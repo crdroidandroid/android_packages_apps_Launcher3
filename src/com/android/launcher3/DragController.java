@@ -53,7 +53,7 @@ public class DragController {
     /** Indicates the drag is a copy.  */
     public static int DRAG_ACTION_COPY = 1;
 
-    public static final int SCROLL_DELAY = 500;
+    public static final int SCROLL_DELAY = 350;
     public static final int RESCROLL_DELAY = PagedView.PAGE_SNAP_ANIMATION_DURATION + 150;
 
     private static final boolean PROFILE_DRAWING_DURING_DRAG = false;
