@@ -95,4 +95,12 @@
         <item name="ringOutset">4dp</item>
     </style>
 
+    <style name="Settings" parent="@android:style/Theme.Material.Light.DarkActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorPrimary">@color/primary_color</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark_color</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
 </resources>
