@@ -124,7 +124,9 @@
             android:name="com.android.launcher3.SettingsActivity"
             android:label="@string/settings_button_text"
             android:autoRemoveFromRecents="true"
-            android:process=":settings_process">
+            android:theme="@style/Settings"
+            android:process=":settings_process"
+            android:parentActivityName="com.android.launcher3.Launcher" >
         </activity>
 
         <!-- Intent received used to install shortcuts from other applications -->
