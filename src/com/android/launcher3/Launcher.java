@@ -2547,8 +2547,8 @@ public class Launcher extends BaseActivity
                 .putExtra(Utilities.EXTRA_WALLPAPER_OFFSET, offset);
 
         String pickerPackage = getString(R.string.wallpaper_picker_package);
-        boolean hasTargetPackage = TextUtils.isEmpty(pickerPackage);
-        if (!hasTargetPackage) {
+        boolean hasTargetPackage = false; //!TextUtils.isEmpty(pickerPackage);
+        if (hasTargetPackage) {
             intent.setPackage(pickerPackage);
         }
 
