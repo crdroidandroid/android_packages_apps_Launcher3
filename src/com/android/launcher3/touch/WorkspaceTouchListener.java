@@ -44,6 +44,7 @@ import com.android.launcher3.BoxSelectionHelper;
 import com.android.launcher3.CellLayout;
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Launcher;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.Workspace;
 import com.android.launcher3.dragndrop.DragLayer;
 import com.android.launcher3.logger.LauncherAtom;
@@ -231,5 +232,14 @@ public class WorkspaceTouchListener extends GestureDetector.SimpleOnGestureListe
                 cancelLongPress();
             }
         }
+    }
+
+    @Override
+    public boolean onDoubleTap(MotionEvent event) {
+        if (LauncherPrefs.SLEEP_GESTURE.get(mWorkspace.getContext())) {
+            mLauncher.onSleepEvent(event);
+            return true;
+        }
+        return false;
     }
 }
