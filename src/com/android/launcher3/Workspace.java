@@ -4265,10 +4265,8 @@ public class Workspace extends PagedView
     }
 
     public void updateQsbVisibility() {
-        if (!FeatureFlags.QSB_ON_FIRST_SCREEN) {
-            return;
-        }
         boolean visible = Utilities.isShowSearchBar(mLauncher);
+        FeatureFlags.QSB_ON_FIRST_SCREEN = visible;
         View qsb = findViewById(getEmbeddedQsbId());
         if (qsb != null) {
             qsb.setVisibility(visible ? View.VISIBLE : View.GONE);

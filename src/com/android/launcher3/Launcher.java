@@ -376,6 +376,9 @@ public class Launcher extends BaseActivity
 
         LauncherAppState app = LauncherAppState.getInstance(this);
 
+        boolean visible = Utilities.isShowSearchBar(this);
+        FeatureFlags.QSB_ON_FIRST_SCREEN = visible;
+
         // Load configuration-specific DeviceProfile
         mDeviceProfile = app.getInvariantDeviceProfile().getDeviceProfile(this);
         if (isInMultiWindowModeCompat()) {
