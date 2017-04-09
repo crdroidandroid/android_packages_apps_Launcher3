@@ -289,4 +289,10 @@
         <item name="android:colorControlHighlight">#DFE1E5</item>
         <item name="android:colorForeground">@color/all_apps_bg_hand_fill_dark</item>
     </style>
+
+    <!-- Icon pack -->
+    <style name="AlertDialogCustom">
+        <item name="android:backgroundTint">?attr/popupColorSecondary</item>
+        <item name="android:outlineProvider">none</item>
+    </style>
 </resources>

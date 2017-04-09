@@ -105,6 +105,13 @@
             android:label="@string/hidden_app"
             android:theme="@android:style/Theme.DeviceDefault.Settings" />
 
+        <!-- Per app icon picker -->
+        <activity
+            android:name="com.android.launcher3.ChooseIconActivity"
+            android:autoRemoveFromRecents="true"
+            android:label="@string/icon_chooser"
+            android:theme="@android:style/Theme.DeviceDefault.Settings" />
+
         <!-- Intent received used to install shortcuts from other applications -->
         <receiver
             android:name="com.android.launcher3.InstallShortcutReceiver"

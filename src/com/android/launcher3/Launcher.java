@@ -33,22 +33,29 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.app.ActivityOptions;
+import android.app.AlertDialog;
 import android.appwidget.AppWidgetHostView;
 import android.appwidget.AppWidgetManager;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.ComponentCallbacks2;
 import android.content.Context;
 import android.content.ContextWrapper;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.content.pm.PackageManager;
+import android.content.pm.LauncherActivityInfo;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
 import android.graphics.Point;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -63,6 +70,7 @@ import android.support.v4.graphics.ColorUtils;
 import android.text.TextUtils;
 import android.text.method.TextKeyListener;
 import android.util.Log;
+import android.util.Pair;
 import android.util.SparseArray;
 import android.view.Display;
 import android.view.KeyEvent;
@@ -71,11 +79,20 @@ import android.view.KeyboardShortcutInfo;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.animation.OvershootInterpolator;
+import android.view.ContextThemeWrapper;
+import android.widget.AdapterView;
+import android.widget.Advanceable;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ListPopupWindow;
+import android.widget.TextView;
 import android.widget.Toast;
-
+import com.android.internal.icons.IconsHandler;
 import com.android.launcher3.DropTarget.DragObject;
 import com.android.launcher3.Workspace.ItemOperator;
 import com.android.launcher3.accessibility.LauncherAccessibilityDelegate;
@@ -84,6 +101,7 @@ import com.android.launcher3.allapps.AllAppsTransitionController;
 import com.android.launcher3.allapps.DiscoveryBounce;
 import com.android.launcher3.badge.BadgeInfo;
 import com.android.launcher3.compat.AppWidgetManagerCompat;
+import com.android.launcher3.compat.LauncherAppsCompat;
 import com.android.launcher3.compat.LauncherAppsCompatVO;
 import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.dragndrop.DragController;
@@ -91,6 +109,7 @@ import com.android.launcher3.dragndrop.DragLayer;
 import com.android.launcher3.dragndrop.DragView;
 import com.android.launcher3.folder.FolderIcon;
 import com.android.launcher3.folder.FolderIconPreviewVerifier;
+import com.android.launcher3.IconCache;
 import com.android.launcher3.keyboard.CustomActionsPopup;
 import com.android.launcher3.keyboard.ViewGroupFocusHelper;
 import com.android.launcher3.logging.FileLog;
@@ -151,6 +170,8 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.Map;
+import java.util.HashMap;
 
 /**
  * Default launcher application.
@@ -275,6 +296,13 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
     private QuickSpaceView mQuickSpace;
 
     private QsbAnimationController mQsbController;
+
+    // Icon pack
+    private AlertDialog mIconPackDialog;
+    private EditText mEditText;
+    private ImageView mPackageIcon;
+    private IconsHandler mIconsHandler;
+    private View mIconPackView;
 
     public QsbAnimationController getQsbController() {
         return mQsbController;
@@ -402,6 +430,9 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         TraceHelper.endSection("Launcher-onCreate");
 
         mQsbController = new QsbAnimationController(this);
+
+        // Icons handler for icon pack
+        mIconsHandler = mIconCache.getIconsHandler();
     }
 
     @Override
@@ -1355,6 +1386,11 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
 
             if (mLauncherCallbacks != null) {
                 mLauncherCallbacks.onHomeIntent(internalStateHandled);
+            }
+
+            // Dismiss icon pack
+            if (mIconPackDialog != null) {
+                mIconPackDialog.dismiss();
             }
         }
 
@@ -2639,5 +2675,87 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
                 mAppsView.getFloatingHeaderView().setPredictedApps(mSharedPrefs.getBoolean(SettingsAppDrawer.KEY_APP_SUGGESTIONS, true), apps);
             }
         }
+    }
+
+    public void startEdit(final ItemInfo info, final ComponentName component) {
+        LauncherActivityInfo app = LauncherAppsCompat.getInstance(this)
+                .resolveActivity(info.getIntent(), info.user);
+        mIconPackView = getLayoutInflater().inflate(R.layout.edit_dialog, null);
+        mPackageIcon = (ImageView) mIconPackView.findViewById(R.id.package_icon);
+        mEditText = (EditText) mIconPackView.findViewById(R.id.editText);
+        mEditText.setText(mIconCache.getCacheEntry(app).title);
+        mEditText.setSelection(mEditText.getText().length());
+
+        // Package name of application selected.
+        final String packageName = component.getPackageName();
+        // Get resources
+        final Resources res = getResources();
+        // Get the icon applied for the icon selected from cache.
+        final Bitmap appliedIcon = mIconCache.getNonNullIcon(mIconCache.getCacheEntry(app), info.user);
+        // Set the dialog package preview
+        mPackageIcon.setImageBitmap(appliedIcon);
+
+        final int popupWidth = res.getDimensionPixelSize(R.dimen.edit_dialog_min_width);
+
+        Pair<List<String>, List<String>> iconPacks = mIconsHandler.getAllIconPacks();
+        ListPopupWindow listPopupWindow = new ListPopupWindow(new ContextThemeWrapper(this, R.style.AlertDialogCustom));
+        listPopupWindow.setAdapter(new ArrayAdapter(new ContextThemeWrapper(this, R.style.AlertDialogCustom),
+                R.layout.edit_dialog_item, iconPacks.second));
+        listPopupWindow.setWidth(popupWidth);
+        listPopupWindow.setAnchorView(mPackageIcon);
+        listPopupWindow.setModal(true);
+        listPopupWindow.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                Intent intent = new Intent(Launcher.this, ChooseIconActivity.class);
+                ChooseIconActivity.setItemInfo(info);
+                intent.putExtra("app_package", packageName);
+                intent.putExtra("app_label", mEditText.getText().toString());
+                intent.putExtra("icon_pack_package", iconPacks.first.get(position));
+                Launcher.this.startActivity(intent);
+                mIconPackDialog.dismiss();
+            }
+        });
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AlertDialogCustom))
+                .setView(mIconPackView)
+                .setTitle(getString(R.string.edit_app))
+                .setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    @Override
+                    public void onDismiss(DialogInterface dialog) {
+                        // Reload workspace.
+                        mModel.forceReload();
+                    }
+                })
+                .setPositiveButton(R.string.ok,
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            // Only apply label.
+                            mIconCache.addCustomInfoToDataBase(info, mEditText.getText());
+                            mIconPackDialog.dismiss();
+                        }
+                });
+                builder.setNeutralButton(R.string.reset_icon,
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            mIconCache.addCustomInfoToDataBase(mIconsHandler.getIconFromHandler(
+                                    Launcher.this, app), info, null);
+                            mIconPackDialog.dismiss();
+                        }
+                });
+
+        mIconPackDialog = builder.create();
+        mPackageIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!iconPacks.second.isEmpty()) {
+                    listPopupWindow.show();
+                }
+            }
+        });
+
+        mIconPackDialog.show();
     }
 }

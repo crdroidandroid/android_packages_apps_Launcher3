@@ -75,6 +75,10 @@ public abstract class SQLiteCacheHelper {
         mIgnoreWrites = true;
     }
 
+    public SQLiteDatabase getDatabase() {
+        return mOpenHelper.getWritableDatabase();
+    }
+
     /**
      * @see SQLiteDatabase#query(String, String[], String, String[], String, String, String)
      */

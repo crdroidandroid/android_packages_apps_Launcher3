@@ -119,7 +119,7 @@ public class PackageUpdatedTask extends BaseModelUpdateTask {
             case OP_UPDATE:
                 for (int i = 0; i < N; i++) {
                     if (DEBUG) Log.d(TAG, "mAllAppsList.updatePackage " + packages[i]);
-                    iconCache.updateIconsForPkg(packages[i], mUser);
+                    // iconCache.updateIconsForPkg(packages[i], mUser);
                     appsList.updatePackage(context, packages[i], mUser);
                     app.getWidgetCache().removePackage(packages[i], mUser);
                 }
