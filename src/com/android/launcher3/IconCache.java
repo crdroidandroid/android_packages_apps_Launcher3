@@ -222,6 +222,21 @@ public class IconCache {
     }
 
     /**
+     * Remove any records for the supplied user name from memory.
+     */
+     private void removeFromMemCacheLocked(UserHandle user) {
+        HashSet<ComponentKey> forDeletion = new HashSet<ComponentKey>();
+        for (ComponentKey key: mCache.keySet()) {
+            if (key.user.equals(user)) {
+                forDeletion.add(key);
+            }
+        }
+        for (ComponentKey condemned: forDeletion) {
+            mCache.remove(condemned);
+        }
+    }
+
+    /**
      * Updates the entries related to the given package in memory and persistent DB.
      */
     public synchronized void updateIconsForPkg(String packageName, UserHandle user) {
@@ -247,6 +262,19 @@ public class IconCache {
         mIconDb.delete(
                 IconDB.COLUMN_COMPONENT + " LIKE ? AND " + IconDB.COLUMN_USER + " = ?",
                 new String[]{packageName + "/%", Long.toString(userSerial)});
+    }
+
+    /**
+     * Removes the entries related to the given user in memory and persistent DB.
+     */
+    public synchronized void removeAllIconsForUser(UserHandle user) {
+
+
+        removeFromMemCacheLocked(user);
+        long userSerial = mUserManager.getSerialNumberForUser(user);
+        mIconDb.delete(
+                IconDB.COLUMN_USER + " = ?",
+                new String[]{Long.toString(userSerial)});
     }
 
     public void updateDbIcons(Set<String> ignorePackagesForMainUser) {
@@ -383,7 +411,15 @@ public class IconCache {
         if (entry == null) {
             entry = new CacheEntry();
             LauncherIcons li = LauncherIcons.obtain(mContext);
-            li.createBadgedIconBitmap(getFullResIcon(app), app.getUser(),
+            Drawable iconDrawable = getFullResIcon(app);
+            IconPack iconPack = IconPackProvider.loadAndGetIconPack(mContext);
+            if (iconPack != null) {
+                Drawable iconPackDrawable = iconPack.getIcon(app, iconDrawable, app.getLabel());
+                if (iconPackDrawable != null) {
+                    iconDrawable = iconPackDrawable;
+                }
+            }
+            li.createBadgedIconBitmap(iconDrawable, app.getUser(),
                     app.getApplicationInfo().targetSdkVersion).applyTo(entry);
             li.recycle();
         }
@@ -551,7 +587,15 @@ public class IconCache {
 
                 if (info != null) {
                     LauncherIcons li = LauncherIcons.obtain(mContext);
-                    li.createBadgedIconBitmap(getFullResIcon(info), info.getUser(),
+                    Drawable iconDrawable = getFullResIcon(info);
+                    IconPack iconPack = IconPackProvider.loadAndGetIconPack(mContext);
+                    if (iconPack != null) {
+                        Drawable iconPackDrawable = iconPack.getIcon(info, iconDrawable, info.getLabel());
+                        if (iconPackDrawable != null) {
+                            iconDrawable = iconPackDrawable;
+                        }
+                    }
+                    li.createBadgedIconBitmap(iconDrawable, info.getUser(),
                             info.getApplicationInfo().targetSdkVersion).applyTo(entry);
                     li.recycle();
                 } else {
@@ -654,8 +698,17 @@ public class IconCache {
                     LauncherIcons li = LauncherIcons.obtain(mContext);
                     // Load the full res icon for the application, but if useLowResIcon is set, then
                     // only keep the low resolution icon instead of the larger full-sized icon
+                    Drawable iconDrawable = appInfo.loadIcon(mPackageManager);
+                    IconPack iconPack = IconPackProvider.loadAndGetIconPack(mContext);
+                    if (iconPack != null) {
+                        // get first one matching packageName
+                        Drawable iconPackDrawable = iconPack.getIcon(packageName, iconDrawable, entry.title);
+                        if (iconPackDrawable != null) {
+                            iconDrawable = iconPackDrawable;
+                        }
+                    }
                     BitmapInfo iconInfo = li.createBadgedIconBitmap(
-                            appInfo.loadIcon(mPackageManager), user, appInfo.targetSdkVersion,
+                            iconDrawable, user, appInfo.targetSdkVersion,
                             mInstantAppResolver.isInstantApp(appInfo));
                     li.recycle();
 
@@ -894,5 +947,9 @@ public class IconCache {
     public interface ItemInfoUpdateReceiver {
 
         void reapplyItemInfo(ItemInfoWithIcon info);
+    }
+
+    public void clearIconCache() {
+        removeAllIconsForUser(Process.myUserHandle());
     }
 }

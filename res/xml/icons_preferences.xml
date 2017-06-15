@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <com.android.launcher3.preferences.IconPackPreference
+        android:key="pref_iconPackPackage"
+        android:title="@string/icon_pack"
+        android:summary="@string/icon_pack_summary"
+        android:persistent="true" />
+
     <com.android.launcher3.views.ButtonPreference
         android:key="pref_icon_badging"
         android:title="@string/icon_badging_title"

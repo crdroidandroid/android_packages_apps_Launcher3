@@ -85,6 +85,8 @@ public class LauncherModel extends BroadcastReceiver
 
     static final String TAG = "Launcher.Model";
 
+    private final IconCache mIconCache;
+
     private final MainThreadExecutor mUiExecutor = new MainThreadExecutor();
     @Thunk final LauncherAppState mApp;
     @Thunk final Object mLock = new Object();
@@ -164,6 +166,7 @@ public class LauncherModel extends BroadcastReceiver
     LauncherModel(LauncherAppState app, IconCache iconCache, AppFilter appFilter) {
         mApp = app;
         mBgAllAppsList = new AllAppsList(iconCache, appFilter);
+        mIconCache = iconCache;
     }
 
     /** Runs the specified runnable immediately if called from the worker thread, otherwise it is
@@ -678,6 +681,10 @@ public class LauncherModel extends BroadcastReceiver
      */
     public static Looper getWorkerLooper() {
         return sWorkerThread.getLooper();
+    }
+
+    public void clearIconCache() {
+        mIconCache.clearIconCache();
     }
 
     public static void setWorkerPriority(final int priority) {
