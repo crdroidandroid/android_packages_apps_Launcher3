@@ -2006,4 +2006,8 @@ public class LauncherModel extends BroadcastReceiver
     public static Looper getWorkerLooper() {
         return sWorkerThread.getLooper();
     }
+
+    public void clearIconCache() {
+        mIconCache.clearIconCache();
+    }
 }

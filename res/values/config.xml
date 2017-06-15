@@ -134,4 +134,7 @@
     <item type="id" name="action_resize" />
     <item type="id" name="action_deep_shortcuts" />
     <item type="id" name="action_dismiss_notification" />
+
+    <!-- Name of an icon pack. -->
+    <string name="iconPackPackageDefault" translatable="false">""</string>
 </resources>
