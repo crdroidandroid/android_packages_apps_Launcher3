@@ -66,7 +66,7 @@ public final class BuildConfig {
     public static final String APPLICATION_ID = \"${overrides[appId]:-${overrides[pkg]}}\";
 
     public static final boolean IS_STUDIO_BUILD = ${overrides[IS_STUDIO_BUILD]:-false};
-    public static final boolean QSB_ON_FIRST_SCREEN = ${overrides[QSB_ON_FIRST_SCREEN]:-true};
+    public static final boolean QSB_ON_FIRST_SCREEN = ${overrides[QSB_ON_FIRST_SCREEN]:-false};
     public static final boolean IS_DEBUG_DEVICE = ${overrides[IS_DEBUG_DEVICE]:-false};
     public static final boolean WIDGETS_ENABLED = ${overrides[WIDGETS_ENABLED]:-true};
     public static final boolean NOTIFICATION_DOTS_ENABLED = ${overrides[NOTIFICATION_DOTS_ENABLED]:-true};
