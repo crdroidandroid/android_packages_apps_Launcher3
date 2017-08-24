@@ -98,3 +98,7 @@
 -keep interface com.android.launcher3.model.nano.LauncherDumpProto.** {
   *;
 }
+
+-keep class com.android.launcher3.graphics.FixedScaleDrawable {
+  *;
+}

@@ -101,7 +101,7 @@ public class LauncherIcons {
         float scale = 1f;
         if (!FeatureFlags.LAUNCHER3_DISABLE_ICON_NORMALIZATION) {
             normalizer = IconNormalizer.getInstance(context);
-            if (Utilities.isAtLeastO() && iconAppTargetSdk >= Build.VERSION_CODES.O) {
+            if (Utilities.isAtLeastO() && iconAppTargetSdk >= Build.VERSION_CODES.O && FeatureFlags.ADAPTIVE_ICON_ENABLED) {
                 boolean[] outShape = new boolean[1];
                 AdaptiveIconDrawable dr = (AdaptiveIconDrawable)
                         context.getDrawable(R.drawable.adaptive_icon_drawable_wrapper).mutate();
@@ -155,7 +155,7 @@ public class LauncherIcons {
         float scale = 1f;
         if (!FeatureFlags.LAUNCHER3_DISABLE_ICON_NORMALIZATION) {
             normalizer = IconNormalizer.getInstance(context);
-            if (Utilities.isAtLeastO() && iconAppTargetSdk >= Build.VERSION_CODES.O) {
+            if (Utilities.isAtLeastO() && iconAppTargetSdk >= Build.VERSION_CODES.O && FeatureFlags.ADAPTIVE_ICON_ENABLED) {
                 boolean[] outShape = new boolean[1];
                 AdaptiveIconDrawable dr = (AdaptiveIconDrawable)
                         context.getDrawable(R.drawable.adaptive_icon_drawable_wrapper).mutate();
