@@ -101,13 +101,13 @@ public class LauncherIcons {
         float scale = 1f;
         if (!FeatureFlags.LAUNCHER3_DISABLE_ICON_NORMALIZATION) {
             normalizer = IconNormalizer.getInstance(context);
-            if (Utilities.isAtLeastO() && iconAppTargetSdk >= Build.VERSION_CODES.O && FeatureFlags.ADAPTIVE_ICON_ENABLED) {
+            if (Utilities.isAtLeastO() && iconAppTargetSdk >= Build.VERSION_CODES.O && Utilities.isAdaptiveIcons(context)) {
                 boolean[] outShape = new boolean[1];
                 AdaptiveIconDrawable dr = (AdaptiveIconDrawable)
                         context.getDrawable(R.drawable.adaptive_icon_drawable_wrapper).mutate();
                 dr.setBounds(0, 0, 1, 1);
                 scale = normalizer.getScale(icon, null, dr.getIconMask(), outShape);
-                if (FeatureFlags.LEGACY_ICON_TREATMENT &&
+                if (Utilities.isLegacyIcons(context) &&
                         !outShape[0]){
                     Drawable wrappedIcon = wrapToAdaptiveIconDrawable(context, icon, scale);
                     if (wrappedIcon != icon) {
@@ -155,13 +155,13 @@ public class LauncherIcons {
         float scale = 1f;
         if (!FeatureFlags.LAUNCHER3_DISABLE_ICON_NORMALIZATION) {
             normalizer = IconNormalizer.getInstance(context);
-            if (Utilities.isAtLeastO() && iconAppTargetSdk >= Build.VERSION_CODES.O && FeatureFlags.ADAPTIVE_ICON_ENABLED) {
+            if (Utilities.isAtLeastO() && iconAppTargetSdk >= Build.VERSION_CODES.O && Utilities.isAdaptiveIcons(context)) {
                 boolean[] outShape = new boolean[1];
                 AdaptiveIconDrawable dr = (AdaptiveIconDrawable)
                         context.getDrawable(R.drawable.adaptive_icon_drawable_wrapper).mutate();
                 dr.setBounds(0, 0, 1, 1);
                 scale = normalizer.getScale(icon, iconBounds, dr.getIconMask(), outShape);
-                if (Utilities.isAtLeastO() && FeatureFlags.LEGACY_ICON_TREATMENT &&
+                if (Utilities.isAtLeastO() && Utilities.isLegacyIcons(context) &&
                         !outShape[0]) {
                     Drawable wrappedIcon = wrapToAdaptiveIconDrawable(context, icon, scale);
                     if (wrappedIcon != icon) {
@@ -290,7 +290,7 @@ public class LauncherIcons {
      * create AdaptiveIconDrawable.
      */
     static Drawable wrapToAdaptiveIconDrawable(Context context, Drawable drawable, float scale) {
-        if (!(FeatureFlags.LEGACY_ICON_TREATMENT && Utilities.isAtLeastO())) {
+        if (!(Utilities.isLegacyIcons(context) && Utilities.isAtLeastO())) {
             return drawable;
         }
 

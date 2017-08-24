@@ -4165,7 +4165,8 @@ public class Launcher extends BaseActivity
                 // it will initialize the rotation preference again.
                 finish();
             }
-            if ("pref_iconPackPackage".equals(key)) {
+            if (Utilities.ICON_PACK_PREFERENCE_KEY.equals(key) || Utilities.ADAPTIVE_ICONS_PREFERENCE_KEY.equals(key)
+                    || Utilities.LEGACY_ICON_PREFERENCE_KEY.equals(key)) {
                 mModel.clearIconCache();
                 mModel.forceReload();
                 mOnResumeNeedsLoad = true;

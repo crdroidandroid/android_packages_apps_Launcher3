@@ -73,4 +73,18 @@
             android:persistent="true"
         />
 
+    <SwitchPreference
+        android:key="pref_adaptiveIcons"
+        android:title="@string/adaptive_icons_title"
+        android:defaultValue="true"
+        android:persistent="true"
+        />
+
+    <SwitchPreference
+        android:key="pref_legacyIcons"
+        android:title="@string/legacy_icons_title"
+        android:defaultValue="false"
+        android:persistent="true"
+        android:dependency="pref_adaptiveIcons"
+        />
 </PreferenceScreen>
