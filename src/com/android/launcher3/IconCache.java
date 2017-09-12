@@ -680,6 +680,7 @@ public class IconCache {
                     // Load the full res icon for the application, but if useLowResIcon is set, then
                     // only keep the low resolution icon instead of the larger full-sized icon
                     Drawable iconDrawable = appInfo.loadIcon(mPackageManager);
+                    entry.title = appInfo.loadLabel(mPackageManager);
                     IconPack iconPack = IconPackProvider.loadAndGetIconPack(mContext);
                     if (iconPack != null) {
                         // get first one matching packageName
@@ -691,7 +692,6 @@ public class IconCache {
                     Bitmap icon = LauncherIcons.createBadgedIconBitmap(
                             iconDrawable, user, mContext, appInfo.targetSdkVersion);
                     Bitmap lowResIcon =  generateLowResIcon(icon, mPackageBgColor);
-                    entry.title = appInfo.loadLabel(mPackageManager);
                     entry.contentDescription = mUserManager.getBadgedLabelForUser(entry.title, user);
                     entry.icon = useLowResIcon ? lowResIcon : icon;
                     entry.isLowResIcon = useLowResIcon;

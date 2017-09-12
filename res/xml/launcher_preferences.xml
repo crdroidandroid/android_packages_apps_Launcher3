@@ -16,75 +16,78 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.android.launcher3.preferences.IconPackPreference
+    <PreferenceCategory
+        android:key="icon_category"
+        android:title="@string/icon_category_title" >
+
+        <com.android.launcher3.preferences.IconPackPreference
             android:key="pref_iconPackPackage"
             android:title="@string/icon_pack"
             android:summary="@string/icon_pack_summary"
+            android:persistent="true" />
+
+        <Preference
+            android:key="pref_icon_badging"
+            android:title="@string/icon_badging_title"
+            android:persistent="false">
+            <intent android:action="android.settings.NOTIFICATION_SETTINGS">
+                <!-- This extra highlights the "Allow icon badges" field in Notification settings -->
+                <extra
+                    android:name=":settings:fragment_args_key"
+                    android:value="notification_badging" />
+            </intent>
+        </Preference>
+
+        <SwitchPreference
+            android:key="pref_adaptiveIcons"
+            android:title="@string/adaptive_icons_title"
+            android:defaultValue="true"
+            android:persistent="true" />
+
+        <ListPreference
+            android:key="pref_iconShape"
+            android:title="@string/adaptive_icon_mask_title"
+            android:entries="@array/adaptive_icon_mask_names"
+            android:entryValues="@array/adaptive_icon_mask_values"
             android:persistent="true"
-    />
+            android:dependency="pref_adaptiveIcons"
+            android:defaultValue="@string/icon_mask_square_string" />
 
-    <SwitchPreference
-        android:key="pref_add_icon_to_home"
-        android:title="@string/auto_add_shortcuts_label"
-        android:summary="@string/auto_add_shortcuts_description"
-        android:defaultValue="true"
-        android:persistent="true"
-        />
+        <SwitchPreference
+            android:key="pref_legacyIcons"
+            android:title="@string/legacy_icons_title"
+            android:defaultValue="false"
+            android:persistent="true"
+            android:dependency="pref_adaptiveIcons" />
+    </PreferenceCategory>
 
-    <ListPreference
-        android:key="pref_override_icon_shape"
-        android:title="@string/icon_shape_override_label"
-        android:summary="%s"
-        android:entries="@array/icon_shape_override_paths_names"
-        android:entryValues="@array/icon_shape_override_paths_values"
-        android:defaultValue=""
-        android:persistent="false" />
+    <PreferenceCategory
+        android:key="other_category"
+        android:title="@string/other_category_title" >
 
-    <Preference
-        android:key="pref_icon_badging"
-        android:title="@string/icon_badging_title"
-        android:persistent="false">
-        <intent android:action="android.settings.NOTIFICATION_SETTINGS">
-            <!-- This extra highlights the "Allow icon badges" field in Notification settings -->
-            <extra
-                android:name=":settings:fragment_args_key"
-                android:value="notification_badging" />
-        </intent>
-    </Preference>/>
+        <SwitchPreference
+            android:key="pref_add_icon_to_home"
+            android:title="@string/auto_add_shortcuts_label"
+            android:summary="@string/auto_add_shortcuts_description"
+            android:defaultValue="true"
+            android:persistent="true" />
 
-    <SwitchPreference
-        android:key="pref_allowRotation"
-        android:title="@string/allow_rotation_title"
-        android:defaultValue="@bool/allow_rotation"
-        android:persistent="true"
-        />
+        <SwitchPreference
+            android:key="pref_allowRotation"
+            android:title="@string/allow_rotation_title"
+            android:defaultValue="@bool/allow_rotation"
+            android:persistent="true" />
 
-    <SwitchPreference
+        <SwitchPreference
             android:key="pref_showPredictiveApps"
             android:title="@string/show_predictive_apps_title"
             android:defaultValue="true"
-            android:persistent="true"
-    />
+            android:persistent="true" />
 
-    <SwitchPreference
+        <SwitchPreference
             android:key="pref_searchBar"
             android:title="@string/search_bar_title"
             android:defaultValue="true"
-            android:persistent="true"
-        />
-
-    <SwitchPreference
-        android:key="pref_adaptiveIcons"
-        android:title="@string/adaptive_icons_title"
-        android:defaultValue="true"
-        android:persistent="true"
-        />
-
-    <SwitchPreference
-        android:key="pref_legacyIcons"
-        android:title="@string/legacy_icons_title"
-        android:defaultValue="false"
-        android:persistent="true"
-        android:dependency="pref_adaptiveIcons"
-        />
+            android:persistent="true" />
+    </PreferenceCategory>
 </PreferenceScreen>

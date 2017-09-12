@@ -35,6 +35,7 @@ import android.graphics.drawable.PaintDrawable;
 import android.os.Build;
 import android.os.Process;
 import android.os.UserHandle;
+import android.util.Log;
 
 import com.android.launcher3.AppInfo;
 import com.android.launcher3.IconCache;
@@ -101,22 +102,27 @@ public class LauncherIcons {
         float scale = 1f;
         if (!FeatureFlags.LAUNCHER3_DISABLE_ICON_NORMALIZATION) {
             normalizer = IconNormalizer.getInstance(context);
-            if (Utilities.isAtLeastO() && iconAppTargetSdk >= Build.VERSION_CODES.O && Utilities.isAdaptiveIcons(context)) {
-                boolean[] outShape = new boolean[1];
-                AdaptiveIconDrawable dr = (AdaptiveIconDrawable)
-                        context.getDrawable(R.drawable.adaptive_icon_drawable_wrapper).mutate();
-                dr.setBounds(0, 0, 1, 1);
-                scale = normalizer.getScale(icon, null, dr.getIconMask(), outShape);
-                if (Utilities.isLegacyIcons(context) &&
-                        !outShape[0]){
-                    Drawable wrappedIcon = wrapToAdaptiveIconDrawable(context, icon, scale);
-                    if (wrappedIcon != icon) {
-                        icon = wrappedIcon;
-                        scale = normalizer.getScale(icon, null, null, null);
+
+            if (Utilities.isAtLeastO() && Utilities.isAdaptiveIcons(context)) {
+                if (icon instanceof AdaptiveIconDrawable) {
+                    scale = normalizer.getScaleForAdaptive(icon, null);
+                } else {
+                    if (Utilities.isLegacyIcons(context)){
+                        Drawable wrappedIcon = wrapToAdaptiveIconDrawable(context, icon, scale);
+                        if (wrappedIcon != icon) {
+                            icon = wrappedIcon;
+                            scale = normalizer.getScaleForAdaptive(icon, null);
+                        }
+                    } else {
+                        scale = normalizer.getScale(icon, null);
                     }
                 }
+                // add support of different shapes
+                if (icon instanceof AdaptiveIconDrawable) {
+                    icon = wrapToMyAdaptiveIconDrawable((AdaptiveIconDrawable) icon, context);
+                }
             } else {
-                scale = normalizer.getScale(icon, null, null, null);
+                scale = normalizer.getScale(icon, null);
             }
         }
         Bitmap bitmap = createIconBitmap(icon, context, scale);
@@ -155,26 +161,30 @@ public class LauncherIcons {
         float scale = 1f;
         if (!FeatureFlags.LAUNCHER3_DISABLE_ICON_NORMALIZATION) {
             normalizer = IconNormalizer.getInstance(context);
-            if (Utilities.isAtLeastO() && iconAppTargetSdk >= Build.VERSION_CODES.O && Utilities.isAdaptiveIcons(context)) {
-                boolean[] outShape = new boolean[1];
-                AdaptiveIconDrawable dr = (AdaptiveIconDrawable)
-                        context.getDrawable(R.drawable.adaptive_icon_drawable_wrapper).mutate();
-                dr.setBounds(0, 0, 1, 1);
-                scale = normalizer.getScale(icon, iconBounds, dr.getIconMask(), outShape);
-                if (Utilities.isAtLeastO() && Utilities.isLegacyIcons(context) &&
-                        !outShape[0]) {
-                    Drawable wrappedIcon = wrapToAdaptiveIconDrawable(context, icon, scale);
-                    if (wrappedIcon != icon) {
-                        icon = wrappedIcon;
-                        scale = normalizer.getScale(icon, iconBounds, null, null);
+            if (Utilities.isAtLeastO() && Utilities.isAdaptiveIcons(context)) {
+                if (icon instanceof AdaptiveIconDrawable) {
+                    scale = normalizer.getScaleForAdaptive(icon, null);
+                } else {
+                    if (Utilities.isLegacyIcons(context)){
+                        Drawable wrappedIcon = wrapToAdaptiveIconDrawable(context, icon, scale);
+                        if (wrappedIcon != icon) {
+                            icon = wrappedIcon;
+                            scale = normalizer.getScaleForAdaptive(icon, null);
+                        }
+                    } else {
+                        scale = normalizer.getScale(icon, null);
                     }
                 }
+                // add support of different shapes
+                if (icon instanceof AdaptiveIconDrawable) {
+                    icon = wrapToMyAdaptiveIconDrawable((AdaptiveIconDrawable) icon, context);
+                }
             } else {
-                scale = normalizer.getScale(icon, iconBounds, null, null);
+                scale = normalizer.getScale(icon, null);
             }
-
         }
         scale = Math.min(scale, ShadowGenerator.getScaleForBounds(iconBounds));
+
         return createIconBitmap(icon, context, scale);
     }
 
@@ -305,6 +315,15 @@ public class LauncherIcons {
             }
         } catch (Exception e) {
             return drawable;
+        }
+        return drawable;
+    }
+
+    static Drawable wrapToMyAdaptiveIconDrawable(AdaptiveIconDrawable drawable, Context context) {
+        try {
+            // TODO could check if value is different then default and only then wrap
+            return new MyAdaptiveIconDrawable(drawable.getBackground(), drawable.getForeground(), context);
+        } catch (Exception e) {
         }
         return drawable;
     }

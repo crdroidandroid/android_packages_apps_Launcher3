@@ -229,15 +229,7 @@ public class IconNormalizer {
      *
      * @param outBounds optional rect to receive the fraction distance from each edge.
      */
-    public synchronized float getScale(@NonNull Drawable d, @Nullable RectF outBounds,
-            @Nullable Path path, @Nullable boolean[] outMaskShape) {
-        if (Utilities.isAtLeastO() && d instanceof AdaptiveIconDrawable &&
-                mAdaptiveIconScale != SCALE_NOT_INITIALIZED) {
-            if (outBounds != null) {
-                outBounds.set(mAdaptiveIconBounds);
-            }
-            return mAdaptiveIconScale;
-        }
+    public synchronized float getScale(@NonNull Drawable d, @Nullable RectF outBounds) {
         int width = d.getIntrinsicWidth();
         int height = d.getIntrinsicHeight();
         if (width <= 0 || height <= 0) {
@@ -341,12 +333,21 @@ public class IconNormalizer {
                     1 - ((float) mBounds.bottom) / height);
         }
 
-        if (outMaskShape != null && outMaskShape.length > 0) {
-            outMaskShape[0] = isShape(path);
-        }
         float areaScale = area / (width * height);
         // Use sqrt of the final ratio as the images is scaled across both width and height.
         float scale = areaScale > scaleRequired ? (float) Math.sqrt(scaleRequired / areaScale) : 1;
+        return scale;
+    }
+
+    public synchronized float getScaleForAdaptive(@NonNull Drawable d, @Nullable RectF outBounds) {
+        if (Utilities.isAtLeastO() && d instanceof AdaptiveIconDrawable &&
+                mAdaptiveIconScale != SCALE_NOT_INITIALIZED) {
+            if (outBounds != null) {
+                outBounds.set(mAdaptiveIconBounds);
+            }
+            return mAdaptiveIconScale;
+        }
+        float scale = getScale(d, outBounds);
         if (Utilities.isAtLeastO() && d instanceof AdaptiveIconDrawable &&
                 mAdaptiveIconScale == SCALE_NOT_INITIALIZED) {
             mAdaptiveIconScale = scale;

@@ -129,6 +129,7 @@ public final class Utilities {
     public static final String ADAPTIVE_ICONS_PREFERENCE_KEY = "pref_adaptiveIcons";
     public static final String ICON_PACK_PREFERENCE_KEY = "pref_iconPackPackage";
     public static final String LEGACY_ICON_PREFERENCE_KEY = "pref_legacyIcons";
+    public static final String ICON_SHAPE_PREFERENCE_KEY = "pref_iconShape";
 
     public static boolean isPropertyEnabled(String propertyName) {
         return Log.isLoggable(propertyName, Log.VERBOSE);
@@ -149,6 +150,10 @@ public final class Utilities {
 
     public static boolean isLegacyIcons(Context context) {
         return getPrefs(context).getBoolean(LEGACY_ICON_PREFERENCE_KEY, FeatureFlags.LEGACY_ICON_TREATMENT);
+    }
+
+    public static String getIconShapePath(Context context) {
+        return getPrefs(context).getString(ICON_SHAPE_PREFERENCE_KEY, context.getResources().getString(R.string.icon_mask_square_string));
     }
 
     public static boolean getAllowRotationDefaultValue(Context context) {

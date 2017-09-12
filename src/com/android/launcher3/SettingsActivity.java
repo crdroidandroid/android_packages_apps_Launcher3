@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.provider.Settings;
 import android.provider.Settings.System;
@@ -101,14 +102,15 @@ public class SettingsActivity extends Activity {
                 mIconBadgingObserver.onChange(true);
             }
 
-            Preference iconShapeOverride = findPreference(IconShapeOverride.KEY_PREFERENCE);
-            if (iconShapeOverride != null) {
-                if (IconShapeOverride.isSupported(getActivity())) {
-                    IconShapeOverride.handlePreferenceUi((ListPreference) iconShapeOverride);
-                } else {
-                    getPreferenceScreen().removePreference(iconShapeOverride);
+            final ListPreference iconShape = (ListPreference) findPreference(Utilities.ICON_SHAPE_PREFERENCE_KEY);
+            iconShape.setSummary(iconShape.getEntry());
+            iconShape.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    int index = iconShape.findIndexOfValue((String) newValue);
+                    iconShape.setSummary(iconShape.getEntries()[index]);
+                    return true;
                 }
-            }
+            });
         }
 
         @Override
