@@ -59,6 +59,13 @@
             android:defaultValue="false"
             android:persistent="true"
             android:dependency="pref_adaptiveIcons" />
+
+        <SwitchPreference
+            android:key="pref_iconShadow"
+            android:title="@string/icon_shadow_title"
+            android:defaultValue="true"
+            android:persistent="true"
+            android:dependency="pref_adaptiveIcons" />
     </PreferenceCategory>
 
     <PreferenceCategory

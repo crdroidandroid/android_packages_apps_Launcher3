@@ -126,7 +126,7 @@ public class LauncherIcons {
             }
         }
         Bitmap bitmap = createIconBitmap(icon, context, scale);
-        if (FeatureFlags.ADAPTIVE_ICON_SHADOW && Utilities.isAtLeastO() &&
+        if (Utilities.isIconShadow(context) && Utilities.isAtLeastO() &&
                 icon instanceof AdaptiveIconDrawable) {
             bitmap = ShadowGenerator.getInstance(context).recreateIcon(bitmap);
         }
@@ -217,12 +217,12 @@ public class LauncherIcons {
      */
     public static Bitmap createIconBitmap(Drawable icon, Context context) {
         float scale = 1f;
-        if (FeatureFlags.ADAPTIVE_ICON_SHADOW && Utilities.isAtLeastO() &&
+        if (Utilities.isIconShadow(context) && Utilities.isAtLeastO() &&
                 icon instanceof AdaptiveIconDrawable) {
             scale = ShadowGenerator.getScaleForBounds(new RectF(0, 0, 0, 0));
         }
         Bitmap bitmap =  createIconBitmap(icon, context, scale);
-        if (FeatureFlags.ADAPTIVE_ICON_SHADOW && Utilities.isAtLeastO() &&
+        if (Utilities.isIconShadow(context) && Utilities.isAtLeastO() &&
                 icon instanceof AdaptiveIconDrawable) {
             bitmap = ShadowGenerator.getInstance(context).recreateIcon(bitmap);
         }
