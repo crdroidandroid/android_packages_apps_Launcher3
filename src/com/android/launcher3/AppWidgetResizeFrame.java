@@ -15,7 +15,6 @@ import android.animation.AnimatorSet;
 import android.animation.LayoutTransition;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
-import android.appwidget.AppWidgetProviderInfo;
 import android.content.Context;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
@@ -263,33 +262,6 @@ public class AppWidgetResizeFrame extends AbstractFloatingView implements View.O
         mMaxHSpan = info.maxSpanX;
         mMaxVSpan = info.maxSpanY;
 
-        LauncherAppWidgetInfo widgetInfoOnView = (LauncherAppWidgetInfo) mWidgetView.getTag();
-        // Only show resize handles for the directions in which resizing is possible.
-        InvariantDeviceProfile idp = LauncherAppState.getIDP(cellLayout.getContext());
-
-        // on font / display change, the dp/px size of a cell changes, which means, existing spans
-        // may be invalid. User should be able to resize to the correct widget size.
-        boolean isWidgetVSpanInvalid = widgetInfoOnView.spanY < mMinVSpan;
-        mVerticalResizeActive = (info.resizeMode & AppWidgetProviderInfo.RESIZE_VERTICAL) != 0 && (
-                (mMinVSpan < idp.numRows && mMaxVSpan > 1 && mMinVSpan < mMaxVSpan)
-                        || isWidgetVSpanInvalid);
-        if (!mVerticalResizeActive) {
-            mDragHandles[INDEX_TOP].setVisibility(GONE);
-            mDragHandles[INDEX_BOTTOM].setVisibility(GONE);
-        }
-
-        // on font / display change, the dp/px size of a cell changes, which means, existing spans
-        // may be invalid. User should be able to resize to the correct widget size.
-        boolean isWidgetHSpanInvalid = widgetInfoOnView.spanX < mMinHSpan;
-        mHorizontalResizeActive =
-                (info.resizeMode & AppWidgetProviderInfo.RESIZE_HORIZONTAL) != 0 && (
-                        (mMinHSpan < idp.numColumns && mMaxHSpan > 1 && mMinHSpan < mMaxHSpan)
-                                || isWidgetHSpanInvalid);
-        if (!mHorizontalResizeActive) {
-            mDragHandles[INDEX_LEFT].setVisibility(GONE);
-            mDragHandles[INDEX_RIGHT].setVisibility(GONE);
-        }
-
         mReconfigureButton = (ImageButton) findViewById(R.id.widget_reconfigure_button);
         if (info.isReconfigurable()) {
             mReconfigureButton.setVisibility(VISIBLE);
@@ -355,12 +327,10 @@ public class AppWidgetResizeFrame extends AbstractFloatingView implements View.O
     }
 
     public boolean beginResizeIfPointInRegion(int x, int y) {
-        mLeftBorderActive = (x < mTouchTargetWidth) && mHorizontalResizeActive;
-        mRightBorderActive = (x > getWidth() - mTouchTargetWidth) && mHorizontalResizeActive;
-        mTopBorderActive = (y < mTouchTargetWidth + mTopTouchRegionAdjustment)
-                && mVerticalResizeActive;
-        mBottomBorderActive = (y > getHeight() - mTouchTargetWidth + mBottomTouchRegionAdjustment)
-                && mVerticalResizeActive;
+        mLeftBorderActive = x < mTouchTargetWidth;
+        mRightBorderActive = x > getWidth() - mTouchTargetWidth;
+        mTopBorderActive = y < mTouchTargetWidth + mTopTouchRegionAdjustment;
+        mBottomBorderActive = y > getHeight() - mTouchTargetWidth + mBottomTouchRegionAdjustment;
 
         boolean anyBordersActive = mLeftBorderActive || mRightBorderActive
                 || mTopBorderActive || mBottomBorderActive;
