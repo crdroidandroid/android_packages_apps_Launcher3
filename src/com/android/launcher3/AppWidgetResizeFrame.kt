@@ -280,37 +280,6 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
             }
         }
 
-        fun updateResizeHandlesForGrid(
-            currentSpanX: Int,
-            currentSpanY: Int,
-            info: LauncherAppWidgetProviderInfo,
-            numRows: Int,
-            numColumns: Int,
-        ) {
-            val isWidgetVSpanInvalid = currentSpanY < minVSpan
-            val isWidgetHSpanInvalid = currentSpanX < minHSpan
-
-            // On font / display change, the dp/px size of a cell changes, which means, existing
-            // spans may be invalid. User should be able to resize to the correct widget size.
-            verticalResizeActive =
-                info.hasVerticalResizeModeEnabled() &&
-                    ((minVSpan < numRows && maxVSpan > 1 && minVSpan < maxVSpan) ||
-                        isWidgetVSpanInvalid)
-            if (!verticalResizeActive) {
-                dragHandles.top.visibility = GONE
-                dragHandles.bottom.visibility = GONE
-            }
-
-            horizontalResizeActive =
-                info.hasHorizontalResizeModeEnabled() &&
-                    ((minHSpan < numColumns && maxHSpan > 1 && minHSpan < maxHSpan) ||
-                        isWidgetHSpanInvalid)
-            if (!horizontalResizeActive) {
-                dragHandles.left.visibility = GONE
-                dragHandles.right.visibility = GONE
-            }
-        }
-
         this.cellLayout = cellLayout
         this.widgetView = widgetView
         val info = widgetView.appWidgetInfo as LauncherAppWidgetProviderInfo
@@ -323,15 +292,6 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 
         val widgetInfoOnView = this.widgetView.tag as LauncherAppWidgetInfo
         val idp = getIDP(cellLayout.context)
-
-        // Only show resize handles for the directions in which resizing is possible.
-        updateResizeHandlesForGrid(
-            currentSpanX = widgetInfoOnView.spanX,
-            currentSpanY = widgetInfoOnView.spanY,
-            info = info,
-            numRows = idp.numRows,
-            numColumns = idp.numColumns,
-        )
 
         if (!Flags.homeScreenEditImprovements() && info.isReconfigurable) {
             initializeReconfigureButton()
@@ -360,12 +320,12 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
      * Additionally, evaluates & saves the resize bounds / ranges necessary for the active resize.
      */
     private fun beginResizeIfPointInRegion(x: Int, y: Int): Boolean {
-        isLeftBorderActive = (x < touchTargetWidth) && horizontalResizeActive
-        isRightBorderActive = (x > width - touchTargetWidth) && horizontalResizeActive
+        isLeftBorderActive = (x < touchTargetWidth)
+        isRightBorderActive = (x > width - touchTargetWidth)
         isTopBorderActive =
-            (y < touchTargetWidth + topTouchRegionAdjustment) && verticalResizeActive
+            (y < touchTargetWidth + topTouchRegionAdjustment)
         isBottomBorderActive =
-            (y > height - touchTargetWidth + bottomTouchRegionAdjustment) && verticalResizeActive
+            (y > height - touchTargetWidth + bottomTouchRegionAdjustment)
 
         val anyBordersActive =
             isLeftBorderActive || isRightBorderActive || isTopBorderActive || isBottomBorderActive
