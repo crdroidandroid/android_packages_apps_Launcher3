@@ -7,41 +7,42 @@
     android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
     android:background="?android:attr/activatedBackgroundIndicator">
 
-    <com.android.internal.widget.PreferenceImageView
-        android:id="@android:id/icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxWidth="48dp"
-        android:maxHeight="48dp"
-        android:paddingEnd="12dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp" />
-
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:paddingTop="16dp"
+        android:layout_weight="1"
         android:paddingBottom="16dp"
-        android:layout_weight="1">
+        android:paddingTop="16dp">
 
         <TextView
             android:id="@+android:id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:textAppearance="?android:attr/textAppearanceListItem"
-            android:ellipsize="marquee"
-            android:fadingEdge="horizontal" />
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceListItem" />
 
         <TextView
             android:id="@android:id/summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@android:id/title"
             android:layout_alignStart="@android:id/title"
-            android:textAppearance="?android:attr/textAppearanceListItemSecondary"
-            android:textColor="?android:attr/textColorSecondary"
+            android:layout_below="@android:id/title"
+            android:ellipsize="end"
             android:maxLines="10"
-            android:ellipsize="end" />
+            android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+            android:textColor="?android:attr/textColorSecondary" />
     </RelativeLayout>
+
+    <com.android.internal.widget.PreferenceImageView
+        android:id="@android:id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="64dp"
+        android:maxHeight="64dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" />
+
 </LinearLayout>
