@@ -27,8 +27,8 @@ import java.util.Set;
 
 abstract class SelectableAdapter<VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
 
-    private Set<String> mSelections;
-    private Context mContext;
+    protected Set<String> mSelections;
+    protected Context mContext;
 
     SelectableAdapter() {
 
@@ -49,20 +49,7 @@ abstract class SelectableAdapter<VH extends RecyclerView.ViewHolder> extends Rec
         return mSelections.contains(packageName);
     }
 
-    void toggleSelection(ActionBar actionBar, int position, String packageName) {
-
-        if (mSelections.contains(packageName)) {
-
-            mSelections.remove(packageName);
-        } else {
-            mSelections.add(packageName);
-        }
-        if (!mSelections.isEmpty()) {
-            actionBar.setTitle(String.valueOf(mSelections.size()) + mContext.getString(R.string.hide_app_selected));
-        } else {
-            actionBar.setTitle(mContext.getString(R.string.hidden_app));
-        }
-        notifyItemChanged(position);
+    void toggleSelection(ActionBar actionBar, int position) {
     }
 
     void addSelectionsToHideList(Context context) {

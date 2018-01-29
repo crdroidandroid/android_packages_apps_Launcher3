@@ -66,55 +66,57 @@ public class WidgetsDiffReporter {
         Iterator<WidgetListRowEntry> orgIter = orgEntries.iterator();
         Iterator<WidgetListRowEntry> newIter = newEntries.iterator();
 
-        WidgetListRowEntry orgRowEntry = orgIter.next();
-        WidgetListRowEntry newRowEntry = newIter.next();
+        WidgetListRowEntry orgRowEntry = orgIter.hasNext() ? orgIter.next() : null;
+        WidgetListRowEntry newRowEntry = newIter.hasNext() ? newIter.next() : null;
 
-        do {
-            int diff = comparePackageName(orgRowEntry, newRowEntry, comparator);
-            if (DEBUG) {
-                Log.d(TAG, String.format("diff=%d orgRowEntry (%s) newRowEntry (%s)",
-                        diff, orgRowEntry != null? orgRowEntry.toString() : null,
-                        newRowEntry != null? newRowEntry.toString() : null));
-            }
-            int index = -1;
-            if (diff < 0) {
-                index = currentEntries.indexOf(orgRowEntry);
-                mListener.notifyItemRemoved(index);
+        if (orgRowEntry != null && newRowEntry != null) {
+            do {
+                int diff = comparePackageName(orgRowEntry, newRowEntry, comparator);
                 if (DEBUG) {
-                    Log.d(TAG, String.format("notifyItemRemoved called (%d)%s", index,
-                            orgRowEntry.titleSectionName));
+                    Log.d(TAG, String.format("diff=%d orgRowEntry (%s) newRowEntry (%s)",
+                            diff, orgRowEntry != null? orgRowEntry.toString() : null,
+                            newRowEntry != null? newRowEntry.toString() : null));
                 }
-                currentEntries.remove(index);
-                orgRowEntry = orgIter.hasNext() ? orgIter.next() : null;
-            } else if (diff > 0) {
-                index = orgRowEntry != null? currentEntries.indexOf(orgRowEntry):
-                        currentEntries.size();
-                currentEntries.add(index, newRowEntry);
-                if (DEBUG) {
-                    Log.d(TAG, String.format("notifyItemInserted called (%d)%s", index,
-                            newRowEntry.titleSectionName));
-                }
-                newRowEntry = newIter.hasNext() ? newIter.next() : null;
-                mListener.notifyItemInserted(index);
-
-            } else {
-                // same package name but,
-                // did the icon, title, etc, change?
-                // or did the widget size and desc, span, etc change?
-                if (!isSamePackageItemInfo(orgRowEntry.pkgItem, newRowEntry.pkgItem) ||
-                        !orgRowEntry.widgets.equals(newRowEntry.widgets)) {
+                int index = -1;
+                if (diff < 0) {
                     index = currentEntries.indexOf(orgRowEntry);
-                    currentEntries.set(index, newRowEntry);
-                    mListener.notifyItemChanged(index);
+                    mListener.notifyItemRemoved(index);
                     if (DEBUG) {
-                        Log.d(TAG, String.format("notifyItemChanged called (%d)%s", index,
+                        Log.d(TAG, String.format("notifyItemRemoved called (%d)%s", index,
+                                orgRowEntry.titleSectionName));
+                    }
+                    currentEntries.remove(index);
+                    orgRowEntry = orgIter.hasNext() ? orgIter.next() : null;
+                } else if (diff > 0) {
+                    index = orgRowEntry != null? currentEntries.indexOf(orgRowEntry):
+                            currentEntries.size();
+                    currentEntries.add(index, newRowEntry);
+                    if (DEBUG) {
+                        Log.d(TAG, String.format("notifyItemInserted called (%d)%s", index,
                                 newRowEntry.titleSectionName));
                     }
+                    newRowEntry = newIter.hasNext() ? newIter.next() : null;
+                    mListener.notifyItemInserted(index);
+
+                } else {
+                    // same package name but,
+                    // did the icon, title, etc, change?
+                    // or did the widget size and desc, span, etc change?
+                    if (!isSamePackageItemInfo(orgRowEntry.pkgItem, newRowEntry.pkgItem) ||
+                            !orgRowEntry.widgets.equals(newRowEntry.widgets)) {
+                        index = currentEntries.indexOf(orgRowEntry);
+                        currentEntries.set(index, newRowEntry);
+                        mListener.notifyItemChanged(index);
+                        if (DEBUG) {
+                            Log.d(TAG, String.format("notifyItemChanged called (%d)%s", index,
+                                    newRowEntry.titleSectionName));
+                        }
+                    }
+                    orgRowEntry = orgIter.hasNext() ? orgIter.next() : null;
+                    newRowEntry = newIter.hasNext() ? newIter.next() : null;
                 }
-                orgRowEntry = orgIter.hasNext() ? orgIter.next() : null;
-                newRowEntry = newIter.hasNext() ? newIter.next() : null;
-            }
-        } while(orgRowEntry != null || newRowEntry != null);
+            } while(orgRowEntry != null || newRowEntry != null);
+        }
     }
 
     /**

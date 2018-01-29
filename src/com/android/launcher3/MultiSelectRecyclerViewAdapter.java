@@ -16,6 +16,7 @@
 
 package com.android.launcher3;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -32,20 +33,32 @@ import com.android.launcher3.R;
 import com.android.launcher3.SelectableAdapter;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
 
 class MultiSelectRecyclerViewAdapter extends SelectableAdapter<MultiSelectRecyclerViewAdapter.ViewHolder> {
 
     private List<Packages> mPackages;
     private ItemClickListener mClickListener;
     private PackageManager mPackageManager;
+    private final Set<String> mBlackList = new HashSet<>();
 
     MultiSelectRecyclerViewAdapter(Context context, List<ResolveInfo> resolveInfos, ItemClickListener clickListener) {
         mClickListener = clickListener;
         mPackageManager = context.getPackageManager();
+
+        mBlackList.add("com.google.android.googlequicksearchbox");
+        mBlackList.add("com.google.android.apps.wallpaper");
+        mBlackList.add("com.google.android.launcher");
         mPackages = new ArrayList<>();
         for (int i = 0; i < resolveInfos.size(); i++) {
-            mPackages.add(new Packages(resolveInfos.get(i)));
+            ResolveInfo info = resolveInfos.get(i);
+            String pn = info.activityInfo.packageName;
+            if (!mBlackList.contains(pn)) {
+                mPackages.add(new Packages(info, pn));
+            }
         }
     }
 
@@ -75,8 +88,8 @@ class MultiSelectRecyclerViewAdapter extends SelectableAdapter<MultiSelectRecycl
         private CharSequence mLabel;
         private Drawable mIcon;
 
-        public Packages(ResolveInfo info) {
-            mPackageName = info.activityInfo.packageName;
+        public Packages(ResolveInfo info, String packageName) {
+            mPackageName = packageName;
             mLabel = info.loadLabel(mPackageManager);
             mIcon = info.loadIcon(mPackageManager);
         }
@@ -123,5 +136,21 @@ class MultiSelectRecyclerViewAdapter extends SelectableAdapter<MultiSelectRecycl
 
     interface ItemClickListener {
         void onItemClicked(int position);
+    }
+
+    @Override
+    void toggleSelection(ActionBar actionBar, int position) {
+        String packageName = mPackages.get(position).getPackageName();
+        if (mSelections.contains(packageName)) {
+            mSelections.remove(packageName);
+        } else {
+            mSelections.add(packageName);
+        }
+        if (!mSelections.isEmpty()) {
+            actionBar.setTitle(String.valueOf(mSelections.size()) + mContext.getString(R.string.hide_app_selected));
+        } else {
+            actionBar.setTitle(mContext.getString(R.string.hidden_app));
+        }
+        notifyItemChanged(position);
     }
 }

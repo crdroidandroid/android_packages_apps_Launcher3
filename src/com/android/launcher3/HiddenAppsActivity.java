@@ -118,7 +118,7 @@ public class HiddenAppsActivity extends Activity implements MultiSelectRecyclerV
 
     @Override
     public void onItemClicked(int position) {
-        mAdapter.toggleSelection(mActionBar, position, mInstalledPackages.get(position).activityInfo.packageName);
+        mAdapter.toggleSelection(mActionBar, position);
         updateHiddenApps();
         recreate();
     }
