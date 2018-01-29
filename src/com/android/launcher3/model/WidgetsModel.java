@@ -177,7 +177,7 @@ public class WidgetsModel {
             if (mAppFilter == null) {
                 mAppFilter = new StringSetAppFilter(app.getContext());
             }
-            if (!mAppFilter.shouldShowApp(item.componentName.getPackageName(), app.getContext())) {
+            if (!mAppFilter.shouldShowApp(item.componentName.getPackageName(), app.getContext(), true)) {
                 if (DEBUG) {
                     Log.d(TAG, String.format("%s is filtered and not added to the widget tray.",
                             item.componentName));
