@@ -125,6 +125,7 @@ import com.android.launcher3.Flags;
 import com.android.launcher3.GestureNavContract;
 import com.android.launcher3.InvariantDeviceProfile;
 import com.android.launcher3.Launcher;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.LauncherSettings.Favorites;
 import com.android.launcher3.LauncherState;
 import com.android.launcher3.QuickstepAccessibilityDelegate;
@@ -536,10 +537,12 @@ public class QuickstepLauncher extends Launcher implements RecentsViewContainer,
         // TODO(b/444744861): Update private space apps to have its own container.
         boolean isPinnable = itemInfo instanceof ItemInfoWithIcon info
                 && (info.runtimeStatusFlags & FLAG_NOT_PINNABLE) == 0;
-        if (container == CONTAINER_HOTSEAT || container == CONTAINER_DESKTOP
-                || /* Folder */ container > 0) {
+        if (LauncherPrefs.WORKSPACE_LOCK.get(this)
+                && (container == CONTAINER_HOTSEAT || container == CONTAINER_DESKTOP
+                || /* Folder */ container > 0)) {
             shortcuts.add(REMOVE);
-        } else if (isPinnable && (container == CONTAINER_ALL_APPS
+        } else if (LauncherPrefs.WORKSPACE_LOCK.get(this) && isPinnable
+                && (container == CONTAINER_ALL_APPS
                 || container == CONTAINER_ALL_APPS_PREDICTION)) {
             shortcuts.add(ADD_TO_HOME_SCREEN);
         }

@@ -40,6 +40,7 @@ import com.android.launcher3.AbstractFloatingView;
 import com.android.launcher3.DragSource;
 import com.android.launcher3.DropTarget;
 import com.android.launcher3.DropTarget.DragObject;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.accessibility.DragViewStateAnnouncer;
 import com.android.launcher3.dragndrop.DragOptions.PreDragCondition;
@@ -659,6 +660,11 @@ public class DragController implements DragDriver.EventListener, TouchController
     @Override
     public boolean onControllerInterceptTouchEvent(MotionEvent ev) {
         if (mOptions != null && mOptions.isAccessibleDrag) {
+            return false;
+        }
+
+        if (LauncherPrefs.WORKSPACE_LOCK.get(mActivity.getDragLayer().getContext())) {
+            cancelDrag();
             return false;
         }
 
