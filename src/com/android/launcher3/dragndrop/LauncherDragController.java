@@ -40,6 +40,7 @@ import com.android.launcher3.DropTarget;
 import com.android.launcher3.DropTarget.DragObject;
 import com.android.launcher3.Launcher;
 import com.android.launcher3.R;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.accessibility.DragViewStateAnnouncer;
 import com.android.launcher3.dragndrop.DragOptions.PreDragCondition;
 import com.android.launcher3.model.data.ItemInfo;
@@ -257,6 +258,10 @@ public class LauncherDragController extends DragController<Launcher> {
     @Override
     public boolean onControllerInterceptTouchEvent(MotionEvent ev) {
         mIsInMouseRightClick = TouchUtil.isMouseRightClickDownOrMove(ev);
+        if (!Utilities.isWorkspaceEditAllowed(mActivity.getDragLayer().getContext())) {
+            cancelDrag();
+            return false;
+        }
         return super.onControllerInterceptTouchEvent(ev);
     }
 }
