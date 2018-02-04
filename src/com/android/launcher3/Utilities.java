@@ -29,6 +29,7 @@ import android.app.ActivityOptions;
 import android.app.Person;
 import android.app.WallpaperManager;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.LauncherActivityInfo;
 import android.content.pm.LauncherApps;
 import android.content.pm.ShortcutInfo;
@@ -839,5 +840,10 @@ public final class Utilities {
             default:
                 // No-Op
         }
+    }
+
+    public static boolean isWorkspaceEditAllowed(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return !prefs.getBoolean(InvariantDeviceProfile.KEY_WORKSPACE_LOCK, false);
     }
 }
