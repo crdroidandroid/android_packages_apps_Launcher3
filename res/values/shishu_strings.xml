@@ -33,6 +33,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Sub categories -->
     <string name="home_grid_title">Grid layout</string>
 
+    <!-- Icon size -->
+    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_extra_small">Tiny</string>
+    <string name="icon_size_small">Small</string>
+    <string name="icon_size_average">Default</string>
+    <string name="icon_size_large">Large</string>
+    <string name="icon_size_extra_large">Extra large</string>
+
     <!-- Gestures -->
     <string name="allow_swipe_down_clearall_title">Clear all from recents view</string>
     <string name="allow_swipe_down_clearall_desc">Swipe vertically downward in recents view to clear all apps.\n\nThis doesn\'t works if P navbar gestures are enable</string>

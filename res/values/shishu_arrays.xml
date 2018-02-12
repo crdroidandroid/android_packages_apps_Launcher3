@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
  <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Grid layout -->
     <string-array name="grid_names">
         <item>@string/num_default</item>
         <item>3</item>
@@ -33,6 +34,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>5</item>
         <item>6</item>
         <item>7</item>
+    </string-array>
+
+    <!-- Icon size -->
+    <string-array name="icon_size_names">
+        <item>@string/icon_size_extra_small</item>
+        <item>@string/icon_size_small</item>
+        <item>@string/icon_size_average</item>
+        <item>@string/icon_size_large</item>
+        <item>@string/icon_size_extra_large</item>
+    </string-array>
+
+    <string-array name="icon_size_values">
+        <item>extrasmall</item>
+        <item>small</item>
+        <item>average</item>
+        <item>large</item>
+        <item>extralarge</item>
     </string-array>
 
 </resources>

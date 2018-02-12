@@ -30,6 +30,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.provider.Settings;
 import android.view.MenuItem;
@@ -115,6 +116,17 @@ public class SettingsIcons extends SettingsActivity implements PreferenceFragmen
                     getPreferenceScreen().removePreference(iconShapeOverride);
                 }
             }
+
+            final ListPreference iconSizes = (ListPreference) findPreference(Utilities.ICON_SIZE);
+            iconSizes.setSummary(iconSizes.getEntry());
+            iconSizes.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    int index = iconSizes.findIndexOfValue((String) newValue);
+                    iconSizes.setSummary(iconSizes.getEntries()[index]);
+                    Utilities.restart(getActivity());
+                    return true;
+                }
+            });
         }
 
         @Override
@@ -184,7 +196,6 @@ public class SettingsIcons extends SettingsActivity implements PreferenceFragmen
             mBadgingPref.setWidgetFrameVisible(!serviceEnabled);
             mBadgingPref.setOnPreferenceClickListener(serviceEnabled && Utilities.ATLEAST_OREO ? null : this);
             mBadgingPref.setSummary(summary);
-
         }
 
         @Override
