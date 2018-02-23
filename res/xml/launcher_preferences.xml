@@ -59,4 +59,36 @@
         android:defaultValue=""
         android:persistent="false" />
 
+    <PreferenceCategory
+        android:key="grid_category"
+        android:title="@string/grid_category_title">
+
+    <ListPreference
+        android:key="pref_grid_columns"
+        android:title="@string/number_of_columns_title"
+        android:summary="%s"
+        android:entries="@array/grid_names"
+        android:entryValues="@array/grid_values"
+        android:defaultValue="-1"
+        android:persistent="true" />
+ 
+    <ListPreference
+        android:key="pref_grid_rows"
+        android:title="@string/number_of_rows_title"
+        android:summary="%s"
+        android:entries="@array/grid_names"
+        android:entryValues="@array/grid_values"
+        android:defaultValue="-1"
+        android:persistent="true" />
+
+ 
+    <ListPreference
+        android:key="pref_hotseat_icons"
+        android:title="@string/number_of_hotseat_title"
+        android:summary="%s"
+        android:entries="@array/grid_names"
+        android:entryValues="@array/grid_values"
+        android:defaultValue="-1"
+        android:persistent="true" />
+     </PreferenceCategory>
 </PreferenceScreen>
