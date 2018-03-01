@@ -65,6 +65,20 @@
         android:defaultValue=""
         android:persistent="false" />
 
+    <SwitchPreference
+        android:key="pref_desktop_show_label"
+        android:title="@string/desktop_show_label_title"
+        android:summary="@string/desktop_show_label_summary"
+        android:defaultValue="true"
+        android:persistent="true"/>
+
+    <SwitchPreference
+        android:key="pref_allapps_show_label"
+        android:title="@string/allapps_show_label_title"
+        android:summary="@string/allapps_show_label_summary"
+        android:defaultValue="true"
+        android:persistent="true"/>
+
     <PreferenceCategory
         android:key="grid_category"
         android:title="@string/grid_category_title">

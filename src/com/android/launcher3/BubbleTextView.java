@@ -66,6 +66,8 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver, 
     private static final int[] STATE_PRESSED = new int[] {android.R.attr.state_pressed};
 
 
+    private final int display;
+
     private static final Property<BubbleTextView, Float> BADGE_SCALE_PROPERTY
             = new Property<BubbleTextView, Float>(Float.TYPE, "badgeScale") {
         @Override
@@ -146,15 +148,25 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver, 
                 R.styleable.BubbleTextView, defStyle, 0);
         mLayoutHorizontal = a.getBoolean(R.styleable.BubbleTextView_layoutHorizontal, false);
 
-        int display = a.getInteger(R.styleable.BubbleTextView_iconDisplay, DISPLAY_WORKSPACE);
+        display = a.getInteger(R.styleable.BubbleTextView_iconDisplay, DISPLAY_WORKSPACE);
         int defaultIconSize = grid.iconSizePx;
         if (display == DISPLAY_WORKSPACE) {
-            setTextSize(TypedValue.COMPLEX_UNIT_PX, grid.iconTextSizePx);
-            setCompoundDrawablePadding(grid.iconDrawablePaddingPx);
+            if(Utilities.showDesktopLabel(context)) {
+                setTextSize(TypedValue.COMPLEX_UNIT_PX, grid.iconTextSizePx);
+                setCompoundDrawablePadding(grid.iconDrawablePaddingPx);
+            } else {
+                setTextSize(0);
+                setCompoundDrawablePadding(0);
+            }
         } else if (display == DISPLAY_ALL_APPS) {
-            setTextSize(TypedValue.COMPLEX_UNIT_PX, grid.allAppsIconTextSizePx);
-            setCompoundDrawablePadding(grid.allAppsIconDrawablePaddingPx);
             defaultIconSize = grid.allAppsIconSizePx;
+            if(Utilities.showAllAppsLabel(context)) {
+                setTextSize(TypedValue.COMPLEX_UNIT_PX, grid.iconTextSizePx);
+                setCompoundDrawablePadding(grid.iconDrawablePaddingPx);
+            } else {
+                setTextSize(0);
+                setCompoundDrawablePadding(0);
+            }
         } else if (display == DISPLAY_FOLDER) {
             setTextSize(TypedValue.COMPLEX_UNIT_PX, grid.folderChildTextSizePx);
             setCompoundDrawablePadding(grid.folderChildDrawablePaddingPx);
@@ -235,7 +247,19 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver, 
         mBadgeColor = IconPalette.getMutedColor(info.iconColor, 0.54f);
 
         setIcon(iconDrawable);
-        setText(info.title);
+
+        if(display == DISPLAY_WORKSPACE) {
+            setText(Utilities.showDesktopLabel(getContext())?info.title:"");
+        } else {
+            setText(info.title);
+        }
+
+        if(display == DISPLAY_ALL_APPS) {
+            setText(Utilities.showAllAppsLabel(getContext())?info.title:"");
+        } else {
+            setText(info.title);
+        }
+
         if (info.contentDescription != null) {
             setContentDescription(info.isDisabled()
                     ? getContext().getString(R.string.disabled_app_label, info.contentDescription)

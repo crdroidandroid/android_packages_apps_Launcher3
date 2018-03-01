@@ -29,4 +29,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="state_loading">Applying\u2026</string>
     <string name="app_drawer_category_title">App drawer</string>
 
+    <!-- Show labels on icon -->
+    <string name="desktop_show_label_title">Homescreen Apps Labels</string>
+    <string name="desktop_show_label_summary">Show labels below the icons on desktop</string>
+    <string name="allapps_show_label_title">AppDrawer Apps Labels</string>
+    <string name="allapps_show_label_summary">Show labels below the icons in app drawer</string>
+
 </resources>

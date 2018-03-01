@@ -890,7 +890,7 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
         } else {
             // Show folder title if not in the hotseat
             if (child instanceof FolderIcon) {
-                ((FolderIcon) child).setTextVisible(true);
+                ((FolderIcon) child).setTextVisible(Utilities.showDesktopLabel(getContext()));
             }
             layout = getScreenWithId(screenId);
         }
