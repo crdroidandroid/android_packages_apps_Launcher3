@@ -252,7 +252,7 @@ public class ChooseIconActivity extends Activity {
                     @Override
                     public void onClick(View v) {
                         Drawable icon = mIconsHandler.loadDrawable(
-                                mIconPackPackageName, drawables.get(holder.getAdapterPosition()), true);
+                                mIconPackPackageName, drawables.get(position), true);
                         if (icon != null) {
                             mIconCache.addCustomInfoToDataBase(icon, sItemInfo, mCurrentPackageLabel);
                             // Force model reload
