@@ -25,4 +25,4 @@
     android:paddingEnd="16dip"
     android:textAppearance="?android:attr/textAppearanceListItemSmall"
     android:ellipsize="marquee"
-    android:layout_alignParentLeft="true" />
+    android:layout_alignParentStart="true" />

@@ -27,8 +27,8 @@
         android:layout_height="@dimen/app_icon_size"
         android:layout_gravity="bottom"
         android:layout_marginEnd="6dp"
-        android:scaleType="fitCenter"
-        android:background="@*android:drawable/spinner_background_holo_dark" />
+        android:scaleType="centerInside"
+        android:foreground="@drawable/icon_pack_edit_background" />
 
     <EditText
         android:id="@+id/editText"
@@ -38,6 +38,7 @@
         android:layout_gravity="bottom"
         android:ellipsize="end"
         android:singleLine="true"
+        android:hint="@string/edit_hint"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textAlignment="viewStart"
         android:labelFor="@id/package_icon" />

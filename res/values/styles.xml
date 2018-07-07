@@ -34,6 +34,7 @@
         <item name="popupColorPrimary">#FFF</item>
         <item name="popupColorSecondary">#F5F5F5</item> <!-- Gray 100 -->
         <item name="popupColorTertiary">#E0E0E0</item> <!-- Gray 300 -->
+        <item name="popupItemColor">#e8e8e8</item>
         <item name="isMainColorDark">false</item>
         <item name="isWorkspaceDarkText">false</item>
         <item name="workspaceTextColor">@android:color/white</item>
@@ -69,6 +70,7 @@
         <item name="popupColorPrimary">?android:attr/colorPrimary</item>
         <item name="popupColorSecondary">#424242</item> <!-- Gray 800 -->
         <item name="popupColorTertiary">#757575</item> <!-- Gray 600 -->
+        <item name="popupItemColor">#343434</item>
         <item name="widgetsTheme">@style/WidgetContainerTheme.Dark</item>
         <item name="isMainColorDark">true</item>
     </style>
@@ -291,8 +293,14 @@
     </style>
 
     <!-- Icon pack -->
-    <style name="AlertDialogCustom">
+    <style name="EditIconDialogStyle">
         <item name="android:backgroundTint">?attr/popupColorSecondary</item>
         <item name="android:outlineProvider">none</item>
     </style>
+
+    <style name="EditIconStyle">
+        <item name="android:backgroundTint">?attr/popupItemColor</item>
+        <item name="android:outlineProvider">none</item>
+    </style>
+
 </resources>
