@@ -42,6 +42,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.R;
+import com.android.launcher3.Utilities;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.widget.SettingsBasePreferenceFragment;
@@ -144,6 +145,10 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
 
         private boolean mPreferenceHighlighted = false;
 
+        private static final String KEY_MINUS_ONE = "pref_enable_minus_one";
+
+        private Preference mShowGoogleAppPref;
+
         @Override
         public void onCreate(@Nullable Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -162,6 +167,9 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
             setPreferencesFromResource(R.xml.launcher_home_screen_preferences, rootKey);
 
             PreferenceScreen screen = getPreferenceScreen();
+
+            mShowGoogleAppPref = screen.findPreference(KEY_MINUS_ONE);
+            updateIsGoogleAppEnabled();
 
             // If the target preference is not in the current preference screen, find the parent
             // preference screen that contains the target preference and set it as the preference
@@ -242,6 +250,12 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
             outState.putBoolean(SAVE_HIGHLIGHTED_KEY, mPreferenceHighlighted);
         }
 
+        private void updateIsGoogleAppEnabled() {
+            if (mShowGoogleAppPref != null) {
+                mShowGoogleAppPref.setEnabled(Utilities.isGSAEnabled(getContext()));
+            }
+        }
+
         @Override
         public void onResume() {
             super.onResume();
@@ -253,6 +267,7 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
                     mPreferenceHighlighted = true;
                 }
             }
+            updateIsGoogleAppEnabled();
 
             if (mRestartOnResume) {
                 recreateActivityNow();
