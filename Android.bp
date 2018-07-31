@@ -400,6 +400,7 @@ android_library {
         "dagger2",
         "jsr330",
         "com_android_systemui_shared_flags_lib",
+        "libGoogleFeed",
         "SettingsLib",
     ],
     manifest: "AndroidManifest-common.xml",
@@ -456,6 +457,13 @@ android_app {
     lint: {
         baseline_filename: "lint-baseline.xml",
     },
+}
+
+java_import {
+    name: "libGoogleFeed",
+    jars: [
+        "libs/libGoogleFeed.jar",
+    ],
 }
 
 // Library with all the dependencies for building quickstep
