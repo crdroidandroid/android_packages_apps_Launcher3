@@ -151,6 +151,10 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
         private String mHighLightKey;
         private boolean mPreferenceHighlighted = false;
 
+        private static final String KEY_MINUS_ONE = "pref_enable_minus_one";
+
+        private Preference mShowGoogleAppPref;
+
         @Override
         public void onCreate(@Nullable Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -167,6 +171,9 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
 
             getPreferenceManager().setSharedPreferencesName(LauncherFiles.SHARED_PREFERENCES_KEY);
             setPreferencesFromResource(R.xml.launcher_home_screen_preferences, rootKey);
+
+            mShowGoogleAppPref = getPreferenceScreen().findPreference(KEY_MINUS_ONE);
+            updateIsGoogleAppEnabled();
 
             if (getActivity() != null && !TextUtils.isEmpty(getPreferenceScreen().getTitle())) {
                 getActivity().setTitle(getPreferenceScreen().getTitle());
@@ -197,6 +204,12 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
             outState.putBoolean(SAVE_HIGHLIGHTED_KEY, mPreferenceHighlighted);
         }
 
+        private void updateIsGoogleAppEnabled() {
+            if (mShowGoogleAppPref != null) {
+                mShowGoogleAppPref.setEnabled(Utilities.isGSAEnabled(getContext()));
+            }
+        }
+
         @Override
         public void onResume() {
             super.onResume();
@@ -208,6 +221,7 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
                     mPreferenceHighlighted = true;
                 }
             }
+            updateIsGoogleAppEnabled();
 
             if (mRestartOnResume) {
                 recreateActivityNow();
