@@ -45,6 +45,12 @@
         android:title="@string/interface_category_title">
 
         <SwitchPreference
+            android:key="pref_enable_minus_one"
+            android:title="@string/title_show_google_app"
+            android:summary="@string/pref_show_google_now_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreference
             android:key="pref_desktop_show_labels"
             android:title="@string/desktop_show_labels"
             android:defaultValue="true"
