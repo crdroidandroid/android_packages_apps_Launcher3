@@ -153,6 +153,7 @@ android_library {
         "androidx.cardview_cardview",
         "com.google.android.material_material",
         "iconloader_base",
+        "libGoogleFeed",
         "SettingsLib",
         "view_capture"
     ],
@@ -224,6 +225,13 @@ android_app {
     lint: {
         baseline_filename: "lint-baseline-launcher3.xml",
     },
+}
+
+java_import {
+    name: "libGoogleFeed",
+    jars: [
+        "libs/libGoogleFeed.jar",
+    ],
 }
 
 // Library with all the dependencies for building quickstep
