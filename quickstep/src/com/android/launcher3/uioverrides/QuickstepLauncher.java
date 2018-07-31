@@ -138,6 +138,7 @@ import com.android.quickstep.util.ViewCapture;
 import com.android.quickstep.views.OverviewActionsView;
 import com.android.quickstep.views.RecentsView;
 import com.android.quickstep.views.TaskView;
+import com.android.systemui.plugins.shared.LauncherOverlayManager;
 import com.android.systemui.shared.system.ActivityManagerWrapper;
 import com.android.systemui.shared.system.RemoteAnimationTargetCompat;
 import com.android.systemui.unfold.UnfoldTransitionFactory;
@@ -182,6 +183,11 @@ public class QuickstepLauncher extends Launcher {
     private PendingSplitSelectInfo mPendingSplitSelectInfo = null;
 
     private SafeCloseable mViewCapture;
+
+    @Override
+    protected LauncherOverlayManager getDefaultOverlay() {
+        return new OverlayCallbackImpl(this);
+    }
 
     @Override
     protected void setupViews() {
