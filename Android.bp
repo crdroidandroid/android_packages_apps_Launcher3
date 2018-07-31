@@ -179,6 +179,7 @@ android_library {
         "androidx.window_window",
         "com.google.android.material_material",
         "iconloader_base",
+        "libGoogleFeed",
         "SettingsLib",
         "view_capture",
         "animationlib",
@@ -261,6 +262,13 @@ android_app {
     lint: {
         baseline_filename: "lint-baseline.xml",
     },
+}
+
+java_import {
+    name: "libGoogleFeed",
+    jars: [
+        "libs/libGoogleFeed.jar",
+    ],
 }
 
 // Library with all the dependencies for building quickstep
