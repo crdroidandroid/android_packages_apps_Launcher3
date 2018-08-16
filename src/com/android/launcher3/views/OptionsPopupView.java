@@ -25,6 +25,7 @@ import android.graphics.RectF;
 import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -188,14 +189,7 @@ public class OptionsPopupView extends ArrowPopup
                 .putExtra(EXTRA_WALLPAPER_OFFSET,
                         launcher.getWorkspace().getWallpaperOffsetForCenterPage());
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-
-        String pickerPackage = launcher.getString(R.string.wallpaper_picker_package);
-        if (!TextUtils.isEmpty(pickerPackage)) {
-            intent.setPackage(pickerPackage);
-        } else {
-            // If there is no target package, use the default intent chooser animation
-            intent.putExtra(INTENT_EXTRA_IGNORE_LAUNCH_ANIMATION, true);
-        }
+        intent.putExtra(INTENT_EXTRA_IGNORE_LAUNCH_ANIMATION, true);
         return launcher.startActivitySafely(v, intent, null);
     }
 
