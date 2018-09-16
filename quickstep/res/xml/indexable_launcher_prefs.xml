@@ -29,6 +29,13 @@
         android:defaultValue="@bool/allow_rotation"
         android:persistent="true" />
 
+    <SwitchPreference
+        android:key="pref_allowSwipeDownClearAll"
+        android:title="@string/allow_swipe_down_clearall_title"
+        android:summary="@string/allow_swipe_down_clearall_desc"
+        android:defaultValue="@bool/allow_swipe_down_clearall"
+        android:persistent="true" />
+
     <ListPreference
         android:key="pref_override_icon_shape"
         android:title="@string/icon_shape_override_label"

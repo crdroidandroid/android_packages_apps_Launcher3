@@ -22,6 +22,13 @@
         android:summary="@string/pref_show_google_now_summary"
         android:defaultValue="true"/>
 
+    <SwitchPreference
+        android:key="pref_allowSwipeDownClearAll"
+        android:title="@string/allow_swipe_down_clearall_title"
+        android:summary="@string/allow_swipe_down_clearall_desc"
+        android:defaultValue="@bool/allow_swipe_down_clearall"
+        android:persistent="true" />
+
     <com.android.launcher3.views.ButtonPreference
         android:key="pref_icon_badging"
         android:title="@string/icon_badging_title"
