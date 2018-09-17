@@ -28,6 +28,15 @@ LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_SDK_VERSION := current
 include $(BUILD_PREBUILT)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := gsa
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_SRC_FILES := searchlauncher/libs/gsa.jar
+LOCAL_UNINSTALLABLE_MODULE := true
+LOCAL_SDK_VERSION := current
+include $(BUILD_PREBUILT)
+
 #
 # Build rule for Launcher3 dependencies lib.
 #
@@ -210,6 +219,59 @@ LOCAL_MANIFEST_FILE := quickstep/AndroidManifest.xml
 LOCAL_JACK_COVERAGE_INCLUDE_FILTER := com.android.launcher3.*
 include $(BUILD_PACKAGE)
 
+include $(CLEAR_VARS)
+
+LOCAL_MODULE_TAGS := optional
+
+LOCAL_STATIC_JAVA_LIBRARIES := \
+    android-support-annotations \
+    libSharedSystemUI \
+    gsa
+
+LOCAL_STATIC_ANDROID_LIBRARIES := \
+    android-support-compat \
+    android-support-media-compat \
+    android-support-core-utils \
+    android-support-core-ui \
+    android-support-fragment \
+    android-support-v7-recyclerview \
+    android-support-dynamic-animation
+
+LOCAL_SRC_FILES := \
+    $(call all-java-files-under, src) \
+    $(call all-java-files-under, quickstep/src) \
+    $(call all-java-files-under, searchlauncher/src) \
+    $(call all-java-files-under, src_flags) \
+    $(call all-proto-files-under, protos) \
+    $(call all-proto-files-under, proto_overrides)
+
+LOCAL_RESOURCE_DIR := \
+    $(LOCAL_PATH)/quickstep/res \
+    $(LOCAL_PATH)/searchlauncher/res \
+    $(LOCAL_PATH)/res \
+
+LOCAL_PROGUARD_ENABLED := disabled
+
+LOCAL_PROTOC_OPTIMIZE_TYPE := nano
+LOCAL_PROTOC_FLAGS := --proto_path=$(LOCAL_PATH)/protos/ --proto_path=$(LOCAL_PATH)/proto_overrides/
+LOCAL_PROTO_JAVA_OUTPUT_PARAMS := enum_style=java
+
+LOCAL_USE_AAPT2 := true
+
+LOCAL_SDK_VERSION := system_current
+LOCAL_MIN_SDK_VERSION := 26
+LOCAL_PACKAGE_NAME := SearchLauncherQuickStep
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_OVERRIDES_PACKAGES := Home Launcher2 Launcher3 Launcher3QuickStep
+
+LOCAL_FULL_LIBS_MANIFEST_FILES := \
+    $(LOCAL_PATH)/searchlauncher/AndroidManifest.xml \
+    $(LOCAL_PATH)/AndroidManifest-common.xml
+
+LOCAL_MANIFEST_FILE := quickstep/AndroidManifest.xml
+LOCAL_JACK_COVERAGE_INCLUDE_FILTER := com.android.launcher3.*
+
+include $(BUILD_PACKAGE)
 
 # ==================================================
 include $(call all-makefiles-under,$(LOCAL_PATH))
