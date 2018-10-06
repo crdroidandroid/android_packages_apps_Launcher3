@@ -18,6 +18,7 @@ package com.android.launcher3;
 
 import android.app.ActivityOptions;
 import android.content.ActivityNotFoundException;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
@@ -26,6 +27,7 @@ import android.os.Bundle;
 import android.os.Process;
 import android.os.StrictMode;
 import android.os.UserHandle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.ActionMode;
 import android.view.Surface;
@@ -56,6 +58,9 @@ public abstract class BaseDraggingActivity extends BaseActivity
     // automatically when user interacts with the launcher.
     public static final Object AUTO_CANCEL_ACTION_MODE = new Object();
 
+    /** The system setting for System Themes **/
+    private static final String SYSTEM_THEME_STYLE = "system_theme_style";
+
     private ActionMode mCurrentActionMode;
     protected boolean mIsSafeModeEnabled;
 
@@ -77,8 +82,8 @@ public abstract class BaseDraggingActivity extends BaseActivity
         int themeRes = getThemeRes(wallpaperColorInfo);
         if (themeRes != mThemeRes) {
             mThemeRes = themeRes;
-            setTheme(themeRes);
         }
+        updateTheme(wallpaperColorInfo);
     }
 
     @Override
@@ -95,6 +100,35 @@ public abstract class BaseDraggingActivity extends BaseActivity
         } else {
             return wallpaperColorInfo.supportsDarkText() ?
                     R.style.AppTheme_DarkText : R.style.AppTheme;
+        }
+    }
+
+    protected void updateTheme(WallpaperColorInfo wallpaperColorInfo) {
+        ContentResolver resolver = this.getContentResolver();
+        final boolean supportsDarkText = wallpaperColorInfo.supportsDarkText();
+        final int systemTheme = Settings.System.getInt(resolver, SYSTEM_THEME_STYLE, 0);
+        switch (systemTheme) {
+            case 1:
+                setTheme(supportsDarkText ? R.style.LauncherTheme_DarkText : R.style.LauncherTheme);
+                break;
+            case 2:
+                setTheme(supportsDarkText ? R.style.LauncherTheme_Dark_DarkText : R.style.LauncherTheme_Dark);
+                break;
+            case 3:
+                setTheme(supportsDarkText ? R.style.LauncherTheme_Black_DarkText : R.style.LauncherTheme_Black);
+                break;
+            case 4: case 6: case 8:
+                setTheme(supportsDarkText ? R.style.LauncherTheme_Shishu_DarkText : R.style.LauncherTheme_ShishuThemes);
+                break;
+            case 5:
+                setTheme(supportsDarkText ? R.style.LauncherTheme_Shishu_DarkText : R.style.LauncherTheme_ShishuNightsTheme);
+                break;
+            case 7:
+                setTheme(supportsDarkText ? R.style.LauncherTheme_Shishu_DarkText : R.style.LauncherTheme_ShishuImmensityTheme);
+                break;
+            default:
+                setTheme(mThemeRes);
+                break;
         }
     }
 
