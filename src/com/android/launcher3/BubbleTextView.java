@@ -24,6 +24,8 @@ import static com.android.launcher3.BubbleTextView.RunningAppState.MINIMIZED;
 import static com.android.launcher3.BubbleTextView.RunningAppState.RUNNING;
 import static com.android.launcher3.Flags.enableContrastTiles;
 import static com.android.launcher3.Flags.enableScalabilityForDesktopExperience;
+import static com.android.launcher3.LauncherPrefs.SHOW_DESKTOP_LABELS;
+import static com.android.launcher3.LauncherPrefs.SHOW_DRAWER_LABELS;
 import static com.android.launcher3.UtilitiesKt.drawWorkspaceItemSelectionHighlight;
 import static com.android.launcher3.graphics.AutomatedIconDelegate.newAutomatedIcon;
 import static com.android.launcher3.graphics.PreloadIconDelegate.extractPreloadDelegate;
@@ -45,6 +47,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -303,6 +306,8 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
     @ViewDebug.ExportedProperty(category = "launcher")
     private boolean mDisableRelayout = false;
 
+    private boolean mShouldShowLabel;
+
     private CancellableTask mIconLoadRequest;
 
     private boolean mHighResUpdateInProgress = false;
@@ -339,6 +344,7 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
                     mDeviceProfile.getWorkspaceProfile().getIconDrawablePaddingPx());
             defaultIconSize = mDeviceProfile.getWorkspaceProfile().getIconSizePx();
             setCenterVertically(mDeviceProfile.getWorkspaceProfile().getIconCenterVertically());
+            mShouldShowLabel = SHOW_DESKTOP_LABELS.get(context);
         } else if (mDisplay == DISPLAY_ALL_APPS || mDisplay == DISPLAY_PREDICTION_ROW
                 || mDisplay == DISPLAY_SEARCH_RESULT_APP_ROW) {
             setTextSize(TypedValue.COMPLEX_UNIT_PX,
@@ -346,19 +352,23 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
             setCompoundDrawablePadding(
                     mDeviceProfile.getAllAppsProfile().getIconDrawablePaddingPx());
             defaultIconSize = mDeviceProfile.getAllAppsProfile().getIconSizePx();
+            mShouldShowLabel = SHOW_DRAWER_LABELS.get(context);
         } else if (mDisplay == DISPLAY_FOLDER) {
             setTextSize(TypedValue.COMPLEX_UNIT_PX,
                     mDeviceProfile.getFolderProfile().getChildTextSizePx());
             setCompoundDrawablePadding(
                     mDeviceProfile.getFolderProfile().getChildDrawablePaddingPx());
             defaultIconSize = mDeviceProfile.getFolderProfile().getChildIconSizePx();
+            mShouldShowLabel = SHOW_DESKTOP_LABELS.get(context);
         } else if (mDisplay == DISPLAY_SEARCH_RESULT) {
             setTextSize(TypedValue.COMPLEX_UNIT_PX,
                     mDeviceProfile.getAllAppsProfile().getIconTextSizePx());
             defaultIconSize = getResources().getDimensionPixelSize(R.dimen.search_row_icon_size);
+            mShouldShowLabel = SHOW_DESKTOP_LABELS.get(context);
         } else if (mDisplay == DISPLAY_SEARCH_RESULT_SMALL) {
             defaultIconSize = getResources().getDimensionPixelSize(
                     R.dimen.search_row_small_icon_size);
+            mShouldShowLabel = SHOW_DESKTOP_LABELS.get(context);
         } else if (mDisplay == DISPLAY_TASKBAR) {
             float iconSize;
             if (mDeviceProfile.getTaskbarProfile().isTransientTaskbar()) {
@@ -370,6 +380,7 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
         } else {
             // widget_selection or shortcut_popup
             defaultIconSize = mDeviceProfile.getWorkspaceProfile().getIconSizePx();
+            mShouldShowLabel = SHOW_DESKTOP_LABELS.get(context);
         }
 
 
@@ -746,7 +757,7 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
 
     private void applyLabel(@Nullable CharSequence label, @Nullable CharSequence contentDescription,
             boolean isTextWithArchivingIcon, boolean isItemDisabled) {
-        if (label != null) {
+        if (mShouldShowLabel && label != null) {
             mLastOriginalText = label;
             mLastModifiedText = mLastOriginalText;
             mBreakPointsIntArray = StringMatcherUtility.getListOfBreakpoints(label, MATCHER);
@@ -1213,6 +1224,10 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
         }
 
         return mIcon.getBounds().height();
+    }
+
+    public boolean shouldShowLabel() {
+        return mShouldShowLabel;
     }
 
     /**
