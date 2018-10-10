@@ -43,4 +43,16 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/interface_category_title">
+
+        <SwitchPreferenceCompat
+            android:key="pref_desktop_show_labels"
+            android:title="@string/desktop_show_labels"
+            android:defaultValue="true"
+            android:persistent="true"
+            launcher:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
 </androidx.preference.PreferenceScreen>
