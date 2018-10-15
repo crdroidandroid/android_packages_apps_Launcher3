@@ -20,7 +20,7 @@
         <widget
             android:label="My custom widget"
             android:initialLayout="@layout/sample_widget_layout"
-            android:icon="@drawable/ic_launcher_home"
+            android:icon="@mipmap/ic_launcher_icon"
             android:resizeMode="horizontal|vertical"
             launcher:numRows="2"
             launcher:numColumns="3"
