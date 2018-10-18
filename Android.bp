@@ -55,6 +55,5 @@ java_library {
 
     srcs: ["src_plugins/**/*.java"],
 
-    sdk_version: "current",
-    min_sdk_version: "28",
+    platform_apis: true,
 }
