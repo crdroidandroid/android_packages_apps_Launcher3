@@ -33,7 +33,8 @@ endif
 LOCAL_SRC_FILES := \
     $(call all-java-files-under, src_plugins)
 
-LOCAL_SDK_VERSION := current
+LOCAL_PRIVATE_PLATFORM_APIS := true
+LOCAL_CERTIFICATE := platform
 LOCAL_MIN_SDK_VERSION := 28
 LOCAL_MODULE := LauncherPluginLib
 
@@ -68,8 +69,8 @@ LOCAL_PROTOC_OPTIMIZE_TYPE := nano
 LOCAL_PROTOC_FLAGS := --proto_path=$(LOCAL_PATH)/protos/ --proto_path=$(LOCAL_PATH)/proto_overrides/
 LOCAL_PROTO_JAVA_OUTPUT_PARAMS := enum_style=java
 
-LOCAL_SDK_VERSION := current
-LOCAL_MIN_SDK_VERSION := 21
+LOCAL_PRIVATE_PLATFORM_APIS := true
+LOCAL_CERTIFICATE := platform
 LOCAL_MODULE := Launcher3CommonDepsLib
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_MANIFEST_FILE := AndroidManifest-common.xml
@@ -96,8 +97,8 @@ LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 # Proguard is disable for testing. Derivarive prjects to keep proguard enabled
 LOCAL_PROGUARD_ENABLED := disabled
 
-LOCAL_SDK_VERSION := current
-LOCAL_MIN_SDK_VERSION := 21
+LOCAL_PRIVATE_PLATFORM_APIS := true
+LOCAL_CERTIFICATE := platform
 LOCAL_PACKAGE_NAME := Launcher3
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_PRODUCT_MODULE := true
@@ -127,8 +128,8 @@ LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/go/res
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
-LOCAL_SDK_VERSION := current
-LOCAL_MIN_SDK_VERSION := 21
+LOCAL_PRIVATE_PLATFORM_APIS := true
+LOCAL_CERTIFICATE := platform
 LOCAL_PACKAGE_NAME := Launcher3Go
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_PRODUCT_MODULE := true
@@ -199,6 +200,7 @@ else
 endif
 LOCAL_PACKAGE_NAME := Launcher3QuickStep
 LOCAL_PRIVILEGED_MODULE := true
+LOCAL_CERTIFICATE := platform
 LOCAL_PRODUCT_MODULE := true
 LOCAL_OVERRIDES_PACKAGES := Home Launcher2 Launcher3
 LOCAL_REQUIRED_MODULES := privapp_whitelist_com.android.launcher3
