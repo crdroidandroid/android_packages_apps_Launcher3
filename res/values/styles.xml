@@ -55,6 +55,7 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">#00000000</item>
         <item name="android:navigationBarColor">#00000000</item>
+        <item name="fastscrollerTextColor">#FFFFFF</item>
     </style>
 
     <style name="LauncherTheme.DarkMainColor" parent="@style/LauncherTheme">
@@ -96,6 +97,7 @@
         <item name="folderTextColor">@android:color/white</item>
         <item name="isMainColorDark">true</item>
         <item name="loadingIconColor">#99FFFFFF</item>
+        <item name="fastscrollerTextColor">#000000</item>
     </style>
 
     <style name="LauncherTheme.Dark.DarkMainColor" parent="@style/LauncherTheme.Dark">
@@ -159,7 +161,7 @@
         <item name="android:alpha">0</item>
         <item name="android:elevation">3dp</item>
         <item name="android:saveEnabled">false</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">?attr/fastscrollerTextColor</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:importantForAccessibility">no</item>
     </style>
