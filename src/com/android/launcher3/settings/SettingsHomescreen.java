@@ -22,12 +22,15 @@ import android.app.Fragment;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
 
 import com.android.launcher3.LauncherFiles;
+import com.android.launcher3.LauncherTab;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.config.FeatureFlags;
@@ -36,11 +39,13 @@ import com.android.launcher3.uioverrides.plugins.PluginManagerWrapper;
 import com.android.launcher3.util.SecureSettingsObserver;
 
 import androidx.preference.Preference;
+import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceFragment.OnPreferenceStartFragmentCallback;
 import androidx.preference.PreferenceFragment.OnPreferenceStartScreenCallback;
 import androidx.preference.PreferenceGroup.PreferencePositionCallback;
 import androidx.preference.PreferenceScreen;
+import androidx.preference.SwitchPreference;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
@@ -56,6 +61,7 @@ public class SettingsHomescreen extends Activity
     public static final String SAVE_HIGHLIGHTED_KEY = "android:preference_highlighted";
 
     public static final String GRID_OPTIONS_PREFERENCE_KEY = "pref_grid_options";
+    public static final String KEY_FEED_INTEGRATION = "pref_feed_integration";
 
     @Override
     protected void onCreate(final Bundle bundle) {
@@ -85,7 +91,7 @@ public class SettingsHomescreen extends Activity
                 c.getPackageManager().setComponentEnabledSetting(cn, newValue,
                         PackageManager.DONT_KILL_APP);
             }
-        } else if (Utilities.KEY_SHOW_SEARCHBAR.equals(key)) {
+        } else if (Utilities.KEY_SHOW_SEARCHBAR.equals(key) || KEY_FEED_INTEGRATION.equals(key)) {
             LauncherAppState.getInstanceNoCreate().setNeedsRestart();
         }
     }
@@ -170,6 +176,8 @@ public class SettingsHomescreen extends Activity
                     return Utilities.isDevelopersOptionsEnabled(getContext()) &&
                             Utilities.IS_DEBUG_DEVICE &&
                             Utilities.existsStyleWallpapers(getContext());
+                case KEY_FEED_INTEGRATION:
+                    return LauncherAppState.getInstanceNoCreate().isSearchAppAvailable();
             }
             return true;
         }

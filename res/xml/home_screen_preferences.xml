@@ -2,6 +2,12 @@
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <SwitchPreference
+        android:defaultValue="true"
+        android:key="pref_feed_integration"
+        android:persistent="true"
+        android:title="@string/settings_feed" />
+
+    <SwitchPreference
         android:key="pref_show_searchbar"
         android:title="@string/show_searchbar_title"
         android:summary="@string/show_searchbar_summary"
