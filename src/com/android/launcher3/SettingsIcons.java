@@ -123,7 +123,7 @@ public class SettingsIcons extends SettingsActivity implements PreferenceFragmen
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     int index = iconSizes.findIndexOfValue((String) newValue);
                     iconSizes.setSummary(iconSizes.getEntries()[index]);
-                    Utilities.restart(getActivity());
+                    SettingsActivity.restartNeeded = true;
                     return true;
                 }
             });
