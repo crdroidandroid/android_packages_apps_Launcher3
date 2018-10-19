@@ -648,4 +648,9 @@ public final class Utilities {
         msg.setAsynchronous(true);
         handler.sendMessage(msg);
     }
+
+    static boolean hasFeedIntegration(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(SettingsActivity.KEY_FEED_INTEGRATION, true);
+    }
 }
