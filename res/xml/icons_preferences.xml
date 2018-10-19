@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.android.launcher3.preferences.IconPackPreference
-        android:key="pref_iconPackPackage"
-        android:title="@string/icon_pack"
-        android:summary="@string/icon_pack_summary"
-        android:persistent="true" />
-
     <com.android.launcher3.views.ButtonPreference
         android:key="pref_icon_badging"
         android:title="@string/icon_badging_title"
@@ -27,22 +21,34 @@
         android:defaultValue="true"
         android:persistent="true" />
 
-    <ListPreference
-        android:key="pref_override_icon_shape"
-        android:title="@string/icon_shape_override_label"
-        android:summary="%s"
-        android:entries="@array/icon_shape_override_paths_names"
-        android:entryValues="@array/icon_shape_override_paths_values"
-        android:defaultValue=""
-        android:persistent="false" />
+    <PreferenceCategory
+        android:key="icon_layout_category"
+        android:title="@string/icon_layout_title">
 
-    <ListPreference
-        android:key="pref_icon_size"
-        android:title="@string/icon_size_title"
-        android:summary="%s"
-        android:entries="@array/icon_size_names"
-        android:entryValues="@array/icon_size_values"
-        android:defaultValue="average"
-        android:persistent="true" />
+        <com.android.launcher3.preferences.IconPackPreference
+            android:key="pref_iconPackPackage"
+            android:title="@string/icon_pack"
+            android:summary="@string/icon_pack_summary"
+            android:persistent="true" />
+
+        <ListPreference
+            android:key="pref_override_icon_shape"
+            android:title="@string/icon_shape_override_label_custom"
+            android:summary="%s"
+            android:entries="@array/icon_shape_override_paths_names"
+            android:entryValues="@array/icon_shape_override_paths_values"
+            android:defaultValue=""
+            android:persistent="false" />
+
+        <ListPreference
+            android:key="pref_icon_size"
+            android:title="@string/icon_size_title"
+            android:summary="%s"
+            android:entries="@array/icon_size_names"
+            android:entryValues="@array/icon_size_values"
+            android:defaultValue="average"
+            android:persistent="true" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
