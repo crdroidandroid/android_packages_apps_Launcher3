@@ -147,7 +147,7 @@ public class OptionsPopupView extends ArrowPopup
                 ControlType.WALLPAPER_BUTTON, OptionsPopupView::startWallpaperPicker));
         options.add(new OptionItem(R.string.widget_button_text, R.drawable.ic_widget,
                 ControlType.WIDGETS_BUTTON, OptionsPopupView::onWidgetsClicked));
-        options.add(new OptionItem(R.string.settings_button_text, R.drawable.ic_setting,
+        options.add(new OptionItem(R.string.settings_title, R.drawable.ic_setting,
                 ControlType.SETTINGS_BUTTON, OptionsPopupView::startSettings));
 
         show(launcher, target, options);

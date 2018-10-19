@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:key="pref_feed_integration"
+        android:title="@string/google_feed_title"
+        android:summary="@string/google_feed_summary"
+        android:defaultValue="true"
+        android:persistent="true" />
+
+    <ListPreference
+        android:key="pref_hotseat_icons"
+        android:title="@string/number_of_hotseat_title"
+        android:summary="%s"
+        android:entries="@array/grid_names"
+        android:entryValues="@array/grid_values"
+        android:defaultValue="-1"
+        android:persistent="true" />
+
+    <SwitchPreference
+        android:key="pref_desktop_show_label"
+        android:title="@string/app_show_label_title"
+        android:summary="@string/desktop_show_label_summary"
+        android:defaultValue="true"
+        android:persistent="true"/>
+
+    <SwitchPreference
+        android:key="pref_allowRotation"
+        android:title="@string/allow_rotation_title"
+        android:summary="@string/allow_rotation_desc"
+        android:defaultValue="@bool/allow_rotation"
+        android:persistent="true" />
+
+    <PreferenceCategory
+        android:key="home_grid_category"
+        android:title="@string/home_grid_title">
+
+        <ListPreference
+            android:key="pref_grid_columns"
+            android:title="@string/number_of_columns_title"
+            android:summary="%s"
+            android:entries="@array/grid_names"
+            android:entryValues="@array/grid_values"
+            android:defaultValue="-1"
+            android:persistent="true" />
+
+        <ListPreference
+            android:key="pref_grid_rows"
+            android:title="@string/number_of_rows_title"
+            android:summary="%s"
+            android:entries="@array/grid_names"
+            android:entryValues="@array/grid_values"
+            android:defaultValue="-1"
+            android:persistent="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -2470,7 +2470,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        if (SettingsActivity.KEY_FEED_INTEGRATION.equals(key)) {
+        if (SettingsHomescreen.KEY_FEED_INTEGRATION.equals(key)) {
             if (mLauncherTab == null) {
                     return;
             }

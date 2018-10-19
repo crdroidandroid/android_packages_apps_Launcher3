@@ -36,7 +36,7 @@ import com.android.launcher3.util.SettingsObserver;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 
-import static com.android.launcher3.SettingsActivity.NOTIFICATION_BADGING;
+import static com.android.launcher3.SettingsIcons.NOTIFICATION_BADGING;
 
 public class LauncherAppState {
 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:key="pref_allapps_show_label"
+        android:title="@string/app_show_label_title"
+        android:summary="@string/allapps_show_label_summary"
+        android:defaultValue="true"
+        android:persistent="true"/>
+
+</PreferenceScreen>
+

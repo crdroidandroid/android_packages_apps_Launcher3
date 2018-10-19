@@ -16,99 +16,52 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.android.launcher3.views.ButtonPreference
-        android:key="pref_icon_badging"
-        android:title="@string/icon_badging_title"
-        android:persistent="false"
-        android:widgetLayout="@layout/notification_pref_warning" >
-        <intent android:action="android.settings.NOTIFICATION_SETTINGS">
-            <!-- This extra highlights the "Allow icon badges" field in Notification settings -->
-            <extra
-                android:name=":settings:fragment_args_key"
-                android:value="notification_badging" />
-        </intent>
-    </com.android.launcher3.views.ButtonPreference>
+    <Preference
+        android:key="icons"
+        android:title="@string/icons_category_title"
+        android:summary="@string/icons_category_summary"
+        android:icon="@drawable/icons"
+        android:layout="@layout/settings_layout">
+        <intent
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:targetPackage="com.android.launcher3"
+            android:targetClass="com.android.launcher3.SettingsIcons" />
+    </Preference>
 
-    <SwitchPreference
-        android:defaultValue="true"
-        android:key="pref_feed_integration"
-        android:persistent="true"
-        android:title="@string/settings_feed" />
+    <Preference
+        android:key="home_screen"
+        android:title="@string/home_category_title"
+        android:summary="@string/home_category_summary"
+        android:icon="@drawable/homescreen"
+        android:layout="@layout/settings_layout">
+    <intent
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:targetPackage="com.android.launcher3"
+            android:targetClass="com.android.launcher3.SettingsHomescreen" />
+    </Preference>
 
-    <SwitchPreference
-        android:key="pref_add_icon_to_home"
-        android:title="@string/auto_add_shortcuts_label"
-        android:summary="@string/auto_add_shortcuts_description"
-        android:defaultValue="true"
-        android:persistent="true" />
+    <Preference
+        android:key="app_drawer"
+        android:title="@string/app_drawer_category_title"
+        android:summary="@string/app_drawer_category_summary"
+        android:icon="@drawable/appdrawer"
+        android:layout="@layout/settings_layout">
+    <intent
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:targetPackage="com.android.launcher3"
+            android:targetClass="com.android.launcher3.SettingsAppDrawer" />
+    </Preference>
 
-    <SwitchPreference
-        android:key="pref_allowRotation"
-        android:title="@string/allow_rotation_title"
-        android:summary="@string/allow_rotation_desc"
-        android:defaultValue="@bool/allow_rotation"
-        android:persistent="true" />
+    <Preference
+        android:key="miscellaneous"
+        android:title="@string/misc_category_title"
+        android:summary="@string/misc_category_summary"
+        android:icon="@drawable/misc_preference"
+        android:layout="@layout/settings_layout">
+    <intent
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:targetPackage="com.android.launcher3"
+            android:targetClass="com.android.launcher3.SettingsMisc" />
+    </Preference>
 
-    <SwitchPreference
-        android:key="pref_allowSwipeDownClearAll"
-        android:title="@string/allow_swipe_down_clearall_title"
-        android:summary="@string/allow_swipe_down_clearall_desc"
-        android:defaultValue="@bool/allow_swipe_down_clearall"
-        android:persistent="true" />
-
-    <ListPreference
-        android:key="pref_override_icon_shape"
-        android:title="@string/icon_shape_override_label"
-        android:summary="%s"
-        android:entries="@array/icon_shape_override_paths_names"
-        android:entryValues="@array/icon_shape_override_paths_values"
-        android:defaultValue=""
-        android:persistent="false" />
-
-    <SwitchPreference
-        android:key="pref_desktop_show_label"
-        android:title="@string/desktop_show_label_title"
-        android:summary="@string/desktop_show_label_summary"
-        android:defaultValue="true"
-        android:persistent="true"/>
-
-    <SwitchPreference
-        android:key="pref_allapps_show_label"
-        android:title="@string/allapps_show_label_title"
-        android:summary="@string/allapps_show_label_summary"
-        android:defaultValue="true"
-        android:persistent="true"/>
-
-    <PreferenceCategory
-        android:key="grid_category"
-        android:title="@string/grid_category_title">
-
-    <ListPreference
-        android:key="pref_grid_columns"
-        android:title="@string/number_of_columns_title"
-        android:summary="%s"
-        android:entries="@array/grid_names"
-        android:entryValues="@array/grid_values"
-        android:defaultValue="-1"
-        android:persistent="true" />
- 
-    <ListPreference
-        android:key="pref_grid_rows"
-        android:title="@string/number_of_rows_title"
-        android:summary="%s"
-        android:entries="@array/grid_names"
-        android:entryValues="@array/grid_values"
-        android:defaultValue="-1"
-        android:persistent="true" />
-
- 
-    <ListPreference
-        android:key="pref_hotseat_icons"
-        android:title="@string/number_of_hotseat_title"
-        android:summary="%s"
-        android:entries="@array/grid_names"
-        android:entryValues="@array/grid_values"
-        android:defaultValue="-1"
-        android:persistent="true" />
-     </PreferenceCategory>
 </PreferenceScreen>

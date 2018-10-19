@@ -16,7 +16,7 @@
 
 package com.android.launcher3.notification;
 
-import static com.android.launcher3.SettingsActivity.NOTIFICATION_BADGING;
+import static com.android.launcher3.SettingsIcons.NOTIFICATION_BADGING;
 
 import android.annotation.TargetApi;
 import android.app.Notification;

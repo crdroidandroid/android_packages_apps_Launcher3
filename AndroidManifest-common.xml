@@ -57,6 +57,38 @@
         android:restoreAnyVersion="true"
         android:supportsRtl="true" >
 
+        <!-- Icons -->
+        <activity
+            android:name="com.android.launcher3.SettingsIcons"
+            android:label="@string/icons_category_title"
+            android:theme="@android:style/Theme.DeviceDefault.Settings"
+            android:autoRemoveFromRecents="true"
+            android:parentActivityName="com.android.launcher3.SettingsActivity" />
+
+        <!-- App drawer -->
+        <activity
+            android:name="com.android.launcher3.SettingsAppDrawer"
+            android:label="@string/app_drawer_category_title"
+            android:theme="@android:style/Theme.DeviceDefault.Settings"
+            android:autoRemoveFromRecents="true"
+            android:parentActivityName="com.android.launcher3.SettingsActivity" />
+
+        <!-- Homescreen -->
+        <activity
+            android:name="com.android.launcher3.SettingsHomescreen"
+            android:label="@string/home_category_title"
+            android:theme="@android:style/Theme.DeviceDefault.Settings"
+            android:autoRemoveFromRecents="true"
+            android:parentActivityName="com.android.launcher3.SettingsActivity" />
+
+        <!-- Misc settings -->
+        <activity
+            android:name="com.android.launcher3.SettingsMisc"
+            android:label="@string/misc_category_title"
+            android:theme="@android:style/Theme.DeviceDefault.Settings"
+            android:autoRemoveFromRecents="true"
+            android:parentActivityName="com.android.launcher3.SettingsActivity" />
+
         <!-- Intent received used to install shortcuts from other applications -->
         <receiver
             android:name="com.android.launcher3.InstallShortcutReceiver"

@@ -89,7 +89,7 @@ public class ScrimView extends View implements Insettable, OnChangeListener,
             };
     private static final int WALLPAPERS = R.string.wallpaper_button_text;
     private static final int WIDGETS = R.string.widget_button_text;
-    private static final int SETTINGS = R.string.settings_button_text;
+    private static final int SETTINGS = R.string.settings_title;
 
     private final Rect mTempRect = new Rect();
     private final int[] mTempPos = new int[2];
