@@ -76,6 +76,8 @@ public class SettingsActivity extends FragmentActivity
     private static final String KEY_MINUS_ONE = "pref_enable_minus_one";
     private static final String SEARCH_PACKAGE = "com.google.android.googlequicksearchbox";
 
+    public static boolean restartNeeded = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,7 +113,7 @@ public class SettingsActivity extends FragmentActivity
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (Utilities.KEY_SHOW_SEARCHBAR.equals(key)) {
-            Utilities.restart(this);
+            restartNeeded = true;
         }
     }
 
@@ -169,6 +171,14 @@ public class SettingsActivity extends FragmentActivity
 
             getPreferenceManager().setSharedPreferencesName(LauncherFiles.SHARED_PREFERENCES_KEY);
             setPreferencesFromResource(R.xml.launcher_preferences, rootKey);
+
+            HomeKeyWatcher mHomeKeyListener = new HomeKeyWatcher(getActivity());
+            mHomeKeyListener.setOnHomePressedListener(() -> {
+                if (restartNeeded) {
+                    Utilities.restart(getActivity());
+                }
+            });
+            mHomeKeyListener.startWatch();
 
             PreferenceScreen screen = getPreferenceScreen();
             for (int i = screen.getPreferenceCount() - 1; i >= 0; i--) {
@@ -298,6 +308,9 @@ public class SettingsActivity extends FragmentActivity
                 mNotificationDotsObserver = null;
             }
             super.onDestroy();
+            if (restartNeeded) {
+                Utilities.restart(getActivity());
+            }
         }
     }
 }
