@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Grid layout -->
-    <string-array name="grid_names">
+    <string-array name="grid_names" translatable="false">
         <item>@string/num_default</item>
         <item>3</item>
         <item>4</item>
@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>7</item>
     </string-array>
 
-    <string-array name="grid_values">
+    <string-array name="grid_values" translatable="false">
         <item>-1</item>
         <item>3</item>
         <item>4</item>
@@ -37,7 +37,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </string-array>
 
     <!-- Icon size -->
-    <string-array name="icon_size_names">
+    <string-array name="icon_size_names" translatable="false">
         <item>@string/icon_size_extra_small</item>
         <item>@string/icon_size_small</item>
         <item>@string/icon_size_average</item>
@@ -45,7 +45,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>@string/icon_size_extra_large</item>
     </string-array>
 
-    <string-array name="icon_size_values">
+    <string-array name="icon_size_values" translatable="false">
         <item>extrasmall</item>
         <item>small</item>
         <item>average</item>
