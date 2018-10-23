@@ -38,6 +38,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="iconPackPackageDefault" translatable="false">""</string>
     <string name="icon_pack">Icon pack</string>
     <string name="icon_pack_summary">Change the look of your app icons</string>
+    <string name="icon_pack_none">None</string>
 
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">Icon shape</string>
