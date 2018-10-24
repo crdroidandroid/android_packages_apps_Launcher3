@@ -55,8 +55,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="allow_swipe_down_clearall_desc">Swipe vertically downward in recents view to clear all apps</string>
 
     <!-- Google Feed -->
-    <string name="google_feed_title">Google now panel</string>
-    <string name="google_feed_summary">Swipe to the right of the homescreen to access the Google now panel</string>
+    <string name="google_feed_title">Display Google app</string>
+    <string name="google_feed_summary">To the left of the main Home screen</string>
 
     <!-- Grid -->
     <string name="num_default">Default</string>
