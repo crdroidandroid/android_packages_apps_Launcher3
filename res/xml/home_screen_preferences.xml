@@ -5,7 +5,8 @@
         android:defaultValue="true"
         android:key="pref_feed_integration"
         android:persistent="true"
-        android:title="@string/settings_feed" />
+        android:title="@string/google_feed_title"
+        android:summary="@string/google_feed_summary" />
 
     <SwitchPreference
         android:key="pref_show_searchbar"
