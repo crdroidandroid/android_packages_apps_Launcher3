@@ -69,6 +69,8 @@ import java.util.Objects;
  */
 public class SettingsAppDrawer extends SettingsActivity implements PreferenceFragment.OnPreferenceStartFragmentCallback {
 
+    private static final String HIDDEN_APPS = "hidden_app";
+
     @Override
     protected void onCreate(final Bundle bundle) {
         super.onCreate(bundle);
@@ -118,6 +120,13 @@ public class SettingsAppDrawer extends SettingsActivity implements PreferenceFra
                     SettingsActivity.restartNeeded = true;
                     return true;
                 }
+            });
+
+            Preference hiddenApp = findPreference(Utilities.KEY_HIDDEN_APPS);
+            hiddenApp.setOnPreferenceClickListener(
+                preference -> {
+                    startActivity(new Intent(getActivity(), MultiSelectRecyclerViewActivity.class));
+                    return false;
             });
         }
 

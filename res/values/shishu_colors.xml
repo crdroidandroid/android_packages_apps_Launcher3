@@ -22,12 +22,5 @@
     <!-- Fastscroller -->
     <color name="fastscroller_thumb_background_color">@*android:color/accent_device_default_light</color>
 
-    <!-- Hidden apps -->
-    <color name="settings_action_bar_color">#ff263238</color>
-    <color name="settings_status_bar_color">#ff21272b</color>
-    <color name="launcher_accent_color">#ff2196f3</color>
-    <color name="icon_settings_background">#ff313131</color>
-    <color name="icon_settings_text">#ffafafaf</color>
-
 </resources>
 

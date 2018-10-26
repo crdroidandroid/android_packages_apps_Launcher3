@@ -47,8 +47,12 @@ public class MultiSelectRecyclerViewActivity extends Activity implements MultiSe
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
-        updateHiddenApps();
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        } else {
+            updateHiddenApps();
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -68,6 +72,7 @@ public class MultiSelectRecyclerViewActivity extends Activity implements MultiSe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multiselect);
         mActionBar = getActionBar();
+        if (mActionBar != null) mActionBar.setDisplayHomeAsUpEnabled(true);
 
         Set<String> hiddenApps = PreferenceManager.getDefaultSharedPreferences(MultiSelectRecyclerViewActivity.this).getStringSet(Utilities.KEY_HIDDEN_APPS_SET, null);
         if (hiddenApps != null) {

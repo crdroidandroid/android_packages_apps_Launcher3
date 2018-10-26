@@ -18,17 +18,3 @@
       xmlns:android="http://schemas.android.com/apk/res/android"
       android:layout_width="0dp"
       android:layout_height="0dp" />
-    <TextView
-        android:id="@+id/customize_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:drawablePadding="4dp"
-        android:drawableTop="@drawable/ic_customize"
-        android:fontFamily="sans-serif-condensed"
-        android:gravity="center_horizontal"
-        android:stateListAnimator="@animator/overview_button_anim"
-        android:text="@string/customize"
-        android:textAllCaps="true"
-        android:textColor="@android:color/white"
-        android:textSize="12sp" />
