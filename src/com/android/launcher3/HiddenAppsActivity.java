@@ -80,8 +80,6 @@ public class HiddenAppsActivity extends Activity implements MultiSelectRecyclerV
         if (appState != null) {
             appState.getModel().forceReload();
         }
-
-        navigateUpTo(new Intent(HiddenAppsActivity.this, Launcher.class));
     }
 
     private void unhideHiddenApps() {
