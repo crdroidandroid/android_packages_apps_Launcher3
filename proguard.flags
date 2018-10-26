@@ -125,7 +125,7 @@
   *;
 }
 
--keep class com.android.launcher3.MultiSelectRecyclerViewActivity {
+-keep class com.android.launcher3.HiddenAppsActivity {
   *;
 }
 

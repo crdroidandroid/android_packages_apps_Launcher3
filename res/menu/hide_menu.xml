@@ -16,7 +16,7 @@
 -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.android.launcher3.MultiSelectRecyclerViewActivity">
+    tools:context="com.android.launcher3.HiddenAppsActivity">
     <item
         android:id="@+id/hide"
         android:icon="@drawable/ic_check_circle"

@@ -92,7 +92,7 @@
 
         <!-- Hidden apps -->
         <activity
-            android:name="com.android.launcher3.MultiSelectRecyclerViewActivity"
+            android:name="com.android.launcher3.HiddenAppsActivity"
             android:autoRemoveFromRecents="true"
             android:label="@string/hidden_app"
             android:theme="@android:style/Theme.DeviceDefault.Settings" />

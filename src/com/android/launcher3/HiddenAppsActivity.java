@@ -32,7 +32,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-public class MultiSelectRecyclerViewActivity extends Activity implements MultiSelectRecyclerViewAdapter.ItemClickListener {
+public class HiddenAppsActivity extends Activity implements MultiSelectRecyclerViewAdapter.ItemClickListener {
 
     private List<ResolveInfo> mInstalledPackages;
     private ActionBar mActionBar;
@@ -58,13 +58,13 @@ public class MultiSelectRecyclerViewActivity extends Activity implements MultiSe
 
     private void updateHiddenApps() {
 
-        mAdapter.addSelectionsToHideList(MultiSelectRecyclerViewActivity.this);
+        mAdapter.addSelectionsToHideList(HiddenAppsActivity.this);
         LauncherAppState appState = LauncherAppState.getInstanceNoCreate();
         if (appState != null) {
             appState.getModel().forceReload();
         }
 
-        navigateUpTo(new Intent(MultiSelectRecyclerViewActivity.this, Launcher.class));
+        navigateUpTo(new Intent(HiddenAppsActivity.this, Launcher.class));
     }
 
     @Override
@@ -74,7 +74,7 @@ public class MultiSelectRecyclerViewActivity extends Activity implements MultiSe
         mActionBar = getActionBar();
         if (mActionBar != null) mActionBar.setDisplayHomeAsUpEnabled(true);
 
-        Set<String> hiddenApps = PreferenceManager.getDefaultSharedPreferences(MultiSelectRecyclerViewActivity.this).getStringSet(Utilities.KEY_HIDDEN_APPS_SET, null);
+        Set<String> hiddenApps = PreferenceManager.getDefaultSharedPreferences(HiddenAppsActivity.this).getStringSet(Utilities.KEY_HIDDEN_APPS_SET, null);
         if (hiddenApps != null) {
             if (!hiddenApps.isEmpty()) {
                 mActionBar.setTitle(String.valueOf(hiddenApps.size()) + getString(R.string.hide_app_selected));
@@ -86,8 +86,8 @@ public class MultiSelectRecyclerViewActivity extends Activity implements MultiSe
         mInstalledPackages = getInstalledApps();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(MultiSelectRecyclerViewActivity.this, LinearLayoutManager.VERTICAL, false));
-        mAdapter = new MultiSelectRecyclerViewAdapter(MultiSelectRecyclerViewActivity.this, mInstalledPackages, this);
+        recyclerView.setLayoutManager(new LinearLayoutManager(HiddenAppsActivity.this, LinearLayoutManager.VERTICAL, false));
+        mAdapter = new MultiSelectRecyclerViewAdapter(HiddenAppsActivity.this, mInstalledPackages, this);
         recyclerView.setAdapter(mAdapter);
     }
 
