@@ -19,6 +19,7 @@ package com.android.launcher3;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,24 +28,30 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.launcher3.R;
+import com.android.launcher3.SelectableAdapter;
+
+import java.util.ArrayList;
 import java.util.List;
 
 class MultiSelectRecyclerViewAdapter extends SelectableAdapter<MultiSelectRecyclerViewAdapter.ViewHolder> {
 
-    private List<ResolveInfo> mResolveInfos;
+    private List<Packages> mPackages;
     private ItemClickListener mClickListener;
     private PackageManager mPackageManager;
 
     MultiSelectRecyclerViewAdapter(Context context, List<ResolveInfo> resolveInfos, ItemClickListener clickListener) {
-        mResolveInfos = resolveInfos;
         mClickListener = clickListener;
         mPackageManager = context.getPackageManager();
+        mPackages = new ArrayList<>();
+        for (int i = 0; i < resolveInfos.size(); i++) {
+            mPackages.add(new Packages(resolveInfos.get(i)));
+        }
     }
 
     // Create new views
     @Override
-    public MultiSelectRecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                                        int viewType) {
+    public MultiSelectRecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemLayoutView = LayoutInflater.from(parent.getContext()).inflate(
                 R.layout.hide_item, null);
 
@@ -53,17 +60,38 @@ class MultiSelectRecyclerViewAdapter extends SelectableAdapter<MultiSelectRecycl
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
-
-        String packageName = mResolveInfos.get(position).activityInfo.packageName;
-        viewHolder.label.setText(mResolveInfos.get(position).loadLabel(mPackageManager));
-        viewHolder.icon.setImageDrawable(mResolveInfos.get(position).loadIcon(mPackageManager));
-
-        viewHolder.checkBox.setChecked(isSelected(packageName));
+        viewHolder.label.setText(mPackages.get(position).getLabel());
+        viewHolder.icon.setImageDrawable(mPackages.get(position).getIcon());
+        viewHolder.checkBox.setChecked(isSelected(mPackages.get(position).getPackageName()));
     }
 
     @Override
     public int getItemCount() {
-        return mResolveInfos.size();
+        return mPackages.size();
+    }
+
+    private class Packages {
+        private String mPackageName;
+        private CharSequence mLabel;
+        private Drawable mIcon;
+
+        public Packages(ResolveInfo info) {
+            mPackageName = info.activityInfo.packageName;
+            mLabel = info.loadLabel(mPackageManager);
+            mIcon = info.loadIcon(mPackageManager);
+        }
+
+        public String getPackageName() {
+            return mPackageName;
+        }
+
+        public CharSequence getLabel() {
+            return mLabel;
+        }
+
+        public Drawable getIcon() {
+            return mIcon;
+        }
     }
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -97,4 +125,3 @@ class MultiSelectRecyclerViewAdapter extends SelectableAdapter<MultiSelectRecycl
         void onItemClicked(int position);
     }
 }
-
