@@ -74,6 +74,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="hidden_app">All apps</string>
     <string name="hide_selected">Hide selected app(s)</string>
     <string name="more">More</string>
+    <string name="reset_hidden_apps">Reset all</string>
+    <string name="reset_hidden_apps_done">Hidden apps are now available</string>
 
     <!-- Show labels on icon -->
     <string name="app_show_label_title">App labels</string>
