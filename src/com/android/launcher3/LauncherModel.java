@@ -165,7 +165,7 @@ public class LauncherModel extends BroadcastReceiver
 
     LauncherModel(LauncherAppState app, IconCache iconCache, AppFilter appFilter) {
         mApp = app;
-        mBgAllAppsList = new AllAppsList(iconCache, appFilter);
+        mBgAllAppsList = new AllAppsList(app.getContext(), iconCache, appFilter);
         mIconCache = iconCache;
     }
 

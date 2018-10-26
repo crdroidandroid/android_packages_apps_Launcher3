@@ -89,6 +89,20 @@
             android:autoRemoveFromRecents="true"
             android:parentActivityName="com.android.launcher3.SettingsActivity" />
 
+
+        <!-- Hidden apps -->
+        <activity
+            android:name="com.android.launcher3.CustomizeActivity"
+            android:label="@string/customize"
+            android:autoRemoveFromRecents="true"
+            android:theme="@style/SettingsTheme" />
+
+        <activity
+            android:name="com.android.launcher3.MultiSelectRecyclerViewActivity"
+            android:autoRemoveFromRecents="true"
+            android:label="@string/hidden_app"
+            android:theme="@style/SettingsTheme" />
+
         <!-- Intent received used to install shortcuts from other applications -->
         <receiver
             android:name="com.android.launcher3.InstallShortcutReceiver"
