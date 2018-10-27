@@ -14,17 +14,25 @@ class HomeKeyWatcher {
 
     HomeKeyWatcher(Context context) {
         mContext = context;
+        mRecevier = new HomeRecevier();
         mFilter = new IntentFilter(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
     }
 
     void setOnHomePressedListener(OnHomePressedListener listener) {
         mListener = listener;
-        mRecevier = new HomeRecevier();
     }
 
     void startWatch() {
+        mContext.registerReceiver(mRecevier, mFilter);
+    }
+
+    void stopWatch() {
+        mListener = null;
         if (mRecevier != null) {
-            mContext.registerReceiver(mRecevier, mFilter);
+            try {
+                mContext.unregisterReceiver(mRecevier);
+                mRecevier = null;
+            } catch (IllegalArgumentException e) {};
         }
     }
 

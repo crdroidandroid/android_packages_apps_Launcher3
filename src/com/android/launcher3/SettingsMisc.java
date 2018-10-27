@@ -81,7 +81,7 @@ public class SettingsMisc extends SettingsActivity implements PreferenceFragment
             SwitchPreference notificationsGesture = (SwitchPreference) findPreference(Utilities.PREF_NOTIFICATIONS_GESTURE);
             notificationsGesture.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    SettingsActivity.restartNeeded = true;
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                     return true;
                 }
             });
@@ -104,7 +104,7 @@ public class SettingsMisc extends SettingsActivity implements PreferenceFragment
                     String gestureValue = (String) newValue;
                     getDevicePrefs(mContext).edit().putString(KEY_HOMESCREEN_DT_GESTURES, gestureValue).commit();
                     mHomescreenGestures.setValue(gestureValue);
-                    SettingsActivity.restartNeeded = true;
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                     break;
             }
             return false;

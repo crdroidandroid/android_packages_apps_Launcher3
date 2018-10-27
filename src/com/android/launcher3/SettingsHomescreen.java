@@ -99,7 +99,7 @@ public class SettingsHomescreen extends SettingsActivity implements PreferenceFr
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     int index = gridColumns.findIndexOfValue((String) newValue);
                     gridColumns.setSummary(gridColumns.getEntries()[index]);
-                    SettingsActivity.restartNeeded = true;
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                     return true;
                 }
             });
@@ -110,7 +110,7 @@ public class SettingsHomescreen extends SettingsActivity implements PreferenceFr
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     int index = gridRows.findIndexOfValue((String) newValue);
                     gridRows.setSummary(gridRows.getEntries()[index]);
-                    SettingsActivity.restartNeeded = true;
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                     return true;
                 }
             });
@@ -121,7 +121,7 @@ public class SettingsHomescreen extends SettingsActivity implements PreferenceFr
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     int index = hotseatColumns.findIndexOfValue((String) newValue);
                     hotseatColumns.setSummary(hotseatColumns.getEntries()[index]);
-                    SettingsActivity.restartNeeded = true;
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                     return true;
                 }
             });
@@ -129,7 +129,7 @@ public class SettingsHomescreen extends SettingsActivity implements PreferenceFr
             SwitchPreference desktopShowLabel = (SwitchPreference) findPreference(Utilities.DESKTOP_SHOW_LABEL);
             desktopShowLabel.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    SettingsActivity.restartNeeded = true;
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                     return true;
                 }
             });

@@ -24,8 +24,6 @@ import android.view.View;
 
 public class SettingsActivity extends Activity {
 
-    public static boolean restartNeeded = false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,24 +41,12 @@ public class SettingsActivity extends Activity {
 
     public static class LauncherSettingsFragment extends PreferenceFragment {
 
-        private Context mContext;
-
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
-            mContext = getActivity();
-
             getPreferenceManager().setSharedPreferencesName(LauncherFiles.SHARED_PREFERENCES_KEY);
             addPreferencesFromResource(R.xml.launcher_preferences);
-
-            HomeKeyWatcher mHomeKeyListener = new HomeKeyWatcher(getActivity());
-            mHomeKeyListener.setOnHomePressedListener(() -> {
-                if (restartNeeded) {
-                    Utilities.restart(mContext);
-                }
-            });
-            mHomeKeyListener.startWatch();
         }
 
         @Override
@@ -82,10 +68,10 @@ public class SettingsActivity extends Activity {
 
         @Override
         public void onDestroy() {
+            // if we don't press the home button but the back button to close Settings,
+            // then we must force a restart because the home button watcher wouldn't trigger it
+            LauncherAppState.getInstanceNoCreate().checkIfRestartNeeded();
             super.onDestroy();
-            if (restartNeeded) {
-                Utilities.restart(mContext);
-            }
         }
     }
 }
