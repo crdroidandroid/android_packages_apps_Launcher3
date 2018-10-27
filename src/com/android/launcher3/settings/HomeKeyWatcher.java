@@ -5,26 +5,34 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 
-class HomeKeyWatcher {
+public class HomeKeyWatcher {
 
     private Context mContext;
     private IntentFilter mFilter;
     private OnHomePressedListener mListener;
     private HomeRecevier mRecevier;
 
-    HomeKeyWatcher(Context context) {
+    public HomeKeyWatcher(Context context) {
         mContext = context;
+        mRecevier = new HomeRecevier();
         mFilter = new IntentFilter(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
     }
 
-    void setOnHomePressedListener(OnHomePressedListener listener) {
+    public void setOnHomePressedListener(OnHomePressedListener listener) {
         mListener = listener;
-        mRecevier = new HomeRecevier();
     }
 
-    void startWatch() {
+    public void startWatch() {
+        mContext.registerReceiver(mRecevier, mFilter);
+    }
+
+    public void stopWatch() {
+        mListener = null;
         if (mRecevier != null) {
-            mContext.registerReceiver(mRecevier, mFilter);
+            try {
+                mContext.unregisterReceiver(mRecevier);
+                mRecevier = null;
+            } catch (IllegalArgumentException e) {};
         }
     }
 
