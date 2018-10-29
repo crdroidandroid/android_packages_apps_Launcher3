@@ -60,6 +60,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_homescreen_dt_gestures_none">None</string>
     <string name="pref_homescreen_dt_gestures_sleep">Sleep</string>
     <string name="pref_homescreen_dt_gestures_torch">Flashlight</string>
+    <string name="pref_notifications_gesture_title">Notifications gesture</string>
+    <string name="pref_notifications_gesture_summary">Swipe vertically downward on the home screen to show the QS panel</string>
 
     <!-- Google Feed -->
     <string name="google_feed_title">Display Google app</string>

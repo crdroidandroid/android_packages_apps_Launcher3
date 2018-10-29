@@ -8,6 +8,13 @@
         android:defaultValue="@bool/allow_swipe_down_clearall"
         android:persistent="true" />
 
+    <SwitchPreference
+        android:key="pref_notifications_gesture"
+        android:title="@string/pref_notifications_gesture_title"
+        android:summary="@string/pref_notifications_gesture_summary"
+        android:defaultValue="true"
+        android:persistent="true"/>
+
     <ListPreference
         android:key="pref_homescreen_dt_gestures"
         android:title="@string/pref_homescreen_dt_gestures_title"

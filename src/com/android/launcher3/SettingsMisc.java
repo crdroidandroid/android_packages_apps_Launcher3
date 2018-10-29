@@ -24,6 +24,8 @@ import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
+import android.preference.SwitchPreference;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.view.MenuItem;
 
 import static com.android.launcher3.Utilities.getDevicePrefs;
@@ -75,6 +77,14 @@ public class SettingsMisc extends SettingsActivity implements PreferenceFragment
             mHomescreenGestures = (ListPreference) findPreference(KEY_HOMESCREEN_DT_GESTURES);
             mHomescreenGestures.setValue(getDevicePrefs(mContext).getString(KEY_HOMESCREEN_DT_GESTURES, "0"));
             mHomescreenGestures.setOnPreferenceChangeListener(this);
+
+            SwitchPreference notificationsGesture = (SwitchPreference) findPreference(Utilities.PREF_NOTIFICATIONS_GESTURE);
+            notificationsGesture.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    SettingsActivity.restartNeeded = true;
+                    return true;
+                }
+            });
         }
 
         @Override
