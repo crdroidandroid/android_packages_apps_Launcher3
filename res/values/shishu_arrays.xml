@@ -17,6 +17,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
  <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Homescreen double tap gestures -->
+    <string-array translatable="false" name="pref_homescreen_dt_gestures_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="pref_homescreen_dt_gestures_names">
+        <item>@string/pref_homescreen_dt_gestures_none</item>
+        <item>@string/pref_homescreen_dt_gestures_sleep</item>
+        <item>@string/pref_homescreen_dt_gestures_torch</item>
+    </string-array>
+
     <!-- Grid layout -->
     <string-array name="grid_names" translatable="false">
         <item>@string/num_default</item>

@@ -247,6 +247,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
 
     private RotationHelper mRotationHelper;
 
+    private static final String KEY_HOMESCREEN_DT_GESTURES = "pref_homescreen_dt_gestures";
 
     private final Handler mHandler = new Handler();
     private final Runnable mLogOnDelayedResume = this::logOnDelayedResume;
@@ -2484,6 +2485,9 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         if ("pref_iconPackPackage".equals(key)) {
             mModel.clearIconCache();
             mModel.forceReload();
+        }
+        if (KEY_HOMESCREEN_DT_GESTURES.equals(key)) {
+            mWorkspace.setGestures(Integer.valueOf(sharedPreferences.getString("KEY_HOMESCREEN_DT_GESTURES", "0")));
         }
     }
 }

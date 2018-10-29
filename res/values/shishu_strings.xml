@@ -55,6 +55,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Gestures -->
     <string name="allow_swipe_down_clearall_title">Clear all from recents view</string>
     <string name="allow_swipe_down_clearall_desc">Swipe vertically downward in recents view to clear all apps</string>
+    <string name="pref_homescreen_dt_gestures_title">Double tap gesture</string>
+    <string name="pref_homescreen_dt_gestures_summary">Select the action of the double tap gesture on the home screen</string>
+    <string name="pref_homescreen_dt_gestures_none">None</string>
+    <string name="pref_homescreen_dt_gestures_sleep">Sleep</string>
+    <string name="pref_homescreen_dt_gestures_torch">Flashlight</string>
 
     <!-- Google Feed -->
     <string name="google_feed_title">Display Google app</string>

@@ -101,6 +101,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+import static com.android.launcher3.Utilities.getDevicePrefs;
+
 /**
  * The workspace is a wide area with a wallpaper and a finite number of pages.
  * Each page contains a number of icons, folders or widgets the user can
@@ -251,6 +253,7 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
     private final WorkspaceStateTransitionAnimation mStateTransitionAnimation;
 
     private GestureDetector mGestureListener;
+    private int mGestureMode;
 
     /**
      * Used to inflate the Workspace from XML.
@@ -286,11 +289,13 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
 
         context.enforceCallingOrSelfPermission(
                     android.Manifest.permission.DEVICE_POWER, null);
+        mGestureMode = Integer.valueOf(
+                getDevicePrefs(getContext()).getString("pref_homescreen_dt_gestures", "0"));
         mGestureListener =
                 new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
             @Override
             public boolean onDoubleTap(MotionEvent event) {
-                BootlegUtils.switchScreenOff(context);
+                triggerGesture(event);
                 return true;
             }
 
@@ -313,6 +318,26 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
         });
 
         setOnTouchListener(new WorkspaceTouchListener(mLauncher, this));
+    }
+
+    private void triggerGesture(MotionEvent event) {
+        switch(mGestureMode) {
+            // Stock behavior
+            case 0:
+                break;
+            // Sleep
+            case 1:
+                BootlegUtils.switchScreenOff(getContext());
+                break;
+            // Flashlight
+            case 2:
+                BootlegUtils.toggleCameraFlash();
+                break;
+        }
+    }
+
+    public void setGestures(int mode) {
+        mGestureMode = mode;
     }
 
     private boolean openNotifications() {
