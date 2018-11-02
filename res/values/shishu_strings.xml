@@ -65,7 +65,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Google Feed -->
     <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main Home screen</string>
+    <string name="google_feed_summary">To the left of the main home screen</string>
 
     <!-- Grid -->
     <string name="num_default">Default</string>
@@ -86,7 +86,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Show labels on icon -->
     <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the homescreen</string>
+    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
     <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
+
+    <!-- Show searchbar -->
+    <string name="show_searchbar_title">Show search bar</string>
+    <string name="show_searchbar_summary">Show the search bar on the home screen</string>
 
 </resources>

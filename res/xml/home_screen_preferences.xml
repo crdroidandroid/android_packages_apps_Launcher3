@@ -8,6 +8,13 @@
         android:defaultValue="true"
         android:persistent="true" />
 
+    <SwitchPreference
+        android:key="pref_show_searchbar"
+        android:title="@string/show_searchbar_title"
+        android:summary="@string/show_searchbar_summary"
+        android:defaultValue="true"
+        android:persistent="true"/>
+
     <ListPreference
         android:key="pref_hotseat_icons"
         android:title="@string/number_of_hotseat_title"

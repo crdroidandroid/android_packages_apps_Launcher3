@@ -69,6 +69,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.android.internal.util.bootleggers.BootlegUtils;
+
 /**
  * Various utilities shared amongst the Launcher's classes.
  */
@@ -699,6 +701,14 @@ public final class Utilities {
     static boolean hasFeedIntegration(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(SettingsHomescreen.KEY_FEED_INTEGRATION, true);
+    }
+
+    public static boolean showQSB(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        if (!BootlegUtils.isPackageInstalled(context, LauncherTab.SEARCH_PACKAGE)) {
+            return false;
+        }
+        return prefs.getBoolean(SettingsHomescreen.KEY_SHOW_SEARCHBAR, true);
     }
 
     public static void restart(final Context context) {
