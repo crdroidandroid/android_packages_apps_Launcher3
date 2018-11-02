@@ -85,6 +85,8 @@ public class SettingsHomescreen extends Activity
                 c.getPackageManager().setComponentEnabledSetting(cn, newValue,
                         PackageManager.DONT_KILL_APP);
             }
+        } else if (Utilities.KEY_SHOW_SEARCHBAR.equals(key)) {
+            LauncherAppState.getInstanceNoCreate().setNeedsRestart();
         }
     }
 
