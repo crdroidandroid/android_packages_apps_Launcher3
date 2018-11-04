@@ -120,7 +120,7 @@ public class AllAppsBackgroundDrawable extends Drawable {
             case 3:
                 context = new ContextThemeWrapper(context, R.style.AllAppsEmptySearchBackground_Black);
                 break;
-            case 4: case 5: case 6: case 7: case 8:
+            case 4: case 5: case 6: case 7: case 8: case 9: case 10:
                 context = new ContextThemeWrapper(context, R.style.AllAppsEmptySearchBackground_ShishuThemes);
                 break;
             default:
