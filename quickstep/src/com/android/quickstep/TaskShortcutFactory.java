@@ -23,14 +23,19 @@ import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCH
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_SYSTEM_SHORTCUT_SPLIT_SCREEN_TAP;
 
 import android.app.Activity;
+import android.app.ActivityManagerNative;
 import android.app.ActivityOptions;
+import android.app.IActivityManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.RemoteException;
+import android.os.UserHandle;
 import android.view.View;
 import android.window.SplashScreen;
+import android.widget.Toast;
 
 import com.android.launcher3.BaseDraggingActivity;
 import com.android.launcher3.DeviceProfile;
@@ -343,4 +348,42 @@ public interface TaskShortcutFactory {
         }
         return null;
     };
+
+    TaskShortcutFactory KILL_APP = (activity, tv) -> {
+        String packageName = tv.getItemInfo().getTargetComponent().getPackageName();
+        return new KillSystemShortcut(activity, tv, packageName);
+    };
+
+    class KillSystemShortcut extends SystemShortcut {
+        private static final String TAG = "KillSystemShortcut";
+        private final TaskView mTaskView;
+        private final BaseDraggingActivity mActivity;
+        private final String mPackageName;
+
+        public KillSystemShortcut(BaseDraggingActivity activity, TaskView tv, String packageName) {
+            super(R.drawable.ic_kill_app, R.string.recent_task_option_kill_app, activity, tv.getItemInfo());
+            mTaskView = tv;
+            mActivity = activity;
+            mPackageName = packageName;
+        }
+
+        @Override
+        public void onClick(View view) {
+            if (mPackageName != null) {
+                IActivityManager iam = ActivityManagerNative.getDefault();
+                Task task = mTaskView.getTask();
+                if (task != null) {
+                    try {
+                        iam.forceStopPackage(mPackageName, UserHandle.USER_CURRENT);
+                        Toast appKilled = Toast.makeText(mActivity, R.string.recents_app_killed,
+                            Toast.LENGTH_SHORT);
+                        appKilled.show();
+                        ((RecentsView)mActivity.getOverviewPanel())
+                              .dismissTask(mTaskView, true /* animate */, true /* removeTask */);
+                    } catch (RemoteException e) { }
+                }
+            }
+            dismissTaskMenuView(mActivity);
+        }
+    }
 }

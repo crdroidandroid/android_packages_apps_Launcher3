@@ -44,6 +44,8 @@
     <uses-permission android:name="android.permission.ROTATE_SURFACE_FLINGER" />
     <uses-permission android:name="android.permission.DEVICE_POWER" />
 
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
+
     <!--
     Permissions required for read/write access to the workspace data. These permission name
     should not conflict with that defined in other apps, as such an app should embed its package
