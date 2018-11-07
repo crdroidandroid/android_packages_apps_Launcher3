@@ -45,6 +45,7 @@ public class TaskOverlayFactory implements ResourceBasedOverride {
             new TaskSystemShortcut.SplitScreen(),
             new TaskSystemShortcut.Pin(),
             new TaskSystemShortcut.Install(),
+            new TaskSystemShortcut.KillApp(),
             new TaskSystemShortcut.Freeform()
     };
 
