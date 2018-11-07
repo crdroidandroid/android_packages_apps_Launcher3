@@ -18,8 +18,12 @@ package com.android.quickstep;
 
 import static com.android.launcher3.userevent.nano.LauncherLogProto.Action.Touch.TAP;
 
+import android.app.Activity;
+import android.app.ActivityManagerNative;
+import android.app.IActivityManager;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Rect;
@@ -29,6 +33,7 @@ import android.os.RemoteException;
 import android.os.UserHandle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.android.launcher3.AbstractFloatingView;
 import com.android.launcher3.BaseDraggingActivity;
@@ -275,4 +280,49 @@ public class TaskSystemShortcut<T extends SystemShortcut> extends SystemShortcut
         AbstractFloatingView.closeOpenViews(activity, true,
                 AbstractFloatingView.TYPE_ALL & ~AbstractFloatingView.TYPE_REBIND_SAFE);
     }
+
+    public static class KillApp extends TaskSystemShortcut {
+
+        public KillApp() {
+            super(R.drawable.ic_kill_app, R.string.recent_task_option_kill_app);
+        }
+
+        @Override
+        public View.OnClickListener getOnClickListener(
+                BaseDraggingActivity activity, TaskView taskView) {
+            final Task task  = taskView.getTask();
+            final RecentsView recentsView = activity.getOverviewPanel();
+
+            final TaskThumbnailView thumbnailView = taskView.getThumbnail();
+            return (v -> {
+                if (TaskSystemShortcut.killTask(task.key, (Activity)activity)) {
+                    recentsView.removeIgnoreResetTask(taskView);
+                    dismissTaskMenuView(activity);
+                    recentsView.dismissTask(taskView, false, true/*remove*/);
+                }
+            });
+        }
+    }
+
+    protected static boolean killTask(Task.TaskKey taskKey, Activity activity) {
+        boolean killed = false;
+        if (activity.checkCallingOrSelfPermission(android.Manifest.permission.FORCE_STOP_PACKAGES)
+                == PackageManager.PERMISSION_GRANTED) {
+            String packageName = taskKey.getComponent().getPackageName();
+            if (packageName != null) {
+                IActivityManager iam = ActivityManagerNative.getDefault();
+                try {
+                    iam.forceStopPackage(packageName, UserHandle.USER_CURRENT);
+                    Toast appKilled = Toast.makeText(activity, R.string.recents_app_killed,
+                            Toast.LENGTH_SHORT);
+                    appKilled.show();
+                    killed = true;
+                } catch (RemoteException e) {
+                    killed = false;
+                }
+            }
+        }
+        return killed;
+    }
+
 }
