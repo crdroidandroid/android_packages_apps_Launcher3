@@ -37,7 +37,7 @@
             android:summary="%s"
             android:entries="@array/icon_shape_override_paths_names"
             android:entryValues="@array/icon_shape_override_paths_values"
-            android:defaultValue=""
+            android:defaultValue="M50 0A50 50,0,1,1,50 100A50 50,0,1,1,50 0"
             android:persistent="false" />
 
         <ListPreference

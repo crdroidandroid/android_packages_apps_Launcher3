@@ -110,7 +110,7 @@ public class IconShapeOverride {
     }
 
     private static String getAppliedValue(Context context) {
-        return getDevicePrefs(context).getString(KEY_PREFERENCE, "");
+        return getDevicePrefs(context).getString(KEY_PREFERENCE, "M50 0A50 50,0,1,1,50 100A50 50,0,1,1,50 0");
     }
 
     public static void handlePreferenceUi(ListPreference preference) {
