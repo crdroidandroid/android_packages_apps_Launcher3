@@ -40,6 +40,8 @@ import com.android.launcher3.util.MainThreadInitializedObject;
 import com.android.launcher3.util.Preconditions;
 import com.android.launcher3.util.SecureSettingsObserver;
 
+import com.android.internal.util.crdroid.Utils;
+
 public class LauncherAppState {
 
     public static final String ACTION_FORCE_ROLOAD = "force-reload-launcher";
@@ -57,6 +59,7 @@ public class LauncherAppState {
 
     private HomeKeyWatcher mHomeKeyListener = null;
     private boolean mNeedsRestart;
+    private boolean mIsSearchAppAvailable;
 
     public static LauncherAppState getInstance(final Context context) {
         return INSTANCE.get(context);
@@ -78,6 +81,8 @@ public class LauncherAppState {
         Log.v(Launcher.TAG, "LauncherAppState initiated");
         Preconditions.assertUIThread();
         mContext = context;
+
+        setSearchAppAvailable(Utils.isPackageInstalled(context, Utilities.SEARCH_PACKAGE));
 
         mInvariantDeviceProfile = InvariantDeviceProfile.INSTANCE.get(mContext);
         mIconCache = new IconCache(mContext, mInvariantDeviceProfile);
@@ -210,4 +215,13 @@ public class LauncherAppState {
             return (LauncherProvider) cl.getLocalContentProvider();
         }
     }
+
+    public void setSearchAppAvailable(boolean available) {
+        mIsSearchAppAvailable = available;
+    }
+
+    public boolean isSearchAppAvailable() {
+        return mIsSearchAppAvailable;
+    }
+
 }
