@@ -33,6 +33,7 @@ import com.android.launcher3.LauncherAppWidgetInfo;
 import com.android.launcher3.LauncherModel.CallbackTask;
 import com.android.launcher3.LauncherModel.Callbacks;
 import com.android.launcher3.LauncherSettings.Favorites;
+import com.android.launcher3.LauncherTab;
 import com.android.launcher3.SessionCommitReceiver;
 import com.android.launcher3.ShortcutInfo;
 import com.android.launcher3.Utilities;
@@ -98,6 +99,9 @@ public class PackageUpdatedTask extends BaseModelUpdateTask {
             case OP_ADD: {
                 for (int i = 0; i < N; i++) {
                     if (DEBUG) Log.d(TAG, "mAllAppsList.addPackage " + packages[i]);
+                    if (isSearchPackage(packages[i])) {
+                        app.setSearchAppAvailable(true);
+                    }
                     iconCache.updateIconsForPkg(packages[i], mUser);
                     if (FeatureFlags.LAUNCHER3_PROMISE_APPS_IN_ALL_APPS) {
                         appsList.removePackage(packages[i], Process.myUserHandle());
@@ -125,6 +129,9 @@ public class PackageUpdatedTask extends BaseModelUpdateTask {
             case OP_REMOVE: {
                 for (int i = 0; i < N; i++) {
                     iconCache.removeIconsForPkg(packages[i], mUser);
+                    if (isSearchPackage(packages[i])) {
+                        app.setSearchAppAvailable(false);
+                    }
                 }
                 // Fall through
             }
@@ -143,6 +150,11 @@ public class PackageUpdatedTask extends BaseModelUpdateTask {
                         FlagOp.removeFlag(ShortcutInfo.FLAG_DISABLED_SUSPENDED);
                 if (DEBUG) Log.d(TAG, "mAllAppsList.(un)suspend " + N);
                 appsList.updateDisabledFlags(matcher, flagOp);
+                for (int i = 0; i < N; i++) {
+                    if (isSearchPackage(packages[i])) {
+                        app.setSearchAppAvailable(mOp == OP_SUSPEND ? false : true);
+                    }
+                }
                 break;
             case OP_USER_AVAILABILITY_CHANGE:
                 flagOp = UserManagerCompat.getInstance(context).isQuietModeEnabled(mUser)
@@ -365,5 +377,9 @@ public class PackageUpdatedTask extends BaseModelUpdateTask {
             }
             bindUpdatedWidgets(dataModel);
         }
+    }
+
+    private boolean isSearchPackage(String packageName) {
+        return packageName.equals(LauncherTab.SEARCH_PACKAGE);
     }
 }

@@ -33,6 +33,8 @@ import com.android.launcher3.util.ConfigMonitor;
 import com.android.launcher3.util.Preconditions;
 import com.android.launcher3.util.SettingsObserver;
 
+import com.android.internal.util.bootleggers.BootlegUtils;
+
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 
@@ -55,6 +57,8 @@ public class LauncherAppState {
 
     private HomeKeyWatcher mHomeKeyListener = null;
     private boolean mNeedsRestart;
+
+    private boolean mIsSearchAppAvailable;
 
     public static LauncherAppState getInstance(final Context context) {
         if (INSTANCE == null) {
@@ -92,6 +96,8 @@ public class LauncherAppState {
         Log.v(Launcher.TAG, "LauncherAppState initiated");
         Preconditions.assertUIThread();
         mContext = context;
+
+        setSearchAppAvailable(BootlegUtils.isPackageInstalled(context, LauncherTab.SEARCH_PACKAGE));
 
         mInvariantDeviceProfile = new InvariantDeviceProfile(mContext);
         mIconCache = new IconCache(mContext, mInvariantDeviceProfile);
@@ -209,5 +215,13 @@ public class LauncherAppState {
                 .acquireContentProviderClient(LauncherProvider.AUTHORITY)) {
             return (LauncherProvider) cl.getLocalContentProvider();
         }
+    }
+
+    public void setSearchAppAvailable(boolean available) {
+        mIsSearchAppAvailable = available;
+    }
+
+    public boolean isSearchAppAvailable() {
+        return mIsSearchAppAvailable;
     }
 }
