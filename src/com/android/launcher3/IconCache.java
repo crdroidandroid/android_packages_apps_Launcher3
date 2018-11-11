@@ -413,16 +413,14 @@ public class IconCache {
             LauncherIcons li = LauncherIcons.obtain(mContext);
             Drawable iconDrawable = getFullResIcon(app);
             IconPack iconPack = IconPackProvider.loadAndGetIconPack(mContext);
-            int iconAppSDK = app.getApplicationInfo().targetSdkVersion;
             if (iconPack != null) {
                 Drawable iconPackDrawable = iconPack.getIcon(app, iconDrawable, app.getLabel());
                 if (iconPackDrawable != null) {
                     iconDrawable = iconPackDrawable;
-                    iconAppSDK = 25;
                 }
             }
             li.createBadgedIconBitmap(iconDrawable, app.getUser(),
-                    iconAppSDK).applyTo(entry);
+                    app.getApplicationInfo().targetSdkVersion).applyTo(entry);
             li.recycle();
         }
         entry.title = app.getLabel();
@@ -591,16 +589,14 @@ public class IconCache {
                     LauncherIcons li = LauncherIcons.obtain(mContext);
                     Drawable iconDrawable = getFullResIcon(info);
                     IconPack iconPack = IconPackProvider.loadAndGetIconPack(mContext);
-                    int iconAppSDK = info.getApplicationInfo().targetSdkVersion;
                     if (iconPack != null) {
                         Drawable iconPackDrawable = iconPack.getIcon(info, iconDrawable, info.getLabel());
                         if (iconPackDrawable != null) {
                             iconDrawable = iconPackDrawable;
-                            iconAppSDK = 25;
                         }
                     }
                     li.createBadgedIconBitmap(iconDrawable, info.getUser(),
-                            iconAppSDK).applyTo(entry);
+                            info.getApplicationInfo().targetSdkVersion).applyTo(entry);
                     li.recycle();
                 } else {
                     if (usePackageIcon) {
