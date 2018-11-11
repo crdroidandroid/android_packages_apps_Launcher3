@@ -44,7 +44,7 @@ public class LauncherDbUtils {
      * the first row. The items in the first screen are moved and resized but the carry-forward
      * items are simply deleted.
      */
-    public static boolean prepareScreenZeroToHostQsb(Context context, SQLiteDatabase db) {
+    public static boolean prepareScreenForQuickSpace(Context context, SQLiteDatabase db) {
         try (SQLiteTransaction t = new SQLiteTransaction(db)) {
             // Get the existing screens
             ArrayList<Long> screenIds = getScreenIdsFromCursor(db.query(WorkspaceScreens.TABLE_NAME,

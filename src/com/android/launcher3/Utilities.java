@@ -706,12 +706,9 @@ public final class Utilities {
         return prefs.getBoolean(SettingsHomescreen.KEY_FEED_INTEGRATION, true);
     }
 
-    public static boolean showQSB(Context context) {
+    public static boolean showQuickspace(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
-        if (!LauncherAppState.getInstanceNoCreate().isSearchAppAvailable()) {
-            return false;
-        }
-        return prefs.getBoolean(SettingsHomescreen.KEY_SHOW_SEARCHBAR, true);
+        return prefs.getBoolean(SettingsHomescreen.KEY_SHOW_QUICKSPACE, true);
     }
 
     public static void restart(final Context context) {

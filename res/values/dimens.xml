@@ -223,7 +223,10 @@
     <dimen name="popup_item_divider_height">0.5dp</dimen>
     <dimen name="swipe_helper_falsing_threshold">70dp</dimen>
 
-<!-- Overview -->
+    <!-- Overview -->
     <dimen name="options_menu_icon_size">24dp</dimen>
     <dimen name="options_menu_thumb_size">32dp</dimen>
+
+    <!-- QuickSpace -->
+    <dimen name="quickspace_title_size">24dp</dimen>
 </resources>

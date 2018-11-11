@@ -98,8 +98,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
     <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
 
-    <!-- Show searchbar -->
-    <string name="show_searchbar_title">Show search bar</string>
-    <string name="show_searchbar_summary">Show the search bar on the home screen</string>
+    <!-- Show quickspace -->
+    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+
+    <!-- QuickSpace -->
+    <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
 
 </resources>

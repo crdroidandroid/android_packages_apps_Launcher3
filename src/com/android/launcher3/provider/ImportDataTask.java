@@ -133,7 +133,7 @@ public class ImportDataTask {
                 .getSerialNumberForUser(Process.myUserHandle()));
 
         boolean createEmptyRowOnFirstScreen;
-        if (Utilities.showQSB(mContext)) {
+        if (Utilities.showQuickspace(mContext)) {
             try (Cursor c = mContext.getContentResolver().query(mOtherFavoritesUri, null,
                     // get items on the first row of the first screen
                     "profileId = ? AND container = -100 AND screen = ? AND cellY = 0",

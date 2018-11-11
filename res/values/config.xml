@@ -140,7 +140,6 @@
     <item type="id" name="action_dismiss_notification" />
 
 <!-- QSB IDs. DO not change -->
-    <item type="id" name="search_container_workspace" />
     <item type="id" name="search_container_hotseat" />
     <item type="id" name="search_container_all_apps" />
 
@@ -148,6 +147,9 @@
     <item type="id" name="overview_panel"/>
     <integer name="config_recentsMaxThumbnailCacheSize">6</integer>
     <integer name="config_recentsMaxIconCacheSize">12</integer>
+
+<!-- Quickspace -->
+    <item type="id" name="reserved_container_workspace" />
 
     <item name="workspace_page_container" type="id" />
 </resources>
