@@ -24,12 +24,16 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
+import android.database.ContentObserver;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.Looper;
 import android.os.RemoteException;
 import android.os.UserHandle;
+import android.provider.Settings;
 import android.support.annotation.WorkerThread;
 import android.util.Log;
 import android.util.LruCache;
@@ -83,6 +87,7 @@ public class RecentsModel extends TaskStackChangeListener {
     private final Context mContext;
     private final RecentsTaskLoader mRecentsTaskLoader;
     private final MainThreadExecutor mMainThreadExecutor;
+    private final SettingsObserver mSettingsObserver;
 
     private RecentsTaskLoadPlan mLastLoadPlan;
     private int mLastLoadPlanId;
@@ -104,17 +109,20 @@ public class RecentsModel extends TaskStackChangeListener {
         Resources res = context.getResources();
         mRecentsTaskLoader = new RecentsTaskLoader(mContext,
                 res.getInteger(R.integer.config_recentsMaxThumbnailCacheSize),
-                res.getInteger(R.integer.config_recentsMaxIconCacheSize), 0) {
+                res.getInteger(R.integer.config_recentsMaxIconCacheSize), 0)/* {
 
             @Override
             protected IconLoader createNewIconLoader(Context context,
                     TaskKeyLruCache<Drawable> iconCache,
                     LruCache<ComponentName, ActivityInfo> activityInfoCache) {
-                return new NormalizedIconLoader(context, iconCache, activityInfoCache);
+                return new NormalizedIconLoader(context, iconCache, activityInfoCache, mRecentsTaskLoader.getIconsHandler());
             }
-        };
+        }*/;
         mRecentsTaskLoader.startLoader(mContext);
         ActivityManagerWrapper.getInstance().registerTaskStackListener(this);
+
+        mSettingsObserver = new SettingsObserver(new Handler(Looper.getMainLooper()));
+        mSettingsObserver.observe();
 
         mTaskChangeId = 1;
         loadTasks(-1, null);
@@ -123,6 +131,38 @@ public class RecentsModel extends TaskStackChangeListener {
 
     public RecentsTaskLoader getRecentsTaskLoader() {
         return mRecentsTaskLoader;
+    }
+
+    public void resetIconCache() {
+        mRecentsTaskLoader.resetIconCache();
+    }
+
+    public void onDpiChanged() {
+        mRecentsTaskLoader.onDpiChanged();
+    }
+
+    private class SettingsObserver extends ContentObserver {
+        SettingsObserver(Handler handler) {
+            super(handler);
+        }
+
+        void observe() {
+            mContext.getContentResolver().registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.RECENTS_ICON_PACK),
+                    false, this);
+        }
+
+        @Override
+        public void onChange(boolean selfChange, Uri uri) {
+            if (uri.equals(Settings.System.getUriFor(
+                    Settings.System.RECENTS_ICON_PACK))) {
+                update();
+            }
+        }
+
+        public void update() {
+            mRecentsTaskLoader.setIconPack();
+        }
     }
 
     /**

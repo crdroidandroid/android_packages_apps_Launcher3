@@ -97,6 +97,10 @@ public class RecentsActivity extends BaseDraggingActivity {
         if ((diff & (CONFIG_ORIENTATION | CONFIG_SCREEN_SIZE)) != 0) {
             onHandleConfigChanged();
         }
+        if ((diff & CONFIG_SCREEN_SIZE) != 0) {
+            RecentsModel.getInstance(this.getApplicationContext()).resetIconCache();
+            RecentsModel.getInstance(this.getApplicationContext()).onDpiChanged();
+        }
         mOldConfig.setTo(newConfig);
         super.onConfigurationChanged(newConfig);
     }
