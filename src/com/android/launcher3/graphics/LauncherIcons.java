@@ -294,6 +294,10 @@ public class LauncherIcons implements AutoCloseable {
         badge.draw(target);
     }
 
+    public BitmapInfo createIconPackBitmapInfo(Drawable icon) {
+        return (BitmapInfo) createIconBitmap(createIconBitmap(icon,1.0f));
+    }
+
     /**
      * @param scale the scale to apply before drawing {@param icon} on the canvas
      */
