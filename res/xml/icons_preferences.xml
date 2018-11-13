@@ -40,6 +40,13 @@
             android:defaultValue="M50 0A50 50,0,1,1,50 100A50 50,0,1,1,50 0"
             android:persistent="false" />
 
+        <SwitchPreference
+            android:key="pref_legacy_icon_mask"
+            android:title="@string/legacy_icon_mask_title"
+            android:summary="@string/legacy_icon_mask_summary"
+            android:defaultValue="false"
+            android:persistent="true"/>
+
         <ListPreference
             android:key="pref_icon_size"
             android:title="@string/icon_size_title"
