@@ -50,6 +50,7 @@ import com.android.launcher3.Launcher;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.compat.LauncherAppsCompat;
+import com.android.launcher3.util.Themes;
 
 import java.util.List;
 
@@ -121,7 +122,7 @@ public class HotseatQsbView extends BaseQsbView {
 
     public void loadViews() {
         View.inflate(new ContextThemeWrapper(getContext(), R.style.HotseatQsbTheme), R.layout.qsb_hotseat_content, this);
-        setColor(0xCCFFFFFF);
+        setColor(Themes.getAttrColor(mLauncher, R.attr.allAppsScrimColor));
         setColorAlpha(ColorUtils.setAlphaComponent(mColor, mQsbConfig.getMicOpacity()));
         TextView hintView = (TextView) LayoutInflater.from(getContext()).inflate(R.layout.qsb_hint, this, false);
         setHintText("Tap to search on Google", hintView);
