@@ -26,6 +26,7 @@ import static com.android.launcher3.anim.Interpolators.ACCEL;
 import static com.android.launcher3.anim.Interpolators.DEACCEL;
 import static com.android.launcher3.anim.Interpolators.LINEAR;
 import static com.android.launcher3.config.FeatureFlags.QUICKSTEP_SPRINGS;
+import static com.android.launcher3.Utilities.EDGE_NAV_BAR;
 import static com.android.systemui.shared.system.QuickStepContract.SYSUI_STATE_OVERVIEW_DISABLED;
 
 import android.animation.TimeInterpolator;
@@ -78,6 +79,8 @@ public class PortraitStatesTouchController extends AbstractStateChangeTouchContr
     // If true, we will finish the current animation instantly on second touch.
     private boolean mFinishFastOnSecondTouch;
 
+    private boolean mStartedFromHotseat;
+
     public PortraitStatesTouchController(Launcher l, boolean allowDragToOverview) {
         super(l, SingleAxisSwipeDetector.VERTICAL);
         mOverviewPortraitStateTouchHelper = new PortraitOverviewStateTouchHelper(l);
@@ -111,14 +114,16 @@ public class PortraitStatesTouchController extends AbstractStateChangeTouchContr
                 return false;
             }
         } else if (mLauncher.isInState(OVERVIEW)) {
+	    DeviceProfile dp = mLauncher.getDeviceProfile();
+            int hotseatHeight = dp.hotseatBarSizePx + dp.getInsets().bottom;
+	    mStartedFromHotseat = ev.getY() >= (mLauncher.getDragLayer().getHeight() - hotseatHeight);
             if (!mOverviewPortraitStateTouchHelper.canInterceptTouch(ev)) {
                 return false;
             }
         } else {
-            // If we are swiping to all apps instead of overview, allow it from anywhere.
-            boolean interceptAnywhere = mLauncher.isInState(NORMAL) && !mAllowDragToOverview;
-            // For all other states, only listen if the event originated below the hotseat height
-            if (!interceptAnywhere && !isTouchOverHotseat(mLauncher, ev)) {
+            // For all other states, only listen if the event originated from the navbar
+            mStartedFromHotseat = (ev.getEdgeFlags() & EDGE_NAV_BAR) != 0;
+            if (!mStartedFromHotseat && !mLauncher.isInState(NORMAL)) {
                 return false;
             }
         }
@@ -137,11 +142,7 @@ public class PortraitStatesTouchController extends AbstractStateChangeTouchContr
         } else if (fromState == OVERVIEW) {
             return isDragTowardPositive ? ALL_APPS : NORMAL;
         } else if (fromState == NORMAL && isDragTowardPositive) {
-            int stateFlags = OverviewInteractionState.INSTANCE.get(mLauncher)
-                    .getSystemUiStateFlags();
-            return mAllowDragToOverview && TouchInteractionService.isConnected()
-                    && (stateFlags & SYSUI_STATE_OVERVIEW_DISABLED) == 0
-                    ? OVERVIEW : ALL_APPS;
+	    return TouchInteractionService.isConnected() && mStartedFromHotseat ? OVERVIEW : ALL_APPS;
         }
         return fromState;
     }
