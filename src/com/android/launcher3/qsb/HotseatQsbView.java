@@ -191,6 +191,7 @@ public class HotseatQsbView extends BaseQsbView {
     public void onLayout(boolean z, int i, int i2, int i3, int i4) {
         super.onLayout(z, i, i2, i3, i4);
         setTranslationY((float) (-getHotseatPadding(mLauncher)));
+        setVisibility(Utilities.isBottomSearchBarVisible(getContext()) ? View.VISIBLE : View.GONE);
     }
 
     public void setInsets(Rect rect) {

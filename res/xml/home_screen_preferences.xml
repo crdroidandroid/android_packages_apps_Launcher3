@@ -58,6 +58,13 @@
         android:defaultValue="-1"
         android:persistent="true" />
 
+    <SwitchPreference
+        android:key="pref_bottom_search_bar"
+        android:title="@string/bottom_search_bar_title"
+        android:summary="@string/bottom_search_bar_summary"
+        android:defaultValue="true"
+        android:persistent="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

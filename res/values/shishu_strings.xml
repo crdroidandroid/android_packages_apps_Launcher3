@@ -116,4 +116,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="label_search">Search</string>
     <string name="label_voice_search">Voice search</string>
 
+    <!-- Hide/Show search bars -->
+    <string name="bottom_search_bar_title">Show search bar on bottom</string>
+    <string name="bottom_search_bar_summary">Show the search bar on the Dock</string>
+
 </resources>
