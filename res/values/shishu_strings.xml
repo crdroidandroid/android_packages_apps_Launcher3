@@ -142,8 +142,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="date_format_long_name">Long</string>
     <string name="date_format_normal_name">Normal</string>
     <string name="date_format_short_name">Short</string>
+    <string name="date_format_daydate_long_name">Day (with number)</string>
+    <string name="date_format_daydate_short_name">Day (short with number)</string>
+    <string name="date_format_dayonly_name">Just today</string>
     <string name="date_format_long" translatable="false">EEEE, MMMM d</string>
     <string name="date_format_normal" translatable="false">EEEE, MMM d</string>
     <string name="date_format_short" translatable="false">EEE, MMM d</string>
+    <string name="date_format_daydate_long" translatable="false">EEEEd</string>
+    <string name="date_format_daydate_short" translatable="false">EEEd</string>
+    <string name="date_format_dayonly" translatable="false">EEEE</string>
 
 </resources>

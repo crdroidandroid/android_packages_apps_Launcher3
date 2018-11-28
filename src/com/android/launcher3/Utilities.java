@@ -253,6 +253,12 @@ public final class Utilities {
                     flags = DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH;
                 } else if (format.equals(context.getString(R.string.date_format_short))) {
                     flags = DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH | DateUtils.FORMAT_ABBREV_WEEKDAY;
+                } else if (format.equals(context.getString(R.string.date_format_dayonly))) {
+                    flags = DateUtils.FORMAT_SHOW_WEEKDAY;
+                } else if (format.equals(context.getString(R.string.date_format_daydate_short))) {
+                    flags = DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_WEEKDAY;
+                } else if (format.equals(context.getString(R.string.date_format_daydate_long))) {
+                    flags = DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE;
                 } else {
                     flags = DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH;
                 }
