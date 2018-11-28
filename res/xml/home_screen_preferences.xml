@@ -65,6 +65,16 @@
         android:defaultValue="true"
         android:persistent="true" />
 
+    <ListPreference
+        android:dependency="pref_bottom_search_bar"
+        android:entries="@array/search_provider_names"
+        android:entryValues="@array/search_provider_values"
+        android:key="pref_search_provider"
+        android:defaultValue="https://www.google.com"
+        android:persistent="true"
+        android:summary="%s"
+        android:title="@string/search_provider_title" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

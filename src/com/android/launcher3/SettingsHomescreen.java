@@ -152,6 +152,21 @@ public class SettingsHomescreen extends SettingsActivity implements PreferenceFr
                     return true;
                 }
             });
+        
+            ListPreference searchProvider = (ListPreference) findPreference(Utilities.SEARCH_PROVIDER_KEY);
+            if (PixeldustUtils.isPackageInstalled(mContext, LauncherTab.SEARCH_PACKAGE)) {
+                getPreferenceScreen().removePreference(searchProvider);
+            } else {
+                searchProvider.setSummary(searchProvider.getEntry());
+                searchProvider.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        int index = searchProvider.findIndexOfValue((String) newValue);
+                        searchProvider.setSummary(searchProvider.getEntries()[index]);
+                        LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                        return true;
+                    }
+                });
+            }
         }
 
         @Override

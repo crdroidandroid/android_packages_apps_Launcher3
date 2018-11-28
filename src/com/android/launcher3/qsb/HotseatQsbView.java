@@ -145,14 +145,20 @@ public class HotseatQsbView extends BaseQsbView {
 
     @Override
     public void startSearch(String initialQuery, int result) {
-        ConfigurationBuilder config = new ConfigurationBuilder(this, false);
-        if (mLauncher.getClient().startSearch(config.build(), config.getExtras())) {
-            SharedPreferences devicePrefs = Utilities.getDevicePrefs(getContext());
-            devicePrefs.edit().putInt("key_hotseat_qsb_tap_count", devicePrefs.getInt("key_hotseat_qsb_tap_count", 0) + 1).apply();
+        String provider = Utilities.getSearchProvider(getContext());
+        if(provider.contains("google")) {
+            ConfigurationBuilder config = new ConfigurationBuilder(this, false);
+            if (mLauncher.getClient().startSearch(config.build(), config.getExtras())) {
+                SharedPreferences devicePrefs = Utilities.getDevicePrefs(getContext());
+                devicePrefs.edit().putInt("key_hotseat_qsb_tap_count", devicePrefs.getInt("key_hotseat_qsb_tap_count", 0) + 1).apply();
+                mLauncher.getQsbController().playQsbAnimation();
+                return;
+            }
+            getContext().sendOrderedBroadcast(getSearchIntent(), null, mSearchReceiver, null, 0, null, null);
+        } else {
+            getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(provider)));
             mLauncher.getQsbController().playQsbAnimation();
-            return;
         }
-        getContext().sendOrderedBroadcast(getSearchIntent(), null, mSearchReceiver, null, 0, null, null);
     }
 
     public void noGoogleAppSearch() {

@@ -66,4 +66,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>extralarge</item>
     </string-array>
 
+    <string-array name="search_provider_names" translatable="false">
+        <item>@string/search_provider_google</item>
+        <item>@string/search_provider_bing</item>
+        <item>@string/search_provider_duckduckgo</item>
+    </string-array>
+     <string-array name="search_provider_values" translatable="false">
+        <item>https://www.google.com</item>
+        <item>https://www.bing.com</item>
+        <item>https://www.duckduckgo.com</item>
+    </string-array>
+
 </resources>
