@@ -190,4 +190,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="date_style_font_vibur" translatable="false">Vibur</string>
     <string name="date_style_font_voltaire" translatable="false">Voltaire</string>
 
+    <!-- At a glance uppercase -->
+    <string name="date_style_transform_title">Show uppercase on date</string>
+    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+
 </resources>

@@ -189,6 +189,14 @@ public class SettingsHomescreen extends SettingsActivity implements PreferenceFr
                     return true;
                 }
             });
+
+            SwitchPreference dateUppercase = (SwitchPreference) findPreference(Utilities.DATE_STYLE_TRANSFORM);
+            dateUppercase.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    return true;
+                }
+            });
         }
 
         @Override

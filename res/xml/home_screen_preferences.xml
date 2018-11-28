@@ -45,6 +45,14 @@
         android:summary="%s"
         android:title="@string/date_style_font" />
 
+    <SwitchPreference
+        android:dependency="pref_show_quickspace"
+        android:key="pref_date_transform"
+        android:summary="@string/date_style_transform_summary"
+        android:title="@string/date_style_transform_title"
+        android:defaultValue="false"
+        android:persistent="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
