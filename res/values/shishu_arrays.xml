@@ -95,4 +95,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>@string/date_format_daydate_long</item>
     </string-array>
 
+    <!-- Date font -->
+    <string-array name="date_style_font_names" translatable="false">
+        <item>@string/date_style_font_system</item>
+        <item>@string/date_style_font_google</item>
+    </string-array>
+     <string-array name="date_style_font_values" translatable="false">
+        <item>system</item>
+        <item>google</item>
+    </string-array>
+
 </resources>

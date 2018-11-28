@@ -35,6 +35,16 @@
         android:summary="%s"
         android:title="@string/date_format_title" />
 
+    <ListPreference
+        android:dependency="pref_show_quickspace"
+        android:entries="@array/date_style_font_names"
+        android:entryValues="@array/date_style_font_values"
+        android:defaultValue="google"
+        android:key="pref_date_font"
+        android:persistent="true"
+        android:summary="%s"
+        android:title="@string/date_style_font" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
