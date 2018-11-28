@@ -53,6 +53,16 @@
         android:defaultValue="false"
         android:persistent="true" />
 
+    <ListPreference
+        android:dependency="pref_show_quickspace"
+        android:entries="@array/date_style_spacing_names"
+        android:entryValues="@array/date_style_spacing_values"
+        android:key="pref_date_spacing"
+        android:defaultValue="normal"
+        android:persistent="true"
+        android:summary="%s"
+        android:title="@string/date_style_spacing" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

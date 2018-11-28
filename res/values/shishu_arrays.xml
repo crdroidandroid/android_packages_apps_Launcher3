@@ -171,4 +171,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>voltaire</item>
     </string-array>
 
+    <!-- At a glance letter spacing -->
+    <string-array name="date_style_spacing_names" translatable="false">
+        <item>@string/date_style_spacing_normal</item>
+        <item>@string/date_style_spacing_barely</item>
+        <item>@string/date_style_spacing_aesthetic</item>
+        <item>@string/date_style_spacing_ott</item>
+    </string-array>
+     <string-array name="date_style_spacing_values" translatable="false">
+        <item>normal</item>
+        <item>barely</item>
+        <item>aesthetic</item>
+        <item>overthetop</item>
+    </string-array>
+
 </resources>
