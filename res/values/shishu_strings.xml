@@ -154,7 +154,40 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- At a glance style -->
     <string name="date_style_font">Date font</string>
+    <string name="date_style_font_systembold">System bold</string>
+    <string name="date_style_font_systemitalic">System italic</string>
     <string name="date_style_font_system">System default</string>
+    <string name="date_style_font_systemlight">System light</string>
+    <string name="date_style_font_abelreg" translatable="false">Abel</string>
+    <string name="date_style_font_adamcg" translatable="false">Adan CG Pro</string>
+    <string name="date_style_font_alienleague" translatable="false">Alien League</string>
+    <string name="date_style_font_archivo" translatable="false">Archivo Narrow</string>
+    <string name="date_style_font_badscript" translatable="false">Bad Script</string>
+    <string name="date_style_font_bariol" translatable="false">Bariol</string>
+    <string name="date_style_font_bignoodle" translatable="false">Big Noodle Tilting</string>
+    <string name="date_style_font_biko" translatable="false">Biko</string>
+    <string name="date_style_font_cherryswash" translatable="false">Cherry Swash</string>
+    <string name="date_style_font_ginorasans" translatable="false">Ginora Sans</string>
+    <string name="date_style_font_gobold" translatable="false">GoBold Light</string>
     <string name="date_style_font_google" translatable="false">Google Sans</string>
+    <string name="date_style_font_ibmplex" translatable="false">IBM Plex Mono</string>
+    <string name="date_style_font_inkferno" translatable="false">Inkferno</string>
+    <string name="date_style_font_instruction" translatable="false">Instruction</string>
+    <string name="date_style_font_jacklane" translatable="false">Jack Lane</string>
+    <string name="date_style_font_kellyslab" translatable="false">Kelly Slab</string>
+    <string name="date_style_font_monad" translatable="false">Monad</string>
+    <string name="date_style_font_noir" translatable="false">Noir</string>
+    <string name="date_style_font_outrunfuture" translatable="false">Outrun Future</string>
+    <string name="date_style_font_pompiere" translatable="false">Pompiere</string>
+    <string name="date_style_font_raleway" translatable="false">Raleway</string>
+    <string name="date_style_font_reemkufi" translatable="false">Reem Kufi</string>
+    <string name="date_style_font_riviera" translatable="false">Riviera</string>
+    <string name="date_style_font_satify" translatable="false">Satisfy</string>
+    <string name="date_style_font_seaweedsc" translatable="false">Seaweed Script</string>
+    <string name="date_style_font_sedgwick" translatable="false">Sedgwick Ave Display</string>
+    <string name="date_style_font_snowstorm" translatable="false">Snowstorm</string>
+    <string name="date_style_font_theoutbox" translatable="false">The Outbox</string>
+    <string name="date_style_font_vibur" translatable="false">Vibur</string>
+    <string name="date_style_font_voltaire" translatable="false">Voltaire</string>
 
 </resources>
