@@ -6,18 +6,34 @@
         android:title="@string/home_overall_title">
 
     <SwitchPreference
+        android:key="pref_desktop_show_label"
+        android:title="@string/app_show_label_title"
+        android:summary="@string/desktop_show_label_summary"
+        android:defaultValue="true"
+        android:persistent="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="home_quickspace_category"
+        android:title="@string/home_quickspace_title">
+
+    <SwitchPreference
         android:key="pref_show_quickspace"
         android:title="@string/show_quickspace_title"
         android:summary="@string/show_quickspace_summary"
         android:defaultValue="true"
         android:persistent="true"/>
 
-    <SwitchPreference
-        android:key="pref_desktop_show_label"
-        android:title="@string/app_show_label_title"
-        android:summary="@string/desktop_show_label_summary"
-        android:defaultValue="true"
-        android:persistent="true"/>
+    <ListPreference
+        android:dependency="pref_show_quickspace"
+        android:entries="@array/date_format_names"
+        android:entryValues="@array/date_format_values"
+        android:key="pref_date_format"
+        android:persistent="true"
+        android:defaultValue="@string/date_format_normal"
+        android:summary="%s"
+        android:title="@string/date_format_title" />
 
     </PreferenceCategory>
 

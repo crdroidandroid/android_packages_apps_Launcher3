@@ -167,6 +167,17 @@ public class SettingsHomescreen extends SettingsActivity implements PreferenceFr
                     }
                 });
             }
+
+            ListPreference dateFormat = (ListPreference) findPreference(Utilities.DATE_FORMAT_KEY);
+            dateFormat.setSummary(dateFormat.getEntry());
+            dateFormat.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    int index = dateFormat.findIndexOfValue((String) newValue);
+                    dateFormat.setSummary(dateFormat.getEntries()[index]);
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    return true;
+                }
+            });
         }
 
         @Override

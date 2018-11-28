@@ -33,6 +33,8 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.icu.text.DateFormat;
+import android.icu.text.DisplayContext;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.DeadObjectException;
@@ -40,6 +42,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.PowerManager;
 import android.os.TransactionTooLargeException;
+import android.text.format.DateUtils;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
@@ -53,12 +56,14 @@ import android.view.animation.Interpolator;
 
 import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.util.LooperExecutor;
+import com.android.launcher3.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.Closeable;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Locale;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Locale;
@@ -146,6 +151,7 @@ public final class Utilities {
     public static final String PREF_NOTIFICATIONS_GESTURE = "pref_notifications_gesture";
     public static final String BOTTOM_SEARCH_BAR_KEY = "pref_bottom_search_bar";
     public static final String SEARCH_PROVIDER_KEY = "pref_search_provider";
+    public static final String DATE_FORMAT_KEY = "pref_date_format";
 
     public static boolean useNotificationsGesture(Context context) {
         return getPrefs(context).getBoolean(PREF_NOTIFICATIONS_GESTURE, true);
@@ -225,6 +231,38 @@ public final class Utilities {
 
     public static String getSearchProvider(Context context) {
         return getPrefs(context).getString(SEARCH_PROVIDER_KEY, "https://www.google.com");
+    }
+
+    public static String getDateFormat(Context context) {
+        return getPrefs(context).getString(DATE_FORMAT_KEY, context.getString(R.string.date_format_normal));
+    }
+
+    public static String formatDateTime(Context context, long timeInMillis) {
+        try {
+            String format = getDateFormat(context);
+            String formattedDate;
+            if (Utilities.ATLEAST_NOUGAT) {
+                DateFormat dateFormat = DateFormat.getInstanceForSkeleton(format, Locale.getDefault());
+                dateFormat.setContext(DisplayContext.CAPITALIZATION_FOR_STANDALONE);
+                formattedDate = dateFormat.format(timeInMillis);
+            } else {
+                int flags;
+                if (format.equals(context.getString(R.string.date_format_long))) {
+                    flags = DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE;
+                } else if (format.equals(context.getString(R.string.date_format_normal))) {
+                    flags = DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH;
+                } else if (format.equals(context.getString(R.string.date_format_short))) {
+                    flags = DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH | DateUtils.FORMAT_ABBREV_WEEKDAY;
+                } else {
+                    flags = DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH;
+                }
+                 formattedDate = DateUtils.formatDateTime(context, timeInMillis, flags);
+            }
+            return formattedDate;
+        } catch (Throwable t) {
+            Log.e(TAG, "Error formatting At A Glance date", t);
+            return DateUtils.formatDateTime(context, timeInMillis, DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH);
+        }
     }
 
     /**

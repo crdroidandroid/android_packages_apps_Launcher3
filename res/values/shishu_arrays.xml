@@ -77,4 +77,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>https://www.duckduckgo.com</item>
     </string-array>
 
+    <!-- Date format -->
+    <string-array name="date_format_names" translatable="false">
+        <item>@string/date_format_long_name</item>
+        <item>@string/date_format_normal_name</item>
+        <item>@string/date_format_short_name</item>
+    </string-array>
+     <string-array name="date_format_values" translatable="false">
+        <item>@string/date_format_long</item>
+        <item>@string/date_format_normal</item>
+        <item>@string/date_format_short</item>
+    </string-array>
+
 </resources>

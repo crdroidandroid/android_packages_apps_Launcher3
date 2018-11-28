@@ -34,6 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="home_grid_title">Grid layout</string>
     <string name="icon_layout_title">Icon layout</string>
     <string name="home_overall_title">Home layout</string>
+    <string name="home_quickspace_title">At A Glance</string>
     <string name="home_hotseat_title">Dock</string>
     <string name="app_overall_title">App list</string>
     <string name="misc_recents_title">Recents</string>
@@ -99,7 +100,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
 
     <!-- Show quickspace -->
-    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_title">Show At A Glance</string>
     <string name="show_quickspace_summary">Show at the top of your Home screen</string>
 
     <!-- QuickSpace -->
@@ -135,5 +136,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="msg_disable_suggestions_prompt">"Suggestions won't appear at the top of your apps list, and the usage data used to create them will be permanently erased."</string>
     <string name="label_turn_off_suggestions">TURN OFF</string>
     <string name="all_apps_label">All apps</string>
+
+    <!-- Date format -->
+    <string name="date_format_title">Date format</string>
+    <string name="date_format_long_name">Long</string>
+    <string name="date_format_normal_name">Normal</string>
+    <string name="date_format_short_name">Short</string>
+    <string name="date_format_long" translatable="false">EEEE, MMMM d</string>
+    <string name="date_format_normal" translatable="false">EEEE, MMM d</string>
+    <string name="date_format_short" translatable="false">EEE, MMM d</string>
 
 </resources>
