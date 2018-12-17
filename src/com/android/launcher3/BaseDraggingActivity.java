@@ -17,7 +17,6 @@
 package com.android.launcher3;
 
 import android.app.ActivityOptions;
-import android.app.UiModeManager;
 import android.content.ActivityNotFoundException;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -41,6 +40,7 @@ import com.android.launcher3.uioverrides.DisplayRotationListener;
 import com.android.launcher3.uioverrides.WallpaperColorInfo;
 import com.android.launcher3.shortcuts.DeepShortcutManager;
 import com.android.launcher3.views.BaseDragLayer;
+import com.android.launcher3.util.CustomSettingsObserver;
 
 /**
  * Extension of BaseActivity allowing support for drag-n-drop
@@ -66,11 +66,12 @@ public abstract class BaseDraggingActivity extends BaseActivity
 
     private OnStartCallback mOnStartCallback;
 
-    private int mThemeRes = R.style.AppTheme;
-
     private DisplayRotationListener mRotationListener;
 
-    private UiModeManager mUiModeManager;
+    private WallpaperColorInfo mWallpaperColorInfo;
+
+    private boolean mForceDark;
+    private SystemThemeObserver mSettingsObserver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,21 +80,20 @@ public abstract class BaseDraggingActivity extends BaseActivity
         mRotationListener = new DisplayRotationListener(this, this::onDeviceRotationChanged);
 
         // Update theme
-        WallpaperColorInfo wallpaperColorInfo = WallpaperColorInfo.getInstance(this);
-        wallpaperColorInfo.addOnChangeListener(this);
-        int themeRes = getThemeRes(wallpaperColorInfo);
-        if (themeRes != mThemeRes) {
-            mThemeRes = themeRes;
-        }
-        mUiModeManager = this.getSystemService(UiModeManager.class);
-        updateTheme(wallpaperColorInfo);
+        mWallpaperColorInfo = WallpaperColorInfo.getInstance(this);
+        mWallpaperColorInfo.addOnChangeListener(this);
+
+        mSettingsObserver = new SystemThemeObserver(this.getContentResolver());
+        mSettingsObserver.register("berry_dark_check");
+        mForceDark = mSettingsObserver.getSettingInt() == 1;
+
+        updateTheme();
     }
 
     @Override
     public void onExtractedColorsChanged(WallpaperColorInfo wallpaperColorInfo) {
-        if (mThemeRes != getThemeRes(wallpaperColorInfo)) {
-            recreate();
-        }
+        mWallpaperColorInfo = wallpaperColorInfo;
+        updateTheme();
     }
 
     protected int getThemeRes(WallpaperColorInfo wallpaperColorInfo) {
@@ -106,15 +106,26 @@ public abstract class BaseDraggingActivity extends BaseActivity
         }
     }
 
-    protected void updateTheme(WallpaperColorInfo wallpaperColorInfo) {
-        if (mUiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_AUTO) {
-            setTheme(wallpaperColorInfo.supportsDarkText() ? R.style.AppTheme_DarkText :
+    private class SystemThemeObserver extends CustomSettingsObserver.System {
+        public SystemThemeObserver(ContentResolver resolver) {
+            super(resolver);
+        }
+
+        @Override
+        public void onSettingChanged(int keySettingInt) {
+            mForceDark = mSettingsObserver.getSettingInt() == 1;
+            updateTheme();
+        }
+    }
+
+    private void updateTheme() {
+        if (mWallpaperColorInfo == null) return;
+        if (!mForceDark) {
+            setTheme(mWallpaperColorInfo.supportsDarkText() ? R.style.AppTheme_DarkText :
                     R.style.AppTheme);
-        } else if (mUiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_YES) {
-            setTheme(wallpaperColorInfo.supportsDarkText() ? R.style.AppTheme_Dark_DarkText :
-                    R.style.AppTheme_Dark);
         } else {
-            setTheme(mThemeRes);
+            setTheme(mWallpaperColorInfo.supportsDarkText() ? R.style.AppTheme_Dark_DarkText :
+                    R.style.AppTheme_Dark);
         }
     }
 
