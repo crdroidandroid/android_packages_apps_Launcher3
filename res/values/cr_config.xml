@@ -12,4 +12,7 @@
     <!-- String representing the fragment class for misc settings activity.-->
     <string name="misc_settings_fragment_name" translatable="false">com.android.launcher3.settings.SettingsMisc$MiscSettingsFragment</string>
 
+    <!-- Quickspace -->
+    <item type="id" name="reserved_container_workspace" />
+
 </resources>
