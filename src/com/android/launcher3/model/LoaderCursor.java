@@ -458,9 +458,8 @@ public class LoaderCursor extends CursorWrapper {
             GridOccupancy screen = new GridOccupancy(countX + 1, countY + 1);
             if (item.screenId == Workspace.FIRST_SCREEN_ID) {
                 // Mark the first row as occupied (if the feature is enabled)
-                // in order to account for the QSB.
-                int spanY = FeatureFlags.EXPANDED_SMARTSPACE.get() ? 2 : 1;
-                screen.markCells(0, 0, countX + 1, spanY, FeatureFlags.QSB_ON_FIRST_SCREEN);
+                // in order to account for Quickspace.
+                screen.markCells(0, 0, countX + 1, 1, Utilities.showQuickspace(mContext));
             }
             occupied.put(item.screenId, screen);
         }

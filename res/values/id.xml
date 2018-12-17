@@ -34,4 +34,7 @@
     <item type="id" name="accessibility_button" />
     <item type="id" name="rotate_suggestion" />
     <!--  /Do not change, must be kept in sync with sysui navbar button IDs for tests!  -->
+    
+    <!-- Quickspace -->
+    <item type="id" name="reserved_container_workspace" />
 </resources>
