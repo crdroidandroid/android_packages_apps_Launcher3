@@ -31,4 +31,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="misc_category_summary">Other options</string>
     <string name="dev_options_title">Developer options</string>
     <string name="dev_options_desc">Enable some hidden features at your own risk</string>
+
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="abbrev_wday_month_day_no_year" translatable="false">EEEEMMMd</string>
 </resources>

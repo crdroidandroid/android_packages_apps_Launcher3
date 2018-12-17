@@ -111,7 +111,7 @@ import java.util.concurrent.TimeoutException;
  * Steps:
  *   1) Create a dummy icon info with just white icon
  *   2) Inflate a strip down layout definition for Launcher
- *   3) Place appropriate elements like icons and first-page qsb
+ *   3) Place appropriate elements like icons and first-page quickspace
  *   4) Measure and draw the view on a canvas
  */
 @TargetApi(Build.VERSION_CODES.O)
@@ -500,14 +500,14 @@ public class LauncherPreviewRenderer {
                 }
             }
 
-            // Add first page QSB
-            if (FeatureFlags.QSB_ON_FIRST_SCREEN) {
-                View qsb = mHomeElementInflater.inflate(
-                        R.layout.search_container_workspace, mWorkspace, false);
+            // Add first page QuickSpace
+            if (FeatureFlags.USE_QUICKSPACE_VIEW) {
+                View quickspace = mHomeElementInflater.inflate(
+                        R.layout.reserved_container_workspace, mWorkspace, false);
                 CellLayout.LayoutParams lp =
                         new CellLayout.LayoutParams(0, 0, mWorkspace.getCountX(), 1);
                 lp.canReorder = false;
-                mWorkspace.addViewToCellLayout(qsb, 0, R.id.search_container_workspace, lp, true);
+                mWorkspace.addViewToCellLayout(quickspace, 0, R.id.reserved_container_workspace, lp, true);
             }
 
             measureView(mRootView, mDp.widthPx, mDp.heightPx);
