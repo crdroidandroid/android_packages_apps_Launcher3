@@ -135,7 +135,7 @@ import com.android.launcher3.pm.UserCache;
 import com.android.launcher3.popup.PopupContainerWithArrow;
 import com.android.launcher3.popup.PopupDataProvider;
 import com.android.launcher3.popup.SystemShortcut;
-import com.android.launcher3.qsb.QsbContainerView;
+import com.android.launcher3.quickspace.QuickSpaceView;
 import com.android.launcher3.statemanager.StateManager;
 import com.android.launcher3.statemanager.StateManager.StateHandler;
 import com.android.launcher3.statemanager.StateManager.StateListener;
@@ -345,6 +345,8 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
     private boolean mTouchInProgress;
 
     private SafeCloseable mUserChangedCallbackCloseable;
+    // QuickSpace
+    private QuickSpaceView mQuickSpace;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -428,6 +430,7 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
         // For handling default keys
         setDefaultKeyMode(DEFAULT_KEYS_SEARCH_LOCAL);
 
+        mQuickSpace = findViewById(R.id.reserved_container_workspace);
         setContentView(getRootView());
         getRootView().dispatchInsets();
 
@@ -1057,6 +1060,10 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
                 resumeCallbacks.get(i).onLauncherResume();
             }
             resumeCallbacks.clear();
+        }
+
+        if (mQuickSpace != null) {
+            mQuickSpace.onResume();
         }
 
         if (mDeferOverlayCallbacks) {
@@ -2034,11 +2041,11 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
     @Override
     public void bindScreens(IntArray orderedScreenIds) {
         // Make sure the first screen is always at the start.
-        if (FeatureFlags.QSB_ON_FIRST_SCREEN &&
+        if (Utilities.showQuickspace(this) &&
                 orderedScreenIds.indexOf(Workspace.FIRST_SCREEN_ID) != 0) {
             orderedScreenIds.removeValue(Workspace.FIRST_SCREEN_ID);
             orderedScreenIds.add(0, Workspace.FIRST_SCREEN_ID);
-        } else if (!FeatureFlags.QSB_ON_FIRST_SCREEN && orderedScreenIds.isEmpty()) {
+        } else if (!Utilities.showQuickspace(this) && orderedScreenIds.isEmpty()) {
             // If there are no screens, we need to have an empty screen
             mWorkspace.addExtraEmptyScreen();
         }
@@ -2054,7 +2061,7 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
         int count = orderedScreenIds.size();
         for (int i = 0; i < count; i++) {
             int screenId = orderedScreenIds.get(i);
-            if (!FeatureFlags.QSB_ON_FIRST_SCREEN || screenId != Workspace.FIRST_SCREEN_ID) {
+            if (!Utilities.showQuickspace(this) || screenId != Workspace.FIRST_SCREEN_ID) {
                 // No need to bind the first screen, as its always bound.
                 mWorkspace.insertNewWorkspaceScreenBeforeEmptyScreen(screenId);
             }
@@ -2217,13 +2224,6 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
     }
 
     private View inflateAppWidget(LauncherAppWidgetInfo item) {
-        if (item.hasOptionFlag(LauncherAppWidgetInfo.OPTION_SEARCH_WIDGET)) {
-            item.providerName = QsbContainerView.getSearchComponentName(this);
-            if (item.providerName == null) {
-                getModelWriter().deleteItemFromDatabase(item);
-                return null;
-            }
-        }
         final AppWidgetHostView view;
         if (mIsSafeModeEnabled) {
             view = new PendingAppWidgetHostView(this, item, mIconCache, true);
