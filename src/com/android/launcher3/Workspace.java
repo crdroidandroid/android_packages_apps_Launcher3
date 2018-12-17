@@ -497,25 +497,25 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
 
     /**
      * Initializes and binds the first page
-     * @param qsb an existing qsb to recycle or null.
+     * @param quickSpace an existing quickSpace to recycle or null.
      */
-    public void bindAndInitFirstWorkspaceScreen(View qsb) {
-        if (!FeatureFlags.QSB_ON_FIRST_SCREEN) {
+    public void bindAndInitFirstWorkspaceScreen(View quickSpace) {
+        if (!Utilities.showQuickspace(getContext())) {
             return;
         }
         // Add the first page
         CellLayout firstPage = insertNewWorkspaceScreen(Workspace.FIRST_SCREEN_ID, 0);
-        // Always add a QSB on the first screen.
-        if (qsb == null) {
-            // In transposed layout, we add the QSB in the Grid. As workspace does not touch the
-            // edges, we do not need a full width QSB.
-            qsb = LayoutInflater.from(getContext())
-                    .inflate(R.layout.search_container_workspace, firstPage, false);
+        // Always add QuickSpace on the first screen.
+        if (quickSpace == null) {
+            // In transposed layout, we add the QuickSpace in the Grid. As workspace does not touch the
+            // edges, we do not need a full width QuickSpace.
+            quickSpace = LayoutInflater.from(getContext())
+                    .inflate(R.layout.reserved_container_workspace, firstPage, false);
         }
 
         CellLayout.LayoutParams lp = new CellLayout.LayoutParams(0, 0, firstPage.getCountX(), 1);
         lp.canReorder = false;
-        if (!firstPage.addViewToCellLayout(qsb, 0, R.id.search_container_workspace, lp, true)) {
+        if (!firstPage.addViewToCellLayout(quickSpace, 0, R.id.reserved_container_workspace, lp, true)) {
             Log.e(TAG, "Failed to add to item at (0, 0) to CellLayout");
         }
     }
@@ -525,10 +525,10 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
         // transition animations competing with us changing the scroll when we add pages
         disableLayoutTransitions();
 
-        // Recycle the QSB widget
-        View qsb = findViewById(R.id.search_container_workspace);
-        if (qsb != null) {
-            ((ViewGroup) qsb.getParent()).removeView(qsb);
+        // Recycle the QuickSpace view
+        View quickSpace = findViewById(R.id.reserved_container_workspace);
+        if (quickSpace != null) {
+            ((ViewGroup) quickSpace.getParent()).removeView(quickSpace);
         }
 
         // Remove the pages and clear the screen models
@@ -541,7 +541,7 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
         mLauncher.mHandler.removeCallbacksAndMessages(DeferredWidgetRefresh.class);
 
         // Ensure that the first page is always present
-        bindAndInitFirstWorkspaceScreen(qsb);
+        bindAndInitFirstWorkspaceScreen(quickSpace);
 
         // Re-enable the layout transitions
         enableLayoutTransitions();
@@ -753,7 +753,7 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
             int id = mWorkspaceScreens.keyAt(i);
             CellLayout cl = mWorkspaceScreens.valueAt(i);
             // FIRST_SCREEN_ID can never be removed.
-            if ((!FeatureFlags.QSB_ON_FIRST_SCREEN || id > FIRST_SCREEN_ID)
+            if ((!Utilities.showQuickspace(getContext()) || id > FIRST_SCREEN_ID)
                     && cl.getShortcutsAndWidgets().getChildCount() == 0) {
                 removeScreens.add(id);
             }

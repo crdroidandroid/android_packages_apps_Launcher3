@@ -847,9 +847,9 @@ public class LauncherProvider extends ContentProvider {
                 case 25:
                     convertShortcutsToLauncherActivities(db);
                 case 26:
-                    // QSB was moved to the grid. Clear the first row on screen 0.
-                    if (FeatureFlags.QSB_ON_FIRST_SCREEN &&
-                            !LauncherDbUtils.prepareScreenZeroToHostQsb(mContext, db)) {
+                    // QuickSpace was moved to the grid. Clear the first row on screen 0.
+                    if (Utilities.showQuickspace(mContext) &&
+                            !LauncherDbUtils.prepareScreenForQuickSpace(mContext, db)) {
                         break;
                     }
                 case 27: {
