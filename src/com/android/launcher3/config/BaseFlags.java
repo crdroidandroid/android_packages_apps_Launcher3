@@ -68,8 +68,8 @@ public abstract class BaseFlags {
             new TogglableFlag("PROMISE_APPS_NEW_INSTALLS", false,
                     "Adds a promise icon to the home screen for new install sessions.");
 
-    // Enable moving the QSB on the 0th screen of the workspace
-    public static final boolean QSB_ON_FIRST_SCREEN = false;
+    // Feature flag to enable the Quickspace view.
+    public static final boolean USE_QUICKSPACE_VIEW = true;
 
     public static final TogglableFlag EXAMPLE_FLAG = new TogglableFlag("EXAMPLE_FLAG", true,
             "An example flag that doesn't do anything. Useful for testing");
