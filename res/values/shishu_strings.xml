@@ -33,6 +33,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Sub categories -->
     <string name="home_grid_title">Grid layout</string>
     <string name="icon_layout_title">Icon layout</string>
+    <string name="home_overall_title">Home layout</string>
+    <string name="home_hotseat_title">Dock</string>
+    <string name="app_overall_title">App list</string>
+    <string name="misc_recents_title">Recents</string>
+    <string name="misc_gestures_title">Gestures</string>
 
     <!-- Icon packs -->
     <string name="iconPackPackageDefault" translatable="false">""</string>

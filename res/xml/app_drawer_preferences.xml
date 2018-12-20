@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <PreferenceCategory
+        android:key="app_overall_category"
+        android:title="@string/app_overall_title">
+
     <SwitchPreference
         android:key="pref_allapps_show_label"
         android:title="@string/app_show_label_title"
@@ -12,6 +16,8 @@
         android:key="hidden_app"
         android:title="@string/hide_app"
         android:summary="@string/hide_app_sum"/>
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
 

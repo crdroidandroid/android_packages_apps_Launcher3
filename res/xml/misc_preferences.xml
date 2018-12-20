@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <SwitchPreference
-        android:key="pref_allowSwipeDownClearAll"
-        android:title="@string/allow_swipe_down_clearall_title"
-        android:summary="@string/allow_swipe_down_clearall_desc"
-        android:defaultValue="@bool/allow_swipe_down_clearall"
-        android:persistent="true" />
+    <PreferenceCategory
+        android:key="misc_gestures_category"
+        android:title="@string/misc_gestures_title">
 
     <SwitchPreference
         android:key="pref_notifications_gesture"
@@ -23,5 +20,20 @@
         android:entryValues="@array/pref_homescreen_dt_gestures_values"
         android:defaultValue=""
         android:persistent="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="misc_recents_category"
+        android:title="@string/misc_recents_title">
+
+    <SwitchPreference
+        android:key="pref_allowSwipeDownClearAll"
+        android:title="@string/allow_swipe_down_clearall_title"
+        android:summary="@string/allow_swipe_down_clearall_desc"
+        android:defaultValue="@bool/allow_swipe_down_clearall"
+        android:persistent="true" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
