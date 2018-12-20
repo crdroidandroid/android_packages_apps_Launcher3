@@ -185,4 +185,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>overthetop</item>
     </string-array>
 
+    <!-- Recents cards values -->
+    <string-array name="custom_recents_corners_type_names">
+        <item>@string/custom_recents_corners_type_default</item>
+        <item>@string/custom_recents_corners_type_card</item>
+        <item>@string/custom_recents_corners_type_op</item>
+    </string-array>
+
+    <string-array translatable="false" name="custom_recents_corners_type_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
 </resources>

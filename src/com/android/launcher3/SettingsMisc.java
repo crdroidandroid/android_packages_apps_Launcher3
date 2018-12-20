@@ -61,6 +61,7 @@ public class SettingsMisc extends SettingsActivity implements PreferenceFragment
         ActionBar actionBar;
 
         private ListPreference mHomescreenGestures;
+        private ListPreference mCustomRecentsType;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -85,6 +86,18 @@ public class SettingsMisc extends SettingsActivity implements PreferenceFragment
                     return true;
                 }
             });
+
+            SwitchPreference useCustomRecentsRound = (SwitchPreference) findPreference(Utilities.PREF_CUSTOM_RECENTS_ROUND_SWITCH);
+            useCustomRecentsRound.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    return true;
+                }
+            });
+
+            mCustomRecentsType = (ListPreference) findPreference(Utilities.PREF_CUSTOM_RECENTS_ROUND_TYPE);
+            mCustomRecentsType.setValue(getDevicePrefs(mContext).getString(Utilities.PREF_CUSTOM_RECENTS_ROUND_TYPE, "0"));
+            mCustomRecentsType.setOnPreferenceChangeListener(this);
         }
 
         @Override
@@ -104,6 +117,12 @@ public class SettingsMisc extends SettingsActivity implements PreferenceFragment
                     String gestureValue = (String) newValue;
                     getDevicePrefs(mContext).edit().putString(KEY_HOMESCREEN_DT_GESTURES, gestureValue).commit();
                     mHomescreenGestures.setValue(gestureValue);
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    break;
+                case Utilities.PREF_CUSTOM_RECENTS_ROUND_TYPE:
+                    String roundValue = (String) newValue;
+                    getDevicePrefs(mContext).edit().putString(Utilities.PREF_CUSTOM_RECENTS_ROUND_TYPE, roundValue).commit();
+                    mCustomRecentsType.setValue(roundValue);
                     LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                     break;
             }

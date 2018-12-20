@@ -43,6 +43,7 @@ import android.widget.Toast;
 import com.android.launcher3.BaseActivity;
 import com.android.launcher3.BaseDraggingActivity;
 import com.android.launcher3.R;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.userevent.nano.LauncherLogProto.Action.Direction;
 import com.android.launcher3.userevent.nano.LauncherLogProto.Action.Touch;
 import com.android.quickstep.TaskSystemShortcut;
@@ -285,14 +286,14 @@ public class TaskView extends FrameLayout implements TaskCallbacks, PageCallback
         return false;
     }
 
-    private static final class TaskOutlineProvider extends ViewOutlineProvider {
+    private final class TaskOutlineProvider extends ViewOutlineProvider {
 
         private final int mMarginTop;
         private final float mRadius;
 
         TaskOutlineProvider(Resources res) {
             mMarginTop = res.getDimensionPixelSize(R.dimen.task_thumbnail_top_margin);
-            mRadius = res.getDimension(R.dimen.task_corner_radius);
+            mRadius = Utilities.useCustomRecentsRound(getContext()) ? Utilities.getRecentsRoundType(getContext()) : res.getDimension(R.dimen.task_corner_radius);
         }
 
         @Override

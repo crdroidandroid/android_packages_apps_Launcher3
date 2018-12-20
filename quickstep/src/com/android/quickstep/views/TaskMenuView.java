@@ -226,7 +226,7 @@ public class TaskMenuView extends AbstractFloatingView {
     }
 
     private RoundedRectRevealOutlineProvider createOpenCloseOutlineProvider() {
-        float radius = getResources().getDimension(R.dimen.task_corner_radius);
+        float radius = Utilities.useCustomRecentsRound(getContext()) ? Utilities.getRecentsRoundType(getContext()) : getResources().getDimension(R.dimen.task_corner_radius);
         Rect fromRect = new Rect(0, 0, getWidth(), 0);
         Rect toRect = new Rect(0, 0, getWidth(), getHeight());
         return new RoundedRectRevealOutlineProvider(radius, radius, fromRect, toRect);
