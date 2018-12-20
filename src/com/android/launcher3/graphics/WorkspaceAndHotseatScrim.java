@@ -45,6 +45,7 @@ import androidx.core.graphics.ColorUtils;
 import com.android.launcher3.CellLayout;
 import com.android.launcher3.R;
 import com.android.launcher3.ResourceUtils;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.Workspace;
 import com.android.launcher3.uioverrides.WallpaperColorInfo;
 import com.android.launcher3.util.Themes;
@@ -253,9 +254,9 @@ public class WorkspaceAndHotseatScrim extends Scrim {
 
     private void reapplySysUiAlphaNoInvalidate() {
         float factor = mSysUiProgress * mSysUiAnimMultiplier;
-        mBottomMaskPaint.setAlpha(Math.round(MAX_HOTSEAT_SCRIM_ALPHA * factor));
+        mBottomMaskPaint.setAlpha(Utilities.showHotseatGradient(mRoot.getContext()) ? Math.round(MAX_HOTSEAT_SCRIM_ALPHA * factor) : Math.round(0 * factor));
         if (mTopScrim != null) {
-            mTopScrim.setAlpha(Math.round(255 * factor));
+            mTopScrim.setAlpha(Utilities.showWorkspaceGradient(mRoot.getContext())? Math.round(255 * factor) : Math.round(0 * factor));
         }
     }
 

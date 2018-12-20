@@ -72,6 +72,8 @@ public class SettingsHomescreen extends Activity
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         switch (key) {
             case KEY_MINUS_ONE:
+            case Utilities.SHOW_WORKSPACE_GRADIENT:
+            case Utilities.SHOW_HOTSEAT_GRADIENT:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:

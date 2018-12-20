@@ -116,6 +116,8 @@ public final class Utilities {
     public static final int EDGE_NAV_BAR = 1 << 8;
 
     public static final String SLEEP_GESTURE = "pref_sleep_gesture";
+    public static final String SHOW_WORKSPACE_GRADIENT = "pref_show_workspace_grad";
+    public static final String SHOW_HOTSEAT_GRADIENT = "pref_show_hotseat_grad";
 
     /**
      * Indicates if the device has a debug build. Should only be used to store additional info or
@@ -623,6 +625,14 @@ public final class Utilities {
 
     public static boolean useSleepGesture(Context context) {
         return getPrefs(context).getBoolean(SLEEP_GESTURE, true);
+    }
+
+    public static boolean showWorkspaceGradient(Context context) {
+        return getPrefs(context).getBoolean(SHOW_WORKSPACE_GRADIENT, true);
+    }
+
+    public static boolean showHotseatGradient(Context context) {
+        return getPrefs(context).getBoolean(SHOW_HOTSEAT_GRADIENT, true);
     }
 
     public static void restart(final Context context) {
