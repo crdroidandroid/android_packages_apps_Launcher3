@@ -208,6 +208,23 @@ public class SettingsHomescreen extends SettingsActivity implements PreferenceFr
                     return true;
                 }
             });
+
+            SwitchPreference showWorkspaceGradient = (SwitchPreference) findPreference(Utilities.SHOW_WORKSPACE_GRADIENT);
+            showWorkspaceGradient.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    return true;
+                }
+            });
+
+            SwitchPreference showHotseatGradient = (SwitchPreference) findPreference(Utilities.SHOW_HOTSEAT_GRADIENT);
+            showHotseatGradient.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    return true;
+                }
+            });
+
         }
 
         @Override

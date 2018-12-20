@@ -290,8 +290,16 @@ public class WorkspaceAndHotseatScrim implements
 
     private void reapplySysUiAlphaNoInvalidate() {
         float factor = mSysUiProgress * mSysUiAnimMultiplier;
-        mBottomMaskPaint.setAlpha(Math.round(MAX_HOTSEAT_SCRIM_ALPHA * factor));
-        mTopScrim.setAlpha(Math.round(255 * factor));
+        if (Utilities.showHotseatGradient(mRoot.getContext())) {
+            mBottomMaskPaint.setAlpha(Math.round(MAX_HOTSEAT_SCRIM_ALPHA * factor));
+        } else {
+            mBottomMaskPaint.setAlpha(Math.round(0 * factor));
+        }
+        if (Utilities.showWorkspaceGradient(mRoot.getContext())) {
+            mTopScrim.setAlpha(Math.round(255 * factor));
+        } else {
+            mTopScrim.setAlpha(Math.round(0 * factor));
+        }
     }
 
     public void invalidate() {

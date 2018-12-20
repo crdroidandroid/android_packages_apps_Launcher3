@@ -201,4 +201,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="date_style_spacing_aesthetic" translatable="false">A e s t h e t i c</string>
     <string name="date_style_spacing_ott">Over the top</string>
 
+    <!-- Gradients on Workspace/Hotseat? -->
+    <string name="workspace_gradient_title">Show gradient on top</string>
+    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
+    <string name="hotseat_gradient_title">Show gradient on bottom</string>
+    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+
 </resources>
