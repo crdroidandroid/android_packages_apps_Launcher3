@@ -42,4 +42,10 @@
     <!-- Google Feed -->
     <string name="google_feed_title">Display Google app</string>
     <string name="google_feed_summary">To the left of the main home screen</string>
+ 
+     <!-- Gradients on Workspace/Hotseat -->
+    <string name="workspace_gradient_title">Show gradient on top</string>
+    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
+    <string name="hotseat_gradient_title">Show gradient on bottom</string>
+    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
 </resources>
