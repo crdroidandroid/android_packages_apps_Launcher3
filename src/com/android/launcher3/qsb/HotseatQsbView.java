@@ -148,7 +148,7 @@ public class HotseatQsbView extends BaseQsbView {
         String provider = Utilities.getSearchProvider(getContext());
         if(provider.contains("google")) {
             ConfigurationBuilder config = new ConfigurationBuilder(this, false);
-            if (mLauncher.getClient().startSearch(config.build(), config.getExtras())) {
+            if (config != null && mLauncher.getClient() != null && mLauncher.getClient().startSearch(config.build(), config.getExtras())) {
                 SharedPreferences devicePrefs = Utilities.getDevicePrefs(getContext());
                 devicePrefs.edit().putInt("key_hotseat_qsb_tap_count", devicePrefs.getInt("key_hotseat_qsb_tap_count", 0) + 1).apply();
                 mLauncher.getQsbController().playQsbAnimation();
