@@ -38,13 +38,7 @@ public class LayoutUtils {
     private @interface MultiWindowStrategy {}
 
     public static void calculateLauncherTaskSize(Context context, DeviceProfile dp, Rect outRect) {
-        float extraSpace;
-        if (dp.isVerticalBarLayout()) {
-            extraSpace = 0;
-        } else {
-            extraSpace = dp.hotseatBarSizePx + dp.verticalDragHandleSizePx;
-        }
-        calculateTaskSize(context, dp, extraSpace, MULTI_WINDOW_STRATEGY_HALF_SCREEN, outRect);
+        calculateTaskSize(context, dp, dp.isVerticalBarLayout() ? 0.0f : (float) dp.hotseatBarSizePx, MULTI_WINDOW_STRATEGY_HALF_SCREEN, outRect);
     }
 
     public static void calculateFallbackTaskSize(Context context, DeviceProfile dp, Rect outRect) {

@@ -20,6 +20,7 @@ import static com.android.launcher3.LauncherAnimUtils.DRAWABLE_ALPHA;
 import static com.android.launcher3.LauncherAnimUtils.SCALE_PROPERTY;
 import static com.android.launcher3.LauncherState.HOTSEAT_ICONS;
 import static com.android.launcher3.LauncherState.HOTSEAT_SEARCH_BOX;
+import static com.android.launcher3.LauncherState.VERTICAL_SWIPE_INDICATOR;
 import static com.android.launcher3.anim.AnimatorSetBuilder.ANIM_WORKSPACE_FADE;
 import static com.android.launcher3.anim.AnimatorSetBuilder.ANIM_WORKSPACE_SCALE;
 import static com.android.launcher3.anim.Interpolators.LINEAR;
@@ -92,6 +93,8 @@ public class WorkspaceStateTransitionAnimation {
                     fadeInterpolator);
             propertySetter.setViewAlpha(mLauncher.getWorkspace().getPageIndicator(),
                     hotseatIconsAlpha, fadeInterpolator);
+            propertySetter.setViewAlpha(mLauncher.getDragHandleIndicator(), 
+                    (elements & VERTICAL_SWIPE_INDICATOR) != 0 ? 1 : 0, fadeInterpolator);
         }
 
         if (!config.playNonAtomicComponent()) {

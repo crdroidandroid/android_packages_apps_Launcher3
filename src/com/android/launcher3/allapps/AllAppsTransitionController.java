@@ -105,6 +105,7 @@ public class AllAppsTransitionController implements StateHandler, OnDeviceProfil
             mAppsView.setAlpha(1);
             mLauncher.getHotseat().setTranslationY(0);
             mLauncher.getWorkspace().getPageIndicator().setTranslationY(0);
+            mLauncher.getDragHandleIndicator().setTranslationY(0.0f);
         }
     }
 
@@ -128,6 +129,7 @@ public class AllAppsTransitionController implements StateHandler, OnDeviceProfil
         if (!mIsVerticalLayout) {
             mLauncher.getHotseat().setTranslationY(hotseatTranslation);
             mLauncher.getWorkspace().getPageIndicator().setTranslationY(hotseatTranslation);
+            mLauncher.getDragHandleIndicator().setTranslationY(hotseatTranslation);
         }
 
         // Use a light system UI (dark icons) if all apps is behind at least half of the

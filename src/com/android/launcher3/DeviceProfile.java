@@ -71,8 +71,7 @@ public class DeviceProfile {
     public final int workspaceSpringLoadedBottomSpace;
 
     // Drag handle
-    public final int verticalDragHandleSizePx;
-    private final int verticalDragHandleOverlapWorkspace;
+    public final int pageIndicatorSizePx;
 
     // Workspace icons
     public int iconSizePx;
@@ -176,10 +175,8 @@ public class DeviceProfile {
                 res.getDimensionPixelSize(R.dimen.dynamic_grid_cell_layout_padding);
         cellLayoutBottomPaddingPx =
                 res.getDimensionPixelSize(R.dimen.dynamic_grid_cell_layout_bottom_padding);
-        verticalDragHandleSizePx = res.getDimensionPixelSize(
-                R.dimen.vertical_drag_handle_size);
-        verticalDragHandleOverlapWorkspace =
-                res.getDimensionPixelSize(R.dimen.vertical_drag_handle_overlap_workspace);
+        pageIndicatorSizePx = res.getDimensionPixelSize(
+                R.dimen.dynamic_grid_min_page_indicator_size);
         defaultPageSpacingPx =
                 res.getDimensionPixelSize(R.dimen.dynamic_grid_workspace_page_spacing);
         topWorkspacePadding =
@@ -218,7 +215,7 @@ public class DeviceProfile {
             // in portrait mode closer together by adding more height to the hotseat.
             // Note: This calculation was created after noticing a pattern in the design spec.
             int extraSpace = getCellSize().y - iconSizePx - iconDrawablePaddingPx * 2
-                    - verticalDragHandleSizePx;
+                    - pageIndicatorSizePx;
             hotseatBarSizePx += extraSpace;
             hotseatBarBottomPaddingPx += extraSpace;
 
@@ -345,7 +342,7 @@ public class DeviceProfile {
 
         if (!isVerticalLayout) {
             int expectedWorkspaceHeight = availableHeightPx - hotseatBarSizePx
-                    - verticalDragHandleSizePx - topWorkspacePadding;
+                    - pageIndicatorSizePx - topWorkspacePadding;
             float minRequiredHeight = dropTargetBarSizePx + workspaceSpringLoadedBottomSpace;
             workspaceSpringLoadShrinkFactor = Math.min(
                     res.getInteger(R.integer.config_workspaceSpringLoadShrinkPercentage) / 100.0f,
@@ -440,14 +437,13 @@ public class DeviceProfile {
             padding.bottom = edgeMarginPx;
             if (isSeascape()) {
                 padding.left = hotseatBarSizePx;
-                padding.right = verticalDragHandleSizePx;
+                padding.right = pageIndicatorSizePx;
             } else {
-                padding.left = verticalDragHandleSizePx;
+                padding.left = pageIndicatorSizePx;
                 padding.right = hotseatBarSizePx;
             }
         } else {
-            int paddingBottom = hotseatBarSizePx + verticalDragHandleSizePx
-                    - verticalDragHandleOverlapWorkspace;
+            int paddingBottom = hotseatBarSizePx + pageIndicatorSizePx;
             if (isTablet) {
                 // Pad the left and right of the workspace to ensure consistent spacing
                 // between all icons
@@ -514,7 +510,7 @@ public class DeviceProfile {
                     mInsets.top + dropTargetBarSizePx + edgeMarginPx,
                     mInsets.left + availableWidthPx - edgeMarginPx,
                     mInsets.top + availableHeightPx - hotseatBarSizePx
-                            - verticalDragHandleSizePx - edgeMarginPx);
+                            - pageIndicatorSizePx - edgeMarginPx);
         }
     }
 

@@ -15,9 +15,19 @@
  */
 package com.android.launcher3.allapps.search;
 
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.pm.LauncherActivityInfo;
 import android.os.Handler;
+import android.os.UserHandle;
 
 import com.android.launcher3.AppInfo;
+import com.android.launcher3.AppFilter;
+import com.android.launcher3.IconCache;
+import com.android.launcher3.LauncherAppState;
+import com.android.launcher3.StringSetAppFilter;
+import com.android.launcher3.compat.LauncherAppsCompat;
+import com.android.launcher3.compat.UserManagerCompat;
 import com.android.launcher3.util.ComponentKey;
 
 import java.text.Collator;
@@ -31,9 +41,13 @@ public class DefaultAppSearchAlgorithm implements SearchAlgorithm {
 
     private final List<AppInfo> mApps;
     protected final Handler mResultHandler;
+    public final AppFilter mBaseFilter;
+    public final Context mContext;
 
-    public DefaultAppSearchAlgorithm(List<AppInfo> apps) {
+    public DefaultAppSearchAlgorithm(Context context, List<AppInfo> apps) {
+        mContext = context;
         mApps = apps;
+        mBaseFilter = new StringSetAppFilter(context);
         mResultHandler = new Handler();
     }
 
@@ -63,12 +77,31 @@ public class DefaultAppSearchAlgorithm implements SearchAlgorithm {
         final String queryTextLower = query.toLowerCase();
         final ArrayList<ComponentKey> result = new ArrayList<>();
         StringMatcher matcher = StringMatcher.getInstance();
-        for (AppInfo info : mApps) {
+        for (AppInfo info : getApps(mContext, mApps, mBaseFilter)) {
             if (matches(info, queryTextLower, matcher)) {
                 result.add(info.toComponentKey());
             }
         }
         return result;
+    }
+
+    public static List<AppInfo> getApps(Context context, List<AppInfo> defaultApps, AppFilter filter) {
+        List<AppInfo> apps = new ArrayList();
+        IconCache iconCache = LauncherAppState.getInstance(context).getIconCache();
+        for (UserHandle user : UserManagerCompat.getInstance(context).getUserProfiles()) {
+            List<ComponentName> duplicatePreventionCache = new ArrayList();
+            for (LauncherActivityInfo info : LauncherAppsCompat.getInstance(context).getActivityList(null, user)) {
+                if (filter.shouldShowApp(info.getComponentName().getPackageName(), context, true)) {
+                    if (!duplicatePreventionCache.contains(info.getComponentName())) {
+                        duplicatePreventionCache.add(info.getComponentName());
+                        AppInfo appInfo = new AppInfo(context, info, user);
+                        iconCache.getTitleAndIcon(appInfo, false);
+                        apps.add(appInfo);
+                    }
+                }
+            }
+        }
+        return apps;
     }
 
     public static boolean matches(AppInfo info, String query, StringMatcher matcher) {

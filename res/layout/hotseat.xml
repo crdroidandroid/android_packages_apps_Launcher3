@@ -25,4 +25,13 @@
         android:layout_gravity="center"
         launcher:containerType="hotseat"
         android:importantForAccessibility="no" />
+
+    <com.android.launcher3.qsb.HotseatQsbView
+        android:layout_gravity="bottom|center"
+        android:id="@id/search_container_hotseat"
+        android:background="@drawable/bg_qsb_click_feedback"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/qsb_widget_height"
+        android:contentDescription="@string/label_search" />
+
 </com.android.launcher3.Hotseat>
