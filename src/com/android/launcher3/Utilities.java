@@ -692,6 +692,10 @@ public final class Utilities {
         }
     }
 
+    public static <T> T notNullOrDefault(T value, T defValue) {
+        return value == null ? defValue : value;
+    }
+
     /**
      * Returns a HashSet with a single element. We use this instead of Collections.singleton()
      * because HashSet ensures all operations, such as remove, are supported.

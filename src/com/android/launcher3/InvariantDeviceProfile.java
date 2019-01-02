@@ -82,6 +82,11 @@ public class InvariantDeviceProfile {
      */
     public int numHotseatIcons;
 
+    /**
+     * Number of predictions inside all apps
+     */
+    public int numPredictions;
+
     int defaultLayoutId;
     int demoModeLayoutId;
 
@@ -148,6 +153,7 @@ public class InvariantDeviceProfile {
         demoModeLayoutId = closestProfile.demoModeLayoutId;
         numFolderRows = closestProfile.numFolderRows;
         numFolderColumns = closestProfile.numFolderColumns;
+        numPredictions = numColumns;
 
         float iconSizeModifier = Utilities.getIconSizeModifier(context);
         iconSize = interpolatedDeviceProfileOut.iconSize * iconSizeModifier;

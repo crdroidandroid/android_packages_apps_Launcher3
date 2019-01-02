@@ -28,5 +28,11 @@
     <!-- Icon colors -->
     <color name="qsb_icons_accent">@*android:color/accent_device_default_light</color>
 
+    <!-- Predictions -->
+    <color name="all_apps_prediction_row_separator">#3c000000</color>
+    <color name="all_apps_prediction_row_separator_dark">#3cffffff</color>
+    <color name="all_apps_label_text">#61000000</color>
+    <color name="all_apps_label_text_dark">#61ffffff</color>
+
 </resources>
 

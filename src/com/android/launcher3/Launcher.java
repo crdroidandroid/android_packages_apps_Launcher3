@@ -92,6 +92,7 @@ import com.android.launcher3.folder.FolderIconPreviewVerifier;
 import com.android.launcher3.keyboard.CustomActionsPopup;
 import com.android.launcher3.keyboard.ViewGroupFocusHelper;
 import com.android.launcher3.logging.FileLog;
+import com.android.launcher3.logging.PredictionsDispatcher;
 import com.android.launcher3.logging.UserEventDispatcher;
 import com.android.launcher3.logging.UserEventDispatcher.UserEventDelegate;
 import com.android.launcher3.model.ModelWriter;
@@ -110,6 +111,7 @@ import com.android.launcher3.userevent.nano.LauncherLogProto.ContainerType;
 import com.android.launcher3.userevent.nano.LauncherLogProto.Target;
 import com.android.launcher3.util.ActivityResultInfo;
 import com.android.launcher3.util.ComponentKey;
+import com.android.launcher3.util.ComponentKeyMapper;
 import com.android.launcher3.util.ItemInfoMatcher;
 import com.android.launcher3.util.MultiHashMap;
 import com.android.launcher3.util.MultiValueAlpha;
@@ -276,6 +278,13 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
     public LauncherClient getClient() {
         return mLauncherTab.getClient();
     }
+
+    public Runnable mUpdatePredictionsIfResumed = new Runnable() {
+        @Override
+        public void run() {
+            updatePredictions(false);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -831,6 +840,13 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         if (mLauncherCallbacks != null) {
             mLauncherCallbacks.onResume();
         }
+
+        Handler handler = getDragLayer().getHandler();
+        if (handler != null) {
+            handler.removeCallbacks(mUpdatePredictionsIfResumed);
+            Utilities.postAsyncCallback(handler, mUpdatePredictionsIfResumed);
+        }
+
         UiFactory.onLauncherStateOrResumeChanged(this);
 
         TraceHelper.endSection("ON_RESUME");
@@ -2564,6 +2580,18 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         }
         if (KEY_HOMESCREEN_DT_GESTURES.equals(key)) {
             mWorkspace.setGestures(Integer.valueOf(sharedPreferences.getString("KEY_HOMESCREEN_DT_GESTURES", "0")));
+        }
+        if (SettingsAppDrawer.KEY_APP_SUGGESTIONS.equals(key)) {
+            updatePredictions(true);
+        }
+    }
+
+    public void updatePredictions(boolean force) {
+        if (hasBeenResumed() || force) {
+            List<ComponentKeyMapper> apps = ((PredictionsDispatcher) getUserEventDispatcher()).getPredictedApps();
+            if (apps != null) {
+                mAppsView.getFloatingHeaderView().setPredictedApps(mSharedPrefs.getBoolean(SettingsAppDrawer.KEY_APP_SUGGESTIONS, true), apps);
+            }
         }
     }
 }

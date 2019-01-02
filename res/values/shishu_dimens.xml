@@ -29,4 +29,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <dimen name="qsb_two_bubble_gap">8.0dip</dimen>
     <dimen name="qsb_widget_height">56.0dip</dimen>
 
+    <!-- Predictions -->
+    <dimen name="all_apps_label_bottom_padding">8.0dip</dimen>
+    <dimen name="all_apps_label_text_size">14.0sp</dimen>
+    <dimen name="all_apps_label_top_padding">16.0dip</dimen>
+    <dimen name="all_apps_prediction_row_divider_height">17.0dip</dimen>
+
 </resources>

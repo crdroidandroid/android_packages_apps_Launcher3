@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2018 The Android Open Source Project
+<!-- Copyright (C) 2018 CypherOS
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
 
-        http://www.apache.org/licenses/LICENSE-2.0
+          http://www.apache.org/licenses/LICENSE-2.0
 
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,10 +13,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-    <string name="task_overlay_factory_class" translatable="false"></string>
 
-    <string name="overview_callbacks_class" translatable="false"></string>
-
-    <string name="user_event_dispatcher_class" translatable="false">com.android.launcher3.logging.PredictionsDispatcher</string>
-</resources>
+<ProgressBar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20.0dip"
+    android:layout_marginRight="20.0dip"
+    android:indeterminate="true"
+    android:indeterminateOnly="true"
+    android:indeterminateTint="?workspaceTextColor"
+    style="?android:progressBarStyleHorizontal"
+    />
