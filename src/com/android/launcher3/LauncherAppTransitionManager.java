@@ -48,7 +48,7 @@ public class LauncherAppTransitionManager {
                     height = bounds.height();
                 }
             }
-            return ActivityOptions.makeClipRevealAnimation(v, left, top, width, height);
+            return ActivityOptions.makeScaleUpAnimation(v, left, top, width, height);
         } else if (Utilities.ATLEAST_LOLLIPOP_MR1) {
             // On L devices, we use the device default slide-up transition.
             // On L MR1 devices, we use a custom version of the slide-up transition which
