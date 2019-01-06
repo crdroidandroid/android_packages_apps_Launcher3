@@ -58,12 +58,6 @@ android {
             applicationId 'com.android.launcher3'
             testApplicationId 'com.android.launcher3.tests'
         }
-
-        searchlauncher {
-            dimension "default"
-            applicationId 'com.android.launcher3'
-            testApplicationId 'com.android.launcher3.tests'
-        }
     }
 
     // Disable release builds for now
@@ -113,12 +107,6 @@ android {
             java.srcDirs = ['src_flags', 'quickstep/src']
             manifest.srcFile "quickstep/AndroidManifest.xml"
         }
-
-	searchlauncher {
-            res.srcDirs = ['searchlauncher/res']
-            java.srcDirs = ['src_flags', 'searchlauncher/src']
-            manifest.srcFile "searchlauncher/AndroidManifest.xml"
-        }
     }
 }
 
@@ -136,7 +124,6 @@ dependencies {
     implementation 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'
 
     quickstepImplementation fileTree(dir: "quickstep/libs", include: 'sysui_shared.jar')
-    searchlauncherImplementation fileTree(dir: "searchlauncher/libs", include: 'gsa.jar')
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation "org.mockito:mockito-core:1.9.5"
