@@ -158,6 +158,7 @@ dependencies {
 
     // Recents lib dependency for Go
     withQuickstepIconRecentsImplementation fileTree(dir: "${FRAMEWORK_PREBUILTS_DIR}/quickstep/libs", include: 'sysui_shared.jar')
+    implementation fileTree(dir: 'libs', include: ['libGoogleFeed.jar'])
 
     // Required for AOSP to compile. This is already included in the sysui_shared.jar
     withoutQuickstepImplementation fileTree(dir: "${FRAMEWORK_PREBUILTS_DIR}/libs", include: 'plugin_core.jar')
