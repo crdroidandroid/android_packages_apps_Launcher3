@@ -375,7 +375,7 @@ public abstract class BaseQsbView extends FrameLayout implements OnClickListener
         return mMicWidth;
     }
 
-    public void setMicRipple() {
+    /*public void setMicRipple() {
         int width;
         int height;
         int micWidth;
@@ -411,7 +411,7 @@ public abstract class BaseQsbView extends FrameLayout implements OnClickListener
         }
         mMicIconView.setPadding(micWidth, 0, micHeight, 0);
         mMicIconView.requestLayout();
-    }
+    }*/
 
     public boolean hasDoodle() {
         return false;

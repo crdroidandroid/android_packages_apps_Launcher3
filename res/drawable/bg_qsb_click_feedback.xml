@@ -15,13 +15,9 @@
 -->
 <inset android:insetLeft="@dimen/qsb_shadow_margin" android:insetRight="@dimen/qsb_shadow_margin" android:insetTop="@dimen/qsb_shadow_margin" android:insetBottom="@dimen/qsb_shadow_margin"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <ripple android:color="@color/focused_background">
-        <item android:id="@android:id/mask">
             <shape android:shape="rectangle">
-                <solid android:color="?attr/popupColorPrimary" />
+                <solid android:color="#00000000" />
                 <stroke android:width="0.0dip" />
                 <corners android:radius="100.0dip" />
             </shape>
-        </item>
-    </ripple>
 </inset>

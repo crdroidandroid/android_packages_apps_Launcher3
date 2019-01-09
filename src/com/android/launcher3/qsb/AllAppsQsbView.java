@@ -145,7 +145,7 @@ public class AllAppsQsbView extends BaseQsbView implements SearchUiManager, OnCh
         setMicPaint(0.0f);
         mUseTwoBubbles = false;
         setHintText(mQsbConfig.hintTextValue(), mHint);
-        setMicRipple();
+        //setMicRipple();
     }
 
     public void onClick(View view) {
