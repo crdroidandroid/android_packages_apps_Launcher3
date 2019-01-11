@@ -49,7 +49,7 @@ public class SearchThread implements SearchAlgorithm, Callback {
         try {
             cursor = mContext.getContentResolver().query(new Builder()
                 .scheme("content")
-                .authority("com.google.android.apps.nexuslauncher.appssearch")
+                .authority("com.android.launcher3.appssearch")
                 .appendPath(componentList.mQuery)
                 .build(), null, null, null, null);
             int suggestIntentData = cursor.getColumnIndex("suggest_intent_data");

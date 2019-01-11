@@ -101,7 +101,7 @@ public class AppSearchProvider extends ContentProvider {
     }
 
     public static Uri buildUri(AppInfo appInfo, UserManagerCompat userManagerCompat) {
-        return new Builder().scheme("content").authority("com.google.android.apps.nexuslauncher.appssearch").appendQueryParameter("component", appInfo.componentName.flattenToShortString()).appendQueryParameter("user", Long.toString(userManagerCompat.getSerialNumberForUser(appInfo.user))).build();
+        return new Builder().scheme("content").authority("com.android.launcher3.appssearch").appendQueryParameter("component", appInfo.componentName.flattenToShortString()).appendQueryParameter("user", Long.toString(userManagerCompat.getSerialNumberForUser(appInfo.user))).build();
     }
 
     public final Cursor listToCursor(List<AppInfo> list) {
@@ -191,7 +191,7 @@ public class AppSearchProvider extends ContentProvider {
         }
         List<AppInfo> list;
         try {
-            SearchTask task = new SearchTask(this, uri.getLastPathSegment());
+            SearchTask task = new SearchTask(uri.getLastPathSegment());
             mApp.getModel().enqueueModelUpdateTask(task);
             list = (List) task.mSearch.get(5, TimeUnit.SECONDS);
         } catch (InterruptedException | ExecutionException | TimeoutException ex) {
@@ -220,11 +220,17 @@ public class AppSearchProvider extends ContentProvider {
         public BgDataModel mBgDataModel;
         public LauncherModel mModel;
         public String mQuery;
-        public AppSearchProvider mProvider;
 
-        public SearchTask(AppSearchProvider provider, String query) {
-            mProvider = provider;
+        public SearchTask(String query) {
             mQuery = query.toLowerCase();
+        }
+
+        @Override
+        public void init(LauncherAppState appState, LauncherModel model, BgDataModel bgModel, AllAppsList allApps, Executor executor) {
+            mApp = appState;
+            mModel = model;
+            mBgDataModel = bgModel;
+            mAllAppsList = allApps;
         }
 
         public List<AppInfo> call() {
@@ -234,7 +240,7 @@ public class AppSearchProvider extends ContentProvider {
             }
             if (mModel.isModelLoaded()) {
                 ArrayList<AppInfo> list = new ArrayList();
-                List<AppInfo> data = DefaultAppSearchAlgorithm.getApps(mApp.getContext(), mAllAppsList.data, mProvider.getBaseFilter());
+                List<AppInfo> data = mAllAppsList.data;
                 StringMatcher instance = StringMatcher.getInstance();
                 for (AppInfo appInfo : data) {
                     if (DefaultAppSearchAlgorithm.matches(appInfo, mQuery, instance)) {
@@ -249,13 +255,6 @@ public class AppSearchProvider extends ContentProvider {
             }
             Log.d("AppSearchProvider", "Loading workspace failed");
             return Collections.emptyList();
-        }
-
-        public void init(LauncherAppState mApp, LauncherModel mModel, BgDataModel mBgDataModel, AllAppsList mAllAppsList, Executor executor) {
-            mApp = mApp;
-            mModel = mModel;
-            mBgDataModel = mBgDataModel;
-            mAllAppsList = mAllAppsList;
         }
 
         @Override

@@ -125,7 +125,7 @@
             android:readPermission="com.android.launcher3.permission.READ_SETTINGS" />
 
         <provider
-            android:authorities="com.google.android.apps.nexuslauncher.appssearch"
+            android:authorities="com.android.launcher3.appssearch"
             android:exported="true"
             android:name="com.android.launcher3.search.AppSearchProvider" />
 
