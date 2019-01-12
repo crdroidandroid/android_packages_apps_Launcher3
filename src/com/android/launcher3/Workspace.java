@@ -306,8 +306,8 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
                     if (Math.abs(e1.getX() - e2.getX()) > 250) {
                         return true;
                     }
-                    if (e2.getY() - e1.getY() > 120/*min distance*/
-                            && Math.abs(velocityY) > 200/*min speed*/) {
+                    if (e2.getY() - e1.getY() > 160/*min distance*/
+                            && Math.abs(velocityY) > 250/*min speed*/) {
                         if(Utilities.useNotificationsGesture(context)) {
                             openNotifications();
                         }
