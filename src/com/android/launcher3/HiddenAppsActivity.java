@@ -28,7 +28,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import java.util.Collections;
 import java.util.List;
@@ -40,6 +39,7 @@ public class HiddenAppsActivity extends Activity implements MultiSelectRecyclerV
     private ActionBar mActionBar;
     private MultiSelectRecyclerViewAdapter mAdapter;
 
+    private Menu mMenu;
     boolean itemClicked = true;
 
     @Override
@@ -56,6 +56,7 @@ public class HiddenAppsActivity extends Activity implements MultiSelectRecyclerV
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater findMenuItems = getMenuInflater();
         findMenuItems.inflate(R.menu.hide_menu, menu);
+        mMenu = menu;
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -72,22 +73,12 @@ public class HiddenAppsActivity extends Activity implements MultiSelectRecyclerV
         return super.onOptionsItemSelected(item);
     }
 
-    private void updateHiddenApps() {
-        mAdapter.addSelectionsToHideList(HiddenAppsActivity.this);
-        LauncherAppState appState = LauncherAppState.getInstanceNoCreate();
-        if (appState != null) {
-            appState.getModel().forceReload();
-        }
-    }
-
     private void unhideHiddenApps() {
         mAdapter.removeSelectionsToHideList(HiddenAppsActivity.this);
         LauncherAppState appState = LauncherAppState.getInstanceNoCreate();
         if (appState != null) {
             appState.getModel().forceReload();
         }
-        Toast.makeText(getApplicationContext(), getString(R.string.reset_hidden_apps_done),
-                Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -119,8 +110,11 @@ public class HiddenAppsActivity extends Activity implements MultiSelectRecyclerV
     @Override
     public void onItemClicked(int position) {
         mAdapter.toggleSelection(mActionBar, position);
-        updateHiddenApps();
-        recreate();
+        mAdapter.addSelectionsToHideList(HiddenAppsActivity.this);
+        if (mMenu != null) {
+            onPrepareOptionsMenu(mMenu);
+        }
+        LauncherAppState.getInstanceNoCreate().setNeedsRestart();
     }
 
     private List<ResolveInfo> getInstalledApps() {
