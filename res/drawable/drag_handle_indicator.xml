@@ -13,28 +13,9 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+    <solid android:color="#00000000" />
+    <size android:height="0.0dp" />
+</shape>
 
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="@dimen/vertical_drag_handle_size"
-    android:height="@dimen/vertical_drag_handle_size"
-    android:viewportWidth="36.0"
-    android:viewportHeight="36.0" >
-
-    <group
-        android:translateX="11.5"
-        android:translateY="11.5">
-        <path
-            android:pathData="M2 8.5L6.5 4L11 8.5"
-            android:strokeColor="?attr/workspaceAmbientShadowColor"
-            android:strokeWidth="3.6"
-            android:strokeLineCap="round"
-            android:strokeLineJoin="round" />
-
-        <path
-            android:pathData="M2 8.5L6.5 4L11 8.5"
-            android:strokeColor="?attr/workspaceTextColor"
-            android:strokeWidth="1.8"
-            android:strokeLineCap="round"
-            android:strokeLineJoin="round" />
-        </group>
-</vector>
