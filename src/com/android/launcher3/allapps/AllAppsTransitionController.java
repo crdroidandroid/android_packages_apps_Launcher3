@@ -258,4 +258,8 @@ public class AllAppsTransitionController implements StateHandler, OnDeviceProfil
             mAppsView.setVisibility(View.VISIBLE);
         }
     }
+
+    public AllAppsContainerView getAppsView() {
+        return mAppsView;
+    }
 }
