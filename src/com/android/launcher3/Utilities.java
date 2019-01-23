@@ -24,6 +24,7 @@ import static com.android.launcher3.graphics.ShapeDelegate.DEFAULT_PATH_SIZE;
 import static com.android.launcher3.icons.BaseIconFactory.CONFIG_HINT_NO_WRAP;
 import static com.android.launcher3.icons.BitmapInfo.FLAG_THEMED;
 import static com.android.launcher3.icons.IconNormalizer.ICON_VISIBLE_AREA_FACTOR;
+import static com.android.launcher3.util.Executors.MAIN_EXECUTOR;
 import static com.android.launcher3.util.SplitConfigurationOptions.STAGE_POSITION_BOTTOM_OR_RIGHT;
 import static com.android.launcher3.util.SplitConfigurationOptions.STAGE_POSITION_TOP_OR_LEFT;
 import static com.android.launcher3.util.SplitConfigurationOptions.STAGE_TYPE_MAIN;
@@ -32,6 +33,7 @@ import static com.android.window.flags.Flags.enableNonDefaultDisplaySplit;
 import android.annotation.SuppressLint;
 import android.app.ActivityManager;
 import android.app.ActivityOptions;
+import android.app.KeyguardManager;
 import android.app.Person;
 import android.app.WallpaperManager;
 import android.content.ComponentName;
@@ -57,10 +59,14 @@ import android.graphics.RectF;
 import android.graphics.drawable.AdaptiveIconDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.hardware.biometrics.BiometricManager.Authenticators;
+import android.hardware.biometrics.BiometricPrompt;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
+import android.os.CancellationSignal;
 import android.os.DeadObjectException;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.os.TransactionTooLargeException;
 import android.os.UserHandle;
@@ -77,6 +83,7 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.view.animation.Interpolator;
+import android.widget.Toast;
 
 import androidx.annotation.ChecksSdkIntAtLeast;
 import androidx.annotation.IntDef;
@@ -85,6 +92,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
 import androidx.core.graphics.ColorUtils;
 
+import com.android.launcher3.R;
 import com.android.launcher3.deviceprofile.DeviceProperties;
 import com.android.launcher3.dragndrop.FolderAdaptiveIcon;
 import com.android.launcher3.graphics.ThemeManager;
@@ -1157,5 +1165,54 @@ public final class Utilities {
 
     public static void startLmoFreeform(Context context, ComponentName activity) {
         startLmoFreeform(context, activity, UserHandle.myUserId());
+    }
+
+    /**
+     * Shows authentication screen to confirm credentials (pin, pattern or password) for the current
+     * user of the device.
+     *
+     * @param context The {@code Context} used to get {@code KeyguardManager} service
+     * @param title the {@code String} which will be shown as the pompt title
+     * @param successRunnable The {@code Runnable} which will be executed if the user does not setup
+     *                        device security or if lock screen is unlocked
+     */
+    public static void showLockScreen(Context context, String title, Runnable successRunnable) {
+        if (hasSecureKeyguard(context)) {
+            final BiometricPrompt.AuthenticationCallback authenticationCallback =
+                    new BiometricPrompt.AuthenticationCallback() {
+                        @Override
+                        public void onAuthenticationSucceeded(
+                                    BiometricPrompt.AuthenticationResult result) {
+                            successRunnable.run();
+                        }
+
+                        @Override
+                        public void onAuthenticationError(int errorCode, CharSequence errString) {
+                            //Do nothing
+                        }
+            };
+
+            final BiometricPrompt bp = new BiometricPrompt.Builder(context)
+                    .setTitle(title)
+                    .setAllowedAuthenticators(Authenticators.BIOMETRIC_STRONG |
+                                              Authenticators.DEVICE_CREDENTIAL)
+                    .build();
+
+            final Handler handler = MAIN_EXECUTOR.getHandler();
+            bp.authenticate(new CancellationSignal(),
+                    runnable -> handler.post(runnable),
+                    authenticationCallback);
+        } else {
+            // Notify the user a secure keyguard is required for protected apps,
+            // but allow to set hidden apps
+            Toast.makeText(context, R.string.trust_apps_no_lock_error, Toast.LENGTH_LONG)
+                .show();
+            successRunnable.run();
+        }
+    }
+
+    public static boolean hasSecureKeyguard(Context context) {
+        final KeyguardManager keyguardManager = context.getSystemService(KeyguardManager.class);
+        return keyguardManager != null && keyguardManager.isKeyguardSecure();
     }
 }
