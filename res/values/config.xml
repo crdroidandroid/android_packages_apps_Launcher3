@@ -175,7 +175,9 @@
         <item>@dimen/swipe_up_max_velocity</item>
     </array>
 
-    <string-array name="filtered_components" ></string-array>
+    <string-array name="filtered_components">
+        <item>com.android.launcher3/.lineage.trust.TrustAppsActivity</item>
+    </string-array>
 
     <!-- Name of the class used to generate colors from the wallpaper colors. Must be implementing the LauncherAppWidgetHostView.ColorGenerator interface. -->
     <string name="color_generator_class" translatable="false"/>
