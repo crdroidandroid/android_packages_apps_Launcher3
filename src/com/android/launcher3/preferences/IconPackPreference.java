@@ -69,7 +69,7 @@ public class IconPackPreference extends Preference {
     }
 
     private void setNone() {
-        setIcon(getContext().getResources().getDrawable(R.mipmap.ic_launcher_icon));
+        setIcon(getContext().getResources().getDrawable(android.R.drawable.sym_def_app_icon));
         setSummary(getContext().getResources().getString(R.string.icon_pack_none));
     }
 
@@ -150,7 +150,7 @@ public class IconPackPreference extends Preference {
 
             Resources res = context.getResources();
             String defaultLabel = context.getResources().getString(R.string.icon_pack_none);
-            Drawable icon = res.getDrawable(R.mipmap.ic_launcher_icon);
+            Drawable icon = res.getDrawable(android.R.drawable.sym_def_app_icon);
             mSupportedPackages.add(0, new IconPackInfo(defaultLabel, icon, ""));
             mCurrentIconPack = currentPack;
         }
