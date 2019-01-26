@@ -22,6 +22,7 @@
         android:id="@+id/layout"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_marginBottom="-8dp"
         android:layout_gravity="center"
         launcher:containerType="hotseat"
         android:importantForAccessibility="no" />
