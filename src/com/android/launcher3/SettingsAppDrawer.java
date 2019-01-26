@@ -127,6 +127,15 @@ public class SettingsAppDrawer extends SettingsActivity implements PreferenceFra
                 }
             });
 
+            SwitchPreference allAppsLongLabels = (SwitchPreference) findPreference(
+                    Utilities.PREF_ALLAPPS_LONG_LABELS);
+            allAppsLongLabels.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    return true;
+                }
+            });
+
             Preference hiddenApp = findPreference(Utilities.KEY_HIDDEN_APPS);
             hiddenApp.setOnPreferenceClickListener(
                 preference -> {

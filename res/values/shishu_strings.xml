@@ -98,6 +98,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_show_label_title">App labels</string>
     <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
     <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
+    <string name="allapps_long_labels_title">Long app labels</string>
+    <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
 
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Show At A Glance</string>

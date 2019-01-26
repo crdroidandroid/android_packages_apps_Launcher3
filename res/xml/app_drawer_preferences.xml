@@ -13,6 +13,14 @@
         android:persistent="true"/>
 
     <SwitchPreference
+        android:dependency="pref_allapps_show_label"
+        android:key="pref_allapps_long_labels"
+        android:title="@string/allapps_long_labels_title"
+        android:summary="@string/allapps_long_labels_summary"
+        android:persistent="true"
+        android:defaultValue="false" />
+
+    <SwitchPreference
         android:title="@string/app_suggestions_title"
         android:key="pref_app_suggestions"
         android:summary="@string/app_suggestions_summary"
