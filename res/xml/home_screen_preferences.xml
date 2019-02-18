@@ -140,6 +140,14 @@
         android:summary="%s"
         android:title="@string/search_provider_title" />
 
+    <SwitchPreference
+        android:key="pref_bottom_search_bar_hint"
+        android:dependency="pref_bottom_search_bar"
+        android:defaultValue="true"
+        android:persistent="true"
+        android:title="@string/search_bar_hint_title"
+        android:summary="@string/search_bar_hint_summary"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -37,6 +37,7 @@ import android.util.AttributeSet;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.launcher3.Launcher;
@@ -106,10 +107,18 @@ public class HotseatQsbView extends BaseQsbView {
     }
 
     public void setSuperGAlpha() {
-        View gIcon = findViewById(R.id.g_icon);
+        ImageView gIcon = findViewById(R.id.g_icon);
         if (gIcon != null) {
             gIcon.setAlpha(1.0f);
+            if (Utilities.getSearchProvider(getContext()).contains("google")) {
+                gIcon.setImageResource(R.drawable.ic_super_g_color);
+            } else if (Utilities.getSearchProvider(getContext()).contains("bing")) {
+                gIcon.setImageResource(R.drawable.ic_super_bing_color);
+            } else if (Utilities.getSearchProvider(getContext()).contains("duckduckgo")) {
+                gIcon.setImageResource(R.drawable.ic_super_ddg_color);
+            }
         }
+
     }
 
     @Override
@@ -124,9 +133,19 @@ public class HotseatQsbView extends BaseQsbView {
         View.inflate(new ContextThemeWrapper(getContext(), R.style.HotseatQsbTheme), R.layout.qsb_hotseat_content, this);
         setColor(Themes.getAttrColor(mLauncher, R.attr.allAppsScrimColor));
         setColorAlpha(ColorUtils.setAlphaComponent(mColor, mQsbConfig.getMicOpacity()));
-        TextView hintView = (TextView) LayoutInflater.from(getContext()).inflate(R.layout.qsb_hint, this, false);
-        setHintText("Tap to search on Google", hintView);
-        addView(hintView);
+        if (Utilities.showSearchBarHint(getContext()) == true) {
+            TextView hintView = (TextView) LayoutInflater.from(getContext()).inflate(R.layout.qsb_hint, this, false);
+            if (Utilities.getSearchProvider(getContext()).contains("google")) {
+                setHintText(getResources().getString(R.string.search_bar_hint, "Google"), hintView);
+            } else if (Utilities.getSearchProvider(getContext()).contains("bing")) {
+                setHintText(getResources().getString(R.string.search_bar_hint, "Bing"), hintView);
+            } else if (Utilities.getSearchProvider(getContext()).contains("duckduckgo")) {
+                setHintText(getResources().getString(R.string.search_bar_hint, "DuckDuckGo"), hintView);
+            } else {
+                setHintText(getResources().getString(R.string.search_bar_hint, "null"), hintView);
+            }
+            addView(hintView);
+        }
     }
 
     public void reinflateViews() {

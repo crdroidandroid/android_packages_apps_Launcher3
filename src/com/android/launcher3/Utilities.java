@@ -151,6 +151,7 @@ public final class Utilities {
     public static final String PREF_NOTIFICATIONS_GESTURE = "pref_notifications_gesture";
     public static final String BOTTOM_SEARCH_BAR_KEY = "pref_bottom_search_bar";
     public static final String SEARCH_PROVIDER_KEY = "pref_search_provider";
+    public static final String SEARCH_BAR_HINT = "pref_bottom_search_bar_hint";
     public static final String DATE_FORMAT_KEY = "pref_date_format";
     public static final String DATE_STYLE_FONT = "pref_date_font";
     public static final String DATE_STYLE_TRANSFORM = "pref_date_transform";
@@ -280,6 +281,10 @@ public final class Utilities {
 
     public static String getSearchProvider(Context context) {
         return getPrefs(context).getString(SEARCH_PROVIDER_KEY, "https://www.google.com");
+    }
+
+    public static boolean showSearchBarHint(Context context) {
+        return getPrefs(context).getBoolean(SEARCH_BAR_HINT, true);
     }
 
     public static String getDateFormat(Context context) {

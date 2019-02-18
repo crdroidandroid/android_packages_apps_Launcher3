@@ -154,19 +154,15 @@ public class SettingsHomescreen extends SettingsActivity implements PreferenceFr
             });
         
             ListPreference searchProvider = (ListPreference) findPreference(Utilities.SEARCH_PROVIDER_KEY);
-            if (BootlegUtils.isPackageInstalled(mContext, LauncherTab.SEARCH_PACKAGE)) {
-                getPreferenceScreen().removePreference(searchProvider);
-            } else {
-                searchProvider.setSummary(searchProvider.getEntry());
-                searchProvider.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-                    public boolean onPreferenceChange(Preference preference, Object newValue) {
-                        int index = searchProvider.findIndexOfValue((String) newValue);
-                        searchProvider.setSummary(searchProvider.getEntries()[index]);
-                        LauncherAppState.getInstanceNoCreate().setNeedsRestart();
-                        return true;
-                    }
-                });
-            }
+            searchProvider.setSummary(searchProvider.getEntry());
+            searchProvider.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    int index = searchProvider.findIndexOfValue((String) newValue);
+                    searchProvider.setSummary(searchProvider.getEntries()[index]);
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    return true;
+                }
+            });
 
             ListPreference dateFormat = (ListPreference) findPreference(Utilities.DATE_FORMAT_KEY);
             dateFormat.setSummary(dateFormat.getEntry());
@@ -225,6 +221,13 @@ public class SettingsHomescreen extends SettingsActivity implements PreferenceFr
                 }
             });
 
+            SwitchPreference showSearchHint = (SwitchPreference) findPreference(Utilities.SEARCH_BAR_HINT);
+            showSearchHint.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    return true;
+                }
+            });
         }
 
         @Override
