@@ -123,7 +123,9 @@ public class ScrimView extends View implements Insettable, OnChangeListener,
         super(context, attrs);
         mLauncher = Launcher.getLauncher(context);
         mWallpaperColorInfo = WallpaperColorInfo.getInstance(context);
-        mEndScrim = Themes.getAttrColor(context, R.attr.allAppsScrimColor);
+
+        mEndScrim = setAlphaComponent(Themes.getAttrColor(context, R.attr.allAppsScrimColor),
+                Math.round(0.9f * 255));
 
         mMaxScrimAlpha = 0.7f;
 
