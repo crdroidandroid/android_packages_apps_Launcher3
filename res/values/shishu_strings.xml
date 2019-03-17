@@ -222,4 +222,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="search_bar_hint_title">Show search bar hint text</string>
     <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
 
+    <!-- Icon edit -->
+    <string name="edit_drop_target_label">Edit</string>
+    <string name="edit_hint">Icon name</string>
+    <string name="reset_icon">Reset</string>
+    <string name="all_icons">All icons</string>
+    <string name="similar_icons">Similar icons</string>
+    <string name="ok">Ok</string>
+    <string name="icon_label">Label</string>
+    <string name="loading">Loading, please wait</string>
+    <string name="icon_chooser">Icon chooser</string>
+    <string name="icon_search">Search for icons</string>
+
 </resources>

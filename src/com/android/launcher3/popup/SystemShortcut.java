@@ -122,7 +122,7 @@ public abstract class SystemShortcut<T extends BaseDraggingActivity> extends Ite
 
     public static class Edit extends SystemShortcut<Launcher> {
         public Edit() {
-            super(R.drawable.ic_edit_no_shadow, R.string.action_edit);
+            super(R.drawable.ic_edit_no_shadow, R.string.edit_drop_target_label);
         }
 
         public View.OnClickListener getOnClickListener(final Launcher launcher,

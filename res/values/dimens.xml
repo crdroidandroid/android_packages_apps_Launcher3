@@ -233,10 +233,4 @@
 
     <dimen name="dynamic_grid_hotseat_top_padding_hidden_bottom_qsb">8dp</dimen>
     <dimen name="dynamic_grid_hotseat_bottom_padding_hidden_bottom_qsb">0dp</dimen>
-
-    <!-- Icon pack -->
-    <dimen name="app_icon_size">65dp</dimen>
-    <dimen name="icon_pack_icon_size">48dp</dimen>
-    <dimen name="edit_dialog_min_width">200dp</dimen>
-    <dimen name="grid_item_spacing">15dp</dimen>
 </resources>
