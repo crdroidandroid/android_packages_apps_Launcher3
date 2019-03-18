@@ -17,10 +17,10 @@
 package com.android.launcher3;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import android.view.View;
+import android.widget.ListView;
 
 public class SettingsActivity extends Activity {
 
@@ -50,9 +50,12 @@ public class SettingsActivity extends Activity {
         }
 
         @Override
-        public void onViewCreated(View view, Bundle savedInstanceState) {
-            if (getListView() != null) {
-                getListView().setDivider(null);
+        public void onActivityCreated(Bundle savedInstanceState) {
+            super.onActivityCreated(savedInstanceState);
+            View rootView = getView();
+            if (rootView != null) {
+                ListView list = rootView.findViewById(android.R.id.list);
+                list.setDivider(null);
             }
         }
 
