@@ -35,6 +35,7 @@
         <item name="popupColorSecondary">#F5F5F5</item> <!-- Gray 100 -->
         <item name="popupColorTertiary">#E0E0E0</item> <!-- Gray 300 -->
         <item name="popupItemColor">#e8e8e8</item>
+        <item name="dialogTitleColor">#000</item>
         <item name="isMainColorDark">false</item>
         <item name="isWorkspaceDarkText">false</item>
         <item name="workspaceTextColor">@android:color/white</item>
@@ -72,6 +73,7 @@
         <item name="popupColorSecondary">@*android:color/material_grey_850</item>
         <item name="popupColorTertiary">@*android:color/material_grey_800</item>
         <item name="popupItemColor">#343434</item>
+        <item name="dialogTitleColor">#FFF</item>
         <item name="widgetsTheme">@style/WidgetContainerTheme.Dark</item>
         <item name="isMainColorDark">true</item>
         <item name="fastscrollerTextColor">#000000</item>
@@ -216,16 +218,19 @@
         <item name="android:colorPrimary">#E0E0E0</item>
         <item name="android:colorControlHighlight">#BDBDBD</item>
         <item name="android:colorForeground">@color/all_apps_bg_hand_fill</item>
+        <item name="android:textColorPrimary">?attr/dialogTitleColor</item>
     </style>
     <style name="AllAppsEmptySearchBackground.Dark">
         <item name="android:colorPrimary">#9AA0A6</item>
         <item name="android:colorControlHighlight">#DFE1E5</item>
         <item name="android:colorForeground">@color/all_apps_bg_hand_fill_dark</item>
+        <item name="android:textColorPrimary">?attr/dialogTitleColor</item>
     </style>
     <style name="AllAppsEmptySearchBackground.Black">
         <item name="android:colorPrimary">@*android:color/black</item>
         <item name="android:colorControlHighlight">#DFE1E5</item>
         <item name="android:colorForeground">@color/all_apps_bg_hand_fill_dark</item>
+        <item name="android:textColorPrimary">?attr/dialogTitleColor</item>
     </style>
 
 </resources>
