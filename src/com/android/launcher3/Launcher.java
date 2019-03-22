@@ -2789,7 +2789,16 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
             @Override
             public void onClick(View v) {
                 if (!iconPacks.second.isEmpty()) {
+                    // Open up the pop-up.
                     listPopupWindow.show();
+                    // If we only have one icon pack we should just open the first element.
+                    if (iconPacks.second.size() == 1) {
+                        listPopupWindow.performItemClick(/* position */ 0);
+                    }
+                // If we don't have any icon pack, alert the user with a small toast.
+                } else {
+                    Toast.makeText(getApplicationContext(), getString(R.string.msg_no_icon_pack),
+                            Toast.LENGTH_SHORT).show();
                 }
             }
         });

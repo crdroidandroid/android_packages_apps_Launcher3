@@ -232,6 +232,8 @@
     <string name="loading">Loading, please wait</string>
     <string name="icon_chooser">Icon chooser</string>
     <string name="icon_search">Search for icons</string>
+    <!-- Toast message for alerting users that no icon packs are available. -->
+    <string name="msg_no_icon_pack">No icon packs available</string>
 
     <!-- Folder titles -->
     <string name="google_title" translatable="false">Google</string>
