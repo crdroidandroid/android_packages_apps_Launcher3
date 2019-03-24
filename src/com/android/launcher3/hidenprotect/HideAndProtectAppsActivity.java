@@ -59,6 +59,7 @@ public class HideAndProtectAppsActivity extends Activity implements
     private RecyclerView mRecyclerView;
     private LinearLayout mLoadingView;
     private ProgressBar mProgressBar;
+    private KeyguardManager manager;
 
     private HideAndProtectDatabaseHelper mDbHelper;
     private HideAndProtectAppsAdapter mAdapter;
@@ -83,14 +84,14 @@ public class HideAndProtectAppsActivity extends Activity implements
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setAdapter(mAdapter);
-
-        authenticate();
+        //if (Utilities.isDeviceSecured(this)) {
+            authenticate();
+        //}
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
         if (requestCode == REQUEST_AUTH_CODE) {
             if (resultCode == Activity.RESULT_OK) {
                 showUi();
@@ -163,8 +164,11 @@ public class HideAndProtectAppsActivity extends Activity implements
         String message = getString(R.string.protect_apps_auth_manager);
         Intent intent = manager.createConfirmDeviceCredentialIntent(title, message);
 
-        if (intent != null) {
+        if (intent != null && manager.isKeyguardSecure()) {
             startActivityForResult(intent, REQUEST_AUTH_CODE);
+            return;
+        } else if (!manager.isKeyguardSecure()) {
+            showUi();
             return;
         }
 

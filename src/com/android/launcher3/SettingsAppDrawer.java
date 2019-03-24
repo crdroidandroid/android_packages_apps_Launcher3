@@ -138,6 +138,13 @@ public class SettingsAppDrawer extends SettingsActivity implements PreferenceFra
             });
 
             Preference hideandProtectApp = findPreference(Utilities.KEY_HP_APPS);
+            if (Utilities.isDeviceSecured(getActivity())) {
+                hideandProtectApp.setTitle(R.string.hide_protect_app);
+                hideandProtectApp.setSummary(R.string.hide_protect_app_sum);
+            } else {
+                hideandProtectApp.setTitle(R.string.hide_app);
+                hideandProtectApp.setSummary(R.string.hide_app_sum);
+            }
             hideandProtectApp.setOnPreferenceClickListener(
                 preference -> {
                     startActivity(new Intent(getActivity(), HideAndProtectAppsActivity.class));

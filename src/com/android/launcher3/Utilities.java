@@ -16,6 +16,7 @@
 
 package com.android.launcher3;
 
+import android.app.KeyguardManager;
 import android.app.ProgressDialog;
 import android.app.WallpaperManager;
 import android.content.ComponentName;
@@ -353,9 +354,14 @@ public final class Utilities {
             Log.e(TAG, "Error formatting At A Glance date", t);
             return DateUtils.formatDateTime(context, timeInMillis, DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH);
         }
-
     }
 
+    public static boolean isDeviceSecured(Context context) {
+        KeyguardManager manager = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ?
+                context.getSystemService(KeyguardManager.class) :
+                (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
+        return manager.isKeyguardSecure();
+    }
 
     /**
      * Given a coordinate relative to the descendant, find the coordinate in a parent view's

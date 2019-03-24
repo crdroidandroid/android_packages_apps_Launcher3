@@ -29,6 +29,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.launcher3.R;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.hidenprotect.db.HideAndProtectComponent;
 
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ import java.util.List;
 class HideAndProtectAppsAdapter extends RecyclerView.Adapter<HideAndProtectAppsAdapter.ViewHolder> {
     private List<HideAndProtectComponent> mList = new ArrayList<>();
     private Listener mListener;
+    private boolean mDeviceSecured;
 
     HideAndProtectAppsAdapter(Listener listener) {
         mListener = listener;
@@ -51,6 +53,8 @@ class HideAndProtectAppsAdapter extends RecyclerView.Adapter<HideAndProtectAppsA
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int type) {
+        //Workaround, nasty approach
+        mDeviceSecured = Utilities.isDeviceSecured(parent.getContext());
         return new ViewHolder(LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_hidden_app, parent, false));
     }
@@ -92,8 +96,35 @@ class HideAndProtectAppsAdapter extends RecyclerView.Adapter<HideAndProtectAppsA
 
             mHiddenView.setImageResource(component.isHidden() ?
                     R.drawable.ic_hidden_locked : R.drawable.ic_hidden_unlocked);
-            mProtectedView.setImageResource(component.isProtected() ?
-                    R.drawable.ic_protected_locked : R.drawable.ic_protected_unlocked);
+            if (mDeviceSecured) {
+                mProtectedView.setVisibility(View.VISIBLE);
+                mProtectedView.setImageResource(component.isProtected() ?
+                        R.drawable.ic_protected_locked : R.drawable.ic_protected_unlocked);
+
+                mProtectedView.setOnClickListener(v -> {
+                    component.invertProtection();
+    
+                    mProtectedView.setImageResource(component.isProtected() ?
+                            R.drawable.avd_protected_lock : R.drawable.avd_protected_unlock);
+                    AnimatedVectorDrawable avd = (AnimatedVectorDrawable) mProtectedView.getDrawable();
+    
+                    int position = getAdapterPosition();
+                    if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
+                        avd.registerAnimationCallback(new Animatable2.AnimationCallback() {
+                            @Override
+                            public void onAnimationEnd(Drawable drawable) {
+                                updateProtectedList(position, component);
+                            }
+                        });
+                        avd.start();
+                    } else {
+                        avd.start();
+                        updateProtectedList(position, component);
+                    }
+                });
+            } else {
+                mProtectedView.setVisibility(View.GONE);
+            }
 
             mHiddenView.setOnClickListener(v -> {
                 component.invertVisibility();
@@ -117,27 +148,6 @@ class HideAndProtectAppsAdapter extends RecyclerView.Adapter<HideAndProtectAppsA
                 }
             });
 
-            mProtectedView.setOnClickListener(v -> {
-                component.invertProtection();
-
-                mProtectedView.setImageResource(component.isProtected() ?
-                        R.drawable.avd_protected_lock : R.drawable.avd_protected_unlock);
-                AnimatedVectorDrawable avd = (AnimatedVectorDrawable) mProtectedView.getDrawable();
-
-                int position = getAdapterPosition();
-                if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
-                    avd.registerAnimationCallback(new Animatable2.AnimationCallback() {
-                        @Override
-                        public void onAnimationEnd(Drawable drawable) {
-                            updateProtectedList(position, component);
-                        }
-                    });
-                    avd.start();
-                } else {
-                    avd.start();
-                    updateProtectedList(position, component);
-                }
-            });
         }
 
         private void updateHiddenList(int position, HideAndProtectComponent component) {

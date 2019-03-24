@@ -82,7 +82,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Hidden apps -->
     <string name="hide_app">Hide apps</string>
-    <string name="hide_app_sum">Hide and protect apps from the app drawer</string>
+    <string name="hide_app_sum">Hide apps from the app drawer</string>
     <string name="hidden_apps_loading">Loading\u2026</string>
     <string name="hidden_app">All apps</string>
     <string name="hide_selected">Hide selected app(s)</string>
@@ -93,6 +93,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Protected apps -->
     <string name="hide_protect_app">Hide and protect apps</string>
+    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
     <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
     <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
     <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
