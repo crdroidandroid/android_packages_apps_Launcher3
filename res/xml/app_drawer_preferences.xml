@@ -28,7 +28,7 @@
         android:persistent="true" />
 
     <Preference
-        android:key="hidden_app"
+        android:key="pref_hp_apps"
         android:title="@string/hide_app"
         android:summary="@string/hide_app_sum"/>
 

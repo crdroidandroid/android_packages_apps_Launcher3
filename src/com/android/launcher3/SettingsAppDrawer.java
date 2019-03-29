@@ -58,6 +58,7 @@ import android.widget.Adapter;
 import android.widget.ListView;
 
 import com.android.launcher3.graphics.IconShapeOverride;
+import com.android.launcher3.hidenprotect.HideAndProtectAppsActivity;
 import com.android.launcher3.notification.NotificationListener;
 import com.android.launcher3.util.ListViewHighlighter;
 import com.android.launcher3.util.SettingsObserver;
@@ -76,7 +77,7 @@ import java.util.Objects;
  */
 public class SettingsAppDrawer extends SettingsActivity implements PreferenceFragment.OnPreferenceStartFragmentCallback {
 
-    private static final String HIDDEN_APPS = "hidden_app";
+    private static final String HIDEANDPROTECT_APPS = "hideandprotect_app";
     public static final String KEY_APP_SUGGESTIONS = "pref_app_suggestions";
 
     @Override
@@ -136,10 +137,10 @@ public class SettingsAppDrawer extends SettingsActivity implements PreferenceFra
                 }
             });
 
-            Preference hiddenApp = findPreference(Utilities.KEY_HIDDEN_APPS);
-            hiddenApp.setOnPreferenceClickListener(
+            Preference hideandProtectApp = findPreference(Utilities.KEY_HP_APPS);
+            hideandProtectApp.setOnPreferenceClickListener(
                 preference -> {
-                    startActivity(new Intent(getActivity(), HiddenAppsActivity.class));
+                    startActivity(new Intent(getActivity(), HideAndProtectAppsActivity.class));
                     return false;
             });
 

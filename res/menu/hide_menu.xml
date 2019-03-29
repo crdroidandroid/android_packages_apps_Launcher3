@@ -16,7 +16,7 @@
 -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.android.launcher3.HiddenAppsActivity">
+    tools:context="com.android.launcher3.hidenprotect.HideAndProtectAppsActivity">
     <item
         android:id="@+id/reset"
         android:icon="@drawable/ic_reset_hidden_apps"

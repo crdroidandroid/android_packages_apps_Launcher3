@@ -25,7 +25,7 @@ import com.android.launcher3.AppInfo;
 import com.android.launcher3.AppFilter;
 import com.android.launcher3.IconCache;
 import com.android.launcher3.LauncherAppState;
-import com.android.launcher3.StringSetAppFilter;
+import com.android.launcher3.hidenprotect.HiddenAppsFilter;
 import com.android.launcher3.compat.LauncherAppsCompat;
 import com.android.launcher3.compat.UserManagerCompat;
 import com.android.launcher3.util.ComponentKey;
@@ -47,7 +47,7 @@ public class DefaultAppSearchAlgorithm implements SearchAlgorithm {
     public DefaultAppSearchAlgorithm(Context context, List<AppInfo> apps) {
         mContext = context;
         mApps = apps;
-        mBaseFilter = new StringSetAppFilter(context);
+        mBaseFilter = new HiddenAppsFilter(context);
         mResultHandler = new Handler();
     }
 

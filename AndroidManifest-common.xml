@@ -100,7 +100,7 @@
 
         <!-- Hidden apps -->
         <activity
-            android:name="com.android.launcher3.HiddenAppsActivity"
+            android:name="com.android.launcher3.hidenprotect.HideAndProtectAppsActivity"
             android:autoRemoveFromRecents="true"
             android:label="@string/hidden_app"
             android:theme="@android:style/Theme.DeviceDefault.Settings" />

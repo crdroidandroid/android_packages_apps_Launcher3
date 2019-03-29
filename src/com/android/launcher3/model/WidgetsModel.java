@@ -16,13 +16,13 @@ import com.android.launcher3.IconCache;
 import com.android.launcher3.InvariantDeviceProfile;
 import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.LauncherAppWidgetProviderInfo;
-import com.android.launcher3.StringSetAppFilter;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.compat.AlphabeticIndexCompat;
 import com.android.launcher3.compat.AppWidgetManagerCompat;
 import com.android.launcher3.compat.LauncherAppsCompat;
 import com.android.launcher3.compat.ShortcutConfigActivityInfo;
 import com.android.launcher3.config.FeatureFlags;
+import com.android.launcher3.hidenprotect.HiddenAppsFilter;
 import com.android.launcher3.util.MultiHashMap;
 import com.android.launcher3.util.PackageUserKey;
 import com.android.launcher3.util.Preconditions;
@@ -175,7 +175,7 @@ public class WidgetsModel {
             }
 
             if (mAppFilter == null) {
-                mAppFilter = new StringSetAppFilter(app.getContext());
+                mAppFilter = new HiddenAppsFilter(app.getContext());
             }
             if (!mAppFilter.shouldShowApp(item.componentName.getPackageName(), app.getContext(), true)) {
                 if (DEBUG) {

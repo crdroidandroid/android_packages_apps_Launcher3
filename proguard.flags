@@ -129,7 +129,7 @@
   *;
 }
 
--keep class com.android.launcher3.HiddenAppsActivity {
+-keep class com.android.launcher3.hidenprotect.** {
   *;
 }
 

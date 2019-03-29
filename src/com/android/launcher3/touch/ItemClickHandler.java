@@ -44,6 +44,7 @@ import com.android.launcher3.ShortcutInfo;
 import com.android.launcher3.compat.AppWidgetManagerCompat;
 import com.android.launcher3.folder.Folder;
 import com.android.launcher3.folder.FolderIcon;
+import com.android.launcher3.hidenprotect.db.HideAndProtectDatabaseHelper;
 import com.android.launcher3.util.PackageManagerHelper;
 import com.android.launcher3.widget.PendingAppWidgetHostView;
 import com.android.launcher3.widget.WidgetAddFlowHandler;
@@ -227,6 +228,14 @@ public class ItemClickHandler {
                 intent.setPackage(null);
             }
         }
-        launcher.startActivitySafely(v, intent, item);
+
+        HideAndProtectDatabaseHelper db = HideAndProtectDatabaseHelper.getInstance(launcher);
+        boolean isProtected = db.isPackageProtected(item.getTargetComponent().getPackageName());
+
+        if (isProtected) {
+            launcher.startActivitySafelyAuth(v, intent, item);
+        } else {
+            launcher.startActivitySafely(v, intent, item);
+        }
     }
 }
