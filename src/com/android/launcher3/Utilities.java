@@ -199,11 +199,6 @@ public final class Utilities {
         return getIconCount(context, HOTSEAT_ICONS, fallback);
     }
 
-    public static boolean forceLegacyIconMask(Context context) {
-        SharedPreferences prefs = getPrefs(context.getApplicationContext());
-        return prefs.getBoolean(SettingsIcons.KEY_PREF_LEGACY_ICON_MASK, false);
-    }
-
     public static boolean showWorkspaceGradient(Context context) {
         return getPrefs(context).getBoolean(SHOW_WORKSPACE_GRADIENT, true);
     }
