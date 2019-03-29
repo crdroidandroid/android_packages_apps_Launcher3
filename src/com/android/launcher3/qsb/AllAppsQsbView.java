@@ -116,7 +116,7 @@ public class AllAppsQsbView extends BaseQsbView implements SearchUiManager, OnCh
 
     @Override
     public void onExtractedColorsChanged(WallpaperColorInfo wallpaperColorInfo) {
-        setColor(ColorUtils.compositeColors(ColorUtils.compositeColors(Themes.getAttrBoolean(mLauncher, R.attr.isMainColorDark) ? -335544321 : -855638017, Themes.getAttrColor(mLauncher, R.attr.allAppsScrimColor)), wallpaperColorInfo.getMainColor()));
+        setColor(Themes.getAttrColor(mLauncher, R.attr.allAppsScrimColor));
     }
 
     @Override
