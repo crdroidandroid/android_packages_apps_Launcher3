@@ -111,6 +111,7 @@ import com.android.launcher3.notification.NotificationListener;
 import com.android.launcher3.popup.PopupContainerWithArrow;
 import com.android.launcher3.popup.PopupDataProvider;
 import com.android.launcher3.settings.SettingsHomescreen;
+import com.android.launcher3.shadespace.ShadespaceView;
 import com.android.launcher3.shortcuts.DeepShortcutManager;
 import com.android.launcher3.states.InternalStateHandler;
 import com.android.launcher3.states.RotationHelper;
@@ -301,6 +302,8 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
     private final Bundle mUiInformation = new Bundle();
     LauncherClient mClient;
 
+    private ShadespaceView mShadespace;
+
     public LauncherClient getClient() {
         return mClient;
     }
@@ -398,6 +401,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         mUiInformation.putInt("system_ui_visibility", getWindow().getDecorView().getSystemUiVisibility());
         WallpaperColorInfo instance = WallpaperColorInfo.getInstance(this);
         onExtractedColorsChanged(instance);
+        mShadespace = findViewById(R.id.search_container_workspace);
 
         setContentView(mLauncherView);
         getRootView().dispatchInsets();
@@ -983,6 +987,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
 
         mHandler.removeCallbacks(mHandleDeferredResume);
         Utilities.postAsyncCallback(mHandler, mHandleDeferredResume);
+        mShadespace.onResume();
 
         if (!mOnResumeCallbacks.isEmpty()) {
             final ArrayList<OnResumeCallback> resumeCallbacks = new ArrayList<>(mOnResumeCallbacks);
@@ -1014,6 +1019,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         mDragController.cancelDrag();
         mDragController.resetLastGestureUpTime();
         mDropTargetBar.animateToVisibility(false);
+        mShadespace.onPause();
 
         if (mFeedIntegrationEnabled) {
             mClient.onPause();

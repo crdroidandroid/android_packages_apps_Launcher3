@@ -14,17 +14,58 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<com.android.launcher3.qsb.QsbContainerView
+<com.android.launcher3.shadespace.ShadespaceView
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
+        xmlns:launcher="http://schemas.android.com/apk/res-auto"
+        android:id="@id/search_container_workspace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+    <com.android.launcher3.shadespace.DoubleShadowTextView
+        android:id="@+id/shadespace_text"
+        style="@style/TextTitle"
+        android:scrollHorizontally="true"
+        android:ellipsize="end"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:id="@id/search_container_workspace"
-        android:padding="0dp" >
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:maxLines="1"
 
-    <fragment
-        android:name="com.android.launcher3.qsb.QsbContainerView$QsbFragment"
+        android:textColor="?workspaceTextColor"
+        android:textSize="24sp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+
+        launcher:ambientShadowBlur="3dp"
+        launcher:ambientShadowColor="?workspaceAmbientShadowColor"
+        launcher:keyShadowBlur="2dp"
+        launcher:keyShadowColor="?workspaceKeyShadowColor"
+        launcher:keyShadowOffset="0.5dp" />
+
+    <com.android.launcher3.shadespace.DoubleShadowTextView
+        android:id="@+id/shadespace_subtext"
+        style="@style/TextTitle"
+        android:scrollHorizontally="true"
+        android:ellipsize="end"
         android:layout_width="match_parent"
-        android:tag="qsb_view"
-        android:layout_height="match_parent"/>
-</com.android.launcher3.qsb.QsbContainerView>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+
+        android:textColor="?workspaceTextColor"
+        android:textSize="16sp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+
+        launcher:ambientShadowBlur="3dp"
+        launcher:ambientShadowColor="?workspaceAmbientShadowColor"
+        launcher:keyShadowBlur="2dp"
+        launcher:keyShadowColor="?workspaceKeyShadowColor"
+        launcher:keyShadowOffset="0.5dp" />
+</com.android.launcher3.shadespace.ShadespaceView>
