@@ -113,7 +113,7 @@ import com.android.launcher3.model.ModelWriter;
 import com.android.launcher3.notification.NotificationListener;
 import com.android.launcher3.popup.PopupContainerWithArrow;
 import com.android.launcher3.popup.PopupDataProvider;
-import com.android.launcher3.qsb.QsbContainerView;
+import com.android.launcher3.shadespace.ShadespaceView;
 import com.android.launcher3.states.InternalStateHandler;
 import com.android.launcher3.states.RotationHelper;
 import com.android.launcher3.touch.ItemClickHandler;
@@ -295,6 +295,8 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
     private DeviceProfile mStableDeviceProfile;
     private RotationMode mRotationMode = RotationMode.NORMAL;
 
+    private ShadespaceView mShadespace;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         RaceConditionTracker.onEvent(ON_CREATE_EVT, ENTER);
@@ -379,6 +381,8 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
 
         // For handling default keys
         setDefaultKeyMode(DEFAULT_KEYS_SEARCH_LOCAL);
+
+        mShadespace = findViewById(R.id.search_container_workspace);
 
         setContentView(mLauncherView);
         getRootView().dispatchInsets();
@@ -980,6 +984,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
 
         mHandler.removeCallbacks(mHandleDeferredResume);
         Utilities.postAsyncCallback(mHandler, mHandleDeferredResume);
+        mShadespace.onResume();
 
         if (!mOnResumeCallbacks.isEmpty()) {
             final ArrayList<OnResumeCallback> resumeCallbacks = new ArrayList<>(mOnResumeCallbacks);
@@ -1007,6 +1012,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         mDragController.cancelDrag();
         mDragController.resetLastGestureUpTime();
         mDropTargetBar.animateToVisibility(false);
+        mShadespace.onResume();
         if (mLauncherCallbacks != null) {
             mLauncherCallbacks.onPause();
         }
@@ -2155,14 +2161,6 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
     }
 
     private View inflateAppWidget(LauncherAppWidgetInfo item) {
-        if (item.hasOptionFlag(LauncherAppWidgetInfo.OPTION_SEARCH_WIDGET)) {
-            item.providerName = QsbContainerView.getSearchComponentName(this);
-            if (item.providerName == null) {
-                getModelWriter().deleteItemFromDatabase(item);
-                return null;
-            }
-        }
-
         if (mIsSafeModeEnabled) {
             PendingAppWidgetHostView view =
                     new PendingAppWidgetHostView(this, item, mIconCache, true);
