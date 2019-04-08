@@ -61,9 +61,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import co.aoscp.lovegood.views.DateTextView;
-import co.aoscp.lovegood.views.DoubleShadowTextView;
-
 import com.android.launcher3.DeviceProfile.OnDeviceProfileChangeListener;
 import com.android.launcher3.InsettableFrameLayout.LayoutParams;
 import com.android.launcher3.allapps.AllAppsTransitionController;
@@ -139,7 +136,7 @@ public class LauncherAppTransitionManagerImpl extends LauncherAppTransitionManag
     private final float mWorkspaceTransY;
     private final float mClosingWindowTransY;
 
-    public DeviceProfile mDeviceProfile;
+    protected DeviceProfile mDeviceProfile;
     private View mFloatingView;
 
     private RemoteAnimationProvider mRemoteAnimationProvider;
@@ -426,14 +423,15 @@ public class LauncherAppTransitionManagerImpl extends LauncherAppTransitionManag
         return new Pair<>(launcherAnimator, endListener);
     }
 
+    /**
+     * Animators for the "floating view" of the view used to launch the target.
+     */
     private void playIconAnimators(AnimatorSet appOpenAnimator, View v, Rect windowTargetBounds) {
         playIconAnimators(appOpenAnimator, v, windowTargetBounds, false);
     }
 
-    /**
-     * Animators for the "floating view" of the view used to launch the target.
-     */
-    public void playIconAnimators(AnimatorSet appOpenAnimator, View v, Rect windowTargetBounds, boolean windowToIcon) {
+    protected void playIconAnimators(AnimatorSet appOpenAnimator, View v, Rect windowTargetBounds,
+            boolean windowToIcon) {
         final boolean isBubbleTextView = v instanceof BubbleTextView;
         mFloatingView = new View(mLauncher);
         if (isBubbleTextView && v.getTag() instanceof ItemInfoWithIcon ) {
@@ -513,7 +511,7 @@ public class LauncherAppTransitionManagerImpl extends LauncherAppTransitionManag
         // relatively close to the center.
         boolean useUpwardAnimation = lp.topMargin > centerY
                 || Math.abs(dY) < mLauncher.getDeviceProfile().cellHeightPx;
-        if (useUpwardAnimation && !windowToIcon) {
+        if (useUpwardAnimation ^ windowToIcon) {
             x.setDuration(APP_LAUNCH_CURVED_DURATION);
             y.setDuration(APP_LAUNCH_DURATION);
         } else {
@@ -524,8 +522,8 @@ public class LauncherAppTransitionManagerImpl extends LauncherAppTransitionManag
             x.setStartDelay(APP_LAUNCH_ALPHA_DURATION);
             y.setStartDelay(APP_LAUNCH_ALPHA_DURATION);
         }
-        x.setInterpolator(windowToIcon? AGGRESSIVE_EASE_REVERSED : AGGRESSIVE_EASE);
-        y.setInterpolator(windowToIcon? AGGRESSIVE_EASE_REVERSED : AGGRESSIVE_EASE);
+        x.setInterpolator(windowToIcon ? AGGRESSIVE_EASE_REVERSED : AGGRESSIVE_EASE);
+        y.setInterpolator(windowToIcon ? AGGRESSIVE_EASE_REVERSED : AGGRESSIVE_EASE);
         appOpenAnimator.play(x);
         appOpenAnimator.play(y);
 
@@ -541,27 +539,33 @@ public class LauncherAppTransitionManagerImpl extends LauncherAppTransitionManag
         appOpenAnimator.play(scaleAnim);
 
         // Fade out the app icon.
-        float xProperty = windowToIcon ? 0f : 1f;
-        float yProperty = windowToIcon ? 1f : 0f;
-        ObjectAnimator alpha = ObjectAnimator.ofFloat(mFloatingView, View.ALPHA, xProperty, yProperty);
-        if (useUpwardAnimation && !windowToIcon) {
-            alpha.setStartDelay(APP_LAUNCH_ALPHA_START_DELAY);
-            alpha.setDuration(APP_LAUNCH_ALPHA_DURATION);
+        ObjectAnimator alpha = ObjectAnimator.ofFloat(mFloatingView, View.ALPHA, windowToIcon ? 0f : 1f,
+                windowToIcon ? 1f : 0f);
+        long alphaStartDelay;
+        long alphaDuration;
+        if (useUpwardAnimation) {
+            alphaStartDelay = APP_LAUNCH_ALPHA_START_DELAY;
+            alphaDuration = APP_LAUNCH_ALPHA_DURATION;
         } else {
-            alpha.setStartDelay(windowToIcon ? APP_LAUNCH_ALPHA_START_DELAY : (long) (APP_LAUNCH_DOWN_DUR_SCALE_FACTOR
-                    * APP_LAUNCH_ALPHA_START_DELAY));
-            alpha.setDuration(windowToIcon ? APP_LAUNCH_ALPHA_DURATION : (long) (APP_LAUNCH_DOWN_DUR_SCALE_FACTOR * APP_LAUNCH_ALPHA_DURATION));
+            alphaStartDelay = (long) (APP_LAUNCH_DOWN_DUR_SCALE_FACTOR
+                    * APP_LAUNCH_ALPHA_START_DELAY);
+            alphaDuration = (long) (APP_LAUNCH_DOWN_DUR_SCALE_FACTOR * APP_LAUNCH_ALPHA_DURATION);
+        }
+        if (!windowToIcon) {
+            alpha.setStartDelay(alphaStartDelay);
+            alpha.setDuration(alphaDuration);
+        } else {
+            alpha.setDuration(alphaDuration);
+            long total = alphaDuration + alphaStartDelay;
+            alpha.setStartDelay(160 - total);
         }
         alpha.setInterpolator(LINEAR);
         appOpenAnimator.play(alpha);
-        if (!(v instanceof BubbleTextView) && !(v instanceof DateTextView)
-                    && !(v instanceof LinearLayout) && !(v instanceof DeepShortcutView) 
-				    && !(v instanceof ImageView) && !(v instanceof DoubleShadowTextView)) {
-            BubbleTextView bubbleTextView = (BubbleTextView) v;
-            bubbleTextView.setTextVisibility(!windowToIcon && ((BubbleTextView) v).shouldTextBeVisible());
-            y = ((BubbleTextView) v).createTextAlphaAnimator(windowToIcon);
-            y.setDuration(APP_LAUNCH_ALPHA_DURATION);
-            appOpenAnimator.play(y);
+        if (v instanceof BubbleTextView) {
+            ((BubbleTextView) v).setTextVisibility(!windowToIcon && ((BubbleTextView) v).shouldTextBeVisible());
+            ObjectAnimator textAlpha = ((BubbleTextView) v).createTextAlphaAnimator(windowToIcon);
+            textAlpha.setDuration(APP_LAUNCH_ALPHA_DURATION);
+            appOpenAnimator.play(textAlpha);
         }
         appOpenAnimator.addListener(new AnimatorListenerAdapter() {
             @Override
@@ -577,23 +581,25 @@ public class LauncherAppTransitionManagerImpl extends LauncherAppTransitionManag
                 ((ViewGroup) mDragLayer.getParent()).removeView(mFloatingView);
             }
         });
-        if (!windowToIcon) {
-            mFloatingView.setAlpha(0.0f);
-            mFloatingView.setScaleX(startScale);
-            mFloatingView.setScaleY(startScale);
+
+        if (windowToIcon) {
+            mFloatingView.setAlpha(0);
+            mFloatingView.setScaleX(scale);
+            mFloatingView.setScaleY(scale);
             mFloatingView.setTranslationX(dX);
             mFloatingView.setTranslationY(dY);
         }
     }
 
-    private ValueAnimator getOpeningWindowAnimators(View v, RemoteAnimationTargetCompat[] targets, Rect windowTargetBounds) {
-        return getOpeningWindowAnimators(v, targets, windowTargetBounds, false);
-    }
-
     /**
      * @return Animator that controls the window of the opening targets.
      */
-    public ValueAnimator getOpeningWindowAnimators(View v, RemoteAnimationTargetCompat[] targets,
+    private ValueAnimator getOpeningWindowAnimators(View v, RemoteAnimationTargetCompat[] targets,
+            Rect windowTargetBounds) {
+        return getOpeningWindowAnimators(v, targets, windowTargetBounds, false);
+    }
+
+    protected ValueAnimator getOpeningWindowAnimators(View v, RemoteAnimationTargetCompat[] targets,
             Rect windowTargetBounds, boolean windowToIcon) {
         int targetMode = windowToIcon ? MODE_CLOSING : MODE_OPENING;
         Rect bounds = new Rect();
@@ -622,11 +628,12 @@ public class LauncherAppTransitionManagerImpl extends LauncherAppTransitionManag
         appAnimator.setDuration(APP_LAUNCH_DURATION);
         appAnimator.addUpdateListener(new MultiValueUpdateListener() {
             // Fade alpha for the app window.
-            FloatProp mAlpha = new FloatProp(0f, 1f, 0, 60, LINEAR);
+            FloatProp mAlpha = new FloatProp(windowToIcon ? 1f : 0f, windowToIcon ? 0f : 1f, 0, 60, LINEAR);
 
             @Override
             public void onUpdate(float percent) {
-                float easePercent = (windowToIcon ? AGGRESSIVE_EASE_REVERSED_IN : AGGRESSIVE_EASE).getInterpolation(percent);
+                final float easePercent = (windowToIcon ? AGGRESSIVE_EASE_REVERSED_IN : AGGRESSIVE_EASE)
+                        .getInterpolation(percent);
 
                 // Calculate app icon size.
                 float iconWidth = bounds.width() * mFloatingView.getScaleX();
@@ -669,7 +676,7 @@ public class LauncherAppTransitionManagerImpl extends LauncherAppTransitionManag
                         matrix.setScale(scale, scale);
                         matrix.postTranslate(transX0, transY0);
                         targetCrop = crop;
-                        alpha = windowToIcon ? 0f : mAlpha.value;
+                        alpha = mAlpha.value;
                     } else {
                         matrix.setTranslate(target.position.x, target.position.y);
                         alpha = 1f;
@@ -702,7 +709,7 @@ public class LauncherAppTransitionManagerImpl extends LauncherAppTransitionManag
         }
     }
 
-    public boolean launcherIsATargetWithMode(RemoteAnimationTargetCompat[] targets, int mode) {
+    protected boolean launcherIsATargetWithMode(RemoteAnimationTargetCompat[] targets, int mode) {
         return taskIsATargetWithMode(targets, mLauncher.getTaskId(), mode);
     }
 
@@ -763,7 +770,7 @@ public class LauncherAppTransitionManagerImpl extends LauncherAppTransitionManag
     /**
      * Animator that controls the transformations of the windows the targets that are closing.
      */
-    public Animator getClosingWindowAnimators(RemoteAnimationTargetCompat[] targets) {
+    protected Animator getClosingWindowAnimators(RemoteAnimationTargetCompat[] targets) {
         SyncRtSurfaceTransactionApplier surfaceApplier =
                 new SyncRtSurfaceTransactionApplier(mDragLayer);
         Matrix matrix = new Matrix();
