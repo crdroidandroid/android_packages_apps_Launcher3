@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Rect;
 import android.graphics.drawable.Icon;
+import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
@@ -225,6 +226,40 @@ public abstract class SystemShortcut<T extends BaseDraggingActivity>
                         .onDismissApp(itemInfo.getTargetComponent(),
                                 itemInfo.user,
                                 AppLaunchTracker.CONTAINER_PREDICTIONS);
+            };
+        }
+    }
+
+    public static class Uninstall extends SystemShortcut {
+        public Uninstall() {
+            super(R.drawable.ic_uninstall_no_shadow, R.string.uninstall_drop_target_label);
+        }
+
+        @Override
+        public View.OnClickListener getOnClickListener(
+                BaseDraggingActivity activity, ItemInfo itemInfo) {
+            // Get application information.
+            String packageName = itemInfo.getTargetComponent().getPackageName();
+            boolean isSystemApp = Utilities.isSystemApp(activity.getApplicationContext(),
+                    packageName);
+            // Do not show the uninstall action if it's a system app.
+            if (isSystemApp) {
+                return null;
+            }
+            // Create uninstall action.
+            return createOnClickListener(activity, packageName);
+        }
+
+        private View.OnClickListener createOnClickListener(
+                BaseDraggingActivity activity, String packageName) {
+            return view -> {
+                // Dismiss drop down.
+                dismissTaskMenuView(activity);
+                // Send intent to uninstall package.
+                Intent intent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE);
+                intent.setData(Uri.parse("package:" + packageName));
+                intent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
+                activity.startActivity(intent);
             };
         }
     }
