@@ -41,6 +41,7 @@ public class SystemShortcutFactory implements ResourceBasedOverride {
         this(new SystemShortcut.AppInfo(),
                 new SystemShortcut.Widgets(),
                 new SystemShortcut.Install(),
+                new SystemShortcut.Uninstall(),
                 new SystemShortcut.DismissPrediction());
     }
 
