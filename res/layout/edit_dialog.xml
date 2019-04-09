@@ -41,5 +41,6 @@
         android:hint="@string/edit_hint"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textAlignment="viewStart"
-        android:labelFor="@id/package_icon" />
+        android:labelFor="@id/package_icon"
+        android:maxLength="25" />
 </LinearLayout>
