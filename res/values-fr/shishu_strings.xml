@@ -26,7 +26,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon packs -->
     <string name="icon_pack_none">Par défaut</string>
     <!-- Icon shape -->
-    <!-- Icon mask -->
     <!-- Icon size -->
     <string name="icon_size_title">Taille d\'icône</string>
     <string name="icon_size_average">Par défaut</string>
@@ -38,6 +37,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="num_default">Par défaut</string>
     <!-- Hidden apps -->
     <string name="hide_app">Masquer les applications</string>
+    <!-- Protected apps -->
     <!-- Show labels on icon -->
     <!-- Show quickspace -->
     <string name="show_quickspace_summary">Montrer en haut de votre écran d\'accueil</string>
@@ -63,4 +63,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Verrouiller l\'écran d\'accueil</string>
     <!-- Search bar hint -->
+    <!-- Icon edit -->
+    <string name="edit_drop_target_label">Modifier</string>
+    <string name="reset_icon">Réinitialiser</string>
 </resources>

@@ -26,7 +26,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon packs -->
     <string name="icon_pack_none">Zadano</string>
     <!-- Icon shape -->
-    <!-- Icon mask -->
     <!-- Icon size -->
     <string name="icon_size_average">Zadano</string>
     <!-- Gestures -->
@@ -36,6 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="num_default">Zadano</string>
     <!-- Hidden apps -->
     <string name="hide_app">Sakrij aplikacije</string>
+    <!-- Protected apps -->
     <!-- Show labels on icon -->
     <!-- Show quickspace -->
     <!-- QuickSpace -->
@@ -58,4 +58,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Zaključaj radnu površinu</string>
     <!-- Search bar hint -->
+    <!-- Icon edit -->
+    <string name="reset_icon">Resetiraj</string>
 </resources>

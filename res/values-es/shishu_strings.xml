@@ -19,39 +19,99 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- General -->
     <string name="settings_title">Configuración</string>
     <!-- Categories -->
+    <string name="home_category_title">Pantalla de inicio</string>
+    <string name="home_category_summary">Configurar el panel de Google ahora y más</string>
     <string name="icons_category_title">Iconos</string>
+    <string name="icons_category_summary">Configurar la forma, el tamaño de los iconos y mas</string>
+    <string name="app_drawer_category_title">Menú de aplicaciones</string>
+    <string name="app_drawer_category_summary">Personalizar tus aplicaciones</string>
     <string name="misc_category_title">Otros ajustes</string>
+    <string name="misc_category_summary">Otras opciones</string>
     <!-- Sub categories -->
+    <string name="home_grid_title">Diseño de cuadrícula</string>
+    <string name="icon_layout_title">Diseño de íconos</string>
+    <string name="home_overall_title">Diseño de inicio</string>
     <string name="home_quickspace_title">De un vistazo</string>
+    <string name="home_hotseat_title">Barra de aplicaciones</string>
+    <string name="app_overall_title">Lista de aplicaciones</string>
+    <string name="misc_recents_title">Recientes</string>
     <string name="misc_gestures_title">Gestos</string>
     <!-- Icon packs -->
+    <string name="icon_pack">Paquete de íconos</string>
+    <string name="icon_pack_summary">Cambiar la apariencia de tus iconos</string>
     <string name="icon_pack_none">Por defecto</string>
     <!-- Icon shape -->
-    <!-- Icon mask -->
+    <string name="icon_shape_override_label_custom">Cambiar el tamaño de los íconos</string>
+    <string name="icon_shape_rounded_square">Cuadrado redondeado</string>
     <!-- Icon size -->
     <string name="icon_size_title">Tamaño de los iconos</string>
+    <string name="icon_size_extra_small">Diminuto</string>
+    <string name="icon_size_small">Pequeño</string>
     <string name="icon_size_average">Por defecto</string>
+    <string name="icon_size_large">Grande</string>
+    <string name="icon_size_extra_large">Muy grande</string>
     <!-- Gestures -->
+    <string name="allow_swipe_down_clearall_title">Borrar todo</string>
+    <string name="allow_swipe_down_clearall_desc">Delizar verticalmente para borrar todas las apps</string>
+    <string name="pref_homescreen_dt_gestures_title">Gestos de doble toque</string>
+    <string name="pref_homescreen_dt_gestures_summary">Seleccionar acción de doble toque en la pantalla de inicio</string>
     <string name="pref_homescreen_dt_gestures_none">Ninguno</string>
+    <string name="pref_homescreen_dt_gestures_sleep">Suspender</string>
     <string name="pref_homescreen_dt_gestures_torch">Linterna</string>
+    <string name="pref_notifications_gesture_title">Gestos en la barra de notificaciones</string>
+    <string name="pref_notifications_gesture_summary">Deslizar verticalmente hacia abajo para en la pantalla de inicio para mostrar el panel de ajustes rápidos</string>
     <!-- Google Feed -->
+    <string name="google_feed_title">Mostrar app de google</string>
+    <string name="google_feed_summary">A la izquierda de la pantalla de inicio</string>
     <!-- Grid -->
     <string name="num_default">Por defecto</string>
+    <string name="number_of_columns_title">Número de columnas</string>
+    <string name="number_of_rows_title">Número de filas</string>
+    <string name="number_of_hotseat_title">Número de íconos en la barra de aplicaciones</string>
+    <string name="state_loading">Aplicando</string>
     <!-- Hidden apps -->
     <string name="hide_app">Ocultar aplicaciones</string>
+    <string name="hide_app_sum">Ocultar aplicaciones de la barra de aplicaciones</string>
+    <string name="hidden_app">Todas las aplicaciones</string>
+    <string name="hide_selected">Ocultar aplicación (es) seleccionada (s)</string>
+    <string name="more">Más</string>
+    <string name="reset_hidden_apps">Restablecer todo</string>
+    <string name="reset_hidden_apps_done">Aplicaciones ocultas están disponibles ahora</string>
+    <!-- Protected apps -->
     <!-- Show labels on icon -->
+    <string name="app_show_label_title">Etiqueta de aplicaciones</string>
+    <string name="desktop_show_label_summary">Mostrar nombres de aplicaciones en la pantalla de inicio</string>
+    <string name="allapps_show_label_summary">Mostrar las etiquetas de los iconos de las aplicaciones en el cajón de aplicaciones</string>
+    <string name="allapps_long_labels_title">Etiqueta de aplicaciones largas</string>
+    <string name="allapps_long_labels_summary">Permite aplicaciones mostrar las etiquetas con dos líneas</string>
     <!-- Show quickspace -->
+    <string name="show_quickspace_title">Mostrar de un vistazo</string>
     <string name="show_quickspace_summary">Mostrar en la parte superior de la pantalla de inicio</string>
     <!-- QuickSpace -->
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Bienvenido a Bootleggers</string>
+    <string name="quick_event_rom_intro_learn">¡Toca aquí para divertirte!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Reproduciendo</string>
+    <string name="quick_event_ambient_song_artist">%1$s por %2$s</string>
     <!-- QSB -->
     <string name="hotseat_qsb_preferences">Preferencias</string>
     <string name="label_search">Búsqueda</string>
     <string name="label_voice_search">Búsqueda por voz</string>
     <!-- Hide/Show search bars -->
+    <string name="bottom_search_bar_title">Mostrar barra de búsqueda en la parte inferior</string>
+    <string name="bottom_search_bar_summary">Mostrar la barra de búsqueda en la pantalla de inicio</string>
     <!-- Search engine -->
+    <string name="search_provider_title">Motor de barra de búsqueda</string>
     <!-- Predictions -->
+    <string name="suggestion_pref_screen_title">Sugerencias</string>
+    <string name="suggestion_pref_screen_desc">Descripción general y la lista de todas las apps</string>
+    <string name="app_suggestions_title">Mostrar sugerencias de aplicaciones</string>
+    <string name="app_suggestions_summary">En la parte superior de la lista de todas las Apps</string>
+    <string name="title_disable_suggestions_prompt">¿Desactivar las sugerencias de aplicaciones?</string>
+    <string name="msg_disable_suggestions_prompt">"No se mostrarán sugerencias en la parte superior de tu lista de aplicaciones y los datos de uso que se utilizaron para crearlas serán borrados de forma permanente."</string>
+    <string name="label_turn_off_suggestions">DESACTIVAR</string>
+    <string name="all_apps_label">Todas las aplicaciones</string>
     <!-- Date format -->
     <string name="date_format_title">Formato de fecha</string>
     <string name="date_format_long_name">Largo</string>
@@ -75,9 +135,25 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="date_style_spacing_barely">Apenas visible</string>
     <string name="date_style_spacing_ott">Exageradamente</string>
     <!-- Gradients on Workspace/Hotseat? -->
+    <string name="workspace_gradient_title">Mostrar gradiente en la parte superior</string>
+    <string name="workspace_gradient_summary">Activar un degradado sutil de la barra de estado</string>
+    <string name="hotseat_gradient_title">Mostrar gradiente en la parte inferior</string>
+    <string name="hotseat_gradient_summary">Activar un degradado sutil en la barra de estado</string>
     <!-- Recents corned -->
+    <string name="custom_recents_corners_switch_title">Usar esquinas redondeadas personalizadas</string>
+    <string name="custom_recents_corners_switch_summary">Si está deshabilitado, utilizará el que proporciona el sistema/tema. Para aplicar el nuevo valor, vaya a inicio después de seleccionar su opción.</string>
+    <string name="custom_recents_corners_type_title">Redondez de recientes</string>
     <string name="custom_recents_corners_type_default">Por defecto</string>
+    <string name="custom_recents_corners_type_card">Cuadrado redondeado</string>
+    <string name="custom_recents_corners_type_op">Estilo OP</string>
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Bloquear escritorio</string>
+    <string name="lock_desktop_summary">Evitar que la pantalla de inicio sea modificada</string>
     <!-- Search bar hint -->
+    <string name="search_bar_hint">Toca para buscar en %s</string>
+    <string name="search_bar_hint_title">Mostrar texto en la barra de búsqueda</string>
+    <string name="search_bar_hint_summary">Mostrar un texto pequeño en la barra de búsqueda sobre lo que puedes hacer</string>
+    <!-- Icon edit -->
+    <string name="edit_drop_target_label">Editar</string>
+    <string name="reset_icon">Reestablecer</string>
 </resources>

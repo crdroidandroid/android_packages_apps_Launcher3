@@ -43,9 +43,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">Simge şekli</string>
     <string name="icon_shape_rounded_square">Yuvarlatılmış kare</string>
-    <!-- Icon mask -->
-    <string name="legacy_icon_mask_title">Eski simgeler üzerinde şekil maskesini zorla</string>
-    <string name="legacy_icon_mask_summary">Etkinleştirilmişse özel simge paketleriyle ilgili soruna neden olabilir</string>
     <!-- Icon size -->
     <string name="icon_size_title">Simge boyutu</string>
     <string name="icon_size_extra_small">Çok küçük</string>
@@ -75,22 +72,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Hidden apps -->
     <string name="hide_app">Uygulamalar gizle</string>
     <string name="hide_app_sum">Uygulamaları uygulama çekmecesinde gizle</string>
-    <string name="hide_app_selected">&#160;seçildi</string>
     <string name="hidden_app">Tüm uygulamalar</string>
     <string name="hide_selected">Seçilen uygulamaları gizle(s)</string>
     <string name="more">Daha fazla</string>
     <string name="reset_hidden_apps">Tümünü sıfırla</string>
     <string name="reset_hidden_apps_done">Gizli uygulamalar artık kullanılabilir</string>
+    <!-- Protected apps -->
+    <string name="protect_app_help">Yardım et</string>
     <!-- Show labels on icon -->
     <string name="app_show_label_title">Uygulama etiketleri</string>
     <string name="desktop_show_label_summary">Ana ekranda uygulama etiketlerini göster</string>
     <string name="allapps_show_label_summary">Uygulama çekmecesinde uygulama etiketlerini göster</string>
+    <string name="allapps_long_labels_title">Uzun uygulama etiketleri</string>
+    <string name="allapps_long_labels_summary">Uygulamalara iki satır kullanarak etiket görüntüleme izni verir</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Bir bakışta göster</string>
     <string name="show_quickspace_summary">Ana ekranınızın üst kısmında göster</string>
     <!-- QuickSpace -->
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Bootleggers\'a Hoşgeldiniz</string>
+    <string name="quick_event_rom_intro_learn">Eğlenmek için buraya dokunun!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">Şimdi çalınıyor</string>
     <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
@@ -104,6 +105,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Search engine -->
     <string name="search_provider_title">Arama motoru</string>
     <!-- Predictions -->
+    <string name="suggestion_pref_screen_title">Öneriler</string>
+    <string name="suggestion_pref_screen_desc">Genel bakış İçin &amp; Tüm uygulamalar listesi</string>
+    <string name="app_suggestions_title">Uygulama önerilerini görüntüle</string>
+    <string name="app_suggestions_summary">Tüm uygulamalar listenizin üstünde</string>
+    <string name="title_disable_suggestions_prompt">Uygulama önerileri kapatılsın mı?</string>
+    <string name="msg_disable_suggestions_prompt">"Öneriler, uygulama listenizin üst kısmında görünmeyecek ve bunları oluşturmak için kullanılan kullanım verileri kalıcı olarak silinecek."</string>
+    <string name="label_turn_off_suggestions">KAPAT</string>
     <string name="all_apps_label">Tüm uygulamalar</string>
     <!-- Date format -->
     <string name="date_format_title">Tarih biçimi</string>
@@ -141,5 +149,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="custom_recents_corners_type_op">OP stili</string>
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Ana ekranı kilitle</string>
+    <string name="lock_desktop_summary">Giriş ekranının değiştirilmesini önleyin</string>
     <!-- Search bar hint -->
+    <string name="search_bar_hint">%s de arama yapmak için dokunun</string>
+    <string name="search_bar_hint_title">Arama çubuğu ipucu metnini göster</string>
+    <string name="search_bar_hint_summary">Arama çubuğunda ne yapabileceğinizi gösteren küçük bir metin gösterin</string>
+    <!-- Icon edit -->
+    <string name="edit_drop_target_label">Düzenle</string>
+    <string name="reset_icon">Sıfırla</string>
+    <string name="ok">Tamam</string>
 </resources>

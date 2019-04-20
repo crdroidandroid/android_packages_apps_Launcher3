@@ -22,7 +22,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon packs -->
     <string name="icon_pack_none">இயல்புநிலை</string>
     <!-- Icon shape -->
-    <!-- Icon mask -->
     <!-- Icon size -->
     <string name="icon_size_average">இயல்புநிலை</string>
     <!-- Gestures -->
@@ -31,6 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Grid -->
     <string name="num_default">இயல்புநிலை</string>
     <!-- Hidden apps -->
+    <!-- Protected apps -->
     <!-- Show labels on icon -->
     <!-- Show quickspace -->
     <!-- QuickSpace -->
@@ -51,4 +51,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="custom_recents_corners_type_default">இயல்புநிலை</string>
     <!-- Lock desktop -->
     <!-- Search bar hint -->
+    <!-- Icon edit -->
 </resources>

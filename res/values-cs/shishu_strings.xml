@@ -43,9 +43,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">Tvar ikony</string>
     <string name="icon_shape_rounded_square">Zaoblený čtverec</string>
-    <!-- Icon mask -->
-    <string name="legacy_icon_mask_title">Vynutit tvar pro starší ikony</string>
-    <string name="legacy_icon_mask_summary">Pokud je povoleno, může způsobit problém s vlastními ikonami</string>
     <!-- Icon size -->
     <string name="icon_size_title">Velikost ikony</string>
     <string name="icon_size_extra_small">Drobné</string>
@@ -75,22 +72,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Hidden apps -->
     <string name="hide_app">Skrýt aplikace</string>
     <string name="hide_app_sum">Skrýt aplikace v seznamu aplikací</string>
-    <string name="hide_app_selected">&#160;vybráno</string>
     <string name="hidden_app">Všechny aplikace</string>
     <string name="hide_selected">Skrýt vybrané aplikace</string>
     <string name="more">Více</string>
     <string name="reset_hidden_apps">Resetovat vše</string>
     <string name="reset_hidden_apps_done">Skryté aplikace jsou nyní k dispozici</string>
+    <!-- Protected apps -->
+    <string name="protect_app_help">Nápověda</string>
     <!-- Show labels on icon -->
     <string name="app_show_label_title">Popisky aplikací</string>
     <string name="desktop_show_label_summary">Zobrazit popisky aplikací na domovské obrazovce</string>
     <string name="allapps_show_label_summary">Zobrazit popisky aplikací v seznamu</string>
+    <string name="allapps_long_labels_title">Dlouhé popisky aplikací</string>
+    <string name="allapps_long_labels_summary">Umožňuje aplikacím zobrazovat popisky pomocí dvou řádků</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Zobrazit At A Glance</string>
     <string name="show_quickspace_summary">Zobrazit v horní části domovské obrazovky</string>
     <!-- QuickSpace -->
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Vítejte v Bootleggers</string>
+    <string name="quick_event_rom_intro_learn">Klepnutím sem se můžete bavit!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">Nyní hraje</string>
     <string name="quick_event_ambient_song_artist">%1$s od %2$s</string>
@@ -104,6 +105,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Search engine -->
     <string name="search_provider_title">Vyhledávací nástroj vyhledávacího panelu</string>
     <!-- Predictions -->
+    <string name="suggestion_pref_screen_title">Návrhy</string>
+    <string name="suggestion_pref_screen_desc">Pro přehled &amp; seznam všech aplikací</string>
+    <string name="app_suggestions_title">Zobrazit návrhy aplikací</string>
+    <string name="app_suggestions_summary">V horní části seznamu všech aplikací</string>
+    <string name="title_disable_suggestions_prompt">Chcete návrhy aplikací vypnout?</string>
+    <string name="msg_disable_suggestions_prompt">"Na začátku seznamu aplikací se nebudou zobrazovat návrhy a údaje o využití, na základě kterých byly návrhy vytvářeny, budou trvale vymazány."</string>
+    <string name="label_turn_off_suggestions">VYPNOUT</string>
     <string name="all_apps_label">Všechny aplikace</string>
     <!-- Date format -->
     <string name="date_format_title">Formát data</string>
@@ -141,5 +149,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="custom_recents_corners_type_op">Styl OP</string>
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Uzamčení pracovní plochy</string>
+    <string name="lock_desktop_summary">Zabránit v úpravě domovské obrazovky</string>
     <!-- Search bar hint -->
+    <string name="search_bar_hint">Klepnutím vyhledat na %s</string>
+    <string name="search_bar_hint_title">Zobrazit text nápovědy</string>
+    <string name="search_bar_hint_summary">Na vyhledávacím panelu zobrazit malý text, který vám pomůže s tím, co můžete dělat</string>
+    <!-- Icon edit -->
+    <string name="edit_drop_target_label">Upravit</string>
+    <string name="reset_icon">Resetovat</string>
+    <string name="ok">Ok</string>
 </resources>

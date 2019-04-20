@@ -26,7 +26,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon packs -->
     <string name="icon_pack_none">Mặc định</string>
     <!-- Icon shape -->
-    <!-- Icon mask -->
     <!-- Icon size -->
     <string name="icon_size_average">Mặc định</string>
     <!-- Gestures -->
@@ -37,6 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="num_default">Mặc định</string>
     <!-- Hidden apps -->
     <string name="hide_app">Ẩn ứng dụng</string>
+    <!-- Protected apps -->
     <!-- Show labels on icon -->
     <!-- Show quickspace -->
     <string name="show_quickspace_summary">Hiển thị ở đầu Màn hình chính của bạn</string>
@@ -60,4 +60,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Khoá màn hình chính</string>
     <!-- Search bar hint -->
+    <!-- Icon edit -->
+    <string name="reset_icon">Thiết lập lại</string>
 </resources>

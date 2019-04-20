@@ -25,7 +25,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon packs -->
     <string name="icon_pack_none">기본값</string>
     <!-- Icon shape -->
-    <!-- Icon mask -->
     <!-- Icon size -->
     <string name="icon_size_average">기본값</string>
     <!-- Gestures -->
@@ -35,6 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Grid -->
     <string name="num_default">기본값</string>
     <!-- Hidden apps -->
+    <!-- Protected apps -->
     <!-- Show labels on icon -->
     <!-- Show quickspace -->
     <string name="show_quickspace_summary">홈 화면 상단에 표시</string>
@@ -58,4 +58,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Lock desktop -->
     <string name="lock_desktop_title">바탕화면 잠금</string>
     <!-- Search bar hint -->
+    <!-- Icon edit -->
+    <string name="reset_icon">재설정</string>
 </resources>

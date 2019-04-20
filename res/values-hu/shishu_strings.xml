@@ -43,9 +43,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">Az ikonok formája</string>
     <string name="icon_shape_rounded_square">Lekerekített sarkok</string>
-    <!-- Icon mask -->
-    <string name="legacy_icon_mask_title">A forma maszkjának kényszerítése a régi ikonokon</string>
-    <string name="legacy_icon_mask_summary">Ha engedélyezett, akadhatnak problémák az egyéni ikoncsomagokkal</string>
     <!-- Icon size -->
     <string name="icon_size_title">Ikonok mérete</string>
     <string name="icon_size_extra_small">Apró</string>
@@ -75,12 +72,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Hidden apps -->
     <string name="hide_app">Alkalmazások elrejtése</string>
     <string name="hide_app_sum">Alkalmazások elrejtése az alkalmazásfiókban</string>
-    <string name="hide_app_selected">&#160; kiválasztva</string>
     <string name="hidden_app">Az összes alkalmazás</string>
     <string name="hide_selected">A kiválasztott alkalmazás(ok) elrejtése</string>
     <string name="more">Továbbiak</string>
     <string name="reset_hidden_apps">Az összes visszaállítása</string>
     <string name="reset_hidden_apps_done">A rejtett alkalmazások újra elérhetőek</string>
+    <!-- Protected apps -->
+    <string name="protect_app_help">Súgó</string>
     <!-- Show labels on icon -->
     <string name="app_show_label_title">Alkalmazásnevek</string>
     <string name="desktop_show_label_summary">Az alkalmazások nevének megjelenítése a Kezdőképernyőn</string>
@@ -142,4 +140,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Asztalzárolás</string>
     <!-- Search bar hint -->
+    <!-- Icon edit -->
+    <string name="edit_drop_target_label">Szerkesztés</string>
+    <string name="reset_icon">Visszaállítás</string>
+    <string name="ok">OK</string>
 </resources>

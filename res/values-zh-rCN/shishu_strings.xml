@@ -43,9 +43,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">更改图标形状</string>
     <string name="icon_shape_rounded_square">圆角方形</string>
-    <!-- Icon mask -->
-    <string name="legacy_icon_mask_title">在旧的图标上强制改变形状</string>
-    <string name="legacy_icon_mask_summary">如果启用，自定义图标包可能会出现问题</string>
     <!-- Icon size -->
     <string name="icon_size_title">图标大小</string>
     <string name="icon_size_extra_small">最小</string>
@@ -75,22 +72,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Hidden apps -->
     <string name="hide_app">隐藏应用</string>
     <string name="hide_app_sum">从应用抽屉隐藏应用</string>
-    <string name="hide_app_selected">&#160;已选择</string>
     <string name="hidden_app">所有应用程序</string>
     <string name="hide_selected">隐藏所选应用</string>
     <string name="more">更多</string>
     <string name="reset_hidden_apps">重置所有</string>
     <string name="reset_hidden_apps_done">隐藏的应用程序现在可用</string>
+    <!-- Protected apps -->
+    <string name="protect_app_help">帮助</string>
     <!-- Show labels on icon -->
     <string name="app_show_label_title">应用程序标签</string>
     <string name="desktop_show_label_summary">在主屏幕上显示应用程序的标签</string>
     <string name="allapps_show_label_summary">在应用抽屉中显示应用程序的标签</string>
+    <string name="allapps_long_labels_title">长应用程序标签</string>
+    <string name="allapps_long_labels_summary">允许应用程序使用两行显示标签</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">显示一目了然</string>
     <string name="show_quickspace_summary">在主屏幕的顶部显示</string>
     <!-- QuickSpace -->
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">欢迎使用 家</string>
+    <string name="quick_event_rom_intro_learn">点击这里有趣！</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">正在播放</string>
     <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
@@ -104,6 +105,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Search engine -->
     <string name="search_provider_title">搜索栏搜索引擎</string>
     <!-- Predictions -->
+    <string name="suggestion_pref_screen_title">建议</string>
+    <string name="suggestion_pref_screen_desc">对于概述 &amp; 所有应用程序列表</string>
+    <string name="app_suggestions_title">显示应用建议</string>
+    <string name="app_suggestions_summary">在您的所有应用列表顶部</string>
+    <string name="title_disable_suggestions_prompt">要关闭应用推荐吗？</string>
+    <string name="msg_disable_suggestions_prompt">"关闭后，系统将不会在您的应用列表顶部显示推荐应用，并且将永久清空用于生成这些信息的使用数据。"</string>
+    <string name="label_turn_off_suggestions">关闭</string>
     <string name="all_apps_label">所有应用程序</string>
     <!-- Date format -->
     <string name="date_format_title">日期格式</string>
@@ -141,5 +149,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="custom_recents_corners_type_op">OP Style</string>
     <!-- Lock desktop -->
     <string name="lock_desktop_title">锁定桌面</string>
+    <string name="lock_desktop_summary">防止主屏幕被修改</string>
     <!-- Search bar hint -->
+    <string name="search_bar_hint">点击在 %s 上搜索</string>
+    <string name="search_bar_hint_title">显示搜索栏提示文本</string>
+    <string name="search_bar_hint_summary">在搜索栏显示小文本</string>
+    <!-- Icon edit -->
+    <string name="edit_drop_target_label">编辑</string>
+    <string name="reset_icon">重置</string>
+    <string name="ok">确定</string>
 </resources>

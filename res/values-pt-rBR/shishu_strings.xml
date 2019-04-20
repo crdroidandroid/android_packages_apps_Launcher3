@@ -43,9 +43,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">formato dos Ícones</string>
     <string name="icon_shape_rounded_square">Cantos arredondados</string>
-    <!-- Icon mask -->
-    <string name="legacy_icon_mask_title">Máscara de forma força nos ícones legados</string>
-    <string name="legacy_icon_mask_summary">Pode causar problema com pacotes de ícone personalizado, se habilitado</string>
     <!-- Icon size -->
     <string name="icon_size_title">Tamanho do ícone</string>
     <string name="icon_size_extra_small">Minúsculo</string>
@@ -75,12 +72,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Hidden apps -->
     <string name="hide_app">Ocultar aplicativos</string>
     <string name="hide_app_sum">Ocultar aplicativos da gaveta de aplicativos</string>
-    <string name="hide_app_selected">&#160;selecionado</string>
     <string name="hidden_app">Todos os aplicativos</string>
     <string name="hide_selected">Ocultar aplicativo (s) selecionado (s)</string>
     <string name="more">Mais</string>
     <string name="reset_hidden_apps">Resetar todos</string>
     <string name="reset_hidden_apps_done">Aplicativos ocultos já estão disponíveis</string>
+    <!-- Protected apps -->
+    <string name="protect_app_help">Ajuda</string>
     <!-- Show labels on icon -->
     <string name="app_show_label_title">Rotulo dos apps</string>
     <string name="desktop_show_label_summary">Mostrar os rótulos de apps na tela inicial</string>
@@ -142,4 +140,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Bloquear área de trabalho</string>
     <!-- Search bar hint -->
+    <!-- Icon edit -->
+    <string name="edit_drop_target_label">Editar</string>
+    <string name="reset_icon">Redefinir</string>
+    <string name="ok">Ok</string>
 </resources>

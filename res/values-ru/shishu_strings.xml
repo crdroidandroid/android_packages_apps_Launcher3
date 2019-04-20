@@ -43,9 +43,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">Форма значка</string>
     <string name="icon_shape_rounded_square">Квадрат с закругленными углами</string>
-    <!-- Icon mask -->
-    <string name="legacy_icon_mask_title">Изменять форму устаревших значков</string>
-    <string name="legacy_icon_mask_summary">Может вызвать проблемы с пользовательскими пакетами значков, если включено</string>
     <!-- Icon size -->
     <string name="icon_size_title">Размер значков</string>
     <string name="icon_size_extra_small">Мелкий</string>
@@ -75,22 +72,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Hidden apps -->
     <string name="hide_app">Скрыть приложения</string>
     <string name="hide_app_sum">Выбрать приложения, которые не будут отображаться в меню приложений</string>
-    <string name="hide_app_selected">&#160;выбрано</string>
     <string name="hidden_app">Все приложения</string>
     <string name="hide_selected">Скрыть выбранное(ые) приложение(я)</string>
     <string name="more">Еще</string>
     <string name="reset_hidden_apps">Сбросить всё</string>
     <string name="reset_hidden_apps_done">Скрытые приложения снова доступны</string>
+    <!-- Protected apps -->
+    <string name="protect_app_help">Помощь</string>
     <!-- Show labels on icon -->
     <string name="app_show_label_title">Подписи приложений</string>
     <string name="desktop_show_label_summary">Показать названия приложений на домашнем экране</string>
     <string name="allapps_show_label_summary">Показать названия приложений в меню приложений</string>
+    <string name="allapps_long_labels_title">Длинные подписи приложений</string>
+    <string name="allapps_long_labels_summary">Позволяет приложениям отображать метки с помощью двух строк</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Показать Glance</string>
     <string name="show_quickspace_summary">Показать в верхней части \"Основного экрана\"</string>
     <!-- QuickSpace -->
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Добро пожаловать в Bootleggers</string>
+    <string name="quick_event_rom_intro_learn">Нажмите здесь, чтобы веселиться!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">Сейчас играет</string>
     <string name="quick_event_ambient_song_artist">%1$s от %2$s</string>
@@ -104,6 +105,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Search engine -->
     <string name="search_provider_title">Поставщик для поиска</string>
     <!-- Predictions -->
+    <string name="suggestion_pref_screen_title">Предложения</string>
+    <string name="suggestion_pref_screen_desc">Для просмотра списка всех приложений &amp;</string>
+    <string name="app_suggestions_title">Отображать предложения приложений</string>
+    <string name="app_suggestions_summary">В верхней части списка всех приложений</string>
+    <string name="title_disable_suggestions_prompt">Выключить предложения приложения?</string>
+    <string name="msg_disable_suggestions_prompt">"Предложения не будут отображаться в верхней части списка приложений, и данные об использовании, используемые для их создания, будут навсегда удалены."</string>
+    <string name="label_turn_off_suggestions">ОТКЛЮЧИТЬ</string>
     <string name="all_apps_label">Все приложения</string>
     <!-- Date format -->
     <string name="date_format_title">Формат даты</string>
@@ -141,5 +149,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="custom_recents_corners_type_op">Стиль OP</string>
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Заблокировать рабочий стол</string>
+    <string name="lock_desktop_summary">Запретить изменять домашний экран</string>
     <!-- Search bar hint -->
+    <string name="search_bar_hint">Нажмите для поиска на %s</string>
+    <string name="search_bar_hint_title">Показать текст в строке поиска</string>
+    <string name="search_bar_hint_summary">Показать небольшой текст в строке поиска о том, что вы можете сделать</string>
+    <!-- Icon edit -->
+    <string name="edit_drop_target_label">Редактировать</string>
+    <string name="reset_icon">Сброс</string>
+    <string name="ok">Ок</string>
 </resources>

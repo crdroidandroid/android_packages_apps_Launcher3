@@ -43,9 +43,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">Forma icona</string>
     <string name="icon_shape_rounded_square">Quadrato arrotondato</string>
-    <!-- Icon mask -->
-    <string name="legacy_icon_mask_title">Forza maschera su icone vecchie</string>
-    <string name="legacy_icon_mask_summary">Potrebbe causare problemi con pacchetti di icone personalizzate, se abilitato</string>
     <!-- Icon size -->
     <string name="icon_size_title">Grandezza icona</string>
     <string name="icon_size_extra_small">Minuscolo</string>
@@ -75,22 +72,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Hidden apps -->
     <string name="hide_app">Nascondi app</string>
     <string name="hide_app_sum">Nascondi le app dal menù delle applicazioni</string>
-    <string name="hide_app_selected">&#160;selezionato</string>
     <string name="hidden_app">Tutte le applicazioni</string>
     <string name="hide_selected">Nascondi le app selezionate</string>
     <string name="more">Altro</string>
     <string name="reset_hidden_apps">Reimposta tutto</string>
     <string name="reset_hidden_apps_done">Le applicazioni nascoste sono disponibili</string>
+    <!-- Protected apps -->
+    <string name="protect_app_help">Aiuto</string>
     <!-- Show labels on icon -->
     <string name="app_show_label_title">Etichette app</string>
     <string name="desktop_show_label_summary">Mostra le etichette delle app sulla schermata home</string>
     <string name="allapps_show_label_summary">Mostra le etichette di app nel menu applicazioni</string>
+    <string name="allapps_long_labels_title">Etichette app lunghe</string>
+    <string name="allapps_long_labels_summary">Consente alle applicazioni di visualizzare le etichette utilizzando due linee</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Visualizza in un colpo d\'occhio</string>
     <string name="show_quickspace_summary">Visualizza nella parte superiore della schermata Home</string>
     <!-- QuickSpace -->
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Benvenuto a Bootleggers</string>
+    <string name="quick_event_rom_intro_learn">Tocca qui per divertirti!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">Now Playing</string>
     <string name="quick_event_ambient_song_artist">%1$s di %2$s</string>
@@ -104,6 +105,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Search engine -->
     <string name="search_provider_title">Motore di ricerca di Searchbar</string>
     <!-- Predictions -->
+    <string name="suggestion_pref_screen_title">Suggerimenti</string>
+    <string name="suggestion_pref_screen_desc">Per Overview &amp; Tutte le app</string>
+    <string name="app_suggestions_title">Visualizza suggerimenti app</string>
+    <string name="app_suggestions_summary">In cima alla tua lista di tutte le app</string>
+    <string name="title_disable_suggestions_prompt">Disattivare i suggerimenti dell\'app?</string>
+    <string name="msg_disable_suggestions_prompt">"I suggerimenti non verranno mostrati in cima all'elenco delle tue app e i dati sull'utilizzo utilizzati per crearli verranno cancellati definitivamente."</string>
+    <string name="label_turn_off_suggestions">DISATTIVA</string>
     <string name="all_apps_label">Tutte le applicazioni</string>
     <!-- Date format -->
     <string name="date_format_title">Formato data</string>
@@ -141,5 +149,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="custom_recents_corners_type_op">Stile OP</string>
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Blocca schermo</string>
+    <string name="lock_desktop_summary">Impedisci che la schermata home venga modificata</string>
     <!-- Search bar hint -->
+    <string name="search_bar_hint">Tocca per cercare su %s</string>
+    <string name="search_bar_hint_title">Mostra testo suggerimento barra di ricerca</string>
+    <string name="search_bar_hint_summary">Mostra un piccolo testo sulla barra di ricerca che indica cosa puoi fare</string>
+    <!-- Icon edit -->
+    <string name="edit_drop_target_label">Modifica</string>
+    <string name="reset_icon">Ripristino</string>
+    <string name="ok">Ok</string>
 </resources>

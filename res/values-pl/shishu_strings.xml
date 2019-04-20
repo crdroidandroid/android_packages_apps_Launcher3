@@ -43,9 +43,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">Kształt ikon</string>
     <string name="icon_shape_rounded_square">Zaokrąglony kwadrat</string>
-    <!-- Icon mask -->
-    <string name="legacy_icon_mask_title">Wymuś kształt dla starszych ikon</string>
-    <string name="legacy_icon_mask_summary">Może powodować problemy z niestandardowym pakietem ikon, jeżeli jest aktywny</string>
     <!-- Icon size -->
     <string name="icon_size_title">Rozmiar ikon</string>
     <string name="icon_size_extra_small">Bardzo mały</string>
@@ -75,22 +72,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Hidden apps -->
     <string name="hide_app">Ukryj aplikacje</string>
     <string name="hide_app_sum">Ukryj aplikacje z szuflady</string>
-    <string name="hide_app_selected">&#160;wybrane</string>
     <string name="hidden_app">Wszystkie aplikacje</string>
     <string name="hide_selected">Ukryj wybrane aplikacje</string>
     <string name="more">Więcej</string>
     <string name="reset_hidden_apps">Zresetuj wszystko</string>
     <string name="reset_hidden_apps_done">Ukryte aplikacje są teraz widoczne</string>
+    <!-- Protected apps -->
+    <string name="protect_app_help">Pomoc</string>
     <!-- Show labels on icon -->
     <string name="app_show_label_title">Etykiety aplikacji</string>
     <string name="desktop_show_label_summary">Wyświetlanie etykiet aplikacji na ekranie głównym</string>
     <string name="allapps_show_label_summary">Wyświetlanie etykiet aplikacji w szufladzie aplikacji</string>
+    <string name="allapps_long_labels_title">Długie etykiety aplikacji</string>
+    <string name="allapps_long_labels_summary">Zezwól aplikacjom na wyświetlanie etykiet w dwóch liniach</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Pokaż At A Glance</string>
     <string name="show_quickspace_summary">Pokaż u góry ekranu głównego</string>
     <!-- QuickSpace -->
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Witamy w Bootleggers</string>
+    <string name="quick_event_rom_intro_learn">Kliknij tutaj, aby cieszyć się ROMem!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">Teraz odtwarzane</string>
     <string name="quick_event_ambient_song_artist">%1$s - %2$s</string>
@@ -104,6 +105,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Search engine -->
     <string name="search_provider_title">Silnik wyszukiwania w pasku wyszukiwania</string>
     <!-- Predictions -->
+    <string name="suggestion_pref_screen_title">Sugestie</string>
+    <string name="app_suggestions_title">Wyświetl sugerowane aplikacje</string>
+    <string name="app_suggestions_summary">U góry listy Wszystkie aplikacje</string>
+    <string name="title_disable_suggestions_prompt">Wyłączyć sugerowane aplikacje?</string>
+    <string name="msg_disable_suggestions_prompt">"Sugestie nie będą pojawiać się u góry listy Twoich aplikacji, a dane o użytkowaniu służące do ich utworzenia zostaną trwale usunięte."</string>
+    <string name="label_turn_off_suggestions">WYŁĄCZ</string>
     <string name="all_apps_label">Wszystkie aplikacje</string>
     <!-- Date format -->
     <string name="date_format_title">Format daty</string>
@@ -142,4 +149,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Blokada pulpitu</string>
     <!-- Search bar hint -->
+    <!-- Icon edit -->
+    <string name="edit_drop_target_label">Edytuj</string>
+    <string name="reset_icon">Reset</string>
+    <string name="ok">OK</string>
 </resources>

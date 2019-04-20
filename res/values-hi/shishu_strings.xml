@@ -26,7 +26,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon packs -->
     <string name="icon_pack_none">डिफॉल्ट</string>
     <!-- Icon shape -->
-    <!-- Icon mask -->
     <!-- Icon size -->
     <string name="icon_size_average">डिफॉल्ट</string>
     <!-- Gestures -->
@@ -36,6 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Grid -->
     <string name="num_default">डिफॉल्ट</string>
     <!-- Hidden apps -->
+    <!-- Protected apps -->
     <!-- Show labels on icon -->
     <!-- Show quickspace -->
     <!-- QuickSpace -->
@@ -58,4 +58,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="custom_recents_corners_type_default">डिफॉल्ट</string>
     <!-- Lock desktop -->
     <!-- Search bar hint -->
+    <!-- Icon edit -->
+    <string name="reset_icon">रीसेट करें</string>
 </resources>

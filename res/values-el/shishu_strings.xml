@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General -->
+    <string name="settings_title">Ρυθμίσεις</string>
     <!-- Categories -->
     <string name="misc_category_title">Διάφορα</string>
     <!-- Sub categories -->
@@ -25,17 +26,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon packs -->
     <string name="icon_pack_none">Προεπιλογή</string>
     <!-- Icon shape -->
-    <!-- Icon mask -->
     <!-- Icon size -->
     <string name="icon_size_title">Μέγεθος εικονιδίου</string>
     <string name="icon_size_average">Προεπιλογή</string>
     <!-- Gestures -->
     <string name="pref_homescreen_dt_gestures_none">Κανένα</string>
+    <string name="pref_homescreen_dt_gestures_torch">Φακός</string>
     <!-- Google Feed -->
     <!-- Grid -->
     <string name="num_default">Προεπιλογή</string>
     <!-- Hidden apps -->
     <string name="hide_app">Απόκρυψη εφαρμογών</string>
+    <!-- Protected apps -->
     <!-- Show labels on icon -->
     <!-- Show quickspace -->
     <string name="show_quickspace_summary">Εμφάνιση στο επάνω μέρος της αρχικής οθόνης</string>
@@ -60,4 +62,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Κλείδωμα αρχικής οθόνης</string>
     <!-- Search bar hint -->
+    <!-- Icon edit -->
+    <string name="reset_icon">Επαναφορά</string>
 </resources>
