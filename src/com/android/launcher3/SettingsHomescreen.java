@@ -32,7 +32,7 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.SwitchPreference;
 import android.view.MenuItem;
 
-import com.android.internal.util.bootleggers.BootlegUtils;
+import com.android.internal.util.crdroid.Utils;
 
 public class SettingsHomescreen extends SettingsActivity implements PreferenceFragment.OnPreferenceStartFragmentCallback {
 
@@ -83,7 +83,7 @@ public class SettingsHomescreen extends SettingsActivity implements PreferenceFr
             SwitchPreference showQuickspace = (SwitchPreference)
                     findPreference(KEY_SHOW_QUICKSPACE);
 
-            if (!BootlegUtils.isPackageInstalled(mContext, LauncherTab.SEARCH_PACKAGE)) {
+            if (!Utils.isPackageInstalled(mContext, LauncherTab.SEARCH_PACKAGE)) {
                 getPreferenceScreen().removePreference(feedIntegration);
             }
 

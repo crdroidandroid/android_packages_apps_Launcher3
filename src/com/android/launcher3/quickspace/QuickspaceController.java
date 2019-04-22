@@ -22,9 +22,9 @@ import android.graphics.drawable.Icon;
 import android.os.Handler;
 import android.provider.Settings;
 
-import com.android.internal.util.custom.weather.WeatherClient;
-import com.android.internal.util.custom.weather.WeatherClient.WeatherInfo;
-import com.android.internal.util.custom.weather.WeatherClient.WeatherObserver;
+import com.android.internal.util.crdroid.weather.WeatherClient;
+import com.android.internal.util.crdroid.weather.WeatherClient.WeatherInfo;
+import com.android.internal.util.crdroid.weather.WeatherClient.WeatherObserver;
 
 import java.util.ArrayList;
 
