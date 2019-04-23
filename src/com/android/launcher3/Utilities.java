@@ -287,8 +287,9 @@ public final class Utilities {
         return getPrefs(context).getString(DATE_FORMAT_KEY, context.getString(R.string.date_format_normal));
     }
 
-    public static String getDateStyleFont(Context context) {
-        return getPrefs(context).getString(DATE_STYLE_FONT, "google");
+    public static int getDateStyleFont(Context context) {
+        int val = (Integer) getPrefs(context).getString(DATE_STYLE_FONT, "0");
+        return val;
     }
 
     public static boolean isDateStyleUppercase(Context context) {

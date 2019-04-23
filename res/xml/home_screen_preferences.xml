@@ -51,13 +51,13 @@
 
     <ListPreference
         android:dependency="pref_show_quickspace"
-        android:entries="@array/date_style_font_names"
-        android:entryValues="@array/date_style_font_values"
-        android:defaultValue="google"
+        android:entries="@array/font_style_entries"
+        android:entryValues="@array/font_style_values"
+        android:defaultValue="0"
         android:key="pref_date_font"
         android:persistent="true"
         android:summary="%s"
-        android:title="@string/date_style_font" />
+        android:title="@string/date_font_style" />
 
     <SwitchPreference
         android:dependency="pref_show_quickspace"

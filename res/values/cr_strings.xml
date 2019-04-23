@@ -160,42 +160,32 @@
     <string name="date_format_dayonly" translatable="false">EEEE</string>
 
     <!-- At a glance style -->
-    <string name="date_style_font">Date font</string>
-    <string name="date_style_font_systembold">System bold</string>
-    <string name="date_style_font_systemitalic">System italic</string>
-    <string name="date_style_font_system">System default</string>
-    <string name="date_style_font_systemlight">System light</string>
-    <string name="date_style_font_abelreg" translatable="false">Abel</string>
-    <string name="date_style_font_adamcg" translatable="false">Adan CG Pro</string>
-    <string name="date_style_font_alienleague" translatable="false">Alien League</string>
-    <string name="date_style_font_archivo" translatable="false">Archivo Narrow</string>
-    <string name="date_style_font_badscript" translatable="false">Bad Script</string>
-    <string name="date_style_font_bariol" translatable="false">Bariol</string>
-    <string name="date_style_font_bignoodle" translatable="false">Big Noodle Tilting</string>
-    <string name="date_style_font_biko" translatable="false">Biko</string>
-    <string name="date_style_font_cherryswash" translatable="false">Cherry Swash</string>
-    <string name="date_style_font_ginorasans" translatable="false">Ginora Sans</string>
-    <string name="date_style_font_gobold" translatable="false">GoBold Light</string>
-    <string name="date_style_font_google" translatable="false">Google Sans</string>
-    <string name="date_style_font_ibmplex" translatable="false">IBM Plex Mono</string>
-    <string name="date_style_font_inkferno" translatable="false">Inkferno</string>
-    <string name="date_style_font_instruction" translatable="false">Instruction</string>
-    <string name="date_style_font_jacklane" translatable="false">Jack Lane</string>
-    <string name="date_style_font_kellyslab" translatable="false">Kelly Slab</string>
-    <string name="date_style_font_monad" translatable="false">Monad</string>
-    <string name="date_style_font_noir" translatable="false">Noir</string>
-    <string name="date_style_font_outrunfuture" translatable="false">Outrun Future</string>
-    <string name="date_style_font_pompiere" translatable="false">Pompiere</string>
-    <string name="date_style_font_raleway" translatable="false">Raleway</string>
-    <string name="date_style_font_reemkufi" translatable="false">Reem Kufi</string>
-    <string name="date_style_font_riviera" translatable="false">Riviera</string>
-    <string name="date_style_font_satify" translatable="false">Satisfy</string>
-    <string name="date_style_font_seaweedsc" translatable="false">Seaweed Script</string>
-    <string name="date_style_font_sedgwick" translatable="false">Sedgwick Ave Display</string>
-    <string name="date_style_font_snowstorm" translatable="false">Snowstorm</string>
-    <string name="date_style_font_theoutbox" translatable="false">The Outbox</string>
-    <string name="date_style_font_vibur" translatable="false">Vibur</string>
-    <string name="date_style_font_voltaire" translatable="false">Voltaire</string>
+    <string name="date_font_style">Date font style</string>
+    <string name="font_normal">Normal</string>
+    <string name="font_italic">Italic</string>
+    <string name="font_bold">Bold</string>
+    <string name="font_bold_italic">Bold Italic</string>
+    <string name="font_light">Light</string>
+    <string name="font_light_italic">Light Italic</string>
+    <string name="font_thin">Thin</string>
+    <string name="font_thin_italic">Thin Italic</string>
+    <string name="font_condensed">Condensed</string>
+    <string name="font_condensed_italic">Condensed Italic</string>
+    <string name="font_condensed_light">Condensed Light</string>
+    <string name="font_condensed_light_italic">Condensed Light Italic</string>
+    <string name="font_condensed_bold">Condensed Bold</string>
+    <string name="font_condensed_bold_italic">Condensed Bold Italic</string>
+    <string name="font_medium">Medium</string>
+    <string name="font_medium_italic">Medium Italic</string>
+    <string name="font_black">Black</string>
+    <string name="font_black_italic">Black Italic</string>
+    <string name="font_dancingscript">DancingScript</string>
+    <string name="font_dancingscript_bold">DancingScript Bold</string>
+    <string name="font_comingsoon">ComingSoon</string>
+    <string name="font_notoserif">NotoSerif Normal</string>
+    <string name="font_notoserif_italic">NotoSerif Italic</string>
+    <string name="font_notoserif_bold">NotoSerif Bold</string>
+    <string name="font_notoserif_bold_italic">NotoSerif Bold Italic</string>
 
     <!-- At a glance uppercase -->
     <string name="date_style_transform_title">Show uppercase on date</string>

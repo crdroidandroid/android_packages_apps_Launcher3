@@ -88,6 +88,32 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     private QuickSpaceActionReceiver mActionReceiver;
     public QuickspaceController mController;
 
+    private static final int FONT_NORMAL = 0;
+    private static final int FONT_ITALIC = 1;
+    private static final int FONT_BOLD = 2;
+    private static final int FONT_BOLD_ITALIC = 3;
+    private static final int FONT_LIGHT = 4;
+    private static final int FONT_LIGHT_ITALIC = 5;
+    private static final int FONT_THIN = 6;
+    private static final int FONT_THIN_ITALIC = 7;
+    private static final int FONT_CONDENSED = 8;
+    private static final int FONT_CONDENSED_ITALIC = 9;
+    private static final int FONT_CONDENSED_LIGHT = 10;
+    private static final int FONT_CONDENSED_LIGHT_ITALIC = 11;
+    private static final int FONT_CONDENSED_BOLD = 12;
+    private static final int FONT_CONDENSED_BOLD_ITALIC = 13;
+    private static final int FONT_MEDIUM = 14;
+    private static final int FONT_MEDIUM_ITALIC = 15;
+    private static final int FONT_BLACK = 16;
+    private static final int FONT_BLACK_ITALIC = 17;
+    private static final int FONT_DANCINGSCRIPT = 18;
+    private static final int FONT_DANCINGSCRIPT_BOLD = 19;
+    private static final int FONT_COMINGSOON = 20;
+    private static final int FONT_NOTOSERIF = 21;
+    private static final int FONT_NOTOSERIF_ITALIC = 22;
+    private static final int FONT_NOTOSERIF_BOLD = 23;
+    private static final int FONT_NOTOSERIF_BOLD_ITALIC = 24;
+
     public QuickSpaceView(Context context, AttributeSet set) {
         super(context, set);
         mActionReceiver = new QuickSpaceActionReceiver(context);
@@ -182,148 +208,81 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     private void setTypeface(TextView... views) {
         Typeface tf;
         switch (Utilities.getDateStyleFont(getContext())) {
-            case "systembold":
-                tf = Typeface.create("sans-serif", Typeface.BOLD);
-                break;
-
-            case "systemitalic":
-                tf = Typeface.create("sans-serif", Typeface.ITALIC);
-                break;
-
-            case "system":
+            case FONT_NORMAL:
+            default:
                 tf = Typeface.create("sans-serif", Typeface.NORMAL);
                 break;
-
-            case "systemlight":
+            case FONT_ITALIC:
+                tf = Typeface.create("sans-serif", Typeface.ITALIC);
+                break;
+            case FONT_BOLD:
+                tf = Typeface.create("sans-serif", Typeface.BOLD);
+                break;
+            case FONT_BOLD_ITALIC:
+                tf = Typeface.create("sans-serif", Typeface.BOLD_ITALIC);
+                break;
+            case FONT_LIGHT:
                 tf = Typeface.create("sans-serif-light", Typeface.NORMAL);
                 break;
-
-            case "abelreg":
-                tf = Typeface.create("abelreg", Typeface.NORMAL);
+            case FONT_LIGHT_ITALIC:
+                tf = Typeface.create("sans-serif-light", Typeface.ITALIC);
                 break;
-
-            case "adamcg":
-                tf = Typeface.create("adamcg-pro", Typeface.NORMAL);
+            case FONT_THIN:
+                tf = Typeface.create("sans-serif-thin", Typeface.NORMAL);
                 break;
-
-            case "alien":
-                tf = Typeface.create("alien-league", Typeface.NORMAL);
+            case FONT_THIN_ITALIC:
+                tf = Typeface.create("sans-serif-thin", Typeface.ITALIC);
                 break;
-
-            case "archivo":
-                tf = Typeface.create("archivonar", Typeface.NORMAL);
+            case FONT_CONDENSED:
+                tf = Typeface.create("sans-serif-condensed", Typeface.NORMAL);
                 break;
-
-            case "badscript":
-                tf = Typeface.create("badscript", Typeface.NORMAL);
+            case FONT_CONDENSED_ITALIC:
+                tf = Typeface.create("sans-serif-condensed", Typeface.ITALIC);
                 break;
-
-            case "bariol":
-                tf = Typeface.create("bariol-reg", Typeface.NORMAL);
+            case FONT_CONDENSED_LIGHT:
+                tf = Typeface.create("sans-serif-condensed-light", Typeface.NORMAL);
                 break;
-
-            case "bignoodle":
-                tf = Typeface.create("bignoodle-regular", Typeface.NORMAL);
+            case FONT_CONDENSED_LIGHT_ITALIC:
+                tf = Typeface.create("sans-serif-condensed-light", Typeface.ITALIC);
                 break;
-
-            case "biko":
-                tf = Typeface.create("biko", Typeface.NORMAL);
+            case FONT_CONDENSED_BOLD:
+                tf = Typeface.create("sans-serif-condensed", Typeface.BOLD);
                 break;
-
-            case "cherryswash":
-                tf = Typeface.create("cherryswash", Typeface.NORMAL);
+            case FONT_CONDENSED_BOLD_ITALIC:
+                tf = Typeface.create("sans-serif-condensed", Typeface.BOLD_ITALIC);
                 break;
-
-            case "ginora":
-                tf = Typeface.create("ginora-sans", Typeface.NORMAL);
+            case FONT_MEDIUM:
+                tf = Typeface.create("sans-serif-medium", Typeface.NORMAL);
                 break;
-
-            case "gobold":
-                tf = Typeface.create("gobold-light-sys", Typeface.NORMAL);
+            case FONT_MEDIUM_ITALIC:
+                tf = Typeface.create("sans-serif-medium", Typeface.ITALIC);
                 break;
-
-            case "google":
-                tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/GoogleSans-Regular.ttf");
+            case FONT_BLACK:
+                tf = Typeface.create("sans-serif-black", Typeface.NORMAL);
                 break;
-
-            case "ibmplex":
-                tf = Typeface.create("ibmplex-mono", Typeface.NORMAL);
+            case FONT_BLACK_ITALIC:
+                tf = Typeface.create("sans-serif-black", Typeface.ITALIC);
                 break;
-
-            case "inkferno":
-                tf = Typeface.create("inkferno", Typeface.NORMAL);
+            case FONT_DANCINGSCRIPT:
+                tf = Typeface.create("cursive", Typeface.NORMAL);
                 break;
-
-            case "instruction":
-                tf = Typeface.create("instruction", Typeface.NORMAL);
+            case FONT_DANCINGSCRIPT_BOLD:
+                tf = Typeface.create("cursive", Typeface.BOLD);
                 break;
-
-            case "jacklane":
-                tf = Typeface.create("jack-lane", Typeface.NORMAL);
+            case FONT_COMINGSOON:
+                tf = Typeface.create("casual", Typeface.NORMAL);
                 break;
-
-            case "kellyslab":
-                tf = Typeface.create("kellyslab", Typeface.NORMAL);
+            case FONT_NOTOSERIF:
+                tf = Typeface.create("serif", Typeface.NORMAL);
                 break;
-
-            case "monad":
-                tf = Typeface.create("monad", Typeface.NORMAL);
+            case FONT_NOTOSERIF_ITALIC:
+                tf = Typeface.create("serif", Typeface.ITALIC);
                 break;
-
-            case "noir":
-                tf = Typeface.create("noir", Typeface.NORMAL);
+            case FONT_NOTOSERIF_BOLD:
+                tf = Typeface.create("serif", Typeface.BOLD);
                 break;
-
-            case "outrun":
-                tf = Typeface.create("outrun-future", Typeface.NORMAL);
-                break;
-
-            case "pompiere":
-                tf = Typeface.create("pompiere", Typeface.NORMAL);
-                break;
-
-            case "raleway":
-                tf = Typeface.create("raleway-light", Typeface.NORMAL);
-                break;
-
-            case "reemkufi":
-                tf = Typeface.create("reemkufi", Typeface.NORMAL);
-                break;
-
-            case "riviera":
-                tf = Typeface.create("riviera", Typeface.NORMAL);
-                break;
-
-            case "satisfy":
-                tf = Typeface.create("satisfy", Typeface.NORMAL);
-                break;
-
-            case "seaweedsc":
-                tf = Typeface.create("seaweedsc", Typeface.NORMAL);
-                break;
-
-            case "sedgwick":
-                tf = Typeface.create("sedgwick-ave", Typeface.NORMAL);
-                break;
-
-            case "snowstorm":
-                tf = Typeface.create("snowstorm-sys", Typeface.NORMAL);
-                break;
-
-            case "theoutbox":
-                tf = Typeface.create("the-outbox", Typeface.NORMAL);
-                break;
-
-            case "vibur":
-                tf = Typeface.create("vibur", Typeface.NORMAL);
-                break;
-
-            case "voltaire":
-                tf = Typeface.create("voltaire", Typeface.NORMAL);
-                break;
-
-            default:
-                tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/GoogleSans-Regular.ttf");
+            case FONT_NOTOSERIF_BOLD_ITALIC:
+                tf = Typeface.create("serif", Typeface.BOLD_ITALIC);
                 break;
         }
         for (TextView view : views) {

@@ -94,80 +94,61 @@
         <item>@string/date_format_daydate_long</item>
     </string-array>
 
-    <!-- Date font -->
-    <string-array name="date_style_font_names" translatable="false">
-        <item>@string/date_style_font_systembold</item>
-        <item>@string/date_style_font_systemitalic</item>
-        <item>@string/date_style_font_system</item>
-        <item>@string/date_style_font_systemlight</item>
-        <item>@string/date_style_font_abelreg</item>
-        <item>@string/date_style_font_adamcg</item>
-        <item>@string/date_style_font_alienleague</item>
-        <item>@string/date_style_font_archivo</item>
-        <item>@string/date_style_font_badscript</item>
-        <item>@string/date_style_font_bariol</item>
-        <item>@string/date_style_font_bignoodle</item>
-        <item>@string/date_style_font_biko</item>
-        <item>@string/date_style_font_cherryswash</item>
-        <item>@string/date_style_font_ginorasans</item>
-        <item>@string/date_style_font_gobold</item>
-        <item>@string/date_style_font_google</item>
-        <item>@string/date_style_font_ibmplex</item>
-        <item>@string/date_style_font_inkferno</item>
-        <item>@string/date_style_font_instruction</item>
-        <item>@string/date_style_font_jacklane</item>
-        <item>@string/date_style_font_kellyslab</item>
-        <item>@string/date_style_font_monad</item>
-        <item>@string/date_style_font_noir</item>
-        <item>@string/date_style_font_outrunfuture</item>
-        <item>@string/date_style_font_pompiere</item>
-        <item>@string/date_style_font_raleway</item>
-        <item>@string/date_style_font_reemkufi</item>
-        <item>@string/date_style_font_riviera</item>
-        <item>@string/date_style_font_satify</item>
-        <item>@string/date_style_font_seaweedsc</item>
-        <item>@string/date_style_font_sedgwick</item>
-        <item>@string/date_style_font_snowstorm</item>
-        <item>@string/date_style_font_theoutbox</item>
-        <item>@string/date_style_font_vibur</item>
-        <item>@string/date_style_font_voltaire</item>
+    <!-- Font style -->
+    <string-array name="font_style_entries">
+        <item>@string/font_normal</item>
+        <item>@string/font_italic</item>
+        <item>@string/font_bold</item>
+        <item>@string/font_bold_italic</item>
+        <item>@string/font_light</item>
+        <item>@string/font_light_italic</item>
+        <item>@string/font_thin</item>
+        <item>@string/font_thin_italic</item>
+        <item>@string/font_condensed</item>
+        <item>@string/font_condensed_italic</item>
+        <item>@string/font_condensed_light</item>
+        <item>@string/font_condensed_light_italic</item>
+        <item>@string/font_condensed_bold</item>
+        <item>@string/font_condensed_bold_italic</item>
+        <item>@string/font_medium</item>
+        <item>@string/font_medium_italic</item>
+        <item>@string/font_black</item>
+        <item>@string/font_black_italic</item>
+        <item>@string/font_dancingscript</item>
+        <item>@string/font_dancingscript_bold</item>
+        <item>@string/font_comingsoon</item>
+        <item>@string/font_notoserif</item>
+        <item>@string/font_notoserif_italic</item>
+        <item>@string/font_notoserif_bold</item>
+        <item>@string/font_notoserif_bold_italic</item>
     </string-array>
-     <string-array name="date_style_font_values" translatable="false">
-        <item>systembold</item>
-        <item>systemitalic</item>
-        <item>system</item>
-        <item>systemlight</item>
-        <item>abelreg</item>
-        <item>adamcg</item>
-        <item>alien</item>
-        <item>archivo</item>
-        <item>badscript</item>
-        <item>bariol</item>
-        <item>bignoodle</item>
-        <item>biko</item>
-        <item>cherryswash</item>
-        <item>ginora</item>
-        <item>gobold</item>
-        <item>google</item>
-        <item>ibmplex</item>
-        <item>inkferno</item>
-        <item>instruction</item>
-        <item>jacklane</item>
-        <item>kellyslab</item>
-        <item>monad</item>
-        <item>noir</item>
-        <item>outrun</item>
-        <item>pompiere</item>
-        <item>raleway</item>
-        <item>reemkufi</item>
-        <item>riviera</item>
-        <item>satisfy</item>
-        <item>seaweedsc</item>
-        <item>sedgwick</item>
-        <item>snowstorm</item>
-        <item>theoutbox</item>
-        <item>vibur</item>
-        <item>voltaire</item>
+ 
+    <string-array name="font_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
     </string-array>
 
     <!-- At a glance letter spacing -->
