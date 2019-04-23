@@ -107,39 +107,14 @@ public abstract class BaseDraggingActivity extends BaseActivity
     }
 
     protected void updateTheme(WallpaperColorInfo wallpaperColorInfo) {
-        ContentResolver resolver = this.getContentResolver();
-        final boolean supportsDarkText = wallpaperColorInfo.supportsDarkText();
-        final int systemTheme = Settings.System.getInt(resolver, SYSTEM_THEME_STYLE, 0);
-        switch (systemTheme) {
-            case 1:
-                setTheme(supportsDarkText ? R.style.LauncherTheme_DarkText : R.style.LauncherTheme);
-                break;
-            case 2:
-                setTheme(supportsDarkText ? R.style.LauncherTheme_Dark_DarkText : R.style.LauncherTheme_Dark);
-                break;
-            case 3:
-                setTheme(supportsDarkText ? R.style.LauncherTheme_Black_DarkText : R.style.LauncherTheme_Black);
-                break;
-            case 4: case 6: case 8: case 9: case 10:
-                setTheme(supportsDarkText ? R.style.LauncherTheme_Shishu_DarkText : R.style.LauncherTheme_ShishuThemes);
-                break;
-            case 5:
-                setTheme(supportsDarkText ? R.style.LauncherTheme_Shishu_DarkText : R.style.LauncherTheme_ShishuNightsTheme);
-                break;
-            case 7:
-                setTheme(supportsDarkText ? R.style.LauncherTheme_Shishu_DarkText : R.style.LauncherTheme_ShishuImmensityTheme);
-                break;
-            default:
-                if (mUiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_AUTO) {
-                    setTheme(wallpaperColorInfo.supportsDarkText() ? R.style.AppTheme_DarkText :
-                            R.style.AppTheme);
-                } else if (mUiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_YES) {
-                    setTheme(wallpaperColorInfo.supportsDarkText() ? R.style.AppTheme_Dark_DarkText :
-                            R.style.AppTheme_Dark);
-                } else {
-                    setTheme(mThemeRes);
-                }
-                break;
+        if (mUiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_AUTO) {
+            setTheme(wallpaperColorInfo.supportsDarkText() ? R.style.AppTheme_DarkText :
+                    R.style.AppTheme);
+        } else if (mUiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_YES) {
+            setTheme(wallpaperColorInfo.supportsDarkText() ? R.style.AppTheme_Dark_DarkText :
+                    R.style.AppTheme_Dark);
+        } else {
+            setTheme(mThemeRes);
         }
     }
 
