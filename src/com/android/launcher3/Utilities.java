@@ -288,7 +288,7 @@ public final class Utilities {
     }
 
     public static int getDateStyleFont(Context context) {
-        int val = (Integer) getPrefs(context).getString(DATE_STYLE_FONT, "0");
+        int val = Integer.parseInt(getPrefs(context).getString(DATE_STYLE_FONT, "0"));
         return val;
     }
 
