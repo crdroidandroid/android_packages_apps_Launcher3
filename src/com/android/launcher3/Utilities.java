@@ -280,7 +280,7 @@ public final class Utilities {
     }
 
     public static boolean showSearchBarHint(Context context) {
-        return getPrefs(context).getBoolean(SEARCH_BAR_HINT, true);
+        return getPrefs(context).getBoolean(SEARCH_BAR_HINT, false);
     }
 
     public static String getDateFormat(Context context) {
