@@ -75,7 +75,7 @@ public class PredictionsFloatingHeader extends FloatingHeaderView implements Ins
     }
 
     public final void updateExpectedHeight() {
-        mPredictionRowView.setDividerType(DividerType.ALL_APPS_LABEL);
+        mPredictionRowView.setDividerType(DividerType.LINE);
         mMaxTranslation = mPredictionRowView.getExpectedHeight();
     }
 
