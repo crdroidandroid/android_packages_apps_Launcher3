@@ -76,22 +76,22 @@
     <string name="hidden_app">Toate aplicațiile</string>
     <string name="hide_selected">Ascunde aplicatii selectate</string>
     <string name="more">Mai mult</string>
-    <string name="reset_hidden_apps">Reset all</string>
-    <string name="reset_hidden_apps_done">Hidden apps are now available</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="reset_hidden_apps">Resetează totul</string>
+    <string name="reset_hidden_apps_done">Aplicatiile ascunse sunt disponibile</string>
+    <string name="hide_app_info_hidden">Aplicațiile ascunse și widget-urile lor sunt ascunse în sertar</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="protect_app_help">Help</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="hide_protect_app">Ascunde aplicatii protejate</string>
+    <string name="hide_protect_app_sum">Ascunde aplicații protejate în lista aplicaţiilor</string>
+    <string name="protect_apps_auth_manager">Deblocați pentru a gestiona aplicaţiile ascunse şi protejate</string>
+    <string name="protect_app_auth_open_app">Autentificați-vă pentru a deschide %1$s</string>
+    <string name="protect_app_no_lock_error">Vă rugăm să setați un ecran de blocare sigur pentru a restricţiona accesul spre aplicații</string>
+    <string name="protect_app_help">Ajutor</string>
+    <string name="protect_app_info_protected">Aplicațiile protejate necesită autentificare pentru a fi deschise din launcher</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
-    <string name="allapps_long_labels_title">Long app labels</string>
+    <string name="app_show_label_title">Etichetele aplicației</string>
+    <string name="desktop_show_label_summary">Arată etichetele aplicațiilor pe panoul principal</string>
+    <string name="allapps_show_label_summary">Afișează etichetele aplicațiilor în desfășurător</string>
+    <string name="allapps_long_labels_title">Etichete lungi pentru aplicații</string>
     <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Show At A Glance</string>
@@ -179,22 +179,22 @@
     <string name="custom_recents_corners_type_op">Stil OP</string>
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Blocare desktop</string>
-    <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
+    <string name="lock_desktop_summary">Previne modificari pentru ecranul principal</string>
     <!-- Search bar hint -->
-    <string name="search_bar_hint">Tap to search on %s</string>
-    <string name="search_bar_hint_title">Show search bar hint text</string>
-    <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
+    <string name="search_bar_hint">Atingeţi pentru a căuta pe %s</string>
+    <string name="search_bar_hint_title">Arată text indiciu in bara de căutare</string>
+    <string name="search_bar_hint_summary">Arată un mic text pe bara de căutare despre ce se poate face</string>
     <!-- Icon edit -->
-    <string name="edit_drop_target_label">Edit</string>
-    <string name="edit_hint">Icon name</string>
+    <string name="edit_drop_target_label">Editare</string>
+    <string name="edit_hint">Nume Pictograma</string>
     <string name="reset_icon">Reset</string>
-    <string name="all_icons">All icons</string>
-    <string name="similar_icons">Similar icons</string>
+    <string name="all_icons">Toate pictogramele</string>
+    <string name="similar_icons">Pictograme similare</string>
     <string name="ok">Ok</string>
-    <string name="icon_label">Label</string>
-    <string name="loading">Loading, please wait</string>
-    <string name="icon_chooser">Icon chooser</string>
-    <string name="icon_search">Search for icons</string>
+    <string name="icon_label">Etichetă</string>
+    <string name="loading">Se încarcă, aşteptaţi</string>
+    <string name="icon_chooser">Selector pictograme</string>
+    <string name="icon_search">Căutare pictograme</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
     <string name="msg_no_icon_pack">No icon packs available</string>
     <!-- Folder titles -->
