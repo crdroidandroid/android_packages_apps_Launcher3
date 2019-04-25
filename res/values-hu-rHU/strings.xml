@@ -99,34 +99,34 @@
     <string name="permdesc_install_shortcut">Lehetővé teszi egy alkalmazás számára, hogy
         felhasználói beavatkozás nélkül adjon hozzá parancsikonokat.</string>
     <!-- Permission short label -->
-    <string name="permlab_read_settings">Kezdőképernyő-beállítások és parancsikonok olvasása</string>
+    <string name="permlab_read_settings">a Kezdőképernyő-beállítások és parancsikonok olvasása</string>
     <!-- Permission description -->
-    <string name="permdesc_read_settings">Allows the app to read the settings and
-        shortcuts in Home.</string>
+    <string name="permdesc_read_settings">Lehetővé teszi az alkalmazás számára, hogy
+        beolvassa a kezdőképernyő beállításait és parancsikonjait.</string>
     <!-- Permission short label -->
-    <string name="permlab_write_settings">write Home settings and shortcuts</string>
+    <string name="permlab_write_settings">a Kezdőképernyő-beállítások és parancsikonok írása</string>
     <!-- Permission description -->
-    <string name="permdesc_write_settings">Allows the app to change the settings and
-        shortcuts in Home.</string>
+    <string name="permdesc_write_settings">Lehetővé teszi az alkalmazás számára, hogy
+        módosítsa a kezdőképernyő beállításait és parancsikonjait.</string>
     <!-- Toast shown on clicking a direct call shortcut. [CHAR_LIMIT=80] -->
-    <string name="msg_no_phone_permission"><xliff:g id="app_name" example="Launcher3">%1$s</xliff:g> is not allowed to make phone calls</string>
+    <string name="msg_no_phone_permission"><xliff:g id="app_name" example="Launcher3">%1$s</xliff:g> nem kezdeményezhet telefonhívásokat</string>
     <!-- Widgets: -->
     <skip></skip>
     <!-- Text to show user in place of a gadget when we can't display it properly -->
-    <string name="gadget_error_text">Problem loading widget</string>
+    <string name="gadget_error_text">Probléma történt a kisalkalmazás betöltésekor</string>
     <!-- Text to show user in place of a gadget when it is not yet initialized. -->
-    <string name="gadget_setup_text">Setup</string>
+    <string name="gadget_setup_text">Beállítások</string>
     <!-- Text to inform the user that they can't uninstall a system application -->
-    <string name="uninstall_system_app_text">This is a system app and can\'t be uninstalled.</string>
+    <string name="uninstall_system_app_text">Ez egy rendszeralkalmazás, nem lehet eltávolítani.</string>
     <!-- Default folder title -->
-    <string name="folder_hint_text">Unnamed Folder</string>
+    <string name="folder_hint_text">Névtelen mappa</string>
     <!-- Accessibility -->
     <!-- The format string for when an app is temporarily disabled. -->
-    <string name="disabled_app_label">Disabled <xliff:g id="app_name" example="Messenger">%1$s</xliff:g></string>
+    <string name="disabled_app_label"><xliff:g id="app_name" example="Messenger">%1$s</xliff:g> letiltva</string>
     <!-- The format string for when an app has a notification dot (meaning it has associated notifications). -->
     <plurals name="badged_app_label">
-        <item quantity="one"><xliff:g id="app_name" example="Messenger">%1$s</xliff:g>, has <xliff:g id="notification_count" example="1">%2$d</xliff:g> notification</item>
-        <item quantity="other"><xliff:g id="app_name" example="Messenger">%1$s</xliff:g>, has <xliff:g id="notification_count" example="3">%2$d</xliff:g> notifications</item>
+        <item quantity="one">A(z) <xliff:g id="APP_NAME_0">%1$s</xliff:g> <xliff:g id="NOTIFICATION_COUNT_1">%2$d</xliff:g> értesítéssel rendelkezik</item>
+        <item quantity="other">A(z) <xliff:g id="APP_NAME_0">%1$s</xliff:g> <xliff:g id="NOTIFICATION_COUNT_1">%2$d</xliff:g> értesítéssel rendelkezik</item>
     </plurals>
     <skip></skip>
     <!-- The format string for default page scroll text [CHAR_LIMIT=none] -->
