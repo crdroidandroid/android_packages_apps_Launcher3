@@ -271,22 +271,22 @@
     <!-- Accessibility action to dismiss a notification in the shortcuts menu for an icon. [CHAR_LIMIT=30] -->
     <string name="action_dismiss_notification">Elvetés</string>
     <!-- Accessibility confirmation for notification being dismissed. -->
-    <string name="notification_dismissed">Notification dismissed</string>
+    <string name="notification_dismissed">Értesítés elvetve</string>
     <!-- Label of tab to indicate personal apps -->
-    <string name="all_apps_personal_tab">Personal</string>
+    <string name="all_apps_personal_tab">Személyes</string>
     <!-- Label of tab to indicate work apps -->
-    <string name="all_apps_work_tab">Work</string>
+    <string name="all_apps_work_tab">Munkahelyi</string>
     <!-- This string is in the work profile tab when a user has All Apps open on their phone. This is a label for a toggle to turn the work profile on and off. "Work profile" means a separate profile on a user's phone that's specifically for their work apps and managed by their company. "Work" is used as an adjective.-->
-    <string name="work_profile_toggle_label">Work profile</string>
+    <string name="work_profile_toggle_label">Munkahelyi profil</string>
     <!-- Title of an overlay in All Apps. This overlay is letting a user know about their work profile, which is managed by their employer. "Work apps" are apps in a user's work profile.-->
-    <string name="bottom_work_tab_user_education_title">Find work apps here</string>
+    <string name="bottom_work_tab_user_education_title">Itt kereshet munkahelyi alkalmazásokat</string>
     <!-- Text in an overlay in All Apps. This overlay is letting a user know about their work profile, which is managed by their employer.-->
-    <string name="bottom_work_tab_user_education_body">Each work app has a badge and is kept secure by your organization. Move apps to your Home screen for easier access.</string>
+    <string name="bottom_work_tab_user_education_body">A munkahelyi alkalmazásoknál \"kitűző\" található, és biztonságukról az Ön szervezete gondoskodik. A könnyebb hozzáférés érdekében ezeket helyezze át a Kezdőképernyőre.</string>
     <!-- This string is in the work profile tab when a user has All Apps open on their phone. It describes the label of a toggle, "Work profile," as being managed by the user's employer.
     "Organization" is used to represent a variety of businesses, non-profits, and educational institutions).-->
-    <string name="work_mode_on_label">Managed by your organization</string>
+    <string name="work_mode_on_label">Az Ön munkáltatója kezeli</string>
     <!-- This string appears under a the label of a toggle in the work profile tab on a user's phone. It describes the status of the toggle, "Work profile," when it's turned off. "Work profile" means a separate profile on a user's phone that's speficially for their work apps and is managed by their company.-->
-    <string name="work_mode_off_label">Notifications and apps are off</string>
-    <string name="bottom_work_tab_user_education_close_button">Close</string>
-    <string name="bottom_work_tab_user_education_closed">Closed</string>
+    <string name="work_mode_off_label">Az értesítések és az alkalmazások kikapcsolásra kerültek</string>
+    <string name="bottom_work_tab_user_education_close_button">Bezárás</string>
+    <string name="bottom_work_tab_user_education_closed">Lezárva</string>
 </resources>
