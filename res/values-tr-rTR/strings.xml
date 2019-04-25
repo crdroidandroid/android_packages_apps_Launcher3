@@ -125,168 +125,167 @@
     <string name="disabled_app_label"><xliff:g id="app_name" example="Messenger">%1$s</xliff:g> devre dışı</string>
     <!-- The format string for when an app has a notification dot (meaning it has associated notifications). -->
     <plurals name="badged_app_label">
-        <item quantity="one"><xliff:g id="app_name" example="Messenger">%1$s</xliff:g>, has <xliff:g id="notification_count" example="1">%2$d</xliff:g> notification</item>
-        <item quantity="other"><xliff:g id="app_name" example="Messenger">%1$s</xliff:g>, has <xliff:g id="notification_count" example="3">%2$d</xliff:g> notifications</item>
+        <item quantity="one"><xliff:g id="app_name" example="Messenger">%1$s</xliff:g>, <xliff:g id="notification_count" example="1">%2$d</xliff:g> bildirim var</item>
+        <item quantity="other"><xliff:g id="app_name" example="Messenger">%1$s</xliff:g>, <xliff:g id="notification_count" example="3">%2$d</xliff:g> bildirimler var</item>
     </plurals>
     <skip></skip>
     <!-- The format string for default page scroll text [CHAR_LIMIT=none] -->
-    <string name="default_scroll_format">Page %1$d of %2$d</string>
+    <string name="default_scroll_format">Sayfa %1$d / %2$d</string>
     <!-- The format string for Workspace page scroll text [CHAR_LIMIT=none] -->
-    <string name="workspace_scroll_format">Home screen %1$d of %2$d</string>
+    <string name="workspace_scroll_format">Ana ekran %1$d / %2$d</string>
     <!-- Description for a new page on homescreen[CHAR_LIMIT=none] -->
-    <string name="workspace_new_page">New home screen page</string>
+    <string name="workspace_new_page">Yeni ana ekran sayfası</string>
     <!-- Folder accessibility -->
     <!-- The format string for when a folder is opened, speaks the dimensions -->
-    <string name="folder_opened">Folder opened, <xliff:g id="width" example="5">%1$d</xliff:g> by <xliff:g id="height" example="3">%2$d</xliff:g></string>
+    <string name="folder_opened"><xliff:g id="width" example="5">%1$d</xliff:g> <xliff:g id="height" example="3">%2$d</xliff:g> klasörü açıldı</string>
     <!-- Instruction that clicking outside will close folder -->
-    <string name="folder_tap_to_close">Tap to close folder</string>
+    <string name="folder_tap_to_close">Klasörü kapatmak için dokunun</string>
     <!-- Instruction that clicking outside will commit folder rename -->
-    <string name="folder_tap_to_rename">Tap to save rename</string>
+    <string name="folder_tap_to_rename">Yeniden adlandırmayı kaydetmek için dokunun</string>
     <!-- Indication that folder closed -->
-    <string name="folder_closed">Folder closed</string>
+    <string name="folder_closed">Klasör kapatıldı</string>
     <!-- Folder renamed format -->
-    <string name="folder_renamed">Folder renamed to <xliff:g id="name" example="Games">%1$s</xliff:g></string>
+    <string name="folder_renamed">Klasör <xliff:g id="name" example="Games">%1$s</xliff:g> için yeniden adlandırıldı</string>
     <!-- Folder name format -->
-    <string name="folder_name_format">Folder: <xliff:g id="name" example="Games">%1$s</xliff:g></string>
+    <string name="folder_name_format">Klasör: <xliff:g id="name" example="Games">%1$s</xliff:g></string>
     <!-- Strings for the customization mode -->
     <!-- Text for widget add button -->
-    <string name="widget_button_text">Widgets</string>
+    <string name="widget_button_text">Widgetler</string>
     <!-- Text for wallpaper change button -->
-    <string name="wallpaper_button_text">Wallpapers</string>
+    <string name="wallpaper_button_text">Duvar kağıtları</string>
     <!-- Text for settings button -->
-    <string name="settings_button_text">Home settings</string>
+    <string name="settings_button_text">Ana ekran ayarları</string>
     <!-- Message shown when a feature is disabled by the administrator -->
-    <string name="msg_disabled_by_admin">Disabled by your admin</string>
+    <string name="msg_disabled_by_admin">Yönetici tarafından devre dışı bırakıldı</string>
     <!-- Strings for settings -->
     <!-- Title for Allow Rotation setting. [CHAR LIMIT=50] -->
-    <string name="allow_rotation_title">Allow Home screen rotation</string>
+    <string name="allow_rotation_title">Ana ekranın döndürülmesine izin ver</string>
     <!-- Text explaining when the home screen will get rotated. [CHAR LIMIT=100] -->
-    <string name="allow_rotation_desc">When phone is rotated</string>
+    <string name="allow_rotation_desc">Cihaz döndürüldüğünde</string>
     <!-- Title for Notification dots setting. Tapping this will link to the system Notifications settings screen where the user can turn off notification dots globally. [CHAR LIMIT=50] -->
-    <string name="icon_badging_title">Notification dots</string>
+    <string name="icon_badging_title">Bildirim noktaları</string>
     <!-- Text to indicate that the system icon badging setting is on [CHAR LIMIT=100] -->
-    <string name="icon_badging_desc_on">On</string>
+    <string name="icon_badging_desc_on">Açık</string>
     <!-- Text to indicate that the system icon badging setting is off [CHAR LIMIT=100] -->
-    <string name="icon_badging_desc_off">Off</string>
+    <string name="icon_badging_desc_off">Kapalı</string>
     <!-- Title for the dialog shown when the app does not has notification access, explaining the requirement for notification access [CHAR LIMIT=50] -->
-    <string name="title_missing_notification_access">Notification access needed</string>
+    <string name="title_missing_notification_access">Bildirim erişimi gerekli</string>
     <!-- Message explaining to the user that the notification access is required by the app for showing 'Notification dots' [CHAR LIMIT=NONE] -->
-    <string name="msg_missing_notification_access">To show Notification Dots, turn on app notifications for <xliff:g id="name" example="My App">%1$s</xliff:g></string>
+    <string name="msg_missing_notification_access">Bildirim noktalarını göstermek için <xliff:g id="name" example="My App">%1$s</xliff:g> uygulamasının bildirimlerini açın</string>
     <!-- Button text in the confirmation dialog which would take the user to the system settings [CHAR LIMIT=50] -->
-    <string name="title_change_settings">Change settings</string>
+    <string name="title_change_settings">Ayarları değiştir</string>
     <!-- Summary for Notification dots setting. Tapping this will link enable/disable notification dots feature on the home screen. [CHAR LIMIT=50] -->
-    <string name="icon_badging_service_title">Show notification dots</string>
+    <string name="icon_badging_service_title">Bildirim noktalarını göster</string>
     <!-- Label for the setting that allows the automatic placement of launcher shortcuts for applications and games installed on the device [CHAR LIMIT=40] -->
-    <string name="auto_add_shortcuts_label">Add icon to Home screen</string>
+    <string name="auto_add_shortcuts_label">Ana ekrana simge ekle</string>
     <!-- Text description of the setting that allows the automatic placement of launcher shortcuts for applications and games installed on the device [CHAR LIMIT=NONE] -->
-    <string name="auto_add_shortcuts_description">For new apps</string>
+    <string name="auto_add_shortcuts_description">Yeni uygulamalar için</string>
     <!-- Developer setting to change the shape of icons on home screen. [CHAR LIMIT=50] -->
-    <string name="icon_shape_override_label">Change icon shape</string>
+    <string name="icon_shape_override_label">Simge şeklini değiştir</string>
     <!-- Subtext explaining that the icons will only be affected on the home screen. This text follows the actual icon action: Change icon shape, on Home screen [CHAR LIMIT=100] -->
-    <string name="icon_shape_override_label_location">on Home screen</string>
+    <string name="icon_shape_override_label_location">Ana ekran üzerinde</string>
     <!-- Option to not change the icon shape on home screen and use the system default setting instead. [CHAR LIMIT=50] -->
-    <string name="icon_shape_system_default">Use system default</string>
+    <string name="icon_shape_system_default">Sistem varsayılanını kullan</string>
     <!-- Option to change the shape of the home screen icons to a square. [CHAR LIMIT=50] -->
-    <string name="icon_shape_square">Square</string>
+    <string name="icon_shape_square">Kare</string>
     <!-- Option to change the shape of the home screen icons to a squircle. This represents the name of the shape somewhere between a circle and a square. [CHAR LIMIT=50] -->
-    <string name="icon_shape_squircle">Squircle</string>
+    <string name="icon_shape_squircle">Köşeli daire</string>
     <!-- Option to change the shape of the home screen icons to a circle. [CHAR LIMIT=50] -->
-    <string name="icon_shape_circle">Circle</string>
+    <string name="icon_shape_circle">Daire</string>
     <!-- Option to change the shape of the home screen icons to a teardrop. This represents the name of the shape similar to a circle with with the bottom right corner pushed out like a square [CHAR LIMIT=50] -->
-    <string name="icon_shape_teardrop">Teardrop</string>
+    <string name="icon_shape_teardrop">Gözyaşı</string>
     <!-- Message shown in the progress dialog when the icon shape override is being applied [CHAR LIMIT=100]-->
-    <string name="icon_shape_override_progress">Applying icon shape changes</string>
+    <string name="icon_shape_override_progress">Simge şekli değişiklikleri uygulanıyor</string>
     <!-- Label on an icon that references an uninstalled package, for which we have no information about when it might be installed. [CHAR_LIMIT=15] -->
-    <string name="package_state_unknown">Unknown</string>
+    <string name="package_state_unknown">Bilinmiyor</string>
     <!-- Button for abandoned promises dialog, to removes this abandoned promise icon. -->
-    <string name="abandoned_clean_this">Remove</string>
+    <string name="abandoned_clean_this">Kaldır</string>
     <!-- Button for abandoned promise dialog, to search in the market for the missing package. -->
-    <string name="abandoned_search">Search</string>
+    <string name="abandoned_search">Arama</string>
     <!-- Title for abandoned promise dialog. -->
-    <string name="abandoned_promises_title">This app is not installed</string>
+    <string name="abandoned_promises_title">Bu uygulama yüklü değil</string>
     <!-- Explanation for abandoned promise dialog. "The first 'it' refers to the shortcut icon.
     The second "it" refers to the app. -->
-    <string name="abandoned_promise_explanation">The app for this icon isn\'t installed.
-        You can remove it, or search for the app and install it manually.
+    <string name="abandoned_promise_explanation">Bu simge için uygulama yüklü değil.
+        Kaldırabilir veya uygulamayı arayabilir ve el ile kurabilirsiniz.
     </string>
     <!-- Title for an app which is being downloaded. -->
-    <string name="app_downloading_title"><xliff:g id="name" example="Messenger">%1$s</xliff:g> downloading, <xliff:g id="progress" example="30%">%2$s</xliff:g> complete</string>
+    <string name="app_downloading_title"><xliff:g id="name" example="Messenger">%1$s</xliff:g> indiriliyor, <xliff:g id="progress" example="30%">%2$s</xliff:g> tamamlandı</string>
     <!-- Title for an app whose download has been started. -->
-    <string name="app_waiting_download_title"><xliff:g id="name" example="Messenger">%1$s</xliff:g> waiting to install</string>
+    <string name="app_waiting_download_title"><xliff:g id="name" example="Messenger">%1$s</xliff:g> yüklenmeyi bekliyor</string>
     <!-- Strings for widgets & more in the popup container/bottom sheet -->
     <!-- Title for a bottom sheet that shows widgets for a particular app -->
-    <string name="widgets_bottom_sheet_title"><xliff:g id="name" example="Messenger">%1$s</xliff:g> widgets</string>
+    <string name="widgets_bottom_sheet_title"><xliff:g id="name" example="Messenger">%1$s</xliff:g> widgetler</string>
     <!-- Accessibility title for the popup containing a list of widgets. [CHAR_LIMIT=50] -->
-    <string name="widgets_list">Widgets list</string>
+    <string name="widgets_list">Widget listesi</string>
     <!-- Text announced by accessibility when the popup containing the list of widgets is closed. [CHAR_LIMIT=100] -->
-    <string name="widgets_list_closed">Widgets list closed</string>
+    <string name="widgets_list_closed">Widget listesi kapalı</string>
     <!-- Strings for accessibility actions -->
     <!-- Accessibility action to add an app to workspace. [CHAR_LIMIT=30] -->
-    <string name="action_add_to_workspace">Add to Home screen</string>
+    <string name="action_add_to_workspace">Ana ekrana ekle</string>
     <!-- Accessibility action to move item to the current location. [CHAR_LIMIT=30] -->
-    <string name="action_move_here">Move item here</string>
+    <string name="action_move_here">Öğeyi buraya taşı</string>
     <!-- Accessibility confirmation for item added to workspace. -->
-    <string name="item_added_to_workspace">Item added to home screen</string>
+    <string name="item_added_to_workspace">Öğe ana ekrana eklendi</string>
     <!-- Accessibility confirmation for item removed. -->
-    <string name="item_removed">Item removed</string>
+    <string name="item_removed">Öğe kaldırıldı</string>
     <!-- Accessibility action to move an item on the workspace. [CHAR_LIMIT=30] -->
-    <string name="action_move">Move item</string>
+    <string name="action_move">Öğeyi taşı</string>
     <!-- Accessibility description to move item to empty cell. -->
-    <string name="move_to_empty_cell">Move to row <xliff:g id="number" example="1">%1$s</xliff:g> column <xliff:g id="number" example="1">%2$s</xliff:g></string>
+    <string name="move_to_empty_cell"><xliff:g id="number" example="1">%1$s</xliff:g>. satırı <xliff:g id="number" example="1">%2$s</xliff:g> sütuna taşı</string>
     <!-- Accessibility description to move item inside a folder. -->
-    <string name="move_to_position">Move to position <xliff:g id="number" example="1">%1$s</xliff:g></string>
+    <string name="move_to_position"><xliff:g id="number" example="1">%1$s </xliff:g> konumuna taşı</string>
     <!-- Accessibility description to move item to the hotseat. -->
-    <string name="move_to_hotseat_position">Move to favorites position <xliff:g id="number" example="1">%1$s</xliff:g></string>
+    <string name="move_to_hotseat_position">Favorileri <xliff:g id="number" example="1">%1$s</xliff:g> konumuna taşı</string>
     <!-- Accessibility confirmation for item move. -->
-    <string name="item_moved">Item moved</string>
+    <string name="item_moved">Öğe taşındı</string>
     <!-- Accessibility description to move item into an existing folder. -->
-    <string name="add_to_folder">Add to folder: <xliff:g id="name" example="Games">%1$s</xliff:g></string>
+    <string name="add_to_folder">Klasöre ekle: <xliff:g id="name" example="Games">%1$s</xliff:g></string>
     <!-- Accessibility description to move item into an existing folder containing an app. -->
-    <string name="add_to_folder_with_app">Add to folder with <xliff:g id="name" example="Messenger">%1$s</xliff:g></string>
+    <string name="add_to_folder_with_app"><xliff:g id="name" example="Messenger">%1$s</xliff:g> öğesini içeren klasöre ekle</string>
     <!-- Accessibility confirmation for item added to folder. -->
-    <string name="added_to_folder">Item added to folder</string>
+    <string name="added_to_folder">Öğe klasöre eklendi</string>
     <!-- Accessibility description to create folder with another item. -->
-    <string name="create_folder_with">Create folder with: <xliff:g id="name" example="Game">%1$s</xliff:g></string>
+    <string name="create_folder_with">Bu öğeyle klasör oluştur: <xliff:g id="name" example="Game">%1$s</xliff:g></string>
     <!-- Accessibility confirmation for folder created. -->
-    <string name="folder_created">Folder created</string>
+    <string name="folder_created">Klasör oluşturuldu</string>
     <!-- Accessibility action to move an item from folder to workspace. [CHAR_LIMIT=30] -->
-    <string name="action_move_to_workspace">Move to Home screen</string>
+    <string name="action_move_to_workspace">Ana ekrana taşı</string>
     <!-- Accessibility action to resize a widget. [CHAR_LIMIT=30] -->
-    <string name="action_resize">Resize</string>
+    <string name="action_resize">Yeniden boyutlandır</string>
     <!-- Accessibility action to increase width of a widget. [CHAR_LIMIT=30] -->
-    <string name="action_increase_width">Increase width</string>
+    <string name="action_increase_width">Genişliği artır</string>
     <!-- Accessibility action to increase height of a widget. [CHAR_LIMIT=30] -->
-    <string name="action_increase_height">Increase height</string>
+    <string name="action_increase_height">Yüksekliği artır</string>
     <!-- Accessibility action to decrease width of a widget. [CHAR_LIMIT=30] -->
-    <string name="action_decrease_width">Decrease width</string>
+    <string name="action_decrease_width">Genişliği azalt</string>
     <!-- Accessibility action to decrease height of a widget. [CHAR_LIMIT=30] -->
-    <string name="action_decrease_height">Decrease height</string>
+    <string name="action_decrease_height">Yüksekliği azalt</string>
     <!-- Accessibility confirmation for widget resize. -->
-    <string name="widget_resized">Widget resized to width <xliff:g id="number" example="2">%1$s</xliff:g> height <xliff:g id="number" example="1">%2$s</xliff:g></string>
+    <string name="widget_resized">Widget genişliği <xliff:g id="number" example="2">%1$s</xliff:g> yüksekliği <xliff:g id="number" example="1">%2$s</xliff:g> olarak yeniden boyutlandırıldı</string>
     <!-- Accessibility action to show quick actions menu for an icon. [CHAR_LIMIT=30] -->
-    <string name="action_deep_shortcut">Shortcuts</string>
+    <string name="action_deep_shortcut">Kısayollar</string>
     <!-- Accessibility description when the context menu of a launcher icon that has notifications as well as shortcuts (providing quick access to app's actions). The "shortcuts" translation should be consistent with the one for action_deep_shortcut. [CHAR_LIMIT=50] -->
-    <string name="shortcuts_menu_with_notifications_description">Shortcuts and notifications
-    </string>
+    <string name="shortcuts_menu_with_notifications_description">Kısayollar ve bildirimler    </string>
     <!-- Accessibility action to dismiss a notification in the shortcuts menu for an icon. [CHAR_LIMIT=30] -->
-    <string name="action_dismiss_notification">Dismiss</string>
+    <string name="action_dismiss_notification">Reddet</string>
     <!-- Accessibility confirmation for notification being dismissed. -->
-    <string name="notification_dismissed">Notification dismissed</string>
+    <string name="notification_dismissed">Bildirim reddedildi</string>
     <!-- Label of tab to indicate personal apps -->
-    <string name="all_apps_personal_tab">Personal</string>
+    <string name="all_apps_personal_tab">Kişisel</string>
     <!-- Label of tab to indicate work apps -->
-    <string name="all_apps_work_tab">Work</string>
+    <string name="all_apps_work_tab">İş</string>
     <!-- This string is in the work profile tab when a user has All Apps open on their phone. This is a label for a toggle to turn the work profile on and off. "Work profile" means a separate profile on a user's phone that's specifically for their work apps and managed by their company. "Work" is used as an adjective.-->
-    <string name="work_profile_toggle_label">Work profile</string>
+    <string name="work_profile_toggle_label">İş profili</string>
     <!-- Title of an overlay in All Apps. This overlay is letting a user know about their work profile, which is managed by their employer. "Work apps" are apps in a user's work profile.-->
-    <string name="bottom_work_tab_user_education_title">Find work apps here</string>
+    <string name="bottom_work_tab_user_education_title">İş uygulamalarını burada bul</string>
     <!-- Text in an overlay in All Apps. This overlay is letting a user know about their work profile, which is managed by their employer.-->
-    <string name="bottom_work_tab_user_education_body">Each work app has a badge and is kept secure by your organization. Move apps to your Home screen for easier access.</string>
+    <string name="bottom_work_tab_user_education_body">Her iş uygulamasının bir rozeti vardır ve kuruluşunuz tarafından güvende tutulmaktadır. Daha kolay erişim için uygulamaları ana ekranınıza taşıyın.</string>
     <!-- This string is in the work profile tab when a user has All Apps open on their phone. It describes the label of a toggle, "Work profile," as being managed by the user's employer.
     "Organization" is used to represent a variety of businesses, non-profits, and educational institutions).-->
-    <string name="work_mode_on_label">Managed by your organization</string>
+    <string name="work_mode_on_label">Kuruluşunuz tarafından yönetiliyor</string>
     <!-- This string appears under a the label of a toggle in the work profile tab on a user's phone. It describes the status of the toggle, "Work profile," when it's turned off. "Work profile" means a separate profile on a user's phone that's speficially for their work apps and is managed by their company.-->
-    <string name="work_mode_off_label">Notifications and apps are off</string>
-    <string name="bottom_work_tab_user_education_close_button">Close</string>
-    <string name="bottom_work_tab_user_education_closed">Closed</string>
+    <string name="work_mode_off_label">Bildirimler ve uygulamalar kapalı</string>
+    <string name="bottom_work_tab_user_education_close_button">Kapat</string>
+    <string name="bottom_work_tab_user_education_closed">Kapalı</string>
 </resources>
