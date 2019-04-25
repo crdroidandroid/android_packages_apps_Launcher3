@@ -38,20 +38,20 @@
     <string name="misc_gestures_title">Gesta</string>
     <!-- Icon packs -->
     <string name="icon_pack">Balíček ikon</string>
-    <string name="icon_pack_summary">Change the look of your app icons</string>
-    <string name="icon_pack_none">Default</string>
+    <string name="icon_pack_summary">Změňte vzhled ikon aplikací</string>
+    <string name="icon_pack_none">Výchozí</string>
     <!-- Icon shape -->
-    <string name="icon_shape_override_label_custom">Icon shape</string>
-    <string name="icon_shape_rounded_square">Rounded square</string>
+    <string name="icon_shape_override_label_custom">Tvar ikony</string>
+    <string name="icon_shape_rounded_square">Zaoblený čtverec</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
-    <string name="icon_size_extra_small">Tiny</string>
-    <string name="icon_size_small">Small</string>
-    <string name="icon_size_average">Default</string>
-    <string name="icon_size_large">Large</string>
-    <string name="icon_size_extra_large">Extra large</string>
+    <string name="icon_size_title">Velikost ikony</string>
+    <string name="icon_size_extra_small">Nejmenší</string>
+    <string name="icon_size_small">Malá</string>
+    <string name="icon_size_average">Výchozí</string>
+    <string name="icon_size_large">Velká</string>
+    <string name="icon_size_extra_large">Extra velká</string>
     <!-- Gestures -->
-    <string name="allow_swipe_down_clearall_title">Clear all from recents view</string>
+    <string name="allow_swipe_down_clearall_title">Vyčistit vše z náhledu nedávných aplikací</string>
     <string name="allow_swipe_down_clearall_desc">Swipe vertically downward in recents view to clear all apps</string>
     <string name="pref_homescreen_dt_gestures_title">Double tap gesture</string>
     <string name="pref_homescreen_dt_gestures_summary">Select the action of the double tap gesture on the home screen</string>
