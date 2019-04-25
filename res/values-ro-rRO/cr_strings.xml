@@ -17,13 +17,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Setări</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape, size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
+    <string name="home_category_title">Ecran de pornire</string>
+    <string name="home_category_summary">Setează panoul Google Now și altele</string>
+    <string name="icons_category_title">Iconiţe</string>
+    <string name="icons_category_summary">Setează forma iconițelor, mărimea și altele</string>
+    <string name="app_drawer_category_title">Listă aplicații</string>
     <string name="app_drawer_category_summary">Customize your app drawer</string>
     <string name="misc_category_title">Miscellaneous</string>
     <string name="misc_category_summary">Other options</string>
