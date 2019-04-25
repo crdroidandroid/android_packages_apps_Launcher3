@@ -92,9 +92,9 @@
     <string name="desktop_show_label_summary">Arată etichetele aplicațiilor pe panoul principal</string>
     <string name="allapps_show_label_summary">Afișează etichetele aplicațiilor în desfășurător</string>
     <string name="allapps_long_labels_title">Etichete lungi pentru aplicații</string>
-    <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
+    <string name="allapps_long_labels_summary">Permite aplicatiilor sa afiseze etichete pe doua randuri</string>
     <!-- Show quickspace -->
-    <string name="show_quickspace_title">Show At A Glance</string>
+    <string name="show_quickspace_title">Arata pe scurt</string>
     <string name="show_quickspace_summary">Show at the top of your Home screen</string>
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
@@ -131,7 +131,7 @@
     <string name="date_format_daydate_short_name">Day (short with number)</string>
     <string name="date_format_dayonly_name">Just today</string>
     <!-- At a glance style -->
-    <string name="date_font_style">Date font style</string>
+    <string name="date_font_style">Stil font data</string>
     <string name="font_normal">Normal</string>
     <string name="font_italic">Italic</string>
     <string name="font_bold">Bold</string>
