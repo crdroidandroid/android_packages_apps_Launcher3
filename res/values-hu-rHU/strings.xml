@@ -60,12 +60,12 @@
     <!-- Loading apps text. [CHAR_LIMIT=50] -->
     <string name="all_apps_loading_message">Alkalmazások betöltése&#8230;</string>
     <!-- No-search-results text. [CHAR_LIMIT=50] -->
-    <string name="all_apps_no_search_results">No apps found matching \"<xliff:g id="query" example="Android">%1$s</xliff:g>\"</string>
+    <string name="all_apps_no_search_results">Nem találhatóak a következőnek megfelelő alkalmazások: \"<xliff:g id="query" example="Android">%1$s</xliff:g>\"</string>
     <!-- Label for the button which allows the user to get app search results. [CHAR_LIMIT=50] -->
-    <string name="all_apps_search_market_message">Search for more apps</string>
+    <string name="all_apps_search_market_message">További alkalmazások keresése</string>
     <!-- Popup items -->
     <!-- Text to display as the header above notifications. [CHAR_LIMIT=30] -->
-    <string name="notifications_header">Notifications</string>
+    <string name="notifications_header">Értesítések</string>
     <!-- Drag and drop -->
     <!-- Message to tell the user to press and hold on a shortcut to add it [CHAR_LIMIT=50] -->
     <string name="long_press_shortcut_to_add">Touch &amp; hold to pick up a shortcut.</string>
