@@ -17,18 +17,18 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Beállítások</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape, size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="home_category_title">Kezdőképernyő</string>
+    <string name="home_category_summary">A \'Google Now\' panel és egyebek beállítása</string>
+    <string name="icons_category_title">Ikonok</string>
+    <string name="icons_category_summary">Az ikonok beállításai (forma, méret és egyebek)</string>
+    <string name="app_drawer_category_title">Alkalmazásfiók</string>
+    <string name="app_drawer_category_summary">Az Alkalmazásfiók testreszabása</string>
+    <string name="misc_category_title">Egyebek</string>
+    <string name="misc_category_summary">Egyéb lehetőségek</string>
     <!-- Sub categories -->
-    <string name="home_grid_title">Grid layout</string>
+    <string name="home_grid_title">Rácselrendezés</string>
     <string name="icon_layout_title">Icon layout</string>
     <string name="home_overall_title">Home layout</string>
     <string name="home_quickspace_title">At A Glance</string>
