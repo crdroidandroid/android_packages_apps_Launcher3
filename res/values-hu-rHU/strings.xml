@@ -25,21 +25,21 @@
     <!-- Default folder name -->
     <string name="folder_name"></string>
     <!-- Work folder name -->
-    <string name="work_folder_name">Work</string>
+    <string name="work_folder_name">Munka</string>
     <!-- Displayed when user selects a shortcut for an app that was uninstalled [CHAR_LIMIT=none]-->
-    <string name="activity_not_found">App isn\'t installed.</string>
+    <string name="activity_not_found">Az alkalmazás nincs telepítve.</string>
     <!-- Displayed when user selects a shortcut for an app that is current not available [CHAR_LIMIT=none]-->
-    <string name="activity_not_available">App isn\'t available</string>
+    <string name="activity_not_available">Az alkalmazás nem érhető el</string>
     <!-- SafeMode shortcut error string -->
-    <string name="safemode_shortcut_error">Downloaded app disabled in Safe mode</string>
+    <string name="safemode_shortcut_error">A letöltött alkalmazások nem érhetők el Csökkentett módban</string>
     <!-- SafeMode widget error string -->
-    <string name="safemode_widget_error">Widgets disabled in Safe mode</string>
+    <string name="safemode_widget_error">A kisalkalmazások nem érhetők el Csökkentett módban</string>
     <!-- Message shown when a shortcut is not available. It could have been temporarily disabled and may start working again after some time. -->
-    <string name="shortcut_not_available">Shortcut isn\'t available</string>
+    <string name="shortcut_not_available">A parancsikon nem áll rendelkezésre</string>
     <!-- User visible name for the launcher/home screen. [CHAR_LIMIT=30] -->
-    <string name="home_screen">Home screen</string>
+    <string name="home_screen">Kezdőképernyő</string>
     <!-- Label for showing custom action list of a shortcut or widget. [CHAR_LIMIT=30] -->
-    <string name="custom_actions">Custom actions</string>
+    <string name="custom_actions">Egyéni műveletek</string>
     <!-- Widgets -->
     <!-- Message to tell the user to press and hold on a widget to add it [CHAR_LIMIT=50] -->
     <string name="long_press_widget_to_add">Touch &amp; hold to pick up a widget.</string>
