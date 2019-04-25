@@ -51,10 +51,10 @@
     <string name="icon_size_large">Velká</string>
     <string name="icon_size_extra_large">Extra velká</string>
     <!-- Gestures -->
-    <string name="allow_swipe_down_clearall_title">Vyčistit vše z náhledu nedávných aplikací</string>
-    <string name="allow_swipe_down_clearall_desc">Swipe vertically downward in recents view to clear all apps</string>
-    <string name="pref_homescreen_dt_gestures_title">Double tap gesture</string>
-    <string name="pref_homescreen_dt_gestures_summary">Select the action of the double tap gesture on the home screen</string>
+    <string name="allow_swipe_down_clearall_title">Vymazat vše z náhledu nedávných aplikací</string>
+    <string name="allow_swipe_down_clearall_desc">Přejetím prstu svisle dolů v náhledu nedávných aplikací vymažete všechny aplikace</string>
+    <string name="pref_homescreen_dt_gestures_title">Gesto dvojím poklepáním</string>
+    <string name="pref_homescreen_dt_gestures_summary">Vyberte akci, která má být uskutečněna po provedení gesta dvojího poklepání na domovskou obrazovku</string>
     <string name="pref_homescreen_dt_gestures_none">None</string>
     <string name="pref_homescreen_dt_gestures_sleep">Sleep</string>
     <string name="pref_homescreen_dt_gestures_torch">Flashlight</string>
