@@ -29,35 +29,35 @@
     <string name="misc_category_summary">Egyéb lehetőségek</string>
     <!-- Sub categories -->
     <string name="home_grid_title">Rácselrendezés</string>
-    <string name="icon_layout_title">Icon layout</string>
-    <string name="home_overall_title">Home layout</string>
-    <string name="home_quickspace_title">At A Glance</string>
-    <string name="home_hotseat_title">Dock</string>
-    <string name="app_overall_title">App list</string>
-    <string name="misc_recents_title">Recents</string>
-    <string name="misc_gestures_title">Gestures</string>
+    <string name="icon_layout_title">Ikonelrendezés</string>
+    <string name="home_overall_title">Kezdőképernyő-elrendezés</string>
+    <string name="home_quickspace_title">Belepillantás</string>
+    <string name="home_hotseat_title">Dokk</string>
+    <string name="app_overall_title">Alkalmazáslista</string>
+    <string name="misc_recents_title">Előzmények</string>
+    <string name="misc_gestures_title">Mozdulatvezérlés</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Change the look of your app icons</string>
-    <string name="icon_pack_none">Default</string>
+    <string name="icon_pack">Ikoncsomag</string>
+    <string name="icon_pack_summary">Változtassa meg az alkalmazásikonok kinézetét</string>
+    <string name="icon_pack_none">Alapértelmezett</string>
     <!-- Icon shape -->
-    <string name="icon_shape_override_label_custom">Icon shape</string>
-    <string name="icon_shape_rounded_square">Rounded square</string>
+    <string name="icon_shape_override_label_custom">Az ikonok formája</string>
+    <string name="icon_shape_rounded_square">Lekerekített négyzet</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
-    <string name="icon_size_extra_small">Tiny</string>
-    <string name="icon_size_small">Small</string>
-    <string name="icon_size_average">Default</string>
-    <string name="icon_size_large">Large</string>
-    <string name="icon_size_extra_large">Extra large</string>
+    <string name="icon_size_title">Az ikonok mérete</string>
+    <string name="icon_size_extra_small">Apró</string>
+    <string name="icon_size_small">Kicsi</string>
+    <string name="icon_size_average">Alapértelmezett</string>
+    <string name="icon_size_large">Nagy</string>
+    <string name="icon_size_extra_large">Hatalmas</string>
     <!-- Gestures -->
-    <string name="allow_swipe_down_clearall_title">Clear all from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Swipe vertically downward in recents view to clear all apps</string>
-    <string name="pref_homescreen_dt_gestures_title">Double tap gesture</string>
-    <string name="pref_homescreen_dt_gestures_summary">Select the action of the double tap gesture on the home screen</string>
-    <string name="pref_homescreen_dt_gestures_none">None</string>
-    <string name="pref_homescreen_dt_gestures_sleep">Sleep</string>
-    <string name="pref_homescreen_dt_gestures_torch">Flashlight</string>
+    <string name="allow_swipe_down_clearall_title">\'Az összes törlése\' az előzmény-nézetből</string>
+    <string name="allow_swipe_down_clearall_desc">Csúsztasson függőlegesen lefelé, hogy törölje az összes alkalmazást az előzményekből</string>
+    <string name="pref_homescreen_dt_gestures_title">A dupla érintéses vezérlés</string>
+    <string name="pref_homescreen_dt_gestures_summary">Válasszon egy műveletet, hogy mi történjen a Kezdőképernyő dupla érintésekor</string>
+    <string name="pref_homescreen_dt_gestures_none">Egyik sem</string>
+    <string name="pref_homescreen_dt_gestures_sleep">Alvó mód</string>
+    <string name="pref_homescreen_dt_gestures_torch">Zseblámpa</string>
     <string name="pref_notifications_gesture_title">Notifications gesture</string>
     <string name="pref_notifications_gesture_summary">Swipe vertically downward on the home screen to show the QS panel</string>
     <!-- Google Feed -->
