@@ -25,19 +25,19 @@
     <string name="icons_category_summary">Nastavte tvar ikon, velikost a další parametry</string>
     <string name="app_drawer_category_title">Nabídka aplikací</string>
     <string name="app_drawer_category_summary">Přizpůsobte si nabídku aplikací</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="misc_category_title">Různé</string>
+    <string name="misc_category_summary">Další možnosti</string>
     <!-- Sub categories -->
-    <string name="home_grid_title">Grid layout</string>
-    <string name="icon_layout_title">Icon layout</string>
-    <string name="home_overall_title">Home layout</string>
-    <string name="home_quickspace_title">At A Glance</string>
-    <string name="home_hotseat_title">Dock</string>
-    <string name="app_overall_title">App list</string>
-    <string name="misc_recents_title">Recents</string>
-    <string name="misc_gestures_title">Gestures</string>
+    <string name="home_grid_title">Rozložení mřížky</string>
+    <string name="icon_layout_title">Rozložení ikon</string>
+    <string name="home_overall_title">Rozložení plochy</string>
+    <string name="home_quickspace_title">Na první pohled</string>
+    <string name="home_hotseat_title">Dok</string>
+    <string name="app_overall_title">Seznam aplikací</string>
+    <string name="misc_recents_title">Nedávné aplikace</string>
+    <string name="misc_gestures_title">Gesta</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
+    <string name="icon_pack">Balíček ikon</string>
     <string name="icon_pack_summary">Change the look of your app icons</string>
     <string name="icon_pack_none">Default</string>
     <!-- Icon shape -->
