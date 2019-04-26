@@ -172,14 +172,14 @@
     <string name="hotseat_gradient_summary">Povolit jemný přechod barev z doku spouštěče</string>
     <!-- Recents corned -->
     <string name="custom_recents_corners_switch_title">Použít pro nedávné aplikace zaoblené rohy</string>
-    <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
+    <string name="custom_recents_corners_switch_summary">Je-li zakázáno, bude použita varianta poskytnutá systémem/tématem. Pro použití nové hodnoty se po vybrání možnosti vraťte na domovskou obrazovku.</string>
     <string name="custom_recents_corners_type_title">Zaoblení rohů karet nedávných aplikací</string>
     <string name="custom_recents_corners_type_default">Výchozí</string>
     <string name="custom_recents_corners_type_card">Zaoblené karty</string>
     <string name="custom_recents_corners_type_op">Styl OP</string>
     <!-- Lock desktop -->
-    <string name="lock_desktop_title">Lock desktop</string>
-    <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
+    <string name="lock_desktop_title">Uzamknout pracovní plochu</string>
+    <string name="lock_desktop_summary">Zabránit provádění změn na domovské obrazovce</string>
     <!-- Search bar hint -->
     <string name="search_bar_hint">Tap to search on %s</string>
     <string name="search_bar_hint_title">Show search bar hint text</string>
