@@ -182,21 +182,21 @@
     <string name="lock_desktop_summary">Zabránit provádění změn na domovské obrazovce</string>
     <!-- Search bar hint -->
     <string name="search_bar_hint">Tap to search on %s</string>
-    <string name="search_bar_hint_title">Show search bar hint text</string>
-    <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
+    <string name="search_bar_hint_title">Zobrazit text nápovědy vyhledávacího panelu</string>
+    <string name="search_bar_hint_summary">Zobrazit na vyhledávacím panelu malý text, který vám napoví, co můžete dělat</string>
     <!-- Icon edit -->
-    <string name="edit_drop_target_label">Edit</string>
-    <string name="edit_hint">Icon name</string>
-    <string name="reset_icon">Reset</string>
-    <string name="all_icons">All icons</string>
-    <string name="similar_icons">Similar icons</string>
+    <string name="edit_drop_target_label">Upravit</string>
+    <string name="edit_hint">Název ikony</string>
+    <string name="reset_icon">Obnovit</string>
+    <string name="all_icons">Všechny ikony</string>
+    <string name="similar_icons">Podobné ikony</string>
     <string name="ok">Ok</string>
-    <string name="icon_label">Label</string>
-    <string name="loading">Loading, please wait</string>
+    <string name="icon_label">Popisek</string>
+    <string name="loading">Načítám, počkejte prosím</string>
     <string name="icon_chooser">Icon chooser</string>
-    <string name="icon_search">Search for icons</string>
+    <string name="icon_search">Vyhledávání ikon</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
-    <string name="msg_no_icon_pack">No icon packs available</string>
+    <string name="msg_no_icon_pack">Nejsou k dispozici žádné balíčky ikon</string>
     <!-- Folder titles -->
     <string name="play_folder_title">Play</string>
 </resources>
