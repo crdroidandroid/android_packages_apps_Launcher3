@@ -117,7 +117,7 @@
     <string name="suggestion_pref_screen_title">Návrhy</string>
     <string name="suggestion_pref_screen_desc">Pro Přehled a seznam Všech aplikací</string>
     <string name="app_suggestions_title">Zobrazit návrhy aplikací</string>
-    <string name="app_suggestions_summary">V horní části seznamu všech aplikací</string>
+    <string name="app_suggestions_summary">V horní části seznamu Všech aplikací</string>
     <string name="title_disable_suggestions_prompt">Chcete vypnout návrhy aplikací?</string>
     <string name="msg_disable_suggestions_prompt">"Návrhy se nebudou zobrazovat na začátku seznamu aplikací a údaje o využití, na základě kterých byly návrhy vytvářeny, budou trvale vymazány."</string>
     <string name="label_turn_off_suggestions">Vypnout</string>
@@ -158,8 +158,8 @@
     <string name="font_notoserif_bold">NotoSerif tučné</string>
     <string name="font_notoserif_bold_italic">NotoSerif tučné kurzíva</string>
     <!-- At a glance uppercase -->
-    <string name="date_style_transform_title">Show uppercase on date</string>
-    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+    <string name="date_style_transform_title">Použít pro datum velká písmena</string>
+    <string name="date_style_transform_summary">Převést veškerý text data / „Na první pohled“ na velká písmena</string>
     <!-- At a glance font spacing -->
     <string name="date_style_spacing">Řádkování data</string>
     <string name="date_style_spacing_normal">Normální</string>
