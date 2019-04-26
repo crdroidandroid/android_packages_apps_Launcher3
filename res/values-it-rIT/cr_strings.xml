@@ -25,7 +25,7 @@
     <string name="icons_category_summary">Set icon shape, size and more</string>
     <string name="app_drawer_category_title">App drawer</string>
     <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Diversos</string>
+    <string name="misc_category_title">Miscellaneous</string>
     <string name="misc_category_summary">Other options</string>
     <!-- Sub categories -->
     <string name="home_grid_title">Grid layout</string>
@@ -35,11 +35,11 @@
     <string name="home_hotseat_title">Dock</string>
     <string name="app_overall_title">App list</string>
     <string name="misc_recents_title">Recents</string>
-    <string name="misc_gestures_title">Gestos</string>
+    <string name="misc_gestures_title">Gestures</string>
     <!-- Icon packs -->
     <string name="icon_pack">Icon pack</string>
     <string name="icon_pack_summary">Change the look of your app icons</string>
-    <string name="icon_pack_none">Predefinição </string>
+    <string name="icon_pack_none">Default</string>
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">Icon shape</string>
     <string name="icon_shape_rounded_square">Rounded square</string>
@@ -47,7 +47,7 @@
     <string name="icon_size_title">Icon size</string>
     <string name="icon_size_extra_small">Tiny</string>
     <string name="icon_size_small">Small</string>
-    <string name="icon_size_average">Predefinição </string>
+    <string name="icon_size_average">Default</string>
     <string name="icon_size_large">Large</string>
     <string name="icon_size_extra_large">Extra large</string>
     <!-- Gestures -->
@@ -55,7 +55,7 @@
     <string name="allow_swipe_down_clearall_desc">Swipe vertically downward in recents view to clear all apps</string>
     <string name="pref_homescreen_dt_gestures_title">Double tap gesture</string>
     <string name="pref_homescreen_dt_gestures_summary">Select the action of the double tap gesture on the home screen</string>
-    <string name="pref_homescreen_dt_gestures_none">Nenhum</string>
+    <string name="pref_homescreen_dt_gestures_none">None</string>
     <string name="pref_homescreen_dt_gestures_sleep">Sleep</string>
     <string name="pref_homescreen_dt_gestures_torch">Flashlight</string>
     <string name="pref_notifications_gesture_title">Notifications gesture</string>
@@ -64,7 +64,7 @@
     <string name="google_feed_title">Display Google app</string>
     <string name="google_feed_summary">To the left of the main home screen</string>
     <!-- Grid -->
-    <string name="num_default">Predefinição </string>
+    <string name="num_default">Default</string>
     <string name="number_of_columns_title">Number of columns</string>
     <string name="number_of_rows_title">Number of rows</string>
     <string name="number_of_hotseat_title">Number of dock icons</string>
@@ -174,7 +174,7 @@
     <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
     <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
     <string name="custom_recents_corners_type_title">Custom recents roundness</string>
-    <string name="custom_recents_corners_type_default">Predefinição </string>
+    <string name="custom_recents_corners_type_default">Default</string>
     <string name="custom_recents_corners_type_card">Rounded Card</string>
     <string name="custom_recents_corners_type_op">OP Style</string>
     <!-- Lock desktop -->
