@@ -76,22 +76,22 @@
     <string name="hidden_app">Todas las aplicaciones</string>
     <string name="hide_selected">Ocultar las aplicaciones seleccionadas</string>
     <string name="more">Más</string>
-    <string name="reset_hidden_apps">Reset all</string>
-    <string name="reset_hidden_apps_done">Hidden apps are now available</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="reset_hidden_apps">Restablecer todo</string>
+    <string name="reset_hidden_apps_done">Las aplicaciones ocultas ahora están disponibles</string>
+    <string name="hide_app_info_hidden">Las aplicaciones ocultas y sus widgets están ocultos del cajón</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="protect_app_help">Help</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="hide_protect_app">Ocultar y proteger aplicaciones</string>
+    <string name="hide_protect_app_sum">Ocultar y proteger aplicaciones desde el cajón de aplicaciones</string>
+    <string name="protect_apps_auth_manager">Desbloquea para gestionar las aplicaciones ocultas y protegidas</string>
+    <string name="protect_app_auth_open_app">Autenticar para abrir %1$s</string>
+    <string name="protect_app_no_lock_error">Configura una pantalla de bloqueo segura para restringir el acceso a las aplicaciónes</string>
+    <string name="protect_app_help">Ayuda</string>
+    <string name="protect_app_info_protected">Las aplicaciones protegidas requieren autenticación para abrirse desde el lanzador</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
-    <string name="allapps_long_labels_title">Long app labels</string>
+    <string name="app_show_label_title">Etiquetas de las aplicaciones</string>
+    <string name="desktop_show_label_summary">Mostrar las etiquetas de las aplicaciones en la pantalla de inicio</string>
+    <string name="allapps_show_label_summary">Mostrar las etiquetas de las aplicaciones en el cajón de aplicaciones</string>
+    <string name="allapps_long_labels_title">Etiquetas largas de aplicaciones</string>
     <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Show At A Glance</string>
@@ -158,8 +158,8 @@
     <string name="font_notoserif_bold">NotoSerif Negrita</string>
     <string name="font_notoserif_bold_italic">NotoSerif Negrita Cursiva</string>
     <!-- At a glance uppercase -->
-    <string name="date_style_transform_title">Show uppercase on date</string>
-    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+    <string name="date_style_transform_title">Mostrar fecha en mayúsculas</string>
+    <string name="date_style_transform_summary">Transforme toda la fecha/de un vistazo con texto en mayúsculas</string>
     <!-- At a glance font spacing -->
     <string name="date_style_spacing">Date spacing</string>
     <string name="date_style_spacing_normal">Normal</string>
