@@ -82,7 +82,7 @@
     <!-- Protected apps -->
     <string name="hide_protect_app">Skrýt a chránit aplikace</string>
     <string name="hide_protect_app_sum">Skrýt a chránit aplikace z nabídky aplikací</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
+    <string name="protect_apps_auth_manager">Odemkněte pro správu skrytých a chráněných aplikací</string>
     <string name="protect_app_auth_open_app">Povolte otevření aplikace %1$s</string>
     <string name="protect_app_no_lock_error">Pro omezení přístupu k aplikaci prosím nastavte zabezpečenou zamykací obrazovku</string>
     <string name="protect_app_help">Nápověda</string>
@@ -103,7 +103,7 @@
     <string name="quick_event_rom_intro_learn">Klepnutím sem se můžete bavit!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">Nyní se přehrává</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_song_artist">%1$s z %2$s</string>
     <!-- QSB -->
     <string name="hotseat_qsb_preferences">Předvolby</string>
     <string name="label_search">Vyhledávání</string>
@@ -115,11 +115,11 @@
     <string name="search_provider_title">Vyhledávací nástroj vyhledávacího panelu</string>
     <!-- Predictions -->
     <string name="suggestion_pref_screen_title">Návrhy</string>
-    <string name="suggestion_pref_screen_desc">For Overview &amp; All Apps list</string>
+    <string name="suggestion_pref_screen_desc">Pro Přehled a seznam Všech aplikací</string>
     <string name="app_suggestions_title">Zobrazit návrhy aplikací</string>
     <string name="app_suggestions_summary">V horní části seznamu všech aplikací</string>
     <string name="title_disable_suggestions_prompt">Chcete vypnout návrhy aplikací?</string>
-    <string name="msg_disable_suggestions_prompt">"Suggestions won't appear at the top of your apps list, and the usage data used to create them will be permanently erased."</string>
+    <string name="msg_disable_suggestions_prompt">"Návrhy se nebudou zobrazovat na začátku seznamu aplikací a údaje o využití, na základě kterých byly návrhy vytvářeny, budou trvale vymazány."</string>
     <string name="label_turn_off_suggestions">Vypnout</string>
     <string name="all_apps_label">Všechny aplikace</string>
     <!-- Date format -->
@@ -181,7 +181,7 @@
     <string name="lock_desktop_title">Uzamknout pracovní plochu</string>
     <string name="lock_desktop_summary">Zabránit provádění změn na domovské obrazovce</string>
     <!-- Search bar hint -->
-    <string name="search_bar_hint">Tap to search on %s</string>
+    <string name="search_bar_hint">Klepnutím vyhledáte %s</string>
     <string name="search_bar_hint_title">Zobrazit text nápovědy vyhledávacího panelu</string>
     <string name="search_bar_hint_summary">Zobrazit na vyhledávacím panelu malý text, který vám napoví, co můžete dělat</string>
     <!-- Icon edit -->
@@ -193,7 +193,7 @@
     <string name="ok">Ok</string>
     <string name="icon_label">Popisek</string>
     <string name="loading">Načítám, počkejte prosím</string>
-    <string name="icon_chooser">Icon chooser</string>
+    <string name="icon_chooser">Výběr ikon</string>
     <string name="icon_search">Vyhledávání ikon</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
     <string name="msg_no_icon_pack">Nejsou k dispozici žádné balíčky ikon</string>
