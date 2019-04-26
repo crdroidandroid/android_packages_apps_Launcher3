@@ -112,14 +112,14 @@
     <string name="bottom_search_bar_title">Mostrar barra de búsqueda en la parte inferior</string>
     <string name="bottom_search_bar_summary">Mostrar la barra de búsqueda en el dock</string>
     <!-- Search engine -->
-    <string name="search_provider_title">Searchbar search engine</string>
+    <string name="search_provider_title">Motor de búsqueda de la barra de búsqueda</string>
     <!-- Predictions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For Overview &amp; All Apps list</string>
-    <string name="app_suggestions_title">Display app suggestions</string>
-    <string name="app_suggestions_summary">At the top of your All Apps list</string>
-    <string name="title_disable_suggestions_prompt">Turn off app suggestions?</string>
-    <string name="msg_disable_suggestions_prompt">"Suggestions won't appear at the top of your apps list, and the usage data used to create them will be permanently erased."</string>
+    <string name="suggestion_pref_screen_title">Sugerencias</string>
+    <string name="suggestion_pref_screen_desc">Para obtener información general &amp; Lista de todas las aplicaciones</string>
+    <string name="app_suggestions_title">Mostrar sugerencias de aplicaciones</string>
+    <string name="app_suggestions_summary">En la parte superior de tu lista de todas las aplicaciones</string>
+    <string name="title_disable_suggestions_prompt">¿Desactivar las sugerencias de aplicaciones?</string>
+    <string name="msg_disable_suggestions_prompt">"No se mostrarán sugerencias en la parte superior de tu lista de aplicaciones, y los datos de uso utilizados para crearlas se borrarán de forma permanente."</string>
     <string name="label_turn_off_suggestions">Apagar</string>
     <string name="all_apps_label">Todas las aplicaciones</string>
     <!-- Date format -->
@@ -167,36 +167,36 @@
     <string name="date_style_spacing_ott">Por encima</string>
     <!-- Gradients on Workspace/Hotseat? -->
     <string name="workspace_gradient_title">Mostrar gradiente en la parte superior</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_summary">Habilitar un gradiente sutil desde la barra de estado</string>
+    <string name="hotseat_gradient_title">Mostrar gradiente en la parte inferior</string>
+    <string name="hotseat_gradient_summary">Habilitar un gradiente sutil desde el dock del lanzador</string>
     <!-- Recents corned -->
-    <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
-    <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
-    <string name="custom_recents_corners_type_title">Custom recents roundness</string>
-    <string name="custom_recents_corners_type_default">Default</string>
-    <string name="custom_recents_corners_type_card">Rounded Card</string>
-    <string name="custom_recents_corners_type_op">OP Style</string>
+    <string name="custom_recents_corners_switch_title">Usar esquinas redondeadas personalizadas de los recientes</string>
+    <string name="custom_recents_corners_switch_summary">Si se desactiva se usará el dado por el sistema/tema. Para aplicar el nuevo valor, ve al inicio después de seleccionar tu opción.</string>
+    <string name="custom_recents_corners_type_title">Redondez de recientes personalizada</string>
+    <string name="custom_recents_corners_type_default">Por defecto</string>
+    <string name="custom_recents_corners_type_card">Tarjeta redondeada</string>
+    <string name="custom_recents_corners_type_op">Estilo OP</string>
     <!-- Lock desktop -->
-    <string name="lock_desktop_title">Lock desktop</string>
-    <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
+    <string name="lock_desktop_title">Bloquear escritorio</string>
+    <string name="lock_desktop_summary">Evitar que la pantalla de inicio sea modificada</string>
     <!-- Search bar hint -->
-    <string name="search_bar_hint">Tap to search on %s</string>
-    <string name="search_bar_hint_title">Show search bar hint text</string>
-    <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
+    <string name="search_bar_hint">Toca para buscar en %s</string>
+    <string name="search_bar_hint_title">Mostrar texto en la barra de búsqueda</string>
+    <string name="search_bar_hint_summary">Mostrar un texto pequeño en la barra de búsqueda que te indica qué puedes hacer</string>
     <!-- Icon edit -->
-    <string name="edit_drop_target_label">Edit</string>
-    <string name="edit_hint">Icon name</string>
-    <string name="reset_icon">Reset</string>
-    <string name="all_icons">All icons</string>
-    <string name="similar_icons">Similar icons</string>
-    <string name="ok">Ok</string>
-    <string name="icon_label">Label</string>
-    <string name="loading">Loading, please wait</string>
-    <string name="icon_chooser">Icon chooser</string>
-    <string name="icon_search">Search for icons</string>
+    <string name="edit_drop_target_label">Editar</string>
+    <string name="edit_hint">Nombre de icono</string>
+    <string name="reset_icon">Restablecer</string>
+    <string name="all_icons">Todos los iconos</string>
+    <string name="similar_icons">Iconos parecidos</string>
+    <string name="ok">Aceptar</string>
+    <string name="icon_label">Etiqueta</string>
+    <string name="loading">Cargando, por favor espere</string>
+    <string name="icon_chooser">Selector de iconos</string>
+    <string name="icon_search">Buscar iconos</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
-    <string name="msg_no_icon_pack">No icon packs available</string>
+    <string name="msg_no_icon_pack">No hay paquetes de iconos disponibles</string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
+    <string name="play_folder_title">Reproducir</string>
 </resources>
