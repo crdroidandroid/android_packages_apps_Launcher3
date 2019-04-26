@@ -31,7 +31,7 @@
     <string name="home_grid_title">Diseño de cuadrícula</string>
     <string name="icon_layout_title">Diseño de iconos</string>
     <string name="home_overall_title">Diseño de inicio</string>
-    <string name="home_quickspace_title">De un vistazo</string>
+    <string name="home_quickspace_title">At A Glance</string>
     <string name="home_hotseat_title">Dock</string>
     <string name="app_overall_title">Lista de aplicaciones</string>
     <string name="misc_recents_title">Recientes</string>
@@ -92,25 +92,25 @@
     <string name="desktop_show_label_summary">Mostrar las etiquetas de las aplicaciones en la pantalla de inicio</string>
     <string name="allapps_show_label_summary">Mostrar las etiquetas de las aplicaciones en el cajón de aplicaciones</string>
     <string name="allapps_long_labels_title">Etiquetas largas de aplicaciones</string>
-    <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
+    <string name="allapps_long_labels_summary">Permite que las aplicaciones muestren etiquetas usando dos líneas</string>
     <!-- Show quickspace -->
-    <string name="show_quickspace_title">Show At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">Mostrar At A Glance</string>
+    <string name="show_quickspace_summary">Mostrar en la parte superior de tu pantalla de inicio</string>
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid</string>
-    <string name="quick_event_rom_intro_learn">Tap here to have fun!</string>
+    <string name="quick_event_rom_intro_welcome">Bienvenido a crDroid</string>
+    <string name="quick_event_rom_intro_learn">¡Toca aquí para divertirte!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_now_playing">Se está reproduciendo</string>
+    <string name="quick_event_ambient_song_artist">%1$s por %2$s</string>
     <!-- QSB -->
-    <string name="hotseat_qsb_preferences">Preferences</string>
-    <string name="label_search">Search</string>
-    <string name="label_voice_search">Voice search</string>
+    <string name="hotseat_qsb_preferences">Preferencias</string>
+    <string name="label_search">Buscar</string>
+    <string name="label_voice_search">Búsqueda por voz</string>
     <!-- Hide/Show search bars -->
-    <string name="bottom_search_bar_title">Show search bar on bottom</string>
-    <string name="bottom_search_bar_summary">Show the search bar on the Dock</string>
+    <string name="bottom_search_bar_title">Mostrar barra de búsqueda en la parte inferior</string>
+    <string name="bottom_search_bar_summary">Mostrar la barra de búsqueda en el dock</string>
     <!-- Search engine -->
     <string name="search_provider_title">Searchbar search engine</string>
     <!-- Predictions -->
@@ -120,25 +120,25 @@
     <string name="app_suggestions_summary">At the top of your All Apps list</string>
     <string name="title_disable_suggestions_prompt">Turn off app suggestions?</string>
     <string name="msg_disable_suggestions_prompt">"Suggestions won't appear at the top of your apps list, and the usage data used to create them will be permanently erased."</string>
-    <string name="label_turn_off_suggestions">Turn off</string>
-    <string name="all_apps_label">All apps</string>
+    <string name="label_turn_off_suggestions">Apagar</string>
+    <string name="all_apps_label">Todas las aplicaciones</string>
     <!-- Date format -->
-    <string name="date_format_title">Date format</string>
-    <string name="date_format_long_name">Long</string>
+    <string name="date_format_title">Formato de fecha</string>
+    <string name="date_format_long_name">Largo</string>
     <string name="date_format_normal_name">Normal</string>
-    <string name="date_format_short_name">Short</string>
-    <string name="date_format_daydate_long_name">Day (with number)</string>
-    <string name="date_format_daydate_short_name">Day (short with number)</string>
-    <string name="date_format_dayonly_name">Just today</string>
+    <string name="date_format_short_name">Corto</string>
+    <string name="date_format_daydate_long_name">Día (con el número)</string>
+    <string name="date_format_daydate_short_name">Día (corto con el numero)</string>
+    <string name="date_format_dayonly_name">Solo hoy</string>
     <!-- At a glance style -->
-    <string name="date_font_style">Date font style</string>
+    <string name="date_font_style">Estilo fuente de fecha</string>
     <string name="font_normal">Normal</string>
-    <string name="font_italic">Italic</string>
-    <string name="font_bold">Bold</string>
-    <string name="font_bold_italic">Bold Italic</string>
-    <string name="font_light">Light</string>
-    <string name="font_light_italic">Light Italic</string>
-    <string name="font_thin">Thin</string>
+    <string name="font_italic">Cursiva</string>
+    <string name="font_bold">Negrita</string>
+    <string name="font_bold_italic">Negrita Cursiva</string>
+    <string name="font_light">Ligera</string>
+    <string name="font_light_italic">Ligera Cursiva</string>
+    <string name="font_thin">Delgada</string>
     <string name="font_thin_italic">Delgada Cursiva</string>
     <string name="font_condensed">Comprimida</string>
     <string name="font_condensed_italic">Comprimida Cursiva</string>
@@ -159,14 +159,14 @@
     <string name="font_notoserif_bold_italic">NotoSerif Negrita Cursiva</string>
     <!-- At a glance uppercase -->
     <string name="date_style_transform_title">Mostrar fecha en mayúsculas</string>
-    <string name="date_style_transform_summary">Transforme toda la fecha/de un vistazo con texto en mayúsculas</string>
+    <string name="date_style_transform_summary">Transforme toda la fecha/At A Glance con texto en mayúsculas</string>
     <!-- At a glance font spacing -->
-    <string name="date_style_spacing">Date spacing</string>
+    <string name="date_style_spacing">Espaciado de fecha</string>
     <string name="date_style_spacing_normal">Normal</string>
-    <string name="date_style_spacing_barely">Barely noticeable</string>
-    <string name="date_style_spacing_ott">Over the top</string>
+    <string name="date_style_spacing_barely">Apenas perceptible</string>
+    <string name="date_style_spacing_ott">Por encima</string>
     <!-- Gradients on Workspace/Hotseat? -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
+    <string name="workspace_gradient_title">Mostrar gradiente en la parte superior</string>
     <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
     <string name="hotseat_gradient_title">Show gradient on bottom</string>
     <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
