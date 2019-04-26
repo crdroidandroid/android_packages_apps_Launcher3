@@ -84,11 +84,11 @@
     <string name="hide_protect_app_sum">Skrýt a chránit aplikace z nabídky aplikací</string>
     <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
     <string name="protect_app_auth_open_app">Povolte otevření aplikace %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="protect_app_help">Help</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="protect_app_no_lock_error">Pro omezení přístupu k aplikaci prosím nastavte zabezpečenou zamykací obrazovku</string>
+    <string name="protect_app_help">Nápověda</string>
+    <string name="protect_app_info_protected">Chráněné aplikace vyžadují pro spuštění ze spouštěče ověření</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
+    <string name="app_show_label_title">Popisky aplikací</string>
     <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
     <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
     <string name="allapps_long_labels_title">Long app labels</string>
