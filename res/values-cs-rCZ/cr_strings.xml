@@ -161,17 +161,17 @@
     <string name="date_style_transform_title">Show uppercase on date</string>
     <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
     <!-- At a glance font spacing -->
-    <string name="date_style_spacing">Date spacing</string>
+    <string name="date_style_spacing">Řádkování data</string>
     <string name="date_style_spacing_normal">Normální</string>
-    <string name="date_style_spacing_barely">Barely noticeable</string>
-    <string name="date_style_spacing_ott">Over the top</string>
+    <string name="date_style_spacing_barely">Sotva znatelné</string>
+    <string name="date_style_spacing_ott">Přehnané</string>
     <!-- Gradients on Workspace/Hotseat? -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">Zobrazit přechod barev nahoře</string>
+    <string name="workspace_gradient_summary">Povolit jemný přechod barev ze stavové lišty</string>
+    <string name="hotseat_gradient_title">Zobrazit přechod barev dole</string>
+    <string name="hotseat_gradient_summary">Povolit jemný přechod barev z doku spouštěče</string>
     <!-- Recents corned -->
-    <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
+    <string name="custom_recents_corners_switch_title">Použít pro nedávné aplikace zaoblené rohy</string>
     <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
     <string name="custom_recents_corners_type_title">Custom recents roundness</string>
     <string name="custom_recents_corners_type_default">Default</string>
