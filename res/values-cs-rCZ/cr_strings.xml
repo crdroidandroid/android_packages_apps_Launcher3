@@ -75,15 +75,15 @@
     <string name="hidden_apps_loading">Načítání\u2026</string>
     <string name="hidden_app">Všechny aplikace</string>
     <string name="hide_selected">Skrýt vybranou aplikaci / vybrané aplikace</string>
-    <string name="more">More</string>
-    <string name="reset_hidden_apps">Reset all</string>
-    <string name="reset_hidden_apps_done">Hidden apps are now available</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="more">Více</string>
+    <string name="reset_hidden_apps">Obnovit vše</string>
+    <string name="reset_hidden_apps_done">Skryté aplikace jsou nyní k dispozici</string>
+    <string name="hide_app_info_hidden">Skryté aplikace a jejich widgety jsou skryty z nabídky aplikací</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
+    <string name="hide_protect_app">Skrýt a chránit aplikace</string>
+    <string name="hide_protect_app_sum">Skrýt a chránit aplikace z nabídky aplikací</string>
     <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
+    <string name="protect_app_auth_open_app">Povolte otevření aplikace %1$s</string>
     <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
     <string name="protect_app_help">Help</string>
     <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
