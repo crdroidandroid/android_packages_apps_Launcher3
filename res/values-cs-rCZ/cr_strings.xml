@@ -173,9 +173,9 @@
     <!-- Recents corned -->
     <string name="custom_recents_corners_switch_title">Použít pro nedávné aplikace zaoblené rohy</string>
     <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
-    <string name="custom_recents_corners_type_title">Custom recents roundness</string>
-    <string name="custom_recents_corners_type_default">Default</string>
-    <string name="custom_recents_corners_type_card">Rounded Card</string>
+    <string name="custom_recents_corners_type_title">Zaoblení rohů karet nedávných aplikací</string>
+    <string name="custom_recents_corners_type_default">Výchozí</string>
+    <string name="custom_recents_corners_type_card">Zaoblené karty</string>
     <string name="custom_recents_corners_type_op">OP Style</string>
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Lock desktop</string>
