@@ -115,29 +115,29 @@
     <string name="search_provider_title">Motor de căutare</string>
     <!-- Predictions -->
     <string name="suggestion_pref_screen_title">Sugestii</string>
-    <string name="suggestion_pref_screen_desc">For Overview &amp; All Apps list</string>
-    <string name="app_suggestions_title">Display app suggestions</string>
-    <string name="app_suggestions_summary">At the top of your All Apps list</string>
-    <string name="title_disable_suggestions_prompt">Turn off app suggestions?</string>
-    <string name="msg_disable_suggestions_prompt">"Suggestions won't appear at the top of your apps list, and the usage data used to create them will be permanently erased."</string>
-    <string name="label_turn_off_suggestions">Turn off</string>
-    <string name="all_apps_label">All apps</string>
+    <string name="suggestion_pref_screen_desc">Prezentare generală &amp; Listă cu toate aplicatiile</string>
+    <string name="app_suggestions_title">Arată sugestii ale aplicației</string>
+    <string name="app_suggestions_summary">În partea de sus al listei tale de aplicații</string>
+    <string name="title_disable_suggestions_prompt">Dezactivați sugestiile de aplicații?</string>
+    <string name="msg_disable_suggestions_prompt">"Sugestiile nu vor apărea la începutul listei de aplicații, iar datele despre utilizare folosite pentru a le crea vor fi șterse definitiv."</string>
+    <string name="label_turn_off_suggestions">Oprește</string>
+    <string name="all_apps_label">Toate aplicațiile</string>
     <!-- Date format -->
-    <string name="date_format_title">Date format</string>
-    <string name="date_format_long_name">Long</string>
+    <string name="date_format_title">Format data</string>
+    <string name="date_format_long_name">Lung</string>
     <string name="date_format_normal_name">Normal</string>
-    <string name="date_format_short_name">Short</string>
-    <string name="date_format_daydate_long_name">Day (with number)</string>
-    <string name="date_format_daydate_short_name">Day (short with number)</string>
-    <string name="date_format_dayonly_name">Just today</string>
+    <string name="date_format_short_name">Scurt</string>
+    <string name="date_format_daydate_long_name">Zi (cu număr)</string>
+    <string name="date_format_daydate_short_name">Zi (scurtă cu numărul)</string>
+    <string name="date_format_dayonly_name">Doar azi</string>
     <!-- At a glance style -->
     <string name="date_font_style">Stil font data</string>
     <string name="font_normal">Normal</string>
-    <string name="font_italic">Italic</string>
-    <string name="font_bold">Bold</string>
-    <string name="font_bold_italic">Bold Italic</string>
-    <string name="font_light">Light</string>
-    <string name="font_light_italic">Light Italic</string>
+    <string name="font_italic">Înclinat</string>
+    <string name="font_bold">Îngroşat</string>
+    <string name="font_bold_italic">Îngroşat şi înclinat</string>
+    <string name="font_light">Uşor</string>
+    <string name="font_light_italic">Ușor Cursiv</string>
     <string name="font_thin">Subţire</string>
     <string name="font_thin_italic">Cursiv subţire</string>
     <string name="font_condensed">Condensat</string>
@@ -196,7 +196,7 @@
     <string name="icon_chooser">Selector pictograme</string>
     <string name="icon_search">Căutare pictograme</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
-    <string name="msg_no_icon_pack">No icon packs available</string>
+    <string name="msg_no_icon_pack">Nu este disponibilă nicio pictogramă</string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
+    <string name="play_folder_title">Redare</string>
 </resources>
