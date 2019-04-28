@@ -238,4 +238,8 @@
     <!-- Folder titles -->
     <string name="google_title" translatable="false">Google</string>
     <string name="play_folder_title">Play</string>
+
+    <!-- Weather -->
+    <string name="show_weather_title">Weather</string>
+    <string name="show_weather_summary">Display weather when available</string>
 </resources>

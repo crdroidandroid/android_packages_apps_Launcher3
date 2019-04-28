@@ -77,6 +77,14 @@
         android:summary="%s"
         android:title="@string/date_style_spacing" />
 
+    <SwitchPreference
+        android:dependency="pref_show_quickspace"
+        android:key="pref_show_weather"
+        android:summary="@string/show_weather_summary"
+        android:title="@string/show_weather_title"
+        android:defaultValue="true"
+        android:persistent="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

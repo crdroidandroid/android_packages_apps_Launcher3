@@ -26,10 +26,6 @@ import android.provider.Settings;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import com.android.internal.util.crdroid.weather.WeatherClient;
-import com.android.internal.util.crdroid.weather.WeatherClient.WeatherInfo;
-import com.android.internal.util.crdroid.weather.WeatherClient.WeatherObserver;
-
 import com.android.launcher3.Launcher;
 import com.android.launcher3.R;
 

@@ -163,6 +163,7 @@ public final class Utilities {
     public static final String PREF_CUSTOM_RECENTS_ROUND_TYPE = "pref_custom_recents_corner_type";
     public static final String PREF_ALLAPPS_LONG_LABELS = "pref_allapps_long_labels";
     public static final String LOCK_DESKTOP_KEY = "pref_lock_desktop";
+    public static final String WEATHER_ENABLED = "pref_show_weather";
 
     public static boolean isDesktopLocked(Context context) {
         return getPrefs(context).getBoolean(LOCK_DESKTOP_KEY, false);
@@ -299,6 +300,10 @@ public final class Utilities {
     public static float getDateStyleTextSpacing(Context context) {
         String modifier = getPrefs(context).getString(DATE_STYLE_SPACING, "normal");
         return translateSpacing(modifier);
+    }
+
+    public static boolean isWeatherEnabled(Context context) {
+        return getPrefs(context).getBoolean(WEATHER_ENABLED, true);
     }
 
      private static float translateSpacing(String spacingamount) {
