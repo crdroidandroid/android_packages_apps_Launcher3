@@ -82,8 +82,8 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     public TextView mWeatherTemp;
 
     public boolean mIsQuickEvent;
-    public boolean mFinishedInflate;
     public boolean mWeatherAvailable;
+    private boolean mListening;
 
     private QuickSpaceActionReceiver mActionReceiver;
     public QuickspaceController mController;
@@ -130,8 +130,13 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         if (mIsQuickEvent != mController.isQuickEvent()) {
             mIsQuickEvent = mController.isQuickEvent();
             prepareLayout();
+            return;
         }
-        mWeatherAvailable = mController.isWeatherAvailable();
+        loadQuickEvent();
+    }
+
+    private final void loadQuickEvent() {
+        if (mController.getEventController() == null) return;
         getQuickSpaceView();
         if (mIsQuickEvent) {
             loadDoubleLine();
@@ -140,7 +145,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         }
     }
 
-    public final void loadDoubleLine() {
+    private final void loadDoubleLine() {
         setBackgroundResource(mQuickspaceBackgroundRes);
         mEventTitle.setText(mController.getEventController().getTitle());
         mEventTitle.setEllipsize(TruncateAt.END);
@@ -152,7 +157,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         bindWeather(mWeatherContentSub, mWeatherTempSub, mWeatherIconSub);
     }
 
-    public final void loadSingleLine() {
+    private final void loadSingleLine() {
         LayoutTransition transition = mQuickspaceContent.getLayoutTransition();
         mQuickspaceContent.setLayoutTransition(transition == null ? new LayoutTransition() : null);
         setBackgroundResource(0);
@@ -160,7 +165,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         bindClockAndSeparator(false);
     }
 
-    public final void bindClockAndSeparator(boolean forced) {
+    private final void bindClockAndSeparator(boolean forced) {
         boolean hasGoogleCalendar = LauncherAppState.getInstanceNoCreate().isCalendarAppAvailable();
         mClockView.setVisibility(View.VISIBLE);
         mClockView.setOnClickListener(hasGoogleCalendar ? mActionReceiver.getCalendarAction() : null);
@@ -170,9 +175,9 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         mTitleSeparator.setVisibility(mWeatherAvailable ? View.VISIBLE : View.GONE);
     }
 
-    public final void bindWeather(View container, TextView title, ImageView icon) {
+    private final void bindWeather(View container, TextView title, ImageView icon) {
         boolean hasGoogleApp = LauncherAppState.getInstanceNoCreate().isSearchAppAvailable();
-        mWeatherAvailable = mController.isWeatherAvailable();
+        mWeatherAvailable = Utilities.isWeatherEnabled(mContext) && mController.isWeatherAvailable();
         if (mWeatherAvailable) {
             container.setVisibility(View.VISIBLE);
             container.setOnClickListener(hasGoogleApp ? mActionReceiver.getWeatherAction() : null);
@@ -183,13 +188,13 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         container.setVisibility(View.GONE);
     }
 
-    public void reloadConfiguration() {
+    private void reloadConfiguration() {
         if (!mIsQuickEvent) {
             bindClockAndSeparator(true);
         }
     }
 
-    public final void loadViews() {
+    private final void loadViews() {
         mEventTitle = (TextView) findViewById(R.id.quick_event_title);
         mEventTitleSub = (TextView) findViewById(R.id.quick_event_title_sub);
         mEventSubIcon = (ImageView) findViewById(R.id.quick_event_icon_sub);
@@ -203,6 +208,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         mClockView = (DateTextView) findViewById(R.id.clock_view);
         mTitleSeparator = findViewById(R.id.separator);
         setTypeface(mEventTitle, mEventTitleSub, mWeatherTemp, mWeatherTempSub, mClockView);
+        loadQuickEvent();
     }
 
     private void setTypeface(TextView... views) {
@@ -294,7 +300,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         }
     }
 
-    public void prepareLayout() {
+    private void prepareLayout() {
         int indexOfChild = indexOfChild(mQuickspaceContent);
         removeView(mQuickspaceContent);
         addView(LayoutInflater.from(getContext()).inflate(mIsQuickEvent ?
@@ -303,7 +309,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         loadViews();
     }
 
-    public void getQuickSpaceView() {
+    private void getQuickSpaceView() {
         if (!(mQuickspaceContent.getVisibility() == View.VISIBLE)) {
             mQuickspaceContent.setVisibility(View.VISIBLE);
             mQuickspaceContent.setAlpha(0.0f);
@@ -319,7 +325,8 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     @Override
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        if (mController != null && mFinishedInflate) {
+        if (mController != null && !mListening) {
+            mListening = true;
             mController.addListener(this);
         }
     }
@@ -327,8 +334,9 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     @Override
     public void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        if (mController != null) {
+        if (mController != null && mListening) {
             mController.removeListener(this);
+            mListening = false;
         }
     }
 
@@ -336,7 +344,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     public void onFinishInflate() {
         super.onFinishInflate();
         loadViews();
-        mFinishedInflate = true;
         mBubbleTextView = findViewById(R.id.dummyBubbleTextView);
         mBubbleTextView.setTag(new ItemInfo() {
             @Override
@@ -345,11 +352,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
             }
         });
         mBubbleTextView.setContentDescription("");
-        if (isAttachedToWindow()) {
-            if (mController != null) {
-                mController.addListener(this);
-            }
-        }
     }
 
     @Override
