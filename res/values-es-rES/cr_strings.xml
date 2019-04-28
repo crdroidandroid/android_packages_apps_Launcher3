@@ -30,7 +30,7 @@
     <!-- Sub categories -->
     <string name="home_grid_title">Diseño de cuadrícula</string>
     <string name="icon_layout_title">Diseño de los iconos</string>
-    <string name="home_overall_title">Diseño de inicio</string>
+    <string name="home_overall_title">Diseño de la pantalla de inicio</string>
     <string name="home_quickspace_title">At A Glance</string>
     <string name="home_hotseat_title">Dock</string>
     <string name="app_overall_title">Lista de aplicaciones</string>
@@ -44,19 +44,19 @@
     <string name="icon_shape_override_label_custom">Forma de los iconos</string>
     <string name="icon_shape_rounded_square">Cuadrado redondeado</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Tamaño del icono</string>
-    <string name="icon_size_extra_small">Muy pequeño</string>
-    <string name="icon_size_small">Pequeño</string>
-    <string name="icon_size_average">Por defecto</string>
-    <string name="icon_size_large">Grande</string>
-    <string name="icon_size_extra_large">Extra grande</string>
+    <string name="icon_size_title">Tamaño de los iconos</string>
+    <string name="icon_size_extra_small">Muy pequeños</string>
+    <string name="icon_size_small">Pequeños</string>
+    <string name="icon_size_average">Predeterminado</string>
+    <string name="icon_size_large">Grandes</string>
+    <string name="icon_size_extra_large">Muy grandes</string>
     <!-- Gestures -->
     <string name="allow_swipe_down_clearall_title">Borrar todo de la vista recientes</string>
     <string name="allow_swipe_down_clearall_desc">Deslice el dedo verticalmente hacia abajo en la vista de recientes para borrar todas las aplicaciones</string>
     <string name="pref_homescreen_dt_gestures_title">Gestos de doble toque</string>
     <string name="pref_homescreen_dt_gestures_summary">Seleccione la acción del gesto de doble toque en la pantalla de inicio</string>
-    <string name="pref_homescreen_dt_gestures_none">Ninguna</string>
-    <string name="pref_homescreen_dt_gestures_sleep">Dormir</string>
+    <string name="pref_homescreen_dt_gestures_none">Ninguno</string>
+    <string name="pref_homescreen_dt_gestures_sleep">Suspender</string>
     <string name="pref_homescreen_dt_gestures_torch">Linterna</string>
     <string name="pref_notifications_gesture_title">Gesto de notificaciones</string>
     <string name="pref_notifications_gesture_summary">Deslice verticalmente hacia abajo en la pantalla de inicio para mostrar el panel de ajustes rápidos</string>
@@ -64,7 +64,7 @@
     <string name="google_feed_title">Mostrar aplicación de Google</string>
     <string name="google_feed_summary">A la izquierda de la pantalla de inicio principal</string>
     <!-- Grid -->
-    <string name="num_default">Por defecto</string>
+    <string name="num_default">Predeterminado</string>
     <string name="number_of_columns_title">Número de columnas</string>
     <string name="number_of_rows_title">Número de filas</string>
     <string name="number_of_hotseat_title">Número de iconos en el dock</string>
