@@ -17,19 +17,19 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Налады</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape, size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="home_category_title">Галоўны экран</string>
+    <string name="home_category_summary">Усталяваць панэль Google Now і іншае</string>
+    <string name="icons_category_title">Значкі</string>
+    <string name="icons_category_summary">Усталяваць форму значкоў, памер і іншае</string>
+    <string name="app_drawer_category_title">Спіс праграм</string>
+    <string name="app_drawer_category_summary">Налада свайго спісу праграм</string>
+    <string name="misc_category_title">Рознае</string>
+    <string name="misc_category_summary">Іншыя налады</string>
     <!-- Sub categories -->
-    <string name="home_grid_title">Grid layout</string>
-    <string name="icon_layout_title">Icon layout</string>
+    <string name="home_grid_title">Размяшчэнне сеткі</string>
+    <string name="icon_layout_title">Размяшчэнне значкоў</string>
     <string name="home_overall_title">Home layout</string>
     <string name="home_quickspace_title">At A Glance</string>
     <string name="home_hotseat_title">Dock</string>
@@ -199,4 +199,7 @@
     <string name="msg_no_icon_pack">No icon packs available</string>
     <!-- Folder titles -->
     <string name="play_folder_title">Play</string>
+    <!-- Weather -->
+    <string name="show_weather_title">Weather</string>
+    <string name="show_weather_summary">Display weather when available</string>
 </resources>
