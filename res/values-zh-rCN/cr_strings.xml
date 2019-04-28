@@ -199,4 +199,7 @@
     <string name="msg_no_icon_pack">没有可用的图标包</string>
     <!-- Folder titles -->
     <string name="play_folder_title">播放</string>
+    <!-- Weather -->
+    <string name="show_weather_title">Weather</string>
+    <string name="show_weather_summary">Display weather when available</string>
 </resources>
