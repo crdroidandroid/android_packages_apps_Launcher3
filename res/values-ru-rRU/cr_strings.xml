@@ -60,37 +60,37 @@
     <string name="pref_homescreen_dt_gestures_sleep">Выключить экран</string>
     <string name="pref_homescreen_dt_gestures_torch">Фонарик</string>
     <string name="pref_notifications_gesture_title">Жест уведомления</string>
-    <string name="pref_notifications_gesture_summary">Проведите пальцем вниз на рабочем столе, для открытия панели уведомллений</string>
+    <string name="pref_notifications_gesture_summary">Проведите пальцем вниз на рабочем столе, для открытия панели уведомлений</string>
     <!-- Google Feed -->
     <string name="google_feed_title">Показывать Google Feed</string>
     <string name="google_feed_summary">Слева от главного экрана</string>
     <!-- Grid -->
     <string name="num_default">По умолчанию</string>
-    <string name="number_of_columns_title">Number of columns</string>
-    <string name="number_of_rows_title">Number of rows</string>
-    <string name="number_of_hotseat_title">Number of dock icons</string>
-    <string name="state_loading">Applying\u2026</string>
+    <string name="number_of_columns_title">Число столбцов</string>
+    <string name="number_of_rows_title">Количество строк</string>
+    <string name="number_of_hotseat_title">Количество значков на панели</string>
+    <string name="state_loading">Применение</string>
     <!-- Hidden apps -->
-    <string name="hide_app">Hide apps</string>
-    <string name="hide_app_sum">Hide apps from the app drawer</string>
-    <string name="hidden_apps_loading">Loading\u2026</string>
-    <string name="hidden_app">All apps</string>
-    <string name="hide_selected">Hide selected app(s)</string>
-    <string name="more">More</string>
-    <string name="reset_hidden_apps">Reset all</string>
-    <string name="reset_hidden_apps_done">Hidden apps are now available</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="hide_app">Скрыть приложения</string>
+    <string name="hide_app_sum">Скрыть приложения из меню приложений</string>
+    <string name="hidden_apps_loading">Загрузка</string>
+    <string name="hidden_app">Все приложения</string>
+    <string name="hide_selected">Скрыть выбранные приложения</string>
+    <string name="more">Ещё</string>
+    <string name="reset_hidden_apps">Сбросить все</string>
+    <string name="reset_hidden_apps_done">Скрытые приложения снова доступны</string>
+    <string name="hide_app_info_hidden">Скрытые приложения и их виджеты скрыты из меню</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="protect_app_help">Help</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="hide_protect_app">Скрыть и защитить приложения</string>
+    <string name="hide_protect_app_sum">Скрыть и защитить приложения из меню приложений</string>
+    <string name="protect_apps_auth_manager">Разблокируйте, для управления скрытыми и защищенными приложениями</string>
+    <string name="protect_app_auth_open_app">Авторизуйтесь, для открытия %1$s</string>
+    <string name="protect_app_no_lock_error">Пожалуйста, установите блокировку экрана для ограничения доступа к приложениям</string>
+    <string name="protect_app_help">Помощь</string>
+    <string name="protect_app_info_protected">Для открытия защищенных приложений из лаунчера требуется аутентификация</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
+    <string name="app_show_label_title">Названия приложений</string>
+    <string name="desktop_show_label_summary">Показать названия приложений на домашнем экране</string>
     <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
     <string name="allapps_long_labels_title">Long app labels</string>
     <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
@@ -103,7 +103,7 @@
     <string name="quick_event_rom_intro_welcome">Welcome to crDroid</string>
     <string name="quick_event_rom_intro_learn">Tap here to have fun!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
+    <string name="quick_event_ambient_now_playing">Сейчас проигрывается</string>
     <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
     <!-- QSB -->
     <string name="hotseat_qsb_preferences">Preferences</string>
