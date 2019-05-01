@@ -65,17 +65,17 @@
     <string name="google_feed_title">Zobraziť aplikácii Google</string>
     <string name="google_feed_summary">Naľavo od hlavnej domovskej obrazovky</string>
     <!-- Grid -->
-    <string name="num_default">Default</string>
-    <string name="number_of_columns_title">Number of columns</string>
-    <string name="number_of_rows_title">Number of rows</string>
-    <string name="number_of_hotseat_title">Number of dock icons</string>
-    <string name="state_loading">Applying\u2026</string>
+    <string name="num_default">Predvolené</string>
+    <string name="number_of_columns_title">Počet stĺpcov</string>
+    <string name="number_of_rows_title">Počet riadkov</string>
+    <string name="number_of_hotseat_title">Počet ikon v doku</string>
+    <string name="state_loading">Aplikujem\u2026</string>
     <!-- Hidden apps -->
-    <string name="hide_app">Hide apps</string>
-    <string name="hide_app_sum">Hide apps from the app drawer</string>
-    <string name="hidden_apps_loading">Loading\u2026</string>
-    <string name="hidden_app">All apps</string>
-    <string name="hide_selected">Hide selected app(s)</string>
+    <string name="hide_app">Skryť aplikácie</string>
+    <string name="hide_app_sum">Skryť aplikácie z ponuky aplikácií</string>
+    <string name="hidden_apps_loading">Načítavanie\u2026</string>
+    <string name="hidden_app">Všetky aplikácie</string>
+    <string name="hide_selected">Skryť vybranú aplikáciu / vybrané aplikácie</string>
     <string name="more">More</string>
     <string name="reset_hidden_apps">Reset all</string>
     <string name="reset_hidden_apps_done">Hidden apps are now available</string>
