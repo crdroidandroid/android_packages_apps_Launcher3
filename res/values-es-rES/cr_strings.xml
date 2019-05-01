@@ -20,15 +20,15 @@
     <string name="settings_title">Ajustes</string>
     <!-- Categories -->
     <string name="home_category_title">Pantalla de inicio</string>
-    <string name="home_category_summary">Configurar el panel de Google Now y más</string>
+    <string name="home_category_summary">Configura el panel de Google Now y más</string>
     <string name="icons_category_title">Iconos</string>
-    <string name="icons_category_summary">Configurar la forma, el tamaño de los iconos y más</string>
+    <string name="icons_category_summary">Configura la forma, el tamaño de los iconos y más</string>
     <string name="app_drawer_category_title">Cajón de aplicaciones</string>
     <string name="app_drawer_category_summary">Personaliza tu cajón de aplicaciones</string>
     <string name="misc_category_title">Ajustes varios</string>
     <string name="misc_category_summary">Otras opciones</string>
     <!-- Sub categories -->
-    <string name="home_grid_title">Diseño de cuadrícula</string>
+    <string name="home_grid_title">Diseño de la cuadrícula</string>
     <string name="icon_layout_title">Diseño de los iconos</string>
     <string name="home_overall_title">Diseño de la pantalla de inicio</string>
     <string name="home_quickspace_title">At A Glance</string>
@@ -53,14 +53,14 @@
     <string name="icon_size_extra_large">Muy grandes</string>
     <!-- Gestures -->
     <string name="allow_swipe_down_clearall_title">Borrar todo de la vista recientes</string>
-    <string name="allow_swipe_down_clearall_desc">Deslice el dedo verticalmente hacia abajo en la vista de recientes para borrar todas las aplicaciones</string>
-    <string name="pref_homescreen_dt_gestures_title">Gestos de doble toque</string>
-    <string name="pref_homescreen_dt_gestures_summary">Seleccione la acción del gesto de doble toque en la pantalla de inicio</string>
+    <string name="allow_swipe_down_clearall_desc">Desliza verticalmente hacia abajo en la vista de recientes para borrar todas las aplicaciones</string>
+    <string name="pref_homescreen_dt_gestures_title">Gesto de doble toque</string>
+    <string name="pref_homescreen_dt_gestures_summary">Selecciona la acción del gesto de doble toque en la pantalla de inicio</string>
     <string name="pref_homescreen_dt_gestures_none">Ninguno</string>
     <string name="pref_homescreen_dt_gestures_sleep">Suspender</string>
     <string name="pref_homescreen_dt_gestures_torch">Linterna</string>
     <string name="pref_notifications_gesture_title">Gesto de notificaciones</string>
-    <string name="pref_notifications_gesture_summary">Deslice verticalmente hacia abajo en la pantalla de inicio para mostrar el panel de ajustes rápidos</string>
+    <string name="pref_notifications_gesture_summary">Desliza verticalmente hacia abajo en la pantalla de inicio para mostrar el panel de ajustes rápidos</string>
     <!-- Google Feed -->
     <string name="google_feed_title">Mostrar aplicación de Google</string>
     <string name="google_feed_summary">A la izquierda de la pantalla de inicio principal</string>
@@ -72,7 +72,7 @@
     <string name="state_loading">Aplicando\u2026</string>
     <!-- Hidden apps -->
     <string name="hide_app">Ocultar aplicaciones</string>
-    <string name="hide_app_sum">Ocultar aplicaciones del cajón de aplicaciones</string>
+    <string name="hide_app_sum">Oculta las aplicaciones del cajón de aplicaciones</string>
     <string name="hidden_apps_loading">Cargando\u2026</string>
     <string name="hidden_app">Todas las aplicaciones</string>
     <string name="hide_selected">Ocultar las aplicaciones seleccionadas</string>
