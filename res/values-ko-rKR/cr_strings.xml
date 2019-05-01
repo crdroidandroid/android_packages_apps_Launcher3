@@ -160,12 +160,12 @@
     <string name="font_notoserif_bold_italic">NotoSerif 굵은 기울임꼴</string>
     <!-- At a glance uppercase -->
     <string name="date_style_transform_title">날짜에 대문자 표시</string>
-    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+    <string name="date_style_transform_summary">대문자로 된 텍스트로 모든 날짜 / 모양을 한 눈에 볼 수 있습니다.</string>
     <!-- At a glance font spacing -->
-    <string name="date_style_spacing">Date spacing</string>
-    <string name="date_style_spacing_normal">Normal</string>
-    <string name="date_style_spacing_barely">Barely noticeable</string>
-    <string name="date_style_spacing_ott">Over the top</string>
+    <string name="date_style_spacing">날짜 간격</string>
+    <string name="date_style_spacing_normal">기본</string>
+    <string name="date_style_spacing_barely">간신히 눈에 띄는</string>
+    <string name="date_style_spacing_ott">박진감이 넘치는</string>
     <!-- Gradients on Workspace/Hotseat? -->
     <string name="workspace_gradient_title">Show gradient on top</string>
     <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
