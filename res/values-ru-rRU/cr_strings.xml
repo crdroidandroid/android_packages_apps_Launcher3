@@ -20,7 +20,7 @@
     <string name="settings_title">Настройки</string>
     <!-- Categories -->
     <string name="home_category_title">Рабочий стол</string>
-    <string name="home_category_summary">Установить панель Google now и др</string>
+    <string name="home_category_summary">Установить панель Google now и др.</string>
     <string name="icons_category_title">Значки</string>
     <string name="icons_category_summary">Задать форму иконок, размер и другое</string>
     <string name="app_drawer_category_title">Меню приложений</string>
@@ -54,7 +54,7 @@
     <!-- Gestures -->
     <string name="allow_swipe_down_clearall_title">Очистить всё из недавних</string>
     <string name="allow_swipe_down_clearall_desc">Свайп вниз в режиме просмотра недавних приложений, чтобы очистить все</string>
-    <string name="pref_homescreen_dt_gestures_title">Двойное нажатие</string>
+    <string name="pref_homescreen_dt_gestures_title">Двойное касание</string>
     <string name="pref_homescreen_dt_gestures_summary">Выберите действие жеста двойного касания на главном экране</string>
     <string name="pref_homescreen_dt_gestures_none">Нет</string>
     <string name="pref_homescreen_dt_gestures_sleep">Выключить экран</string>
@@ -69,13 +69,13 @@
     <string name="number_of_columns_title">Число столбцов</string>
     <string name="number_of_rows_title">Количество строк</string>
     <string name="number_of_hotseat_title">Количество значков на панели</string>
-    <string name="state_loading">Применение</string>
+    <string name="state_loading">Применение\u2026</string>
     <!-- Hidden apps -->
     <string name="hide_app">Скрыть приложения</string>
     <string name="hide_app_sum">Скрыть приложения из меню приложений</string>
-    <string name="hidden_apps_loading">Загрузка</string>
+    <string name="hidden_apps_loading">Загрузка\u2026</string>
     <string name="hidden_app">Все приложения</string>
-    <string name="hide_selected">Скрыть выбранные приложения</string>
+    <string name="hide_selected">Скрыть выбранное(ые) приложение(ия)</string>
     <string name="more">Ещё</string>
     <string name="reset_hidden_apps">Сбросить все</string>
     <string name="reset_hidden_apps_done">Скрытые приложения снова доступны</string>
@@ -95,7 +95,7 @@
     <string name="allapps_long_labels_title">Длинные ярлыки приложений</string>
     <string name="allapps_long_labels_summary">Разрешить приложениям отображать ярлыки используя две линии</string>
     <!-- Show quickspace -->
-    <string name="show_quickspace_title">Включить \"С первого взгляда\"</string>
+    <string name="show_quickspace_title">Включить At A Glance</string>
     <string name="show_quickspace_summary">Отображать в верхней части Домашнего экрана</string>
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
