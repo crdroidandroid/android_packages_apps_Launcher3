@@ -82,7 +82,7 @@
     <string name="hide_app_info_hidden">Las aplicaciones ocultas y sus widgets están ocultos del cajón</string>
     <!-- Protected apps -->
     <string name="hide_protect_app">Ocultar y proteger aplicaciones</string>
-    <string name="hide_protect_app_sum">Ocultar y proteger aplicaciones desde el cajón de aplicaciones</string>
+    <string name="hide_protect_app_sum">Oculta y protege aplicaciones desde el cajón de aplicaciones</string>
     <string name="protect_apps_auth_manager">Desbloquea para gestionar las aplicaciones ocultas y protegidas</string>
     <string name="protect_app_auth_open_app">Autenticar para abrir %1$s</string>
     <string name="protect_app_no_lock_error">Por favor, configura un bloqueo de pantalla seguro para restringir el acceso a las aplicaciones</string>
@@ -90,8 +90,8 @@
     <string name="protect_app_info_protected">Las aplicaciones protegidas requieren autenticación para abrirse desde el lanzador</string>
     <!-- Show labels on icon -->
     <string name="app_show_label_title">Etiquetas de las aplicaciones</string>
-    <string name="desktop_show_label_summary">Mostrar las etiquetas de las aplicaciones en la pantalla de inicio</string>
-    <string name="allapps_show_label_summary">Mostrar las etiquetas de las aplicaciones en el cajón de aplicaciones</string>
+    <string name="desktop_show_label_summary">Muestra las etiquetas de las aplicaciones en la pantalla de inicio</string>
+    <string name="allapps_show_label_summary">Muestra las etiquetas de las aplicaciones en el cajón de aplicaciones</string>
     <string name="allapps_long_labels_title">Etiquetas largas de aplicaciones</string>
     <string name="allapps_long_labels_summary">Permite que las aplicaciones muestren etiquetas usando dos líneas</string>
     <!-- Show quickspace -->
@@ -111,7 +111,7 @@
     <string name="label_voice_search">Búsqueda por voz</string>
     <!-- Hide/Show search bars -->
     <string name="bottom_search_bar_title">Mostrar barra de búsqueda en la parte inferior</string>
-    <string name="bottom_search_bar_summary">Mostrar la barra de búsqueda en el dock</string>
+    <string name="bottom_search_bar_summary">Muestra la barra de búsqueda en el dock</string>
     <!-- Search engine -->
     <string name="search_provider_title">Motor de búsqueda de la barra de búsqueda</string>
     <!-- Predictions -->
@@ -124,7 +124,7 @@
     <string name="label_turn_off_suggestions">Apagar</string>
     <string name="all_apps_label">Todas las aplicaciones</string>
     <!-- Date format -->
-    <string name="date_format_title">Formato de fecha</string>
+    <string name="date_format_title">Formato de la fecha</string>
     <string name="date_format_long_name">Larga</string>
     <string name="date_format_normal_name">Normal</string>
     <string name="date_format_short_name">Corta</string>
@@ -132,7 +132,7 @@
     <string name="date_format_daydate_short_name">Día (corto con el número)</string>
     <string name="date_format_dayonly_name">Solo hoy</string>
     <!-- At a glance style -->
-    <string name="date_font_style">Estilo fuente de fecha</string>
+    <string name="date_font_style">Estilo de fuente de la fecha</string>
     <string name="font_normal">Normal</string>
     <string name="font_italic">Cursiva</string>
     <string name="font_bold">Negrita</string>
@@ -162,15 +162,15 @@
     <string name="date_style_transform_title">Mostrar la fecha en mayúsculas</string>
     <string name="date_style_transform_summary">Cambia toda la fecha/At A Glance por texto en mayúsculas</string>
     <!-- At a glance font spacing -->
-    <string name="date_style_spacing">Espaciado de fecha</string>
+    <string name="date_style_spacing">Espaciado de la fecha</string>
     <string name="date_style_spacing_normal">Normal</string>
     <string name="date_style_spacing_barely">Apenas perceptible</string>
     <string name="date_style_spacing_ott">Por encima</string>
     <!-- Gradients on Workspace/Hotseat? -->
     <string name="workspace_gradient_title">Mostrar gradiente en la parte superior</string>
-    <string name="workspace_gradient_summary">Habilitar un gradiente sutil desde la barra de estado</string>
+    <string name="workspace_gradient_summary">Activa un gradiente sutil desde la barra de estado</string>
     <string name="hotseat_gradient_title">Mostrar gradiente en la parte inferior</string>
-    <string name="hotseat_gradient_summary">Habilitar un gradiente sutil desde el dock del lanzador</string>
+    <string name="hotseat_gradient_summary">Activa un gradiente sutil desde el dock del lanzador</string>
     <!-- Recents corned -->
     <string name="custom_recents_corners_switch_title">Usar la pantalla de recientes con esquinas redondeadas</string>
     <string name="custom_recents_corners_switch_summary">Si se desactiva, se usará el dado por el sistema/tema. Para aplicar el nuevo valor, ve al inicio después de seleccionar tu opción.</string>
@@ -180,11 +180,11 @@
     <string name="custom_recents_corners_type_op">Estilo OP</string>
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Bloquear escritorio</string>
-    <string name="lock_desktop_summary">Evitar que la pantalla de inicio sea modificada</string>
+    <string name="lock_desktop_summary">Evita que la pantalla de inicio sea modificada</string>
     <!-- Search bar hint -->
     <string name="search_bar_hint">Toca para buscar en %s</string>
     <string name="search_bar_hint_title">Mostrar texto en la barra de búsqueda</string>
-    <string name="search_bar_hint_summary">Mostrar un texto pequeño en la barra de búsqueda que te indica qué puedes hacer</string>
+    <string name="search_bar_hint_summary">Muestra un texto pequeño en la barra de búsqueda que te indica qué puedes hacer</string>
     <!-- Icon edit -->
     <string name="edit_drop_target_label">Editar</string>
     <string name="edit_hint">Nombre de icono</string>
