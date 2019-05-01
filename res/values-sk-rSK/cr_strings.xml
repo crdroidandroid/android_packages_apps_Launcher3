@@ -192,15 +192,15 @@
     <string name="all_icons">Všetky ikony</string>
     <string name="similar_icons">Podobné ikony</string>
     <string name="ok">Ok</string>
-    <string name="icon_label">Label</string>
-    <string name="loading">Loading, please wait</string>
-    <string name="icon_chooser">Icon chooser</string>
-    <string name="icon_search">Search for icons</string>
+    <string name="icon_label">Popisok</string>
+    <string name="loading">Načítavanie, čakajte prosím</string>
+    <string name="icon_chooser">Výber ikon</string>
+    <string name="icon_search">Vyhľadávanie ikon</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
-    <string name="msg_no_icon_pack">No icon packs available</string>
+    <string name="msg_no_icon_pack">Nie sú k dispozícii žiadne balíky ikon</string>
     <!-- Folder titles -->
     <string name="play_folder_title">Play</string>
     <!-- Weather -->
-    <string name="show_weather_title">Weather</string>
-    <string name="show_weather_summary">Display weather when available</string>
+    <string name="show_weather_title">Počasie</string>
+    <string name="show_weather_summary">Zobraziť počasie, ak je k dispozícii</string>
 </resources>
