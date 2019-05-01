@@ -85,18 +85,18 @@
     <string name="hide_protect_app_sum">Skryť a chrániť aplikácie z ponuky aplikácií</string>
     <string name="protect_apps_auth_manager">Odomknite pre správu skrytých a chránených aplikácií</string>
     <string name="protect_app_auth_open_app">Povoľte otvorenie aplikácie %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="protect_app_help">Help</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="protect_app_no_lock_error">Pre obmedzenie prístupu k aplikácii prosím nastavte zabezpečenú obrazovku uzamknutia</string>
+    <string name="protect_app_help">Nápoveda</string>
+    <string name="protect_app_info_protected">Chránené aplikácie vyžadujú pre spustenie zo spúšťača overenie</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
-    <string name="allapps_long_labels_title">Long app labels</string>
-    <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
+    <string name="app_show_label_title">Popisky aplikácií</string>
+    <string name="desktop_show_label_summary">Zobraziť popisky aplikácií na domovskej obrazovke</string>
+    <string name="allapps_show_label_summary">Zobraziť popisky aplikácií v ponuke aplikácií</string>
+    <string name="allapps_long_labels_title">Dlhé popisky aplikácií</string>
+    <string name="allapps_long_labels_summary">Umožňuje aplikáciám zobrazovať popisky na dvoch riadkoch</string>
     <!-- Show quickspace -->
-    <string name="show_quickspace_title">Show At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">Zobraziť Na prvý pohľad</string>
+    <string name="show_quickspace_summary">Zobraziť v hornej časti Domovské obrazovky</string>
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
