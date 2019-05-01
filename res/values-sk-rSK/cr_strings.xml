@@ -41,19 +41,19 @@
     <string name="icon_pack_summary">Zmeňte si vzhľad ikon aplikácií</string>
     <string name="icon_pack_none">Predvolený</string>
     <!-- Icon shape -->
-    <string name="icon_shape_override_label_custom">Icon shape</string>
-    <string name="icon_shape_rounded_square">Rounded square</string>
-    <string name="icon_shape_hexagon">Rounded Hexagon</string>
+    <string name="icon_shape_override_label_custom">Tvar ikony</string>
+    <string name="icon_shape_rounded_square">Zaoblený štvorec</string>
+    <string name="icon_shape_hexagon">Zaoblený šesťuholník</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
-    <string name="icon_size_extra_small">Tiny</string>
-    <string name="icon_size_small">Small</string>
-    <string name="icon_size_average">Default</string>
-    <string name="icon_size_large">Large</string>
-    <string name="icon_size_extra_large">Extra large</string>
+    <string name="icon_size_title">Veľkosť ikony</string>
+    <string name="icon_size_extra_small">Najmenší</string>
+    <string name="icon_size_small">Malá</string>
+    <string name="icon_size_average">Predvolená</string>
+    <string name="icon_size_large">Veľká</string>
+    <string name="icon_size_extra_large">Extra veľká</string>
     <!-- Gestures -->
-    <string name="allow_swipe_down_clearall_title">Clear all from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Swipe vertically downward in recents view to clear all apps</string>
+    <string name="allow_swipe_down_clearall_title">Vymazať všetko z náhľadu nedávnych aplikácií</string>
+    <string name="allow_swipe_down_clearall_desc">Prejdením prsta zvislo nadol v náhľade nedávnych aplikácií vymažete všetky aplikácie</string>
     <string name="pref_homescreen_dt_gestures_title">Double tap gesture</string>
     <string name="pref_homescreen_dt_gestures_summary">Select the action of the double tap gesture on the home screen</string>
     <string name="pref_homescreen_dt_gestures_none">None</string>
