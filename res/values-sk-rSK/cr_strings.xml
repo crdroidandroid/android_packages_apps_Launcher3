@@ -159,13 +159,13 @@
     <string name="font_notoserif_bold">NotoSerif tučné</string>
     <string name="font_notoserif_bold_italic">NotoSerif tučné kurzíva</string>
     <!-- At a glance uppercase -->
-    <string name="date_style_transform_title">Show uppercase on date</string>
-    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+    <string name="date_style_transform_title">Použiť pre text dátumu veľké písmená</string>
+    <string name="date_style_transform_summary">Previesť všetok text dátumu / \"Na prvý pohľad\" na veľké písmená</string>
     <!-- At a glance font spacing -->
-    <string name="date_style_spacing">Date spacing</string>
-    <string name="date_style_spacing_normal">Normal</string>
-    <string name="date_style_spacing_barely">Barely noticeable</string>
-    <string name="date_style_spacing_ott">Over the top</string>
+    <string name="date_style_spacing">Riadkovanie dátumu</string>
+    <string name="date_style_spacing_normal">Normálny</string>
+    <string name="date_style_spacing_barely">Sotva znateľné</string>
+    <string name="date_style_spacing_ott">Prehnané</string>
     <!-- Gradients on Workspace/Hotseat? -->
     <string name="workspace_gradient_title">Show gradient on top</string>
     <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
