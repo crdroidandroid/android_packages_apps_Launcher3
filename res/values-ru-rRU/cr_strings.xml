@@ -92,7 +92,7 @@
     <string name="app_show_label_title">Названия приложений</string>
     <string name="desktop_show_label_summary">Показать названия приложений на домашнем экране</string>
     <string name="allapps_show_label_summary">Показать названия приложений в меню приложений</string>
-    <string name="allapps_long_labels_title">Длиннные ярлыки приложений</string>
+    <string name="allapps_long_labels_title">Длинные ярлыки приложений</string>
     <string name="allapps_long_labels_summary">Разрешить приложениям отображать ярлыки используя две линии</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Включить \"С первого взгляда\"</string>
@@ -116,11 +116,11 @@
     <string name="search_provider_title">Поставщик для поиска</string>
     <!-- Predictions -->
     <string name="suggestion_pref_screen_title">Предложения</string>
-    <string name="suggestion_pref_screen_desc">For Overview &amp; All Apps list</string>
+    <string name="suggestion_pref_screen_desc">Для просмотра списка всех приложений &amp;</string>
     <string name="app_suggestions_title">Показывать рекомендуемые приложения</string>
     <string name="app_suggestions_summary">Вверху списка всех приложений</string>
-    <string name="title_disable_suggestions_prompt">Turn off app suggestions?</string>
-    <string name="msg_disable_suggestions_prompt">"Suggestions won't appear at the top of your apps list, and the usage data used to create them will be permanently erased."</string>
+    <string name="title_disable_suggestions_prompt">Не показывать рекомендуемые приложения?</string>
+    <string name="msg_disable_suggestions_prompt">"Рекомендуемые приложения не будут показываться в начале списка. Данные, связанные с этой функцией, будут удалены."</string>
     <string name="label_turn_off_suggestions">Отключить</string>
     <string name="all_apps_label">Все приложения</string>
     <!-- Date format -->
@@ -150,27 +150,27 @@
     <string name="font_medium">Средний</string>
     <string name="font_medium_italic">Средний курсив</string>
     <string name="font_black">Чёрный</string>
-    <string name="font_black_italic">Black Italic</string>
-    <string name="font_dancingscript">DancingScript</string>
-    <string name="font_dancingscript_bold">DancingScript Bold</string>
-    <string name="font_comingsoon">ComingSoon</string>
-    <string name="font_notoserif">NotoSerif Normal</string>
-    <string name="font_notoserif_italic">NotoSerif Italic</string>
-    <string name="font_notoserif_bold">NotoSerif Bold</string>
-    <string name="font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+    <string name="font_black_italic">Чёрный курсив</string>
+    <string name="font_dancingscript">Рукописный</string>
+    <string name="font_dancingscript_bold">Рукописный жирный</string>
+    <string name="font_comingsoon">Ожидается</string>
+    <string name="font_notoserif">NotoSerif обычный</string>
+    <string name="font_notoserif_italic">NotoSerif курсив</string>
+    <string name="font_notoserif_bold">NotoSerif жирный</string>
+    <string name="font_notoserif_bold_italic">NotoSerif жирный курсив</string>
     <!-- At a glance uppercase -->
-    <string name="date_style_transform_title">Show uppercase on date</string>
-    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+    <string name="date_style_transform_title">Показать в верхнем регистре даты</string>
+    <string name="date_style_transform_summary">Преобразовать все даты/\"С первого взгляда\" в текст верхнего регистра</string>
     <!-- At a glance font spacing -->
-    <string name="date_style_spacing">Date spacing</string>
-    <string name="date_style_spacing_normal">Normal</string>
-    <string name="date_style_spacing_barely">Barely noticeable</string>
-    <string name="date_style_spacing_ott">Over the top</string>
+    <string name="date_style_spacing">Расстояние между датами</string>
+    <string name="date_style_spacing_normal">Обычный</string>
+    <string name="date_style_spacing_barely">Едва заметное</string>
+    <string name="date_style_spacing_ott">Наверху</string>
     <!-- Gradients on Workspace/Hotseat? -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">Показать градиент сверху</string>
+    <string name="workspace_gradient_summary">Включение тонкого градиента от строки состояния</string>
+    <string name="hotseat_gradient_title">Показать градиент снизу</string>
+    <string name="hotseat_gradient_summary">Включение тонкого градиента от нижнего края</string>
     <!-- Recents corned -->
     <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
     <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
