@@ -113,7 +113,7 @@
     <string name="bottom_search_bar_title">하단에 검색 표시줄 표시</string>
     <string name="bottom_search_bar_summary">Dock에 검색 창 표시</string>
     <!-- Search engine -->
-    <string name="search_provider_title">Searchbar search engine</string>
+    <string name="search_provider_title">검색 창 검색 엔진</string>
     <!-- Predictions -->
     <string name="suggestion_pref_screen_title">제안</string>
     <string name="suggestion_pref_screen_desc">개요 &amp; 모든 앱 목록</string>
@@ -128,17 +128,17 @@
     <string name="date_format_long_name">길게</string>
     <string name="date_format_normal_name">기본</string>
     <string name="date_format_short_name">짧은</string>
-    <string name="date_format_daydate_long_name">Day (with number)</string>
-    <string name="date_format_daydate_short_name">Day (short with number)</string>
-    <string name="date_format_dayonly_name">Just today</string>
+    <string name="date_format_daydate_long_name">일 (숫자 포함)</string>
+    <string name="date_format_daydate_short_name">일 (숫자가 짧음)</string>
+    <string name="date_format_dayonly_name">바로 오늘</string>
     <!-- At a glance style -->
-    <string name="date_font_style">Date font style</string>
-    <string name="font_normal">Normal</string>
-    <string name="font_italic">Italic</string>
-    <string name="font_bold">Bold</string>
-    <string name="font_bold_italic">Bold Italic</string>
-    <string name="font_light">Light</string>
-    <string name="font_light_italic">Light Italic</string>
+    <string name="date_font_style">날짜 폰트 스타일</string>
+    <string name="font_normal">기본</string>
+    <string name="font_italic">기울임꼴</string>
+    <string name="font_bold">굵기</string>
+    <string name="font_bold_italic">굵은 기울임꼴</string>
+    <string name="font_light">얇게</string>
+    <string name="font_light_italic">얇은 이탤릭체</string>
     <string name="font_thin">가늘게</string>
     <string name="font_thin_italic">얇은 기울임꼴</string>
     <string name="font_condensed">좁게</string>
@@ -197,10 +197,10 @@
     <string name="icon_chooser">아이콘 선택</string>
     <string name="icon_search">아이콘 찾기</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
-    <string name="msg_no_icon_pack">No icon packs available</string>
+    <string name="msg_no_icon_pack">사용 가능한 아이콘 팩 없음</string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
+    <string name="play_folder_title">재생</string>
     <!-- Weather -->
-    <string name="show_weather_title">Weather</string>
-    <string name="show_weather_summary">Display weather when available</string>
+    <string name="show_weather_title">날씨</string>
+    <string name="show_weather_summary">사용 가능한 경우 날씨 표시</string>
 </resources>
