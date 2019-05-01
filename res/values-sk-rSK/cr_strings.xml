@@ -81,10 +81,10 @@
     <string name="reset_hidden_apps_done">Skryté aplikácie sú teraz k dispozícii</string>
     <string name="hide_app_info_hidden">Skryté aplikácie a ich widgety sú skryté z ponuky aplikácií</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
+    <string name="hide_protect_app">Skryť a chrániť aplikácie</string>
+    <string name="hide_protect_app_sum">Skryť a chrániť aplikácie z ponuky aplikácií</string>
+    <string name="protect_apps_auth_manager">Odomknite pre správu skrytých a chránených aplikácií</string>
+    <string name="protect_app_auth_open_app">Povoľte otvorenie aplikácie %1$s</string>
     <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
     <string name="protect_app_help">Help</string>
     <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
