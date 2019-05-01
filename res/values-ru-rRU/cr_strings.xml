@@ -32,7 +32,7 @@
     <string name="icon_layout_title">Расположение значка</string>
     <string name="home_overall_title">Макет домашнего экрана</string>
     <string name="home_quickspace_title">С первого взгляда</string>
-    <string name="home_hotseat_title">Dock</string>
+    <string name="home_hotseat_title">Док-бар</string>
     <string name="app_overall_title">Список приложений</string>
     <string name="misc_recents_title">Меню недавних приложений</string>
     <string name="misc_gestures_title">Жесты</string>
@@ -91,9 +91,9 @@
     <!-- Show labels on icon -->
     <string name="app_show_label_title">Названия приложений</string>
     <string name="desktop_show_label_summary">Показать названия приложений на домашнем экране</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
-    <string name="allapps_long_labels_title">Long app labels</string>
-    <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
+    <string name="allapps_show_label_summary">Показать названия приложений в меню приложений</string>
+    <string name="allapps_long_labels_title">Длиннные ярлыки приложений</string>
+    <string name="allapps_long_labels_summary">Разрешить приложениям отображать ярлыки используя две линии</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Show At A Glance</string>
     <string name="show_quickspace_summary">Show at the top of your Home screen</string>
