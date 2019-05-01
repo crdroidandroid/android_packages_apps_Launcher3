@@ -20,26 +20,26 @@
     <string name="settings_title">Nastavenia</string>
     <!-- Categories -->
     <string name="home_category_title">Domovská obrazovka</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape, size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="home_category_summary">Nastavte panel Google Now a ďalšie funkcie</string>
+    <string name="icons_category_title">Ikony</string>
+    <string name="icons_category_summary">Nastavte tvar ikony, veľkosť a ďalšie parametre</string>
+    <string name="app_drawer_category_title">Ponuka aplikácií</string>
+    <string name="app_drawer_category_summary">Prispôsobte si ponuku aplikácií</string>
+    <string name="misc_category_title">Rôzne</string>
+    <string name="misc_category_summary">Ďaľšie možnosti</string>
     <!-- Sub categories -->
-    <string name="home_grid_title">Grid layout</string>
-    <string name="icon_layout_title">Icon layout</string>
-    <string name="home_overall_title">Home layout</string>
-    <string name="home_quickspace_title">At A Glance</string>
-    <string name="home_hotseat_title">Dock</string>
-    <string name="app_overall_title">App list</string>
-    <string name="misc_recents_title">Recents</string>
-    <string name="misc_gestures_title">Gestures</string>
+    <string name="home_grid_title">Rozloženie mriežky</string>
+    <string name="icon_layout_title">Rozloženie ikon</string>
+    <string name="home_overall_title">Rozloženie plochy</string>
+    <string name="home_quickspace_title">Na prvý pohľad</string>
+    <string name="home_hotseat_title">Dok</string>
+    <string name="app_overall_title">Zoznam aplikácií</string>
+    <string name="misc_recents_title">Nedávne aplikácie</string>
+    <string name="misc_gestures_title">Gestá</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Change the look of your app icons</string>
-    <string name="icon_pack_none">Default</string>
+    <string name="icon_pack">Balíček ikon</string>
+    <string name="icon_pack_summary">Zmeňte si vzhľad ikon aplikácií</string>
+    <string name="icon_pack_none">Predvolený</string>
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">Icon shape</string>
     <string name="icon_shape_rounded_square">Rounded square</string>
