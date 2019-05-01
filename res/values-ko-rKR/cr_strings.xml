@@ -86,48 +86,48 @@
     <string name="protect_apps_auth_manager">숨겨지거나 보호된 앱을 관리하려면 잠금을 해제하세요.</string>
     <string name="protect_app_auth_open_app">인증하여 %1$s 열기</string>
     <string name="protect_app_no_lock_error">제한된 앱 접근을 위해 잠금 화면을 설정하세요.</string>
-    <string name="protect_app_help">Help</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="protect_app_help">도움말</string>
+    <string name="protect_app_info_protected">실행기에서 보호된 앱을 실행하기 위해 인증이 필요합니다.</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
-    <string name="allapps_long_labels_title">Long app labels</string>
-    <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
+    <string name="app_show_label_title">앱 이름</string>
+    <string name="desktop_show_label_summary">홈 화면에서 앱 이름을 표시</string>
+    <string name="allapps_show_label_summary">앱 서랍에서 앱 이름을 표시</string>
+    <string name="allapps_long_labels_title">긴 앱 이름</string>
+    <string name="allapps_long_labels_summary">앱 이름을 두 줄로 표시하도록 허용합니다.</string>
     <!-- Show quickspace -->
-    <string name="show_quickspace_title">Show At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">한 눈에 보기</string>
+    <string name="show_quickspace_summary">홈 화면 상단에 표시</string>
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid</string>
-    <string name="quick_event_rom_intro_learn">Tap here to have fun!</string>
+    <string name="quick_event_rom_intro_welcome">crDroid에 오신 것을 환영합니다.</string>
+    <string name="quick_event_rom_intro_learn">재미있게하려면 여기를 누르십시오!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_now_playing">재생 중</string>
+    <string name="quick_event_ambient_song_artist">%2$s님의 %1$s</string>
     <!-- QSB -->
-    <string name="hotseat_qsb_preferences">Preferences</string>
-    <string name="label_search">Search</string>
-    <string name="label_voice_search">Voice search</string>
+    <string name="hotseat_qsb_preferences">설정</string>
+    <string name="label_search">검색</string>
+    <string name="label_voice_search">음성 검색</string>
     <!-- Hide/Show search bars -->
-    <string name="bottom_search_bar_title">Show search bar on bottom</string>
-    <string name="bottom_search_bar_summary">Show the search bar on the Dock</string>
+    <string name="bottom_search_bar_title">하단에 검색 표시줄 표시</string>
+    <string name="bottom_search_bar_summary">Dock에 검색 창 표시</string>
     <!-- Search engine -->
     <string name="search_provider_title">Searchbar search engine</string>
     <!-- Predictions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For Overview &amp; All Apps list</string>
-    <string name="app_suggestions_title">Display app suggestions</string>
-    <string name="app_suggestions_summary">At the top of your All Apps list</string>
-    <string name="title_disable_suggestions_prompt">Turn off app suggestions?</string>
-    <string name="msg_disable_suggestions_prompt">"Suggestions won't appear at the top of your apps list, and the usage data used to create them will be permanently erased."</string>
-    <string name="label_turn_off_suggestions">Turn off</string>
-    <string name="all_apps_label">All apps</string>
+    <string name="suggestion_pref_screen_title">제안</string>
+    <string name="suggestion_pref_screen_desc">개요 &amp; 모든 앱 목록</string>
+    <string name="app_suggestions_title">앱 추천</string>
+    <string name="app_suggestions_summary">모든 앱 목록 상단에</string>
+    <string name="title_disable_suggestions_prompt">앱 추천을 사용 중지할까요?</string>
+    <string name="msg_disable_suggestions_prompt">"추천사항이 앱 목록 상단에 표시되지 않으며 추천에 반영된 사용 데이터는 영구 삭제됩니다."</string>
+    <string name="label_turn_off_suggestions">끄기</string>
+    <string name="all_apps_label">모든 앱</string>
     <!-- Date format -->
-    <string name="date_format_title">Date format</string>
-    <string name="date_format_long_name">Long</string>
-    <string name="date_format_normal_name">Normal</string>
-    <string name="date_format_short_name">Short</string>
+    <string name="date_format_title">날짜 형식</string>
+    <string name="date_format_long_name">길게</string>
+    <string name="date_format_normal_name">기본</string>
+    <string name="date_format_short_name">짧은</string>
     <string name="date_format_daydate_long_name">Day (with number)</string>
     <string name="date_format_daydate_short_name">Day (short with number)</string>
     <string name="date_format_dayonly_name">Just today</string>
