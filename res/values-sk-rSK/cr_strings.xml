@@ -167,10 +167,10 @@
     <string name="date_style_spacing_barely">Sotva znateľné</string>
     <string name="date_style_spacing_ott">Prehnané</string>
     <!-- Gradients on Workspace/Hotseat? -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">Zobraziť prechod farieb hore</string>
+    <string name="workspace_gradient_summary">Povoliť jemný prechod farieb zo stavovej lišty</string>
+    <string name="hotseat_gradient_title">Zobraziť prechod farieb dole</string>
+    <string name="hotseat_gradient_summary">Povoliť jemný prechod farieb z doku spúšťače</string>
     <!-- Recents corned -->
     <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
     <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
