@@ -76,16 +76,16 @@
     <string name="hidden_apps_loading">로드 중..</string>
     <string name="hidden_app">모든 앱</string>
     <string name="hide_selected">선택된 앱 숨김</string>
-    <string name="more">More</string>
-    <string name="reset_hidden_apps">Reset all</string>
-    <string name="reset_hidden_apps_done">Hidden apps are now available</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="more">더 보기</string>
+    <string name="reset_hidden_apps">모두 초기화</string>
+    <string name="reset_hidden_apps_done">숨겨진 앱들을 이제 사용 가능합니다</string>
+    <string name="hide_app_info_hidden">숨겨진 앱과 해당 앱의 위젯은 앱 서랍에서 숨겨집니다.</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
+    <string name="hide_protect_app">숨기기 및 앱보호</string>
+    <string name="hide_protect_app_sum">앱 서랍에서 앱 숨기기 및 보호</string>
+    <string name="protect_apps_auth_manager">숨겨지거나 보호된 앱을 관리하려면 잠금을 해제하세요.</string>
+    <string name="protect_app_auth_open_app">인증하여 %1$s 열기</string>
+    <string name="protect_app_no_lock_error">제한된 앱 접근을 위해 잠금 화면을 설정하세요.</string>
     <string name="protect_app_help">Help</string>
     <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
     <!-- Show labels on icon -->
@@ -167,35 +167,35 @@
     <string name="date_style_spacing_barely">간신히 눈에 띄는</string>
     <string name="date_style_spacing_ott">박진감이 넘치는</string>
     <!-- Gradients on Workspace/Hotseat? -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">상단에 그라데이션 표시</string>
+    <string name="workspace_gradient_summary">상태 표시 줄에서 미묘한 그라데이션 사용</string>
+    <string name="hotseat_gradient_title">하단에 그라디언트 표시</string>
+    <string name="hotseat_gradient_summary">런처 부두에서 미묘한 그라데이션 사용</string>
     <!-- Recents corned -->
-    <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
-    <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
-    <string name="custom_recents_corners_type_title">Custom recents roundness</string>
-    <string name="custom_recents_corners_type_default">Default</string>
-    <string name="custom_recents_corners_type_card">Rounded Card</string>
-    <string name="custom_recents_corners_type_op">OP Style</string>
+    <string name="custom_recents_corners_switch_title">최근 앱 목록에 둥근 가장자리 사용자 지정</string>
+    <string name="custom_recents_corners_switch_summary">만약 비활성화된다면, 이것은 시스템/테마 에서 제공된 하나가 사용될것이다. 새로운 값을 적용하려면, 옵션을 선택하고 홈으로 가세요</string>
+    <string name="custom_recents_corners_type_title">사용자 지겅 최근 앱 둥근 정도.</string>
+    <string name="custom_recents_corners_type_default">기본값</string>
+    <string name="custom_recents_corners_type_card">모서리가 둥근 카드</string>
+    <string name="custom_recents_corners_type_op">OP의 스타일</string>
     <!-- Lock desktop -->
-    <string name="lock_desktop_title">Lock desktop</string>
-    <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
+    <string name="lock_desktop_title">바탕화면 잠금</string>
+    <string name="lock_desktop_summary">홈 화면이 변경되는 것을 방지합니다</string>
     <!-- Search bar hint -->
-    <string name="search_bar_hint">Tap to search on %s</string>
-    <string name="search_bar_hint_title">Show search bar hint text</string>
-    <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
+    <string name="search_bar_hint">% s에서 검색하려면 살짝 누르십시오.</string>
+    <string name="search_bar_hint_title">검색 창 힌트 텍스트 표시</string>
+    <string name="search_bar_hint_summary">검색 바에 대해 당신이 할 수 있는 힌트에 작은 텍스트를 표시</string>
     <!-- Icon edit -->
-    <string name="edit_drop_target_label">Edit</string>
-    <string name="edit_hint">Icon name</string>
-    <string name="reset_icon">Reset</string>
-    <string name="all_icons">All icons</string>
-    <string name="similar_icons">Similar icons</string>
-    <string name="ok">Ok</string>
-    <string name="icon_label">Label</string>
-    <string name="loading">Loading, please wait</string>
-    <string name="icon_chooser">Icon chooser</string>
-    <string name="icon_search">Search for icons</string>
+    <string name="edit_drop_target_label">편집</string>
+    <string name="edit_hint">아이콘 이름</string>
+    <string name="reset_icon">초기화</string>
+    <string name="all_icons">모든 아이콘</string>
+    <string name="similar_icons">비슷한 아이콘</string>
+    <string name="ok">확인</string>
+    <string name="icon_label">라벨</string>
+    <string name="loading">로드 중, 잠시만 기다려 주세요</string>
+    <string name="icon_chooser">아이콘 선택</string>
+    <string name="icon_search">아이콘 찾기</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
     <string name="msg_no_icon_pack">No icon packs available</string>
     <!-- Folder titles -->
