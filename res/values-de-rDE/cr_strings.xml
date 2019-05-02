@@ -93,15 +93,15 @@
     <string name="desktop_show_label_summary">App Beschriftungen auf dem Startbildschirm anzeigen</string>
     <string name="allapps_show_label_summary">App-Beschriftungen in der App-Übersicht anzeigen</string>
     <string name="allapps_long_labels_title">Lange App-Beschriftungen</string>
-    <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
+    <string name="allapps_long_labels_summary">Erlaubt Apps, Beschriftungen in zwei Zeilen anzuzeigen</string>
     <!-- Show quickspace -->
-    <string name="show_quickspace_title">Show At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">Auf einen Blick anzeigen</string>
+    <string name="show_quickspace_summary">Oben auf deinem Startbildschirm anzeigen</string>
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Willkommen zu crDroid</string>
-    <string name="quick_event_rom_intro_learn">Tap here to have fun!</string>
+    <string name="quick_event_rom_intro_learn">Tippen Sie hier, um Spaß zu haben!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">Läuft gerade</string>
     <string name="quick_event_ambient_song_artist">%1$s von %2$s</string>
@@ -110,10 +110,10 @@
     <string name="label_search">Suche</string>
     <string name="label_voice_search">Sprachsuche</string>
     <!-- Hide/Show search bars -->
-    <string name="bottom_search_bar_title">Show search bar on bottom</string>
-    <string name="bottom_search_bar_summary">Show the search bar on the Dock</string>
+    <string name="bottom_search_bar_title">Suchleiste unten anzeigen</string>
+    <string name="bottom_search_bar_summary">Suchleiste im Dock anzeigen</string>
     <!-- Search engine -->
-    <string name="search_provider_title">Searchbar search engine</string>
+    <string name="search_provider_title">Auswahl der Suchmaschine</string>
     <!-- Predictions -->
     <string name="suggestion_pref_screen_title">Vorschläge</string>
     <string name="suggestion_pref_screen_desc">For Overview &amp; All Apps list</string>
