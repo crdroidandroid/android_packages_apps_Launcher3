@@ -72,7 +72,7 @@
     <string name="state_loading">Wird angewendet\u2026</string>
     <!-- Hidden apps -->
     <string name="hide_app">Apps verstecken</string>
-    <string name="hide_app_sum">Apps im App-Drawer verstecken</string>
+    <string name="hide_app_sum">Apps in der App-Übersicht ausblenden</string>
     <string name="hidden_apps_loading">Lade\u2026</string>
     <string name="hidden_app">Alle Apps</string>
     <string name="hide_selected">Ausgewählte App(s) ausblenden</string>
@@ -82,7 +82,7 @@
     <string name="hide_app_info_hidden">Versteckte Apps und ihre Widgets werden in der App-Übersicht nicht angezeigt</string>
     <!-- Protected apps -->
     <string name="hide_protect_app">Apps ausblenden und schützen</string>
-    <string name="hide_protect_app_sum">Apps im App-Drawer verstecken</string>
+    <string name="hide_protect_app_sum">Apps aus der App-Übersicht ausblenden und schützen</string>
     <string name="protect_apps_auth_manager">Entsperren, um die versteckten und geschützten Apps zu verwalten</string>
     <string name="protect_app_auth_open_app">Authentifizieren, um %1$s zu öffnen</string>
     <string name="protect_app_no_lock_error">Bitte richten Sie einen sicheren Sperrbildschirm ein, um den Zugriff auf die Apps zu beschränken</string>
@@ -162,18 +162,18 @@
     <string name="date_style_transform_title">Großbuchstaben für Datum anzeigen</string>
     <string name="date_style_transform_summary">Verwandelt das Datum / auf einen Blick in Großbuchstaben</string>
     <!-- At a glance font spacing -->
-    <string name="date_style_spacing">Date spacing</string>
+    <string name="date_style_spacing">Datumsabstand</string>
     <string name="date_style_spacing_normal">Normal</string>
     <string name="date_style_spacing_barely">Kaum sichtbar</string>
-    <string name="date_style_spacing_ott">Over the top</string>
+    <string name="date_style_spacing_ott">Übertrieben</string>
     <!-- Gradients on Workspace/Hotseat? -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">Farbverlauf anzeigen oben</string>
+    <string name="workspace_gradient_summary">Einen dezenten Farbverlauf der Statusleiste aktivieren</string>
+    <string name="hotseat_gradient_title">Farbverlauf anzeigen unten</string>
+    <string name="hotseat_gradient_summary">Einen dezenten Farbverlauf des Launcher-Dock anzeigen</string>
     <!-- Recents corned -->
-    <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
-    <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
+    <string name="custom_recents_corners_switch_title">Verwenden Sie benutzerdefinierte abgerundete Ecken im Anwendungsverlauf</string>
+    <string name="custom_recents_corners_switch_summary">Wenn deaktiviert, wird der vom System/Theme bereitgestellte Wert verwendet. Um den neuen Wert anzuwenden, gehen Sie nach der Auswahl Ihrer Option zur Startseite.</string>
     <string name="custom_recents_corners_type_title">Custom recents roundness</string>
     <string name="custom_recents_corners_type_default">Standard</string>
     <string name="custom_recents_corners_type_card">Rounded Card</string>
