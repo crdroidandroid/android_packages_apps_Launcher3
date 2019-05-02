@@ -92,7 +92,7 @@
     <string name="app_show_label_title">Etiquetas de las aplicaciones</string>
     <string name="desktop_show_label_summary">Muestra las etiquetas de las aplicaciones en la pantalla de inicio</string>
     <string name="allapps_show_label_summary">Muestra las etiquetas de las aplicaciones en el cajón de aplicaciones</string>
-    <string name="allapps_long_labels_title">Etiquetas largas de aplicaciones</string>
+    <string name="allapps_long_labels_title">Aplicaciones con etiquetas largas</string>
     <string name="allapps_long_labels_summary">Permite que las aplicaciones muestren etiquetas usando dos líneas</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Mostrar At A Glance</string>
@@ -174,7 +174,7 @@
     <!-- Recents corned -->
     <string name="custom_recents_corners_switch_title">Usar la pantalla de recientes con esquinas redondeadas</string>
     <string name="custom_recents_corners_switch_summary">Si se desactiva, se usará el dado por el sistema/tema. Para aplicar el nuevo valor, ve al inicio después de seleccionar tu opción.</string>
-    <string name="custom_recents_corners_type_title">Redondez de la pantalla de recientes personalizada</string>
+    <string name="custom_recents_corners_type_title">Estilo de las esquinas de los recientes</string>
     <string name="custom_recents_corners_type_default">Predeterminado</string>
     <string name="custom_recents_corners_type_card">Tarjeta con esquinas redondas</string>
     <string name="custom_recents_corners_type_op">Estilo One Plus</string>
