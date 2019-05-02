@@ -17,190 +17,190 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Nastavenia</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape, size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="home_category_title">Domovská obrazovka</string>
+    <string name="home_category_summary">Nastavte panel Google Now a ďalšie funkcie</string>
+    <string name="icons_category_title">Ikony</string>
+    <string name="icons_category_summary">Nastavte tvar ikony, veľkosť a ďalšie parametre</string>
+    <string name="app_drawer_category_title">Ponuka aplikácií</string>
+    <string name="app_drawer_category_summary">Prispôsobte si ponuku aplikácií</string>
+    <string name="misc_category_title">Rôzne</string>
+    <string name="misc_category_summary">Ďaľšie možnosti</string>
     <!-- Sub categories -->
-    <string name="home_grid_title">Grid layout</string>
-    <string name="icon_layout_title">Icon layout</string>
-    <string name="home_overall_title">Home layout</string>
-    <string name="home_quickspace_title">At A Glance</string>
-    <string name="home_hotseat_title">Dock</string>
-    <string name="app_overall_title">App list</string>
-    <string name="misc_recents_title">Recents</string>
-    <string name="misc_gestures_title">Gestures</string>
+    <string name="home_grid_title">Rozloženie mriežky</string>
+    <string name="icon_layout_title">Rozloženie ikon</string>
+    <string name="home_overall_title">Rozloženie plochy</string>
+    <string name="home_quickspace_title">Na prvý pohľad</string>
+    <string name="home_hotseat_title">Dok</string>
+    <string name="app_overall_title">Zoznam aplikácií</string>
+    <string name="misc_recents_title">Nedávne aplikácie</string>
+    <string name="misc_gestures_title">Gestá</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Change the look of your app icons</string>
-    <string name="icon_pack_none">Default</string>
+    <string name="icon_pack">Balíček ikon</string>
+    <string name="icon_pack_summary">Zmeňte si vzhľad ikon aplikácií</string>
+    <string name="icon_pack_none">Predvolený</string>
     <!-- Icon shape -->
-    <string name="icon_shape_override_label_custom">Icon shape</string>
-    <string name="icon_shape_rounded_square">Rounded square</string>
-    <string name="icon_shape_hexagon">Rounded Hexagon</string>
+    <string name="icon_shape_override_label_custom">Tvar ikony</string>
+    <string name="icon_shape_rounded_square">Zaoblený štvorec</string>
+    <string name="icon_shape_hexagon">Zaoblený šesťuholník</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
-    <string name="icon_size_extra_small">Tiny</string>
-    <string name="icon_size_small">Small</string>
-    <string name="icon_size_average">Default</string>
-    <string name="icon_size_large">Large</string>
-    <string name="icon_size_extra_large">Extra large</string>
+    <string name="icon_size_title">Veľkosť ikony</string>
+    <string name="icon_size_extra_small">Najmenší</string>
+    <string name="icon_size_small">Malá</string>
+    <string name="icon_size_average">Predvolená</string>
+    <string name="icon_size_large">Veľká</string>
+    <string name="icon_size_extra_large">Extra veľká</string>
     <!-- Gestures -->
-    <string name="allow_swipe_down_clearall_title">Clear all from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Swipe vertically downward in recents view to clear all apps</string>
-    <string name="pref_homescreen_dt_gestures_title">Double tap gesture</string>
-    <string name="pref_homescreen_dt_gestures_summary">Select the action of the double tap gesture on the home screen</string>
-    <string name="pref_homescreen_dt_gestures_none">None</string>
-    <string name="pref_homescreen_dt_gestures_sleep">Sleep</string>
-    <string name="pref_homescreen_dt_gestures_torch">Flashlight</string>
-    <string name="pref_notifications_gesture_title">Notifications gesture</string>
-    <string name="pref_notifications_gesture_summary">Swipe vertically downward on the home screen to show the QS panel</string>
+    <string name="allow_swipe_down_clearall_title">Vymazať všetko z náhľadu nedávnych aplikácií</string>
+    <string name="allow_swipe_down_clearall_desc">Prejdením prsta zvislo nadol v náhľade nedávnych aplikácií vymažete všetky aplikácie</string>
+    <string name="pref_homescreen_dt_gestures_title">Gesto dvojitým poklepaním</string>
+    <string name="pref_homescreen_dt_gestures_summary">Vyberte akciu, ktorá má byť uskutočnená po vykonaní gestá dvojitého poklepanie na domovskú obrazovku</string>
+    <string name="pref_homescreen_dt_gestures_none">Žiadna</string>
+    <string name="pref_homescreen_dt_gestures_sleep">Spánok</string>
+    <string name="pref_homescreen_dt_gestures_torch">Svietidlo</string>
+    <string name="pref_notifications_gesture_title">Gestá oznámenia</string>
+    <string name="pref_notifications_gesture_summary">Prejdením prsta smerom dolu na domovskej obrazovke zobraziť panel Rýchlych nastavení</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_title">Zobraziť aplikácii Google</string>
+    <string name="google_feed_summary">Naľavo od hlavnej domovskej obrazovky</string>
     <!-- Grid -->
-    <string name="num_default">Default</string>
-    <string name="number_of_columns_title">Number of columns</string>
-    <string name="number_of_rows_title">Number of rows</string>
-    <string name="number_of_hotseat_title">Number of dock icons</string>
-    <string name="state_loading">Applying\u2026</string>
+    <string name="num_default">Predvolené</string>
+    <string name="number_of_columns_title">Počet stĺpcov</string>
+    <string name="number_of_rows_title">Počet riadkov</string>
+    <string name="number_of_hotseat_title">Počet ikon v doku</string>
+    <string name="state_loading">Aplikujem\u2026</string>
     <!-- Hidden apps -->
-    <string name="hide_app">Hide apps</string>
-    <string name="hide_app_sum">Hide apps from the app drawer</string>
-    <string name="hidden_apps_loading">Loading\u2026</string>
-    <string name="hidden_app">All apps</string>
-    <string name="hide_selected">Hide selected app(s)</string>
-    <string name="more">More</string>
-    <string name="reset_hidden_apps">Reset all</string>
-    <string name="reset_hidden_apps_done">Hidden apps are now available</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="hide_app">Skryť aplikácie</string>
+    <string name="hide_app_sum">Skryť aplikácie z ponuky aplikácií</string>
+    <string name="hidden_apps_loading">Načítavanie\u2026</string>
+    <string name="hidden_app">Všetky aplikácie</string>
+    <string name="hide_selected">Skryť vybranú aplikáciu / vybrané aplikácie</string>
+    <string name="more">Viac</string>
+    <string name="reset_hidden_apps">Obnoviť všetko</string>
+    <string name="reset_hidden_apps_done">Skryté aplikácie sú teraz k dispozícii</string>
+    <string name="hide_app_info_hidden">Skryté aplikácie a ich widgety sú skryté z ponuky aplikácií</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="protect_app_help">Help</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="hide_protect_app">Skryť a chrániť aplikácie</string>
+    <string name="hide_protect_app_sum">Skryť a chrániť aplikácie z ponuky aplikácií</string>
+    <string name="protect_apps_auth_manager">Odomknite pre správu skrytých a chránených aplikácií</string>
+    <string name="protect_app_auth_open_app">Povoľte otvorenie aplikácie %1$s</string>
+    <string name="protect_app_no_lock_error">Pre obmedzenie prístupu k aplikácii prosím nastavte zabezpečenú obrazovku uzamknutia</string>
+    <string name="protect_app_help">Nápoveda</string>
+    <string name="protect_app_info_protected">Chránené aplikácie vyžadujú pre spustenie zo spúšťača overenie</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
-    <string name="allapps_long_labels_title">Long app labels</string>
-    <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
+    <string name="app_show_label_title">Popisky aplikácií</string>
+    <string name="desktop_show_label_summary">Zobraziť popisky aplikácií na domovskej obrazovke</string>
+    <string name="allapps_show_label_summary">Zobraziť popisky aplikácií v ponuke aplikácií</string>
+    <string name="allapps_long_labels_title">Dlhé popisky aplikácií</string>
+    <string name="allapps_long_labels_summary">Umožňuje aplikáciám zobrazovať popisky na dvoch riadkoch</string>
     <!-- Show quickspace -->
-    <string name="show_quickspace_title">Show At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">Zobraziť Na prvý pohľad</string>
+    <string name="show_quickspace_summary">Zobraziť v hornej časti Domovské obrazovky</string>
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid</string>
-    <string name="quick_event_rom_intro_learn">Tap here to have fun!</string>
+    <string name="quick_event_rom_intro_welcome">Vitajte v crDroidu</string>
+    <string name="quick_event_rom_intro_learn">Kliknite tu, aby ste sa pobavili!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_now_playing">Práve sa prehráva</string>
+    <string name="quick_event_ambient_song_artist">%1$s z %2$s</string>
     <!-- QSB -->
-    <string name="hotseat_qsb_preferences">Preferences</string>
-    <string name="label_search">Search</string>
-    <string name="label_voice_search">Voice search</string>
+    <string name="hotseat_qsb_preferences">Predvoľby</string>
+    <string name="label_search">Vyhľadávanie</string>
+    <string name="label_voice_search">Hlasové vyhľadávanie</string>
     <!-- Hide/Show search bars -->
-    <string name="bottom_search_bar_title">Show search bar on bottom</string>
-    <string name="bottom_search_bar_summary">Show the search bar on the Dock</string>
+    <string name="bottom_search_bar_title">Zobraziť panel vyhľadávania v dolnej časti</string>
+    <string name="bottom_search_bar_summary">Zobraziť panel vyhľadávania v Doku</string>
     <!-- Search engine -->
-    <string name="search_provider_title">Searchbar search engine</string>
+    <string name="search_provider_title">Vyhľadávací nástroj panela vyhľadávania</string>
     <!-- Predictions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For Overview &amp; All Apps list</string>
-    <string name="app_suggestions_title">Display app suggestions</string>
-    <string name="app_suggestions_summary">At the top of your All Apps list</string>
-    <string name="title_disable_suggestions_prompt">Turn off app suggestions?</string>
-    <string name="msg_disable_suggestions_prompt">"Suggestions won't appear at the top of your apps list, and the usage data used to create them will be permanently erased."</string>
-    <string name="label_turn_off_suggestions">Turn off</string>
-    <string name="all_apps_label">All apps</string>
+    <string name="suggestion_pref_screen_title">Návrhy</string>
+    <string name="suggestion_pref_screen_desc">Pre Prehľad a zoznam Všetkých aplikácií</string>
+    <string name="app_suggestions_title">Zobraziť návrhy aplikácií</string>
+    <string name="app_suggestions_summary">V hornej časti zoznamu Všetkých aplikácií</string>
+    <string name="title_disable_suggestions_prompt">Chcete vypnúť návrhy aplikácií?</string>
+    <string name="msg_disable_suggestions_prompt">"Návrhy sa nebudú zobrazovať na začiatku zoznamu aplikácií a údaje o využití, na základe ktorých boli návrhy vytvárané, budú natrvalo vymazané."</string>
+    <string name="label_turn_off_suggestions">Vypnúť</string>
+    <string name="all_apps_label">Všetky aplikácie</string>
     <!-- Date format -->
-    <string name="date_format_title">Date format</string>
-    <string name="date_format_long_name">Long</string>
-    <string name="date_format_normal_name">Normal</string>
-    <string name="date_format_short_name">Short</string>
-    <string name="date_format_daydate_long_name">Day (with number)</string>
-    <string name="date_format_daydate_short_name">Day (short with number)</string>
-    <string name="date_format_dayonly_name">Just today</string>
+    <string name="date_format_title">Formát dátumu</string>
+    <string name="date_format_long_name">Dlhý</string>
+    <string name="date_format_normal_name">Normálny</string>
+    <string name="date_format_short_name">Krátky</string>
+    <string name="date_format_daydate_long_name">Deň (s číslom)</string>
+    <string name="date_format_daydate_short_name">Deň (krátky s číslom)</string>
+    <string name="date_format_dayonly_name">Len dnešný deň</string>
     <!-- At a glance style -->
-    <string name="date_font_style">Date font style</string>
-    <string name="font_normal">Normal</string>
-    <string name="font_italic">Italic</string>
-    <string name="font_bold">Bold</string>
-    <string name="font_bold_italic">Bold Italic</string>
-    <string name="font_light">Light</string>
-    <string name="font_light_italic">Light Italic</string>
-    <string name="font_thin">Thin</string>
-    <string name="font_thin_italic">Thin Italic</string>
-    <string name="font_condensed">Condensed</string>
-    <string name="font_condensed_italic">Condensed Italic</string>
-    <string name="font_condensed_light">Condensed Light</string>
-    <string name="font_condensed_light_italic">Condensed Light Italic</string>
-    <string name="font_condensed_bold">Condensed Bold</string>
-    <string name="font_condensed_bold_italic">Condensed Bold Italic</string>
-    <string name="font_medium">Medium</string>
-    <string name="font_medium_italic">Medium Italic</string>
-    <string name="font_black">Black</string>
-    <string name="font_black_italic">Black Italic</string>
+    <string name="date_font_style">Štýl písma dátumu</string>
+    <string name="font_normal">Normálny</string>
+    <string name="font_italic">Kurzíva</string>
+    <string name="font_bold">Tučné</string>
+    <string name="font_bold_italic">Tučné kurzíva</string>
+    <string name="font_light">Slabé</string>
+    <string name="font_light_italic">Slabé kurzíva</string>
+    <string name="font_thin">Tenké</string>
+    <string name="font_thin_italic">Tenké kurzíva</string>
+    <string name="font_condensed">Zhustené</string>
+    <string name="font_condensed_italic">Zhustené kurzíva</string>
+    <string name="font_condensed_light">Zhustené slabé</string>
+    <string name="font_condensed_light_italic">Zhustené slabé kurzíva</string>
+    <string name="font_condensed_bold">Zhustené tučné</string>
+    <string name="font_condensed_bold_italic">Zhustené tučné kurzíva</string>
+    <string name="font_medium">Stredné</string>
+    <string name="font_medium_italic">Stredné kurzíva</string>
+    <string name="font_black">Čierne</string>
+    <string name="font_black_italic">Čierne kurzíva</string>
     <string name="font_dancingscript">DancingScript</string>
-    <string name="font_dancingscript_bold">DancingScript Bold</string>
+    <string name="font_dancingscript_bold">DancingScript tučné</string>
     <string name="font_comingsoon">ComingSoon</string>
-    <string name="font_notoserif">NotoSerif Normal</string>
-    <string name="font_notoserif_italic">NotoSerif Italic</string>
-    <string name="font_notoserif_bold">NotoSerif Bold</string>
-    <string name="font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+    <string name="font_notoserif">NotoSerif normálny</string>
+    <string name="font_notoserif_italic">NotoSerif kurzíva</string>
+    <string name="font_notoserif_bold">NotoSerif tučné</string>
+    <string name="font_notoserif_bold_italic">NotoSerif tučné kurzíva</string>
     <!-- At a glance uppercase -->
-    <string name="date_style_transform_title">Show uppercase on date</string>
-    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+    <string name="date_style_transform_title">Použiť pre text dátumu veľké písmená</string>
+    <string name="date_style_transform_summary">Previesť všetok text dátumu / \"Na prvý pohľad\" na veľké písmená</string>
     <!-- At a glance font spacing -->
-    <string name="date_style_spacing">Date spacing</string>
-    <string name="date_style_spacing_normal">Normal</string>
-    <string name="date_style_spacing_barely">Barely noticeable</string>
-    <string name="date_style_spacing_ott">Over the top</string>
+    <string name="date_style_spacing">Riadkovanie dátumu</string>
+    <string name="date_style_spacing_normal">Normálny</string>
+    <string name="date_style_spacing_barely">Sotva znateľné</string>
+    <string name="date_style_spacing_ott">Prehnané</string>
     <!-- Gradients on Workspace/Hotseat? -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">Zobraziť prechod farieb hore</string>
+    <string name="workspace_gradient_summary">Povoliť jemný prechod farieb zo stavovej lišty</string>
+    <string name="hotseat_gradient_title">Zobraziť prechod farieb dole</string>
+    <string name="hotseat_gradient_summary">Povoliť jemný prechod farieb z doku spúšťače</string>
     <!-- Recents corned -->
-    <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
-    <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
-    <string name="custom_recents_corners_type_title">Custom recents roundness</string>
-    <string name="custom_recents_corners_type_default">Default</string>
-    <string name="custom_recents_corners_type_card">Rounded Card</string>
-    <string name="custom_recents_corners_type_op">OP Style</string>
+    <string name="custom_recents_corners_switch_title">Použiť pre nedávne aplikácie zaoblené rohy</string>
+    <string name="custom_recents_corners_switch_summary">Ak je zakázané, bude použitá varianta poskytnutá systémom / témou. Na použitie novej hodnoty sa po vybraní možnosti vráťte na domovskú obrazovku.</string>
+    <string name="custom_recents_corners_type_title">Zaoblenie rohov kariet nedávnych aplikácií</string>
+    <string name="custom_recents_corners_type_default">Predvolené</string>
+    <string name="custom_recents_corners_type_card">Zaoblené karty</string>
+    <string name="custom_recents_corners_type_op">Štýl OP</string>
     <!-- Lock desktop -->
-    <string name="lock_desktop_title">Lock desktop</string>
-    <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
+    <string name="lock_desktop_title">Uzamknúť pracovnú plochu</string>
+    <string name="lock_desktop_summary">Zabrániť vykonávanie zmien na domovskej obrazovke</string>
     <!-- Search bar hint -->
-    <string name="search_bar_hint">Tap to search on %s</string>
-    <string name="search_bar_hint_title">Show search bar hint text</string>
-    <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
+    <string name="search_bar_hint">Kliknutím vyhľadáte %s</string>
+    <string name="search_bar_hint_title">Zobraziť text pomoci panela vyhľadávania</string>
+    <string name="search_bar_hint_summary">Zobraziť na paneli vyhľadávanie malý text, ktorý vám napovie, čo môžete robiť</string>
     <!-- Icon edit -->
-    <string name="edit_drop_target_label">Edit</string>
-    <string name="edit_hint">Icon name</string>
-    <string name="reset_icon">Reset</string>
-    <string name="all_icons">All icons</string>
-    <string name="similar_icons">Similar icons</string>
+    <string name="edit_drop_target_label">Upraviť</string>
+    <string name="edit_hint">Názov ikony</string>
+    <string name="reset_icon">Obnoviť</string>
+    <string name="all_icons">Všetky ikony</string>
+    <string name="similar_icons">Podobné ikony</string>
     <string name="ok">Ok</string>
-    <string name="icon_label">Label</string>
-    <string name="loading">Loading, please wait</string>
-    <string name="icon_chooser">Icon chooser</string>
-    <string name="icon_search">Search for icons</string>
+    <string name="icon_label">Popisok</string>
+    <string name="loading">Načítavanie, čakajte prosím</string>
+    <string name="icon_chooser">Výber ikon</string>
+    <string name="icon_search">Vyhľadávanie ikon</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
-    <string name="msg_no_icon_pack">No icon packs available</string>
+    <string name="msg_no_icon_pack">Nie sú k dispozícii žiadne balíky ikon</string>
     <!-- Folder titles -->
     <string name="play_folder_title">Play</string>
     <!-- Weather -->
-    <string name="show_weather_title">Weather</string>
-    <string name="show_weather_summary">Display weather when available</string>
+    <string name="show_weather_title">Počasie</string>
+    <string name="show_weather_summary">Zobraziť počasie, ak je k dispozícii</string>
 </resources>
