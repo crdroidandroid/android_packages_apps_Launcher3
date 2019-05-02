@@ -20,19 +20,19 @@
     <string name="settings_title">Einstellungen</string>
     <!-- Categories -->
     <string name="home_category_title">Startbildschirm</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
+    <string name="home_category_summary">Anpassungen von Google Now und mehr</string>
     <string name="icons_category_title">Symbole</string>
-    <string name="icons_category_summary">Set icon shape, size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
+    <string name="icons_category_summary">Wähle die Symbolform, -größe und mehr</string>
+    <string name="app_drawer_category_title">App-Drawer</string>
+    <string name="app_drawer_category_summary">App-Übersicht konfigurieren</string>
     <string name="misc_category_title">Verschiedenes</string>
     <string name="misc_category_summary">Andere Optionen</string>
     <!-- Sub categories -->
     <string name="home_grid_title">Rasteransicht</string>
-    <string name="icon_layout_title">Icon layout</string>
-    <string name="home_overall_title">Home layout</string>
+    <string name="icon_layout_title">Symbol-Layout</string>
+    <string name="home_overall_title">Home-Layout</string>
     <string name="home_quickspace_title">Auf einen Blick</string>
-    <string name="home_hotseat_title">Dock</string>
+    <string name="home_hotseat_title">Ladestation</string>
     <string name="app_overall_title">App-Liste</string>
     <string name="misc_recents_title">Anwendungsverlauf</string>
     <string name="misc_gestures_title">Gesten</string>
@@ -83,16 +83,16 @@
     <!-- Protected apps -->
     <string name="hide_protect_app">Apps ausblenden und schützen</string>
     <string name="hide_protect_app_sum">Apps im App-Drawer verstecken</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
+    <string name="protect_apps_auth_manager">Entsperren, um die versteckten und geschützten Apps zu verwalten</string>
+    <string name="protect_app_auth_open_app">Authentifizieren, um %1$s zu öffnen</string>
+    <string name="protect_app_no_lock_error">Bitte richten Sie einen sicheren Sperrbildschirm ein, um den Zugriff auf die Apps zu beschränken</string>
     <string name="protect_app_help">Hilfe</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="protect_app_info_protected">Geschützte Apps erfordern eine Authentifizierung, um gestartet werden zu können</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
-    <string name="allapps_long_labels_title">Long app labels</string>
+    <string name="app_show_label_title">App Beschriftungen</string>
+    <string name="desktop_show_label_summary">App Beschriftungen auf dem Startbildschirm anzeigen</string>
+    <string name="allapps_show_label_summary">App-Beschriftungen in der App-Übersicht anzeigen</string>
+    <string name="allapps_long_labels_title">Lange App-Beschriftungen</string>
     <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Show At A Glance</string>
