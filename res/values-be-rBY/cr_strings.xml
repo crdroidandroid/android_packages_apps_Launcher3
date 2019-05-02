@@ -79,20 +79,20 @@
     <string name="more">Яшчэ</string>
     <string name="reset_hidden_apps">Скінуць усё</string>
     <string name="reset_hidden_apps_done">Схаваная праграмы цяпер даступныя</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="hide_app_info_hidden">Схаваныя праграмы і іх віджэты схаваны з меню</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="protect_app_help">Help</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="hide_protect_app">Схаваць і абараніць праграмы</string>
+    <string name="hide_protect_app_sum">Схаваць і абараніць праграмы ў спісе праграм</string>
+    <string name="protect_apps_auth_manager">Разблакуюцца, для кіравання ўтоенымі і абароненымі праграмамі</string>
+    <string name="protect_app_auth_open_app">Аўтарызуйцеся, для адкрыцця %1$s</string>
+    <string name="protect_app_no_lock_error">Калі ласка, усталюйце блакаванне экрана для абмежавання доступу да праграм</string>
+    <string name="protect_app_help">Дапамога</string>
+    <string name="protect_app_info_protected">Для адкрыцця абароненых праграм з лаунчэра патрабуецца аўтэнтыфікацыя</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
-    <string name="allapps_long_labels_title">Long app labels</string>
+    <string name="app_show_label_title">Подпісы праграм</string>
+    <string name="desktop_show_label_summary">Паказаць подпісы значкоў праграм на хатнім экране</string>
+    <string name="allapps_show_label_summary">Паказаць подпісы значкоў праграм на хатнім экране</string>
+    <string name="allapps_long_labels_title">Доўгія ярлыкі праграм</string>
     <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Show At A Glance</string>
@@ -149,21 +149,21 @@
     <string name="font_condensed_bold_italic">Condensed Bold Italic</string>
     <string name="font_medium">Medium</string>
     <string name="font_medium_italic">Medium Italic</string>
-    <string name="font_black">Black</string>
-    <string name="font_black_italic">Black Italic</string>
-    <string name="font_dancingscript">DancingScript</string>
-    <string name="font_dancingscript_bold">DancingScript Bold</string>
+    <string name="font_black">Чорны</string>
+    <string name="font_black_italic">Чорны курсіў</string>
+    <string name="font_dancingscript">Рукапісны</string>
+    <string name="font_dancingscript_bold">Рукапісны тлусты</string>
     <string name="font_comingsoon">ComingSoon</string>
-    <string name="font_notoserif">NotoSerif Normal</string>
-    <string name="font_notoserif_italic">NotoSerif Italic</string>
-    <string name="font_notoserif_bold">NotoSerif Bold</string>
-    <string name="font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+    <string name="font_notoserif">NotoSerif звычайны</string>
+    <string name="font_notoserif_italic">NotoSerif курсіў</string>
+    <string name="font_notoserif_bold">NotoSerif тлусты</string>
+    <string name="font_notoserif_bold_italic">NotoSerif тлусты курсіў</string>
     <!-- At a glance uppercase -->
-    <string name="date_style_transform_title">Show uppercase on date</string>
-    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+    <string name="date_style_transform_title">Паказаць у верхнім рэгістры даты</string>
+    <string name="date_style_transform_summary">Пераўтварыць ўсе даты/At A Glance ў тэкст верхняга рэгістра</string>
     <!-- At a glance font spacing -->
-    <string name="date_style_spacing">Date spacing</string>
-    <string name="date_style_spacing_normal">Normal</string>
+    <string name="date_style_spacing">Адлегласць паміж датамі</string>
+    <string name="date_style_spacing_normal">Звычайны</string>
     <string name="date_style_spacing_barely">Barely noticeable</string>
     <string name="date_style_spacing_ott">Over the top</string>
     <!-- Gradients on Workspace/Hotseat? -->
