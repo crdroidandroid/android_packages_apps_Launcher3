@@ -42,8 +42,8 @@
     <string name="icon_pack_none">Predeterminado</string>
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">Forma de los iconos</string>
-    <string name="icon_shape_rounded_square">Cuadrado redondeado</string>
-    <string name="icon_shape_hexagon">Hexágono redondeado</string>
+    <string name="icon_shape_rounded_square">Cuadrado con esquinas redondas</string>
+    <string name="icon_shape_hexagon">Hexágono con esquinas redondas</string>
     <!-- Icon size -->
     <string name="icon_size_title">Tamaño de los iconos</string>
     <string name="icon_size_extra_small">Muy pequeños</string>
@@ -202,5 +202,5 @@
     <string name="play_folder_title">Reproducir</string>
     <!-- Weather -->
     <string name="show_weather_title">Clima</string>
-    <string name="show_weather_summary">Muestra en la pantalla el clima cuando esté disponible</string>
+    <string name="show_weather_summary">Muestra en la pantalla la información meteorológica cuando esté disponible</string>
 </resources>
