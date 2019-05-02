@@ -116,38 +116,38 @@
     <string name="search_provider_title">Auswahl der Suchmaschine</string>
     <!-- Predictions -->
     <string name="suggestion_pref_screen_title">Vorschläge</string>
-    <string name="suggestion_pref_screen_desc">For Overview &amp; All Apps list</string>
-    <string name="app_suggestions_title">Display app suggestions</string>
-    <string name="app_suggestions_summary">At the top of your All Apps list</string>
-    <string name="title_disable_suggestions_prompt">Turn off app suggestions?</string>
-    <string name="msg_disable_suggestions_prompt">"Suggestions won't appear at the top of your apps list, and the usage data used to create them will be permanently erased."</string>
+    <string name="suggestion_pref_screen_desc">Für die Übersicht &amp; Alle Apps-Liste</string>
+    <string name="app_suggestions_title">App-Vorschläge anzeigen</string>
+    <string name="app_suggestions_summary">Oben in der Liste \"Alle Apps\"</string>
+    <string name="title_disable_suggestions_prompt">App-Vorschläge deaktivieren?</string>
+    <string name="msg_disable_suggestions_prompt">"Vorschläge werden nicht länger oberhalb der App-Liste angezeigt und die gesammelten Daten dafür werden gelöscht."</string>
     <string name="label_turn_off_suggestions">Ausschalten</string>
     <string name="all_apps_label">Alle Apps</string>
     <!-- Date format -->
     <string name="date_format_title">Datumsformat</string>
     <string name="date_format_long_name">Lang</string>
     <string name="date_format_normal_name">Normal</string>
-    <string name="date_format_short_name">Short</string>
-    <string name="date_format_daydate_long_name">Day (with number)</string>
-    <string name="date_format_daydate_short_name">Day (short with number)</string>
-    <string name="date_format_dayonly_name">Just today</string>
+    <string name="date_format_short_name">Kurz</string>
+    <string name="date_format_daydate_long_name">Wochentag (mit Nummer)</string>
+    <string name="date_format_daydate_short_name">Wochentag (kurz mit Nummer)</string>
+    <string name="date_format_dayonly_name">Nur heute</string>
     <!-- At a glance style -->
-    <string name="date_font_style">Date font style</string>
+    <string name="date_font_style">Schriftstil des Datums</string>
     <string name="font_normal">Normal</string>
     <string name="font_italic">Kursiv</string>
     <string name="font_bold">Fett</string>
     <string name="font_bold_italic">Fett kursiv</string>
     <string name="font_light">Leicht</string>
     <string name="font_light_italic">Leicht kursiv</string>
-    <string name="font_thin">Thin</string>
-    <string name="font_thin_italic">Thin Italic</string>
-    <string name="font_condensed">Condensed</string>
-    <string name="font_condensed_italic">Condensed Italic</string>
-    <string name="font_condensed_light">Condensed Light</string>
-    <string name="font_condensed_light_italic">Condensed Light Italic</string>
-    <string name="font_condensed_bold">Condensed Bold</string>
-    <string name="font_condensed_bold_italic">Condensed Bold Italic</string>
-    <string name="font_medium">Medium</string>
+    <string name="font_thin">Dünn</string>
+    <string name="font_thin_italic">Dünn Italic</string>
+    <string name="font_condensed">Schmal</string>
+    <string name="font_condensed_italic">Schmal Italic</string>
+    <string name="font_condensed_light">Schmal leicht</string>
+    <string name="font_condensed_light_italic">Schmal leicht Italic</string>
+    <string name="font_condensed_bold">Schmal fett</string>
+    <string name="font_condensed_bold_italic">Schmal Fett Italic</string>
+    <string name="font_medium">Mittel</string>
     <string name="font_medium_italic">Medium kursiv</string>
     <string name="font_black">Schwarz</string>
     <string name="font_black_italic">Schwarz kursiv</string>
@@ -160,7 +160,7 @@
     <string name="font_notoserif_bold_italic">NotoSerif fett kursiv</string>
     <!-- At a glance uppercase -->
     <string name="date_style_transform_title">Großbuchstaben für Datum anzeigen</string>
-    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+    <string name="date_style_transform_summary">Verwandelt das Datum / auf einen Blick in Großbuchstaben</string>
     <!-- At a glance font spacing -->
     <string name="date_style_spacing">Date spacing</string>
     <string name="date_style_spacing_normal">Normal</string>
