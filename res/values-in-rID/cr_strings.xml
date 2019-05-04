@@ -17,32 +17,32 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Pengaturan</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape, size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="home_category_title">Layar Beranda</string>
+    <string name="home_category_summary">Atur panel Google now dan lainnya</string>
+    <string name="icons_category_title">Ikon</string>
+    <string name="icons_category_summary">Atur bentuk, ukuran dan lainnya dari ikon</string>
+    <string name="app_drawer_category_title">Laci aplikasi</string>
+    <string name="app_drawer_category_summary">Kustomisasi laci aplikasi anda</string>
+    <string name="misc_category_title">Lain-lain</string>
+    <string name="misc_category_summary">Opsi lainnya</string>
     <!-- Sub categories -->
-    <string name="home_grid_title">Grid layout</string>
-    <string name="icon_layout_title">Icon layout</string>
-    <string name="home_overall_title">Home layout</string>
-    <string name="home_quickspace_title">At A Glance</string>
-    <string name="home_hotseat_title">Dock</string>
-    <string name="app_overall_title">App list</string>
-    <string name="misc_recents_title">Recents</string>
-    <string name="misc_gestures_title">Gestures</string>
+    <string name="home_grid_title">Tata letak Grid</string>
+    <string name="icon_layout_title">Tata letak ikon</string>
+    <string name="home_overall_title">Tata letak beranda</string>
+    <string name="home_quickspace_title">Sekilas</string>
+    <string name="home_hotseat_title">Dok</string>
+    <string name="app_overall_title">Daftar aplikasi</string>
+    <string name="misc_recents_title">Terbaru</string>
+    <string name="misc_gestures_title">Gestur</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Change the look of your app icons</string>
-    <string name="icon_pack_none">Default</string>
+    <string name="icon_pack">Paket ikon</string>
+    <string name="icon_pack_summary">Ubah tampilan dari ikon aplikasi anda</string>
+    <string name="icon_pack_none">Bawaan</string>
     <!-- Icon shape -->
-    <string name="icon_shape_override_label_custom">Icon shape</string>
-    <string name="icon_shape_rounded_square">Rounded square</string>
+    <string name="icon_shape_override_label_custom">Bentuk ikon</string>
+    <string name="icon_shape_rounded_square">Persegi membulat</string>
     <string name="icon_shape_hexagon">Rounded Hexagon</string>
     <!-- Icon size -->
     <string name="icon_size_title">Icon size</string>
