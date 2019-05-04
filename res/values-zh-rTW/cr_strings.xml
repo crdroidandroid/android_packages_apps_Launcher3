@@ -20,68 +20,68 @@
     <string name="settings_title">設定</string>
     <!-- Categories -->
     <string name="home_category_title">主螢幕</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape, size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
+    <string name="home_category_summary">設定 Google 即時資訊等</string>
+    <string name="icons_category_title">圖示</string>
+    <string name="icons_category_summary">設定圖示形狀、大小等</string>
+    <string name="app_drawer_category_title">應用程式抽屜</string>
+    <string name="app_drawer_category_summary">自訂您的應用程式抽屜</string>
     <string name="misc_category_title">其他設定</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="misc_category_summary">其他選項</string>
     <!-- Sub categories -->
-    <string name="home_grid_title">Grid layout</string>
-    <string name="icon_layout_title">Icon layout</string>
-    <string name="home_overall_title">Home layout</string>
-    <string name="home_quickspace_title">At A Glance</string>
-    <string name="home_hotseat_title">Dock</string>
-    <string name="app_overall_title">App list</string>
-    <string name="misc_recents_title">Recents</string>
+    <string name="home_grid_title">格線佈局</string>
+    <string name="icon_layout_title">圖示佈局</string>
+    <string name="home_overall_title">主頁佈局</string>
+    <string name="home_quickspace_title">一目了然</string>
+    <string name="home_hotseat_title">Dock 欄</string>
+    <string name="app_overall_title">應用程式清單</string>
+    <string name="misc_recents_title">最近應用</string>
     <string name="misc_gestures_title">手勢</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Change the look of your app icons</string>
+    <string name="icon_pack">圖示包</string>
+    <string name="icon_pack_summary">更改應用程式圖示的外觀</string>
     <string name="icon_pack_none">預設</string>
     <!-- Icon shape -->
-    <string name="icon_shape_override_label_custom">Icon shape</string>
-    <string name="icon_shape_rounded_square">Rounded square</string>
-    <string name="icon_shape_hexagon">Rounded Hexagon</string>
+    <string name="icon_shape_override_label_custom">變更圖示形狀</string>
+    <string name="icon_shape_rounded_square">圓角方形</string>
+    <string name="icon_shape_hexagon">圓角六邊形</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
-    <string name="icon_size_extra_small">Tiny</string>
-    <string name="icon_size_small">Small</string>
+    <string name="icon_size_title">圖示大小</string>
+    <string name="icon_size_extra_small">超小</string>
+    <string name="icon_size_small">小</string>
     <string name="icon_size_average">預設</string>
-    <string name="icon_size_large">Large</string>
-    <string name="icon_size_extra_large">Extra large</string>
+    <string name="icon_size_large">大</string>
+    <string name="icon_size_extra_large">超大</string>
     <!-- Gestures -->
-    <string name="allow_swipe_down_clearall_title">Clear all from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Swipe vertically downward in recents view to clear all apps</string>
-    <string name="pref_homescreen_dt_gestures_title">Double tap gesture</string>
-    <string name="pref_homescreen_dt_gestures_summary">Select the action of the double tap gesture on the home screen</string>
+    <string name="allow_swipe_down_clearall_title">從最近應用程式畫面清除所有任務</string>
+    <string name="allow_swipe_down_clearall_desc">在最近應用程式畫面垂直向下滑動來清除所有應用程式</string>
+    <string name="pref_homescreen_dt_gestures_title">雙擊手勢</string>
+    <string name="pref_homescreen_dt_gestures_summary">選擇在主畫面上的雙擊手勢動作</string>
     <string name="pref_homescreen_dt_gestures_none">無</string>
-    <string name="pref_homescreen_dt_gestures_sleep">Sleep</string>
-    <string name="pref_homescreen_dt_gestures_torch">Flashlight</string>
-    <string name="pref_notifications_gesture_title">Notifications gesture</string>
-    <string name="pref_notifications_gesture_summary">Swipe vertically downward on the home screen to show the QS panel</string>
+    <string name="pref_homescreen_dt_gestures_sleep">休眠</string>
+    <string name="pref_homescreen_dt_gestures_torch">手電筒</string>
+    <string name="pref_notifications_gesture_title">通知手勢</string>
+    <string name="pref_notifications_gesture_summary">在主畫面垂直向下滑動來顯示快速設定面板</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_title">顯示 Google 應用程式</string>
+    <string name="google_feed_summary">移至主畫面的左側</string>
     <!-- Grid -->
     <string name="num_default">預設</string>
-    <string name="number_of_columns_title">Number of columns</string>
-    <string name="number_of_rows_title">Number of rows</string>
-    <string name="number_of_hotseat_title">Number of dock icons</string>
-    <string name="state_loading">Applying\u2026</string>
+    <string name="number_of_columns_title">列數</string>
+    <string name="number_of_rows_title">行數</string>
+    <string name="number_of_hotseat_title">Dock圖標個數</string>
+    <string name="state_loading">套用中\u2026</string>
     <!-- Hidden apps -->
-    <string name="hide_app">Hide apps</string>
-    <string name="hide_app_sum">Hide apps from the app drawer</string>
-    <string name="hidden_apps_loading">Loading\u2026</string>
-    <string name="hidden_app">All apps</string>
-    <string name="hide_selected">Hide selected app(s)</string>
-    <string name="more">More</string>
-    <string name="reset_hidden_apps">Reset all</string>
-    <string name="reset_hidden_apps_done">Hidden apps are now available</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="hide_app">隱藏應用程式</string>
+    <string name="hide_app_sum">從應用抽屜中隱藏應用程式</string>
+    <string name="hidden_apps_loading">載入中\u2026</string>
+    <string name="hidden_app">所有應用程式</string>
+    <string name="hide_selected">隱藏所選應用程式</string>
+    <string name="more">更多</string>
+    <string name="reset_hidden_apps">全部重設</string>
+    <string name="reset_hidden_apps_done">隱藏目前可用的應用程式</string>
+    <string name="hide_app_info_hidden">從抽屜中隱藏應用及其部件</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
+    <string name="hide_protect_app">隱藏和保護應用</string>
     <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
     <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
     <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
