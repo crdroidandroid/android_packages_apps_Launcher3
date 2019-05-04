@@ -82,9 +82,9 @@
     <string name="hide_app_info_hidden">從抽屜中隱藏應用及其部件</string>
     <!-- Protected apps -->
     <string name="hide_protect_app">隱藏和保護應用</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
+    <string name="hide_protect_app_sum">在應用抽屜中隱藏和保護應用</string>
+    <string name="protect_apps_auth_manager">解鎖以管理隱藏和受保護的應用程式</string>
+    <string name="protect_app_auth_open_app">進行身份驗證以開啟 %1$s</string>
     <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
     <string name="protect_app_help">Help</string>
     <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
@@ -148,33 +148,33 @@
     <string name="font_condensed_bold">Condensed Bold</string>
     <string name="font_condensed_bold_italic">Condensed Bold Italic</string>
     <string name="font_medium">Medium</string>
-    <string name="font_medium_italic">Medium Italic</string>
-    <string name="font_black">Black</string>
-    <string name="font_black_italic">Black Italic</string>
-    <string name="font_dancingscript">DancingScript</string>
-    <string name="font_dancingscript_bold">DancingScript Bold</string>
-    <string name="font_comingsoon">ComingSoon</string>
-    <string name="font_notoserif">NotoSerif Normal</string>
-    <string name="font_notoserif_italic">NotoSerif Italic</string>
-    <string name="font_notoserif_bold">NotoSerif Bold</string>
-    <string name="font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+    <string name="font_medium_italic">中等斜體</string>
+    <string name="font_black">黑體</string>
+    <string name="font_black_italic">黑斜體</string>
+    <string name="font_dancingscript">花體字</string>
+    <string name="font_dancingscript_bold">花粗體</string>
+    <string name="font_comingsoon">即將到來</string>
+    <string name="font_notoserif">NotoSerif 一般</string>
+    <string name="font_notoserif_italic">NotoSerif 斜體</string>
+    <string name="font_notoserif_bold">NotoSerif 粗體</string>
+    <string name="font_notoserif_bold_italic">NotoSerif 粗斜體</string>
     <!-- At a glance uppercase -->
-    <string name="date_style_transform_title">Show uppercase on date</string>
-    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+    <string name="date_style_transform_title">在日期顯示大寫</string>
+    <string name="date_style_transform_summary">使用大寫文本轉換所有日期/一目了然</string>
     <!-- At a glance font spacing -->
-    <string name="date_style_spacing">Date spacing</string>
+    <string name="date_style_spacing">行距</string>
     <string name="date_style_spacing_normal">正常</string>
-    <string name="date_style_spacing_barely">Barely noticeable</string>
-    <string name="date_style_spacing_ott">Over the top</string>
+    <string name="date_style_spacing_barely">幾乎沒有人注意到</string>
+    <string name="date_style_spacing_ott">夸张的</string>
     <!-- Gradients on Workspace/Hotseat? -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">在頂部顯示漸變</string>
+    <string name="workspace_gradient_summary">從狀態欄啟用細微漸變</string>
+    <string name="hotseat_gradient_title">在底部顯示漸變</string>
+    <string name="hotseat_gradient_summary">在啟動器的Dock栏啟用細微漸變</string>
     <!-- Recents corned -->
-    <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
-    <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
-    <string name="custom_recents_corners_type_title">Custom recents roundness</string>
+    <string name="custom_recents_corners_switch_title">使用自定義最近任务的圓角</string>
+    <string name="custom_recents_corners_switch_summary">如果禁用，它將使用系統/主題提供的那個圆角样式。 要應用新值，請在選擇選項後轉到主頁。</string>
+    <string name="custom_recents_corners_type_title">自訂圓度</string>
     <string name="custom_recents_corners_type_default">預設</string>
     <string name="custom_recents_corners_type_card">Rounded Card</string>
     <string name="custom_recents_corners_type_op">OP Style</string>
@@ -186,21 +186,21 @@
     <string name="search_bar_hint_title">Show search bar hint text</string>
     <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
     <!-- Icon edit -->
-    <string name="edit_drop_target_label">Edit</string>
-    <string name="edit_hint">Icon name</string>
+    <string name="edit_drop_target_label">編輯</string>
+    <string name="edit_hint">圖示名稱</string>
     <string name="reset_icon">重置</string>
-    <string name="all_icons">All icons</string>
-    <string name="similar_icons">Similar icons</string>
-    <string name="ok">Ok</string>
-    <string name="icon_label">Label</string>
-    <string name="loading">Loading, please wait</string>
-    <string name="icon_chooser">Icon chooser</string>
-    <string name="icon_search">Search for icons</string>
+    <string name="all_icons">所有圖示</string>
+    <string name="similar_icons">相似圖示</string>
+    <string name="ok">確定</string>
+    <string name="icon_label">標籤</string>
+    <string name="loading">正在載入，請稍候</string>
+    <string name="icon_chooser">圖示選擇器</string>
+    <string name="icon_search">搜尋圖示</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
-    <string name="msg_no_icon_pack">No icon packs available</string>
+    <string name="msg_no_icon_pack">沒有可用的圖標包</string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
+    <string name="play_folder_title">播放</string>
     <!-- Weather -->
-    <string name="show_weather_title">Weather</string>
-    <string name="show_weather_summary">Display weather when available</string>
+    <string name="show_weather_title">天氣</string>
+    <string name="show_weather_summary">可用時顯示天氣</string>
 </resources>
