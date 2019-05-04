@@ -42,27 +42,27 @@
     <string name="icon_pack_none">Bawaan</string>
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">Bentuk ikon</string>
-    <string name="icon_shape_rounded_square">Persegi membulat</string>
-    <string name="icon_shape_hexagon">Rounded Hexagon</string>
+    <string name="icon_shape_rounded_square">Persegi melengkung</string>
+    <string name="icon_shape_hexagon">Segi enam melengkung</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
-    <string name="icon_size_extra_small">Tiny</string>
-    <string name="icon_size_small">Small</string>
-    <string name="icon_size_average">Default</string>
-    <string name="icon_size_large">Large</string>
-    <string name="icon_size_extra_large">Extra large</string>
+    <string name="icon_size_title">Ukuran ikon</string>
+    <string name="icon_size_extra_small">Sangat kecil</string>
+    <string name="icon_size_small">Kecil</string>
+    <string name="icon_size_average">Bawaan</string>
+    <string name="icon_size_large">Besar</string>
+    <string name="icon_size_extra_large">Sangat Besar</string>
     <!-- Gestures -->
-    <string name="allow_swipe_down_clearall_title">Clear all from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Swipe vertically downward in recents view to clear all apps</string>
-    <string name="pref_homescreen_dt_gestures_title">Double tap gesture</string>
-    <string name="pref_homescreen_dt_gestures_summary">Select the action of the double tap gesture on the home screen</string>
-    <string name="pref_homescreen_dt_gestures_none">None</string>
-    <string name="pref_homescreen_dt_gestures_sleep">Sleep</string>
-    <string name="pref_homescreen_dt_gestures_torch">Flashlight</string>
-    <string name="pref_notifications_gesture_title">Notifications gesture</string>
-    <string name="pref_notifications_gesture_summary">Swipe vertically downward on the home screen to show the QS panel</string>
+    <string name="allow_swipe_down_clearall_title">Bersihkan semua dari tampilan terakhir</string>
+    <string name="allow_swipe_down_clearall_desc">Geser ke bawah pada tampilan terakhir untuk membersihkan semua aplikasi</string>
+    <string name="pref_homescreen_dt_gestures_title">Gestur ketuk dua kali</string>
+    <string name="pref_homescreen_dt_gestures_summary">Pilih aksi untuk gestur ketuk dua kali pada layar beranda</string>
+    <string name="pref_homescreen_dt_gestures_none">Tidak ada</string>
+    <string name="pref_homescreen_dt_gestures_sleep">Tidur</string>
+    <string name="pref_homescreen_dt_gestures_torch">Senter</string>
+    <string name="pref_notifications_gesture_title">Gestur pemberitahuan</string>
+    <string name="pref_notifications_gesture_summary">Geser ke bawah pada layar beranda untuk menampilkan panel QS</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Display Google app</string>
+    <string name="google_feed_title">Tampilan Google app</string>
     <string name="google_feed_summary">To the left of the main home screen</string>
     <!-- Grid -->
     <string name="num_default">Default</string>
