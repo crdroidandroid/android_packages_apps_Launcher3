@@ -63,29 +63,29 @@
     <string name="pref_notifications_gesture_summary">Geser ke bawah pada layar beranda untuk menampilkan panel QS</string>
     <!-- Google Feed -->
     <string name="google_feed_title">Tampilan Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_summary">Di sebelah kiri dari layar beranda utama</string>
     <!-- Grid -->
-    <string name="num_default">Default</string>
-    <string name="number_of_columns_title">Number of columns</string>
-    <string name="number_of_rows_title">Number of rows</string>
-    <string name="number_of_hotseat_title">Number of dock icons</string>
-    <string name="state_loading">Applying\u2026</string>
+    <string name="num_default">Bawaan</string>
+    <string name="number_of_columns_title">Jumlah kolom</string>
+    <string name="number_of_rows_title">Jumlah baris</string>
+    <string name="number_of_hotseat_title">Jumlah ikon dok</string>
+    <string name="state_loading">Menerapkan\u2026</string>
     <!-- Hidden apps -->
-    <string name="hide_app">Hide apps</string>
-    <string name="hide_app_sum">Hide apps from the app drawer</string>
-    <string name="hidden_apps_loading">Loading\u2026</string>
-    <string name="hidden_app">All apps</string>
-    <string name="hide_selected">Hide selected app(s)</string>
-    <string name="more">More</string>
-    <string name="reset_hidden_apps">Reset all</string>
-    <string name="reset_hidden_apps_done">Hidden apps are now available</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="hide_app">Sembunyikan aplikasi</string>
+    <string name="hide_app_sum">Sembunyikan aplikasi dari laci aplikasi</string>
+    <string name="hidden_apps_loading">Memuat\u2026</string>
+    <string name="hidden_app">Semua aplikasi</string>
+    <string name="hide_selected">Sembunyikan aplikasi terpilih</string>
+    <string name="more">Lebih</string>
+    <string name="reset_hidden_apps">Atur ulang semua</string>
+    <string name="reset_hidden_apps_done">Aplikasi tersembunyi telah tersedia</string>
+    <string name="hide_app_info_hidden">Aplikasi tersembunyi dan widget mereka akan disembunyikan</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
+    <string name="hide_protect_app">Sembunyikan dan lindungi aplikasi</string>
+    <string name="hide_protect_app_sum">Sembunyikan dan lindungi aplikasi dari laci aplikasi</string>
+    <string name="protect_apps_auth_manager">Buka kunci untuk mengelola aplikasi tersembunyi dan terlindungi</string>
+    <string name="protect_app_auth_open_app">Autentikasi untuk membuka%1$s</string>
+    <string name="protect_app_no_lock_error">Harap atur pengunci layar untuk membatasi akses aplikasi</string>
     <string name="protect_app_help">Help</string>
     <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
     <!-- Show labels on icon -->
@@ -148,29 +148,29 @@
     <string name="font_condensed_bold">Condensed Bold</string>
     <string name="font_condensed_bold_italic">Condensed Bold Italic</string>
     <string name="font_medium">Medium</string>
-    <string name="font_medium_italic">Medium Italic</string>
-    <string name="font_black">Black</string>
-    <string name="font_black_italic">Black Italic</string>
+    <string name="font_medium_italic">Miring sedang</string>
+    <string name="font_black">Hitam</string>
+    <string name="font_black_italic">Hitam Miring</string>
     <string name="font_dancingscript">DancingScript</string>
-    <string name="font_dancingscript_bold">DancingScript Bold</string>
+    <string name="font_dancingscript_bold">DancingScript Tebal</string>
     <string name="font_comingsoon">ComingSoon</string>
     <string name="font_notoserif">NotoSerif Normal</string>
-    <string name="font_notoserif_italic">NotoSerif Italic</string>
-    <string name="font_notoserif_bold">NotoSerif Bold</string>
-    <string name="font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+    <string name="font_notoserif_italic">NotoSerif Miring</string>
+    <string name="font_notoserif_bold">NotoSerif Tebal</string>
+    <string name="font_notoserif_bold_italic">NotoSerif Tebal Miring</string>
     <!-- At a glance uppercase -->
-    <string name="date_style_transform_title">Show uppercase on date</string>
-    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+    <string name="date_style_transform_title">Tampilkan huruf besar pada tanggal</string>
+    <string name="date_style_transform_summary">Ubah semua tanggal/sekilas dengan teks berhuruf besar</string>
     <!-- At a glance font spacing -->
-    <string name="date_style_spacing">Date spacing</string>
+    <string name="date_style_spacing">Jarak tanggal</string>
     <string name="date_style_spacing_normal">Normal</string>
-    <string name="date_style_spacing_barely">Barely noticeable</string>
-    <string name="date_style_spacing_ott">Over the top</string>
+    <string name="date_style_spacing_barely">Hampir tak terlihat</string>
+    <string name="date_style_spacing_ott">Di paling atas</string>
     <!-- Gradients on Workspace/Hotseat? -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">Tampilkan gradasi di atas</string>
+    <string name="workspace_gradient_summary">Aktifkan gradasi halus dari bar status</string>
+    <string name="hotseat_gradient_title">Tampilkan gradasi di bawah</string>
+    <string name="hotseat_gradient_summary">Aktifkan gradasi lembut dari dok peluncur</string>
     <!-- Recents corned -->
     <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
     <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
