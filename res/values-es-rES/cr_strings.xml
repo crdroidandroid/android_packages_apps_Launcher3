@@ -42,8 +42,8 @@
     <string name="icon_pack_none">Predeterminado</string>
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">Forma de los iconos</string>
-    <string name="icon_shape_rounded_square">Cuadrado redondeado</string>
-    <string name="icon_shape_hexagon">Hexágono redondeado</string>
+    <string name="icon_shape_rounded_square">Cuadrados con esquinas redondas</string>
+    <string name="icon_shape_hexagon">Hexágono con esquinas redondas</string>
     <!-- Icon size -->
     <string name="icon_size_title">Tamaño de los iconos</string>
     <string name="icon_size_extra_small">Muy pequeños</string>
@@ -92,7 +92,7 @@
     <string name="app_show_label_title">Etiquetas de las aplicaciones</string>
     <string name="desktop_show_label_summary">Muestra las etiquetas de las aplicaciones en la pantalla de inicio</string>
     <string name="allapps_show_label_summary">Muestra las etiquetas de las aplicaciones en el cajón de aplicaciones</string>
-    <string name="allapps_long_labels_title">Etiquetas largas de aplicaciones</string>
+    <string name="allapps_long_labels_title">Aplicaciones con etiquetas largas</string>
     <string name="allapps_long_labels_summary">Permite que las aplicaciones muestren etiquetas usando dos líneas</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Mostrar At A Glance</string>
@@ -174,10 +174,10 @@
     <!-- Recents corned -->
     <string name="custom_recents_corners_switch_title">Usar la pantalla de recientes con esquinas redondeadas</string>
     <string name="custom_recents_corners_switch_summary">Si se desactiva, se usará el dado por el sistema/tema. Para aplicar el nuevo valor, ve al inicio después de seleccionar tu opción.</string>
-    <string name="custom_recents_corners_type_title">Redondez de la pantalla de recientes personalizada</string>
+    <string name="custom_recents_corners_type_title">Estilo de las esquinas de los recientes</string>
     <string name="custom_recents_corners_type_default">Predeterminado</string>
-    <string name="custom_recents_corners_type_card">Tarjeta redondeada</string>
-    <string name="custom_recents_corners_type_op">Estilo OP</string>
+    <string name="custom_recents_corners_type_card">Tarjeta con esquinas redondas</string>
+    <string name="custom_recents_corners_type_op">Estilo One Plus</string>
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Bloquear escritorio</string>
     <string name="lock_desktop_summary">Evita que la pantalla de inicio sea modificada</string>
@@ -201,6 +201,6 @@
     <!-- Folder titles -->
     <string name="play_folder_title">Reproducir</string>
     <!-- Weather -->
-    <string name="show_weather_title">Clima</string>
-    <string name="show_weather_summary">Muestra en la pantalla el clima cuando esté disponible</string>
+    <string name="show_weather_title">Información meteorológica</string>
+    <string name="show_weather_summary">Muestra en la pantalla la información meteorológica cuando esté disponible</string>
 </resources>

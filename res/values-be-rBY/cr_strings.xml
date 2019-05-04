@@ -30,69 +30,69 @@
     <!-- Sub categories -->
     <string name="home_grid_title">Размяшчэнне сеткі</string>
     <string name="icon_layout_title">Размяшчэнне значкоў</string>
-    <string name="home_overall_title">Home layout</string>
+    <string name="home_overall_title">Раскладка хатняга экрана</string>
     <string name="home_quickspace_title">At A Glance</string>
-    <string name="home_hotseat_title">Dock</string>
-    <string name="app_overall_title">App list</string>
-    <string name="misc_recents_title">Recents</string>
-    <string name="misc_gestures_title">Gestures</string>
+    <string name="home_hotseat_title">Док-панэль</string>
+    <string name="app_overall_title">Спіс праграм</string>
+    <string name="misc_recents_title">Нядаўнія</string>
+    <string name="misc_gestures_title">Жэсты</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Change the look of your app icons</string>
-    <string name="icon_pack_none">Default</string>
+    <string name="icon_pack">Набор значкоў</string>
+    <string name="icon_pack_summary">Змяніце знешні выгляд значкоў Вашых праграм</string>
+    <string name="icon_pack_none">Па змаўчанні</string>
     <!-- Icon shape -->
-    <string name="icon_shape_override_label_custom">Icon shape</string>
-    <string name="icon_shape_rounded_square">Rounded square</string>
-    <string name="icon_shape_hexagon">Rounded Hexagon</string>
+    <string name="icon_shape_override_label_custom">Форма значкоў</string>
+    <string name="icon_shape_rounded_square">Скруглены квадрат</string>
+    <string name="icon_shape_hexagon">Скруглены шасцікутнік</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
-    <string name="icon_size_extra_small">Tiny</string>
-    <string name="icon_size_small">Small</string>
-    <string name="icon_size_average">Default</string>
-    <string name="icon_size_large">Large</string>
-    <string name="icon_size_extra_large">Extra large</string>
+    <string name="icon_size_title">Памер значка</string>
+    <string name="icon_size_extra_small">Драбнюткі</string>
+    <string name="icon_size_small">Маленькі</string>
+    <string name="icon_size_average">Па змаўчанні</string>
+    <string name="icon_size_large">Вялікі</string>
+    <string name="icon_size_extra_large">Вялізны</string>
     <!-- Gestures -->
-    <string name="allow_swipe_down_clearall_title">Clear all from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Swipe vertically downward in recents view to clear all apps</string>
-    <string name="pref_homescreen_dt_gestures_title">Double tap gesture</string>
-    <string name="pref_homescreen_dt_gestures_summary">Select the action of the double tap gesture on the home screen</string>
-    <string name="pref_homescreen_dt_gestures_none">None</string>
-    <string name="pref_homescreen_dt_gestures_sleep">Sleep</string>
-    <string name="pref_homescreen_dt_gestures_torch">Flashlight</string>
-    <string name="pref_notifications_gesture_title">Notifications gesture</string>
-    <string name="pref_notifications_gesture_summary">Swipe vertically downward on the home screen to show the QS panel</string>
+    <string name="allow_swipe_down_clearall_title">Ачысціць усё з Нядаўніх</string>
+    <string name="allow_swipe_down_clearall_desc">Свайп ўніз ў рэжыме прагляду нядаўніх праграм, каб ачысціць ўсе</string>
+    <string name="pref_homescreen_dt_gestures_title">Жэсты падвойнага націску</string>
+    <string name="pref_homescreen_dt_gestures_summary">Выберыце дзеянне жэсту падвойнага дотыку на галоўным экране</string>
+    <string name="pref_homescreen_dt_gestures_none">Няма</string>
+    <string name="pref_homescreen_dt_gestures_sleep">Рэжым сну</string>
+    <string name="pref_homescreen_dt_gestures_torch">Ліхтарык</string>
+    <string name="pref_notifications_gesture_title">Жэст апавяшчэнняў</string>
+    <string name="pref_notifications_gesture_summary">Правядзіце пальцам па вертыкалі ўніз на галоўным экране, каб адлюстраваць панэль апавяшчэнняў</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_title">Паказаць праграмы Google</string>
+    <string name="google_feed_summary">Злева ад галоўнага экрана</string>
     <!-- Grid -->
-    <string name="num_default">Default</string>
-    <string name="number_of_columns_title">Number of columns</string>
-    <string name="number_of_rows_title">Number of rows</string>
-    <string name="number_of_hotseat_title">Number of dock icons</string>
-    <string name="state_loading">Applying\u2026</string>
+    <string name="num_default">Па змаўчанні</string>
+    <string name="number_of_columns_title">Колькасць слупкоў</string>
+    <string name="number_of_rows_title">Колькасць радкоў</string>
+    <string name="number_of_hotseat_title">Колькасць значкоў у док-панэлі</string>
+    <string name="state_loading">Прымяненне\u2026</string>
     <!-- Hidden apps -->
-    <string name="hide_app">Hide apps</string>
-    <string name="hide_app_sum">Hide apps from the app drawer</string>
-    <string name="hidden_apps_loading">Loading\u2026</string>
-    <string name="hidden_app">All apps</string>
-    <string name="hide_selected">Hide selected app(s)</string>
-    <string name="more">More</string>
-    <string name="reset_hidden_apps">Reset all</string>
-    <string name="reset_hidden_apps_done">Hidden apps are now available</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="hide_app">Схаваць праграму</string>
+    <string name="hide_app_sum">Схаваць праграму ў спісе праграм</string>
+    <string name="hidden_apps_loading">Загрузка\u2026</string>
+    <string name="hidden_app">Усе праграмы</string>
+    <string name="hide_selected">Схаваць выбранныя праграмы</string>
+    <string name="more">Яшчэ</string>
+    <string name="reset_hidden_apps">Скінуць усё</string>
+    <string name="reset_hidden_apps_done">Схаваная праграмы цяпер даступныя</string>
+    <string name="hide_app_info_hidden">Схаваныя праграмы і іх віджэты схаваны з меню</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="protect_app_help">Help</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="hide_protect_app">Схаваць і абараніць праграмы</string>
+    <string name="hide_protect_app_sum">Схаваць і абараніць праграмы ў спісе праграм</string>
+    <string name="protect_apps_auth_manager">Разблакуюцца, для кіравання ўтоенымі і абароненымі праграмамі</string>
+    <string name="protect_app_auth_open_app">Аўтарызуйцеся, для адкрыцця %1$s</string>
+    <string name="protect_app_no_lock_error">Калі ласка, усталюйце блакаванне экрана для абмежавання доступу да праграм</string>
+    <string name="protect_app_help">Дапамога</string>
+    <string name="protect_app_info_protected">Для адкрыцця абароненых праграм з лаунчэра патрабуецца аўтэнтыфікацыя</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
-    <string name="allapps_long_labels_title">Long app labels</string>
+    <string name="app_show_label_title">Подпісы праграм</string>
+    <string name="desktop_show_label_summary">Паказаць подпісы значкоў праграм на хатнім экране</string>
+    <string name="allapps_show_label_summary">Паказаць подпісы значкоў праграм на хатнім экране</string>
+    <string name="allapps_long_labels_title">Доўгія ярлыкі праграм</string>
     <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Show At A Glance</string>
@@ -149,21 +149,21 @@
     <string name="font_condensed_bold_italic">Condensed Bold Italic</string>
     <string name="font_medium">Medium</string>
     <string name="font_medium_italic">Medium Italic</string>
-    <string name="font_black">Black</string>
-    <string name="font_black_italic">Black Italic</string>
-    <string name="font_dancingscript">DancingScript</string>
-    <string name="font_dancingscript_bold">DancingScript Bold</string>
+    <string name="font_black">Чорны</string>
+    <string name="font_black_italic">Чорны курсіў</string>
+    <string name="font_dancingscript">Рукапісны</string>
+    <string name="font_dancingscript_bold">Рукапісны тлусты</string>
     <string name="font_comingsoon">ComingSoon</string>
-    <string name="font_notoserif">NotoSerif Normal</string>
-    <string name="font_notoserif_italic">NotoSerif Italic</string>
-    <string name="font_notoserif_bold">NotoSerif Bold</string>
-    <string name="font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+    <string name="font_notoserif">NotoSerif звычайны</string>
+    <string name="font_notoserif_italic">NotoSerif курсіў</string>
+    <string name="font_notoserif_bold">NotoSerif тлусты</string>
+    <string name="font_notoserif_bold_italic">NotoSerif тлусты курсіў</string>
     <!-- At a glance uppercase -->
-    <string name="date_style_transform_title">Show uppercase on date</string>
-    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+    <string name="date_style_transform_title">Паказаць у верхнім рэгістры даты</string>
+    <string name="date_style_transform_summary">Пераўтварыць ўсе даты/At A Glance ў тэкст верхняга рэгістра</string>
     <!-- At a glance font spacing -->
-    <string name="date_style_spacing">Date spacing</string>
-    <string name="date_style_spacing_normal">Normal</string>
+    <string name="date_style_spacing">Адлегласць паміж датамі</string>
+    <string name="date_style_spacing_normal">Звычайны</string>
     <string name="date_style_spacing_barely">Barely noticeable</string>
     <string name="date_style_spacing_ott">Over the top</string>
     <!-- Gradients on Workspace/Hotseat? -->
