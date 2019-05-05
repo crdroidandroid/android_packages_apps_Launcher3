@@ -17,190 +17,190 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">設定</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape, size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
+    <string name="home_category_title">主螢幕</string>
+    <string name="home_category_summary">設定 Google 即時資訊等</string>
+    <string name="icons_category_title">圖示</string>
+    <string name="icons_category_summary">設定圖示形狀、大小等</string>
+    <string name="app_drawer_category_title">應用程式抽屜</string>
+    <string name="app_drawer_category_summary">自訂您的應用程式抽屜</string>
     <string name="misc_category_title">其他設定</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="misc_category_summary">其他選項</string>
     <!-- Sub categories -->
-    <string name="home_grid_title">Grid layout</string>
-    <string name="icon_layout_title">Icon layout</string>
-    <string name="home_overall_title">Home layout</string>
-    <string name="home_quickspace_title">At A Glance</string>
-    <string name="home_hotseat_title">Dock</string>
-    <string name="app_overall_title">App list</string>
-    <string name="misc_recents_title">Recents</string>
+    <string name="home_grid_title">格線佈局</string>
+    <string name="icon_layout_title">圖示佈局</string>
+    <string name="home_overall_title">主頁佈局</string>
+    <string name="home_quickspace_title">一目了然</string>
+    <string name="home_hotseat_title">Dock 欄</string>
+    <string name="app_overall_title">應用程式清單</string>
+    <string name="misc_recents_title">最近應用</string>
     <string name="misc_gestures_title">手勢</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Change the look of your app icons</string>
+    <string name="icon_pack">圖示包</string>
+    <string name="icon_pack_summary">更改應用程式圖示的外觀</string>
     <string name="icon_pack_none">預設</string>
     <!-- Icon shape -->
-    <string name="icon_shape_override_label_custom">Icon shape</string>
-    <string name="icon_shape_rounded_square">Rounded square</string>
-    <string name="icon_shape_hexagon">Rounded Hexagon</string>
+    <string name="icon_shape_override_label_custom">變更圖示形狀</string>
+    <string name="icon_shape_rounded_square">圓角方形</string>
+    <string name="icon_shape_hexagon">圓角六邊形</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
-    <string name="icon_size_extra_small">Tiny</string>
-    <string name="icon_size_small">Small</string>
+    <string name="icon_size_title">圖示大小</string>
+    <string name="icon_size_extra_small">超小</string>
+    <string name="icon_size_small">小</string>
     <string name="icon_size_average">預設</string>
-    <string name="icon_size_large">Large</string>
-    <string name="icon_size_extra_large">Extra large</string>
+    <string name="icon_size_large">大</string>
+    <string name="icon_size_extra_large">超大</string>
     <!-- Gestures -->
-    <string name="allow_swipe_down_clearall_title">Clear all from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Swipe vertically downward in recents view to clear all apps</string>
-    <string name="pref_homescreen_dt_gestures_title">Double tap gesture</string>
-    <string name="pref_homescreen_dt_gestures_summary">Select the action of the double tap gesture on the home screen</string>
+    <string name="allow_swipe_down_clearall_title">從最近應用程式畫面清除所有任務</string>
+    <string name="allow_swipe_down_clearall_desc">在最近應用程式畫面垂直向下滑動來清除所有應用程式</string>
+    <string name="pref_homescreen_dt_gestures_title">雙擊手勢</string>
+    <string name="pref_homescreen_dt_gestures_summary">選擇在主畫面上的雙擊手勢動作</string>
     <string name="pref_homescreen_dt_gestures_none">無</string>
-    <string name="pref_homescreen_dt_gestures_sleep">Sleep</string>
-    <string name="pref_homescreen_dt_gestures_torch">Flashlight</string>
-    <string name="pref_notifications_gesture_title">Notifications gesture</string>
-    <string name="pref_notifications_gesture_summary">Swipe vertically downward on the home screen to show the QS panel</string>
+    <string name="pref_homescreen_dt_gestures_sleep">休眠</string>
+    <string name="pref_homescreen_dt_gestures_torch">手電筒</string>
+    <string name="pref_notifications_gesture_title">通知手勢</string>
+    <string name="pref_notifications_gesture_summary">在主畫面垂直向下滑動來顯示快速設定面板</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_title">顯示 Google 應用程式</string>
+    <string name="google_feed_summary">移至主畫面的左側</string>
     <!-- Grid -->
     <string name="num_default">預設</string>
-    <string name="number_of_columns_title">Number of columns</string>
-    <string name="number_of_rows_title">Number of rows</string>
-    <string name="number_of_hotseat_title">Number of dock icons</string>
-    <string name="state_loading">Applying\u2026</string>
+    <string name="number_of_columns_title">列數</string>
+    <string name="number_of_rows_title">行數</string>
+    <string name="number_of_hotseat_title">Dock圖標個數</string>
+    <string name="state_loading">套用中\u2026</string>
     <!-- Hidden apps -->
-    <string name="hide_app">Hide apps</string>
-    <string name="hide_app_sum">Hide apps from the app drawer</string>
-    <string name="hidden_apps_loading">Loading\u2026</string>
-    <string name="hidden_app">All apps</string>
-    <string name="hide_selected">Hide selected app(s)</string>
-    <string name="more">More</string>
-    <string name="reset_hidden_apps">Reset all</string>
-    <string name="reset_hidden_apps_done">Hidden apps are now available</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="hide_app">隱藏應用程式</string>
+    <string name="hide_app_sum">從應用抽屜中隱藏應用程式</string>
+    <string name="hidden_apps_loading">載入中\u2026</string>
+    <string name="hidden_app">所有應用程式</string>
+    <string name="hide_selected">隱藏所選應用程式</string>
+    <string name="more">更多</string>
+    <string name="reset_hidden_apps">全部重設</string>
+    <string name="reset_hidden_apps_done">隱藏目前可用的應用程式</string>
+    <string name="hide_app_info_hidden">從抽屜中隱藏應用及其部件</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="protect_app_help">Help</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="hide_protect_app">隱藏和保護應用</string>
+    <string name="hide_protect_app_sum">在應用抽屜中隱藏和保護應用</string>
+    <string name="protect_apps_auth_manager">解鎖以管理隱藏和受保護的應用程式</string>
+    <string name="protect_app_auth_open_app">進行身份驗證以開啟 %1$s</string>
+    <string name="protect_app_no_lock_error">請設置安全鎖定屏幕以限制應用訪問權限</string>
+    <string name="protect_app_help">幫助</string>
+    <string name="protect_app_info_protected">需要身份驗證才能從啟動器打開受保護的應用程序</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
-    <string name="allapps_long_labels_title">Long app labels</string>
-    <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
+    <string name="app_show_label_title">應用程式標籤</string>
+    <string name="desktop_show_label_summary">在主畫面上顯示應用程式的標籤</string>
+    <string name="allapps_show_label_summary">在應用程式抽屜中顯示應用程式的標籤</string>
+    <string name="allapps_long_labels_title">長應用標籤</string>
+    <string name="allapps_long_labels_summary">允許應用使用兩行顯示標籤</string>
     <!-- Show quickspace -->
-    <string name="show_quickspace_title">Show At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">顯示一目了然</string>
+    <string name="show_quickspace_summary">顯示在主屏幕的頂部</string>
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid</string>
-    <string name="quick_event_rom_intro_learn">Tap here to have fun!</string>
+    <string name="quick_event_rom_intro_welcome">欢迎来到crDroid</string>
+    <string name="quick_event_rom_intro_learn">輕點此處以設定！</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_now_playing">正在播放</string>
+    <string name="quick_event_ambient_song_artist">%2$s的%1$s</string>
     <!-- QSB -->
-    <string name="hotseat_qsb_preferences">Preferences</string>
-    <string name="label_search">Search</string>
-    <string name="label_voice_search">Voice search</string>
+    <string name="hotseat_qsb_preferences">偏好設定</string>
+    <string name="label_search">搜尋</string>
+    <string name="label_voice_search">語音搜尋</string>
     <!-- Hide/Show search bars -->
-    <string name="bottom_search_bar_title">Show search bar on bottom</string>
-    <string name="bottom_search_bar_summary">Show the search bar on the Dock</string>
+    <string name="bottom_search_bar_title">在Dock欄中顯示搜索欄</string>
+    <string name="bottom_search_bar_summary">在 Dock 欄上顯示搜尋列</string>
     <!-- Search engine -->
-    <string name="search_provider_title">Searchbar search engine</string>
+    <string name="search_provider_title">搜索欄搜索引擎</string>
     <!-- Predictions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For Overview &amp; All Apps list</string>
-    <string name="app_suggestions_title">Display app suggestions</string>
-    <string name="app_suggestions_summary">At the top of your All Apps list</string>
-    <string name="title_disable_suggestions_prompt">Turn off app suggestions?</string>
-    <string name="msg_disable_suggestions_prompt">"Suggestions won't appear at the top of your apps list, and the usage data used to create them will be permanently erased."</string>
-    <string name="label_turn_off_suggestions">Turn off</string>
-    <string name="all_apps_label">All apps</string>
+    <string name="suggestion_pref_screen_title">建議</string>
+    <string name="suggestion_pref_screen_desc">對於概述 &amp; 所有應用列表</string>
+    <string name="app_suggestions_title">顯示應用程式建議</string>
+    <string name="app_suggestions_summary">位於「所有應用程式」清單頂端</string>
+    <string name="title_disable_suggestions_prompt">要關閉應用程式建議嗎？</string>
+    <string name="msg_disable_suggestions_prompt">"建議不會顯示在應用程式清單頂端，而且用來產生這些建議的使用資料將永久清除。"</string>
+    <string name="label_turn_off_suggestions">關閉</string>
+    <string name="all_apps_label">所有應用程式</string>
     <!-- Date format -->
-    <string name="date_format_title">Date format</string>
-    <string name="date_format_long_name">Long</string>
+    <string name="date_format_title">日期格式</string>
+    <string name="date_format_long_name">長</string>
     <string name="date_format_normal_name">正常</string>
-    <string name="date_format_short_name">Short</string>
-    <string name="date_format_daydate_long_name">Day (with number)</string>
-    <string name="date_format_daydate_short_name">Day (short with number)</string>
-    <string name="date_format_dayonly_name">Just today</string>
+    <string name="date_format_short_name">短</string>
+    <string name="date_format_daydate_long_name">天數(有數字)</string>
+    <string name="date_format_daydate_short_name">天數(帶短數字)</string>
+    <string name="date_format_dayonly_name">就是今天</string>
     <!-- At a glance style -->
-    <string name="date_font_style">Date font style</string>
-    <string name="font_normal">Normal</string>
-    <string name="font_italic">Italic</string>
-    <string name="font_bold">Bold</string>
-    <string name="font_bold_italic">Bold Italic</string>
-    <string name="font_light">Light</string>
-    <string name="font_light_italic">Light Italic</string>
-    <string name="font_thin">Thin</string>
-    <string name="font_thin_italic">Thin Italic</string>
-    <string name="font_condensed">Condensed</string>
-    <string name="font_condensed_italic">Condensed Italic</string>
-    <string name="font_condensed_light">Condensed Light</string>
-    <string name="font_condensed_light_italic">Condensed Light Italic</string>
-    <string name="font_condensed_bold">Condensed Bold</string>
-    <string name="font_condensed_bold_italic">Condensed Bold Italic</string>
-    <string name="font_medium">Medium</string>
-    <string name="font_medium_italic">Medium Italic</string>
-    <string name="font_black">Black</string>
-    <string name="font_black_italic">Black Italic</string>
-    <string name="font_dancingscript">DancingScript</string>
-    <string name="font_dancingscript_bold">DancingScript Bold</string>
-    <string name="font_comingsoon">ComingSoon</string>
-    <string name="font_notoserif">NotoSerif Normal</string>
-    <string name="font_notoserif_italic">NotoSerif Italic</string>
-    <string name="font_notoserif_bold">NotoSerif Bold</string>
-    <string name="font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+    <string name="date_font_style">日期字體樣式</string>
+    <string name="font_normal">正常</string>
+    <string name="font_italic">斜體</string>
+    <string name="font_bold">粗體</string>
+    <string name="font_bold_italic">粗斜體</string>
+    <string name="font_light">極細體</string>
+    <string name="font_light_italic">極細斜體</string>
+    <string name="font_thin">瘦體</string>
+    <string name="font_thin_italic">細斜體</string>
+    <string name="font_condensed">緊湊</string>
+    <string name="font_condensed_italic">緊湊斜體</string>
+    <string name="font_condensed_light">緊湊細體</string>
+    <string name="font_condensed_light_italic">緊湊細斜體</string>
+    <string name="font_condensed_bold">緊湊粗體</string>
+    <string name="font_condensed_bold_italic">緊湊粗斜體</string>
+    <string name="font_medium">中等</string>
+    <string name="font_medium_italic">中等斜體</string>
+    <string name="font_black">黑體</string>
+    <string name="font_black_italic">黑斜體</string>
+    <string name="font_dancingscript">花體字</string>
+    <string name="font_dancingscript_bold">花粗體</string>
+    <string name="font_comingsoon">即將到來</string>
+    <string name="font_notoserif">NotoSerif 一般</string>
+    <string name="font_notoserif_italic">NotoSerif 斜體</string>
+    <string name="font_notoserif_bold">NotoSerif 粗體</string>
+    <string name="font_notoserif_bold_italic">NotoSerif 粗斜體</string>
     <!-- At a glance uppercase -->
-    <string name="date_style_transform_title">Show uppercase on date</string>
-    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+    <string name="date_style_transform_title">在日期顯示大寫</string>
+    <string name="date_style_transform_summary">使用大寫文本轉換所有日期/一目了然</string>
     <!-- At a glance font spacing -->
-    <string name="date_style_spacing">Date spacing</string>
+    <string name="date_style_spacing">行距</string>
     <string name="date_style_spacing_normal">正常</string>
-    <string name="date_style_spacing_barely">Barely noticeable</string>
-    <string name="date_style_spacing_ott">Over the top</string>
+    <string name="date_style_spacing_barely">幾乎沒有人注意到</string>
+    <string name="date_style_spacing_ott">夸张的</string>
     <!-- Gradients on Workspace/Hotseat? -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">在頂部顯示漸變</string>
+    <string name="workspace_gradient_summary">從狀態欄啟用細微漸變</string>
+    <string name="hotseat_gradient_title">在底部顯示漸變</string>
+    <string name="hotseat_gradient_summary">在啟動器的Dock栏啟用細微漸變</string>
     <!-- Recents corned -->
-    <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
-    <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
-    <string name="custom_recents_corners_type_title">Custom recents roundness</string>
+    <string name="custom_recents_corners_switch_title">使用自定義最近任务的圓角</string>
+    <string name="custom_recents_corners_switch_summary">如果禁用，它將使用系統/主題提供的那個圆角样式。 要應用新值，請在選擇選項後轉到主頁。</string>
+    <string name="custom_recents_corners_type_title">自訂圓度</string>
     <string name="custom_recents_corners_type_default">預設</string>
-    <string name="custom_recents_corners_type_card">Rounded Card</string>
-    <string name="custom_recents_corners_type_op">OP Style</string>
+    <string name="custom_recents_corners_type_card">圓角總覽卡</string>
+    <string name="custom_recents_corners_type_op">OP 样式</string>
     <!-- Lock desktop -->
-    <string name="lock_desktop_title">Lock desktop</string>
-    <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
+    <string name="lock_desktop_title">鎖定桌面</string>
+    <string name="lock_desktop_summary">防止主屏幕被修改</string>
     <!-- Search bar hint -->
-    <string name="search_bar_hint">Tap to search on %s</string>
-    <string name="search_bar_hint_title">Show search bar hint text</string>
-    <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
+    <string name="search_bar_hint">點擊在 %s 上搜索</string>
+    <string name="search_bar_hint_title">顯示搜索欄提示文本</string>
+    <string name="search_bar_hint_summary">在搜索欄上顯示一個小文字暗示您可以做什麼</string>
     <!-- Icon edit -->
-    <string name="edit_drop_target_label">Edit</string>
-    <string name="edit_hint">Icon name</string>
+    <string name="edit_drop_target_label">編輯</string>
+    <string name="edit_hint">圖示名稱</string>
     <string name="reset_icon">重置</string>
-    <string name="all_icons">All icons</string>
-    <string name="similar_icons">Similar icons</string>
-    <string name="ok">Ok</string>
-    <string name="icon_label">Label</string>
-    <string name="loading">Loading, please wait</string>
-    <string name="icon_chooser">Icon chooser</string>
-    <string name="icon_search">Search for icons</string>
+    <string name="all_icons">所有圖示</string>
+    <string name="similar_icons">相似圖示</string>
+    <string name="ok">確定</string>
+    <string name="icon_label">標籤</string>
+    <string name="loading">正在載入，請稍候</string>
+    <string name="icon_chooser">圖示選擇器</string>
+    <string name="icon_search">搜尋圖示</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
-    <string name="msg_no_icon_pack">No icon packs available</string>
+    <string name="msg_no_icon_pack">沒有可用的圖標包</string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
+    <string name="play_folder_title">播放</string>
     <!-- Weather -->
-    <string name="show_weather_title">Weather</string>
-    <string name="show_weather_summary">Display weather when available</string>
+    <string name="show_weather_title">天氣</string>
+    <string name="show_weather_summary">可用時顯示天氣</string>
 </resources>

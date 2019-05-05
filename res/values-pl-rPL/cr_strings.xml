@@ -17,190 +17,190 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Ustawienia</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape, size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="home_category_title">Ekran Główny</string>
+    <string name="home_category_summary">Ustaw panel Google now</string>
+    <string name="icons_category_title">Ikony</string>
+    <string name="icons_category_summary">Ustaw kształt, rozmiar ikon i więcej</string>
+    <string name="app_drawer_category_title">Lista aplikacji</string>
+    <string name="app_drawer_category_summary">Spersonalizuj szufladę aplikacji</string>
+    <string name="misc_category_title">Pozostałe</string>
+    <string name="misc_category_summary">Pozostałe opcje</string>
     <!-- Sub categories -->
-    <string name="home_grid_title">Grid layout</string>
-    <string name="icon_layout_title">Icon layout</string>
-    <string name="home_overall_title">Home layout</string>
-    <string name="home_quickspace_title">At A Glance</string>
+    <string name="home_grid_title">Układ siatki</string>
+    <string name="icon_layout_title">Układ ikon</string>
+    <string name="home_overall_title">Układ ekranu domowego</string>
+    <string name="home_quickspace_title">W skrócie</string>
     <string name="home_hotseat_title">Dock</string>
-    <string name="app_overall_title">App list</string>
-    <string name="misc_recents_title">Recents</string>
-    <string name="misc_gestures_title">Gestures</string>
+    <string name="app_overall_title">Lista aplikacji</string>
+    <string name="misc_recents_title">Ostatnio używane</string>
+    <string name="misc_gestures_title">Gesty</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Change the look of your app icons</string>
-    <string name="icon_pack_none">Default</string>
+    <string name="icon_pack">Paczka ikon</string>
+    <string name="icon_pack_summary">Zmień wygląd ikon aplikacji</string>
+    <string name="icon_pack_none">Domyślny</string>
     <!-- Icon shape -->
-    <string name="icon_shape_override_label_custom">Icon shape</string>
-    <string name="icon_shape_rounded_square">Rounded square</string>
-    <string name="icon_shape_hexagon">Rounded Hexagon</string>
+    <string name="icon_shape_override_label_custom">Kształt ikon</string>
+    <string name="icon_shape_rounded_square">Zaokrąglony kwadrat</string>
+    <string name="icon_shape_hexagon">Zaokrąglony sześciokąt</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
-    <string name="icon_size_extra_small">Tiny</string>
-    <string name="icon_size_small">Small</string>
-    <string name="icon_size_average">Default</string>
-    <string name="icon_size_large">Large</string>
-    <string name="icon_size_extra_large">Extra large</string>
+    <string name="icon_size_title">Rozmiar ikon</string>
+    <string name="icon_size_extra_small">Bardzo mały</string>
+    <string name="icon_size_small">Mały</string>
+    <string name="icon_size_average">Domyślny</string>
+    <string name="icon_size_large">Duże</string>
+    <string name="icon_size_extra_large">Bardzo duży</string>
     <!-- Gestures -->
-    <string name="allow_swipe_down_clearall_title">Clear all from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Swipe vertically downward in recents view to clear all apps</string>
-    <string name="pref_homescreen_dt_gestures_title">Double tap gesture</string>
-    <string name="pref_homescreen_dt_gestures_summary">Select the action of the double tap gesture on the home screen</string>
-    <string name="pref_homescreen_dt_gestures_none">None</string>
-    <string name="pref_homescreen_dt_gestures_sleep">Sleep</string>
-    <string name="pref_homescreen_dt_gestures_torch">Flashlight</string>
-    <string name="pref_notifications_gesture_title">Notifications gesture</string>
-    <string name="pref_notifications_gesture_summary">Swipe vertically downward on the home screen to show the QS panel</string>
+    <string name="allow_swipe_down_clearall_title">Wyczyść ostatnie</string>
+    <string name="allow_swipe_down_clearall_desc">Przesuń palcem pionowo w dół w menu ostatnich aplikacji, aby wyczyścić wszystkie aplikacje</string>
+    <string name="pref_homescreen_dt_gestures_title">Gest dwukrotnego dotknięcia</string>
+    <string name="pref_homescreen_dt_gestures_summary">Wybierz akcję dwukrotnego kliknięcia na ekranie głównym</string>
+    <string name="pref_homescreen_dt_gestures_none">Brak</string>
+    <string name="pref_homescreen_dt_gestures_sleep">Uśpienie</string>
+    <string name="pref_homescreen_dt_gestures_torch">Latarka</string>
+    <string name="pref_notifications_gesture_title">Gest powiadomień</string>
+    <string name="pref_notifications_gesture_summary">Przesuń pionowo w dół na ekranie głównym, aby wyświetlić panel powiadomień</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_title">Wyświetl aplikację Google</string>
+    <string name="google_feed_summary">Po lewej stronie ekranu głównego</string>
     <!-- Grid -->
-    <string name="num_default">Default</string>
-    <string name="number_of_columns_title">Number of columns</string>
-    <string name="number_of_rows_title">Number of rows</string>
-    <string name="number_of_hotseat_title">Number of dock icons</string>
-    <string name="state_loading">Applying\u2026</string>
+    <string name="num_default">Domyślny</string>
+    <string name="number_of_columns_title">Liczba kolumn</string>
+    <string name="number_of_rows_title">Liczba wierszy</string>
+    <string name="number_of_hotseat_title">Liczba ikon doku</string>
+    <string name="state_loading">Stosowanie\u2026</string>
     <!-- Hidden apps -->
-    <string name="hide_app">Hide apps</string>
-    <string name="hide_app_sum">Hide apps from the app drawer</string>
-    <string name="hidden_apps_loading">Loading\u2026</string>
-    <string name="hidden_app">All apps</string>
-    <string name="hide_selected">Hide selected app(s)</string>
-    <string name="more">More</string>
-    <string name="reset_hidden_apps">Reset all</string>
-    <string name="reset_hidden_apps_done">Hidden apps are now available</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="hide_app">Ukryj aplikacje</string>
+    <string name="hide_app_sum">Ukryj aplikacje z listy</string>
+    <string name="hidden_apps_loading">Ładowanie\u2026</string>
+    <string name="hidden_app">Wszystkie aplikacje</string>
+    <string name="hide_selected">Ukryj wybrane aplikacje</string>
+    <string name="more">Więcej</string>
+    <string name="reset_hidden_apps">Zresetuj wszystko</string>
+    <string name="reset_hidden_apps_done">Ukryte aplikacje są teraz dostępne</string>
+    <string name="hide_app_info_hidden">Ukryte aplikacje i ich widżety są ukryte z szuflady aplikacji</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="protect_app_help">Help</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="hide_protect_app">Ukryj i chroń aplikacje</string>
+    <string name="hide_protect_app_sum">Ukryj i chroń aplikacje z listy</string>
+    <string name="protect_apps_auth_manager">Odblokuj, aby zarządzać ukrytymi i chronionymi aplikacjami</string>
+    <string name="protect_app_auth_open_app">Uwierzytelnij, aby otworzyć %1$s</string>
+    <string name="protect_app_no_lock_error">Należy skonfigurować blokadę urządzenia, aby ograniczyć dostęp do aplikacji</string>
+    <string name="protect_app_help">Pomoc</string>
+    <string name="protect_app_info_protected">Chronione aplikacje wymagają uwierzytelniania, aby mogły zostać uruchomione z poziomu ekranu głównego</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
-    <string name="allapps_long_labels_title">Long app labels</string>
-    <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
+    <string name="app_show_label_title">Etykiety aplikacji</string>
+    <string name="desktop_show_label_summary">Wyświetlanie etykiet aplikacji na ekranie głównym</string>
+    <string name="allapps_show_label_summary">Wyświetlanie etykiet aplikacji w szufladzie aplikacji</string>
+    <string name="allapps_long_labels_title">Długie etykiety aplikacji</string>
+    <string name="allapps_long_labels_summary">Zezwól aplikacjom na wyświetlanie etykiet w dwóch liniach</string>
     <!-- Show quickspace -->
-    <string name="show_quickspace_title">Show At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">Pokaż At A Glance</string>
+    <string name="show_quickspace_summary">Pokaż u góry ekranu głównego</string>
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid</string>
-    <string name="quick_event_rom_intro_learn">Tap here to have fun!</string>
+    <string name="quick_event_rom_intro_welcome">Witam w crDroid</string>
+    <string name="quick_event_rom_intro_learn">Kliknij tutaj, aby cieszyć się ROMem!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_now_playing">Teraz odtwarzane</string>
+    <string name="quick_event_ambient_song_artist">%1$s przez %2$s</string>
     <!-- QSB -->
-    <string name="hotseat_qsb_preferences">Preferences</string>
-    <string name="label_search">Search</string>
-    <string name="label_voice_search">Voice search</string>
+    <string name="hotseat_qsb_preferences">Właściwości</string>
+    <string name="label_search">Szukaj</string>
+    <string name="label_voice_search">Wyszukiwanie głosowe</string>
     <!-- Hide/Show search bars -->
-    <string name="bottom_search_bar_title">Show search bar on bottom</string>
-    <string name="bottom_search_bar_summary">Show the search bar on the Dock</string>
+    <string name="bottom_search_bar_title">Pokaż pasek wyszukiwania na dole</string>
+    <string name="bottom_search_bar_summary">Wyświetla pasek wyszukiwania w doku</string>
     <!-- Search engine -->
-    <string name="search_provider_title">Searchbar search engine</string>
+    <string name="search_provider_title">Silnik wyszukiwania w pasku wyszukiwania</string>
     <!-- Predictions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For Overview &amp; All Apps list</string>
-    <string name="app_suggestions_title">Display app suggestions</string>
-    <string name="app_suggestions_summary">At the top of your All Apps list</string>
-    <string name="title_disable_suggestions_prompt">Turn off app suggestions?</string>
-    <string name="msg_disable_suggestions_prompt">"Suggestions won't appear at the top of your apps list, and the usage data used to create them will be permanently erased."</string>
-    <string name="label_turn_off_suggestions">Turn off</string>
-    <string name="all_apps_label">All apps</string>
+    <string name="suggestion_pref_screen_title">Sugestie</string>
+    <string name="suggestion_pref_screen_desc">Przegląd &amp; listy aplikacji</string>
+    <string name="app_suggestions_title">Wyświetl sugerowane aplikacje</string>
+    <string name="app_suggestions_summary">U góry listy Wszystkie aplikacje</string>
+    <string name="title_disable_suggestions_prompt">Wyłączyć sugerowane aplikacje?</string>
+    <string name="msg_disable_suggestions_prompt">"Sugestie nie będą pojawiać się u góry listy Twoich aplikacji, a dane o użytkowaniu służące do ich utworzenia zostaną trwale usunięte."</string>
+    <string name="label_turn_off_suggestions">Wyłącz</string>
+    <string name="all_apps_label">Wszystkie aplikacje</string>
     <!-- Date format -->
-    <string name="date_format_title">Date format</string>
-    <string name="date_format_long_name">Long</string>
-    <string name="date_format_normal_name">Normal</string>
-    <string name="date_format_short_name">Short</string>
-    <string name="date_format_daydate_long_name">Day (with number)</string>
-    <string name="date_format_daydate_short_name">Day (short with number)</string>
-    <string name="date_format_dayonly_name">Just today</string>
+    <string name="date_format_title">Format daty</string>
+    <string name="date_format_long_name">Długo</string>
+    <string name="date_format_normal_name">Normalnie</string>
+    <string name="date_format_short_name">Krótko</string>
+    <string name="date_format_daydate_long_name">Dzień (z numerem)</string>
+    <string name="date_format_daydate_short_name">Dzień (krótki z numerem)</string>
+    <string name="date_format_dayonly_name">Dzisiaj</string>
     <!-- At a glance style -->
-    <string name="date_font_style">Date font style</string>
-    <string name="font_normal">Normal</string>
-    <string name="font_italic">Italic</string>
-    <string name="font_bold">Bold</string>
-    <string name="font_bold_italic">Bold Italic</string>
-    <string name="font_light">Light</string>
-    <string name="font_light_italic">Light Italic</string>
-    <string name="font_thin">Thin</string>
-    <string name="font_thin_italic">Thin Italic</string>
-    <string name="font_condensed">Condensed</string>
-    <string name="font_condensed_italic">Condensed Italic</string>
-    <string name="font_condensed_light">Condensed Light</string>
-    <string name="font_condensed_light_italic">Condensed Light Italic</string>
-    <string name="font_condensed_bold">Condensed Bold</string>
-    <string name="font_condensed_bold_italic">Condensed Bold Italic</string>
-    <string name="font_medium">Medium</string>
-    <string name="font_medium_italic">Medium Italic</string>
-    <string name="font_black">Black</string>
-    <string name="font_black_italic">Black Italic</string>
-    <string name="font_dancingscript">DancingScript</string>
-    <string name="font_dancingscript_bold">DancingScript Bold</string>
-    <string name="font_comingsoon">ComingSoon</string>
-    <string name="font_notoserif">NotoSerif Normal</string>
-    <string name="font_notoserif_italic">NotoSerif Italic</string>
-    <string name="font_notoserif_bold">NotoSerif Bold</string>
-    <string name="font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+    <string name="date_font_style">Styl czcionki daty</string>
+    <string name="font_normal">Normalny</string>
+    <string name="font_italic">Kursywa</string>
+    <string name="font_bold">Pogrubienie</string>
+    <string name="font_bold_italic">Pogrubiona kursywa</string>
+    <string name="font_light">Cienka</string>
+    <string name="font_light_italic">Cienka kursywa</string>
+    <string name="font_thin">Cienki</string>
+    <string name="font_thin_italic">Cieńka kursywa</string>
+    <string name="font_condensed">Zagęszczona</string>
+    <string name="font_condensed_italic">Zagęszczona kursywa</string>
+    <string name="font_condensed_light">Zagęszczona cienka</string>
+    <string name="font_condensed_light_italic">Zagęszczona Cienka Kursywa</string>
+    <string name="font_condensed_bold">Zagęszczona pogrubiona</string>
+    <string name="font_condensed_bold_italic">Zagęszczona pogrubiona kursywa</string>
+    <string name="font_medium">Średnia</string>
+    <string name="font_medium_italic">Średnia kursywa</string>
+    <string name="font_black">Czarny</string>
+    <string name="font_black_italic">Czarna kursywa</string>
+    <string name="font_dancingscript">Tańczący skrypt</string>
+    <string name="font_dancingscript_bold">Tańczący skrypt pogrubiony</string>
+    <string name="font_comingsoon">Wkrótce</string>
+    <string name="font_notoserif">NotoSerif Normalny</string>
+    <string name="font_notoserif_italic">NotoSerif Kursywa</string>
+    <string name="font_notoserif_bold">NotoSerif pogrubiony</string>
+    <string name="font_notoserif_bold_italic">NotoSerif Pogrubiona Kursywa</string>
     <!-- At a glance uppercase -->
-    <string name="date_style_transform_title">Show uppercase on date</string>
-    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+    <string name="date_style_transform_title">Użyj dużych liter w nazwie daty</string>
+    <string name="date_style_transform_summary">Przekształć daty na pierwszy rzut oka z Dużym tekstem</string>
     <!-- At a glance font spacing -->
-    <string name="date_style_spacing">Date spacing</string>
-    <string name="date_style_spacing_normal">Normal</string>
-    <string name="date_style_spacing_barely">Barely noticeable</string>
-    <string name="date_style_spacing_ott">Over the top</string>
+    <string name="date_style_spacing">Odstęp daty</string>
+    <string name="date_style_spacing_normal">Normalny</string>
+    <string name="date_style_spacing_barely">Ledwo zauważalny</string>
+    <string name="date_style_spacing_ott">Na górze</string>
     <!-- Gradients on Workspace/Hotseat? -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">Pokaż gradient na górze</string>
+    <string name="workspace_gradient_summary">Włącza gradient obok paska statusu</string>
+    <string name="hotseat_gradient_title">Pokaż gradient na dole</string>
+    <string name="hotseat_gradient_summary">Włącza gradient od doku</string>
     <!-- Recents corned -->
-    <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
-    <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
-    <string name="custom_recents_corners_type_title">Custom recents roundness</string>
-    <string name="custom_recents_corners_type_default">Default</string>
-    <string name="custom_recents_corners_type_card">Rounded Card</string>
-    <string name="custom_recents_corners_type_op">OP Style</string>
+    <string name="custom_recents_corners_switch_title">Użyj niestandardowych zaokrąglonych narożników w menu Ostatnich aplikacji</string>
+    <string name="custom_recents_corners_switch_summary">Jeśli opcja jest wyłączona, zostaną użyte zaokrąglenia dostarczone przez system/motyw. Aby zastosować nową wartość, przejdź do ekranu domowego po wybraniu opcji.</string>
+    <string name="custom_recents_corners_type_title">Niestandardowe zaokrąglenia w menu Ostatnich aplikacji</string>
+    <string name="custom_recents_corners_type_default">Domyślne</string>
+    <string name="custom_recents_corners_type_card">Zaokrąglona karta</string>
+    <string name="custom_recents_corners_type_op">Styl OP</string>
     <!-- Lock desktop -->
-    <string name="lock_desktop_title">Lock desktop</string>
-    <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
+    <string name="lock_desktop_title">Blokada pulpitu</string>
+    <string name="lock_desktop_summary">Zapobiega modyfikacji ekranu głównego</string>
     <!-- Search bar hint -->
-    <string name="search_bar_hint">Tap to search on %s</string>
-    <string name="search_bar_hint_title">Show search bar hint text</string>
-    <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
+    <string name="search_bar_hint">Wybierz, aby wyszukać w %s</string>
+    <string name="search_bar_hint_title">Pokaż tekst podpowiedzi paska wyszukiwania</string>
+    <string name="search_bar_hint_summary">Pokaż mały tekst na pasku wyszukiwania z podpowiedziami, co możesz zrobić</string>
     <!-- Icon edit -->
-    <string name="edit_drop_target_label">Edit</string>
-    <string name="edit_hint">Icon name</string>
-    <string name="reset_icon">Reset</string>
-    <string name="all_icons">All icons</string>
-    <string name="similar_icons">Similar icons</string>
-    <string name="ok">Ok</string>
-    <string name="icon_label">Label</string>
-    <string name="loading">Loading, please wait</string>
-    <string name="icon_chooser">Icon chooser</string>
-    <string name="icon_search">Search for icons</string>
+    <string name="edit_drop_target_label">Edytuj</string>
+    <string name="edit_hint">Nazwa ikony</string>
+    <string name="reset_icon">Resetuj</string>
+    <string name="all_icons">Wszystkie ikony</string>
+    <string name="similar_icons">Podobne ikony</string>
+    <string name="ok">OK</string>
+    <string name="icon_label">Etykieta</string>
+    <string name="loading">Ładuję, proszę czekać</string>
+    <string name="icon_chooser">Wybór ikon</string>
+    <string name="icon_search">Szukaj ikony</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
-    <string name="msg_no_icon_pack">No icon packs available</string>
+    <string name="msg_no_icon_pack">Brak dostępnych paczek ikon</string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
+    <string name="play_folder_title">Odtwórz</string>
     <!-- Weather -->
-    <string name="show_weather_title">Weather</string>
-    <string name="show_weather_summary">Display weather when available</string>
+    <string name="show_weather_title">Pogoda</string>
+    <string name="show_weather_summary">Wyświetl pogodę, jeśli jest dostępna</string>
 </resources>
