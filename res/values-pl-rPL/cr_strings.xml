@@ -182,25 +182,25 @@
     <string name="lock_desktop_title">Blokada pulpitu</string>
     <string name="lock_desktop_summary">Zapobiega modyfikacji ekranu głównego</string>
     <!-- Search bar hint -->
-    <string name="search_bar_hint">Tap to search on %s</string>
-    <string name="search_bar_hint_title">Show search bar hint text</string>
-    <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
+    <string name="search_bar_hint">Wybierz, aby wyszukać w %s</string>
+    <string name="search_bar_hint_title">Pokaż tekst podpowiedzi paska wyszukiwania</string>
+    <string name="search_bar_hint_summary">Pokaż mały tekst na pasku wyszukiwania z podpowiedziami, co możesz zrobić</string>
     <!-- Icon edit -->
-    <string name="edit_drop_target_label">Edit</string>
-    <string name="edit_hint">Icon name</string>
-    <string name="reset_icon">Reset</string>
-    <string name="all_icons">All icons</string>
-    <string name="similar_icons">Similar icons</string>
-    <string name="ok">Ok</string>
-    <string name="icon_label">Label</string>
-    <string name="loading">Loading, please wait</string>
-    <string name="icon_chooser">Icon chooser</string>
-    <string name="icon_search">Search for icons</string>
+    <string name="edit_drop_target_label">Edytuj</string>
+    <string name="edit_hint">Nazwa ikony</string>
+    <string name="reset_icon">Resetuj</string>
+    <string name="all_icons">Wszystkie ikony</string>
+    <string name="similar_icons">Podobne ikony</string>
+    <string name="ok">OK</string>
+    <string name="icon_label">Etykieta</string>
+    <string name="loading">Ładuję, proszę czekać</string>
+    <string name="icon_chooser">Wybór ikon</string>
+    <string name="icon_search">Szukaj ikony</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
-    <string name="msg_no_icon_pack">No icon packs available</string>
+    <string name="msg_no_icon_pack">Brak dostępnych paczek ikon</string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
+    <string name="play_folder_title">Odtwórz</string>
     <!-- Weather -->
-    <string name="show_weather_title">Weather</string>
-    <string name="show_weather_summary">Display weather when available</string>
+    <string name="show_weather_title">Pogoda</string>
+    <string name="show_weather_summary">Wyświetl pogodę, jeśli jest dostępna</string>
 </resources>
