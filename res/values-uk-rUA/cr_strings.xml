@@ -29,19 +29,19 @@
     <string name="misc_category_summary">Інші налаштування</string>
     <!-- Sub categories -->
     <string name="home_grid_title">Схема сітки</string>
-    <string name="icon_layout_title">Icon layout</string>
-    <string name="home_overall_title">Home layout</string>
+    <string name="icon_layout_title">Розташування іконок</string>
+    <string name="home_overall_title">Макет домашнього екрану</string>
     <string name="home_quickspace_title">At A Glance</string>
-    <string name="home_hotseat_title">Dock</string>
-    <string name="app_overall_title">App list</string>
-    <string name="misc_recents_title">Recents</string>
-    <string name="misc_gestures_title">Gestures</string>
+    <string name="home_hotseat_title">Док-панель</string>
+    <string name="app_overall_title">Список додатків</string>
+    <string name="misc_recents_title">Меню \"Нещодавні\"</string>
+    <string name="misc_gestures_title">Жести</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Change the look of your app icons</string>
-    <string name="icon_pack_none">Default</string>
+    <string name="icon_pack">Набір значків</string>
+    <string name="icon_pack_summary">Змінити зовнішній вигляд значків додатків</string>
+    <string name="icon_pack_none">За замовчуванням</string>
     <!-- Icon shape -->
-    <string name="icon_shape_override_label_custom">Icon shape</string>
+    <string name="icon_shape_override_label_custom">Форма значка</string>
     <string name="icon_shape_rounded_square">Rounded square</string>
     <string name="icon_shape_hexagon">Rounded Hexagon</string>
     <!-- Icon size -->
