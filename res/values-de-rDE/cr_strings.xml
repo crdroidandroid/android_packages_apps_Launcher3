@@ -30,7 +30,7 @@
     <!-- Sub categories -->
     <string name="home_grid_title">Rasteransicht</string>
     <string name="icon_layout_title">Symbol-Layout</string>
-    <string name="home_overall_title">Home-Layout</string>
+    <string name="home_overall_title">Startbildschirm-Layout</string>
     <string name="home_quickspace_title">Auf einen Blick</string>
     <string name="home_hotseat_title">Ladestation</string>
     <string name="app_overall_title">App-Liste</string>
@@ -202,5 +202,5 @@
     <string name="play_folder_title">Wiedergabe</string>
     <!-- Weather -->
     <string name="show_weather_title">Wetter</string>
-    <string name="show_weather_summary">Display weather when available</string>
+    <string name="show_weather_summary">Zeige Wetter an, falls verfügbar</string>
 </resources>
