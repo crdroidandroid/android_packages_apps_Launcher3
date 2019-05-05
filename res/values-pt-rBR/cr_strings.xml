@@ -81,8 +81,8 @@
     <string name="reset_hidden_apps_done">Aplicativos ocultos já estão disponíveis</string>
     <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
+    <string name="hide_protect_app">Ocultar e proteger apps</string>
+    <string name="hide_protect_app_sum">Ocultar aplicativos do menu de apps</string>
     <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
     <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
     <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
