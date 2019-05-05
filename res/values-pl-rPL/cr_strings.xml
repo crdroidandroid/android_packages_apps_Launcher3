@@ -76,37 +76,37 @@
     <string name="hidden_apps_loading">Ładowanie\u2026</string>
     <string name="hidden_app">Wszystkie aplikacje</string>
     <string name="hide_selected">Ukryj wybrane aplikacje</string>
-    <string name="more">More</string>
-    <string name="reset_hidden_apps">Reset all</string>
-    <string name="reset_hidden_apps_done">Hidden apps are now available</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="more">Więcej</string>
+    <string name="reset_hidden_apps">Zresetuj wszystko</string>
+    <string name="reset_hidden_apps_done">Ukryte aplikacje są teraz dostępne</string>
+    <string name="hide_app_info_hidden">Ukryte aplikacje i ich widżety są ukryte z szuflady aplikacji</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="protect_app_help">Help</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="hide_protect_app">Ukryj i chroń aplikacje</string>
+    <string name="hide_protect_app_sum">Ukryj i chroń aplikacje z listy</string>
+    <string name="protect_apps_auth_manager">Odblokuj, aby zarządzać ukrytymi i chronionymi aplikacjami</string>
+    <string name="protect_app_auth_open_app">Uwierzytelnij, aby otworzyć %1$s</string>
+    <string name="protect_app_no_lock_error">Należy skonfigurować blokadę urządzenia, aby ograniczyć dostęp do aplikacji</string>
+    <string name="protect_app_help">Pomoc</string>
+    <string name="protect_app_info_protected">Chronione aplikacje wymagają uwierzytelniania, aby mogły zostać uruchomione z poziomu ekranu głównego</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
-    <string name="allapps_long_labels_title">Long app labels</string>
-    <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
+    <string name="app_show_label_title">Etykiety aplikacji</string>
+    <string name="desktop_show_label_summary">Wyświetlanie etykiet aplikacji na ekranie głównym</string>
+    <string name="allapps_show_label_summary">Wyświetlanie etykiet aplikacji w szufladzie aplikacji</string>
+    <string name="allapps_long_labels_title">Długie etykiety aplikacji</string>
+    <string name="allapps_long_labels_summary">Zezwól aplikacjom na wyświetlanie etykiet w dwóch liniach</string>
     <!-- Show quickspace -->
-    <string name="show_quickspace_title">Show At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">Pokaż At A Glance</string>
+    <string name="show_quickspace_summary">Pokaż u góry ekranu głównego</string>
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid</string>
-    <string name="quick_event_rom_intro_learn">Tap here to have fun!</string>
+    <string name="quick_event_rom_intro_welcome">Witam w crDroid</string>
+    <string name="quick_event_rom_intro_learn">Kliknij tutaj, aby cieszyć się ROMem!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_now_playing">Teraz odtwarzane</string>
+    <string name="quick_event_ambient_song_artist">%1$s przez %2$s</string>
     <!-- QSB -->
-    <string name="hotseat_qsb_preferences">Preferences</string>
+    <string name="hotseat_qsb_preferences">Preferencje</string>
     <string name="label_search">Search</string>
     <string name="label_voice_search">Voice search</string>
     <!-- Hide/Show search bars -->
@@ -164,12 +164,12 @@
     <!-- At a glance font spacing -->
     <string name="date_style_spacing">Odstęp daty</string>
     <string name="date_style_spacing_normal">Normalny</string>
-    <string name="date_style_spacing_barely">Barely noticeable</string>
-    <string name="date_style_spacing_ott">Over the top</string>
+    <string name="date_style_spacing_barely">Ledwo zauważalny</string>
+    <string name="date_style_spacing_ott">Na górze</string>
     <!-- Gradients on Workspace/Hotseat? -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
+    <string name="workspace_gradient_title">Pokaż gradient na górze</string>
+    <string name="workspace_gradient_summary">Włącza gradient obok paska statusu</string>
+    <string name="hotseat_gradient_title">Pokaż gradient na dole</string>
     <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
     <!-- Recents corned -->
     <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
