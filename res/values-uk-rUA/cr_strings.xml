@@ -168,18 +168,18 @@
     <string name="date_style_spacing_ott">Нагорі</string>
     <!-- Gradients on Workspace/Hotseat? -->
     <string name="workspace_gradient_title">Показати градієнт зверху</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_summary">Увімкнення тонкого градієнта від рядка стану</string>
+    <string name="hotseat_gradient_title">Показати градієнт знизу</string>
+    <string name="hotseat_gradient_summary">Увімкнення тонкого градієнта від нижнього краю</string>
     <!-- Recents corned -->
-    <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
-    <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
-    <string name="custom_recents_corners_type_title">Custom recents roundness</string>
-    <string name="custom_recents_corners_type_default">Default</string>
-    <string name="custom_recents_corners_type_card">Rounded Card</string>
-    <string name="custom_recents_corners_type_op">OP Style</string>
+    <string name="custom_recents_corners_switch_title">Використовувати для користувацькі налаштування заокруглення кутів недавніх додатків</string>
+    <string name="custom_recents_corners_switch_summary">Якщо вимкнено, то використовуватиметься значення за замовчуванням від системи/теми. Щоб застосувати нове значення, перейдіть на головний екран після вибору потрібного варіанту.</string>
+    <string name="custom_recents_corners_type_title">Користувацьке заокруглення кутів нещодавніх додатків</string>
+    <string name="custom_recents_corners_type_default">За замовчуванням</string>
+    <string name="custom_recents_corners_type_card">Заокруглені вкладки</string>
+    <string name="custom_recents_corners_type_op">Стиль OP</string>
     <!-- Lock desktop -->
-    <string name="lock_desktop_title">Lock desktop</string>
+    <string name="lock_desktop_title">Заблокувати робочий стіл</string>
     <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
     <!-- Search bar hint -->
     <string name="search_bar_hint">Tap to search on %s</string>
