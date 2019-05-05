@@ -184,23 +184,23 @@
     <!-- Search bar hint -->
     <string name="search_bar_hint">Toque para pesquisar %s</string>
     <string name="search_bar_hint_title">Mostrar texto na barra de pesquisa</string>
-    <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
+    <string name="search_bar_hint_summary">Mostrar um pequeno texto na barra de pesquisa sobre o que mais pode fazer</string>
     <!-- Icon edit -->
     <string name="edit_drop_target_label">Editar</string>
-    <string name="edit_hint">Icon name</string>
+    <string name="edit_hint">Nome do ícone</string>
     <string name="reset_icon">Redefinir</string>
-    <string name="all_icons">All icons</string>
-    <string name="similar_icons">Similar icons</string>
+    <string name="all_icons">Todos os ícones</string>
+    <string name="similar_icons">Ícones parecidos</string>
     <string name="ok">Ok</string>
-    <string name="icon_label">Label</string>
-    <string name="loading">Loading, please wait</string>
-    <string name="icon_chooser">Icon chooser</string>
-    <string name="icon_search">Search for icons</string>
+    <string name="icon_label">Rótulo</string>
+    <string name="loading">Carregando, por favor espere</string>
+    <string name="icon_chooser">Seletor de ícones</string>
+    <string name="icon_search">Procurar por ícones</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
-    <string name="msg_no_icon_pack">No icon packs available</string>
+    <string name="msg_no_icon_pack">Não há pacotes de ícones disponível</string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
+    <string name="play_folder_title">Reproduzir</string>
     <!-- Weather -->
-    <string name="show_weather_title">Weather</string>
-    <string name="show_weather_summary">Display weather when available</string>
+    <string name="show_weather_title">Clima</string>
+    <string name="show_weather_summary">Mostrar clima quando disponível</string>
 </resources>
