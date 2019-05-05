@@ -81,17 +81,17 @@
     <string name="reset_hidden_apps_done">Приховані додатки знову доступні</string>
     <string name="hide_app_info_hidden">Приховані додатки і їх віджети приховані з меню</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="protect_app_help">Help</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="hide_protect_app">Приховати і захистити додатки</string>
+    <string name="hide_protect_app_sum">Приховати і захистити додатки з меню додатків</string>
+    <string name="protect_apps_auth_manager">Розблокуйте, щоб керувати прихованими та захищеними додатками</string>
+    <string name="protect_app_auth_open_app">Авторизуйтесь, щоб відкрити %1$s</string>
+    <string name="protect_app_no_lock_error">Будь ласка, встановіть блокування екрану для обмеження доступу до додатків</string>
+    <string name="protect_app_help">Довідка</string>
+    <string name="protect_app_info_protected">Для відкриття захищених додатків з лаунчера потрібна аутентифікація</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
+    <string name="app_show_label_title">Підписи додатків</string>
+    <string name="desktop_show_label_summary">Показувати підписи додатків на домашньому екрані</string>
+    <string name="allapps_show_label_summary">Показувати підписи додатків в меню додатків</string>
     <string name="allapps_long_labels_title">Long app labels</string>
     <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
     <!-- Show quickspace -->
