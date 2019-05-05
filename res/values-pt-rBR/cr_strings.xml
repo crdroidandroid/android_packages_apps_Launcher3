@@ -32,7 +32,7 @@
     <string name="icon_layout_title">Layout de ícone</string>
     <string name="home_overall_title">Layout principal</string>
     <string name="home_quickspace_title">Resumo</string>
-    <string name="home_hotseat_title">Dock</string>
+    <string name="home_hotseat_title">Barra de aplicativos</string>
     <string name="app_overall_title">Lista de App</string>
     <string name="misc_recents_title">Aplicações recentes</string>
     <string name="misc_gestures_title">Gestos</string>
@@ -43,7 +43,7 @@
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">formato dos Ícones</string>
     <string name="icon_shape_rounded_square">Cantos arredondados</string>
-    <string name="icon_shape_hexagon">Rounded Hexagon</string>
+    <string name="icon_shape_hexagon">Hexágono arredondado</string>
     <!-- Icon size -->
     <string name="icon_size_title">Tamanho do ícone</string>
     <string name="icon_size_extra_small">Minúsculo</string>
@@ -73,13 +73,13 @@
     <!-- Hidden apps -->
     <string name="hide_app">Ocultar aplicativos</string>
     <string name="hide_app_sum">Ocultar aplicativos da gaveta de aplicativos</string>
-    <string name="hidden_apps_loading">Loading\u2026</string>
+    <string name="hidden_apps_loading">Carregando\u2026</string>
     <string name="hidden_app">Todos os aplicativos</string>
     <string name="hide_selected">Ocultar aplicativo (s) selecionado (s)</string>
     <string name="more">Mais</string>
     <string name="reset_hidden_apps">Resetar todos</string>
     <string name="reset_hidden_apps_done">Aplicativos ocultos já estão disponíveis</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="hide_app_info_hidden">Aplicativos ocultos e seus widgets estão escondidos do menu de apps</string>
     <!-- Protected apps -->
     <string name="hide_protect_app">Ocultar e proteger apps</string>
     <string name="hide_protect_app_sum">Ocultar aplicativos do menu de apps</string>
@@ -183,7 +183,7 @@
     <string name="lock_desktop_summary">Impedir modificações na tela inicial</string>
     <!-- Search bar hint -->
     <string name="search_bar_hint">Toque para pesquisar %s</string>
-    <string name="search_bar_hint_title">Show search bar hint text</string>
+    <string name="search_bar_hint_title">Mostrar texto na barra de pesquisa</string>
     <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
     <!-- Icon edit -->
     <string name="edit_drop_target_label">Editar</string>
