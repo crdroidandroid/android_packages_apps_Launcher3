@@ -29,178 +29,178 @@
     <string name="misc_category_summary">Інші налаштування</string>
     <!-- Sub categories -->
     <string name="home_grid_title">Схема сітки</string>
-    <string name="icon_layout_title">Icon layout</string>
-    <string name="home_overall_title">Home layout</string>
+    <string name="icon_layout_title">Розташування іконок</string>
+    <string name="home_overall_title">Макет домашнього екрану</string>
     <string name="home_quickspace_title">At A Glance</string>
-    <string name="home_hotseat_title">Dock</string>
-    <string name="app_overall_title">App list</string>
-    <string name="misc_recents_title">Recents</string>
-    <string name="misc_gestures_title">Gestures</string>
+    <string name="home_hotseat_title">Док-панель</string>
+    <string name="app_overall_title">Список додатків</string>
+    <string name="misc_recents_title">Меню \"Нещодавні\"</string>
+    <string name="misc_gestures_title">Жести</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Change the look of your app icons</string>
-    <string name="icon_pack_none">Default</string>
+    <string name="icon_pack">Набір значків</string>
+    <string name="icon_pack_summary">Змінити зовнішній вигляд значків додатків</string>
+    <string name="icon_pack_none">За замовчуванням</string>
     <!-- Icon shape -->
-    <string name="icon_shape_override_label_custom">Icon shape</string>
-    <string name="icon_shape_rounded_square">Rounded square</string>
-    <string name="icon_shape_hexagon">Rounded Hexagon</string>
+    <string name="icon_shape_override_label_custom">Форма значка</string>
+    <string name="icon_shape_rounded_square">Закруглений квадрат</string>
+    <string name="icon_shape_hexagon">Закруглений шестикутник</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
-    <string name="icon_size_extra_small">Tiny</string>
-    <string name="icon_size_small">Small</string>
-    <string name="icon_size_average">Default</string>
-    <string name="icon_size_large">Large</string>
-    <string name="icon_size_extra_large">Extra large</string>
+    <string name="icon_size_title">Розмір значків</string>
+    <string name="icon_size_extra_small">Крихітний</string>
+    <string name="icon_size_small">Малий</string>
+    <string name="icon_size_average">За замовчуванням</string>
+    <string name="icon_size_large">Великий</string>
+    <string name="icon_size_extra_large">Дуже великий</string>
     <!-- Gestures -->
-    <string name="allow_swipe_down_clearall_title">Clear all from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Swipe vertically downward in recents view to clear all apps</string>
-    <string name="pref_homescreen_dt_gestures_title">Double tap gesture</string>
-    <string name="pref_homescreen_dt_gestures_summary">Select the action of the double tap gesture on the home screen</string>
-    <string name="pref_homescreen_dt_gestures_none">None</string>
-    <string name="pref_homescreen_dt_gestures_sleep">Sleep</string>
-    <string name="pref_homescreen_dt_gestures_torch">Flashlight</string>
-    <string name="pref_notifications_gesture_title">Notifications gesture</string>
-    <string name="pref_notifications_gesture_summary">Swipe vertically downward on the home screen to show the QS panel</string>
+    <string name="allow_swipe_down_clearall_title">Очистити все з недавніх</string>
+    <string name="allow_swipe_down_clearall_desc">Свайпніть вниз в меню нещодавніх, щоб очистити всі додатки</string>
+    <string name="pref_homescreen_dt_gestures_title">Подвійне натискання</string>
+    <string name="pref_homescreen_dt_gestures_summary">Виберіть дію при подвійному натисканні на домашньому екрані</string>
+    <string name="pref_homescreen_dt_gestures_none">Немає</string>
+    <string name="pref_homescreen_dt_gestures_sleep">Сон</string>
+    <string name="pref_homescreen_dt_gestures_torch">Ліхтарик</string>
+    <string name="pref_notifications_gesture_title">Жести сповіщень</string>
+    <string name="pref_notifications_gesture_summary">Проведіть пальцем вниз на робочому столі, щоб відобразити панель сповіщень</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_title">Відобразити додаток Google</string>
+    <string name="google_feed_summary">Зліва від головного екрану</string>
     <!-- Grid -->
-    <string name="num_default">Default</string>
-    <string name="number_of_columns_title">Number of columns</string>
-    <string name="number_of_rows_title">Number of rows</string>
-    <string name="number_of_hotseat_title">Number of dock icons</string>
-    <string name="state_loading">Applying\u2026</string>
+    <string name="num_default">За замовчуванням</string>
+    <string name="number_of_columns_title">Кількість стовпців</string>
+    <string name="number_of_rows_title">Кількість рядків</string>
+    <string name="number_of_hotseat_title">Кількість значків на панелі</string>
+    <string name="state_loading">Застосування\u2026</string>
     <!-- Hidden apps -->
-    <string name="hide_app">Hide apps</string>
-    <string name="hide_app_sum">Hide apps from the app drawer</string>
-    <string name="hidden_apps_loading">Loading\u2026</string>
-    <string name="hidden_app">All apps</string>
-    <string name="hide_selected">Hide selected app(s)</string>
-    <string name="more">More</string>
-    <string name="reset_hidden_apps">Reset all</string>
-    <string name="reset_hidden_apps_done">Hidden apps are now available</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="hide_app">Приховати додатки</string>
+    <string name="hide_app_sum">Приховати додатки з меню додатків</string>
+    <string name="hidden_apps_loading">Завантаження\u2026</string>
+    <string name="hidden_app">Усі додатки</string>
+    <string name="hide_selected">Приховати обраний(ні) додаток(ки)</string>
+    <string name="more">Більше</string>
+    <string name="reset_hidden_apps">Скинути все</string>
+    <string name="reset_hidden_apps_done">Приховані додатки знову доступні</string>
+    <string name="hide_app_info_hidden">Приховані додатки і їх віджети приховані з меню</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="protect_app_help">Help</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="hide_protect_app">Приховати і захистити додатки</string>
+    <string name="hide_protect_app_sum">Приховати і захистити додатки з меню додатків</string>
+    <string name="protect_apps_auth_manager">Розблокуйте, щоб керувати прихованими та захищеними додатками</string>
+    <string name="protect_app_auth_open_app">Авторизуйтесь, щоб відкрити %1$s</string>
+    <string name="protect_app_no_lock_error">Будь ласка, встановіть блокування екрану для обмеження доступу до додатків</string>
+    <string name="protect_app_help">Довідка</string>
+    <string name="protect_app_info_protected">Для відкриття захищених додатків з лаунчера потрібна аутентифікація</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
-    <string name="allapps_long_labels_title">Long app labels</string>
-    <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
+    <string name="app_show_label_title">Підписи додатків</string>
+    <string name="desktop_show_label_summary">Показувати підписи додатків на домашньому екрані</string>
+    <string name="allapps_show_label_summary">Показувати підписи додатків в меню додатків</string>
+    <string name="allapps_long_labels_title">Довгі ярлики додатків</string>
+    <string name="allapps_long_labels_summary">Дозволити додаткам відображати ярлики використовуючи дві лінії</string>
     <!-- Show quickspace -->
-    <string name="show_quickspace_title">Show At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">Включити \"At A Glance\"</string>
+    <string name="show_quickspace_summary">Відображати в верхній частині Домашнього екрану</string>
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid</string>
-    <string name="quick_event_rom_intro_learn">Tap here to have fun!</string>
+    <string name="quick_event_rom_intro_welcome">Ласкаво просимо в crDroid</string>
+    <string name="quick_event_rom_intro_learn">Натисніть тут і веселися!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_now_playing">Зараз програється</string>
+    <string name="quick_event_ambient_song_artist">%1$s від %2$s</string>
     <!-- QSB -->
-    <string name="hotseat_qsb_preferences">Preferences</string>
-    <string name="label_search">Search</string>
-    <string name="label_voice_search">Voice search</string>
+    <string name="hotseat_qsb_preferences">Налаштування</string>
+    <string name="label_search">Пошук</string>
+    <string name="label_voice_search">Голосовий пошук</string>
     <!-- Hide/Show search bars -->
-    <string name="bottom_search_bar_title">Show search bar on bottom</string>
-    <string name="bottom_search_bar_summary">Show the search bar on the Dock</string>
+    <string name="bottom_search_bar_title">Показувати рядок пошуку внизу</string>
+    <string name="bottom_search_bar_summary">Відображати панель пошуку в Док-барі</string>
     <!-- Search engine -->
-    <string name="search_provider_title">Searchbar search engine</string>
+    <string name="search_provider_title">Постачальник для пошуку</string>
     <!-- Predictions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For Overview &amp; All Apps list</string>
-    <string name="app_suggestions_title">Display app suggestions</string>
-    <string name="app_suggestions_summary">At the top of your All Apps list</string>
-    <string name="title_disable_suggestions_prompt">Turn off app suggestions?</string>
-    <string name="msg_disable_suggestions_prompt">"Suggestions won't appear at the top of your apps list, and the usage data used to create them will be permanently erased."</string>
-    <string name="label_turn_off_suggestions">Turn off</string>
-    <string name="all_apps_label">All apps</string>
+    <string name="suggestion_pref_screen_title">Пропозиції</string>
+    <string name="suggestion_pref_screen_desc">Для огляду списку всіх додатків &amp;</string>
+    <string name="app_suggestions_title">Показувати рекомендовані додатки</string>
+    <string name="app_suggestions_summary">У верхній частині списку всіх додатків</string>
+    <string name="title_disable_suggestions_prompt">Не показувати рекомендовані додатки?</string>
+    <string name="msg_disable_suggestions_prompt">"Рекомендовані додатки не будуть показуватися на початку списку. Дані, пов'язані з цією функцією, будуть видалені."</string>
+    <string name="label_turn_off_suggestions">Вимкнути</string>
+    <string name="all_apps_label">Усі додатки</string>
     <!-- Date format -->
-    <string name="date_format_title">Date format</string>
-    <string name="date_format_long_name">Long</string>
-    <string name="date_format_normal_name">Normal</string>
-    <string name="date_format_short_name">Short</string>
-    <string name="date_format_daydate_long_name">Day (with number)</string>
-    <string name="date_format_daydate_short_name">Day (short with number)</string>
-    <string name="date_format_dayonly_name">Just today</string>
+    <string name="date_format_title">Формат дати</string>
+    <string name="date_format_long_name">Довгий</string>
+    <string name="date_format_normal_name">Звичайний</string>
+    <string name="date_format_short_name">Короткий</string>
+    <string name="date_format_daydate_long_name">День (з номером)</string>
+    <string name="date_format_daydate_short_name">День (короткий з номером)</string>
+    <string name="date_format_dayonly_name">Тільки сьогодні</string>
     <!-- At a glance style -->
-    <string name="date_font_style">Date font style</string>
-    <string name="font_normal">Normal</string>
-    <string name="font_italic">Italic</string>
-    <string name="font_bold">Bold</string>
-    <string name="font_bold_italic">Bold Italic</string>
-    <string name="font_light">Light</string>
-    <string name="font_light_italic">Light Italic</string>
-    <string name="font_thin">Thin</string>
-    <string name="font_thin_italic">Thin Italic</string>
-    <string name="font_condensed">Condensed</string>
-    <string name="font_condensed_italic">Condensed Italic</string>
-    <string name="font_condensed_light">Condensed Light</string>
-    <string name="font_condensed_light_italic">Condensed Light Italic</string>
-    <string name="font_condensed_bold">Condensed Bold</string>
-    <string name="font_condensed_bold_italic">Condensed Bold Italic</string>
-    <string name="font_medium">Medium</string>
-    <string name="font_medium_italic">Medium Italic</string>
-    <string name="font_black">Black</string>
-    <string name="font_black_italic">Black Italic</string>
-    <string name="font_dancingscript">DancingScript</string>
-    <string name="font_dancingscript_bold">DancingScript Bold</string>
-    <string name="font_comingsoon">ComingSoon</string>
-    <string name="font_notoserif">NotoSerif Normal</string>
-    <string name="font_notoserif_italic">NotoSerif Italic</string>
-    <string name="font_notoserif_bold">NotoSerif Bold</string>
-    <string name="font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+    <string name="date_font_style">Стиль шрифту дати</string>
+    <string name="font_normal">Звичайний</string>
+    <string name="font_italic">Курсив</string>
+    <string name="font_bold">Жирний</string>
+    <string name="font_bold_italic">Жирний курсив</string>
+    <string name="font_light">Легкий</string>
+    <string name="font_light_italic">Легкий курсив</string>
+    <string name="font_thin">Тонкий</string>
+    <string name="font_thin_italic">Тонкий курсив</string>
+    <string name="font_condensed">Стиснутий</string>
+    <string name="font_condensed_italic">Стиснутий курсив</string>
+    <string name="font_condensed_light">Стиснутий тонкий</string>
+    <string name="font_condensed_light_italic">Стиснутий тонкий курсив</string>
+    <string name="font_condensed_bold">Стиснутий Жирний</string>
+    <string name="font_condensed_bold_italic">Стиснутий Жирний Курсив</string>
+    <string name="font_medium">Середній</string>
+    <string name="font_medium_italic">Середній курсив</string>
+    <string name="font_black">Чорний</string>
+    <string name="font_black_italic">Чорний курсив</string>
+    <string name="font_dancingscript">Рукописний</string>
+    <string name="font_dancingscript_bold">Рукописний Жирний</string>
+    <string name="font_comingsoon">Незабаром</string>
+    <string name="font_notoserif">NotoSerif Звичайний</string>
+    <string name="font_notoserif_italic">NotoSerif Курсив</string>
+    <string name="font_notoserif_bold">NotoSerif Жирний</string>
+    <string name="font_notoserif_bold_italic">NotoSerif Жирний Курсив</string>
     <!-- At a glance uppercase -->
-    <string name="date_style_transform_title">Show uppercase on date</string>
-    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+    <string name="date_style_transform_title">Показати дату в верхньому регістрі</string>
+    <string name="date_style_transform_summary">Перетворити все дати /At A Glance в текст верхнього регістру</string>
     <!-- At a glance font spacing -->
-    <string name="date_style_spacing">Date spacing</string>
-    <string name="date_style_spacing_normal">Normal</string>
-    <string name="date_style_spacing_barely">Barely noticeable</string>
-    <string name="date_style_spacing_ott">Over the top</string>
+    <string name="date_style_spacing">Відстань між датами</string>
+    <string name="date_style_spacing_normal">Звичайний</string>
+    <string name="date_style_spacing_barely">Ледь помітний</string>
+    <string name="date_style_spacing_ott">Нагорі</string>
     <!-- Gradients on Workspace/Hotseat? -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">Показати градієнт зверху</string>
+    <string name="workspace_gradient_summary">Увімкнення тонкого градієнта від рядка стану</string>
+    <string name="hotseat_gradient_title">Показати градієнт знизу</string>
+    <string name="hotseat_gradient_summary">Увімкнення тонкого градієнта від нижнього краю</string>
     <!-- Recents corned -->
-    <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
-    <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
-    <string name="custom_recents_corners_type_title">Custom recents roundness</string>
-    <string name="custom_recents_corners_type_default">Default</string>
-    <string name="custom_recents_corners_type_card">Rounded Card</string>
-    <string name="custom_recents_corners_type_op">OP Style</string>
+    <string name="custom_recents_corners_switch_title">Використовувати для користувацькі налаштування заокруглення кутів недавніх додатків</string>
+    <string name="custom_recents_corners_switch_summary">Якщо вимкнено, то використовуватиметься значення за замовчуванням від системи/теми. Щоб застосувати нове значення, перейдіть на головний екран після вибору потрібного варіанту.</string>
+    <string name="custom_recents_corners_type_title">Користувацьке заокруглення кутів нещодавніх додатків</string>
+    <string name="custom_recents_corners_type_default">За замовчуванням</string>
+    <string name="custom_recents_corners_type_card">Заокруглені вкладки</string>
+    <string name="custom_recents_corners_type_op">Стиль OP</string>
     <!-- Lock desktop -->
-    <string name="lock_desktop_title">Lock desktop</string>
-    <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
+    <string name="lock_desktop_title">Заблокувати робочий стіл</string>
+    <string name="lock_desktop_summary">Заборонити зміни домашнього екрану</string>
     <!-- Search bar hint -->
-    <string name="search_bar_hint">Tap to search on %s</string>
-    <string name="search_bar_hint_title">Show search bar hint text</string>
-    <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
+    <string name="search_bar_hint">Натисніть для пошуку в %s</string>
+    <string name="search_bar_hint_title">Показати текст в рядку пошуку</string>
+    <string name="search_bar_hint_summary">Показати невеликий текст в рядку пошуку про те, що ви можете зробити</string>
     <!-- Icon edit -->
-    <string name="edit_drop_target_label">Edit</string>
-    <string name="edit_hint">Icon name</string>
-    <string name="reset_icon">Reset</string>
-    <string name="all_icons">All icons</string>
-    <string name="similar_icons">Similar icons</string>
-    <string name="ok">Ok</string>
-    <string name="icon_label">Label</string>
-    <string name="loading">Loading, please wait</string>
-    <string name="icon_chooser">Icon chooser</string>
-    <string name="icon_search">Search for icons</string>
+    <string name="edit_drop_target_label">Змінити</string>
+    <string name="edit_hint">Назва значка</string>
+    <string name="reset_icon">Скинути</string>
+    <string name="all_icons">Всі значки</string>
+    <string name="similar_icons">Схожі значки</string>
+    <string name="ok">Добре</string>
+    <string name="icon_label">Назва</string>
+    <string name="loading">Завантаження, будь ласка, зачекайте</string>
+    <string name="icon_chooser">Вибір значка</string>
+    <string name="icon_search">Пошук значків</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
-    <string name="msg_no_icon_pack">No icon packs available</string>
+    <string name="msg_no_icon_pack">Немає доступного набору іконок</string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
+    <string name="play_folder_title">Відтворити</string>
     <!-- Weather -->
-    <string name="show_weather_title">Weather</string>
-    <string name="show_weather_summary">Display weather when available</string>
+    <string name="show_weather_title">Погода</string>
+    <string name="show_weather_summary">Показувати погоду при наявності</string>
 </resources>

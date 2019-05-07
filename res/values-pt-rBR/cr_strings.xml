@@ -32,7 +32,7 @@
     <string name="icon_layout_title">Layout de ícone</string>
     <string name="home_overall_title">Layout principal</string>
     <string name="home_quickspace_title">Resumo</string>
-    <string name="home_hotseat_title">Dock</string>
+    <string name="home_hotseat_title">Barra de aplicativos</string>
     <string name="app_overall_title">Lista de App</string>
     <string name="misc_recents_title">Aplicações recentes</string>
     <string name="misc_gestures_title">Gestos</string>
@@ -43,7 +43,7 @@
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">formato dos Ícones</string>
     <string name="icon_shape_rounded_square">Cantos arredondados</string>
-    <string name="icon_shape_hexagon">Rounded Hexagon</string>
+    <string name="icon_shape_hexagon">Hexágono arredondado</string>
     <!-- Icon size -->
     <string name="icon_size_title">Tamanho do ícone</string>
     <string name="icon_size_extra_small">Minúsculo</string>
@@ -73,27 +73,27 @@
     <!-- Hidden apps -->
     <string name="hide_app">Ocultar aplicativos</string>
     <string name="hide_app_sum">Ocultar aplicativos da gaveta de aplicativos</string>
-    <string name="hidden_apps_loading">Loading\u2026</string>
+    <string name="hidden_apps_loading">Carregando\u2026</string>
     <string name="hidden_app">Todos os aplicativos</string>
     <string name="hide_selected">Ocultar aplicativo (s) selecionado (s)</string>
     <string name="more">Mais</string>
     <string name="reset_hidden_apps">Resetar todos</string>
     <string name="reset_hidden_apps_done">Aplicativos ocultos já estão disponíveis</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="hide_app_info_hidden">Aplicativos ocultos e seus widgets estão escondidos do menu de apps</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
+    <string name="hide_protect_app">Ocultar e proteger apps</string>
+    <string name="hide_protect_app_sum">Ocultar aplicativos do menu de apps</string>
+    <string name="protect_apps_auth_manager">Desbloquear para gerenciar os aplicativos ocultos e protegidos</string>
+    <string name="protect_app_auth_open_app">Autenticar para abrir %1$s</string>
+    <string name="protect_app_no_lock_error">Por favor, configure uma tela de bloqueio para restringir o acesso aos aplicativos</string>
     <string name="protect_app_help">Ajuda</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="protect_app_info_protected">Aplicativos protegidos requerem autenticação para serem abertos do lançador</string>
     <!-- Show labels on icon -->
     <string name="app_show_label_title">Rotulo dos apps</string>
     <string name="desktop_show_label_summary">Mostrar os rótulos de apps na tela inicial</string>
     <string name="allapps_show_label_summary">Mostrar os rótulos de apps na gaveta de aplicativos</string>
-    <string name="allapps_long_labels_title">Long app labels</string>
-    <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
+    <string name="allapps_long_labels_title">Rótulos longos dos aplicativos</string>
+    <string name="allapps_long_labels_summary">Permitir que aplicativos mostrem os rótulos em duas linhas</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Mostre At A Glance</string>
     <string name="show_quickspace_summary">Mostrar no topo da tela inicial</string>
@@ -101,7 +101,7 @@
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Bem vindo a crDroid</string>
-    <string name="quick_event_rom_intro_learn">Tap here to have fun!</string>
+    <string name="quick_event_rom_intro_learn">Toque aqui para se divertir!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">Tocando agora</string>
     <string name="quick_event_ambient_song_artist">%1$s por %2$s</string>
@@ -115,13 +115,13 @@
     <!-- Search engine -->
     <string name="search_provider_title">Motor de busca Searchbar</string>
     <!-- Predictions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For Overview &amp; All Apps list</string>
-    <string name="app_suggestions_title">Display app suggestions</string>
-    <string name="app_suggestions_summary">At the top of your All Apps list</string>
-    <string name="title_disable_suggestions_prompt">Turn off app suggestions?</string>
-    <string name="msg_disable_suggestions_prompt">"Suggestions won't appear at the top of your apps list, and the usage data used to create them will be permanently erased."</string>
-    <string name="label_turn_off_suggestions">Turn off</string>
+    <string name="suggestion_pref_screen_title">Sugestões</string>
+    <string name="suggestion_pref_screen_desc">Para visão geral &amp; Lista de todos os apps</string>
+    <string name="app_suggestions_title">Mostrar sugestões de aplicativos</string>
+    <string name="app_suggestions_summary">No topo de sua lista de aplicativos</string>
+    <string name="title_disable_suggestions_prompt">Desligar sugestão de aplicativos?</string>
+    <string name="msg_disable_suggestions_prompt">"Sugestões não irão aperecer no topo de sua lista de aplicativos e os dados usados para criá-las serão permanentemente apagados."</string>
+    <string name="label_turn_off_suggestions">Desligar</string>
     <string name="all_apps_label">Todos os aplicativos</string>
     <!-- Date format -->
     <string name="date_format_title">Formato da data</string>
@@ -132,32 +132,32 @@
     <string name="date_format_daydate_short_name">Dia (curto com número)</string>
     <string name="date_format_dayonly_name">Apenas hoje</string>
     <!-- At a glance style -->
-    <string name="date_font_style">Date font style</string>
+    <string name="date_font_style">Estilo de fonte da data</string>
     <string name="font_normal">Normal</string>
-    <string name="font_italic">Italic</string>
-    <string name="font_bold">Bold</string>
-    <string name="font_bold_italic">Bold Italic</string>
-    <string name="font_light">Light</string>
-    <string name="font_light_italic">Light Italic</string>
-    <string name="font_thin">Thin</string>
-    <string name="font_thin_italic">Thin Italic</string>
-    <string name="font_condensed">Condensed</string>
-    <string name="font_condensed_italic">Condensed Italic</string>
-    <string name="font_condensed_light">Condensed Light</string>
-    <string name="font_condensed_light_italic">Condensed Light Italic</string>
-    <string name="font_condensed_bold">Condensed Bold</string>
-    <string name="font_condensed_bold_italic">Condensed Bold Italic</string>
-    <string name="font_medium">Medium</string>
-    <string name="font_medium_italic">Medium Italic</string>
-    <string name="font_black">Black</string>
-    <string name="font_black_italic">Black Italic</string>
+    <string name="font_italic">Itálico</string>
+    <string name="font_bold">Negrito</string>
+    <string name="font_bold_italic">Negrito itálico</string>
+    <string name="font_light">Claro</string>
+    <string name="font_light_italic">Itálico Claro</string>
+    <string name="font_thin">Fino</string>
+    <string name="font_thin_italic">Itálico Fino</string>
+    <string name="font_condensed">Condensado</string>
+    <string name="font_condensed_italic">Itálico Condensado</string>
+    <string name="font_condensed_light">Levemente Condensado</string>
+    <string name="font_condensed_light_italic">Levemente Condensado Claro</string>
+    <string name="font_condensed_bold">Negrito Condensado</string>
+    <string name="font_condensed_bold_italic">Itálico Negrito Condensado</string>
+    <string name="font_medium">Médio</string>
+    <string name="font_medium_italic">Itálico Médio</string>
+    <string name="font_black">Preto</string>
+    <string name="font_black_italic">Itálico Preto</string>
     <string name="font_dancingscript">DancingScript</string>
-    <string name="font_dancingscript_bold">DancingScript Bold</string>
-    <string name="font_comingsoon">ComingSoon</string>
+    <string name="font_dancingscript_bold">Negrito DancingScript</string>
+    <string name="font_comingsoon">Em Breve</string>
     <string name="font_notoserif">NotoSerif Normal</string>
-    <string name="font_notoserif_italic">NotoSerif Italic</string>
-    <string name="font_notoserif_bold">NotoSerif Bold</string>
-    <string name="font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+    <string name="font_notoserif_italic">NotoSerif Itálico</string>
+    <string name="font_notoserif_bold">NotoSerif Negrito</string>
+    <string name="font_notoserif_bold_italic">NotoSerif Negrito Itálico</string>
     <!-- At a glance uppercase -->
     <string name="date_style_transform_title">Mostrar maiúsculos na data</string>
     <string name="date_style_transform_summary">Transformar toda a data/resumo em um texto maiúsculo</string>
@@ -180,27 +180,27 @@
     <string name="custom_recents_corners_type_op">Estilo OP</string>
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Bloquear área de trabalho</string>
-    <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
+    <string name="lock_desktop_summary">Impedir modificações na tela inicial</string>
     <!-- Search bar hint -->
-    <string name="search_bar_hint">Tap to search on %s</string>
-    <string name="search_bar_hint_title">Show search bar hint text</string>
-    <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
+    <string name="search_bar_hint">Toque para pesquisar %s</string>
+    <string name="search_bar_hint_title">Mostrar texto na barra de pesquisa</string>
+    <string name="search_bar_hint_summary">Mostrar um pequeno texto na barra de pesquisa sobre o que mais pode fazer</string>
     <!-- Icon edit -->
     <string name="edit_drop_target_label">Editar</string>
-    <string name="edit_hint">Icon name</string>
+    <string name="edit_hint">Nome do ícone</string>
     <string name="reset_icon">Redefinir</string>
-    <string name="all_icons">All icons</string>
-    <string name="similar_icons">Similar icons</string>
+    <string name="all_icons">Todos os ícones</string>
+    <string name="similar_icons">Ícones parecidos</string>
     <string name="ok">Ok</string>
-    <string name="icon_label">Label</string>
-    <string name="loading">Loading, please wait</string>
-    <string name="icon_chooser">Icon chooser</string>
-    <string name="icon_search">Search for icons</string>
+    <string name="icon_label">Rótulo</string>
+    <string name="loading">Carregando, por favor espere</string>
+    <string name="icon_chooser">Seletor de ícones</string>
+    <string name="icon_search">Procurar por ícones</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
-    <string name="msg_no_icon_pack">No icon packs available</string>
+    <string name="msg_no_icon_pack">Não há pacotes de ícones disponível</string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
+    <string name="play_folder_title">Reproduzir</string>
     <!-- Weather -->
-    <string name="show_weather_title">Weather</string>
-    <string name="show_weather_summary">Display weather when available</string>
+    <string name="show_weather_title">Clima</string>
+    <string name="show_weather_summary">Mostrar clima quando disponível</string>
 </resources>

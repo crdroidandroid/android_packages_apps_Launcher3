@@ -30,7 +30,7 @@
     <!-- Sub categories -->
     <string name="home_grid_title">Rasteransicht</string>
     <string name="icon_layout_title">Symbol-Layout</string>
-    <string name="home_overall_title">Home-Layout</string>
+    <string name="home_overall_title">Startbildschirm-Layout</string>
     <string name="home_quickspace_title">Auf einen Blick</string>
     <string name="home_hotseat_title">Ladestation</string>
     <string name="app_overall_title">App-Liste</string>
@@ -174,17 +174,17 @@
     <!-- Recents corned -->
     <string name="custom_recents_corners_switch_title">Verwenden Sie benutzerdefinierte abgerundete Ecken im Anwendungsverlauf</string>
     <string name="custom_recents_corners_switch_summary">Wenn deaktiviert, wird der vom System/Theme bereitgestellte Wert verwendet. Um den neuen Wert anzuwenden, gehen Sie nach der Auswahl Ihrer Option zur Startseite.</string>
-    <string name="custom_recents_corners_type_title">Custom recents roundness</string>
+    <string name="custom_recents_corners_type_title">Benutzerdefinierte Rundungen im Anwendungsverlauf</string>
     <string name="custom_recents_corners_type_default">Standard</string>
-    <string name="custom_recents_corners_type_card">Rounded Card</string>
-    <string name="custom_recents_corners_type_op">OP Style</string>
+    <string name="custom_recents_corners_type_card">Abgerundete Karten</string>
+    <string name="custom_recents_corners_type_op">OP-Stil</string>
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Startbildschirm sperren</string>
-    <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
+    <string name="lock_desktop_summary">Verhindert Änderungen am Startbildschirm</string>
     <!-- Search bar hint -->
-    <string name="search_bar_hint">Tap to search on %s</string>
-    <string name="search_bar_hint_title">Show search bar hint text</string>
-    <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
+    <string name="search_bar_hint">Tippen um nach %s zu suchen</string>
+    <string name="search_bar_hint_title">Suchleiste-Hinweis anzeigen</string>
+    <string name="search_bar_hint_summary">Zeige einen kleinen Text in der Suchleiste, der Hinweise darauf enthält, was du tun kannst</string>
     <!-- Icon edit -->
     <string name="edit_drop_target_label">Bearbeiten</string>
     <string name="edit_hint">Symbolname</string>
@@ -192,15 +192,15 @@
     <string name="all_icons">Alle Symbole</string>
     <string name="similar_icons">Ähnliche Symbole</string>
     <string name="ok">Ok</string>
-    <string name="icon_label">Label</string>
-    <string name="loading">Loading, please wait</string>
-    <string name="icon_chooser">Icon chooser</string>
-    <string name="icon_search">Search for icons</string>
+    <string name="icon_label">Bezeichnung</string>
+    <string name="loading">Laden, bitte warten</string>
+    <string name="icon_chooser">Symbolauswahl</string>
+    <string name="icon_search">Nach Symbolen suchen</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
-    <string name="msg_no_icon_pack">No icon packs available</string>
+    <string name="msg_no_icon_pack">Kein Symbolpaket vorhanden</string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
+    <string name="play_folder_title">Wiedergabe</string>
     <!-- Weather -->
-    <string name="show_weather_title">Weather</string>
-    <string name="show_weather_summary">Display weather when available</string>
+    <string name="show_weather_title">Wetter</string>
+    <string name="show_weather_summary">Zeige Wetter an, falls verfügbar</string>
 </resources>
