@@ -172,35 +172,35 @@
     <string name="hotseat_gradient_title">Mostra gradiente in basso</string>
     <string name="hotseat_gradient_summary">Abilita un leggero gradiente dal dock del launcher</string>
     <!-- Recents corned -->
-    <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
-    <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
-    <string name="custom_recents_corners_type_title">Custom recents roundness</string>
-    <string name="custom_recents_corners_type_default">Default</string>
-    <string name="custom_recents_corners_type_card">Rounded Card</string>
-    <string name="custom_recents_corners_type_op">OP Style</string>
+    <string name="custom_recents_corners_switch_title">Schermata recenti con angoli arrotondati personalizzati</string>
+    <string name="custom_recents_corners_switch_summary">Se disabilitato, utilizzerà quello fornito dal sistema/tema. Per applicare il nuovo valore, vai su home dopo aver selezionato l\'opzione.</string>
+    <string name="custom_recents_corners_type_title">Personalizza gli angoli dei recenti</string>
+    <string name="custom_recents_corners_type_default">Predefinito</string>
+    <string name="custom_recents_corners_type_card">Card con angoli arrotondati</string>
+    <string name="custom_recents_corners_type_op">Stile One Plus</string>
     <!-- Lock desktop -->
-    <string name="lock_desktop_title">Lock desktop</string>
+    <string name="lock_desktop_title">Blocca desktop</string>
     <string name="lock_desktop_summary">Impedisci che la schermata home venga modificata</string>
     <!-- Search bar hint -->
     <string name="search_bar_hint">Tocca per cercare su %s</string>
-    <string name="search_bar_hint_title">Show search bar hint text</string>
-    <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
+    <string name="search_bar_hint_title">Mostra testo suggerito nella barra di ricerca</string>
+    <string name="search_bar_hint_summary">Mostra un piccolo testo sulla barra di ricerca che suggerisce cosa puoi fare</string>
     <!-- Icon edit -->
-    <string name="edit_drop_target_label">Edit</string>
-    <string name="edit_hint">Icon name</string>
-    <string name="reset_icon">Reset</string>
-    <string name="all_icons">All icons</string>
-    <string name="similar_icons">Similar icons</string>
+    <string name="edit_drop_target_label">Modifica</string>
+    <string name="edit_hint">Nome dell\'icona</string>
+    <string name="reset_icon">Ripristina</string>
+    <string name="all_icons">Tutte le icone</string>
+    <string name="similar_icons">Icone simili</string>
     <string name="ok">Ok</string>
-    <string name="icon_label">Label</string>
-    <string name="loading">Loading, please wait</string>
-    <string name="icon_chooser">Icon chooser</string>
-    <string name="icon_search">Search for icons</string>
+    <string name="icon_label">Etichetta</string>
+    <string name="loading">Caricamento in corso, attendere</string>
+    <string name="icon_chooser">Selettore icona</string>
+    <string name="icon_search">Ricerca icone</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
-    <string name="msg_no_icon_pack">No icon packs available</string>
+    <string name="msg_no_icon_pack">Nessun pacchetto icone disponibile</string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
+    <string name="play_folder_title">Riproduci</string>
     <!-- Weather -->
-    <string name="show_weather_title">Weather</string>
+    <string name="show_weather_title">Meteo</string>
     <string name="show_weather_summary">Visualizza il meteo se disponibile</string>
 </resources>
