@@ -79,43 +79,43 @@
     <string name="more">Altro</string>
     <string name="reset_hidden_apps">Ripristina tutto</string>
     <string name="reset_hidden_apps_done">Le applicazioni nascoste sono ora disponibili</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="hide_app_info_hidden">Le app nascoste e i loro widget sono nascosti dal drawer</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="protect_app_help">Help</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="hide_protect_app">Nascondi e proteggi le app</string>
+    <string name="hide_protect_app_sum">Nascondi e proteggi le applicazioni dall\'app drawer</string>
+    <string name="protect_apps_auth_manager">Sblocca per gestire le app protette e nascoste</string>
+    <string name="protect_app_auth_open_app">Autenticati per aprire %1$s</string>
+    <string name="protect_app_no_lock_error">Si prega di impostare una schermata di blocco sicura per limitare l\'accesso all\'app</string>
+    <string name="protect_app_help">Aiuto</string>
+    <string name="protect_app_info_protected">Le applicazioni protette richiedono l\'autenticazione per essere aperte dal launcher</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
-    <string name="allapps_long_labels_title">Long app labels</string>
-    <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
+    <string name="app_show_label_title">Etichette delle applicazioni</string>
+    <string name="desktop_show_label_summary">Mostra le etichette delle app nella schermata home</string>
+    <string name="allapps_show_label_summary">Visualizza le etichette delle applicazioni del drawer</string>
+    <string name="allapps_long_labels_title">Etichette lunghe delle applicazioni</string>
+    <string name="allapps_long_labels_summary">Consenti alle applicazioni di visualizzare le etichette utilizzando due linee</string>
     <!-- Show quickspace -->
-    <string name="show_quickspace_title">Show At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">Mostra al volo</string>
+    <string name="show_quickspace_summary">Mostra in cima alla schermata Home</string>
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid</string>
-    <string name="quick_event_rom_intro_learn">Tap here to have fun!</string>
+    <string name="quick_event_rom_intro_welcome">Benvenuto in crDroid</string>
+    <string name="quick_event_rom_intro_learn">Tocca qui e inizia l\'avventura!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_now_playing">In riproduzione</string>
+    <string name="quick_event_ambient_song_artist">%1$s di %2$s</string>
     <!-- QSB -->
-    <string name="hotseat_qsb_preferences">Preferences</string>
-    <string name="label_search">Search</string>
-    <string name="label_voice_search">Voice search</string>
+    <string name="hotseat_qsb_preferences">Preferenze</string>
+    <string name="label_search">Ricerca</string>
+    <string name="label_voice_search">Ricerca vocale</string>
     <!-- Hide/Show search bars -->
-    <string name="bottom_search_bar_title">Show search bar on bottom</string>
-    <string name="bottom_search_bar_summary">Show the search bar on the Dock</string>
+    <string name="bottom_search_bar_title">Mostra la barra di ricerca in basso</string>
+    <string name="bottom_search_bar_summary">Mostra la barra di ricerca nella Dock</string>
     <!-- Search engine -->
-    <string name="search_provider_title">Searchbar search engine</string>
+    <string name="search_provider_title">Barra del motore di ricerca</string>
     <!-- Predictions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
+    <string name="suggestion_pref_screen_title">Suggerimenti</string>
     <string name="suggestion_pref_screen_desc">For Overview &amp; All Apps list</string>
     <string name="app_suggestions_title">Display app suggestions</string>
     <string name="app_suggestions_summary">At the top of your All Apps list</string>
