@@ -59,26 +59,26 @@
     <string name="pref_homescreen_dt_gestures_none">Niente</string>
     <string name="pref_homescreen_dt_gestures_sleep">Sospensione</string>
     <string name="pref_homescreen_dt_gestures_torch">Torcia</string>
-    <string name="pref_notifications_gesture_title">Notifications gesture</string>
-    <string name="pref_notifications_gesture_summary">Swipe vertically downward on the home screen to show the QS panel</string>
+    <string name="pref_notifications_gesture_title">Gesture per le notifiche</string>
+    <string name="pref_notifications_gesture_summary">Scorri verticalmente verso il basso sulla schermata home per mostrare il pannello QS</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_title">Mostra l\'app Google</string>
+    <string name="google_feed_summary">A sinistra della schermata home principale</string>
     <!-- Grid -->
-    <string name="num_default">Default</string>
-    <string name="number_of_columns_title">Number of columns</string>
-    <string name="number_of_rows_title">Number of rows</string>
-    <string name="number_of_hotseat_title">Number of dock icons</string>
-    <string name="state_loading">Applying\u2026</string>
+    <string name="num_default">Predefinito</string>
+    <string name="number_of_columns_title">Numero di colonne</string>
+    <string name="number_of_rows_title">Numero di righe</string>
+    <string name="number_of_hotseat_title">Numero di icone nella dock</string>
+    <string name="state_loading">Sto applicando\u2026</string>
     <!-- Hidden apps -->
-    <string name="hide_app">Hide apps</string>
-    <string name="hide_app_sum">Hide apps from the app drawer</string>
-    <string name="hidden_apps_loading">Loading\u2026</string>
-    <string name="hidden_app">All apps</string>
-    <string name="hide_selected">Hide selected app(s)</string>
-    <string name="more">More</string>
-    <string name="reset_hidden_apps">Reset all</string>
-    <string name="reset_hidden_apps_done">Hidden apps are now available</string>
+    <string name="hide_app">Nascondi apps</string>
+    <string name="hide_app_sum">Nascondi apps nell\'app drawer</string>
+    <string name="hidden_apps_loading">Sto caricando\u2026</string>
+    <string name="hidden_app">Tutte le apps</string>
+    <string name="hide_selected">Nascondi le app selezionate</string>
+    <string name="more">Altro</string>
+    <string name="reset_hidden_apps">Ripristina tutto</string>
+    <string name="reset_hidden_apps_done">Le applicazioni nascoste sono ora disponibili</string>
     <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
     <!-- Protected apps -->
     <string name="hide_protect_app">Hide and protect apps</string>
