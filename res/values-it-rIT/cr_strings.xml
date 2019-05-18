@@ -147,30 +147,30 @@
     <string name="font_condensed_light_italic">Compatto Corsivo Light</string>
     <string name="font_condensed_bold">Compatto Grassetto</string>
     <string name="font_condensed_bold_italic">Compatto Grassetto Corsivo</string>
-    <string name="font_medium">Medium</string>
-    <string name="font_medium_italic">Medium Italic</string>
-    <string name="font_black">Black</string>
-    <string name="font_black_italic">Black Italic</string>
+    <string name="font_medium">Medio</string>
+    <string name="font_medium_italic">Medio corsivo</string>
+    <string name="font_black">Nero</string>
+    <string name="font_black_italic">Corsivo Nero</string>
     <string name="font_dancingscript">DancingScript</string>
-    <string name="font_dancingscript_bold">DancingScript Bold</string>
+    <string name="font_dancingscript_bold">DancingScript Grassetto</string>
     <string name="font_comingsoon">ComingSoon</string>
-    <string name="font_notoserif">NotoSerif Normal</string>
-    <string name="font_notoserif_italic">NotoSerif Italic</string>
-    <string name="font_notoserif_bold">NotoSerif Bold</string>
-    <string name="font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+    <string name="font_notoserif">NotoSerif Normale</string>
+    <string name="font_notoserif_italic">NotoSerif Corsivo</string>
+    <string name="font_notoserif_bold">NotoSerif Grassetto</string>
+    <string name="font_notoserif_bold_italic">NotoSerif Grassetto Corsivo</string>
     <!-- At a glance uppercase -->
-    <string name="date_style_transform_title">Show uppercase on date</string>
-    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+    <string name="date_style_transform_title">Mostra la data in maiuscolo</string>
+    <string name="date_style_transform_summary">Rendi la data tutta in maiuscolo</string>
     <!-- At a glance font spacing -->
-    <string name="date_style_spacing">Date spacing</string>
-    <string name="date_style_spacing_normal">Normal</string>
-    <string name="date_style_spacing_barely">Barely noticeable</string>
-    <string name="date_style_spacing_ott">Over the top</string>
+    <string name="date_style_spacing">Spaziatura della data</string>
+    <string name="date_style_spacing_normal">Normale</string>
+    <string name="date_style_spacing_barely">Appena percettibile</string>
+    <string name="date_style_spacing_ott">Al di sopra di tutto</string>
     <!-- Gradients on Workspace/Hotseat? -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">Mostra gradiente in alto</string>
+    <string name="workspace_gradient_summary">Abilitare un leggero gradiente dalla barra di stato</string>
+    <string name="hotseat_gradient_title">Mostra gradiente in basso</string>
+    <string name="hotseat_gradient_summary">Abilita un leggero gradiente dal dock del launcher</string>
     <!-- Recents corned -->
     <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
     <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
