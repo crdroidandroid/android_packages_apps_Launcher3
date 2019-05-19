@@ -17,25 +17,25 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Paramètres</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape, size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="home_category_title">Écran d’accueil</string>
+    <string name="home_category_summary">Définir le panneau Google Now et plus</string>
+    <string name="icons_category_title">Icônes</string>
+    <string name="icons_category_summary">Définir la forme de l’icône, la taille, etc</string>
+    <string name="app_drawer_category_title">Tiroir des applications</string>
+    <string name="app_drawer_category_summary">Personnaliser votre tiroir d\'applications</string>
+    <string name="misc_category_title">Divers</string>
+    <string name="misc_category_summary">Autres Options</string>
     <!-- Sub categories -->
-    <string name="home_grid_title">Grid layout</string>
-    <string name="icon_layout_title">Icon layout</string>
-    <string name="home_overall_title">Home layout</string>
-    <string name="home_quickspace_title">At A Glance</string>
+    <string name="home_grid_title">Disposition de la grille</string>
+    <string name="icon_layout_title">Disposition des icônes</string>
+    <string name="home_overall_title">Disposition de l\'accueil</string>
+    <string name="home_quickspace_title">En bref</string>
     <string name="home_hotseat_title">Dock</string>
-    <string name="app_overall_title">App list</string>
-    <string name="misc_recents_title">Recents</string>
-    <string name="misc_gestures_title">Gestures</string>
+    <string name="app_overall_title">Liste des applications</string>
+    <string name="misc_recents_title">Récents</string>
+    <string name="misc_gestures_title">Gestes</string>
     <!-- Icon packs -->
     <string name="icon_pack">Icon pack</string>
     <string name="icon_pack_summary">Change the look of your app icons</string>
