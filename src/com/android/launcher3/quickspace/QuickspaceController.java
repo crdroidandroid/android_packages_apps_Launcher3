@@ -63,8 +63,7 @@ public class QuickspaceController implements WeatherObserver {
     public void addListener(OnDataListener listener) {
         mListeners.add(listener);
         addEventsController();
-        mWeatherClient.addObserver(this);
-        mWeatherClient.updateWeather(true);
+        mWeatherClient.addObserver(this, true /*withQuery*/);
         listener.onDataUpdated();
     }
 
