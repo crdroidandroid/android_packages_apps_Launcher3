@@ -82,63 +82,63 @@
     <string name="hide_app_info_hidden">Các ứng dụng ẩn và các tiện ích con của chúng được ẩn khỏi ngăn kéo</string>
     <!-- Protected apps -->
     <string name="hide_protect_app">Ẩn và bảo vệ ứng dụng</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
-    <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
-    <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="protect_app_help">Help</string>
-    <string name="protect_app_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="hide_protect_app_sum">Ẩn và bảo vệ ứng dụng khỏi ngăn chứa ứng dụng</string>
+    <string name="protect_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn và được bảo vệ</string>
+    <string name="protect_app_auth_open_app">Xác thực để mở %1$s</string>
+    <string name="protect_app_no_lock_error">Vui lòng thiết lập màn hình khóa an toàn để hạn chế quyền truy cập ứng dụng</string>
+    <string name="protect_app_help">Hỗ trợ</string>
+    <string name="protect_app_info_protected">Các ứng dụng được bảo vệ yêu cầu xác thực được mở từ trình khởi chạy</string>
     <!-- Show labels on icon -->
-    <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
-    <string name="allapps_long_labels_title">Long app labels</string>
-    <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
+    <string name="app_show_label_title">Tên ứng dụng</string>
+    <string name="desktop_show_label_summary">Hiển thị tên ứng dụng trên màn hình chính</string>
+    <string name="allapps_show_label_summary">Hiển thị tên ứng dụng trong ngăn chứa ứng dụng</string>
+    <string name="allapps_long_labels_title">Nhãn ứng dụng dài</string>
+    <string name="allapps_long_labels_summary">Cho phép ứng dụng hiển thị nhãn bằng hai dòng</string>
     <!-- Show quickspace -->
-    <string name="show_quickspace_title">Show At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">Hiển thị nhanh</string>
+    <string name="show_quickspace_summary">Hiển thị ở đầu Màn hình chính của bạn</string>
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid</string>
-    <string name="quick_event_rom_intro_learn">Tap here to have fun!</string>
+    <string name="quick_event_rom_intro_welcome">Chào mừng đến với Orchard</string>
+    <string name="quick_event_rom_intro_learn">Nhấn vào đây để vui chơi!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_now_playing">Đang phát</string>
+    <string name="quick_event_ambient_song_artist">%1$s bởi %2$s</string>
     <!-- QSB -->
-    <string name="hotseat_qsb_preferences">Preferences</string>
-    <string name="label_search">Search</string>
-    <string name="label_voice_search">Voice search</string>
+    <string name="hotseat_qsb_preferences">Tuỳ chỉnh</string>
+    <string name="label_search">Tìm kiếm</string>
+    <string name="label_voice_search">Tìm kiếm bằng giọng nói</string>
     <!-- Hide/Show search bars -->
-    <string name="bottom_search_bar_title">Show search bar on bottom</string>
-    <string name="bottom_search_bar_summary">Show the search bar on the Dock</string>
+    <string name="bottom_search_bar_title">Hiển thị thanh tìm kiếm bên dưới</string>
+    <string name="bottom_search_bar_summary">Hiển thị thanh tìm kiếm dưới Dock</string>
     <!-- Search engine -->
-    <string name="search_provider_title">Searchbar search engine</string>
+    <string name="search_provider_title">Công cụ tìm kiếm trên thanh tìm kiếm</string>
     <!-- Predictions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For Overview &amp; All Apps list</string>
-    <string name="app_suggestions_title">Display app suggestions</string>
-    <string name="app_suggestions_summary">At the top of your All Apps list</string>
-    <string name="title_disable_suggestions_prompt">Turn off app suggestions?</string>
-    <string name="msg_disable_suggestions_prompt">"Suggestions won't appear at the top of your apps list, and the usage data used to create them will be permanently erased."</string>
-    <string name="label_turn_off_suggestions">Turn off</string>
-    <string name="all_apps_label">All apps</string>
+    <string name="suggestion_pref_screen_title">Đề xuất</string>
+    <string name="suggestion_pref_screen_desc">Để biết tổng quan &amp; Tất cả danh sách ứng dụng</string>
+    <string name="app_suggestions_title">Hiển thị đề xuất ứng dụng</string>
+    <string name="app_suggestions_summary">Ở đầu danh sách Tất cả ứng dụng của bạn</string>
+    <string name="title_disable_suggestions_prompt">Tắt đề xuất ứng dụng?</string>
+    <string name="msg_disable_suggestions_prompt">"Các đề xuất sẽ không hiển thị ở đầu danh sách ứng dụng và dữ liệu sử dụng đã được dùng để tạo các đề xuất này sẽ bị xóa vĩnh viễn."</string>
+    <string name="label_turn_off_suggestions">Tắt</string>
+    <string name="all_apps_label">Tất cả ứng dụng</string>
     <!-- Date format -->
-    <string name="date_format_title">Date format</string>
-    <string name="date_format_long_name">Long</string>
-    <string name="date_format_normal_name">Normal</string>
-    <string name="date_format_short_name">Short</string>
-    <string name="date_format_daydate_long_name">Day (with number)</string>
-    <string name="date_format_daydate_short_name">Day (short with number)</string>
-    <string name="date_format_dayonly_name">Just today</string>
+    <string name="date_format_title">Định dạng ngày tháng</string>
+    <string name="date_format_long_name">Dài</string>
+    <string name="date_format_normal_name">Bình thường</string>
+    <string name="date_format_short_name">Ngắn</string>
+    <string name="date_format_daydate_long_name">Ngày (có số)</string>
+    <string name="date_format_daydate_short_name">Ngày (ngắn với số)</string>
+    <string name="date_format_dayonly_name">Chỉ hôm nay</string>
     <!-- At a glance style -->
-    <string name="date_font_style">Date font style</string>
-    <string name="font_normal">Normal</string>
-    <string name="font_italic">Italic</string>
-    <string name="font_bold">Bold</string>
-    <string name="font_bold_italic">Bold Italic</string>
-    <string name="font_light">Light</string>
-    <string name="font_light_italic">Light Italic</string>
+    <string name="date_font_style">Kiểu chữ ngày</string>
+    <string name="font_normal">Bình thường</string>
+    <string name="font_italic">Nghiêng</string>
+    <string name="font_bold">Đậm</string>
+    <string name="font_bold_italic">Nghiêng đậm</string>
+    <string name="font_light">Nhạt</string>
+    <string name="font_light_italic">Nghiêng nhạt</string>
     <string name="font_thin">Mảnh</string>
     <string name="font_thin_italic">Nghiêng Mảnh</string>
     <string name="font_condensed">Thu Gọn</string>
@@ -164,15 +164,15 @@
     <!-- At a glance font spacing -->
     <string name="date_style_spacing">Khoảng cách ngày</string>
     <string name="date_style_spacing_normal">Bình thường</string>
-    <string name="date_style_spacing_barely">Barely noticeable</string>
-    <string name="date_style_spacing_ott">Over the top</string>
+    <string name="date_style_spacing_barely">Khá đáng chú ý</string>
+    <string name="date_style_spacing_ott">Trên đầu trang</string>
     <!-- Gradients on Workspace/Hotseat? -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">Hiển thị mờ trên đầu trang</string>
+    <string name="workspace_gradient_summary">Kích hoạt bóng mờ tinh tế từ thanh trạng thái</string>
+    <string name="hotseat_gradient_title">Hiển thị mờ bên dưới</string>
+    <string name="hotseat_gradient_summary">Kích hoạt bóng mờ tinh tế từ đế</string>
     <!-- Recents corned -->
-    <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
+    <string name="custom_recents_corners_switch_title">Sử dụng tùy chỉnh khoảng cách các góc tròn</string>
     <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
     <string name="custom_recents_corners_type_title">Custom recents roundness</string>
     <string name="custom_recents_corners_type_default">Default</string>
