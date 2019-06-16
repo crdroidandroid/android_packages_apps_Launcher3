@@ -160,7 +160,7 @@ public class InvariantDeviceProfile {
         landscapeIconSize = interpolatedDeviceProfileOut.landscapeIconSize * iconSizeModifier;
         iconBitmapSize = Utilities.pxFromDp(iconSize, dm);
         iconTextSize = interpolatedDeviceProfileOut.iconTextSize * iconSizeModifier;
-        fillResIconDpi = getLauncherIconDensity(iconBitmapSize);
+        fillResIconDpi = DisplayMetrics.DENSITY_XXXHIGH;
 
         // If the partner customization apk contains any grid overrides, apply them
         // Supported overrides: numRows, numColumns, iconSize
