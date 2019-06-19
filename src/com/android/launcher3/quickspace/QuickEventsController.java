@@ -21,15 +21,18 @@ import android.content.Context;
 import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.SystemProperties;
 import android.provider.Settings;
 import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.android.launcher3.Launcher;
+import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.R;
 
 import java.util.List;
+import java.util.Random;
 import java.util.ArrayList;
 
 public class QuickEventsController {
@@ -46,13 +49,13 @@ public class QuickEventsController {
     private boolean mIsQuickEvent = false;
 
     // Device Intro
-    /**private boolean mEventIntro = false;
-    private boolean mEventIntroClicked = false;
-    private boolean mIsFirstTimeDone; **/
+    private boolean mEventIntro = false;
+    private boolean mIsFirstTimeDone = false;
+    private SharedPreferences mPreferences;
+
      /** Ambient Play
     private boolean mEventAmbientPlay = false;
     private long mLastAmbientInfo;
-gi
     private BroadcastReceiver mAmbientReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -72,35 +75,40 @@ gi
     }
 
     public void initQuickEvents() {
-        /**mIsFirstTimeDone = Settings.System.getInt(mContext.getContentResolver(), SETTING_DEVICE_INTRO_COMPLETED, 0) != 0;
+        mPreferences = mContext.getSharedPreferences(LauncherFiles.SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
+        mIsFirstTimeDone = mPreferences.getBoolean(SETTING_DEVICE_INTRO_COMPLETED, false);
         deviceIntroEvent();
-        ambientPlayEvent();**/
+        //ambientPlayEvent();
     }
 
-    /**private void deviceIntroEvent() {
-        if (mIsFirstTimeDone || mEventIntroClicked) {
+    private void deviceIntroEvent() {
+        if (mIsFirstTimeDone) {
             mEventIntro = false;
             return;
         }
         mIsQuickEvent = true;
         mEventIntro = true;
         mEventTitle = mContext.getResources().getString(R.string.quick_event_rom_intro_welcome);
-        mEventTitleSub = mContext.getResources().getString(R.string.quick_event_rom_intro_learn);
+        mEventTitleSub = mContext.getResources().getStringArray(R.array.welcome_message_variants)[getLuckyNumber(0,6)];
 
         mEventTitleSubAction = new OnClickListener() {
             @Override
             public void onClick(View view) {
-                final Intent intent = new Intent(Settings.ACTION_DEVICE_INTRODUCTION)
-                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+                mContext.getSharedPreferences(LauncherFiles.SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE)
+                        .edit()
+                        .putBoolean(SETTING_DEVICE_INTRO_COMPLETED, true)
+                        .commit();
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
                 try {
-                    Launcher.getLauncher(mContext).startActivitySafely(view, intent, null);
+                    Launcher.getLauncher(mContext).startActivitySafely(view, intent, null, null);
                 } catch (ActivityNotFoundException ex) {
                 }
                 mIsQuickEvent = false;
-                mEventIntroClicked = true;
             }
         };
-    } **/
+    }
 
     /**public void ambientPlayEvent() {
         if (mEventAmbientPlay) {
@@ -158,5 +166,14 @@ gi
 
     public int getActionIcon() {
         return mEventSubIcon;
+    }
+
+    public int getLuckyNumber(int max) {
+        return getLuckyNumber(0, max);
+    }
+
+    public int getLuckyNumber(int min, int max) {
+        Random r = new Random();
+        return r.nextInt((max - min) + 1) + min;
     }
 }
