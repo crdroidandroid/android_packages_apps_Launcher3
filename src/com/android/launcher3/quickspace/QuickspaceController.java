@@ -99,6 +99,17 @@ public class QuickspaceController implements WeatherObserver {
         return weatherTemp;
     }
 
+    public void onPause() {
+        if (mEventsController != null) mEventsController.onPause();
+    }
+
+    public void onResume() {
+        if (mEventsController != null) {
+            mEventsController.onResume();
+            notifyListeners();
+        }
+    }
+
     @Override
     public void onWeatherUpdated(WeatherInfo weatherInfo) {
         mWeatherInfo = weatherInfo;

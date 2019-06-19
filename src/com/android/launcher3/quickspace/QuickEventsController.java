@@ -45,6 +45,7 @@ public class QuickEventsController {
     private int mEventSubIcon;
 
     private boolean mIsQuickEvent = false;
+    private boolean mRunning;
 
     // Device Intro
     private boolean mEventIntro = false;
@@ -66,17 +67,22 @@ public class QuickEventsController {
 
     public QuickEventsController(Context context) {
         mContext = context;
-        //context.registerReceiver(mAmbientReceiver, new IntentFilter(AmbientPlayHistoryManager.INTENT_SONG_MATCH.getAction()));
         initQuickEvents();
     }
 
     public void initQuickEvents() {
         mIsFirstTimeDone = true;
+        updateQuickEvents();
+    }
+
+    public void updateQuickEvents() {
         deviceIntroEvent();
         //ambientPlayEvent();
     }
 
     private void deviceIntroEvent() {
+        if (!mRunning) return;
+
         if (mIsFirstTimeDone) {
             mEventIntro = false;
             return;
@@ -166,5 +172,13 @@ public class QuickEventsController {
     public int getLuckyNumber(int min, int max) {
         Random r = new Random();
         return r.nextInt((max - min) + 1) + min;
+    }
+
+    public void onPause() {
+        mRunning = false;
+    }
+
+    public void onResume() {
+        mRunning = true;
     }
 }
