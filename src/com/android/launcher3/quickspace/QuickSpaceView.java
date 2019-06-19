@@ -255,6 +255,11 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
 
     public void onPause() {
         mHandler.removeCallbacks(this);
+        mController.onPause();
+    }
+
+    public void onResume() {
+        mController.onResume();
     }
 
     public void run() {

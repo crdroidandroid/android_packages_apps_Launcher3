@@ -100,6 +100,17 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver {
         return weatherTemp;
     }
 
+    public void onPause() {
+        if (mEventsController != null) mEventsController.onPause();
+    }
+
+    public void onResume() {
+        if (mEventsController != null) {
+            mEventsController.onResume();
+            notifyListeners();
+        }
+    }
+
     @Override
     public void weatherUpdated() {
         queryAndUpdateWeather();
