@@ -178,4 +178,14 @@
         <item>2</item>
     </string-array>
 
+    <string-array translatable="false" name="welcome_message_variants">
+        <item>@string/quick_event_rom_intro_title1</item>
+        <item>@string/quick_event_rom_intro_title2</item>
+        <item>@string/quick_event_rom_intro_title3</item>
+        <item>@string/quick_event_rom_intro_title4</item>
+        <item>@string/quick_event_rom_intro_title5</item>
+        <item>@string/quick_event_rom_intro_title6</item>
+        <item>@string/quick_event_rom_intro_title7</item>
+    </string-array>
+
 </resources>
