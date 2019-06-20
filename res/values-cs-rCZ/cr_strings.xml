@@ -31,7 +31,7 @@
     <string name="home_grid_title">Rozložení mřížky</string>
     <string name="icon_layout_title">Rozložení ikon</string>
     <string name="home_overall_title">Rozložení plochy</string>
-    <string name="home_quickspace_title">Na první pohled</string>
+    <string name="home_quickspace_title">Přehled událostí</string>
     <string name="home_hotseat_title">Dok</string>
     <string name="app_overall_title">Seznam aplikací</string>
     <string name="misc_recents_title">Nedávné aplikace</string>
@@ -95,7 +95,7 @@
     <string name="allapps_long_labels_title">Dlouhé popisky aplikací</string>
     <string name="allapps_long_labels_summary">Umožňuje aplikacím zobrazovat popisky na dvou řádcích</string>
     <!-- Show quickspace -->
-    <string name="show_quickspace_title">Zobrazit Na první pohled</string>
+    <string name="show_quickspace_title">Zobrazit Přehled událostí</string>
     <string name="show_quickspace_summary">Zobrazit v horní části Domovské obrazovky</string>
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
@@ -160,7 +160,7 @@
     <string name="font_notoserif_bold_italic">NotoSerif tučné kurzíva</string>
     <!-- At a glance uppercase -->
     <string name="date_style_transform_title">Použít pro text data velká písmena</string>
-    <string name="date_style_transform_summary">Převést veškerý text data / „Na první pohled“ na velká písmena</string>
+    <string name="date_style_transform_summary">Převést veškerý text data / „Přehledu událostí“ na velká písmena</string>
     <!-- At a glance font spacing -->
     <string name="date_style_spacing">Řádkování data</string>
     <string name="date_style_spacing_normal">Normální</string>
@@ -173,7 +173,7 @@
     <string name="hotseat_gradient_summary">Povolit jemný přechod barev z doku spouštěče</string>
     <!-- Recents corned -->
     <string name="custom_recents_corners_switch_title">Použít pro nedávné aplikace zaoblené rohy</string>
-    <string name="custom_recents_corners_switch_summary">Je-li zakázáno, bude použita varianta poskytnutá systémem/tématem. Pro použití nové hodnoty se po vybrání možnosti vraťte na domovskou obrazovku.</string>
+    <string name="custom_recents_corners_switch_summary">Je-li zakázáno, bude použita varianta poskytnutá systémem/motivem. Pro použití nové hodnoty se po vybrání možnosti vraťte na domovskou obrazovku.</string>
     <string name="custom_recents_corners_type_title">Zaoblení rohů karet nedávných aplikací</string>
     <string name="custom_recents_corners_type_default">Výchozí</string>
     <string name="custom_recents_corners_type_card">Zaoblené karty</string>
