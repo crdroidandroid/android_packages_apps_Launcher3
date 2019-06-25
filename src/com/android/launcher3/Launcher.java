@@ -459,6 +459,14 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
 
         mOldConfig.setTo(newConfig);
         UiFactory.onLauncherStateOrResumeChanged(this);
+
+        if (mLauncherTab != null && mClient != null) {
+            LauncherClient launcherClient = mClient;
+            if (launcherClient.mLayoutParams != null) {
+                launcherClient.exchangeConfig();
+            }
+        }
+
         super.onConfigurationChanged(newConfig);
     }
 
