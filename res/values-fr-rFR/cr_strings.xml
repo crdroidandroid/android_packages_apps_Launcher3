@@ -168,34 +168,34 @@
     <string name="date_style_spacing_ott">En haut</string>
     <!-- Gradients on Workspace/Hotseat? -->
     <string name="workspace_gradient_title">Afficher le dégradé en haut</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_summary">Activer un dégradé subtil depuis la barre d\'état</string>
+    <string name="hotseat_gradient_title">Afficher le dégradé en bas</string>
+    <string name="hotseat_gradient_summary">Activer un dégradé subtil depuis le dock du lanceur</string>
     <!-- Recents corned -->
-    <string name="custom_recents_corners_switch_title">Use custom recents rounded corners</string>
-    <string name="custom_recents_corners_switch_summary">If disabled, it\'ll use the one provided by the system/theme. To apply the new value, go to home after selecting your option.</string>
-    <string name="custom_recents_corners_type_title">Custom recents roundness</string>
-    <string name="custom_recents_corners_type_default">Default</string>
-    <string name="custom_recents_corners_type_card">Rounded Card</string>
-    <string name="custom_recents_corners_type_op">OP Style</string>
+    <string name="custom_recents_corners_switch_title">Utiliser les coins arrondis personnalisés</string>
+    <string name="custom_recents_corners_switch_summary">Si désactivé, il sera utilisé celui fourni par le système/thème. Pour appliquer la nouvelle valeur, aller à l\'écran d\'accueil après avoir sélectionné votre option.</string>
+    <string name="custom_recents_corners_type_title">Coins arrondis personnalisés</string>
+    <string name="custom_recents_corners_type_default">Par défaut</string>
+    <string name="custom_recents_corners_type_card">Coins arrondis</string>
+    <string name="custom_recents_corners_type_op">Style OP</string>
     <!-- Lock desktop -->
-    <string name="lock_desktop_title">Lock desktop</string>
-    <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
+    <string name="lock_desktop_title">Verrouiller l\'écran d\'accueil</string>
+    <string name="lock_desktop_summary">Empêcher la modification de l\'écran d\'accueil</string>
     <!-- Search bar hint -->
-    <string name="search_bar_hint">Tap to search on %s</string>
-    <string name="search_bar_hint_title">Show search bar hint text</string>
-    <string name="search_bar_hint_summary">Show a small text on search bar hinting about what you can do</string>
+    <string name="search_bar_hint">Appuyez pour rechercher sur %s</string>
+    <string name="search_bar_hint_title">Afficher le texte de la barre de recherche</string>
+    <string name="search_bar_hint_summary">Afficher un petit texte sur la barre de recherche indiquant ce que vous pouvez faire</string>
     <!-- Icon edit -->
-    <string name="edit_drop_target_label">Edit</string>
-    <string name="edit_hint">Icon name</string>
-    <string name="reset_icon">Reset</string>
-    <string name="all_icons">All icons</string>
-    <string name="similar_icons">Similar icons</string>
+    <string name="edit_drop_target_label">Modifier</string>
+    <string name="edit_hint">Nom de l\'icône</string>
+    <string name="reset_icon">Réinitialiser</string>
+    <string name="all_icons">Toutes les icônes</string>
+    <string name="similar_icons">Icônes similaires</string>
     <string name="ok">Ok</string>
-    <string name="icon_label">Label</string>
-    <string name="loading">Loading, please wait</string>
-    <string name="icon_chooser">Icon chooser</string>
-    <string name="icon_search">Search for icons</string>
+    <string name="icon_label">Titre </string>
+    <string name="loading">Chargement, veuillez patienter</string>
+    <string name="icon_chooser">Sélecteur d\'icône</string>
+    <string name="icon_search">Rechercher des icônes</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
     <string name="msg_no_icon_pack">Aucun pack d\'icônes disponible</string>
     <!-- Folder titles -->
