@@ -78,11 +78,11 @@
     <string name="hide_selected">Masquer les applications sélectionnées</string>
     <string name="more">Plus</string>
     <string name="reset_hidden_apps">Tout réinitialiser</string>
-    <string name="reset_hidden_apps_done">Hidden apps are now available</string>
-    <string name="hide_app_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
+    <string name="reset_hidden_apps_done">Les applications précédemment masquées sont de nouveau affichées</string>
+    <string name="hide_app_info_hidden">Les applications cachées et leurs widgets sont cachés du tiroir d\'applications</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Hide and protect apps</string>
-    <string name="hide_protect_app_sum">Hide and protect apps from the app drawer</string>
+    <string name="hide_protect_app">Applications masquées et protegées</string>
+    <string name="hide_protect_app_sum">Applications masquées et protegées du tiroir d\'applications</string>
     <string name="protect_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
     <string name="protect_app_auth_open_app">Authenticate to open %1$s</string>
     <string name="protect_app_no_lock_error">Please set up a secure lock screen to restrict app access</string>
