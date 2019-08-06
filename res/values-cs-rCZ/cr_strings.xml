@@ -56,7 +56,7 @@
     <string name="allow_swipe_down_clearall_desc">Přejetím prstu svisle dolů v náhledu nedávných aplikací vymažete všechny aplikace</string>
     <string name="pref_homescreen_dt_gestures_title">Gesto dvojím poklepáním</string>
     <string name="pref_homescreen_dt_gestures_summary">Vyberte akci, která má být uskutečněna po provedení gesta dvojího poklepání na plochu</string>
-    <string name="pref_homescreen_dt_gestures_none">Žádná</string>
+    <string name="pref_homescreen_dt_gestures_none">Žádné</string>
     <string name="pref_homescreen_dt_gestures_sleep">Spánek</string>
     <string name="pref_homescreen_dt_gestures_torch">Svítilna</string>
     <string name="pref_notifications_gesture_title">Gesto zobrazení oznámení</string>
@@ -90,13 +90,13 @@
     <string name="protect_app_info_protected">Chráněné aplikace vyžadují pro spuštění ze spouštěče ověření</string>
     <!-- Show labels on icon -->
     <string name="app_show_label_title">Popisky aplikací</string>
-    <string name="desktop_show_label_summary">Zobrazit popisky aplikací na domovské obrazovce</string>
+    <string name="desktop_show_label_summary">Zobrazit popisky aplikací na ploše</string>
     <string name="allapps_show_label_summary">Zobrazit popisky aplikací v roletě aplikací</string>
     <string name="allapps_long_labels_title">Dlouhé popisky aplikací</string>
     <string name="allapps_long_labels_summary">Umožňuje aplikacím zobrazovat popisky na dvou řádcích</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Zobrazit Přehled událostí</string>
-    <string name="show_quickspace_summary">Zobrazit v horní části Domovské obrazovky</string>
+    <string name="show_quickspace_summary">Zobrazit v horní části hlavní plochy</string>
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
@@ -173,7 +173,7 @@
     <string name="hotseat_gradient_summary">Povolit jemný přechod barev z doku spouštěče</string>
     <!-- Recents corned -->
     <string name="custom_recents_corners_switch_title">Použít pro nedávné aplikace zaoblené rohy</string>
-    <string name="custom_recents_corners_switch_summary">Je-li zakázáno, bude použita varianta poskytnutá systémem/motivem. Pro použití nové hodnoty se po vybrání možnosti vraťte na domovskou obrazovku.</string>
+    <string name="custom_recents_corners_switch_summary">Je-li zakázáno, bude použita varianta poskytnutá systémem/motivem. Pro použití nové hodnoty se po vybrání možnosti vraťte na plochu.</string>
     <string name="custom_recents_corners_type_title">Zaoblení rohů karet nedávných aplikací</string>
     <string name="custom_recents_corners_type_default">Výchozí</string>
     <string name="custom_recents_corners_type_card">Zaoblené karty</string>
