@@ -55,12 +55,12 @@
     <string name="allow_swipe_down_clearall_title">Vymazat vše z náhledu nedávných aplikací</string>
     <string name="allow_swipe_down_clearall_desc">Přejetím prstu svisle dolů v náhledu nedávných aplikací vymažete všechny aplikace</string>
     <string name="pref_homescreen_dt_gestures_title">Gesto dvojím poklepáním</string>
-    <string name="pref_homescreen_dt_gestures_summary">Vyberte akci, která má být uskutečněna po provedení gesta dvojího poklepání na domovskou obrazovku</string>
+    <string name="pref_homescreen_dt_gestures_summary">Vyberte akci, která má být uskutečněna po provedení gesta dvojího poklepání na plochu</string>
     <string name="pref_homescreen_dt_gestures_none">Žádná</string>
     <string name="pref_homescreen_dt_gestures_sleep">Spánek</string>
     <string name="pref_homescreen_dt_gestures_torch">Svítilna</string>
-    <string name="pref_notifications_gesture_title">Gesta oznámení</string>
-    <string name="pref_notifications_gesture_summary">Přejetím prstu svisle dolů na domovské obrazovce zobrazit panel Rychlých nastavení</string>
+    <string name="pref_notifications_gesture_title">Gesto zobrazení oznámení</string>
+    <string name="pref_notifications_gesture_summary">Přejetím prstu přes plochu svisle dolů zobrazit panel Rychlých nastavení</string>
     <!-- Google Feed -->
     <string name="google_feed_title">Zobrazit aplikaci Google</string>
     <string name="google_feed_summary">Nalevo od hlavní domovské obrazovky</string>
