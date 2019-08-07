@@ -19,12 +19,12 @@
     <!-- General -->
     <string name="settings_title">Nastavení</string>
     <!-- Categories -->
-    <string name="home_category_title">Domovská obrazovka</string>
+    <string name="home_category_title">Plocha</string>
     <string name="home_category_summary">Nastavte panel Google Now a další funkce</string>
     <string name="icons_category_title">Ikony</string>
-    <string name="icons_category_summary">Nastavte tvar ikon, velikost a další parametry</string>
-    <string name="app_drawer_category_title">Nabídka aplikací</string>
-    <string name="app_drawer_category_summary">Přizpůsobte si nabídku aplikací</string>
+    <string name="icons_category_summary">Nastavte tvar a velikost ikon a další parametry</string>
+    <string name="app_drawer_category_title">Roleta aplikací</string>
+    <string name="app_drawer_category_summary">Přizpůsobte si roletu aplikací</string>
     <string name="misc_category_title">Různé</string>
     <string name="misc_category_summary">Další možnosti</string>
     <!-- Sub categories -->
@@ -52,18 +52,18 @@
     <string name="icon_size_large">Velká</string>
     <string name="icon_size_extra_large">Extra velká</string>
     <!-- Gestures -->
-    <string name="allow_swipe_down_clearall_title">Vymazat vše z náhledu nedávných aplikací</string>
-    <string name="allow_swipe_down_clearall_desc">Přejetím prstu svisle dolů v náhledu nedávných aplikací vymažete všechny aplikace</string>
+    <string name="allow_swipe_down_clearall_title">Vymazat vše ze zobrazení nedávných aplikací</string>
+    <string name="allow_swipe_down_clearall_desc">Přejetím prstu svisle dolů v zobrazení nedávných aplikací vymažete všechny aplikace</string>
     <string name="pref_homescreen_dt_gestures_title">Gesto dvojím poklepáním</string>
-    <string name="pref_homescreen_dt_gestures_summary">Vyberte akci, která má být uskutečněna po provedení gesta dvojího poklepání na domovskou obrazovku</string>
+    <string name="pref_homescreen_dt_gestures_summary">Vyberte akci, která má být uskutečněna po provedení gesta dvojího poklepání na plochu</string>
     <string name="pref_homescreen_dt_gestures_none">Žádná</string>
     <string name="pref_homescreen_dt_gestures_sleep">Spánek</string>
     <string name="pref_homescreen_dt_gestures_torch">Svítilna</string>
-    <string name="pref_notifications_gesture_title">Gesta oznámení</string>
-    <string name="pref_notifications_gesture_summary">Přejetím prstu svisle dolů na domovské obrazovce zobrazit panel Rychlých nastavení</string>
+    <string name="pref_notifications_gesture_title">Gesto zobrazení oznámení</string>
+    <string name="pref_notifications_gesture_summary">Přejetím prstu přes plochu svisle dolů zobrazit QS panel</string>
     <!-- Google Feed -->
     <string name="google_feed_title">Zobrazit aplikaci Google</string>
-    <string name="google_feed_summary">Nalevo od hlavní domovské obrazovky</string>
+    <string name="google_feed_summary">Nalevo od hlavní plochy</string>
     <!-- Grid -->
     <string name="num_default">Výchozí</string>
     <string name="number_of_columns_title">Počet sloupců</string>
@@ -72,31 +72,31 @@
     <string name="state_loading">Aplikuji\u2026</string>
     <!-- Hidden apps -->
     <string name="hide_app">Skrýt aplikace</string>
-    <string name="hide_app_sum">Skrýt aplikace z nabídky aplikací</string>
+    <string name="hide_app_sum">Skrýt aplikace z rolety aplikací</string>
     <string name="hidden_apps_loading">Načítání\u2026</string>
     <string name="hidden_app">Všechny aplikace</string>
     <string name="hide_selected">Skrýt vybranou aplikaci / vybrané aplikace</string>
     <string name="more">Více</string>
     <string name="reset_hidden_apps">Obnovit vše</string>
     <string name="reset_hidden_apps_done">Skryté aplikace jsou nyní k dispozici</string>
-    <string name="hide_app_info_hidden">Skryté aplikace a jejich widgety jsou skryty z nabídky aplikací</string>
+    <string name="hide_app_info_hidden">Skryté aplikace a jejich widgety jsou skryty z rolety aplikací</string>
     <!-- Protected apps -->
     <string name="hide_protect_app">Skrýt a chránit aplikace</string>
-    <string name="hide_protect_app_sum">Skrýt a chránit aplikace z nabídky aplikací</string>
+    <string name="hide_protect_app_sum">Skrýt a chránit aplikace z rolety aplikací</string>
     <string name="protect_apps_auth_manager">Odemkněte pro správu skrytých a chráněných aplikací</string>
     <string name="protect_app_auth_open_app">Povolte otevření aplikace %1$s</string>
-    <string name="protect_app_no_lock_error">Pro omezení přístupu k aplikaci prosím nastavte zabezpečenou zamykací obrazovku</string>
+    <string name="protect_app_no_lock_error">Pro omezení přístupu k aplikaci prosím nastavte zabezpečenou obrazovku uzamčení</string>
     <string name="protect_app_help">Nápověda</string>
     <string name="protect_app_info_protected">Chráněné aplikace vyžadují pro spuštění ze spouštěče ověření</string>
     <!-- Show labels on icon -->
     <string name="app_show_label_title">Popisky aplikací</string>
-    <string name="desktop_show_label_summary">Zobrazit popisky aplikací na domovské obrazovce</string>
-    <string name="allapps_show_label_summary">Zobrazit popisky aplikací v nabídce aplikací</string>
+    <string name="desktop_show_label_summary">Zobrazit popisky aplikací na ploše</string>
+    <string name="allapps_show_label_summary">Zobrazit popisky aplikací v roletě aplikací</string>
     <string name="allapps_long_labels_title">Dlouhé popisky aplikací</string>
     <string name="allapps_long_labels_summary">Umožňuje aplikacím zobrazovat popisky na dvou řádcích</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Zobrazit Přehled událostí</string>
-    <string name="show_quickspace_summary">Zobrazit v horní části Domovské obrazovky</string>
+    <string name="show_quickspace_summary">Zobrazit v horní části hlavní plochy</string>
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
@@ -173,18 +173,18 @@
     <string name="hotseat_gradient_summary">Povolit jemný přechod barev z doku spouštěče</string>
     <!-- Recents corned -->
     <string name="custom_recents_corners_switch_title">Použít pro nedávné aplikace zaoblené rohy</string>
-    <string name="custom_recents_corners_switch_summary">Je-li zakázáno, bude použita varianta poskytnutá systémem/motivem. Pro použití nové hodnoty se po vybrání možnosti vraťte na domovskou obrazovku.</string>
+    <string name="custom_recents_corners_switch_summary">Je-li zakázáno, bude použita varianta poskytnutá systémem/motivem. Pro použití nové hodnoty se po vybrání možnosti vraťte na plochu.</string>
     <string name="custom_recents_corners_type_title">Zaoblení rohů karet nedávných aplikací</string>
     <string name="custom_recents_corners_type_default">Výchozí</string>
     <string name="custom_recents_corners_type_card">Zaoblené karty</string>
     <string name="custom_recents_corners_type_op">Styl OP</string>
     <!-- Lock desktop -->
-    <string name="lock_desktop_title">Uzamknout pracovní plochu</string>
-    <string name="lock_desktop_summary">Zabránit provádění změn na domovské obrazovce</string>
+    <string name="lock_desktop_title">Uzamknout plochu</string>
+    <string name="lock_desktop_summary">Zabránit provádění změn na ploše</string>
     <!-- Search bar hint -->
     <string name="search_bar_hint">Klepnutím vyhledáte %s</string>
     <string name="search_bar_hint_title">Zobrazit text nápovědy vyhledávacího panelu</string>
-    <string name="search_bar_hint_summary">Zobrazit na vyhledávacím panelu malý text, který vám napoví, co můžete dělat</string>
+    <string name="search_bar_hint_summary">Zobrazit ve vyhledávacím panelu malý text, který vám napoví, co můžete dělat</string>
     <!-- Icon edit -->
     <string name="edit_drop_target_label">Upravit</string>
     <string name="edit_hint">Název ikony</string>
