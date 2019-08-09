@@ -20,15 +20,15 @@
     <string name="settings_title">Ayarlar</string>
     <!-- Categories -->
     <string name="home_category_title">Ana ekran</string>
-    <string name="home_category_summary">Google now paneli ve daha fazlasını ayarla</string>
+    <string name="home_category_summary">Google now paneli ve daha fazlasını ayarlayın</string>
     <string name="icons_category_title">Simgeler</string>
-    <string name="icons_category_summary">Simge şeklini, boyutunu ve daha fazlasını ayarla</string>
+    <string name="icons_category_summary">Simge şeklini, boyutunu ve daha fazlasını ayarlayın</string>
     <string name="app_drawer_category_title">Uygulama menüsü</string>
     <string name="app_drawer_category_summary">Uygulama menünüzü özelleştirin</string>
     <string name="misc_category_title">Çeşitli</string>
     <string name="misc_category_summary">Diğer seçenekler</string>
     <!-- Sub categories -->
-    <string name="home_grid_title">Klavuz düzeni</string>
+    <string name="home_grid_title">Kılavuz düzeni</string>
     <string name="icon_layout_title">Simge düzeni</string>
     <string name="home_overall_title">Ana ekran düzeni</string>
     <string name="home_quickspace_title">Bir bakışta</string>
@@ -53,14 +53,14 @@
     <string name="icon_size_extra_large">Ekstra büyük</string>
     <!-- Gestures -->
     <string name="allow_swipe_down_clearall_title">Son uygulamalardan tümünü temizle</string>
-    <string name="allow_swipe_down_clearall_desc">Tüm uygulamaları temizlemek için son uygulamalar görünümde dikey olarak aşağı doğru kaydırın</string>
+    <string name="allow_swipe_down_clearall_desc">Tüm uygulamaları temizlemek için son uygulamalar görünümünde aşağı doğru dikey kaydırın</string>
     <string name="pref_homescreen_dt_gestures_title">Çift dokunma hareketi</string>
     <string name="pref_homescreen_dt_gestures_summary">Ana ekrana çift dokunma hareketi için eylem seçin</string>
     <string name="pref_homescreen_dt_gestures_none">Yok</string>
     <string name="pref_homescreen_dt_gestures_sleep">Uyut</string>
     <string name="pref_homescreen_dt_gestures_torch">El feneri</string>
     <string name="pref_notifications_gesture_title">Bildirim hareketi</string>
-    <string name="pref_notifications_gesture_summary">Hızlı ayarlar panelini göstermek için ana ekranda dikey olarak aşağı doğru hızlıca kaydırın</string>
+    <string name="pref_notifications_gesture_summary">Hızlı ayarlar panelini göstermek için ana ekranda dikey olarak aşağı doğru kaydırın</string>
     <!-- Google Feed -->
     <string name="google_feed_title">Google uygulamasını görüntüle</string>
     <string name="google_feed_summary">Ana ekranın solunda</string>
