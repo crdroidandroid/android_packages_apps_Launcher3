@@ -23,31 +23,31 @@
     <string name="home_category_summary">Stel Google Now in en meer</string>
     <string name="icons_category_title">Iconen</string>
     <string name="icons_category_summary">Stel icoon vorm, grootte en meer in</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="app_drawer_category_title">App-overzicht</string>
+    <string name="app_drawer_category_summary">Pas je app-overzicht aan</string>
+    <string name="misc_category_title">Overige</string>
+    <string name="misc_category_summary">Andere opties</string>
     <!-- Sub categories -->
-    <string name="home_grid_title">Grid layout</string>
-    <string name="icon_layout_title">Icon layout</string>
-    <string name="home_overall_title">Home layout</string>
-    <string name="home_quickspace_title">At A Glance</string>
-    <string name="home_hotseat_title">Dock</string>
-    <string name="app_overall_title">App list</string>
-    <string name="misc_recents_title">Recents</string>
-    <string name="misc_gestures_title">Gestures</string>
+    <string name="home_grid_title">Rooster layout</string>
+    <string name="icon_layout_title">Icoon layout</string>
+    <string name="home_overall_title">Thuis lay-out</string>
+    <string name="home_quickspace_title">In een oogopslag</string>
+    <string name="home_hotseat_title">Koppelen</string>
+    <string name="app_overall_title">App lijst</string>
+    <string name="misc_recents_title">Recente apps</string>
+    <string name="misc_gestures_title">Gebaren</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Change the look of your app icons</string>
-    <string name="icon_pack_none">Default</string>
+    <string name="icon_pack">Pictogrammenpakket</string>
+    <string name="icon_pack_summary">Verander het uiterlijk van je appiconen</string>
+    <string name="icon_pack_none">Standaard</string>
     <!-- Icon shape -->
-    <string name="icon_shape_override_label_custom">Icon shape</string>
-    <string name="icon_shape_rounded_square">Rounded square</string>
-    <string name="icon_shape_hexagon">Rounded Hexagon</string>
+    <string name="icon_shape_override_label_custom">Pictogram vorm</string>
+    <string name="icon_shape_rounded_square">Afgerond vierkant</string>
+    <string name="icon_shape_hexagon">Afgerond Hexagon</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
-    <string name="icon_size_extra_small">Tiny</string>
-    <string name="icon_size_small">Small</string>
+    <string name="icon_size_title">Icoongrootte</string>
+    <string name="icon_size_extra_small">Zeer klein</string>
+    <string name="icon_size_small">Klein</string>
     <string name="icon_size_average">Default</string>
     <string name="icon_size_large">Large</string>
     <string name="icon_size_extra_large">Extra large</string>
