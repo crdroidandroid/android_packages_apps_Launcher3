@@ -243,4 +243,8 @@
     <!-- Weather -->
     <string name="show_weather_title">Weather</string>
     <string name="show_weather_summary">Display weather when available</string>
+
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Use an alternative style</string>
+    <string name="quickspace_alternate_style_summary">Use a different style for At a Glance, more minimalistic</string>
 </resources>
