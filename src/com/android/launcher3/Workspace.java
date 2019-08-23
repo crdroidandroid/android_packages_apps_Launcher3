@@ -509,8 +509,13 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
         if (quickSpace == null) {
             // In transposed layout, we add the QuickSpace in the Grid. As workspace does not touch the
             // edges, we do not need a full width QuickSpace.
-            quickSpace = LayoutInflater.from(getContext())
-                    .inflate(R.layout.reserved_container_workspace, firstPage, false);
+            if (Utilities.useAlternativeQuickspaceUI(getContext())) {
+                quickSpace = LayoutInflater.from(getContext())
+                        .inflate(R.layout.reserved_container_alternate_workspace,firstPage, false);
+            } else {
+                quickSpace = LayoutInflater.from(getContext())
+                        .inflate(R.layout.reserved_container_workspace,firstPage, false);
+            }
         }
 
         CellLayout.LayoutParams lp = new CellLayout.LayoutParams(0, 0, firstPage.getCountX(), 1);

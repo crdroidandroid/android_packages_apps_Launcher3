@@ -81,8 +81,13 @@ public class SettingsHomescreen extends FragmentActivity
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        if (Utilities.DESKTOP_SHOW_QUICKSPACE.equals(key)) {
-            LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+        switch (key) {
+            case Utilities.DESKTOP_SHOW_QUICKSPACE:
+            case Utilities.KEY_SHOW_ALT_QUICKSPACE:
+                LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                break;
+            default:
+                break;
         }
      }
 
