@@ -75,6 +75,7 @@ public class SettingsHomescreen extends Activity
             case Utilities.SHOW_WORKSPACE_GRADIENT:
             case Utilities.SHOW_HOTSEAT_GRADIENT:
             case Utilities.DESKTOP_SHOW_QUICKSPACE:
+            case Utilities.KEY_SHOW_ALT_QUICKSPACE:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:

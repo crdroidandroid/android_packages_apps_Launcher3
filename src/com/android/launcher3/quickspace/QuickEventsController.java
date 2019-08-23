@@ -47,6 +47,7 @@ public class QuickEventsController {
     private int mEventSubIcon;
 
     private boolean mIsQuickEvent = false;
+    private boolean mImportantQuickEvent = false;
     private boolean mRunning;
 
     // Device Intro
@@ -94,6 +95,7 @@ public class QuickEventsController {
         }
         mIsQuickEvent = true;
         mEventIntro = true;
+        mImportantQuickEvent = true;
         mEventTitle = mContext.getResources().getString(R.string.quick_event_rom_intro_welcome);
         mEventTitleSub = mContext.getResources().getStringArray(R.array.welcome_message_variants)[getLuckyNumber(0,6)];
 
@@ -137,6 +139,7 @@ public class QuickEventsController {
         mEventSubIcon = R.drawable.ic_music_note_24dp;
         mIsQuickEvent = true;
         mEventAmbientPlay = true;
+        mImportantQuickEvent = false;
         mLastAmbientInfo = System.currentTimeMillis();
 
         mEventTitleSubAction = new OnClickListener() {
@@ -156,6 +159,10 @@ public class QuickEventsController {
 
     public boolean isQuickEvent() {
         return mIsQuickEvent;
+    }
+
+    public boolean isQuickEventImportant() {
+        return mImportantQuickEvent;
     }
 
     public String getTitle() {
