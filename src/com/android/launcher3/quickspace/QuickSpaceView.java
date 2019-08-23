@@ -151,7 +151,15 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         if (mWeatherAvailable) {
             container.setVisibility(View.VISIBLE);
             container.setOnClickListener(hasGoogleApp ? mActionReceiver.getWeatherAction() : null);
-            title.setText(mController.getWeatherTemp());
+            if (Utilities.useAlternativeQuickspaceUI(getContext())) {
+                if (mIsQuickEvent) {
+                    title.setText(mController.getWeatherTemp() + " · ");
+                } else {
+                    title.setText(" · " + mController.getWeatherTemp());
+                }
+            } else {
+                title.setText(mController.getWeatherTemp());
+            }
             icon.setImageIcon(mController.getWeatherIcon());
             return;
         }
@@ -181,9 +189,15 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     public void prepareLayout() {
         int indexOfChild = indexOfChild(mQuickspaceContent);
         removeView(mQuickspaceContent);
-        addView(LayoutInflater.from(getContext()).inflate(mIsQuickEvent ?
-                R.layout.quickspace_doubleline :
-                R.layout.quickspace_singleline, this, false), indexOfChild);
+        if (Utilities.useAlternativeQuickspaceUI(getContext())) {
+            addView(LayoutInflater.from(getContext()).inflate(mIsQuickEvent ?
+                    R.layout.quickspace_alternate_double :
+                    R.layout.quickspace_alternate_single, this, false), indexOfChild);
+        } else {
+            addView(LayoutInflater.from(getContext()).inflate(mIsQuickEvent ?
+                    R.layout.quickspace_doubleline :
+                    R.layout.quickspace_singleline, this, false), indexOfChild);
+        }
         loadViews();
     }
 

@@ -16,6 +16,14 @@
         android:persistent="true"/>
 
     <SwitchPreference
+        android:key="pref_show_alt_quickspace"
+        android:dependency="pref_show_quickspace"
+        android:title="@string/quickspace_alternate_style_title"
+        android:summary="@string/quickspace_alternate_style_summary"
+        android:defaultValue="false"
+        android:persistent="true"/>
+
+    <SwitchPreference
         android:dependency="pref_show_quickspace"
         android:key="pref_quickspace_np"
         android:summary="@string/quickspace_now_playing_summary"
