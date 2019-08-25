@@ -20,11 +20,11 @@
     <string name="settings_title">Nastavení</string>
     <!-- Categories -->
     <string name="home_category_title">Plocha</string>
-    <string name="home_category_summary">Nastavte panel Google Now a další funkce</string>
+    <string name="home_category_summary">Nastavení panelu Google Now a dalších funkcí</string>
     <string name="icons_category_title">Ikony</string>
-    <string name="icons_category_summary">Nastavte tvar a velikost ikon a další parametry</string>
+    <string name="icons_category_summary">Nastavení tvaru a velikosti ikon a dalších parametrů</string>
     <string name="app_drawer_category_title">Roleta aplikací</string>
-    <string name="app_drawer_category_summary">Přizpůsobte si roletu aplikací</string>
+    <string name="app_drawer_category_summary">Přizpůsobení rolety aplikací</string>
     <string name="misc_category_title">Různé</string>
     <string name="misc_category_summary">Další možnosti</string>
     <!-- Sub categories -->
@@ -38,7 +38,7 @@
     <string name="misc_gestures_title">Gesta</string>
     <!-- Icon packs -->
     <string name="icon_pack">Balíček ikon</string>
-    <string name="icon_pack_summary">Změňte vzhled ikon aplikací</string>
+    <string name="icon_pack_summary">Změnit vzhled ikon aplikací</string>
     <string name="icon_pack_none">Výchozí</string>
     <!-- Icon shape -->
     <string name="icon_shape_override_label_custom">Tvar ikony</string>
@@ -53,14 +53,14 @@
     <string name="icon_size_extra_large">Extra velká</string>
     <!-- Gestures -->
     <string name="allow_swipe_down_clearall_title">Vymazat vše ze zobrazení nedávných aplikací</string>
-    <string name="allow_swipe_down_clearall_desc">Přejetím prstu svisle dolů v zobrazení nedávných aplikací vymažete všechny aplikace</string>
-    <string name="pref_homescreen_dt_gestures_title">Gesto dvojím poklepáním</string>
+    <string name="allow_swipe_down_clearall_desc">Přejetím prstem svisle dolů v zobrazení nedávných aplikací dojde k vymazání všech aplikací</string>
+    <string name="pref_homescreen_dt_gestures_title">Gesto dvojího poklepání</string>
     <string name="pref_homescreen_dt_gestures_summary">Vyberte akci, která má být uskutečněna po provedení gesta dvojího poklepání na plochu</string>
     <string name="pref_homescreen_dt_gestures_none">Žádná</string>
     <string name="pref_homescreen_dt_gestures_sleep">Spánek</string>
     <string name="pref_homescreen_dt_gestures_torch">Svítilna</string>
     <string name="pref_notifications_gesture_title">Gesto zobrazení oznámení</string>
-    <string name="pref_notifications_gesture_summary">Přejetím prstu přes plochu svisle dolů zobrazit QS panel</string>
+    <string name="pref_notifications_gesture_summary">Přejetím prstem přes plochu svisle dolů zobrazit QS panel</string>
     <!-- Google Feed -->
     <string name="google_feed_title">Zobrazit aplikaci Google</string>
     <string name="google_feed_summary">Nalevo od hlavní plochy</string>
@@ -69,11 +69,11 @@
     <string name="number_of_columns_title">Počet sloupců</string>
     <string name="number_of_rows_title">Počet řádků</string>
     <string name="number_of_hotseat_title">Počet ikon v doku</string>
-    <string name="state_loading">Aplikuji\u2026</string>
+    <string name="state_loading">Aplikuje se\u2026</string>
     <!-- Hidden apps -->
     <string name="hide_app">Skrýt aplikace</string>
     <string name="hide_app_sum">Skrýt aplikace z rolety aplikací</string>
-    <string name="hidden_apps_loading">Načítání\u2026</string>
+    <string name="hidden_apps_loading">Načítávají se\u2026</string>
     <string name="hidden_app">Všechny aplikace</string>
     <string name="hide_selected">Skrýt vybranou aplikaci / vybrané aplikace</string>
     <string name="more">Více</string>
@@ -81,9 +81,9 @@
     <string name="reset_hidden_apps_done">Skryté aplikace jsou nyní k dispozici</string>
     <string name="hide_app_info_hidden">Skryté aplikace a jejich widgety jsou skryty z rolety aplikací</string>
     <!-- Protected apps -->
-    <string name="hide_protect_app">Skrýt a chránit aplikace</string>
-    <string name="hide_protect_app_sum">Skrýt a chránit aplikace z rolety aplikací</string>
-    <string name="protect_apps_auth_manager">Odemkněte pro správu skrytých a chráněných aplikací</string>
+    <string name="hide_protect_app">Skrýt a zabezpečit aplikace</string>
+    <string name="hide_protect_app_sum">Skrýt a zabezpečit aplikace z rolety aplikací</string>
+    <string name="protect_apps_auth_manager">Odemkněte pro správu skrytých a zabezpečených aplikací</string>
     <string name="protect_app_auth_open_app">Povolte otevření aplikace %1$s</string>
     <string name="protect_app_no_lock_error">Pro omezení přístupu k aplikaci prosím nastavte zabezpečenou obrazovku uzamčení</string>
     <string name="protect_app_help">Nápověda</string>
@@ -93,24 +93,24 @@
     <string name="desktop_show_label_summary">Zobrazit popisky aplikací na ploše</string>
     <string name="allapps_show_label_summary">Zobrazit popisky aplikací v roletě aplikací</string>
     <string name="allapps_long_labels_title">Dlouhé popisky aplikací</string>
-    <string name="allapps_long_labels_summary">Umožňuje aplikacím zobrazovat popisky na dvou řádcích</string>
+    <string name="allapps_long_labels_summary">Umožňuje zobrazovat popisky aplikací na dvou řádcích</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Zobrazit Přehled událostí</string>
     <string name="show_quickspace_summary">Zobrazit v horní části hlavní plochy</string>
     <!-- QuickSpace -->
-    <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
+    <string name="abbrev_wday_month_day_no_year">EEEdMMM</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Vítejte v crDroidu</string>
     <string name="quick_event_rom_intro_learn">Klepnutím sem se můžete bavit!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Nyní se přehrává</string>
-    <string name="quick_event_ambient_song_artist">%1$s z %2$s</string>
+    <string name="quick_event_ambient_now_playing">Co to hraje</string>
+    <string name="quick_event_ambient_song_artist">%1$s od %2$s</string>
     <!-- QSB -->
     <string name="hotseat_qsb_preferences">Předvolby</string>
     <string name="label_search">Vyhledávání</string>
     <string name="label_voice_search">Hlasové vyhledávání</string>
     <!-- Hide/Show search bars -->
-    <string name="bottom_search_bar_title">Zobrazit vyhledávací panel v dolní části</string>
+    <string name="bottom_search_bar_title">Zobrazit vyhledávací panel vespod</string>
     <string name="bottom_search_bar_summary">Zobrazit vyhledávací panel v Doku</string>
     <!-- Search engine -->
     <string name="search_provider_title">Vyhledávací nástroj vyhledávacího panelu</string>
@@ -133,31 +133,31 @@
     <string name="date_format_dayonly_name">Jen dnešní den</string>
     <!-- At a glance style -->
     <string name="date_font_style">Styl písma data</string>
-    <string name="font_normal">Normální</string>
-    <string name="font_italic">Kurzíva</string>
-    <string name="font_bold">Tučné</string>
-    <string name="font_bold_italic">Tučné kurzíva</string>
-    <string name="font_light">Slabé</string>
-    <string name="font_light_italic">Slabé kurzíva</string>
-    <string name="font_thin">Tenké</string>
-    <string name="font_thin_italic">Tenké kurzíva</string>
-    <string name="font_condensed">Zúžené</string>
-    <string name="font_condensed_italic">Zúžené kurzíva</string>
-    <string name="font_condensed_light">Zúžené slabé</string>
-    <string name="font_condensed_light_italic">Zúžené slabé kurzíva</string>
-    <string name="font_condensed_bold">Zúžené tučné</string>
-    <string name="font_condensed_bold_italic">Zúžené tučné kurzíva</string>
-    <string name="font_medium">Střední</string>
-    <string name="font_medium_italic">Střední kurzíva</string>
-    <string name="font_black">Černá</string>
-    <string name="font_black_italic">Černá kurzíva</string>
+    <string name="font_normal">Normal</string>
+    <string name="font_italic">Italic</string>
+    <string name="font_bold">Bold</string>
+    <string name="font_bold_italic">Bold Italic</string>
+    <string name="font_light">Light</string>
+    <string name="font_light_italic">Light Italic</string>
+    <string name="font_thin">Thin</string>
+    <string name="font_thin_italic">Thin Italic</string>
+    <string name="font_condensed">Condensed</string>
+    <string name="font_condensed_italic">Condensed Italic</string>
+    <string name="font_condensed_light">Condensed Light</string>
+    <string name="font_condensed_light_italic">Condensed Light Italic</string>
+    <string name="font_condensed_bold">Condensed Bold</string>
+    <string name="font_condensed_bold_italic">Condensed Bold Italic</string>
+    <string name="font_medium">Medium</string>
+    <string name="font_medium_italic">Medium Italic</string>
+    <string name="font_black">Black</string>
+    <string name="font_black_italic">Black Italic</string>
     <string name="font_dancingscript">DancingScript</string>
-    <string name="font_dancingscript_bold">DancingScript tučné</string>
+    <string name="font_dancingscript_bold">DancingScript Bold</string>
     <string name="font_comingsoon">ComingSoon</string>
-    <string name="font_notoserif">NotoSerif normální</string>
-    <string name="font_notoserif_italic">NotoSerif kurzíva</string>
-    <string name="font_notoserif_bold">NotoSerif tučné</string>
-    <string name="font_notoserif_bold_italic">NotoSerif tučné kurzíva</string>
+    <string name="font_notoserif">NotoSerif Normal</string>
+    <string name="font_notoserif_italic">NotoSerif Italic</string>
+    <string name="font_notoserif_bold">NotoSerif Bold</string>
+    <string name="font_notoserif_bold_italic">NotoSerif Bold Italic</string>
     <!-- At a glance uppercase -->
     <string name="date_style_transform_title">Použít pro text data velká písmena</string>
     <string name="date_style_transform_summary">Převést veškerý text data / „Přehledu událostí“ na velká písmena</string>
@@ -167,10 +167,10 @@
     <string name="date_style_spacing_barely">Sotva znatelné</string>
     <string name="date_style_spacing_ott">Přehnané</string>
     <!-- Gradients on Workspace/Hotseat? -->
-    <string name="workspace_gradient_title">Zobrazit přechod barev nahoře</string>
-    <string name="workspace_gradient_summary">Povolit jemný přechod barev ze stavové lišty</string>
-    <string name="hotseat_gradient_title">Zobrazit přechod barev dole</string>
-    <string name="hotseat_gradient_summary">Povolit jemný přechod barev z doku spouštěče</string>
+    <string name="workspace_gradient_title">Zobrazit gradient nahoře</string>
+    <string name="workspace_gradient_summary">Povolit jemný gradient ze stavového řádku</string>
+    <string name="hotseat_gradient_title">Zobrazit gradient vespod</string>
+    <string name="hotseat_gradient_summary">Povolit jemný gradient z doku spouštěče</string>
     <!-- Recents corned -->
     <string name="custom_recents_corners_switch_title">Použít pro nedávné aplikace zaoblené rohy</string>
     <string name="custom_recents_corners_switch_summary">Je-li zakázáno, bude použita varianta poskytnutá systémem/motivem. Pro použití nové hodnoty se po vybrání možnosti vraťte na plochu.</string>
@@ -183,7 +183,7 @@
     <string name="lock_desktop_summary">Zabránit provádění změn na ploše</string>
     <!-- Search bar hint -->
     <string name="search_bar_hint">Klepnutím vyhledáte %s</string>
-    <string name="search_bar_hint_title">Zobrazit text nápovědy vyhledávacího panelu</string>
+    <string name="search_bar_hint_title">Zobrazit text nápovědy ve vyhledávacím panelu</string>
     <string name="search_bar_hint_summary">Zobrazit ve vyhledávacím panelu malý text, který vám napoví, co můžete dělat</string>
     <!-- Icon edit -->
     <string name="edit_drop_target_label">Upravit</string>
@@ -193,7 +193,7 @@
     <string name="similar_icons">Podobné ikony</string>
     <string name="ok">Ok</string>
     <string name="icon_label">Popisek</string>
-    <string name="loading">Načítám, počkejte prosím</string>
+    <string name="loading">Načítává se, počkejte prosím</string>
     <string name="icon_chooser">Výběr ikon</string>
     <string name="icon_search">Vyhledávání ikon</string>
     <!-- Toast message for alerting users that no icon packs are available. -->
@@ -202,5 +202,5 @@
     <string name="play_folder_title">Play</string>
     <!-- Weather -->
     <string name="show_weather_title">Počasí</string>
-    <string name="show_weather_summary">Zobrazit počasí, pokud je k dispozici</string>
+    <string name="show_weather_summary">Zobrazit počasí, je‑li k dispozici</string>
 </resources>
