@@ -55,20 +55,13 @@ public class QuickEventsController {
     private boolean mIsFirstTimeDone = false;
     private SharedPreferences mPreferences;
 
-     /** Ambient Play
-    private boolean mEventAmbientPlay = false;
-    private long mLastAmbientInfo;
-    private BroadcastReceiver mAmbientReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if (intent == null || intent.getAction() == null) {
-                return;
-            }
-            if (intent.getAction().equals(AmbientPlayHistoryManager.INTENT_SONG_MATCH.getAction())) {
-                initAmbientPlayEvent();
-            }
-        }
-    }; **/
+    // NowPlaying
+    private boolean mEventNowPlaying = false;
+    private String mNowPlayingTitle;
+    private String mNowPlayingArtist;
+    private boolean mClientLost = true;
+    private boolean mPlayingActive = false;
+    //private long mLastAmbientInfo;
 
     public QuickEventsController(Context context) {
         mContext = context;
@@ -83,7 +76,8 @@ public class QuickEventsController {
 
     public void updateQuickEvents() {
         deviceIntroEvent();
-        //ambientPlayEvent();
+        nowPlayingEvent();
+        initNowPlayingEvent();
     }
 
     private void deviceIntroEvent() {
@@ -118,44 +112,60 @@ public class QuickEventsController {
         };
     }
 
-    /**public void ambientPlayEvent() {
-        if (mEventAmbientPlay) {
-            boolean infoExpired = System.currentTimeMillis() - mLastAmbientInfo > AMBIENT_INFO_MAX_DURATION;
+    public void nowPlayingEvent() {
+        if (mEventNowPlaying) {
+            //boolean infoExpired = System.currentTimeMillis() - mLastAmbientInfo > AMBIENT_INFO_MAX_DURATION;
+            boolean infoExpired = !mPlayingActive;
             if (infoExpired) {
                 mIsQuickEvent = false;
-                mEventAmbientPlay = false;
+                mEventNowPlaying = false;
             }
         }
     }
 
-    public void initAmbientPlayEvent() {
+    public void initNowPlayingEvent() {
+        if (!mRunning) return;
+
         if (mEventIntro) return;
-        List<AmbientPlayHistoryEntry> songInfo = AmbientPlayHistoryManager.getSongs(mContext);
-        if (songInfo.size() < 1) return;
-        AmbientPlayHistoryEntry entry = songInfo.get(0);
+
+        if (!mPlayingActive) return;
+
+        if (mNowPlayingTitle == null) return;
+        
         mEventTitle = mContext.getResources().getString(R.string.quick_event_ambient_now_playing);
-        mEventTitleSub = String.format(mContext.getResources().getString(
-                R.string.quick_event_ambient_song_artist), entry.getSongTitle(), entry.getArtistTitle());
+        if (mNowPlayingArtist == null ) {
+            mEventTitleSub = mNowPlayingTitle;
+        } else {
+            mEventTitleSub = String.format(mContext.getResources().getString(
+                    R.string.quick_event_ambient_song_artist), mNowPlayingTitle, mNowPlayingArtist);
+        }
         mEventSubIcon = R.drawable.ic_music_note_24dp;
         mIsQuickEvent = true;
-        mEventAmbientPlay = true;
+        mEventNowPlaying = true;
         mImportantQuickEvent = false;
-        mLastAmbientInfo = System.currentTimeMillis();
 
         mEventTitleSubAction = new OnClickListener() {
             @Override
             public void onClick(View view) {
-                String query = String.format(mContext.getResources().getString(
+                // TODO: Implement Pixel Now Playing support
+                /**String query = String.format(mContext.getResources().getString(
                         R.string.quick_event_ambient_song_artist), entry.getSongTitle(), entry.getArtistTitle());
                 final Intent ambient = new Intent(Intent.ACTION_WEB_SEARCH)
-                        .putExtra(SearchManager.QUERY, query);
-                try {
-                    Launcher.getLauncher(mContext).startActivitySafely(view, ambient, null);
-                } catch (ActivityNotFoundException ex) {
+                        .putExtra(SearchManager.QUERY, query); **/
+
+                if (mPlayingActive) {
+                    // Work required for local media actions
+                    Intent npIntent = new Intent(Intent.ACTION_MAIN);
+                    npIntent.addCategory(Intent.CATEGORY_APP_MUSIC);
+                    npIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    try {
+                        Launcher.getLauncher(mContext).startActivitySafely(view, npIntent, null, null);
+                    } catch (ActivityNotFoundException ex) {
+                    }
                 }
             }
         };
-    } **/
+    }
 
     public boolean isQuickEvent() {
         return mIsQuickEvent;
@@ -188,6 +198,13 @@ public class QuickEventsController {
     public int getLuckyNumber(int min, int max) {
         Random r = new Random();
         return r.nextInt((max - min) + 1) + min;
+    }
+
+    public void setMediaInfo(String title, String artist, boolean clientLost, boolean activePlayback) {
+        mNowPlayingTitle = title;
+        mNowPlayingArtist = artist;
+        mClientLost = clientLost;
+        mPlayingActive = activePlayback;
     }
 
     public void onPause() {
