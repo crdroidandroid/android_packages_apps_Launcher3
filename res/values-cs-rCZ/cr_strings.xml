@@ -45,27 +45,27 @@
     <string name="icon_shape_rounded_square">Zaoblený čtverec</string>
     <string name="icon_shape_hexagon">Zaoblený šestiúhelník</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Velikost ikony</string>
+    <string name="icon_size_title">Velikost ikon</string>
     <string name="icon_size_extra_small">Nejmenší</string>
-    <string name="icon_size_small">Malá</string>
+    <string name="icon_size_small">Malé</string>
     <string name="icon_size_average">Výchozí</string>
-    <string name="icon_size_large">Velká</string>
-    <string name="icon_size_extra_large">Extra velká</string>
+    <string name="icon_size_large">Velké</string>
+    <string name="icon_size_extra_large">Extra velké</string>
     <!-- Gestures -->
     <string name="allow_swipe_down_clearall_title">Vymazat vše ze zobrazení nedávných aplikací</string>
     <string name="allow_swipe_down_clearall_desc">Přejetím prstem svisle dolů v zobrazení nedávných aplikací dojde k vymazání všech aplikací</string>
     <string name="pref_homescreen_dt_gestures_title">Gesto dvojího poklepání</string>
     <string name="pref_homescreen_dt_gestures_summary">Vyberte akci, která má být uskutečněna po provedení gesta dvojího poklepání na plochu</string>
-    <string name="pref_homescreen_dt_gestures_none">Žádná</string>
-    <string name="pref_homescreen_dt_gestures_sleep">Spánek</string>
-    <string name="pref_homescreen_dt_gestures_torch">Svítilna</string>
+    <string name="pref_homescreen_dt_gestures_none">Žádná akce</string>
+    <string name="pref_homescreen_dt_gestures_sleep">Uspat zařízení</string>
+    <string name="pref_homescreen_dt_gestures_torch">Zapnout svítilnu</string>
     <string name="pref_notifications_gesture_title">Gesto zobrazení oznámení</string>
-    <string name="pref_notifications_gesture_summary">Přejetím prstem přes plochu svisle dolů zobrazit QS panel</string>
+    <string name="pref_notifications_gesture_summary">Přejetím prstem přes plochu svisle dolů zobrazit panel Rychlého nastavení a\u00a0oznámení</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Zobrazit aplikaci Google</string>
+    <string name="google_feed_title">Zobrazit kanál Objevit</string>
     <string name="google_feed_summary">Nalevo od hlavní plochy</string>
     <!-- Grid -->
-    <string name="num_default">Výchozí</string>
+    <string name="num_default">Výchozí počet</string>
     <string name="number_of_columns_title">Počet sloupců</string>
     <string name="number_of_rows_title">Počet řádků</string>
     <string name="number_of_hotseat_title">Počet ikon v doku</string>
@@ -79,20 +79,20 @@
     <string name="more">Více</string>
     <string name="reset_hidden_apps">Obnovit vše</string>
     <string name="reset_hidden_apps_done">Skryté aplikace jsou nyní k dispozici</string>
-    <string name="hide_app_info_hidden">Skryté aplikace a jejich widgety jsou skryty z rolety aplikací</string>
+    <string name="hide_app_info_hidden">Takto označené aplikace jsou skryty, včetně jejich widgetů, z\u00a0rolety aplikací</string>
     <!-- Protected apps -->
     <string name="hide_protect_app">Skrýt a zabezpečit aplikace</string>
-    <string name="hide_protect_app_sum">Skrýt a zabezpečit aplikace z rolety aplikací</string>
-    <string name="protect_apps_auth_manager">Odemkněte pro správu skrytých a zabezpečených aplikací</string>
-    <string name="protect_app_auth_open_app">Povolte otevření aplikace %1$s</string>
+    <string name="hide_protect_app_sum">Skrýt aplikace z\u00a0rolety aplikací a\u00a0nastavit jejich zabezpečení</string>
+    <string name="protect_apps_auth_manager">Pro správu skrytých a\u00a0zabezpečených aplikací nejdříve odemkněte obrazovku</string>
+    <string name="protect_app_auth_open_app">Zadejte bezpečnostní ověření pro spuštění aplikace %1$s</string>
     <string name="protect_app_no_lock_error">Pro omezení přístupu k aplikaci prosím nastavte zabezpečenou obrazovku uzamčení</string>
     <string name="protect_app_help">Nápověda</string>
-    <string name="protect_app_info_protected">Chráněné aplikace vyžadují pro spuštění ze spouštěče ověření</string>
+    <string name="protect_app_info_protected">Takto jsou označeny zabezpečené aplikace. Před jejich spuštěním je vyžadováno bezpečnostní ověření</string>
     <!-- Show labels on icon -->
     <string name="app_show_label_title">Popisky aplikací</string>
     <string name="desktop_show_label_summary">Zobrazit popisky aplikací na ploše</string>
     <string name="allapps_show_label_summary">Zobrazit popisky aplikací v roletě aplikací</string>
-    <string name="allapps_long_labels_title">Dlouhé popisky aplikací</string>
+    <string name="allapps_long_labels_title">Dvouřádkové popisky aplikací</string>
     <string name="allapps_long_labels_summary">Umožňuje zobrazovat popisky aplikací na dvou řádcích</string>
     <!-- Show quickspace -->
     <string name="show_quickspace_title">Zobrazit Přehled událostí</string>
@@ -110,8 +110,8 @@
     <string name="label_search">Vyhledávání</string>
     <string name="label_voice_search">Hlasové vyhledávání</string>
     <!-- Hide/Show search bars -->
-    <string name="bottom_search_bar_title">Zobrazit vyhledávací panel vespod</string>
-    <string name="bottom_search_bar_summary">Zobrazit vyhledávací panel v Doku</string>
+    <string name="bottom_search_bar_title">Zobrazit vespod vyhledávací panel</string>
+    <string name="bottom_search_bar_summary">Zobrazit v doku vyhledávací panel</string>
     <!-- Search engine -->
     <string name="search_provider_title">Vyhledávací nástroj vyhledávacího panelu</string>
     <!-- Predictions -->
@@ -120,7 +120,7 @@
     <string name="app_suggestions_title">Zobrazit návrhy aplikací</string>
     <string name="app_suggestions_summary">V horní části seznamu Všech aplikací</string>
     <string name="title_disable_suggestions_prompt">Chcete vypnout návrhy aplikací?</string>
-    <string name="msg_disable_suggestions_prompt">"Návrhy se nebudou zobrazovat na začátku seznamu aplikací a údaje o využití, na základě kterých byly návrhy vytvářeny, budou trvale vymazány."</string>
+    <string name="msg_disable_suggestions_prompt">"Návrhy aplikací se nebudou zobrazovat navrchu seznamu aplikací a\u00a0údaje o\u00a0jejich využití, na základě kterých byly návrhy vytvářeny, budou trvale vymazány."</string>
     <string name="label_turn_off_suggestions">Vypnout</string>
     <string name="all_apps_label">Všechny aplikace</string>
     <!-- Date format -->
@@ -129,7 +129,7 @@
     <string name="date_format_normal_name">Normální</string>
     <string name="date_format_short_name">Krátký</string>
     <string name="date_format_daydate_long_name">Den (s číslem)</string>
-    <string name="date_format_daydate_short_name">Den (zkrácený s číslem)</string>
+    <string name="date_format_daydate_short_name">Den (zkrácený název s\u00a0číslem)</string>
     <string name="date_format_dayonly_name">Jen dnešní den</string>
     <!-- At a glance style -->
     <string name="date_font_style">Styl písma data</string>
@@ -168,16 +168,16 @@
     <string name="date_style_spacing_ott">Přehnané</string>
     <!-- Gradients on Workspace/Hotseat? -->
     <string name="workspace_gradient_title">Zobrazit gradient nahoře</string>
-    <string name="workspace_gradient_summary">Povolit jemný gradient ze stavového řádku</string>
+    <string name="workspace_gradient_summary">Povolit nenápadný gradient ze stavového řádku</string>
     <string name="hotseat_gradient_title">Zobrazit gradient vespod</string>
-    <string name="hotseat_gradient_summary">Povolit jemný gradient z doku spouštěče</string>
+    <string name="hotseat_gradient_summary">Povolit nenápadný gradient z\u00a0doku spouštěče</string>
     <!-- Recents corned -->
     <string name="custom_recents_corners_switch_title">Použít pro nedávné aplikace zaoblené rohy</string>
-    <string name="custom_recents_corners_switch_summary">Je-li zakázáno, bude použita varianta poskytnutá systémem/motivem. Pro použití nové hodnoty se po vybrání možnosti vraťte na plochu.</string>
+    <string name="custom_recents_corners_switch_summary">Je-li nastavení zakázáno, bude použita varianta poskytnutá systémem/motivem. Pro použití nového nastavení se po vybrání možnosti vraťte na plochu.</string>
     <string name="custom_recents_corners_type_title">Zaoblení rohů karet nedávných aplikací</string>
     <string name="custom_recents_corners_type_default">Výchozí</string>
     <string name="custom_recents_corners_type_card">Zaoblené karty</string>
-    <string name="custom_recents_corners_type_op">Styl OP</string>
+    <string name="custom_recents_corners_type_op">Ve stylu OP</string>
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Uzamknout plochu</string>
     <string name="lock_desktop_summary">Zabránit provádění změn na ploše</string>
