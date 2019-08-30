@@ -20,15 +20,29 @@ import android.content.Context;
 import android.database.ContentObserver;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
+import android.media.AudioManager;
+import android.media.IAudioService;
+import android.media.MediaMetadataRetriever;
+import android.media.RemoteControlClient;
+import android.media.RemoteController;
+import android.media.session.MediaSessionLegacyHelper;
 import android.os.Handler;
 import android.provider.Settings;
+import android.service.notification.StatusBarNotification;
 import android.util.Log;
 
 import com.android.internal.util.crdroid.OmniJawsClient;
 
-import java.util.ArrayList;
+import com.android.launcher3.LauncherNotifications;
+import com.android.launcher3.notification.NotificationInfo;
+import com.android.launcher3.notification.NotificationKeyData;
+import com.android.launcher3.notification.NotificationListener;
+import com.android.launcher3.util.PackageUserKey;
 
-public class QuickspaceController implements OmniJawsClient.OmniJawsObserver {
+import java.util.ArrayList;
+import java.util.List;
+
+public class QuickspaceController implements NotificationListener.NotificationsChangedListener, OmniJawsClient.OmniJawsObserver {
 
     public final ArrayList<OnDataListener> mListeners = new ArrayList();
     private static final String SETTING_WEATHER_LOCKSCREEN_UNIT = "weather_lockscreen_unit";
@@ -43,6 +57,13 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver {
     private OmniJawsClient.WeatherInfo mWeatherInfo;
 
     private boolean mUseImperialUnit;
+
+    private AudioManager mAudioManager;
+    private Metadata mMetadata = new Metadata();
+    private RemoteController mRemoteController;
+    private IAudioService mAudioService = null;
+    private boolean mClientLost = true;
+    private boolean mMediaActive = false;
 
     public interface OnDataListener {
         void onDataUpdated();
@@ -69,6 +90,9 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver {
         mListeners.add(listener);
         addEventsController();
         addWeatherProvider();
+        mRemoteController = new RemoteController(mContext, mRCClientUpdateListener);
+        mAudioManager = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
+        mAudioManager.registerRemoteController(mRemoteController);
         listener.onDataUpdated();
     }
 
@@ -100,12 +124,56 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver {
         return weatherTemp;
     }
 
+    private void playbackStateUpdate(int state) {
+        boolean active;
+        switch (state) {
+            case RemoteControlClient.PLAYSTATE_PLAYING:
+                active = true;
+                break;
+            case RemoteControlClient.PLAYSTATE_ERROR:
+            case RemoteControlClient.PLAYSTATE_PAUSED:
+            default:
+                active = false;
+                break;
+        }
+        if (active != mMediaActive) {
+            mMediaActive = active;
+        }
+        updateMediaInfo();
+    }
+
+    public void updateMediaInfo() {
+        if (mEventsController != null) {
+            mEventsController.setMediaInfo(mMetadata.trackTitle, mMetadata.trackArtist, mClientLost, mMediaActive);
+            mEventsController.updateQuickEvents();
+            notifyListeners();
+        }
+    }
+
+    @Override
+    public void onNotificationPosted(PackageUserKey postedPackageUserKey,
+                                     NotificationKeyData notificationKey) {
+        updateMediaInfo();
+    }
+
+    @Override
+    public void onNotificationRemoved(PackageUserKey removedPackageUserKey,
+                                      NotificationKeyData notificationKey) {
+        updateMediaInfo();
+    }
+
+    @Override
+    public void onNotificationFullRefresh(List<StatusBarNotification> activeNotifications) {
+        updateMediaInfo();
+    }
+
     public void onPause() {
         if (mEventsController != null) mEventsController.onPause();
     }
 
     public void onResume() {
         if (mEventsController != null) {
+            updateMediaInfo();
             mEventsController.onResume();
             notifyListeners();
         }
@@ -161,5 +229,56 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver {
                 }
             }
         });
+    }
+
+   private RemoteController.OnClientUpdateListener mRCClientUpdateListener =
+            new RemoteController.OnClientUpdateListener() {
+
+        @Override
+        public void onClientChange(boolean clearing) {
+            if (clearing) {
+                mMetadata.clear();
+                mMediaActive = false;
+                mClientLost = true;
+            }
+            updateMediaInfo();
+        }
+
+        @Override
+        public void onClientPlaybackStateUpdate(int state, long stateChangeTimeMs,
+                long currentPosMs, float speed) {
+            mClientLost = false;
+            playbackStateUpdate(state);
+        }
+
+        @Override
+        public void onClientPlaybackStateUpdate(int state) {
+            mClientLost = false;
+            playbackStateUpdate(state);
+        }
+
+        @Override
+        public void onClientMetadataUpdate(RemoteController.MetadataEditor data) {
+            mMetadata.trackTitle = data.getString(MediaMetadataRetriever.METADATA_KEY_TITLE,
+                    mMetadata.trackTitle);
+            mMetadata.trackArtist = data.getString(MediaMetadataRetriever.METADATA_KEY_ARTIST,
+                    mMetadata.trackArtist);
+            mClientLost = false;
+            updateMediaInfo();
+        }
+
+        @Override
+        public void onClientTransportControlUpdate(int transportControlFlags) {
+        }
+    };
+
+    class Metadata {
+        private String trackTitle;
+        private String trackArtist;
+
+         public void clear() {
+            trackTitle = null;
+            trackArtist = null;
+        }
     }
 }
