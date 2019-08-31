@@ -909,6 +909,10 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
             mClient.onResume();
         }
 
+        if (mQuickSpace != null) {
+            mQuickSpace.onResume();
+        }
+
         if (mLauncherCallbacks != null) {
             mLauncherCallbacks.onResume();
         }
