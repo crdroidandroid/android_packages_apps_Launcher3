@@ -29,6 +29,7 @@ import android.view.View.OnClickListener;
 
 import com.android.launcher3.Launcher;
 import com.android.launcher3.LauncherFiles;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.R;
 
 import java.util.List;
@@ -127,6 +128,8 @@ public class QuickEventsController {
         if (!mRunning) return;
 
         if (mEventIntro) return;
+
+        if (!Utilities.isQuickspaceNowPlaying(mContext)) return;
 
         if (!mPlayingActive) return;
 
