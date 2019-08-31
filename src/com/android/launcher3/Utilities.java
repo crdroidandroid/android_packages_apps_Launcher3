@@ -148,6 +148,8 @@ public final class Utilities {
     public static final String EXTRA_WALLPAPER_OFFSET = "com.android.launcher3.WALLPAPER_OFFSET";
     public static final String EXTRA_WALLPAPER_FLAVOR = "com.android.launcher3.WALLPAPER_FLAVOR";
 
+    public static final String KEY_SHOW_QUICKSPACE_NOWPLAYING = "pref_quickspace_np";
+
     public static boolean IS_RUNNING_IN_TEST_HARNESS =
                     ActivityManager.isRunningInTestHarness();
 
@@ -163,6 +165,10 @@ public final class Utilities {
         ResolveInfo ri = context.getPackageManager().resolveActivity(
                 PackageManagerHelper.getStyleWallpapersIntent(context), 0);
         return ri != null;
+    }
+
+    public static boolean isQuickspaceNowPlaying(Context context) {
+        return getPrefs(context).getBoolean(KEY_SHOW_QUICKSPACE_NOWPLAYING, true);
     }
 
     /**
