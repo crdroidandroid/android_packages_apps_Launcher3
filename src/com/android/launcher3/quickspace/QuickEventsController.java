@@ -29,6 +29,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.android.launcher3.Launcher;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.R;
 
 import java.util.List;
@@ -194,6 +195,10 @@ public class QuickEventsController {
 
     public boolean isNowPlayingReady() {
         boolean status = false;
+
+        if (!Utilities.isQuickspaceNowPlaying(mContext)) {
+            return false;
+        }
 
         if (mLocalPlaying && mArtist != null && mSong != null) {
             status = true;

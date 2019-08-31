@@ -250,4 +250,8 @@
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">Use an alternative style</string>
     <string name="quickspace_alternate_style_summary">Use a different style for At a Glance, more minimalistic</string>
+
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Show now playing</string>
+    <string name="quickspace_now_playing_summary">Display the song you\'re playing on At a Glance</string>
 </resources>

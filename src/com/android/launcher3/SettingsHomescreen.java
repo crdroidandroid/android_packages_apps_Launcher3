@@ -154,6 +154,14 @@ public class SettingsHomescreen extends SettingsActivity implements PreferenceFr
                 }
             });
 
+            SwitchPreference quickspaceNowPlaying = (SwitchPreference) findPreference(Utilities.KEY_SHOW_QUICKSPACE_NOWPLAYING);
+            quickspaceNowPlaying.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    return true;
+                }
+            });
+
             SwitchPreference showBottomSearchBar = (SwitchPreference) findPreference(Utilities.BOTTOM_SEARCH_BAR_KEY);
             showBottomSearchBar.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {

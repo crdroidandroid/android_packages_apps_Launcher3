@@ -47,6 +47,14 @@
         android:defaultValue="false"
         android:persistent="true"/>
 
+    <SwitchPreference
+        android:dependency="pref_show_quickspace"
+        android:key="pref_quickspace_np"
+        android:summary="@string/quickspace_now_playing_summary"
+        android:title="@string/quickspace_now_playing_title"
+        android:defaultValue="true"
+        android:persistent="true" />
+
     <ListPreference
         android:dependency="pref_show_quickspace"
         android:entries="@array/date_format_names"
