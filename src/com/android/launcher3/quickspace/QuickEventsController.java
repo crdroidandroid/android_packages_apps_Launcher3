@@ -72,7 +72,7 @@ public class QuickEventsController {
     }
 
     public void initQuickEvents() {
-        mIsFirstTimeDone = Settings.System.getInt(mContext.getContentResolver(), SETTING_DEVICE_INTRO_COMPLETED, 0) != 0;
+        mIsFirstTimeDone = true;
         deviceIntroEvent();
         //ambientPlayEvent();
     }
@@ -85,19 +85,13 @@ public class QuickEventsController {
         mIsQuickEvent = true;
         mEventIntro = true;
         mEventTitle = mContext.getResources().getString(R.string.quick_event_rom_intro_welcome);
-        int mRandomLuck = getLuckyNumber(10);
-        String endingWelcome;
-        if (mRandomLuck == 7) {
-            endingWelcome = mContext.getResources().getStringArray(R.array.welcome_message_variants)[getLuckyNumber(0,6)];
-        } else {
-            endingWelcome = mContext.getResources().getStringArray(R.array.welcome_message_variants)[0];
-        }
+        String endingWelcome = mContext.getResources().getStringArray(R.array.welcome_message_variants)[getLuckyNumber(0,2)];
         mEventTitleSub = mContext.getResources().getString(R.string.quick_event_rom_intro_bridge, endingWelcome);
 
         mEventTitleSubAction = new OnClickListener() {
             @Override
             public void onClick(View view) {
-                final Intent intent = new Intent(Intent.ACTION_MAIN).setClassName("com.android.settings","com.bootleggers.dumpster.fragments.BootlegWelcome")
+                final Intent intent = new Intent(Intent.ACTION_MAIN).setClassName("com.android.settings","Settings$crDroidSettingsLayoutActivity")
                         .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
                 try {
                     Launcher.getLauncher(mContext).startActivitySafely(view, intent, null);
