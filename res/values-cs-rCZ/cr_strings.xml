@@ -207,13 +207,13 @@
     <string name="show_weather_title">Počasí</string>
     <string name="show_weather_summary">Zobrazit počasí, je‑li k\u00a0dispozici</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a different style for At a Glance, more minimalistic</string>
+    <string name="quickspace_alternate_style_title">Použít alternativní styl</string>
+    <string name="quickspace_alternate_style_summary">Použít jiný, více minimalistický, styl zobrazení <i>Přehledu událostí</i></string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Zobrazit právě přehrávanou skladbu</string>
-    <string name="quickspace_now_playing_summary">Display the song you\'re playing on At a Glance</string>
+    <string name="quickspace_now_playing_summary">Zobrazit právě přehrávanou hudební skladbu v\u00a0<i>Přehledu událostí</i></string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
+    <string name="quickspace_psa_title">Zobrazit nahodilou zprávu</string>
     <string name="quickspace_psa_summary">Display some nice messages on At a Glance.</string>
     <string-array name="quickspace_psa_morning">
         <item>Good morning!</item>
