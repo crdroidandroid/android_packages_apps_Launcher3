@@ -101,7 +101,10 @@
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Üdvözöli a crDroid</string>
-    <string name="quick_event_rom_intro_learn">Kattintson ide, és jó mulatást!</string>
+    <string name="quick_event_rom_intro_bridge">Éintse meg itt %s</string>
+    <string name="quick_event_rom_intro_title1">tudjon meg még többet</string>
+    <string name="quick_event_rom_intro_title2">és érezze jól magát!</string>
+    <string name="quick_event_rom_intro_title3">tudjon meg még többet a projektünkről</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">\'Now Playing\'</string>
     <string name="quick_event_ambient_song_artist">%1$s – %2$s</string>
@@ -203,4 +206,82 @@
     <!-- Weather -->
     <string name="show_weather_title">Időjárás</string>
     <string name="show_weather_summary">Ha elérhető, jelenítse meg az Időjárást</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Alternatív stílus</string>
+    <string name="quickspace_alternate_style_summary">Egy eltérő stílus használata a \'Belepillantáshoz\', még egyszerűbb</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Most hallható</string>
+    <string name="quickspace_now_playing_summary">Megjeleníti az éppen játszott zeneszámot a \'Belepillantásban\'</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Véletlenszerű üzenetek</string>
+    <string name="quickspace_psa_summary">Megjelenít néhány kedves üzenetet a \'Belepillantásban\'.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Jó reggelt!</item>
+        <item>Jó reggelt, Játékos!</item>
+        <item>Micsoda szép nap!</item>
+        <item>Legyen szép napja!</item>
+        <item>Mit szólna egy 5 perces szunyókáláshoz?</item>
+        <item>Ez is egy módja az ébredésnek.</item>
+        <item>Meg kell változtatnia az ébresztés hangját.</item>
+        <item>Ez egy szép napnak tűnik, nem?</item>
+        <item>Lásson neki a reggelinek.</item>
+        <item>Mindenképp ellenőrizze az időjárást</item>
+        <item>Még egy kicsit álmos lehet</item>
+        <item>Szétnézett már odakinn?</item>
+        <item>Lásson neki a munkának.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Jó éjszakát!</item>
+        <item>Aludjon jól!</item>
+        <item>Holnap találkozunk!</item>
+        <item>Szép álmokat!</item>
+        <item>Ne maradjon ébren túl későig</item>
+        <item>Legyen pihentető az álma</item>
+        <item>Aludjon többet</item>
+        <item>Eljött a relaxálás ideje</item>
+        <item>Élvezze az éjszakát!</item>
+        <item>Eljött az akkumulátorok feltöltésének ideje!</item>
+        <item>A holnapi nap akár nagyszerű is lehet</item>
+        <item>Készítse elő fáradt csontjait holnapra</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Hm... jó éjt?</item>
+        <item>Egy kicsit már késő van</item>
+        <item>Alvási ütemtervet kéne készítenie</item>
+        <item>Még ebben az órában is tevékeny?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Ez néha ilyen...</item>
+        <item>Itt az ideje már egy másik ROM-ot telepíteni?</item>
+        <item>Elege van már az Android 10 körüli felhajtásból?</item>
+        <item>Ó, Helló, mi a helyzet?</item>
+        <item>Dicsekedjünk a #beállításaimmal</item>
+        <item>Hány képernyőképet készített?</item>
+        <item>A verejtékes munkánk. Élvezze!</item>
+        <item>Bárcsak használhatnám a VoLTE-t</item>
+        <item>Jó szórakozást!</item>
+        <item>Játékos! Kezdjük a darálást!</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C FEJ</item>
+        <item>Szeretettel a crDroid csapatától!</item>
+        <item>Emlékezzen az egyszarvú eredetére</item>
+        <item>Egy szénsavas bagoly-szobor</item>
+        <item>Induljunk újra nulláról</item>
+        <item>Egyen zöldséget és küldjön hibanaplókat</item>
+        <item>Jajj ne, már megint ez a tréfa</item>
+        <item>Azért jöttem, hogy tegyek egy bejelentést</item>
+        <item>Mi a fenét jelent az, hogy kang?</item>
+        <item>Hogy mennek a dolgok?</item>
+        <item>Hogyan kell gondosan válogatni?</item>
+        <item>Köszönjük a támogatást!</item>
+        <item>Tényleg olyan srácok vagyunk, akik azzal &quot;ugratják&quot; a felhasználót, hogy fizetett szolgáltatásokat adnak hozzá egy olyan ROM-hoz, amelyet korábban ingyen használhattak?</item>
+        <item>Az építőrobot egyik legjobb válogatása</item>
+        <item>Ha megkedvelt egy alkalmazást, kérjük, segítsen azzal, hogy megvásárolja</item>
+        <item>Milyen remek élmény, nem igaz?</item>
+        <item>Milyen bugos élmény, nem igaz?</item>
+        <item>Menő</item>
+        <item>Élvezze a naplementét!</item>
+        <item>Bazinga! (by Sheldon)</item>
+        <item>A kávé a crDroid mellet a legélvezetesebb!</item>
+        <item>rm -rf \/</item>
+    </string-array>
 </resources>
