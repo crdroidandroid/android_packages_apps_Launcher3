@@ -210,16 +210,16 @@
     <string name="quickspace_alternate_style_title">Alternatív stílus</string>
     <string name="quickspace_alternate_style_summary">Egy eltérő stílus használata a \'Belepillantáshoz\', még egyszerűbb</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Display the song you\'re playing on At a Glance</string>
+    <string name="quickspace_now_playing_title">Most hallható</string>
+    <string name="quickspace_now_playing_summary">Megjeleníti az éppen játszott zeneszámot a \'Belepillantásban\'</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Display some nice messages on At a Glance.</string>
+    <string name="quickspace_psa_title">Véletlenszerű üzenetek</string>
+    <string name="quickspace_psa_summary">Megjelenít néhány kedves üzenetet a \'Belepillantásban\'.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, gamer!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
+        <item>Jó reggelt!</item>
+        <item>Jó reggelt, Játékos!</item>
+        <item>Micsoda szép nap!</item>
+        <item>Legyen szép napja!</item>
         <item>What about a small 5 minutes nap?</item>
         <item>That\'s one way to wake up.</item>
         <item>You should change your alarm sounds.</item>
