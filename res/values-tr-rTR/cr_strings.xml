@@ -101,10 +101,10 @@
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">CrDroid\'e Hoşgeldiniz</string>
-    <string name="quick_event_rom_intro_bridge">Tap here %s</string>
-    <string name="quick_event_rom_intro_title1">to learn more</string>
-    <string name="quick_event_rom_intro_title2">and have fun!</string>
-    <string name="quick_event_rom_intro_title3">to learn about our project</string>
+    <string name="quick_event_rom_intro_bridge">Buraya dokunun %s</string>
+    <string name="quick_event_rom_intro_title1">daha fazla öğrenmek için</string>
+    <string name="quick_event_rom_intro_title2">ve eğlen!</string>
+    <string name="quick_event_rom_intro_title3">projemiz hakkında bilgi edinin</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">Şimdi çalınıyor</string>
     <string name="quick_event_ambient_song_artist">%2$s - %1$s</string>
@@ -207,54 +207,54 @@
     <string name="show_weather_title">Hava durumu</string>
     <string name="show_weather_summary">Mevcut olduğunda hava durumunu göster</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a different style for At a Glance, more minimalistic</string>
+    <string name="quickspace_alternate_style_title">Alternatif bir stil kullan</string>
+    <string name="quickspace_alternate_style_summary">Bir bakışta farklı bir stil kullanın, daha minimalist</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Display the song you\'re playing on At a Glance</string>
+    <string name="quickspace_now_playing_title">Şimdi oynatıldığını göster</string>
+    <string name="quickspace_now_playing_summary">Oynatığınız şarkıyı bir bakışta görüntüleyin</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Display some nice messages on At a Glance.</string>
+    <string name="quickspace_psa_title">Rastgele bir mesaj göster</string>
+    <string name="quickspace_psa_summary">Bir bakışta kısmında güzel mesajları görüntüleyin.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, gamer!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Günaydın!</item>
+        <item>Günaydın oyun!</item>
+        <item>Ne kadar güzel bir gün!</item>
+        <item>İyi günler dilerim!</item>
+        <item>Peki ya 5 dakikalık küçük bir şekerlemeye nedersin?</item>
+        <item>Uyanmanın bir yolu bu.</item>
+        <item>Alarm seslerinizi değiştirmelisiniz.</item>
+        <item>Güzel bir gün gibi görünüyor, değil mi?</item>
+        <item>Hadi bu ekmeği alalım.</item>
+        <item>Sadece hava durumunu kontrol et</item>
+        <item>Henüz biraz uykulu hissediyorum</item>
+        <item>Dışarıya baktın mı?</item>
+        <item>Bunu halledelim.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>İyi geceler!</item>
+        <item>İyi uykular!</item>
+        <item>Yarın görüşürüz!</item>
+        <item>Tatlı rüyalar!</item>
+        <item>Çok uzun süre kalma</item>
+        <item>İyi uykular</item>
+        <item>Biraz uyu</item>
+        <item>Rahatlama zamanı</item>
+        <item>Gecenin tadını çıkart!</item>
+        <item>Pilleri şarj etme zamanı!</item>
+        <item>Yarın harika bir gün olabilir</item>
+        <item>Kemiklerinizi yarın için hazırlayın</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Um... iyi geceler?</item>
+        <item>Şimdi biraz geç</item>
+        <item>Uyku zamanlamanızı düzeltmelisiniz</item>
+        <item>Şu anda daha üretken misiniz?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>It do be like that sometimes</item>
-        <item>Is it time to flash another ROM already?</item>
-        <item>Hyped about Android 10?</item>
-        <item>Oh hey, what\'s up?</item>
+        <item>Bazen böyle olur</item>
+        <item>Şimdiden başka bir ROM’u flaş etme zamanı geldi mi?</item>
+        <item>Android 10 hakkında şüpheli mi?</item>
+        <item>Hey, naber?</item>
         <item>Time to brag my #setup</item>
         <item>How many screenshots do you take?</item>
         <item>We sweat. You enjoy!</item>
