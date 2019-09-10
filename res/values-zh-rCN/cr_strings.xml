@@ -101,10 +101,10 @@
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">欢迎使用 家</string>
-    <string name="quick_event_rom_intro_bridge">Tap here %s</string>
-    <string name="quick_event_rom_intro_title1">to learn more</string>
-    <string name="quick_event_rom_intro_title2">and have fun!</string>
-    <string name="quick_event_rom_intro_title3">to learn about our project</string>
+    <string name="quick_event_rom_intro_bridge">点击此处 %s</string>
+    <string name="quick_event_rom_intro_title1">学习更多</string>
+    <string name="quick_event_rom_intro_title2">有趣的！</string>
+    <string name="quick_event_rom_intro_title3">了解我们的项目</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">正在播放</string>
     <string name="quick_event_ambient_song_artist">%2$s的%1$s</string>
@@ -207,81 +207,81 @@
     <string name="show_weather_title">天气</string>
     <string name="show_weather_summary">当可用时显示天气</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a different style for At a Glance, more minimalistic</string>
+    <string name="quickspace_alternate_style_title">使用替代样式</string>
+    <string name="quickspace_alternate_style_summary">使用不同的风格概览，更简约</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Display the song you\'re playing on At a Glance</string>
+    <string name="quickspace_now_playing_title">显示正在播放</string>
+    <string name="quickspace_now_playing_summary">显示正在播放的歌曲概览</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Display some nice messages on At a Glance.</string>
+    <string name="quickspace_psa_title">显示随机消息</string>
+    <string name="quickspace_psa_summary">在概览上显示一些不错的消息。</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, gamer!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>早上好！</item>
+        <item>早上好，玩家！</item>
+        <item>多么美好的一天！</item>
+        <item>祝您生活愉快！</item>
+        <item>小睡五分钟怎么样？</item>
+        <item>这是唤醒的一种方法。</item>
+        <item>您应该更改您的闹钟声音。</item>
+        <item>看起来好像是一个美丽的日子，不是吗？</item>
+        <item>让我们获得这个面包。</item>
+        <item>检查天气</item>
+        <item>保持一个点睡眠</item>
+        <item>有没有看看外面的风光呢？</item>
+        <item>让我们完成。</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>晚上好！</item>
+        <item>晚安！</item>
+        <item>明天见！</item>
+        <item>祝您好梦！</item>
+        <item>不要睡得太晚了哦</item>
+        <item>有良好的睡眠</item>
+        <item>去睡一会</item>
+        <item>放松时间</item>
+        <item>享受夜晚！</item>
+        <item>是时候给电池充电了！</item>
+        <item>明天可能是一个伟大的日子</item>
+        <item>为明天做好准备</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Um... 好夜？</item>
+        <item>现在有点晚了</item>
+        <item>你应该修复您的睡眠时间表</item>
+        <item>你现在的工作效率更高吗？</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>It do be like that sometimes</item>
-        <item>Is it time to flash another ROM already?</item>
-        <item>Hyped about Android 10?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Time to brag my #setup</item>
-        <item>How many screenshots do you take?</item>
-        <item>We sweat. You enjoy!</item>
-        <item>I wish i could use VoLTE</item>
-        <item>Have fun!</item>
-        <item>Let\'s get this grind, gamer!</item>
+        <item>有时它确实如此</item>
+        <item>是时候刷入另一个 ROM 吗？</item>
+        <item>关于 Android 10 的炒作？</item>
+        <item>哦，嘿，怎么了？</item>
+        <item>是时候吹嘘我的#setup了</item>
+        <item>你截取了几个截图？</item>
+        <item>我们宣誓。你喜欢！</item>
+        <item>我希望我可以使用 VoLTE</item>
+        <item>祝您愉快！</item>
+        <item>让我们得到这个研究，玩家！</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>With love,Team crDroid!</item>
-        <item>Remember the lineage of the unicorn</item>
-        <item>A carbonized owl statue</item>
-        <item>Starting from the ground zero</item>
-        <item>Eat your veggies and send logs</item>
-        <item>Oh no, it\'s updog again</item>
-        <item>I\'ve come to make an announcement</item>
-        <item>What is a kang?</item>
-        <item>How is everything going?</item>
-        <item>How to cherry-pick correctly?</item>
-        <item>Thank you for your support</item>
-        <item>Are you guys really giving us &quot;teasers&quot; about adding paid features on a rom that was free to use previously?</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>If you love an app, please, support it by purchasing it</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>What a buggy experience, isn\'t it?</item>
-        <item>nice</item>
-        <item>Enjoy the sunset!</item>
-        <item>Bazinga!</item>
-        <item>Coffee with crDroid is best!</item>
+        <item>有爱，crDroid 团队！</item>
+        <item>记住独角兽的血统</item>
+        <item>碳化的猫头鹰雕像</item>
+        <item>从零开始</item>
+        <item>吃你的蔬菜和发送日志</item>
+        <item>哦不，它再次升级</item>
+        <item>我来做宣布</item>
+        <item>什么是 kang？</item>
+        <item>最近怎么样？</item>
+        <item>如何正确选择？</item>
+        <item>感谢您的支持</item>
+        <item>你们真的给我们&quot;“戏弄”&quot;关于在以前免费使用的 Rom 上添加付费功能吗？</item>
+        <item>Buildbot 的最佳选择之一</item>
+        <item>如果您喜欢某个应用，请购买它来支持它</item>
+        <item>多么可爱的经历，不是吗？</item>
+        <item>多么糟糕的经历，不是吗？</item>
+        <item>不错</item>
+        <item>享受日落！</item>
+        <item>巴辛加！</item>
+        <item>咖啡与 crDroid 是最好的！</item>
         <item>rm -rf \/</item>
     </string-array>
 </resources>
