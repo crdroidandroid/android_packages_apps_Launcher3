@@ -182,11 +182,7 @@ public class QuickEventsController {
 
         if (!isNowPlayingReady()) return;
 
-        if (Utilities.useAlternativeQuickspaceUI(mContext)) {
-            mEventTitle = Utilities.formatDateTime(mContext, System.currentTimeMillis()) + " · " + mContext.getResources().getString(R.string.quick_event_ambient_now_playing);
-        } else {
-            mEventTitle = mContext.getResources().getString(R.string.quick_event_ambient_now_playing);
-        }
+        mEventTitle = Utilities.formatDateTime(mContext, System.currentTimeMillis());
         mEventSubIcon = R.drawable.ic_music_note_24dp;
         if (mNowPlayingTrack != mPrevNowPlayingTrack) {
             mEventTitleSub = mNowPlayingTrack;
