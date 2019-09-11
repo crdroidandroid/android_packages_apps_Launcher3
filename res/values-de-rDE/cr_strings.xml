@@ -103,7 +103,7 @@
     <string name="quick_event_rom_intro_welcome">Willkommen zu crDroid</string>
     <string name="quick_event_rom_intro_bridge">Tippe hier %s</string>
     <string name="quick_event_rom_intro_title1">um mehr zu erfahren</string>
-    <string name="quick_event_rom_intro_title2">und hab Spaß!</string>
+    <string name="quick_event_rom_intro_title2">und viel Spaß!</string>
     <string name="quick_event_rom_intro_title3">um mehr über unser Projekt zu erfahren</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">Läuft gerade</string>
@@ -208,21 +208,21 @@
     <string name="show_weather_summary">Zeige Wetter an, falls verfügbar</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">Nutze einen alternativen Stil</string>
-    <string name="quickspace_alternate_style_summary">Nutze einen anderen Stil für \"Auf einen Blick\", vielleicht etwas minimalistischer</string>
+    <string name="quickspace_alternate_style_summary">Verwende einen anderen Stil für die Übersicht, vielleicht etwas minimalistischeres</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Display the song you\'re playing on At a Glance</string>
+    <string name="quickspace_now_playing_title">Zeigt \"spielt aktuell\"</string>
+    <string name="quickspace_now_playing_summary">Zeigt das Lied an, welches in der Übersicht abgespielt wird</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Display some nice messages on At a Glance.</string>
+    <string name="quickspace_psa_title">Zeigt eine zufällige Nachricht an</string>
+    <string name="quickspace_psa_summary">Zeigt dir coole Nachrichten im Überblick an.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, gamer!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
+        <item>Guten Morgen!</item>
+        <item>Guten Morgen, Zocker!</item>
+        <item>Was für ein schöner Tag!</item>
+        <item>Hab einen schönen Tag!</item>
+        <item>Wie wäre es mit einem kleinen Nickerchen?</item>
+        <item>Dies ist eine der Möglichkeiten aufzuwachen.</item>
+        <item>Du solltest deinen Weckton ändern.</item>
         <item>Looks like it\'s a beautiful day, isn\'t it?</item>
         <item>Let\'s get this bread.</item>
         <item>Check the weather just in case</item>
