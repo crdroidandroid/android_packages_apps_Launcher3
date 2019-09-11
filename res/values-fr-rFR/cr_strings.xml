@@ -208,13 +208,13 @@
     <string name="show_weather_summary">Afficher la météo quand elle est disponible</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">Utiliser un autre style</string>
-    <string name="quickspace_alternate_style_summary">Use a different style for At a Glance, more minimalistic</string>
+    <string name="quickspace_alternate_style_summary">Utiliser un style minimaliste pour la Surimpression</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Display the song you\'re playing on At a Glance</string>
+    <string name="quickspace_now_playing_title">Lecture en cours</string>
+    <string name="quickspace_now_playing_summary">Afficher la chanson en cours en Surimpression</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Afficher un message aléatoire</string>
-    <string name="quickspace_psa_summary">Display some nice messages on At a Glance.</string>
+    <string name="quickspace_psa_summary">Afficher un message sympa en Surimpression.</string>
     <string-array name="quickspace_psa_morning">
         <item>Bonjour !</item>
         <item>Bonjour, joueur !</item>
