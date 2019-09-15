@@ -81,7 +81,6 @@ public class QuickEventsController {
     private String[] intentWhitelist = new String[]{"com.android.music.metachanged", "com.android.music.playstatechanged", "com.android.music.playbackcomplete", "com.android.music.queuechanged", "com.jrtstudio.music.playstatechanged", "com.jrtstudio.music.playbackcomplete", "com.jrtstudio.music.metachanged", "com.htc.music.playstatechanged", "com.htc.music.playbackcomplete", "com.htc.music.metachanged", "fm.last.android.metachanged", "fm.last.android.playbackpaused", "fm.last.android.playbackcomplete", "com.lge.music.metachanged", "com.lge.music.playstatechanged", "com.lge.music.endofplayback", "com.miui.player.playbackcomplete", "com.miui.player.metachanged", "com.real.IMP.playstatechanged", "com.real.IMP.playbackcomplete", "com.real.IMP.metachanged", "com.sonyericsson.music.metachanged", "com.sonyericsson.music.playbackcontrol.ACTION_PLAYBACK_PAUSE", "com.sonyericsson.music.playbackcontrol.ACTION_PAUSED", "com.samsung.sec.android.MusicPlayer.playstatechanged", "com.samsung.sec.android.MusicPlayer.playbackcomplete", "com.samsung.sec.android.MusicPlayer.metachanged", "com.nullsoft.winamp.metachanged", "com.nullsoft.winamp.playstatechanged", "com.nullsoft.winamp.playbackcomplete", "com.amazon.mp3.metachanged", "com.amazon.mp3.playstatechanged", "com.amazon.mp3.playbackcomplete", "com.rdio.android.metachanged", "com.rdio.android.playbackcomplete", "com.rdio.android.playstatechanged", "com.spotify.music.metadatachanged", "com.spotify.music.playbackstatechanged", "com.spotify.music.queuechanged", "com.doubleTwist.androidPlayer.metachanged", "com.doubleTwist.androidPlayer.playstatechanged", "com.doubleTwist.androidPlayer.playbackcomplete", "org.iii.romulus.meridian.playbackcomplete", "org.iii.romulus.meridian.playstatechanged", "org.iii.romulus.meridian.metachanged", "com.tbig.playerpro.playstatechanged", "com.tbig.playerpro.metachanged", "com.tbig.playerpro.queuechanged", "com.tbig.playerpro.playbackcomplete"};
     private boolean mEventNowPlaying = false;
     private boolean mPixelNowPlaying = false;
-    private boolean mLocalPlaying = false;
     private String mPrevArtist;
     private String mPrevSong;
     private String mPrevNowPlayingTrack;
@@ -91,18 +90,21 @@ public class QuickEventsController {
     private BroadcastReceiver mNowPlayingListener = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            String intentAction = intent.getAction();
-            mArtist = intent.getStringExtra("artist");
-            mSong = intent.getStringExtra("track");
-            mLocalPlaying = intent.getBooleanExtra("playing", false);
-            Log.d("Locally now Playing:", mSong + " by " + mArtist);
-            if (intent == null || intent.getAction() == null) {
+            if (intent == null || !Utilities.isQuickspaceNowPlaying(mContext)) {
                 return;
             }
-            if (intentAction.contains("meta")) {
-               initNowPlayingEvent();
-            } else if (intentAction.toLowerCase().contains("play") || intentAction.toLowerCase().contains("pause") || intentAction.toLowerCase().contains("queue")) {
-                initQuickEvents();
+            if (intent.hasExtra("playing")) {
+                if (intent.getBooleanExtra("playing", false)) {
+                    mArtist = intent.getStringExtra("artist");
+                    mSong = intent.getStringExtra("track");
+                    if (isNowPlayingReady()) {
+                        Log.d("Now Playing:", mSong + " by " + mArtist);
+                    }
+                } else {
+                    mArtist = null;
+                    mSong = null;
+                }
+                updateQuickEvents();
             }
         }
     };
@@ -122,7 +124,9 @@ public class QuickEventsController {
         initQuickEvents();
     }
 
-    public void destroy() { 
+    public void destroy() {
+        mArtist = null;
+        mSong = null;
         mContext.unregisterReceiver(mNowPlayingListener);  
     }
 
@@ -133,7 +137,6 @@ public class QuickEventsController {
 
     public void updateQuickEvents() {
         deviceIntroEvent();
-        nowPlayingEvent();
         initNowPlayingEvent();
         psonalityEvent();
     }
@@ -166,38 +169,34 @@ public class QuickEventsController {
         };
     }
 
-    public void nowPlayingEvent() {
-        if (mEventNowPlaying) {
-            boolean noWorkToDo = !isNowPlayingReady();
-            if (noWorkToDo) {
+    public void initNowPlayingEvent() {
+        if (mEventIntro) return;
+
+        if (!isNowPlayingReady() || !Utilities.isQuickspaceNowPlaying(mContext)) {
+            if (mEventNowPlaying) {
                 mIsQuickEvent = false;
                 mEventNowPlaying = false;
                 mImportantQuickEvent = false;
             }
+            return;
         }
-    }
-
-    public void initNowPlayingEvent() {
-        if (mEventIntro) return;
-
-        if (!isNowPlayingReady()) return;
 
         mEventTitle = Utilities.formatDateTime(mContext, System.currentTimeMillis());
         mEventSubIcon = R.drawable.ic_music_note_24dp;
         if (mNowPlayingTrack != mPrevNowPlayingTrack) {
             mEventTitleSub = mNowPlayingTrack;
             mPrevNowPlayingTrack = mNowPlayingTrack;
-	        mIsQuickEvent = true;
-	        mEventNowPlaying = true;
-	        mImportantQuickEvent = false;
-        } else if ((mArtist != null || mSong != null) && (mArtist != mPrevArtist && mSong != mPrevSong)) {
+            mIsQuickEvent = true;
+            mEventNowPlaying = true;
+            mImportantQuickEvent = false;
+        } else if ((mArtist != null && mSong != null) && (mArtist != mPrevArtist && mSong != mPrevSong)) {
             mEventTitleSub = String.format(mContext.getResources().getString(
                     R.string.quick_event_ambient_song_artist), mSong, mArtist);
             mPrevSong = mSong;
             mPrevArtist = mArtist;
-	        mIsQuickEvent = true;
-	        mEventNowPlaying = true;
-	        mImportantQuickEvent = false;
+            mIsQuickEvent = true;
+            mEventNowPlaying = true;
+            mImportantQuickEvent = false;
         }
         //mLastAmbientInfo = System.currentTimeMillis();
 
@@ -209,7 +208,7 @@ public class QuickEventsController {
                 //        R.string.quick_event_ambient_song_artist), entry.getSongTitle(), entry.getArtistTitle());
                 //final Intent ambient = new Intent(Intent.ACTION_WEB_SEARCH)
                 //        .putExtra(SearchManager.QUERY, query);
-                //try {
+                //try {mArtist
                 //    Launcher.getLauncher(mContext).startActivitySafely(view, ambient, null);
                 //} catch (ActivityNotFoundException ex) {
                 //}
@@ -218,18 +217,11 @@ public class QuickEventsController {
     } 
 
     public boolean isNowPlayingReady() {
-        boolean status = false;
-
-        if (!Utilities.isQuickspaceNowPlaying(mContext)) {
+        if (mArtist != null && mSong != null) {
+            return true;
+        } else {
             return false;
         }
-
-        if (mLocalPlaying && mArtist != null && mSong != null) {
-            status = true;
-        } else {
-            status = false;
-        }
-        return status;
     }
 
     public void psonalityEvent() {

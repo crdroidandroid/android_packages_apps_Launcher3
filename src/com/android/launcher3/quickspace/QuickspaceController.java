@@ -22,8 +22,6 @@ import android.database.ContentObserver;
 import android.graphics.drawable.Icon;
 import android.media.MediaMetadata;
 import android.media.session.MediaController;
-import android.media.session.MediaSession;
-import android.media.session.MediaSessionManager;
 import android.media.session.PlaybackState;
 import android.os.Handler;
 import android.provider.Settings;
@@ -43,16 +41,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class QuickspaceController extends MediaController.Callback implements NotificationListener.NotificationsChangedListener,  WeatherObserver, 
-        MediaSessionManager.OnActiveSessionsChangedListener {
+public class QuickspaceController extends MediaController.Callback implements NotificationListener.NotificationsChangedListener,  WeatherObserver {
 
     public final ArrayList<OnDataListener> mListeners = new ArrayList();
     private static final String SETTING_WEATHER_LOCKSCREEN_UNIT = "weather_lockscreen_unit";
     private final List<NotificationKeyData> mNotifications = new ArrayList<>();
     private final List<StatusBarNotification> mSbn = new ArrayList<>();
     private final ComponentName mComponent;
-    private final MediaSessionManager mManager;
-    private List<MediaController> mControllers = Collections.emptyList();
 
     private Context mContext;
     private final Handler mHandler;
@@ -60,8 +55,9 @@ public class QuickspaceController extends MediaController.Callback implements No
     private WeatherClient mWeatherClient;
     private WeatherInfo mWeatherInfo;
     private WeatherSettingsObserver mWeatherSettingsObserver;
-
     private boolean mUseImperialUnit;
+
+    private MediaMetadata mMediaMetadata;
 
     public interface OnDataListener {
         void onDataUpdated();
@@ -72,7 +68,6 @@ public class QuickspaceController extends MediaController.Callback implements No
         mHandler = new Handler();
         mWeatherClient = new WeatherClient(context);
         mComponent = new ComponentName(context, NotificationListener.class);
-        mManager = (MediaSessionManager) context.getSystemService(Context.MEDIA_SESSION_SERVICE);
         mWeatherSettingsObserver = new WeatherSettingsObserver(
                 mHandler, context.getContentResolver());
         mWeatherSettingsObserver.register();
@@ -80,7 +75,6 @@ public class QuickspaceController extends MediaController.Callback implements No
     }
 
     private void addEventsController() {
-        onActiveSessionsChanged(null); // Bind all current controllers.
         mEventsController = new QuickEventsController(mContext);
     }
 
@@ -128,19 +122,12 @@ public class QuickspaceController extends MediaController.Callback implements No
 
     public void onPause() {
         if (mEventsController != null) {
-            mManager.removeOnActiveSessionsChangedListener(this);
-            onActiveSessionsChanged(Collections.emptyList()); // Unbind all previous controllers.
             mEventsController.onPause();
         }
     }
 
     public void onResume() {
         if (mEventsController != null) {
-            try {
-                mManager.addOnActiveSessionsChangedListener(this, mComponent);
-            } catch (SecurityException ignored) {
-            }
-            onActiveSessionsChanged(null); // Bind all current controllers.
             mEventsController.onResume();
             notifyListeners();
         }
@@ -188,34 +175,6 @@ public class QuickspaceController extends MediaController.Callback implements No
                 mSbn.addAll(notificationListener.getNotificationsForKeys(mNotifications));
             }
         }
-        onActiveSessionsChanged(null); // Bind all current controllers.
-        if (mEventsController != null) {
-            mEventsController.updateQuickEvents();
-            notifyListeners();
-        }
-    }
-
-    @Override
-    public void onActiveSessionsChanged(List<MediaController> controllers) {
-        if (controllers == null) {
-            try {
-                controllers = mManager.getActiveSessions(mComponent);
-            } catch (SecurityException ignored) {
-                controllers = Collections.emptyList();
-            }
-        }
-        updateControllers(controllers);
-        notifyListeners();
-    }
-
-    private void updateControllers(List<MediaController> controllers) {
-        for (MediaController mc : mControllers) {
-            mc.unregisterCallback(this);
-        }
-        for (MediaController mc : controllers) {
-            mc.registerCallback(this);
-        }
-        mControllers = controllers;
         if (mEventsController != null) {
             mEventsController.updateQuickEvents();
             notifyListeners();
@@ -224,13 +183,16 @@ public class QuickspaceController extends MediaController.Callback implements No
 
     @Override
     public void onMetadataChanged(MediaMetadata metadata) {
-        mEventsController.updateQuickEvents();
-        notifyListeners();
+        if (mMediaMetadata != metadata) {
+            mMediaMetadata = metadata;
+            mEventsController.initNowPlayingEvent();
+            notifyListeners();
+        }
     }
 
     @Override
     public void onPlaybackStateChanged(PlaybackState state) {
-        mEventsController.initQuickEvents();
+        mEventsController.initNowPlayingEvent();
         notifyListeners();
      }
 
