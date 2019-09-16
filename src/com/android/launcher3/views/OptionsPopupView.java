@@ -204,7 +204,8 @@ public class OptionsPopupView extends ArrowPopup
                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 .putExtra(EXTRA_WALLPAPER_OFFSET,
                         launcher.getWorkspace().getWallpaperOffsetForCenterPage());
-        if (!Utilities.existsStyleWallpapers(launcher)) {
+        boolean existsStyleWallpapers = Utilities.existsStyleWallpapers(launcher);
+        if (!existsStyleWallpapers) {
             intent.putExtra(EXTRA_WALLPAPER_FLAVOR, "wallpaper_only");
         } else {
             intent.putExtra(EXTRA_WALLPAPER_FLAVOR, "focus_wallpaper");
@@ -212,6 +213,10 @@ public class OptionsPopupView extends ArrowPopup
         String pickerPackage = launcher.getString(R.string.wallpaper_picker_package);
         if (!TextUtils.isEmpty(pickerPackage)) {
             intent.setPackage(pickerPackage);
+            if (existsStyleWallpapers) {
+                intent.setComponent(new ComponentName(pickerPackage, 
+                        "com.android.customization.picker.CustomizationPickerActivity"));
+            }
         }
         return launcher.startActivitySafely(v, intent, null, null);
     }

@@ -35,4 +35,7 @@
     <!-- Assistant Gesture -->
     <integer name="assistant_gesture_min_time_threshold">200</integer>
     <integer name="assistant_gesture_corner_deg_threshold">20</integer>
+
+    <!-- Use ThemePicker to set wallpapers -->
+    <string name="wallpaper_picker_package" translatable="false">com.android.wallpaper</string>
 </resources>
