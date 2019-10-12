@@ -27,6 +27,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
 
+import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
@@ -193,6 +194,9 @@ public class SettingsActivity extends Activity
 
         @Override
         public void onDestroy() {
+            // if we don't press the home button but the back button to close Settings,
+            // then we must force a restart because the home button watcher wouldn't trigger it
+            LauncherAppState.getInstanceNoCreate().checkIfRestartNeeded();
             super.onDestroy();
         }
     }
