@@ -207,6 +207,7 @@ public class SettingsHomescreen extends FragmentActivity
         @Override
         public void onDestroy() {
             super.onDestroy();
+            LauncherAppState.getInstanceNoCreate().checkIfRestartNeeded();
         }
     }
 }
