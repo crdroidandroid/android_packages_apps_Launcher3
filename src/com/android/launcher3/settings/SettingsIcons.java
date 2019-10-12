@@ -273,6 +273,7 @@ public class SettingsIcons extends FragmentActivity
                 mNotificationDotsObserver.unregister();
                 mNotificationDotsObserver = null;
             }
+            LauncherAppState.getInstanceNoCreate().checkIfRestartNeeded();
         }
 
         private void setupIconPackPreference(Preference preference) {
