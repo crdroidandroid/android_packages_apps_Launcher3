@@ -79,6 +79,8 @@ public class LauncherAppState implements SafeCloseable {
     private final InvariantDeviceProfile mInvariantDeviceProfile;
     private final RunnableList mOnTerminateCallback = new RunnableList();
 
+    private boolean mNeedsRestart;
+
     // WORKAROUND: b/269335387 remove this after widget background listener is enabled
     /* Array of RemoteViews cached by Launcher process */
     @GuardedBy("itself")
@@ -203,6 +205,18 @@ public class LauncherAppState implements SafeCloseable {
 
     private void onPrivateSpaceHideWhenLockChanged(boolean isPrivateSpaceHideOnLockEnabled) {
         mModel.forceReload();
+    }
+
+    public void setNeedsRestart() {
+        mNeedsRestart = true;
+    }
+
+    public void checkIfRestartNeeded() {
+        // we destroyed Settings activity with the back button
+        // so we force a restart now if needed without waiting for home button press
+        if (mNeedsRestart) {
+            Utilities.restart(mContext);
+        }
     }
 
     private void refreshAndReloadLauncher() {

@@ -85,6 +85,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
 import androidx.core.graphics.ColorUtils;
 
+import com.android.launcher3.LauncherModel;
 import com.android.launcher3.R;
 import com.android.launcher3.dragndrop.FolderAdaptiveIcon;
 import com.android.launcher3.graphics.TintedDrawableSpan;
@@ -113,6 +114,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static com.android.launcher3.util.Executors.MODEL_EXECUTOR;
 
 /**
  * Various utilities shared amongst the Launcher's classes.
@@ -147,6 +150,8 @@ public final class Utilities {
 
     @ChecksSdkIntAtLeast(api = VERSION_CODES.UPSIDE_DOWN_CAKE, codename = "U")
     public static final boolean ATLEAST_U = Build.VERSION.SDK_INT >= VERSION_CODES.UPSIDE_DOWN_CAKE;
+
+    private static final long WAIT_BEFORE_RESTART = 250;
 
     /**
      * Set on a motion event dispatched from the nav bar. See {@link MotionEvent#setEdgeFlags(int)}.
@@ -850,6 +855,16 @@ public final class Utilities {
             default:
                 // No-Op
         }
+    }
+
+    public static void restart(final Context context) {
+        MODEL_EXECUTOR.execute(() -> {
+            try {
+                Thread.sleep(WAIT_BEFORE_RESTART);
+            } catch (Exception ignored) {
+            }
+            android.os.Process.killProcess(android.os.Process.myPid());
+        });
     }
 
     public static boolean isWorkspaceEditAllowed(Context context) {
