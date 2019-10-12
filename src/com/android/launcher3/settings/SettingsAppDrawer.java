@@ -42,6 +42,7 @@ import androidx.preference.PreferenceGroup.PreferencePositionCallback;
 import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
@@ -204,6 +205,12 @@ public class SettingsAppDrawer extends CollapsingToolbarBaseActivity
                     requestAccessibilityFocus(getListView());
                 }
             }
+        }
+
+        @Override
+        public void onDestroy() {
+            super.onDestroy();
+            LauncherAppState.getInstanceNoCreate().checkIfRestartNeeded();
         }
 
         private PreferenceHighlighter createHighlighter() {

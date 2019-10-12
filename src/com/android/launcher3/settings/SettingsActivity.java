@@ -40,6 +40,7 @@ import androidx.preference.PreferenceGroup.PreferencePositionCallback;
 import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
@@ -137,6 +138,7 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
         return super.onOptionsItemSelected(item);
     }
 
+
     /**
      * This fragment shows the launcher preferences.
      */
@@ -203,6 +205,12 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
                     requestAccessibilityFocus(getListView());
                 }
             }
+        }
+
+        @Override
+        public void onDestroy() {
+            super.onDestroy();
+            LauncherAppState.getInstanceNoCreate().checkIfRestartNeeded();
         }
 
         private PreferenceHighlighter createHighlighter() {
