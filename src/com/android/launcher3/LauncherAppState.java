@@ -80,6 +80,8 @@ public class LauncherAppState implements SafeCloseable {
 
     private final RunnableList mOnTerminateCallback = new RunnableList();
 
+    private boolean mNeedsRestart;
+
     public static LauncherAppState getInstance(final Context context) {
         return INSTANCE.get(context);
     }
@@ -209,6 +211,18 @@ public class LauncherAppState implements SafeCloseable {
 
     private void onPrivateSpaceHideWhenLockChanged(boolean isPrivateSpaceHideOnLockEnabled) {
         mModel.forceReload();
+    }
+
+    public void setNeedsRestart() {
+        mNeedsRestart = true;
+    }
+
+    public void checkIfRestartNeeded() {
+        // we destroyed Settings activity with the back button
+        // so we force a restart now if needed without waiting for home button press
+        if (mNeedsRestart) {
+            Utilities.restart(mContext);
+        }
     }
 
     private void refreshAndReloadLauncher() {
