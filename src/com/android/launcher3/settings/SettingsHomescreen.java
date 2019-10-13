@@ -74,6 +74,7 @@ public class SettingsHomescreen extends Activity
             case KEY_MINUS_ONE:
             case Utilities.SHOW_WORKSPACE_GRADIENT:
             case Utilities.SHOW_HOTSEAT_GRADIENT:
+            case Utilities.SHOW_SHADE_GLANCE:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:
