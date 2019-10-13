@@ -35,9 +35,9 @@
     <string name="misc_category_title">Miscellaneous</string>
     <string name="misc_category_summary">Other options</string>
 
-    <!-- Show searchbar -->
-    <string name="show_searchbar_title">Show search bar</string>
-    <string name="show_searchbar_summary">Show the search bar on the home screen</string>
+    <!-- Show Shade Glance (a.k.a Shade Space) -->
+    <string name="show_shadeglance_title">At A Glance</string>
+    <string name="show_shadeglance_summary">Show at the top of your Home screen</string>
 
     <!-- Google Feed -->
     <string name="google_feed_title">Display Google app</string>

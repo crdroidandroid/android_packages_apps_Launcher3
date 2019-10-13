@@ -259,8 +259,8 @@ public class LauncherPreviewRenderer implements Callable<Bitmap> {
                 inflateAndAddIcon(info);
             }
 
-            // Add first page QSB
-            if (Utilities.showQSB(this)) {
+            // Add first page Shade Space
+            if (Utilities.showShadeGlance(this)) {
                 View qsb = mHomeElementInflater.inflate(
                         R.layout.search_container_workspace, mWorkspace, false);
                 CellLayout.LayoutParams lp =

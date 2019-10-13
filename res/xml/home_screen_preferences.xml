@@ -9,9 +9,9 @@
         android:summary="@string/google_feed_summary" />
 
     <SwitchPreference
-        android:key="pref_show_searchbar"
-        android:title="@string/show_searchbar_title"
-        android:summary="@string/show_searchbar_summary"
+        android:key="pref_show_shade_glance"
+        android:title="@string/show_shadeglance_title"
+        android:summary="@string/show_shadeglance_summary"
         android:defaultValue="true"
         android:persistent="true"/>
 

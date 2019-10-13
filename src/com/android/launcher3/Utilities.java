@@ -141,7 +141,7 @@ public final class Utilities {
      */
     public static final int FLAG_NO_GESTURES = 1 << 9;
 
-    public static final String KEY_SHOW_SEARCHBAR = "pref_show_searchbar";
+    public static final String SHOW_SHADE_GLANCE = "pref_show_shade_glance";
     public static final String SHOW_WORKSPACE_GRADIENT = "pref_show_workspace_grad";
     public static final String SHOW_HOTSEAT_GRADIENT = "pref_show_hotseat_grad";
 
@@ -795,12 +795,9 @@ public final class Utilities {
             return mSize;
         }
     }
-    public static boolean showQSB(Context context) {
-        SharedPreferences prefs = getPrefs(context.getApplicationContext());
-        if (!LauncherAppState.getInstanceNoCreate().isSearchAppAvailable()) {
-            return false;
-        }
-        return prefs.getBoolean(KEY_SHOW_SEARCHBAR, true);
+
+    public static boolean showShadeGlance(Context context) {
+        return getPrefs(context).getBoolean(SHOW_SHADE_GLANCE, true);
     }
 
     static boolean hasFeedIntegration(Context context) {
