@@ -16,6 +16,8 @@
 
 package com.android.launcher3.icons;
 
+import static com.android.launcher3.util.MainThreadInitializedObject.forOverride;
+
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -37,7 +39,9 @@ import com.android.launcher3.R;
 import com.android.launcher3.icons.BitmapInfo.Extender;
 import com.android.launcher3.pm.UserCache;
 import com.android.launcher3.util.ComponentKey;
+import com.android.launcher3.util.MainThreadInitializedObject;
 import com.android.launcher3.util.SafeCloseable;
+import com.android.launcher3.util.ResourceBasedOverride;
 
 import java.util.Calendar;
 import java.util.function.BiConsumer;
@@ -46,7 +50,7 @@ import java.util.function.BiFunction;
 /**
  * Class to handle icon loading from different packages
  */
-public class IconProvider {
+public class IconProvider implements ResourceBasedOverride {
 
     private static final String TAG = "IconProvider";
     private static final boolean DEBUG = false;
@@ -65,9 +69,12 @@ public class IconProvider {
             ActivityInfo::loadUnbadgedIcon;
 
 
-    private final Context mContext;
+    protected final Context mContext;
     private final ComponentName mCalendar;
     private final ComponentName mClock;
+
+    public static MainThreadInitializedObject<IconProvider> INSTANCE =
+            forOverride(IconProvider.class, R.string.icon_provider_class);
 
     public IconProvider(Context context) {
         mContext = context;
