@@ -63,4 +63,9 @@
     <!-- Google Feed -->
     <string name="google_feed_title">Display Google app</string>
     <string name="google_feed_summary">To the left of the main home screen</string>
+
+    <!-- Icon packs -->
+    <string name="iconPackPackageDefault" translatable="false">""</string>
+    <string name="icon_pack">Icon pack</string>
+    <string name="icon_pack_summary">Select a custom icon pack</string>
 </resources>
