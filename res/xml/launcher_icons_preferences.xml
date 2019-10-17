@@ -15,4 +15,10 @@
         </intent>
     </com.android.launcher3.settings.NotificationDotsPreference>
 
+    <com.android.launcher3.settings.IconPackPreference
+        android:key="pref_iconPackPackage"
+        android:title="@string/icon_pack"
+        android:summary="@string/icon_pack_summary"
+        android:persistent="true" />
+
 </androidx.preference.PreferenceScreen>
