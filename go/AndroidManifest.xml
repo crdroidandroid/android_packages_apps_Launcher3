@@ -35,6 +35,7 @@
         android:largeHeap="@bool/config_largeHeap"
         android:restoreAnyVersion="true"
         android:supportsRtl="true"
+        tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:icon">
 
         <!-- Activity for handling PinItemRequest is disabled on Android Go. -->
