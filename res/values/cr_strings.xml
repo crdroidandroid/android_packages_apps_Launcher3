@@ -52,4 +52,8 @@
     <!-- Shadespace -->
     <string name="shadespace_subtext_double">%1$s - %2$s</string>
     <string name="shadespace_subtext_default">Press home to search for apps</string>
+
+    <!-- Folder titles -->
+    <string name="google_title" translatable="false">Google</string>
+    <string name="play_folder_title">Play</string>
 </resources>
