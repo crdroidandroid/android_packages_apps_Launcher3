@@ -42,21 +42,21 @@
 
     <!-- Hotseat/all-apps scrim -->
     <dimen name="all_apps_scrim_blur">4dp</dimen>
-    <dimen name="vertical_drag_handle_width">18dp</dimen>
-    <dimen name="vertical_drag_handle_height">6dp</dimen>
+    <dimen name="vertical_drag_handle_width">14dp</dimen>
+    <dimen name="vertical_drag_handle_height">2dp</dimen>
     <dimen name="vertical_drag_handle_elevation">1dp</dimen>
     <dimen name="vertical_drag_handle_touch_size">48dp</dimen>
     <dimen name="vertical_drag_handle_padding_in_vertical_bar_layout">16dp</dimen>
 
-<!-- Drop target bar -->
+    <!-- Drop target bar -->
     <dimen name="dynamic_grid_drop_target_size">48dp</dimen>
     <dimen name="drop_target_vertical_gap">20dp</dimen>
 
-<!-- App Widget resize frame -->
+    <!-- App Widget resize frame -->
     <dimen name="widget_handle_margin">13dp</dimen>
     <dimen name="resize_frame_background_padding">24dp</dimen>
 
-<!-- Fast scroll -->
+    <!-- Fast scroll -->
     <dimen name="fastscroll_track_min_width">6dp</dimen>
     <dimen name="fastscroll_track_max_width">8dp</dimen>
     <dimen name="fastscroll_thumb_padding">1dp</dimen>
@@ -97,7 +97,7 @@
     <dimen name="arrow_toast_corner_radius">2dp</dimen>
 
 
-<!-- Search bar in All Apps -->
+    <!-- Search bar in All Apps -->
     <dimen name="all_apps_header_max_elevation">3dp</dimen>
     <dimen name="all_apps_header_scroll_to_elevation">16dp</dimen>
     <dimen name="all_apps_header_shadow_height">6dp</dimen>
