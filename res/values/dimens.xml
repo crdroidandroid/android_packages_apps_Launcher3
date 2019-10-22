@@ -38,7 +38,7 @@
 
     <!-- Hotseat/all-apps scrim -->
     <dimen name="all_apps_scrim_blur">4dp</dimen>
-    <dimen name="vertical_drag_handle_size">24dp</dimen>
+    <dimen name="vertical_drag_handle_size">20dp</dimen>
     <dimen name="vertical_drag_handle_overlap_workspace">0dp</dimen>
 
 <!-- Drop target bar -->
