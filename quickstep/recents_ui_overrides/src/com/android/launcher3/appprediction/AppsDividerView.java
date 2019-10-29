@@ -53,6 +53,7 @@ public class AppsDividerView extends View implements LauncherStateManager.StateL
 
     private static final String ALL_APPS_VISITED_COUNT = "launcher.all_apps_visited_count";
     private static final int SHOW_ALL_APPS_LABEL_ON_ALL_APPS_VISITED_COUNT = 20;
+    private static final boolean SHOW_ALL_APPS_LABEL_OVERRIDE = true;
 
     public enum DividerType {
         NONE,
@@ -277,7 +278,8 @@ public class AppsDividerView extends View implements LauncherStateManager.StateL
     }
 
     private boolean shouldShowAllAppsLabel() {
-        return getAllAppsVisitedCount() < SHOW_ALL_APPS_LABEL_ON_ALL_APPS_VISITED_COUNT;
+        return getAllAppsVisitedCount() < SHOW_ALL_APPS_LABEL_ON_ALL_APPS_VISITED_COUNT
+                || SHOW_ALL_APPS_LABEL_OVERRIDE;
     }
 
     @Override
