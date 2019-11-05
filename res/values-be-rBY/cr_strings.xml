@@ -208,40 +208,40 @@
     <string name="show_weather_summary">Паказваць надвор\'е пры наяўнасці</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">Выкарыстоўвайце альтэрнатыўны стыль</string>
-    <string name="quickspace_alternate_style_summary">Use a different style for At a Glance, more minimalistic</string>
+    <string name="quickspace_alternate_style_summary">Выкарыстоўваць іншы стыль для At a Glance, больш мінімалістычны</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Display the song you\'re playing on At a Glance</string>
+    <string name="quickspace_now_playing_title">Паказваць што зараз гучыць</string>
+    <string name="quickspace_now_playing_summary">Паказваць песню якая гучыць на At a Glance</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Display some nice messages on At a Glance.</string>
+    <string name="quickspace_psa_title">Паказваць выпадковыя паведамленні</string>
+    <string name="quickspace_psa_summary">Паказваць прыемныя паведамленні на At a Glance.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, gamer!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
+        <item>Добрай раніцы!</item>
+        <item>Добрай раніцы, геймер!</item>
+        <item>Які цудоўны дзень!</item>
+        <item>Добрага дня!</item>
+        <item>А як з невялікім 5-хвілінным сном?</item>
+        <item>Гэта адзін са спосабаў прачнуцца.</item>
+        <item>Вы павінны змяніць гукі будзільніка.</item>
+        <item>Падобна, гэта цудоўны дзень, ці не так?</item>
         <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
+        <item>Праверце надвор\'е на ўсялякі выпадак</item>
+        <item>Яшчэ адчуваеце сябе крыху сонным?</item>
         <item>Have you looked outside yet?</item>
         <item>Let\'s get this done.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
+        <item>Дабранач!</item>
         <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
+        <item>Убачымся заўтра!</item>
+        <item>Салодкіх сноў!</item>
+        <item>Ня заседжвайся занадта доўга</item>
+        <item>Добра выспацца</item>
+        <item>Пара спаць</item>
+        <item>Час расслабіцца</item>
         <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
+        <item>Час зарадзіць батарэю!</item>
+        <item>Заўтра можа быць выдатны дзень</item>
         <item>Get your bones ready for tomorrow</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
