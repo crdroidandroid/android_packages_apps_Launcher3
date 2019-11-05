@@ -210,78 +210,78 @@
     <string name="quickspace_alternate_style_title">Использовать альтернативный стиль</string>
     <string name="quickspace_alternate_style_summary">Использовать другой стиль для At a Glance, более минималистичный</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Показать \"сейчас играет\"</string>
+    <string name="quickspace_now_playing_title">Показать что играет сейчас</string>
     <string name="quickspace_now_playing_summary">Показывать песню которая играет на At a Glance</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Показывать случайные сообщения</string>
-    <string name="quickspace_psa_summary">Показывать приятные сообщения на At a Glance.</string>
+    <string name="quickspace_psa_summary">Показывать хорошие сообщения на At a Glance.</string>
     <string-array name="quickspace_psa_morning">
         <item>Доброе утро!</item>
         <item>Доброе утро, геймер!</item>
         <item>Какой чудесный день!</item>
         <item>Хорошего дня!</item>
-        <item>What about a small 5 minutes nap?</item>
+        <item>Как насчет небольшого 5-минутного сна?</item>
         <item>Это один из способов пробудиться.</item>
         <item>Вы должны изменить звук будильника.</item>
         <item>Похоже, это прекрасный день, не так ли?</item>
         <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
+        <item>Проверьте погоду на всякий случай</item>
         <item>Ещё чувствуете себя немного сонным?</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Вы уже смотрели на улицу?</item>
+        <item>Давайте сделаем это.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
         <item>Спокойной ночи!</item>
-        <item>Sleep well!</item>
+        <item>Спокойной ночи!</item>
         <item>Увидимся завтра!</item>
         <item>Сладких снов!</item>
         <item>Не засиживайся слишком долго</item>
-        <item>Have a good sleep</item>
+        <item>Хорошего дня</item>
         <item>Пора спать</item>
         <item>Время расслабиться</item>
-        <item>Enjoy the night!</item>
+        <item>Наслаждайтесь ночью!</item>
         <item>Время зарядить батарею!</item>
         <item>Завтра может быть отличный день</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>Получите ваши кости готовы к завтра</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
         <item>Эм... спокойной ночи?</item>
-        <item>It\'s a bit late now</item>
+        <item>Это немного позже</item>
         <item>Вы должны исправить свой режим сна</item>
         <item>Вы более продуктивны в это время?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>It do be like that sometimes</item>
+        <item>Это так иногда</item>
         <item>Настало ли время прошивать другую прошивку?</item>
         <item>Ждёшь Android 10?</item>
-        <item>Oh hey, what\'s up?</item>
+        <item>О, привет, что случилось?</item>
         <item>Time to brag my #setup</item>
         <item>Сколько скриншотов вы сделали?</item>
-        <item>We sweat. You enjoy!</item>
-        <item>I wish i could use VoLTE</item>
-        <item>Have fun!</item>
+        <item>Мы потянулись. Вам нравится!</item>
+        <item>Я хотел бы воспользоваться VoLTE</item>
+        <item>Веселитесь!</item>
         <item>Let\'s get this grind, gamer!</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
         <item>С любовью, команда crDroid!</item>
         <item>Remember the lineage of the unicorn</item>
         <item>A carbonized owl statue</item>
-        <item>Starting from the ground zero</item>
+        <item>Начиная с нуля</item>
         <item>Eat your veggies and send logs</item>
         <item>Oh no, it\'s updog again</item>
-        <item>I\'ve come to make an announcement</item>
+        <item>Я пришел сделать объявление</item>
         <item>What is a kang?</item>
         <item>How is everything going?</item>
-        <item>How to cherry-pick correctly?</item>
-        <item>Thank you for your support</item>
+        <item>Как правильно выбрать вишню?</item>
+        <item>Спасибо за вашу поддержку</item>
         <item>Are you guys really giving us &quot;teasers&quot; about adding paid features on a rom that was free to use previously?</item>
         <item>One of the buildbot\'s best picks</item>
-        <item>If you love an app, please, support it by purchasing it</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>What a buggy experience, isn\'t it?</item>
-        <item>nice</item>
-        <item>Enjoy the sunset!</item>
+        <item>Если вам нравится приложение, пожалуйста, поддержите его, купив</item>
+        <item>Какой прекрасный опыт, не так ли?</item>
+        <item>Какой глючный опыт, не так ли?</item>
+        <item>Отлично!</item>
+        <item>Наслаждайтесь закатом!</item>
         <item>Bazinga!</item>
-        <item>Coffee with crDroid is best!</item>
+        <item>Кофе с crDroid лучше!</item>
         <item>rm -rf \/</item>
     </string-array>
 </resources>

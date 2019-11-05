@@ -101,10 +101,10 @@
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Selamat datang di crDroid</string>
-    <string name="quick_event_rom_intro_bridge">Tap here %s</string>
-    <string name="quick_event_rom_intro_title1">to learn more</string>
-    <string name="quick_event_rom_intro_title2">and have fun!</string>
-    <string name="quick_event_rom_intro_title3">to learn about our project</string>
+    <string name="quick_event_rom_intro_bridge">Ketuk Sini</string>
+    <string name="quick_event_rom_intro_title1">Lebih lanjut</string>
+    <string name="quick_event_rom_intro_title2">senang-senang!</string>
+    <string name="quick_event_rom_intro_title3">tentang Project Kami</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">Sedang Diputar</string>
     <string name="quick_event_ambient_song_artist">%1$s dari %2$s</string>
@@ -207,81 +207,81 @@
     <string name="show_weather_title">Cuaca</string>
     <string name="show_weather_summary">Tampilkan cuaca jika tersedia</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a different style for At a Glance, more minimalistic</string>
+    <string name="quickspace_alternate_style_title">Gunakan gaya alternatif</string>
+    <string name="quickspace_alternate_style_summary">Gunakan gaya berbeda untuk Sekilas, lebih minimalis</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Display the song you\'re playing on At a Glance</string>
+    <string name="quickspace_now_playing_title">Perlihatkan sekarang sedang diputar</string>
+    <string name="quickspace_now_playing_summary">Tampilkan lagu yang sedang Anda putar di At a Glance</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Display some nice messages on At a Glance.</string>
+    <string name="quickspace_psa_title">Tampilkan Pesan</string>
+    <string name="quickspace_psa_summary">Tampilkan beberapa pesan bagus di Sekilas.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, gamer!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Selamat Pagi!</item>
+        <item>Selamat Pagi, Brow!</item>
+        <item>Hari yang indah:)!</item>
+        <item>Semoga harimu menyenangkan!</item>
+        <item>Bagaimana dengan tidur siang 5 menit kecil?</item>
+        <item>Itu salah satu cara untuk bangun.</item>
+        <item>Kamu akan mengubah suara nada dering alarm.</item>
+        <item>Sepertinya ini hari yang indah, bukan?</item>
+        <item>Mari kita bekerja hari ini.</item>
+        <item>Periksa cuaca untuk berjaga-jaga</item>
+        <item>Merasa sedikit mengantuk</item>
+        <item>Apakah Anda sudah melihat ke luar?</item>
+        <item>Mari kita selesaikan ini.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>Selamat Malam!</item>
+        <item>Tidur yang baik!</item>
+        <item>Sampai jumpa besok!</item>
+        <item>Mimpi Indah!</item>
+        <item>Jangan begadang terlalu lama</item>
+        <item>Selamat tidur</item>
+        <item>Tidurlah Bego</item>
+        <item>Waktu atau santuy</item>
+        <item>Menikmati Malam!</item>
+        <item>Isi batre nya cuk!</item>
+        <item>Besok jadi hari enak bro</item>
+        <item>Siapkan buat besok bro</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Selamat Malam sayang?</item>
+        <item>Sudah terlambat sepertinya</item>
+        <item>Lu harus mengubah jadwal tidur</item>
+        <item>Hari ini lu udah coli?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>It do be like that sometimes</item>
-        <item>Is it time to flash another ROM already?</item>
-        <item>Hyped about Android 10?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Time to brag my #setup</item>
-        <item>How many screenshots do you take?</item>
-        <item>We sweat. You enjoy!</item>
-        <item>I wish i could use VoLTE</item>
-        <item>Have fun!</item>
-        <item>Let\'s get this grind, gamer!</item>
+        <item>Yaah terkadang memang seperi itu</item>
+        <item>Kayaknya sudah waktu nya untuk flash ROM?</item>
+        <item>Tentang Android 10?</item>
+        <item>Oh, Haai, ada apa lo?</item>
+        <item>Saat nya tempur #hajar saya</item>
+        <item>Udah berapa kali anda ss layar?</item>
+        <item>Berkeringat. lu enak aja!</item>
+        <item>Gua harap lu bisa pake VoLTE</item>
+        <item>Punya yg senang!</item>
+        <item>Ayo ambil dan mainkan Wkwkwk!</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>With love,Team crDroid!</item>
-        <item>Remember the lineage of the unicorn</item>
-        <item>A carbonized owl statue</item>
-        <item>Starting from the ground zero</item>
-        <item>Eat your veggies and send logs</item>
-        <item>Oh no, it\'s updog again</item>
-        <item>I\'ve come to make an announcement</item>
-        <item>What is a kang?</item>
-        <item>How is everything going?</item>
-        <item>How to cherry-pick correctly?</item>
-        <item>Thank you for your support</item>
-        <item>Are you guys really giving us &quot;teasers&quot; about adding paid features on a rom that was free to use previously?</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>If you love an app, please, support it by purchasing it</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>What a buggy experience, isn\'t it?</item>
-        <item>nice</item>
-        <item>Enjoy the sunset!</item>
+        <item>Dengan Cinta, Tim crDroid!</item>
+        <item>Ingat akan garis keturunan unicorn</item>
+        <item>Patung burung hantu berkarbonasi</item>
+        <item>Mulai dari awal</item>
+        <item>Makanlah sayuranmu dan kirimkan log</item>
+        <item>Oh tidak, ada updog lagi</item>
+        <item>Saya datang untuk membuat sebuah pengumuman</item>
+        <item>Apa itu \"Kang\"?</item>
+        <item>Bagaimana semuanya berjalan?</item>
+        <item>Bagaimana untuk melakukan \"Cherry-picking\" dengan benar?</item>
+        <item>Terima kasih atas dukungan Anda</item>
+        <item>Apakah kalian benar-benar memberi kami sebuah &quot;penggoda&quot; tentang menambahkan fitur berbayar pada Rom yang sebelumnya gratis untuk dipakai?</item>
+        <item>Salah satu pilihan terbaik Buildbot</item>
+        <item>Jika Anda menyukai aplikasi ini, tolong, untuk mendukungnya dengan membeli aplikasi ini</item>
+        <item>Benar-benar pengalaman yang menyenangkan, bukan?</item>
+        <item>Benar-benar pengalaman yang tidak menyenangkan ya?</item>
+        <item>mantap</item>
+        <item>Nikmati senjamu!</item>
         <item>Bazinga!</item>
-        <item>Coffee with crDroid is best!</item>
+        <item>Kopi dengan crDroid terbaik!</item>
         <item>rm -rf \/</item>
     </string-array>
 </resources>
