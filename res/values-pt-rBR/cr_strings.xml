@@ -101,10 +101,10 @@
     <string name="abbrev_wday_month_day_no_year">EEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Bem vindo a crDroid</string>
-    <string name="quick_event_rom_intro_bridge">Tap here %s</string>
-    <string name="quick_event_rom_intro_title1">to learn more</string>
-    <string name="quick_event_rom_intro_title2">and have fun!</string>
-    <string name="quick_event_rom_intro_title3">to learn about our project</string>
+    <string name="quick_event_rom_intro_bridge">Toque aqui %s</string>
+    <string name="quick_event_rom_intro_title1">para saber mais</string>
+    <string name="quick_event_rom_intro_title2">e se divirta!</string>
+    <string name="quick_event_rom_intro_title3">saiba mais sobre nosso projeto</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">Tocando agora</string>
     <string name="quick_event_ambient_song_artist">%1$s por %2$s</string>
@@ -207,81 +207,81 @@
     <string name="show_weather_title">Clima</string>
     <string name="show_weather_summary">Mostrar clima quando disponível</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a different style for At a Glance, more minimalistic</string>
+    <string name="quickspace_alternate_style_title">Use um estilo alternativo</string>
+    <string name="quickspace_alternate_style_summary">Use um estilo diferente para o At a Glance, mais minimalista</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Display the song you\'re playing on At a Glance</string>
+    <string name="quickspace_now_playing_title">Mostrar tocando agora</string>
+    <string name="quickspace_now_playing_summary">Exibir a música que você está reproduzindo no At a Glance</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Display some nice messages on At a Glance.</string>
+    <string name="quickspace_psa_title">Mostrar uma mensagem aleatória</string>
+    <string name="quickspace_psa_summary">Exibir algumas mensagens legais no At a Glance.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, gamer!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Bom dia!</item>
+        <item>Bom dia, gamer!</item>
+        <item>Que dia maravilhoso!</item>
+        <item>Tenha um ótimo dia!</item>
+        <item>Que tal um pequeno cochilo de 5 minutos?</item>
+        <item>Essa é uma maneira de despertar.</item>
+        <item>Você deveria mudar os sons de seu alarme.</item>
+        <item>Parece ser um belo dia, não é?</item>
+        <item>Vamos pegar este pão.</item>
+        <item>Verifique o clima para garantir</item>
+        <item>Sentindo um pouco sonolento ainda</item>
+        <item>Você já olhou pra fora?</item>
+        <item>Vamos resolver isso.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>Boa noite!</item>
+        <item>Durma bem!</item>
+        <item>Te vejo amanhã!</item>
+        <item>Bons sonhos!</item>
+        <item>Não fique acordado até tarde</item>
+        <item>Tenha um bom sono</item>
+        <item>Descanse um pouco</item>
+        <item>Hora de relaxar</item>
+        <item>Aproveite a noite!</item>
+        <item>Hora de carregar as baterias!</item>
+        <item>Amanhã pode ser um grande dia</item>
+        <item>Prepare seus ossos para amanhã</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Hm... boa noite?</item>
+        <item>É um pouco tarde agora</item>
+        <item>Você deveria melhorar seu cronograma de sono</item>
+        <item>Você é mais produtivo neste horário?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>It do be like that sometimes</item>
-        <item>Is it time to flash another ROM already?</item>
-        <item>Hyped about Android 10?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Time to brag my #setup</item>
-        <item>How many screenshots do you take?</item>
-        <item>We sweat. You enjoy!</item>
-        <item>I wish i could use VoLTE</item>
-        <item>Have fun!</item>
-        <item>Let\'s get this grind, gamer!</item>
+        <item>É assim às vezes</item>
+        <item>Já está na hora de instalar outra ROM?</item>
+        <item>Empolgado sobre o Android 10?</item>
+        <item>Ah ei, beleza?</item>
+        <item>Hora de gabar meu #setup</item>
+        <item>Quantas capturas de tela você tira?</item>
+        <item>Nós suamos. Você adora!</item>
+        <item>Eu queria poder usar VoLTE</item>
+        <item>Divirta-se!</item>
+        <item>Vamos destruir, gamer!</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>With love,Team crDroid!</item>
-        <item>Remember the lineage of the unicorn</item>
-        <item>A carbonized owl statue</item>
-        <item>Starting from the ground zero</item>
-        <item>Eat your veggies and send logs</item>
-        <item>Oh no, it\'s updog again</item>
-        <item>I\'ve come to make an announcement</item>
-        <item>What is a kang?</item>
-        <item>How is everything going?</item>
-        <item>How to cherry-pick correctly?</item>
-        <item>Thank you for your support</item>
-        <item>Are you guys really giving us &quot;teasers&quot; about adding paid features on a rom that was free to use previously?</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>If you love an app, please, support it by purchasing it</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>What a buggy experience, isn\'t it?</item>
-        <item>nice</item>
-        <item>Enjoy the sunset!</item>
-        <item>Bazinga!</item>
-        <item>Coffee with crDroid is best!</item>
+        <item>Com amor, Time crDroid!</item>
+        <item>Lembre-se da linhagem do unicórnio</item>
+        <item>Uma estátua de coruja carbonizada</item>
+        <item>Começando da estaca zero</item>
+        <item>Coma seus vegetais e mande logs</item>
+        <item>An não, uma atualização de novo</item>
+        <item>Eu vim para fazer um anuncio</item>
+        <item>O que é um kang?</item>
+        <item>Como vai tudo?</item>
+        <item>Como colher cerejas corretamente?</item>
+        <item>Obrigado pela sua ajuda</item>
+        <item>Vocês realmente estão nos dando &quot;teasers&quot; sobre adicionar recursos pagos em uma Rom que era de uso livre (grátis) anteriormente?</item>
+        <item>Uma das melhores escolhas do buildbot</item>
+        <item>Se você adora um aplicativo, por favor, ajude-o comprando-o</item>
+        <item>Que experiencia maravilhosa, não é?</item>
+        <item>Que experiencia problemática, não é?</item>
+        <item>boa</item>
+        <item>Aproveite o por do sol!</item>
+        <item>Bazinga! (haha humor)</item>
+        <item>Café com crDroid é melhor!</item>
         <item>rm -rf \/</item>
     </string-array>
 </resources>
