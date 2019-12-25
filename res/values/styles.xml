@@ -21,7 +21,7 @@
     <!-- Launcher theme -->
     <style name="BaseLauncherTheme" parent="@android:style/Theme.DeviceDefault.Light">
         <item name="android:colorBackgroundCacheHint">@null</item>
-        <item name="android:colorEdgeEffect">#FF757575</item>
+        <item name="android:colorEdgeEffect">@*android:color/tertiary_material_settings</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
@@ -47,7 +47,7 @@
         <item name="workspaceStatusBarScrim">@drawable/workspace_bg</item>
         <item name="widgetsTheme">@style/WidgetContainerTheme</item>
         <item name="folderDotColor">?android:attr/colorPrimary</item>
-        <item name="folderFillColor">#CDFFFFFF</item>
+        <item name="folderFillColor">@*android:color/primary_dark_material_settings</item>
         <item name="folderIconBorderColor">?android:attr/colorPrimary</item>
         <item name="folderTextColor">#FF212121</item>
         <item name="folderHintColor">#89616161</item>
@@ -67,7 +67,7 @@
     </style>
 
     <style name="LauncherTheme.DarkMainColor" parent="@style/LauncherTheme">
-        <item name="folderFillColor">#FF3C4043</item> <!-- 100% GM2 800 -->
+        <item name="folderFillColor">@*android:color/primary_dark_material_settings</item>
         <item name="folderTextColor">?attr/workspaceTextColor</item>
         <item name="disabledIconAlpha">.254</item>
 
@@ -82,7 +82,7 @@
         <item name="isWorkspaceDarkText">true</item>
         <item name="workspaceStatusBarScrim">@null</item>
         <item name="folderDotColor">#FF464646</item>
-        <item name="folderFillColor">#CDFFFFFF</item>
+        <item name="folderFillColor">@*android:color/primary_dark_material_settings</item>
         <item name="folderIconBorderColor">#FF80868B</item>
         <item name="folderTextColor">?attr/workspaceTextColor</item>
     </style>
@@ -98,12 +98,12 @@
         <item name="allAppsInterimScrimAlpha">102</item>
         <item name="allAppsNavBarScrimColor">#80000000</item>
         <item name="allAppsTheme">@style/AllAppsTheme.Dark</item>
-        <item name="popupColorPrimary">#3C4043</item> <!-- Gray 800 -->
-        <item name="popupColorSecondary">#202124</item>
-        <item name="popupColorTertiary">#757575</item> <!-- Gray 600 -->
+        <item name="popupColorPrimary">@*android:color/primary_dark_material_settings</item>
+        <item name="popupColorSecondary">@*android:color/secondary_material_settings</item>
+        <item name="popupColorTertiary">@*android:color/tertiary_material_settings</item>
         <item name="widgetsTheme">@style/WidgetContainerTheme.Dark</item>
         <item name="folderDotColor">#FF464646</item>
-        <item name="folderFillColor">#DD3C4043</item> <!-- 87% GM2 800 -->
+        <item name="folderFillColor">@*android:color/primary_dark_material_settings</item>
         <item name="folderIconBorderColor">#FF80868B</item>
         <item name="folderTextColor">@android:color/white</item>
         <item name="folderHintColor">#89CCCCCC</item>
@@ -115,7 +115,7 @@
     </style>
 
     <style name="LauncherTheme.Dark.DarkMainColor" parent="@style/LauncherTheme.Dark">
-        <item name="folderFillColor">#FF3C4043</item> <!-- 100% GM2 800 -->
+        <item name="folderFillColor">@*android:color/primary_dark_material_settings</item>
         <item name="folderTextColor">@android:color/white</item>
         <item name="disabledIconAlpha">.54</item>
     </style>
@@ -123,7 +123,7 @@
     <style name="LauncherTheme.Dark.DarkText" parent="@style/LauncherTheme.Dark">
         <item name="android:colorControlHighlight">#75212121</item>
         <item name="allAppsInterimScrimAlpha">25</item>
-        <item name="folderFillColor">#CDFFFFFF</item>
+        <item name="folderFillColor">@*android:color/primary_dark_material_settings</item>
         <item name="folderTextColor">?attr/workspaceTextColor</item>
         <item name="workspaceTextColor">#FF212121</item>
         <item name="workspaceShadowColor">@android:color/transparent</item>
@@ -167,6 +167,7 @@
         <item name="android:colorEdgeEffect">?android:attr/textColorSecondaryInverse</item>
         <item name="android:textColorPrimary">?android:attr/textColorPrimaryInverse</item>
         <item name="android:textColorSecondary">?android:attr/textColorSecondaryInverse</item>
+        <item name="android:textColorTertiary">?android:attr/textColorTertiaryInverse</item>
     </style>
 
     <style name="WidgetContainerTheme.Dark" />
