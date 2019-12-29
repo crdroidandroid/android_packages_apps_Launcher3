@@ -40,7 +40,7 @@
             android:layout_width="@dimen/notification_icon_size"
             android:layout_height="match_parent"
             android:layout_gravity="end"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="@*android:string/config_headlineFontFamilyMedium"
             android:gravity="center"
             android:textColor="?android:attr/textColorPrimary"
             android:textSize="@dimen/notification_header_count_text_size" />
@@ -69,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
-                android:fontFamily="sans-serif"
+                android:fontFamily="@*android:string/config_headlineFontFamily"
                 android:lines="1"
                 android:textAlignment="viewStart"
                 android:textColor="?android:attr/textColorPrimary"
@@ -80,7 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
-                android:fontFamily="sans-serif"
+                android:fontFamily="@*android:string/config_bodyFontFamily"
                 android:lines="1"
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="@dimen/notification_main_text_size" />
