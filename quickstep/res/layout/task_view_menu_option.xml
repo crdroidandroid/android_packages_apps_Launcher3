@@ -42,7 +42,7 @@
         android:paddingBottom="@dimen/popup_padding_end"
         android:textSize="12sp"
         android:textColor="?android:attr/textColorPrimary"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@*android:string/config_bodyFontFamily"
         android:gravity="center_horizontal"
         android:layout_gravity="center_horizontal"
         android:focusable="false" />
