@@ -46,9 +46,9 @@
         android:persistent="true" />
 
     <SwitchPreference
-        android:key="pref_show_searchbar"
-        android:title="@string/show_searchbar_title"
-        android:summary="@string/show_searchbar_summary"
+        android:key="pref_show_quickspace"
+        android:title="@string/show_quickspace_title"
+        android:summary="@string/show_quickspace_summary"
         android:defaultValue="true"
         android:persistent="true"/>
 

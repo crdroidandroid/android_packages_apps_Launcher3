@@ -127,7 +127,7 @@ public final class Utilities {
 
     private static final long WAIT_BEFORE_RESTART = 250;
 
-    public static final String KEY_SHOW_SEARCHBAR = "pref_show_searchbar";
+    public static final String KEY_SHOW_SEARCHBAR = "pref_show_quickspace";
 
     /**
      * Indicates if the device has a debug build. Should only be used to store additional info or
