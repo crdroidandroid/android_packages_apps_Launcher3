@@ -3,7 +3,9 @@ package com.android.launcher3.lineage;
 import android.app.KeyguardManager;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.hardware.biometrics.BiometricManager.Authenticators;
 import android.hardware.biometrics.BiometricPrompt;
 import android.os.CancellationSignal;
@@ -71,6 +73,21 @@ public class LineageUtils {
         } catch (PackageManager.NameNotFoundException e) {
             return false;
         }
+    }
+
+    public static boolean isPackageInstalled(Context context, String pkg, boolean ignoreState) {
+        if (pkg != null) {
+            try {
+                PackageInfo pi = context.getPackageManager().getPackageInfo(pkg, 0);
+                if (!pi.applicationInfo.enabled && !ignoreState) {
+                    return false;
+                }
+            } catch (NameNotFoundException e) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
 }

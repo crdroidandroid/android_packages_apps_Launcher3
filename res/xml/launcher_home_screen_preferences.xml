@@ -9,6 +9,12 @@
         android:title="@string/title_show_google_app" />
 
     <SwitchPreference
+        android:key="pref_dock_search"
+        android:title="@string/dock_search_title"
+        android:summary="@string/dock_search_summary"
+        android:defaultValue="true" />
+
+    <SwitchPreference
         android:key="pref_show_quickspace"
         android:title="@string/show_quickspace_title"
         android:summary="@string/show_quickspace_summary"

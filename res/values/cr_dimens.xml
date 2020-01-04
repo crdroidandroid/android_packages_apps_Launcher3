@@ -24,4 +24,17 @@
     <dimen name="quickspace_title_size">24dp</dimen>
     <dimen name="quickspace_alternate_title_size">22dp</dimen>
 
+    <!-- Dock search bar -->
+    <dimen name="qsb_wrapper_height">48dp</dimen>
+    <dimen name="qsb_widget_padding">8dp</dimen>
+    <dimen name="all_apps_min_top_inset">16dp</dimen>
+
+    <!-- hotseat -->
+    <dimen name="dynamic_grid_hotseat_bottom_padding">0dp</dimen>
+    <dimen name="dynamic_grid_hotseat_bottom_non_tall_padding">16dp</dimen>
+    <dimen name="dynamic_grid_hotseat_extra_vertical_size">20dp</dimen>
+    <dimen name="dynamic_grid_hotseat_bottom_padding_widget">88dp</dimen>
+    <dimen name="dynamic_grid_hotseat_bottom_non_tall_padding_widget">15dp</dimen>
+    <dimen name="dynamic_grid_hotseat_extra_vertical_size_widget">24dp</dimen>
+
 </resources>

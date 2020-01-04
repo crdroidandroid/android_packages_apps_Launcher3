@@ -13,7 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="@color/search_ripple">
-    <item android:id="@+id/search_basic" android:drawable="@drawable/bg_all_apps_searchbox_basic" />
-</ripple>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@*android:color/notification_material_background_color" />
+    <corners android:radius="24dp" />
+</shape>
