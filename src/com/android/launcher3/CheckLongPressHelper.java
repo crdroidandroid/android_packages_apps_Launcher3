@@ -87,7 +87,7 @@ public class CheckLongPressHelper {
         mLongPressTimeoutFactor = longPressTimeoutFactor;
     }
 
-    private void postCheckForLongPress() {
+    public void postCheckForLongPress() {
         mHasPerformedLongPress = false;
 
         if (mPendingCheckForLongPress == null) {
