@@ -20,6 +20,7 @@ import com.android.launcher3.BaseDraggingActivity;
 import com.android.launcher3.Launcher;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
+import com.android.launcher3.customization.InfoBottomSheet;
 import com.android.launcher3.model.WidgetItem;
 import com.android.launcher3.model.data.ItemInfo;
 import com.android.launcher3.model.data.WorkspaceItemInfo;
@@ -179,12 +180,20 @@ public abstract class SystemShortcut<T extends Context & ActivityContext> extend
             }
         }
 
+        private InfoBottomSheet cbs;
+
         @Override
         public void onClick(View view) {
-            dismissTaskMenuView(mTarget);
-            Rect sourceBounds = Utilities.getViewBounds(view);
-            new PackageManagerHelper(mTarget).startDetailsActivityForInfo(
-                    mItemInfo, sourceBounds, ActivityOptions.makeBasic().toBundle());
+            if (cbs == null) {
+                dismissTaskMenuView(mTarget);
+                Rect sourceBounds = Utilities.getViewBounds(view);
+                cbs = (InfoBottomSheet) mTarget.getLayoutInflater().inflate(
+                        R.layout.app_info_bottom_sheet,
+                        mTarget.getDragLayer(),
+                        false);
+                cbs.configureBottomSheet(sourceBounds, mTarget);
+                cbs.populateAndShow(mItemInfo);
+            }
             mTarget.getStatsLogManager().logger().withItemInfo(mItemInfo)
                     .log(LAUNCHER_SYSTEM_SHORTCUT_APP_INFO_TAP);
         }
