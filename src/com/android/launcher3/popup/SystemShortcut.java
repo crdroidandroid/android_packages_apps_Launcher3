@@ -29,6 +29,8 @@ import com.android.launcher3.util.PackageManagerHelper;
 import com.android.launcher3.util.PackageUserKey;
 import com.android.launcher3.widget.WidgetsBottomSheet;
 
+import com.android.launcher3.customization.InfoBottomSheet;
+
 import java.util.List;
 
 /**
@@ -135,12 +137,20 @@ public abstract class SystemShortcut<T extends BaseDraggingActivity> extends Ite
                     itemInfo);
         }
 
+        private InfoBottomSheet cbs;
+
         @Override
         public void onClick(View view) {
-            dismissTaskMenuView(mTarget);
-            Rect sourceBounds = mTarget.getViewBounds(view);
-            new PackageManagerHelper(mTarget).startDetailsActivityForInfo(
-                    mItemInfo, sourceBounds, ActivityOptions.makeBasic().toBundle());
+            if (cbs == null) {
+                dismissTaskMenuView(mTarget);
+                Rect sourceBounds = mTarget.getViewBounds(view);
+                cbs = (InfoBottomSheet) mTarget.getLayoutInflater().inflate(
+                        R.layout.app_info_bottom_sheet,
+                        mTarget.getDragLayer(),
+                        false);
+                cbs.configureBottomSheet(sourceBounds, mTarget);
+                cbs.populateAndShow(mItemInfo);
+            }
             mTarget.getUserEventDispatcher().logActionOnControl(Action.Touch.TAP,
                     ControlType.APPINFO_TARGET, view);
             mTarget.getStatsLogManager().logger().withItemInfo(mItemInfo)
