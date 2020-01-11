@@ -81,7 +81,7 @@ public class RecentsModel implements IconChangeListener, TaskStackChangeListener
     private final TaskStackChangeListeners mTaskStackChangeListeners;
 
     private RecentsModel(Context context) {
-        this(context, new IconProvider(context));
+        this(context, IconProvider.INSTANCE.get(context));
     }
 
     private RecentsModel(Context context, IconProvider iconProvider) {
