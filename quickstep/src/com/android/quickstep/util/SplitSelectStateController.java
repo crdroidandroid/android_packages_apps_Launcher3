@@ -882,7 +882,7 @@ public class SplitSelectStateController {
             mTaskInfo = taskInfo;
             String packageName = mTaskInfo.realActivity.getPackageName();
             PackageManager pm = mLauncher.getApplicationContext().getPackageManager();
-            IconProvider provider = new IconProvider(mLauncher.getApplicationContext());
+            IconProvider provider = IconProvider.INSTANCE.get(mLauncher.getApplicationContext());
             try {
                 mAppIcon = provider.getIcon(pm.getActivityInfo(mTaskInfo.baseActivity,
                      PackageManager.ComponentInfoFlags.of(0)));
