@@ -52,6 +52,7 @@ import com.android.launcher3.InvariantDeviceProfile;
 import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.config.FeatureFlags;
+import com.android.launcher3.icons.BaseIconFactory;
 import com.android.launcher3.icons.ComponentWithLabel.ComponentCachingLogic;
 import com.android.launcher3.icons.cache.BaseIconCache;
 import com.android.launcher3.icons.cache.CachingLogic;
@@ -114,7 +115,7 @@ public class IconCache extends BaseIconCache {
         mLauncherApps = mContext.getSystemService(LauncherApps.class);
         mUserManager = UserCache.INSTANCE.get(mContext);
         mInstantAppResolver = InstantAppResolver.newInstance(mContext);
-        mIconProvider = iconProvider;
+        mIconProvider = IconProvider.INSTANCE.get(mContext);
         mWidgetCategoryBitmapInfos = new SparseArray<>();
     }
 
