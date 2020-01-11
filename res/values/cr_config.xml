@@ -34,4 +34,7 @@
     <!-- Sort sections of apps list, in case AlphabeticIndex (of current locale)
          returns duplicate labels for some reasons. -->
     <bool name="config_appsListSortSections">false</bool>
+
+    <!-- Themed icons -->
+    <string name="drawable_factory_class" translatable="false">com.android.launcher3.icons.ThirdPartyDrawableFactory</string>
 </resources>
