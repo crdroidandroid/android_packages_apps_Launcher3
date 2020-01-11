@@ -75,4 +75,6 @@
     <string name="app_info_last_update" translatable="false">Last update</string>
     <string name="app_info_version" translatable="false">Version</string>
     <string name="app_info_more" translatable="false">More</string>
+    <!-- Preference default value -->
+    <string name="pref_value_default" translatable="false">Default</string>
 </resources>
