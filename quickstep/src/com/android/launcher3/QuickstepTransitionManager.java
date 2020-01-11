@@ -357,7 +357,9 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
         IRemoteCallback endCallback = completeRunnableListCallback(onEndCallback);
         options.setOnAnimationAbortListener(endCallback);
         options.setOnAnimationFinishedListener(endCallback);
-        options.setLaunchCookie(StableViewInfo.toLaunchCookie(itemInfo));
+        if (itemInfo != null) {
+            options.setLaunchCookie(StableViewInfo.toLaunchCookie(itemInfo));
+        }
         return new ActivityOptionsWrapper(options, onEndCallback);
     }
 
