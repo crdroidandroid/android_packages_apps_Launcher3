@@ -33,4 +33,7 @@
 
     <!-- Allow rotation by default -->
     <bool name="config_allowRotation">false</bool>
+
+    <!-- Themed icons -->
+    <string name="drawable_factory_class" translatable="false">com.android.launcher3.icons.ThirdPartyDrawableFactory</string>
 </resources>
