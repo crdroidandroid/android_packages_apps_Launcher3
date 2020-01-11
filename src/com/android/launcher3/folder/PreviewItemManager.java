@@ -40,6 +40,7 @@ import androidx.annotation.NonNull;
 
 import com.android.launcher3.BubbleTextView;
 import com.android.launcher3.Utilities;
+import com.android.launcher3.graphics.DrawableFactory;
 import com.android.launcher3.graphics.PreloadIconDrawable;
 import com.android.launcher3.model.data.ItemInfoWithIcon;
 import com.android.launcher3.model.data.WorkspaceItemInfo;
@@ -70,6 +71,7 @@ public class PreviewItemManager {
 
     private final Context mContext;
     private final FolderIcon mIcon;
+    private final DrawableFactory mDrawableFactory;
     private final int mIconSize;
 
     // These variables are all associated with the drawing of the preview; they are stored
@@ -103,6 +105,7 @@ public class PreviewItemManager {
     public PreviewItemManager(FolderIcon icon) {
         mContext = icon.getContext();
         mIcon = icon;
+        mDrawableFactory = DrawableFactory.INSTANCE.get(mContext);
         mIconSize = ActivityContext.lookupContext(
                 mContext).getDeviceProfile().folderChildIconSizePx;
         mClipThreshold = Utilities.dpToPx(1f);
@@ -430,7 +433,7 @@ public class PreviewItemManager {
     private void setDrawable(PreviewItemDrawingParams p, WorkspaceItemInfo item) {
         if (item.hasPromiseIconUi() || (item.runtimeStatusFlags
                     & ItemInfoWithIcon.FLAG_SHOW_DOWNLOAD_PROGRESS_MASK) != 0) {
-            PreloadIconDrawable drawable = newPendingIcon(mContext, item);
+            PreloadIconDrawable drawable = mDrawableFactory.newPendingIcon(mContext, item);
             drawable.setLevel(item.getProgressLevel());
             p.drawable = drawable;
         } else {
