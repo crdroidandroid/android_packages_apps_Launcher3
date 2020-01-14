@@ -213,30 +213,7 @@ public class BaseIconFactory implements AutoCloseable {
         if (icon == null) {
             return null;
         }
-        float scale = 1f;
-
-        if (shrinkNonAdaptiveIcons && ATLEAST_OREO) {
-            if (mWrapperIcon == null) {
-                mWrapperIcon = mContext.getDrawable(R.drawable.adaptive_icon_drawable_wrapper)
-                        .mutate();
-            }
-            AdaptiveIconDrawable dr = (AdaptiveIconDrawable) mWrapperIcon;
-            dr.setBounds(0, 0, 1, 1);
-            boolean[] outShape = new boolean[1];
-            scale = getNormalizer().getScale(icon, outIconBounds, dr.getIconMask(), outShape);
-            if (!(icon instanceof AdaptiveIconDrawable) && !outShape[0]) {
-                FixedScaleDrawable fsd = ((FixedScaleDrawable) dr.getForeground());
-                fsd.setDrawable(icon);
-                fsd.setScale(scale);
-                icon = dr;
-                scale = getNormalizer().getScale(icon, outIconBounds, null, null);
-
-                ((ColorDrawable) dr.getBackground()).setColor(mWrapperBackgroundColor);
-            }
-        } else {
-            scale = getNormalizer().getScale(icon, outIconBounds, null, null);
-        }
-
+        float scale = getNormalizer().getScale(icon, outIconBounds, null, null);
         outScale[0] = scale;
         return icon;
     }
