@@ -18,7 +18,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import androidx.preference.Preference;
+import androidx.preference.ListPreference;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -30,7 +30,7 @@ import com.android.launcher3.IconPackProvider;
 import com.android.launcher3.R;
 
 
-public class IconPackPreference extends Preference {
+public class IconPackPreference extends ListPreference {
 
     private final PackageManager pm;
 
@@ -56,7 +56,6 @@ public class IconPackPreference extends Preference {
         } else {
             try {
                 ApplicationInfo info = pm.getApplicationInfo(currentPack, 0);
-                setIcon(info.loadIcon(pm));
                 setSummary(info.loadLabel(pm));
             } catch (PackageManager.NameNotFoundException e) {
                 setNone();
@@ -66,32 +65,30 @@ public class IconPackPreference extends Preference {
     }
 
     private void setNone() {
-        setIcon(getContext().getResources().getDrawable(R.mipmap.ic_launcher_home));
         setSummary("None");
     }
 
     @Override
     protected void onClick() {
+        load();
         super.onClick();
-        showDialog();
     }
 
-    protected void showDialog() {
+    protected void load() {
         final Map<String, IconPackInfo> packages = loadAvailableIconPacks();
-        final IconAdapter adapter = new IconAdapter(getContext(), packages, getPersistedString(""));
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setAdapter(adapter, (dialog, position) -> {
-            String item = adapter.getItem(position);
-            persistString(item);
-            if (!item.isEmpty()) {
-                IconPackInfo packInfo = packages.get(item);
-                setIcon(packInfo.icon);
-                setSummary(packInfo.label);
-            } else {
-                setNone();
-            }
-        });
-        builder.show();
+        String[] packageNames = new String[packages.size()+1];
+        CharSequence[] labels = new CharSequence[packages.size()+1];
+        String defaultLabel = "None";
+        packageNames[0] = "";
+        labels[0] = defaultLabel;
+        int i = 1;
+        for (Map.Entry<String, IconPackInfo> entry : packages.entrySet()) {
+            packageNames[i] = entry.getKey();
+            labels[i] = entry.getValue().label;
+            i++;
+        }
+        setEntries(labels);
+        setEntryValues(packageNames);
     }
 
     private Map<String, IconPackInfo> loadAvailableIconPacks() {
@@ -110,67 +107,15 @@ public class IconPackPreference extends Preference {
     private static class IconPackInfo {
         String packageName;
         CharSequence label;
-        Drawable icon;
 
         IconPackInfo(ResolveInfo r, PackageManager packageManager) {
             packageName = r.activityInfo.packageName;
-            icon = r.loadIcon(packageManager);
             label = r.loadLabel(packageManager);
         }
 
-        public IconPackInfo(String label, Drawable icon, String packageName) {
+        public IconPackInfo(String label, String packageName) {
             this.label = label;
-            this.icon = icon;
             this.packageName = packageName;
         }
     }
-
-    private static class IconAdapter extends BaseAdapter {
-        ArrayList<IconPackInfo> mSupportedPackages;
-        LayoutInflater mLayoutInflater;
-        String mCurrentIconPack;
-
-        IconAdapter(Context context, Map<String, IconPackInfo> supportedPackages, String currentPack) {
-            mLayoutInflater = LayoutInflater.from(context);
-            mSupportedPackages = new ArrayList<>(supportedPackages.values());
-            Collections.sort(mSupportedPackages, (lhs, rhs) -> lhs.label.toString().compareToIgnoreCase(rhs.label.toString()));
-
-            Resources res = context.getResources();
-            String defaultLabel = "None";
-            Drawable icon = res.getDrawable(R.mipmap.ic_launcher_home);
-            mSupportedPackages.add(0, new IconPackInfo(defaultLabel, icon, ""));
-            mCurrentIconPack = currentPack;
-        }
-
-        @Override
-        public int getCount() {
-            return mSupportedPackages.size();
-        }
-
-        @Override
-        public String getItem(int position) {
-            return mSupportedPackages.get(position).packageName;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            if (convertView == null) {
-                convertView = mLayoutInflater.inflate(R.layout.iconpack_dialog, null);
-            }
-            IconPackInfo info = mSupportedPackages.get(position);
-            TextView txtView = convertView.findViewById(R.id.title);
-            txtView.setText(info.label);
-            ImageView imgView = convertView.findViewById(R.id.icon);
-            imgView.setImageDrawable(info.icon);
-            RadioButton radioButton = convertView.findViewById(R.id.radio);
-            radioButton.setChecked(info.packageName.equals(mCurrentIconPack));
-            return convertView;
-        }
-    }
-
 }

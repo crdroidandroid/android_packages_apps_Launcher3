@@ -14,36 +14,17 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License
   -->
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minHeight="?android:attr/listPreferredItemHeightSmall"
     android:gravity="center_vertical"
-    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+    android:paddingStart="72dp"
+    android:paddingEnd="16dp"
     android:background="?android:attr/selectableItemBackground"
     android:clipToPadding="false"
     android:focusable="true" >
-
-    <LinearLayout
-        android:id="@+id/icon_frame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minWidth="56dp"
-        android:gravity="start|center_vertical"
-        android:orientation="horizontal"
-        android:paddingEnd="8dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp">
-        <androidx.preference.internal.PreferenceImageView
-            android:id="@android:id/icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:maxWidth="48dp"
-            app:maxHeight="48dp" />
-    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -51,14 +32,12 @@
         android:layout_weight="1"
         android:paddingTop="16dp"
         android:paddingBottom="16dp">
-
         <TextView android:id="@android:id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:textAppearance="?android:attr/textAppearanceListItem"
             android:ellipsize="marquee" />
-
         <TextView android:id="@android:id/summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,7 +47,6 @@
             android:textAlignment="viewStart"
             android:textColor="?android:attr/textColorSecondary"
             android:maxLines="10" />
-
     </RelativeLayout>
 
     <!-- Preference should place its actual preference widget here. -->
@@ -78,5 +56,4 @@
         android:gravity="end|center_vertical"
         android:paddingStart="16dp"
         android:orientation="vertical" />
-
 </LinearLayout>
