@@ -100,8 +100,8 @@ public class NotificationInfo implements View.OnClickListener {
             return;
         }
         final Launcher launcher = Launcher.getLauncher(view.getContext());
-        Bundle activityOptions = ActivityOptions.makeClipRevealAnimation(
-                view, 0, 0, view.getWidth(), view.getHeight()).toBundle();
+        Bundle activityOptions = launcher.getAppTransitionManager()
+                .getActivityLaunchOptions(view).toBundle();
         try {
             intent.send(null, 0, null, null, null, null, activityOptions);
             launcher.getStatsLogManager().logger().withItemInfo(mItemInfo)

@@ -119,6 +119,7 @@ import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
 
 import com.android.launcher3.DropTarget.DragObject;
+import com.android.launcher3.QuickstepTransitionManager;
 import com.android.launcher3.accessibility.LauncherAccessibilityDelegate;
 import com.android.launcher3.accessibility.LauncherAccessibilityDelegate.LauncherAction;
 import com.android.launcher3.allapps.AllAppsContainerView;
@@ -172,6 +173,7 @@ import com.android.launcher3.testing.TestProtocol;
 import com.android.launcher3.touch.AllAppsSwipeController;
 import com.android.launcher3.touch.ItemClickHandler;
 import com.android.launcher3.uioverrides.plugins.PluginManagerWrapper;
+import com.android.launcher3.util.ActivityOptionsWrapper;
 import com.android.launcher3.util.ActivityResultInfo;
 import com.android.launcher3.util.ActivityTracker;
 import com.android.launcher3.util.ComponentKey;
@@ -304,6 +306,7 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
 
     private WidgetManagerHelper mAppWidgetManager;
     private LauncherAppWidgetHost mAppWidgetHost;
+    private QuickstepTransitionManager mAppTransitionManager;
 
     private final int[] mTmpAddItemCellCoordinates = new int[2];
 
@@ -3048,6 +3051,14 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
      */
     public float[] getNormalOverviewScaleAndOffset() {
         return new float[] {NO_SCALE, NO_OFFSET};
+    }
+
+    public ActivityOptionsWrapper getActivityLaunchOptions(View v) {
+        return mAppTransitionManager.getActivityLaunchOptions(v);
+    }
+
+    public QuickstepTransitionManager getAppTransitionManager() {
+        return mAppTransitionManager;
     }
 
     public static Launcher getLauncher(Context context) {
