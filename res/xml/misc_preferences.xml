@@ -12,6 +12,13 @@
         android:key="pref_trust_apps"
         android:title="@string/trust_apps_manager_name" />
 
+    <SwitchPreference
+        android:key="pref_sleep_gesture"
+        android:title="@string/pref_sleep_gesture_title"
+        android:summary="@string/pref_sleep_gesture_summary"
+        android:defaultValue="true"
+        android:persistent="true"/>
+
     <androidx.preference.PreferenceScreen
         android:key="pref_developer_options"
         android:persistent="false"
