@@ -48,4 +48,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Show now playing</string>
     <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance.</string>
+
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
 </resources>
