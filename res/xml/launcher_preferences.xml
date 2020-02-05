@@ -98,4 +98,11 @@
         android:title="@string/show_labels_landscape"
         android:defaultValue="false"
         android:persistent="true" />
+
+    <SwitchPreference
+        android:key="pref_sleep_gesture"
+        android:title="@string/pref_sleep_gesture_title"
+        android:summary="@string/pref_sleep_gesture_summary"
+        android:defaultValue="true"
+        android:persistent="true"/>
 </androidx.preference.PreferenceScreen>
