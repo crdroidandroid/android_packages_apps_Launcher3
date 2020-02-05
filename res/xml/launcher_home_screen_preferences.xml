@@ -39,6 +39,13 @@
             launcher:logIdOn="613"
             launcher:logIdOff="614" />
 
+        <SwitchPreference
+            android:key="pref_sleep_gesture"
+            android:title="@string/pref_sleep_gesture_title"
+            android:summary="@string/pref_sleep_gesture_summary"
+            android:defaultValue="true"
+            android:persistent="true"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory
