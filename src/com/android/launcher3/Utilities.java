@@ -148,6 +148,7 @@ public final class Utilities {
     public static final String SHOW_SHADE_GLANCE = "pref_show_shade_glance";
     public static final String SHOW_WORKSPACE_GRADIENT = "pref_show_workspace_grad";
     public static final String SHOW_HOTSEAT_GRADIENT = "pref_show_hotseat_grad";
+    public static final String SLEEP_GESTURE = "pref_sleep_gesture";
 
     public static boolean shouldDisableGestures(MotionEvent ev) {
         return (ev.getEdgeFlags() & FLAG_NO_GESTURES) == FLAG_NO_GESTURES;
@@ -813,6 +814,10 @@ public final class Utilities {
 
     public static boolean showHotseatGradient(Context context) {
         return getPrefs(context).getBoolean(SHOW_HOTSEAT_GRADIENT, true);
+    }
+
+    public static boolean useSleepGesture(Context context) {
+        return getPrefs(context).getBoolean(SLEEP_GESTURE, true);
     }
 
     public static void restart(final Context context) {
