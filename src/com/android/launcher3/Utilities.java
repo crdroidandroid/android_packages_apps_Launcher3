@@ -127,6 +127,8 @@ public final class Utilities {
 
     public static final String DESKTOP_SHOW_QUICKSPACE = "pref_show_quickspace";
 
+    public static final String SLEEP_GESTURE = "pref_sleep_gesture";
+
     /**
      * Set on a motion event dispatched from the nav bar. See {@link MotionEvent#setEdgeFlags(int)}.
      */
@@ -708,6 +710,10 @@ public final class Utilities {
     public static boolean isWorkspaceEditAllowed(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(InvariantDeviceProfile.KEY_WORKSPACE_EDIT, true);
+    }
+
+    public static boolean useSleepGesture(Context context) {
+        return getPrefs(context).getBoolean(SLEEP_GESTURE, true);
     }
 
     public static void restart(final Context context) {
