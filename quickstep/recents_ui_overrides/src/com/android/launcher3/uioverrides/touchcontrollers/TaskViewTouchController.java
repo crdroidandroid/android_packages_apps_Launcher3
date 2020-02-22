@@ -64,6 +64,7 @@ public abstract class TaskViewTouchController<T extends BaseDraggingActivity>
     private PendingAnimation mPendingAnimation;
     private AnimatorPlaybackController mCurrentAnimation;
     private boolean mCurrentAnimationIsGoingUp;
+    private boolean mCurrentAnimationIsGoingDown;
 
     private boolean mNoIntercept;
 
@@ -129,7 +130,8 @@ public abstract class TaskViewTouchController<T extends BaseDraggingActivity>
                         if (!SysUINavigationMode.getMode(mActivity).hasGestures) {
                             // Don't allow swipe down to open if we don't support swipe up
                             // to enter overview.
-                            directionsToDetectScroll = DIRECTION_POSITIVE;
+                            directionsToDetectScroll = getSwipeForClearAllState() ? DIRECTION_BOTH : DIRECTION_POSITIVE;
+
                         } else {
                             // The task can be dragged up to dismiss it,
                             // and down to open if it's the current page.
@@ -162,8 +164,8 @@ public abstract class TaskViewTouchController<T extends BaseDraggingActivity>
         return mDetector.onTouchEvent(ev);
     }
 
-    private void reInitAnimationController(boolean goingUp) {
-        if (mCurrentAnimation != null && mCurrentAnimationIsGoingUp == goingUp) {
+    private void reInitAnimationController(boolean goingUp, boolean goingDown) {
+        if (mCurrentAnimation != null && (mCurrentAnimationIsGoingUp == goingUp || mCurrentAnimationIsGoingDown == goingDown)) {
             // No need to init
             return;
         }
@@ -182,12 +184,17 @@ public abstract class TaskViewTouchController<T extends BaseDraggingActivity>
         }
 
         mCurrentAnimationIsGoingUp = goingUp;
+        mCurrentAnimationIsGoingDown = goingDown;
         BaseDragLayer dl = mActivity.getDragLayer();
         long maxDuration = (long) (2 * dl.getHeight());
 
         if (goingUp) {
             mPendingAnimation = mRecentsView.createTaskDismissAnimation(mTaskBeingDragged,
                     true /* animateTaskView */, true /* removeTask */, maxDuration);
+
+            mEndDisplacement = -mTaskBeingDragged.getHeight();
+        } else if (goingDown && getSwipeForClearAllState()) {
+            mPendingAnimation = mRecentsView.createAllTasksDismissAnimation(maxDuration);
 
             mEndDisplacement = -mTaskBeingDragged.getHeight();
         } else {
@@ -214,7 +221,7 @@ public abstract class TaskViewTouchController<T extends BaseDraggingActivity>
     @Override
     public void onDragStart(boolean start) {
         if (mCurrentAnimation == null) {
-            reInitAnimationController(mDetector.wasInitialTouchPositive());
+            reInitAnimationController(mDetector.wasInitialTouchPositive(), mDetector.wasInitialTouchNegative());
             mDisplacementShift = 0;
         } else {
             mDisplacementShift = mCurrentAnimation.getProgressFraction() / mProgressMultiplier;
@@ -228,8 +235,12 @@ public abstract class TaskViewTouchController<T extends BaseDraggingActivity>
         float totalDisplacement = displacement + mDisplacementShift;
         boolean isGoingUp =
                 totalDisplacement == 0 ? mCurrentAnimationIsGoingUp : totalDisplacement < 0;
+        boolean isGoingDown = totalDisplacement == 0 ? mCurrentAnimationIsGoingDown : totalDisplacement > 0;
         if (isGoingUp != mCurrentAnimationIsGoingUp) {
-            reInitAnimationController(isGoingUp);
+            reInitAnimationController(isGoingUp, isGoingDown);
+            mFlingBlockCheck.blockFling();
+        } else if (isGoingDown != mCurrentAnimationIsGoingDown && getSwipeForClearAllState()) {
+            reInitAnimationController(isGoingUp, isGoingDown);
             mFlingBlockCheck.blockFling();
         } else {
             mFlingBlockCheck.onEvent();
@@ -257,9 +268,19 @@ public abstract class TaskViewTouchController<T extends BaseDraggingActivity>
         float progress = mCurrentAnimation.getProgressFraction();
         float interpolatedProgress = mCurrentAnimation.getInterpolatedProgress();
         if (fling) {
-            logAction = Touch.FLING;
             boolean goingUp = velocity < 0;
-            goingToEnd = goingUp == mCurrentAnimationIsGoingUp;
+            boolean goingDown = velocity > 0;
+            if (goingUp) {
+                logAction = Touch.FLING;
+                goingToEnd = goingUp == mCurrentAnimationIsGoingUp;
+            } else if (getSwipeForClearAllState()) {
+               logAction = Touch.FLING;
+               goingToEnd = goingDown == mCurrentAnimationIsGoingDown;
+            }
+            else {
+                logAction = Touch.SWIPE;
+                goingToEnd = mCurrentAnimation.getProgressFraction() > SUCCESS_TRANSITION_PROGRESS;
+            }
         } else {
             logAction = Touch.SWIPE;
             goingToEnd = interpolatedProgress > SUCCESS_TRANSITION_PROGRESS;
@@ -309,5 +330,9 @@ public abstract class TaskViewTouchController<T extends BaseDraggingActivity>
             mPendingAnimation.finish(false, Touch.SWIPE);
             mPendingAnimation = null;
         }
+    }
+
+    private boolean getSwipeForClearAllState() {
+        return mRecentsView.getSwipeForClearAllState();
     }
 }
