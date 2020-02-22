@@ -38,17 +38,17 @@
     <string name="google_feed_summary">Links neben dem Startbildschirm</string>
     <!-- Gradients on Workspace/Hotseat -->
     <string name="workspace_gradient_title">Farbverlauf oben anzeigen</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_summary">Einen ab­ge­stuften Farbverlauf der Statusleiste aktivieren</string>
+    <string name="hotseat_gradient_title">Farbverlauf anzeigen unten</string>
+    <string name="hotseat_gradient_summary">Einen ab­ge­stuften Farbverlauf des Launcher-Dock aktivieren</string>
     <!-- Shadespace -->
     <string name="shadespace_subtext_double">%1$s - %2$s</string>
     <string name="shadespace_subtext_default"></string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="play_folder_title">Wiedergabe</string>
+    <string name="pref_sleep_gesture_title">Doppeltippen zum Sperren</string>
+    <string name="pref_sleep_gesture_summary">Zum Ausschalten zweimal auf einen leeren Bereich tippen</string>
     <!-- Swipe down to clear recents -->
-    <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Doesn\'t works if P navbar gestures are enable</string>
+    <string name="allow_swipe_down_clearall_title">In der kürzlich verwendeten App-Ansicht nach unten wischen beendet alles</string>
+    <string name="allow_swipe_down_clearall_desc">Funktioniert nicht, wenn Pie-Navigationsleisten-Gesten aktiviert sind</string>
 </resources>
