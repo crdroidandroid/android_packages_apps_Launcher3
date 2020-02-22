@@ -18,29 +18,29 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <string name="app_name">crDroid Home</string>
+    <string name="app_name">crDroid domů</string>
     <!-- General -->
     <string name="settings_title">Nastavení</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="home_category_title">Domovská obrazovka</string>
+    <string name="home_category_summary">Nastavení panelu Google Now a dalších funkcí</string>
+    <string name="icons_category_title">Ikony</string>
+    <string name="icons_category_summary">Nastavit tvar ikony a další</string>
+    <string name="app_drawer_category_title">Seznam aplikací</string>
+    <string name="app_drawer_category_summary">Přizpůsobit seznam aplikací</string>
+    <string name="misc_category_title">Různé</string>
+    <string name="misc_category_summary">Další možnosti</string>
     <!-- Show Shade Glance (a.k.a Shade Space) -->
-    <string name="show_shadeglance_title">At A Glance</string>
-    <string name="show_shadeglance_summary">Show at the top of your Home screen</string>
+    <string name="show_shadeglance_title">Přehled událostí</string>
+    <string name="show_shadeglance_summary">Zobrazit v horní části Domovské obrazovky</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_title">Zobrazit aplikace Google</string>
+    <string name="google_feed_summary">Nalevo od domovské obrazovky</string>
     <!-- Gradients on Workspace/Hotseat -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">Zobrazit přechod barev nahoře</string>
+    <string name="workspace_gradient_summary">Povolit jemný přechod barev ze stavové lišty</string>
+    <string name="hotseat_gradient_title">Zobrazit přechod barev dole</string>
+    <string name="hotseat_gradient_summary">Povolit jemný přechod barev z doku spouštěče</string>
     <!-- Shadespace -->
     <string name="shadespace_subtext_double">%1$s - %2$s</string>
     <string name="shadespace_subtext_default"></string>
