@@ -59,4 +59,8 @@
 
     <string name="pref_sleep_gesture_title">Double tap to sleep</string>
     <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+
+    <!-- Swipe down to clear recents -->
+    <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
+    <string name="allow_swipe_down_clearall_desc">Doesn\'t works if P navbar gestures are enable</string>
 </resources>
