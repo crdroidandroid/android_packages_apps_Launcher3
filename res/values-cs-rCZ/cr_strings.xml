@@ -20,7 +20,7 @@
     <!-- Application name -->
     <string name="app_name">crDroid Home</string>
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Nastavení</string>
     <!-- Categories -->
     <string name="home_category_title">Home screen</string>
     <string name="home_category_summary">Set Google now panel and more</string>
@@ -45,10 +45,10 @@
     <string name="shadespace_subtext_double">%1$s - %2$s</string>
     <string name="shadespace_subtext_default"></string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="play_folder_title">Přehrát</string>
+    <string name="pref_sleep_gesture_title">Uspat poklepáním</string>
+    <string name="pref_sleep_gesture_summary">Dvojím poklepáním na prázdné místo vypnout zařízení</string>
     <!-- Swipe down to clear recents -->
-    <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Doesn\'t works if P navbar gestures are enable</string>
+    <string name="allow_swipe_down_clearall_title">Vymazat vše přejetím dolů z nabídky nedávných</string>
+    <string name="allow_swipe_down_clearall_desc">Nefunguje, pokud jsou povoleny gesta P na navigačním panelu</string>
 </resources>
