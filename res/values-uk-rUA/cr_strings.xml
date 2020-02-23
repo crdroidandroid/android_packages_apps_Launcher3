@@ -18,26 +18,26 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <string name="app_name">crDroid Home</string>
+    <string name="app_name">crDroid домашня</string>
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Налаштування</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="home_category_title">Головний екран</string>
+    <string name="home_category_summary">Встановити панель Google Now і більше</string>
+    <string name="icons_category_title">Піктограми</string>
+    <string name="icons_category_summary">Встановити форму іконок, розмір та багато іншого</string>
+    <string name="app_drawer_category_title">Меню додатків</string>
+    <string name="app_drawer_category_summary">Налаштувати меню додатків</string>
+    <string name="misc_category_title">Усіляке</string>
+    <string name="misc_category_summary">Інші налаштування</string>
     <!-- Show Shade Glance (a.k.a Shade Space) -->
     <string name="show_shadeglance_title">At A Glance</string>
     <string name="show_shadeglance_summary">Show at the top of your Home screen</string>
     <!-- Google Feed -->
     <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_summary">Зліва від головного екрану</string>
     <!-- Gradients on Workspace/Hotseat -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
+    <string name="workspace_gradient_title">Показати градієнт зверху</string>
     <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
     <string name="hotseat_gradient_title">Show gradient on bottom</string>
     <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
