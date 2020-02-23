@@ -25,7 +25,7 @@
     <string name="home_category_title">Ekran Główny</string>
     <string name="home_category_summary">Ustaw panel Google Now i więcej</string>
     <string name="icons_category_title">Ikony</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
+    <string name="icons_category_summary">Ustaw kształt ikon i więcej</string>
     <string name="app_drawer_category_title">Szuflada aplikacji</string>
     <string name="app_drawer_category_summary">Spersonalizuj szufladę aplikacji</string>
     <string name="misc_category_title">Pozostałe</string>
@@ -38,17 +38,17 @@
     <string name="google_feed_summary">Po lewej stronie ekranu głównego</string>
     <!-- Gradients on Workspace/Hotseat -->
     <string name="workspace_gradient_title">Pokaż gradient na górze</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
+    <string name="workspace_gradient_summary">Włącz subtelny gradient z paska statusu</string>
     <string name="hotseat_gradient_title">Pokaż gradient na dole</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="hotseat_gradient_summary">Włącz subtelny gradient z doku launchera</string>
     <!-- Shadespace -->
     <string name="shadespace_subtext_double">%1$s - %2$s</string>
     <string name="shadespace_subtext_default"></string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="play_folder_title">Odtwórz</string>
+    <string name="pref_sleep_gesture_title">Dwukrotnie stuknij, by uśpić</string>
+    <string name="pref_sleep_gesture_summary">Dwukrotnie stuknij w puste miejsce aby wyłączyć</string>
     <!-- Swipe down to clear recents -->
-    <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Doesn\'t works if P navbar gestures are enable</string>
+    <string name="allow_swipe_down_clearall_title">Wyczyść wszystko po przesunięciu palcem w dół z widoku ostatnich aplikacji</string>
+    <string name="allow_swipe_down_clearall_desc">Nie działa, jeśli pasek nawigacyjny z gestami jest włączony</string>
 </resources>
