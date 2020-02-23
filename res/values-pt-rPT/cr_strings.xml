@@ -18,37 +18,37 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <string name="app_name">crDroid Home</string>
+    <string name="app_name">início do crDroid</string>
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Definições</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="home_category_title">Ecrã principal</string>
+    <string name="home_category_summary">Definir o painel do Google Now e mais</string>
+    <string name="icons_category_title">Ícones</string>
+    <string name="icons_category_summary">Definir formato do ícone e muito mais</string>
+    <string name="app_drawer_category_title">Gaveta de aplicações</string>
+    <string name="app_drawer_category_summary">Personalize a sua gaveta de aplicações</string>
+    <string name="misc_category_title">Diversos</string>
+    <string name="misc_category_summary">Outras opções</string>
     <!-- Show Shade Glance (a.k.a Shade Space) -->
-    <string name="show_shadeglance_title">At A Glance</string>
-    <string name="show_shadeglance_summary">Show at the top of your Home screen</string>
+    <string name="show_shadeglance_title">Num relance</string>
+    <string name="show_shadeglance_summary">Mostrar no topo do ecrã inicial</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_title">Exibir a aplicação Google</string>
+    <string name="google_feed_summary">À esquerda do ambiente de trabalho principal</string>
     <!-- Gradients on Workspace/Hotseat -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">Mostrar gradiente no topo</string>
+    <string name="workspace_gradient_summary">Ativar um gradiente sutil da barra de status</string>
+    <string name="hotseat_gradient_title">Mostrar gradiente em baixo</string>
+    <string name="hotseat_gradient_summary">Ativar um gradiente sutil desde a doca</string>
     <!-- Shadespace -->
     <string name="shadespace_subtext_double">%1$s - %2$s</string>
     <string name="shadespace_subtext_default"></string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="play_folder_title">Reproduzir</string>
+    <string name="pref_sleep_gesture_title">Toque duplo para desligar ecrã</string>
+    <string name="pref_sleep_gesture_summary">Toque duplo no espaço vazio para desligar</string>
     <!-- Swipe down to clear recents -->
-    <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Doesn\'t works if P navbar gestures are enable</string>
+    <string name="allow_swipe_down_clearall_title">Limpar tudo ao deslizar da visualização de recentes</string>
+    <string name="allow_swipe_down_clearall_desc">Não funciona se os gestos da barra de navegação P estiverem ativados</string>
 </resources>
