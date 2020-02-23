@@ -18,37 +18,37 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <string name="app_name">crDroid Home</string>
+    <string name="app_name">crDroid Launcher</string>
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Nastavení</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="home_category_title">Domovská obrazovka</string>
+    <string name="home_category_summary">Nastavení panelu Google Now a\u00a0dalších funkcí</string>
+    <string name="icons_category_title">Ikony</string>
+    <string name="icons_category_summary">Nastavení tvaru ikon a dalších parametrů</string>
+    <string name="app_drawer_category_title">Seznam aplikací</string>
+    <string name="app_drawer_category_summary">Přizpůsobit seznam aplikací</string>
+    <string name="misc_category_title">Různé</string>
+    <string name="misc_category_summary">Další možnosti</string>
     <!-- Show Shade Glance (a.k.a Shade Space) -->
-    <string name="show_shadeglance_title">At A Glance</string>
-    <string name="show_shadeglance_summary">Show at the top of your Home screen</string>
+    <string name="show_shadeglance_title">Přehled událostí</string>
+    <string name="show_shadeglance_summary">Zobrazit v\u00a0horní části domovské obrazovky</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_title">Zobrazit kanál Objevit</string>
+    <string name="google_feed_summary">Nalevo od domovské obrazovky</string>
     <!-- Gradients on Workspace/Hotseat -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">Zobrazit gradient nahoře</string>
+    <string name="workspace_gradient_summary">Povolit nenápadný gradient ze stavového řádku</string>
+    <string name="hotseat_gradient_title">Zobrazit gradient vespod</string>
+    <string name="hotseat_gradient_summary">Povolit nenápadný gradient z\u00a0doku spouštěče</string>
     <!-- Shadespace -->
     <string name="shadespace_subtext_double">%1$s - %2$s</string>
     <string name="shadespace_subtext_default"></string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="play_folder_title">Přehrát</string>
+    <string name="pref_sleep_gesture_title">Uspat dvojím poklepáním</string>
+    <string name="pref_sleep_gesture_summary">Dvojím poklepáním na prázdné místo vypnout zařízení</string>
     <!-- Swipe down to clear recents -->
-    <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Doesn\'t works if P navbar gestures are enable</string>
+    <string name="allow_swipe_down_clearall_title">Vymazat vše přejetím dolů v\u00a0náhledu nedávných aplikací</string>
+    <string name="allow_swipe_down_clearall_desc">Nefunguje, pokud jsou povolena gesta\u00a0P na navigačním panelu</string>
 </resources>

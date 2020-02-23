@@ -18,37 +18,37 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <string name="app_name">crDroid Home</string>
+    <string name="app_name">crDroid Главная</string>
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Настройки</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
+    <string name="home_category_title">Главный экран</string>
     <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
+    <string name="icons_category_title">Иконки</string>
+    <string name="icons_category_summary">Настроить форму иконок</string>
     <string name="app_drawer_category_title">App drawer</string>
     <string name="app_drawer_category_summary">Customize your app drawer</string>
     <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="misc_category_summary">Другие настройки</string>
     <!-- Show Shade Glance (a.k.a Shade Space) -->
     <string name="show_shadeglance_title">At A Glance</string>
     <string name="show_shadeglance_summary">Show at the top of your Home screen</string>
     <!-- Google Feed -->
     <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_summary">Слева от главного экрана</string>
     <!-- Gradients on Workspace/Hotseat -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
+    <string name="workspace_gradient_title">Показать градиент сверху</string>
     <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
+    <string name="hotseat_gradient_title">Показать градиент снизу</string>
     <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
     <!-- Shadespace -->
     <string name="shadespace_subtext_double">%1$s - %2$s</string>
     <string name="shadespace_subtext_default"></string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="play_folder_title">Воспроизвести</string>
+    <string name="pref_sleep_gesture_title">Двойное нажатие для блокировки</string>
+    <string name="pref_sleep_gesture_summary">Двойное нажатие по пустому месту для выключения</string>
     <!-- Swipe down to clear recents -->
-    <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Doesn\'t works if P navbar gestures are enable</string>
+    <string name="allow_swipe_down_clearall_title">Проведите вниз для очистки истории просмотра</string>
+    <string name="allow_swipe_down_clearall_desc">Не будет работать, если жесты навигации Pie включены</string>
 </resources>
