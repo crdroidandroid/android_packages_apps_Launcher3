@@ -18,21 +18,21 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <string name="app_name">crDroid domů</string>
+    <string name="app_name">crDroid Launcher</string>
     <!-- General -->
     <string name="settings_title">Nastavení</string>
     <!-- Categories -->
     <string name="home_category_title">Domovská obrazovka</string>
-    <string name="home_category_summary">Nastavení panelu Google Now a dalších funkcí</string>
+    <string name="home_category_summary">Nastavení panelu Google Now a\u00a0dalších funkcí</string>
     <string name="icons_category_title">Ikony</string>
-    <string name="icons_category_summary">Nastavit tvar ikony a další</string>
+    <string name="icons_category_summary">Nastavení tvaru ikon a dalších parametrů</string>
     <string name="app_drawer_category_title">Seznam aplikací</string>
     <string name="app_drawer_category_summary">Přizpůsobit seznam aplikací</string>
     <string name="misc_category_title">Různé</string>
     <string name="misc_category_summary">Další možnosti</string>
     <!-- Show Shade Glance (a.k.a Shade Space) -->
     <string name="show_shadeglance_title">Přehled událostí</string>
-    <string name="show_shadeglance_summary">Zobrazit v horní části Domovské obrazovky</string>
+    <string name="show_shadeglance_summary">Zobrazit v\u00a0horní části Domovské obrazovky</string>
     <!-- Google Feed -->
     <string name="google_feed_title">Zobrazit aplikace Google</string>
     <string name="google_feed_summary">Nalevo od domovské obrazovky</string>
