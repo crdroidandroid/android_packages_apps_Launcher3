@@ -22,33 +22,33 @@
     <!-- General -->
     <string name="settings_title">Налаштування</string>
     <!-- Categories -->
-    <string name="home_category_title">Головний екран</string>
+    <string name="home_category_title">Домашній екран</string>
     <string name="home_category_summary">Встановити панель Google Now і більше</string>
-    <string name="icons_category_title">Піктограми</string>
+    <string name="icons_category_title">Іконки</string>
     <string name="icons_category_summary">Встановити форму іконок, розмір та багато іншого</string>
     <string name="app_drawer_category_title">Меню додатків</string>
     <string name="app_drawer_category_summary">Налаштувати меню додатків</string>
     <string name="misc_category_title">Усіляке</string>
     <string name="misc_category_summary">Інші налаштування</string>
     <!-- Show Shade Glance (a.k.a Shade Space) -->
-    <string name="show_shadeglance_title">At A Glance</string>
-    <string name="show_shadeglance_summary">Show at the top of your Home screen</string>
+    <string name="show_shadeglance_title">Швидкий перегляд</string>
+    <string name="show_shadeglance_summary">Показувати у верхній частині головного екрану</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Display Google app</string>
+    <string name="google_feed_title">Відобразити додаток Google</string>
     <string name="google_feed_summary">Зліва від головного екрану</string>
     <!-- Gradients on Workspace/Hotseat -->
     <string name="workspace_gradient_title">Показати градієнт зверху</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_summary">Увімкнення тонкого градієнта від рядка стану</string>
+    <string name="hotseat_gradient_title">Показати градієнт знизу</string>
+    <string name="hotseat_gradient_summary">Увімкнення тонкого градієнта від нижнього краю</string>
     <!-- Shadespace -->
     <string name="shadespace_subtext_double">%1$s - %2$s</string>
     <string name="shadespace_subtext_default"></string>
     <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="play_folder_title">Відтворити</string>
+    <string name="pref_sleep_gesture_title">Подвійне натискання для блокування екрану</string>
+    <string name="pref_sleep_gesture_summary">Подвійне натискання на пусте місце для вимкнення живлення</string>
     <!-- Swipe down to clear recents -->
-    <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Doesn\'t works if P navbar gestures are enable</string>
+    <string name="allow_swipe_down_clearall_title">Проведіть вниз для очищення історії перегляду</string>
+    <string name="allow_swipe_down_clearall_desc">Не працює, якщо увімкнена навігаційна панель P</string>
 </resources>
