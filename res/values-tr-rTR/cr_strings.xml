@@ -23,7 +23,7 @@
     <string name="settings_title">Ayarlar</string>
     <!-- Categories -->
     <string name="home_category_title">Ana ekran</string>
-    <string name="home_category_summary">Google now paneli ve daha fazlasını ayarlayın</string>
+    <string name="home_category_summary">Google now panelini ve daha fazlasını ayarlayın</string>
     <string name="icons_category_title">Simgeler</string>
     <string name="icons_category_summary">Simge şeklini ve daha fazlasını ayarlayın</string>
     <string name="app_drawer_category_title">Uygulama çekmecesi</string>
@@ -38,9 +38,9 @@
     <string name="google_feed_summary">Ana ekranın solunda</string>
     <!-- Gradients on Workspace/Hotseat -->
     <string name="workspace_gradient_title">Gradyanı üstte göster</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Graydanı altta göster</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_summary">Durum çubuğundan zarif bir gradyan etkinleştirin</string>
+    <string name="hotseat_gradient_title">Gradyanı altta göster</string>
+    <string name="hotseat_gradient_summary">Alt panelde zarif bir graydan etkinleştirin</string>
     <!-- Shadespace -->
     <string name="shadespace_subtext_double">%1$s - %2$s</string>
     <string name="shadespace_subtext_default"></string>
