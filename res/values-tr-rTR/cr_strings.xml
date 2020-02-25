@@ -37,9 +37,9 @@
     <string name="google_feed_title">Google uygulamasını görüntüle</string>
     <string name="google_feed_summary">Ana ekranın solunda</string>
     <!-- Gradients on Workspace/Hotseat -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
+    <string name="workspace_gradient_title">Gradyanı üstte göster</string>
     <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
+    <string name="hotseat_gradient_title">Graydanı altta göster</string>
     <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
     <!-- Shadespace -->
     <string name="shadespace_subtext_double">%1$s - %2$s</string>
