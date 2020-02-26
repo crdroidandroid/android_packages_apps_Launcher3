@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <string name="app_name">crDroid домашня</string>
+    <string name="app_name">crDroid Головна</string>
     <!-- General -->
     <string name="settings_title">Налаштування</string>
     <!-- Categories -->
@@ -47,8 +47,8 @@
     <!-- Folder titles -->
     <string name="play_folder_title">Відтворити</string>
     <string name="pref_sleep_gesture_title">Подвійне натискання для блокування екрану</string>
-    <string name="pref_sleep_gesture_summary">Подвійне натискання на пусте місце для вимкнення живлення</string>
+    <string name="pref_sleep_gesture_summary">Подвійне натискання на пусте місце для вимкнення екрану</string>
     <!-- Swipe down to clear recents -->
     <string name="allow_swipe_down_clearall_title">Проведіть вниз для очищення історії перегляду</string>
-    <string name="allow_swipe_down_clearall_desc">Не працює, якщо увімкнена навігаційна панель P</string>
+    <string name="allow_swipe_down_clearall_desc">Не працює, якщо увімкнена навігаційна панель Pie</string>
 </resources>
