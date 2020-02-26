@@ -34,13 +34,13 @@
     <string name="show_shadeglance_title">Самое главное</string>
     <string name="show_shadeglance_summary">Отображать в верхней части Домашнего экрана</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Display Google app</string>
+    <string name="google_feed_title">Показывать Google Feed</string>
     <string name="google_feed_summary">Слева от главного экрана</string>
     <!-- Gradients on Workspace/Hotseat -->
     <string name="workspace_gradient_title">Показать градиент сверху</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
+    <string name="workspace_gradient_summary">Включить тонкий градиент из строки состояния</string>
     <string name="hotseat_gradient_title">Показать градиент снизу</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="hotseat_gradient_summary">Включить тонкий градиент из панели лаунчера</string>
     <!-- Shadespace -->
     <string name="shadespace_subtext_double">%1$s - %2$s</string>
     <string name="shadespace_subtext_default"></string>
