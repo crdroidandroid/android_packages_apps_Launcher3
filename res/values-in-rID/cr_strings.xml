@@ -18,20 +18,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <string name="app_name">crDroid Home</string>
+    <string name="app_name">beranda crDroid</string>
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Pengaturan</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="home_category_title">Layar utama</string>
+    <string name="home_category_summary">Atur panel Google now dan lainnya</string>
+    <string name="icons_category_title">Ikon</string>
+    <string name="icons_category_summary">Atur bentuk ikon dan yang lainnya</string>
+    <string name="app_drawer_category_title">Laci aplikasi</string>
+    <string name="app_drawer_category_summary">Kostumisasi laci aplikasi Anda</string>
+    <string name="misc_category_title">Lain - lain</string>
+    <string name="misc_category_summary">Pilihan lain</string>
     <!-- Show Shade Glance (a.k.a Shade Space) -->
-    <string name="show_shadeglance_title">At A Glance</string>
+    <string name="show_shadeglance_title">Sekilas</string>
     <string name="show_shadeglance_summary">Show at the top of your Home screen</string>
     <!-- Google Feed -->
     <string name="google_feed_title">Display Google app</string>
