@@ -104,6 +104,7 @@ public class InstallShortcutReceiver extends BroadcastReceiver {
 
     @WorkerThread
     private static void addToQueue(Context context, PendingInstallShortcutInfo info) {
+    	if (info == null) return;
         String encoded = info.encodeToString();
         SharedPreferences prefs = Utilities.getPrefs(context);
         Set<String> strings = prefs.getStringSet(APPS_PENDING_INSTALL, null);
