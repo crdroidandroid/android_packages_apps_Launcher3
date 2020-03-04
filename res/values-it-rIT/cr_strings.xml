@@ -47,8 +47,8 @@
     <!-- Folder titles -->
     <string name="play_folder_title">Riproduci</string>
     <string name="pref_sleep_gesture_title">Doppio tocco per sospendere</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_summary">Tocca due volte sullo spazio vuoto per spegnere il dispositivo</string>
     <!-- Swipe down to clear recents -->
-    <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Doesn\'t works if P navbar gestures are enable</string>
+    <string name="allow_swipe_down_clearall_title">Cancella tutto quando scorri verso il basso dalla visualizzazione recenti</string>
+    <string name="allow_swipe_down_clearall_desc">Non funziona se i gesti della barra di navigazione di Pie sono abilitati</string>
 </resources>
