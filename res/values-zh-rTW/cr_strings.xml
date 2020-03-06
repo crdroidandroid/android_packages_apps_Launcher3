@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+* Copyright (C) 2019 crDroid Android Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <string name="app_name">crDroid 主畫面</string>
+    <!-- General -->
+    <string name="settings_title">設定</string>
+    <!-- Categories -->
+    <string name="home_category_title">主螢幕</string>
+    <string name="home_category_summary">設定 Google 即時資訊等</string>
+    <string name="icons_category_title">圖示</string>
+    <string name="icons_category_summary">設定圖示形狀等</string>
+    <string name="app_drawer_category_title">應用程式抽屜</string>
+    <string name="app_drawer_category_summary">自訂您的應用程式抽屜</string>
+    <string name="misc_category_title">雜項</string>
+    <string name="misc_category_summary">其他選項</string>
+    <!-- Show Shade Glance (a.k.a Shade Space) -->
+    <string name="show_shadeglance_title">一目了然</string>
+    <string name="show_shadeglance_summary">顯示在主屏幕的頂部</string>
+    <!-- Google Feed -->
+    <string name="google_feed_title">顯示 Google 應用程式</string>
+    <string name="google_feed_summary">移至主畫面的左側</string>
+    <!-- Gradients on Workspace/Hotseat -->
+    <string name="workspace_gradient_title">在頂部顯示漸變</string>
+    <string name="workspace_gradient_summary">在狀態列中啟用微妙的漸變</string>
+    <string name="hotseat_gradient_title">在底部顯示漸變</string>
+    <string name="hotseat_gradient_summary">在啟動器的Dock栏啟用細微漸變</string>
+    <!-- Shadespace -->
+    <string name="shadespace_subtext_double">%1$s - %2$s</string>
+    <string name="shadespace_subtext_default"></string>
+    <!-- Folder titles -->
+    <string name="play_folder_title">播放</string>
+    <string name="pref_sleep_gesture_title">雙擊睡眠</string>
+    <string name="pref_sleep_gesture_summary">雙擊空白處以關閉電源</string>
+    <!-- Swipe down to clear recents -->
+    <string name="allow_swipe_down_clearall_title">從最近視圖向下滑動即可清除所有內容</string>
+    <string name="allow_swipe_down_clearall_desc">如果啟用了P導航欄手勢，則無法使用</string>
+</resources>
