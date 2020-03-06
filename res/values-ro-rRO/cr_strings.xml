@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+* Copyright (C) 2019 crDroid Android Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <string name="app_name">crDroid Home</string>
+    <!-- General -->
+    <string name="settings_title">Setări</string>
+    <!-- Categories -->
+    <string name="home_category_title">Ecarnul principal</string>
+    <string name="home_category_summary">Setează panoul Google Now și altele</string>
+    <string name="icons_category_title">Pictograme</string>
+    <string name="icons_category_summary">Setează forma iconițelor, mărimea și altele</string>
+    <string name="app_drawer_category_title">Listă aplicații</string>
+    <string name="app_drawer_category_summary">Personalizați lista aplicațiilor</string>
+    <string name="misc_category_title">Diverse</string>
+    <string name="misc_category_summary">Alte opțiuni</string>
+    <!-- Show Shade Glance (a.k.a Shade Space) -->
+    <string name="show_shadeglance_title">Pe scurt</string>
+    <string name="show_shadeglance_summary">Arată în zona de sus a ecranului principal</string>
+    <!-- Google Feed -->
+    <string name="google_feed_title">Afișează aplicația Google</string>
+    <string name="google_feed_summary">Spre stânga pe panoul principal</string>
+    <!-- Gradients on Workspace/Hotseat -->
+    <string name="workspace_gradient_title">Arată degradat pe partea de sus</string>
+    <string name="workspace_gradient_summary">Permite o degradare usoara din bara de stare</string>
+    <string name="hotseat_gradient_title">Arată degradat pe partea de jos</string>
+    <string name="hotseat_gradient_summary">Permite o degradare usoara din dock</string>
+    <!-- Shadespace -->
+    <string name="shadespace_subtext_double">%1$s - %2$s</string>
+    <string name="shadespace_subtext_default"></string>
+    <!-- Folder titles -->
+    <string name="play_folder_title">Redare</string>
+    <string name="pref_sleep_gesture_title">Apăsare dublă pentru a adormi dispozitivul</string>
+    <string name="pref_sleep_gesture_summary">Apăsare dublă pe o zonă libeta pentru a opri dispozitivul</string>
+    <!-- Swipe down to clear recents -->
+    <string name="allow_swipe_down_clearall_title">Ștergeți totul la glisare în jos din vizualizare aplicații recente</string>
+    <string name="allow_swipe_down_clearall_desc">Nu funcționează dacă navigația prin gesturi este activată</string>
+</resources>

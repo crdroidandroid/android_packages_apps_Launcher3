@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+* Copyright (C) 2019 crDroid Android Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <string name="app_name">crDroid Kezdőképernyő</string>
+    <!-- General -->
+    <string name="settings_title">Beállítások</string>
+    <!-- Categories -->
+    <string name="home_category_title">Kezdőképernyő</string>
+    <string name="home_category_summary">A \'Google Now\' panel és egyebek beállítása</string>
+    <string name="icons_category_title">Ikonok</string>
+    <string name="icons_category_summary">Az ikonok beállításai (forma, méret és egyebek)</string>
+    <string name="app_drawer_category_title">Alkalmazásfiók</string>
+    <string name="app_drawer_category_summary">Testreszabhatja az Alkalmazásfiókját</string>
+    <string name="misc_category_title">Különlegességek</string>
+    <string name="misc_category_summary">Minden, ami egyedivé tesz</string>
+    <!-- Show Shade Glance (a.k.a Shade Space) -->
+    <string name="show_shadeglance_title">Belepillantás</string>
+    <string name="show_shadeglance_summary">Jelenítse meg a kezdőképernyő tetején</string>
+    <!-- Google Feed -->
+    <string name="google_feed_title">A Google-alkalmazás megjelenítése</string>
+    <string name="google_feed_summary">A fő kezdőképernyőtől balra</string>
+    <!-- Gradients on Workspace/Hotseat -->
+    <string name="workspace_gradient_title">A felső színátmenet megjelenítése</string>
+    <string name="workspace_gradient_summary">Engedélyezi a finomabb színátmenetet az állapotsortól</string>
+    <string name="hotseat_gradient_title">Az alsó színátmenet megjelenítése</string>
+    <string name="hotseat_gradient_summary">Engedélyezi a finomabb színátmenetet a launcher dokkjától</string>
+    <!-- Shadespace -->
+    <string name="shadespace_subtext_double">%1$s - %2$s</string>
+    <string name="shadespace_subtext_default"></string>
+    <!-- Folder titles -->
+    <string name="play_folder_title">Play</string>
+    <string name="pref_sleep_gesture_title">Dupla érintésre alvómód</string>
+    <string name="pref_sleep_gesture_summary">A kikapcsoláshoz elég a duplakopp egy üres területre</string>
+    <!-- Swipe down to clear recents -->
+    <string name="allow_swipe_down_clearall_title">Az \'Összes törlése\' egy lefelé mozdulattal</string>
+    <string name="allow_swipe_down_clearall_desc">A funkció nem érhető el, ha a P-navigációs mozdulatvezérlések engedélyezettek</string>
+</resources>
