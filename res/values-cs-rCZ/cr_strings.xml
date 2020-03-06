@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+* Copyright (C) 2019 crDroid Android Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <string name="app_name">crDroid Launcher</string>
+    <!-- General -->
+    <string name="settings_title">Nastavení</string>
+    <!-- Categories -->
+    <string name="home_category_title">Domovská obrazovka</string>
+    <string name="home_category_summary">Nastavení panelu Google Now a\u00a0dalších funkcí</string>
+    <string name="icons_category_title">Ikony</string>
+    <string name="icons_category_summary">Nastavení tvaru ikon a dalších parametrů</string>
+    <string name="app_drawer_category_title">Seznam aplikací</string>
+    <string name="app_drawer_category_summary">Přizpůsobit seznam aplikací</string>
+    <string name="misc_category_title">Různé</string>
+    <string name="misc_category_summary">Další možnosti</string>
+    <!-- Show Shade Glance (a.k.a Shade Space) -->
+    <string name="show_shadeglance_title">Přehled událostí</string>
+    <string name="show_shadeglance_summary">Zobrazit v\u00a0horní části domovské obrazovky</string>
+    <!-- Google Feed -->
+    <string name="google_feed_title">Zobrazit kanál Objevit</string>
+    <string name="google_feed_summary">Nalevo od domovské obrazovky</string>
+    <!-- Gradients on Workspace/Hotseat -->
+    <string name="workspace_gradient_title">Zobrazit gradient nahoře</string>
+    <string name="workspace_gradient_summary">Povolit nenápadný gradient ze stavového řádku</string>
+    <string name="hotseat_gradient_title">Zobrazit gradient vespod</string>
+    <string name="hotseat_gradient_summary">Povolit nenápadný gradient z\u00a0doku spouštěče</string>
+    <!-- Shadespace -->
+    <string name="shadespace_subtext_double">%1$s - %2$s</string>
+    <string name="shadespace_subtext_default"></string>
+    <!-- Folder titles -->
+    <string name="play_folder_title">Přehrát</string>
+    <string name="pref_sleep_gesture_title">Uspat dvojím poklepáním</string>
+    <string name="pref_sleep_gesture_summary">Dvojím poklepáním na prázdné místo vypnout zařízení</string>
+    <!-- Swipe down to clear recents -->
+    <string name="allow_swipe_down_clearall_title">Vymazat vše přejetím dolů v\u00a0náhledu nedávných aplikací</string>
+    <string name="allow_swipe_down_clearall_desc">Nefunguje, pokud jsou povolena gesta\u00a0P na navigačním panelu</string>
+</resources>

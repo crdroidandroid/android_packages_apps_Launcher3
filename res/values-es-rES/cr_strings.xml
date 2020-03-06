@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+* Copyright (C) 2019 crDroid Android Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <string name="app_name">inicio crDroid</string>
+    <!-- General -->
+    <string name="settings_title">Ajustes</string>
+    <!-- Categories -->
+    <string name="home_category_title">Pantalla de Inicio</string>
+    <string name="home_category_summary">Configura el panel de Google Now y más</string>
+    <string name="icons_category_title">Iconos</string>
+    <string name="icons_category_summary">Configura la forma, el tamaño de los iconos y más</string>
+    <string name="app_drawer_category_title">Cajón de aplicaciones</string>
+    <string name="app_drawer_category_summary">Personaliza tu cajón de aplicaciones</string>
+    <string name="misc_category_title">Misceláneo</string>
+    <string name="misc_category_summary">Otras opciones</string>
+    <!-- Show Shade Glance (a.k.a Shade Space) -->
+    <string name="show_shadeglance_title">De un vistazo</string>
+    <string name="show_shadeglance_summary">Mostrar en la parte superior de tu pantalla de inicio</string>
+    <!-- Google Feed -->
+    <string name="google_feed_title">Mostrar aplicación de Google</string>
+    <string name="google_feed_summary">A la izquierda de la pantalla de inicio principal</string>
+    <!-- Gradients on Workspace/Hotseat -->
+    <string name="workspace_gradient_title">Mostrar gradiente en la parte superior</string>
+    <string name="workspace_gradient_summary">Activa un gradiente sutil desde la barra de estado</string>
+    <string name="hotseat_gradient_title">Mostrar gradiente en la parte inferior</string>
+    <string name="hotseat_gradient_summary">Activa un gradiente sutil desde el dock del lanzador</string>
+    <!-- Shadespace -->
+    <string name="shadespace_subtext_double">%1$s - %2$s</string>
+    <string name="shadespace_subtext_default"></string>
+    <!-- Folder titles -->
+    <string name="play_folder_title">Reproducir</string>
+    <string name="pref_sleep_gesture_title">Doble toque para apagar la pantalla</string>
+    <string name="pref_sleep_gesture_summary">Toca dos veces el espacio vacío para apagar</string>
+    <!-- Swipe down to clear recents -->
+    <string name="allow_swipe_down_clearall_title">Borrar todo al deslizar hacia abajo desde la pantalla de recientes</string>
+    <string name="allow_swipe_down_clearall_desc">No funciona si los gestos de la barra de navegación P están activados</string>
+</resources>

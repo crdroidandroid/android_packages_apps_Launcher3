@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+* Copyright (C) 2019 crDroid Android Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <string name="app_name">crDroid Home</string>
+    <!-- General -->
+    <string name="settings_title">Налады</string>
+    <!-- Categories -->
+    <string name="home_category_title">Галоўны экран</string>
+    <string name="home_category_summary">Усталяваць панэль Google Now і іншае</string>
+    <string name="icons_category_title">Значкі</string>
+    <string name="icons_category_summary">Усталяваць форму значкоў і іншае</string>
+    <string name="app_drawer_category_title">Спіс праграм</string>
+    <string name="app_drawer_category_summary">Налада свайго спісу праграм</string>
+    <string name="misc_category_title">Рознае</string>
+    <string name="misc_category_summary">Іншыя налады</string>
+    <!-- Show Shade Glance (a.k.a Shade Space) -->
+    <string name="show_shadeglance_title">Хуткі прагляд апавяшчэнняў</string>
+    <string name="show_shadeglance_summary">Адлюстроўваць у верхняй частцы Хатняга экрана</string>
+    <!-- Google Feed -->
+    <string name="google_feed_title">Паказаць праграму Google</string>
+    <string name="google_feed_summary">Злева ад галоўнага экрана</string>
+    <!-- Gradients on Workspace/Hotseat -->
+    <string name="workspace_gradient_title">Паказаць градыент зверху</string>
+    <string name="workspace_gradient_summary">Уключэнне тонкага градыенту ад радка стану</string>
+    <string name="hotseat_gradient_title">Паказаць градыент знізу</string>
+    <string name="hotseat_gradient_summary">Уключэнне тонкага градыенту ад ніжняга краю</string>
+    <!-- Shadespace -->
+    <string name="shadespace_subtext_double">%1$s - %2$s</string>
+    <string name="shadespace_subtext_default"></string>
+    <!-- Folder titles -->
+    <string name="play_folder_title">Прайграць</string>
+    <string name="pref_sleep_gesture_title">Выключаць экран пры падвойным націску</string>
+    <string name="pref_sleep_gesture_summary">Двойчы націсніце на пустое месца, каб выключыць сілкаванне</string>
+    <!-- Swipe down to clear recents -->
+    <string name="allow_swipe_down_clearall_title">Правядзіце ўніз для ачысткі гісторыі прагляду Нядаўніх</string>
+    <string name="allow_swipe_down_clearall_desc">Не будзе працаваць, калі жэсты навігацыі Pie ўключаны</string>
+</resources>
