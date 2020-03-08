@@ -33,6 +33,7 @@ import com.android.launcher3.R;
 public class IconPackPreference extends ListPreference {
 
     private final PackageManager pm;
+    private Context mContext;
 
     public IconPackPreference(Context context) {
         this(context, null);
@@ -44,28 +45,25 @@ public class IconPackPreference extends ListPreference {
 
     public IconPackPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        mContext = context;
         setLayoutResource(R.layout.preference_iconpack);
-        pm = context.getPackageManager();
+        pm = mContext.getPackageManager();
         init();
     }
 
     private void init() {
-        String currentPack = IconPackProvider.getCurrentIconPack(getContext());
+        String currentPack = IconPackProvider.getCurrentIconPack(mContext);
         if (currentPack.isEmpty()) {
-            setNone();
+            setSummary(mContext.getString(R.string.icon_pack_default));
         } else {
             try {
                 ApplicationInfo info = pm.getApplicationInfo(currentPack, 0);
                 setSummary(info.loadLabel(pm));
             } catch (PackageManager.NameNotFoundException e) {
-                setNone();
+                setSummary(mContext.getString(R.string.icon_pack_default));
                 persistString("");
             }
         }
-    }
-
-    private void setNone() {
-        setSummary("None");
     }
 
     @Override
@@ -74,11 +72,17 @@ public class IconPackPreference extends ListPreference {
         super.onClick();
     }
 
+    @Override
+    public void setValue(String value) {
+        super.setValue(value);
+        init();
+    }
+
     protected void load() {
         final Map<String, IconPackInfo> packages = loadAvailableIconPacks();
         String[] packageNames = new String[packages.size()+1];
         CharSequence[] labels = new CharSequence[packages.size()+1];
-        String defaultLabel = "None";
+        String defaultLabel = mContext.getString(R.string.icon_pack_default);
         packageNames[0] = "";
         labels[0] = defaultLabel;
         int i = 1;
