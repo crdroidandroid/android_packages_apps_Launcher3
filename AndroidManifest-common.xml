@@ -175,7 +175,7 @@
             android:name="com.android.launcher3.settings.SettingsActivity"
             android:label="@string/settings_title"
             android:theme="@style/HomeSettingsTheme"
-            android:parentActivityName="com.android.launcher3.Launcher"
+            android:parentActivityName="com.android.launcher3.lineage.LineageLauncher"
             android:autoRemoveFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
