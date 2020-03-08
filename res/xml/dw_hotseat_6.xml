@@ -15,14 +15,22 @@
 -->
 
 <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
-
     <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
-    <!-- Messaging, [All Apps], Dialer -->
-
+    <!-- Dialer, Messaging, Email, Music, Browser, Camera -->
     <resolve
         launcher:container="-101"
         launcher:screen="0"
         launcher:x="0"
+        launcher:y="0" >
+        <favorite launcher:uri="#Intent;action=android.intent.action.DIAL;end" />
+        <favorite launcher:uri="tel:123" />
+        <favorite launcher:uri="#Intent;action=android.intent.action.CALL_BUTTON;end" />
+    </resolve>
+
+    <resolve
+        launcher:container="-101"
+        launcher:screen="1"
+        launcher:x="1"
         launcher:y="0" >
         <favorite launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_MESSAGING;end" />
         <favorite launcher:uri="sms:" />
@@ -31,58 +39,51 @@
         <favorite launcher:uri="mmsto:" />
     </resolve>
 
-    <!-- All Apps -->
-
     <resolve
         launcher:container="-101"
         launcher:screen="2"
         launcher:x="2"
         launcher:y="0" >
-        <favorite launcher:uri="#Intent;action=android.intent.action.DIAL;end" />
-        <favorite launcher:uri="tel:123" />
-        <favorite launcher:uri="#Intent;action=android.intent.action.CALL_BUTTON;end" />
-    </resolve>
-
-    <!-- Bottom row -->
-    <resolve
-        launcher:screen="0"
-        launcher:x="0"
-        launcher:y="-1" >
         <favorite launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_EMAIL;end" />
         <favorite launcher:uri="mailto:" />
     </resolve>
 
     <resolve
-        launcher:screen="0"
-        launcher:x="1"
-        launcher:y="-1" >
-        <favorite launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_GALLERY;end" />
-        <favorite launcher:uri="#Intent;type=images/*;end" />
+        launcher:container="-101"
+        launcher:screen="3"
+        launcher:x="3"
+        launcher:y="0" >
+        <favorite launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_MUSIC;end" />
+        <favorite launcher:uri="market:" />
     </resolve>
 
     <resolve
-        launcher:screen="0"
-        launcher:x="2"
-        launcher:y="-1" >
-        <favorite launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_MARKET;end" />
-        <favorite launcher:uri="market://details?id=com.android.launcher" />
-    </resolve>
-
-    <!-- Second last row -->
-    <resolve
-        launcher:screen="0"
-        launcher:x="0"
-        launcher:y="-2" >
-        <favorite launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_BROWSER;end" />
+        launcher:container="-101"
+        launcher:screen="4"
+        launcher:x="4"
+        launcher:y="0" >
+        <favorite
+            launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_BROWSER;end" />
         <favorite launcher:uri="http://www.example.com/" />
     </resolve>
 
     <resolve
-        launcher:screen="0"
-        launcher:x="2"
-        launcher:y="-2" >
-        <favorite launcher:uri="#Intent;action=android.media.action.STILL_IMAGE_CAMERA;end" />
-        <favorite launcher:uri="#Intent;action=android.intent.action.CAMERA_BUTTON;end" />
+        launcher:container="-101"
+        launcher:screen="5"
+        launcher:x="5"
+        launcher:y="0" >
+        <favorite
+            launcher:packageName="org.lineageos.snap"
+            launcher:className="com.android.camera.CameraActivity" />
+        <favorite
+            launcher:packageName="com.android.camera2"
+            launcher:className="com.android.camera.CameraActivity" />
+        <favorite
+            launcher:packageName="com.android.camera"
+            launcher:className="com.android.camera.Camera" />
+        <favorite
+            launcher:packageName="com.oneplus.camera"
+            launcher:className="com.oneplus.camera.OPCameraActivity" />
     </resolve>
 
 </favorites>
