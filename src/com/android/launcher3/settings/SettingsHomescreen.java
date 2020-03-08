@@ -21,11 +21,13 @@ import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
 
+import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
@@ -47,7 +49,8 @@ import androidx.recyclerview.widget.RecyclerView;
  * Settings activity for Launcher. Currently implements the following setting: Allow rotation
  */
 public class SettingsHomescreen extends Activity
-        implements OnPreferenceStartFragmentCallback, OnPreferenceStartScreenCallback {
+        implements OnPreferenceStartFragmentCallback, OnPreferenceStartScreenCallback,
+        SharedPreferences.OnSharedPreferenceChangeListener {
 
     public static final String EXTRA_FRAGMENT_ARG_KEY = ":settings:fragment_args_key";
     public static final String EXTRA_SHOW_FRAGMENT_ARGS = ":settings:show_fragment_args";
@@ -61,6 +64,18 @@ public class SettingsHomescreen extends Activity
         super.onCreate(bundle);
         if (bundle == null) {
             getFragmentManager().beginTransaction().replace(android.R.id.content, new HomescreenSettingsFragment()).commit();
+        }
+        Utilities.getPrefs(getApplicationContext()).registerOnSharedPreferenceChangeListener(this);
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        switch (key) {
+            case KEY_MINUS_ONE:
+                LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                break;
+            default:
+                break;
         }
     }
 
@@ -112,6 +127,7 @@ public class SettingsHomescreen extends Activity
                 mPreferenceHighlighted = savedInstanceState.getBoolean(SAVE_HIGHLIGHTED_KEY);
             }
 
+            getPreferenceManager().setSharedPreferencesName(LauncherFiles.SHARED_PREFERENCES_KEY);
             setPreferencesFromResource(R.xml.home_screen_preferences, rootKey);
 
             PreferenceScreen screen = getPreferenceScreen();
