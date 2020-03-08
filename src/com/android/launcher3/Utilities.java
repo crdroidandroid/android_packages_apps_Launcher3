@@ -17,6 +17,7 @@
 package com.android.launcher3;
 
 import static com.android.launcher3.ItemInfoWithIcon.FLAG_ICON_BADGED;
+import static com.android.launcher3.util.Executors.MODEL_EXECUTOR;
 
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
@@ -68,7 +69,6 @@ import com.android.launcher3.icons.LauncherIcons;
 import com.android.launcher3.shortcuts.DeepShortcutManager;
 import com.android.launcher3.shortcuts.ShortcutKey;
 import com.android.launcher3.util.IntArray;
-import com.android.launcher3.util.LooperExecutor;
 import com.android.launcher3.views.Transposable;
 import com.android.launcher3.widget.PendingAddShortcutInfo;
 
@@ -620,7 +620,7 @@ public final class Utilities {
     }
 
     public static void restart(final Context context) {
-        new LooperExecutor(LauncherModel.getWorkerLooper()).execute(() -> {
+        MODEL_EXECUTOR.execute(() -> {
             try {
                 Thread.sleep(WAIT_BEFORE_RESTART);
             } catch (Exception ignored) {
