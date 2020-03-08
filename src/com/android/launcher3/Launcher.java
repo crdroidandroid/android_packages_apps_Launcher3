@@ -461,7 +461,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
                     ? RotationMode.NORMAL : UiFactory.getRotationMode(mDeviceProfile);
         }
         getRootView().dispatchInsets();
-        getStateManager().reapplyState(cancelCurrentAnimation);
+        mStateManager.reapplyState(cancelCurrentAnimation);
     }
 
     @Override
@@ -742,7 +742,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
                 final Runnable onComplete = new Runnable() {
                     @Override
                     public void run() {
-                        getStateManager().goToState(NORMAL);
+                        mStateManager.goToState(NORMAL);
                     }
                 };
 
@@ -901,7 +901,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         mAppWidgetHost.setListenIfResumed(false);
 
         NotificationListener.removeNotificationsChangedListener();
-        getStateManager().moveToRestState();
+        mStateManager.moveToRestState();
 
         UiFactory.onLauncherStateOrResumeChanged(this);
 
@@ -2553,7 +2553,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
             switch (keyCode) {
                 case KeyEvent.KEYCODE_A:
                     if (isInState(NORMAL)) {
-                        getStateManager().goToState(ALL_APPS);
+                        mStateManager.goToState(ALL_APPS);
                         return true;
                     }
                     break;
@@ -2611,7 +2611,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
     @Override
     public void returnToHomescreen() {
         super.returnToHomescreen();
-        getStateManager().goToState(LauncherState.NORMAL);
+        mStateManager.goToState(LauncherState.NORMAL);
     }
 
     /**
