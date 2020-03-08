@@ -41,7 +41,7 @@
             android:targetClass="com.android.launcher3.settings.SettingsHomescreen" />
     </Preference>
 
-    <Preference
+    <!--<Preference
         android:key="app_drawer"
         android:title="@string/app_drawer_category_title"
         android:summary="@string/app_drawer_category_summary"
@@ -51,7 +51,7 @@
             android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
             android:targetPackage="com.android.launcher3"
             android:targetClass="com.android.launcher3.settings.SettingsAppDrawer" />
-    </Preference>
+    </Preference> -->
 
     <Preference
         android:key="miscellaneous"
