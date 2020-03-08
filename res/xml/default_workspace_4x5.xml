@@ -54,10 +54,6 @@
         <favorite
             launcher:className="com.google.android.apps.plus.phone.HomeActivity"
             launcher:packageName="com.google.android.apps.plus" />
-    </folder>
-
-    <!-- Play Folder -->
-    <folder launcher:screen="0" launcher:x="1" launcher:y="-1" launcher:title="@string/play_folder_title">
         <favorite
             launcher:className="com.android.music.activitymanagement.TopLevelActivity"
             launcher:packageName="com.google.android.music" />
