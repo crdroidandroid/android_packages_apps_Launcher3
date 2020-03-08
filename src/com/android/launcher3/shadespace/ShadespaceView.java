@@ -13,14 +13,14 @@ import com.android.launcher3.LauncherNotifications;
 import com.android.launcher3.R;
 import com.android.launcher3.notification.NotificationKeyData;
 import com.android.launcher3.notification.NotificationListener;
-import com.android.launcher3.touch.SwipeDetector;
+import com.android.launcher3.touch.SingleAxisSwipeDetector;
 import com.android.launcher3.util.PackageUserKey;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ShadespaceView extends LinearLayout
-        implements SwipeDetector.Listener, NotificationListener.NotificationsChangedListener, ShadespaceController.DoubleLineView {
+        implements SingleAxisSwipeDetector.Listener, NotificationListener.NotificationsChangedListener, ShadespaceController.DoubleLineView {
     private final static float NOTIFICATION_OPEN_VELOCITY = 2.25f;
     private final static float NOTIFICATION_CLOSE_VELOCITY = -0.35f;
 
@@ -48,8 +48,8 @@ public class ShadespaceView extends LinearLayout
 
         mMedia = new MediaListener(context, mSbn, this::reload);
 
-        SwipeDetector swipe = new SwipeDetector(context, this, SwipeDetector.VERTICAL);
-        swipe.setDetectableScrollConditions(SwipeDetector.DIRECTION_BOTH, false);
+        SingleAxisSwipeDetector swipe = new SingleAxisSwipeDetector(context, this, SingleAxisSwipeDetector.VERTICAL);
+        swipe.setDetectableScrollConditions(SingleAxisSwipeDetector.DIRECTION_BOTH, false);
         setOnTouchListener((v, event) -> swipe.onTouchEvent(event) && swipe.isDraggingState());
 
         mController = new ShadespaceController(this, mMedia, new NotificationRanker(mSbn));
@@ -88,7 +88,7 @@ public class ShadespaceView extends LinearLayout
     }
 
     @Override
-    public void onDragEnd(float velocity, boolean fling) {
+    public void onDragEnd(float velocity) {
     }
 
     private boolean mRunning;

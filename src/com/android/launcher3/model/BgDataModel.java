@@ -137,9 +137,7 @@ public class BgDataModel {
                 screenSet.add(item.screenId);
             }
         }
-        if (Utilities.showShadeGlance(getContext()) || screenSet.isEmpty()) {
-            screenSet.add(Workspace.FIRST_SCREEN_ID);
-        }
+        screenSet.add(Workspace.FIRST_SCREEN_ID);
         return screenSet.getArray();
     }
 
