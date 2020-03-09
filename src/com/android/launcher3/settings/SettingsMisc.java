@@ -120,6 +120,7 @@ public class SettingsMisc extends Activity
                 mPreferenceHighlighted = savedInstanceState.getBoolean(SAVE_HIGHLIGHTED_KEY);
             }
 
+            getPreferenceManager().setSharedPreferencesName(LauncherFiles.SHARED_PREFERENCES_KEY);
             setPreferencesFromResource(R.xml.misc_preferences, rootKey);
 
             PreferenceScreen screen = getPreferenceScreen();
