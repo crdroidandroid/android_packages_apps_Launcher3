@@ -606,8 +606,7 @@ public class DragView extends View implements LauncherStateManager.StateListener
         }
 
         public void animateToPos(float value) {
-            try {mSpring.animateToFinalPosition(Utilities.boundToRange(value, -mDelta, mDelta));}
-            catch (java.lang.UnsupportedOperationException e){}
+            mSpring.animateToFinalPosition(Utilities.boundToRange(value, -mDelta, mDelta));
         }
     }
 }
