@@ -21,7 +21,7 @@
         android:key="pref_quickspace_np"
         android:summary="@string/quickspace_now_playing_summary"
         android:title="@string/quickspace_now_playing_title"
-        android:defaultValue="false"
+        android:defaultValue="true"
         android:persistent="true" />
 
     <SwitchPreference
