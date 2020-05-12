@@ -21,7 +21,6 @@ import android.animation.ValueAnimator.AnimatorUpdateListener;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.graphics.Typeface;
 import android.text.TextUtils.TruncateAt;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -106,16 +105,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         mEventSubIcon = (ImageView) findViewById(R.id.quick_event_icon_sub);
         mQuickspaceContent = (ViewGroup) findViewById(R.id.quickspace_content);
         mClockView = (DateTextView) findViewById(R.id.clock_view);
-        setTypeface(mEventTitle, mEventTitleSub, mClockView);
-    }
-
-    private void setTypeface(TextView... views) {
-        Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/GoogleSans-Regular.ttf");
-        for (TextView view : views) {
-            if (view != null) {
-                view.setTypeface(tf);
-            }
-        }
     }
 
     private void prepareLayout() {
