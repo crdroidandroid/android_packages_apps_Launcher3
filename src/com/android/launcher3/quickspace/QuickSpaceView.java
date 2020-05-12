@@ -176,16 +176,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         mWeatherTemp = (TextView) findViewById(R.id.weather_temp);
         mWeatherTempSub = (TextView) findViewById(R.id.quick_event_weather_temp);
         mClockView = (DateTextView) findViewById(R.id.clock_view);
-        setTypeface(mEventTitle, mEventTitleSub, mWeatherTemp, mWeatherTempSub, mClockView);
-    }
-
-    private void setTypeface(TextView... views) {
-        Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/GoogleSans-Regular.ttf");
-        for (TextView view : views) {
-            if (view != null) {
-                view.setTypeface(tf);
-            }
-        }
     }
 
     public void prepareLayout() {

@@ -56,6 +56,7 @@
 
         <com.android.launcher3.quickspace.views.DoubleShadowTextView
             android:id="@+id/quick_event_title_sub"
+            style="@style/QuickSpaceSubText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -102,6 +103,7 @@
 
             <com.android.launcher3.quickspace.views.DoubleShadowTextView
                 android:id="@+id/quick_event_weather_temp"
+                style="@style/QuickSpaceSubText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
