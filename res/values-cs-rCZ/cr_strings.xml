@@ -29,7 +29,7 @@
     <string name="misc_category_title">Různé</string>
     <string name="misc_category_summary">Další možnosti</string>
     <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recents_app_killed">Aplikace byla ukončena</string>
     <!-- Folder titles -->
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Uspat dvojím poklepáním</string>
@@ -49,7 +49,7 @@
     <!-- Used for preference height loading. -->
     <!-- Preference default value -->
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_title">Přehled událostí</string>
     <string name="show_quickspace_summary">Show at the top of your Home screen</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
@@ -71,33 +71,33 @@
     <string name="quickspace_now_playing_title">Show now playing</string>
     <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
+    <string name="quickspace_psa_title">Zobrazit nahodilý vzkaz</string>
     <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
+        <item>Dobré ránko!</item>
         <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
+        <item>Dneska je venku hezky!</item>
         <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
+        <item>Což takhle si ještě na 5\u00a0minut zdřímnout?</item>
         <item>That\'s one way to wake up.</item>
         <item>You should change your alarm sounds.</item>
         <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
+        <item>Pojď na to, zlato.</item>
+        <item>Raději se podívej, jaké je venku počasí</item>
         <item>Feeling a bit sleepy yet</item>
         <item>Have you looked outside yet?</item>
         <item>Let\'s get this done.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
+        <item>Dobrou noc!</item>
+        <item>Dobře se vyspi!</item>
+        <item>Uvidíme se zítra!</item>
+        <item>Sladké sny!</item>
+        <item>Moc dlouho neponocuj</item>
         <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
+        <item>Trochu se prospi</item>
+        <item>Je čas hodit si nohy nahoru</item>
+        <item>Užij si noc!</item>
         <item>Time to charge the batteries!</item>
         <item>Tomorrow might be a great day</item>
         <item>Get your bones ready for tomorrow</item>
