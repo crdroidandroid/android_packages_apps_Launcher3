@@ -50,7 +50,7 @@
     <!-- Preference default value -->
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Auf einen Blick</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_summary">Oben auf dem Startbildschirm anzeigen</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Willkommen zu crDroid!</string>
@@ -72,7 +72,7 @@
     <string name="quickspace_now_playing_summary">Zeigt das Lied , das du gerade spielst, in \'Auf einen Blick\' an. WARNUNG: Es ist nicht mit allen Media-Playern vollständig kompatibel!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Eine zufällige Nachricht anzeigen</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_summary">Manchmal paar nette Botschaften in \'Auf einen Blick\' anzeigen.</string>
     <string-array name="quickspace_psa_morning">
         <item>Guten Morgen!</item>
         <item>Guten Morgen, Zeit zu Rocken!</item>
@@ -80,24 +80,24 @@
         <item>Hab einen schönen Tag!</item>
         <item>Wie wäre es mit einem kleinen Nickerchen von 5 Minuten?</item>
         <item>Das ist eine Möglichkeit, aufzuwachen.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
+        <item>Du solltest deine Alarmtöne ändern.</item>
+        <item>Sieht so aus, als wäre es ein schöner Tag, nicht wahr?</item>
         <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
+        <item>Das Wetter für den Fall der Fälle überprüfen</item>
         <item>Ich fühle mich noch etwas schläfrig</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Hast du schon rausgeschaut?</item>
+        <item>Bringen wir es zu Ende.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
         <item>Gute Nacht!</item>
         <item>Schlaf gut!</item>
         <item>Bis morgen!</item>
         <item>Süße Träume!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
+        <item>Nicht zu lange aufbleiben</item>
+        <item>Schlaf gut</item>
+        <item>Gönn dir etwas Schlaf</item>
+        <item>Zeit zum Entspannen</item>
+        <item>Genieße die Nacht!</item>
         <item>Time to charge the batteries!</item>
         <item>Tomorrow might be a great day</item>
         <item>Get your bones ready for tomorrow</item>
@@ -138,8 +138,8 @@
         <item>What a lovely experience, isn\'t it?</item>
         <item>Evolution is a myth, right?</item>
         <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
-        <item>Winner Winner ....?</item>
+        <item>Was beschäftigt dich?</item>
+        <item>Gewinner Gewinner …?</item>
         <item>rm -rf \/</item>
     </string-array>
 </resources>
