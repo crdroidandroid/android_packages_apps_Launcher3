@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-* Copyright (C) 2019 crDroid Android Project
+* Copyright (C) 2019-2020 crDroid Android Project
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -17,8 +17,6 @@
 */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Application name -->
-    <string name="app_name">crDroid Kezdőképernyő</string>
     <!-- General -->
     <string name="settings_title">Beállítások</string>
     <!-- Categories -->
@@ -30,25 +28,118 @@
     <string name="app_drawer_category_summary">Testreszabhatja az Alkalmazásfiókját</string>
     <string name="misc_category_title">Különlegességek</string>
     <string name="misc_category_summary">Minden, ami egyedivé tesz</string>
-    <!-- Show Shade Glance (a.k.a Shade Space) -->
-    <string name="show_shadeglance_title">Belepillantás</string>
-    <string name="show_shadeglance_summary">Jelenítse meg a kezdőképernyő tetején</string>
-    <!-- Google Feed -->
-    <string name="google_feed_title">A Google-alkalmazás megjelenítése</string>
-    <string name="google_feed_summary">A fő kezdőképernyőtől balra</string>
+    <string name="recent_task_option_kill_app">Blokkolás</string>
+    <string name="recents_app_killed">Alkalmazás leállítva</string>
+    <!-- Folder titles -->
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Dupla érintésre alvómód</string>
+    <string name="pref_sleep_gesture_summary">A kikapcsoláshoz elég a duplakopp egy üres területre</string>
     <!-- Gradients on Workspace/Hotseat -->
     <string name="workspace_gradient_title">A felső színátmenet megjelenítése</string>
     <string name="workspace_gradient_summary">Engedélyezi a finomabb színátmenetet az állapotsortól</string>
     <string name="hotseat_gradient_title">Az alsó színátmenet megjelenítése</string>
     <string name="hotseat_gradient_summary">Engedélyezi a finomabb színátmenetet a launcher dokkjától</string>
-    <!-- Shadespace -->
-    <string name="shadespace_subtext_double">%1$s - %2$s</string>
-    <string name="shadespace_subtext_default"></string>
-    <!-- Folder titles -->
-    <string name="play_folder_title">Play</string>
-    <string name="pref_sleep_gesture_title">Dupla érintésre alvómód</string>
-    <string name="pref_sleep_gesture_summary">A kikapcsoláshoz elég a duplakopp egy üres területre</string>
     <!-- Swipe down to clear recents -->
     <string name="allow_swipe_down_clearall_title">Az \'Összes törlése\' egy lefelé mozdulattal</string>
     <string name="allow_swipe_down_clearall_desc">A funkció nem érhető el, ha a P-navigációs mozdulatvezérlések engedélyezettek</string>
+    <!-- Google Feed -->
+    <string name="google_feed_title">A Google-alkalmazás megjelenítése</string>
+    <string name="google_feed_summary">A fő kezdőképernyőtől balra</string>
+    <!-- AppInfo -->
+    <!-- Used for preference height loading. -->
+    <!-- Preference default value -->
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Belepillantás</string>
+    <string name="show_quickspace_summary">Az Ön kezdőképernyőjének tetején jelenik meg</string>
+    <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Üdvözöli a crDroid!</string>
+    <string name="quick_event_rom_intro_title1">Legyen szép napja!</string>
+    <string name="quick_event_rom_intro_title2">Köszönjük, hogy minket választott</string>
+    <string name="quick_event_rom_intro_title3">Kedvel minket? Küldjön nekünk sört!</string>
+    <string name="quick_event_rom_intro_title4">Minden idők legjobb rendszere.</string>
+    <string name="quick_event_rom_intro_title5">Írjon ránk a Telegramon</string>
+    <string name="quick_event_rom_intro_title6">Érintse meg itt a kezdéshez</string>
+    <string name="quick_event_rom_intro_title7">Szeretünk téged 3000</string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">\'Now Playing\'</string>
+    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Alternatív stílus használata</string>
+    <string name="quickspace_alternate_style_summary">Használjon minimalista stílust a Belepillantáshoz</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Jelenítse meg mi hallható</string>
+    <string name="quickspace_now_playing_summary">A Belepillantásban jeleníti meg mi szól éppen. FIGYELEM: Ez nem minden médialejátszóval kompatibilis!</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Véletlenszerű üzenetek</string>
+    <string name="quickspace_psa_summary">Néha jelenjenek meg kedves üzenetek a Belepillantásban.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Jó reggelt!</item>
+        <item>Jó reggelt, szóljon a rock!</item>
+        <item>Micsoda szép nap!</item>
+        <item>Legyen szép napja!</item>
+        <item>Mit szólna egy 5 perces szunyókáláshoz?</item>
+        <item>Ez is egy módja az ébredésnek.</item>
+        <item>Meg kell változtatnia az ébresztés hangját.</item>
+        <item>Ez egy szép napnak tűnik, nem?</item>
+        <item>Lásson neki a reggelinek.</item>
+        <item>Mindenképp ellenőrizze az időjárást</item>
+        <item>Még egy kicsit álmos lehet</item>
+        <item>Szétnézett már odakinn?</item>
+        <item>Lásson neki a munkának.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Jó éjszakát!</item>
+        <item>Aludjon jól!</item>
+        <item>Holnap találkozunk!</item>
+        <item>Szép álmokat!</item>
+        <item>Ne maradjon ébren túl későig</item>
+        <item>Legyen pihentető az álma</item>
+        <item>Aludjon többet</item>
+        <item>Eljött a relaxálás ideje</item>
+        <item>Élvezze az éjszakát!</item>
+        <item>Eljött az akkumulátorok feltöltésének ideje!</item>
+        <item>A holnapi nap akár nagyszerű is lehet</item>
+        <item>Készítse elő fáradt csontjait holnapra</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Hm... jó éjt?</item>
+        <item>Egy kicsit már késő van</item>
+        <item>Alvási ütemtervet kéne készítenie</item>
+        <item>Még ebben az órában is tevékeny?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Boldogok a lelki-szegények</item>
+        <item>Itt az ideje már egy új frissítést telepíteni?</item>
+        <item>Elege van már az Android 10 körüli felhajtásból?</item>
+        <item>Ó, Helló, mi a helyzet?</item>
+        <item>Fókuszáljon a feladataira</item>
+        <item>Hány képernyőképet készített?</item>
+        <item>Találjon klassz funkciókat a crDroidban</item>
+        <item>Szeretetet árasszon, ne pusztítást</item>
+        <item>Jó szórakozást!</item>
+        <item>Ideje jó zenét hallgatni!</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>crDroid Prémium-ra van szüksége, hogy láthassa ezt</item>
+        <item>Emlékezzen az Egyszarvú eredetére</item>
+        <item>Élvezze a Kiterjesztett akkuidőt</item>
+        <item>Induljunk újra nulláról</item>
+        <item>Szeretünk téged 3000</item>
+        <item>Maradj otthon, Maradj biztonságban</item>
+        <item>Tegyen ma valami kedveset</item>
+        <item>Ez a legmenőbb Pixel Experience, vagy mégsem?</item>
+        <item>Hogy mennek a dolgok?</item>
+        <item>Nem ámítás, legyen üdvözölve a valóságban!</item>
+        <item>Köszönjük a támogatását!</item>
+        <item>Nincs ostobák fesztiválja - csak a tökéletesség!</item>
+        <item>Az építőrobot egyik legjobb válogatása</item>
+        <item>Kivezető út a Paranoiájából</item>
+        <item>Próbáljon egy jeges deszertet</item>
+        <item>Milyen remek élmény, nem igaz?</item>
+        <item>Az evolúció csak kitaláció, ugye?</item>
+        <item>Azzá válik, amit flessel...ne legyen már Krumpli</item>
+        <item>Mi jár a fejében?</item>
+        <item>A győztes pedig.......?</item>
+        <item>rm -rf \/</item>
+    </string-array>
 </resources>

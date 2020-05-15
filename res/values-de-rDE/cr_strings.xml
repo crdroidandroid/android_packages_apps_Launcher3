@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-* Copyright (C) 2019 crDroid Android Project
+* Copyright (C) 2019-2020 crDroid Android Project
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -17,8 +17,6 @@
 */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Application name -->
-    <string name="app_name">crDroid Home</string>
     <!-- General -->
     <string name="settings_title">Einstellungen</string>
     <!-- Categories -->
@@ -30,25 +28,118 @@
     <string name="app_drawer_category_summary">App-Übersicht konfigurieren</string>
     <string name="misc_category_title">Verschiedenes</string>
     <string name="misc_category_summary">Andere Optionen</string>
-    <!-- Show Shade Glance (a.k.a Shade Space) -->
-    <string name="show_shadeglance_title">Auf einen Blick</string>
-    <string name="show_shadeglance_summary">Oben auf deinem Startbildschirm anzeigen</string>
-    <!-- Google Feed -->
-    <string name="google_feed_title">Google App anzeigen</string>
-    <string name="google_feed_summary">Links neben dem Startbildschirm</string>
+    <string name="recent_task_option_kill_app">Kill</string>
+    <string name="recents_app_killed">App killed</string>
+    <!-- Folder titles -->
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Doppeltippen zum Sperren</string>
+    <string name="pref_sleep_gesture_summary">Zum Ausschalten zweimal auf einen leeren Bereich tippen</string>
     <!-- Gradients on Workspace/Hotseat -->
     <string name="workspace_gradient_title">Farbverlauf oben anzeigen</string>
     <string name="workspace_gradient_summary">Einen ab­ge­stuften Farbverlauf der Statusleiste aktivieren</string>
     <string name="hotseat_gradient_title">Farbverlauf anzeigen unten</string>
     <string name="hotseat_gradient_summary">Einen ab­ge­stuften Farbverlauf des Launcher-Dock aktivieren</string>
-    <!-- Shadespace -->
-    <string name="shadespace_subtext_double">%1$s - %2$s</string>
-    <string name="shadespace_subtext_default"></string>
-    <!-- Folder titles -->
-    <string name="play_folder_title">Wiedergabe</string>
-    <string name="pref_sleep_gesture_title">Doppeltippen zum Sperren</string>
-    <string name="pref_sleep_gesture_summary">Zum Ausschalten zweimal auf einen leeren Bereich tippen</string>
     <!-- Swipe down to clear recents -->
     <string name="allow_swipe_down_clearall_title">In der kürzlich verwendeten App-Ansicht nach unten wischen beendet alles</string>
     <string name="allow_swipe_down_clearall_desc">Funktioniert nicht, wenn Pie-Navigationsleisten-Gesten aktiviert sind</string>
+    <!-- Google Feed -->
+    <string name="google_feed_title">Google App anzeigen</string>
+    <string name="google_feed_summary">Links neben dem Startbildschirm</string>
+    <!-- AppInfo -->
+    <!-- Used for preference height loading. -->
+    <!-- Preference default value -->
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Auf einen Blick</string>
+    <string name="show_quickspace_summary">Oben auf dem Startbildschirm anzeigen</string>
+    <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Willkommen zu crDroid!</string>
+    <string name="quick_event_rom_intro_title1">Einen schönen Tag noch</string>
+    <string name="quick_event_rom_intro_title2">Danke, dass du dich für uns entschieden hast</string>
+    <string name="quick_event_rom_intro_title3">Liebst du uns? Schicke uns ein Bier</string>
+    <string name="quick_event_rom_intro_title4">Beste Rom aller Zeiten.</string>
+    <string name="quick_event_rom_intro_title5">Begrüsse uns per Telegramm</string>
+    <string name="quick_event_rom_intro_title6">Hier tippen, um zu beginnen</string>
+    <string name="quick_event_rom_intro_title7">Wir lieben dich 3000</string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Jetzt abspielen</string>
+    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Einen alternativer Stil verwenden</string>
+    <string name="quickspace_alternate_style_summary">Einen minimalistischen Stil für \'Auf einen Blick\' verwenden</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Jetzt spielen anzeigen</string>
+    <string name="quickspace_now_playing_summary">Zeigt das Lied , das du gerade spielst, in \'Auf einen Blick\' an. WARNUNG: Es ist nicht mit allen Media-Playern vollständig kompatibel!</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Eine zufällige Nachricht anzeigen</string>
+    <string name="quickspace_psa_summary">Manchmal paar nette Botschaften in \'Auf einen Blick\' anzeigen.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Guten Morgen!</item>
+        <item>Guten Morgen, Zeit zu Rocken!</item>
+        <item>Was für ein schöner Tag!</item>
+        <item>Hab einen schönen Tag!</item>
+        <item>Wie wäre es mit einem kleinen Nickerchen von 5 Minuten?</item>
+        <item>Das ist eine Möglichkeit, aufzuwachen.</item>
+        <item>Du solltest deine Alarmtöne ändern.</item>
+        <item>Sieht so aus, als wäre es ein schöner Tag, nicht wahr?</item>
+        <item>Let\'s get this bread.</item>
+        <item>Das Wetter für den Fall der Fälle überprüfen</item>
+        <item>Ich fühle mich noch etwas schläfrig</item>
+        <item>Hast du schon rausgeschaut?</item>
+        <item>Bringen wir es zu Ende.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Gute Nacht!</item>
+        <item>Schlaf gut!</item>
+        <item>Bis morgen!</item>
+        <item>Süße Träume!</item>
+        <item>Nicht zu lange aufbleiben</item>
+        <item>Schlaf gut</item>
+        <item>Gönn dir etwas Schlaf</item>
+        <item>Zeit zum Entspannen</item>
+        <item>Genieße die Nacht!</item>
+        <item>Zeit zum Akku aufladen!</item>
+        <item>Morgen könnte ein großer Tag sein</item>
+        <item>Deine Knochen für morgen vorbereiten</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Äh… gute Nacht?</item>
+        <item>Es ist schon etwas spät</item>
+        <item>Du solltest deinen Schlafplan überarbeiten</item>
+        <item>Du bist zu diesem Zeitpunkt produktiver?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Unwissenheit ist Glückseligkeit</item>
+        <item>Ist es an der Zeit, bereits ein weiteres Update zu flashen?</item>
+        <item>Hype um Android 10?</item>
+        <item>Oh hey, was gibt\'s?</item>
+        <item>Konzentriere dich auf deine Aufgaben</item>
+        <item>Wie viele Screenshots machst du so?</item>
+        <item>Offene Güte mit crDroid</item>
+        <item>Liebe verbreiten statt Chaos</item>
+        <item>Viel Spaß!</item>
+        <item>Zeit für etwas gute Musik</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>Du brauchst crDroid Premium, um dies zu sehen</item>
+        <item>Erinnere dich an Lineage von Unicorn</item>
+        <item>Genieße die Xtended Akkulaufzeit</item>
+        <item>Vom Nullpunkt aus starten</item>
+        <item>Wir lieben dich 3000</item>
+        <item>Bleibe zu Hause, bleibe in Sicherheit</item>
+        <item>Heute etwas Nettes tun</item>
+        <item>Das ist die beste Pixel-Erfahrung, nicht wahr?</item>
+        <item>Wie geht es voran?</item>
+        <item>Keine Illusionen, willkommen in der Realität!</item>
+        <item>Vielen Dank für deine Unterstützung</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>Sanity for your Paranoia</item>
+        <item>Try Ice Cold desserts</item>
+        <item>What a lovely experience, isn\'t it?</item>
+        <item>Evolution is a myth, right?</item>
+        <item>You are what you flash, don\'t be Potato</item>
+        <item>Was beschäftigt dich?</item>
+        <item>Gewinner Gewinner …?</item>
+        <item>rm -rf \/</item>
+    </string-array>
 </resources>
