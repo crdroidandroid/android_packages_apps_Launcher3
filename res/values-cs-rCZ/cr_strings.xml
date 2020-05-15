@@ -28,7 +28,7 @@
     <string name="app_drawer_category_summary">Přizpůsobit seznam aplikací</string>
     <string name="misc_category_title">Různé</string>
     <string name="misc_category_summary">Další možnosti</string>
-    <string name="recent_task_option_kill_app">Kill</string>
+    <string name="recent_task_option_kill_app">Ukončit</string>
     <string name="recents_app_killed">Aplikace byla ukončena</string>
     <!-- Folder titles -->
     <!-- DT2S -->
@@ -94,22 +94,22 @@
         <item>Uvidíme se zítra!</item>
         <item>Sladké sny!</item>
         <item>Moc dlouho neponocuj</item>
-        <item>Have a good sleep</item>
+        <item>Dobře se vyspi</item>
         <item>Trochu se prospi</item>
         <item>Je čas hodit si nohy nahoru</item>
         <item>Užij si noc!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>Nastal čas dobíjení baterií!</item>
+        <item>Zítřek by se mohl vyvést</item>
+        <item>Připrav se na zítřek</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
+        <item>Ehm... dobrou noc?</item>
+        <item>Už je trochu pozdě</item>
         <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>V tuto dobu jsi produktivnější?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
+        <item>Nevědomost je síla</item>
         <item>Is it time to flash another update already?</item>
         <item>Hyped about Android 10?</item>
         <item>Oh hey, what\'s up?</item>
