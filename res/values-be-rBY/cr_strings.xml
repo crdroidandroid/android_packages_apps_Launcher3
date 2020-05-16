@@ -28,8 +28,8 @@
     <string name="app_drawer_category_summary">Налада свайго спісу праграм</string>
     <string name="misc_category_title">Рознае</string>
     <string name="misc_category_summary">Іншыя налады</string>
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">Спыніць</string>
+    <string name="recents_app_killed">Праграма завершана</string>
     <!-- Folder titles -->
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Выключаць экран пры падвойным націску</string>
@@ -50,12 +50,12 @@
     <!-- Preference default value -->
     <!-- QuickSpace -->
     <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_summary">Адлюстроўваць у верхняй частцы Хатняга экрана</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
-    <string name="quick_event_rom_intro_title1">Have a great day</string>
-    <string name="quick_event_rom_intro_title2">Thank you for choosing us</string>
+    <string name="quick_event_rom_intro_welcome">Сардэчна запрашаем у crDroid!</string>
+    <string name="quick_event_rom_intro_title1">Добрага дня</string>
+    <string name="quick_event_rom_intro_title2">Дзякуй, што выбралі нас</string>
     <string name="quick_event_rom_intro_title3">Loving us? Send us a beer</string>
     <string name="quick_event_rom_intro_title4">Best Rom Ever.</string>
     <string name="quick_event_rom_intro_title5">Say hi to us on Telegram</string>
