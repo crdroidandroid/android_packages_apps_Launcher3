@@ -28,8 +28,8 @@
     <string name="app_drawer_category_summary">定制您的应用抽屉</string>
     <string name="misc_category_title">杂项</string>
     <string name="misc_category_summary">其他选项</string>
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">终止</string>
+    <string name="recents_app_killed">应用程序已被终止</string>
     <!-- Folder titles -->
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">双击睡眠</string>
@@ -49,96 +49,96 @@
     <!-- Used for preference height loading. -->
     <!-- Preference default value -->
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">一目了然</string>
+    <string name="show_quickspace_summary">在主屏幕的顶部显示</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
-    <string name="quick_event_rom_intro_title1">Have a great day</string>
-    <string name="quick_event_rom_intro_title2">Thank you for choosing us</string>
+    <string name="quick_event_rom_intro_welcome">欢迎使用 crDroid！</string>
+    <string name="quick_event_rom_intro_title1">享受美好的一天</string>
+    <string name="quick_event_rom_intro_title2">感谢您选择我们</string>
     <string name="quick_event_rom_intro_title3">Loving us? Send us a beer</string>
     <string name="quick_event_rom_intro_title4">Best Rom Ever.</string>
-    <string name="quick_event_rom_intro_title5">Say hi to us on Telegram</string>
-    <string name="quick_event_rom_intro_title6">Tap here to begin</string>
-    <string name="quick_event_rom_intro_title7">We love you 3000</string>
+    <string name="quick_event_rom_intro_title5">在 Telegram 上向我们问好</string>
+    <string name="quick_event_rom_intro_title6">点击此处开始</string>
+    <string name="quick_event_rom_intro_title7">我们喜欢你 3000</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
+    <string name="quick_event_ambient_now_playing">正在播放</string>
     <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
+    <string name="quickspace_alternate_style_title">使用替代样式</string>
     <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
+    <string name="quickspace_now_playing_title">显示正在播放</string>
+    <string name="quickspace_now_playing_summary">显示您正在播放的歌曲。 警告：它并不与所有媒体播放器完全兼容！</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
+    <string name="quickspace_psa_title">显示随机消息</string>
     <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
+        <item>早上好！</item>
         <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
+        <item>多么美好的一天！</item>
+        <item>祝您生活愉快！</item>
+        <item>小睡五分钟怎么样？</item>
+        <item>这是唤醒的一种方法。</item>
+        <item>您应该更改您的闹钟声音。</item>
+        <item>看起来好像是一个美丽的日子，不是吗？</item>
         <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
+        <item>检查天气</item>
         <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
+        <item>有没有看看外面的风光呢？</item>
         <item>Let\'s get this done.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>晚上好！</item>
+        <item>晚安！</item>
+        <item>明天见！</item>
+        <item>祝您好梦！</item>
+        <item>不要睡得太晚了哦</item>
+        <item>睡个好觉</item>
+        <item>去睡一会</item>
+        <item>放松时间</item>
+        <item>享受夜晚！</item>
+        <item>是时候给电池充电了！</item>
+        <item>明天可能是一个伟大的日子</item>
+        <item>为明天做好准备</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>嗯...晚安？</item>
+        <item>现在有点晚了</item>
+        <item>你应该修复您的睡眠时间表</item>
+        <item>你现在的工作效率更高吗？</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Ignorance is Bliss</item>
         <item>Is it time to flash another update already?</item>
-        <item>Hyped about Android 10?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
+        <item>关于 Android 10 的炒作？</item>
+        <item>哦，嘿，怎么了？</item>
+        <item>专注于你的任务</item>
+        <item>你截取了几个截图？</item>
         <item>Open goodness with crDroid</item>
         <item>Spread love not havoc</item>
-        <item>Have fun!</item>
-        <item>Time for some good music</item>
+        <item>祝您愉快！</item>
+        <item>是时候听一些好音乐了</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
+        <item>您需要crDroid Premium才能看到此内容</item>
         <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
-        <item>We love you 3000</item>
+        <item>享受 Xtended 的电池寿命</item>
+        <item>从零开始</item>
+        <item>我们喜欢你 3000</item>
         <item>Stay Home, Stay Safe</item>
         <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>How is everything going?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
+        <item>这是最好的 Pixel 体验，不是吗？</item>
+        <item>最近怎么样？</item>
+        <item>没有幻想，欢迎来到现实！</item>
+        <item>感谢您的支持</item>
+        <item>没有Derps的节日 - 只有完美！</item>
+        <item>Buildbot 的最佳选择之一</item>
+        <item>为您的偏执提供理智</item>
         <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
+        <item>多么可爱的经历，不是吗？</item>
+        <item>进化是神话，对不对？</item>
         <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
+        <item>您在想什么呢？</item>
         <item>Winner Winner ....?</item>
         <item>rm -rf \/</item>
     </string-array>
