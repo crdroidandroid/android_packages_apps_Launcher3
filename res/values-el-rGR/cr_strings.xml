@@ -28,8 +28,8 @@
     <string name="app_drawer_category_summary">Προσαρμογή καρτέλας εφαρμογών</string>
     <string name="misc_category_title">Διάφορα</string>
     <string name="misc_category_summary">Άλλες επιλογές</string>
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">Τερματισμός</string>
+    <string name="recents_app_killed">Η εφαρμογή τερματίστηκε</string>
     <!-- Folder titles -->
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Διπλό πάτημα για ύπνο</string>
@@ -49,14 +49,14 @@
     <!-- Used for preference height loading. -->
     <!-- Preference default value -->
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">Με μια Ματιά</string>
+    <string name="show_quickspace_summary">Εμφάνιση στην κορυφή της Αρχικής Οθόνης</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
-    <string name="quick_event_rom_intro_title1">Have a great day</string>
-    <string name="quick_event_rom_intro_title2">Thank you for choosing us</string>
-    <string name="quick_event_rom_intro_title3">Loving us? Send us a beer</string>
+    <string name="quick_event_rom_intro_welcome">Καλώς ήλθατε στο crDroid!</string>
+    <string name="quick_event_rom_intro_title1">Να έχεις μια υπέροχη μέρα</string>
+    <string name="quick_event_rom_intro_title2">Ευχαριστούμε που μας επιλέξατε</string>
+    <string name="quick_event_rom_intro_title3">Μας αγαπάς; Στείλτε μας μια μπύρα</string>
     <string name="quick_event_rom_intro_title4">Best Rom Ever.</string>
     <string name="quick_event_rom_intro_title5">Say hi to us on Telegram</string>
     <string name="quick_event_rom_intro_title6">Tap here to begin</string>
