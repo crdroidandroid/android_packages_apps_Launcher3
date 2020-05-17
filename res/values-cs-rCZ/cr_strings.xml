@@ -69,13 +69,13 @@
     <string name="quickspace_alternate_style_summary">Použít minimalistický styl zobrazení Přehledu událostí</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Zobrazit co to hraje</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
+    <string name="quickspace_now_playing_summary">Zobrazí název právě přehrávané skladby v\u00a0Přehledu událostí. VAROVÁNÍ: Není plně kompatibilní se všemi přehrávači médií!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Zobrazit nahodilý vzkaz</string>
     <string name="quickspace_psa_summary">Čas od času zobrazit v\u00a0Přehledu událostí nějaké pěkné vzkazy.</string>
     <string-array name="quickspace_psa_morning">
         <item>Dobré ránko!</item>
-        <item>Dobré ráno, je načase vstávat a\u00a0cvičit!</item>
+        <item>Dobré ráno! Je načase vstávat a\u00a0cvičit!</item>
         <item>Dneska je venku hezky!</item>
         <item>Měj se fanfárově!</item>
         <item>Což takhle si ještě na 5\u00a0minut zdřímnout?</item>
