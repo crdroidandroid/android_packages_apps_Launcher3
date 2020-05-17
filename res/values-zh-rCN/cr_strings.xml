@@ -28,7 +28,7 @@
     <string name="app_drawer_category_summary">定制您的应用抽屉</string>
     <string name="misc_category_title">杂项</string>
     <string name="misc_category_summary">其他选项</string>
-    <string name="recent_task_option_kill_app">终止</string>
+    <string name="recent_task_option_kill_app">结束进程</string>
     <string name="recents_app_killed">应用程序已被终止</string>
     <!-- Folder titles -->
     <!-- DT2S -->
@@ -49,14 +49,14 @@
     <!-- Used for preference height loading. -->
     <!-- Preference default value -->
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">一目了然</string>
+    <string name="show_quickspace_title">速览</string>
     <string name="show_quickspace_summary">在主屏幕的顶部显示</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">欢迎使用 crDroid！</string>
-    <string name="quick_event_rom_intro_title1">享受美好的一天</string>
+    <string name="quick_event_rom_intro_title1">祝您生活愉快！</string>
     <string name="quick_event_rom_intro_title2">感谢您选择我们</string>
-    <string name="quick_event_rom_intro_title3">Loving us? Send us a beer</string>
+    <string name="quick_event_rom_intro_title3">喜欢我们吗？请我们一听啤酒吧</string>
     <string name="quick_event_rom_intro_title4">有史以来最棒的Rom</string>
     <string name="quick_event_rom_intro_title5">在 Telegram 上向我们问好</string>
     <string name="quick_event_rom_intro_title6">点击此处开始</string>
@@ -125,8 +125,8 @@
         <item>享受 Xtended 的电池寿命</item>
         <item>从零开始</item>
         <item>我们喜欢你 3000</item>
-        <item>Stay Home, Stay Safe</item>
-        <item>Do something nice today</item>
+        <item>待在家里才安全</item>
+        <item>今日做点不错的事吧。</item>
         <item>这是最好的 Pixel 体验，不是吗？</item>
         <item>最近怎么样？</item>
         <item>没有幻想，欢迎来到现实！</item>
@@ -134,12 +134,12 @@
         <item>没有Derps的节日 - 只有完美！</item>
         <item>Buildbot 的最佳选择之一</item>
         <item>为您的偏执提供理智</item>
-        <item>Try Ice Cold desserts</item>
+        <item>来点冰凉的甜点？</item>
         <item>多么可爱的经历，不是吗？</item>
         <item>进化是神话，对不对？</item>
-        <item>You are what you flash, don\'t be Potato</item>
+        <item>走自己的路，让别人说去吧</item>
         <item>您在想什么呢？</item>
-        <item>Winner Winner ....?</item>
+        <item>大吉大利 今晚……？</item>
         <item>rm -rf \/</item>
     </string-array>
 </resources>
