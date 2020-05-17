@@ -62,20 +62,20 @@
     <string name="quick_event_rom_intro_title6">Začněte klepnutím sem</string>
     <string name="quick_event_rom_intro_title7">Milujeme tě 3000</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
+    <string name="quick_event_ambient_now_playing">Co to hraje</string>
     <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
+    <string name="quickspace_alternate_style_title">Použít alternativní styl</string>
+    <string name="quickspace_alternate_style_summary">Použít minimalistický styl zobrazení Přehledu událostí</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
+    <string name="quickspace_now_playing_title">Zobrazit co to hraje</string>
     <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Zobrazit nahodilý vzkaz</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_summary">Čas od času zobrazit v\u00a0Přehledu událostí nějaké pěkné vzkazy.</string>
     <string-array name="quickspace_psa_morning">
         <item>Dobré ránko!</item>
-        <item>Good morning, time to rock!</item>
+        <item>Dobré ráno, je načase vstávat a\u00a0cvičit!</item>
         <item>Dneska je venku hezky!</item>
         <item>Měj se fanfárově!</item>
         <item>Což takhle si ještě na 5\u00a0minut zdřímnout?</item>
@@ -84,7 +84,7 @@
         <item>Zdá se, že je krásný den, že?</item>
         <item>Pojď na to, zlato.</item>
         <item>Raději se podívej, jaké je venku počasí</item>
-        <item>Feeling a bit sleepy yet</item>
+        <item>Ještě jsem trochu ospalý</item>
         <item>Co takhle vykouknout ven?</item>
         <item>Pojďme se s\u00a0tím poprat.</item>
     </string-array>
@@ -131,8 +131,8 @@
         <item>Jak ti dupou králíci?</item>
         <item>Žádné iluze, vítej ve skutečnosti!</item>
         <item>Děkujeme ti za tvoji podporu</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
+        <item>Zde není místo pro Derpy\u00a0– pouze pro dokonalost!</item>
+        <item>Jeden z\u00a0nejlepších výběrů buildbota</item>
         <item>Trochu Normálnosti pro tvoji Paranoiu</item>
         <item>Zakus ledově vychlazené dezerty</item>
         <item>Úžasný zážitek, že?</item>
