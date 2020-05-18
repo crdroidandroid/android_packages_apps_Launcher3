@@ -50,43 +50,43 @@
     <!-- Preference default value -->
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Přehled událostí</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_summary">Zobrazit v\u00a0horní části domovské obrazovky</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Vítejte v\u00a0crDroidu!</string>
-    <string name="quick_event_rom_intro_title1">Have a great day</string>
-    <string name="quick_event_rom_intro_title2">Thank you for choosing us</string>
-    <string name="quick_event_rom_intro_title3">Loving us? Send us a beer</string>
-    <string name="quick_event_rom_intro_title4">Best Rom Ever.</string>
-    <string name="quick_event_rom_intro_title5">Say hi to us on Telegram</string>
-    <string name="quick_event_rom_intro_title6">Tap here to begin</string>
-    <string name="quick_event_rom_intro_title7">We love you 3000</string>
+    <string name="quick_event_rom_intro_title1">Mějte se fanfárově!</string>
+    <string name="quick_event_rom_intro_title2">Děkujeme, že jste si vybrali právě nás</string>
+    <string name="quick_event_rom_intro_title3">Máte nás rádi? Pošlete nám pivo</string>
+    <string name="quick_event_rom_intro_title4">Vůbec nejlepší ROM</string>
+    <string name="quick_event_rom_intro_title5">Pozdrav nás na Telegramu</string>
+    <string name="quick_event_rom_intro_title6">Začněte klepnutím sem</string>
+    <string name="quick_event_rom_intro_title7">Milujeme tě 3000</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
+    <string name="quick_event_ambient_now_playing">Co to hraje</string>
     <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
+    <string name="quickspace_alternate_style_title">Použít alternativní styl</string>
+    <string name="quickspace_alternate_style_summary">Použít minimalistický styl zobrazení Přehledu událostí</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
+    <string name="quickspace_now_playing_title">Zobrazit co to hraje</string>
+    <string name="quickspace_now_playing_summary">Zobrazí název právě přehrávané skladby v\u00a0Přehledu událostí. VAROVÁNÍ: Není plně kompatibilní se všemi přehrávači médií!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Zobrazit nahodilý vzkaz</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_summary">Čas od času zobrazit v\u00a0Přehledu událostí nějaké pěkné vzkazy.</string>
     <string-array name="quickspace_psa_morning">
         <item>Dobré ránko!</item>
-        <item>Good morning, time to rock!</item>
+        <item>Dobré ráno! Je načase vstávat a\u00a0cvičit!</item>
         <item>Dneska je venku hezky!</item>
-        <item>Have a nice day!</item>
+        <item>Měj se fanfárově!</item>
         <item>Což takhle si ještě na 5\u00a0minut zdřímnout?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
+        <item>Taky jedna z\u00a0možností, jak se probudit.</item>
+        <item>Co takhle změnit si zvuk budíku?</item>
+        <item>Zdá se, že je krásný den, že?</item>
         <item>Pojď na to, zlato.</item>
         <item>Raději se podívej, jaké je venku počasí</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Ještě jsem trochu ospalý</item>
+        <item>Co takhle vykouknout ven?</item>
+        <item>Pojďme se s\u00a0tím poprat.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
         <item>Dobrou noc!</item>
@@ -105,40 +105,40 @@
     <string-array name="quickspace_psa_midnight">
         <item>Ehm... dobrou noc?</item>
         <item>Už je trochu pozdě</item>
-        <item>You should fix your sleep schedule</item>
+        <item>Co takhle napravit svůj plán večerky?</item>
         <item>V tuto dobu jsi produktivnější?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Nevědomost je síla</item>
-        <item>Is it time to flash another update already?</item>
+        <item>Že už by bylo načase flashnout další aktualizaci?</item>
         <item>Jsi natěšen(a) na Android\u00a010?</item>
         <item>Hej hola, jak je?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
-        <item>Open goodness with crDroid</item>
-        <item>Spread love not havoc</item>
+        <item>Soustřeď se na své úkoly</item>
+        <item>Kolik snímků obrazovky vytvoříš?</item>
+        <item>S crDroidem zpřístupníš lecjaké vychytávky</item>
+        <item>Šiř lásku, nikoliv chaos a\u00a0spoušť</item>
         <item>Bav se!</item>
-        <item>Time for some good music</item>
+        <item>Je čas na nějakou dobrou hudbu</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
-        <item>We love you 3000</item>
+        <item>Pro zobrazení tohoto obsahu je potřeba mít crDroid Premium</item>
+        <item>Pamatuj na Lineage of the Unicorn</item>
+        <item>Užij si Xtended výdrž baterie</item>
+        <item>Začínáme od píky</item>
+        <item>Milujeme tě 3000</item>
         <item>Zůstaň doma, zůstaň v\u00a0bezpečí</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>How is everything going?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
+        <item>Vykonej dneska něco dobrého</item>
+        <item>Toto je nejlepší Pixel Experience, že?</item>
+        <item>Jak ti dupou králíci?</item>
+        <item>Žádné iluze, vítej ve tvrdé realitě!</item>
+        <item>Děkujeme ti za tvou podporu</item>
+        <item>Zde není místo pro Derpy\u00a0– pouze pro dokonalost!</item>
+        <item>Jeden z\u00a0nejlepších výběrů buildbota</item>
+        <item>Trochu Normálnosti pro tvou Paranoiu</item>
+        <item>Zakus ledově vychlazené dezerty</item>
+        <item>Úžasný zážitek, že?</item>
+        <item>Evoluce je mýtus, že?</item>
         <item>Jsi to, co flashuješ. Nebuď labuť</item>
-        <item>What\'s on your mind?</item>
+        <item>Co se ti honí hlavou?</item>
         <item>Vítěz ....?</item>
         <item>rm -rf \/</item>
     </string-array>
