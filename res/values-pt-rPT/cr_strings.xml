@@ -28,8 +28,8 @@
     <string name="app_drawer_category_summary">Personalize a sua gaveta de aplicações</string>
     <string name="misc_category_title">Diversos</string>
     <string name="misc_category_summary">Outras opções</string>
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">Terminar aplicação</string>
+    <string name="recents_app_killed">Aplicação terminada</string>
     <!-- Folder titles -->
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Toque duplo para desligar ecrã</string>
@@ -49,68 +49,68 @@
     <!-- Used for preference height loading. -->
     <!-- Preference default value -->
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">Resumo</string>
+    <string name="show_quickspace_summary">Mostrar no topo do ecrã inicial</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
-    <string name="quick_event_rom_intro_title1">Have a great day</string>
-    <string name="quick_event_rom_intro_title2">Thank you for choosing us</string>
-    <string name="quick_event_rom_intro_title3">Loving us? Send us a beer</string>
-    <string name="quick_event_rom_intro_title4">Best Rom Ever.</string>
-    <string name="quick_event_rom_intro_title5">Say hi to us on Telegram</string>
-    <string name="quick_event_rom_intro_title6">Tap here to begin</string>
-    <string name="quick_event_rom_intro_title7">We love you 3000</string>
+    <string name="quick_event_rom_intro_welcome">Bem vindo ao crDroid!</string>
+    <string name="quick_event_rom_intro_title1">Bom dia</string>
+    <string name="quick_event_rom_intro_title2">Obrigado por nos escolher</string>
+    <string name="quick_event_rom_intro_title3">A gostar de nós? Envie-nos uma cerveja</string>
+    <string name="quick_event_rom_intro_title4">A melhor ROM de sempre.</string>
+    <string name="quick_event_rom_intro_title5">Diga-nos olá no Telegram</string>
+    <string name="quick_event_rom_intro_title6">Toque aqui para começar</string>
+    <string name="quick_event_rom_intro_title7">Nós adorámos-lo a 3000 </string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
+    <string name="quick_event_ambient_now_playing">A reproduzir</string>
     <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
+    <string name="quickspace_alternate_style_title">Use um estilo alternativo</string>
+    <string name="quickspace_alternate_style_summary">Usar um estilo minimalista para o Resumo</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
+    <string name="quickspace_now_playing_title">Mostrar a reproduzir</string>
+    <string name="quickspace_now_playing_summary">Mostrar a música a reproduzir no Resumo. AVISO: Não é totalmente compatível com todos os reprodutores!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">Mostrar uma mensagem aleatória</string>
+    <string name="quickspace_psa_summary">Mostrar algumas mensagens animadoras no Resumo</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Bom dia!</item>
+        <item>Bom dia, hora de rockalhar!</item>
+        <item>Tenha um bom dia!</item>
+        <item>Tenha um bom dia!</item>
+        <item>Que tal um cochilo de 5 minutos?</item>
+        <item>Essa é a única maneira de acordar.</item>
+        <item>Devia mudar os sons de alarme.</item>
+        <item>Parece um bom dia, não?</item>
+        <item>Vamos lá ganhar o pão.</item>
+        <item>Verifique o tempo, só por acaso...</item>
+        <item>Ainda se sente um bocado sonolento</item>
+        <item>Já olhou lá para fora?</item>
+        <item>Vamos lá acabar com isto.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>Boa noite!</item>
+        <item>Durma bem!</item>
+        <item>Até amanhã!</item>
+        <item>Bons sonhos!</item>
+        <item>Não fique acordado até tarde</item>
+        <item>Bom sono</item>
+        <item>É hora de ir dormir</item>
+        <item>Altura de relaxar</item>
+        <item>Divirta-se esta noite!</item>
+        <item>Altura de carregar as baterias!</item>
+        <item>Amanhã vai ser um grande dia</item>
+        <item>Prepara-te para amanhã</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Umm... Boa noite?</item>
+        <item>É um bocado tarde</item>
+        <item>Devia mudar o seu horário de sono</item>
+        <item>É mais produtivo a esta hora?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
+        <item>A ignorância é uma benção</item>
+        <item>Já é altura de flashar outro update?</item>
         <item>Hyped about Android 10?</item>
         <item>Oh hey, what\'s up?</item>
         <item>Focus on your tasks</item>
