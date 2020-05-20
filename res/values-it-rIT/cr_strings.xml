@@ -28,8 +28,8 @@
     <string name="app_drawer_category_summary">Personalizza il menù delle applicazioni</string>
     <string name="misc_category_title">Varie</string>
     <string name="misc_category_summary">Altre opzioni</string>
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">Termina</string>
+    <string name="recents_app_killed">Applicazione terminata</string>
     <!-- Folder titles -->
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Doppio tocco per sospendere</string>
@@ -49,8 +49,8 @@
     <!-- Used for preference height loading. -->
     <!-- Preference default value -->
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">Riepilogo</string>
+    <string name="show_quickspace_summary">Mostra nella parte superiore della tua schermata Home</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
