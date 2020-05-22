@@ -49,7 +49,7 @@
     <!-- Used for preference height loading. -->
     <!-- Preference default value -->
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_title">Самое главное</string>
     <string name="show_quickspace_summary">Отображать в верхней части Домашнего экрана</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
@@ -135,11 +135,11 @@
         <item>Одна из лучших сборок!</item>
         <item>Безопасность для вашей паранойи</item>
         <item>Попробуйте холодные десерты</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
+        <item>Какой прекрасный опыт, не правда ли?</item>
+        <item>Верно, что эволюция это миф?</item>
         <item>Ты - это то что ты прошиваешь, не будь картошкой</item>
-        <item>Что на душе?</item>
-        <item>Выигрыш есть ....?</item>
+        <item>Что у тебя на уме?</item>
+        <item>Победитель, Победитель ....?</item>
         <item>rm -rf \/</item>
     </string-array>
 </resources>
