@@ -49,7 +49,8 @@ public class QuickEventsController {
     private int mEventSubIcon;
 
     private boolean mIsQuickEvent = false;
-    private boolean mRunning;
+    private boolean mRunning = true;
+    private boolean mRegistered = false;
 
     // Device Intro
     private boolean mEventIntro = false;
@@ -94,12 +95,24 @@ public class QuickEventsController {
     public void initQuickEvents() {
         mPreferences = mContext.getSharedPreferences(LauncherFiles.SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
         mIsFirstTimeDone = mPreferences.getBoolean(SETTING_DEVICE_INTRO_COMPLETED, false);
+        registerPSAListener();
+        updateQuickEvents();
+    }
+
+    private void registerPSAListener() {
+        if (mRegistered) return;
+        mRegistered = true;
         IntentFilter psonalityIntent = new IntentFilter();
         psonalityIntent.addAction(Intent.ACTION_TIME_TICK);
         psonalityIntent.addAction(Intent.ACTION_TIME_CHANGED);
         psonalityIntent.addAction(Intent.ACTION_TIMEZONE_CHANGED);
         mContext.registerReceiver(mPSAListener, psonalityIntent);
-        updateQuickEvents();
+    }
+
+    private void unregisterPSAListener() {
+        if (!mRegistered) return;
+        mRegistered = false;
+        mContext.unregisterReceiver(mPSAListener);
     }
 
     public void updateQuickEvents() {
@@ -301,9 +314,11 @@ public class QuickEventsController {
 
     public void onPause() {
         mRunning = false;
+        unregisterPSAListener();
     }
 
     public void onResume() {
         mRunning = true;
+        registerPSAListener();
     }
 }
