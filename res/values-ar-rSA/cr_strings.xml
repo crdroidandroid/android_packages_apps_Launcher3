@@ -33,15 +33,15 @@
     <!-- Folder titles -->
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">انقر نقراً مزدوجاً لقفل الجهاز</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_summary">نقرتين على المساحة الفارغة لإيقاف التشغيل</string>
     <!-- Gradients on Workspace/Hotseat -->
     <string name="workspace_gradient_title">إظهار متدرج في الأعلى</string>
     <string name="workspace_gradient_summary">تمكين تدرج لون دقيق من شريط الحالة</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="hotseat_gradient_title">إظهار التدرج في الأسفل</string>
+    <string name="hotseat_gradient_summary">تمكين تدرج دقيق من الشريط السفلي للواجهة الرئيسية</string>
     <!-- Swipe down to clear recents -->
-    <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Doesn\'t works if P navbar gestures are enable</string>
+    <string name="allow_swipe_down_clearall_title">مسح كل شيئ عند السحب للأسفل من واجهة التطبيقات الأخيرة</string>
+    <string name="allow_swipe_down_clearall_desc">لا يعمل عند تفعيل إيماءات أندرويد 9</string>
     <!-- Google Feed -->
     <string name="google_feed_title">عرض تطبيق جوجل</string>
     <string name="google_feed_summary">على الجانب الأيسر من الشاشة الرئيسية</string>
@@ -117,11 +117,11 @@
         <item>How many screenshots do you take?</item>
         <item>Open goodness with crDroid</item>
         <item>Spread love not havoc</item>
-        <item>Have fun!</item>
-        <item>Time for some good music</item>
+        <item>استمتع!</item>
+        <item>حان الوقت للقليل من الموسيقى الجيدة</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
+        <item>تحتاج للاشتراك في crDroid Premium لرؤية هذا</item>
+        <item>تذكر عصر الكائن أحادي القرن</item>
         <item>استمتع بعمر بطارية طويل</item>
         <item>البدء من نقطة الصفر</item>
         <item>نحبك 3000</item>
@@ -133,13 +133,13 @@
         <item>شكرا لك على دعمك</item>
         <item>لا يوجد مهرجان للأغبياء - فقط للكاملين!</item>
         <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
-        <item>Winner Winner ....?</item>
+        <item>عقلانية لجنون عظمتك</item>
+        <item>جرب الحلويات المتجمدة</item>
+        <item>يا لها من تجربة جميلة، أليس كذلك؟</item>
+        <item>التطور خرافة، أليس كذلك؟</item>
+        <item>ما تقوم بتثبيته يعبر عنك، لا تكن ليناً</item>
+        <item>ما الذي يدور في خاطرك؟</item>
+        <item>الفائز ....؟</item>
         <item>rm -rf \/</item>
     </string-array>
 </resources>
