@@ -41,7 +41,7 @@
     <string name="hotseat_gradient_summary">تمكين تدرج دقيق من الشريط السفلي للواجهة الرئيسية</string>
     <!-- Swipe down to clear recents -->
     <string name="allow_swipe_down_clearall_title">مسح كل شيئ عند السحب للأسفل من واجهة التطبيقات الأخيرة</string>
-    <string name="allow_swipe_down_clearall_desc">لا يعمل عند تفعيل إيماءات أندرويد 9</string>
+    <string name="allow_swipe_down_clearall_desc">لا يعمل عند تفعيل التنقل باستخدام زرين</string>
     <!-- Google Feed -->
     <string name="google_feed_title">عرض تطبيق جوجل</string>
     <string name="google_feed_summary">على الجانب الأيسر من الشاشة الرئيسية</string>
@@ -49,7 +49,7 @@
     <!-- Used for preference height loading. -->
     <!-- Preference default value -->
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_title">النظرة السريعة</string>
     <string name="show_quickspace_summary">إظهار في الجزء العلوي من الشاشة الرئيسية</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
@@ -66,17 +66,17 @@
     <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">استخدام نمط بديل</string>
-    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
+    <string name="quickspace_alternate_style_summary">استخدام نمط بسيط في نظرة السريعة</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">اظهار ما يتم تشغيله</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
+    <string name="quickspace_now_playing_summary">عرض الأغنية التي يتم تشغلها في لوحة النظرة السريعة. تحذير: غير متوافقة مع جميع تطبيقات تشغيل الوسائط!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">إظهار رسالة عشوائية</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_summary">أظهر بعض الرسائل اللطيفة في بعض الأحيان في النظرة السريعة.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
+        <item>صباح الخير!</item>
+        <item>صباح الخير ، حان وقت التألق!</item>
+        <item>يا له من يوم جميل!</item>
         <item>Have a nice day!</item>
         <item>What about a small 5 minutes nap?</item>
         <item>That\'s one way to wake up.</item>
