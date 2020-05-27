@@ -23,7 +23,7 @@
     android:background="@drawable/top_round_rect_primary"
     android:elevation="@dimen/deep_shortcuts_elevation"
     android:layout_gravity="bottom"
-    android:theme="?attr/widgetsTheme">
+    android:theme="@style/AppItemActivityTheme">
 
     <TextView
         style="@style/TextHeadline"
