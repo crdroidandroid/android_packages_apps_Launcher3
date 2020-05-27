@@ -152,6 +152,7 @@
         <item name="android:colorEdgeEffect">?android:attr/textColorSecondaryInverse</item>
         <item name="android:textColorPrimary">?android:attr/textColorPrimaryInverse</item>
         <item name="android:textColorSecondary">?android:attr/textColorSecondaryInverse</item>
+        <item name="android:textColorTertiary">?android:attr/textColorTertiaryInverse</item>
     </style>
 
     <style name="WidgetContainerTheme.Dark" />
