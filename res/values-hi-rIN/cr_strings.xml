@@ -46,8 +46,18 @@
     <string name="google_feed_title">गूगल ऐप प्रदर्शित करें</string>
     <string name="google_feed_summary">मुख्य होम स्क्रीन के बाईं ओर</string>
     <!-- AppInfo -->
+    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="placeholder_string">Loading...</string>
     <!-- Used for preference height loading. -->
+    <string name="app_info_icon_pack">Icon pack</string>
+    <string name="app_info_icon_pack_none">None</string>
+    <string name="app_info_source">Source</string>
+    <string name="app_info_source_unknown">Unknown</string>
+    <string name="app_info_last_update">Last update</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">More</string>
     <!-- Preference default value -->
+    <string name="pref_value_default">Default</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">At A Glance</string>
     <string name="show_quickspace_summary">Show at the top of your Home screen</string>
