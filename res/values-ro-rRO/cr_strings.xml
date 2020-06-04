@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-* Copyright (C) 2019 crDroid Android Project
+* Copyright (C) 2019-2020 crDroid Android Project
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -17,8 +17,6 @@
 */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Application name -->
-    <string name="app_name">crDroid Home</string>
     <!-- General -->
     <string name="settings_title">Setări</string>
     <!-- Categories -->
@@ -30,25 +28,128 @@
     <string name="app_drawer_category_summary">Personalizați lista aplicațiilor</string>
     <string name="misc_category_title">Diverse</string>
     <string name="misc_category_summary">Alte opțiuni</string>
-    <!-- Show Shade Glance (a.k.a Shade Space) -->
-    <string name="show_shadeglance_title">Pe scurt</string>
-    <string name="show_shadeglance_summary">Arată în zona de sus a ecranului principal</string>
-    <!-- Google Feed -->
-    <string name="google_feed_title">Afișează aplicația Google</string>
-    <string name="google_feed_summary">Spre stânga pe panoul principal</string>
+    <string name="recent_task_option_kill_app">Termina</string>
+    <string name="recents_app_killed">Aplicaţie oprită</string>
+    <!-- Folder titles -->
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Apăsare dublă pentru a adormi dispozitivul</string>
+    <string name="pref_sleep_gesture_summary">Apăsare dublă pe o zonă libeta pentru a opri dispozitivul</string>
     <!-- Gradients on Workspace/Hotseat -->
     <string name="workspace_gradient_title">Arată degradat pe partea de sus</string>
     <string name="workspace_gradient_summary">Permite o degradare usoara din bara de stare</string>
     <string name="hotseat_gradient_title">Arată degradat pe partea de jos</string>
     <string name="hotseat_gradient_summary">Permite o degradare usoara din dock</string>
-    <!-- Shadespace -->
-    <string name="shadespace_subtext_double">%1$s - %2$s</string>
-    <string name="shadespace_subtext_default"></string>
-    <!-- Folder titles -->
-    <string name="play_folder_title">Redare</string>
-    <string name="pref_sleep_gesture_title">Apăsare dublă pentru a adormi dispozitivul</string>
-    <string name="pref_sleep_gesture_summary">Apăsare dublă pe o zonă libeta pentru a opri dispozitivul</string>
     <!-- Swipe down to clear recents -->
     <string name="allow_swipe_down_clearall_title">Ștergeți totul la glisare în jos din vizualizare aplicații recente</string>
     <string name="allow_swipe_down_clearall_desc">Nu funcționează dacă navigația prin gesturi este activată</string>
+    <!-- Google Feed -->
+    <string name="google_feed_title">Afișează aplicația Google</string>
+    <string name="google_feed_summary">Spre stânga pe panoul principal</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="placeholder_string">Loading...</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_icon_pack">Icon pack</string>
+    <string name="app_info_icon_pack_none">None</string>
+    <string name="app_info_source">Source</string>
+    <string name="app_info_source_unknown">Unknown</string>
+    <string name="app_info_last_update">Last update</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">More</string>
+    <!-- Preference default value -->
+    <string name="pref_value_default">Default</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Pe scurt</string>
+    <string name="show_quickspace_summary">Arată în partea de sus a ecranului de pornire</string>
+    <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Bine ai venit la crDroid!</string>
+    <string name="quick_event_rom_intro_title1">O zi bună</string>
+    <string name="quick_event_rom_intro_title2">Vă mulțumim că ne-ați ales</string>
+    <string name="quick_event_rom_intro_title3">Ne iubiti? Trimite-ne o bere</string>
+    <string name="quick_event_rom_intro_title4">Cel mai bun ROM din totdeauna.</string>
+    <string name="quick_event_rom_intro_title5">Spune-ne salut pe Telegram</string>
+    <string name="quick_event_rom_intro_title6">Atingeți aici pentru a începe</string>
+    <string name="quick_event_rom_intro_title7">Te iubim 3000</string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Acum se redă</string>
+    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Folosește un stil alternativ</string>
+    <string name="quickspace_alternate_style_summary">Folosește un stil minimalist pentru pe scurt</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Arată ce melodie ruleaza</string>
+    <string name="quickspace_now_playing_summary">Arată melodia pe care o redai pe scurt. AVERTISMENT: nu este pe deplin compatibilă cu toți playerii media!</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Arată un mesaj aleatoriu</string>
+    <string name="quickspace_psa_summary">Arată unele mesaje frumoase uneori pe scurt.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Bună dimineața!</item>
+        <item>Bună dimineața, timpul de rock!</item>
+        <item>Ce zi frumoasă!</item>
+        <item>O zi bună!</item>
+        <item>Ce zici de un pui de somn mic de 5 minute?</item>
+        <item>Acesta este un mod de a te trezi.</item>
+        <item>Ar trebui să vă schimbați sunetele de alarmă.</item>
+        <item>Se pare că este o zi frumoasă, nu-i așa?</item>
+        <item>Hai să obținem această pâine.</item>
+        <item>Verificați vremea</item>
+        <item>Te simti somnoros deja</item>
+        <item>Te-ai uitat afară?</item>
+        <item>Să terminăm asta.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Noapte bună!</item>
+        <item>Somn ușor!</item>
+        <item>Pe mâine!</item>
+        <item>Vise plăcute!</item>
+        <item>Nu sta prea mult</item>
+        <item>Somn usor</item>
+        <item>Odihnestete</item>
+        <item>Timpul pentru relaxare</item>
+        <item>Bucura-te de noapte!</item>
+        <item>Este timpul să încărcăm bateriile!</item>
+        <item>Mâine ar putea fi o zi grozavă</item>
+        <item>Pregătește-ți oasele pentru mâine</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Noapte bună?</item>
+        <item>E cam târziu acum</item>
+        <item>Ar trebui să vă stabiliți programul de somn</item>
+        <item>Ești mai productiv în acest moment?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Ignoranta este Bliss</item>
+        <item>Este timpul să instalezi o nouă actualizare deja?</item>
+        <item>Entuziasmat pentru Android 10?</item>
+        <item>Oh, hei, ce se întâmplă?</item>
+        <item>Focalizează sarcinile tale</item>
+        <item>Câte capturi de ecran faceți?</item>
+        <item>Deschide bunătatea cu crDroid</item>
+        <item>Dragostea răsunătoare nu devastează</item>
+        <item>Distractie placuta!</item>
+        <item>Timp pentru muzica buna</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>Ai nevoie de crDroid Premium pentru a vedea asta</item>
+        <item>Amintiți-vă Lineage of the Unicorn</item>
+        <item>Bucură-te de durata bateriei Xtended</item>
+        <item>Pornind de la zero</item>
+        <item>Te iubim 3000</item>
+        <item>Stai acasă, rămâi în siguranță</item>
+        <item>Fă ceva drăguț astăzi</item>
+        <item>Aceasta este cea mai bună experiență Pixel, nu-i așa?</item>
+        <item>Cum merge totul?</item>
+        <item>Nicio iluzie, bun venit în realitate!</item>
+        <item>Vă mulțumim pentru sprijin</item>
+        <item>Niciun festival pentru Derps - doar perfecţiune!</item>
+        <item>Una dintre cele mai bune alegeri ale buildbot-ului</item>
+        <item>Sanitatea ta pentru Paranoia</item>
+        <item>Încearcă deserturile de gheață</item>
+        <item>Ce experiență minunată, nu-i așa?</item>
+        <item>Evoluția e un mit, nu?</item>
+        <item>Ești ceea ce flash-ui, nu fii Cartofor</item>
+        <item>La ce te gandesti?</item>
+        <item>Câștigător ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
 </resources>
