@@ -28,8 +28,8 @@
     <string name="app_drawer_category_summary">अपने एप्लिकेशन ड्रॉअर में बदलाव करें</string>
     <string name="misc_category_title">विविध</string>
     <string name="misc_category_summary">अन्य विकल्प</string>
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">mar</string>
+    <string name="recents_app_killed">ऐप को मार दिया गया</string>
     <!-- Folder titles -->
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">सुलाने के लिए डबल-टैप करे</string>
@@ -59,12 +59,12 @@
     <!-- Preference default value -->
     <string name="pref_value_default">Default</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">एक नज़र में</string>
+    <string name="show_quickspace_summary">अपनी होम स्क्रीन के सबसे ऊपर देखे</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
-    <string name="quick_event_rom_intro_title1">Have a great day</string>
+    <string name="quick_event_rom_intro_welcome">crDroid में आपका स्वागत है</string>
+    <string name="quick_event_rom_intro_title1">आपका दिन मंगलमय हो!</string>
     <string name="quick_event_rom_intro_title2">Thank you for choosing us</string>
     <string name="quick_event_rom_intro_title3">Loving us? Send us a beer</string>
     <string name="quick_event_rom_intro_title4">Best Rom Ever.</string>
