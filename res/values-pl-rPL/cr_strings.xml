@@ -82,21 +82,21 @@
     <string name="quickspace_now_playing_summary">Wyświetl piosenkę, którą grasz w At a Glance. OSTRZEŻENIE: Funkcja nie jest ona w pełni kompatybilna ze wszystkimi odtwarzaczami!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Pokaż losową wiadomość</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_summary">Wyświetl fajne wiadomości w At a Glance</string>
     <string-array name="quickspace_psa_morning">
         <item>Dzień dobry!</item>
-        <item>Good morning, time to rock!</item>
+        <item>Dzień dobry, pora na działanie!</item>
         <item>Ależ piękny dzień!</item>
         <item>Miłego dnia!</item>
         <item>A może 5-cio minutowa drzemka?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
+        <item>To jest sposób na pobudkę.</item>
+        <item>Powinieneś zmienić dźwięk swojego alarmu.</item>
+        <item>Zapowiada się piękny dzień, nieprawdaż?</item>
         <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
+        <item>Sprawdź pogodę dla pewności</item>
         <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Wyjrzałeś już dzisiaj za okno?</item>
+        <item>Zajmijmy się tym</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
         <item>Dobranoc!</item>
@@ -104,24 +104,24 @@
         <item>Do jutra!</item>
         <item>Słodkich snów!</item>
         <item>Nie siedź za długo</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
+        <item>Miłych snów</item>
+        <item>Idź spać</item>
+        <item>Czas na relaks!</item>
+        <item>Miłej nocy!</item>
         <item>Czas naładować baterie!</item>
         <item>Jutro może być świetny dzień</item>
         <item>Get your bones ready for tomorrow</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Hmm... dobrej nocy?</item>
+        <item>Jest trochę późno</item>
+        <item>Powinieneś poprawić swój harmonogram snu</item>
+        <item>Jesteś teraz bardziej produktywny?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
-        <item>Hyped about Android 10?</item>
+        <item>Niewiedza jest błogosławieństwem</item>
+        <item>Czy to czas na kolejną aktualizację?</item>
+        <item>Podekscytowany Androidem 10?</item>
         <item>Oh hey, what\'s up?</item>
         <item>Focus on your tasks</item>
         <item>How many screenshots do you take?</item>
