@@ -81,30 +81,30 @@
     <string name="quickspace_now_playing_title">Perlihatkan sekarang yang sedang diputar</string>
     <string name="quickspace_now_playing_summary">Perlihatkan lagu yang dimainkan saat sekilas. PERHATIAN: Fitur ini tidak mendukung semua media pemutar!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">Perlihatkan pesan secara acak</string>
+    <string name="quickspace_psa_summary">Perlihatkan beberapa pesan yang bagus untuk sekilas.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Selamat Pagi!</item>
+        <item>Selamat pagi, waktunya bergoyang!</item>
+        <item>Hari yang sangat indah!</item>
+        <item>Semoga harimu menyenangkan!</item>
+        <item>Bagaimana dengan tidur siang selama 5 menit?</item>
+        <item>Itu adalah salah satu cara untuk bangun.</item>
+        <item>Kamu harus menganti nada dering alarm.</item>
+        <item>Sepertinya hari ini adalah hari yang indah, bukan?</item>
+        <item>Mari kita ambil roti ini.</item>
+        <item>Pastikan periksa cuaca untuk berjaga-jaga</item>
+        <item>Merasa sedikit mengantuk</item>
+        <item>Apakah Anda sudah melihat di luar?</item>
+        <item>Mari kita selesaikan ini.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
+        <item>Selamat Malam!</item>
+        <item>Tidur yang nyenyak!</item>
+        <item>Sampai jumpa besok!</item>
+        <item>Semoga mimpi indah!</item>
+        <item>Jangan begadang terlalu lama</item>
+        <item>Selamat tidur</item>
         <item>Get some sleep</item>
         <item>Time to relax</item>
         <item>Enjoy the night!</item>
