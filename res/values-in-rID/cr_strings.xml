@@ -28,8 +28,8 @@
     <string name="app_drawer_category_summary">Kostumisasi laci aplikasi Anda</string>
     <string name="misc_category_title">Lain - lain</string>
     <string name="misc_category_summary">Pilihan lain</string>
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">Mematikan</string>
+    <string name="recents_app_killed">Aplikasi dimatikan</string>
     <!-- Folder titles -->
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Ketuk dua kali untuk tidur</string>
@@ -59,27 +59,27 @@
     <!-- Preference default value -->
     <string name="pref_value_default">Default</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">Sekilas</string>
+    <string name="show_quickspace_summary">Tampilkan di atas bagian Layar beranda anda</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
-    <string name="quick_event_rom_intro_title1">Have a great day</string>
-    <string name="quick_event_rom_intro_title2">Thank you for choosing us</string>
-    <string name="quick_event_rom_intro_title3">Loving us? Send us a beer</string>
-    <string name="quick_event_rom_intro_title4">Best Rom Ever.</string>
-    <string name="quick_event_rom_intro_title5">Say hi to us on Telegram</string>
-    <string name="quick_event_rom_intro_title6">Tap here to begin</string>
-    <string name="quick_event_rom_intro_title7">We love you 3000</string>
+    <string name="quick_event_rom_intro_welcome">Selamat datang di crDroid!</string>
+    <string name="quick_event_rom_intro_title1">Semoga hari mu menyenangkan!</string>
+    <string name="quick_event_rom_intro_title2">Terima kasih sudah memilih kami</string>
+    <string name="quick_event_rom_intro_title3">Suka dengan project kami? Berikan kami segelas bir</string>
+    <string name="quick_event_rom_intro_title4">Rom terbaik yang pernah ada.</string>
+    <string name="quick_event_rom_intro_title5">Kontak kami di Telegram</string>
+    <string name="quick_event_rom_intro_title6">Ketuk disini untuk memulai</string>
+    <string name="quick_event_rom_intro_title7">Kami mencintai mu 3000</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
+    <string name="quick_event_ambient_now_playing">Sedang Diputar</string>
     <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
+    <string name="quickspace_alternate_style_title">Gunakan gaya alternatif</string>
+    <string name="quickspace_alternate_style_summary">Menggunakan gaya minimalis untuk sekilas</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
+    <string name="quickspace_now_playing_title">Perlihatkan sekarang yang sedang diputar</string>
+    <string name="quickspace_now_playing_summary">Perlihatkan lagu yang dimainkan saat sekilas. PERHATIAN: Fitur ini tidak mendukung semua media pemutar!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Show a random message</string>
     <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
