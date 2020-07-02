@@ -20,24 +20,24 @@
     <!-- General -->
     <string name="settings_title">設定</string>
     <!-- Categories -->
-    <string name="home_category_title">主螢幕</string>
+    <string name="home_category_title">主畫面</string>
     <string name="home_category_summary">設定 Google 即時資訊等</string>
     <string name="icons_category_title">圖示</string>
     <string name="icons_category_summary">設定圖示形狀等</string>
     <string name="app_drawer_category_title">應用程式抽屜</string>
     <string name="app_drawer_category_summary">自訂您的應用程式抽屜</string>
-    <string name="misc_category_title">雜項</string>
+    <string name="misc_category_title">其他設定</string>
     <string name="misc_category_summary">其他選項</string>
-    <string name="recent_task_option_kill_app">終止</string>
-    <string name="recents_app_killed">已終止應用程式</string>
+    <string name="recent_task_option_kill_app">強制結束</string>
+    <string name="recents_app_killed">已強制結束應用程式</string>
     <!-- Folder titles -->
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">雙擊睡眠</string>
-    <string name="pref_sleep_gesture_summary">雙擊空白處以關閉電源</string>
+    <string name="pref_sleep_gesture_title">輕觸兩下即可休眠</string>
+    <string name="pref_sleep_gesture_summary">在空白處點兩下以關閉電源</string>
     <!-- Gradients on Workspace/Hotseat -->
-    <string name="workspace_gradient_title">在頂部顯示漸變</string>
-    <string name="workspace_gradient_summary">在狀態列中啟用微妙的漸變</string>
-    <string name="hotseat_gradient_title">在底部顯示漸變</string>
+    <string name="workspace_gradient_title">在頂端顯示漸層</string>
+    <string name="workspace_gradient_summary">在狀態列中啟用細微的漸層</string>
+    <string name="hotseat_gradient_title">在底端顯示漸層</string>
     <string name="hotseat_gradient_summary">在啟動器的Dock栏啟用細微漸變</string>
     <!-- Swipe down to clear recents -->
     <string name="allow_swipe_down_clearall_title">從最近視圖向下滑動即可清除所有內容</string>
