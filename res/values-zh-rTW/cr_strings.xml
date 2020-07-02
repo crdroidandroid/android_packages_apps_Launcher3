@@ -38,10 +38,10 @@
     <string name="workspace_gradient_title">在頂端顯示漸層</string>
     <string name="workspace_gradient_summary">在狀態列中啟用細微的漸層</string>
     <string name="hotseat_gradient_title">在底端顯示漸層</string>
-    <string name="hotseat_gradient_summary">在啟動器的Dock栏啟用細微漸變</string>
+    <string name="hotseat_gradient_summary">在啟動器的 Dock 欄啟用細微的漸層</string>
     <!-- Swipe down to clear recents -->
-    <string name="allow_swipe_down_clearall_title">從最近視圖向下滑動即可清除所有內容</string>
-    <string name="allow_swipe_down_clearall_desc">如果啟用了P導航欄手勢，則無法使用</string>
+    <string name="allow_swipe_down_clearall_title">在「最近使用」畫面向下滑動即可清除所有應用程式</string>
+    <string name="allow_swipe_down_clearall_desc">如果啟用了 P 導航欄手勢，則無法使用</string>
     <!-- Google Feed -->
     <string name="google_feed_title">顯示 Google 應用程式</string>
     <string name="google_feed_summary">移至主畫面的左側</string>
