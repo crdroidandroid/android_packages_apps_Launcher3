@@ -79,19 +79,19 @@
     <string name="quickspace_alternate_style_summary">ஒரு பார்வையில் குறைந்தபட்ச பாணியைப் பயன்படுத்தவும்</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">தற்போது பாடுவதைக் காட்டு</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
+    <string name="quickspace_now_playing_summary">ஒரு பார்வையில் நீங்கள் கேட்கும் பாடலைக் காட்டு. எச்சரிக்கை: இது எல்லா மீடியா பிளேயர்களுடனும் முழுமையாக பொருந்தாது!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">தோராயமான செய்திகளைக் காட்டு</string>
+    <string name="quickspace_psa_summary">ஒரு பார்வையில் சில நேரங்களில் சில நல்ல செய்திகளைக் காட்டு.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
+        <item>காலை வணக்கம்!</item>
+        <item>காலை வணக்கம், உற்சாகத்திற்கான நேரம்!</item>
+        <item>என்ன ஒரு அழகான நாள்!</item>
+        <item>ஒரு நல்ல நாள்!</item>
+        <item>ஒரு சிறிய 5 நிமிட தூக்கத்தைப் பற்றி என்ன?</item>
+        <item>அது எழுந்திருக்க ஒரு வழி.</item>
+        <item>உங்கள் அலாரம் ஒலிகளை மாற்ற வேண்டும்.</item>
+        <item>இது ஒரு அழகான நாள் போல் தெரிகிறது, இல்லையா?</item>
         <item>Let\'s get this bread.</item>
         <item>Check the weather just in case</item>
         <item>Feeling a bit sleepy yet</item>
