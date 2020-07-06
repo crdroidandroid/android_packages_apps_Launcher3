@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+* Copyright (C) 2019-2020 crDroid Android Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">அமைப்புகள்</string>
+    <!-- Categories -->
+    <string name="home_category_title">முகப்புத் திரை</string>
+    <string name="home_category_summary">கூகுள்‌ நவ் பகுதி</string>
+    <string name="icons_category_title">படவுருக்கள்</string>
+    <string name="icons_category_summary">படவுருக்களை மாற்று</string>
+    <string name="app_drawer_category_title">பயன்பாட்டு அலமாரி</string>
+    <string name="app_drawer_category_summary">உங்கள் பயன்பாடு தட்டு தனிப்பயனாக்கு</string>
+    <string name="misc_category_title">இதர அமைப்பு</string>
+    <string name="misc_category_summary">மற்ற தேர்வுகள்</string>
+    <string name="recent_task_option_kill_app">கொல்</string>
+    <string name="recents_app_killed">பயன்பாடு கொல்லப்பட்டது</string>
+    <!-- Folder titles -->
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">உறங்குவதற்கு இருமுறை தட்டு</string>
+    <string name="pref_sleep_gesture_summary">உறங்குவதற்கு வெட்டவெளியில் இருமுறை தட்டவும்</string>
+    <!-- Gradients on Workspace/Hotseat -->
+    <string name="workspace_gradient_title">மேலே சாய்வு காண்பி</string>
+    <string name="workspace_gradient_summary">நிலைமை பட்டையில் சாய்வு காண்பி</string>
+    <string name="hotseat_gradient_title">கீழே சாய்வு காண்பி</string>
+    <string name="hotseat_gradient_summary">‌டாக்-ல் சாய்வு காண்பி</string>
+    <!-- Swipe down to clear recents -->
+    <string name="allow_swipe_down_clearall_title">தற்காலிக பார்வையில் இருந்து கீழே இழுத்தவுடன் அனைத்தையும் அழிக்கவும்</string>
+    <string name="allow_swipe_down_clearall_desc">பை வழிநடத்து பட்டையை உபயோகித்தால் ‌வேலை செய்யாது</string>
+    <!-- Google Feed -->
+    <string name="google_feed_title">கூகுள் பயன்பாட்டைக் காட்டு</string>
+    <string name="google_feed_summary">முதன்மை முகப்புத் திரையின் இடப்புறம்</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="placeholder_string">Loading...</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_icon_pack">Icon pack</string>
+    <string name="app_info_icon_pack_none">None</string>
+    <string name="app_info_source">Source</string>
+    <string name="app_info_source_unknown">Unknown</string>
+    <string name="app_info_last_update">Last update</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">More</string>
+    <!-- Preference default value -->
+    <string name="pref_value_default">Default</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">முகப்புத் தகவல்</string>
+    <string name="show_quickspace_summary">முகப்புத் திரையின் மேற்புறம்</string>
+    <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Crdroid-க்கு வரவேற்கிறோம்!</string>
+    <string name="quick_event_rom_intro_title1">இந்த நாள் இனிதாகட்டும்</string>
+    <string name="quick_event_rom_intro_title2">எங்களை தேர்ந்தெடுத்ததற்கு நன்றி</string>
+    <string name="quick_event_rom_intro_title3">எங்களை நேசிக்கிறீர்களா? எங்களுக்கு ஒரு பீர் அனுப்புங்கள்</string>
+    <string name="quick_event_rom_intro_title4">சிறந்த ROM.</string>
+    <string name="quick_event_rom_intro_title5">டெலிகிராம்-ல் எங்களுக்கு வணக்கம் சொல்லுங்கள்</string>
+    <string name="quick_event_rom_intro_title6">தொடங்குவதற்கு இங்கே தட்டவும்</string>
+    <string name="quick_event_rom_intro_title7">நாங்கள் உங்களை 3000 மடங்கு நேசிக்கிறோம்</string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">தற்போது பாடுவது</string>
+    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">மாற்று பாணியைப் பயன்படுத்தவும்</string>
+    <string name="quickspace_alternate_style_summary">ஒரு பார்வையில் குறைந்தபட்ச பாணியைப் பயன்படுத்தவும்</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">தற்போது பாடுவதைக் காட்டு</string>
+    <string name="quickspace_now_playing_summary">ஒரு பார்வையில் நீங்கள் கேட்கும் பாடலைக் காட்டு. எச்சரிக்கை: இது எல்லா மீடியா பிளேயர்களுடனும் முழுமையாக பொருந்தாது!</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">தோராயமான செய்திகளைக் காட்டு</string>
+    <string name="quickspace_psa_summary">ஒரு பார்வையில் சில நேரங்களில் சில நல்ல செய்திகளைக் காட்டு.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>காலை வணக்கம்!</item>
+        <item>காலை வணக்கம், உற்சாகத்திற்கான நேரம்!</item>
+        <item>என்ன ஒரு அழகான நாள்!</item>
+        <item>ஒரு நல்ல நாள்!</item>
+        <item>ஒரு சிறிய 5 நிமிட தூக்கத்தைப் பற்றி என்ன?</item>
+        <item>அது எழுந்திருக்க ஒரு வழி.</item>
+        <item>உங்கள் அலாரம் ஒலிகளை மாற்ற வேண்டும்.</item>
+        <item>இது ஒரு அழகான நாள் போல் தெரிகிறது, இல்லையா?</item>
+        <item>இந்த இட்லியைப் பெறுவோம்.</item>
+        <item>வானிலை சரிபார்க்கவும்</item>
+        <item>இன்னும் கொஞ்சம் தூக்கமாக இருக்கிறது</item>
+        <item>நீங்கள் இன்னும் விடியலைப் பார்த்தீர்களா?</item>
+        <item>இதைச் செய்வோம்.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>இரவு வணக்கம்!</item>
+        <item>நன்றாக தூங்கவும்!</item>
+        <item>நாளை சந்திப்போம்!</item>
+        <item>இனிய கனவுகள்!</item>
+        <item>அதிக நேரம் விழித்திருக்காதீர்கள்</item>
+        <item>தூங்கி இளைப்பாருங்கள்</item>
+        <item>கொஞ்சம் தூங்குங்கள்</item>
+        <item>ஓய்வுக்கான நேரம்</item>
+        <item>இரவு மகிழுங்கள்!</item>
+        <item>பேட்டரிகளை சார்ஜ் செய்யும் நேரம்!</item>
+        <item>நாளை ஒரு சிறந்த நாளாக இருக்கலாம்</item>
+        <item>உங்கள் எலும்புகளை நாளைக்கு தயார் செய்யுங்கள்</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>உம்... இரவு வணக்கம்?</item>
+        <item>இப்போது சற்று தாமதமாகிவிட்டது</item>
+        <item>உங்கள் தூக்க அட்டவணையை நீங்கள் சரிசெய்ய வேண்டும்</item>
+        <item>இந்த நேரத்தில் நீங்கள் அதிக வேலை செய்கிறீர்களா?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>அறியாமையே பேரின்பம்</item>
+        <item>ஏற்கனவே மற்றொரு புதுப்பிப்பை ப்ளாஷ் செய்ய நேரம் வந்துவிட்டதா?</item>
+        <item>அண்ட்ராய்டு 10 பற்றி மிகைப்படுத்தப்பட்டதா?</item>
+        <item>ஓ ஏய், என்ன நடக்கிறது?</item>
+        <item>உங்கள் பணிகளில் கவனம் செலுத்துங்கள்</item>
+        <item>எத்தனை ஸ்கிரீன் ஷாட்களை எடுக்கிறீர்கள்?</item>
+        <item>CrDroid உடன் நன்மைகளை அனுபவிங்கள்</item>
+        <item>அன்பை பரப்புங்கள் Havoc-ஐ‌ இல்லை</item>
+        <item>மகிழுங்கள்!</item>
+        <item>சில நல்ல இசைக்கான நேரம்</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>இதைப் பார்க்க உங்களுக்கு crDroid பிரீமியம் தேவை</item>
+        <item>யூனிகார்னின் பரம்பரையை நினைவில் கொள்க</item>
+        <item>Xtended பேட்டரி ஆயுளை அனுபவிக்கவும்</item>
+        <item>Ground zero-ல் இருந்து தொடங்குகிறது</item>
+        <item>நாங்கள் உங்களை 3000 மடங்கு நேசிக்கிறோம்</item>
+        <item>வீட்டிலேயே இருங்கள், பாதுகாப்பாக இருங்கள்</item>
+        <item>இன்று ஏதாவது நல்லது செய்யுங்கள்</item>
+        <item>இதுதான் சிறந்த Pixel Experience, இல்லையா?</item>
+        <item>எல்லாம் எப்படி நடக்கிறது?</item>
+        <item>Illusion இல்லை, உண்மைக்கு வருக!</item>
+        <item>தங்கள் ஆதரவிற்கு நன்றி</item>
+        <item>Derps-க்கு திருவிழா இல்லை - முழுமை மட்டுமே!</item>
+        <item>buildbot-ன் சிறந்த தேர்வுகளில் ஒன்று</item>
+        <item>உங்கள் Paranoia-க்கு நல்லறிவு</item>
+        <item>ஐஸ் குளிர் இனிப்புகளை முயற்சிக்கவும்</item>
+        <item>என்ன ஒரு அழகான அனுபவம், இல்லையா?</item>
+        <item>Evolution என்பது ஒரு கட்டுக்கதை, இல்லையா?</item>
+        <item>நீங்கள் ஃபிளாஷ் செய்வதுதான் நீங்கள், Potato-க இருக்க வேண்டாம்</item>
+        <item>உங்கள் மனதில் என்ன இருக்கிறது?</item>
+        <item>வின்னர் வின்னர்....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+</resources>
