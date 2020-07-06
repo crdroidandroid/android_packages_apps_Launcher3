@@ -32,15 +32,15 @@
     <string name="recents_app_killed">பயன்பாடு கொல்லப்பட்டது</string>
     <!-- Folder titles -->
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">உறங்குவதற்கு இருமுறை தட்டு</string>
+    <string name="pref_sleep_gesture_summary">உறங்குவதற்கு வெட்டவெளியில் இருமுறை தட்டவும்</string>
     <!-- Gradients on Workspace/Hotseat -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">மேலே சாய்வு காண்பி</string>
+    <string name="workspace_gradient_summary">நிலைமை பட்டையில் சாய்வு காண்பி</string>
+    <string name="hotseat_gradient_title">கீழே சாய்வு காண்பி</string>
+    <string name="hotseat_gradient_summary">‌டாக்-ல் சாய்வு காண்பி</string>
     <!-- Swipe down to clear recents -->
-    <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
+    <string name="allow_swipe_down_clearall_title">தற்காலிக பார்வையில் இருந்து கீழே இழுத்தவுடன் அனைத்தையும் அழிக்கவும்</string>
     <string name="allow_swipe_down_clearall_desc">Doesn\'t works if P navbar gestures are enable</string>
     <!-- Google Feed -->
     <string name="google_feed_title">Display Google app</string>
