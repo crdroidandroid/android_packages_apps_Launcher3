@@ -21,15 +21,15 @@
     <string name="settings_title">அமைப்புகள்</string>
     <!-- Categories -->
     <string name="home_category_title">முகப்புத் திரை</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="home_category_summary">கூகுள்‌ நவ் பகுதி</string>
+    <string name="icons_category_title">படவுருக்கள்</string>
+    <string name="icons_category_summary">படவுருக்களை மாற்று</string>
+    <string name="app_drawer_category_title">பயன்பாட்டு அலமாரி</string>
+    <string name="app_drawer_category_summary">உங்கள் பயன்பாடு தட்டு தனிப்பயனாக்கு</string>
+    <string name="misc_category_title">இதர அமைப்பு</string>
+    <string name="misc_category_summary">மற்ற தேர்வுகள்</string>
+    <string name="recent_task_option_kill_app">கொல்</string>
+    <string name="recents_app_killed">பயன்பாடு கொல்லப்பட்டது</string>
     <!-- Folder titles -->
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Double tap to sleep</string>
