@@ -41,10 +41,10 @@
     <string name="hotseat_gradient_summary">‌டாக்-ல் சாய்வு காண்பி</string>
     <!-- Swipe down to clear recents -->
     <string name="allow_swipe_down_clearall_title">தற்காலிக பார்வையில் இருந்து கீழே இழுத்தவுடன் அனைத்தையும் அழிக்கவும்</string>
-    <string name="allow_swipe_down_clearall_desc">Doesn\'t works if P navbar gestures are enable</string>
+    <string name="allow_swipe_down_clearall_desc">பை வழிநடத்து பட்டையை உபயோகித்தால் ‌வேலை செய்யாது</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_title">கூகுள் பயன்பாட்டைக் காட்டு</string>
+    <string name="google_feed_summary">முதன்மை முகப்புத் திரையின் இடப்புறம்</string>
     <!-- AppInfo -->
     <string name="app_info_subtext">Swipe down to close app info.</string>
     <string name="placeholder_string">Loading...</string>
@@ -59,26 +59,26 @@
     <!-- Preference default value -->
     <string name="pref_value_default">Default</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">முகப்புத் தகவல்</string>
+    <string name="show_quickspace_summary">முகப்புத் திரையின் மேற்புறம்</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
-    <string name="quick_event_rom_intro_title1">Have a great day</string>
-    <string name="quick_event_rom_intro_title2">Thank you for choosing us</string>
-    <string name="quick_event_rom_intro_title3">Loving us? Send us a beer</string>
-    <string name="quick_event_rom_intro_title4">Best Rom Ever.</string>
-    <string name="quick_event_rom_intro_title5">Say hi to us on Telegram</string>
-    <string name="quick_event_rom_intro_title6">Tap here to begin</string>
-    <string name="quick_event_rom_intro_title7">We love you 3000</string>
+    <string name="quick_event_rom_intro_welcome">Crdroid-க்கு வரவேற்கிறோம்!</string>
+    <string name="quick_event_rom_intro_title1">இந்த நாள் இனிதாகட்டும்</string>
+    <string name="quick_event_rom_intro_title2">எங்களை தேர்ந்தெடுத்ததற்கு நன்றி</string>
+    <string name="quick_event_rom_intro_title3">எங்களை நேசிக்கிறீர்களா? எங்களுக்கு ஒரு பீர் அனுப்புங்கள்</string>
+    <string name="quick_event_rom_intro_title4">சிறந்த ROM.</string>
+    <string name="quick_event_rom_intro_title5">டெலிகிராம்-ல் எங்களுக்கு வணக்கம் சொல்லுங்கள்</string>
+    <string name="quick_event_rom_intro_title6">தொடங்குவதற்கு இங்கே தட்டவும்</string>
+    <string name="quick_event_rom_intro_title7">நாங்கள் உங்களை 3000 மடங்கு நேசிக்கிறோம்</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
+    <string name="quick_event_ambient_now_playing">தற்போது பாடுவது</string>
     <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
+    <string name="quickspace_alternate_style_title">மாற்று பாணியைப் பயன்படுத்தவும்</string>
+    <string name="quickspace_alternate_style_summary">ஒரு பார்வையில் குறைந்தபட்ச பாணியைப் பயன்படுத்தவும்</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
+    <string name="quickspace_now_playing_title">தற்போது பாடுவதைக் காட்டு</string>
     <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Show a random message</string>
