@@ -27,13 +27,13 @@
     <string name="app_drawer_category_title">Calaix d\'aplicacions</string>
     <string name="app_drawer_category_summary">Personalitzeu el calaix d\'aplicacions</string>
     <string name="misc_category_title">Miscel·lània</string>
-    <string name="misc_category_summary">Other options</string>
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="misc_category_summary">Opcions addicionals</string>
+    <string name="recent_task_option_kill_app">Atura</string>
+    <string name="recents_app_killed">S\'ha aturat l\'aplicació</string>
     <!-- Folder titles -->
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">Toca dues vegades per a posar en repòs</string>
+    <string name="pref_sleep_gesture_summary">Toca dues voltes en un espai buit per a apagar la pantalla</string>
     <!-- Gradients on Workspace/Hotseat -->
     <string name="workspace_gradient_title">Show gradient on top</string>
     <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
