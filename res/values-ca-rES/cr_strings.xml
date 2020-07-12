@@ -35,10 +35,10 @@
     <string name="pref_sleep_gesture_title">Toca dues vegades per a posar en repòs</string>
     <string name="pref_sleep_gesture_summary">Toca dues voltes en un espai buit per a apagar la pantalla</string>
     <!-- Gradients on Workspace/Hotseat -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="workspace_gradient_title">Mostra el gradient a la part superior</string>
+    <string name="workspace_gradient_summary">Activa un gradient subtil en la barra d\'estat</string>
+    <string name="hotseat_gradient_title">Mostra el gradient a la part inferior</string>
+    <string name="hotseat_gradient_summary">Activa un gradient subtil en l\'acoblador del llançador</string>
     <!-- Swipe down to clear recents -->
     <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
     <string name="allow_swipe_down_clearall_desc">Doesn\'t works if P navbar gestures are enable</string>
