@@ -18,15 +18,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Preferències</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
+    <string name="home_category_title">Pàgina d\'inici</string>
+    <string name="home_category_summary">Configura el panel de «Google Now» i altres</string>
+    <string name="icons_category_title">Icones</string>
+    <string name="icons_category_summary">Configura la forma i altres opcions de les icones</string>
+    <string name="app_drawer_category_title">Calaix d\'aplicacions</string>
+    <string name="app_drawer_category_summary">Personalitzeu el calaix d\'aplicacions</string>
+    <string name="misc_category_title">Miscel·lània</string>
     <string name="misc_category_summary">Other options</string>
     <string name="recent_task_option_kill_app">Kill</string>
     <string name="recents_app_killed">App killed</string>
