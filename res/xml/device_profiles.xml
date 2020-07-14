@@ -18,6 +18,76 @@
 <profiles xmlns:launcher="http://schemas.android.com/apk/res-auto" >
 
     <grid-option
+        launcher:defaultLayoutId="@xml/default_workspace_6x6"
+        launcher:name="tiny"
+        launcher:numColumns="6"
+        launcher:numFolderColumns="6"
+        launcher:numFolderRows="6" 
+        launcher:numHotseatIcons="6" 
+        launcher:numRows="6">
+
+        <display-option
+            launcher:iconImageSize="48.0"
+            launcher:iconTextSize="12.0"
+            launcher:landscapeIconSize="50.0"
+            launcher:minHeightDps="659.0"
+            launcher:minWidthDps="387.0"
+            launcher:name="Pixel" />
+
+        <display-option
+            launcher:iconImageSize="46.0"
+            launcher:iconTextSize="12.0"
+            launcher:landscapeIconSize="44.0"
+            launcher:minHeightDps="568.0"
+            launcher:minWidthDps="296.0"
+            launcher:name="Pixel 2 XL (Display size set to Largest)" />
+
+        <display-option
+            launcher:iconImageSize="46.0"
+            launcher:iconTextSize="12.0"
+            launcher:landscapeIconSize="52.0"
+            launcher:minHeightDps="750.0"
+            launcher:minWidthDps="387.0"
+            launcher:name="Pixel 2 XL" />
+
+    </grid-option>
+
+    <grid-option
+        launcher:defaultLayoutId="@xml/default_workspace_5x6"
+        launcher:name="smaller"
+        launcher:numColumns="5"
+        launcher:numFolderColumns="5"
+        launcher:numFolderRows="6" 
+        launcher:numHotseatIcons="5" 
+        launcher:numRows="6">
+
+        <display-option
+            launcher:iconImageSize="52.0"
+            launcher:iconTextSize="12.0"
+            launcher:landscapeIconSize="52.0"
+            launcher:minHeightDps="659.0"
+            launcher:minWidthDps="387.0"
+            launcher:name="Pixel" />
+
+        <display-option
+            launcher:iconImageSize="50.0"
+            launcher:iconTextSize="12.0"
+            launcher:landscapeIconSize="48.0"
+            launcher:minHeightDps="568.0"
+            launcher:minWidthDps="296.0"
+            launcher:name="Pixel 2 XL (Display size set to Largest)" />
+
+        <display-option
+            launcher:iconImageSize="54.0"
+            launcher:iconTextSize="12.0"
+            launcher:landscapeIconSize="52.0"
+            launcher:minHeightDps="750.0"
+            launcher:minWidthDps="387.0"
+            launcher:name="Pixel 2 XL" />
+
+    </grid-option>
+
+    <grid-option
         launcher:defaultLayoutId="@xml/default_workspace_5x5"
         launcher:name="normal"
         launcher:numColumns="5"
@@ -52,6 +122,41 @@
             launcher:minHeightDps="750.0"
             launcher:minWidthDps="387.0"
             launcher:name="Pixel 2 XL" />
+
+    </grid-option>
+
+    <grid-option
+        launcher:defaultLayoutId="@xml/default_workspace_4x5"
+        launcher:name="bigger"
+        launcher:numColumns="4"
+        launcher:numFolderColumns="4"
+        launcher:numFolderRows="5"
+        launcher:numHotseatIcons="5"
+        launcher:numRows="5">
+
+        <display-option
+            launcher:iconImageSize="58.0"
+            launcher:iconTextSize="12.0"
+            launcher:landscapeIconSize="56.0"
+            launcher:minHeightDps="659.0"
+            launcher:minWidthDps="387.0"
+            launcher:name="Pixel" />
+
+        <display-option
+            launcher:iconImageSize="52.0"
+            launcher:iconTextSize="11.0"
+            launcher:landscapeIconSize="50.0"
+            launcher:minHeightDps="496.0"
+            launcher:minWidthDps="296.0"
+            launcher:name="Pixel (Display : Small)" />
+
+        <display-option
+            launcher:iconImageSize="64.0"
+            launcher:iconTextSize="14.0"
+            launcher:landscapeIconSize="60.0"
+            launcher:minHeightDps="754.0"
+            launcher:minWidthDps="449.0"
+            launcher:name="Pixel (Display : Largest)" />
 
     </grid-option>
 
