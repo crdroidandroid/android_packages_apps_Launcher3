@@ -18,17 +18,17 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">ڕێکخستنەکان</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
-    <string name="recent_task_option_kill_app">Kill</string>
+    <string name="home_category_title">پەڕەی ماڵەوە</string>
+    <string name="home_category_summary">دانانی تەختەی گوگڵ ناو و زیاتر</string>
+    <string name="icons_category_title">وێنۆچکەکان</string>
+    <string name="icons_category_summary">دانانی شێوەی وێنۆچکە و زیاتر</string>
+    <string name="app_drawer_category_title">لیستی ئەپەکان</string>
+    <string name="app_drawer_category_summary">دەسکاریکردنی لیستی ئەپەکانت</string>
+    <string name="misc_category_title">هەمەجۆر</string>
+    <string name="misc_category_summary">بژاردەکانیتر</string>
+    <string name="recent_task_option_kill_app">کوشتن</string>
     <string name="recents_app_killed">App killed</string>
     <!-- Folder titles -->
     <!-- DT2S -->
