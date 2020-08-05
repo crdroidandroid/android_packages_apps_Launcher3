@@ -30,4 +30,7 @@
 
     <!-- String representing the fragment class for recents view settings activity.-->
     <string name="recents_settings_fragment_name" translatable="false">com.android.launcher3.settings.SettingsRecents$RecentsSettingsFragment</string>
+
+    <!-- Icon pack -->
+    <string name="icon_pack_settings_class" translatable="false">com.android.launcher3.lineage.icon.IconPackSettingsFragment</string>
 </resources>
