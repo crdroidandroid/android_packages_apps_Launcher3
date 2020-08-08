@@ -29,7 +29,7 @@
     <string name="misc_category_title">Overige</string>
     <string name="misc_category_summary">Andere opties</string>
     <string name="recent_task_option_kill_app">Beëindigen</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recents_app_killed">App gestopt</string>
     <!-- Folder titles -->
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Dubbeltik om te slapen</string>
@@ -59,15 +59,15 @@
     <!-- Preference default value -->
     <string name="pref_value_default">Default</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">In een oogopslag</string>
+    <string name="show_quickspace_summary">Toon aan de bovenkant van je startscherm</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
-    <string name="quick_event_rom_intro_title1">Have a great day</string>
-    <string name="quick_event_rom_intro_title2">Thank you for choosing us</string>
-    <string name="quick_event_rom_intro_title3">Loving us? Send us a beer</string>
-    <string name="quick_event_rom_intro_title4">Best Rom Ever.</string>
+    <string name="quick_event_rom_intro_welcome">Welkom bij crDroid!</string>
+    <string name="quick_event_rom_intro_title1">Geniet van je dag!</string>
+    <string name="quick_event_rom_intro_title2">Bedankt dat je voor ons hebt gekozen</string>
+    <string name="quick_event_rom_intro_title3">Hou je van ons? Stuur ons een biertje</string>
+    <string name="quick_event_rom_intro_title4">Beste Rom ooit</string>
     <string name="quick_event_rom_intro_title5">Say hi to us on Telegram</string>
     <string name="quick_event_rom_intro_title6">Tap here to begin</string>
     <string name="quick_event_rom_intro_title7">We love you 3000</string>
