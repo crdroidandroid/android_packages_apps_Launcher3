@@ -68,55 +68,55 @@
     <string name="quick_event_rom_intro_title2">Bedankt dat je voor ons hebt gekozen</string>
     <string name="quick_event_rom_intro_title3">Hou je van ons? Stuur ons een biertje</string>
     <string name="quick_event_rom_intro_title4">Beste Rom ooit</string>
-    <string name="quick_event_rom_intro_title5">Say hi to us on Telegram</string>
-    <string name="quick_event_rom_intro_title6">Tap here to begin</string>
-    <string name="quick_event_rom_intro_title7">We love you 3000</string>
+    <string name="quick_event_rom_intro_title5">Zeg hallo tegen ons op Telegram</string>
+    <string name="quick_event_rom_intro_title6">Tik hier om te beginnen</string>
+    <string name="quick_event_rom_intro_title7">We houden van je 3000</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
+    <string name="quick_event_ambient_now_playing">Speelt nu</string>
     <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
+    <string name="quickspace_alternate_style_title">Gebruik een alternatieve stijl</string>
+    <string name="quickspace_alternate_style_summary">Gebruik een minimalistische stijl voor At a Glance</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
+    <string name="quickspace_now_playing_title">Toon nu aan het spelen</string>
+    <string name="quickspace_now_playing_summary">Toont het liedje dat je speelt op At a Glance. WAARSCHUWING: Het is niet volledig compatibel met alle mediaspelers!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">Laat een willekeurig bericht zien</string>
+    <string name="quickspace_psa_summary">Laat sommige leuke berichten soms zien op At a Glance.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Goedemorgen!</item>
+        <item>Goedemorgen, tijd om te rocken!</item>
+        <item>Wat een mooie dag!</item>
+        <item>Geniet van je dag!</item>
+        <item>Wat denk je van een 5 minuten dutje?</item>
+        <item>Dat is één manier om wakker te worden.</item>
+        <item>U moet uw alarmgeluiden wijzigen.</item>
+        <item>Het lijkt erop dat het een mooie dag is, nietwaar?</item>
+        <item>Laten we dit doen.</item>
+        <item>Controleer het weer in het geval van</item>
+        <item>Voel je je al een beetje slaperig?</item>
+        <item>Heb je al naar buiten gekeken?</item>
+        <item>Laten we dit doen.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>Goede nacht!</item>
+        <item>Slaap lekker!</item>
+        <item>Tot morgen!</item>
+        <item>Droom zacht!</item>
+        <item>Niet te lang opblijven</item>
+        <item>Geniet van een goede slaap</item>
+        <item>Slaap maar wat</item>
+        <item>Tijd om te ontspannen</item>
+        <item>Geniet van de nacht!</item>
+        <item>Tijd om de batterijen op te laden!</item>
+        <item>Morgen kan een geweldige dag zijn</item>
+        <item>Maak je klaar voor morgen</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Um... goede nacht?</item>
+        <item>Het is nu een beetje laat</item>
+        <item>Je moet je slaapschema verbeteren</item>
+        <item>Ben je productiever op dit moment?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Ignorance is Bliss</item>
