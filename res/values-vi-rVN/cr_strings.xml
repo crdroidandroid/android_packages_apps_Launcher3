@@ -79,23 +79,23 @@
     <string name="quickspace_alternate_style_summary">Sử dụng phong cách tối giản cho Xem nhanh</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Hiện đang phát</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
+    <string name="quickspace_now_playing_summary">Hiện bài hát bạn đang phát trên xem nhanh. CHÚ Ý: nó không tương thích với tất cả trình phát!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Hiển thị một tin nhắn ngẫu nhiên</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_summary">Đôi khi hiển thị một số thông điệp tốt đẹp trên Xem nhanh.</string>
     <string-array name="quickspace_psa_morning">
         <item>Chào buổi sáng!</item>
         <item>Chào buổi sáng, đến giờ quẩy rồi!</item>
         <item>Thật là một ngày đẹp trời!</item>
         <item>Chúc bạn một ngày tốt lành!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
+        <item>Còn một giấc ngủ ngắn 5 phút thì sao?</item>
+        <item>Đó là một cách để thức dậy.</item>
+        <item>Bạn nên thay đổi âm báo của bạn.</item>
+        <item>Có vẻ như đó là một ngày đẹp trời, phải không?</item>
+        <item>Hãy lấy bánh mì này.</item>
+        <item>Kiểm tra thời tiết cẩn thận</item>
+        <item>Cảm thấy hơi buồn ngủ</item>
+        <item>Bạn đã thử nhìn ra ngoài chưa?</item>
         <item>Hãy hoàn thành nó.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
@@ -104,29 +104,29 @@
         <item>Hẹn gặp bạn vào ngày mai!</item>
         <item>Chúc bạn có những giấc mơ đẹp!</item>
         <item>Đừng ngủ quá muộn nhé</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
+        <item>Có một giấc ngủ ngon</item>
+        <item>Có được một giấc ngủ</item>
         <item>Đến giờ giải lao rồi</item>
         <item>Tận hưởng buổi tối!</item>
         <item>Thời gian để sạc pin!</item>
         <item>Ngày mai có thể là một ngày tuyệt vời</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>Chuẩn bị sẵn sàng cho ngày mai</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
         <item>Ừm... chúc ngủ ngon?</item>
         <item>Bây giờ hơi muộn</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Bạn nên sửa lịch ngủ</item>
+        <item>Bạn có năng lực hơn vào lúc này không?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
-        <item>Hyped about Android 10?</item>
+        <item>Điếc không sợ súng</item>
+        <item>Đã đến lúc flash bản cập nhật khác chưa?</item>
+        <item>Thổi phồng về Android 10?</item>
         <item>Oh này, có chuyện gì thế?</item>
         <item>Hãy tập chung vào nhiệm vụ</item>
         <item>Bạn chụp bao nhiêu ảnh chụp màn hình?</item>
-        <item>Open goodness with crDroid</item>
-        <item>Spread love not havoc</item>
+        <item>Mở thứ tốt nhất với crDroid</item>
+        <item>Lan tỏa tình yêu thương không tàn phá</item>
         <item>Chúc vui vẻ!</item>
         <item>Time for some good music</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
