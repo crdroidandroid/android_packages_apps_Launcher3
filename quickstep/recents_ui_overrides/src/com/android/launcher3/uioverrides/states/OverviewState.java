@@ -143,7 +143,7 @@ public class OverviewState extends LauncherState {
             boolean hasAllAppsHeaderExtra = launcher.getAppsView() != null
                     && launcher.getAppsView().getFloatingHeaderView().hasVisibleContent();
             return HOTSEAT_SEARCH_BOX | VERTICAL_SWIPE_INDICATOR | RECENTS_CLEAR_ALL_BUTTON |
-                    (hasAllAppsHeaderExtra ? ALL_APPS_HEADER_EXTRA : HOTSEAT_ICONS);
+                    HOTSEAT_ICONS;
         }
     }
 
