@@ -147,7 +147,7 @@ public final class FeatureFlags {
             "ENABLE_OVERVIEW_SELECTIONS", true, "Show Select Mode button in Overview Actions");
 
     public static final BooleanFlag ENABLE_OVERVIEW_SHARE = getDebugFlag(
-            "ENABLE_OVERVIEW_SHARE", false, "Show Share button in Overview Actions");
+            "ENABLE_OVERVIEW_SHARE", true, "Show Share button in Overview Actions");
 
     public static final BooleanFlag ENABLE_DATABASE_RESTORE = getDebugFlag(
             "ENABLE_DATABASE_RESTORE", true,
