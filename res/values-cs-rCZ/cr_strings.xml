@@ -46,22 +46,22 @@
     <string name="google_feed_title">Zobrazit kanál Objevit</string>
     <string name="google_feed_summary">Nalevo od domovské obrazovky</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info.</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="app_info_subtext">Přejetím dolů informace o\u00a0aplikaci zavřete.</string>
+    <string name="placeholder_string">Načítání...</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_icon_pack">Icon pack</string>
-    <string name="app_info_icon_pack_none">None</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_unknown">Unknown</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_icon_pack">Balíček ikon</string>
+    <string name="app_info_icon_pack_none">Žádný</string>
+    <string name="app_info_source">Zdroj</string>
+    <string name="app_info_source_unknown">Neznámý</string>
+    <string name="app_info_last_update">Poslední aktualizace</string>
+    <string name="app_info_version">Verze</string>
+    <string name="app_info_more">Více</string>
     <!-- Preference default value -->
-    <string name="pref_value_default">Default</string>
+    <string name="pref_value_default">Výchozí</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Přehled událostí</string>
     <string name="show_quickspace_summary">Zobrazit v\u00a0horní části domovské obrazovky</string>
-    <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
+    <string name="abbrev_wday_month_day_no_year">EEEEdMMM</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Vítejte v\u00a0crDroidu!</string>
     <string name="quick_event_rom_intro_title1">Mějte se fanfárově!</string>
@@ -73,7 +73,7 @@
     <string name="quick_event_rom_intro_title7">Milujeme tě 3000</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">Co to hraje</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_song_artist">%1$s od %2$s</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">Použít alternativní styl</string>
     <string name="quickspace_alternate_style_summary">Použít minimalistický styl zobrazení Přehledu událostí</string>
