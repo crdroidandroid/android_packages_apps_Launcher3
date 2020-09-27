@@ -46,13 +46,13 @@
     <string name="google_feed_title">Google app weergeven</string>
     <string name="google_feed_summary">Links van het standaard thuisscherm</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info.</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="app_info_subtext">Veeg omlaag om app info te sluiten.</string>
+    <string name="placeholder_string">Bezig met laden...</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_icon_pack">Icon pack</string>
-    <string name="app_info_icon_pack_none">None</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_unknown">Unknown</string>
+    <string name="app_info_icon_pack">Icoon pakket</string>
+    <string name="app_info_icon_pack_none">Geen</string>
+    <string name="app_info_source">Bron</string>
+    <string name="app_info_source_unknown">Onbekend</string>
     <string name="app_info_last_update">Last update</string>
     <string name="app_info_version">Version</string>
     <string name="app_info_more">More</string>
