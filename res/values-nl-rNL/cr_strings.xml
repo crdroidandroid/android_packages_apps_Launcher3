@@ -53,11 +53,11 @@
     <string name="app_info_icon_pack_none">Geen</string>
     <string name="app_info_source">Bron</string>
     <string name="app_info_source_unknown">Onbekend</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_last_update">Laatst bijgewerkt</string>
+    <string name="app_info_version">Versie</string>
+    <string name="app_info_more">Meer</string>
     <!-- Preference default value -->
-    <string name="pref_value_default">Default</string>
+    <string name="pref_value_default">Standaard</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">In een oogopslag</string>
     <string name="show_quickspace_summary">Toon aan de bovenkant van je startscherm</string>
@@ -73,7 +73,7 @@
     <string name="quick_event_rom_intro_title7">We houden van je 3000</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">Speelt nu</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_song_artist">%1$s door %2$s</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">Gebruik een alternatieve stijl</string>
     <string name="quickspace_alternate_style_summary">Gebruik een minimalistische stijl voor At a Glance</string>
