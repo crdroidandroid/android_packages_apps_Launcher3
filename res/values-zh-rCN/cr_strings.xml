@@ -53,11 +53,11 @@
     <string name="app_info_icon_pack_none">无</string>
     <string name="app_info_source">来源</string>
     <string name="app_info_source_unknown">未知</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_last_update">上次更新</string>
+    <string name="app_info_version">版本</string>
+    <string name="app_info_more">更多</string>
     <!-- Preference default value -->
-    <string name="pref_value_default">Default</string>
+    <string name="pref_value_default">默认值</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">速览</string>
     <string name="show_quickspace_summary">在主屏幕的顶部显示</string>
@@ -73,7 +73,7 @@
     <string name="quick_event_rom_intro_title7">我们爱你 3000 遍（by Tony Stark）</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">正在播放</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_song_artist">%1$s 作者 %2$s</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">使用其他风格</string>
     <string name="quickspace_alternate_style_summary">最简化以便于快速查看</string>
