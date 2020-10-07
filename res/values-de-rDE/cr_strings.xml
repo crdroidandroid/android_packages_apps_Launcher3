@@ -21,7 +21,7 @@
     <string name="settings_title">Einstellungen</string>
     <!-- Categories -->
     <string name="home_category_title">Startbildschirm</string>
-    <string name="home_category_summary">Google Now-Panel und mehr einstellen</string>
+    <string name="home_category_summary">Google Now-Panel einstellen und mehr</string>
     <string name="icons_category_title">Symbole</string>
     <string name="icons_category_summary">Symbolform und mehr einstellen</string>
     <string name="app_drawer_category_title">App-Übersicht</string>
@@ -40,7 +40,7 @@
     <string name="hotseat_gradient_title">Farbverlauf anzeigen unten</string>
     <string name="hotseat_gradient_summary">Einen ab­ge­stuften Farbverlauf des Launcher-Dock aktivieren</string>
     <!-- Swipe down to clear recents -->
-    <string name="allow_swipe_down_clearall_title">In der kürzlich verwendeten App-Ansicht nach unten wischen beendet alles</string>
+    <string name="allow_swipe_down_clearall_title">Nach unten wischen in der App-Ansicht beendet alle laufenden Apps</string>
     <string name="allow_swipe_down_clearall_desc">Funktioniert nicht, wenn Pie-Navigationsleisten-Gesten aktiviert sind</string>
     <!-- Google Feed -->
     <string name="google_feed_title">Google App anzeigen</string>
@@ -108,7 +108,7 @@
         <item>Gönn dir etwas Schlaf</item>
         <item>Zeit zum Entspannen</item>
         <item>Genieße die Nacht!</item>
-        <item>Zeit zum Akku aufladen!</item>
+        <item>Zeit zum Akkus aufladen!</item>
         <item>Morgen könnte ein großer Tag sein</item>
         <item>Deine Knochen für morgen vorbereiten</item>
     </string-array>
