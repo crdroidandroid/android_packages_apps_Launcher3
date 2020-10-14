@@ -67,6 +67,9 @@
         <favorite
             launcher:packageName="com.android.camera2"
             launcher:className="com.android.camera.CameraActivity" />
+        <favorite
+            launcher:packageName="com.android.camera"
+            launcher:className="com.android.camera.Camera" />
     </resolve>
 
 </favorites>
