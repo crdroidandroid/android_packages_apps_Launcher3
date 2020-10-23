@@ -131,6 +131,10 @@ public class SingleAxisSwipeDetector extends BaseSwipeDetector {
         return mDir.isPositive(mDir.extractDirection(mSubtractDisplacement));
     }
 
+    public boolean wasInitialTouchNegative() {
+        return mDir.extractDirection(mSubtractDisplacement) > 0;
+    }
+
     @Override
     protected boolean shouldScrollStart(PointF displacement) {
         // Reject cases where the angle or slop condition is not met.

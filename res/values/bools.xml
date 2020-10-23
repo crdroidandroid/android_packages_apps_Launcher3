@@ -20,4 +20,6 @@
     <bool name="notification_dots_enabled">false</bool>
 
     <bool name="enable_install_shortcut_api">true</bool>
+
+    <bool name="allow_swipe_down_clearall">false</bool>
 </resources>
