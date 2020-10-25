@@ -46,18 +46,18 @@
     <string name="google_feed_title">गूगल ऐप प्रदर्शित करें</string>
     <string name="google_feed_summary">मुख्य होम स्क्रीन के बाईं ओर</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info.</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="app_info_subtext">इस ऐप को बंद करने के लिए नीचे स्वाइप करें|</string>
+    <string name="placeholder_string">प्रस्तुत होने जा रहा है...</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_icon_pack">Icon pack</string>
-    <string name="app_info_icon_pack_none">None</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_unknown">Unknown</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_icon_pack">आइकॉन पैक</string>
+    <string name="app_info_icon_pack_none">कुछ भी नहीं है</string>
+    <string name="app_info_source">स्रोत</string>
+    <string name="app_info_source_unknown">अज्ञात</string>
+    <string name="app_info_last_update">पिछला अपडेट</string>
+    <string name="app_info_version">संस्करण</string>
+    <string name="app_info_more">अधिक</string>
     <!-- Preference default value -->
-    <string name="pref_value_default">Default</string>
+    <string name="pref_value_default">पूर्व निर्धारित</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">एक नज़र में</string>
     <string name="show_quickspace_summary">अपनी होम स्क्रीन के सबसे ऊपर देखे</string>
@@ -65,7 +65,7 @@
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">crDroid में आपका स्वागत है</string>
     <string name="quick_event_rom_intro_title1">आपका दिन मंगलमय हो!</string>
-    <string name="quick_event_rom_intro_title2">Thank you for choosing us</string>
+    <string name="quick_event_rom_intro_title2">हमें चुनने के लिए धन्यवाद</string>
     <string name="quick_event_rom_intro_title3">Loving us? Send us a beer</string>
     <string name="quick_event_rom_intro_title4">Best Rom Ever.</string>
     <string name="quick_event_rom_intro_title5">Say hi to us on Telegram</string>
