@@ -36,7 +36,6 @@ import com.android.launcher3.statemanager.StateManager.StateHandler;
 import com.android.launcher3.states.StateAnimationConfig;
 import com.android.launcher3.util.MultiValueAlpha;
 import com.android.quickstep.RecentsActivity;
-import com.android.quickstep.views.ClearAllButton;
 
 /**
  * State controller for fallback recents activity
@@ -74,9 +73,6 @@ public class FallbackRecentsStateController implements StateHandler<RecentsState
 
     private void setProperties(RecentsState state, StateAnimationConfig config,
             PropertySetter setter) {
-        float clearAllButtonAlpha = state.hasClearAllButton() ? 1 : 0;
-        setter.setFloat(mRecentsView.getClearAllButton(), ClearAllButton.VISIBILITY_ALPHA,
-                clearAllButtonAlpha, LINEAR);
         float overviewButtonAlpha =
                 state.hasOverviewActions() && mRecentsView.shouldShowOverviewActionsForState(state)
                         ? 1 : 0;

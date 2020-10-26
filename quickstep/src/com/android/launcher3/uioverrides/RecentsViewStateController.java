@@ -40,7 +40,6 @@ import com.android.launcher3.anim.PendingAnimation;
 import com.android.launcher3.anim.PropertySetter;
 import com.android.launcher3.states.StateAnimationConfig;
 import com.android.launcher3.util.MultiValueAlpha;
-import com.android.quickstep.views.ClearAllButton;
 import com.android.quickstep.views.LauncherRecentsView;
 import com.android.quickstep.views.RecentsView;
 
@@ -103,9 +102,6 @@ public final class RecentsViewStateController extends
 
     private void setAlphas(PropertySetter propertySetter, StateAnimationConfig config,
             LauncherState state) {
-        float clearAllButtonAlpha = state.areElementsVisible(mLauncher, CLEAR_ALL_BUTTON) ? 1 : 0;
-        propertySetter.setFloat(mRecentsView.getClearAllButton(), ClearAllButton.VISIBILITY_ALPHA,
-                clearAllButtonAlpha, LINEAR);
         float overviewButtonAlpha = state.areElementsVisible(mLauncher, OVERVIEW_ACTIONS)
                 && mRecentsView.shouldShowOverviewActionsForState(state) ? 1 : 0;
         propertySetter.setFloat(mLauncher.getActionsView().getVisibilityAlpha(),
