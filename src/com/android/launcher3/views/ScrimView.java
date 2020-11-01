@@ -77,6 +77,8 @@ import com.android.launcher3.util.MultiValueAlpha.AlphaProperty;
 import com.android.launcher3.util.Themes;
 import com.android.launcher3.widget.WidgetsFullSheet;
 
+import com.android.systemui.shared.system.BlurUtils;
+
 import java.util.List;
 
 /**
@@ -157,7 +159,9 @@ public class ScrimView<T extends Launcher> extends View implements Insettable, O
         super(context, attrs);
         mLauncher = Launcher.cast(Launcher.getLauncher(context));
         mWallpaperColorInfo = WallpaperColorInfo.INSTANCE.get(context);
-        mEndScrim = Themes.getAttrColor(context, R.attr.allAppsScrimColor);
+        int scrimColorResId = BlurUtils.supportsBlursOnWindows() ? R.attr.allAppsScrimColor
+                : R.attr.allAppsScrimBlurDisabledColor;
+        mEndScrim = Themes.getAttrColor(context, scrimColorResId);
         mIsScrimDark = ColorUtils.calculateLuminance(mEndScrim) < 0.5f;
 
         mMaxScrimAlpha = 0.7f;
