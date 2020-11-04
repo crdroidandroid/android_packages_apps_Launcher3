@@ -181,4 +181,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Show dock search widget -->
     <string name="dock_search_title">Google search bar</string>
     <string name="dock_search_summary">Show search bar in the bottom dock</string>
+
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Suggestions</string>
+    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
 </resources>
