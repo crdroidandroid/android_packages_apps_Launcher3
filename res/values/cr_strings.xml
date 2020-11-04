@@ -243,4 +243,8 @@
         <item>Winner Winner ....?</item>
         <item>rm -rf \/</item>
     </string-array>
+    
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Suggestions</string>
+    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
 </resources>
