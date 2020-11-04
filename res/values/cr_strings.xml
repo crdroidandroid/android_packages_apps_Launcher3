@@ -77,4 +77,8 @@
     <string name="work_apps_enable_btn_text_calyx">Turn on work apps</string>
     <string name="work_apps_paused_info_body_custom">Your work apps can’t send you notifications, use your battery, or access your location</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps can’t receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Suggestions</string>
+    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
 </resources>
