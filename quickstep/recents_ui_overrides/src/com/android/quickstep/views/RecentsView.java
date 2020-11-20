@@ -55,7 +55,9 @@ import android.animation.LayoutTransition.TransitionListener;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
+import android.app.ActivityManager;
 import android.app.ActivityManager.RunningTaskInfo;
+import android.app.IActivityManager;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Canvas;
@@ -269,6 +271,7 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
     private final RecentsModel mModel;
     private final int mTaskTopMargin;
     private Button mClearAllButton;
+    private Button mKillAppButton;
     private final Rect mTaskViewDeadZoneRect = new Rect();
 
     private final ScrollState mScrollState = new ScrollState();
@@ -548,6 +551,8 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
         mActionsView.updateHiddenFlags(HIDDEN_NO_TASKS, getTaskViewCount() == 0);
         mClearAllButton = (Button) mActionsView.findViewById(R.id.clear_all);
         mClearAllButton.setOnClickListener(this::dismissAllTasks);
+        mKillAppButton = (Button) mActionsView.findViewById(R.id.kill_app);
+        mKillAppButton.setOnClickListener(this::killTask);
     }
 
     @Override
@@ -1589,6 +1594,22 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
     private void dismissAllTasks(View view) {
         runDismissAnimation(createAllTasksDismissAnimation(DISMISS_TASK_DURATION));
         mActivity.getUserEventDispatcher().logActionOnControl(TAP, CLEAR_ALL_BUTTON);
+    }
+
+    @SuppressWarnings("unused")
+    private void killTask(View view) {
+        IActivityManager am = ActivityManager.getService();
+        TaskView tv = getNextPageTaskView();
+        Task task = tv.getTask();
+        String pkgname = task.key.getPackageName();
+        if (task != null) {
+            try {
+                am.killBackgroundProcesses(pkgname, UserHandle.USER_CURRENT);
+            } catch (Throwable t) {
+                //TODO: handle exception
+            }
+            dismissTask(tv, true, true);
+        }
     }
 
     private void dismissCurrentTask() {
