@@ -116,7 +116,6 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
         findViewById(R.id.action_screenshot).setOnClickListener(this);
         if (ENABLE_OVERVIEW_SHARE.get()) {
             share.setVisibility(VISIBLE);
-            findViewById(R.id.share_space).setVisibility(VISIBLE);
         }
     }
 
