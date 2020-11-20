@@ -26,13 +26,9 @@
         android:layout_gravity="center"
         android:orientation="horizontal">
 
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" />
-
         <Button
             android:id="@+id/action_screenshot"
+            android:layout_weight="1"
             style="@style/OverviewActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,13 +36,9 @@
             android:text="@string/action_screenshot"
             android:theme="@style/ThemeControlHighlightWorkspaceColor" />
 
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" />
-
         <Button
             style="@style/OverviewActionButton"
+            android:layout_weight="1"
             android:id="@+id/clear_all"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,13 +47,20 @@
             android:drawableStart="@drawable/ic_clear_all_recents"
             />
 
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" />
+        <Button
+            style="@style/OverviewActionButton"
+            android:layout_weight="1"
+            android:id="@+id/kill_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recents_kill_app"
+            android:theme="@style/ThemeControlHighlightWorkspaceColor"
+            android:drawableStart="@drawable/ic_kill_app_recents"
+            />
 
         <Button
             android:id="@+id/action_share"
+            android:layout_weight="1"
             style="@style/OverviewActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,12 +69,6 @@
             android:theme="@style/ThemeControlHighlightWorkspaceColor"
             android:visibility="gone" />
 
-        <Space
-            android:id="@+id/share_space"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"
-            android:visibility="gone" />
     </LinearLayout>
 
 </com.android.quickstep.views.OverviewActionsView>
