@@ -79,16 +79,16 @@
     <string name="quickspace_alternate_style_summary">ᱡᱷᱚᱞᱚᱠ ᱞᱟᱹᱜᱤᱫᱽ ᱠᱚᱢᱥᱚᱠᱚᱢ ᱥᱴᱟᱭᱤᱞ ᱵᱮᱵᱷᱟᱨ ᱢᱮᱸ</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">ᱱᱤᱛᱚᱜᱽ ᱫᱮᱠᱷᱟᱣᱢᱮᱸ ᱯᱞᱮᱜᱽ ᱠᱟᱱᱟ</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
+    <string name="quickspace_now_playing_summary">ᱡᱷᱚᱞᱚᱠ ᱨᱮ ᱡᱟᱦᱟᱸ ᱯᱞᱮᱜᱽ ᱠᱟᱱᱟ ᱥᱮᱨᱮᱧ ᱠᱚ ᱫᱮᱠᱷᱟᱣᱟᱭ ᱾ ᱦᱤᱥᱤᱭᱟᱨᱺ ᱱᱚᱶᱟ ᱡᱷᱚᱛᱚ ᱢᱮᱰᱤᱭᱟ ᱯᱞᱮᱭᱟᱹᱨ ᱥᱟᱞᱟᱜᱽ ᱵᱟᱭ ᱠᱟᱹᱢᱤᱟᱭ!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">ᱨᱮᱱᱰᱚᱢ ᱠᱷᱚᱵᱚᱨ ᱫᱮᱠᱷᱟᱣᱢᱮᱸ</string>
+    <string name="quickspace_psa_summary">ᱡᱷᱚᱞᱚᱠ ᱨᱮ ᱚᱠᱟᱡᱷᱚᱜᱽ ᱡᱟᱦᱟᱱᱟᱜᱽ ᱵᱮᱥ ᱠᱷᱚᱵᱚᱨ ᱫᱚᱠᱷᱟᱣᱢᱮᱸ ᱾</string>
     <string-array name="quickspace_psa_morning">
         <item>ᱥᱟᱹᱜᱩᱱ ᱥᱮᱛᱟᱜᱽ!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
+        <item>ᱥᱟᱹᱜᱤᱱ ᱥᱮᱛᱟᱜᱽ, ᱨᱚᱠ ᱨᱮᱭᱟᱜᱽ ᱚᱠᱛᱚ!</item>
+        <item>ᱟᱹᱰᱤ ᱵᱮᱥ ᱫᱤᱱ ᱠᱟᱱᱟ!</item>
+        <item>ᱵᱮᱥ ᱫᱤᱱ ᱛᱟᱦᱮᱸ ᱢᱟ!</item>
+        <item>᱕ ᱴᱤᱯᱤᱡᱽ ᱱᱮᱯ ᱪᱮᱫᱮᱢ ᱢᱮᱱᱮᱜᱼᱟ?</item>
         <item>That\'s one way to wake up.</item>
         <item>You should change your alarm sounds.</item>
         <item>Looks like it\'s a beautiful day, isn\'t it?</item>
