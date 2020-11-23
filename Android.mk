@@ -60,8 +60,8 @@ LOCAL_PROTOC_OPTIMIZE_TYPE := nano
 LOCAL_PROTOC_FLAGS := --proto_path=$(LOCAL_PATH)/protos/ --proto_path=$(LOCAL_PATH)/proto_overrides/
 LOCAL_PROTO_JAVA_OUTPUT_PARAMS := enum_style=java
 
-LOCAL_SDK_VERSION := current
-LOCAL_MIN_SDK_VERSION := 26
+LOCAL_PRIVATE_PLATFORM_APIS := true
+LOCAL_CERTIFICATE := platform
 LOCAL_MODULE := Launcher3CommonDepsLib
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_MANIFEST_FILE := AndroidManifest-common.xml
@@ -89,8 +89,8 @@ LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 # Proguard is disable for testing. Derivarive prjects to keep proguard enabled
 LOCAL_PROGUARD_ENABLED := disabled
 
-LOCAL_SDK_VERSION := current
-LOCAL_MIN_SDK_VERSION := 26
+LOCAL_PRIVATE_PLATFORM_APIS := true
+LOCAL_CERTIFICATE := platform
 LOCAL_PACKAGE_NAME := Launcher3
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_SYSTEM_EXT_MODULE := true
@@ -121,8 +121,8 @@ LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/go/res
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
-LOCAL_SDK_VERSION := current
-LOCAL_MIN_SDK_VERSION := 26
+LOCAL_PRIVATE_PLATFORM_APIS := true
+LOCAL_CERTIFICATE := platform
 LOCAL_PACKAGE_NAME := Launcher3Go
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_SYSTEM_EXT_MODULE := true
@@ -151,12 +151,9 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     SystemUISharedLib \
     launcherprotosnano \
     launcher_log_protos_lite
-ifneq (,$(wildcard frameworks/base))
-  LOCAL_PRIVATE_PLATFORM_APIS := true
-else
-  LOCAL_SDK_VERSION := system_current
-  LOCAL_MIN_SDK_VERSION := 26
-endif
+
+LOCAL_PRIVATE_PLATFORM_APIS := true
+LOCAL_CERTIFICATE := platform
 LOCAL_MODULE := Launcher3QuickStepLib
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_STATIC_ANDROID_LIBRARIES := Launcher3CommonDepsLib
@@ -186,12 +183,9 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_STATIC_ANDROID_LIBRARIES := Launcher3QuickStepLib
 LOCAL_PROGUARD_ENABLED := disabled
 
-ifneq (,$(wildcard frameworks/base))
-  LOCAL_PRIVATE_PLATFORM_APIS := true
-else
-  LOCAL_SDK_VERSION := system_current
-  LOCAL_MIN_SDK_VERSION := 26
-endif
+
+LOCAL_PRIVATE_PLATFORM_APIS := true
+LOCAL_CERTIFICATE := platform
 LOCAL_PACKAGE_NAME := Launcher3QuickStep
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_SYSTEM_EXT_MODULE := true
@@ -225,12 +219,9 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     SystemUISharedLib \
     launcherprotosnano \
     launcher_log_protos_lite
-ifneq (,$(wildcard frameworks/base))
-  LOCAL_PRIVATE_PLATFORM_APIS := true
-else
-  LOCAL_SDK_VERSION := system_current
-  LOCAL_MIN_SDK_VERSION := 26
-endif
+
+LOCAL_PRIVATE_PLATFORM_APIS := true
+LOCAL_CERTIFICATE := platform
 LOCAL_STATIC_ANDROID_LIBRARIES := Launcher3CommonDepsLib
 
 LOCAL_SRC_FILES := \
