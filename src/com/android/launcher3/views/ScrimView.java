@@ -100,7 +100,7 @@ public class ScrimView<T extends Launcher> extends View implements Insettable, O
             };
     private static final int WALLPAPERS = R.string.wallpaper_button_text;
     private static final int WIDGETS = R.string.widget_button_text;
-    private static final int SETTINGS = R.string.settings_button_text;
+    private static final int SETTINGS = R.string.settings_title;
     private static final int ALPHA_CHANNEL_COUNT = 1;
 
     private static final long DRAG_HANDLE_BOUNCE_DURATION_MS = 300;
