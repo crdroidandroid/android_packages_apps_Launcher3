@@ -7,4 +7,13 @@
         android:title="@string/drawer_show_labels"
         android:defaultValue="true"
         android:persistent="true" />
+
+    <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+        android:key="pref_all_apps_scrim_alpha"
+        android:title="@string/all_apps_background_opacity_title"
+        android:persistent="true"
+        android:max="100"
+        android:min="0"
+        settings:units="%"
+        android:defaultValue="100" />
 </androidx.preference.PreferenceScreen>
