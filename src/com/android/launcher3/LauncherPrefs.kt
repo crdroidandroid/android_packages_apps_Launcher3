@@ -32,7 +32,7 @@ import com.android.launcher3.pm.InstallSessionHelper
 import com.android.launcher3.popup.ui.ExpandedSection
 import com.android.launcher3.provider.RestoreDbTask
 import com.android.launcher3.provider.RestoreDbTask.Companion.FIRST_LOAD_AFTER_RESTORE_KEY
-import com.android.launcher3.settings.SettingsActivity
+import com.android.launcher3.settings.SettingsMisc
 import com.android.launcher3.util.DaggerSingletonObject
 import com.android.launcher3.util.DefaultsValueProvider
 import java.util.concurrent.ConcurrentHashMap
@@ -318,7 +318,7 @@ constructor(@ApplicationContext private val encryptedContext: Context) {
         @JvmField val ENABLE_COMPOSITION_TRACING = backedUpItem(COMPOSITION_TRACING_PREF_KEY, false)
 
         @JvmField
-        val FIXED_LANDSCAPE_MODE = backedUpItem(SettingsActivity.FIXED_LANDSCAPE_MODE, false)
+        val FIXED_LANDSCAPE_MODE = backedUpItem(SettingsMisc.FIXED_LANDSCAPE_MODE, false)
 
         @JvmField
         val WORKSPACE_ITEMS_LABEL_HIDDEN = backedUpItem("pref_workspace_items_label_hidden", false)

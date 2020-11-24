@@ -139,7 +139,7 @@ object WorkspaceLongPressOptions {
         add(
             PopupData(
                 R.drawable.ic_setting,
-                R.string.settings_button_text,
+                R.string.settings_title,
                 SYSTEM_SHORTCUT,
                 LAUNCHER_SETTINGS_BUTTON_TAP_OR_LONGPRESS,
             ) { ac, _, _ ->

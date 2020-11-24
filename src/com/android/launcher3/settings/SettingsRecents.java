@@ -49,7 +49,7 @@ import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 /**
  * Settings activity for Launcher.
  */
-public class SettingsActivity extends CollapsingToolbarBaseActivity
+public class SettingsRecents extends CollapsingToolbarBaseActivity
         implements OnPreferenceStartFragmentCallback, OnPreferenceStartScreenCallback {
 
     public static final String EXTRA_FRAGMENT_ARGS = ":settings:fragment_args";
@@ -88,7 +88,7 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
 
             final FragmentManager fm = getSupportFragmentManager();
             final Fragment f = fm.getFragmentFactory().instantiate(getClassLoader(),
-                    getString(R.string.settings_fragment_name));
+                    getString(R.string.recents_settings_fragment_name));
             f.setArguments(args);
             // Display the fragment as the main content.
             fm.beginTransaction().replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame, f).commit();
@@ -107,7 +107,7 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
             f.setArguments(args);
             ((DialogFragment) f).show(fm, key);
         } else {
-            startActivity(new Intent(this, SettingsActivity.class)
+            startActivity(new Intent(this, SettingsRecents.class)
                     .putExtra(EXTRA_FRAGMENT_ARGS, args));
         }
         return true;
@@ -123,7 +123,7 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
     public boolean onPreferenceStartScreen(PreferenceFragmentCompat caller, PreferenceScreen pref) {
         Bundle args = new Bundle();
         args.putString(ARG_PREFERENCE_ROOT, pref.getKey());
-        return startPreference(getString(R.string.settings_title), args, pref.getKey());
+        return startPreference(getString(R.string.recents_category_title), args, pref.getKey());
     }
 
     @Override
@@ -138,7 +138,7 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
     /**
      * This fragment shows the launcher preferences.
      */
-    public static class LauncherSettingsFragment extends PreferenceFragmentCompat {
+    public static class RecentsSettingsFragment extends PreferenceFragmentCompat {
 
         private boolean mRestartOnResume = false;
 
@@ -161,7 +161,7 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
             }
 
             getPreferenceManager().setSharedPreferencesName(LauncherFiles.SHARED_PREFERENCES_KEY);
-            setPreferencesFromResource(R.xml.launcher_preferences, rootKey);
+            setPreferencesFromResource(R.xml.launcher_recents_preferences, rootKey);
 
             PreferenceScreen screen = getPreferenceScreen();
 
