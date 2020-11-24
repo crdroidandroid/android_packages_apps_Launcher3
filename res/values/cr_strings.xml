@@ -156,4 +156,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Font size -->
     <string name="font_size_title">Font size</string>
+
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">Background opacity</string>
 </resources>
