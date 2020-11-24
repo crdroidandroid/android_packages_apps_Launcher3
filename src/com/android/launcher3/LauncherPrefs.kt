@@ -27,7 +27,7 @@ import com.android.launcher3.model.DeviceGridState
 import com.android.launcher3.pm.InstallSessionHelper
 import com.android.launcher3.provider.RestoreDbTask
 import com.android.launcher3.provider.RestoreDbTask.FIRST_LOAD_AFTER_RESTORE_KEY
-import com.android.launcher3.settings.SettingsActivity
+import com.android.launcher3.settings.SettingsMisc
 import com.android.launcher3.states.RotationHelper
 import com.android.launcher3.util.DisplayController
 import com.android.launcher3.util.MainThreadInitializedObject
@@ -152,7 +152,7 @@ abstract class LauncherPrefs : SafeCloseable {
             }
 
         @JvmField
-        val FIXED_LANDSCAPE_MODE = backedUpItem(SettingsActivity.FIXED_LANDSCAPE_MODE, false)
+        val FIXED_LANDSCAPE_MODE = backedUpItem(SettingsMisc.FIXED_LANDSCAPE_MODE, false)
 
         // Preferences for widget configurations
         @JvmField
