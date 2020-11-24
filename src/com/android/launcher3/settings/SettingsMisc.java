@@ -16,7 +16,13 @@
 
 package com.android.launcher3.settings;
 
+import static android.provider.Settings.Global.DEVELOPMENT_SETTINGS_ENABLED;
+
 import static androidx.preference.PreferenceFragmentCompat.ARG_PREFERENCE_ROOT;
+
+import static com.android.launcher3.BuildConfig.IS_DEBUG_DEVICE;
+import static com.android.launcher3.BuildConfig.IS_STUDIO_BUILD;
+import static com.android.launcher3.states.RotationHelper.ALLOW_ROTATION_PREFERENCE_KEY;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -45,6 +51,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.android.launcher3.BuildConfig;
 import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.R;
+import com.android.launcher3.Utilities;
+import com.android.launcher3.states.RotationHelper;
+import com.android.launcher3.uioverrides.flags.DeveloperOptionsUI;
+import com.android.launcher3.util.DisplayController;
 import com.android.launcher3.util.Executors;
 import com.android.launcher3.util.SettingsCache;
 
@@ -53,8 +63,11 @@ import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 /**
  * Settings activity for Launcher.
  */
-public class SettingsActivity extends CollapsingToolbarBaseActivity
+public class SettingsMisc extends CollapsingToolbarBaseActivity
         implements OnPreferenceStartFragmentCallback, OnPreferenceStartScreenCallback {
+
+    @VisibleForTesting
+    static final String DEVELOPER_OPTIONS_KEY = "pref_developer_options";
 
     public static final String EXTRA_FRAGMENT_ARGS = ":settings:fragment_args";
 
@@ -92,7 +105,7 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
 
             final FragmentManager fm = getSupportFragmentManager();
             final Fragment f = fm.getFragmentFactory().instantiate(getClassLoader(),
-                    getString(R.string.settings_fragment_name));
+                    getString(R.string.misc_settings_fragment_name));
             f.setArguments(args);
             // Display the fragment as the main content.
             fm.beginTransaction().replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame, f).commit();
@@ -111,7 +124,7 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
             f.setArguments(args);
             ((DialogFragment) f).show(fm, key);
         } else {
-            startActivity(new Intent(this, SettingsActivity.class)
+            startActivity(new Intent(this, SettingsMisc.class)
                     .putExtra(EXTRA_FRAGMENT_ARGS, args));
         }
         return true;
@@ -127,7 +140,7 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
     public boolean onPreferenceStartScreen(PreferenceFragmentCompat caller, PreferenceScreen pref) {
         Bundle args = new Bundle();
         args.putString(ARG_PREFERENCE_ROOT, pref.getKey());
-        return startPreference(getString(R.string.settings_title), args, pref.getKey());
+        return startPreference(getString(R.string.misc_category_title), args, pref.getKey());
     }
 
     @Override
@@ -142,8 +155,10 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
     /**
      * This fragment shows the launcher preferences.
      */
-    public static class LauncherSettingsFragment extends PreferenceFragmentCompat implements
+    public static class MiscSettingsFragment extends PreferenceFragmentCompat implements
             SettingsCache.OnChangeListener {
+
+        protected boolean mDeveloperOptionsEnabled = false;
 
         private boolean mRestartOnResume = false;
 
@@ -152,6 +167,12 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
 
         @Override
         public void onCreate(@Nullable Bundle savedInstanceState) {
+            if (BuildConfig.IS_DEBUG_DEVICE) {
+                Uri devUri = Settings.Global.getUriFor(DEVELOPMENT_SETTINGS_ENABLED);
+                SettingsCache settingsCache = SettingsCache.INSTANCE.get(getContext());
+                mDeveloperOptionsEnabled = settingsCache.getValue(devUri);
+                settingsCache.register(devUri, this);
+            }
             super.onCreate(savedInstanceState);
         }
 
@@ -165,7 +186,15 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
             }
 
             getPreferenceManager().setSharedPreferencesName(LauncherFiles.SHARED_PREFERENCES_KEY);
-            setPreferencesFromResource(R.xml.launcher_preferences, rootKey);
+            setPreferencesFromResource(R.xml.launcher_misc_preferences, rootKey);
+
+            PreferenceScreen screen = getPreferenceScreen();
+            for (int i = screen.getPreferenceCount() - 1; i >= 0; i--) {
+                Preference preference = screen.getPreference(i);
+                if (!initPreference(preference)) {
+                    screen.removePreference(preference);
+                }
+            }
 
             if (getActivity() != null && !TextUtils.isEmpty(getPreferenceScreen().getTitle())) {
                 getActivity().setTitle(getPreferenceScreen().getTitle());
@@ -196,6 +225,39 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
             outState.putBoolean(SAVE_HIGHLIGHTED_KEY, mPreferenceHighlighted);
         }
 
+        /**
+         * Initializes a preference. This is called for every preference. Returning false here
+         * will remove that preference from the list.
+         */
+        protected boolean initPreference(Preference preference) {
+            switch (preference.getKey()) {
+                case ALLOW_ROTATION_PREFERENCE_KEY:
+                    DisplayController.Info info =
+                            DisplayController.INSTANCE.get(getContext()).getInfo();
+                    if (info.isTablet(info.realBounds)) {
+                        // Launcher supports rotation by default. No need to show this setting.
+                        return false;
+                    }
+                    // Initialize the UI once
+                    preference.setDefaultValue(RotationHelper.getAllowRotationDefaultValue(info));
+                    return true;
+
+                case DEVELOPER_OPTIONS_KEY:
+                    if (IS_STUDIO_BUILD) {
+                        preference.setOrder(0);
+                    }
+                    return mDeveloperOptionsEnabled;
+                case "pref_developer_flags":
+                    if (mDeveloperOptionsEnabled && preference instanceof PreferenceCategory pc) {
+                        Executors.MAIN_EXECUTOR.post(() -> new DeveloperOptionsUI(this, pc));
+                        return true;
+                    }
+                    return false;
+            }
+
+            return true;
+        }
+
         @Override
         public void onResume() {
             super.onResume();
@@ -217,6 +279,15 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
         public void onSettingsChanged(boolean isEnabled) {
             // Developer options changed, try recreate
             tryRecreateActivity();
+        }
+
+        @Override
+        public void onDestroy() {
+            super.onDestroy();
+            if (IS_DEBUG_DEVICE) {
+                SettingsCache.INSTANCE.get(getContext())
+                        .unregister(Settings.Global.getUriFor(DEVELOPMENT_SETTINGS_ENABLED), this);
+            }
         }
 
         /**
