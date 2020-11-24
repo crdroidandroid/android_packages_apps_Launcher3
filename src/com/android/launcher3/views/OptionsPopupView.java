@@ -197,7 +197,7 @@ public class OptionsPopupView extends ArrowPopup<Launcher>
                     OptionsPopupView::onWidgetsClicked));
         }
         options.add(new OptionItem(launcher,
-                R.string.settings_button_text,
+                R.string.settings_title,
                 R.drawable.ic_setting,
                 LAUNCHER_SETTINGS_BUTTON_TAP_OR_LONGPRESS,
                 OptionsPopupView::startSettings));

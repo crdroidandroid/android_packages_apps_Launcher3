@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2016-2022 crDroid Android Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -49,7 +49,7 @@ import com.android.launcher3.Utilities;
 /**
  * Settings activity for Launcher.
  */
-public class SettingsActivity extends FragmentActivity
+public class SettingsHomescreen extends FragmentActivity
         implements OnPreferenceStartFragmentCallback, OnPreferenceStartScreenCallback,
         SharedPreferences.OnSharedPreferenceChangeListener{
 
@@ -88,7 +88,7 @@ public class SettingsActivity extends FragmentActivity
 
             final FragmentManager fm = getSupportFragmentManager();
             final Fragment f = fm.getFragmentFactory().instantiate(getClassLoader(),
-                    getString(R.string.settings_fragment_name));
+                    getString(R.string.home_screen_settings_fragment_name));
             f.setArguments(args);
             // Display the fragment as the main content.
             fm.beginTransaction().replace(R.id.content_frame, f).commit();
@@ -111,7 +111,7 @@ public class SettingsActivity extends FragmentActivity
             f.setArguments(args);
             ((DialogFragment) f).show(fm, key);
         } else {
-            startActivity(new Intent(this, SettingsActivity.class)
+            startActivity(new Intent(this, SettingsHomescreen.class)
                     .putExtra(EXTRA_FRAGMENT, fragment)
                     .putExtra(EXTRA_FRAGMENT_ARGS, args));
         }
@@ -128,7 +128,7 @@ public class SettingsActivity extends FragmentActivity
     public boolean onPreferenceStartScreen(PreferenceFragmentCompat caller, PreferenceScreen pref) {
         Bundle args = new Bundle();
         args.putString(PreferenceFragmentCompat.ARG_PREFERENCE_ROOT, pref.getKey());
-        return startPreference(getString(R.string.settings_title), args, pref.getKey());
+        return startPreference(getString(R.string.home_category_title), args, pref.getKey());
     }
 
     @Override
@@ -143,10 +143,13 @@ public class SettingsActivity extends FragmentActivity
     /**
      * This fragment shows the launcher preferences.
      */
-    public static class LauncherSettingsFragment extends PreferenceFragmentCompat {
+    public static class HomescreenSettingsFragment extends PreferenceFragmentCompat {
 
         private String mHighLightKey;
         private boolean mPreferenceHighlighted = false;
+
+        private static final String KEY_MINUS_ONE = "pref_enable_minus_one";
+        private Preference mShowGoogleAppPref;
 
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -161,7 +164,11 @@ public class SettingsActivity extends FragmentActivity
             }
 
             getPreferenceManager().setSharedPreferencesName(LauncherFiles.SHARED_PREFERENCES_KEY);
-            setPreferencesFromResource(R.xml.launcher_preferences, rootKey);
+            setPreferencesFromResource(R.xml.launcher_home_screen_preferences, rootKey);
+
+            PreferenceScreen screen = getPreferenceScreen();
+            mShowGoogleAppPref = screen.findPreference(KEY_MINUS_ONE);
+            updateIsGoogleAppEnabled();
 
             if (getActivity() != null && !TextUtils.isEmpty(getPreferenceScreen().getTitle())) {
                 if (getPreferenceScreen().getTitle().equals(
@@ -201,6 +208,12 @@ public class SettingsActivity extends FragmentActivity
             return null;
         }
 
+        private void updateIsGoogleAppEnabled() {
+            if (mShowGoogleAppPref != null) {
+                mShowGoogleAppPref.setEnabled(Utilities.isGSAEnabled(getContext()));
+            }
+        }
+
         @Override
         public void onResume() {
             super.onResume();
@@ -214,6 +227,7 @@ public class SettingsActivity extends FragmentActivity
                     requestAccessibilityFocus(getListView());
                 }
             }
+            updateIsGoogleAppEnabled();
         }
 
         private PreferenceHighlighter createHighlighter() {
