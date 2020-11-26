@@ -43,7 +43,8 @@ public class LineageUtils {
             };
 
             final BiometricPrompt.Builder builder = new BiometricPrompt.Builder(context)
-                    .setTitle(title);
+                    .setTitle(title)
+                    .setConfirmationRequired(false);
 
             if (keyguardManager.isDeviceSecure()) {
                 builder.setDeviceCredentialAllowed(true);
