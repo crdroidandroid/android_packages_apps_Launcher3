@@ -21,21 +21,21 @@
     <string name="settings_title">تنظیمات</string>
     <!-- Categories -->
     <string name="home_category_title">صفحه اصلی</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="home_category_summary">تنظیم کردن پنل google now و بیشتر</string>
+    <string name="icons_category_title">آیکن‌ ها</string>
+    <string name="icons_category_summary">تنظیم شکل آیکون و بیشتر</string>
+    <string name="app_drawer_category_title">کشوی برنامه ها</string>
+    <string name="app_drawer_category_summary">شخصی سازی کشوی برنامه ها</string>
+    <string name="misc_category_title">متفرقه</string>
+    <string name="misc_category_summary">سایر گزینه‌ها</string>
+    <string name="recent_task_option_kill_app">به اتمام رساندن</string>
+    <string name="recents_app_killed">برنامه بسته شد</string>
     <!-- Folder titles -->
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">دو بار ضربه برای به خواب رفتن دستگاه</string>
+    <string name="pref_sleep_gesture_summary">دوبار ضربه روی فضای خالی برای خاموش کردن</string>
     <!-- Gradients on Workspace/Hotseat -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
+    <string name="workspace_gradient_title">نمایش شیب در بالا</string>
     <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
     <string name="hotseat_gradient_title">Show gradient on bottom</string>
     <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
