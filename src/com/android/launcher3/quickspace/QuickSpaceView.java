@@ -77,7 +77,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     public ViewGroup mWeatherContentSub;
     public ImageView mWeatherIconSub;
     public TextView mWeatherTempSub;
-    public View mTitleSeparator;
     public TextView mEventTitle;
     public ViewGroup mWeatherContent;
     public ImageView mWeatherIcon;
@@ -135,16 +134,15 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         mQuickspaceContent.setLayoutTransition(transition == null ? new LayoutTransition() : null);
         setBackgroundResource(0);
         bindWeather(mWeatherContent, mWeatherTemp, mWeatherIcon);
-        bindClockAndSeparator(false);
+        bindClock(false);
     }
 
-    public final void bindClockAndSeparator(boolean forced) {
+    public final void bindClock(boolean forced) {
         mClockView.setVisibility(View.VISIBLE);
         mClockView.setOnClickListener(mActionReceiver.getCalendarAction());
         if (forced) {
             mClockView.reloadDateFormat(true);
         }
-        mTitleSeparator.setVisibility(mWeatherAvailable ? View.VISIBLE : View.GONE);
     }
 
     public final void bindWeather(View container, TextView title, ImageView icon) {
@@ -162,7 +160,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
 
     public void reloadConfiguration() {
         if (!mIsQuickEvent) {
-            bindClockAndSeparator(true);
+            bindClock(true);
         }
     }
 
@@ -178,7 +176,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         mWeatherTemp = (TextView) findViewById(R.id.weather_temp);
         mWeatherTempSub = (TextView) findViewById(R.id.quick_event_weather_temp);
         mClockView = (DateTextView) findViewById(R.id.clock_view);
-        mTitleSeparator = findViewById(R.id.separator);
         setTypeface(mEventTitle, mEventTitleSub, mWeatherTemp, mWeatherTempSub, mClockView);
     }
 
