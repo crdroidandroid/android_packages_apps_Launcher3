@@ -92,15 +92,6 @@
             android:paddingRight="6dp"
             android:paddingTop="6dp">
 
-            <View
-                android:id="@+id/subtitle_separator"
-                android:layout_width="1dp"
-                android:layout_height="fill_parent"
-                android:layout_marginBottom="4dp"
-                android:layout_marginRight="6dp"
-                android:layout_marginTop="4dp"
-                android:background="?workspaceTextColor" />
-
             <ImageView
                 android:id="@+id/quick_event_weather_icon"
                 android:layout_width="16dp"
