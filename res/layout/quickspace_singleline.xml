@@ -35,7 +35,7 @@
         android:gravity="center"
         android:maxLines="1"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:paddingRight="4dp"
         android:textColor="?workspaceTextColor"
         android:textSize="@dimen/quickspace_title_size"
         android:letterSpacing="0.02"
@@ -44,14 +44,6 @@
         launcher:keyShadowBlur="2dp"
         launcher:keyShadowColor="?workspaceKeyShadowColor"
         launcher:keyShadowOffset="0.5dip" />
-
-    <View
-        android:id="@+id/separator"
-        android:layout_width="1dp"
-        android:layout_height="20dp"
-        android:layout_gravity="center_vertical"
-        android:background="?workspaceTextColor"
-        android:visibility="gone" />
 
     <LinearLayout
         android:id="@+id/weather_content"
@@ -63,7 +55,7 @@
         android:clickable="true"
         android:gravity="center"
         android:orientation="horizontal"
-        android:paddingLeft="10dp"
+        android:paddingLeft="4dp"
         android:paddingRight="10dp"
         android:visibility="gone">
 
