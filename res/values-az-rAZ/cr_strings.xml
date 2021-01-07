@@ -79,18 +79,18 @@
     <string name="quickspace_alternate_style_summary">Bir Baxışta üçün minimal bir dizayn istifadə edin</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">İndi oynatılanı göstər</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
+    <string name="quickspace_now_playing_summary">Bir Baxışta indi oxudulan mahnını göstərir. Xəbərdarlıq: Bu bütün oynatıcılar ilə tam uyğun deyil!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">Təsadüfi mesaj göstər</string>
+    <string name="quickspace_psa_summary">Bir Baxışta\'da bəzən bəzi gözəl mesajlar göstər.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
+        <item>Sabahınız xeyir!</item>
+        <item>Sabahın xeyir, coşmaq vaxtıdır!</item>
+        <item>Nə gözəl bir gündür!</item>
+        <item>Günün gözəl keçsin!</item>
+        <item>5 dəqiqəlik sakitləşməyə necə baxırsan?</item>
+        <item>Yuxudan durmağın sadəcə bir yolu var.</item>
+        <item>Alarm\'ın səsini artırmalısan.</item>
         <item>Looks like it\'s a beautiful day, isn\'t it?</item>
         <item>Let\'s get this bread.</item>
         <item>Check the weather just in case</item>
@@ -142,14 +142,14 @@
         <item>No illusions, welcome to reality!</item>
         <item>Thank you for your support</item>
         <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
-        <item>Winner Winner ....?</item>
+        <item>BuildBot\'ların ən yaxşı seçimlərindən biri</item>
+        <item>Paranoyan üçün sağlamlıq</item>
+        <item>Buz kimi desertləri sınayın</item>
+        <item>Nə gözəl bir təcrübə, düz deyil?</item>
+        <item>Təkamül bir əfsanədir, düzdü?</item>
+        <item>Sən nə istifadə edirsənsə osan, Heç vaxt kartof olma</item>
+        <item>Sənin düşüncən nədir?</item>
+        <item>Qalib Qalib ....?</item>
         <item>rm -rf \/</item>
     </string-array>
 </resources>
