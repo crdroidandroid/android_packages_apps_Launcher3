@@ -16,10 +16,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- SmartSpace -->
-    <string name="smartspace_preferences">Preferences</string>
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="smartspace_preferences">Preferinţe</string>
+    <string name="show_quickspace_title">Pe scurt</string>
+    <string name="show_quickspace_summary">Arată în partea de sus a ecranului de pornire</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Select a custom icon pack</string>
+    <string name="icon_pack">Pachet de pictograme</string>
+    <string name="icon_pack_summary">Selectaţi un pachet personalizat de pictograme</string>
 </resources>
