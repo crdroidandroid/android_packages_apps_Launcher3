@@ -22,4 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon packs -->
     <string name="icon_pack">Symbolpaket</string>
     <string name="icon_pack_summary">Ein benutzerdefiniertes Symbolpaket wählen</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
 </resources>
