@@ -67,6 +67,7 @@ import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.folder.FolderIcon;
 import com.android.launcher3.icons.BaseIconFactory;
 import com.android.launcher3.icons.BitmapInfo;
+import com.android.launcher3.icons.IconProvider;
 import com.android.launcher3.icons.LauncherIcons;
 import com.android.launcher3.model.AllAppsList;
 import com.android.launcher3.model.BgDataModel;
@@ -128,7 +129,8 @@ public class LauncherPreviewRenderer {
         private final Set<MainThreadInitializedObject> mAllowedObjects = new HashSet<>(
                 Arrays.asList(UserCache.INSTANCE, InstallSessionHelper.INSTANCE,
                         LauncherAppState.INSTANCE, InvariantDeviceProfile.INSTANCE,
-                        CustomWidgetManager.INSTANCE, PluginManagerWrapper.INSTANCE));
+                        CustomWidgetManager.INSTANCE, PluginManagerWrapper.INSTANCE,
+                        IconProvider.INSTANCE));
 
         private final InvariantDeviceProfile mIdp;
         private final Map<MainThreadInitializedObject, Object> mObjectMap = new HashMap<>();
