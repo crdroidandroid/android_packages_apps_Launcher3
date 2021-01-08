@@ -93,19 +93,19 @@
         <item>ᱟᱢ ᱟᱢᱟᱜᱽ ᱟᱞᱟᱢ ᱥᱟᱲᱮ ᱵᱚᱫᱚᱞ ᱠᱟᱛᱷᱟ ᱾</item>
         <item>ᱟᱹᱰᱤ ᱪᱚᱨᱚᱠ ᱫᱤᱱ ᱞᱮᱠᱷᱟ ᱵᱩᱡᱷᱟᱣᱼᱜ ᱠᱟᱱᱟ, ᱵᱟ ᱥᱮ?</item>
         <item>ᱱᱚᱶᱟ ᱯᱟᱸᱨᱩᱴᱤ ᱵᱚᱱ ᱤᱫᱤᱭᱟ ᱾</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>ᱯᱟᱜᱚ ᱠᱚ ᱧᱮᱞ ᱵᱤᱲᱟᱹᱣ ᱢᱮ</item>
+        <item>ᱫᱩᱫᱲᱩᱝ ᱜᱮ ᱵᱩᱡᱷᱟᱣᱜ ᱠᱟᱱᱟ</item>
+        <item>ᱱᱤᱛ ᱦᱟᱹᱵᱤᱡᱽ ᱵᱟᱦᱨᱮ ᱮᱢ ᱧᱮᱞ ᱟᱠᱟᱫᱟ ᱥᱮ?</item>
+        <item>ᱫᱮᱞᱟᱵᱚᱱ ᱠᱚᱨᱟᱣ ᱪᱷᱚᱭᱟ ᱾</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
+        <item>ᱥᱟᱹᱜᱩᱱ ᱧᱤᱫᱟᱹ!</item>
+        <item>ᱵᱮᱥ ᱜᱤᱛᱤᱡᱽ ᱢᱮ!</item>
+        <item>ᱜᱟᱯᱟ ᱧᱮᱞ ᱢᱮᱟᱹᱧ!</item>
+        <item>ᱦᱮᱲᱮᱢ ᱜᱤᱛᱤᱡ!</item>
+        <item>ᱡᱟᱹᱥᱛᱤ ᱜᱷᱟᱹᱬᱤᱡ ᱟᱞᱚᱢ ᱛᱟᱦᱮᱸᱱᱟᱢ</item>
+        <item>ᱵᱮᱥ ᱜᱤᱛᱤᱡ ᱛᱟᱦᱮᱸᱱ ᱛᱟᱢ ᱢᱟ</item>
+        <item>ᱵᱮᱥ ᱜᱤᱛᱤᱡ ᱡᱚᱝ ᱢᱮ</item>
         <item>Time to relax</item>
         <item>Enjoy the night!</item>
         <item>Time to charge the batteries!</item>
@@ -113,7 +113,7 @@
         <item>Get your bones ready for tomorrow</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
+        <item>ᱦᱢ... ᱥᱟᱹᱜᱤᱱ ᱟᱹᱭᱩᱵ ᱥᱮ?</item>
         <item>It\'s a bit late now</item>
         <item>You should fix your sleep schedule</item>
         <item>Are you more productive at this time?</item>
@@ -140,7 +140,7 @@
         <item>This is best Pixel Experience, isn\'t it?</item>
         <item>How is everything going?</item>
         <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
+        <item>ᱟᱢᱟᱜ ᱜᱚᱲᱚ ᱮᱢ ᱞᱟᱹᱜᱤᱫ ᱟᱭᱢᱟ ᱥᱟᱨᱦᱟᱣ </item>
         <item>No festival for Derps - only perfection!</item>
         <item>One of the buildbot\'s best picks</item>
         <item>Sanity for your Paranoia</item>
@@ -149,7 +149,7 @@
         <item>Evolution is a myth, right?</item>
         <item>You are what you flash, don\'t be Potato</item>
         <item>ᱟᱢᱟᱜ ᱢᱟᱹᱱᱮ ᱨᱮ ᱪᱮᱫ ᱢᱮᱱᱟᱜ-ᱟ?</item>
-        <item>Winner Winner ....?</item>
+        <item>ᱡᱤᱛᱟᱹᱣ ᱮᱱᱟᱢ ᱡᱤᱛᱟᱹᱣ ᱮᱱᱟᱢ .... ?</item>
         <item>rm -rf \/</item>
     </string-array>
 </resources>
