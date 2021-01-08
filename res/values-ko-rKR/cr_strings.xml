@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2020 crDroid Android Project
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- SmartSpace -->
+    <string name="smartspace_preferences">설정</string>
+    <string name="show_quickspace_title">한 눈에 보기</string>
+    <string name="show_quickspace_summary">홈 화면 상단에 표시</string>
+    <!-- Icon packs -->
+    <string name="icon_pack">아이콘 팩</string>
+    <string name="icon_pack_summary">커스텀 아이콘 팩 선택</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">두 번 탭하여 화면 끄기</string>
+    <string name="pref_sleep_gesture_summary">화면을 끄려면 빈 공간을 두 번 탭하십시오</string>
+</resources>
