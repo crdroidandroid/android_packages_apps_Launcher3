@@ -16,10 +16,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- SmartSpace -->
-    <string name="smartspace_preferences">Preferences</string>
+    <string name="smartspace_preferences">Настройки</string>
     <string name="show_quickspace_title">Самое главное</string>
     <string name="show_quickspace_summary">Отображать в верхней части Домашнего экрана</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Select a custom icon pack</string>
+    <string name="icon_pack">Набор значков</string>
+    <string name="icon_pack_summary">Выберите набор иконок</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Выключение экрана двойным нажатием</string>
+    <string name="pref_sleep_gesture_summary">Двойное нажатие по пустому месту для выключения</string>
 </resources>

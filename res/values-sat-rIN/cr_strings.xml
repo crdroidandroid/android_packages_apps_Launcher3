@@ -16,10 +16,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- SmartSpace -->
-    <string name="smartspace_preferences">Preferences</string>
+    <string name="smartspace_preferences">ᱠᱩᱥᱤᱠᱚ</string>
     <string name="show_quickspace_title">ᱢᱤᱫᱽ ᱡᱷᱚᱞᱠ ᱛᱮ</string>
     <string name="show_quickspace_summary">ᱟᱢᱟᱜᱽ ᱚᱲᱟᱜᱽ ᱥᱠᱨᱤᱻᱱ ᱨᱮᱭᱟᱜᱽ ᱴᱚᱯ ᱨᱮ ᱫᱮᱠᱷᱟᱣ ᱢᱮᱸ</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Select a custom icon pack</string>
+    <string name="icon_pack">ᱟᱭᱠᱚᱱ ᱯᱮᱠ</string>
+    <string name="icon_pack_summary">ᱢᱤᱫᱴᱟᱹᱝ ᱠᱟᱹᱥᱴᱚᱢ ᱟᱭᱠᱚᱱ ᱯᱮᱠ ᱵᱟᱪᱷᱟᱣ ᱢᱮ</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">ᱜᱤᱛᱤᱡ ᱞᱟᱹᱜᱤᱫ ᱵᱟᱨ ᱡᱮᱠᱷᱟ ᱚᱛᱟᱭ ᱢᱮ</string>
+    <string name="pref_sleep_gesture_summary">ᱯᱟᱣᱟᱹᱨ ᱵᱚᱸᱫᱽ ᱞᱟᱹᱜᱤᱫ ᱠᱷᱟᱹᱞᱤ ᱡᱟᱭᱜᱟ ᱨᱮ ᱵᱟᱨ ᱡᱮᱠᱷᱟ ᱚᱛᱟᱭ ᱢᱮ</string>
 </resources>

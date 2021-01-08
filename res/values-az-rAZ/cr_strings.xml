@@ -16,10 +16,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- SmartSpace -->
-    <string name="smartspace_preferences">Preferences</string>
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="smartspace_preferences">Tənzimləmələr</string>
+    <string name="show_quickspace_title">Bir baxışda</string>
+    <string name="show_quickspace_summary">Ana ekranın üstündə göstər</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Select a custom icon pack</string>
+    <string name="icon_pack">İkon paketi</string>
+    <string name="icon_pack_summary">Xüsusi bir ikon paketi seçin</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Yuxuya keçmək üçün iki dəfə toxun</string>
+    <string name="pref_sleep_gesture_summary">Ekranı söndürmək üçün boş yerə iki dəfə toxun</string>
 </resources>

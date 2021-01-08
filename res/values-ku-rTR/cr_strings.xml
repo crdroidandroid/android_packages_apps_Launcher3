@@ -16,10 +16,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- SmartSpace -->
-    <string name="smartspace_preferences">Preferences</string>
+    <string name="smartspace_preferences">ڕێکخستنەکان</string>
     <string name="show_quickspace_title">At A Glance</string>
     <string name="show_quickspace_summary">پیشاندان لە سەرەوەی پەڕەی ماڵەوە</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Select a custom icon pack</string>
+    <string name="icon_pack">دەستە ئایکۆن</string>
+    <string name="icon_pack_summary">دیاریکردنی دەستە ئایکۆنی دڵخواز</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
 </resources>
