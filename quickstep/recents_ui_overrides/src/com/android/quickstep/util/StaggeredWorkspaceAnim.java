@@ -82,6 +82,9 @@ public class StaggeredWorkspaceAnim {
         DeviceProfile grid = launcher.getDeviceProfile();
         Workspace workspace = launcher.getWorkspace();
         CellLayout cellLayout = (CellLayout) workspace.getChildAt(workspace.getCurrentPage());
+
+        if (cellLayout == null) return;
+
         ShortcutAndWidgetContainer currentPage = cellLayout.getShortcutsAndWidgets();
         ViewGroup hotseat = launcher.getHotseat();
 
