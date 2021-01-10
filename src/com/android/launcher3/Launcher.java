@@ -1075,6 +1075,8 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
             mOverlayManager.onActivityResumed(this);
         }
 
+        mStateManager.reapplyState();
+
         TraceHelper.INSTANCE.endSection(traceToken);
     }
 
