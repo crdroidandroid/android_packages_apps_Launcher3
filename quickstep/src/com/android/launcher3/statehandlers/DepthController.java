@@ -222,12 +222,22 @@ public class DepthController implements StateHandler<LauncherState>,
         ensureDependencies();
         IBinder windowToken = mLauncher.getRootView().getWindowToken();
         if (windowToken != null) {
-            mWallpaperManager.setWallpaperZoomOut(windowToken, mDepth);
+            if (mLauncher.isInState(LauncherState.NORMAL)) {
+                mWallpaperManager.setWallpaperZoomOut(windowToken, 0);
+            } else {
+                mWallpaperManager.setWallpaperZoomOut(windowToken, mDepth);
+            }
         }
 
         if (supportsBlur) {
+            final int blur;
+            if (mLauncher.isInState(LauncherState.NORMAL)) {
+                blur = 0;
+            } else {
+                blur = (int) (mDepth * mMaxBlurRadius);
+            }
             new TransactionCompat()
-                    .setBackgroundBlurRadius(mSurface, (int) (mDepth * mMaxBlurRadius))
+                    .setBackgroundBlurRadius(mSurface, blur)
                     .apply();
         }
     }
