@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  Copyright (C) 2020 crDroid Android Project
+<!--  Copyright (C) 2020-2021 crDroid Android Project
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,10 +15,31 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- SmartSpace -->
-    <string name="smartspace_preferences">Властивості</string>
+    <!-- General -->
+    <string name="settings_title">Налаштування</string>
+    <!-- Categories -->
+    <string name="home_category_title">Домашній екран</string>
+    <string name="home_category_summary">Встановити панель Google Now та інше</string>
+    <string name="icons_category_title">Іконки</string>
+    <string name="icons_category_summary">Встановити форму іконок та інше</string>
+    <string name="app_drawer_category_title">Меню додатків</string>
+    <string name="app_drawer_category_summary">Налаштувати меню додатків</string>
+    <string name="misc_category_title">Різне</string>
+    <string name="misc_category_summary">Інші параметри</string>
+    <string name="dev_options_title">Параметри розробника</string>
+    <string name="dev_options_desc">Увімкнути деякі приховані функції на свій страх і ризик</string>
+    <!-- QuickSpace -->
     <string name="show_quickspace_title">Найголовніше</string>
     <string name="show_quickspace_summary">Відображати в верхній частині Домашнього екрану</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Ласкаво просимо до crDroid!</string>
+    <string name="quick_event_rom_intro_learn">Натисніть тут, щоб отримати задоволення!</string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Зараз грає</string>
+    <string name="quick_event_ambient_song_artist">%1$s від %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Показати зараз грає</string>
+    <string name="quickspace_now_playing_summary">Показує пісню, на якій ви граєте біля Glance.</string>
     <!-- Icon packs -->
     <string name="icon_pack">Пакет іконок</string>
     <string name="icon_pack_summary">Вибрати набір значків</string>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  Copyright (C) 2020 crDroid Android Project
+<!--  Copyright (C) 2020-2021 crDroid Android Project
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,10 +15,31 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- SmartSpace -->
-    <string name="smartspace_preferences">Preferences</string>
+    <!-- General -->
+    <string name="settings_title">Settings</string>
+    <!-- Categories -->
+    <string name="home_category_title">Home screen</string>
+    <string name="home_category_summary">Set Google now panel and more</string>
+    <string name="icons_category_title">Icons</string>
+    <string name="icons_category_summary">Set icon shape and more</string>
+    <string name="app_drawer_category_title">App drawer</string>
+    <string name="app_drawer_category_summary">Customize your app drawer</string>
+    <string name="misc_category_title">Miscellaneous</string>
+    <string name="misc_category_summary">Other options</string>
+    <string name="dev_options_title">Developer options</string>
+    <string name="dev_options_desc">Enable some hidden features at your own risk</string>
+    <!-- QuickSpace -->
     <string name="show_quickspace_title">At A Glance</string>
     <string name="show_quickspace_summary">نمایش در بالای صفحه اصلی</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
+    <string name="quick_event_rom_intro_learn">Tap here to have fun!</string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Now Playing</string>
+    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Show now playing</string>
+    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance.</string>
     <!-- Icon packs -->
     <string name="icon_pack">Icon pack</string>
     <string name="icon_pack_summary">Select a custom icon pack</string>
