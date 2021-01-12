@@ -21,23 +21,23 @@
     <string name="settings_title">Nastavenia</string>
     <!-- Categories -->
     <string name="home_category_title">Domovská obrazovka</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="home_category_summary">Nastavenie panelu Google Now a ďalších funkcií</string>
+    <string name="icons_category_title">Ikony</string>
+    <string name="icons_category_summary">Nastaviť tvar ikony a ďalších parametrov</string>
+    <string name="app_drawer_category_title">Zoznam aplikácií</string>
+    <string name="app_drawer_category_summary">Prispôsobiť zoznam aplikácií</string>
+    <string name="misc_category_title">Rôzne</string>
+    <string name="misc_category_summary">Ďalšie možnosti</string>
+    <string name="recent_task_option_kill_app">Ukončiť</string>
+    <string name="recents_app_killed">Aplikácia bola ukončená</string>
     <!-- Folder titles -->
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">Uspať dvojitým poklepaním</string>
+    <string name="pref_sleep_gesture_summary">Dvojitým poklepaním sa zariadenie uspí</string>
     <!-- Gradients on Workspace/Hotseat -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
+    <string name="workspace_gradient_title">Zobraziť prechod navrchu</string>
     <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
+    <string name="hotseat_gradient_title">Zobraziť prechod dole</string>
     <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
     <!-- Swipe down to clear recents -->
     <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
