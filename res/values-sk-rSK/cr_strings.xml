@@ -66,29 +66,29 @@
     <string name="quick_event_rom_intro_welcome">Vitajte v crDroid!</string>
     <string name="quick_event_rom_intro_title1">Prajem Vám krásny deň</string>
     <string name="quick_event_rom_intro_title2">Ďakujeme, že ste si nás vybrali</string>
-    <string name="quick_event_rom_intro_title3">Loving us? Send us a beer</string>
-    <string name="quick_event_rom_intro_title4">Best Rom Ever.</string>
-    <string name="quick_event_rom_intro_title5">Say hi to us on Telegram</string>
-    <string name="quick_event_rom_intro_title6">Tap here to begin</string>
-    <string name="quick_event_rom_intro_title7">We love you 3000</string>
+    <string name="quick_event_rom_intro_title3">Máte nás radi? Pošlite nám pivo</string>
+    <string name="quick_event_rom_intro_title4">Vôbec najlepšia ROM.</string>
+    <string name="quick_event_rom_intro_title5">Pozdravte nás na Telegrame</string>
+    <string name="quick_event_rom_intro_title6">Začnite klepnutím tu</string>
+    <string name="quick_event_rom_intro_title7">Milujeme ťa 3000</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_now_playing">Teraz hrá</string>
+    <string name="quick_event_ambient_song_artist">%1$s od %2$s</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
+    <string name="quickspace_alternate_style_title">Použiť alternatívny štýl</string>
+    <string name="quickspace_alternate_style_summary">Pre prehľad udalostí použiť minimalistický štýl</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
+    <string name="quickspace_now_playing_title">Zobraziť práve prehrávanú skladbu</string>
+    <string name="quickspace_now_playing_summary">Zobraziť názov práve prehrávanej skladby v prehľade udalostí. POZOR: Nie je plne kompatibilné so všetkými prehrávačmi médií!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">Zobraziť náhodnú správu</string>
+    <string name="quickspace_psa_summary">Niekedy zobraziť v prehľade udalostí nejaké pekné správy.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
+        <item>Dobré ráno!</item>
+        <item>Dobré ráno, čas na rozcvičku!</item>
+        <item>Aký krásny deň!</item>
+        <item>Majte pekný deň</item>
+        <item>Čo tak malý 5 minútový spánok?</item>
         <item>That\'s one way to wake up.</item>
         <item>You should change your alarm sounds.</item>
         <item>Looks like it\'s a beautiful day, isn\'t it?</item>
@@ -99,16 +99,16 @@
         <item>Let\'s get this done.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
+        <item>Dobrú noc!</item>
+        <item>Dobre sa vyspi!</item>
+        <item>Uvidíme sa zajtra!</item>
         <item>Sweet dreams!</item>
         <item>Don\'t stay up too long</item>
         <item>Have a good sleep</item>
         <item>Get some sleep</item>
         <item>Time to relax</item>
         <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
+        <item>Je čas nabiť batérie!</item>
         <item>Tomorrow might be a great day</item>
         <item>Get your bones ready for tomorrow</item>
     </string-array>
@@ -140,7 +140,7 @@
         <item>This is best Pixel Experience, isn\'t it?</item>
         <item>How is everything going?</item>
         <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
+        <item>Ďakujem za tvoju podporu</item>
         <item>No festival for Derps - only perfection!</item>
         <item>One of the buildbot\'s best picks</item>
         <item>Sanity for your Paranoia</item>
