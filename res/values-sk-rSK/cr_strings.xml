@@ -36,36 +36,36 @@
     <string name="pref_sleep_gesture_summary">Dvojitým poklepaním sa zariadenie uspí</string>
     <!-- Gradients on Workspace/Hotseat -->
     <string name="workspace_gradient_title">Zobraziť prechod navrchu</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
+    <string name="workspace_gradient_summary">Povoliť jemný prechod zo stavového riadku</string>
     <string name="hotseat_gradient_title">Zobraziť prechod dole</string>
     <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
     <!-- Swipe down to clear recents -->
     <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Doesn\'t works if P navbar gestures are enable</string>
+    <string name="allow_swipe_down_clearall_desc">Nefunguje, ak sú povolené gestá v P navigačnom paneli</string>
     <!-- Google Feed -->
     <string name="google_feed_title">Display Google app</string>
     <string name="google_feed_summary">To the left of the main home screen</string>
     <!-- AppInfo -->
     <string name="app_info_subtext">Swipe down to close app info.</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="placeholder_string">Načítava...</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_icon_pack">Icon pack</string>
-    <string name="app_info_icon_pack_none">None</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_unknown">Unknown</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_icon_pack">Balíček ikon</string>
+    <string name="app_info_icon_pack_none">Žiadny</string>
+    <string name="app_info_source">Zdroj</string>
+    <string name="app_info_source_unknown">Neznámy</string>
+    <string name="app_info_last_update">Posledná aktualizácia</string>
+    <string name="app_info_version">Verzia</string>
+    <string name="app_info_more">Viac</string>
     <!-- Preference default value -->
-    <string name="pref_value_default">Default</string>
+    <string name="pref_value_default">Predvolené</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_title">Prehľad udalostí</string>
     <string name="show_quickspace_summary">Show at the top of your Home screen</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
-    <string name="quick_event_rom_intro_title1">Have a great day</string>
-    <string name="quick_event_rom_intro_title2">Thank you for choosing us</string>
+    <string name="quick_event_rom_intro_welcome">Vitajte v crDroid!</string>
+    <string name="quick_event_rom_intro_title1">Prajem Vám krásny deň</string>
+    <string name="quick_event_rom_intro_title2">Ďakujeme, že ste si nás vybrali</string>
     <string name="quick_event_rom_intro_title3">Loving us? Send us a beer</string>
     <string name="quick_event_rom_intro_title4">Best Rom Ever.</string>
     <string name="quick_event_rom_intro_title5">Say hi to us on Telegram</string>
