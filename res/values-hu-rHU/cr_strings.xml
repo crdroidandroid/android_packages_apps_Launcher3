@@ -40,6 +40,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Jelenítse meg mi hallható</string>
     <string name="quickspace_now_playing_summary">Megjeleníti az éppen játszott zeneszámot a \'Bepillantásban\'</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Use an alternative style</string>
+    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
     <!-- Icon packs -->
     <string name="icon_pack">Ikoncsomag</string>
     <string name="icon_pack_summary">Válasszon egy egyedi ikoncsomagot</string>
