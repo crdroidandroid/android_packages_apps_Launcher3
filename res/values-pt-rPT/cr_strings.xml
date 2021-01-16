@@ -40,6 +40,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Mostrar a reproduzir</string>
     <string name="quickspace_now_playing_summary">Mostrar a música que está sendo reproduzida no Resumo.</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Use an alternative style</string>
+    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
     <!-- Icon packs -->
     <string name="icon_pack">Pacote de ícones</string>
     <string name="icon_pack_summary">Selecione um pacote de ícones personalizado</string>
