@@ -40,6 +40,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Sedang diputar</string>
     <string name="quickspace_now_playing_summary">Menampilkan lagu yang Anda putar Sekilas</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Use an alternative style</string>
+    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
     <!-- Icon packs -->
     <string name="icon_pack">Paket ikon</string>
     <string name="icon_pack_summary">Pilih paket ikon</string>

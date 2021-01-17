@@ -40,6 +40,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">재생 중인 트랙 표시</string>
     <string name="quickspace_now_playing_summary">재생중인 노래를 한 눈에 보기에 표시합니다.</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Use an alternative style</string>
+    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
     <!-- Icon packs -->
     <string name="icon_pack">아이콘 팩</string>
     <string name="icon_pack_summary">커스텀 아이콘 팩 선택</string>
