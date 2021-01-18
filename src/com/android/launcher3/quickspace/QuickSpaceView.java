@@ -144,7 +144,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     }
 
     private final void bindWeather(View container, TextView title, ImageView icon) {
-        if (mController.isWeatherAvailable()) {
+        if (mController.isWeatherAvailable() && mController.getEventController().isDeviceIntroCompleted()) {
             boolean hasGoogleApp = isPackageEnabled("com.google.android.googlequicksearchbox", getContext());
             container.setVisibility(View.VISIBLE);
             container.setOnClickListener(hasGoogleApp ? mActionReceiver.getWeatherAction() : null);

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 CypherOS
+ * Copyright (C) 2020-2021 crDroid Android Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -51,7 +51,6 @@ public class QuickEventsController {
     private boolean mRunning;
 
     // Device Intro
-    private boolean mEventIntro = false;
     private boolean mIsFirstTimeDone = false;
     private SharedPreferences mPreferences;
 
@@ -83,12 +82,9 @@ public class QuickEventsController {
     private void deviceIntroEvent() {
         if (!mRunning) return;
 
-        if (mIsFirstTimeDone) {
-            mEventIntro = false;
-            return;
-        }
+        if (mIsFirstTimeDone) return;
+
         mIsQuickEvent = true;
-        mEventIntro = true;
         mEventTitle = mContext.getResources().getString(R.string.quick_event_rom_intro_welcome);
         mEventTitleSub = mContext.getResources().getStringArray(R.array.welcome_message_variants)[getLuckyNumber(0,6)];
         mEventSubIcon = R.drawable.ic_quickspace_crdroid;
@@ -126,7 +122,7 @@ public class QuickEventsController {
     public void initNowPlayingEvent() {
         if (!mRunning) return;
 
-        if (mEventIntro) return;
+        if (!mIsFirstTimeDone) return;
 
         if (!Utilities.isQuickspaceNowPlaying(mContext)) return;
 
@@ -173,8 +169,8 @@ public class QuickEventsController {
         return mIsQuickEvent;
     }
 
-    public boolean isDeviceIntro() {
-        return mEventIntro;
+    public boolean isDeviceIntroCompleted() {
+        return mIsFirstTimeDone;
     }
 
     public String getTitle() {

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 CypherOS
+ * Copyright (C) 2020-2021 crDroid Android Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -49,7 +49,6 @@ public class QuickspaceController implements NotificationListener.NotificationsC
     private static final boolean DEBUG = false;
     private static final String TAG = "Launcher3:QuickspaceController";
 
-    private Context mContext;
     private final Handler mHandler;
     private QuickEventsController mEventsController;
     private OmniJawsClient mWeatherClient;
@@ -70,9 +69,12 @@ public class QuickspaceController implements NotificationListener.NotificationsC
     }
 
     public QuickspaceController(Context context) {
-        mContext = context;
         mHandler = new Handler();
+        mEventsController = new QuickEventsController(context);
         mWeatherClient = new OmniJawsClient(context);
+        mRemoteController = new RemoteController(context, mRCClientUpdateListener);
+        mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+        mAudioManager.registerRemoteController(mRemoteController);
     }
 
     private void addWeatherProvider() {
@@ -82,17 +84,9 @@ public class QuickspaceController implements NotificationListener.NotificationsC
         }
     }
 
-    private void addEventsController() {
-        mEventsController = new QuickEventsController(mContext);
-    }
-
     public void addListener(OnDataListener listener) {
         mListeners.add(listener);
-        addEventsController();
         addWeatherProvider();
-        mRemoteController = new RemoteController(mContext, mRCClientUpdateListener);
-        mAudioManager = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
-        mAudioManager.registerRemoteController(mRemoteController);
         listener.onDataUpdated();
     }
 
