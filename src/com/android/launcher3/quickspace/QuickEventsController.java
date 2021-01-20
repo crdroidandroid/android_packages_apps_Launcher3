@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 crDroid Android Project
+ * Copyright (C) 2020-2021 crDroid Android Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,7 +54,6 @@ public class QuickEventsController {
     private boolean mRegistered = false;
 
     // Device Intro
-    private boolean mEventIntro = false;
     private boolean mIsFirstTimeDone = false;
     private SharedPreferences mPreferences;
 
@@ -126,12 +125,8 @@ public class QuickEventsController {
     private void deviceIntroEvent() {
         if (!mRunning) return;
 
-        if (mIsFirstTimeDone) {
-            mEventIntro = false;
-            return;
-        }
+        if (mIsFirstTimeDone) return;
         mIsQuickEvent = true;
-        mEventIntro = true;
         mImportantQuickEvent = true;
         mEventTitle = mContext.getResources().getString(R.string.quick_event_rom_intro_welcome);
         mEventTitleSub = mContext.getResources().getStringArray(R.array.welcome_message_variants)[getLuckyNumber(0,6)];
@@ -170,7 +165,7 @@ public class QuickEventsController {
     public void initNowPlayingEvent() {
         if (!mRunning) return;
 
-        if (mEventIntro) return;
+        if (!mIsFirstTimeDone) return;
 
         if (!Utilities.isQuickspaceNowPlaying(mContext)) return;
 
@@ -214,7 +209,7 @@ public class QuickEventsController {
     }
 
     public void psonalityEvent() {
-        if (mEventIntro || mEventNowPlaying) return;
+        if (!mIsFirstTimeDone || mEventNowPlaying) return;
 
         if (!Utilities.isQuickspacePersonalityEnabled(mContext)) return;
 
@@ -284,6 +279,10 @@ public class QuickEventsController {
 
     public boolean isQuickEventImportant() {
         return mImportantQuickEvent;
+    }
+
+    public boolean isDeviceIntroCompleted() {
+        return mIsFirstTimeDone;
     }
 
     public String getTitle() {
