@@ -49,7 +49,6 @@ public class QuickEventsController {
     private int mEventSubIcon;
 
     private boolean mIsQuickEvent = false;
-    private boolean mImportantQuickEvent = false;
     private boolean mRunning = true;
     private boolean mRegistered = false;
 
@@ -127,7 +126,6 @@ public class QuickEventsController {
 
         if (mIsFirstTimeDone) return;
         mIsQuickEvent = true;
-        mImportantQuickEvent = true;
         mEventTitle = mContext.getResources().getString(R.string.quick_event_rom_intro_welcome);
         mEventTitleSub = mContext.getResources().getStringArray(R.array.welcome_message_variants)[getLuckyNumber(0,6)];
         mEventSubIcon = R.drawable.ic_quickspace_crdroid;
@@ -183,7 +181,6 @@ public class QuickEventsController {
         mEventSubIcon = R.drawable.ic_music_note_24dp;
         mIsQuickEvent = true;
         mEventNowPlaying = true;
-        mImportantQuickEvent = false;
 
         mEventTitleSubAction = new OnClickListener() {
             @Override
@@ -235,7 +232,6 @@ public class QuickEventsController {
                 mEventSubIcon = R.drawable.ic_quickspace_morning;
                 mIsQuickEvent = true;
                 mEventPSA = true;
-                mImportantQuickEvent = false;
                 break;
 
             case 19: case 20: case 21: case 22: case 23: case 0:
@@ -244,7 +240,6 @@ public class QuickEventsController {
                 mEventSubIcon = R.drawable.ic_quickspace_evening;
                 mIsQuickEvent = true;
                 mEventPSA = true;
-                mImportantQuickEvent = false;
                 break;
 
             case 1: case 2: case 3: case 4:
@@ -253,7 +248,6 @@ public class QuickEventsController {
                 mEventSubIcon = R.drawable.ic_quickspace_evening;
                 mIsQuickEvent = true;
                 mEventPSA = true;
-                mImportantQuickEvent = false;
                 break;
 
             default:
@@ -263,7 +257,6 @@ public class QuickEventsController {
                     mEventSubIcon = R.drawable.ic_quickspace_crdroid;
                     mIsQuickEvent = true;
                     mEventPSA = true;
-                    mImportantQuickEvent = false;
                 } else {
                     mIsQuickEvent = false;
                     mEventPSA = false;
@@ -275,10 +268,6 @@ public class QuickEventsController {
 
     public boolean isQuickEvent() {
         return mIsQuickEvent;
-    }
-
-    public boolean isQuickEventImportant() {
-        return mImportantQuickEvent;
     }
 
     public boolean isDeviceIntroCompleted() {
