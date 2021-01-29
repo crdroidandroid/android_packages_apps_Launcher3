@@ -49,46 +49,46 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_sleep_gesture_title">Nhấn đúp để tắt màn hình</string>
     <string name="pref_sleep_gesture_summary">Nhấn đúp vào khoảng trống để tắt nguồn</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">Hiển thị một thông điệp ngẫu nhiên</string>
+    <string name="quickspace_psa_summary">Đôi khi hiển thị một số thông điệp tốt đẹp trên Xem nhanh.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Chào buổi sáng!</item>
+        <item>Chào buổi sáng, đến giờ quẩy rồi!</item>
+        <item>Thật là một ngày đẹp trời!</item>
+        <item>Chúc bạn một ngày tốt lành!</item>
+        <item>Còn một giấc ngủ ngắn 5 phút thì sao?</item>
+        <item>Đó là một cách để thức dậy.</item>
+        <item>Bạn nên thay đổi âm báo của bạn.</item>
+        <item>Có vẻ như đó là một ngày đẹp trời, phải không?</item>
+        <item>Dậy ăn bánh mì thôi.</item>
+        <item>Kiểm tra thời tiết cẩn thận</item>
+        <item>Cảm thấy hơi buồn ngủ</item>
+        <item>Bạn đã thử nhìn ra ngoài chưa?</item>
+        <item>Hãy hoàn thành nó.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>Chúc bạn ngủ ngon!</item>
+        <item>Ngủ ngon nhé!</item>
+        <item>Hẹn gặp bạn vào ngày mai!</item>
+        <item>Chúc bạn có những giấc mơ đẹp!</item>
+        <item>Đừng ngủ quá muộn nhé</item>
+        <item>Có một giấc ngủ ngon</item>
+        <item>Ngủ một chút đi</item>
+        <item>Đến giờ giải lao rồi</item>
+        <item>Tận hưởng buổi tối!</item>
+        <item>Đã đến lúc sạc pin!</item>
+        <item>Ngày mai có thể là một ngày tuyệt vời</item>
+        <item>Chuẩn bị sẵn sàng cho ngày mai</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Ừm... chúc ngủ ngon?</item>
+        <item>Bây giờ hơi muộn</item>
+        <item>Bạn nên chỉnh sửa lịch ngủ của mình</item>
+        <item>Bạn có năng suất hơn vào lúc này không?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
+        <item>Điếc không sợ súng</item>
+        <item>Đã đến lúc cập nhật một bản Rom khác chưa?</item>
         <item>Hyped about Android 12?</item>
         <item>Oh hey, what\'s up?</item>
         <item>Focus on your tasks</item>
