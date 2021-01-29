@@ -20,30 +20,13 @@ import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
-import android.content.ContentUris;
 import android.content.Context;
-import android.content.Intent;
-import android.content.pm.LauncherApps;
 import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
-import android.graphics.Bitmap;
-import android.graphics.Paint.FontMetrics;
-import android.graphics.Rect;
-import android.graphics.RectF;
-import android.graphics.Typeface;
-import android.net.Uri.Builder;
-import android.os.Handler;
-import android.os.Process;
-import android.provider.CalendarContract;
-import android.text.TextPaint;
-import android.text.TextUtils;
 import android.text.TextUtils.TruncateAt;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -51,7 +34,6 @@ import android.widget.TextView;
 
 import com.android.launcher3.BubbleTextView;
 import com.android.launcher3.model.data.ItemInfo;
-import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.util.Themes;
@@ -67,7 +49,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
 
     public final ColorStateList mColorStateList;
     public BubbleTextView mBubbleTextView;
-    public final Handler mHandler;
     public final int mQuickspaceBackgroundRes;
 
     public DateTextView mClockView;
@@ -93,7 +74,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         super(context, set);
         mActionReceiver = new QuickSpaceActionReceiver(context);
         mController = new QuickspaceController(context);
-        mHandler = new Handler();
         mColorStateList = ColorStateList.valueOf(Themes.getAttrColor(getContext(), R.attr.workspaceTextColor));
         mQuickspaceBackgroundRes = R.drawable.bg_quickspace;
         setClipChildren(false);
@@ -106,7 +86,8 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
             mIsQuickEvent = mController.isQuickEvent();
             prepareLayout();
         }
-        mWeatherAvailable = mController.isWeatherAvailable();
+        mWeatherAvailable = mController.isWeatherAvailable() && 
+                mController.getEventController().isDeviceIntroCompleted();
         getQuickSpaceView();
         if (mIsQuickEvent) {
             loadDoubleLine();
@@ -115,7 +96,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         }
     }
 
-    public final void loadDoubleLine() {
+    private final void loadDoubleLine() {
         setBackgroundResource(mQuickspaceBackgroundRes);
         mEventTitle.setText(mController.getEventController().getTitle());
         mEventTitle.setEllipsize(TruncateAt.END);
@@ -129,7 +110,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         bindWeather(mWeatherContentSub, mWeatherTempSub, mWeatherIconSub);
     }
 
-    public final void loadSingleLine() {
+    private final void loadSingleLine() {
         LayoutTransition transition = mQuickspaceContent.getLayoutTransition();
         mQuickspaceContent.setLayoutTransition(transition == null ? new LayoutTransition() : null);
         setBackgroundResource(0);
@@ -137,7 +118,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         bindClock(false);
     }
 
-    public final void bindClock(boolean forced) {
+    private final void bindClock(boolean forced) {
         mClockView.setVisibility(View.VISIBLE);
         mClockView.setOnClickListener(mActionReceiver.getCalendarAction());
         if (forced) {
@@ -145,10 +126,9 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         }
     }
 
-    public final void bindWeather(View container, TextView title, ImageView icon) {
-        boolean hasGoogleApp = isPackageEnabled("com.google.android.googlequicksearchbox", getContext());
-        mWeatherAvailable = mController.isWeatherAvailable();
+    private final void bindWeather(View container, TextView title, ImageView icon) {
         if (mWeatherAvailable) {
+            boolean hasGoogleApp = isPackageEnabled("com.google.android.googlequicksearchbox", getContext());
             container.setVisibility(View.VISIBLE);
             container.setOnClickListener(hasGoogleApp ? mActionReceiver.getWeatherAction() : null);
             if (Utilities.useAlternativeQuickspaceUI(getContext())) {
@@ -166,13 +146,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         container.setVisibility(View.GONE);
     }
 
-    public void reloadConfiguration() {
-        if (!mIsQuickEvent) {
-            bindClock(true);
-        }
-    }
-
-    public final void loadViews() {
+    private final void loadViews() {
         mEventTitle = (TextView) findViewById(R.id.quick_event_title);
         mEventTitleSub = (TextView) findViewById(R.id.quick_event_title_sub);
         mEventSubIcon = (ImageView) findViewById(R.id.quick_event_icon_sub);
@@ -186,7 +160,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         mClockView = (DateTextView) findViewById(R.id.clock_view);
     }
 
-    public void prepareLayout() {
+    private void prepareLayout() {
         int indexOfChild = indexOfChild(mQuickspaceContent);
         removeView(mQuickspaceContent);
         if (Utilities.useAlternativeQuickspaceUI(getContext())) {
@@ -198,10 +172,11 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
                     R.layout.quickspace_doubleline :
                     R.layout.quickspace_singleline, this, false), indexOfChild);
         }
+
         loadViews();
     }
 
-    public void getQuickSpaceView() {
+    private void getQuickSpaceView() {
         if (!(mQuickspaceContent.getVisibility() == View.VISIBLE)) {
         	mQuickspaceContent.setVisibility(View.VISIBLE);
             mQuickspaceContent.setAlpha(0.0f);
@@ -261,11 +236,9 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     @Override
     public void onLayout(boolean b, int n, int n2, int n3, int n4) {
         super.onLayout(b, n, n2, n3, n4);
-        //mEventTitle.setText(cn); Todo: set the event info here
     }
 
     public void onPause() {
-        mHandler.removeCallbacks(this);
         mController.onPause();
     }
 
