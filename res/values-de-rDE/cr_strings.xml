@@ -49,29 +49,29 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_sleep_gesture_title">Doppeltippen zum Sperren</string>
     <string name="pref_sleep_gesture_summary">Zum Ausschalten zweimal auf einen leeren Bereich tippen</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">Zufällige Nachricht anzeigen</string>
+    <string name="quickspace_psa_summary">Manchmal nette Botschaften in \'Auf einen Blick\' anzeigen.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
+        <item>Guten Morgen!</item>
+        <item>Guten Morgen, Zeit zu Rocken!</item>
+        <item>Was für ein schöner Tag!</item>
+        <item>Schönen Tag!</item>
+        <item>Wie wäre es mit einem kleinen Nickerchen?</item>
+        <item>So kann man auch aufwachen.</item>
+        <item>Du solltest deinen Weckerton ändern.</item>
+        <item>Sieht aus, als wäre es ein schöner Tag, oder?</item>
         <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Schau mal nach, wie das Wetter wird. Man weiß ja nie.</item>
+        <item>Na, noch ein bisschen müde?</item>
+        <item>Heute schon aus dem Fenster geschaut?</item>
+        <item>Auf geht’s.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
+        <item>Gute Nacht!</item>
+        <item>Schlaf gut!</item>
+        <item>Bis morgen!</item>
+        <item>Träum süß!</item>
+        <item>Bleib nicht zu lang auf.</item>
         <item>Have a good sleep</item>
         <item>Get some sleep</item>
         <item>Time to relax</item>
