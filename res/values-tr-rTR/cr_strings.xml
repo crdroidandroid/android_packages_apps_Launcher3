@@ -47,7 +47,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="icon_pack_summary">Özel bir simge paketi seçin</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Çift dokunuşla uyutma</string>
-    <string name="pref_sleep_gesture_summary">Cihazı kapatmak için boş bir alana çift dokunun</string>
+    <string name="pref_sleep_gesture_summary">Ekranı kapatmak için boş bir alana çift dokunun</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Rastgele bir mesaj göster</string>
     <string name="quickspace_psa_summary">Bir bakışta için bazı güzel mesajlar göster.</string>
@@ -59,65 +59,65 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>Peki ya 5 dakikalık küçük bir şekerlemeye nedersin?</item>
         <item>Uyanmanın yollarından biri de bu.</item>
         <item>Alarm seslerinizi değiştirmelisiniz.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Güzel bir gün gibi görünüyor, değil mi?</item>
+        <item>Haydi sorunu çözelim.</item>
+        <item>Sadece hava durumunu kontrol et</item>
+        <item>Henüz biraz uykulu hissediyorum</item>
+        <item>Dışarıya baktın mı?</item>
+        <item>Bunu halledelim.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>İyi geceler!</item>
+        <item>İyi uykular!</item>
+        <item>Yarın görüşürüz!</item>
+        <item>Tatlı rüyalar!</item>
+        <item>Çok uzun süre uyanık kalma</item>
+        <item>İyi uykular</item>
+        <item>Biraz uyu</item>
+        <item>Rahatlama zamanı</item>
+        <item>Gecenin tadını çıkart!</item>
+        <item>Pilleri şarj etme zamanı!</item>
+        <item>Yarın harika bir gün olabilir</item>
+        <item>Kemiklerinizi yarın için hazırlayın</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Um... iyi geceler?</item>
+        <item>Şimdi biraz geç</item>
+        <item>Uyku zamanlamanızı düzeltmelisiniz</item>
+        <item>Şu anda daha üretken misiniz?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
-        <item>Hyped about Android 12?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
-        <item>Open goodness with crDroid</item>
-        <item>Spread love not havoc</item>
-        <item>Have fun!</item>
-        <item>Time for some good music</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
-        <item>We love you 3000</item>
-        <item>Stay Home, Stay Safe</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>How is everything going?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
-        <item>Winner Winner ....?</item>
+        <item>Cehalet mutluluktur</item>
+        <item>Çoktan başka güncelleme flaş etme zamanı gelmedi mi?</item>
+        <item>Android 12 hakkında endişeli misiniz?</item>
+        <item>Hey, nasıl gidiyor?</item>
+        <item>Görevlerinize odaklanın</item>
+        <item>Kaç tane ekran görüntüsü alıyorsunuz?</item>
+        <item>Crdroid ile çeşitli özelleştirmeler</item>
+        <item>Yayılmış aşk havoc değil</item>
+        <item>İyi eğlenceler!</item>
+        <item>Bazı güzel müzikler için doğru zaman</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C BAŞ</item>
+        <item>Bunu görmek için crDroid Premium\'a ihtiyacınız var</item>
+        <item>Unicorn soyunu hatırla</item>
+        <item>Daha uzun pil ömrünün keyfini çıkarın</item>
+        <item>Sıfırdan başlayarak</item>
+        <item>Seni seviyoruz 3000</item>
+        <item>Evde Kal, Güvende Kal</item>
+        <item>Bugün güzel bir şey yap</item>
+        <item>Bu en iyi Pixel Experience, değil mi?</item>
+        <item>Her şey nasıl gidiyor?</item>
+        <item>Yanılsama yok, gerçeğe hoş geldiniz!</item>
+        <item>Desteğiniz için teşekkür ederiz</item>
+        <item>Derps için festival yok - sadece mükemmellik!</item>
+        <item>Buildbot\'ların en iyi seçimlerinden biri</item>
+        <item>Paranoya için akıl sağlığı</item>
+        <item>Buz gibi tatlıları deneyin</item>
+        <item>Ne hoş bir deneyim değil mi?</item>
+        <item>Evrim bir efsanedir, değil mi?</item>
+        <item>Sen, ne kullanıyorsan osun. Sakın patates olma</item>
+        <item>Aklınızdan ne geçiyor?</item>
+        <item>Kazanan Kazanan ....?</item>
         <item>rm -rf \/</item>
     </string-array>
 </resources>
