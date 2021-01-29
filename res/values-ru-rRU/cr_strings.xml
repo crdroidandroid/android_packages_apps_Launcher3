@@ -50,7 +50,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_sleep_gesture_summary">Двойное нажатие по пустому месту для выключения</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Показывать случайные сообщения</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_summary">Показывать иногда некоторые приятные сообщения на виджете At A Glance.</string>
     <string-array name="quickspace_psa_morning">
         <item>Доброе утро!</item>
         <item>Доброе утро, время зажигать!</item>
@@ -62,42 +62,42 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>Похоже, это прекрасный день, не так ли?</item>
         <item>Давайте сделаем это.</item>
         <item>Проверьте погоду на всякий случай</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Ещё чувствуете себя немного сонным?</item>
+        <item>Вы уже смотрели на улицу?</item>
+        <item>Давайте сделаем это.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>Спокойной ночи!</item>
+        <item>Приятных снов!</item>
+        <item>Увидимся завтра!</item>
+        <item>Сладких снов!</item>
+        <item>Не засиживайся долго</item>
+        <item>Приятных снов</item>
+        <item>Пора поспать</item>
+        <item>Время расслабиться</item>
+        <item>Приятной ночи!</item>
+        <item>Время зарядить батарею!</item>
+        <item>Завтра может быть отличный день</item>
+        <item>Готовь свои кости к завтрашнему дню</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Эм... спокойной ночи?</item>
+        <item>Сейчас уже немного поздно</item>
+        <item>Вы должны исправить свой график сна</item>
+        <item>Вы сейчас более продуктивны?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
-        <item>Hyped about Android 12?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
-        <item>Open goodness with crDroid</item>
-        <item>Spread love not havoc</item>
-        <item>Have fun!</item>
-        <item>Time for some good music</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>Невежество - это блаженство</item>
+        <item>Не пора ли уже установить еще одно обновление?</item>
+        <item>Наконец-то Android 12?</item>
+        <item>О, привет, что случилось?</item>
+        <item>Сосредоточьтесь на своих задачах</item>
+        <item>Сколько скриншотов вы сделали?</item>
+        <item>Открой лучшее с crDroid</item>
+        <item>Распространяйте любовь, а не хаос</item>
+        <item>Веселитесь!</item>
+        <item>Время хорошей музыки</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C ГОЛОВА</item>
         <item>You need crDroid Premium to see this</item>
         <item>Remember the Lineage of the Unicorn</item>
         <item>Enjoy Xtended battery life</item>
