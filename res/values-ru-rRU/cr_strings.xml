@@ -49,19 +49,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_sleep_gesture_title">Выключение экрана двойным нажатием</string>
     <string name="pref_sleep_gesture_summary">Двойное нажатие по пустому месту для выключения</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
+    <string name="quickspace_psa_title">Показывать случайные сообщения</string>
     <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
+        <item>Доброе утро!</item>
+        <item>Доброе утро, время зажигать!</item>
+        <item>Какой чудесный день!</item>
+        <item>Хорошего дня!</item>
+        <item>Как насчет небольшого 5-минутного перерыва?</item>
+        <item>Это один из способов проснуться.</item>
+        <item>Вы должны изменить звук будильника.</item>
+        <item>Похоже, это прекрасный день, не так ли?</item>
+        <item>Давайте сделаем это.</item>
+        <item>Проверьте погоду на всякий случай</item>
         <item>Feeling a bit sleepy yet</item>
         <item>Have you looked outside yet?</item>
         <item>Let\'s get this done.</item>
