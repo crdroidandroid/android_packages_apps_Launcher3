@@ -84,6 +84,8 @@ public class SettingsHomescreen extends FragmentActivity
         switch (key) {
             case Utilities.DESKTOP_SHOW_QUICKSPACE:
             case Utilities.KEY_SHOW_ALT_QUICKSPACE:
+            case Utilities.KEY_SHOW_QUICKSPACE_NOWPLAYING:
+            case Utilities.KEY_SHOW_QUICKSPACE_PSONALITY:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:
@@ -151,14 +153,6 @@ public class SettingsHomescreen extends FragmentActivity
                     screen.removePreference(preference);
                 }
             }
-
-            SwitchPreference quickspaceNowPlaying = (SwitchPreference) findPreference(Utilities.KEY_SHOW_QUICKSPACE_NOWPLAYING);
-            quickspaceNowPlaying.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-                public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
-                    return true;
-                }
-            });
         }
 
         @Override
