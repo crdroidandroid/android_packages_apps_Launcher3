@@ -20,28 +20,12 @@ import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
-import android.content.ContentUris;
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.ColorStateList;
-import android.graphics.Bitmap;
-import android.graphics.Paint.FontMetrics;
-import android.graphics.Rect;
-import android.graphics.RectF;
-import android.graphics.Typeface;
-import android.net.Uri.Builder;
-import android.os.Handler;
-import android.os.Process;
-import android.provider.CalendarContract;
-import android.text.TextPaint;
-import android.text.TextUtils;
 import android.text.TextUtils.TruncateAt;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -52,7 +36,6 @@ import com.android.launcher3.ItemInfo;
 import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
-import com.android.launcher3.compat.LauncherAppsCompat;
 import com.android.launcher3.util.Themes;
 
 import com.android.launcher3.quickspace.QuickspaceController.OnDataListener;
@@ -66,7 +49,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
 
     public final ColorStateList mColorStateList;
     public BubbleTextView mBubbleTextView;
-    public final Handler mHandler;
     public final int mQuickspaceBackgroundRes;
 
     public DateTextView mClockView;
@@ -93,7 +75,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         super(context, set);
         mActionReceiver = new QuickSpaceActionReceiver(context);
         mController = new QuickspaceController(context);
-        mHandler = new Handler();
         mColorStateList = ColorStateList.valueOf(Themes.getAttrColor(getContext(), R.attr.workspaceTextColor));
         mQuickspaceBackgroundRes = R.drawable.bg_quickspace;
         setClipChildren(false);
@@ -251,11 +232,9 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     @Override
     public void onLayout(boolean b, int n, int n2, int n3, int n4) {
         super.onLayout(b, n, n2, n3, n4);
-        //mEventTitle.setText(cn); Todo: set the event info here
     }
 
     public void onPause() {
-        mHandler.removeCallbacks(this);
         mController.onPause();
     }
 

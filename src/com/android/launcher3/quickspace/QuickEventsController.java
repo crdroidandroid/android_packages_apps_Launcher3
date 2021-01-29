@@ -15,31 +15,26 @@
  */
 package com.android.launcher3.quickspace;
 
-import android.app.SearchManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
-import android.os.SystemProperties;
 import android.provider.Settings;
 import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.android.launcher3.Launcher;
 import com.android.launcher3.LauncherFiles;
-import com.android.launcher3.Utilities;
 import com.android.launcher3.R;
+import com.android.launcher3.Utilities;
 
 import java.util.Calendar;
-import java.util.List;
 import java.util.Random;
-import java.util.ArrayList;
 
 public class QuickEventsController {
 
-    // private static final int AMBIENT_INFO_MAX_DURATION = 120000; // 2 minutes
     private static final String SETTING_DEVICE_INTRO_COMPLETED = "device_introduction_completed";
     private Context mContext;
 
@@ -57,11 +52,6 @@ public class QuickEventsController {
     private SharedPreferences mPreferences;
 
     // PSA + Personality
-    private boolean mEventPSA = false;
-    private String mPSAMessage;
-    private Calendar mPSACalendar = Calendar.getInstance();
-    private int mPSARandom;
-    private Random mPSAGenerator;
     private String[] mPSAMorningStr;
     private String[] mPSAEvenStr;
     private String[] mPSAMidniteStr;
@@ -69,13 +59,8 @@ public class QuickEventsController {
     private BroadcastReceiver mPSAListener = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Calendar mPSAOldCalendar = mPSACalendar;
-            mPSACalendar = Calendar.getInstance();
-            if (mPSACalendar != mPSAOldCalendar) {
-                psonalityEvent();
-            }
+            psonalityEvent();
         }
-
     };
 
     // NowPlaying
@@ -84,7 +69,6 @@ public class QuickEventsController {
     private String mNowPlayingArtist;
     private boolean mClientLost = true;
     private boolean mPlayingActive = false;
-    //private long mLastAmbientInfo;
 
     public QuickEventsController(Context context) {
         mContext = context;
@@ -151,8 +135,7 @@ public class QuickEventsController {
 
     public void nowPlayingEvent() {
         if (mEventNowPlaying) {
-            //boolean infoExpired = System.currentTimeMillis() - mLastAmbientInfo > AMBIENT_INFO_MAX_DURATION;
-            boolean infoExpired = !mPlayingActive;
+            boolean infoExpired = !mPlayingActive || mClientLost;
             if (infoExpired) {
                 mIsQuickEvent = false;
                 mEventNowPlaying = false;
@@ -185,12 +168,6 @@ public class QuickEventsController {
         mEventTitleSubAction = new OnClickListener() {
             @Override
             public void onClick(View view) {
-                // TODO: Implement Pixel Now Playing support
-                /**String query = String.format(mContext.getResources().getString(
-                        R.string.quick_event_ambient_song_artist), entry.getSongTitle(), entry.getArtistTitle());
-                final Intent ambient = new Intent(Intent.ACTION_WEB_SEARCH)
-                        .putExtra(SearchManager.QUERY, query); **/
-
                 if (mPlayingActive) {
                     // Work required for local media actions
                     Intent npIntent = new Intent(Intent.ACTION_MAIN);
@@ -225,29 +202,26 @@ public class QuickEventsController {
             }
         };
 
-        switch (mPSACalendar.get(Calendar.HOUR_OF_DAY)) {
+        switch (Calendar.getInstance().get(Calendar.HOUR_OF_DAY)) {
             case 5: case 6: case 7: case 8: case 9:
                 psaLength = mPSAMorningStr.length - 1;
                 mEventTitleSub = mPSAMorningStr[getLuckyNumber(0, psaLength)];
                 mEventSubIcon = R.drawable.ic_quickspace_morning;
                 mIsQuickEvent = true;
-                mEventPSA = true;
                 break;
 
-            case 19: case 20: case 21: case 22: case 23: case 0:
+            case 19: case 20: case 21: case 22: case 23:
                 psaLength = mPSAEvenStr.length - 1;
                 mEventTitleSub = mPSAEvenStr[getLuckyNumber(0, psaLength)];
                 mEventSubIcon = R.drawable.ic_quickspace_evening;
                 mIsQuickEvent = true;
-                mEventPSA = true;
                 break;
 
-            case 1: case 2: case 3: case 4:
-                psaLength = mPSAEvenStr.length - 1;
-                mEventTitleSub = mPSAEvenStr[getLuckyNumber(0, psaLength)];
-                mEventSubIcon = R.drawable.ic_quickspace_evening;
+            case 0: case 1: case 2: case 3: case 4:
+                psaLength = mPSAMidniteStr.length - 1;
+                mEventTitleSub = mPSAMidniteStr[getLuckyNumber(0, psaLength)];
+                mEventSubIcon = R.drawable.ic_quickspace_midnight;
                 mIsQuickEvent = true;
-                mEventPSA = true;
                 break;
 
             default:
@@ -256,14 +230,11 @@ public class QuickEventsController {
                     mEventTitleSub = mPSARandomStr[getLuckyNumber(0, psaLength)];
                     mEventSubIcon = R.drawable.ic_quickspace_crdroid;
                     mIsQuickEvent = true;
-                    mEventPSA = true;
                 } else {
                     mIsQuickEvent = false;
-                    mEventPSA = false;
                 }
                 break;
         }
-
     }
 
     public boolean isQuickEvent() {
