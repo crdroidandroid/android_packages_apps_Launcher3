@@ -49,14 +49,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_sleep_gesture_title">Uspat dvojím poklepáním</string>
     <string name="pref_sleep_gesture_summary">Dvojím poklepáním do prázdného prostoru uspat zařízení</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">Zobrazovat nahodilé vzkazy</string>
+    <string name="quickspace_psa_summary">Čas od času zobrazit v\u00a0Přehledu událostí nějaké pěkné vzkazy.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
+        <item>Dobré ránko!</item>
+        <item>Dobré ráno! Je načase vstávat a\u00a0cvičit!</item>
+        <item>Dneska je venku hezky!</item>
+        <item>Měj se fanfárově!</item>
+        <item>Což takhle si ještě na 5\u00a0minut zdřímnout?</item>
         <item>That\'s one way to wake up.</item>
         <item>You should change your alarm sounds.</item>
         <item>Looks like it\'s a beautiful day, isn\'t it?</item>
