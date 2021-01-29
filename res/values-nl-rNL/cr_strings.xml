@@ -49,75 +49,75 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_sleep_gesture_title">Dubbeltikken voor slaapstand</string>
     <string name="pref_sleep_gesture_summary">Dubbeltikken op lege ruimte om uit te schakelen</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">Laat een willekeurig bericht zien</string>
+    <string name="quickspace_psa_summary">Laat sommige leuke berichten soms zien op At a Glance.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Goedemorgen!</item>
+        <item>Goedemorgen, tijd om te rocken!</item>
+        <item>Wat een mooie dag!</item>
+        <item>Geniet van je dag!</item>
+        <item>Wat denk je van een 5 minuten dutje?</item>
+        <item>Dat is één manier om wakker te worden.</item>
+        <item>U moet uw alarmgeluiden wijzigen.</item>
+        <item>Het lijkt erop dat het een mooie dag is, nietwaar?</item>
+        <item>Laten we dit doen.</item>
+        <item>Controleer het weer in het geval van</item>
+        <item>Voel je een beetje slaperig</item>
+        <item>Heb je al naar buiten gekeken?</item>
+        <item>Laten we dit doen.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>Goede nacht!</item>
+        <item>Slaap lekker!</item>
+        <item>Tot morgen!</item>
+        <item>Droom zacht!</item>
+        <item>Niet te lang opblijven</item>
+        <item>Geniet van een goede slaap</item>
+        <item>Slaap maar wat</item>
+        <item>Tijd om te ontspannen</item>
+        <item>Geniet van de nacht!</item>
+        <item>Tijd om de batterijen op te laden!</item>
+        <item>Morgen kan een geweldige dag zijn</item>
+        <item>Maak je klaar voor morgen</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Um... goede nacht?</item>
+        <item>Het is nu een beetje laat</item>
+        <item>Je moet je slaapschema verbeteren</item>
+        <item>Ben je productiever op dit moment?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
-        <item>Hyped about Android 12?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
-        <item>Open goodness with crDroid</item>
-        <item>Spread love not havoc</item>
-        <item>Have fun!</item>
-        <item>Time for some good music</item>
+        <item>Negeren is Bliss</item>
+        <item>Is het al tijd om nog een update te flashen?</item>
+        <item>Opgewonden voor Android 12?</item>
+        <item>Hey, hoe gaat het?</item>
+        <item>Focus op uw taken</item>
+        <item>Hoeveel schermafbeeldingen neem je?</item>
+        <item>Open het goeie met CrDroid</item>
+        <item>Verspreid de liefde en niet de vernieling</item>
+        <item>Veel plezier!</item>
+        <item>Tijd voor wat goede muziek</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
-        <item>We love you 3000</item>
-        <item>Stay Home, Stay Safe</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>How is everything going?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
-        <item>Winner Winner ....?</item>
+        <item>Je hebt crDroid Premium nodig om dit te zien</item>
+        <item>Onthoud de afkomst van de Unicorn</item>
+        <item>Geniet van de Xtended batterijduur</item>
+        <item>Vanaf nul beginnen</item>
+        <item>We houden van je 3000</item>
+        <item>Blijf thuis, blijf veilig</item>
+        <item>Doe iets leuks vandaag</item>
+        <item>Dit is de beste Pixel Experience, nietwaar?</item>
+        <item>Hoe gaat het met alles?</item>
+        <item>Geen illusies, welkom bij de realiteit!</item>
+        <item>Bedankt voor je steun</item>
+        <item>Geen festival voor Derps - enkel perfectie!</item>
+        <item>Een van buildbot\'s beste keuze</item>
+        <item>Gezondheid voor je Paranoia</item>
+        <item>Probeer Ijs Koude toetjes</item>
+        <item>Wat een mooie ervaring, nietwaar?</item>
+        <item>Evolutie is een mythe, toch?</item>
+        <item>Je bent wat je flasht, dus ben geen Potato</item>
+        <item>Waar denk je aan?</item>
+        <item>Winnaar ....?</item>
         <item>rm -rf \/</item>
     </string-array>
 </resources>
