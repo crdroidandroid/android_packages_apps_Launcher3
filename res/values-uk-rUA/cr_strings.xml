@@ -49,52 +49,52 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_sleep_gesture_title">Подвійне натискання для блокування екрану</string>
     <string name="pref_sleep_gesture_summary">Подвійне натискання на пусте місце для вимкнення екрану</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">Показати випадкове повідомлення</string>
+    <string name="quickspace_psa_summary">Показувати зрідка кілька гарних повідомлень у віджеті At a Glance.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Доброго ранку!</item>
+        <item>Доброго ранку, час запалювати!</item>
+        <item>Який гарний день!</item>
+        <item>Гарного дня!</item>
+        <item>Як щодо маленької 5 хвилинної дрімоти?</item>
+        <item>Ось це один із способів прокидатися.</item>
+        <item>Ви повинні змінити звуки будильника.</item>
+        <item>Схоже, це прекрасний день, чи не так?</item>
+        <item>Зробімо це.</item>
+        <item>Перевіряйте погоду про всяк випадок</item>
+        <item>Трохи сонний</item>
+        <item>Ти вже виглядував назовні?</item>
+        <item>Зробимо це.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>На добраніч!</item>
+        <item>Приємних снів!</item>
+        <item>Побачимося завтра!</item>
+        <item>Солодких снів!</item>
+        <item>Не залишайся надто довго</item>
+        <item>Гарного сну</item>
+        <item>Поспи, просто поспи</item>
+        <item>Час відпочинку</item>
+        <item>Насолоджуйся ніччю!</item>
+        <item>Час заряджати батареї!</item>
+        <item>Завтра буде чудовий день</item>
+        <item>Приготуйте свої кістки на завтра</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Ну... Доброї ночі?</item>
+        <item>Зараз уже трохи пізно</item>
+        <item>Вам слід виправити свій розклад сну</item>
+        <item>У цей час ти більш продуктивний?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
-        <item>Hyped about Android 12?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
-        <item>Open goodness with crDroid</item>
-        <item>Spread love not havoc</item>
+        <item>Невігластво це блаженство</item>
+        <item>Настав час прошити ще одне оновлення?</item>
+        <item>Перехід на Android 12?</item>
+        <item>Привіт, що відбувається?</item>
+        <item>Сфокусуйтеся на ваших справах</item>
+        <item>Скільки знімків екрану ви робите?</item>
+        <item>Відкрийте добро з crDroid</item>
+        <item>Поширювати любов не хаос</item>
         <item>Have fun!</item>
         <item>Time for some good music</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
