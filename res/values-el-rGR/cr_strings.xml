@@ -48,4 +48,76 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Διπλό πάτημα για ύπνο</string>
     <string name="pref_sleep_gesture_summary">Πάτημα δύο φορές σε κενό χώρο για απενεργοποίηση</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Εμφάνιση τυχαίου μηνύματος</string>
+    <string name="quickspace_psa_summary">Εμφάνιση μερικών ωραίων μηνυμάτων μερικές φορές στο Με μια Ματιά.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Καλημέρα!</item>
+        <item>Καλημέρα, ώρα να ροκάρουμε!</item>
+        <item>Τι όμορφη μέρα!</item>
+        <item>Να έχεις μια όμορφη μέρα!</item>
+        <item>Τι λες για έναν μικρό υπνάκο 5 λεπτών;</item>
+        <item>Αυτός είναι ένας τρόπος να ξυπνήσετε.</item>
+        <item>Πρέπει να αλλάξετε τους ήχους alarm.</item>
+        <item>Φαίνεται ότι έχει μια υπέροχη μέρα, έτσι δεν είναι;</item>
+        <item>Ας πάρουμε αυτό το ψωμί.</item>
+        <item>Έλεγξε τον καιρό για κάθε περίπτωση</item>
+        <item>Αισθάνεσαι λίγο υπνηλία</item>
+        <item>Έχεις κοιτάξει έξω;</item>
+        <item>Ας το κάνουμε αυτό.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Καληνύχτα!</item>
+        <item>Καλόν ύπνο!</item>
+        <item>Τα λέμε αύριο!</item>
+        <item>Όνειρα γλυκά!</item>
+        <item>Μην μένεις ξύπνιος μέχρι αργά</item>
+        <item>Να έχετε έναν καλό ύπνο</item>
+        <item>Πήγαινε να κοιμηθείς λίγο</item>
+        <item>Ώρα για χαλάρωση</item>
+        <item>Απόλαυσε τη νύχτα!</item>
+        <item>Ώρα να φορτίσεις τις μπαταρίες!</item>
+        <item>Αύριο μπορεί να είναι μια υπέροχη μέρα</item>
+        <item>Ετοίμασε τα κόκαλά σου για αύριο</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Εμ... καληνύχτα;</item>
+        <item>Είναι λίγο αργά τώρα</item>
+        <item>Πρέπει να διορθώσεις το πρόγραμμα ύπνου σου</item>
+        <item>Είσαι πιο παραγωγικός αυτή τη στιγμή;</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Η άγνοια είναι Ευτυχία</item>
+        <item>Ήρθε ήδη η ώρα να flashaρουμε ακόμα μια ενημέρωση;</item>
+        <item>Είσαι hyped σχετικά με το Android 12;</item>
+        <item>Ω γεια, τι λέει;</item>
+        <item>Επικεντρώσου στις εργασίες σου</item>
+        <item>Πόσα στιγμιότυπα οθόνης παίρνεις;</item>
+        <item>Ανοιχτή καλοσύνη με crDroid</item>
+        <item>Μοίρασε αγάπη όχι όλεθρο</item>
+        <item>Καλή διασκέδαση!</item>
+        <item>Ώρα για λίγη καλή μουσική</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>Χρειάζεστε το crDroid Premium για να το δείτε αυτό</item>
+        <item>Θυμήσου το Lineage του Unicorn</item>
+        <item>Απόλαυσε την Xtended διάρκεια ζωής της μπαταρίας</item>
+        <item>Ξεκινώντας από το απόλυτο μηδέν</item>
+        <item>Σε αγαπάμε 3000</item>
+        <item>Μείνε Σπίτι, Μείνε Ασφαλείς</item>
+        <item>Κάνε κάτι ωραίο σήμερα</item>
+        <item>Αυτή είναι η καλύτερη εμπειρία Pixel, έτσι δεν είναι;</item>
+        <item>Πως πάνε τα πράγματα;</item>
+        <item>Χωρίς ψευδαισθήσεις, καλώς ήρθατε στην πραγματικότητα!</item>
+        <item>Ευχαριστούμε για την υποστήριξη</item>
+        <item>Χωρίς φεστιβάλ για Derps - μόνο τελειότητα!</item>
+        <item>Μία από τις καλύτερες επιλογές του buildbot</item>
+        <item>Λογική για την Παράνοιά σας</item>
+        <item>Δοκιμάστε το Ice Cold επιδόρπια</item>
+        <item>Τι υπέροχη εμπειρία, έτσι δεν είναι;</item>
+        <item>Η εξέλιξη είναι μύθος, σωστά;</item>
+        <item>Είσαι ότι flashάρεις, μην είσαι Πατάτα</item>
+        <item>Τι έχεις στο μυαλό σου;</item>
+        <item>Winner Winner ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
 </resources>

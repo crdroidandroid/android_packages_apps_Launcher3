@@ -48,4 +48,76 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Double-cliquez pour mettre en veille</string>
     <string name="pref_sleep_gesture_summary">Double appui sur un espace vide pour éteindre</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Montrer un message aléatoire</string>
+    <string name="quickspace_psa_summary">Montrer parfois de beaux messages dans \"En bref\".</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Bonjour !</item>
+        <item>Bonjour, il est temps d\'y aller !</item>
+        <item>Quelle belle journée !</item>
+        <item>Bonne journée !</item>
+        <item>Que diriez-vous d\'une pause de 5 minutes ?</item>
+        <item>Drôle de façon de se réveiller.</item>
+        <item>Vous devriez changer le son de votre alarme.</item>
+        <item>On dirait une belle journée, n\'est-ce pas ?</item>
+        <item>Let\'s get this bread.</item>
+        <item>Vérifiez la météo au cas où</item>
+        <item>Feeling a bit sleepy yet</item>
+        <item>Avez-vous regardé dehors ?</item>
+        <item>Occupons-nous de cela.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Bonne nuit !</item>
+        <item>Dormez bien !</item>
+        <item>À demain!</item>
+        <item>Faites de beaux rêves!</item>
+        <item>Ne vous couchez pas trop tard</item>
+        <item>Dormez bien</item>
+        <item>Allez vous reposer</item>
+        <item>C\'est le moment de se détendre</item>
+        <item>Profitez de la nuit!</item>
+        <item>Il est temps de recharger les batteries !</item>
+        <item>Demain sera peut-être un grand jour</item>
+        <item>Préparez-vous pour demain</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Hum... bonne nuit ?</item>
+        <item>C\'est un peu tard</item>
+        <item>Vous devriez faire attention à vos horaires de sommeil</item>
+        <item>Êtes-vous plus productif en ce moment?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Heureux sont les ignorants</item>
+        <item>Est-ce déjà le moment de flasher une autre mise à jour ?</item>
+        <item>Excité par Android 12?</item>
+        <item>Hey ! Quoi de neuf ?</item>
+        <item>Concentrez-vous sur vos tâches</item>
+        <item>Combien de captures d\'écran prenez-vous ?</item>
+        <item>Libérez ce qui est bon avec crDroid</item>
+        <item>Faites l\'amour, pas la guerre</item>
+        <item>Amusez-vous bien!</item>
+        <item>Il est temps d\'écouter de la bonne musique</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>Vous avez besoin de crDroid Premium pour voir ceci</item>
+        <item>Souviens-toi de l\'héritage de la licorne</item>
+        <item>Profitez d\'une durée de vie de la batterie prolongée</item>
+        <item>A partir du début</item>
+        <item>On vous aime aussi</item>
+        <item>Restez à la maison, protégez-vous</item>
+        <item>Faites quelque chose de bien aujourd\'hui</item>
+        <item>Ceci est la meilleure expérience Pixel, n\'est-ce pas ?</item>
+        <item>Comment ça se passe?</item>
+        <item>Pas d\'illusion, bienvenue dans la réalité!</item>
+        <item>Merci pour votre soutien</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>Sanity for your Paranoia</item>
+        <item>Try Ice Cold desserts</item>
+        <item>Une plaisante expérience, n\'est-ce-pas ?</item>
+        <item>L\'évolution est un mythe, n\'est-ce pas?</item>
+        <item>You are what you flash, don\'t be Potato</item>
+        <item>What\'s on your mind?</item>
+        <item>Winner Winner ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
 </resources>

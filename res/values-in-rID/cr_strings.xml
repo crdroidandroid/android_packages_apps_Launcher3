@@ -40,12 +40,84 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="quickspace_now_playing_title">Sedang diputar</string>
     <string name="quickspace_now_playing_summary">Menampilkan lagu yang Anda putar Sekilas</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
+    <string name="quickspace_alternate_style_title">Gunakan gaya alternatif</string>
+    <string name="quickspace_alternate_style_summary">Gunakan gaya minimalis untuk Sekilas</string>
     <!-- Icon packs -->
     <string name="icon_pack">Paket ikon</string>
     <string name="icon_pack_summary">Pilih paket ikon</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Ketuk dua kali untuk tidur</string>
     <string name="pref_sleep_gesture_summary">Ketuk dua kali pada ruang kosong untuk mematikan</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Tampilkan pesan acak</string>
+    <string name="quickspace_psa_summary">Tampilkan beberapa pesan sekilas.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Selamat Pagi</item>
+        <item>Selamat pagi, saatnya bergoyang</item>
+        <item>Hari yang indah</item>
+        <item>Semoga harimu menyenangkan</item>
+        <item>Bagaimana dengan tidur siang kecil selama 5 menit</item>
+        <item>Itu adalah salah satu cara untuk bangun</item>
+        <item>Anda harus mengubah suara alarm</item>
+        <item>Sepertinya ini hari yang indah, bukan</item>
+        <item>Let\'s get this bread.</item>
+        <item>Check the weather just in case</item>
+        <item>Feeling a bit sleepy yet</item>
+        <item>Have you looked outside yet?</item>
+        <item>Let\'s get this done.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Good night!</item>
+        <item>Sleep well!</item>
+        <item>See you tomorrow!</item>
+        <item>Sweet dreams!</item>
+        <item>Don\'t stay up too long</item>
+        <item>Have a good sleep</item>
+        <item>Get some sleep</item>
+        <item>Time to relax</item>
+        <item>Enjoy the night!</item>
+        <item>Time to charge the batteries!</item>
+        <item>Tomorrow might be a great day</item>
+        <item>Get your bones ready for tomorrow</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Um... good night?</item>
+        <item>It\'s a bit late now</item>
+        <item>You should fix your sleep schedule</item>
+        <item>Are you more productive at this time?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Ignorance is Bliss</item>
+        <item>Is it time to flash another update already?</item>
+        <item>Hyped about Android 12?</item>
+        <item>Oh hey, what\'s up?</item>
+        <item>Focus on your tasks</item>
+        <item>How many screenshots do you take?</item>
+        <item>Open goodness with crDroid</item>
+        <item>Spread love not havoc</item>
+        <item>Have fun!</item>
+        <item>Time for some good music</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>You need crDroid Premium to see this</item>
+        <item>Remember the Lineage of the Unicorn</item>
+        <item>Enjoy Xtended battery life</item>
+        <item>Starting from the ground zero</item>
+        <item>We love you 3000</item>
+        <item>Stay Home, Stay Safe</item>
+        <item>Do something nice today</item>
+        <item>This is best Pixel Experience, isn\'t it?</item>
+        <item>How is everything going?</item>
+        <item>No illusions, welcome to reality!</item>
+        <item>Thank you for your support</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>Sanity for your Paranoia</item>
+        <item>Try Ice Cold desserts</item>
+        <item>What a lovely experience, isn\'t it?</item>
+        <item>Evolution is a myth, right?</item>
+        <item>You are what you flash, don\'t be Potato</item>
+        <item>What\'s on your mind?</item>
+        <item>Winner Winner ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
 </resources>

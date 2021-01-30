@@ -48,4 +48,76 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Подвійне натискання для блокування екрану</string>
     <string name="pref_sleep_gesture_summary">Подвійне натискання на пусте місце для вимкнення екрану</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Показати випадкове повідомлення</string>
+    <string name="quickspace_psa_summary">Показувати зрідка кілька гарних повідомлень у віджеті At a Glance.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Доброго ранку!</item>
+        <item>Доброго ранку, час запалювати!</item>
+        <item>Який гарний день!</item>
+        <item>Гарного дня!</item>
+        <item>Як щодо маленької 5 хвилинної дрімоти?</item>
+        <item>Ось це один із способів прокидатися.</item>
+        <item>Ви повинні змінити звуки будильника.</item>
+        <item>Схоже, це прекрасний день, чи не так?</item>
+        <item>Зробімо це.</item>
+        <item>Перевіряйте погоду про всяк випадок</item>
+        <item>Трохи сонний</item>
+        <item>Ти вже виглядував назовні?</item>
+        <item>Зробимо це.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>На добраніч!</item>
+        <item>Приємних снів!</item>
+        <item>Побачимося завтра!</item>
+        <item>Солодких снів!</item>
+        <item>Не залишайся надто довго</item>
+        <item>Гарного сну</item>
+        <item>Поспи, просто поспи</item>
+        <item>Час відпочинку</item>
+        <item>Насолоджуйся ніччю!</item>
+        <item>Час заряджати батареї!</item>
+        <item>Завтра буде чудовий день</item>
+        <item>Приготуйте свої кістки на завтра</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Ну... Доброї ночі?</item>
+        <item>Зараз уже трохи пізно</item>
+        <item>Вам слід виправити свій розклад сну</item>
+        <item>У цей час ти більш продуктивний?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Невігластво це блаженство</item>
+        <item>Настав час прошити ще одне оновлення?</item>
+        <item>Перехід на Android 12?</item>
+        <item>Привіт, що відбувається?</item>
+        <item>Сфокусуйтеся на ваших справах</item>
+        <item>Скільки знімків екрану ви робите?</item>
+        <item>Відкрийте добро з crDroid</item>
+        <item>Поширювати любов не хаос</item>
+        <item>Приємного користування!</item>
+        <item>Час для якоїсь хорошої музики</item>
+        <item>Голова</item>
+        <item>Вам потрібен crDroid Premium щоб побачити це</item>
+        <item>Пам\'ятайте схему єдинорога</item>
+        <item>Насолоджуйтесь подовженим життям батарейки</item>
+        <item>Починаючи з нуля</item>
+        <item>Ми любимо вас 3000</item>
+        <item>Залишайтеся вдома, будьте у безпеці</item>
+        <item>Зроби щось гарне сьогодні</item>
+        <item>Це найкращий Pixel Experience, чи не так?</item>
+        <item>Як все відбувається?</item>
+        <item>Немає ілюзій, ласкаво просимо до реальності!</item>
+        <item>Дякуємо за вашу підтримку</item>
+        <item>Жодного святкування задля дурниць - лише досконалість!</item>
+        <item>Один з найкращих виборців будівельного робота</item>
+        <item>Здоров’я для вашої Параної</item>
+        <item>Спробуйте крижані холодні десерти</item>
+        <item>Який чудовий досвід, чи не так?</item>
+        <item>Еволюція — міф, чи не так?</item>
+        <item>Ви саме те, що формуєте, не будьте байдужими</item>
+        <item>Що у тебе на думці?</item>
+        <item>Переможець ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
 </resources>

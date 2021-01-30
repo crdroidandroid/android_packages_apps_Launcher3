@@ -48,4 +48,76 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Yuxuya keçmək üçün iki dəfə toxun</string>
     <string name="pref_sleep_gesture_summary">Ekranı söndürmək üçün boş yerə iki dəfə toxun</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Təsadüfi mesaj göstər</string>
+    <string name="quickspace_psa_summary">Bir Baxışta\'da bəzən bəzi gözəl mesajlar göstər.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Sabahınız xeyir!</item>
+        <item>Sabahın xeyir, coşmaq vaxtıdır!</item>
+        <item>Nə gözəl bir gündür!</item>
+        <item>Günün gözəl keçsin!</item>
+        <item>5 dəqiqəlik sakitləşməyə necə baxırsan?</item>
+        <item>Yuxudan durmağın sadəcə bir yolu var.</item>
+        <item>Alarm\'ın səsini artırmalısan.</item>
+        <item>Bu gün gözəl gün kimi görünür, düzdü?</item>
+        <item>Gəlin bu çörəyi alaq.</item>
+        <item>Hər ehtimala qarşı havanı yoxla</item>
+        <item>Hələ də biraz yuxulu hiss edirəm</item>
+        <item>Hələ çölə baxmamısan?</item>
+        <item>Gəlin bunu tamamlayaq.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Gecəniz xeyrə!</item>
+        <item>Yuxunuz şirin olsun!</item>
+        <item>Sabah görüşənədək!</item>
+        <item>Gözəl yuxular!</item>
+        <item>Çox uzun qalmayın</item>
+        <item>Şirin yuxular</item>
+        <item>Biraz yat</item>
+        <item>Dincəlmə vaxtıdı</item>
+        <item>Gecənin keyfini sür!</item>
+        <item>Batareyanı dəyişdirmək vaxtıdır!</item>
+        <item>Sabah bəlkə də gözəl gün olacaq</item>
+        <item>Sümüklərinizi sabah üçün hazır edin</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Hmm... Gecəniz xeyrə?</item>
+        <item>Biraz gecdir</item>
+        <item>Yatmaq vaxtlarını düzəltməlisən</item>
+        <item>İndi daha bacarıqlısız?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Cahillik xoşbəxtlikdir</item>
+        <item>Çoxdan başqa güncəlləməni quraşdırmaq vaxtı gəlmədi?</item>
+        <item>Android 12 haqqında danışıldı?</item>
+        <item>Salam, necəsən?</item>
+        <item>İşinə fokuslan</item>
+        <item>Neçə ekran görüntüsü çəkmisən?</item>
+        <item>crDroid ilə birdən çox özəlləşdirmələr</item>
+        <item>Yayılmış sevgi, dağıntıdır</item>
+        <item>Əylənin!</item>
+        <item>Bəzi gözəl mahnıları dinləməyin vaxtıdır</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>Bunu görə bilməyin üçün crDroid Premium\'a ehtiyacın var</item>
+        <item>Unicorn soyunu yadda saxla</item>
+        <item>Xtended batareya ömrünün kefini çək</item>
+        <item>Sıfırdan başlayaraq</item>
+        <item>Səni 3000 dəfə sevirik</item>
+        <item>Evində Qal, Sağlam Qal</item>
+        <item>Bu gün gözəl bir şeylər et</item>
+        <item>Bu ən gözəl Pixel təcrübəsidir, düz deyil?</item>
+        <item>Hər şey yolundadır?</item>
+        <item>İluzyonlara deyil, real həyata xoş gəldin!</item>
+        <item>Bizi dəstəklədiyin üçün təşəkkür edirik</item>
+        <item>Derps üçün festival yoxdur - sadəcə mükəmməllik!</item>
+        <item>BuildBot\'ların ən yaxşı seçimlərindən biri</item>
+        <item>Paranoyan üçün sağlamlıq</item>
+        <item>Buz kimi desertləri sınayın</item>
+        <item>Nə gözəl bir təcrübə, düz deyil?</item>
+        <item>Təkamül bir əfsanədir, düzdü?</item>
+        <item>Sən nə istifadə edirsənsə osan, Heç vaxt kartof olma</item>
+        <item>Sənin düşüncən nədir?</item>
+        <item>Qalib Qalib ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
 </resources>

@@ -48,4 +48,76 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Dublă atingere pentru oprire ecran</string>
     <string name="pref_sleep_gesture_summary">Dublă atingere pe spațiul gol pentru oprire</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Arată un mesaj aleatoriu</string>
+    <string name="quickspace_psa_summary">Arată unele mesaje frumoase uneori pe scurt.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Bună dimineața!</item>
+        <item>Bună dimineața, timpul de rock!</item>
+        <item>Ce zi frumoasă!</item>
+        <item>O zi bună!</item>
+        <item>Ce zici de o pauză de 5 minute?</item>
+        <item>Acesta este un mod de a te trezi.</item>
+        <item>Ar trebui să vă schimbați sunetele de alarmă.</item>
+        <item>Se pare că este o zi frumoasă, nu-i așa?</item>
+        <item>Hai să obținem această pâine.</item>
+        <item>Verificați vremea</item>
+        <item>Te simti somnoros deja</item>
+        <item>Te-ai uitat afară?</item>
+        <item>Să terminăm asta.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Noapte bună!</item>
+        <item>Somn ușor!</item>
+        <item>Pe mâine!</item>
+        <item>Vise plăcute!</item>
+        <item>Nu sta prea mult</item>
+        <item>Somn usor</item>
+        <item>Odihnestete</item>
+        <item>Timpul pentru relaxare</item>
+        <item>Bucura-te de noapte!</item>
+        <item>Este timpul să încărcăm bateriile!</item>
+        <item>Mâine ar putea fi o zi grozavă</item>
+        <item>Pregătește-ți oasele pentru mâine</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Noapte bună?</item>
+        <item>E cam târziu acum</item>
+        <item>Ar trebui să vă stabiliți programul de somn</item>
+        <item>Ești mai productiv în acest moment?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Ignoranta este Bliss</item>
+        <item>Este timpul să instalezi o nouă actualizare deja?</item>
+        <item>Entuziasmat pentru Android 12?</item>
+        <item>Oh, hei, ce se întâmplă?</item>
+        <item>Focalizează sarcinile tale</item>
+        <item>Câte capturi de ecran faceți?</item>
+        <item>Deschide bunătatea cu crDroid</item>
+        <item>Dragostea răsunătoare nu devastează</item>
+        <item>Distractie placuta!</item>
+        <item>Timp pentru muzica buna</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>Ai nevoie de crDroid Premium pentru a vedea asta</item>
+        <item>Amintiți-vă Lineage of the Unicorn</item>
+        <item>Bucură-te de durata bateriei Xtended</item>
+        <item>Pornind de la zero</item>
+        <item>Te iubim 3000</item>
+        <item>Stai acasă, rămâi în siguranță</item>
+        <item>Fă ceva drăguț astăzi</item>
+        <item>Aceasta este cea mai bună experiență Pixel, nu-i așa?</item>
+        <item>Cum merge totul?</item>
+        <item>Nicio iluzie, bun venit în realitate!</item>
+        <item>Vă mulțumim pentru sprijin</item>
+        <item>Niciun festival pentru Derps - doar perfecţiune!</item>
+        <item>Una dintre cele mai bune alegeri ale buildbot-ului</item>
+        <item>Sanitatea ta pentru Paranoia</item>
+        <item>Încearcă deserturile de gheață</item>
+        <item>Ce experiență minunată, nu-i așa?</item>
+        <item>Evoluția e un mit, nu?</item>
+        <item>Ești ceea ce flash-ui, nu fii Cartofor</item>
+        <item>La ce te gandesti?</item>
+        <item>Câștigător ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
 </resources>

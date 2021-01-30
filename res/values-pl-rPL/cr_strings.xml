@@ -48,4 +48,76 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Stuknij dwukrotnie aby uśpić</string>
     <string name="pref_sleep_gesture_summary">Kliknij dwukrotnie w puste miejsce, aby wyłączyć ekran</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Pokaż losową wiadomość</string>
+    <string name="quickspace_psa_summary">Wyświetl fajne wiadomości w widżecie At a Glance.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Dzień dobry!</item>
+        <item>Dzień dobry, pora na działanie!</item>
+        <item>Ależ piękny dzień!</item>
+        <item>Miłego dnia!</item>
+        <item>A może 5-cio minutowa drzemka?</item>
+        <item>To jest sposób na pobudkę.</item>
+        <item>Powinieneś zmienić dźwięk swojego alarmu.</item>
+        <item>Zapowiada się piękny dzień, nieprawdaż?</item>
+        <item>Zajmijmy się tym.</item>
+        <item>Sprawdź pogodę dla pewności</item>
+        <item>Jestem trochę śpiący</item>
+        <item>Wyjrzałeś już dzisiaj za okno?</item>
+        <item>Zajmijmy się tym.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Dobranoc!</item>
+        <item>Śpij dobrze!</item>
+        <item>Do jutra!</item>
+        <item>Słodkich snów!</item>
+        <item>Nie siedź za długo</item>
+        <item>Miłych snów</item>
+        <item>Idź spać</item>
+        <item>Czas na relaks</item>
+        <item>Miłej nocy!</item>
+        <item>Czas naładować baterie!</item>
+        <item>Jutro może być świetny dzień</item>
+        <item>Przygotuj się na jutro</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Hmm... dobrej nocy?</item>
+        <item>Jest trochę późno</item>
+        <item>Powinieneś poprawić swój harmonogram snu</item>
+        <item>Jesteś teraz bardziej produktywny?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Niewiedza jest błogosławieństwem</item>
+        <item>Czy to czas na kolejną aktualizację?</item>
+        <item>Podekscytowany Androidem 12?</item>
+        <item>Hej, co słychać?</item>
+        <item>Skoncentruj się na swoich zadaniach</item>
+        <item>Ile zrzutów ekranu robisz?</item>
+        <item>Otwórz dobroć z crDroid</item>
+        <item>Szerz miłość nie spustoszenie</item>
+        <item>Baw się dobrze!</item>
+        <item>Czas na dobrą muzykę</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C GŁÓWNY</item>
+        <item>Potrzebujesz crDroid Premium, aby to zobaczyć</item>
+        <item>Pamiętaj the Lineage of the Unicorn</item>
+        <item>Ciesz się wydłużonym czasem baterii</item>
+        <item>Zaczynamy od początku</item>
+        <item>Kochamy cię razy 3000</item>
+        <item>Zostań w domu, dbaj o bezpieczeństwo</item>
+        <item>Zrób dziś coś miłego</item>
+        <item>To najlepsze Pixel Experience, prawda?</item>
+        <item>Jak leci?</item>
+        <item>Brak iluzji, witaj w rzeczywistości!</item>
+        <item>Dziękujemy za wsparcie</item>
+        <item>Brak miejsca dla Derpów - czysta perfekcja!</item>
+        <item>Jeden z najlepszych wyborów buildbota</item>
+        <item>Ukojenie twojej paranoi</item>
+        <item>Wypróbuj lodowe desery</item>
+        <item>Ale cudowne doświadczenie, nieprawdaż?</item>
+        <item>Ewolucja jest mitem, prawda?</item>
+        <item>Jesteś tym co wgrywasz, nie bądź ziemniakiem</item>
+        <item>Co ci chodzi po głowie?</item>
+        <item>Zwycięzca Wygrywa....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
 </resources>

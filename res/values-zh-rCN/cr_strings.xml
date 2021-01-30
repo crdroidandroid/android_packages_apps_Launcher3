@@ -48,4 +48,76 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">双击锁屏</string>
     <string name="pref_sleep_gesture_summary">双击空白处以关机</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">显示一条随机消息</string>
+    <string name="quickspace_psa_summary">在快速查看中显示一些亲切的问候</string>
+    <string-array name="quickspace_psa_morning">
+        <item>早上好！</item>
+        <item>早啊，今天也嗨起来吧！</item>
+        <item>多么美好的一天！</item>
+        <item>祝你有个美好的一天</item>
+        <item>再睡 5 分钟？</item>
+        <item>今早醒来如何？</item>
+        <item>换一下闹钟铃声试试？</item>
+        <item>看起来今天不错，不是吗？</item>
+        <item>今天也要努力工作鸭❤</item>
+        <item>以防万一，看看天气预报吧。</item>
+        <item>唔……还有点困吗？</item>
+        <item>有没有看窗外的风景呢？</item>
+        <item>要努力把工作完成！</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>晚安！</item>
+        <item>好好睡吧。</item>
+        <item>明天见！</item>
+        <item>祝您好梦！</item>
+        <item>不要睡得太晚了哦</item>
+        <item>睡个好觉</item>
+        <item>不打个盹吗？</item>
+        <item>放松一下吧</item>
+        <item>祝您有个美好的夜晚！</item>
+        <item>该充电了！</item>
+        <item>明天可能是美好的一天</item>
+        <item>为明天做好准备</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>还不睡吗？</item>
+        <item>你看到这条消息的时候，不觉得现在有点晚了吗？</item>
+        <item>考虑规范一下作息吧</item>
+        <item>你在这段时间工作，效率更高吗？</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>天真是种幸福</item>
+        <item>是时候更新新系统了吗？</item>
+        <item>对 Android 12 很兴奋？</item>
+        <item>哦，嘿，怎么了？</item>
+        <item>别忘了要做的事</item>
+        <item>你截了几张图？</item>
+        <item>和 crDroid 一起迎接美好</item>
+        <item>用爱击碎毁灭——Havoc Os</item>
+        <item>玩得愉快！</item>
+        <item>是时候听一些好音乐了</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>You need crDroid Premium to see this</item>
+        <item>Remember the Lineage of the Unicorn</item>
+        <item>Enjoy Xtended battery life</item>
+        <item>Starting from the ground zero</item>
+        <item>We love you 3000</item>
+        <item>Stay Home, Stay Safe</item>
+        <item>Do something nice today</item>
+        <item>This is best Pixel Experience, isn\'t it?</item>
+        <item>How is everything going?</item>
+        <item>No illusions, welcome to reality!</item>
+        <item>Thank you for your support</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>Sanity for your Paranoia</item>
+        <item>Try Ice Cold desserts</item>
+        <item>What a lovely experience, isn\'t it?</item>
+        <item>Evolution is a myth, right?</item>
+        <item>You are what you flash, don\'t be Potato</item>
+        <item>What\'s on your mind?</item>
+        <item>Winner Winner ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
 </resources>

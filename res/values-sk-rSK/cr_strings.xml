@@ -48,4 +48,76 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Uspať dvojitým poklepaním</string>
     <string name="pref_sleep_gesture_summary">Dvojitým poklepaním sa zariadenie uspí</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Zobraziť náhodnú správu</string>
+    <string name="quickspace_psa_summary">Niekedy zobraziť v prehľade udalostí nejaké pekné správy.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Dobré ráno!</item>
+        <item>Dobré ráno, čas na rozcvičku!</item>
+        <item>Aký krásny deň!</item>
+        <item>Prajeme pekný deň</item>
+        <item>Čo tak malý 5 minútový spánok?</item>
+        <item>Tiež jedna z možností, ako sa zobudiť.</item>
+        <item>Mali by ste si zmeniť zvuk budíka.</item>
+        <item>Vyzerá to, že je krásny deň, však?</item>
+        <item>Poďme na to.</item>
+        <item>Pre každý prípad radšej skontrolujte počasie</item>
+        <item>Cítim sa trochu ospalo</item>
+        <item>Pozreli ste sa už von?</item>
+        <item>Poďme na to.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Dobrú noc!</item>
+        <item>Dobre sa vyspi!</item>
+        <item>Uvidíme sa zajtra!</item>
+        <item>Sladké sny!</item>
+        <item>Nezostávaj príliš dlho hore</item>
+        <item>Dobre sa vyspi</item>
+        <item>Vyspi sa</item>
+        <item>Čas na relaxovanie</item>
+        <item>Uži si noc!</item>
+        <item>Je čas nabiť batérie!</item>
+        <item>Zajtra môže byť skvelý deň</item>
+        <item>Buď pripravený sa na zajtrajšok</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Hm... dobrú noc?</item>
+        <item>Je trochu neskoro</item>
+        <item>Mal by si si upraviť spánkový režim</item>
+        <item>Si v tejto dobe produktívnejší?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Sladká nevedomosť</item>
+        <item>Je čas na ďalšiu aktualizáciu?</item>
+        <item>Tešíš sa na Android 12?</item>
+        <item>Oh hey, what\'s up?</item>
+        <item>Zameraj sa na svoje úlohy</item>
+        <item>Koľko snímok obrazovky urobíš?</item>
+        <item>S crDroid otvoríš hocijaké vychytávky</item>
+        <item>Šír lásku, nie chaos</item>
+        <item>Bav sa!</item>
+        <item>Čas na dobrú hudbu</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HROT</item>
+        <item>Pre zobrazenie tohto obsahu je potrebné mať crDroid Premium</item>
+        <item>Pamätaj na Lineage of the Unicorn</item>
+        <item>Uži si dlhšiu výdrž batérie</item>
+        <item>Začíname od piky</item>
+        <item>Milujeme ťa 3000</item>
+        <item>Zostaň doma, zostaň v bezpečí</item>
+        <item>Urob dnes niečo pekné</item>
+        <item>Toto je najlepší Pixel Experience, však?</item>
+        <item>Ako sa veci majú?</item>
+        <item>Žiadne ilúzie, vitaj v realite!</item>
+        <item>Ďakujem za tvoju podporu</item>
+        <item>Blbosti tu nemajú miesto - iba dokonalosť!</item>
+        <item>Jeden z najlepších výberov buildbota</item>
+        <item>Zdravý rozum pre tvoju paranoju</item>
+        <item>Vyskúšaj ľadovo vychladené pochúťky</item>
+        <item>Aká krásna skúsenosť, nemyslíš?</item>
+        <item>Evolúcia je mýtus, však?</item>
+        <item>Si to, čo nainštaluješ, nebuď zemiak</item>
+        <item>Na čo myslíš?</item>
+        <item>Víťaz Víťaz ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
 </resources>
