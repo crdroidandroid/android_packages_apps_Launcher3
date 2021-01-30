@@ -191,6 +191,23 @@ public abstract class SystemShortcut<T extends BaseDraggingActivity> extends Ite
         }
     }
 
+    public static class UnInstall extends SystemShortcut {
+
+        public UnInstall(BaseDraggingActivity target, ItemInfo itemInfo) {
+            super(R.drawable.ic_uninstall_no_shadow, R.string.uninstall_drop_target_label,
+                    target, itemInfo);
+        }
+
+        @Override
+        public void onClick(View view) {
+            String packageName = mItemInfo.getTargetComponent().getPackageName();
+            Intent intent = new PackageManagerHelper(
+                    view.getContext()).getUninstallIntent(packageName);
+            mTarget.startActivitySafely(view, intent, mItemInfo, null);
+            AbstractFloatingView.closeAllOpenViews(mTarget);
+        }
+    }
+
     public static void dismissTaskMenuView(BaseDraggingActivity activity) {
         AbstractFloatingView.closeOpenViews(activity, true,
             AbstractFloatingView.TYPE_ALL & ~AbstractFloatingView.TYPE_REBIND_SAFE);
