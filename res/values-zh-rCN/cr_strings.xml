@@ -49,26 +49,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_sleep_gesture_title">双击锁屏</string>
     <string name="pref_sleep_gesture_summary">双击空白处以关机</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">显示一条随机消息</string>
+    <string name="quickspace_psa_summary">在快速查看中显示一些亲切的问候</string>
     <string-array name="quickspace_psa_morning">
         <item>早上好！</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>早啊，今天也嗨起来吧！</item>
+        <item>多么美好的一天！</item>
+        <item>祝你有个美好的一天</item>
+        <item>再睡 5 分钟？</item>
+        <item>今早醒来如何？</item>
+        <item>换一下闹钟铃声试试？</item>
+        <item>看起来今天不错，不是吗？</item>
+        <item>今天也要努力工作鸭❤</item>
+        <item>以防万一，看看天气预报吧。</item>
+        <item>唔……还有点困吗？</item>
+        <item>有没有看窗外的风景呢？</item>
+        <item>要努力把工作完成！</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
+        <item>晚安！</item>
+        <item>好好睡吧。</item>
         <item>See you tomorrow!</item>
         <item>Sweet dreams!</item>
         <item>Don\'t stay up too long</item>
