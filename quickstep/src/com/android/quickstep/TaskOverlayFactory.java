@@ -121,6 +121,7 @@ public class TaskOverlayFactory implements ResourceBasedOverride {
     private static final TaskShortcutFactory[] MENU_OPTIONS = new TaskShortcutFactory[]{
             TaskShortcutFactory.APP_INFO,
             TaskShortcutFactory.SPLIT_SELECT,
+            TaskShortcutFactory.UNINSTALL,
             TaskShortcutFactory.PIN,
             TaskShortcutFactory.INSTALL,
             TaskShortcutFactory.FREE_FORM,
