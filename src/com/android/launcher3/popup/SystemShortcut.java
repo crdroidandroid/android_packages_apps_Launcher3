@@ -191,6 +191,8 @@ public abstract class SystemShortcut<T extends BaseDraggingActivity> extends Ite
         }
     }
 
+    public static final Factory<BaseDraggingActivity> UNINSTALL = UnInstall::new;
+
     public static class UnInstall extends SystemShortcut {
 
         public UnInstall(BaseDraggingActivity target, ItemInfo itemInfo) {
