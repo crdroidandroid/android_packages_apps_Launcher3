@@ -49,63 +49,63 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_sleep_gesture_title">Doble toque para apagar pantalla</string>
     <string name="pref_sleep_gesture_summary">Doble toque en espacio vacío para apagar</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">Mostrar un mensaje aleatorio</string>
+    <string name="quickspace_psa_summary">Mostrar mensajes agradables en Información de un vistazo.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>¡Buenos días!</item>
+        <item>¡Buenos días, hora de actuar!</item>
+        <item>¡Qué bonito día!</item>
+        <item>¡Que tengas un buen día!</item>
+        <item>¿Qué tal una pequeña siesta de 5 minutos?</item>
+        <item>Esa es una forma de despertar.</item>
+        <item>Deberías cambiar los sonidos de tu alarma.</item>
+        <item>Parece que es un hermoso día, ¿no?</item>
+        <item>Vamos a ganarnos el pan.</item>
+        <item>Consulta el clima por si acaso</item>
+        <item>Tengo un poco de sueño todavía</item>
+        <item>¿Has echado un vistazo afuera?</item>
+        <item>Hagamos esto.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>¡Buenas noches!</item>
+        <item>¡Que duermas bien!</item>
+        <item>¡Nos vemos mañana!</item>
+        <item>¡Dulces sueños!</item>
+        <item>No te acuestes muy tarde</item>
+        <item>Que duermas bien</item>
+        <item>Duerme un poco</item>
+        <item>Hora de relajarse</item>
+        <item>¡Disfruta de la noche!</item>
+        <item>¡Hora de cargar las baterías!</item>
+        <item>Mañana puede ser un gran día</item>
+        <item>Prepara tus huesos para mañana</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Um... buenas noches?</item>
+        <item>Ya es un poco tarde</item>
+        <item>Deberías arreglar tu horario de sueño</item>
+        <item>¿Eres más productivo a esta hora?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
-        <item>Hyped about Android 12?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
-        <item>Open goodness with crDroid</item>
-        <item>Spread love not havoc</item>
-        <item>Have fun!</item>
-        <item>Time for some good music</item>
+        <item>La ignorancia es una virtud</item>
+        <item>¿Es hora de instalar otra actualización ya?</item>
+        <item>¿Emocionado por Android 12?</item>
+        <item>Hola, ¿qué pasa?</item>
+        <item>Céntrate en tus tareas</item>
+        <item>¿Cuántas capturas de pantalla haces?</item>
+        <item>Descubre lo mejor con crDroid</item>
+        <item>Difunde amor, no caos</item>
+        <item>¡Diviértete!</item>
+        <item>Hora de un poco de buena música</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
-        <item>We love you 3000</item>
-        <item>Stay Home, Stay Safe</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
+        <item>Necesitas crDroid Premium para ver esto</item>
+        <item>Recuerda el Linaje (Lineage) del Unicornio (Unicorn)</item>
+        <item>Disfruta la vida extendida de batería</item>
+        <item>Empezando de cero</item>
+        <item>Te queremos 3000</item>
+        <item>Quédate en casa, mantente seguro</item>
+        <item>Haz algo bueno hoy</item>
+        <item>Esta es la mejor experiencia Pixel (Pixel experience), ¿verdad?</item>
         <item>How is everything going?</item>
         <item>No illusions, welcome to reality!</item>
         <item>Thank you for your support</item>
