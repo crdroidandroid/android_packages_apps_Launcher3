@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="misc_category_title">هەمەجۆرەکان</string>
     <string name="misc_category_summary">بژاردەکانی تر</string>
     <string name="dev_options_title">هەڵبژاردەی گەشەپێدەر</string>
-    <string name="dev_options_desc">Enable some hidden features at your own risk</string>
+    <string name="dev_options_desc">هەنێ تایبەتمەندی شاراوە کارابکە لەسەر بەرپرسیاریەتی خۆت</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">At A Glance</string>
     <string name="show_quickspace_summary">پیشاندان لە سەرەوەی پەڕەی ماڵەوە</string>
@@ -40,50 +40,50 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="quickspace_now_playing_title">پیشاندانی لێدانی ئێستا</string>
     <string name="quickspace_now_playing_summary">پیشاندانی هەنێ نامەی جوان لە At a Glance دا.</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
+    <string name="quickspace_alternate_style_title">بەکارهێنانی شێوازێکی گۆڕاو</string>
+    <string name="quickspace_alternate_style_summary">بەکارهێنانی شێوازی کەمترین بڕ بۆ لەسەرنجدا</string>
     <!-- Icon packs -->
     <string name="icon_pack">دەستە ئایکۆن</string>
     <string name="icon_pack_summary">دیاریکردنی دەستە ئایکۆنی دڵخواز</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">دووانەکرتە بۆ کوژانەوە</string>
+    <string name="pref_sleep_gesture_summary">دووجار کرتە لەهەر بۆشاییەک بکە بۆ کوژانەوەی ڕوونما</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">پیشاندانی نامەیەکی هەڕەمەکی</string>
+    <string name="quickspace_psa_summary">پیشاندانی هەنێ نامەی جوان لە At a Glance دا.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>بەیانی باش!</item>
+        <item>بەیانی باش, کاتی ڕۆکە!</item>
+        <item>چ ڕۆژێکی جوانە!</item>
+        <item>هیوای ڕۆژێکی خۆش!</item>
+        <item>چی لەبارەی 5 خولەکی کەمی وەنەوز؟</item>
+        <item>ئەوە ڕێگایەکە بۆ هەڵسان.</item>
+        <item>پێویستە زەنگی ووریاکەرەوەکەت بگۆڕیت.</item>
+        <item>بە ڕۆژێکی خۆش ئەچێت، وانییە؟</item>
+        <item>با ئەم نانە بخۆین.</item>
+        <item>کەش و هەوای ئەمڕۆ بپشکنە</item>
+        <item>هێشتا خەواڵوویت</item>
+        <item>سەیرێکی دەرەوەت کردووە؟</item>
+        <item>با ئەمە تەواوکەین.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>شەوشاد!</item>
+        <item>بەباشی بخەوە!</item>
+        <item>بەیانی دەتبینمەوە!</item>
+        <item>خەونە خۆشەکان!</item>
+        <item>تا درەنگ بەئاگا مەبە</item>
+        <item>هیوای خەوێکی خۆش</item>
+        <item>تۆزێ بنوو</item>
+        <item>کاتی پشووە</item>
+        <item>چێژ لەمشەو وەرگرە!</item>
+        <item>کاتی بارگاویکردنەوەی پاترییە!</item>
+        <item>سبەی ڕۆژێکی خۆش ئەبێت</item>
+        <item>خۆت ئامادەکە بۆ سبەی</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
+        <item>ئمم... شەوشاد؟</item>
+        <item>تۆزێ درەنگە ئێستا</item>
+        <item>پێویستە کاتی خەوت ڕێکبخەیت</item>
         <item>Are you more productive at this time?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
