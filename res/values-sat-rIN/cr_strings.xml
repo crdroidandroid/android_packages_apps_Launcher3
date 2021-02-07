@@ -40,8 +40,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="quickspace_now_playing_title">ᱯᱞᱮᱜ ᱠᱟᱱᱟ ᱢᱮᱱᱛᱮ ᱫᱮᱠᱷᱟᱣ ᱢᱮ</string>
     <string name="quickspace_now_playing_summary">ᱢᱤᱫᱴᱟᱹᱝ ᱡᱷᱚᱞᱚᱠ ᱨᱮ ᱟᱢ ᱯᱞᱭᱮᱫ ᱥᱮᱨᱮᱧ ᱠᱚ ᱫᱮᱠᱦᱟᱣᱟᱭ ᱾</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
+    <string name="quickspace_alternate_style_title">ᱚᱞᱜᱟ ᱥᱴᱟᱭᱤᱞ ᱵᱮᱵᱷᱟᱨ ᱢᱮ</string>
+    <string name="quickspace_alternate_style_summary">ᱡᱷᱚᱞᱚᱠ ᱞᱟᱹᱜᱤᱫ ᱠᱚᱢᱥᱚᱠᱚᱢ ᱥᱴᱟᱭᱤᱞ ᱵᱮᱵᱷᱟᱨ ᱢᱮ</string>
     <!-- Icon packs -->
     <string name="icon_pack">ᱟᱭᱠᱚᱱ ᱯᱮᱠ</string>
     <string name="icon_pack_summary">ᱢᱤᱫᱴᱟᱹᱝ ᱠᱟᱹᱥᱴᱚᱢ ᱟᱭᱠᱚᱱ ᱯᱮᱠ ᱵᱟᱪᱷᱟᱣ ᱢᱮ</string>
@@ -49,75 +49,75 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_sleep_gesture_title">ᱜᱤᱛᱤᱡ ᱞᱟᱹᱜᱤᱫ ᱵᱟᱨ ᱡᱮᱠᱷᱟ ᱚᱛᱟᱭ ᱢᱮ</string>
     <string name="pref_sleep_gesture_summary">ᱯᱟᱣᱟᱹᱨ ᱵᱚᱸᱫᱽ ᱞᱟᱹᱜᱤᱫ ᱠᱷᱟᱹᱞᱤ ᱡᱟᱭᱜᱟ ᱨᱮ ᱵᱟᱨ ᱡᱮᱠᱷᱟ ᱚᱛᱟᱭ ᱢᱮ</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">ᱨᱮᱱᱰᱚᱢ ᱠᱷᱚᱵᱚᱨ ᱫᱮᱠᱷᱟᱣᱢᱮ</string>
+    <string name="quickspace_psa_summary">ᱡᱷᱚᱞᱚᱠ ᱨᱮ ᱚᱠᱟᱡᱷᱚᱜ ᱡᱟᱦᱟᱱᱟᱜ ᱵᱮᱥ ᱠᱷᱚᱵᱚᱨ ᱫᱚᱠᱷᱟᱣᱢᱮ ᱾</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>ᱥᱟᱹᱜᱩᱱ ᱥᱮᱛᱟᱜ!</item>
+        <item>ᱥᱟᱹᱜᱤᱱ ᱥᱮᱛᱟᱜ, ᱨᱚᱠ ᱨᱮᱭᱟᱜ ᱚᱠᱛᱚ!</item>
+        <item>ᱟᱹᱰᱤ ᱵᱮᱥ ᱫᱤᱱ ᱠᱟᱱᱟ!</item>
+        <item>ᱵᱮᱥ ᱫᱤᱱ ᱛᱟᱦᱮᱸᱱ ᱢᱟ!</item>
+        <item>᱕ ᱴᱤᱯᱤᱡ ᱱᱮᱯ ᱪᱮᱫᱮᱢ ᱢᱮᱱᱮᱜᱼᱟ?</item>
+        <item>ᱱᱚᱶᱟ ᱢᱤᱫ ᱛᱚᱨᱠᱟ ᱠᱟᱱᱟ ᱥᱮᱞᱮᱫ ᱞᱟᱹᱜᱤᱫ ᱾</item>
+        <item>ᱟᱢ ᱟᱢᱟᱜ ᱟᱞᱟᱢ ᱥᱟᱲᱮ ᱵᱚᱫᱚᱞ ᱠᱟᱛᱷᱟ ᱾</item>
+        <item>ᱟᱹᱰᱤ ᱪᱚᱨᱚᱠ ᱫᱤᱱ ᱞᱮᱠᱷᱟ ᱵᱩᱡᱷᱟᱣᱼᱜ ᱠᱟᱱᱟ, ᱵᱟ ᱥᱮ?</item>
+        <item>ᱱᱚᱶᱟ ᱯᱟᱸᱨᱩᱴᱤ ᱵᱚᱱ ᱤᱫᱤᱭᱟ ᱾</item>
+        <item>ᱯᱟᱜᱚ ᱠᱚ ᱧᱮᱞ ᱵᱤᱲᱟᱹᱣ ᱢᱮ</item>
+        <item>ᱫᱩᱫᱲᱩᱝ ᱜᱮ ᱵᱩᱡᱷᱟᱣᱜ ᱠᱟᱱᱟ</item>
+        <item>ᱱᱤᱛ ᱦᱟᱹᱵᱤᱡ ᱵᱟᱦᱨᱮ ᱮᱢ ᱧᱮᱞ ᱟᱠᱟᱫᱟ ᱥᱮ?</item>
+        <item>ᱫᱮᱞᱟᱵᱚᱱ ᱠᱚᱨᱟᱣ ᱪᱷᱚᱭᱟ ᱾</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>ᱥᱟᱹᱜᱩᱱ ᱧᱤᱫᱟᱹ!</item>
+        <item>ᱵᱮᱥ ᱜᱤᱛᱤᱡ ᱢᱮ!</item>
+        <item>ᱜᱟᱯᱟ ᱧᱮᱞ ᱢᱮᱟᱹᱧ!</item>
+        <item>ᱦᱮᱲᱮᱢ ᱠᱩᱠᱢᱩ!</item>
+        <item>ᱡᱟᱹᱥᱛᱤ ᱜᱷᱟᱹᱬᱤᱡ ᱟᱞᱚᱢ ᱛᱟᱦᱮᱸᱱᱟᱢ</item>
+        <item>ᱵᱮᱥ ᱜᱤᱛᱤᱡ ᱛᱟᱦᱮᱸᱱ ᱛᱟᱢ ᱢᱟ</item>
+        <item>ᱵᱮᱥ ᱜᱤᱛᱤᱡ ᱡᱚᱝ ᱢᱮ</item>
+        <item>ᱦᱟᱹᱞᱠᱟᱹ ᱛᱟᱦᱮᱸ ᱞᱟᱹᱜᱤᱫ ᱚᱠᱛᱚ</item>
+        <item>ᱟᱹᱭᱩᱵ ᱢᱚᱡᱽ ᱢᱮ!</item>
+        <item>ᱵᱮᱴᱨᱭᱠᱚ ᱪᱟᱨᱡᱽ ᱞᱟᱹᱜᱤᱫ ᱥᱚᱢᱚᱭ ᱦᱩᱭᱮᱱᱟ!</item>
+        <item>ᱜᱟᱯᱟ ᱵᱮᱥ ᱫᱤᱱ ᱦᱩᱭᱫᱟᱲᱮᱭᱟᱜᱼᱟ</item>
+        <item>ᱜᱟᱯᱟ ᱞᱟᱹᱜᱤᱫ ᱦᱚᱲᱢᱚ ᱴᱷᱤᱠ ᱫᱚᱦᱚᱭᱢᱮ</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>ᱦᱢ... ᱥᱟᱹᱜᱤᱱ ᱟᱹᱭᱩᱵ ᱥᱮ?</item>
+        <item>ᱠᱟᱹᱴᱤᱡ ᱜᱷᱟᱹᱬᱤᱡ ᱜᱮᱭᱟ</item>
+        <item>ᱟᱢ ᱜᱤᱛᱤᱡ ᱚᱠᱛᱚ ᱴᱷᱤᱠ ᱢᱮ</item>
+        <item>ᱟᱢ ᱪᱮᱫ ᱱᱚᱶᱟ ᱚᱠᱛᱚ ᱨᱮ ᱡᱟᱹᱥᱛᱤ ᱠᱟᱹᱢᱤ ᱮᱢ ᱠᱚᱨᱟᱣᱮᱫ ᱟᱢ?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
-        <item>Hyped about Android 12?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
-        <item>Open goodness with crDroid</item>
-        <item>Spread love not havoc</item>
-        <item>Have fun!</item>
-        <item>Time for some good music</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
-        <item>We love you 3000</item>
-        <item>Stay Home, Stay Safe</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>How is everything going?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
-        <item>Winner Winner ....?</item>
+        <item>ᱚᱜᱭᱟᱱᱛᱟ ᱯᱚᱨᱚᱢᱟᱱᱚᱸᱫᱼᱟ</item>
+        <item>ᱚᱱᱜᱟ ᱟᱹᱯᱰᱮᱴ ᱯᱷᱞᱟᱥ ᱨᱮᱭᱟᱜ ᱚᱠᱛᱚ ᱦᱩᱭᱮᱱᱟ ᱥᱮ?</item>
+        <item>Android 12 ᱵᱟᱵᱚᱛ ᱪᱤᱱᱛᱟᱹᱮᱫ ᱟᱢ ᱥᱮ?</item>
+        <item>ᱚ ᱭᱮ, ᱣᱷᱟᱹᱴᱥ ᱟᱹᱯ?</item>
+        <item>ᱟᱢᱟᱜ ᱠᱟᱹᱢᱤ ᱨᱮ ᱯᱷᱚᱠᱟᱹᱥ ᱢᱮ</item>
+        <item>ᱛᱤᱱᱟᱹᱝ ᱜᱟᱱ ᱥᱠᱨᱤᱱᱥᱚᱴ ᱮᱢ ᱤᱫᱤᱮᱫᱟ?</item>
+        <item>crDroid ᱥᱟᱞᱟᱜ ᱵᱮᱥ ᱡᱤᱱᱥᱤ ᱠᱷᱩᱞᱟᱫᱭ ᱢᱮ</item>
+        <item>ᱫᱩᱞᱟᱹᱲ ᱯᱟᱥᱱᱟᱣ ᱢᱮ ᱵᱤᱱᱟᱥ ᱫᱚ ᱵᱟᱝ ᱜᱮ</item>
+        <item>ᱢᱚᱡᱟ ᱠᱚᱨᱟᱣ ᱢᱮ!</item>
+        <item>ᱵᱮᱥ ᱥᱮᱨᱮᱧ ᱞᱟᱹᱜᱤᱫ ᱚᱠᱛᱚ ᱚᱲᱚᱠ ᱢᱮ</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C ᱵᱚᱦᱚᱜ</item>
+        <item>ᱱᱚᱶᱟ ᱧᱮᱞ ᱞᱟᱹᱜᱤᱫ crDroid ᱯᱨᱢᱤᱭᱟᱹᱢ ᱫᱚᱨᱠᱟᱨ ᱛᱟᱢ</item>
+        <item>ᱭᱩᱱᱤᱠᱚᱨᱱ ᱨᱮᱭᱟᱜ Lineage ᱩᱭᱦᱟᱹᱨ ᱠᱟᱜ ᱢᱮ</item>
+        <item>ᱵᱚᱲᱦᱟᱣ ᱠᱟᱱ ᱵᱽᱮᱴᱨᱭ ᱡᱤᱣᱚᱱ ᱥᱟᱞᱟᱜ ᱢᱚᱡᱽ ᱢᱮ</item>
+        <item>ᱜᱨᱟᱩᱸᱰ ᱡᱤᱨᱚ ᱥᱟᱞᱟᱜ ᱮᱦᱚᱵᱚᱜ  ᱠᱟᱱᱟ</item>
+        <item>ᱟᱞᱮ ᱠᱩᱥᱤ ᱟᱢ ᱠᱟᱱᱟᱞᱮ ᱓᱐᱐᱐</item>
+        <item>ᱚᱲᱟᱜ ᱨᱮ ᱛᱟᱦᱮᱱ ᱢᱮ, ᱵᱮᱥ ᱛᱟᱦᱮᱱ ᱢᱮ</item>
+        <item>ᱛᱮᱦᱚᱧ ᱵᱮᱥ ᱡᱤᱱᱤᱥ ᱠᱚᱨᱟᱣ ᱢᱮ</item>
+        <item>ᱱᱚᱶᱟ ᱫᱚ ᱵᱮᱥ Pixel Experience ᱠᱟᱱᱟ,  ᱵᱟ ᱥᱮ?</item>
+        <item>ᱡᱷᱚᱛᱚ ᱚᱠᱟᱞᱠᱟ ᱪᱟᱹᱞᱩᱜ ᱠᱟᱱᱟ?</item>
+        <item>ᱵᱷᱨᱚᱢ ᱵᱟᱝ ᱜᱮ, ᱚᱥᱚᱞ ᱛᱮ ᱛᱮ ᱥᱟᱹᱜᱩᱱ ᱫᱟᱨᱟᱢ!</item>
+        <item>ᱟᱢᱟᱜ ᱜᱚᱲᱚ ᱮᱢ ᱞᱟᱹᱜᱤᱫ ᱟᱭᱢᱟ ᱥᱟᱨᱦᱟᱣ </item>
+        <item>ᱥᱹᱨᱯᱥ ᱞᱟᱹᱜᱤᱫ ᱚᱠᱟ ᱯᱚᱨᱚᱵᱽ ᱦᱚᱸ ᱵᱟᱝᱟ - ᱠᱷᱟᱹᱞᱤ ᱯᱟᱹᱨᱯᱷᱮᱠᱥᱚᱱ!</item>
+        <item>ᱵᱤᱞᱰᱵᱚᱴ ᱨᱮᱭᱟᱜ ᱵᱮᱥ ᱵᱟᱪᱷᱟᱣ ᱠᱷᱚᱱ ᱢᱤᱫᱴᱟᱹᱝ</item>
+        <item>ᱟᱢᱟᱜ ᱯᱟᱨᱟᱱᱚᱤᱭᱟ ᱞᱟᱹᱜᱤᱫ ᱥᱟᱱᱤᱴᱭ</item>
+        <item>ᱵᱚᱨᱚᱯᱷ ᱰᱮᱥᱟᱹᱴᱠᱚ ᱪᱮᱥᱴᱟᱭ ᱢᱮ</item>
+        <item>ᱟᱹᱲᱤ ᱫᱩᱞᱟᱹᱲᱤᱭᱟᱹ ᱢᱟᱨᱠᱷᱤ, ᱵᱟ ᱥᱮ?</item>
+        <item>Evolution ᱫᱚ  ᱠᱟᱞᱯᱚᱱᱤᱠ ᱠᱟᱱᱟ, ᱥᱟᱹᱨᱤ ᱥᱮ?</item>
+        <item>ᱟᱢ ᱩᱱᱤ ᱠᱟᱱᱟᱢ ᱚᱠᱚᱭ ᱫᱚ ᱯᱷᱞᱟᱥ ᱮᱫ ᱟᱭ, ᱟᱞᱚᱢ ᱟᱹᱲᱩᱜᱼᱟᱢ</item>
+        <item>ᱟᱢᱟᱜ ᱢᱟᱹᱱᱮ ᱨᱮ ᱪᱮᱫ ᱢᱮᱱᱟᱜ-ᱟ?</item>
+        <item>ᱡᱤᱛᱟᱹᱣ ᱮᱱᱟᱢ ᱡᱤᱛᱟᱹᱣ ᱮᱱᱟᱢ .... ?</item>
         <item>rm -rf \/</item>
     </string-array>
 </resources>
