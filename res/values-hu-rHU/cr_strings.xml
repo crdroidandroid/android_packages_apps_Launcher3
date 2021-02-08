@@ -120,4 +120,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>A győztes pedig.......?</item>
         <item>rm -rf \/</item>
     </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">Close app</string>
 </resources>
