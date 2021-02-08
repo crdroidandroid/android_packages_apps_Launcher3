@@ -42,9 +42,9 @@
             android:id="@+id/kill_app"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/recents_kill_app"
+            android:text="@string/recents_close_app"
             android:theme="@style/ThemeControlHighlightWorkspaceColor"
-            android:drawableStart="@drawable/ic_kill_app_recents"
+            android:drawableStart="@drawable/ic_close_app_recents"
             />
 
         <Button
