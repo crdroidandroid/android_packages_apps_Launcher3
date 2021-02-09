@@ -109,15 +109,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>¿Como va todo?</item>
         <item>Ilusiones no,! bienvenido a la realidad!</item>
         <item>Gracias por su apoyo</item>
-        <item>No festival for Derps - only perfection!</item>
+        <item>No hay festival para Derps - !sólo perfección!</item>
         <item>Una de las mejores elecciones del buildbot</item>
         <item>Cordura para tu paranoia</item>
         <item>Prueba postres helados</item>
         <item>Qué experiencia tan encantadora, ¿no?</item>
         <item>La evolución es un mito, ¿verdad?</item>
-        <item>You are what you flash, don\'t be Potato</item>
+        <item>Eres lo que flasheas, no seas patata</item>
         <item>¿En que estas pensando?</item>
         <item>Ganador Ganador ....?</item>
         <item>rm -rf \/</item>
     </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">Close app</string>
 </resources>

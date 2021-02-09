@@ -120,4 +120,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>Переможець ....?</item>
         <item>rm -rf \/</item>
     </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">Закрити додаток</string>
 </resources>
