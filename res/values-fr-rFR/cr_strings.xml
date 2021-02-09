@@ -27,7 +27,7 @@
     <string name="app_drawer_category_title">Menu d\'applications</string>
     <string name="app_drawer_category_summary">Personnaliser le menu d\'applications</string>
     <string name="misc_category_title">Divers</string>
-    <string name="misc_category_summary">Autres Options</string>
+    <string name="misc_category_summary">Autres options</string>
     <string name="recent_task_option_kill_app">Terminer</string>
     <string name="recents_app_killed">Application terminée</string>
     <!-- Folder titles -->
@@ -82,7 +82,7 @@
     <string name="quickspace_now_playing_summary">Affiche la chanson en cours en un coup d\'œil. ATTENTION : Ce n\'est pas entièrement compatible avec tous les lecteurs multimédia!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Montrer un message aléatoire</string>
-    <string name="quickspace_psa_summary">Affiche parfois de jolis messages dans «En un coup d\'œil».</string>
+    <string name="quickspace_psa_summary">Afficher régulièrement de jolis messages dans «En bref».</string>
     <string-array name="quickspace_psa_morning">
         <item>Bonjour !</item>
         <item>Bonjour, il est temps d\'y aller !</item>
