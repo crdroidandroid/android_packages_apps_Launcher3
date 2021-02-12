@@ -50,18 +50,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_sleep_gesture_summary">برای خاموش شدن دوبار در فضای خالی ضربه بزنید</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">نمایش پیامی تصادفی</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_summary">بعضی مواقع تعدادی پیغام زیبا را در قسمت در یک دید نمایش بده.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
+        <item>صبح بخیر!</item>
+        <item>صبح بخیر، وقتشه بترکونیم!</item>
+        <item>چه روز قشنگی!</item>
+        <item>روز خوبی داشته باشید!</item>
+        <item>نظرتون در مورد یک چرت کوچک ۵ دقیقه ای چیه؟</item>
+        <item>اینم راهی برای بیدار شدنه.</item>
+        <item>باید صداهای هشدار تان را عوض کنید.</item>
+        <item>به نظر می‌رسه امروز روز قشنگیه، اینطور نیست؟</item>
         <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
+        <item>محض احتیاط آب و هوا را بررسی کنید</item>
         <item>Feeling a bit sleepy yet</item>
         <item>Have you looked outside yet?</item>
         <item>Let\'s get this done.</item>
