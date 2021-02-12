@@ -43,13 +43,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="quickspace_alternate_style_title">از سبک جایگزین استفاده کنید</string>
     <string name="quickspace_alternate_style_summary">برای در یک دید از سبکی ساده استفاده کنید</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Select a custom icon pack</string>
+    <string name="icon_pack">آیکون پک</string>
+    <string name="icon_pack_summary">آیکون پک دلخواهی را انتخاب کنید</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">برای حالت خواب دوبار ضربه بزنید</string>
+    <string name="pref_sleep_gesture_summary">برای خاموش شدن دوبار در فضای خالی ضربه بزنید</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
+    <string name="quickspace_psa_title">نمایش پیامی تصادفی</string>
     <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
     <string-array name="quickspace_psa_morning">
         <item>Good morning!</item>
