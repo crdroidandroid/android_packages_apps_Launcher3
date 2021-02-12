@@ -18,13 +18,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- General -->
     <string name="settings_title">Settings</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
+    <string name="home_category_title">صفحه اصلی</string>
+    <string name="home_category_summary">تنظیم پنل گوگل نَـو و بیشتر</string>
+    <string name="icons_category_title">آیکون ها</string>
+    <string name="icons_category_summary">تنظیم شکل آیکون و بیشتر</string>
+    <string name="app_drawer_category_title">منوی برنامه ها</string>
+    <string name="app_drawer_category_summary">شخصی سازی منوی برنامه ها</string>
+    <string name="misc_category_title">متفرقه</string>
     <string name="misc_category_summary">Other options</string>
     <string name="dev_options_title">Developer options</string>
     <string name="dev_options_desc">Enable some hidden features at your own risk</string>
