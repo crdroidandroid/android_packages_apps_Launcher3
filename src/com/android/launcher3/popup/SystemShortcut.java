@@ -191,7 +191,11 @@ public abstract class SystemShortcut<T extends BaseDraggingActivity> extends Ite
         }
     }
 
-    public static final Factory<BaseDraggingActivity> UNINSTALL = UnInstall::new;
+    public static final Factory<BaseDraggingActivity> UNINSTALL = (activity, itemInfo) ->
+            PackageManagerHelper.isSystemApp(activity,
+                 itemInfo.getTargetComponent().getPackageName())
+                    ? null : new UnInstall(activity, itemInfo);
+
 
     public static class UnInstall extends SystemShortcut {
 
