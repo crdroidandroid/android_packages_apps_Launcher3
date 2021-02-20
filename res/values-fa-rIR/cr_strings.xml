@@ -18,67 +18,67 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- General -->
     <string name="settings_title">Settings</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
-    <string name="dev_options_title">Developer options</string>
-    <string name="dev_options_desc">Enable some hidden features at your own risk</string>
+    <string name="home_category_title">صفحه اصلی</string>
+    <string name="home_category_summary">تنظیم پنل گوگل نَـو و بیشتر</string>
+    <string name="icons_category_title">آیکون ها</string>
+    <string name="icons_category_summary">تنظیم شکل آیکون و بیشتر</string>
+    <string name="app_drawer_category_title">منوی برنامه ها</string>
+    <string name="app_drawer_category_summary">شخصی سازی منوی برنامه ها</string>
+    <string name="misc_category_title">متفرقه</string>
+    <string name="misc_category_summary">گزینه های دیگر</string>
+    <string name="dev_options_title">گزینه های برنامه نویس</string>
+    <string name="dev_options_desc">ویژگی های مخفی بیشتری را با مسئولیت خود فعال کنید</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_title">در یک دید</string>
     <string name="show_quickspace_summary">نمایش در بالای صفحه اصلی</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
+    <string name="quick_event_rom_intro_welcome">به crDroid خوش آمدید!</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
+    <string name="quick_event_ambient_now_playing">در حال پخش</string>
     <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance.</string>
+    <string name="quickspace_now_playing_title">نشان دادن در حال پخش</string>
+    <string name="quickspace_now_playing_summary">آهنگ کنونی را در قسمت در یک دید نمایش می دهد.</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
+    <string name="quickspace_alternate_style_title">از سبک جایگزین استفاده کنید</string>
+    <string name="quickspace_alternate_style_summary">برای در یک دید از سبکی ساده استفاده کنید</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
-    <string name="icon_pack_summary">Select a custom icon pack</string>
+    <string name="icon_pack">آیکون پک</string>
+    <string name="icon_pack_summary">آیکون پک دلخواهی را انتخاب کنید</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">برای حالت خواب دوبار ضربه بزنید</string>
+    <string name="pref_sleep_gesture_summary">برای خاموش شدن دوبار در فضای خالی ضربه بزنید</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">نمایش پیامی تصادفی</string>
+    <string name="quickspace_psa_summary">بعضی مواقع تعدادی پیغام زیبا را در قسمت در یک دید نمایش بده.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
+        <item>صبح بخیر!</item>
+        <item>صبح بخیر، وقتشه بترکونیم!</item>
+        <item>چه روز قشنگی!</item>
+        <item>روز خوبی داشته باشید!</item>
+        <item>نظرتون در مورد یک چرت کوچک ۵ دقیقه ای چیه؟</item>
+        <item>اینم راهی برای بیدار شدنه.</item>
+        <item>باید صداهای هشدار تان را عوض کنید.</item>
+        <item>به نظر می‌رسه امروز روز قشنگیه، اینطور نیست؟</item>
         <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>محض احتیاط آب و هوا را بررسی کنید</item>
+        <item>هنوز کمی احساس خواب‌آلودگی دارید</item>
+        <item>آیا تا کنون بیرون را دیده‌اید؟</item>
+        <item>بیایید انجامش بدیم.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>شب به خیر!</item>
+        <item>خوب بخوابید!</item>
+        <item>فردا می‌بینمتون!</item>
+        <item>شب خوش!</item>
+        <item>تا دیر وقت بیدار نمون</item>
+        <item>خوب بخوابید</item>
+        <item>کمی بخوابید</item>
+        <item>وقت استراحته</item>
+        <item>از شب لذت ببرید!</item>
+        <item>وقت شارژ کردن باتری هاست!</item>
+        <item>فردا ممکنه روز بزرگی باشه</item>
+        <item>خودت رو برای فردا آماده کن</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
         <item>Um... good night?</item>
