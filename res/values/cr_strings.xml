@@ -108,4 +108,10 @@
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Swipe to start search</string>
     <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
+
+    <!-- Icon size -->
+    <string name="icon_size_title">Icon size</string>
+
+    <!-- Font size -->
+    <string name="font_size_title">Font size</string>
 </resources>
