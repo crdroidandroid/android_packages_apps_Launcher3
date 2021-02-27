@@ -150,4 +150,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="custom_seekbar_default_value">by default</string>
     <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
     <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+
+    <!-- Icon size -->
+    <string name="icon_size_title">Icon size</string>
 </resources>
