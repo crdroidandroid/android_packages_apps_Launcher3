@@ -122,4 +122,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </string-array>
     <!-- Recents screen, close app -->
     <string name="recents_close_app">關閉應用程式</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">值：<xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">預設</string>
+    <string name="custom_seekbar_default_value_to_set">預設值：<xliff:g id="v">%s</xliff:g>\n長按以設定</string>
+    <string name="custom_seekbar_default_value_is_set">已設定為預設值</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">圖示大小</string>
+    <!-- Font size -->
+    <string name="font_size_title">字體大小</string>
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">背景透明度</string>
 </resources>

@@ -122,4 +122,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </string-array>
     <!-- Recents screen, close app -->
     <string name="recents_close_app">Uygulamayı kapat</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Değer: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">Varsayılan</string>
+    <string name="custom_seekbar_default_value_to_set">Varsayılan değer: <xliff:g id="v">%s</xliff:g>\nAyarlamak için uzun dokunun</string>
+    <string name="custom_seekbar_default_value_is_set">Varsayılan değer ayarlandı</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Simge boyutu</string>
+    <!-- Font size -->
+    <string name="font_size_title">Yazı tipi boyutu</string>
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">Arka plan şeffaflığı</string>
 </resources>
