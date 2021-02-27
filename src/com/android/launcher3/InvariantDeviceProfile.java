@@ -264,6 +264,7 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
             case KEY_SHOW_DESKTOP_LABELS:
             case KEY_SHOW_DRAWER_LABELS:
             case Utilities.ICON_SIZE:
+            case Utilities.FONT_SIZE:
                 onConfigChanged(mContext);
                 break;
         }
@@ -314,11 +315,12 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
         mExtraAttrs = closestProfile.extraAttrs;
 
         float iconSizeModifier = (float) Utilities.getIconSizeModifier(context) / 100F;
+        float fontSizeModifier = (float) Utilities.getFontSizeModifier(context) / 100F;
         iconSize = displayOption.iconSize * iconSizeModifier;
         landscapeIconSize = displayOption.landscapeIconSize * iconSizeModifier;
         iconBitmapSize = ResourceUtils.pxFromDp(iconSize, metrics);
-        iconTextSize = displayOption.iconTextSize;
-        landscapeIconTextSize = displayOption.landscapeIconTextSize;
+        iconTextSize = displayOption.iconTextSize * fontSizeModifier;
+        landscapeIconTextSize = displayOption.landscapeIconTextSize * fontSizeModifier;
         fillResIconDpi = getLauncherIconDensity(iconBitmapSize);
 
         minCellHeight = displayOption.minCellHeight;
@@ -335,7 +337,7 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
 
         if (Utilities.isGridOptionsEnabled(context)) {
             allAppsIconSize = displayOption.allAppsIconSize * iconSizeModifier;
-            allAppsIconTextSize = displayOption.allAppsIconTextSize;
+            allAppsIconTextSize = displayOption.allAppsIconTextSize * fontSizeModifier;
         } else {
             allAppsIconSize = iconSize;
             allAppsIconTextSize = iconTextSize;
