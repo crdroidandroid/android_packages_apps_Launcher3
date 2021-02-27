@@ -133,6 +133,7 @@ public final class Utilities {
 
     public static final String SLEEP_GESTURE = "pref_sleep_gesture";
     public static final String ICON_SIZE = "pref_custom_icon_size";
+    public static final String FONT_SIZE = "pref_custom_font_size";
 
     /**
      * Set on a motion event dispatched from the nav bar. See {@link MotionEvent#setEdgeFlags(int)}.
@@ -739,6 +740,11 @@ public final class Utilities {
     public static int getIconSizeModifier(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getInt(ICON_SIZE, 100);
+    }
+
+    public static int getFontSizeModifier(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getInt(FONT_SIZE, 100);
     }
 
     public static void restart(final Context context) {
