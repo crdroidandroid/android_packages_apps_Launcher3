@@ -123,14 +123,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Recents screen, close app -->
     <string name="recents_close_app">Fermer l\'application</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">Valeur : <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">par défaut</string>
+    <string name="custom_seekbar_default_value_to_set">Valeur par défaut : <xliff:g id="v">%s</xliff:g>\nAppui long pour définir</string>
+    <string name="custom_seekbar_default_value_is_set">Valeur par défaut définie</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">Taille des icônes</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">Taille de police</string>
     <!-- Scrim alpha in apps drawer -->
-    <string name="all_apps_background_opacity_title">Background opacity</string>
+    <string name="all_apps_background_opacity_title">Opacité de l\'arrière-plan</string>
 </resources>
