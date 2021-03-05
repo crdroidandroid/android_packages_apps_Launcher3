@@ -124,9 +124,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="recents_close_app">Zavřít aplikaci</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Hodnota: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_default_value">výchozí hodnota</string>
+    <string name="custom_seekbar_default_value_to_set">Výchozí hodnota: <xliff:g id="v">%s</xliff:g>\nDlouhým klepnutím ji nastavíte</string>
+    <string name="custom_seekbar_default_value_is_set">Výchozí hodnota je nastavena</string>
     <!-- Icon size -->
     <string name="icon_size_title">Velikost ikon</string>
     <!-- Font size -->

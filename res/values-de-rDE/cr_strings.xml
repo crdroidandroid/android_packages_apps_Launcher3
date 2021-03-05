@@ -124,9 +124,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="recents_close_app">App schließen</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Wert: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">Standarmäßig</string>
-    <string name="custom_seekbar_default_value_to_set">Standardwert: <xliff:g id="v">%s</xliff:g>\nlang gedrückt halten um einzustellen</string>
-    <string name="custom_seekbar_default_value_is_set">Standardwert ist gesetzt</string>
+    <string name="custom_seekbar_default_value">Standardmäßig</string>
+    <string name="custom_seekbar_default_value_to_set">Standardwert: <xliff:g id="v">%s</xliff:g>\nZum Einstellen lange gedrückt halten</string>
+    <string name="custom_seekbar_default_value_is_set">Standardwert ist eingestellt</string>
     <!-- Icon size -->
     <string name="icon_size_title">Symbolgröße</string>
     <!-- Font size -->
