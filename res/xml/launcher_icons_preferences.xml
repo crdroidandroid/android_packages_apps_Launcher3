@@ -17,7 +17,7 @@
 
     <Preference
         android:key="pref_icon_pack"
-        android:title="@string/icon_pack_title" />
+        android:title="@string/icon_pack" />
 
     <com.android.launcher3.settings.preferences.CustomSeekBarPreference
         android:key="pref_custom_icon_size"
