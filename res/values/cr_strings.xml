@@ -61,6 +61,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="quickspace_alternate_style_title">Use an alternative style</string>
     <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
 
+    <!-- Icon packs -->
+    <string name="icon_pack">Icon pack</string>
+
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Double tap to sleep</string>
     <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
