@@ -44,7 +44,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="quickspace_alternate_style_summary">Utilisez un style minimaliste pour «At a Glance»</string>
     <!-- Icon packs -->
     <string name="icon_pack">Pack d\'icônes</string>
-    <string name="icon_pack_summary">Sélectionner un pack d\'icônes personnalisé</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Double-cliquez pour mettre en veille</string>
     <string name="pref_sleep_gesture_summary">Double appui sur un espace vide pour éteindre</string>
@@ -123,7 +122,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Recents screen, close app -->
     <string name="recents_close_app">Fermer l\'application</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Valeur : <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_value">Valeur : <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">par défaut</string>
     <string name="custom_seekbar_default_value_to_set">Valeur par défaut : <xliff:g id="v">%s</xliff:g>\nAppui long pour définir</string>
     <string name="custom_seekbar_default_value_is_set">Valeur par défaut définie</string>
