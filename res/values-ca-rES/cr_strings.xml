@@ -142,13 +142,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Scrim alpha in apps drawer -->
     <string name="all_apps_background_opacity_title">Opacitat del fons</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="app_info_subtext">Llisca cap avall per a tancar la informació de l\'aplicació.</string>
     <string name="app_info_version_value">%1$s (%2$d)</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="placeholder_string">Carregant...</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_source">Origen</string>
+    <string name="app_info_source_system">Sistema</string>
+    <string name="app_info_last_update">Darrera actualització</string>
+    <string name="app_info_version">Versió</string>
+    <string name="app_info_more">Més</string>
 </resources>
