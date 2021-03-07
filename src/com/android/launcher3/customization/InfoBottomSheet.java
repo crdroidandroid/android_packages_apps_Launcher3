@@ -75,8 +75,7 @@ public class InfoBottomSheet extends WidgetsBottomSheet {
     }
 
     public static class PrefsFragment extends PreferenceFragment
-            implements Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener {
-        private static final String KEY_ICON_PACK = "pref_app_info_icon_pack";
+            implements Preference.OnPreferenceClickListener {
         private static final String KEY_SOURCE = "pref_app_info_source";
         private static final String KEY_LAST_UPDATE = "pref_app_info_last_update";
         private static final String KEY_VERSION = "pref_app_info_version";
@@ -112,12 +111,8 @@ public class InfoBottomSheet extends WidgetsBottomSheet {
             mComponent = itemInfo.getTargetComponent();
             mItemInfo = itemInfo;
             mKey = new ComponentKey(mComponent, itemInfo.user);
-//            mOnMoreClick = onMoreClick;
             MetadataExtractor extractor = new MetadataExtractor(mContext, mComponent);
 
-            Preference iconPack = findPreference(KEY_ICON_PACK);
-            iconPack.setOnPreferenceChangeListener(this);
-            iconPack.setSummary(R.string.app_info_icon_pack_none);
             findPreference(KEY_SOURCE).setSummary(extractor.getSource());
             findPreference(KEY_LAST_UPDATE).setSummary(extractor.getLastUpdate());
             findPreference(KEY_VERSION).setSummary(mContext.getString(
@@ -125,14 +120,6 @@ public class InfoBottomSheet extends WidgetsBottomSheet {
                     extractor.getVersionName(),
                     extractor.getVersionCode()));
             findPreference(KEY_MORE).setOnPreferenceClickListener(this);
-        }
-
-        @Override
-        public boolean onPreferenceChange(Preference preference, Object newValue) {
-            if (KEY_ICON_PACK.equals(preference.getKey())) {
-                // Reload in launcher.
-            }
-            return false;
         }
 
         private void onMoreClick() {
