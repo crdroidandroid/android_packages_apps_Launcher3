@@ -40,6 +40,26 @@ import java.util.Set;
 
 public final class IconPackSettingsFragment extends RadioSettingsFragment {
     private static final IntentFilter PKG_UPDATE_INTENT = new IntentFilter();
+
+    private static final String[] ICON_INTENT_ACTIONS = new String[] {
+            "com.fede.launcher.THEME_ICONPACK",
+            "com.anddoes.launcher.THEME",
+            "com.novalauncher.THEME",
+            "com.teslacoilsw.launcher.THEME",
+            "com.gau.go.launcherex.theme",
+            "org.adw.launcher.THEMES",
+            "org.adw.launcher.icons.ACTION_PICK_ICON",
+            "net.oneplus.launcher.icons.ACTION_PICK_ICON",
+    };
+
+    private static final Intent[] ICON_INTENTS = new Intent[ICON_INTENT_ACTIONS.length];
+
+    static {
+        for (int i = 0; i < ICON_INTENT_ACTIONS.length; i++) {
+            ICON_INTENTS[i] = new Intent(ICON_INTENT_ACTIONS[i]);
+        }
+    }
+
     static {
         PKG_UPDATE_INTENT.addAction(Intent.ACTION_PACKAGE_INSTALL);
         PKG_UPDATE_INTENT.addAction(Intent.ACTION_PACKAGE_ADDED);
@@ -106,10 +126,9 @@ public final class IconPackSettingsFragment extends RadioSettingsFragment {
         final PackageManager pm = context.getPackageManager();
         final Set<IconPackInfo> availablePacks = new LinkedHashSet<>();
         final List<ResolveInfo> eligiblePacks = new ArrayList<>();
-        eligiblePacks.addAll(pm.queryIntentActivities(
-                new Intent("com.novalauncher.THEME"), 0));
-        eligiblePacks.addAll(pm.queryIntentActivities(
-                new Intent("org.adw.launcher.icons.ACTION_PICK_ICON"), 0));
+        for (Intent intent : ICON_INTENTS) {
+            eligiblePacks.addAll(pm.queryIntentActivities(intent, PackageManager.GET_META_DATA));
+        }
 
         // Add default
         final String defaultLabel = context.getString(R.string.icon_pack_default_label);
