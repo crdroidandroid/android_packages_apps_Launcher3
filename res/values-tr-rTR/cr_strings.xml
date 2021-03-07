@@ -142,13 +142,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Scrim alpha in apps drawer -->
     <string name="all_apps_background_opacity_title">Arka plan şeffaflığı</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="app_info_subtext">Uygulama bilgilerini kapatmak için aşağı kaydırın.</string>
     <string name="app_info_version_value">%1$s (%2$d)</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="placeholder_string">Yükleniyor...</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_source">Kaynak</string>
+    <string name="app_info_source_system">Sistem</string>
+    <string name="app_info_last_update">Son güncelleme</string>
+    <string name="app_info_version">Sürüm</string>
+    <string name="app_info_more">Daha fazla</string>
 </resources>
