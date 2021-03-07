@@ -39,7 +39,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
-    <string-array translatable="false" name="welcome_message_variants">
+    <string-array name="welcome_message_variants">
         <item>Have a great day</item>
         <item>Thank you for choosing us</item>
         <item>Loving us? Send us a beer</item>
@@ -164,12 +164,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="all_apps_background_opacity_title">Background opacity</string>
 
     <!-- AppInfo -->
-    <string name="app_info_subtext" translatable="false">Swipe down to close app info.</string>
-    <string name="app_info_version_value" translatable="false">%1$s (%2$d)</string>
-    <string name="placeholder_string" translatable="false">Loading...</string> <!-- Used for preference height loading. -->
-    <string name="app_info_source" translatable="false">Source</string>
-    <string name="app_info_source_system" translatable="false">System</string>
-    <string name="app_info_last_update" translatable="false">Last update</string>
-    <string name="app_info_version" translatable="false">Version</string>
-    <string name="app_info_more" translatable="false">More</string>
+    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="app_info_version_value">%1$s (%2$d)</string>
+    <string name="placeholder_string">Loading...</string> <!-- Used for preference height loading. -->
+    <string name="app_info_source">Source</string>
+    <string name="app_info_source_system">System</string>
+    <string name="app_info_last_update">Last update</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">More</string>
 </resources>
