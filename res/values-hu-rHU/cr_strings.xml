@@ -33,6 +33,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="show_quickspace_summary">Az Ön kezdőképernyőjének tetején jelenik meg</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Üdvözöli a crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>Have a great day</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
+        <item>We love you 3000</item>
+    </string-array>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">\'Now Playing\'</string>
     <string name="quick_event_ambient_song_artist">%1$s – %2$s</string>
@@ -44,7 +53,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="quickspace_alternate_style_summary">Használjon minimalista stílust a Belepillantáshoz</string>
     <!-- Icon packs -->
     <string name="icon_pack">Ikoncsomag</string>
-    <string name="icon_pack_summary">Válasszon egy egyedi ikoncsomagot</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Alvómód duplakoppal</string>
     <string name="pref_sleep_gesture_summary">A kikapcsoláshoz elég a duplakopp egy üres területre</string>
@@ -133,4 +141,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="font_size_title">Betűméret</string>
     <!-- Scrim alpha in apps drawer -->
     <string name="all_apps_background_opacity_title">Háttérátlátszóság</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Alkalmazásinfó bezárása felfelé csúsztatással.</string>
+    <string name="app_info_version_value">%1$s (%2$d)</string>
+    <string name="placeholder_string">Betöltés...</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_source">Forrás</string>
+    <string name="app_info_source_system">Rendszer</string>
+    <string name="app_info_last_update">Utoljára frissítve</string>
+    <string name="app_info_version">Verzió</string>
+    <string name="app_info_more">Továbbiak</string>
 </resources>
