@@ -142,13 +142,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Scrim alpha in apps drawer -->
     <string name="all_apps_background_opacity_title">背景透明度</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="app_info_subtext">向下滑動關閉應用程式資訊</string>
     <string name="app_info_version_value">%1$s (%2$d)</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="placeholder_string">載入中…</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_source">來源</string>
+    <string name="app_info_source_system">系統</string>
+    <string name="app_info_last_update">上次更新</string>
+    <string name="app_info_version">版本</string>
+    <string name="app_info_more">更多</string>
 </resources>
