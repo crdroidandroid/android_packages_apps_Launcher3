@@ -129,26 +129,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>rm -rf \/</item>
     </string-array>
     <!-- Recents screen, close app -->
-    <string name="recents_close_app">Close app</string>
+    <string name="recents_close_app">Fechar app</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">Valor: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">padrão</string>
+    <string name="custom_seekbar_default_value_to_set">Valor padrão: <xliff:g id="v">%s</xliff:g>\nToque longo para definir</string>
+    <string name="custom_seekbar_default_value_is_set">Valor padrão está definido</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">Tamanho dos ícones</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">Tamanho da letra</string>
     <!-- Scrim alpha in apps drawer -->
-    <string name="all_apps_background_opacity_title">Background opacity</string>
+    <string name="all_apps_background_opacity_title">Opacidade do fundo</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="app_info_subtext">Deslize para baixo para fechar as informações da aplicação.</string>
     <string name="app_info_version_value">%1$s (%2$d)</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="placeholder_string">A carregar...</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_source">Origem</string>
+    <string name="app_info_source_system">Sistema</string>
+    <string name="app_info_last_update">Última atualização</string>
+    <string name="app_info_version">Versão</string>
+    <string name="app_info_more">Mais</string>
 </resources>
