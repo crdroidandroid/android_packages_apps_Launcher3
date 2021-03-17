@@ -74,7 +74,6 @@ public class LauncherAppState implements SafeCloseable {
     private final InvariantDeviceProfile mInvariantDeviceProfile;
     private final RunnableList mOnTerminateCallback = new RunnableList();
 
-    private HomeKeyWatcher mHomeKeyListener = null;
     private boolean mNeedsRestart;
 
     // WORKAROUND: b/269335387 remove this after widget background listener is enabled
@@ -150,30 +149,6 @@ public class LauncherAppState implements SafeCloseable {
         mOnTerminateCallback.add(() ->
                 settingsCache.unregister(NOTIFICATION_BADGING_URI, notificationLister));
 
-        mHomeKeyListener = new HomeKeyWatcher(mContext);
-    }
-
-    public void setNeedsRestart() {
-        if (mNeedsRestart) {
-            // another pref change already called a restart
-            return;
-        }
-        mNeedsRestart = true;
-        mHomeKeyListener.startWatch();
-        mHomeKeyListener.setOnHomePressedListener(() -> {
-            mHomeKeyListener.stopWatch();
-            Utilities.restart(mContext);
-            // we're killing the whole process so no need to set mNeedsRestart to false again
-        });
-    }
-
-    public void checkIfRestartNeeded() {
-        // we destroyed Settings activity with the back button
-        // so we force a restart now if needed without waiting for home button press
-        if (mNeedsRestart) {
-            mHomeKeyListener.stopWatch();
-            Utilities.restart(mContext);
-        }
     }
 
     public LauncherAppState(Context context, @Nullable String iconCacheFileName) {
@@ -192,6 +167,18 @@ public class LauncherAppState implements SafeCloseable {
         if (areNotificationDotsEnabled) {
             NotificationListener.requestRebind(new ComponentName(
                     mContext, NotificationListener.class));
+        }
+    }
+
+    public void setNeedsRestart() {
+        mNeedsRestart = true;
+    }
+
+    public void checkIfRestartNeeded() {
+        // we destroyed Settings activity with the back button
+        // so we force a restart now if needed without waiting for home button press
+        if (mNeedsRestart) {
+            Utilities.restart(mContext);
         }
     }
 

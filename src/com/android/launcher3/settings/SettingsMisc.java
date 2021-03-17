@@ -312,12 +312,6 @@ public class SettingsMisc extends CollapsingToolbarBaseActivity
             }
         }
 
-        @Override
-        public void onDestroy() {
-            super.onDestroy();
-            LauncherAppState.getInstanceNoCreate().checkIfRestartNeeded();
-        }
-
         private PreferenceHighlighter createHighlighter() {
             if (TextUtils.isEmpty(mHighLightKey)) {
                 return null;
