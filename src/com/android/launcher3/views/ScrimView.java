@@ -157,8 +157,7 @@ public class ScrimView<T extends Launcher> extends View implements Insettable, O
         super(context, attrs);
         mLauncher = Launcher.cast(Launcher.getLauncher(context));
         mWallpaperColorInfo = WallpaperColorInfo.INSTANCE.get(context);
-        int endScrimAlpha = (int) Math.round(Utilities.getAllAppsScrimAlpha(context) * 2.55);
-        mEndScrim = ColorUtils.setAlphaComponent(Themes.getAttrColor(context, R.attr.allAppsScrimColor), endScrimAlpha);
+        mEndScrim = Themes.getAttrColor(context, R.attr.allAppsScrimColor);
         mIsScrimDark = ColorUtils.calculateLuminance(mEndScrim) < 0.5f;
 
         mMaxScrimAlpha = 0.7f;
@@ -542,5 +541,14 @@ public class ScrimView<T extends Launcher> extends View implements Insettable, O
      */
     public float getVisualTop() {
         return Float.MAX_VALUE;
+    }
+
+    public void refreshScrimAlpha(Context context) {
+        // Override in inheriting classes
+    }
+
+    public int getScrimAlpha() {
+        // Override in inheriting classes
+        return 255;
     }
 }
