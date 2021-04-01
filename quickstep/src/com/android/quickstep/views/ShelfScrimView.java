@@ -73,7 +73,7 @@ public class ShelfScrimView extends ScrimView<BaseQuickstepLauncher>
     private boolean mDrawingFlatColor;
 
     // For shelf mode
-    private final int mEndAlpha;
+    private int mEndAlpha;
     private final float mRadius;
     private final int mMaxScrimAlpha;
     private final Paint mPaint;
@@ -109,13 +109,14 @@ public class ShelfScrimView extends ScrimView<BaseQuickstepLauncher>
         super(context, attrs);
         mMaxScrimAlpha = Math.round(OVERVIEW.getOverviewScrimAlpha(mLauncher) * 255);
 
-        mEndAlpha = Color.alpha(mEndScrim);
         mRadius = BOTTOM_CORNER_RADIUS_RATIO * Themes.getDialogCornerRadius(context);
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mOnboardingPrefs = mLauncher.getOnboardingPrefs();
 
         // Just assume the easiest UI for now, until we have the proper layout information.
         mDrawingFlatColor = true;
+
+        refreshScrimAlpha(context);
     }
 
     @Override
@@ -315,5 +316,15 @@ public class ShelfScrimView extends ScrimView<BaseQuickstepLauncher>
     @Override
     public float getVisualTop() {
         return mShelfTop;
+    }
+
+    @Override
+    public void refreshScrimAlpha(Context context) {
+        mEndAlpha = (int) Math.round(Utilities.getAllAppsScrimAlpha(context) * 2.55);
+    }
+
+    @Override
+    public int getScrimAlpha() {
+        return mEndAlpha;
     }
 }
