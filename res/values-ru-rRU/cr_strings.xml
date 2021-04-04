@@ -58,7 +58,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_sleep_gesture_summary">Двойное нажатие по пустому месту для выключения</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Показывать случайные сообщения</string>
-    <string name="quickspace_psa_summary">Показывать иногда некоторые приятные сообщения на виджете At A Glance.</string>
+    <string name="quickspace_psa_summary">Показывать интересные случайные сообщения на виджете At A Glance.</string>
     <string-array name="quickspace_psa_morning">
         <item>Доброе утро!</item>
         <item>Доброе утро, время зажигать!</item>
