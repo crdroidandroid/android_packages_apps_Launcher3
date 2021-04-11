@@ -131,24 +131,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Recents screen, close app -->
     <string name="recents_close_app">إغلاق التطبيق</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">القيمة: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">بشكل افتراضي</string>
+    <string name="custom_seekbar_default_value_to_set">القيمة الافتراضية: <xliff:g id="v">%s</xliff:g>\nانقر لفترة طويلة لتعيين</string>
+    <string name="custom_seekbar_default_value_is_set">تم تعيين القيمة الافتراضية</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">حجم الأيقونة</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">حجم الخط</string>
     <!-- Scrim alpha in apps drawer -->
-    <string name="all_apps_background_opacity_title">Background opacity</string>
+    <string name="all_apps_background_opacity_title">تعتيم الخلفية</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="app_info_subtext">إسحب للأسفل لإغلاق معلومات التطبيق.</string>
     <string name="app_info_version_value">%1$s (%2$d)</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="placeholder_string">جاري التحميل...</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_source">المصدر</string>
+    <string name="app_info_source_system">النظام</string>
+    <string name="app_info_last_update">آخر تحديث</string>
+    <string name="app_info_version">الإصدار</string>
+    <string name="app_info_more">المزيد</string>
 </resources>
