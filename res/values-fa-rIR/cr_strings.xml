@@ -113,31 +113,31 @@ Remember the Lineage of the Unicorn</item>
         <item>از صفر شروع کن</item>
         <item>تو رو ۳۰۰۰تا دوست داریم</item>
         <item>خونه بمون، امن بمون</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>How is everything going?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
+        <item>امروز یه کار خوب انجام بده</item>
+        <item>این بهترین تجربه کاربری پیکسلیه، مگه نه؟</item>
+        <item>اوضاع چطوره؟</item>
+        <item>توهم بی توهم، به واقعیت خوش اومدی!</item>
+        <item>از حمایتت ممنونیم</item>
         <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
+        <item>یکی از بهترین‌های buildbot</item>
         <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
-        <item>Winner Winner ....?</item>
+        <item>دسرهای یخیو امتحان کن</item>
+        <item>چه تجربه‌ی باحالی، مگه نه؟</item>
+        <item>تکامل یه افسانه‌س، نه؟</item>
+        <item>تو چیزی هستی که فلشش می‌کنی، سیب‌زمینی نباش</item>
+        <item>چی تو ذهنته؟</item>
+        <item>تو بردی و تو بردی ....؟</item>
         <item>rm -rf \/</item>
     </string-array>
     <!-- Recents screen, close app -->
-    <string name="recents_close_app">Close app</string>
+    <string name="recents_close_app">بستن برنامه</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">ارزش: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">بطور پیش‌فرض</string>
+    <string name="custom_seekbar_default_value_to_set">ارزش پیش‌فرض: <xliff:g id="v">%s</xliff:g>\n برای تنظیم نگه دارید</string>
+    <string name="custom_seekbar_default_value_is_set">مقدار پیش‌فرض تعیین شده است</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">اندازه آیکون</string>
     <!-- Font size -->
     <string name="font_size_title">Font size</string>
     <!-- Scrim alpha in apps drawer -->
