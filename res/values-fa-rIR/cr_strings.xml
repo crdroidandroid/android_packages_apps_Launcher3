@@ -68,7 +68,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>اینم راهی برای بیدار شدنه.</item>
         <item>باید صداهای هشدار تان را عوض کنید.</item>
         <item>به نظر می‌رسه امروز روز قشنگیه، اینطور نیست؟</item>
-        <item>بیا کارمونو شروع کنیم.</item>
+        <item>بریم یه نون بخوریم.</item>
         <item>محض احتیاط آب و هوا را بررسی کنید</item>
         <item>هنوز کمی احساس خواب‌آلودگی دارید</item>
         <item>آیا تا کنون بیرون را دیده‌اید؟</item>
@@ -95,8 +95,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>این موقع پرکارتری؟</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>نادیده بگیر تا شادروان شوی!</item>
-        <item>به این زودی موقع فلش کردن یه آپدیت دیگه رسید؟</item>
+        <item>نادیده بگیر تا شادروان شوی</item>
+        <item>به این زودی موقع فلش کردن یه به‌روزرسانی دیگه رسید؟</item>
         <item>برای اندروید ۱۲ هیجان‌زده‌ای؟</item>
         <item>هی، چه خبرا؟</item>
         <item>روی کارات تمرکز کن</item>
@@ -112,7 +112,7 @@ Remember the Lineage of the Unicorn</item>
         <item>از طول عمر Xtended باتری لذت ببر</item>
         <item>از صفر شروع کن</item>
         <item>تو رو ۳۰۰۰تا دوست داریم</item>
-        <item>خونه بمون، امن بمون</item>
+        <item>خانه بمان، امن بمان</item>
         <item>امروز یه کار خوب انجام بده</item>
         <item>این بهترین تجربه کاربری پیکسلیه، مگه نه؟</item>
         <item>اوضاع چطوره؟</item>
@@ -139,9 +139,9 @@ Remember the Lineage of the Unicorn</item>
     <!-- Icon size -->
     <string name="icon_size_title">اندازه آیکون</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">اندازه قلم</string>
     <!-- Scrim alpha in apps drawer -->
-    <string name="all_apps_background_opacity_title">Background opacity</string>
+    <string name="all_apps_background_opacity_title">شفافیت پس‌زمینه</string>
     <!-- AppInfo -->
     <string name="app_info_subtext">برای بستن اطلاعات برنامه صفحه را به سمت پائین بکشید.</string>
     <string name="app_info_version_value">%1$s(%2$d)</string>
