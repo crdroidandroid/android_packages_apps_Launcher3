@@ -7,6 +7,7 @@ import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Rect;
+import android.view.InflateException;
 import android.view.View;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.ImageView;
@@ -137,19 +138,21 @@ public abstract class SystemShortcut<T extends BaseDraggingActivity> extends Ite
                     itemInfo);
         }
 
-        private InfoBottomSheet cbs;
-
         @Override
         public void onClick(View view) {
-            if (cbs == null) {
-                dismissTaskMenuView(mTarget);
-                Rect sourceBounds = mTarget.getViewBounds(view);
+            InfoBottomSheet cbs;
+            dismissTaskMenuView(mTarget);
+            Rect sourceBounds = mTarget.getViewBounds(view);
+            try {
                 cbs = (InfoBottomSheet) mTarget.getLayoutInflater().inflate(
                         R.layout.app_info_bottom_sheet,
                         mTarget.getDragLayer(),
                         false);
                 cbs.configureBottomSheet(sourceBounds, mTarget);
                 cbs.populateAndShow(mItemInfo);
+            } catch (InflateException e) {
+                new PackageManagerHelper(mTarget).startDetailsActivityForInfo(
+                        mItemInfo, sourceBounds, ActivityOptions.makeBasic().toBundle());
             }
             mTarget.getUserEventDispatcher().logActionOnControl(Action.Touch.TAP,
                     ControlType.APPINFO_TARGET, view);
