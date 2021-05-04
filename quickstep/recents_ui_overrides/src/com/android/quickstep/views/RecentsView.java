@@ -383,6 +383,7 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
     private final float mSquaredTouchSlop;
     private int mDownX;
     private int mDownY;
+    public static int mActionButtonsBgAlpha;
 
     private PendingAnimation mPendingAnimation;
     private LayoutTransition mLayoutTransition;
@@ -403,6 +404,7 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
 
     // Variables for empty state
     private final Drawable mEmptyIcon;
+    public static Drawable mBackground;
     private final CharSequence mEmptyMessage;
     private final TextPaint mEmptyMessagePaint;
     private final Point mLastMeasureSize = new Point();
@@ -455,6 +457,7 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
                 .getDimensionPixelSize(R.dimen.task_thumbnail_top_margin);
         mSquaredTouchSlop = squaredTouchSlop(context);
 
+		mBackground = context.getDrawable(R.drawable.ic_dyn_screen);
         mEmptyIcon = context.getDrawable(R.drawable.ic_empty_recents);
         mEmptyIcon.setCallback(this);
         mEmptyMessage = context.getText(R.string.recents_empty_message);
@@ -552,8 +555,10 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
         mActionsView = actionsView;
         mActionsView.updateHiddenFlags(HIDDEN_NO_TASKS, getTaskViewCount() == 0);
         mClearAllButton = (ImageButton) mActionsView.findViewById(R.id.clear_all);
+        mClearAllButton.setBackgroundDrawable(mBackground);
         mClearAllButton.setOnClickListener(this::dismissAllTasks);
         mKillAppButton = (ImageButton) mActionsView.findViewById(R.id.kill_app);
+        mKillAppButton.setBackgroundDrawable(mBackground);
         mKillAppButton.setOnClickListener(this::killTask);
     }
 
@@ -1668,6 +1673,10 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
     }
 
     public void setContentAlpha(float alpha) {
+        mActionButtonsBgAlpha = (int) Math.round(Utilities.getActionButtonsBgAlpha(getContext()) * 2.55);
+        if (mActionButtonsBgAlpha < 255)
+        mBackground.setAlpha(mActionButtonsBgAlpha);
+
         if (alpha == mContentAlpha) {
             return;
         }

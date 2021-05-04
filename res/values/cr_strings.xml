@@ -172,4 +172,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_info_last_update">Last update</string>
     <string name="app_info_version">Version</string>
     <string name="app_info_more">More</string>
+
+    <!-- Action buttons background opacity in recents view -->
+    <string name="action_buttons_background_opacity_title">Action buttons background opacity in recents view</string>
 </resources>
