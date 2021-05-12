@@ -44,26 +44,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </string-array>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">Soitetaan</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_song_artist">esittäjältä</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance.</string>
+    <string name="quickspace_now_playing_title">Näytä nyt soitossa</string>
+    <string name="quickspace_now_playing_summary">Näytä soitettava kappale pikanäytössä.</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
+    <string name="quickspace_alternate_style_title">Käytä vaihtoehtoista tyyliä</string>
+    <string name="quickspace_alternate_style_summary">Käytä pelkistettyä tyyliä pikanäytössä</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
+    <string name="icon_pack">Kuvakepaketti</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">Tuplanäpäytä horrostilaan</string>
+    <string name="pref_sleep_gesture_summary">Tuplanäpäytä tyhjää tilaa katkaistaksesi virran</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">Näytä satunnainen viesti</string>
+    <string name="quickspace_psa_summary">Näytä väliajoin jokin kiva viesti pikanäytössä.</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
+        <item>Hyvää huomenta!</item>
+        <item>Hyvää huomenta, aika rokata!</item>
+        <item>Mikä kaunis päivä!</item>
+        <item>Hyvää päivänjatkoa!</item>
         <item>What about a small 5 minutes nap?</item>
         <item>That\'s one way to wake up.</item>
         <item>You should change your alarm sounds.</item>
