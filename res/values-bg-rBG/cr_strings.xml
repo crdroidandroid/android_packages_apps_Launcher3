@@ -78,15 +78,15 @@
     <string name="quickspace_alternate_style_title">Използвай алтернативен стил</string>
     <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
+    <string name="quickspace_now_playing_title">Покажи какво се изпълнява</string>
     <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
+    <string name="quickspace_psa_title">Покажи случайни съобщения</string>
     <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
     <string-array name="quickspace_psa_morning">
         <item>Добро утро!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
+        <item>Добро утро, време е за рок!</item>
+        <item>Какъв чудесен ден!</item>
         <item>Have a nice day!</item>
         <item>What about a small 5 minutes nap?</item>
         <item>That\'s one way to wake up.</item>
