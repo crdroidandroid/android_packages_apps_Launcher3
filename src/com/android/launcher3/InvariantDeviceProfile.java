@@ -86,6 +86,7 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
     public static final String KEY_SHOW_LABELS_LANDSCAPE = "pref_show_labels_landscape";
     public static final String KEY_ICON_PATH_REF = "pref_icon_shape_path";
     public static final String KEY_WORKSPACE_EDIT = "pref_workspace_edit";
+    public static final String KEY_MAX_LINES = "pref_max_lines";
 
     // Constants that affects the interpolation curve between statically defined device profile
     // buckets.
@@ -205,7 +206,8 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-        if (KEY_SHOW_DESKTOP_LABELS.equals(key) || KEY_SHOW_DRAWER_LABELS.equals(key)) {
+        if (KEY_SHOW_DESKTOP_LABELS.equals(key) || KEY_SHOW_DRAWER_LABELS.equals(key) ||
+                KEY_MAX_LINES.equals(key)) {
             apply(mContext, CHANGE_FLAG_ICON_PARAMS);
         } else if (KEY_SHOW_LABELS_LANDSCAPE.equals(key)) {
             onConfigChanged(mContext);

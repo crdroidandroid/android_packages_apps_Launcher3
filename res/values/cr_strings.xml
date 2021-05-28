@@ -160,6 +160,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Font size -->
     <string name="font_size_title">Font size</string>
 
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Max lines for app label</string>
+
     <!-- Scrim alpha in apps drawer -->
     <string name="all_apps_background_opacity_title">Background opacity</string>
 
