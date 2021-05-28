@@ -18,6 +18,7 @@ package com.android.launcher3;
 
 import static com.android.launcher3.InvariantDeviceProfile.KEY_SHOW_DESKTOP_LABELS;
 import static com.android.launcher3.InvariantDeviceProfile.KEY_SHOW_DRAWER_LABELS;
+import static com.android.launcher3.InvariantDeviceProfile.KEY_MAX_LINES;
 import static com.android.launcher3.config.FeatureFlags.ENABLE_ICON_LABEL_AUTO_SCALING;
 import static com.android.launcher3.graphics.PreloadIconDrawable.newPendingIcon;
 import static com.android.launcher3.icons.GraphicsUtils.setColorAlphaBound;
@@ -171,6 +172,7 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
     private boolean mDisableRelayout = false;
 
     private boolean mShouldShowLabel;
+    private int mMaxLines;
 
     private HandlerRunnable mIconLoadRequest;
 
@@ -230,6 +232,7 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
             defaultIconSize = grid.iconSizePx;
             mShouldShowLabel = prefs.getBoolean(KEY_SHOW_DESKTOP_LABELS, true);
         }
+        mMaxLines = prefs.getInt(KEY_MAX_LINES, 1);
 
         mCenterVertically = a.getBoolean(R.styleable.BubbleTextView_centerVertically, false);
 
@@ -387,6 +390,7 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
     private void applyLabel(ItemInfoWithIcon info) {
         if (mShouldShowLabel) {
             setText(info.title);
+            setMaxLines(mMaxLines);
         }
         if (info.contentDescription != null) {
             setContentDescription(info.isDisabled()
@@ -661,6 +665,10 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
 
     public boolean shouldShowLabel() {
         return mShouldShowLabel;
+    }
+
+    public int getMaxLines() {
+        return mMaxLines;
     }
 
     public boolean shouldTextBeVisible() {
