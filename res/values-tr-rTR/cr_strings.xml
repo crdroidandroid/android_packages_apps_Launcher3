@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2020-2021 crDroid Android Project
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Ayarlar</string>
+    <!-- Categories -->
+    <string name="home_category_title">Ana ekran</string>
+    <string name="home_category_summary">Google now panelini ve daha fazlasını ayarlayın</string>
+    <string name="icons_category_title">Simgeler</string>
+    <string name="icons_category_summary">Simge şeklini ve daha fazlasını ayarlayın</string>
+    <string name="app_drawer_category_title">Uygulama menüsü</string>
+    <string name="app_drawer_category_summary">Uygulama menünüzü özelleştirin</string>
+    <string name="misc_category_title">Çeşitli</string>
+    <string name="misc_category_summary">Diğer seçenekler</string>
+    <string name="dev_options_title">Geliştirici seçenekleri</string>
+    <string name="dev_options_desc">Bazı gizli özellikleri kendi sorumluluğunuzda etkinleştirin</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Bir Bakışta</string>
+    <string name="show_quickspace_summary">Ana ekranın üst kısmında göster</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">CrDroid\'e hoş geldiniz!</string>
+    <string-array name="welcome_message_variants">
+        <item>Have a great day</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
+        <item>We love you 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Şimdi çalınıyor</string>
+    <string name="quick_event_ambient_song_artist">%2$s tarafından %1$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Şimdi oynatılanı göster</string>
+    <string name="quickspace_now_playing_summary">Çalmakta olduğunuz şarkıyı Bir Bakışta gösterir.</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Alternatif bir stil kullan</string>
+    <string name="quickspace_alternate_style_summary">Bir bakışta için minimalist bir still kullanın</string>
+    <!-- Icon packs -->
+    <string name="icon_pack">Simge paketi</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Çift dokunuşla uyutma</string>
+    <string name="pref_sleep_gesture_summary">Ekranı kapatmak için boş bir alana çift dokunun</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Rastgele bir mesaj göster</string>
+    <string name="quickspace_psa_summary">Bir bakışta için bazı güzel mesajlar göster.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Günaydın!</item>
+        <item>Günaydın, rock zamanı!</item>
+        <item>Ne kadar güzel bir gün!</item>
+        <item>İyi günler dilerim!</item>
+        <item>Peki ya 5 dakikalık küçük bir şekerlemeye nedersin?</item>
+        <item>Uyanmanın yollarından biri de bu.</item>
+        <item>Alarm seslerinizi değiştirmelisiniz.</item>
+        <item>Güzel bir gün gibi görünüyor, değil mi?</item>
+        <item>Haydi sorunu çözelim.</item>
+        <item>Sadece hava durumunu kontrol et</item>
+        <item>Henüz biraz uykulu hissediyorum</item>
+        <item>Dışarıya baktın mı?</item>
+        <item>Bunu halledelim.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>İyi geceler!</item>
+        <item>İyi uykular!</item>
+        <item>Yarın görüşürüz!</item>
+        <item>Tatlı rüyalar!</item>
+        <item>Çok uzun süre uyanık kalma</item>
+        <item>İyi uykular</item>
+        <item>Biraz uyu</item>
+        <item>Rahatlama zamanı</item>
+        <item>Gecenin tadını çıkart!</item>
+        <item>Pilleri şarj etme zamanı!</item>
+        <item>Yarın harika bir gün olabilir</item>
+        <item>Kemiklerinizi yarın için hazırlayın</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Um... iyi geceler?</item>
+        <item>Şimdi biraz geç</item>
+        <item>Uyku zamanlamanızı düzeltmelisiniz</item>
+        <item>Şu anda daha üretken misiniz?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Cehalet mutluluktur</item>
+        <item>Çoktan başka güncelleme flaş etme zamanı gelmedi mi?</item>
+        <item>Android 12 hakkında endişeli misiniz?</item>
+        <item>Hey, nasıl gidiyor?</item>
+        <item>Görevlerinize odaklanın</item>
+        <item>Kaç tane ekran görüntüsü alıyorsunuz?</item>
+        <item>Crdroid ile çeşitli özelleştirmeler</item>
+        <item>Yayılmış aşk havoc değil</item>
+        <item>İyi eğlenceler!</item>
+        <item>Bazı güzel müzikler için doğru zaman</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C BAŞ</item>
+        <item>Bunu görmek için crDroid Premium\'a ihtiyacınız var</item>
+        <item>Unicorn soyunu hatırla</item>
+        <item>Daha uzun pil ömrünün keyfini çıkarın</item>
+        <item>Sıfırdan başlayarak</item>
+        <item>Seni seviyoruz 3000</item>
+        <item>Evde Kal, Güvende Kal</item>
+        <item>Bugün güzel bir şey yap</item>
+        <item>Bu en iyi Pixel Experience, değil mi?</item>
+        <item>Her şey nasıl gidiyor?</item>
+        <item>Yanılsama yok, gerçeğe hoş geldiniz!</item>
+        <item>Desteğiniz için teşekkür ederiz</item>
+        <item>Derps için festival yok - sadece mükemmellik!</item>
+        <item>Buildbot\'ların en iyi seçimlerinden biri</item>
+        <item>Paranoya için akıl sağlığı</item>
+        <item>Buz gibi tatlıları deneyin</item>
+        <item>Ne hoş bir deneyim değil mi?</item>
+        <item>Evrim bir efsanedir, değil mi?</item>
+        <item>Sen, ne kullanıyorsan osun. Sakın patates olma</item>
+        <item>Aklınızdan ne geçiyor?</item>
+        <item>Kazanan Kazanan ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">Uygulamayı kapat</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Değer: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">Varsayılan</string>
+    <string name="custom_seekbar_default_value_to_set">Varsayılan değer: <xliff:g id="v">%s</xliff:g>\nAyarlamak için uzun dokunun</string>
+    <string name="custom_seekbar_default_value_is_set">Varsayılan değer ayarlandı</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Simge boyutu</string>
+    <!-- Font size -->
+    <string name="font_size_title">Yazı tipi boyutu</string>
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">Arka plan şeffaflığı</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Uygulama bilgilerini kapatmak için aşağı kaydırın.</string>
+    <string name="app_info_version_value">%1$s (%2$d)</string>
+    <string name="placeholder_string">Yükleniyor...</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_source">Kaynak</string>
+    <string name="app_info_source_system">Sistem</string>
+    <string name="app_info_last_update">Son güncelleme</string>
+    <string name="app_info_version">Sürüm</string>
+    <string name="app_info_more">Daha fazla</string>
+</resources>

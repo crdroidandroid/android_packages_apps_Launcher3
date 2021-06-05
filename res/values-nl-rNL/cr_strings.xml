@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2020-2021 crDroid Android Project
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Instellingen</string>
+    <!-- Categories -->
+    <string name="home_category_title">Startscherm</string>
+    <string name="home_category_summary">Stel Google Now in en meer</string>
+    <string name="icons_category_title">Pictogrammen</string>
+    <string name="icons_category_summary">Stel pictogram vorm en meer in</string>
+    <string name="app_drawer_category_title">App lade</string>
+    <string name="app_drawer_category_summary">Personaliseer je app overzicht</string>
+    <string name="misc_category_title">Overige</string>
+    <string name="misc_category_summary">Overige opties</string>
+    <string name="dev_options_title">Opties voor ontwikkelaars</string>
+    <string name="dev_options_desc">Schakel enkele verborgen functies in op eigen risico</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">In een oogopslag</string>
+    <string name="show_quickspace_summary">Toon aan de bovenkant van je startscherm</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Welkom bij crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>Have a great day</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
+        <item>We love you 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Nu aan het spelen</string>
+    <string name="quick_event_ambient_song_artist">%1$s van %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Toon nu aan het spelen</string>
+    <string name="quickspace_now_playing_summary">Toon het nummer dat je speelt op \"At a Glance\".</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Gebruik een alternatieve stijl</string>
+    <string name="quickspace_alternate_style_summary">Gebruik een minimalistische stijl voor At a Glance</string>
+    <!-- Icon packs -->
+    <string name="icon_pack">Pictogram pakket</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Dubbeltikken voor slaapstand</string>
+    <string name="pref_sleep_gesture_summary">Dubbeltikken op lege ruimte om uit te schakelen</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Laat een willekeurig bericht zien</string>
+    <string name="quickspace_psa_summary">Laat sommige leuke berichten soms zien op At a Glance.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Goedemorgen!</item>
+        <item>Goedemorgen, tijd om te rocken!</item>
+        <item>Wat een mooie dag!</item>
+        <item>Geniet van je dag!</item>
+        <item>Wat denk je van een 5 minuten dutje?</item>
+        <item>Dat is één manier om wakker te worden.</item>
+        <item>U moet uw alarmgeluiden wijzigen.</item>
+        <item>Het lijkt erop dat het een mooie dag is, nietwaar?</item>
+        <item>Laten we dit doen.</item>
+        <item>Controleer het weer in het geval van</item>
+        <item>Voel je een beetje slaperig</item>
+        <item>Heb je al naar buiten gekeken?</item>
+        <item>Laten we dit doen.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Goede nacht!</item>
+        <item>Slaap lekker!</item>
+        <item>Tot morgen!</item>
+        <item>Droom zacht!</item>
+        <item>Niet te lang opblijven</item>
+        <item>Geniet van een goede slaap</item>
+        <item>Slaap maar wat</item>
+        <item>Tijd om te ontspannen</item>
+        <item>Geniet van de nacht!</item>
+        <item>Tijd om de batterijen op te laden!</item>
+        <item>Morgen kan een geweldige dag zijn</item>
+        <item>Maak je klaar voor morgen</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Um... goede nacht?</item>
+        <item>Het is nu een beetje laat</item>
+        <item>Je moet je slaapschema verbeteren</item>
+        <item>Ben je productiever op dit moment?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Negeren is Bliss</item>
+        <item>Is het al tijd om nog een update te flashen?</item>
+        <item>Opgewonden voor Android 12?</item>
+        <item>Hey, hoe gaat het?</item>
+        <item>Focus op uw taken</item>
+        <item>Hoeveel schermafbeeldingen neem je?</item>
+        <item>Open het goeie met CrDroid</item>
+        <item>Verspreid de liefde en niet de vernieling</item>
+        <item>Veel plezier!</item>
+        <item>Tijd voor wat goede muziek</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>Je hebt crDroid Premium nodig om dit te zien</item>
+        <item>Onthoud de afkomst van de Unicorn</item>
+        <item>Geniet van de Xtended batterijduur</item>
+        <item>Vanaf nul beginnen</item>
+        <item>We houden van je 3000</item>
+        <item>Blijf thuis, blijf veilig</item>
+        <item>Doe iets leuks vandaag</item>
+        <item>Dit is de beste Pixel Experience, nietwaar?</item>
+        <item>Hoe gaat het met alles?</item>
+        <item>Geen illusies, welkom bij de realiteit!</item>
+        <item>Bedankt voor je steun</item>
+        <item>Geen festival voor Derps - enkel perfectie!</item>
+        <item>Een van buildbot\'s beste keuze</item>
+        <item>Gezondheid voor je Paranoia</item>
+        <item>Probeer Ijs Koude toetjes</item>
+        <item>Wat een mooie ervaring, nietwaar?</item>
+        <item>Evolutie is een mythe, toch?</item>
+        <item>Je bent wat je flasht, dus ben geen Potato</item>
+        <item>Waar denk je aan?</item>
+        <item>Winnaar ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">Sluit app</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Waarde: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">standaard</string>
+    <string name="custom_seekbar_default_value_to_set">Standaard waarde: <xliff:g id="v">%s</xliff:g>\nLange tik om in te stellen</string>
+    <string name="custom_seekbar_default_value_is_set">Standaard waarde is ingesteld</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Pictogram grootte</string>
+    <!-- Font size -->
+    <string name="font_size_title">Leterrtype grootte</string>
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">Achtergrond transparantie</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Veeg omlaag om app informatie te sluiten.</string>
+    <string name="app_info_version_value">%1$s (%2$d)</string>
+    <string name="placeholder_string">Bezig met laden...</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_source">Bron</string>
+    <string name="app_info_source_system">Systeem</string>
+    <string name="app_info_last_update">Laatste update</string>
+    <string name="app_info_version">Versie</string>
+    <string name="app_info_more">Meer</string>
+</resources>

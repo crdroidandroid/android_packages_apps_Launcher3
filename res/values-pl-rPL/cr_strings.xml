@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2020-2021 crDroid Android Project
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Ustawienia</string>
+    <!-- Categories -->
+    <string name="home_category_title">Ekran główny</string>
+    <string name="home_category_summary">Ustaw panel Google Now i więcej</string>
+    <string name="icons_category_title">Ikony</string>
+    <string name="icons_category_summary">Ustaw kształt ikon i więcej</string>
+    <string name="app_drawer_category_title">Szuflada aplikacji</string>
+    <string name="app_drawer_category_summary">Spersonalizuj szufladę aplikacji</string>
+    <string name="misc_category_title">Pozostałe</string>
+    <string name="misc_category_summary">Pozostałe opcje</string>
+    <string name="dev_options_title">Opcje programistyczne</string>
+    <string name="dev_options_desc">Włącz niektóre ukryte funkcje na własne ryzyko</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">W skrócie</string>
+    <string name="show_quickspace_summary">Pokaż u góry ekranu głównego</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Witaj w crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>Have a great day</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
+        <item>We love you 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Teraz odtwarzane</string>
+    <string name="quick_event_ambient_song_artist">%1$s przez %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Pokaż teraz odtwarzane</string>
+    <string name="quickspace_now_playing_summary">Wyświetl piosenkę której słuchasz na At a Glance.</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Użyj alternatywnego stylu</string>
+    <string name="quickspace_alternate_style_summary">Użyj minimalistycznego stylu dla widżetu At a Glance</string>
+    <!-- Icon packs -->
+    <string name="icon_pack">Pakiet ikon</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Stuknij dwukrotnie aby uśpić</string>
+    <string name="pref_sleep_gesture_summary">Kliknij dwukrotnie w puste miejsce, aby wyłączyć ekran</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Pokaż losową wiadomość</string>
+    <string name="quickspace_psa_summary">Wyświetl fajne wiadomości w widżecie At a Glance.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Dzień dobry!</item>
+        <item>Dzień dobry, pora na działanie!</item>
+        <item>Ależ piękny dzień!</item>
+        <item>Miłego dnia!</item>
+        <item>A może 5-cio minutowa drzemka?</item>
+        <item>To jest sposób na pobudkę.</item>
+        <item>Powinieneś zmienić dźwięk swojego alarmu.</item>
+        <item>Zapowiada się piękny dzień, nieprawdaż?</item>
+        <item>Zajmijmy się tym.</item>
+        <item>Sprawdź pogodę dla pewności</item>
+        <item>Jestem trochę śpiący</item>
+        <item>Wyjrzałeś już dzisiaj za okno?</item>
+        <item>Zajmijmy się tym.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Dobranoc!</item>
+        <item>Śpij dobrze!</item>
+        <item>Do jutra!</item>
+        <item>Słodkich snów!</item>
+        <item>Nie siedź za długo</item>
+        <item>Miłych snów</item>
+        <item>Idź spać</item>
+        <item>Czas na relaks</item>
+        <item>Miłej nocy!</item>
+        <item>Czas naładować baterie!</item>
+        <item>Jutro może być świetny dzień</item>
+        <item>Przygotuj się na jutro</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Hmm... dobrej nocy?</item>
+        <item>Jest trochę późno</item>
+        <item>Powinieneś poprawić swój harmonogram snu</item>
+        <item>Jesteś teraz bardziej produktywny?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Niewiedza jest błogosławieństwem</item>
+        <item>Czy to czas na kolejną aktualizację?</item>
+        <item>Podekscytowany Androidem 12?</item>
+        <item>Hej, co słychać?</item>
+        <item>Skoncentruj się na swoich zadaniach</item>
+        <item>Ile zrzutów ekranu robisz?</item>
+        <item>Otwórz dobroć z crDroid</item>
+        <item>Szerz miłość nie spustoszenie</item>
+        <item>Baw się dobrze!</item>
+        <item>Czas na dobrą muzykę</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C GŁÓWNY</item>
+        <item>Potrzebujesz crDroid Premium, aby to zobaczyć</item>
+        <item>Pamiętaj the Lineage of the Unicorn</item>
+        <item>Ciesz się wydłużonym czasem baterii</item>
+        <item>Zaczynamy od początku</item>
+        <item>Kochamy cię razy 3000</item>
+        <item>Zostań w domu, dbaj o bezpieczeństwo</item>
+        <item>Zrób dziś coś miłego</item>
+        <item>To najlepsze Pixel Experience, prawda?</item>
+        <item>Jak leci?</item>
+        <item>Brak iluzji, witaj w rzeczywistości!</item>
+        <item>Dziękujemy za wsparcie</item>
+        <item>Brak miejsca dla Derpów - czysta perfekcja!</item>
+        <item>Jeden z najlepszych wyborów buildbota</item>
+        <item>Ukojenie twojej paranoi</item>
+        <item>Wypróbuj lodowe desery</item>
+        <item>Ale cudowne doświadczenie, nieprawdaż?</item>
+        <item>Ewolucja jest mitem, prawda?</item>
+        <item>Jesteś tym co wgrywasz, nie bądź ziemniakiem</item>
+        <item>Co ci chodzi po głowie?</item>
+        <item>Zwycięzca Wygrywa....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">Zamknij aplikację</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Wartość: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">domyślnie</string>
+    <string name="custom_seekbar_default_value_to_set">Wartość domyślna: <xliff:g id="v">%s</xliff:g>\nPrzytrzymaj dłużej by ustawić</string>
+    <string name="custom_seekbar_default_value_is_set">Wartość domyślna jest ustawiona</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Rozmiar ikon</string>
+    <!-- Font size -->
+    <string name="font_size_title">Rozmiar czcionki</string>
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">Przezroczystość tła</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Przesuń w dół, aby zamknąć informacje o aplikacji.</string>
+    <string name="app_info_version_value">%1$s (%2$d)</string>
+    <string name="placeholder_string">Ładowanie...</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_source">Źródło</string>
+    <string name="app_info_source_system">System</string>
+    <string name="app_info_last_update">Ostatnia aktualizacja</string>
+    <string name="app_info_version">Wersja</string>
+    <string name="app_info_more">Więcej</string>
+</resources>

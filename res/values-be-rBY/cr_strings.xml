@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2020-2021 crDroid Android Project
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Налады</string>
+    <!-- Categories -->
+    <string name="home_category_title">Галоўны экран</string>
+    <string name="home_category_summary">Усталяваць панэль Google Now і іншае</string>
+    <string name="icons_category_title">Значкі</string>
+    <string name="icons_category_summary">Усталяваць форму значкоў і іншае</string>
+    <string name="app_drawer_category_title">Спіс праграм</string>
+    <string name="app_drawer_category_summary">Налада свайго спісу праграм</string>
+    <string name="misc_category_title">Рознае</string>
+    <string name="misc_category_summary">Іншыя налады</string>
+    <string name="dev_options_title">Опцыі распрацоўшчыка</string>
+    <string name="dev_options_desc">Уключыце некаторыя схаваныя функцыі на свой страх і рызыку</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">З Першага Погляду</string>
+    <string name="show_quickspace_summary">Адлюстроўваць у верхняй частцы Хатняга экрана</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Сардэчна запрашаем у crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>Have a great day</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
+        <item>We love you 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Зараз гучыць</string>
+    <string name="quick_event_ambient_song_artist">%1$s ад %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Паказваць што зараз гучыць</string>
+    <string name="quickspace_now_playing_summary">Паказваць песню якая гучыць З Першага Погляду.</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Выкарыстоўвайце альтэрнатыўны стыль</string>
+    <string name="quickspace_alternate_style_summary">Выкарыстоўвайце мінімальны стыль для At a Glance</string>
+    <!-- Icon packs -->
+    <string name="icon_pack">Набор значкоў</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Выключаць экран пры падвойным націску</string>
+    <string name="pref_sleep_gesture_summary">Двойчы націсніце на пустое месца для адключэння</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Паказваць выпадковыя паведамленні</string>
+    <string name="quickspace_psa_summary">Паказваць часам некаторыя прыемныя паведамленні на віджэце At a Glance.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Добрай раніцы!</item>
+        <item>Добрай раніцы, час качацца!</item>
+        <item>Які цудоўны дзень!</item>
+        <item>Добрага дня!</item>
+        <item>А як з невялікім 5-хвілінным сном?</item>
+        <item>Гэта адзін са спосабаў прачнуцца.</item>
+        <item>Вы павінны змяніць гукі будзільніка.</item>
+        <item>Падобна, гэта цудоўны дзень, ці не так?</item>
+        <item>Давайце зробім гэта.</item>
+        <item>Праверце надвор\'е на ўсялякі выпадак</item>
+        <item>Крыху сонна</item>
+        <item>Вы ўжо глядзелі на вуліцу?</item>
+        <item>Давайце зробім гэта.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Дабранач!</item>
+        <item>Прыемных сноў!</item>
+        <item>Убачымся заўтра!</item>
+        <item>Салодкіх сноў!</item>
+        <item>Не заседжвайся занадта доўга</item>
+        <item>Добра выспацца</item>
+        <item>Пара спаць</item>
+        <item>Час расслабіцца</item>
+        <item>Атрымлівайце асалоду ад ночы!</item>
+        <item>Час зарадзіць батарэю!</item>
+        <item>Заўтра можа быць выдатны дзень</item>
+        <item>Падрыхтуй косці да заўтрашняга дня</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Гм... дабранач?</item>
+        <item>Цяпер ужо крыху позна</item>
+        <item>Вы павінны выправіць свой рэжым сну</item>
+        <item>Вы больш прадуктыўныя ў гэты час?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Няведанне ёсць Bliss</item>
+        <item>Час прашываць яшчэ адно абнаўленне?</item>
+        <item>Чакаеш Android 12?</item>
+        <item>О, прывітанне, што здарылася?</item>
+        <item>Засяродзьцеся на сваіх задачах</item>
+        <item>Колькі скрыншотаў вы зрабілі?</item>
+        <item>Адкрыйце дабро з crDroid</item>
+        <item>Распаўсюджвайце каханне не на havoc</item>
+        <item>Весяліцеся!</item>
+        <item>Час для добрай музыкі</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C ГАЛАВА</item>
+        <item>Для гэтага вам патрэбен crDroid Premium</item>
+        <item>Памятайце Lineage і Unicorn</item>
+        <item>Атрымлівайце асалоду ад тэрміну службы батарэі</item>
+        <item>Пачынаючы з нуля</item>
+        <item>Мы любім цябе 3000</item>
+        <item>Будзь дома, заставайся ў бяспецы</item>
+        <item>Зрабі што-небудзь прыемнае сёння</item>
+        <item>Гэта лепшы Pixel Experience, ці не так?</item>
+        <item>Як усё адбываецца?</item>
+        <item>Ніякіх ілюзій, сардэчна запрашаем у рэальнасць!</item>
+        <item>Дзякуй за вашу падтрымку</item>
+        <item>Ніякага фестывалю для Derps - толькі дасканаласць!</item>
+        <item>Адзін з лепшых выбаршчыкаў</item>
+        <item>Разважлівасць для вашай паранойі</item>
+        <item>Паспрабуйце Ice Cold дэсерты</item>
+        <item>Які цудоўны вопыт, ці не так?</item>
+        <item>Evolution гэта міф, праўда?</item>
+        <item>Вы тое, што прашываеце, не будзьце бульбай</item>
+        <item>Што вы маеце на ўвазе?</item>
+        <item>Пераможца Пераможца ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">Закрыць праграму</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Значэнне: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">па змаўчанні</string>
+    <string name="custom_seekbar_default_value_to_set">Значэнне па змаўчанні: <xliff:g id="v">%s</xliff:g>\nУтрымлівайце для ўсталёўкі</string>
+    <string name="custom_seekbar_default_value_is_set">Значэнне па змаўчанні ўжо ўсталявана</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Памер значка</string>
+    <!-- Font size -->
+    <string name="font_size_title">Памер шрыфта</string>
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">Фон непразрыстасці</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Правядзіце пальцам уніз, каб закрыць інфармацыю аб праграме.</string>
+    <string name="app_info_version_value">%1$s (%2$d)</string>
+    <string name="placeholder_string">Загрузка...</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_source">Крыніца</string>
+    <string name="app_info_source_system">Сістэма</string>
+    <string name="app_info_last_update">Апошняе абнаўленне</string>
+    <string name="app_info_version">Версія</string>
+    <string name="app_info_more">Яшчэ</string>
+</resources>

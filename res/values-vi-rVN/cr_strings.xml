@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2020-2021 crDroid Android Project
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Cài đặt</string>
+    <!-- Categories -->
+    <string name="home_category_title">Màn hình chính</string>
+    <string name="home_category_summary">Đặt bảng điều khiển Google now và nhiều hơn</string>
+    <string name="icons_category_title">Biểu tượng</string>
+    <string name="icons_category_summary">Đặt hình dạng biểu tượng và hơn thế nữa</string>
+    <string name="app_drawer_category_title">Ngăn ứng dụng</string>
+    <string name="app_drawer_category_summary">Tùy chỉnh ngăn chứa ứng dụng</string>
+    <string name="misc_category_title">Cài đặt khác</string>
+    <string name="misc_category_summary">Tùy chọn khác</string>
+    <string name="dev_options_title">Tùy chọn nhà phát triển</string>
+    <string name="dev_options_desc">Bật một số tính năng ẩn và tự chịu rủi ro</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Nhìn Thoáng qua</string>
+    <string name="show_quickspace_summary">Hiển thị ở đầu Màn hình chính của bạn</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Chào mừng đến với crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>Have a great day</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
+        <item>We love you 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Đang phát</string>
+    <string name="quick_event_ambient_song_artist">%1$s bởi %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Hiện đang phát</string>
+    <string name="quickspace_now_playing_summary">Hiển thị bài hát bạn đang phát trên At Glance.</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Sử dụng một phong cách thay thế</string>
+    <string name="quickspace_alternate_style_summary">Sử dụng phong cách tối giản cho Xem nhanh</string>
+    <!-- Icon packs -->
+    <string name="icon_pack">Gói biểu tượng</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Nhấn đúp để tắt màn hình</string>
+    <string name="pref_sleep_gesture_summary">Nhấn đúp vào khoảng trống để tắt nguồn</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Hiển thị một thông điệp ngẫu nhiên</string>
+    <string name="quickspace_psa_summary">Đôi khi hiển thị một số thông điệp tốt đẹp trên Xem nhanh.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Chào buổi sáng!</item>
+        <item>Chào buổi sáng, đến giờ quẩy rồi!</item>
+        <item>Thật là một ngày đẹp trời!</item>
+        <item>Chúc bạn một ngày tốt lành!</item>
+        <item>Còn một giấc ngủ ngắn 5 phút thì sao?</item>
+        <item>Đó là một cách để thức dậy.</item>
+        <item>Bạn nên thay đổi âm báo của bạn.</item>
+        <item>Có vẻ như đó là một ngày đẹp trời, phải không?</item>
+        <item>Dậy ăn bánh mì thôi.</item>
+        <item>Kiểm tra thời tiết cẩn thận</item>
+        <item>Cảm thấy hơi buồn ngủ</item>
+        <item>Bạn đã thử nhìn ra ngoài chưa?</item>
+        <item>Hãy hoàn thành nó.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Chúc bạn ngủ ngon!</item>
+        <item>Ngủ ngon nhé!</item>
+        <item>Hẹn gặp bạn vào ngày mai!</item>
+        <item>Chúc bạn có những giấc mơ đẹp!</item>
+        <item>Đừng ngủ quá muộn nhé</item>
+        <item>Có một giấc ngủ ngon</item>
+        <item>Ngủ một chút đi</item>
+        <item>Đến giờ giải lao rồi</item>
+        <item>Tận hưởng buổi tối!</item>
+        <item>Đã đến lúc sạc pin!</item>
+        <item>Ngày mai có thể là một ngày tuyệt vời</item>
+        <item>Chuẩn bị sẵn sàng cho ngày mai</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Ừm... chúc ngủ ngon?</item>
+        <item>Bây giờ hơi muộn</item>
+        <item>Bạn nên chỉnh sửa lịch ngủ của mình</item>
+        <item>Bạn có năng suất hơn vào lúc này không?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Điếc không sợ súng</item>
+        <item>Đã đến lúc cập nhật một bản Rom khác chưa?</item>
+        <item>Cường điệu về Android 12?</item>
+        <item>Oh này, có chuyện gì thế?</item>
+        <item>Hãy tập chung vào nhiệm vụ</item>
+        <item>Bạn chụp bao nhiêu ảnh chụp màn hình?</item>
+        <item>Mở thứ tốt nhất với crDroid</item>
+        <item>Lan tỏa tình yêu thương không tàn phá</item>
+        <item>Chúc vui vẻ!</item>
+        <item>Khoảng thời gian cho một số bản nhạc hay</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C CÁI ĐẦU</item>
+        <item>Bạn cần crDroid Premium để xem điều này</item>
+        <item>Hãy nhớ lineage của unicorn</item>
+        <item>Tận hưởng thời lượng pin dài hơn</item>
+        <item>Bắt đầu từ con số 0</item>
+        <item>Chúng tôi yêu bạn 3000</item>
+        <item>Ở Nhà Là Khỏe Mạnh</item>
+        <item>Làm điều gì đó tốt đẹp hôm nay</item>
+        <item>Đây là trải nghiệm Pixel tốt nhất, phải không?</item>
+        <item>Mọi chuyện thế nào rồi?</item>
+        <item>Không ảo tưởng, chào mừng bạn đến với thực tế!</item>
+        <item>Cảm ơn sự giúp đỡ của bạn</item>
+        <item>Không có lễ hội cho Derps - chỉ có sự hoàn hảo!</item>
+        <item>Một trong những lựa chọn tốt nhất của buildbot</item>
+        <item>Hãy tỉnh táo chứ đừng hoang tưởng</item>
+        <item>Thử món tráng miệng Đá lạnh</item>
+        <item>Thật là một trải nghiệm đáng yêu phải không?</item>
+        <item>Evolution là một huyền thoại, phải không?</item>
+        <item>Hãy nạp rom bạn muốn, đừng thử Potato</item>
+        <item>Bạn đang nghĩ gì?</item>
+        <item>Người chiến thắng Người chiến thắng ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">Đóng ứng dụng</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Giá trị: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">theo mặc định</string>
+    <string name="custom_seekbar_default_value_to_set">Giá trị mặc định: <xliff:g id="v">%s</xliff:g>\nNhấn giữ lâu để thiết lập</string>
+    <string name="custom_seekbar_default_value_is_set">Thiết lập giá trị mặc định</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Kích cỡ biểu tượng</string>
+    <!-- Font size -->
+    <string name="font_size_title">Cỡ chữ</string>
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">Độ mờ của nền</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Vuốt xuống để đóng thông tin ứng dụng.</string>
+    <string name="app_info_version_value">%1$s (%2$d)</string>
+    <string name="placeholder_string">Đang tải...</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_source">Nguồn</string>
+    <string name="app_info_source_system">Hệ thống</string>
+    <string name="app_info_last_update">Cập nhật lần cuối</string>
+    <string name="app_info_version">Phiên bản</string>
+    <string name="app_info_more">Thêm</string>
+</resources>

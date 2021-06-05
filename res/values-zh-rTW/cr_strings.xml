@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2020-2021 crDroid Android Project
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">設定</string>
+    <!-- Categories -->
+    <string name="home_category_title">主畫面</string>
+    <string name="home_category_summary">設定 Google 即時資訊等</string>
+    <string name="icons_category_title">圖示</string>
+    <string name="icons_category_summary">設定圖示形狀等</string>
+    <string name="app_drawer_category_title">應用程式抽屜</string>
+    <string name="app_drawer_category_summary">自訂您的應用程式抽屜</string>
+    <string name="misc_category_title">其他設定</string>
+    <string name="misc_category_summary">其他選項</string>
+    <string name="dev_options_title">開發人員選項</string>
+    <string name="dev_options_desc">開啟一些隱藏功能（自行承擔風險！）</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">快速查看</string>
+    <string name="show_quickspace_summary">顯示在主畫面的頂端</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">歡迎來到 crDroid ！</string>
+    <string-array name="welcome_message_variants">
+        <item>Have a great day</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
+        <item>We love you 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">正在播放</string>
+    <string name="quick_event_ambient_song_artist">%2$s的%1$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">顯示正在播放</string>
+    <string name="quickspace_now_playing_summary">在快速查看顯示您正在播放的歌曲。</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">使用替代風格</string>
+    <string name="quickspace_alternate_style_summary">為快速查看套用極簡風格</string>
+    <!-- Icon packs -->
+    <string name="icon_pack">圖示包</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">輕觸兩下即可休眠</string>
+    <string name="pref_sleep_gesture_summary">在空白處點兩下以關閉螢幕</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">顯示一個隨機訊息</string>
+    <string name="quickspace_psa_summary">偶爾於快速查看中顯示一些親切的訊息</string>
+    <string-array name="quickspace_psa_morning">
+        <item>早安！</item>
+        <item>早安，該去工作了！</item>
+        <item>多麼美好的一天！</item>
+        <item>祝你有個美好的一天！</item>
+        <item>小睡 5 分鐘怎麼樣？</item>
+        <item>這樣醒來也不錯。</item>
+        <item>你可以試著改變你的鬧鐘音效。</item>
+        <item>今天天氣看起來不錯，不是嗎？</item>
+        <item>去賺大錢吧！</item>
+        <item>以防萬一，檢查一下天氣吧</item>
+        <item>想睡覺了嗎？</item>
+        <item>你今天看看窗外了嗎？</item>
+        <item>讓我們完成這件事吧。</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>晚安！</item>
+        <item>祝你一覺好眠！</item>
+        <item>明天見！</item>
+        <item>祝您有個好夢！</item>
+        <item>不要熬夜太久</item>
+        <item>祝您一覺好眠</item>
+        <item>去睡一會吧</item>
+        <item>你該放鬆一下囉</item>
+        <item>祝您有個美好的夜晚！</item>
+        <item>該充電了！</item>
+        <item>明天應該是個很棒的一天</item>
+        <item>記得為明天做好準備</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>嗯… 晚安？</item>
+        <item>不覺得現在的時間有點晚了嗎？</item>
+        <item>你該調整你的作息了</item>
+        <item>你在這個時間的工作效率更高嗎？</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>有時候，不知道也是一種幸福喔</item>
+        <item>該更新 Rom 了嗎？</item>
+        <item>對 Android 12 感到興奮？</item>
+        <item>哦，嘿，今天怎麼樣？</item>
+        <item>專心工作</item>
+        <item>你截了幾張圖？</item>
+        <item>和 crDroid 一起打開美好</item>
+        <item>散播美好，而不是破壞（Havoc）</item>
+        <item>玩的開心！</item>
+        <item>是時候播些好音樂了</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C 標頭</item>
+        <item>你需要 crDroid Premium 才能看到這個內容</item>
+        <item>記住獨角獸的血統 (Remember the Lineage of the Unicorn)</item>
+        <item>享受延長 (Xtended) 的電池壽命吧</item>
+        <item>從零開始</item>
+        <item>我們愛你 3000</item>
+        <item>待在家裡，保持安全</item>
+        <item>今天很適合行善呢</item>
+        <item>這不就是最棒的 Pixel 體驗 (PixelExperience) 嗎？</item>
+        <item>今天如何？</item>
+        <item>這不是幻覺，歡迎來到現實！</item>
+        <item>非常感謝您的支持</item>
+        <item>沒有慶祝白癡的節日－只有完美！</item>
+        <item>Buildbot 的最佳選擇之一</item>
+        <item>先想想再行動</item>
+        <item>試試冰涼的甜點</item>
+        <item>多麼美妙的體驗，不是嗎？</item>
+        <item>進化是個迷思，對吧？</item>
+        <item>你刷什麼，你就是什麼，別當個馬鈴薯 (Potato)</item>
+        <item>你在想什麼？</item>
+        <item>大吉大利……？</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">關閉應用程式</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">值：<xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">預設</string>
+    <string name="custom_seekbar_default_value_to_set">預設值：<xliff:g id="v">%s</xliff:g>\n長按以設定</string>
+    <string name="custom_seekbar_default_value_is_set">已設定為預設值</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">圖示大小</string>
+    <!-- Font size -->
+    <string name="font_size_title">字體大小</string>
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">背景透明度</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">向下滑動關閉應用程式資訊</string>
+    <string name="app_info_version_value">%1$s (%2$d)</string>
+    <string name="placeholder_string">載入中…</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_source">來源</string>
+    <string name="app_info_source_system">系統</string>
+    <string name="app_info_last_update">上次更新</string>
+    <string name="app_info_version">版本</string>
+    <string name="app_info_more">更多</string>
+</resources>

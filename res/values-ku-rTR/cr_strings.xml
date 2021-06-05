@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2020-2021 crDroid Android Project
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">ڕێکخستنەکان</string>
+    <!-- Categories -->
+    <string name="home_category_title">ڕوونمای ماڵەوە</string>
+    <string name="home_category_summary">دانانی تەختەی گوگڵ ناو و زیاتر</string>
+    <string name="icons_category_title">ئایکۆنەکان</string>
+    <string name="icons_category_summary">دانانی شێوەی ئایکۆن و زیاتر</string>
+    <string name="app_drawer_category_title">پلیکانەی ئەپ</string>
+    <string name="app_drawer_category_summary">سازدانی پلیکانەی ئەپەکانت</string>
+    <string name="misc_category_title">هەمەجۆر</string>
+    <string name="misc_category_summary">بژاردەکانی تر</string>
+    <string name="dev_options_title">بژاردەکانی گەشەپێدەر</string>
+    <string name="dev_options_desc">هەنێ تایبەتمەندی شاراوە کارابکە لەسەر بەرپرسیاریەتی خۆت</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_summary">پیشاندان لە سەرەوەی پەڕەی ماڵەوە</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">بەخێربێیت بۆ crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>بەهیوای ڕۆژێکی خۆش</item>
+        <item>سپاستەکەین بۆ هەڵبژاردنی ئێمە</item>
+        <item>ئێمەت خۆشەوێ؟ دیاریمان پێشکەش بکە</item>
+        <item>باشترین ڕۆم تا ئێستا.</item>
+        <item>سڵاومان لێبکە لە تێلیگرام</item>
+        <item>گرتەبکە بۆ دەسپێک</item>
+        <item>ئێمە 3000 جار خۆشمانەوێی</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">لێدانی ئێستا</string>
+    <string name="quick_event_ambient_song_artist">%1$s لەلایەن %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">پیشاندانی لێدانی ئێستا</string>
+    <string name="quickspace_now_playing_summary">ئەو گۆرانییە پیشان ئەدات کە لێتداوە لە At a Glance</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">بەکارهێنانی شێوازێکی گۆڕاو</string>
+    <string name="quickspace_alternate_style_summary">بەکارهێنانی شێوازی کەمترین بڕ بۆ لەسەرنجدا</string>
+    <!-- Icon packs -->
+    <string name="icon_pack">دەستە ئایکۆن</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">دووانەکرتە بۆ کوژانەوە</string>
+    <string name="pref_sleep_gesture_summary">دووجار کرتە لەهەر بۆشاییەک بکە بۆ کوژانەوەی ڕوونما</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">پیشاندانی نامەیەکی هەڕەمەکی</string>
+    <string name="quickspace_psa_summary">پیشاندانی هەنێ نامەی جوان لە At a Glance دا.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>بەیانی باش!</item>
+        <item>بەیانی باش, کاتی ڕۆکە!</item>
+        <item>چ ڕۆژێکی جوانە!</item>
+        <item>هیوای ڕۆژێکی خۆش!</item>
+        <item>چی لەبارەی 5 خولەکی کەمی وەنەوز؟</item>
+        <item>ئەوە ڕێگایەکە بۆ هەڵسان.</item>
+        <item>پێویستە زەنگی ووریاکەرەوەکەت بگۆڕیت.</item>
+        <item>بە ڕۆژێکی خۆش ئەچێت، وانییە؟</item>
+        <item>با ئەم نانە بخۆین.</item>
+        <item>کەش و هەوای ئەمڕۆ بپشکنە</item>
+        <item>هێشتا خەواڵوویت</item>
+        <item>سەیرێکی دەرەوەت کردووە؟</item>
+        <item>با ئەمە تەواوکەین.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>شەوشاد!</item>
+        <item>بەباشی بخەوە!</item>
+        <item>بەیانی دەتبینمەوە!</item>
+        <item>خەونە خۆشەکان!</item>
+        <item>تا درەنگ بەئاگا مەبە</item>
+        <item>هیوای خەوێکی خۆش</item>
+        <item>تۆزێ بنوو</item>
+        <item>کاتی پشووە</item>
+        <item>چێژ لە ئەمشەو وەرگرە!</item>
+        <item>کاتی بارگاویکردنەوەی پاترییە!</item>
+        <item>سبەی ڕۆژێکی خۆش ئەبێت</item>
+        <item>خۆت ئامادەکە بۆ سبەی</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>ئمم... شەوشاد؟</item>
+        <item>تۆزێ درەنگە ئێستا</item>
+        <item>پێویستە کاتی خەوت ڕێکبخەیت</item>
+        <item>ئێستا زیاتر ئاسوودەیت؟</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>نەزانی بەختەوەرییە</item>
+        <item>ئێستا کاتی لێدانی نوێکارییەکی دیکەیە؟</item>
+        <item>زۆر ئەزانی لەسەر ئەندرۆید 12؟</item>
+        <item>سڵاو، چی هەیە؟</item>
+        <item>سەرنج بخەرە سەر ئەرکەکانت</item>
+        <item>چەندێک ڕوونماکەت ئەچرکێنی؟</item>
+        <item>کردنەوەی goodness لەگەڵ crDroid</item>
+        <item>خۆشەویستی بڵاوبکەوە نەک وێرانی</item>
+        <item>چێژ وەرگرە!</item>
+        <item>کاتی گوێگرتن لە میوزیکە</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C سەر</item>
+        <item>پێویستت بە crDroid ی نایاب هەیە بۆ بینینی ئەمە</item>
+        <item>Remember the Lineage of the Unicorn</item>
+        <item>چێژ لە تەمەنی پاتری زیاتر وەرگرە</item>
+        <item>دەسپێک لە تەواوی سفرەوە</item>
+        <item>ئێمە 3000 جار خۆشمانەوێی</item>
+        <item>لەماڵ بمێنەوە، سەلامەت بمێنەوە</item>
+        <item>ئەمڕۆ شتێکی جوان بکە</item>
+        <item>ئەمە باشترین ئەزموونی پیکسڵە، وانییە؟</item>
+        <item>شتەکان چۆن ئەڕۆن؟</item>
+        <item>خەیاڵ نییە، بەخێربێی بۆ واقیع!</item>
+        <item>سپاس بۆ پاڵپشتیت</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>یەکێ لە باشترین هەڵبژێردراوەکانی buildbot</item>
+        <item>Sanity for your Paranoia</item>
+        <item>بیابانە سەهۆڵییە ساردەکانی تاقیکەوە</item>
+        <item>چ ئەزموونێکی خۆشەویستە، وانییە؟</item>
+        <item>گەشەکردن ئەفسانەییە، وایە؟</item>
+        <item>تۆ ئەوەی کە فلاشی ئەکەیت، پەتاتەیی مەبە</item>
+        <item>بیر لە چی ئەکەیتەوە؟</item>
+        <item>براوە براوە....؟</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">Close app</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">by default</string>
+    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
+    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Icon size</string>
+    <!-- Font size -->
+    <string name="font_size_title">Font size</string>
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">Background opacity</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="app_info_version_value">%1$s (%2$d)</string>
+    <string name="placeholder_string">Loading...</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_source">Source</string>
+    <string name="app_info_source_system">System</string>
+    <string name="app_info_last_update">Last update</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">More</string>
+</resources>

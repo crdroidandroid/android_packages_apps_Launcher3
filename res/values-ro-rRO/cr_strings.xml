@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2020-2021 crDroid Android Project
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Setări</string>
+    <!-- Categories -->
+    <string name="home_category_title">Ecranul principal</string>
+    <string name="home_category_summary">Setează panoul Google Now și altele</string>
+    <string name="icons_category_title">Pictograme</string>
+    <string name="icons_category_summary">Setează forma pictogramei și mai multe</string>
+    <string name="app_drawer_category_title">Sertar aplicații</string>
+    <string name="app_drawer_category_summary">Personalizați sertarul de aplicații</string>
+    <string name="misc_category_title">Diverse</string>
+    <string name="misc_category_summary">Alte opțiuni</string>
+    <string name="dev_options_title">Opțiuni dezvoltator</string>
+    <string name="dev_options_desc">Activează pe propriul risc unele caracteristici ascunse</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Pe scurt</string>
+    <string name="show_quickspace_summary">Arată în partea de sus a ecranului de pornire</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Bine ai venit la crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>Have a great day</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
+        <item>We love you 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Acum se redă</string>
+    <string name="quick_event_ambient_song_artist">%1$s de %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Arată redarea acum</string>
+    <string name="quickspace_now_playing_summary">Afișează melodia pe care o redați pe Glance.</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Folosiți un stil alternativ</string>
+    <string name="quickspace_alternate_style_summary">Folosiți un stil minimalist pentru Prezentarea generală</string>
+    <!-- Icon packs -->
+    <string name="icon_pack">Pachet de pictograme</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Dublă atingere pentru oprire ecran</string>
+    <string name="pref_sleep_gesture_summary">Dublă atingere pe spațiul gol pentru oprire</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Arată un mesaj aleatoriu</string>
+    <string name="quickspace_psa_summary">Arată unele mesaje frumoase uneori pe scurt.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Bună dimineața!</item>
+        <item>Bună dimineața, timpul de rock!</item>
+        <item>Ce zi frumoasă!</item>
+        <item>O zi bună!</item>
+        <item>Ce zici de o pauză de 5 minute?</item>
+        <item>Acesta este un mod de a te trezi.</item>
+        <item>Ar trebui să vă schimbați sunetele de alarmă.</item>
+        <item>Se pare că este o zi frumoasă, nu-i așa?</item>
+        <item>Hai să obținem această pâine.</item>
+        <item>Verificați vremea</item>
+        <item>Te simti somnoros deja</item>
+        <item>Te-ai uitat afară?</item>
+        <item>Să terminăm asta.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Noapte bună!</item>
+        <item>Somn ușor!</item>
+        <item>Pe mâine!</item>
+        <item>Vise plăcute!</item>
+        <item>Nu sta prea mult</item>
+        <item>Somn usor</item>
+        <item>Odihnestete</item>
+        <item>Timpul pentru relaxare</item>
+        <item>Bucura-te de noapte!</item>
+        <item>Este timpul să încărcăm bateriile!</item>
+        <item>Mâine ar putea fi o zi grozavă</item>
+        <item>Pregătește-ți oasele pentru mâine</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Noapte bună?</item>
+        <item>E cam târziu acum</item>
+        <item>Ar trebui să vă stabiliți programul de somn</item>
+        <item>Ești mai productiv în acest moment?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Ignoranta este Bliss</item>
+        <item>Este timpul să instalezi o nouă actualizare deja?</item>
+        <item>Entuziasmat pentru Android 12?</item>
+        <item>Oh, hei, ce se întâmplă?</item>
+        <item>Focalizează sarcinile tale</item>
+        <item>Câte capturi de ecran faceți?</item>
+        <item>Deschide bunătatea cu crDroid</item>
+        <item>Dragostea răsunătoare nu devastează</item>
+        <item>Distractie placuta!</item>
+        <item>Timp pentru muzica buna</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>Ai nevoie de crDroid Premium pentru a vedea asta</item>
+        <item>Amintiți-vă Lineage of the Unicorn</item>
+        <item>Bucură-te de durata bateriei Xtended</item>
+        <item>Pornind de la zero</item>
+        <item>Te iubim 3000</item>
+        <item>Stai acasă, rămâi în siguranță</item>
+        <item>Fă ceva drăguț astăzi</item>
+        <item>Aceasta este cea mai bună experiență Pixel, nu-i așa?</item>
+        <item>Cum merge totul?</item>
+        <item>Nicio iluzie, bun venit în realitate!</item>
+        <item>Vă mulțumim pentru sprijin</item>
+        <item>Niciun festival pentru Derps - doar perfecţiune!</item>
+        <item>Una dintre cele mai bune alegeri ale buildbot-ului</item>
+        <item>Sanitatea ta pentru Paranoia</item>
+        <item>Încearcă deserturile de gheață</item>
+        <item>Ce experiență minunată, nu-i așa?</item>
+        <item>Evoluția e un mit, nu?</item>
+        <item>Ești ceea ce flash-ui, nu fii Cartofor</item>
+        <item>La ce te gandesti?</item>
+        <item>Câștigător ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">Închide aplicația</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Valoare: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">implicit</string>
+    <string name="custom_seekbar_default_value_to_set">Valoare implicită: <xliff:g id="v">%s</xliff:g>\nAtingeți lung pentru a seta</string>
+    <string name="custom_seekbar_default_value_is_set">Valoarea implicită este setată</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Dimensiune pictogramă</string>
+    <!-- Font size -->
+    <string name="font_size_title">Dimensiune font</string>
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">Opacitate fundal</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Glisați în jos pentru a închide informațiile aplicației.</string>
+    <string name="app_info_version_value">%1$s (%2$d)</string>
+    <string name="placeholder_string">Încărcare...</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_source">Sursa</string>
+    <string name="app_info_source_system">Sistem</string>
+    <string name="app_info_last_update">Ultima actualizare</string>
+    <string name="app_info_version">Versiune</string>
+    <string name="app_info_more">Mai mult</string>
+</resources>

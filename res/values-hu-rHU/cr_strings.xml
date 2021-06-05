@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2020-2021 crDroid Android Project
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Beállítások</string>
+    <!-- Categories -->
+    <string name="home_category_title">Kezdőképernyő</string>
+    <string name="home_category_summary">A \'Google Now\' panel és egyebek beállítása</string>
+    <string name="icons_category_title">Ikonok</string>
+    <string name="icons_category_summary">Az ikonok beállításai (forma, méret és egyebek)</string>
+    <string name="app_drawer_category_title">Alkalmazásfiók</string>
+    <string name="app_drawer_category_summary">Testreszabhatja az Alkalmazásfiókját</string>
+    <string name="misc_category_title">Különlegességek</string>
+    <string name="misc_category_summary">Minden, ami egyedivé tesz</string>
+    <string name="dev_options_title">Fejlesztői beállítások</string>
+    <string name="dev_options_desc">Saját felelősségére rejtett beállításokat engedélyezhet</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Belepillantás</string>
+    <string name="show_quickspace_summary">Az Ön kezdőképernyőjének tetején jelenik meg</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Üdvözöli a crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>Have a great day</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
+        <item>We love you 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">\'Now Playing\'</string>
+    <string name="quick_event_ambient_song_artist">%1$s – %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Jelenítse meg mi hallható</string>
+    <string name="quickspace_now_playing_summary">Megjeleníti az éppen játszott zeneszámot a \'Bepillantásban\'</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Alternatív stílus használata</string>
+    <string name="quickspace_alternate_style_summary">Használjon minimalista stílust a Belepillantáshoz</string>
+    <!-- Icon packs -->
+    <string name="icon_pack">Ikoncsomag</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Alvómód duplakoppal</string>
+    <string name="pref_sleep_gesture_summary">A kikapcsoláshoz elég a duplakopp egy üres területre</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Véletlenszerű üzenetek megjelenítése</string>
+    <string name="quickspace_psa_summary">Néha jelenjenek meg kedves üzenetek a Belepillantásban.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Jó reggelt!</item>
+        <item>Jó reggelt, szóljon a rock!</item>
+        <item>Micsoda szép nap!</item>
+        <item>Legyen szép napja!</item>
+        <item>Mit szólna egy 5 perces szunyókáláshoz?</item>
+        <item>Ez is egy módja az ébredésnek.</item>
+        <item>Meg kell változtatnia az ébresztési hangot.</item>
+        <item>Ez egy szép napnak tűnik, nem?</item>
+        <item>Lásson neki a reggelinek.</item>
+        <item>Mindenképp ellenőrizze az időjárást</item>
+        <item>Még egy kicsit álmos lehet</item>
+        <item>Szétnézett már odakinn?</item>
+        <item>Lásson neki a munkának.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Jó éjszakát!</item>
+        <item>Aludjon jól!</item>
+        <item>Holnap találkozunk!</item>
+        <item>Szép álmokat!</item>
+        <item>Ne maradjon ébren túl későig</item>
+        <item>Legyen pihentető az álma</item>
+        <item>Aludjon többet</item>
+        <item>Eljött a relaxálás ideje</item>
+        <item>Élvezze az éjszakát!</item>
+        <item>Eljött az akkumulátorok feltöltésének ideje!</item>
+        <item>A holnapi nap akár nagyszerű is lehet</item>
+        <item>Készítse elő fáradt csontjait holnapra</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Hm... jó éjt?</item>
+        <item>Egy kicsit már késő van</item>
+        <item>Alvási ütemtervet kéne készítenie</item>
+        <item>Még ebben az órában is tevékeny?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Boldogok a lelki-szegények</item>
+        <item>Itt az ideje már egy új frissítést telepíteni?</item>
+        <item>Elege van már az Android 12 körüli felhajtásból?</item>
+        <item>Ó, helló, mi a helyzet?</item>
+        <item>Fókuszáljon a feladataira</item>
+        <item>Hány képernyőképet készített?</item>
+        <item>Találjon klassz funkciókat a crDroidban</item>
+        <item>Szeretetet árasszon, ne pusztítást</item>
+        <item>Jó szórakozást!</item>
+        <item>Ideje jó zenét hallgatni!</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C FEJ</item>
+        <item>crDroid Prémium-ra van szüksége, hogy láthassa ezt</item>
+        <item>Emlékezzen az Egyszarvú eredetére</item>
+        <item>Élvezze a Kiterjesztett akkuidőt</item>
+        <item>Induljunk újra nulláról</item>
+        <item>Ne telefonozzon! Szerelmeskedjen!</item>
+        <item>Maradj otthon, Maradj biztonságban</item>
+        <item>Tegyen ma valami kedveset</item>
+        <item>Ez a legmenőbb Pixel Experience, vagy mégsem?</item>
+        <item>Hogy mennek a dolgok?</item>
+        <item>Nem ámítás, legyen üdvözölve a valóságban!</item>
+        <item>Köszönjük a támogatását!</item>
+        <item>Nincs ostobák fesztiválja - csak a tökéletesség!</item>
+        <item>Az építőrobot egyik legjobb válogatása</item>
+        <item>Kivezető út a Paranoiájából</item>
+        <item>Próbáljon egy jeges deszertet</item>
+        <item>Milyen remek élmény, nem igaz?</item>
+        <item>Az evolúció csak kitaláció, ugye?</item>
+        <item>Azzá válik, amit flessel...ne legyen már Krumpli</item>
+        <item>Mi jár a fejében?</item>
+        <item>A győztes pedig.......?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">Alkalmazás-bezárás</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value"><xliff:g id="v">%s</xliff:g> értékű</string>
+    <string name="custom_seekbar_default_value">alapértelmezés szerint</string>
+    <string name="custom_seekbar_default_value_to_set">Alapértelmezetten <xliff:g id="v">%s</xliff:g> értékű\nNyomja hosszan a beállításhoz</string>
+    <string name="custom_seekbar_default_value_is_set">Az alapértelmezett érték beállítva</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Ikonméret</string>
+    <!-- Font size -->
+    <string name="font_size_title">Betűméret</string>
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">Háttérátlátszóság</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Alkalmazásinfó bezárása felfelé csúsztatással.</string>
+    <string name="app_info_version_value">%1$s (%2$d)</string>
+    <string name="placeholder_string">Betöltés...</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_source">Forrás</string>
+    <string name="app_info_source_system">Rendszer</string>
+    <string name="app_info_last_update">Utoljára frissítve</string>
+    <string name="app_info_version">Verzió</string>
+    <string name="app_info_more">Továbbiak</string>
+</resources>

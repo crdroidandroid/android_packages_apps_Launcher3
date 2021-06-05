@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2020-2021 crDroid Android Project
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Configuració</string>
+    <!-- Categories -->
+    <string name="home_category_title">Pàgina d\'inici</string>
+    <string name="home_category_summary">Configura el panel de Google Now i altres</string>
+    <string name="icons_category_title">Icones</string>
+    <string name="icons_category_summary">Configura la forma i altres opcions de les icones</string>
+    <string name="app_drawer_category_title">Calaix d\'aplicacions</string>
+    <string name="app_drawer_category_summary">Personalitzeu el calaix d\'aplicacions</string>
+    <string name="misc_category_title">Miscel·lània</string>
+    <string name="misc_category_summary">Altres opcions</string>
+    <string name="dev_options_title">Opcions de desenvolupament</string>
+    <string name="dev_options_desc">Activa algunes característiques ocultes baix la teva responsabilitat</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">D\'una ullada</string>
+    <string name="show_quickspace_summary">Mostra a la part superior de la pantalla d\'inici</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Benvingut al crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>Have a great day</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
+        <item>We love you 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Reproduint</string>
+    <string name="quick_event_ambient_song_artist">%1$s per %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Mostra el que s\'està reproduint</string>
+    <string name="quickspace_now_playing_summary">Mostra la cançó que sona a «D\'un cop d\'ull»</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Empra un estil alternatiu</string>
+    <string name="quickspace_alternate_style_summary">Empra un estil minimalista per a «D\'un cop d\'ull»</string>
+    <!-- Icon packs -->
+    <string name="icon_pack">Paquet d\'icones</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Toca dues vegades per a posar en repòs</string>
+    <string name="pref_sleep_gesture_summary">Toca dues voltes en un espai buit per a apagar la pantalla</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Mostra un missatge aleatori</string>
+    <string name="quickspace_psa_summary">Mostra de tant en tant alguns missatges positius en «D\'un cop d\'ull».</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Bon dia!</item>
+        <item>Bon dia, moment de moure\'s!</item>
+        <item>Quin dia més bonic!</item>
+        <item>Que tingues un bon dia!</item>
+        <item>Què et sembla fer una migdiada de cinc minutets?</item>
+        <item>Eixa és una forma d\'alçar-se.</item>
+        <item>Hauries de canviar els sons de les teves alarmes.</item>
+        <item>Sembla que fa un dia espectacular, oi?</item>
+        <item>Anem a guanyar-nos el pa.</item>
+        <item>Comprova l\'oratge per si de cas</item>
+        <item>Sentint-me una mica adormit encara</item>
+        <item>Heu fet un cop d\'ull a l\'exterior?</item>
+        <item>Anem a fer-ho.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Bona nit!</item>
+        <item>Que dormes bé!</item>
+        <item>Fins demà!</item>
+        <item>Dolços somnis!</item>
+        <item>No te\'n vages a dormir massa tard</item>
+        <item>Que dormes bé</item>
+        <item>Dorm un poc</item>
+        <item>Moment de relaxar-se</item>
+        <item>Gaudeix de la nit!</item>
+        <item>És hora de carregar les bateries!</item>
+        <item>Demà serà un gran dia</item>
+        <item>Prepara\'t per demà</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Em… bona nit?</item>
+        <item>És un poc tard ara</item>
+        <item>Deuries d\'arreglar el teu horari de son</item>
+        <item>Ets més productiu en aquestes hores?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>La ignorància és una sort</item>
+        <item>Ja és el moment d\'instal·lar una altra actualització?</item>
+        <item>Emocionat per l\'Android 12?</item>
+        <item>Ei, com estàs?</item>
+        <item>Centra’t en les teves tasques</item>
+        <item>Quantes captures de pantalla fas?</item>
+        <item>Descobreix el millor amb crDroid</item>
+        <item>Difon l\'amor i no la guerra</item>
+        <item>Passa-ho bé!</item>
+        <item>Moment d\'escoltar un poc de bona música</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C CAP</item>
+        <item>Necessites crDroid Prèmium per a poder vore açò</item>
+        <item>Recorda el llinatge de l\'unicorn</item>
+        <item>Gaudeix de la vida extesa de la bateria</item>
+        <item>Començant des de zero</item>
+        <item>T\'estimem 3000</item>
+        <item>Queda\'t a casa, estigues segur</item>
+        <item>Fes alguna cosa bona avui</item>
+        <item>Aquesta és la millor Pixel Experience, oi?</item>
+        <item>Com va tot?</item>
+        <item>Res d\'il·lusions, benvingut a la realitat!</item>
+        <item>Gràcies pel teu suport</item>
+        <item>No hi ha festivals per als babaus - només perfecció!</item>
+        <item>Una de les millors tries del «buildbot»</item>
+        <item>Trellat per a la teva paranoia</item>
+        <item>Prova les postres gelades</item>
+        <item>Quina experiència més plaentera, veritat?</item>
+        <item>L\'evolució és un mite, veritat?</item>
+        <item>Ets allò que instal·les, així que tingues trellat</item>
+        <item>En què estàs pensant?</item>
+        <item>Ganador Ganador ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">Tanca l\'aplicació</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Valor: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">per defecte</string>
+    <string name="custom_seekbar_default_value_to_set">Valor per defecte: <xliff:g id="v">%s</xliff:g>\nPulsació llarga per a definir</string>
+    <string name="custom_seekbar_default_value_is_set">Valor per defecte</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Mida de les icones</string>
+    <!-- Font size -->
+    <string name="font_size_title">Mida de la lletra</string>
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">Opacitat del fons</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Llisca cap avall per a tancar la informació de l\'aplicació.</string>
+    <string name="app_info_version_value">%1$s (%2$d)</string>
+    <string name="placeholder_string">Carregant...</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_source">Origen</string>
+    <string name="app_info_source_system">Sistema</string>
+    <string name="app_info_last_update">Darrera actualització</string>
+    <string name="app_info_version">Versió</string>
+    <string name="app_info_more">Més</string>
+</resources>

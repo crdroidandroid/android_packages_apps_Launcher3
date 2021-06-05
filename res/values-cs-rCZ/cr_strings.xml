@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2020-2021 crDroid Android Project
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Nastavení</string>
+    <!-- Categories -->
+    <string name="home_category_title">Domovská obrazovka</string>
+    <string name="home_category_summary">Nastavení panelu Google\u00a0Now a\u00a0dalších funkcí</string>
+    <string name="icons_category_title">Ikony</string>
+    <string name="icons_category_summary">Nastavení tvaru ikon a\u00a0dalších parametrů</string>
+    <string name="app_drawer_category_title">Roleta aplikací</string>
+    <string name="app_drawer_category_summary">Přizpůsobte si svou roletu aplikací</string>
+    <string name="misc_category_title">Různé</string>
+    <string name="misc_category_summary">Další možnosti</string>
+    <string name="dev_options_title">Možnosti pro vývojáře</string>
+    <string name="dev_options_desc">Zde můžete na vlastní riziko povolit některé skryté funkce</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Přehled událostí</string>
+    <string name="show_quickspace_summary">Zobrazit v\u00a0horní části domovské obrazovky</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Vítejte v\u00a0crDroidu!</string>
+    <string-array name="welcome_message_variants">
+        <item>Mějte se skvěle!</item>
+        <item>Děkujeme, že jste si vybrali právě nás</item>
+        <item>Máte nás rádi? Pošlete nám příspěvek na pivo :)</item>
+        <item>Vůbec nejlepší ROM.</item>
+        <item>Pozdravte nás na Telegramu</item>
+        <item>Začněte klepnutím sem</item>
+        <item>Milujeme tě 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Nyní se přehrává</string>
+    <string name="quick_event_ambient_song_artist">%1$s od %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Zobrazit právě přehrávanou skladbu</string>
+    <string name="quickspace_now_playing_summary">V Přehledu událostí bude zobrazen název přehrávané skladby.</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Použít alternativní styl</string>
+    <string name="quickspace_alternate_style_summary">Použít minimalistický styl zobrazení Přehledu událostí</string>
+    <!-- Icon packs -->
+    <string name="icon_pack">Balíček ikon</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Uspat dvojím poklepáním</string>
+    <string name="pref_sleep_gesture_summary">Dvojím poklepáním do prázdného prostoru uspat zařízení</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Zobrazovat nahodilé vzkazy</string>
+    <string name="quickspace_psa_summary">Čas od času zobrazit v\u00a0Přehledu událostí nějaké pěkné vzkazy.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Dobré ránko!</item>
+        <item>Dobré ráno! Je načase vstávat a\u00a0cvičit!</item>
+        <item>Dneska je venku hezky!</item>
+        <item>Měj se fanfárově!</item>
+        <item>Což takhle si ještě na 5\u00a0minut zdřímnout?</item>
+        <item>Taky jedna z\u00a0možností, jak se probudit.</item>
+        <item>Co takhle změnit si zvuk budíku?</item>
+        <item>Zdá se, že je krásný den, že?</item>
+        <item>Pojď na to, zlato.</item>
+        <item>Raději se podívej, jaké je venku počasí</item>
+        <item>Ještě se cítím trochu ospalý</item>
+        <item>Co takhle vykouknout ven?</item>
+        <item>Pojďme se s\u00a0tím poprat.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Dobrou noc!</item>
+        <item>Dobře se vyspi!</item>
+        <item>Uvidíme se zítra!</item>
+        <item>Sladké sny!</item>
+        <item>Neponocuj příliš dlouho</item>
+        <item>Dobře se vyspi</item>
+        <item>Trochu se prospi</item>
+        <item>Je čas hodit si nohy nahoru</item>
+        <item>Užij si noc!</item>
+        <item>Nastal čas dobíjení baterií!</item>
+        <item>Zítřek by se mohl vyvést</item>
+        <item>Připrav se na zítřek</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Ehm… dobrou noc?</item>
+        <item>Už je trochu pozdě</item>
+        <item>Co takhle napravit svůj plán večerky?</item>
+        <item>V tuto dobu jsi produktivnější?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Nevědomost je síla</item>
+        <item>Že už by bylo načase flashnout další aktualizaci?</item>
+        <item>Těšíš se na\u00a0Android\u00a012?</item>
+        <item>Hej hola, jak je?</item>
+        <item>Soustřeď se na své úkoly</item>
+        <item>Kolik snímků obrazovky vytvoříš?</item>
+        <item>S crDroidem zpřístupníš lecjaké vychytávky</item>
+        <item>Šiř lásku, nikoliv chaos a\u00a0spoušť</item>
+        <item>Bav se!</item>
+        <item>Je čas na nějakou dobrou hudbu</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HROT</item>
+        <item>Pro zobrazení tohoto obsahu potřebuješ mít crDroid Premium</item>
+        <item>Pamatuj na Lineage of the Unicorn</item>
+        <item>Užij si Xtended výdrž baterie</item>
+        <item>Začínáme od píky</item>
+        <item>Milujeme tě 3000</item>
+        <item>Zůstaň doma, zůstaň v\u00a0bezpečí</item>
+        <item>Vykonej dneska něco dobrého</item>
+        <item>Toto je nejlepší Pixel Experience, že?</item>
+        <item>Jak ti dupou králíci?</item>
+        <item>Žádné iluze, vítej ve tvrdé realitě!</item>
+        <item>Děkujeme ti za podporu</item>
+        <item>Blbosti zde nemají místo\u00a0– pouze dokonalost!</item>
+        <item>Jeden z\u00a0nejlepších výběrů buildbota</item>
+        <item>Trochu Normálnosti pro tvou Paranoiu</item>
+        <item>Zakus ledově vychlazené dezerty</item>
+        <item>Úžasný zážitek, že?</item>
+        <item>Evoluce je mýtus, že?</item>
+        <item>Jsi to, co flashuješ. Nebuď labuť</item>
+        <item>Co se ti honí hlavou?</item>
+        <item>Vítěz vítěz ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">Zavřít aplikaci</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Hodnota: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">výchozí hodnota</string>
+    <string name="custom_seekbar_default_value_to_set">Výchozí hodnota: <xliff:g id="v">%s</xliff:g>\nDlouhým klepnutím ji nastavíte</string>
+    <string name="custom_seekbar_default_value_is_set">Výchozí hodnota je nastavena</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Velikost ikon</string>
+    <!-- Font size -->
+    <string name="font_size_title">Velikost písma</string>
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">Neprůhlednost pozadí</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Přejetím dolů informace o\u00a0aplikaci zavřete.</string>
+    <string name="app_info_version_value">%1$s (%2$d)</string>
+    <string name="placeholder_string">Načítání…</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_source">Zdroj</string>
+    <string name="app_info_source_system">Systém</string>
+    <string name="app_info_last_update">Poslední aktualizace</string>
+    <string name="app_info_version">Verze</string>
+    <string name="app_info_more">Více</string>
+</resources>

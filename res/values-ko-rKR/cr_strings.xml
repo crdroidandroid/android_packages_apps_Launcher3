@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2020-2021 crDroid Android Project
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">환경설정</string>
+    <!-- Categories -->
+    <string name="home_category_title">홈 화면</string>
+    <string name="home_category_summary">구글 나우 패널 및 관련 설정</string>
+    <string name="icons_category_title">아이콘</string>
+    <string name="icons_category_summary">아이콘 모양 및 관련 설정</string>
+    <string name="app_drawer_category_title">앱 서랍</string>
+    <string name="app_drawer_category_summary">앱 서랍 맞춤 설정</string>
+    <string name="misc_category_title">기타 설정</string>
+    <string name="misc_category_summary">기타 옵션</string>
+    <string name="dev_options_title">개발자 옵션</string>
+    <string name="dev_options_desc">위험할 수 있는 숨겨진 기능들을 허용합니다</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">한 눈에 보기</string>
+    <string name="show_quickspace_summary">홈 화면 상단에 표시</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">crDroid에 오신 것을 환영합니다!</string>
+    <string-array name="welcome_message_variants">
+        <item>Have a great day</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
+        <item>We love you 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">재생 중</string>
+    <string name="quick_event_ambient_song_artist">%2$s의 %1$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">재생 중인 트랙 표시</string>
+    <string name="quickspace_now_playing_summary">재생중인 노래를 한 눈에 보기에 표시합니다.</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">대체 스타일 사용</string>
+    <string name="quickspace_alternate_style_summary">한 눈에 최소한의 스타일 사용</string>
+    <!-- Icon packs -->
+    <string name="icon_pack">아이콘 팩</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">두 번 탭하여 화면 끄기</string>
+    <string name="pref_sleep_gesture_summary">화면을 끄려면 빈 공간을 두 번 탭하십시오</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">무작위 문구를 표시</string>
+    <string name="quickspace_psa_summary">한 눈에 보기 위젯에 좋은 문구를 보여줍니다.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>굿모닝!</item>
+        <item>좋은 아침입니다. 일어나세요!</item>
+        <item>아름다운 날이네요!</item>
+        <item>좋은 하루 보내세요!</item>
+        <item>5 분 낮잠은 어떻습니까?</item>
+        <item>각자의 일어나는 방법이 있죠.</item>
+        <item>알람음을 바꾸셔야겠네요.</item>
+        <item>오늘 하루도 좋을 것 같아요, 그렇죠?</item>
+        <item>오늘 하루도 힘냅시다.</item>
+        <item>만약을 대비하여 날씨를 확인하세요.</item>
+        <item>조금 졸려 보이시네요...</item>
+        <item>오늘 바깥을 둘러보신 적이 있나요?</item>
+        <item>Let\'s get this done.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>좋은 밤 보내세요!</item>
+        <item>안녕히 주무세요!</item>
+        <item>내일 봬요!</item>
+        <item>좋은 꿈 꿔요!</item>
+        <item>너무 늦게까지 깨어있지 마세요.</item>
+        <item>안녕히 주무세요.</item>
+        <item>주무셔야겠네요.</item>
+        <item>쉬어야 할 시간이에요.</item>
+        <item>좋은 밤 되세요!</item>
+        <item>배터리를 충전하세요!</item>
+        <item>내일은 좋은 날이 될 거에요.</item>
+        <item>내일을 준비하세요.</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>음... 안녕히 주무세요?</item>
+        <item>조금 늦은 시간이에요.</item>
+        <item>좀 더 일찍 주무셔야겠어요.</item>
+        <item>이 시간대에 더 생산적이신가요?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Ignorance is Bliss</item>
+        <item>Is it time to flash another update already?</item>
+        <item>안드로이드 12가 기대되지 않나요?</item>
+        <item>Oh hey, what\'s up?</item>
+        <item>Focus on your tasks</item>
+        <item>How many screenshots do you take?</item>
+        <item>Open goodness with crDroid</item>
+        <item>Spread love not havoc</item>
+        <item>Have fun!</item>
+        <item>Time for some good music</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>You need crDroid Premium to see this</item>
+        <item>Remember the Lineage of the Unicorn</item>
+        <item>Enjoy Xtended battery life</item>
+        <item>Starting from the ground zero</item>
+        <item>3000만큼 사랑해요.</item>
+        <item>Stay Home, Stay Safe</item>
+        <item>Do something nice today</item>
+        <item>This is best Pixel Experience, isn\'t it?</item>
+        <item>How is everything going?</item>
+        <item>No illusions, welcome to reality!</item>
+        <item>후원해 주셔서 감사합니다.</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>Sanity for your Paranoia</item>
+        <item>Try Ice Cold desserts</item>
+        <item>What a lovely experience, isn\'t it?</item>
+        <item>Evolution is a myth, right?</item>
+        <item>You are what you flash, don\'t be Potato</item>
+        <item>What\'s on your mind?</item>
+        <item>Winner Winner ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">앱 종료</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">값: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">by default</string>
+    <string name="custom_seekbar_default_value_to_set">기본값: <xliff:g id="v">%s</xliff:g>\n길게 눌러서 설정</string>
+    <string name="custom_seekbar_default_value_is_set">기본값으로 설정됨</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">아이콘 크기</string>
+    <!-- Font size -->
+    <string name="font_size_title">글꼴 크기</string>
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">배경 불투명도</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">아래로 스와이프하여 앱 정보를 닫습니다.</string>
+    <string name="app_info_version_value">%1$s (%2$d)</string>
+    <string name="placeholder_string">Loading...</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_source">Source</string>
+    <string name="app_info_source_system">System</string>
+    <string name="app_info_last_update">Last update</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">More</string>
+</resources>

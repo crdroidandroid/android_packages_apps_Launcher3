@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2020-2021 crDroid Android Project
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">الإعدادات</string>
+    <!-- Categories -->
+    <string name="home_category_title">الشاشة الرئيسية</string>
+    <string name="home_category_summary">تعيين لوحة Google Now والمزيد</string>
+    <string name="icons_category_title">أيقونات</string>
+    <string name="icons_category_summary">تعيين شكل الأيقونة والمزيد</string>
+    <string name="app_drawer_category_title">قائمة التطبيقات</string>
+    <string name="app_drawer_category_summary">تخصيص قائمة التطبيقات الخاصة بك</string>
+    <string name="misc_category_title">خيارات متنوعة</string>
+    <string name="misc_category_summary">خيارات أخرى</string>
+    <string name="dev_options_title">خيارات المطور</string>
+    <string name="dev_options_desc">تمكين بعض الميزات المخفية على مسؤوليتك الخاصة</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">النظرة السريعة</string>
+    <string name="show_quickspace_summary">إظهار في الجزء العلوي من الشاشة الرئيسية</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">مرحبا بكم في crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>Have a great day</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
+        <item>We love you 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">قيد التشغيل</string>
+    <string name="quick_event_ambient_song_artist">%1$s بواسطة %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">اظهار ما يتم تشغيله</string>
+    <string name="quickspace_now_playing_summary">يعرض الأغنية التي تقوم بتشغيلها في لمحة.</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">استخدام نمط بديل</string>
+    <string name="quickspace_alternate_style_summary">استخدام نمط بسيط في نظرة السريعة</string>
+    <!-- Icon packs -->
+    <string name="icon_pack">حزمة الايقونات</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">انقر نقرًا مزدوجًا للنوم</string>
+    <string name="pref_sleep_gesture_summary">انقر نقرًا مزدوجًا على مساحة فارغة لإيقاف التشغيل</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">إظهار رسالة عشوائية</string>
+    <string name="quickspace_psa_summary">أظهر بعض الرسائل اللطيفة في بعض الأحيان في النظرة السريعة.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>صباح الخير!</item>
+        <item>صباح الخير ، حان وقت التألق!</item>
+        <item>يا له من يوم جميل!</item>
+        <item>نتمنى لك يوماً سعيداً!</item>
+        <item>ما رأيك بغفوة لخمس دقائق؟</item>
+        <item>هذه إحدى الطرق الإستيقاظ.</item>
+        <item>يجب عليك تغيير أصوات المنبه الخاص بك.</item>
+        <item>يبدو أنه يوم جميل، أليس كذلك؟</item>
+        <item>دعونا ننجز ذلك.</item>
+        <item>تحقق من حالة الطقس لتطمئن</item>
+        <item>أما زلت تشعر ببعض النعاس</item>
+        <item>هل نظرت إلى الخارج بعد؟</item>
+        <item>دعونا ننجز ذلك.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>طابت ليلتك!</item>
+        <item>نوماً هنيئاً!</item>
+        <item>أراك غداً!</item>
+        <item>أحلام جميلة!</item>
+        <item>لا تبقى مستيقظاً لوقت متأخر</item>
+        <item>احصل على نوم جيد</item>
+        <item>احصل على بعض النوم</item>
+        <item>وقت الاسترخاء</item>
+        <item>استمتع بالليلة!</item>
+        <item>حان الوقت لشحن البطاريات!</item>
+        <item>قد يكون غدا يوما عظيما</item>
+        <item>جهز نفسك من أجل الغد</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>أمم... ليلة جيدة؟</item>
+        <item>الوقت متأخر قليلاً الآن</item>
+        <item>يجب عليك تعديل أوقات نومك</item>
+        <item>هل أنت أكثر إنتاجية في هذا الوقت؟</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>التجاهل نعمة</item>
+        <item>هل حان الوقت لتثبيت تحديث آخر بالفعل؟</item>
+        <item>متحمس ل أندرويد 12؟</item>
+        <item>أوه أهلاً، كيف الحال؟</item>
+        <item>ركز على مهامك</item>
+        <item>كم عدد لقطات الشاشة التي تقوم بالتقاطها؟</item>
+        <item>عرض مميزات crDroid</item>
+        <item>انشر الحب وليس الفوضى</item>
+        <item>استمتع!</item>
+        <item>حان الوقت للقليل من الموسيقى الجيدة</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C الراس</item>
+        <item>تحتاج للاشتراك في crDroid Premium لرؤية هذا</item>
+        <item>تذكرLineage للUnicorn</item>
+        <item>استمتع بعمر بطارية طويل</item>
+        <item>البدء من نقطة الصفر</item>
+        <item>نحبك 3000</item>
+        <item>ابقى في المنزل ، ابقى آمناً</item>
+        <item>قم بعمل شيء لطيف اليوم</item>
+        <item>هذه أفضل تجربة رقمية، أليس كذلك؟</item>
+        <item>كيف يسير كل شيء؟</item>
+        <item>لا أوهام ، مرحبا بالواقع!</item>
+        <item>شكرا لك على دعمك</item>
+        <item>لا يوجد مهرجان للأغبياء - فقط للكاملين!</item>
+        <item>واحدة من أفضل اختيارات آلي البناء</item>
+        <item>عقلانية لجنون عظمتك</item>
+        <item>جرب الحلويات المتجمدة</item>
+        <item>يا لها من تجربة جميلة، أليس كذلك؟</item>
+        <item>التطور خرافة، أليس كذلك؟</item>
+        <item>ما تقوم بتثبيته يعبر عنك، لا تكن ليناً</item>
+        <item>ما الذي يدور في خاطرك؟</item>
+        <item>الفائز ....؟</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">إغلاق التطبيق</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">القيمة: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">بشكل افتراضي</string>
+    <string name="custom_seekbar_default_value_to_set">القيمة الافتراضية: <xliff:g id="v">%s</xliff:g>\nانقر لفترة طويلة لتعيين</string>
+    <string name="custom_seekbar_default_value_is_set">تم تعيين القيمة الافتراضية</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">حجم الأيقونة</string>
+    <!-- Font size -->
+    <string name="font_size_title">حجم الخط</string>
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">تعتيم الخلفية</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">إسحب للأسفل لإغلاق معلومات التطبيق.</string>
+    <string name="app_info_version_value">%1$s (%2$d)</string>
+    <string name="placeholder_string">جاري التحميل...</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_source">المصدر</string>
+    <string name="app_info_source_system">النظام</string>
+    <string name="app_info_last_update">آخر تحديث</string>
+    <string name="app_info_version">الإصدار</string>
+    <string name="app_info_more">المزيد</string>
+</resources>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2020-2021 crDroid Android Project
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">ᱥᱟᱡᱟᱣ ᱠᱚ</string>
+    <!-- Categories -->
+    <string name="home_category_title">ᱚᱲᱟᱜ ᱥᱠᱨᱤᱱ</string>
+    <string name="home_category_summary">ᱜᱩᱜᱟᱹᱞ ᱯᱮᱱᱟᱞ ᱟᱨ ᱟᱭᱢᱟ ᱡᱤᱱᱤᱥ ᱥᱮᱴ ᱢᱮ</string>
+    <string name="icons_category_title">ᱟᱭᱠᱚᱱᱠᱚ</string>
+    <string name="icons_category_summary">ᱟᱭᱠᱚᱱ ᱨᱮᱭᱟᱜ ᱨᱩᱯ ᱟᱨ ᱟᱭᱢᱮ ᱡᱤᱱᱤᱥ ᱠᱚ‌ ᱥᱮᱴ ᱢᱮ</string>
+    <string name="app_drawer_category_title">ᱮᱯ ᱰᱨᱚᱣᱟᱹᱨ</string>
+    <string name="app_drawer_category_summary">ᱟᱢᱟᱜ ᱮᱯ ᱰᱨᱚᱣᱟᱹᱨ ᱠᱚᱥᱴᱚᱢᱟᱭᱤᱡᱽ ᱢᱮ</string>
+    <string name="misc_category_title">ᱢᱤᱥᱮᱞᱟᱱᱤᱭᱟᱹᱥ</string>
+    <string name="misc_category_summary">ᱚᱞᱜᱟ ᱚᱯᱥᱚᱱᱠᱚ</string>
+    <string name="dev_options_title">ᱰᱮᱵᱽᱷᱞᱚᱯᱟᱹᱨ ᱚᱯᱥᱚᱱ ᱠᱚ</string>
+    <string name="dev_options_desc">ᱟᱢᱟᱜ ᱨᱤᱥᱠ ᱛᱮ ᱡᱟᱦᱟᱱᱟᱜ ᱩᱠᱩ ᱯᱷᱤᱪᱚᱨᱠᱚ ᱮᱢ ᱪᱷᱚᱭ ᱢᱮ</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">ᱢᱤᱫᱽ ᱡᱷᱚᱞᱠ ᱛᱮ</string>
+    <string name="show_quickspace_summary">ᱟᱢᱟᱜᱽ ᱚᱲᱟᱜᱽ ᱥᱠᱨᱤᱻᱱ ᱨᱮᱭᱟᱜᱽ ᱴᱚᱯ ᱨᱮ ᱫᱮᱠᱷᱟᱣ ᱢᱮᱸ</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">crDroid ᱨᱮ ᱥᱟᱹᱜᱩᱱ ᱫᱟᱨᱟᱢ!</string>
+    <string-array name="welcome_message_variants">
+        <item>Have a great day</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
+        <item>We love you 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">ᱱᱤᱛᱚᱜ ᱯᱞᱮᱜ ᱠᱟᱱᱟ</string>
+    <string name="quick_event_ambient_song_artist">%1$s ᱵᱭ %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">ᱯᱞᱮᱜ ᱠᱟᱱᱟ ᱢᱮᱱᱛᱮ ᱫᱮᱠᱷᱟᱣ ᱢᱮ</string>
+    <string name="quickspace_now_playing_summary">ᱢᱤᱫᱴᱟᱹᱝ ᱡᱷᱚᱞᱚᱠ ᱨᱮ ᱟᱢ ᱯᱞᱭᱮᱫ ᱥᱮᱨᱮᱧ ᱠᱚ ᱫᱮᱠᱦᱟᱣᱟᱭ ᱾</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">ᱚᱞᱜᱟ ᱥᱴᱟᱭᱤᱞ ᱵᱮᱵᱷᱟᱨ ᱢᱮ</string>
+    <string name="quickspace_alternate_style_summary">ᱡᱷᱚᱞᱚᱠ ᱞᱟᱹᱜᱤᱫ ᱠᱚᱢᱥᱚᱠᱚᱢ ᱥᱴᱟᱭᱤᱞ ᱵᱮᱵᱷᱟᱨ ᱢᱮ</string>
+    <!-- Icon packs -->
+    <string name="icon_pack">ᱟᱭᱠᱚᱱ ᱯᱮᱠ</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">ᱜᱤᱛᱤᱡ ᱞᱟᱹᱜᱤᱫ ᱵᱟᱨ ᱡᱮᱠᱷᱟ ᱚᱛᱟᱭ ᱢᱮ</string>
+    <string name="pref_sleep_gesture_summary">ᱯᱟᱣᱟᱹᱨ ᱵᱚᱸᱫᱽ ᱞᱟᱹᱜᱤᱫ ᱠᱷᱟᱹᱞᱤ ᱡᱟᱭᱜᱟ ᱨᱮ ᱵᱟᱨ ᱡᱮᱠᱷᱟ ᱚᱛᱟᱭ ᱢᱮ</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">ᱨᱮᱱᱰᱚᱢ ᱠᱷᱚᱵᱚᱨ ᱫᱮᱠᱷᱟᱣᱢᱮ</string>
+    <string name="quickspace_psa_summary">ᱡᱷᱚᱞᱚᱠ ᱨᱮ ᱚᱠᱟᱡᱷᱚᱜ ᱡᱟᱦᱟᱱᱟᱜ ᱵᱮᱥ ᱠᱷᱚᱵᱚᱨ ᱫᱚᱠᱷᱟᱣᱢᱮ ᱾</string>
+    <string-array name="quickspace_psa_morning">
+        <item>ᱥᱟᱹᱜᱩᱱ ᱥᱮᱛᱟᱜ!</item>
+        <item>ᱥᱟᱹᱜᱤᱱ ᱥᱮᱛᱟᱜ, ᱨᱚᱠ ᱨᱮᱭᱟᱜ ᱚᱠᱛᱚ!</item>
+        <item>ᱟᱹᱰᱤ ᱵᱮᱥ ᱫᱤᱱ ᱠᱟᱱᱟ!</item>
+        <item>ᱵᱮᱥ ᱫᱤᱱ ᱛᱟᱦᱮᱸᱱ ᱢᱟ!</item>
+        <item>᱕ ᱴᱤᱯᱤᱡ ᱱᱮᱯ ᱪᱮᱫᱮᱢ ᱢᱮᱱᱮᱜᱼᱟ?</item>
+        <item>ᱱᱚᱶᱟ ᱢᱤᱫ ᱛᱚᱨᱠᱟ ᱠᱟᱱᱟ ᱥᱮᱞᱮᱫ ᱞᱟᱹᱜᱤᱫ ᱾</item>
+        <item>ᱟᱢ ᱟᱢᱟᱜ ᱟᱞᱟᱢ ᱥᱟᱲᱮ ᱵᱚᱫᱚᱞ ᱠᱟᱛᱷᱟ ᱾</item>
+        <item>ᱟᱹᱰᱤ ᱪᱚᱨᱚᱠ ᱫᱤᱱ ᱞᱮᱠᱷᱟ ᱵᱩᱡᱷᱟᱣᱼᱜ ᱠᱟᱱᱟ, ᱵᱟ ᱥᱮ?</item>
+        <item>ᱱᱚᱶᱟ ᱯᱟᱸᱨᱩᱴᱤ ᱵᱚᱱ ᱤᱫᱤᱭᱟ ᱾</item>
+        <item>ᱯᱟᱜᱚ ᱠᱚ ᱧᱮᱞ ᱵᱤᱲᱟᱹᱣ ᱢᱮ</item>
+        <item>ᱫᱩᱫᱲᱩᱝ ᱜᱮ ᱵᱩᱡᱷᱟᱣᱜ ᱠᱟᱱᱟ</item>
+        <item>ᱱᱤᱛ ᱦᱟᱹᱵᱤᱡ ᱵᱟᱦᱨᱮ ᱮᱢ ᱧᱮᱞ ᱟᱠᱟᱫᱟ ᱥᱮ?</item>
+        <item>ᱫᱮᱞᱟᱵᱚᱱ ᱠᱚᱨᱟᱣ ᱪᱷᱚᱭᱟ ᱾</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>ᱥᱟᱹᱜᱩᱱ ᱧᱤᱫᱟᱹ!</item>
+        <item>ᱵᱮᱥ ᱜᱤᱛᱤᱡ ᱢᱮ!</item>
+        <item>ᱜᱟᱯᱟ ᱧᱮᱞ ᱢᱮᱟᱹᱧ!</item>
+        <item>ᱦᱮᱲᱮᱢ ᱠᱩᱠᱢᱩ!</item>
+        <item>ᱡᱟᱹᱥᱛᱤ ᱜᱷᱟᱹᱬᱤᱡ ᱟᱞᱚᱢ ᱛᱟᱦᱮᱸᱱᱟᱢ</item>
+        <item>ᱵᱮᱥ ᱜᱤᱛᱤᱡ ᱛᱟᱦᱮᱸᱱ ᱛᱟᱢ ᱢᱟ</item>
+        <item>ᱵᱮᱥ ᱜᱤᱛᱤᱡ ᱡᱚᱝ ᱢᱮ</item>
+        <item>ᱦᱟᱹᱞᱠᱟᱹ ᱛᱟᱦᱮᱸ ᱞᱟᱹᱜᱤᱫ ᱚᱠᱛᱚ</item>
+        <item>ᱟᱹᱭᱩᱵ ᱢᱚᱡᱽ ᱢᱮ!</item>
+        <item>ᱵᱮᱴᱨᱭᱠᱚ ᱪᱟᱨᱡᱽ ᱞᱟᱹᱜᱤᱫ ᱥᱚᱢᱚᱭ ᱦᱩᱭᱮᱱᱟ!</item>
+        <item>ᱜᱟᱯᱟ ᱵᱮᱥ ᱫᱤᱱ ᱦᱩᱭᱫᱟᱲᱮᱭᱟᱜᱼᱟ</item>
+        <item>ᱜᱟᱯᱟ ᱞᱟᱹᱜᱤᱫ ᱦᱚᱲᱢᱚ ᱴᱷᱤᱠ ᱫᱚᱦᱚᱭᱢᱮ</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>ᱦᱢ... ᱥᱟᱹᱜᱤᱱ ᱟᱹᱭᱩᱵ ᱥᱮ?</item>
+        <item>ᱠᱟᱹᱴᱤᱡ ᱜᱷᱟᱹᱬᱤᱡ ᱜᱮᱭᱟ</item>
+        <item>ᱟᱢ ᱜᱤᱛᱤᱡ ᱚᱠᱛᱚ ᱴᱷᱤᱠ ᱢᱮ</item>
+        <item>ᱟᱢ ᱪᱮᱫ ᱱᱚᱶᱟ ᱚᱠᱛᱚ ᱨᱮ ᱡᱟᱹᱥᱛᱤ ᱠᱟᱹᱢᱤ ᱮᱢ ᱠᱚᱨᱟᱣᱮᱫ ᱟᱢ?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>ᱚᱜᱭᱟᱱᱛᱟ ᱯᱚᱨᱚᱢᱟᱱᱚᱸᱫᱼᱟ</item>
+        <item>ᱚᱱᱜᱟ ᱟᱹᱯᱰᱮᱴ ᱯᱷᱞᱟᱥ ᱨᱮᱭᱟᱜ ᱚᱠᱛᱚ ᱦᱩᱭᱮᱱᱟ ᱥᱮ?</item>
+        <item>Android 12 ᱵᱟᱵᱚᱛ ᱪᱤᱱᱛᱟᱹᱮᱫ ᱟᱢ ᱥᱮ?</item>
+        <item>ᱚ ᱭᱮ, ᱣᱷᱟᱹᱴᱥ ᱟᱹᱯ?</item>
+        <item>ᱟᱢᱟᱜ ᱠᱟᱹᱢᱤ ᱨᱮ ᱯᱷᱚᱠᱟᱹᱥ ᱢᱮ</item>
+        <item>ᱛᱤᱱᱟᱹᱝ ᱜᱟᱱ ᱥᱠᱨᱤᱱᱥᱚᱴ ᱮᱢ ᱤᱫᱤᱮᱫᱟ?</item>
+        <item>crDroid ᱥᱟᱞᱟᱜ ᱵᱮᱥ ᱡᱤᱱᱥᱤ ᱠᱷᱩᱞᱟᱫᱭ ᱢᱮ</item>
+        <item>ᱫᱩᱞᱟᱹᱲ ᱯᱟᱥᱱᱟᱣ ᱢᱮ ᱵᱤᱱᱟᱥ ᱫᱚ ᱵᱟᱝ ᱜᱮ</item>
+        <item>ᱢᱚᱡᱟ ᱠᱚᱨᱟᱣ ᱢᱮ!</item>
+        <item>ᱵᱮᱥ ᱥᱮᱨᱮᱧ ᱞᱟᱹᱜᱤᱫ ᱚᱠᱛᱚ ᱚᱲᱚᱠ ᱢᱮ</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C ᱵᱚᱦᱚᱜ</item>
+        <item>ᱱᱚᱶᱟ ᱧᱮᱞ ᱞᱟᱹᱜᱤᱫ crDroid ᱯᱨᱢᱤᱭᱟᱹᱢ ᱫᱚᱨᱠᱟᱨ ᱛᱟᱢ</item>
+        <item>ᱭᱩᱱᱤᱠᱚᱨᱱ ᱨᱮᱭᱟᱜ Lineage ᱩᱭᱦᱟᱹᱨ ᱠᱟᱜ ᱢᱮ</item>
+        <item>ᱵᱚᱲᱦᱟᱣ ᱠᱟᱱ ᱵᱽᱮᱴᱨᱭ ᱡᱤᱣᱚᱱ ᱥᱟᱞᱟᱜ ᱢᱚᱡᱽ ᱢᱮ</item>
+        <item>ᱜᱨᱟᱩᱸᱰ ᱡᱤᱨᱚ ᱥᱟᱞᱟᱜ ᱮᱦᱚᱵᱚᱜ  ᱠᱟᱱᱟ</item>
+        <item>ᱟᱞᱮ ᱠᱩᱥᱤ ᱟᱢ ᱠᱟᱱᱟᱞᱮ ᱓᱐᱐᱐</item>
+        <item>ᱚᱲᱟᱜ ᱨᱮ ᱛᱟᱦᱮᱱ ᱢᱮ, ᱵᱮᱥ ᱛᱟᱦᱮᱱ ᱢᱮ</item>
+        <item>ᱛᱮᱦᱚᱧ ᱵᱮᱥ ᱡᱤᱱᱤᱥ ᱠᱚᱨᱟᱣ ᱢᱮ</item>
+        <item>ᱱᱚᱶᱟ ᱫᱚ ᱵᱮᱥ Pixel Experience ᱠᱟᱱᱟ,  ᱵᱟ ᱥᱮ?</item>
+        <item>ᱡᱷᱚᱛᱚ ᱚᱠᱟᱞᱠᱟ ᱪᱟᱹᱞᱩᱜ ᱠᱟᱱᱟ?</item>
+        <item>ᱵᱷᱨᱚᱢ ᱵᱟᱝ ᱜᱮ, ᱚᱥᱚᱞ ᱛᱮ ᱛᱮ ᱥᱟᱹᱜᱩᱱ ᱫᱟᱨᱟᱢ!</item>
+        <item>ᱟᱢᱟᱜ ᱜᱚᱲᱚ ᱮᱢ ᱞᱟᱹᱜᱤᱫ ᱟᱭᱢᱟ ᱥᱟᱨᱦᱟᱣ </item>
+        <item>ᱥᱹᱨᱯᱥ ᱞᱟᱹᱜᱤᱫ ᱚᱠᱟ ᱯᱚᱨᱚᱵᱽ ᱦᱚᱸ ᱵᱟᱝᱟ - ᱠᱷᱟᱹᱞᱤ ᱯᱟᱹᱨᱯᱷᱮᱠᱥᱚᱱ!</item>
+        <item>ᱵᱤᱞᱰᱵᱚᱴ ᱨᱮᱭᱟᱜ ᱵᱮᱥ ᱵᱟᱪᱷᱟᱣ ᱠᱷᱚᱱ ᱢᱤᱫᱴᱟᱹᱝ</item>
+        <item>ᱟᱢᱟᱜ ᱯᱟᱨᱟᱱᱚᱤᱭᱟ ᱞᱟᱹᱜᱤᱫ ᱥᱟᱱᱤᱴᱭ</item>
+        <item>ᱵᱚᱨᱚᱯᱷ ᱰᱮᱥᱟᱹᱴᱠᱚ ᱪᱮᱥᱴᱟᱭ ᱢᱮ</item>
+        <item>ᱟᱹᱲᱤ ᱫᱩᱞᱟᱹᱲᱤᱭᱟᱹ ᱢᱟᱨᱠᱷᱤ, ᱵᱟ ᱥᱮ?</item>
+        <item>Evolution ᱫᱚ  ᱠᱟᱞᱯᱚᱱᱤᱠ ᱠᱟᱱᱟ, ᱥᱟᱹᱨᱤ ᱥᱮ?</item>
+        <item>ᱟᱢ ᱩᱱᱤ ᱠᱟᱱᱟᱢ ᱚᱠᱚᱭ ᱫᱚ ᱯᱷᱞᱟᱥ ᱮᱫ ᱟᱭ, ᱟᱞᱚᱢ ᱟᱹᱲᱩᱜᱼᱟᱢ</item>
+        <item>ᱟᱢᱟᱜ ᱢᱟᱹᱱᱮ ᱨᱮ ᱪᱮᱫ ᱢᱮᱱᱟᱜ-ᱟ?</item>
+        <item>ᱡᱤᱛᱟᱹᱣ ᱮᱱᱟᱢ ᱡᱤᱛᱟᱹᱣ ᱮᱱᱟᱢ .... ?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">Close app</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">ᱮᱞ:<xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">ᱢᱩᱞ ᱯᱷᱮᱲᱟᱛ</string>
+    <string name="custom_seekbar_default_value_to_set">ᱢᱩᱞ ᱯᱷᱮᱲᱟᱛ ᱮᱞ:<xliff:g id="v">%s</xliff:g>\nᱥᱮᱴ ᱞᱟᱹᱜᱤᱫ ᱡᱩᱨ ᱥᱮ ᱚᱛᱟᱭ ᱢᱮ</string>
+    <string name="custom_seekbar_default_value_is_set">ᱢᱩᱞ ᱯᱷᱮᱲᱟᱛ ᱮᱞ ᱥᱮᱴ ᱮᱱᱟ</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Icon size</string>
+    <!-- Font size -->
+    <string name="font_size_title">Font size</string>
+    <!-- Scrim alpha in apps drawer -->
+    <string name="all_apps_background_opacity_title">ᱵᱮᱠᱜᱽᱨᱟᱩᱸᱰ ᱚᱯᱟᱥᱤᱴᱭ</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="app_info_version_value">%1$s (%2$d)</string>
+    <string name="placeholder_string">Loading...</string>
+    <!-- Used for preference height loading. -->
+    <string name="app_info_source">Source</string>
+    <string name="app_info_source_system">System</string>
+    <string name="app_info_last_update">Last update</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">More</string>
+</resources>
