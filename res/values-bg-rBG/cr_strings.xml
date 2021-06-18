@@ -71,8 +71,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>Let\'s get this bread.</item>
         <item>Check the weather just in case</item>
         <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Погледна ли навън вече?</item>
+        <item>Нека свършим това.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
         <item>Лека нощ!</item>
@@ -80,37 +80,37 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>До утре!</item>
         <item>Сладки сънища!</item>
         <item>Не стой до късно</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>Приятни сънища</item>
+        <item>Наспете се</item>
+        <item>Време за релакс</item>
+        <item>Приятна нощ!</item>
+        <item>Време за зареждане на батерията!</item>
+        <item>Утре може да е страхотен ден</item>
+        <item>Пригответе костите си за утре</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Хм... спокойна нощ?</item>
+        <item>Сега е малко късно</item>
+        <item>Трябва да коригирате графика си за сън</item>
+        <item>По-продуктивни ли сте по това време?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
-        <item>Hyped about Android 12?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
+        <item>Невежеството е блаженство</item>
+        <item>Време ли е вече за инсталиране на друга актуализация?</item>
+        <item>Вълнува ли те Android 12?</item>
+        <item>О, хей, какво има?</item>
+        <item>Съсредоточете се върху задачите си</item>
+        <item>Колко скрийншота правите?</item>
         <item>Open goodness with crDroid</item>
         <item>Spread love not havoc</item>
         <item>Забавлявайте се!</item>
         <item>Time for some good music</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C ГЛАВА</item>
         <item>You need crDroid Premium to see this</item>
         <item>Remember the Lineage of the Unicorn</item>
         <item>Enjoy Xtended battery life</item>
         <item>Starting from the ground zero</item>
-        <item>We love you 3000</item>
+        <item>Обичаме Ви, вече сме 3000</item>
         <item>Stay Home, Stay Safe</item>
         <item>Do something nice today</item>
         <item>This is best Pixel Experience, isn\'t it?</item>
@@ -132,13 +132,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="recents_close_app">Затвори приложението</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_default_value">по подразбиране</string>
+    <string name="custom_seekbar_default_value_to_set">Стойност по подразбиране: <xliff:g id="v">%s</xliff:g>\nПродължително натискане за задаване</string>
+    <string name="custom_seekbar_default_value_is_set">По подразбиране стойността е зададена</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">Размер на иконата</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">Размер на шрифта</string>
     <!-- App label - max lines -->
     <string name="icon_max_lines_title">Max lines for app label</string>
     <!-- Scrim alpha in apps drawer -->
@@ -146,10 +146,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- AppInfo -->
     <string name="app_info_subtext">Swipe down to close app info.</string>
     <string name="app_info_version_value">%1$s (%2$d)</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="placeholder_string">Зареждане...</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
+    <string name="app_info_source">Източник</string>
+    <string name="app_info_source_system">Система</string>
     <string name="app_info_last_update">Последно обновяване</string>
     <string name="app_info_version">Версия</string>
     <string name="app_info_more">Още</string>
