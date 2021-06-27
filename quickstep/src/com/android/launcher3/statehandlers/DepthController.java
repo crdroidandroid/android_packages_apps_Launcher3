@@ -109,6 +109,8 @@ public class DepthController implements StateHandler<LauncherState>,
      */
     private float mDepth;
 
+    private boolean mRestoreDepth;
+
     // Workaround for animating the depth when multiwindow mode changes.
     private boolean mIgnoreStateChangesDuringMultiWindowAnimation = false;
 
@@ -116,6 +118,10 @@ public class DepthController implements StateHandler<LauncherState>,
 
     public DepthController(Launcher l) {
         mLauncher = l;
+    }
+
+    public void onResume() {
+        mRestoreDepth = true;
     }
 
     private void ensureDependencies() {
@@ -210,9 +216,10 @@ public class DepthController implements StateHandler<LauncherState>,
         // Round out the depth to dedupe frequent, non-perceptable updates
         int depthI = (int) (depth * 256);
         float depthF = depthI / 256f;
-        if (Float.compare(mDepth, depthF) == 0) {
+        if (Float.compare(mDepth, depthF) == 0 && !mRestoreDepth) {
             return;
         }
+        mRestoreDepth = false;
 
         boolean supportsBlur = BlurUtils.supportsBlursOnWindows();
         if (supportsBlur && (mSurface == null || !mSurface.isValid())) {
@@ -227,7 +234,8 @@ public class DepthController implements StateHandler<LauncherState>,
 
         if (supportsBlur) {
             final int blur;
-            if (mLauncher.isInState(LauncherState.NORMAL)) {
+            if (mLauncher.isInState(LauncherState.NORMAL) && mLauncher.getStateManager()
+                    .getCurrentStableState() == LauncherState.NORMAL) {
                 // Normal state has a solid wallpaper. We don't need to draw blurs after it's fully
                 // visible. This will take us out of GPU composition, saving battery and increasing
                 // performance.

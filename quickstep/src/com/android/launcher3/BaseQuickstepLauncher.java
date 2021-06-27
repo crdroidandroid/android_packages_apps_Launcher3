@@ -225,6 +225,12 @@ public abstract class BaseQuickstepLauncher extends Launcher
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        mDepthController.onResume();
+    }
+
+    @Override
     protected OnboardingPrefs createOnboardingPrefs(SharedPreferences sharedPrefs) {
         return new QuickstepOnboardingPrefs(this, sharedPrefs);
     }
