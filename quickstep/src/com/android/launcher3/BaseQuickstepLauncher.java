@@ -64,6 +64,9 @@ import java.util.stream.Stream;
 public abstract class BaseQuickstepLauncher extends Launcher
         implements NavigationModeChangeListener {
 
+    // Type: float
+    private static final String BLUR_DEPTH = "blur.depth";
+
     private DepthController mDepthController = new DepthController(this);
 
     /**
@@ -121,6 +124,18 @@ public abstract class BaseQuickstepLauncher extends Launcher
     public void onTrimMemory(int level) {
         super.onTrimMemory(level);
         RecentsModel.INSTANCE.get(this).onTrimMemory(level);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle state) {
+        super.onRestoreInstanceState(state);
+        mDepthController.onRestoreState(state.getFloat(BLUR_DEPTH));
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putFloat(BLUR_DEPTH, mDepthController.getCurrentDepth());
+        super.onSaveInstanceState(outState);
     }
 
     @Override

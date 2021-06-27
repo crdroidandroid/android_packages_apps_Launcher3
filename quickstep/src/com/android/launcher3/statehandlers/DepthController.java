@@ -120,6 +120,15 @@ public class DepthController implements StateHandler<LauncherState>,
         mLauncher = l;
     }
 
+    public void onRestoreState(float depth) {
+        mDepth = depth;
+        onResume();
+    }
+
+    public float getCurrentDepth() {
+        return mDepth;
+    }
+
     public void onResume() {
         mRestoreDepth = true;
     }
