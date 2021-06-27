@@ -190,6 +190,9 @@ public class QuickstepLauncher extends Launcher {
 
     private SafeCloseable mViewCapture;
 
+    // Type: float
+    private static final String BLUR_DEPTH = "blur.depth";
+
     private StateListener noStatusBarStateListener = new StateManager.StateListener<LauncherState>() {
         @Override
         public void onStateTransitionStart(LauncherState toState) {
@@ -536,6 +539,8 @@ public class QuickstepLauncher extends Launcher {
     protected void onResume() {
         super.onResume();
 
+        mDepthController.onResume();
+
         if (mLauncherUnfoldAnimationController != null) {
             mLauncherUnfoldAnimationController.onResume();
         }
@@ -584,6 +589,12 @@ public class QuickstepLauncher extends Launcher {
     public void onTrimMemory(int level) {
         super.onTrimMemory(level);
         RecentsModel.INSTANCE.get(this).onTrimMemory(level);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle state) {
+        super.onRestoreInstanceState(state);
+        mDepthController.onRestoreState(state.getFloat(BLUR_DEPTH));
     }
 
     @Override
@@ -949,6 +960,8 @@ public class QuickstepLauncher extends Launcher {
             ));
             outState.putInt(RUNTIME_STATE, OVERVIEW.ordinal);
         }
+
+        outState.putFloat(BLUR_DEPTH, mDepthController.getCurrentDepth());
     }
 
     /**
