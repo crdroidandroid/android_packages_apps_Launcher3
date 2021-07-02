@@ -14,6 +14,7 @@ import static com.android.launcher3.testing.shared.ResourceUtils.INVALID_RESOURC
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.ShortcutInfo;
 import android.graphics.Rect;
 import android.os.Process;
@@ -48,6 +49,7 @@ import com.android.launcher3.pm.UserCache;
 import com.android.launcher3.testing.shared.ResourceUtils;
 import com.android.launcher3.util.ActivityOptionsWrapper;
 import com.android.launcher3.util.ApiWrapper;
+import com.android.launcher3.util.ApplicationInfoWrapper;
 import com.android.launcher3.util.ComponentKey;
 import com.android.launcher3.util.InstantAppResolver;
 import com.android.launcher3.util.PackageManagerHelper;
