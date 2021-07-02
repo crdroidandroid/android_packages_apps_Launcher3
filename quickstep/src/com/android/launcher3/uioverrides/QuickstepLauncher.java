@@ -72,9 +72,11 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.app.ActivityOptions;
+import android.app.AppGlobals;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.content.pm.IPackageManager;
 import android.content.pm.ShortcutInfo;
 import android.content.res.Configuration;
 import android.graphics.Rect;
@@ -86,7 +88,9 @@ import android.os.Bundle;
 import android.os.IRemoteCallback;
 import android.os.SystemProperties;
 import android.os.Trace;
+import android.os.UserHandle;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Display;
 import android.view.HapticFeedbackConstants;
 import android.view.KeyEvent;
@@ -118,6 +122,7 @@ import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.Workspace;
 import com.android.launcher3.accessibility.LauncherAccessibilityDelegate;
+import com.android.launcher3.allapps.AllAppsStore;
 import com.android.launcher3.anim.AnimatorPlaybackController;
 import com.android.launcher3.anim.PendingAnimation;
 import com.android.launcher3.apppairs.AppPairIcon;
@@ -158,6 +163,7 @@ import com.android.launcher3.util.DisplayController;
 import com.android.launcher3.util.IntSet;
 import com.android.launcher3.util.NavigationMode;
 import com.android.launcher3.util.ObjectWrapper;
+import com.android.launcher3.util.PackageManagerHelper;
 import com.android.launcher3.util.PendingRequestArgs;
 import com.android.launcher3.util.PendingSplitSelectInfo;
 import com.android.launcher3.util.RunnableList;
@@ -214,20 +220,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.function.BiConsumer;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class QuickstepLauncher extends Launcher implements RecentsViewContainer,
-        SystemShortcut.BubbleActivityStarter {
+        SystemShortcut.BubbleActivityStarter, AllAppsStore.OnUpdateListener {
     private static final boolean TRACE_LAYOUTS =
             SystemProperties.getBoolean("persist.debug.trace_layouts", false);
     private static final String TRACE_RELAYOUT_CLASS =
             SystemProperties.get("persist.debug.trace_request_layout_class", null);
 
     protected static final String RING_APPEAR_ANIMATION_PREFIX = "RingAppearAnimation\t";
+
+    private static boolean sIsNewProcess = true;
 
     private FixedContainerItems mAllAppsPredictions;
     private HotseatPredictionController mHotseatPredictionController;
@@ -266,6 +276,8 @@ public class QuickstepLauncher extends Launcher implements RecentsViewContainer,
     private boolean mIsOverlayVisible;
 
     private final OverviewChangeListener mOverviewChangeListener = this::onOverviewTargetChanged;
+
+    private boolean mShouldUpdateSuspensions;
 
     public static QuickstepLauncher getLauncher(Context context) {
         return fromContext(context);
@@ -318,6 +330,8 @@ public class QuickstepLauncher extends Launcher implements RecentsViewContainer,
         getWorkspace().addOverlayCallback(progress ->
                 onTaskbarInAppDisplayProgressUpdate(progress, MINUS_ONE_PAGE_PROGRESS_INDEX));
         addBackAnimationCallback(mSplitSelectStateController.getSplitBackHandler());
+
+        getAppsView().getAppsStore().addUpdateListener(this);
     }
 
     @Override
@@ -461,6 +475,7 @@ public class QuickstepLauncher extends Launcher implements RecentsViewContainer,
         List<SystemShortcut.Factory> shortcuts = new ArrayList(Arrays.asList(
                 APP_INFO, WellbeingModel.SHORTCUT_FACTORY, mHotseatPredictionController));
         shortcuts.addAll(getSplitShortcuts());
+        shortcuts.add(WellbeingModel.PAUSE_APPS);
         shortcuts.add(WIDGETS);
         shortcuts.add(INSTALL);
         if (Flags.enablePrivateSpaceInstallShortcut()) {
@@ -686,6 +701,8 @@ public class QuickstepLauncher extends Launcher implements RecentsViewContainer,
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mShouldUpdateSuspensions = sIsNewProcess;
+        sIsNewProcess = false;
         if (savedInstanceState != null) {
             mPendingSplitSelectInfo = ObjectWrapper.unwrap(
                     savedInstanceState.getIBinder(PENDING_SPLIT_SELECT_INFO));
@@ -1459,6 +1476,15 @@ public class QuickstepLauncher extends Launcher implements RecentsViewContainer,
         mBubbleBarLocation = bubbleBarLocation;
     }
 
+    @Override
+    public void onAppsUpdated() {
+        if (mShouldUpdateSuspensions) {
+            // We do this only once.
+            mShouldUpdateSuspensions = false;
+            updateSuspensions();
+        }
+    }
+
     private static final class LauncherTaskViewController extends
             TaskViewTouchController<QuickstepLauncher> {
 
@@ -1535,5 +1561,48 @@ public class QuickstepLauncher extends Launcher implements RecentsViewContainer,
 
     public void setCanShowAllAppsEducationView(boolean canShowAllAppsEducationView) {
         mCanShowAllAppsEducationView = canShowAllAppsEducationView;
+    }
+
+    /**
+     * Reapply suspensions to apps we paused, so as to update suspend dialogs. This is necessary
+     * to ensure that the resources used by the dialog are still correct, particularly in the event
+     * that our app was updated after the suspension took place and may have different resource IDs.
+     */
+    private void updateSuspensions() {
+        final Map<UserHandle, List<String>> pausedAppsByUser =
+                Stream.of(getAppsView().getAppsStore().getApps())
+                        .filter(i -> getPackageName().equals(
+                                getSuspendingPackage(i.getTargetPackage(), i.user)))
+                        .collect(Collectors.groupingBy((ItemInfo item) -> item.user,
+                                Collectors.mapping(item -> item.getTargetPackage(),
+                                        Collectors.toList())));
+
+        pausedAppsByUser.forEach((targetUser, packages) -> {
+            Log.d(Launcher.TAG,
+                    "Re-suspending apps to update suspend dialogs for user " + targetUser
+                            + ": " + packages);
+            try {
+                WellbeingModel.suspendPackages(this, packages, targetUser);
+            } catch (Exception e) {
+                Log.e(Launcher.TAG, "Failed to re-suspend packages for user " + targetUser + "!",
+                        e);
+            }
+        });
+    }
+
+    /**
+     * Returns the suspending package for a target app and a given user.
+     */
+    private String getSuspendingPackage(@NonNull final String packageName,
+            @NonNull final UserHandle user) {
+        final IPackageManager ipm = AppGlobals.getPackageManager();
+        final int userId = user.getIdentifier();
+        try {
+            return ipm.getSuspendingPackage(packageName, userId);
+        } catch (Exception e) {
+            Log.e(Launcher.TAG, "Could not determine if " + user + " package " + packageName
+                    + " was suspended by us!", e);
+        }
+        return null;
     }
 }
