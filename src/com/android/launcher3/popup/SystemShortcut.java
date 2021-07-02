@@ -1,5 +1,7 @@
 package com.android.launcher3.popup;
 
+import static android.content.pm.SuspendDialogInfo.BUTTON_ACTION_UNSUSPEND;
+
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_PRIVATE_SPACE_INSTALL_SYSTEM_SHORTCUT_TAP;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_PRIVATE_SPACE_UNINSTALL_SYSTEM_SHORTCUT_TAP;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_SYSTEM_SHORTCUT_APP_INFO_TAP;
@@ -7,12 +9,18 @@ import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCH
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_SYSTEM_SHORTCUT_WIDGETS_TAP;
 
 import android.app.ActivityOptions;
+import android.app.AlertDialog;
+import android.app.AppGlobals;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.SuspendDialogInfo;
 import android.graphics.Rect;
 import android.os.Process;
+import android.os.RemoteException;
 import android.os.UserHandle;
+import android.util.Log;
 import android.view.View;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.ImageView;
@@ -53,6 +61,7 @@ import java.util.List;
 public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
         implements View.OnClickListener {
 
+    private static final String TAG = SystemShortcut.class.getSimpleName();
     private final int mIconResId;
     protected final int mLabelResId;
     protected int mAccessibilityActionId;
@@ -377,6 +386,63 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
                     .logger()
                     .withItemInfo(mItemInfo)
                     .log(LAUNCHER_PRIVATE_SPACE_UNINSTALL_SYSTEM_SHORTCUT_TAP);
+        }
+    }
+
+    public static final Factory<ActivityContext> PAUSE_APPS =
+            (activity, itemInfo, originalView) -> {
+                if (originalView == null) {
+                    return null;
+                }
+                if (new PackageManagerHelper(originalView.getContext()).isAppSuspended(
+                        itemInfo.getTargetComponent().getPackageName(), itemInfo.user)) {
+                    return null;
+                }
+                return new PauseApps(activity, itemInfo, originalView);
+    };
+
+    public static class PauseApps<T extends ActivityContext> extends SystemShortcut<T> {
+
+        public PauseApps(T target, ItemInfo itemInfo, View originalView) {
+            super(R.drawable.ic_hourglass_top, R.string.paused_apps_drop_target_label, target,
+                    itemInfo, originalView);
+        }
+
+        @Override
+        public void onClick(View view) {
+            CharSequence appLabel = view.getContext().getPackageManager().getApplicationLabel(
+                    new PackageManagerHelper(view.getContext()).getApplicationInfo(
+                            mItemInfo.getTargetComponent().getPackageName(), mItemInfo.user, 0));
+            new AlertDialog.Builder(view.getContext())
+                    .setIcon(R.drawable.ic_hourglass_top)
+                    .setTitle(view.getContext().getString(R.string.pause_apps_dialog_title,
+                            appLabel))
+                    .setMessage(view.getContext().getString(R.string.pause_apps_dialog_message,
+                            appLabel))
+                    .setNegativeButton(android.R.string.cancel, null)
+                    .setPositiveButton(R.string.pause, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            try {
+                                AppGlobals.getPackageManager().setPackagesSuspendedAsUser(
+                                        new String[]{
+                                                mItemInfo.getTargetComponent().getPackageName()},
+                                        true, null, null,
+                                        new SuspendDialogInfo.Builder()
+                                                .setIcon(R.drawable.ic_hourglass_top)
+                                                .setTitle(R.string.paused_apps_dialog_title)
+                                                .setMessage(R.string.paused_apps_dialog_message)
+                                                .setNeutralButtonAction(BUTTON_ACTION_UNSUSPEND)
+                                                .build(), 0, view.getContext().getOpPackageName(),
+                                        view.getContext().getUserId(),
+                                        mItemInfo.user.getIdentifier());
+                            } catch (RemoteException e) {
+                                Log.e(TAG, "Failed to pause app", e);
+                            }
+                        }
+                    })
+                    .show();
+            AbstractFloatingView.closeAllOpenViews(mTarget);
         }
     }
 
