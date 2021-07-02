@@ -71,4 +71,12 @@
     <!-- Developer options -->
     <string name="dev_options_title">Developer options</string>
     <string name="dev_options_summary">Enable some hidden features at your own risk</string>
+
+    <!-- Pause apps shortcut -->
+    <string name="pause">Pause</string>
+    <string name="pause_apps_dialog_title">Pause %1$s?</string>
+    <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
+    <string name="paused_apps_dialog_title">App paused</string>
+    <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
+    <string name="paused_apps_drop_target_label">Pause app</string>
 </resources>
