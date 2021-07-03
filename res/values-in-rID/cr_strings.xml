@@ -68,7 +68,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>Itu adalah salah satu cara untuk bangun</item>
         <item>Anda harus mengubah suara alarm</item>
         <item>Sepertinya ini hari yang indah, bukan</item>
-        <item>Let\'s get this bread.</item>
+        <item>Mari memakan roti.</item>
         <item>Check the weather just in case</item>
         <item>Feeling a bit sleepy yet</item>
         <item>Have you looked outside yet?</item>
@@ -149,8 +149,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="placeholder_string">Loading...</string>
     <!-- Used for preference height loading. -->
     <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_source_system">Sistem</string>
+    <string name="app_info_last_update">Update yang lalu</string>
+    <string name="app_info_version">Versi</string>
+    <string name="app_info_more">Selebihnya</string>
 </resources>
