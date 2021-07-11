@@ -103,54 +103,54 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>Berapa banyak tangkapan layar yang kamu ambil?</item>
         <item>Kebaikan terbuka dengan crDroid</item>
         <item>Rrrrr tidak untuk havoc</item>
-        <item>Have fun!</item>
-        <item>Time for some good music</item>
+        <item>Selamat bersenang senang</item>
+        <item>Waktunya mendengarkan musik</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
-        <item>We love you 3000</item>
-        <item>Stay Home, Stay Safe</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>How is everything going?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
-        <item>Winner Winner ....?</item>
+        <item>Anda membutuhkan crDroid Premium untuk melihat ini</item>
+        <item>Ingat garis keturunan Unicorn</item>
+        <item>Nikmati daya tahan baterai yang bertambah</item>
+        <item>Dimulai dari paling nol</item>
+        <item>Kami mencintaimu 3000</item>
+        <item>Tetap dirumah, tetap aman</item>
+        <item>Lakukan sesuatu yang baik hari ini</item>
+        <item>Inilah pengalaman Pixel yang terbaik, betul tidak?</item>
+        <item>Bagaimana semuanya berjalan?</item>
+        <item>Tidak ada ilusi, selamat datang ke kenyataan!</item>
+        <item>Terima kasih atas dukungan anda</item>
+        <item>Tidak ada festival untuk kebodohan - hanya kesempurnaan!</item>
+        <item>Salah satu pilihan terbaik Buildbot</item>
+        <item>Sanitas untuk Paranoia Anda</item>
+        <item>Cobalah makanan penutup Ice Cold</item>
+        <item>Benar-benar pengalaman yang menyenangkan, bukan?</item>
+        <item>Evolusi adalah mitos, bukan?</item>
+        <item>Anda adalah apa yang Anda flash, jangan menjadi Kentang</item>
+        <item>Apa yang ada di pikiran Anda?</item>
+        <item>Menang Menang ....?</item>
         <item>rm -rf \/</item>
     </string-array>
     <!-- Recents screen, close app -->
-    <string name="recents_close_app">Close app</string>
+    <string name="recents_close_app">Tutup apl</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">Nilai: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">bawaan</string>
+    <string name="custom_seekbar_default_value_to_set">Nilai defaulf: <xliff:g id="v">%s</xliff:g>\nTekan lama untuk mengatur</string>
+    <string name="custom_seekbar_default_value_is_set">Nilai default tekah diterapkan</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">Ukuran ikon</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">Ukuran huruf</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">Garis maksimum untuk pekerja aplikasi</string>
     <!-- Scrim alpha in apps drawer -->
-    <string name="all_apps_background_opacity_title">Background opacity</string>
+    <string name="all_apps_background_opacity_title">Transparansi latar Belakang</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="app_info_subtext">Geser kebawah untuk menutup info app.</string>
     <string name="app_info_version_value">%1$s (%2$d)</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="placeholder_string">Memuat...</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_source">Source</string>
+    <string name="app_info_source">Sumber</string>
     <string name="app_info_source_system">Sistem</string>
     <string name="app_info_last_update">Update yang lalu</string>
     <string name="app_info_version">Versi</string>
-    <string name="app_info_more">Selebihnya</string>
+    <string name="app_info_more">Lainnya</string>
 </resources>
