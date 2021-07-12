@@ -83,6 +83,7 @@ public class SettingsHomescreen extends FragmentActivity
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         switch (key) {
             case Utilities.DESKTOP_SHOW_QUICKSPACE:
+            case Utilities.KEY_DOCK_SEARCH:
             case Utilities.KEY_SHOW_ALT_QUICKSPACE:
             case Utilities.KEY_SHOW_QUICKSPACE_NOWPLAYING:
             case Utilities.KEY_SHOW_QUICKSPACE_PSONALITY:
@@ -153,14 +154,6 @@ public class SettingsHomescreen extends FragmentActivity
                     screen.removePreference(preference);
                 }
             }
-
-            Preference showDocksearch = findPreference(Utilities.KEY_DOCK_SEARCH);
-            showDocksearch.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    Utilities.restart(getActivity());
-                    return true;
-                }
-            });
         }
 
         @Override
