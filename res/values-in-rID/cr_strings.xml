@@ -70,26 +70,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>Sepertinya ini hari yang indah, bukan</item>
         <item>Mari memakan roti.</item>
         <item>Periksa cuaca untuk berjaga-jaga</item>
-        <item>Merasa sedikit mengantuk </item>
-        <item>apakah kamu sudah melihat ke luar kawan?</item>
-        <item>ayo selesaikan ini</item>
+        <item>Merasa sedikit mengantuk</item>
+        <item>Apakah kamu sudah melihat ke luar?</item>
+        <item>Mari kita selesaikan ini.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
         <item>Selamat malam!</item>
         <item>Tidur dengan nyenyak!</item>
         <item>Sampai bertemu besok!</item>
         <item>Semoga bermimpi indah!</item>
-        <item>Jangan bergadang terlalu lama</item>
+        <item>Jangan begadang terlalu lama</item>
         <item>Selamat tidur kawan</item>
-        <item>Tidurlah sebentar</item>
-        <item>Waktunya santuy</item>
-        <item>Selamat malam kawan</item>
-        <item>Sudah waktunya mengisi baterai!!!</item>
-        <item>Besok mungkin menjadi hari-hari yang baik</item>
-        <item>Ayo siapkan dirimu untuk besok</item>
+        <item>Tidurlah</item>
+        <item>Waktunya bersantai</item>
+        <item>Nikmati malam!</item>
+        <item>Waktunya mengisi baterai!</item>
+        <item>Mungkin besok menjadi hari yang menyenangkan</item>
+        <item>Siapkan dirimu untuk besok</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... selamat malam sayang?</item>
+        <item>Um... selamat malam?</item>
         <item>Sudah agak terlambat sekarang</item>
         <item>Kamu harus mengubah jadwal tidur</item>
         <item>Apakah kamu akan lebih produktif hari ini?</item>
@@ -154,6 +154,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_info_version">Versi</string>
     <string name="app_info_more">Lainnya</string>
     <!-- Show dock search widget -->
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Show search bar in the bottom dock</string>
+    <string name="dock_search_title">Bilah pencarian Google</string>
+    <string name="dock_search_summary">Tampilkan bilah pencarian di bawah</string>
 </resources>
