@@ -154,4 +154,7 @@ Remember the Lineage of the Unicorn</item>
     <string name="app_info_last_update">آخرین بروزرسانی</string>
     <string name="app_info_version">نسخه</string>
     <string name="app_info_more">بیشتر</string>
+    <!-- Show dock search widget -->
+    <string name="dock_search_title">Google search bar</string>
+    <string name="dock_search_summary">Show search bar in the bottom dock</string>
 </resources>
