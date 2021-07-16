@@ -153,4 +153,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_info_last_update">Son güncelleme</string>
     <string name="app_info_version">Sürüm</string>
     <string name="app_info_more">Daha fazla</string>
+    <!-- Show dock search widget -->
+    <string name="dock_search_title">Google search bar</string>
+    <string name="dock_search_summary">Show search bar in the bottom dock</string>
 </resources>
