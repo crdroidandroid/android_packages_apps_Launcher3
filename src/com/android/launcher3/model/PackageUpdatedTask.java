@@ -96,13 +96,14 @@ public class PackageUpdatedTask extends BaseModelUpdateTask {
         final HashSet<String> packageSet = new HashSet<>(Arrays.asList(packages));
         ItemInfoMatcher matcher = ItemInfoMatcher.ofPackages(packageSet, mUser);
         final HashSet<ComponentName> removedComponents = new HashSet<>();
+        boolean needsRestart = false;
 
         switch (mOp) {
             case OP_ADD: {
                 for (int i = 0; i < N; i++) {
                     if (DEBUG) Log.d(TAG, "mAllAppsList.addPackage " + packages[i]);
                     if (isSearchPackage(packages[i])) {
-                        app.setSearchAppAvailable(true);
+                        needsRestart = true;
                     }
                     iconCache.updateIconsForPkg(packages[i], mUser);
                     if (FeatureFlags.PROMISE_APPS_IN_ALL_APPS.get()) {
@@ -135,7 +136,10 @@ public class PackageUpdatedTask extends BaseModelUpdateTask {
                 for (int i = 0; i < N; i++) {
                     FileLog.d(TAG, "Removing app icon" + packages[i]);
                     iconCache.removeIconsForPkg(packages[i], mUser);
-                }
+                     if (isSearchPackage(packages[i])) {
+                        needsRestart = true;
+                    }
+               }
                 // Fall through
             }
             case OP_UNAVAILABLE:
@@ -155,7 +159,7 @@ public class PackageUpdatedTask extends BaseModelUpdateTask {
                 appsList.updateDisabledFlags(matcher, flagOp);
                 for (int i = 0; i < N; i++) {
                     if (isSearchPackage(packages[i])) {
-                        app.setSearchAppAvailable(mOp == OP_SUSPEND ? false : true);
+                        needsRestart = true;
                     }
                 }
                 break;
@@ -341,6 +345,10 @@ public class PackageUpdatedTask extends BaseModelUpdateTask {
                 dataModel.widgetsModel.update(app, new PackageUserKey(packages[i], mUser));
             }
             bindUpdatedWidgets(dataModel);
+        }
+
+        if (needsRestart && (Utilities.isQSBEnabled(context) || Utilities.isMinusOneEnabled(context))) {
+            Utilities.restart(context);
         }
     }
 

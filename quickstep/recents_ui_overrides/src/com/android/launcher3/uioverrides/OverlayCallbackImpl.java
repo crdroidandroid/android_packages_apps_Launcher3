@@ -42,8 +42,6 @@ public class OverlayCallbackImpl
         implements LauncherOverlay, LauncherClientCallbacks, LauncherOverlayManager,
         SharedPreferences.OnSharedPreferenceChangeListener {
 
-    private static final String KEY_ENABLE_MINUS_ONE = "pref_enable_minus_one";
-
     private final Launcher mLauncher;
     private final LauncherClient mClient;
 
@@ -134,8 +132,12 @@ public class OverlayCallbackImpl
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-        if (KEY_ENABLE_MINUS_ONE.equals(key)) {
-            mClient.setClientOptions(getClientOptions(prefs));
+        switch (key) {
+            case Utilities.KEY_MINUS_ONE:
+                mClient.setClientOptions(getClientOptions(prefs));
+                break;
+            default:
+                break;
         }
     }
 
@@ -176,7 +178,7 @@ public class OverlayCallbackImpl
 
     private LauncherClient.ClientOptions getClientOptions(SharedPreferences prefs) {
         return new LauncherClient.ClientOptions(
-                prefs.getBoolean(KEY_ENABLE_MINUS_ONE, true),
+                prefs.getBoolean(Utilities.KEY_MINUS_ONE, true),
                 true, /* enableHotword */
                 true /* enablePrewarming */
         );

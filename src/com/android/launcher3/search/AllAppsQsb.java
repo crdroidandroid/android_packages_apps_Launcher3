@@ -116,7 +116,7 @@ public class AllAppsQsb extends QsbContainerView
     }
 
     private boolean shouldHideDockSearch() {
-        return !Utilities.showQSB(getContext(), mLauncher);
+        return !Utilities.showQSB(getContext());
     }
 
     @Override

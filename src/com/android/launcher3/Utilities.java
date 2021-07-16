@@ -76,6 +76,7 @@ import com.android.launcher3.graphics.TintedDrawableSpan;
 import com.android.launcher3.icons.IconProvider;
 import com.android.launcher3.icons.LauncherIcons;
 import com.android.launcher3.icons.ShortcutCachingLogic;
+import com.android.launcher3.lineage.LineageUtils;
 import com.android.launcher3.model.data.ItemInfo;
 import com.android.launcher3.model.data.ItemInfoWithIcon;
 import com.android.launcher3.pm.ShortcutConfigActivityInfo;
@@ -131,6 +132,7 @@ public final class Utilities {
     public static final String KEY_SHOW_ALT_QUICKSPACE = "pref_show_alt_quickspace";
     public static final String KEY_SHOW_QUICKSPACE_PSONALITY = "pref_quickspace_psonality";
     public static final String KEY_DOCK_SEARCH = "pref_dock_search";
+    public static final String KEY_MINUS_ONE = "pref_enable_minus_one";
     public static final String SEARCH_PACKAGE = "com.google.android.googlequicksearchbox";
 
     public static final String SLEEP_GESTURE = "pref_sleep_gesture";
@@ -736,9 +738,8 @@ public final class Utilities {
         return prefs.getBoolean(InvariantDeviceProfile.KEY_WORKSPACE_EDIT, true);
     }
 
-    public static boolean showQSB(Context context, Launcher launcher) {
-        LauncherAppState appState = LauncherAppState.getInstance(launcher);
-        if (!appState.isSearchAppAvailable()) {
+    public static boolean showQSB(Context context) {
+        if (!LineageUtils.isPackageEnabled(context, SEARCH_PACKAGE)) {
             return false;
         }
         return isQSBEnabled(context);
@@ -747,6 +748,18 @@ public final class Utilities {
     public static boolean isQSBEnabled(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_DOCK_SEARCH, true);
+    }
+
+    public static boolean showMinusOne(Context context) {
+        if (!LineageUtils.isPackageEnabled(context, SEARCH_PACKAGE)) {
+            return false;
+        }
+        return isMinusOneEnabled(context);
+    }
+
+    public static boolean isMinusOneEnabled(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_MINUS_ONE, true);
     }
 
     public static boolean useSleepGesture(Context context) {
