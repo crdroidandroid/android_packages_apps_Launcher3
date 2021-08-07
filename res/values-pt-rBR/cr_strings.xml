@@ -140,7 +140,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Font size -->
     <string name="font_size_title">Tamanho da fonte</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">Máximo de linhas para o rótulo do aplicativo</string>
     <!-- Scrim alpha in apps drawer -->
     <string name="all_apps_background_opacity_title">Opacidade do fundo</string>
     <!-- AppInfo -->
@@ -154,6 +154,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_info_version">Versão</string>
     <string name="app_info_more">Mais</string>
     <!-- Show dock search widget -->
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Show search bar in the bottom dock</string>
+    <string name="dock_search_title">Barra de pesquisa do Google</string>
+    <string name="dock_search_summary">Mostrar a barra de pesquisa na dock inferior</string>
 </resources>
