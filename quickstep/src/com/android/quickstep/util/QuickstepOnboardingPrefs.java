@@ -114,7 +114,7 @@ public class QuickstepOnboardingPrefs extends OnboardingPrefs<BaseQuickstepLaunc
                 @Override
                 public void onStateTransitionComplete(LauncherState finalState) {
                     HotseatPredictionController client = mLauncher.getHotseatPredictionController();
-                    if (mFromAllApps && finalState == NORMAL && client.hasPredictions()) {
+                    if (client != null && client.hasPredictions() && mFromAllApps && finalState == NORMAL) {
                         if (incrementEventCount(HOTSEAT_DISCOVERY_TIP_COUNT)) {
                             client.showEdu();
                             stateManager.removeStateListener(this);
