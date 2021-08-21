@@ -95,12 +95,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>이 시간대에 더 생산적이신가요?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
+        <item>무지는 축복입니다!</item>
         <item>Is it time to flash another update already?</item>
         <item>안드로이드 12가 기대되지 않나요?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
+        <item>오, 무슨 일이에요?</item>
+        <item>당신에 작업에 집중하세요</item>
+        <item>얼마나 많은 스크린샷을 찍으셨나요?</item>
         <item>Open goodness with crDroid</item>
         <item>Spread love not havoc</item>
         <item>즐기세요!</item>
@@ -108,31 +108,31 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
         <item>이것을 보려면 crDroid Premium이 필요합니다</item>
         <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
+        <item>더 나은 배터리 수명을 즐기세요</item>
         <item>Starting from the ground zero</item>
         <item>3000만큼 사랑해요.</item>
         <item>Stay Home, Stay Safe</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>How is everything going?</item>
+        <item>오늘 좋은 일을 해 보세요</item>
+        <item>이것이 최고의 픽셀 경험이죠, 그렇지 않나요?</item>
+        <item>모든 게 어때요?</item>
         <item>No illusions, welcome to reality!</item>
         <item>후원해 주셔서 감사합니다.</item>
         <item>No festival for Derps - only perfection!</item>
         <item>One of the buildbot\'s best picks</item>
         <item>Sanity for your Paranoia</item>
         <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
+        <item>정말 멋진 경험이지 않나요?</item>
         <item>Evolution is a myth, right?</item>
         <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
-        <item>Winner Winner ....?</item>
+        <item>무슨 생각을 하고 계신가요?</item>
+        <item>이겼닭 ....?</item>
         <item>rm -rf \/</item>
     </string-array>
     <!-- Recents screen, close app -->
     <string name="recents_close_app">앱 종료</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">값: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
+    <string name="custom_seekbar_default_value">기본값</string>
     <string name="custom_seekbar_default_value_to_set">기본값: <xliff:g id="v">%s</xliff:g>\n길게 눌러서 설정</string>
     <string name="custom_seekbar_default_value_is_set">기본값으로 설정됨</string>
     <!-- Icon size -->
@@ -140,20 +140,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Font size -->
     <string name="font_size_title">글꼴 크기</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">앱 라벨에 최대 줄 개수</string>
     <!-- Scrim alpha in apps drawer -->
     <string name="all_apps_background_opacity_title">배경 불투명도</string>
     <!-- AppInfo -->
     <string name="app_info_subtext">아래로 스와이프하여 앱 정보를 닫습니다.</string>
     <string name="app_info_version_value">%1$s (%2$d)</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="placeholder_string">불러오는 중…</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_source">소스</string>
+    <string name="app_info_source_system">시스템</string>
+    <string name="app_info_last_update">최근 업데이트</string>
+    <string name="app_info_version">버전</string>
+    <string name="app_info_more">더 보기</string>
     <!-- Show dock search widget -->
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Show search bar in the bottom dock</string>
+    <string name="dock_search_title">Google 검색 바</string>
+    <string name="dock_search_summary">하단에 검색 표시줄 표시</string>
 </resources>
