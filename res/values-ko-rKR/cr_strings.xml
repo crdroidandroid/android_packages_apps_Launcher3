@@ -148,9 +148,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_info_version_value">%1$s (%2$d)</string>
     <string name="placeholder_string">불러오는 중…</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_source">소스</string>
+    <string name="app_info_source">출처</string>
     <string name="app_info_source_system">시스템</string>
-    <string name="app_info_last_update">최근 업데이트</string>
+    <string name="app_info_last_update">마지막 업데이트</string>
     <string name="app_info_version">버전</string>
     <string name="app_info_more">더 보기</string>
     <!-- Show dock search widget -->
