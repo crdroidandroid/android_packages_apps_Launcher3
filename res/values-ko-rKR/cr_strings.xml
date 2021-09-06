@@ -96,7 +96,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>무지는 축복입니다!</item>
-        <item>Is it time to flash another update already?</item>
+        <item>다른 롬을 플래시해야 합니까?</item>
         <item>안드로이드 12가 기대되지 않나요?</item>
         <item>오, 무슨 일이에요?</item>
         <item>당신에 작업에 집중하세요</item>
@@ -104,14 +104,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>Open goodness with crDroid</item>
         <item>Spread love not havoc</item>
         <item>즐기세요!</item>
-        <item>Time for some good music</item>
+        <item>좋은 음악을 들을 시간입니다</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
         <item>이것을 보려면 crDroid Premium이 필요합니다</item>
         <item>Remember the Lineage of the Unicorn</item>
         <item>더 나은 배터리 수명을 즐기세요</item>
         <item>Starting from the ground zero</item>
         <item>3000만큼 사랑해요.</item>
-        <item>Stay Home, Stay Safe</item>
+        <item>집 밖은 위험해요</item>
         <item>오늘 좋은 일을 해 보세요</item>
         <item>이것이 최고의 픽셀 경험이죠, 그렇지 않나요?</item>
         <item>모든 게 어때요?</item>
@@ -120,7 +120,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>No festival for Derps - only perfection!</item>
         <item>One of the buildbot\'s best picks</item>
         <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
+        <item>차가운 디저트를 먹어보세요</item>
         <item>정말 멋진 경험이지 않나요?</item>
         <item>Evolution is a myth, right?</item>
         <item>You are what you flash, don\'t be Potato</item>
@@ -140,7 +140,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Font size -->
     <string name="font_size_title">글꼴 크기</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">앱 라벨에 최대 줄 개수</string>
+    <string name="icon_max_lines_title">앱 라벨의 최대 줄 개수</string>
     <!-- Scrim alpha in apps drawer -->
     <string name="all_apps_background_opacity_title">배경 불투명도</string>
     <!-- AppInfo -->
