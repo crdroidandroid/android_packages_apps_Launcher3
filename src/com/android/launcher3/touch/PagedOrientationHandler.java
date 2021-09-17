@@ -91,6 +91,7 @@ public interface PagedOrientationHandler {
     void delegateScrollBy(PagedView pagedView, int unboundedScroll, int x, int y);
     void scrollerStartScroll(OverScroller scroller, int newPosition);
     void getCurveProperties(PagedView view, Rect insets, CurveProperties out);
+    boolean isGoingDown(float displacement, boolean isRtl);
     boolean isGoingUp(float displacement, boolean isRtl);
     boolean isLayoutNaturalToLauncher();
     float getTaskMenuX(float x, View thumbnailView);
