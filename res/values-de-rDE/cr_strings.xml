@@ -131,7 +131,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Recents screen, close app -->
     <string name="recents_close_app">App schließen</string>
     <string name="allow_swipe_down_clearall_title">Nach unten wischen, um alle Apps im Anwendungsverlauf zu schließen</string>
-    <string name="allow_swipe_down_clearall_desc">Enable to clear all recents in the overview screen by swiping down</string>
+    <string name="allow_swipe_down_clearall_desc">Wenn aktiviert, können alle Apps im Anwendungsverlauf durch Wischen nach unten geschlossen werden</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Wert: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">Standardmäßig</string>
