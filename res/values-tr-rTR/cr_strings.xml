@@ -130,6 +130,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </string-array>
     <!-- Recents screen, close app -->
     <string name="recents_close_app">Uygulamayı kapat</string>
+    <string name="allow_swipe_down_clearall_title">Tüm son uygulamaları temizlemek için aşağı kaydırın</string>
+    <string name="allow_swipe_down_clearall_desc">Aşağı kaydırarak tüm son uygulamaları temizlemeyi etkinleştirin</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Değer: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">Varsayılan</string>

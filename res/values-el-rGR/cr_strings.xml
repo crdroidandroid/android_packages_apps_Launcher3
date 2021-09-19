@@ -130,6 +130,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </string-array>
     <!-- Recents screen, close app -->
     <string name="recents_close_app">Κλείσιμο εφαρμογής</string>
+    <string name="allow_swipe_down_clearall_title">Σύρετε προς τα κάτω για εκκαθάριση όλων των προσφάτων</string>
+    <string name="allow_swipe_down_clearall_desc">Ενεργοποιήστε την εκκαθάριση όλων των προσφάτων στην οθόνη επισκόπησης σύροντας προς τα κάτω</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Τιμή: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">από προεπιλογή</string>

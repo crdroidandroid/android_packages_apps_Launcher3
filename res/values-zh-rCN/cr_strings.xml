@@ -130,6 +130,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </string-array>
     <!-- Recents screen, close app -->
     <string name="recents_close_app">关闭应用程序</string>
+    <string name="allow_swipe_down_clearall_title">向下滑动以清除所有最近任务</string>
+    <string name="allow_swipe_down_clearall_desc">启用向下滑动以清除概览屏幕上的所有最近任务</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">数值: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">默认</string>
