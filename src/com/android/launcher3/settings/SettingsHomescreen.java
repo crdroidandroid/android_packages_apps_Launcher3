@@ -109,7 +109,8 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (LauncherPrefs.DOCK_SEARCH.getSharedPrefKey().equals(key) ||
                 LauncherPrefs.DOCK_THEME.getSharedPrefKey().equals(key) ||
-                LauncherPrefs.SEARCH_RADIUS_SIZE.getSharedPrefKey().equals(key)) {
+                LauncherPrefs.SEARCH_RADIUS_SIZE.getSharedPrefKey().equals(key) ||
+                LauncherPrefs.SHOW_HOTSEAT_BG.getSharedPrefKey().equals(key)) {
             LauncherAppState.INSTANCE.executeIfCreated(app -> app.setNeedsRestart());
         }
     }
