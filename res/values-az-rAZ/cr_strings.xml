@@ -130,8 +130,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </string-array>
     <!-- Recents screen, close app -->
     <string name="recents_close_app">Tətbiqi bağla</string>
-    <string name="allow_swipe_down_clearall_title">Swipe down to clear all recents</string>
-    <string name="allow_swipe_down_clearall_desc">Enable to clear all recents in the overview screen by swiping down</string>
+    <string name="allow_swipe_down_clearall_title">Hamısını təmizləmək üçün aşağı sürüşdürün</string>
+    <string name="allow_swipe_down_clearall_desc">Aşağı sürüşdürərək bütün son tətbiqləri təmizləməni fəallaşdırın</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Dəyər: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">standart</string>
@@ -156,6 +156,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_info_version">Versiya</string>
     <string name="app_info_more">Daha çox</string>
     <!-- Show dock search widget -->
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Show search bar in the bottom dock</string>
+    <string name="dock_search_title">Google axtarış paneli</string>
+    <string name="dock_search_summary">Alt paneldə axtarış panelini göstər</string>
 </resources>
