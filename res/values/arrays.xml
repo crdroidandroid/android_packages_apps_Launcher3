@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="grayscale_calendar_icons">
+        <item>@drawable/calendar_1</item>
+        <item>@drawable/calendar_2</item>
+        <item>@drawable/calendar_3</item>
+        <item>@drawable/calendar_4</item>
+        <item>@drawable/calendar_5</item>
+        <item>@drawable/calendar_6</item>
+        <item>@drawable/calendar_7</item>
+        <item>@drawable/calendar_8</item>
+        <item>@drawable/calendar_9</item>
+        <item>@drawable/calendar_10</item>
+        <item>@drawable/calendar_11</item>
+        <item>@drawable/calendar_12</item>
+        <item>@drawable/calendar_13</item>
+        <item>@drawable/calendar_14</item>
+        <item>@drawable/calendar_15</item>
+        <item>@drawable/calendar_16</item>
+        <item>@drawable/calendar_17</item>
+        <item>@drawable/calendar_18</item>
+        <item>@drawable/calendar_19</item>
+        <item>@drawable/calendar_20</item>
+        <item>@drawable/calendar_21</item>
+        <item>@drawable/calendar_22</item>
+        <item>@drawable/calendar_23</item>
+        <item>@drawable/calendar_24</item>
+        <item>@drawable/calendar_25</item>
+        <item>@drawable/calendar_26</item>
+        <item>@drawable/calendar_27</item>
+        <item>@drawable/calendar_28</item>
+        <item>@drawable/calendar_29</item>
+        <item>@drawable/calendar_30</item>
+        <item>@drawable/calendar_31</item>
+    </array>
+
+    <array name="grayscale_clock_icons">
+        <item>com.android.launcher3.LEVEL_PER_TICK_ICON_ROUND</item>
+        <item>@drawable/clock</item>
+        <item>com.android.launcher3.HOUR_LAYER_INDEX</item>
+        <item>@null</item>
+        <item>com.android.launcher3.MINUTE_LAYER_INDEX</item>
+        <item>1</item>
+        <item>com.android.launcher3.DEFAULT_HOUR</item>
+        <item>10</item>
+        <item>com.android.launcher3.DEFAULT_MINUTE</item>
+        <item>10</item>
+    </array>
+</resources>
