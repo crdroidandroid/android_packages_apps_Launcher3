@@ -107,6 +107,8 @@ android_library {
         "iconloader_base",
         "libGoogleFeed",
         "SettingsLib",
+        "colorkt",
+        "themelib",
     ],
     manifest: "AndroidManifest-common.xml",
     sdk_version: "current",
