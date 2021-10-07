@@ -131,7 +131,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Recents screen, close app -->
     <string name="recents_close_app">Fechar app</string>
     <string name="allow_swipe_down_clearall_title">Deslize para baixo para limpar todos os recentes</string>
-    <string name="allow_swipe_down_clearall_desc">Clique para limpar todos os recentes na tela geral deslizando para baixo</string>
+    <string name="allow_swipe_down_clearall_desc">Permite limpar todos os recentes na tela de visão geral deslizando para baixo</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Valor: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">por padrão</string>
