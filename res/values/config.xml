@@ -88,7 +88,7 @@
 
     <!-- Default packages -->
     <string name="wallpaper_picker_package" translatable="false">com.android.wallpaper</string>
-    <string name="local_colors_extraction_class" translatable="false"></string>
+    <string name="local_colors_extraction_class" translatable="false">org.protonaosp.launcher3.ThemedLocalColorExtractor</string>
 
     <!-- Accessibility actions -->
     <item type="id" name="action_remove" />
