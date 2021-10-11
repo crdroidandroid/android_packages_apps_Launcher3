@@ -213,4 +213,104 @@
 
     </grid-option>
 
+    <grid-option
+        launcher:name="6_by_7"
+        launcher:numRows="7"
+        launcher:numColumns="6"
+        launcher:numFolderRows="6"
+        launcher:numFolderColumns="6"
+        launcher:numHotseatIcons="6"
+        launcher:dbFile="launcher_6_by_6.db"
+        launcher:defaultLayoutId="@xml/default_workspace_6x7" >
+
+        <display-option
+            launcher:name="Large Phone"
+            launcher:minWidthDps="406"
+            launcher:minHeightDps="694"
+            launcher:iconImageSize="48"
+            launcher:iconTextSize="13.0"
+            launcher:canBeDefault="true" />
+
+    </grid-option>
+
+    <grid-option
+        launcher:name="6_by_8"
+        launcher:numRows="8"
+        launcher:numColumns="6"
+        launcher:numFolderRows="8"
+        launcher:numFolderColumns="6"
+        launcher:numHotseatIcons="6"
+        launcher:dbFile="launcher_6_by_8.db"
+        launcher:defaultLayoutId="@xml/default_workspace_6x8" >
+
+        <display-option
+            launcher:name="Large Phone"
+            launcher:minWidthDps="406"
+            launcher:minHeightDps="694"
+            launcher:iconImageSize="48"
+            launcher:iconTextSize="13.0"
+            launcher:canBeDefault="true" />
+
+    </grid-option>
+
+    <grid-option
+        launcher:name="6_by_9"
+        launcher:numRows="9"
+        launcher:numColumns="6"
+        launcher:numFolderRows="8"
+        launcher:numFolderColumns="6"
+        launcher:numHotseatIcons="6"
+        launcher:dbFile="launcher_6_by_9.db"
+        launcher:defaultLayoutId="@xml/default_workspace_6x9" >
+
+        <display-option
+            launcher:name="Large Phone"
+            launcher:minWidthDps="406"
+            launcher:minHeightDps="694"
+            launcher:iconImageSize="48"
+            launcher:iconTextSize="13.0"
+            launcher:canBeDefault="true" />
+
+    </grid-option>
+
+    <grid-option
+        launcher:name="6_by_10"
+        launcher:numRows="10"
+        launcher:numColumns="6"
+        launcher:numFolderRows="8"
+        launcher:numFolderColumns="6"
+        launcher:numHotseatIcons="6"
+        launcher:dbFile="launcher_6_by_10.db"
+        launcher:defaultLayoutId="@xml/default_workspace_6x10" >
+
+        <display-option
+            launcher:name="Large Phone"
+            launcher:minWidthDps="406"
+            launcher:minHeightDps="694"
+            launcher:iconImageSize="48"
+            launcher:iconTextSize="13.0"
+            launcher:canBeDefault="true" />
+
+    </grid-option>
+
+    <grid-option
+        launcher:name="6_by_12"
+        launcher:numRows="12"
+        launcher:numColumns="6"
+        launcher:numFolderRows="8"
+        launcher:numFolderColumns="6"
+        launcher:numHotseatIcons="6"
+        launcher:dbFile="launcher_6_by_12.db"
+        launcher:defaultLayoutId="@xml/default_workspace_6x12" >
+
+        <display-option
+            launcher:name="Large Phone"
+            launcher:minWidthDps="610"
+            launcher:minHeightDps="825"
+            launcher:iconImageSize="48"
+            launcher:iconTextSize="13.0"
+            launcher:canBeDefault="true" />
+
+    </grid-option>
+
 </profiles>
