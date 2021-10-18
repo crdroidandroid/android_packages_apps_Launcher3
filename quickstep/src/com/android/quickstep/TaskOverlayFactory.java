@@ -319,6 +319,14 @@ public class TaskOverlayFactory implements ResourceBasedOverride {
             public void onScreenshot() {
                 endLiveTileMode(() -> saveScreenshot(mTask));
             }
+
+            public void onLens() {
+                if (mIsAllowedByPolicy) {
+                    endLiveTileMode(() -> mImageApi.startLensActivity());
+                } else {
+                    showBlockedByPolicyMessage();
+                }
+            }
         }
     }
 
@@ -332,5 +340,7 @@ public class TaskOverlayFactory implements ResourceBasedOverride {
 
         /** User has indicated they want to screenshot the current task. */
         void onScreenshot();
+
+        void onLens();
     }
 }
