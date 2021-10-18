@@ -33,6 +33,7 @@ import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Flags;
 import com.android.launcher3.Insettable;
 import com.android.launcher3.R;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.util.DisplayController;
 import com.android.launcher3.util.MultiPropertyFactory.MultiProperty;
 import com.android.launcher3.util.MultiValueAlpha;
@@ -143,6 +144,13 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
 
         mSplitButton = findViewById(R.id.action_split);
         mSplitButton.setOnClickListener(this);
+
+        if (Utilities.isGSAEnabled(getContext())) {
+            View lens = findViewById(R.id.action_lens);
+            lens.setOnClickListener(this);
+            lens.setVisibility(VISIBLE);
+            findViewById(R.id.lens_space).setVisibility(VISIBLE);
+        }
     }
 
     /**
@@ -166,6 +174,8 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
             mCallbacks.onSplit();
         } else if (id == R.id.action_clear_all) {
             mCallbacks.onClearAllTasksRequested();
+        } else if (id == R.id.action_lens) {
+            mCallbacks.onLens();
         }
     }
 
