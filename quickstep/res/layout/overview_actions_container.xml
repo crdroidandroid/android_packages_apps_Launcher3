@@ -46,6 +46,16 @@
             android:visibility="gone" />
 
         <Button
+            android:id="@+id/action_lens"
+            style="@style/OverviewActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_lens"
+            android:text="@string/action_lens"
+            android:theme="@style/ThemeControlHighlightWorkspaceColor"
+            android:visibility="gone" />
+
+        <Button
             android:id="@+id/action_clear_all"
             style="@style/OverviewActionButton"
             android:layout_width="wrap_content"
