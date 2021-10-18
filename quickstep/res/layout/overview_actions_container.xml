@@ -55,6 +55,23 @@
             android:theme="@style/ThemeControlHighlightWorkspaceColor" />
 
         <Space
+            android:id="@+id/lens_space"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <Button
+            android:drawableStart="@drawable/ic_lens"
+            style="@style/OverviewActionButton"
+            android:id="@+id/action_lens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_lens"
+            android:theme="@style/ThemeControlHighlightWorkspaceColor"
+            android:visibility="gone" />
+
+        <Space
             android:id="@+id/action_split_space"
             android:layout_width="@dimen/overview_actions_button_spacing"
             android:layout_height="1dp"
