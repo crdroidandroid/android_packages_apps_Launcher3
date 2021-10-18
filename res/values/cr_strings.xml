@@ -152,4 +152,7 @@
     <!-- Background blur -->
     <string name="background_blur_title">Background blur depth</string>
     <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
+
+    <!-- Recents -->
+    <string name="action_lens">Lens</string>
 </resources>
