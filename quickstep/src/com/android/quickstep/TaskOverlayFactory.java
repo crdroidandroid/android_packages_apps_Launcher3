@@ -449,6 +449,15 @@ public class TaskOverlayFactory {
             public void onClearAllTasksRequested() {
                 endLiveTileMode(TaskOverlay.this::clearAllTasks);
             }
+
+            @Override
+            public void onLens() {
+                if (mIsAllowedByPolicy) {
+                    endLiveTileMode(() -> mImageApi.startLensActivity());
+                } else {
+                    showBlockedByPolicyMessage();
+                }
+            }
         }
     }
 
@@ -467,5 +476,7 @@ public class TaskOverlayFactory {
         void onSaveAppPair();
 
         void onClearAllTasksRequested();
+
+        void onLens();
     }
 }
