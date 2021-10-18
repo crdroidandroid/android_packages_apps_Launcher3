@@ -116,6 +116,12 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
         super.onFinishInflate();
         findViewById(R.id.action_screenshot).setOnClickListener(this);
         findViewById(R.id.action_clear_all).setOnClickListener(this);
+        if (getContext().getPackageManager().getLaunchIntentForPackage("com.google.ar.lens") != null) {
+            View lens = findViewById(R.id.action_lens);
+            findViewById(R.id.action_lens).setOnClickListener(this);
+            lens.setVisibility(VISIBLE);
+            findViewById(R.id.lens_space).setVisibility(VISIBLE);
+        }
 
         mSplitButton = findViewById(R.id.action_split);
         mSplitButton.setOnClickListener(this);
@@ -142,6 +148,8 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
             mCallbacks.onSplit();
         } else if (id == R.id.action_clear_all) {
             mCallbacks.onClearAllTasksRequested();
+        } else if (id == R.id.action_lens) {
+            mCallbacks.onLens();
         }
     }
 
