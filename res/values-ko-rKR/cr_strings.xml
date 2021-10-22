@@ -123,15 +123,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>차가운 디저트를 먹어보세요</item>
         <item>정말 멋진 경험이지 않나요?</item>
         <item>진화는 신화입니다.</item>
-        <item>You are what you flash, don\'t be Potato</item>
+        <item>당신이 깜박이는 것입니다, 감자가되지 마십시오?</item>
         <item>무슨 생각을 하고 계신가요?</item>
         <item>이겼닭 ....?</item>
         <item>rm -rf \/</item>
     </string-array>
     <!-- Recents screen, close app -->
     <string name="recents_close_app">앱 종료</string>
-    <string name="allow_swipe_down_clearall_title">Swipe down to clear all recents</string>
-    <string name="allow_swipe_down_clearall_desc">Enable to clear all recents in the overview screen by swiping down</string>
+    <string name="allow_swipe_down_clearall_title">아래로 스와이프해서 최근 앱 모두 지우기</string>
+    <string name="allow_swipe_down_clearall_desc">최근 앱 화면에서 아래로 스와이프하여 모두 지우기를 활성화합니다</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">값: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">기본값</string>
