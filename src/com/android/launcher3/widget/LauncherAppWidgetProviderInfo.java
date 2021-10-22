@@ -101,7 +101,7 @@ public class LauncherAppWidgetProviderInfo extends AppWidgetProviderInfo impleme
     public void initSpans(Context context, InvariantDeviceProfile idp) {
         mPM = context.getApplicationContext().getPackageManager();
         int minSpanX = 0;
-        int minSpanY = 0;
+        int minSpanY = 1;
         int maxSpanX = idp.numColumns;
         int maxSpanY = idp.numRows;
         int spanX = 0;
@@ -124,7 +124,7 @@ public class LauncherAppWidgetProviderInfo extends AppWidgetProviderInfo impleme
                     getSpanX(widgetPadding, minResizeWidth,
                             dp.getWorkspaceProfile().getCellLayoutBorderSpacePx().x,
                             cellSize.x));
-            minSpanY = Math.max(minSpanY,
+            minSpanY = Math.min(minSpanY,
                     getSpanY(widgetPadding, minResizeHeight,
                             dp.getWorkspaceProfile().getCellLayoutBorderSpacePx().y,
                             cellSize.y));
