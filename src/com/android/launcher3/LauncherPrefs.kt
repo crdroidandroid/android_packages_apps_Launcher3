@@ -249,6 +249,7 @@ constructor(@ApplicationContext private val encryptedContext: Context) {
         @JvmField val FONT_SIZE = backedUpItem("pref_custom_font_size", 100)
         @JvmField val ICON_SIZE = backedUpItem("pref_custom_icon_size", 100)
         @JvmField val ROW_HEIGHT = backedUpItem("pref_row_height", 100)
+        @JvmField val SEARCH_RADIUS_SIZE = backedUpItem("pref_search_radius_size", 100)
         @JvmField val SHOW_DESKTOP_LABELS = backedUpItem("pref_desktop_show_labels", true)
         @JvmField val SHOW_DRAWER_LABELS = backedUpItem("pref_drawer_show_labels", true)
         @JvmField val PROMISE_ICON_IDS = backedUpItem(InstallSessionHelper.PROMISE_ICON_IDS, "")
