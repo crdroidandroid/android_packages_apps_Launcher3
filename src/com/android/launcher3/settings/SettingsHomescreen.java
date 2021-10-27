@@ -110,6 +110,7 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
         switch (key) {
             case Utilities.KEY_DOCK_SEARCH:
             case Utilities.KEY_DOCK_THEME:
+            case Utilities.KEY_SEARCH_RADIUS:
                 LauncherAppState.INSTANCE.executeIfCreated(app -> app.setNeedsRestart());
                 break;
             default:
