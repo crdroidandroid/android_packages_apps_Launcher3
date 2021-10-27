@@ -87,6 +87,17 @@
             android:dependency="pref_dock_search"
             launcher:iconSpaceReserved="false" />
 
+        <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+            android:key="pref_search_radius_size"
+            android:title="@string/search_radius_title"
+            android:persistent="true"
+            android:max="100"
+            android:min="0"
+            settings:interval="5"
+            settings:units="%"
+            android:defaultValue="100"
+            android:dependency="pref_dock_search" />
+
     </PreferenceCategory>
 
 </androidx.preference.PreferenceScreen>
