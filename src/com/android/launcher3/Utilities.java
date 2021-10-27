@@ -165,6 +165,7 @@ public final class Utilities {
 
     public static final String KEY_DOCK_SEARCH = "pref_dock_search";
     public static final String KEY_DOCK_THEME = "pref_dock_theme";
+    public static final String KEY_SEARCH_RADIUS = "pref_search_radius_size";
 
     /**
      * Returns true if theme is dark.
@@ -905,5 +906,10 @@ public final class Utilities {
     public static boolean isThemedIconsEnabled(Context context) {
         SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_DOCK_THEME, false);
+    }
+
+    public static int getCornerRadius(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getInt(KEY_SEARCH_RADIUS, 100);
     }
 }
