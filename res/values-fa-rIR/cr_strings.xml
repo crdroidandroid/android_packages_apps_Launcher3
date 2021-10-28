@@ -59,7 +59,7 @@
     <!-- Preference default value -->
     <string name="pref_value_default">پیش‎فرض</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">ویجت آب و هوا و ساعت</string>
+    <string name="show_quickspace_title">در یک دید</string>
     <string name="show_quickspace_summary">نمایش در بالای صفحه اصلی</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
@@ -76,41 +76,41 @@
     <string name="quick_event_ambient_song_artist">%1$s توسط %2$s</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">از یک سبک جایگزین استفاده کنید</string>
-    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
+    <string name="quickspace_alternate_style_summary">استفاده از سبک ساده برای قابلیت در یک دید</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
+    <string name="quickspace_now_playing_title">نمایش در حال پخش</string>
+    <string name="quickspace_now_playing_summary">نمایش نام آهنگ در حال پخش. توجه: ممکن است با برخی از پلیر ها سازگار نباشد!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">نمایش یک پیام تصادفی</string>
     <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
     <string-array name="quickspace_psa_morning">
         <item>صبح بخیر!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>صبح بخیر، وقتشه بترکونیم!</item>
+        <item>چه روز قشنگی!</item>
+        <item>روز خوبی داشته باشی!</item>
+        <item>با یه چرت 5 دقیقه ای چطوری؟</item>
+        <item>اینم یه راه بیدار شدنه.</item>
+        <item>باید صداهای هشدار تان را عوض کنید.</item>
+        <item>به نظر می‌رسه امروز روز قشنگیه، اینطور نیست؟</item>
+        <item>بریم یه نون بخوریم.</item>
+        <item>محض احتیاط آب و هوا را بررسی کنید</item>
+        <item>هنوز کمی احساس خواب‌آلودگی دارید</item>
+        <item>هنوز بیرون رو نگاه نکردی؟</item>
+        <item>بیا کارمونو شروع کنیم.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>شب به خیر!</item>
+        <item>خوب بخوابی!</item>
+        <item>فردا می‌بینمت!</item>
+        <item>خوابای خوشکل ببینی!</item>
+        <item>تا دیر وقت بیدار نباش</item>
+        <item>خواب خوبی داشته باشی</item>
+        <item>برو یکم چرت بزن</item>
+        <item>وقت استراحته</item>
+        <item>از شبت لذت ببر!</item>
+        <item>وقت شارژ کردن باتری هاست!</item>
+        <item>فردا شاید یه روز عالی باشه</item>
+        <item>خودتو واسه فردا آماده کن</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
         <item>Um... good night?</item>
