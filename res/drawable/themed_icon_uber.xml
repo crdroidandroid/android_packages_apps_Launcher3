@@ -1,0 +1,34 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:viewportWidth="215"
+    android:viewportHeight="207"
+    android:width="215dp"
+    android:height="207dp">
+    <path
+        android:pathData="M2 66L13.5 66L14 66.5L14 114.5L19.5 124Q23.8 129.2 34.5 128Q41.7 126.2 45 120.5L48 113.5L48 66L58.5 66L59 66.5L59 137L48 137L48 132.5L46.5 133Q39.7 140.2 23.5 138Q13.4 135.6 8 128.5L4 121.5L2 112.5L2 66Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.9019608"
+        android:strokeColor="#FFFFFF"
+        android:strokeAlpha="0.9019608"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M66 66L78 66L78 89.5L80.5 88Q87.2 82.2 101.5 84Q112.4 86.6 118 94.5L123 106.5L123 115.5Q120.8 127.3 112.5 133Q105.4 139.9 89.5 138Q81.6 136.4 77.5 131L77 137L66.5 137L66 136.5L66 66ZM91 94L86 96Q79 100 77 110Q77 116 80 121L90 128Q102 130 107 124L112 115Q113 104 108 100L100 94L91 94Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.9019608"
+        android:strokeColor="#FFFFFF"
+        android:strokeAlpha="0.9019608"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M147.5 84L162.5 85L174 93.5Q181 100.3 179 115L138.5 115L138 117.5L143.5 125Q148.3 129.7 159.5 128L169.5 121L177 126.5L172.5 132L160.5 138L147.5 138Q137.9 135.1 132 128.5Q125.2 121.8 126 107.5Q128.4 95.4 136.5 89L147.5 84ZM149 94L145 96L138 105L139 106L168 106L166 101L158 94L149 94Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.9019608"
+        android:strokeColor="#FFFFFF"
+        android:strokeAlpha="0.9019608"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M205.5 84L211 84L211 95Q201.7 93.4 198 98.5L195 105.5L195 137L184.5 137L184 136.5L184 85L195 85L195 89.5L199.5 86L205.5 84Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.9019608"
+        android:strokeColor="#FFFFFF"
+        android:strokeAlpha="0.9019608"
+        android:strokeWidth="1" />
+</vector>

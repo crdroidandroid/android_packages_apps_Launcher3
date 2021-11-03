@@ -1,0 +1,34 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:viewportWidth="294"
+    android:viewportHeight="286"
+    android:width="294dp"
+    android:height="286dp">
+    <path
+        android:pathData="M6.5 25L48.5 25L51 27.5L135 140.5L48.5 255L6.5 255L5 253.5L89 141.5L89 138.5L5 26.5L6.5 25ZM7 27L8 28L9 32L12 34Q11 37 14 36L15 40L18 42Q17 45 20 44L21 48L24 50Q23 53 26 52L27 56L30 58Q29 61 32 60L33 64L36 66Q35 69 38 68L39 72L42 74Q41 77 44 76L45 80L48 82Q47 85 50 84L51 88L54 90Q53 93 56 92L57 96L60 98Q59 101 62 100L63 104L66 106Q65 109 68 108L69 112L72 114Q71 117 74 116L75 120L78 122Q77 125 80 124L81 128L84 130Q83 133 86 132L87 136L90 138Q91 143 89 144Q86 143 87 147L84 148L83 152Q80 151 81 155L78 156L77 160Q74 159 75 163L72 164L71 168Q68 167 69 171L66 172L65 176Q62 175 63 179L60 180L59 184Q56 183 57 187L54 188L53 192Q50 191 51 195L48 196L47 200Q44 199 45 203L42 204L41 208Q38 207 39 211L36 212L35 216Q32 215 33 219L30 220L29 224Q26 223 27 227L24 228L23 232Q20 231 21 235L18 236L17 240Q14 239 15 243L12 244L11 248Q8 247 9 251L6 253L49 253L133 141L50 29L49 27L7 27Z"
+        android:fillColor="#BFBFBF"
+        android:fillAlpha="0.5058824"
+        android:strokeColor="#BFBFBF"
+        android:strokeAlpha="0.5058824"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M162.5 224L289.5 224L291 225.5L163 226L163 252.5L163.5 253L290.5 253L289.5 255L162.5 255L161 253.5L161 225.5L162.5 224Z"
+        android:fillColor="#BFBFBF"
+        android:fillAlpha="0.5058824"
+        android:strokeColor="#BFBFBF"
+        android:strokeAlpha="0.5058824"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M7.5 27L48.5 27L50 28.5L133 140.5L48.5 253L7 252.5L91 139.5L9 30.5L7.5 27Z"
+        android:fillColor="#FEFEFE"
+        android:fillAlpha="0.9960784"
+        android:strokeColor="#FEFEFE"
+        android:strokeAlpha="0.9960784"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M163 226L289.5 226L290 226.5L290 253L163.5 253L163 252.5L163 226Z"
+        android:fillColor="#FEFEFE"
+        android:fillAlpha="0.9960784"
+        android:strokeColor="#FEFEFE"
+        android:strokeAlpha="0.9960784"
+        android:strokeWidth="1" />
+</vector>
