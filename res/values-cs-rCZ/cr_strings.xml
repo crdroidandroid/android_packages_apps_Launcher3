@@ -131,7 +131,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Recents screen, close app -->
     <string name="recents_close_app">Zavřít aplikaci</string>
     <string name="allow_swipe_down_clearall_title">Přejetím dolů vymazat nedávné aplikace</string>
-    <string name="allow_swipe_down_clearall_desc">Přejetím dolů vymažete všechny nedávné aplikace v přehledu aplikací</string>
+    <string name="allow_swipe_down_clearall_desc">Přejetím dolů vymažete všechny nedávné aplikace v\u00a0přehledu aplikací</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Hodnota: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">výchozí hodnota</string>
