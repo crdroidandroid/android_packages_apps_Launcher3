@@ -29,7 +29,6 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.SparseArray;
 import android.util.TypedValue;
-import android.provider.Settings;
 
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
@@ -75,7 +74,8 @@ public class Themes {
      * Returns true if workspace icon theming is enabled
      */
     public static boolean isThemedIconEnabled(Context context) {
-        return Settings.System.getInt(context.getContentResolver(), Settings.System.L3_THEMED_ICONS, 0) == 1;
+        return FeatureFlags.ENABLE_THEMED_ICONS.get()
+                && Utilities.getPrefs(context).getBoolean(KEY_THEMED_ICONS, false);
     }
 
     public static String getDefaultBodyFont(Context context) {
