@@ -215,4 +215,16 @@
     <icon drawable="@drawable/themed_icon_wall_x" package="com.stresscodes.wallp" />
     <icon drawable="@drawable/themed_icon_dolby" package="com.motorola.dolby.dolbyui" />
     <icon drawable="@drawable/themed_icon_boost" package="com.rubenmayayo.reddit" />
+
+    <icon drawable="@drawable/themed_icon_camera" package="com.android.camera2" />
+    <icon drawable="@drawable/themed_icon_contacts" package="com.android.contacts" />
+    <icon drawable="@drawable/themed_icon_files" package="com.android.documentsui" />
+    <icon drawable="@drawable/themed_icon_photos" package="com.android.gallery3d" />
+    <icon drawable="@drawable/themed_icon_messages" package="com.android.messaging" />
+    <icon drawable="@drawable/themed_icon_dialer" package="com.android.dialer" />
+    <icon drawable="@drawable/themed_icon_calendar_1" package="com.android.calendar" />
+    <icon drawable="@drawable/themed_icon_calendar_1" package="org.lineageos.etar" />
+    <icon drawable="@drawable/themed_icon_clock" package="com.android.deskclock" />
+    <icon drawable="@drawable/themed_icon_chrome" package="org.lineageos.jelly" />
+    <icon drawable="@drawable/themed_icon_calculator" package="com.android.calculator2" />
 </icons>
