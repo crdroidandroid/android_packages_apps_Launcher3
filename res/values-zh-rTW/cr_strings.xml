@@ -130,8 +130,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </string-array>
     <!-- Recents screen, close app -->
     <string name="recents_close_app">關閉應用程式</string>
-    <string name="allow_swipe_down_clearall_title">Swipe down to clear all recents</string>
-    <string name="allow_swipe_down_clearall_desc">Enable to clear all recents in the overview screen by swiping down</string>
+    <string name="allow_swipe_down_clearall_title">向下滑動以清除所有最近的應用程式</string>
+    <string name="allow_swipe_down_clearall_desc">啟用向下滑動以清除所有最近的應用程式</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">值：<xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">預設</string>
@@ -142,7 +142,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Font size -->
     <string name="font_size_title">字體大小</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">應用程式標籤允許的最大行數</string>
     <!-- Scrim alpha in apps drawer -->
     <string name="all_apps_background_opacity_title">背景透明度</string>
     <!-- AppInfo -->
@@ -156,6 +156,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_info_version">版本</string>
     <string name="app_info_more">更多</string>
     <!-- Show dock search widget -->
-    <string name="dock_search_title">Google 搜尋框</string>
-    <string name="dock_search_summary">Show search bar in the bottom dock</string>
+    <string name="dock_search_title">Google 搜尋列</string>
+    <string name="dock_search_summary">在底部顯示搜尋列</string>
 </resources>
