@@ -36,11 +36,13 @@
     <icon drawable="@drawable/themed_icon_home" package="com.google.android.apps.chromecast.app" />
     <icon drawable="@drawable/themed_icon_play_services" package="com.google.android.ims" />
     <icon drawable="@drawable/themed_icon_youtube" package="com.google.android.youtube" />
+    <icon drawable="@drawable/themed_icon_youtube" package="com.vanced.android.youtube" />
     <icon drawable="@drawable/themed_icon_dialer" package="com.google.android.dialer" />
     <icon drawable="@drawable/themed_icon_gfit_health" package="com.google.android.apps.fitness" />
     <icon drawable="@drawable/themed_icon_keep" package="com.google.android.keep" />
     <icon drawable="@drawable/themed_icon_play_store" package="com.android.vending" />
     <icon drawable="@drawable/themed_icon_youtube_music" package="com.google.android.apps.youtube.music" />
+    <icon drawable="@drawable/themed_icon_youtube_music" package="com.vanced.android.apps.youtube.music" />
     <icon drawable="@drawable/themed_icon_docs_editors" package="com.google.android.apps.docs.editors.docs" />
     <icon drawable="@drawable/themed_icon_gmail" package="com.google.android.gm" />
     <icon drawable="@drawable/themed_icon_maps" package="com.google.android.apps.maps" />
