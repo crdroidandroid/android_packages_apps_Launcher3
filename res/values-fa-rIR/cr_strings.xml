@@ -131,8 +131,8 @@ Remember the Lineage of the Unicorn</item>
     </string-array>
     <!-- Recents screen, close app -->
     <string name="recents_close_app">بستن برنامه</string>
-    <string name="allow_swipe_down_clearall_title">Swipe down to clear all recents</string>
-    <string name="allow_swipe_down_clearall_desc">Enable to clear all recents in the overview screen by swiping down</string>
+    <string name="allow_swipe_down_clearall_title">برای بستن برنامه های اخیر به پایین بکشید</string>
+    <string name="allow_swipe_down_clearall_desc">برای بستن همه برنامه ها اخیر هنگام مرور صفحه رو به پایین بکشید</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">ارزش: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">بطور پیش‌فرض</string>
@@ -143,7 +143,7 @@ Remember the Lineage of the Unicorn</item>
     <!-- Font size -->
     <string name="font_size_title">اندازه قلم</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">حداکثر خطوط برای برچسب برنامه</string>
     <!-- Scrim alpha in apps drawer -->
     <string name="all_apps_background_opacity_title">شفافیت پس‌زمینه</string>
     <!-- AppInfo -->
@@ -157,6 +157,6 @@ Remember the Lineage of the Unicorn</item>
     <string name="app_info_version">نسخه</string>
     <string name="app_info_more">بیشتر</string>
     <!-- Show dock search widget -->
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Show search bar in the bottom dock</string>
+    <string name="dock_search_title">نوار جست‌وجوی گوگل</string>
+    <string name="dock_search_summary">نمایش نوار جستجو در پایین</string>
 </resources>
