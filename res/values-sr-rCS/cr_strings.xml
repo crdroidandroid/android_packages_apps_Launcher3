@@ -38,15 +38,15 @@
     <string name="workspace_gradient_title">Prikaži senčenje na vrhu</string>
     <string name="workspace_gradient_summary">Omogući suptilno senčenje statusne trake</string>
     <string name="hotseat_gradient_title">Prikaži senčenje na dnu</string>
-    <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
+    <string name="hotseat_gradient_summary">Omogućite fino senčenje pokretača</string>
     <!-- Swipe down to clear recents -->
-    <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Doesn\'t works if P navbar gestures are enable</string>
+    <string name="allow_swipe_down_clearall_title">Privucite nadole kako biste zatvorili pregled nedavnih aplikacija</string>
+    <string name="allow_swipe_down_clearall_desc">Ne radi ako je su uključeni P navigacioni gestovi uključeni</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_title">Prikaži Google Feed</string>
+    <string name="google_feed_summary">Levo od glavnog početnog ekrana</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="app_info_subtext">Privucite dole kako biste zatvorili informacije o aplikaciji.</string>
     <string name="placeholder_string">Učitavanje...</string>
     <!-- Used for preference height loading. -->
     <string name="app_info_icon_pack">Paket ikona</string>
@@ -61,7 +61,7 @@
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Na prvi pogled</string>
     <string name="show_quickspace_summary">Prikaži na vrhu početnog ekrana</string>
-    <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
+    <string name="abbrev_wday_month_day_no_year">EEEEdMMM</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Dobrodošli na crDroid!</string>
     <string name="quick_event_rom_intro_title1">Uživajte u današnjem danu</string>
@@ -87,29 +87,29 @@
         <item>Dobro jutro!</item>
         <item>Dobro jutro, vreme je za akciju!</item>
         <item>Kako divan dan!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Prijatan dan!</item>
+        <item>Šta kažete na petominutnu dremku?</item>
+        <item>To je jedan način za probuditi se.</item>
+        <item>Trebalo bi da promenite Vaše zvukove alarma.</item>
+        <item>Lep dan, zar ne?</item>
+        <item>Hajmo po ovaj hleb.</item>
+        <item>Proverite vremenske prilike za svaki slučaj</item>
+        <item>Osećate li se malo pospano?</item>
+        <item>Jeste li pogledali kroz prozor?</item>
+        <item>Hajmo završiti ovo.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
+        <item>Laku noć!</item>
+        <item>Lepo spavajte!</item>
+        <item>Vidimo se sutra!</item>
+        <item>Slatko sanjajte!</item>
+        <item>Nemotje ostati budi do kasno</item>
+        <item>Lepo se odmorite</item>
+        <item>Odspavajte malo</item>
+        <item>Vreme je za opuštanje</item>
+        <item>Uživajte u noći!</item>
+        <item>Vreme je za promenu baterija!</item>
+        <item>Sutra će možda biti sjajan dan</item>
         <item>Get your bones ready for tomorrow</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
@@ -129,7 +129,7 @@
         <item>Spread love not havoc</item>
         <item>Have fun!</item>
         <item>Time for some good music</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C GLAVA</item>
         <item>You need crDroid Premium to see this</item>
         <item>Remember the Lineage of the Unicorn</item>
         <item>Enjoy Xtended battery life</item>
@@ -143,7 +143,7 @@
         <item>Hvala Vam na podršci</item>
         <item>Nema zabave za Derpove - samo perfekcija!</item>
         <item>Jedan od najboljih odabira buildbota</item>
-        <item>Sanity for your Paranoia</item>
+        <item>Zdrav razum za Vašu Paranoju</item>
         <item>Probajte ledene dezerte</item>
         <item>Kako lepo iskustvo, zar ne?</item>
         <item>Evolucija je mit, zar ne?</item>
