@@ -79,14 +79,14 @@
     <string name="quickspace_alternate_style_summary">Koristi minimalistički stil za \"Na prvi pogled\"</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Prikaži šta se trenutno pušta</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
+    <string name="quickspace_now_playing_summary">Prikaži pesmu koju trenutno slušaš na \"Na prvi pogled\" UPOZORENJE: Nije potpuno kompatibilno sa svim media plejerima!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">显示随机消息</string>
+    <string name="quickspace_psa_summary">Prikaži poneku lepu poruku s vremena na vreme na \"Na prvi pogled\"</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
+        <item>Dobro jutro!</item>
+        <item>Dobro jutro, vreme je za akciju!</item>
+        <item>Kako divan dan!</item>
         <item>Have a nice day!</item>
         <item>What about a small 5 minutes nap?</item>
         <item>That\'s one way to wake up.</item>
@@ -138,17 +138,17 @@
         <item>Stay Home, Stay Safe</item>
         <item>Do something nice today</item>
         <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>How is everything going?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
+        <item>Kako ide život?</item>
+        <item>Nema iluzija, dobrodošli u realnost!</item>
+        <item>Hvala Vam na podršci</item>
+        <item>Nema zabave za Derpove - samo perfekcija!</item>
+        <item>Jedan od najboljih odabira buildbota</item>
         <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
+        <item>Probajte ledene dezerte</item>
+        <item>Kako lepo iskustvo, zar ne?</item>
+        <item>Evolucija je mit, zar ne?</item>
+        <item>Ti si ono što flešuješ, nemoj biti Krompir</item>
+        <item>Šta Vam je na umu?</item>
         <item>Winner Winner ....?</item>
         <item>rm -rf \/</item>
     </string-array>
