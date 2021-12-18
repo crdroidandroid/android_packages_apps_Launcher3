@@ -66,7 +66,7 @@
     <string name="quick_event_rom_intro_welcome">Dobrodošli na crDroid!</string>
     <string name="quick_event_rom_intro_title1">Uživajte u današnjem danu</string>
     <string name="quick_event_rom_intro_title2">Hvala Vam što ste izabrali nas</string>
-    <string name="quick_event_rom_intro_title3">Sviđamo vam se? Pošaljite nam pivo</string>
+    <string name="quick_event_rom_intro_title3">Sviđamo Vam se? Pošaljite nam pivo</string>
     <string name="quick_event_rom_intro_title4">Najbolji Rom Ikada.</string>
     <string name="quick_event_rom_intro_title5">Javite nam se na Telegramu</string>
     <string name="quick_event_rom_intro_title6">Kliknite ovde kako biste počeli</string>
@@ -78,10 +78,10 @@
     <string name="quickspace_alternate_style_title">Koristi alternativni stil</string>
     <string name="quickspace_alternate_style_summary">Koristi minimalistički stil za \"Na prvi pogled\"</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Prikaži šta se trenutno pušta</string>
+    <string name="quickspace_now_playing_title">Prikaži šta se trenutno reprodukuje</string>
     <string name="quickspace_now_playing_summary">Prikaži pesmu koju trenutno slušaš na \"Na prvi pogled\" UPOZORENJE: Nije potpuno kompatibilno sa svim media plejerima!</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">显示随机消息</string>
+    <string name="quickspace_psa_title">Prikaži nasumičnu poruku</string>
     <string name="quickspace_psa_summary">Prikaži poneku lepu poruku s vremena na vreme na \"Na prvi pogled\"</string>
     <string-array name="quickspace_psa_morning">
         <item>Dobro jutro!</item>
@@ -103,7 +103,7 @@
         <item>Lepo spavajte!</item>
         <item>Vidimo se sutra!</item>
         <item>Slatko sanjajte!</item>
-        <item>Nemotje ostati budi do kasno</item>
+        <item>Nemojte ostati budi do kasno</item>
         <item>Lepo se odmorite</item>
         <item>Odspavajte malo</item>
         <item>Vreme je za opuštanje</item>
@@ -141,7 +141,7 @@
         <item>Kako ide život?</item>
         <item>Nema iluzija, dobrodošli u realnost!</item>
         <item>Hvala Vam na podršci</item>
-        <item>Nema zabave za Derpove - samo perfekcija!</item>
+        <item>Nema zabave za Derpove - samo perfekcije!</item>
         <item>Jedan od najboljih odabira buildbota</item>
         <item>Zdrav razum za Vašu Paranoju</item>
         <item>Probajte ledene dezerte</item>
