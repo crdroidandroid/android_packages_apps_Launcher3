@@ -28,16 +28,16 @@
     <string name="app_drawer_category_summary">Prilagodite ladicu aplikacija</string>
     <string name="misc_category_title">Razno</string>
     <string name="misc_category_summary">Druge opcije</string>
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">Prisilno zatvori aplikaciju</string>
+    <string name="recents_app_killed">Aplikacija je prisilno zatvorena</string>
     <!-- Folder titles -->
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">Dvostruki dodir za spavanje</string>
+    <string name="pref_sleep_gesture_summary">Dvostruki dodir na prazni prostor za gašenje ekrana</string>
     <!-- Gradients on Workspace/Hotseat -->
-    <string name="workspace_gradient_title">Show gradient on top</string>
-    <string name="workspace_gradient_summary">Enable a subtle gradient from the status bar</string>
-    <string name="hotseat_gradient_title">Show gradient on bottom</string>
+    <string name="workspace_gradient_title">Prikaži senčenje na vrhu</string>
+    <string name="workspace_gradient_summary">Omogući suptilno senčenje statusne trake</string>
+    <string name="hotseat_gradient_title">Prikaži senčenje na dnu</string>
     <string name="hotseat_gradient_summary">Enable a subtle gradient from the launcher dock</string>
     <!-- Swipe down to clear recents -->
     <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
@@ -47,24 +47,24 @@
     <string name="google_feed_summary">To the left of the main home screen</string>
     <!-- AppInfo -->
     <string name="app_info_subtext">Swipe down to close app info.</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="placeholder_string">Učitavanje...</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_icon_pack">Icon pack</string>
-    <string name="app_info_icon_pack_none">None</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_unknown">Unknown</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_icon_pack">Paket ikona</string>
+    <string name="app_info_icon_pack_none">Ništa</string>
+    <string name="app_info_source">Izvor</string>
+    <string name="app_info_source_unknown">Nepoznato</string>
+    <string name="app_info_last_update">Poslednje ažurirano</string>
+    <string name="app_info_version">Verzija</string>
+    <string name="app_info_more">Više</string>
     <!-- Preference default value -->
-    <string name="pref_value_default">Default</string>
+    <string name="pref_value_default">Podrazmevano</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">Na prvi pogled</string>
+    <string name="show_quickspace_summary">Prikaži na vrhu početnog ekrana</string>
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
-    <string name="quick_event_rom_intro_title1">Have a great day</string>
+    <string name="quick_event_rom_intro_welcome">Dobrodošli na crDroid!</string>
+    <string name="quick_event_rom_intro_title1">Uživajte u današnjem danu</string>
     <string name="quick_event_rom_intro_title2">Thank you for choosing us</string>
     <string name="quick_event_rom_intro_title3">Loving us? Send us a beer</string>
     <string name="quick_event_rom_intro_title4">Best Rom Ever.</string>
