@@ -36,14 +36,14 @@
     <string name="pref_sleep_gesture_summary">Dvostruki dodir na prazni prostor za gašenje ekrana</string>
     <!-- Gradients on Workspace/Hotseat -->
     <string name="workspace_gradient_title">Prikaži senčenje na vrhu</string>
-    <string name="workspace_gradient_summary">Omogući suptilno senčenje statusne trake</string>
+    <string name="workspace_gradient_summary">Omogući fino senčenje statusne trake</string>
     <string name="hotseat_gradient_title">Prikaži senčenje na dnu</string>
-    <string name="hotseat_gradient_summary">Omogućite fino senčenje pokretača</string>
+    <string name="hotseat_gradient_summary">Omogući fino senčenje pokretača</string>
     <!-- Swipe down to clear recents -->
     <string name="allow_swipe_down_clearall_title">Privucite nadole kako biste zatvorili pregled nedavnih aplikacija</string>
-    <string name="allow_swipe_down_clearall_desc">Ne radi ako je su uključeni P navigacioni gestovi uključeni</string>
+    <string name="allow_swipe_down_clearall_desc">Ne radi ako je su uključeni P navigacioni gestovi</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Prikaži Google Feed</string>
+    <string name="google_feed_title">Prikaži aplikaciju Google</string>
     <string name="google_feed_summary">Levo od glavnog početnog ekrana</string>
     <!-- AppInfo -->
     <string name="app_info_subtext">Privucite dole kako biste zatvorili informacije o aplikaciji.</string>
@@ -53,7 +53,7 @@
     <string name="app_info_icon_pack_none">Ništa</string>
     <string name="app_info_source">Izvor</string>
     <string name="app_info_source_unknown">Nepoznato</string>
-    <string name="app_info_last_update">Poslednje ažurirano</string>
+    <string name="app_info_last_update">Poslеdnjе ažuriranjе</string>
     <string name="app_info_version">Verzija</string>
     <string name="app_info_more">Više</string>
     <!-- Preference default value -->
@@ -119,25 +119,25 @@
         <item>Jeste li produktivniji u ovo doba?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Neznanje je Bliss</item>
-        <item>Da li je već vreme za flešovanje ažuriranja?</item>
+        <item>Neznanje je Sreća</item>
+        <item>Da li je već vreme za novo ažuriranje?</item>
         <item>Jeste li zahuhtani oko Androida 10?</item>
         <item>Zdravo, šta ima?</item>
         <item>Fokusirajte se na svoje zadatke</item>
         <item>Koliko snimaka ekrana napravite?</item>
         <item>Otkrijte dobre stvari uz crDroid</item>
-        <item>Širite ljubav, ne Rasulo</item>
+        <item>Širite ljubav, ne haos</item>
         <item>Uživajte!</item>
         <item>Vreme je za malo muzike</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C GLAVA</item>
         <item>Treba Vam crDroid Premium kako biste videli ovo</item>
-        <item>Remember the Lineage of the Unicorn</item>
+        <item>Setite se Loze Jednoroga</item>
         <item>Uživajte u Xtendnom trajanju baterije</item>
         <item>Počinjemo od nule</item>
         <item>Volimo Vas 3000</item>
         <item>Ostanite kući, ostanite bezbedni</item>
         <item>Radite nešto lepo danas</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
+        <item>Ovo je najbolji Iskustvo Pixela, zar ne?</item>
         <item>Kako ide život?</item>
         <item>Nema iluzija, dobrodošli u realnost!</item>
         <item>Hvala Vam na podršci</item>
