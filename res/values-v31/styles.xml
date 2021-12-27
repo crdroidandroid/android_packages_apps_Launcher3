@@ -38,6 +38,7 @@
         <item name="preferenceScreenStyle">@style/HomeSettings.PreferenceScreenStyle</item>
         <item name="preferenceStyle">@style/HomeSettings.PreferenceStyle</item>
         <item name="switchPreferenceStyle">@style/HomeSettings.SwitchPreferenceStyle</item>
+        <item name="dropdownPreferenceStyle">@style/HomeSettings.DropDownPreferenceStyle</item>
     </style>
 
     <style name="HomeSettings.CategoryStyle" parent="@style/Preference.Category.Material">
@@ -57,6 +58,11 @@
 
     <style name="HomeSettings.SwitchPreferenceStyle"
             parent="@style/Preference.SwitchPreference.Material">
+        <item name="iconSpaceReserved">@bool/home_settings_icon_space_reserved</item>
+    </style>
+
+    <style name="HomeSettings.DropDownPreferenceStyle"
+            parent="@style/Preference.DropDown.Material">
         <item name="iconSpaceReserved">@bool/home_settings_icon_space_reserved</item>
     </style>
 
