@@ -131,7 +131,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Recents screen, close app -->
     <string name="recents_close_app">Tanca l\'aplicació</string>
     <string name="allow_swipe_down_clearall_title">Desplaçar avall per esborrar tots els recents</string>
-    <string name="allow_swipe_down_clearall_desc">Enable to clear all recents in the overview screen by swiping down</string>
+    <string name="allow_swipe_down_clearall_desc">Activar per esborrar totes les aplicacions recents mitjançant el desplaçament cap avall</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Valor: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">per defecte</string>
@@ -142,7 +142,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Font size -->
     <string name="font_size_title">Mida de la lletra</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">Max línies per a l\'etiqueta d\'aplicació</string>
     <!-- Scrim alpha in apps drawer -->
     <string name="all_apps_background_opacity_title">Opacitat del fons</string>
     <!-- AppInfo -->
@@ -156,6 +156,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_info_version">Versió</string>
     <string name="app_info_more">Més</string>
     <!-- Show dock search widget -->
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Show search bar in the bottom dock</string>
+    <string name="dock_search_title">Barra de cerca de Google</string>
+    <string name="dock_search_summary">Mostra la barra de cerca a l\'inferior del dock</string>
 </resources>
