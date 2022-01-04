@@ -337,6 +337,7 @@ android_library {
         "cuebarlib",
         "SettingsLib",
         "commonutils",
+        "chaldea.seraphixgoogle",
     ],
     manifest: "AndroidManifest-common.xml",
     sdk_version: "current",
