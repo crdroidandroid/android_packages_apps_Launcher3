@@ -195,8 +195,10 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
         container.setOnClickListener(QuickSpaceActionReceiver.getWeatherAction());
         title.setText(weatherTemp);
         title.setOnClickListener(QuickSpaceActionReceiver.getWeatherAction());
-        icon.setImageDrawable(mController.getWeatherIcon());
+        Drawable d = mController.getWeatherIcon();
+        icon.setImageDrawable(d);
         icon.setOnClickListener(QuickSpaceActionReceiver.getWeatherAction());
+        icon.setVisibility(d != null ? View.VISIBLE : View.GONE);
     }
 
     private final void loadViews() {

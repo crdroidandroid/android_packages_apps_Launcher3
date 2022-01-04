@@ -178,6 +178,16 @@
             android:persistent="true"
             launcher:iconSpaceReserved="false" />
 
+        <ListPreference
+            android:key="pref_quickspace_weather_provider"
+            android:title="@string/quickspace_weather_provider_title"
+            android:summary="%s"
+            android:entries="@array/quickspace_weather_provider_entries"
+            android:entryValues="@array/quickspace_weather_provider_values"
+            android:dependency="pref_quickspace_weather"
+            android:defaultValue="auto"
+            launcher:iconSpaceReserved="false" />
+
         <SwitchPreferenceCompat
             android:key="pref_quickspace_weather_city"
             android:title="@string/quick_event_weather_city_title"
