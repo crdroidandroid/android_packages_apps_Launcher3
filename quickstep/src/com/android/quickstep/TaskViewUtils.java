@@ -176,7 +176,7 @@ public final class TaskViewUtils {
                 ENABLE_QUICKSTEP_LIVE_TILE.get() && recentsView.getRunningTaskIndex() != -1;
         final RemoteAnimationTargets targets =
                 new RemoteAnimationTargets(appTargets, wallpaperTargets, nonAppTargets,
-                        inLiveTileMode ? MODE_CLOSING : MODE_OPENING);
+                        !ENABLE_SHELL_TRANSITIONS && inLiveTileMode ? MODE_CLOSING : MODE_OPENING);
         final RemoteAnimationTargetCompat navBarTarget = targets.getNavBarRemoteAnimationTarget();
 
         SurfaceTransactionApplier applier = new SurfaceTransactionApplier(v);
@@ -290,8 +290,8 @@ public final class TaskViewUtils {
             topMostSimulators = remoteTargetHandles;
         }
 
-        if (!skipViewChanges && parallaxCenterAndAdjacentTask &&
-                topMostSimulators != null && topMostSimulators.length > 0) {
+        if (!skipViewChanges && parallaxCenterAndAdjacentTask && topMostSimulators != null
+                && topMostSimulators.length > 0) {
             out.addFloat(v, VIEW_ALPHA, 1, 0, clampToProgress(LINEAR, 0.2f, 0.4f));
 
             RemoteTargetHandle[] simulatorCopies = topMostSimulators;
