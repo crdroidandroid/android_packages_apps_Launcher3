@@ -224,6 +224,7 @@
     <icon drawable="@drawable/themed_icon_contacts" package="com.android.contacts" />
     <icon drawable="@drawable/themed_icon_files" package="com.android.documentsui" />
     <icon drawable="@drawable/themed_icon_photos" package="com.android.gallery3d" />
+    <icon drawable="@drawable/themed_icon_photos" package="com.oneplus.gallery" />
     <icon drawable="@drawable/themed_icon_messages" package="com.android.messaging" />
     <icon drawable="@drawable/themed_icon_dialer" package="com.android.dialer" />
     <icon drawable="@drawable/themed_icon_calendar_1" package="com.android.calendar" />
