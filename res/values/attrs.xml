@@ -22,6 +22,7 @@
     <attr name="allAppsScrimColorOverBlur" format="color" />
     <attr name="allappsHeaderProtectionColor" format="color" />
     <attr name="allAppsNavBarScrimColor" format="color" />
+    <attr name="allAppsSearchTextColor" format="color"/>
     <attr name="allAppsTheme" format="reference" />
     <attr name="popupColorPrimary" format="color" />
     <attr name="popupColorSecondary" format="color" />
