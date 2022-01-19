@@ -21,6 +21,7 @@
     <attr name="allAppsScrimColor" format="color" />
     <attr name="allappsHeaderProtectionColor" format="color" />
     <attr name="allAppsNavBarScrimColor" format="color" />
+    <attr name="allAppsSearchTextColor" format="color"/>
     <attr name="allAppsSurfaceLow" format="color" />
     <attr name="allAppsSurfaceHighest" format="color" />
     <attr name="allAppsUnselectedTab" format="color" />
