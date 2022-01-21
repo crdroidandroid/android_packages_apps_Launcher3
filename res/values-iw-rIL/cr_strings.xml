@@ -131,7 +131,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Recents screen, close app -->
     <string name="recents_close_app">סגור יישום</string>
     <string name="allow_swipe_down_clearall_title">החלק מטה כדי לנקות הכול</string>
-    <string name="allow_swipe_down_clearall_desc">Enable to clear all recents in the overview screen by swiping down</string>
+    <string name="allow_swipe_down_clearall_desc">אפשר לנקות את כל האחרונים במסך הסקירה הכללית על ידי החלקה מטה</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">ערך: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">כברירת מחדל</string>
@@ -142,7 +142,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Font size -->
     <string name="font_size_title">גודל גופן</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">מקסימום שורות עבור תווית יישומים</string>
     <!-- Scrim alpha in apps drawer -->
     <string name="all_apps_background_opacity_title">שקיפות הרקע</string>
     <!-- AppInfo -->
@@ -157,5 +157,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_info_more">עוד</string>
     <!-- Show dock search widget -->
     <string name="dock_search_title">סרגל החיפוש של Google</string>
-    <string name="dock_search_summary">Show search bar in the bottom dock</string>
+    <string name="dock_search_summary">הראה שורת חיפוש בדף הבית</string>
 </resources>
