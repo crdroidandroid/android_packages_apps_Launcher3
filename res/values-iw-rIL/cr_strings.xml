@@ -18,19 +18,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- General -->
     <string name="settings_title">הגדרות</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="home_category_title">דף הבית</string>
+    <string name="home_category_summary">הגדר את פאנל Google now כעת ועוד</string>
+    <string name="icons_category_title">סמלים</string>
+    <string name="icons_category_summary">הגדר את צורת הסמל ועוד</string>
+    <string name="app_drawer_category_title">מגירת היישומים</string>
+    <string name="app_drawer_category_summary">התאמה אישית של מגירת היישומים</string>
+    <string name="misc_category_title">שונות</string>
+    <string name="misc_category_summary">אפשרויות נוספות</string>
     <string name="dev_options_title">אפשרויות מפתחים</string>
     <string name="dev_options_desc">אפשר כמה תכונות נסתרות על אחריותך בלבד</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">בקצרה</string>
+    <string name="show_quickspace_summary">הצג בקצה העליון של מסך הבית שלך</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">ברוכים הבאים לcrDroid!</string>
     <string-array name="welcome_message_variants">
@@ -68,7 +68,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>זו דרך אחת להתעורר.</item>
         <item>אתה צריך לשנות את הצליל של השעון המעורר שלך.</item>
         <item>נראה שזה יום יפה, לא?</item>
-        <item>Let\'s get this bread.</item>
+        <item>בוא נעשה את זה.</item>
         <item>בדוק את מזג האוויר – לכל מקרה</item>
         <item>מרגיש קצת ישנוני עדיין, אה?</item>
         <item>הסתכלת כבר החוצה?</item>
@@ -89,8 +89,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>תכין את העצמות שלך למחר</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
+        <item>אממ... לילה טוב?</item>
+        <item>קצת מאוחר עכשיו</item>
         <item>You should fix your sleep schedule</item>
         <item>Are you more productive at this time?</item>
     </string-array>
