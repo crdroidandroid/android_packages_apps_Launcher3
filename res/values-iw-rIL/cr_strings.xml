@@ -91,16 +91,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string-array name="quickspace_psa_midnight">
         <item>אממ... לילה טוב?</item>
         <item>קצת מאוחר עכשיו</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>אתה צריך לסדר את זמני השינה שלך</item>
+        <item>האם אתה יעיל יותר בשלב זה?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
-        <item>Hyped about Android 12?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
+        <item>האם הגיע כבר הזמן לצרוב עדכון נוסף?</item>
+        <item>מתרגש מ־Android 12?</item>
+        <item>היי, מה קורה?</item>
+        <item>תתמקד במשימות שלך</item>
+        <item>כמה צילומי מסך אתה מצלם?</item>
         <item>Open goodness with crDroid</item>
         <item>תפיץ אהבה – לא שנאה</item>
         <item>תהנו!</item>
@@ -123,14 +123,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>Try Ice Cold desserts</item>
         <item>איזו חוויה מקסימה, לא?</item>
         <item>האבולוציה היא מיתוס, נכון?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
-        <item>Winner Winner ....?</item>
+        <item>אתה מה שאתה צורב, אל תהיה תפו\"א</item>
+        <item>על מה אתה חושב?</item>
+        <item>ווינר ווינר ....?</item>
         <item>rm -rf \/</item>
     </string-array>
     <!-- Recents screen, close app -->
-    <string name="recents_close_app">Close app</string>
-    <string name="allow_swipe_down_clearall_title">Swipe down to clear all recents</string>
+    <string name="recents_close_app">סגור יישום</string>
+    <string name="allow_swipe_down_clearall_title">החלק מטה כדי לנקות הכול</string>
     <string name="allow_swipe_down_clearall_desc">Enable to clear all recents in the overview screen by swiping down</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">ערך: <xliff:g id="v">%s</xliff:g></string>
@@ -138,7 +138,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="custom_seekbar_default_value_to_set">ערך ברירת מחדל: <xliff:g id="v">%s</xliff:g>\nלחיצה ממושכת להגדרה</string>
     <string name="custom_seekbar_default_value_is_set">ערך ברירת מחדל מוגדר</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">גודל הסמל</string>
     <!-- Font size -->
     <string name="font_size_title">גודל גופן</string>
     <!-- App label - max lines -->
