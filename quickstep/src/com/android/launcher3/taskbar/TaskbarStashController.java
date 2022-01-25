@@ -248,7 +248,11 @@ public class TaskbarStashController {
      * Returns whether the taskbar is currently visible and in an app.
      */
     public boolean isInAppAndNotStashed() {
-        return !mIsStashed && (mState & FLAG_IN_APP) != 0;
+        return !mIsStashed && isInApp();
+    }
+
+    private boolean isInApp() {
+        return hasAnyFlag(FLAG_IN_APP);
     }
 
     /**
@@ -257,8 +261,15 @@ public class TaskbarStashController {
     public int getContentHeightToReportToApps() {
         if (hasAnyFlag(FLAGS_REPORT_STASHED_INSETS_TO_APP)) {
             boolean isAnimating = mAnimator != null && mAnimator.isStarted();
-            return mControllers.stashedHandleViewController.isStashedHandleVisible() || isAnimating
-                    ? mStashedHeight : 0;
+            if (!mControllers.stashedHandleViewController.isStashedHandleVisible()
+                    && isInApp()
+                    && !isAnimating) {
+                // We are in a settled state where we're not showing the handle even though taskbar
+                // is stashed. This can happen for example when home button is disabled (see
+                // StashedHandleViewController#setIsHomeButtonDisabled()).
+                return 0;
+            }
+            return mStashedHeight;
         }
         return mUnstashedHeight;
     }
