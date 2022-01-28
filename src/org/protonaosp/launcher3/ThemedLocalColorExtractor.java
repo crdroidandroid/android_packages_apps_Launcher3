@@ -16,6 +16,7 @@
 
 package org.protonaosp.launcher3;
 
+import android.annotation.ColorInt;
 import android.app.WallpaperColors;
 import android.app.WallpaperManager;
 import android.content.Context;
@@ -60,16 +61,7 @@ public class ThemedLocalColorExtractor extends LocalColorExtractor implements
     private static final SparseIntArray NEUTRAL1_RES = new SparseIntArray(13);
     private static final SparseIntArray NEUTRAL2_RES = new SparseIntArray(13);
 
-    // Viewing conditions and targets for theme generation
-    private final Zcam.ViewingConditions cond = new Zcam.ViewingConditions(
-            /* surroundFactor */ Zcam.ViewingConditions.SURROUND_AVERAGE,
-            /* adaptingLuminance */ 0.4 * CieXyzAbs.DEFAULT_SDR_WHITE_LUMINANCE,
-            /* backgroundLuminance */ new CieLab(50.0, 0.0, 0.0, Illuminants.D65)
-                    .toXyz().getY() * CieXyzAbs.DEFAULT_SDR_WHITE_LUMINANCE,
-            /* referenceWhite */ CieXyzAbs.fromRel(Illuminants.D65,
-                    CieXyzAbs.DEFAULT_SDR_WHITE_LUMINANCE)
-    );
-    private final ColorScheme targets = new MaterialYouTargets(1.0, false, cond);
+    private Context mContext;
 
     private final WallpaperManager wallpaperManager;
     private Listener listener;
@@ -154,6 +146,7 @@ public class ThemedLocalColorExtractor extends LocalColorExtractor implements
     }
 
     public ThemedLocalColorExtractor(Context context) {
+        mContext = context;
         wallpaperManager = (WallpaperManager) context.getSystemService(Context.WALLPAPER_SERVICE);
 
         try {
@@ -202,8 +195,19 @@ public class ThemedLocalColorExtractor extends LocalColorExtractor implements
         }
 
         SparseIntArray colorRes = new SparseIntArray(5 * 13);
-        Color color = new Srgb(colors.getPrimaryColor().toArgb());
-        ColorScheme colorScheme = new DynamicColorScheme(targets, color, 1.0, cond, true);
+        double luminance = (double) Settings.Secure.getLong(mContext.getContentResolver(), "monet_engine_white_luminance_user", (long) CieXyzAbs.DEFAULT_SDR_WHITE_LUMINANCE);
+        Zcam.ViewingConditions cond = new Zcam.ViewingConditions(
+            /* surroundFactor */ Zcam.ViewingConditions.SURROUND_AVERAGE,
+            /* adaptingLuminance */ 0.4 * luminance,
+            /* backgroundLuminance */ new CieLab(50.0, 0.0, 0.0, Illuminants.D65)
+                    .toXyz().getY() * luminance,
+            /* referenceWhite */ CieXyzAbs.fromRel(Illuminants.D65, luminance)
+        );
+        ColorScheme targets = new MaterialYouTargets(getChroma(), false, cond);
+        @ColorInt int customColor = Settings.Secure.getInt(mContext.getContentResolver(), "monet_engine_custom_color", 0);
+        @ColorInt int colorOverride = Settings.Secure.getInt(mContext.getContentResolver(), "monet_engine_color_override", -1);
+        Color color = new Srgb((colorOverride != -1 && customColor != 0)  ? colorOverride : colors.getPrimaryColor().toArgb());
+        ColorScheme colorScheme = new DynamicColorScheme(targets, color, getChroma(), cond, true);
 
         addColorsToArray(colorScheme.getAccent1(), ACCENT1_RES, colorRes);
         addColorsToArray(colorScheme.getAccent2(), ACCENT2_RES, colorRes);
@@ -276,5 +280,9 @@ public class ThemedLocalColorExtractor extends LocalColorExtractor implements
         if (listener != null) {
             listener.onColorsChanged(generateColorsOverride(colors));
         }
+    }
+
+    private float getChroma() {
+        return Settings.Secure.getFloat(mContext.getContentResolver(), "monet_engine_chroma_factor", 1.0f);
     }
 }
