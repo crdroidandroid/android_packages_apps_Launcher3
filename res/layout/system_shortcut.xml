@@ -39,7 +39,8 @@
         android:textColor="?android:attr/textColorPrimary"
         launcher:iconDisplay="shortcut_popup"
         launcher:layoutHorizontal="true"
-        android:focusable="false" />
+        android:focusable="false"
+        android:minHeight="@dimen/bg_popup_item_height" />
 
     <View
         android:id="@+id/icon"
