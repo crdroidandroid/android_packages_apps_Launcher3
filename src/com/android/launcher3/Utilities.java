@@ -125,9 +125,6 @@ public final class Utilities {
     public static final boolean ATLEAST_S = BuildCompat.isAtLeastS()
             || Build.VERSION.SDK_INT >= Build.VERSION_CODES.S;
 
-    public static final String ICON_SIZE = "pref_custom_icon_size";
-    public static final String FONT_SIZE = "pref_custom_font_size";
-
     /**
      * Set on a motion event dispatched from the nav bar. See {@link MotionEvent#setEdgeFlags(int)}.
      */
@@ -863,15 +860,5 @@ public final class Utilities {
     public static boolean isWorkspaceEditAllowed(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return !prefs.getBoolean(InvariantDeviceProfile.KEY_WORKSPACE_LOCK, false);
-    }
-
-    public static int getIconSizeModifier(Context context) {
-        SharedPreferences prefs = getPrefs(context.getApplicationContext());
-        return prefs.getInt(ICON_SIZE, 100);
-    }
-
-    public static int getFontSizeModifier(Context context) {
-        SharedPreferences prefs = getPrefs(context.getApplicationContext());
-        return prefs.getInt(FONT_SIZE, 100);
     }
 }

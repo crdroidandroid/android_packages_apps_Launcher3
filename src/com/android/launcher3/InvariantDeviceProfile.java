@@ -83,6 +83,8 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
     public static final String KEY_SHOW_DESKTOP_LABELS = "pref_desktop_show_labels";
     public static final String KEY_SHOW_DRAWER_LABELS = "pref_drawer_show_labels";
     public static final String KEY_WORKSPACE_LOCK = "pref_workspace_lock";
+    public static final String KEY_ICON_SIZE = "pref_custom_icon_size";
+    public static final String KEY_FONT_SIZE = "pref_custom_font_size";
 
     // Constants that affects the interpolation curve between statically defined device profile
     // buckets.
@@ -263,8 +265,8 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
         switch (key) {
             case KEY_SHOW_DESKTOP_LABELS:
             case KEY_SHOW_DRAWER_LABELS:
-            case Utilities.ICON_SIZE:
-            case Utilities.FONT_SIZE:
+            case KEY_ICON_SIZE:
+            case KEY_FONT_SIZE:
                 onConfigChanged(mContext);
                 break;
         }
@@ -314,8 +316,10 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
 
         mExtraAttrs = closestProfile.extraAttrs;
 
-        float iconSizeModifier = (float) Utilities.getIconSizeModifier(context) / 100F;
-        float fontSizeModifier = (float) Utilities.getFontSizeModifier(context) / 100F;
+        float iconSizeModifier =
+                (float) Utilities.getPrefs(context).getInt(KEY_ICON_SIZE, 100) / 100F;
+        float fontSizeModifier =
+                (float) Utilities.getPrefs(context).getInt(KEY_FONT_SIZE, 100) / 100F;
         iconSize = displayOption.iconSize * iconSizeModifier;
         landscapeIconSize = displayOption.landscapeIconSize * iconSizeModifier;
         iconBitmapSize = ResourceUtils.pxFromDp(iconSize, metrics);
