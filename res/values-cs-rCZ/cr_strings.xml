@@ -35,17 +35,17 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Při gestu přejetím vpravo z\u00a0domovské obrazovky</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">Hodnota: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">výchozí hodnota</string>
+    <string name="custom_seekbar_default_value_to_set">Výchozí hodnota: <xliff:g id="v">%s</xliff:g>\nDlouze klepněte na šipku pro její nastavení</string>
+    <string name="custom_seekbar_default_value_is_set">Výchozí hodnota je nastavena</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">Velikost ikon</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">Velikost písma</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">Maximální počet řádků pro popisek aplikace</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">Uspat dvojím poklepáním</string>
+    <string name="pref_sleep_gesture_summary">Dvojím poklepáním do prázdného prostoru uspat zařízení</string>
 </resources>
