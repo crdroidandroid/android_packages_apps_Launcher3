@@ -23,29 +23,29 @@
     <string name="icons_category_title">סמלים</string>
     <string name="icons_category_summary">הגדר את צורת הסמל ועוד</string>
     <string name="app_drawer_category_title">מגירת היישומים</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
-    <string name="dev_options_title">Developer options</string>
-    <string name="dev_options_desc">Enable some hidden features at your own risk</string>
+    <string name="app_drawer_category_summary">התאמה אישית של מגירת היישומים</string>
+    <string name="misc_category_title">שונות</string>
+    <string name="misc_category_summary">אפשרויות נוספות</string>
+    <string name="dev_options_title">אפשרויות מפתחים</string>
+    <string name="dev_options_desc">אפשר כמה תכונות נסתרות על אחריותך בלבד</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Swipe to access Google app</string>
+    <string name="title_show_google_app">החלק כדי לגשת לאפליקציה גוגל</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">When you swipe left from main Home screen</string>
+    <string name="msg_minus_one_on_left">בעת החלקה שמאלה ממסך הבית</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">When you swipe right from main Home screen</string>
+    <string name="msg_minus_one_on_right">בעת החלקה ימינה ממסך הבית</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">ערך: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">כברירת מחדל</string>
+    <string name="custom_seekbar_default_value_to_set">ערך ברירת מחדל: <xliff:g id="v">%s</xliff:g>/nלחיצה ארוכה כדי להגדיר</string>
+    <string name="custom_seekbar_default_value_is_set">ערך ברירת מחדל מוגדר</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">גודל הסמל</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">גודל גופן</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">מקסימום שורות עבור תווית יישומים</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">הקשה כפולה לכיבוי המסך</string>
+    <string name="pref_sleep_gesture_summary">הקשה כפולה על מקום ריק לכיבוי המסך</string>
 </resources>
