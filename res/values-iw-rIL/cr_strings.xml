@@ -16,13 +16,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">הגדרות</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
+    <string name="home_category_title">דף הבית</string>
+    <string name="home_category_summary">הגדר את פאנל Google now כעת ועוד</string>
+    <string name="icons_category_title">סמלים</string>
+    <string name="icons_category_summary">הגדר את צורת הסמל ועוד</string>
+    <string name="app_drawer_category_title">מגירת היישומים</string>
     <string name="app_drawer_category_summary">Customize your app drawer</string>
     <string name="misc_category_title">Miscellaneous</string>
     <string name="misc_category_summary">Other options</string>
