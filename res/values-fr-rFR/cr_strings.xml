@@ -35,7 +35,7 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Lorsque vous faites glisser depuis la gauche sur l\'écran d\'accueil principal</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_value">Valeur : <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">par défaut</string>
     <string name="custom_seekbar_default_value_to_set">Valeur par défaut : <xliff:g id="v">%s</xliff:g>\nAppui long pour définir</string>
     <string name="custom_seekbar_default_value_is_set">La valeur par défaut est définie</string>
@@ -47,5 +47,5 @@
     <string name="icon_max_lines_title">Lignes maximales pour le libellé de l\'application</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Appui double pour mettre en veille. </string>
-    <string name="pref_sleep_gesture_summary">Double appui sur un espace vide pour éteindre</string>
+    <string name="pref_sleep_gesture_summary">Double appui sur un espace vide pour éteindre </string>
 </resources>
