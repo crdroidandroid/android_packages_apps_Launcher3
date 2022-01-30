@@ -22,9 +22,9 @@
     <string name="home_category_summary">Google now panelini ve daha fazlasını ayarlayın</string>
     <string name="icons_category_title">Simgeler</string>
     <string name="icons_category_summary">Simge şeklini ve daha fazlasını ayarlayın</string>
-    <string name="app_drawer_category_title">Uygulama menüsü</string>
-    <string name="app_drawer_category_summary">Uygulama menünüzü özelleştirin</string>
-    <string name="misc_category_title">Çeşitli</string>
+    <string name="app_drawer_category_title">Uygulama çekmecesi</string>
+    <string name="app_drawer_category_summary">Uygulama çekmecenizi özelleştirin</string>
+    <string name="misc_category_title">Çeşitli seçenekler</string>
     <string name="misc_category_summary">Diğer seçenekler</string>
     <string name="dev_options_title">Geliştirici seçenekleri</string>
     <string name="dev_options_desc">Bazı gizli özellikleri kendi sorumluluğunuzda etkinleştirin</string>
@@ -44,8 +44,8 @@
     <!-- Font size -->
     <string name="font_size_title">Yazı tipi boyutu</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Uygulama adı için maksimum satır sayısı</string>
+    <string name="icon_max_lines_title">Uygulama etiketi için maksimum satır sayısı</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Çift dokunuşla uyutma</string>
-    <string name="pref_sleep_gesture_summary">Ekranı kapatmak için boş bir alana çift dokunun</string>
+    <string name="pref_sleep_gesture_title">Çift dokunarak uyutma</string>
+    <string name="pref_sleep_gesture_summary">Ekranı kapatmak için boş bir alana çift dokun</string>
 </resources>
