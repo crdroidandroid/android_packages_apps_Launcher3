@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Beállítások</string>
+    <!-- Categories -->
+    <string name="home_category_title">Kezdőképernyő</string>
+    <string name="home_category_summary">A \'Google Now\' panel és egyebek beállítása</string>
+    <string name="icons_category_title">Ikonok</string>
+    <string name="icons_category_summary">Az ikonok beállításai (forma, méret és egyebek)</string>
+    <string name="app_drawer_category_title">Alkalmazásfiók</string>
+    <string name="app_drawer_category_summary">Testreszabhatja az Alkalmazásfiókját</string>
+    <string name="misc_category_title">Különlegességek</string>
+    <string name="misc_category_summary">Minden, ami egyedivé tesz</string>
+    <string name="dev_options_title">Fejlesztői beállítások</string>
+    <string name="dev_options_desc">Saját felelősségére rejtett beállításokat engedélyezhet</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Google-alkalmazás csúsztatással</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Amikor a fő Kezdőképernyőn balra csúsztat</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Amikor a fő Kezdőképernyőn jobbra csúsztat</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value"><xliff:g id="v">%s</xliff:g> értékű</string>
+    <string name="custom_seekbar_default_value">alapértelmezés szerint</string>
+    <string name="custom_seekbar_default_value_to_set">Alapértelmezetten <xliff:g id="v">%s</xliff:g> értékű\nÉrintse meg a beállításhoz</string>
+    <string name="custom_seekbar_default_value_is_set">Az alapértelmezett érték beállítva</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Ikonméret</string>
+    <!-- Font size -->
+    <string name="font_size_title">Betűméret</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Sorok maximális száma az ikoncímkékhez</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Alvómód duplakoppal</string>
+    <string name="pref_sleep_gesture_summary">A kikapcsoláshoz elég a duplakopp egy üres területre</string>
+</resources>
