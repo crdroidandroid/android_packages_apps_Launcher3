@@ -100,7 +100,11 @@ public class Hotseat extends CellLayout implements Insettable {
 
     public Hotseat(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        mQsb = LayoutInflater.from(context).inflate(R.layout.search_container_hotseat, this, false);
+        if (Utilities.showQSB(context)) {
+            mQsb = LayoutInflater.from(context).inflate(R.layout.search_container_hotseat, this, false);
+        } else {
+            mQsb = LayoutInflater.from(context).inflate(R.layout.empty_view, this, false);
+        }
         addView(mQsb);
         mIconsAlphaChannels = new MultiValueAlpha(getShortcutsAndWidgets(),
                 ALPHA_CHANNEL_CHANNELS_COUNT);
