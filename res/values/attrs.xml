@@ -73,6 +73,12 @@
     <attr name="widgetPickerUnselectedTabTextColor" format="color"/>
     <attr name="widgetPickerCollapseHandleColor" format="color"/>
 
+    <attr name="qsbFillColor" format="color" />
+    <attr name="qsbIconTintPrimary" format="color" />
+    <attr name="qsbIconTintQuaternary" format="color" />
+    <attr name="qsbIconTintSecondary" format="color" />
+    <attr name="qsbIconTintTertiary" format="color" />
+
     <!-- BubbleTextView specific attributes. -->
     <declare-styleable name="BubbleTextView">
         <attr name="layoutHorizontal" format="boolean" />

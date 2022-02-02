@@ -109,4 +109,9 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Use taskbar</string>
     <string name="pref_allow_phone_taskbar_summary">For opening and switching apps anywhere</string>
+
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Search</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Voice search</string>
 </resources>
