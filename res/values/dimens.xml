@@ -31,14 +31,17 @@
 
     <!-- Hotseat -->
     <dimen name="dynamic_grid_hotseat_top_padding">8dp</dimen>
-    <dimen name="dynamic_grid_hotseat_bottom_padding">62dp</dimen>
+    <dimen name="dynamic_grid_hotseat_bottom_padding">2dp</dimen>
     <!-- Extra bottom padding for non-tall devices. -->
-    <dimen name="dynamic_grid_hotseat_bottom_non_tall_padding">15dp</dimen>
-    <dimen name="dynamic_grid_hotseat_extra_vertical_size">24dp</dimen>
+    <dimen name="dynamic_grid_hotseat_bottom_non_tall_padding">0dp</dimen>
+    <dimen name="dynamic_grid_hotseat_extra_vertical_size">34dp</dimen>
     <dimen name="dynamic_grid_hotseat_side_padding">0dp</dimen>
 
-    <dimen name="noqsb_hotseat_bottom_non_tall_padding">0dp</dimen>
-    <dimen name="noqsb_hotseat_extra_vertical_size">34dp</dimen>
+    <dimen name="dynamic_grid_hotseat_top_padding_widget">0dp</dimen>
+    <dimen name="dynamic_grid_hotseat_bottom_padding_widget">60dp</dimen>
+    <dimen name="dynamic_grid_hotseat_bottom_non_tall_padding_widget">15dp</dimen>
+    <dimen name="dynamic_grid_hotseat_extra_vertical_size_widget">24dp</dimen>
+
     <dimen name="qsb_g_icon_marginStart">16dp</dimen>
     <dimen name="qsb_lens_marginEnd">4dp</dimen>
     <dimen name="qsb_lens_padding">8dp</dimen>
@@ -46,9 +49,7 @@
     <dimen name="qsb_mic_width">54dp</dimen>
     <dimen name="qsb_min_width_with_mic">124dp</dimen>
     <dimen name="qsb_shadow_margin">6dp</dimen>
-    <dimen name="qsb_widget_height">63dp</dimen>
-    <dimen name="noqsb_hotseat_top_padding">8dp</dimen>
-    <dimen name="noqsb_hotseat_bottom_padding">2dp</dimen>
+    <dimen name="qsb_widget_height">64dp</dimen>
 
     <!-- Scalable Grid -->
     <dimen name="scalable_grid_qsb_bottom_margin">42dp</dimen>
@@ -108,7 +109,7 @@
     <dimen name="all_apps_header_pill_corner_radius">12dp</dimen>
     <dimen name="all_apps_header_tab_height">48dp</dimen>
     <dimen name="all_apps_tabs_indicator_height">2dp</dimen>
-    <dimen name="all_apps_header_top_padding">36dp</dimen>
+    <dimen name="all_apps_header_top_padding">30dp</dimen>
     <dimen name="all_apps_header_bottom_padding">6dp</dimen>
     <dimen name="all_apps_work_profile_tab_footer_top_padding">16dp</dimen>
     <dimen name="all_apps_work_profile_tab_footer_bottom_padding">20dp</dimen>
