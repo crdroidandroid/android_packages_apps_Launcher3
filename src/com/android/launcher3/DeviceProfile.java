@@ -141,6 +141,8 @@ public class DeviceProfile {
     private float allAppsCellHeightMultiplier;
     private boolean allAppsIconText;
 
+    public boolean isQsbVisible;
+
     /** Used only as an alternative to mocking when null values cannot be used. */
     @VisibleForTesting
     public DeviceProfile() {
@@ -189,6 +191,7 @@ public class DeviceProfile {
         mInfo = null;
         mMetrics = null;
         mIconSizeSteps = null;
+        isQsbVisible = true;
         mIsScalableGrid = false;
         mTypeIndex = 0;
         mIsResponsiveGrid = false;
@@ -283,7 +286,9 @@ public class DeviceProfile {
                     responsiveAspectRatio, mDeviceProperties.getHeightPx());
         }
 
-        int qsbHeight = res.getDimensionPixelSize(R.dimen.qsb_widget_height);
+        isQsbVisible = Utilities.showQSB(context);
+
+        int qsbHeight = isQsbVisible ? res.getDimensionPixelSize(R.dimen.qsb_widget_height) : 0;
 
         HotseatProfileInitialValues hotseatProfileInitialValues =
                 HotseatProfileInitialValues.Factory.createHotseatProfileInitialValues(
@@ -997,6 +1002,7 @@ public class DeviceProfile {
     }
 
     private int getAdditionalQsbSpace() {
+        if (!isQsbVisible) return 0;
         return mHotseatProfile.isQsbInline() ? mHotseatProfile.getQsbWidth()
                 + mHotseatProfile.getBorderSpace() : 0;
     }
@@ -1017,6 +1023,7 @@ public class DeviceProfile {
      * Returns the number of pixels the QSB is translated from the bottom of the screen.
      */
     public int getQsbOffsetY() {
+        if (!isQsbVisible) return 0;
         if (mHotseatProfile.isQsbInline()) {
             return getHotseatBarBottomPadding()
                     - ((getHotseatProfile().getQsbHeight()
@@ -1052,7 +1059,7 @@ public class DeviceProfile {
         if (shouldAlignBubbleBarWithHotseat()) {
             return mHotseatProfile.getBarSizePx()
                     - (mHotseatProfile.isQsbInline() ? 0 : getHotseatProfile().getQsbVisualHeight())
-                    - mHotseatProfile.getQsbSpace()
+                    - (isQsbVisible ? mHotseatProfile.getQsbSpace() : 0)
                     - (mHotseatProfile.getCellHeightPx() / 2)
                     + ((mHotseatProfile.getCellHeightPx()
                     - getWorkspaceProfile().getIconSizePx()) / 2);

@@ -43,6 +43,7 @@ import android.util.ArraySet;
 import android.util.AttributeSet;
 import android.view.DisplayCutout;
 import android.view.InputDevice;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,6 +60,7 @@ import com.android.launcher3.BubbleTextView;
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Flags;
 import com.android.launcher3.Insettable;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.anim.AnimatorListeners;
@@ -186,7 +188,7 @@ public class TaskbarView extends FrameLayout implements FolderIcon.FolderIconPar
      */
     private boolean mAddedDividerForRecents;
 
-    private final View mQsb;
+    private final @Nullable View mQsb;
 
     private final float mTransientTaskbarMinWidth;
 
@@ -232,8 +234,14 @@ public class TaskbarView extends FrameLayout implements FolderIcon.FolderIconPar
         mTaskbarUiState.setIsTaskbarViewShown(isShown());
         mTransientTaskbarMinWidth = resources.getDimension(R.dimen.transient_taskbar_min_width);
 
-        // TODO: Disable touch events on QSB otherwise it can crash.
-        mQsb = LauncherComponentProvider.get(context).getQsbWidgetFactory().createView(this);
+        if (Utilities.showQSB(context)) {
+            int layoutRes = LauncherPrefs.DOCK_SEARCH_PIXEL_STYLE.get(context)
+                    ? R.layout.qsb_container_hotseat_pixel
+                    : R.layout.qsb_container_hotseat;
+            mQsb = LayoutInflater.from(context).inflate(layoutRes, this, false);
+        } else {
+            mQsb = null;
+        }
         onDeviceProfileChanged(mActivityContext.getDeviceProfile());
 
         final TaskbarSpecsEvaluator specsEvaluator = mActivityContext.getTaskbarSpecsEvaluator();
@@ -365,7 +373,8 @@ public class TaskbarView extends FrameLayout implements FolderIcon.FolderIconPar
             numStaticViews++;
         }
 
-        if (mActivityContext.getDeviceProfile().getHotseatProfile().isQsbInline()) {
+        if (mQsb != null
+                && mActivityContext.getDeviceProfile().getHotseatProfile().isQsbInline()) {
             addView(mQsb, mIsRtl ? numStaticViews : 0);
             mQsb.setVisibility(View.INVISIBLE);
             numStaticViews++;
@@ -397,10 +406,12 @@ public class TaskbarView extends FrameLayout implements FolderIcon.FolderIconPar
     @Override
     public void onDeviceProfileChanged(DeviceProfile dp) {
         mShouldTryStartAlign = mActivityContext.shouldStartAlignTaskbar();
-        ViewGroup.LayoutParams lp = mQsb.getLayoutParams();
-        if (lp != null) {
-            lp.width = dp.getHotseatProfile().getQsbWidth();
-            lp.height = dp.getHotseatProfile().getQsbHeight();
+        if (mQsb != null) {
+            ViewGroup.LayoutParams lp = mQsb.getLayoutParams();
+            if (lp != null) {
+                lp.width = dp.getHotseatProfile().getQsbWidth();
+                lp.height = dp.getHotseatProfile().getQsbHeight();
+            }
         }
     }
 
@@ -1801,8 +1812,9 @@ public class TaskbarView extends FrameLayout implements FolderIcon.FolderIconPar
     }
 
     /**
-     * Returns the QSB in the taskbar.
+     * Returns the QSB in the taskbar, or null if QSB is not enabled.
      */
+    @Nullable
     public View getQsb() {
         return mQsb;
     }

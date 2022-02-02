@@ -40,6 +40,9 @@
 
     <dimen name="dynamic_grid_hotseat_side_padding">0dp</dimen>
 
+    <dimen name="qsb_icon_padding">10dp</dimen>
+    <dimen name="qsb_widget_vertical_padding">6dp</dimen>
+
     <!-- Scalable Grid -->
     <dimen name="min_qsb_margin">8dp</dimen>
 
@@ -428,7 +431,7 @@
     <dimen name="qsb_search_icon_padding_end">8dp</dimen>
     <dimen name="min_hotseat_icon_space">18dp</dimen>
     <dimen name="max_hotseat_icon_space">50dp</dimen>
-    <dimen name="min_hotseat_qsb_width">0dp</dimen>
+    <dimen name="min_hotseat_qsb_width">240dp</dimen>
     <dimen name="taskbar_running_app_indicator_height">0dp</dimen>
     <dimen name="taskbar_running_app_indicator_width">0dp</dimen>
     <dimen name="taskbar_running_app_indicator_top_margin">0dp</dimen>

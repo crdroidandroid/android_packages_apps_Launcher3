@@ -78,6 +78,81 @@
             android:persistent="true"
             launcher:iconSpaceReserved="false" />
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/search_bar_category_title">
+
+        <SwitchPreferenceCompat
+            android:key="pref_dock_search"
+            android:title="@string/dock_search_title"
+            android:summary="@string/dock_search_summary"
+            android:defaultValue="true"
+            launcher:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="pref_dock_search_pixel_style"
+            android:title="@string/dock_search_pixel_style_title"
+            android:summary="@string/dock_search_pixel_style_summary"
+            android:dependency="pref_dock_search"
+            android:defaultValue="true"
+            android:persistent="true"
+            launcher:iconSpaceReserved="false" />
+
+        <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+            android:key="pref_hotseat_qsb_opacity"
+            android:title="@string/background_opacity_title"
+            android:persistent="true"
+            android:max="100"
+            android:min="0"
+            settings:units="%"
+            android:dependency="pref_dock_search"
+            android:defaultValue="70" />
+
+        <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+            android:key="pref_hotseat_qsb_outer_opacity"
+            android:title="@string/qsb_outer_opacity_title"
+            android:persistent="true"
+            android:max="100"
+            android:min="0"
+            settings:units="%"
+            android:dependency="pref_dock_search_pixel_style"
+            android:defaultValue="60" />
+
+        <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+            android:key="pref_hotseat_qsb_stroke_width"
+            android:title="@string/stroke_width_title"
+            android:persistent="true"
+            android:max="10"
+            android:min="0"
+            settings:units="vw"
+            android:dependency="pref_dock_search"
+            android:defaultValue="0" />
+
+        <SwitchPreferenceCompat
+            android:key="pref_dock_music_search"
+            android:title="@string/dock_music_search_title"
+            android:summary="@string/dock_music_search_summary"
+            android:dependency="pref_dock_search"
+            android:defaultValue="false"
+            launcher:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="pref_dock_theme"
+            android:title="@string/dock_theme_title"
+            android:summary="@string/dock_theme_summary"
+            launcher:iconSpaceReserved="false" />
+
+        <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+            android:key="pref_search_radius_size"
+            android:title="@string/search_radius_title"
+            android:persistent="true"
+            android:max="100"
+            android:min="0"
+            settings:interval="5"
+            settings:units="%"
+            android:defaultValue="100" />
+
         <SwitchPreferenceCompat
             android:key="pref_show_hotseat_bg"
             android:title="@string/hotseat_bg_title"

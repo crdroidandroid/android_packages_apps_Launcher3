@@ -28,6 +28,7 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewDebug;
@@ -91,13 +92,13 @@ public class Hotseat extends CellLayout implements Insettable {
     private Workspace<?> mWorkspace;
     private boolean mSendTouchToWorkspace;
     private final MultiValueAlpha mIconsAlphaChannels;
-    private final MultiValueAlpha mQsbAlphaChannels;
+    private final @Nullable MultiValueAlpha mQsbAlphaChannels;
 
     private @Nullable MultiProperty mQsbTranslationX;
 
     private final MultiPropertyFactory mIconsTranslationXFactory;
 
-    private final View mQsb;
+    private final @Nullable View mQsb;
 
     public Hotseat(Context context) {
         this(context, null);
@@ -109,20 +110,32 @@ public class Hotseat extends CellLayout implements Insettable {
 
     public Hotseat(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        mQsb = LauncherComponentProvider.get(context).getQsbWidgetFactory().createView(this);
+        if (Utilities.showQSB(context)) {
+            int layoutRes = LauncherPrefs.DOCK_SEARCH_PIXEL_STYLE.get(context)
+                    ? R.layout.qsb_container_hotseat_pixel
+                    : R.layout.qsb_container_hotseat;
+            mQsb = LayoutInflater.from(context).inflate(layoutRes, this, false);
+        } else {
+            mQsb = null;
+        }
 
-        addView(mQsb);
+        if (mQsb != null) {
+            addView(mQsb);
+            if (mQsb instanceof Reorderable qsbReorderable) {
+                mQsbTranslationX = qsbReorderable.getTranslateDelegate()
+                        .getTranslationX(MultiTranslateDelegate.INDEX_NAV_BAR_ANIM);
+            }
+            mQsbAlphaChannels = new MultiValueAlpha(mQsb, ALPHA_CHANNEL_CHANNELS_COUNT);
+            mQsbAlphaChannels.setUpdateVisibility(true);
+        } else {
+            mQsbAlphaChannels = null;
+        }
+
         mIconsAlphaChannels = new MultiValueAlpha(getShortcutsAndWidgets(),
                 ALPHA_CHANNEL_CHANNELS_COUNT);
         mIconsAlphaChannels.setUpdateVisibility(true);
-        if (mQsb instanceof Reorderable qsbReorderable) {
-            mQsbTranslationX = qsbReorderable.getTranslateDelegate()
-                    .getTranslationX(MultiTranslateDelegate.INDEX_NAV_BAR_ANIM);
-        }
         mIconsTranslationXFactory = new MultiPropertyFactory<>(getShortcutsAndWidgets(),
                 VIEW_TRANSLATE_X, ICONS_TRANSLATION_X_CHANNELS_COUNT, Float::sum);
-        mQsbAlphaChannels = new MultiValueAlpha(mQsb, ALPHA_CHANNEL_CHANNELS_COUNT);
-        mQsbAlphaChannels.setUpdateVisibility(true);
     }
 
     /** Provides translation X for hotseat icons for the channel. */
@@ -174,7 +187,7 @@ public class Hotseat extends CellLayout implements Insettable {
             if (dp.shouldAdjustHotseatForBubbleBar(getContext(), hasBubbles)) {
                 getShortcutsAndWidgets().setTranslationProvider(
                         cellX -> dp.getHotseatAdjustedTranslation(getContext(), cellX));
-                if (mQsb instanceof HorizontalInsettableView) {
+                if (mQsb != null && mQsb instanceof HorizontalInsettableView) {
                     HorizontalInsettableView insettableQsb = (HorizontalInsettableView) mQsb;
                     final float insetFraction =
                             (float) dp.getWorkspaceProfile().getIconSizePx()
@@ -185,7 +198,7 @@ public class Hotseat extends CellLayout implements Insettable {
                 }
             } else {
                 getShortcutsAndWidgets().setTranslationProvider(null);
-                if (mQsb instanceof HorizontalInsettableView) {
+                if (mQsb != null && mQsb instanceof HorizontalInsettableView) {
                     ((HorizontalInsettableView) mQsb).setHorizontalInsets(0);
                 }
             }
@@ -240,7 +253,7 @@ public class Hotseat extends CellLayout implements Insettable {
         //TODO(b/381109832) refactor & simplify adjustment logic
         boolean shouldAdjustQsb =
                 shouldAdjustHotseat || (shouldAdjust && dp.shouldAlignBubbleBarWithQSB());
-        if (mQsb instanceof HorizontalInsettableView horizontalInsettableQsb) {
+        if (mQsb != null && mQsb instanceof HorizontalInsettableView horizontalInsettableQsb) {
             final float currentInsetFraction = horizontalInsettableQsb.getHorizontalInsets();
             final float targetInsetFraction = shouldAdjustQsb
                     ? (float) dp.getWorkspaceProfile().getIconSizePx() / dp.getHotseatProfile()
@@ -271,7 +284,7 @@ public class Hotseat extends CellLayout implements Insettable {
 
         int topOverlap = 0;
         if (grid.isVerticalBarLayout()) {
-            mQsb.setVisibility(View.GONE);
+            if (mQsb != null) mQsb.setVisibility(View.GONE);
             lp.height = ViewGroup.LayoutParams.MATCH_PARENT;
             if (grid.isSeascape()) {
                 lp.gravity = Gravity.LEFT;
@@ -281,7 +294,7 @@ public class Hotseat extends CellLayout implements Insettable {
                 lp.width = grid.getHotseatProfile().getBarSizePx() + insets.right;
             }
         } else {
-            mQsb.setVisibility(View.VISIBLE);
+            if (mQsb != null) mQsb.setVisibility(View.VISIBLE);
             lp.gravity = Gravity.BOTTOM;
             lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
 
@@ -337,16 +350,20 @@ public class Hotseat extends CellLayout implements Insettable {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
-        DeviceProfile dp = mActivity.getDeviceProfile();
-        mQsb.measure(
-                makeMeasureSpec(dp.getHotseatProfile().getQsbWidth(), MeasureSpec.EXACTLY),
-                makeMeasureSpec(dp.getHotseatProfile().getQsbHeight(), MeasureSpec.EXACTLY)
-        );
+        if (mQsb != null && mQsb.getVisibility() != View.GONE) {
+            DeviceProfile dp = mActivity.getDeviceProfile();
+            mQsb.measure(
+                    makeMeasureSpec(dp.getHotseatProfile().getQsbWidth(), MeasureSpec.EXACTLY),
+                    makeMeasureSpec(dp.getHotseatProfile().getQsbHeight(), MeasureSpec.EXACTLY)
+            );
+        }
     }
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
+
+        if (mQsb == null || mQsb.getVisibility() == View.GONE) return;
 
         int qsbMeasuredWidth = mQsb.getMeasuredWidth();
         int left;
@@ -376,7 +393,10 @@ public class Hotseat extends CellLayout implements Insettable {
      * Sets the alpha value of just our QSB.
      */
     public void setQsbAlpha(float alpha, @HotseatQsbAlphaId int channelId) {
-        getQsbAlpha(channelId).setValue(alpha);
+        MultiProperty prop = getQsbAlpha(channelId);
+        if (prop != null) {
+            prop.setValue(alpha);
+        }
     }
 
     /** Returns the alpha channel for ShortcutAndWidgetContainer */
@@ -384,14 +404,16 @@ public class Hotseat extends CellLayout implements Insettable {
         return mIconsAlphaChannels.get(channelId);
     }
 
-    /** Returns the alpha channel for Qsb */
+    /** Returns the alpha channel for Qsb, or null if QSB is not present */
+    @Nullable
     public MultiProperty getQsbAlpha(@HotseatQsbAlphaId int channelId) {
-        return mQsbAlphaChannels.get(channelId);
+        return mQsbAlphaChannels != null ? mQsbAlphaChannels.get(channelId) : null;
     }
 
     /**
-     * Returns the QSB inside hotseat
+     * Returns the QSB inside hotseat, or null if QSB is not enabled.
      */
+    @Nullable
     public View getQsb() {
         return mQsb;
     }
@@ -399,8 +421,7 @@ public class Hotseat extends CellLayout implements Insettable {
     @Nullable
     @Override
     public View mapOverItems(ItemOperator op) {
-        if (Flags.enableQsbOnHotseat()
-                && mQsb != null
+        if (mQsb != null
                 && mQsb.getTag() instanceof ItemInfo info
                 && op.evaluate(info, mQsb)) {
             return mQsb;
@@ -418,14 +439,16 @@ public class Hotseat extends CellLayout implements Insettable {
                 "ALPHA_CHANNEL_TASKBAR_ALIGNMENT",
                 "ALPHA_CHANNEL_PREVIEW_RENDERER",
                 "ALPHA_CHANNEL_TASKBAR_STASH");
-        mQsbAlphaChannels.dump(
-                prefix + "\t",
-                writer,
-                "mQsbAlphaChannels",
-                "ALPHA_CHANNEL_TASKBAR_ALIGNMENT",
-                "ALPHA_CHANNEL_PREVIEW_RENDERER",
-                "ALPHA_CHANNEL_TASKBAR_STASH"
-        );
+        if (mQsbAlphaChannels != null) {
+            mQsbAlphaChannels.dump(
+                    prefix + "\t",
+                    writer,
+                    "mQsbAlphaChannels",
+                    "ALPHA_CHANNEL_TASKBAR_ALIGNMENT",
+                    "ALPHA_CHANNEL_PREVIEW_RENDERER",
+                    "ALPHA_CHANNEL_TASKBAR_STASH"
+            );
+        }
     }
 
     // TODO(b/479881252): Determine whether it still makes sense to disallow all instances of

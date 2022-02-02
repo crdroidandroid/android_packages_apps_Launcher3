@@ -35,6 +35,7 @@ import static com.android.launcher3.testing.shared.TestProtocol.QUICK_SWITCH_STA
 import static com.android.launcher3.testing.shared.TestProtocol.SPRING_LOADED_STATE_ORDINAL;
 
 import android.graphics.Color;
+import android.graphics.Rect;
 import android.view.View;
 import android.view.animation.Interpolator;
 
@@ -253,6 +254,11 @@ public abstract class LauncherState implements BaseState<LauncherState> {
     public int getFloatingSearchBarRestingMarginStart(Launcher launcher) {
         boolean isRtl = Utilities.isRtl(launcher.getResources());
         View qsb = launcher.getHotseat().getQsb();
+        if (qsb == null) {
+            DeviceProfile dp = launcher.getDeviceProfile();
+            Rect pad = dp.getHotseatLayoutPadding(launcher);
+            return isRtl ? pad.right : pad.left;
+        }
         return isRtl ? launcher.getHotseat().getRight() - qsb.getRight() : qsb.getLeft();
     }
 
@@ -272,6 +278,10 @@ public abstract class LauncherState implements BaseState<LauncherState> {
 
         boolean isRtl = Utilities.isRtl(launcher.getResources());
         View qsb = launcher.getHotseat().getQsb();
+        if (qsb == null) {
+            Rect pad = dp.getHotseatLayoutPadding(launcher);
+            return isRtl ? pad.left : pad.right;
+        }
         return isRtl ? qsb.getLeft() : launcher.getHotseat().getRight() - qsb.getRight();
     }
 

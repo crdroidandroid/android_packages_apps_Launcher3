@@ -38,6 +38,7 @@
     <string name="misc_category_summary">Other options</string>
     <string name="general_category_title">General</string>
     <string name="interface_category_title">Interface</string>
+    <string name="search_bar_category_title">Search bar</string>
 
     <!-- Developer options -->
     <string name="dev_options_title">Developer options</string>
@@ -141,4 +142,25 @@
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Kill</string>
     <string name="recents_app_killed">App killed</string>
+
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Search</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Voice search</string>
+    <string name="label_gemini_search">AI mode</string>
+    <string name="dock_music_search_title">Music search</string>
+    <string name="dock_music_search_summary">Start music search on pressing mic icon</string>
+    <string name="dock_search_title">Google search bar</string>
+    <string name="dock_search_summary">Search bar in the bottom dock</string>
+    <string name="dock_theme_title">Themed icons</string>
+    <string name="dock_theme_summary">Use themed icons for search bar</string>
+    <string name="search_radius_title">Corner radius</string>
+
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
+    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
+    <string name="qsb_outer_opacity_title">Outer layer opacity</string>
+
+    <!-- Stroke -->
+    <string name="stroke_width_title">Stroke</string>
 </resources>
