@@ -63,4 +63,9 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Double tap to sleep</string>
     <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Search</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Voice search</string>
 </resources>
