@@ -38,6 +38,20 @@
     <dimen name="inline_qsb_bottom_margin">0dp</dimen>
     <dimen name="spring_loaded_hotseat_top_margin">76dp</dimen>
 
+    <dimen name="dynamic_grid_hotseat_top_padding_widget">0dp</dimen>
+    <dimen name="dynamic_grid_hotseat_bottom_padding_widget">60dp</dimen>
+    <dimen name="dynamic_grid_hotseat_bottom_non_tall_padding_widget">15dp</dimen>
+    <dimen name="dynamic_grid_hotseat_extra_vertical_size_widget">24dp</dimen>
+
+    <dimen name="qsb_g_icon_marginStart">16dp</dimen>
+    <dimen name="qsb_lens_marginEnd">4dp</dimen>
+    <dimen name="qsb_lens_padding">8dp</dimen>
+    <dimen name="qsb_lens_width">48dp</dimen>
+    <dimen name="qsb_mic_width">54dp</dimen>
+    <dimen name="qsb_min_width_with_mic">124dp</dimen>
+    <dimen name="qsb_shadow_margin">6dp</dimen>
+    <dimen name="qsb_widget_height">64dp</dimen>
+
     <!-- Qsb -->
     <!-- Used for adjusting the position of QSB when placed in hotseat. This is a ratio and a higher
      number signifies that the QSB is close to the hotseat icons and a lower number signifies that
@@ -363,7 +377,6 @@
     <!-- Taskbar related (placeholders to compile in Launcher3 without Quickstep) -->
     <dimen name="taskbar_size">0dp</dimen>
     <dimen name="taskbar_stashed_size">0dp</dimen>
-    <dimen name="qsb_widget_height">0dp</dimen>
     <dimen name="taskbar_icon_size">44dp</dimen>
     <!-- Note that this applies to both sides of all icons, so visible space is double this. -->
     <dimen name="taskbar_icon_spacing">8dp</dimen>
