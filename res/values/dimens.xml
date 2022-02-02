@@ -34,6 +34,15 @@
 
     <dimen name="dynamic_grid_hotseat_side_padding">0dp</dimen>
 
+    <dimen name="qsb_g_icon_marginStart">16dp</dimen>
+    <dimen name="qsb_lens_marginEnd">4dp</dimen>
+    <dimen name="qsb_lens_padding">8dp</dimen>
+    <dimen name="qsb_lens_width">48dp</dimen>
+    <dimen name="qsb_mic_width">54dp</dimen>
+    <dimen name="qsb_min_width_with_mic">124dp</dimen>
+    <dimen name="qsb_shadow_margin">6dp</dimen>
+    <dimen name="qsb_widget_height">64dp</dimen>
+
     <!-- Scalable Grid -->
     <dimen name="min_qsb_margin">8dp</dimen>
 
@@ -370,7 +379,6 @@
     <!-- Taskbar related (placeholders to compile in Launcher3 without Quickstep) -->
     <dimen name="taskbar_size">0dp</dimen>
     <dimen name="taskbar_stashed_size">0dp</dimen>
-    <dimen name="qsb_widget_height">0dp</dimen>
     <dimen name="qsb_shadow_height">0dp</dimen>
     <dimen name="min_hotseat_icon_space">18dp</dimen>
     <dimen name="max_hotseat_icon_space">50dp</dimen>
