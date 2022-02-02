@@ -96,7 +96,15 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
     }
 
     @Override
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) { }
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) { 
+        switch (key) {
+            case Utilities.KEY_DOCK_SEARCH:
+                LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                break;
+            default:
+                break;
+        }
+    }
 
     private boolean startPreference(String fragment, Bundle args, String key) {
         if (Utilities.ATLEAST_P && getSupportFragmentManager().isStateSaved()) {
@@ -150,6 +158,7 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
         private static final String KEY_MINUS_ONE = "pref_enable_minus_one";
 
         private Preference mShowGoogleAppPref;
+        private Preference mShowGoogleBarPref;
 
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -175,6 +184,7 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
             }
 
             mShowGoogleAppPref = screen.findPreference(KEY_MINUS_ONE);
+            mShowGoogleBarPref = screen.findPreference(Utilities.KEY_DOCK_SEARCH);
             updateIsGoogleAppEnabled();
 
             if (getActivity() != null && !TextUtils.isEmpty(getPreferenceScreen().getTitle())) {
@@ -218,6 +228,9 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
         private void updateIsGoogleAppEnabled() {
             if (mShowGoogleAppPref != null) {
                 mShowGoogleAppPref.setEnabled(Utilities.isGSAEnabled(getContext()));
+            }
+            if (mShowGoogleBarPref != null) {
+                mShowGoogleBarPref.setEnabled(Utilities.isGSAEnabled(getContext()));
             }
         }
 
