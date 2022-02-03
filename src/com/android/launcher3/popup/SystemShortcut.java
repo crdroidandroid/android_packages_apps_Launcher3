@@ -218,9 +218,8 @@ public abstract class SystemShortcut<T extends BaseDraggingActivity> extends Ite
 
         @Override
         public void onClick(View view) {
-            String packageName = mItemInfo.getTargetComponent().getPackageName();
-            Intent intent = new PackageManagerHelper(
-                    view.getContext()).getUninstallIntent(packageName);
+            Intent intent = new PackageManagerHelper(view.getContext()).getUninstallIntent(
+                    mItemInfo.getTargetComponent().getPackageName());
             mTarget.startActivitySafely(view, intent, mItemInfo);
             AbstractFloatingView.closeAllOpenViews(mTarget);
         }
