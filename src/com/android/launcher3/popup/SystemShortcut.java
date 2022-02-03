@@ -17,6 +17,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.SuspendDialogInfo;
 import android.graphics.Rect;
+import android.net.Uri;
 import android.os.Process;
 import android.os.RemoteException;
 import android.os.UserHandle;
@@ -47,6 +48,7 @@ import com.android.launcher3.util.PackageUserKey;
 import com.android.launcher3.views.ActivityContext;
 import com.android.launcher3.widget.WidgetsBottomSheet;
 
+import java.net.URISyntaxException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -460,11 +462,15 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
 
         @Override
         public void onClick(View view) {
-            String packageName = mItemInfo.getTargetComponent().getPackageName();
-            Intent intent = new PackageManagerHelper(
-                    view.getContext()).getUninstallIntent(packageName);
-            ((Context) mTarget).startActivitySafely(view, intent, mItemInfo);
-            AbstractFloatingView.closeAllOpenViews(mTarget);
+            try {
+                Intent intent = Intent.parseUri(view.getContext().getString(R.string.delete_package_intent), 0)
+                    .setData(Uri.fromParts("package", mItemInfo.getTargetComponent().getPackageName(),
+                    mItemInfo.getTargetComponent().getClassName())).putExtra(Intent.EXTRA_USER, mItemInfo.user);
+                ((Context) mTarget).startActivitySafely(view, intent, mItemInfo);
+                AbstractFloatingView.closeAllOpenViews(mTarget);
+            } catch (URISyntaxException e) {
+                // Do nothing.
+            }
         }
     }
 
