@@ -93,7 +93,8 @@ java_library {
 
     srcs: ["src_plugins/**/*.java"],
 
-    platform_apis: true,
+    sdk_version: "current",
+    min_sdk_version: min_launcher3_sdk_version,
 }
 
 java_import {
