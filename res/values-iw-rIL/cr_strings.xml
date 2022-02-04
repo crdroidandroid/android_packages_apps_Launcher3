@@ -49,9 +49,9 @@
     <string name="pref_sleep_gesture_title">הקשה כפולה לכיבוי המסך</string>
     <string name="pref_sleep_gesture_summary">הקשה כפולה על מקום ריק לכיבוי המסך</string>
     <!-- Hotseat searchbar -->
-    <string name="label_search">Search</string>
+    <string name="label_search">חיפוש</string>
     <string name="label_lens">Google Lens</string>
-    <string name="label_voice_search">Voice search</string>
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Show search bar in the bottom dock</string>
+    <string name="label_voice_search">חיפוש קולי</string>
+    <string name="dock_search_title">סרגל החיפוש של Google</string>
+    <string name="dock_search_summary">הראה שורת חיפוש בדף הבית</string>
 </resources>
