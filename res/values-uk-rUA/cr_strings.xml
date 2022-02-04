@@ -49,9 +49,9 @@
     <string name="pref_sleep_gesture_title">Подвійне натискання для сну</string>
     <string name="pref_sleep_gesture_summary">Подвійне натискання на пусте місце для вимкнення живлення</string>
     <!-- Hotseat searchbar -->
-    <string name="label_search">Search</string>
-    <string name="label_lens">Google Lens</string>
-    <string name="label_voice_search">Voice search</string>
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Show search bar in the bottom dock</string>
+    <string name="label_search">Пошук</string>
+    <string name="label_lens">Google Ленс</string>
+    <string name="label_voice_search">Голосовий пошук</string>
+    <string name="dock_search_title">Панель пошуку Google</string>
+    <string name="dock_search_summary">Показувати панель пошуку в нижній панелі</string>
 </resources>
