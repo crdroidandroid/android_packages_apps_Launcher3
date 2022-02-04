@@ -48,4 +48,10 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Выключаць экран пры падвойным націску</string>
     <string name="pref_sleep_gesture_summary">Двойчы націсніце на пустое месца для адключэння</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Search</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Voice search</string>
+    <string name="dock_search_title">Google search bar</string>
+    <string name="dock_search_summary">Show search bar in the bottom dock</string>
 </resources>
