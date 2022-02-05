@@ -22,4 +22,7 @@
     <dimen name="meminfo_bottom_margin_transient_taskbar">96dp</dimen>
     <dimen name="meminfo_bottom_margin_three_button">42dp</dimen>
     <dimen name="meminfo_top_margin">12dp</dimen>
+
+    <!-- Overview scrolling scale animation -->
+    <dimen name="overview_scroll_scale">0.9</dimen>
 </resources>
