@@ -31,4 +31,7 @@
 
     <!-- Search bar margin -->
     <dimen name="all_apps_search_bar_margin_side">38dp</dimen>
+
+    <!-- Overview scrolling scale animation -->
+    <dimen name="overview_scroll_scale">0.9</dimen>
 </resources>
