@@ -1517,6 +1517,12 @@ constructor(
     fun getSizeAdjustment(fullscreenEnabled: Boolean) = if (fullscreenEnabled) nonGridScale else 1f
 
     private fun applyScale() {
+        /* This is now only for grid mode on tablets. Unconditionally calling this breaks
+         * our overview scrolling animation. Block this method, otherwise we have to
+         * introduce a multivalue scale fusion class to handle this. */
+        if (!container.deviceProfile.isTablet)
+            return
+
         val scale = persistentScale * dismissScale
         scaleX = scale
         scaleY = scale
