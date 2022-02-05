@@ -49,9 +49,9 @@
     <string name="pref_sleep_gesture_title">Uspať dvojitým kliknutím</string>
     <string name="pref_sleep_gesture_summary">Dvojklikom do prázdneho priestoru vypnúť zariadenie</string>
     <!-- Hotseat searchbar -->
-    <string name="label_search">Search</string>
-    <string name="label_lens">Google Lens</string>
-    <string name="label_voice_search">Voice search</string>
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Show search bar in the bottom dock</string>
+    <string name="label_search">Vyhľadať</string>
+    <string name="label_lens">Dokumenty Google</string>
+    <string name="label_voice_search">Hlasové vyhľadávanie</string>
+    <string name="dock_search_title">Vyhľadávací panel Google</string>
+    <string name="dock_search_summary">Zobraziť vyhľadávací panel v spodnom doku</string>
 </resources>
