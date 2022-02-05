@@ -18,4 +18,7 @@
 
     <!-- Search box radius -->
     <dimen name="bg_searchbox_radius">58dp</dimen>
+
+    <!-- Overview scrolling scale animation -->
+    <dimen name="overview_scroll_scale">0.9</dimen>
 </resources>
