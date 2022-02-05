@@ -80,7 +80,7 @@ public final class FeatureFlags {
             "KEYGUARD_ANIMATION", false, "Enable animation for keyguard going away on wallpaper");
 
     public static final BooleanFlag ENABLE_QUICKSTEP_LIVE_TILE = getDebugFlag(
-            "ENABLE_QUICKSTEP_LIVE_TILE", true, "Enable live tile in Quickstep overview");
+            "ENABLE_QUICKSTEP_LIVE_TILE", false, "Enable live tile in Quickstep overview");
 
     public static final BooleanFlag ENABLE_QUICKSTEP_WIDGET_APP_START = getDebugFlag(
             "ENABLE_QUICKSTEP_WIDGET_APP_START", true,
