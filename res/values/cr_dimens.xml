@@ -24,4 +24,7 @@
 
     <!-- Meminfo in overview -->
     <dimen name="meminfo_claimed_height">16dp</dimen>
+
+    <!-- Overview scrolling scale animation -->
+    <dimen name="overview_scroll_scale">0.9</dimen>
 </resources>
