@@ -27,4 +27,7 @@
     <dimen name="quickspace_subtitle_size">16sp</dimen>
     <dimen name="quickspace_alternate_title_size">18sp</dimen>
     <dimen name="quickspace_alternate_subtitle_size">16sp</dimen>
+
+    <!-- Overview scrolling scale animation -->
+    <dimen name="overview_scroll_scale">0.9</dimen>
 </resources>
