@@ -33,6 +33,7 @@ import com.android.launcher3.Launcher;
 import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.LauncherSettings;
 import com.android.launcher3.LauncherSettings.Favorites;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.icons.BitmapInfo;
 import com.android.launcher3.icons.IconCache;
@@ -100,11 +101,15 @@ public class PackageUpdatedTask extends BaseModelUpdateTask {
                 : ItemInfoMatcher.ofPackages(packageSet, mUser);
         final HashSet<ComponentName> removedComponents = new HashSet<>();
         final HashMap<String, List<LauncherActivityInfo>> activitiesLists = new HashMap<>();
+        boolean needsRestart = false;
 
         switch (mOp) {
             case OP_ADD: {
                 for (int i = 0; i < N; i++) {
                     if (DEBUG) Log.d(TAG, "mAllAppsList.addPackage " + packages[i]);
+                    if (isTargetPackage(packages[i])) {
+                        needsRestart = true;
+                    }
                     iconCache.updateIconsForPkg(packages[i], mUser);
                     if (FeatureFlags.PROMISE_APPS_IN_ALL_APPS.get()) {
                         appsList.removePackage(packages[i], mUser);
@@ -140,6 +145,9 @@ public class PackageUpdatedTask extends BaseModelUpdateTask {
                 for (int i = 0; i < N; i++) {
                     FileLog.d(TAG, "Removing app icon" + packages[i]);
                     iconCache.removeIconsForPkg(packages[i], mUser);
+                    if (isTargetPackage(packages[i])) {
+                        needsRestart = true;
+                    }
                 }
                 // Fall through
             }
@@ -157,6 +165,11 @@ public class PackageUpdatedTask extends BaseModelUpdateTask {
                         FlagOp.removeFlag(WorkspaceItemInfo.FLAG_DISABLED_SUSPENDED);
                 if (DEBUG) Log.d(TAG, "mAllAppsList.(un)suspend " + N);
                 appsList.updateDisabledFlags(matcher, flagOp);
+                for (int i = 0; i < N; i++) {
+                    if (isTargetPackage(packages[i])) {
+                        needsRestart = true;
+                    }
+                }
                 break;
             case OP_USER_AVAILABILITY_CHANGE: {
                 UserManagerState ums = new UserManagerState();
@@ -356,6 +369,10 @@ public class PackageUpdatedTask extends BaseModelUpdateTask {
             }
             bindUpdatedWidgets(dataModel);
         }
+
+        if (needsRestart) {
+            Utilities.restart(context);
+        }
     }
 
     /**
@@ -377,5 +394,9 @@ public class PackageUpdatedTask extends BaseModelUpdateTask {
             return true;
         }
         return false;
+    }
+
+    private boolean isTargetPackage(String packageName) {
+        return packageName.equals("com.google.ar.lens") || packageName.equals("com.google.android.googlequicksearchbox");
     }
 }
