@@ -112,10 +112,10 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        View share = findViewById(R.id.action_share);
-        share.setOnClickListener(this);
         findViewById(R.id.action_screenshot).setOnClickListener(this);
         if (ENABLE_OVERVIEW_SHARE.get()) {
+            View share = findViewById(R.id.action_share);
+            share.setOnClickListener(this);
             share.setVisibility(VISIBLE);
             findViewById(R.id.oav_three_button_space).setVisibility(VISIBLE);
         }
