@@ -48,4 +48,12 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Double tap to sleep</string>
     <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Pesquisar</string>
+    <string name="label_lens">Lentes do Google</string>
+    <string name="label_voice_search">Pesquisa por voz</string>
+    <string name="dock_search_title">Barra de pesquisa do Google</string>
+    <string name="dock_search_summary">Mostrar a barra de pesquisa na barra inferior</string>
+    <!-- Recents -->
+    <string name="action_lens">Lens</string>
 </resources>

@@ -48,4 +48,12 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Ketuk dua kali untuk tidur</string>
     <string name="pref_sleep_gesture_summary">Ketuk dua kali pada ruang kosong untuk mematikan layar</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Pencarian</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Pencarian suara</string>
+    <string name="dock_search_title">Bilah pencarian Google</string>
+    <string name="dock_search_summary">Tampilkan bilah pencarian di dok bawah</string>
+    <!-- Recents -->
+    <string name="action_lens">Lens</string>
 </resources>

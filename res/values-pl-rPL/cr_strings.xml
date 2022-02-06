@@ -48,4 +48,12 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Stuknij dwukrotnie, aby uśpić</string>
     <string name="pref_sleep_gesture_summary">Dwukrotnie stuknij pustą przestrzeń, aby wyłączyć</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Szukaj</string>
+    <string name="label_lens">Obiektyw Google</string>
+    <string name="label_voice_search">Wyszukiwanie głosowe</string>
+    <string name="dock_search_title">Pasek wyszukiwania Google</string>
+    <string name="dock_search_summary">Pokaż pasek wyszukiwania na dolnym doku</string>
+    <!-- Recents -->
+    <string name="action_lens">Lens</string>
 </resources>

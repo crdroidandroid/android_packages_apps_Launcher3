@@ -48,4 +48,12 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Appui double pour mettre en veille. </string>
     <string name="pref_sleep_gesture_summary">Double appui sur un espace vide pour éteindre </string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Rechercher</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Recherche vocale</string>
+    <string name="dock_search_title">Barre de recherche Google</string>
+    <string name="dock_search_summary">Afficher la barre de recherche en bas</string>
+    <!-- Recents -->
+    <string name="action_lens">Lens</string>
 </resources>

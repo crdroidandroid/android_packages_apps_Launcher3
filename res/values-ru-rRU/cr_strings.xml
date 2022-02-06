@@ -48,4 +48,12 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Выключение экрана двойным нажатием</string>
     <string name="pref_sleep_gesture_summary">Дважды нажмите по пустому месту для выключения</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Поиск</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Голосовой поиск</string>
+    <string name="dock_search_title">Панель поиска Google</string>
+    <string name="dock_search_summary">Показывать строку поиска в нижней панели</string>
+    <!-- Recents -->
+    <string name="action_lens">Lens</string>
 </resources>

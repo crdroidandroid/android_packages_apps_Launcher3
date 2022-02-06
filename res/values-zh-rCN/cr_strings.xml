@@ -48,4 +48,12 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">双击锁屏</string>
     <string name="pref_sleep_gesture_summary">双击空白处以关机</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">搜索</string>
+    <string name="label_lens">谷歌镜头</string>
+    <string name="label_voice_search">语音搜索</string>
+    <string name="dock_search_title">谷歌搜索框</string>
+    <string name="dock_search_summary">在底部显示搜索框</string>
+    <!-- Recents -->
+    <string name="action_lens">镜头</string>
 </resources>

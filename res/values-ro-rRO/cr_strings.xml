@@ -48,4 +48,12 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Dublă atingere pentru oprire ecran</string>
     <string name="pref_sleep_gesture_summary">Dublă atingere pe spațiul gol pentru oprire</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Căutare</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Căutare vocală</string>
+    <string name="dock_search_title">Bară de căutare Google</string>
+    <string name="dock_search_summary">Arată bara de căutare în partea de jos a dok-ului</string>
+    <!-- Recents -->
+    <string name="action_lens">Lens</string>
 </resources>
