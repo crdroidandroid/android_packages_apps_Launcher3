@@ -75,6 +75,9 @@ public class QsbContainerView extends FrameLayout {
             if (componentName != null) {
                 providerPkg = searchManager.getGlobalSearchActivity().getPackageName();
             }
+            if (providerPkg == null && Utilities.isGSAEnabled(context)) {
+                providerPkg = Utilities.GSA_PACKAGE;
+            }
         }
         return providerPkg;
     }
