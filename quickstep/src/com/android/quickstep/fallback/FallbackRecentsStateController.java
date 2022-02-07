@@ -48,6 +48,7 @@ import com.android.launcher3.states.StateAnimationConfig;
 import com.android.launcher3.util.MultiValueAlpha;
 import com.android.quickstep.RecentsActivity;
 import com.android.quickstep.views.ClearAllButton;
+import com.android.quickstep.views.MemInfoView;
 
 /**
  * State controller for fallback recents activity
@@ -96,6 +97,9 @@ public class FallbackRecentsStateController implements StateHandler<RecentsState
         float overviewButtonAlpha = state.hasOverviewActions() ? 1 : 0;
         setter.setFloat(mActivity.getActionsView().getVisibilityAlpha(),
                 MultiValueAlpha.VALUE, overviewButtonAlpha, LINEAR);
+        float memInfoAlpha = state.hasMemInfoView() ? 1 : 0;
+        setter.setFloat(mActivity.getMemInfoView(), MemInfoView.STATE_CTRL_ALPHA,
+                memInfoAlpha, LINEAR);
 
         float[] scaleAndOffset = state.getOverviewScaleAndOffset(mActivity);
         setter.setFloat(mRecentsView, RECENTS_SCALE_PROPERTY, scaleAndOffset[0],

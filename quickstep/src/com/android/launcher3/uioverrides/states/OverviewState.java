@@ -102,7 +102,7 @@ public class OverviewState extends LauncherState {
 
     @Override
     public int getVisibleElements(Launcher launcher) {
-        return OVERVIEW_ACTIONS;
+        return OVERVIEW_ACTIONS | MEMINFO;
     }
 
     @Override

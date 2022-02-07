@@ -139,6 +139,7 @@ import com.android.quickstep.util.RemoteFadeOutAnimationListener;
 import com.android.quickstep.util.SplitSelectStateController;
 import com.android.quickstep.util.TISBindHelper;
 import com.android.quickstep.util.ViewCapture;
+import com.android.quickstep.views.MemInfoView;
 import com.android.quickstep.views.OverviewActionsView;
 import com.android.quickstep.views.RecentsView;
 import com.android.quickstep.views.TaskView;
@@ -172,6 +173,7 @@ public class QuickstepLauncher extends Launcher {
     private DepthController mDepthController;
     private QuickstepTransitionManager mAppTransitionManager;
     private OverviewActionsView mActionsView;
+    private MemInfoView mMemInfoView;
     private TISBindHelper mTISBindHelper;
     private @Nullable TaskbarManager mTaskbarManager;
     private @Nullable OverviewCommandHelper mOverviewCommandHelper;
@@ -214,13 +216,16 @@ public class QuickstepLauncher extends Launcher {
         super.setupViews();
 
         mActionsView = findViewById(R.id.overview_actions_view);
+        mMemInfoView = findViewById(R.id.meminfo);
         RecentsView overviewPanel = (RecentsView) getOverviewPanel();
         SplitSelectStateController controller =
                 new SplitSelectStateController(this, mHandler, getStateManager(),
                         getDepthController(), getStatsLogManager());
-        overviewPanel.init(mActionsView, controller);
+        overviewPanel.init(mActionsView, controller, mMemInfoView);
         mActionsView.updateDimension(getDeviceProfile(), overviewPanel.getLastComputedTaskSize());
+        mMemInfoView.setDp(getDeviceProfile());
         mActionsView.updateVerticalMargin(DisplayController.getNavigationMode(this));
+        mMemInfoView.updateVerticalMargin(DisplayController.getNavigationMode(this));
 
         mAppTransitionManager = new QuickstepTransitionManager(this);
         mAppTransitionManager.registerRemoteAnimations();
@@ -735,6 +740,10 @@ public class QuickstepLauncher extends Launcher {
         return (T) mActionsView;
     }
 
+    public MemInfoView getMemInfoView () {
+        return mMemInfoView;
+    }
+
     @Override
     protected void closeOpenViews(boolean animate) {
         super.closeOpenViews(animate);
@@ -911,6 +920,9 @@ public class QuickstepLauncher extends Launcher {
             getDragLayer().recreateControllers();
             if (mActionsView != null) {
                 mActionsView.updateVerticalMargin(info.navigationMode);
+            }
+            if (mMemInfoView != null) {
+                mMemInfoView.updateVerticalMargin(info.navigationMode);
             }
         }
     }
