@@ -78,6 +78,11 @@
             android:persistent="true"
             launcher:iconSpaceReserved="false" />
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/search_bar_category_title">
+
         <SwitchPreferenceCompat
             android:key="pref_dock_search"
             android:title="@string/dock_search_title"
