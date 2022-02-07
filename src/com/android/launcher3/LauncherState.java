@@ -64,6 +64,7 @@ public abstract class LauncherState implements BaseState<LauncherState> {
     public static final int CLEAR_ALL_BUTTON = 1 << 4;
     public static final int WORKSPACE_PAGE_INDICATOR = 1 << 5;
     public static final int SPLIT_PLACHOLDER_VIEW = 1 << 6;
+    public static final int MEMINFO = 1 << 7;
 
     // Flag indicating workspace has multiple pages visible.
     public static final int FLAG_MULTI_PAGE = BaseState.getFlag(0);
