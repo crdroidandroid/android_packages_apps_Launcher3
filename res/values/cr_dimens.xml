@@ -22,4 +22,8 @@
 
     <!-- Overview scrolling scale animation -->
     <dimen name="overview_scroll_scale">0.9</dimen>
+
+     <!-- Meminfo in overview -->
+    <dimen name="meminfo_bottom_margin_gesture">15dp</dimen>
+    <dimen name="meminfo_bottom_margin_three_button">15dp</dimen>
 </resources>
