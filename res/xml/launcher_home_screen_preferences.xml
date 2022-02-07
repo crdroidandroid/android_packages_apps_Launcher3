@@ -63,6 +63,11 @@
             android:defaultValue="true"
             android:persistent="true" />
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/search_bar_category_title">
+
         <SwitchPreference
             android:key="pref_dock_search"
             android:title="@string/dock_search_title"
