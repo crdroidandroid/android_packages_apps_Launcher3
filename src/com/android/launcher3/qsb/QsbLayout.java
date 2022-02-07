@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 import androidx.core.view.ViewCompat;
 import com.android.launcher3.BaseActivity;
 import com.android.launcher3.DeviceProfile;
@@ -17,8 +17,9 @@ import android.view.View;
 
 public class QsbLayout extends FrameLayout {
 
-    ImageButton lensIcon;
-    AssistantIconView assistantIcon;
+    ImageView assistantIcon;
+    ImageView gIcon;
+    ImageView lensIcon;
     Context mContext;
 
     public QsbLayout(Context context, AttributeSet attrs) {
@@ -34,7 +35,19 @@ public class QsbLayout extends FrameLayout {
     protected void onFinishInflate() {
         super.onFinishInflate();
         assistantIcon = findViewById(R.id.mic_icon);
-        assistantIcon.setIcon();
+        gIcon = findViewById(R.id.g_icon);
+        lensIcon = findViewById(R.id.lens_icon);
+
+        if (Utilities.isThemedIconsEnabled(mContext)) {
+            assistantIcon.setImageResource(R.drawable.ic_mic_themed);
+            gIcon.setImageResource(R.drawable.ic_super_g_themed);
+            lensIcon.setImageResource(R.drawable.ic_lens_themed);
+        } else {
+            assistantIcon.setImageResource(R.drawable.ic_mic_color);
+            gIcon.setImageResource(R.drawable.ic_super_g_color);
+            lensIcon.setImageResource(R.drawable.ic_lens_color);
+        }
+
         String searchPackage = QsbContainerView.getSearchWidgetPackageName(mContext);
         setOnClickListener(view -> {
             mContext.startActivity(new Intent("android.search.action.GLOBAL_SEARCH").addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
@@ -72,9 +85,7 @@ public class QsbLayout extends FrameLayout {
         if (getContext().getPackageManager().resolveActivity(lensIntent, 0) == null){
             return;
         }
-        lensIcon = findViewById(R.id.lens_icon);
         lensIcon.setVisibility(View.VISIBLE);
-        lensIcon.setImageResource(R.drawable.ic_lens_color);
 
         lensIcon.setOnClickListener(view -> {
             mContext.startActivity(lensIntent);
