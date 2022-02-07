@@ -48,6 +48,7 @@ import com.android.launcher3.states.StateAnimationConfig;
 import com.android.launcher3.util.MultiPropertyFactory;
 import com.android.quickstep.RecentsActivity;
 import com.android.quickstep.views.ClearAllButton;
+import com.android.quickstep.views.MemInfoView;
 
 /**
  * State controller for fallback recents activity
@@ -133,6 +134,9 @@ public class FallbackRecentsStateController implements StateHandler<RecentsState
         setter.setFloat(mRecentsView, taskViewsFloat.first, isSplitSelectionState(state)
                 ? mRecentsView.getSplitSelectTranslation() : 0, LINEAR);
         setter.setFloat(mRecentsView, taskViewsFloat.second, 0, LINEAR);
+        float memInfoAlpha = state.hasMemInfoView() ? 1 : 0;
+        setter.setFloat(mActivity.getMemInfoView(), MemInfoView.STATE_CTRL_ALPHA,
+                memInfoAlpha, LINEAR);
     }
 
     /**
