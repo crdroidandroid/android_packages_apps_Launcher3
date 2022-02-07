@@ -87,19 +87,20 @@ public class TaskOverlayFactory implements ResourceBasedOverride {
                 shortcuts.add(shortcut);
             }
         }
+
+        // Add screenshot action to task menu.
+        SystemShortcut screenshotShortcut = TaskShortcutFactory.SCREENSHOT
+                .getShortcut(activity, taskContainer);
+        if (screenshotShortcut != null) {
+            shortcuts.add(screenshotShortcut);
+        }
+
         RecentsOrientedState orientedState = taskView.getRecentsView().getPagedViewOrientedState();
         boolean canLauncherRotate = orientedState.isRecentsActivityRotationAllowed();
         boolean isInLandscape = orientedState.getTouchRotation() != ROTATION_0;
 
         // Add overview actions to the menu when in in-place rotate landscape mode.
         if (!canLauncherRotate && isInLandscape) {
-            // Add screenshot action to task menu.
-            SystemShortcut screenshotShortcut = TaskShortcutFactory.SCREENSHOT
-                    .getShortcut(activity, taskContainer);
-            if (screenshotShortcut != null) {
-                shortcuts.add(screenshotShortcut);
-            }
-
             // Add modal action only if display orientation is the same as the device orientation.
             if (orientedState.getDisplayRotation() == ROTATION_0) {
                 SystemShortcut modalShortcut = TaskShortcutFactory.MODAL
