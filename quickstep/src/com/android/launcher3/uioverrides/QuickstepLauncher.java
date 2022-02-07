@@ -171,6 +171,7 @@ import com.android.quickstep.util.SplitWithKeyboardShortcutController;
 import com.android.quickstep.util.TISBindHelper;
 import com.android.quickstep.views.DesktopTaskView;
 import com.android.quickstep.views.FloatingTaskView;
+import com.android.quickstep.views.MemInfoView;
 import com.android.quickstep.views.OverviewActionsView;
 import com.android.quickstep.views.RecentsView;
 import com.android.quickstep.views.TaskView;
@@ -214,6 +215,7 @@ public class QuickstepLauncher extends Launcher {
     private DesktopVisibilityController mDesktopVisibilityController;
     private QuickstepTransitionManager mAppTransitionManager;
     private OverviewActionsView mActionsView;
+    private MemInfoView mMemInfoView;
     private TISBindHelper mTISBindHelper;
     private @Nullable LauncherTaskbarUIController mTaskbarUIController;
     // Will be updated when dragging from taskbar.
@@ -262,18 +264,21 @@ public class QuickstepLauncher extends Launcher {
         super.setupViews();
 
         mActionsView = findViewById(R.id.overview_actions_view);
+        mMemInfoView = findViewById(R.id.meminfo);
         RecentsView overviewPanel = getOverviewPanel();
         mSplitSelectStateController =
                 new SplitSelectStateController(this, mHandler, getStateManager(),
                         getDepthController(), getStatsLogManager(),
                         SystemUiProxy.INSTANCE.get(this), RecentsModel.INSTANCE.get(this));
-        overviewPanel.init(mActionsView, mSplitSelectStateController);
+        overviewPanel.init(mActionsView, mSplitSelectStateController, mMemInfoView);
         mSplitWithKeyboardShortcutController = new SplitWithKeyboardShortcutController(this,
                 mSplitSelectStateController);
         mSplitToWorkspaceController = new SplitToWorkspaceController(this,
                 mSplitSelectStateController);
         mActionsView.updateDimension(getDeviceProfile(), overviewPanel.getLastComputedTaskSize());
         mActionsView.updateVerticalMargin(DisplayController.getNavigationMode(this));
+        mMemInfoView.setDp(getDeviceProfile());
+        mMemInfoView.updateVerticalMargin(DisplayController.getNavigationMode(this));
 
         mAppTransitionManager = buildAppTransitionManager();
         mAppTransitionManager.registerRemoteAnimations();
@@ -1011,6 +1016,10 @@ public class QuickstepLauncher extends Launcher {
         return (T) mActionsView;
     }
 
+    public MemInfoView getMemInfoView () {
+        return mMemInfoView;
+    }
+
     @Override
     protected void closeOpenViews(boolean animate) {
         super.closeOpenViews(animate);
@@ -1187,6 +1196,9 @@ public class QuickstepLauncher extends Launcher {
             getDragLayer().recreateControllers();
             if (mActionsView != null) {
                 mActionsView.updateVerticalMargin(info.navigationMode);
+            }
+            if (mMemInfoView != null) {
+                mMemInfoView.updateVerticalMargin(info.navigationMode);
             }
         }
     }
