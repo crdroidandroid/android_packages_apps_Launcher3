@@ -49,6 +49,7 @@ import com.android.quickstep.RotationTouchHelper;
 import com.android.quickstep.util.GroupTask;
 import com.android.quickstep.util.SplitSelectStateController;
 import com.android.quickstep.util.TaskViewSimulator;
+import com.android.quickstep.views.MemInfoView;
 import com.android.quickstep.views.OverviewActionsView;
 import com.android.quickstep.views.RecentsView;
 import com.android.quickstep.views.RecentsViewContainer;
@@ -85,8 +86,9 @@ public class FallbackRecentsView<CONTAINER_TYPE extends Context & RecentsViewCon
 
     @Override
     public void init(OverviewActionsView actionsView, SplitSelectStateController splitController,
-            @Nullable DesktopRecentsTransitionController desktopRecentsTransitionController) {
-        super.init(actionsView, splitController, desktopRecentsTransitionController);
+            @Nullable DesktopRecentsTransitionController desktopRecentsTransitionController,
+            MemInfoView memInfoView) {
+        super.init(actionsView, splitController, desktopRecentsTransitionController, memInfoView);
         setOverviewStateEnabled(true);
         setOverlayEnabled(true);
     }
