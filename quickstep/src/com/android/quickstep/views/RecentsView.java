@@ -822,6 +822,7 @@ public abstract class RecentsView<
     private OverviewActionsView mActionsView;
     private ObjectAnimator mActionsViewAlphaAnimator;
     private float mActionsViewAlphaAnimatorFinalValue;
+    private MemInfoView mMemInfoView;
 
     @Nullable
     private DesktopRecentsTransitionController mDesktopRecentsTransitionController;
@@ -1229,7 +1230,8 @@ public abstract class RecentsView<
     }
 
     public void init(OverviewActionsView actionsView, SplitSelectStateController splitController,
-            @Nullable DesktopRecentsTransitionController desktopRecentsTransitionController) {
+            @Nullable DesktopRecentsTransitionController desktopRecentsTransitionController,
+            MemInfoView memInfoView) {
         mIs3PLauncher = !OverviewComponentObserver.INSTANCE.get(mContext).isHomeAndOverviewSame();
         mActionsView = actionsView;
         mActionsView.updateHiddenFlags(HIDDEN_NO_TASKS, !hasTaskViews());
@@ -1237,6 +1239,7 @@ public abstract class RecentsView<
         mActionsView.updateFor3pLauncher(mIs3PLauncher);
         mSplitSelectStateController = splitController;
         mDesktopRecentsTransitionController = desktopRecentsTransitionController;
+        mMemInfoView = memInfoView;
     }
 
     public SplitSelectStateController getSplitSelectController() {
@@ -2275,8 +2278,9 @@ public abstract class RecentsView<
         mClearAllButton.setFullscreenProgress(fullscreenProgress);
 
         // Fade out the actions view quickly (0.1 range)
-        mActionsView.getFullscreenAlpha().updateValue(
-                mapToRange(fullscreenProgress, 0, 0.1f, 1f, 0f, LINEAR));
+        float alpha = mapToRange(fullscreenProgress, 0, 0.1f, 1f, 0f, LINEAR);
+        mActionsView.getFullscreenAlpha().updateValue(alpha);
+        mMemInfoView.setAlpha(MemInfoView.ALPHA_FS_PROGRESS, alpha);
     }
 
     private void updateTaskStackListenerState() {
