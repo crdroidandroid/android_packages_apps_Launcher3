@@ -44,6 +44,7 @@ import com.android.quickstep.split.SplitSelectStateController;
 import com.android.quickstep.util.GroupTask;
 import com.android.quickstep.util.SingleTask;
 import com.android.quickstep.util.SurfaceTransactionApplier;
+import com.android.quickstep.views.MemInfoView;
 import com.android.quickstep.views.OverviewActionsView;
 import com.android.quickstep.views.RecentsDismissUtils;
 import com.android.quickstep.views.RecentsView;
@@ -76,9 +77,10 @@ public abstract class FallbackRecentsView<CONTAINER_TYPE extends Context & Recen
     public void init(OverviewActionsView actionsView, SplitSelectStateController splitController,
             @Nullable DesktopRecentsTransitionController desktopRecentsTransitionController,
             SurfaceTransactionApplier surfaceTransactionApplier,
-            @Nullable ViewGroup emptyRecentsMessageView) {
+            @Nullable ViewGroup emptyRecentsMessageView,
+            MemInfoView memInfoView) {
         super.init(actionsView, splitController, desktopRecentsTransitionController,
-                surfaceTransactionApplier, emptyRecentsMessageView);
+                surfaceTransactionApplier, emptyRecentsMessageView, memInfoView);
         if (mContainer instanceof RecentsWindowManager) {
             // These will be set during the state transition to DEFAULT
             return;

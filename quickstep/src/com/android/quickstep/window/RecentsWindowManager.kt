@@ -132,6 +132,7 @@ import com.android.quickstep.util.RecentsAtomicAnimationFactory
 import com.android.quickstep.util.RecentsWindowProtoLogProxy
 import com.android.quickstep.util.SurfaceTransactionApplier
 import com.android.quickstep.util.TraceStateLoggerHelper
+import com.android.quickstep.views.MemInfoView
 import com.android.quickstep.views.OverviewActionsView
 import com.android.quickstep.views.RecentsView
 import com.android.quickstep.views.RecentsViewContainer
@@ -209,6 +210,8 @@ constructor(
     private var windowView: LauncherRootView? = null
     private var actionsView: OverviewActionsView<*>? = null
     private var scrimView: ScrimView? = null
+
+    private var memInfoView: MemInfoView? = null
 
     private var callbacks: RecentsAnimationCallbacks? = null
 
@@ -392,6 +395,7 @@ constructor(
                             ),
                             SurfaceTransactionApplier(rootView),
                             emptyRecentsMessageView,
+                            memInfoView,
                         )
                     }
             actionsView?.apply {
@@ -400,6 +404,7 @@ constructor(
             }
             scrimView = it.findViewById(R.id.scrim_view)
             dragLayer = it.findViewById(R.id.drag_layer)
+            memInfoView = it.findViewById(R.id.meminfo)
 
             it.systemUiVisibility =
                 (View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
@@ -998,4 +1003,8 @@ constructor(
 
     override fun getDepthController(): DepthController<RecentsState, RecentsWindowManager>? =
         depthController
+
+    override fun getMemInfoView(): MemInfoView? {
+        return memInfoView
+    }
 }

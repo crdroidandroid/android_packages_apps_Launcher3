@@ -74,6 +74,7 @@ import com.android.launcher3.anim.AnimatorPlaybackController;
 import com.android.launcher3.anim.PendingAnimation;
 import com.android.launcher3.compat.AccessibilityManagerCompat;
 import com.android.launcher3.desktop.DesktopRecentsTransitionController;
+import com.android.launcher3.display.DisplayController;
 import com.android.launcher3.model.data.ItemInfo;
 import com.android.launcher3.statemanager.StateManager;
 import com.android.launcher3.statemanager.StateManager.AtomicAnimationFactory;
@@ -98,6 +99,7 @@ import com.android.quickstep.sysuiconnection.SysUIConnectionTracker;
 import com.android.quickstep.util.RecentsAtomicAnimationFactory;
 import com.android.quickstep.util.SurfaceTransactionApplier;
 import com.android.quickstep.util.TraceStateLoggerHelper;
+import com.android.quickstep.views.MemInfoView;
 import com.android.quickstep.views.OverviewActionsView;
 import com.android.quickstep.views.RecentsView;
 import com.android.quickstep.views.RecentsViewContainer;
@@ -130,6 +132,7 @@ public final class RecentsActivity extends StatefulActivity<RecentsState> implem
     private OverviewActionsView<?> mActionsView;
     private SysUIConnectionTracker mSysUIConnectionTracker;
     private @Nullable volatile TaskbarInteractor mTaskbarInteractor;
+    private MemInfoView mMemInfoView;
 
     private StateManager<RecentsState, RecentsActivity> mStateManager;
 
@@ -168,6 +171,7 @@ public final class RecentsActivity extends StatefulActivity<RecentsState> implem
         mFallbackRecentsView = (FallbackActivityRecentsView) recentsViewStub.inflate();
         mActionsView = rootView.findViewById(R.id.overview_actions_view);
         ViewGroup emptyRecentsMessageView = rootView.findViewById(R.id.empty_recents_message_view);
+        mMemInfoView = rootView.findViewById(R.id.meminfo);
 
         if (DesktopModeStatus.canEnterDesktopMode(this)) {
             mDesktopRecentsTransitionController = new DesktopRecentsTransitionController(
@@ -177,7 +181,10 @@ public final class RecentsActivity extends StatefulActivity<RecentsState> implem
         }
         mFallbackRecentsView.init(mActionsView, mSplitSelectStateController,
                 mDesktopRecentsTransitionController, new SurfaceTransactionApplier(getRootView()),
-                emptyRecentsMessageView);
+                emptyRecentsMessageView, mMemInfoView);
+
+        mMemInfoView.setDp(mDeviceProfile);
+        mMemInfoView.updateVerticalMargin(DisplayController.getNavigationMode(this));
 
         setContentView(rootView);
         rootView.getSysUiScrim().getSysUIProgress().updateValue(0);
@@ -268,6 +275,11 @@ public final class RecentsActivity extends StatefulActivity<RecentsState> implem
     @Override
     public OverviewActionsView<?> getActionsView() {
         return mActionsView;
+    }
+
+    @Override
+    public MemInfoView getMemInfoView() {
+        return mMemInfoView;
     }
 
     @Override

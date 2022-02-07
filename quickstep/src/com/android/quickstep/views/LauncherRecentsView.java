@@ -83,9 +83,10 @@ public class LauncherRecentsView extends RecentsView<QuickstepLauncher, Launcher
             SplitSelectStateController splitPlaceholderView,
             @Nullable DesktopRecentsTransitionController desktopRecentsTransitionController,
             SurfaceTransactionApplier surfaceTransactionApplier,
-            @Nullable ViewGroup emptyRecentsMessageView) {
+            @Nullable ViewGroup emptyRecentsMessageView,
+            MemInfoView memInfoView) {
         super.init(actionsView, splitPlaceholderView, desktopRecentsTransitionController,
-                surfaceTransactionApplier, emptyRecentsMessageView);
+                surfaceTransactionApplier, emptyRecentsMessageView, memInfoView);
         setContentAlpha(0);
     }
 

@@ -143,6 +143,9 @@ public class DeviceProfile {
 
     public boolean isQsbVisible;
 
+    // Meminfo in overview
+    public int memInfoHeight;
+
     /** Used only as an alternative to mocking when null values cannot be used. */
     @VisibleForTesting
     public DeviceProfile() {
@@ -285,6 +288,9 @@ public class DeviceProfile {
             mResponsiveWorkspaceCellSpec = workspaceCellSpecs.getCalculatedSpec(
                     responsiveAspectRatio, mDeviceProperties.getHeightPx());
         }
+
+        memInfoHeight = inv.getLauncherPrefs().get(LauncherPrefs.RECENTS_MEMINFO) ? res.getDimensionPixelSize(
+                R.dimen.meminfo_claimed_height) : 0;
 
         isQsbVisible = Utilities.showQSB(context);
 
@@ -1115,7 +1121,7 @@ public class DeviceProfile {
         int overviewActionsSpace = mDeviceProperties.isLargeScreen()
                 ? 0
                 : (overviewProfile.getActionsTopMarginPx() + overviewProfile.getActionsHeight());
-        return overviewActionsSpace + getOverviewActionsClaimedSpaceBelow();
+        return overviewActionsSpace + memInfoHeight + getOverviewActionsClaimedSpaceBelow();
     }
 
     /**
@@ -1613,6 +1619,10 @@ public class DeviceProfile {
 
     public void setTaskbarProfile(TaskbarProfile taskbarProfile) {
         mTaskbarProfile = taskbarProfile;
+    }
+
+    public LauncherPrefs getLauncherPrefs() {
+        return inv.getLauncherPrefs();
     }
 
     /**

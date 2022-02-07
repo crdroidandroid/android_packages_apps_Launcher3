@@ -27,6 +27,7 @@ import androidx.core.graphics.ColorUtils;
 
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Launcher;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.LauncherState;
 import com.android.launcher3.LauncherUiState;
 import com.android.launcher3.R;
@@ -135,6 +136,9 @@ public class OverviewState extends LauncherState {
         }
         if (launcherUiState.getSplitScreenUiState().isSplitSelectActive()) {
             elements &= ~CLEAR_ALL_BUTTON & ~ADD_DESK_BUTTON;
+        }
+        if (dp.getLauncherPrefs().get(LauncherPrefs.RECENTS_MEMINFO)) {
+            elements |= MEMINFO;
         }
         return elements;
     }

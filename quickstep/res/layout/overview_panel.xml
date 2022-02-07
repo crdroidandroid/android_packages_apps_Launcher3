@@ -34,4 +34,7 @@
         layout="@layout/overview_empty_recents_message"
         android:visibility="gone"/>
 
+    <include
+        layout="@layout/meminfo" />
+
 </merge>

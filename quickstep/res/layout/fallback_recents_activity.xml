@@ -57,5 +57,8 @@
             layout="@layout/overview_empty_recents_message"
             android:visibility="gone"/>
 
+        <include
+            layout="@layout/meminfo" />
+
     </com.android.quickstep.fallback.RecentsDragLayer>
 </com.android.launcher3.LauncherRootView>

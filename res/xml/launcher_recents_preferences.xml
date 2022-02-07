@@ -19,4 +19,25 @@
     xmlns:launcher="http://schemas.android.com/apk/res-auto"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.launcher3">
 
+    <PreferenceCategory
+        android:key="recents_category_general"
+        android:title="@string/general_category_title">
+
+        <SwitchPreferenceCompat
+            android:key="pref_recents_meminfo"
+            android:title="@string/recents_meminfo_title"
+            android:defaultValue="false"
+            android:persistent="true"
+            launcher:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="pref_recents_meminfo_zram"
+            android:title="@string/recents_meminfo_zram_title"
+            android:defaultValue="false"
+            android:persistent="true"
+            android:dependency="pref_recents_meminfo"
+            launcher:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
 </androidx.preference.PreferenceScreen>

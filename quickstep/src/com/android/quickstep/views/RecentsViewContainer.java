@@ -38,6 +38,7 @@ import com.android.launcher3.views.ScrimView;
 import com.android.quickstep.BaseContainerInterface;
 import com.android.quickstep.fallback.RecentsState;
 import com.android.quickstep.split.SplitSelectStateController;
+import com.android.quickstep.views.MemInfoView;
 
 /**
  * Interface to be implemented by the parent view of RecentsView
@@ -216,4 +217,6 @@ public interface RecentsViewContainer extends ActivityContext, RecentsViewContai
      */
     void goToRecentsState(RecentsState recentsState, boolean animated,
             Animator.AnimatorListener listener);
+
+    MemInfoView getMemInfoView();
 }

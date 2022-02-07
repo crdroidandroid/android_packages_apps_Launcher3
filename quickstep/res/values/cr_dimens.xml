@@ -29,4 +29,7 @@
     <dimen name="taskbar_stashed_handle_height_smaller">2dp</dimen>
     <dimen name="taskbar_stashed_handle_height_small">3dp</dimen>
     <dimen name="taskbar_stashed_handle_height_tall">5dp</dimen>
+
+    <!-- Meminfo in overview -->
+    <dimen name="meminfo_claimed_height">16dp</dimen>
 </resources>
