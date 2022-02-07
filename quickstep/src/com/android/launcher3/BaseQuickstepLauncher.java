@@ -78,6 +78,7 @@ import com.android.quickstep.util.RemoteAnimationProvider;
 import com.android.quickstep.util.RemoteFadeOutAnimationListener;
 import com.android.quickstep.util.SplitSelectStateController;
 import com.android.quickstep.util.TISBindHelper;
+import com.android.quickstep.views.MemInfoView;
 import com.android.quickstep.views.OverviewActionsView;
 import com.android.quickstep.views.RecentsView;
 import com.android.systemui.shared.system.ActivityManagerWrapper;
@@ -112,6 +113,7 @@ public abstract class BaseQuickstepLauncher extends Launcher
                     Float.intBitsToFloat(arg1), arg2 != 0);
 
     private OverviewActionsView mActionsView;
+    private MemInfoView mMemInfoView;
 
     private TISBindHelper mTISBindHelper;
     private @Nullable TaskbarManager mTaskbarManager;
@@ -191,6 +193,9 @@ public abstract class BaseQuickstepLauncher extends Launcher
         getDragLayer().recreateControllers();
         if (mActionsView != null) {
             mActionsView.updateVerticalMargin(newMode);
+        }
+        if (mMemInfoView != null) {
+            mMemInfoView.updateVerticalMargin(newMode);
         }
     }
 
@@ -317,13 +322,16 @@ public abstract class BaseQuickstepLauncher extends Launcher
 
         SysUINavigationMode.INSTANCE.get(this).updateMode();
         mActionsView = findViewById(R.id.overview_actions_view);
+        mMemInfoView = findViewById(R.id.meminfo);
         RecentsView overviewPanel = (RecentsView) getOverviewPanel();
         SplitSelectStateController controller =
                 new SplitSelectStateController(mHandler, SystemUiProxy.INSTANCE.get(this),
                         getStateManager(), getDepthController());
-        overviewPanel.init(mActionsView, controller);
+        overviewPanel.init(mActionsView, controller, mMemInfoView);
         mActionsView.setDp(getDeviceProfile());
+        mMemInfoView.setDp(getDeviceProfile());
         mActionsView.updateVerticalMargin(SysUINavigationMode.getMode(this));
+        mMemInfoView.updateVerticalMargin(SysUINavigationMode.getMode(this));
 
         mAppTransitionManager = new QuickstepTransitionManager(this);
         mAppTransitionManager.registerRemoteAnimations();
@@ -375,6 +383,10 @@ public abstract class BaseQuickstepLauncher extends Launcher
 
     public <T extends OverviewActionsView> T getActionsView() {
         return (T) mActionsView;
+    }
+
+    public MemInfoView getMemInfoView () {
+        return mMemInfoView;
     }
 
     @Override

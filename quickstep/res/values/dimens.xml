@@ -39,23 +39,23 @@
     <item name="overview_max_scale" format="float" type="dimen">0.7</item>
 
     <!-- Overrideable in overlay that provides the Overview Actions. -->
-    <dimen name="overview_actions_height">48dp</dimen>
+    <dimen name="overview_actions_height">80dp</dimen>
     <dimen name="overview_actions_button_spacing">32dp</dimen>
     <dimen name="overview_actions_button_spacing_grid">36dp</dimen>
     <dimen name="overview_actions_margin_gesture">28dp</dimen>
     <dimen name="overview_actions_top_margin_gesture_grid_portrait">19.37dp</dimen>
     <dimen name="overview_actions_bottom_margin_gesture_grid_portrait">22dp</dimen>
     <dimen name="overview_actions_top_margin_gesture_grid_landscape">19.1dp</dimen>
-    <dimen name="overview_actions_bottom_margin_gesture_grid_landscape">10dp</dimen>
+    <dimen name="overview_actions_bottom_margin_gesture_grid_landscape">5dp</dimen>
     <dimen name="overview_actions_margin_three_button">8dp</dimen>
     <dimen name="overview_actions_horizontal_margin">16dp</dimen>
 
     <dimen name="overview_grid_side_margin_portrait">60dp</dimen>
-    <dimen name="overview_grid_side_margin_landscape">52dp</dimen>
+    <dimen name="overview_grid_side_margin_landscape">70dp</dimen>
     <dimen name="overview_grid_row_spacing">36dp</dimen>
     <dimen name="overview_page_spacing">16dp</dimen>
     <dimen name="overview_page_spacing_grid_portrait">36dp</dimen>
-    <dimen name="overview_page_spacing_grid_landscape">38dp</dimen>
+    <dimen name="overview_page_spacing_grid_landscape">70dp</dimen>
 
     <!-- These speeds are in dp/s -->
     <dimen name="max_task_dismiss_drag_velocity">2.25dp</dimen>
