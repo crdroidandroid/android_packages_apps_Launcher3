@@ -75,6 +75,13 @@
             android:defaultValue="true"
             launcher:iconSpaceReserved="false" />
 
+        <SwitchPreferenceCompat
+            android:key="pref_dock_theme"
+            android:title="@string/dock_theme_title"
+            android:summary="@string/dock_theme_summary"
+            android:dependency="pref_dock_search"
+            launcher:iconSpaceReserved="false" />
+
     </PreferenceCategory>
 
 </androidx.preference.PreferenceScreen>
