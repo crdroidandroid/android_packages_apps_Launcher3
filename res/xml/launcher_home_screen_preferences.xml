@@ -69,6 +69,12 @@
             android:summary="@string/dock_search_summary"
             android:defaultValue="true" />
 
+        <SwitchPreference
+            android:key="pref_dock_theme"
+            android:title="@string/dock_theme_title"
+            android:summary="@string/dock_theme_summary"
+            android:dependency="pref_dock_search" />
+
     </PreferenceCategory>
 
 </androidx.preference.PreferenceScreen>
