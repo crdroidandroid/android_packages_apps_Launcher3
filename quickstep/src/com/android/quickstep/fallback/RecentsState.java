@@ -49,6 +49,7 @@ public class RecentsState implements BaseState<RecentsState> {
     private static final int FLAG_DETACH_DESKTOP_CAROUSEL = BaseState.getFlag(9);
     private static final int FLAG_ADD_DESK_BUTTON = BaseState.getFlag(10);
     private static final int FLAG_SHOW_EXPLODED_DESKTOP_VIEW = BaseState.getFlag(11);
+    private static final int FLAG_MEMINFO = BaseState.getFlag(12);
 
     public static final int DEFAULT_STATE_ORDINAL = 0;
     public static final int MODAL_TASK_ORDINAL = 1;
@@ -62,11 +63,11 @@ public class RecentsState implements BaseState<RecentsState> {
     public static final RecentsState DEFAULT = new RecentsState(DEFAULT_STATE_ORDINAL,
             FLAG_DISABLE_RESTORE | FLAG_CLEAR_ALL_BUTTON | FLAG_OVERVIEW_ACTIONS | FLAG_SHOW_AS_GRID
                     | FLAG_SCRIM | FLAG_LIVE_TILE | FLAG_RECENTS_VIEW_VISIBLE
-                    | FLAG_ADD_DESK_BUTTON | FLAG_SHOW_EXPLODED_DESKTOP_VIEW);
+                    | FLAG_ADD_DESK_BUTTON | FLAG_SHOW_EXPLODED_DESKTOP_VIEW | FLAG_MEMINFO);
     public static final RecentsState MODAL_TASK = new ModalState(MODAL_TASK_ORDINAL,
             FLAG_DISABLE_RESTORE | FLAG_OVERVIEW_ACTIONS | FLAG_MODAL
                     | FLAG_SHOW_AS_GRID | FLAG_SCRIM | FLAG_LIVE_TILE | FLAG_RECENTS_VIEW_VISIBLE
-                    | FLAG_SHOW_EXPLODED_DESKTOP_VIEW);
+                    | FLAG_SHOW_EXPLODED_DESKTOP_VIEW | FLAG_MEMINFO);
     public static final RecentsState BACKGROUND_APP = new BackgroundAppState(BACKGROUND_APP_ORDINAL,
             FLAG_DISABLE_RESTORE | FLAG_NON_INTERACTIVE | FLAG_FULL_SCREEN
                     | FLAG_RECENTS_VIEW_VISIBLE | FLAG_TASK_THUMBNAIL_SPLASH
@@ -155,6 +156,13 @@ public class RecentsState implements BaseState<RecentsState> {
      */
     public boolean hasOverviewActions() {
         return hasFlag(FLAG_OVERVIEW_ACTIONS);
+    }
+
+    /**
+     * For this state, whether mem info view should be shown.
+     */
+    public boolean hasMemInfoView() {
+        return hasFlag(FLAG_MEMINFO);
     }
 
     /**
