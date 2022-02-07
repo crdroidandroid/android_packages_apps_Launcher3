@@ -33,6 +33,8 @@ import com.android.launcher3.taskbar.TaskbarUIController;
 import com.android.launcher3.views.ActivityContext;
 import com.android.launcher3.views.ScrimView;
 
+import com.android.quickstep.views.MemInfoView;
+
 /**
  * Interface to be implemented by the parent view of RecentsView
  */
@@ -198,4 +200,6 @@ public interface RecentsViewContainer extends ActivityContext {
     void setTaskbarUIController(@Nullable TaskbarUIController taskbarUIController);
 
     @Nullable TaskbarUIController getTaskbarUIController();
+
+    MemInfoView getMemInfoView();
 }
