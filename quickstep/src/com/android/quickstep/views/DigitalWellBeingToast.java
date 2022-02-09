@@ -329,7 +329,7 @@ public final class DigitalWellBeingToast {
                 mTaskView.getThumbnail().getLayoutParams()).bottomMargin;
         PagedOrientationHandler orientationHandler = mTaskView.getPagedOrientationHandler();
         Pair<Float, Float> translations = orientationHandler
-                .setDwbLayoutParamsAndGetTranslations(mTaskView.getMeasuredWidth(),
+                .getDwbLayoutTranslations(mTaskView.getMeasuredWidth(),
                         mTaskView.getMeasuredHeight(), mStagedSplitBounds, deviceProfile,
                         mTaskView.getThumbnails(), mTask.key.id, mBanner);
         mSplitOffsetTranslationX = translations.first;
