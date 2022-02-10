@@ -204,10 +204,11 @@ public class ThemedLocalColorExtractor extends LocalColorExtractor implements
             /* referenceWhite */ CieXyzAbs.fromRel(Illuminants.D65, luminance)
         );
         ColorScheme targets = new MaterialYouTargets(getChroma(), false, cond);
-        @ColorInt int customColor = Settings.Secure.getInt(mContext.getContentResolver(), "monet_engine_custom_color", 0);
+        boolean useCustomColor = Settings.Secure.getInt(mContext.getContentResolver(), "monet_engine_custom_color", 0) != 0;
         @ColorInt int colorOverride = Settings.Secure.getInt(mContext.getContentResolver(), "monet_engine_color_override", -1);
-        Color color = new Srgb((colorOverride != -1 && customColor != 0)  ? colorOverride : colors.getPrimaryColor().toArgb());
-        ColorScheme colorScheme = new DynamicColorScheme(targets, color, getChroma(), cond, true);
+        boolean useAccurateShades = Settings.Secure.getInt(mContext.getContentResolver(), "monet_engine_accurate_shades", 1) != 0;
+        Color color = new Srgb(useCustomColor ? colorOverride : colors.getPrimaryColor().toArgb());
+        ColorScheme colorScheme = new DynamicColorScheme(targets, color, getChroma(), cond, useAccurateShades);
 
         addColorsToArray(colorScheme.getAccent1(), ACCENT1_RES, colorRes);
         addColorsToArray(colorScheme.getAccent2(), ACCENT2_RES, colorRes);
@@ -283,6 +284,6 @@ public class ThemedLocalColorExtractor extends LocalColorExtractor implements
     }
 
     private float getChroma() {
-        return Settings.Secure.getFloat(mContext.getContentResolver(), "monet_engine_chroma_factor", 1.0f);
+        return Settings.Secure.getFloat(mContext.getContentResolver(), "monet_engine_chroma_factor", 100.0f) / 100f;
     }
 }
