@@ -113,7 +113,7 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
     protected void onFinishInflate() {
         super.onFinishInflate();
         findViewById(R.id.action_screenshot).setOnClickListener(this);
-        if (getContext().getPackageManager().getLaunchIntentForPackage("com.google.ar.lens") != null) {
+        if (Utilities.isGSAEnabled(getContext())) {
             View lens = findViewById(R.id.action_lens);
             findViewById(R.id.action_lens).setOnClickListener(this);
             lens.setVisibility(VISIBLE);

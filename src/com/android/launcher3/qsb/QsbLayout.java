@@ -3,6 +3,9 @@ package com.android.launcher3.qsb;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -53,7 +56,7 @@ public class QsbLayout extends FrameLayout {
             mContext.startActivity(new Intent("android.search.action.GLOBAL_SEARCH").addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
                 Intent.FLAG_ACTIVITY_CLEAR_TASK).setPackage(searchPackage));
         });
-        if (searchPackage.equals(Utilities.GSA_PACKAGE)) {
+        if (Utilities.isGSAEnabled(mContext)) {
             setupLensIcon();
         }
     }
@@ -75,19 +78,20 @@ public class QsbLayout extends FrameLayout {
                 measureChildWithMargins(child, widthMeasureSpec, 0, heightMeasureSpec, 0);
             }
         }
-
     }
 
     private void setupLensIcon() {
-        Intent lensIntent = Intent.makeMainActivity(new ComponentName(Utilities.LENS_PACKAGE,
-            Utilities.LENS_ACTIVITY)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
-            Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
-        if (getContext().getPackageManager().resolveActivity(lensIntent, 0) == null){
-            return;
-        }
         lensIcon.setVisibility(View.VISIBLE);
-
         lensIcon.setOnClickListener(view -> {
+            Intent lensIntent = new Intent();
+            Bundle bundle = new Bundle();
+            bundle.putString("caller_package", Utilities.GSA_PACKAGE);
+            bundle.putLong("start_activity_time_nanos", SystemClock.elapsedRealtimeNanos());
+            lensIntent.setComponent(new ComponentName(Utilities.GSA_PACKAGE, Utilities.LENS_ACTIVITY))
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    .setPackage(Utilities.GSA_PACKAGE)
+                    .setData(Uri.parse(Utilities.LENS_URI))
+                    .putExtra("lens_activity_params", bundle);
             mContext.startActivity(lensIntent);
         });
     }
