@@ -49,6 +49,7 @@ import androidx.core.content.FileProvider;
 
 import com.android.internal.app.ChooserActivity;
 import com.android.launcher3.BuildConfig;
+import com.android.launcher3.Utilities;
 import com.android.quickstep.SystemUiProxy;
 import com.android.systemui.shared.recents.model.Task;
 import com.android.systemui.shared.recents.utilities.BitmapUtil;
@@ -291,8 +292,17 @@ public class ImageActionUtils {
         if (intent == null) {
             intent = new Intent();
         }
-        intent.setPackage("com.google.ar.lens");
-        return getShareIntentForImageUri(uri, intent);
+        ClipData clipdata = new ClipData(new ClipDescription("content",
+                new String[]{"image/png"}),
+                new ClipData.Item(uri));
+        intent.setAction(Intent.ACTION_SEND)
+                .setComponent(new ComponentName(Utilities.GSA_PACKAGE, Utilities.LENS_SHARE_ACTIVITY))
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                .addFlags(FLAG_GRANT_READ_URI_PERMISSION)
+                .setType("image/png")
+                .putExtra(Intent.EXTRA_STREAM, uri)
+                .setClipData(clipdata);
+        return new Intent[]{Intent.createChooser(intent, null).addFlags(FLAG_ACTIVITY_NEW_TASK)};
     }
 
     private static void clearOldCacheFiles(Context context) {
