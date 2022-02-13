@@ -34,6 +34,7 @@ public class QsbLayout extends FrameLayout {
         super(context, attrs, defStyle);
         mContext = context;
     }
+
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
@@ -56,9 +57,8 @@ public class QsbLayout extends FrameLayout {
             mContext.startActivity(new Intent("android.search.action.GLOBAL_SEARCH").addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
                 Intent.FLAG_ACTIVITY_CLEAR_TASK).setPackage(searchPackage));
         });
-        if (Utilities.isGSAEnabled(mContext)) {
-            setupLensIcon();
-        }
+        setupGIcon();
+        setupLensIcon();
     }
 
     @Override
@@ -80,8 +80,15 @@ public class QsbLayout extends FrameLayout {
         }
     }
 
+    private void setupGIcon() {
+        Intent intent = mContext.getPackageManager().getLaunchIntentForPackage(Utilities.GSA_PACKAGE);
+        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+        gIcon.setOnClickListener(view -> {
+            mContext.startActivity(intent);
+        });
+    }
+
     private void setupLensIcon() {
-        lensIcon.setVisibility(View.VISIBLE);
         lensIcon.setOnClickListener(view -> {
             Intent lensIntent = new Intent();
             Bundle bundle = new Bundle();
@@ -95,5 +102,4 @@ public class QsbLayout extends FrameLayout {
             mContext.startActivity(lensIntent);
         });
     }
-
 }
