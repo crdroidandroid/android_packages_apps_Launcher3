@@ -62,6 +62,7 @@ public class QsbLayout extends FrameLayout {
             gIcon.setImageResource(R.drawable.ic_super_g_color);
             lensIcon.setImageResource(R.drawable.ic_lens_color);
         }
+        setupGIcon();
         setupLensIcon();
     }
 
@@ -73,6 +74,8 @@ public class QsbLayout extends FrameLayout {
         micIcon.setBackground(pd);
         lensIcon.setClipToOutline(cornerRadius > 0);
         lensIcon.setBackground(pd);
+        gIcon.setClipToOutline(cornerRadius > 0);
+        gIcon.setBackground(pd);
     }
 
     private void setUpBackground() {
@@ -111,6 +114,14 @@ public class QsbLayout extends FrameLayout {
         setOnClickListener(view -> {
             mContext.startActivity(new Intent("android.search.action.GLOBAL_SEARCH").addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
                 Intent.FLAG_ACTIVITY_CLEAR_TASK).setPackage(searchPackage));
+        });
+    }
+
+    private void setupGIcon() {
+        Intent intent = mContext.getPackageManager().getLaunchIntentForPackage(Utilities.GSA_PACKAGE);
+        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+        gIcon.setOnClickListener(view -> {
+            mContext.startActivity(intent);
         });
     }
 
