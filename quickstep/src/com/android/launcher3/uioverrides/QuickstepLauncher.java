@@ -73,6 +73,8 @@ import android.window.SplashScreen;
 
 import androidx.annotation.BinderThread;
 import androidx.annotation.Nullable;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 
 import com.android.app.viewcapture.ViewCapture;
 import com.android.launcher3.DeviceProfile;
@@ -101,8 +103,10 @@ import com.android.launcher3.proxy.ProxyActivityStarter;
 import com.android.launcher3.proxy.StartActivityParams;
 import com.android.launcher3.statehandlers.DepthController;
 import com.android.launcher3.statehandlers.DesktopVisibilityController;
+import com.android.launcher3.statemanager.StateManager;
 import com.android.launcher3.statemanager.StateManager.AtomicAnimationFactory;
 import com.android.launcher3.statemanager.StateManager.StateHandler;
+import com.android.launcher3.statemanager.StateManager.StateListener;
 import com.android.launcher3.taskbar.LauncherTaskbarUIController;
 import com.android.launcher3.taskbar.TaskbarManager;
 import com.android.launcher3.uioverrides.QuickstepWidgetHolder.QuickstepHolderFactory;
@@ -200,6 +204,22 @@ public class QuickstepLauncher extends Launcher {
     private SafeCloseable mViewCapture;
 
     private boolean mEnableWidgetDepth;
+
+    private StateListener noStatusBarStateListener = new StateManager.StateListener<LauncherState>() {
+        @Override
+        public void onStateTransitionStart(LauncherState toState) {
+            if (toState == OVERVIEW) {
+                getWindow().getDecorView().getWindowInsetsController().show(WindowInsetsCompat.Type.statusBars());
+            }
+        }
+
+        @Override
+        public void onStateTransitionComplete(LauncherState finalState) {
+            if (finalState != OVERVIEW) {
+                getWindow().getDecorView().getWindowInsetsController().hide(WindowInsetsCompat.Type.statusBars());
+            }
+        }
+    };
 
     @Override
     protected LauncherOverlayManager getDefaultOverlay() {
@@ -420,6 +440,9 @@ public class QuickstepLauncher extends Launcher {
 
     @Override
     public void onDestroy() {
+        if (!Utilities.showStatusbarEnabled(getApplicationContext())) {
+            getStateManager().removeStateListener(noStatusBarStateListener);
+        }
         mAppTransitionManager.onActivityDestroyed();
         if (mUnfoldTransitionProgressProvider != null) {
             mUnfoldTransitionProgressProvider.destroy();
@@ -542,6 +565,9 @@ public class QuickstepLauncher extends Launcher {
         initUnfoldTransitionProgressProvider();
         if (FeatureFlags.CONTINUOUS_VIEW_TREE_CAPTURE.get()) {
             mViewCapture = ViewCapture.getInstance().startCapture(getWindow());
+        }
+        if (!Utilities.showStatusbarEnabled(getApplicationContext())) {
+            getStateManager().addStateListener(noStatusBarStateListener);
         }
     }
 
