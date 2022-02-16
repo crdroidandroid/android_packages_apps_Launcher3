@@ -61,6 +61,7 @@
     <integer name="config_caretAnimationDuration">200</integer>
 
     <!-- Various classes overriden by projects/build flavors. -->
+    <string name="app_filter_class" translatable="false"></string>
     <string name="folder_name_provider_class" translatable="false"></string>
     <string name="stats_log_manager_class" translatable="false"></string>
     <string name="instant_app_resolver_class" translatable="false"></string>
@@ -216,9 +217,6 @@
         <item>@dimen/c2_d</item>
     </array>
 
-    <string-array name="filtered_components" ></string-array>
-
     <!-- Name of the class used to generate colors from the wallpaper colors. Must be implementing the LauncherAppWidgetHostView.ColorGenerator interface. -->
     <string name="color_generator_class" translatable="false"/>
-
 </resources>
