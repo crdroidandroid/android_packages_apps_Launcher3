@@ -154,6 +154,7 @@ public final class Utilities {
     public static final String KEY_DOCK_SEARCH = "pref_dock_search";
     public static final String KEY_DOCK_THEME = "pref_dock_theme";
     public static final String KEY_SEARCH_RADIUS = "pref_search_radius_size";
+    public static final String KEY_STATUS_BAR = "pref_show_statusbar";
 
     /**
      * Returns true if theme is dark.
@@ -939,5 +940,10 @@ public final class Utilities {
     public static int getCornerRadius(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getInt(KEY_SEARCH_RADIUS, 100);
+    }
+
+    public static boolean showStatusbarEnabled(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_STATUS_BAR, true);
     }
 }
