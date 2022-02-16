@@ -19,69 +19,81 @@
     xmlns:launcher="http://schemas.android.com/apk/res-auto"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.launcher3">
 
-    <SwitchPreference
-        android:defaultValue="true"
-        android:key="pref_enable_minus_one"
-        android:summary="@string/pref_show_google_now_summary"
-        android:title="@string/title_show_google_app" />
+    <PreferenceCategory
+        android:title="@string/general_category_title">
 
-    <SwitchPreference
-        android:defaultValue="false"
-        android:key="pref_workspace_lock"
-        android:persistent="true"
-        android:title="@string/settings_lock_layout_title"
-        android:summaryOn="@string/settings_lock_layout_summary_on"
-        android:summaryOff="@string/settings_lock_layout_summary_off" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="pref_workspace_lock"
+            android:persistent="true"
+            android:title="@string/settings_lock_layout_title"
+            android:summaryOn="@string/settings_lock_layout_summary_on"
+            android:summaryOff="@string/settings_lock_layout_summary_off" />
 
-    <SwitchPreference
-        android:key="pref_add_icon_to_home"
-        android:title="@string/auto_add_shortcuts_label"
-        android:summary="@string/auto_add_shortcuts_description"
-        android:defaultValue="true"
-        android:persistent="true"
-        launcher:logIdOn="613"
-        launcher:logIdOff="614" />
+        <SwitchPreference
+            android:key="pref_add_icon_to_home"
+            android:title="@string/auto_add_shortcuts_label"
+            android:summary="@string/auto_add_shortcuts_description"
+            android:defaultValue="true"
+            android:persistent="true"
+            launcher:logIdOn="613"
+            launcher:logIdOff="614" />
 
-    <SwitchPreference
-        android:key="pref_show_statusbar"
-        android:title="@string/show_statusbar_title"
-        android:defaultValue="true"
-        android:persistent="true" />
+        <SwitchPreference
+            android:key="pref_sleep_gesture"
+            android:title="@string/pref_sleep_gesture_title"
+            android:summary="@string/pref_sleep_gesture_summary"
+            android:defaultValue="true"
+            android:persistent="true" />
+    </PreferenceCategory>
 
-    <SwitchPreference
-        android:key="pref_desktop_show_labels"
-        android:title="@string/desktop_show_labels"
-        android:defaultValue="true"
-        android:persistent="true" />
+    <PreferenceCategory
+        android:title="@string/interface_category_title">
 
-    <SwitchPreference
-        android:key="pref_sleep_gesture"
-        android:title="@string/pref_sleep_gesture_title"
-        android:summary="@string/pref_sleep_gesture_summary"
-        android:defaultValue="true"
-        android:persistent="true"/>
+        <SwitchPreference
+            android:key="pref_enable_minus_one"
+            android:title="@string/title_show_google_app"
+            android:summary="@string/pref_show_google_now_summary"
+            android:defaultValue="true" />
 
-    <SwitchPreference
-        android:key="pref_dock_search"
-        android:title="@string/dock_search_title"
-        android:summary="@string/dock_search_summary"
-        android:defaultValue="true" />
+        <SwitchPreference
+            android:key="pref_show_statusbar"
+            android:title="@string/show_statusbar_title"
+            android:defaultValue="true"
+            android:persistent="true" />
 
-    <SwitchPreference
-        android:key="pref_dock_theme"
-        android:title="@string/dock_theme_title"
-        android:summary="@string/dock_theme_summary"
-        android:dependency="pref_dock_search" />
+        <SwitchPreference
+            android:key="pref_desktop_show_labels"
+            android:title="@string/desktop_show_labels"
+            android:defaultValue="true"
+            android:persistent="true" />
+    </PreferenceCategory>
 
-    <com.android.launcher3.settings.preferences.CustomSeekBarPreference
-        android:key="pref_search_radius_size"
-        android:title="@string/search_radius_title"
-        android:persistent="true"
-        android:max="100"
-        android:min="0"
-        settings:interval="5"
-        settings:units="%"
-        android:defaultValue="100"
-        android:dependency="pref_dock_search" />
+    <PreferenceCategory
+        android:title="@string/search_bar_category_title">
+
+        <SwitchPreference
+            android:key="pref_dock_search"
+            android:title="@string/dock_search_title"
+            android:summary="@string/dock_search_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="pref_dock_theme"
+            android:title="@string/dock_theme_title"
+            android:summary="@string/dock_theme_summary"
+            android:dependency="pref_dock_search" />
+
+        <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+            android:key="pref_search_radius_size"
+            android:title="@string/search_radius_title"
+            android:persistent="true"
+            android:max="100"
+            android:min="0"
+            settings:interval="5"
+            settings:units="%"
+            android:defaultValue="100"
+            android:dependency="pref_dock_search" />
+    </PreferenceCategory>
 
 </androidx.preference.PreferenceScreen>
