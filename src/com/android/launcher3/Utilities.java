@@ -173,6 +173,7 @@ public final class Utilities {
     public static final String KEY_SEARCH_RADIUS = "pref_search_radius_size";
     public static final String KEY_SHOW_HOTSEAT_BG = "pref_show_hotseat_bg";
     public static final String KEY_ALLOW_WALLPAPER_ZOOMING = "pref_allow_wallpaper_zooming";
+    public static final String KEY_STATUS_BAR = "pref_show_statusbar";
 
     /**
      * Returns true if theme is dark.
@@ -1055,5 +1056,10 @@ public final class Utilities {
     public static boolean canZoomWallpaper(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_ALLOW_WALLPAPER_ZOOMING, true);
+    }
+
+    public static boolean showStatusbarEnabled(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_STATUS_BAR, true);
     }
 }
