@@ -120,6 +120,8 @@ import androidx.annotation.BinderThread;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 
 import com.android.app.viewcapture.ViewCaptureFactory;
 import com.android.launcher3.AbstractFloatingView;
@@ -161,6 +163,7 @@ import com.android.launcher3.statehandlers.DesktopVisibilityController;
 import com.android.launcher3.statemanager.StateManager;
 import com.android.launcher3.statemanager.StateManager.AtomicAnimationFactory;
 import com.android.launcher3.statemanager.StateManager.StateHandler;
+import com.android.launcher3.statemanager.StateManager.StateListener;
 import com.android.launcher3.taskbar.TaskbarInteractor;
 import com.android.launcher3.taskbar.TaskbarManager;
 import com.android.launcher3.taskbar.TaskbarUiState;
@@ -336,6 +339,22 @@ public class QuickstepLauncher extends Launcher implements RecentsViewContainer,
                     getStateManager().setCurrentUserControlledAnimation(animController);
                 }
             };
+
+    private StateListener noStatusBarStateListener = new StateManager.StateListener<LauncherState>() {
+        @Override
+        public void onStateTransitionStart(LauncherState toState) {
+            if (toState == OVERVIEW) {
+                getWindow().getDecorView().getWindowInsetsController().show(WindowInsetsCompat.Type.statusBars());
+            }
+        }
+
+        @Override
+        public void onStateTransitionComplete(LauncherState finalState) {
+            if (finalState != OVERVIEW) {
+                getWindow().getDecorView().getWindowInsetsController().hide(WindowInsetsCompat.Type.statusBars());
+            }
+        }
+    };
 
     @Override
     protected LauncherOverlayManager getDefaultOverlay() {
@@ -699,6 +718,9 @@ public class QuickstepLauncher extends Launcher implements RecentsViewContainer,
 
     @Override
     public void onDestroy() {
+        if (!LauncherPrefs.SHOW_STATUS_BAR.get(this)) {
+            getStateManager().removeStateListener(noStatusBarStateListener);
+        }
         if (mAppTransitionManager != null) {
             mAppTransitionManager.onActivityDestroyed();
         }
@@ -857,6 +879,9 @@ public class QuickstepLauncher extends Launcher implements RecentsViewContainer,
         mViewCapture = ViewCaptureFactory.getInstance(this).startCapture(getWindow());
         getWindow().addPrivateFlags(PRIVATE_FLAG_OPTIMIZE_MEASURE);
         QuickstepOnboardingPrefs.setup(this);
+        if (!LauncherPrefs.SHOW_STATUS_BAR.get(this)) {
+            getStateManager().addStateListener(noStatusBarStateListener);
+        }
         View.setTraceLayoutSteps(TRACE_LAYOUTS);
         View.setTracedRequestLayoutClassClass(TRACE_RELAYOUT_CLASS);
         OverviewComponentObserver.INSTANCE.get(this)
