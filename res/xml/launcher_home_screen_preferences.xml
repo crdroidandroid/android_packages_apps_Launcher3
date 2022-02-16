@@ -43,6 +43,12 @@
         launcher:logIdOff="614" />
 
     <SwitchPreference
+        android:key="pref_show_statusbar"
+        android:title="@string/show_statusbar_title"
+        android:defaultValue="true"
+        android:persistent="true" />
+
+    <SwitchPreference
         android:key="pref_desktop_show_labels"
         android:title="@string/desktop_show_labels"
         android:defaultValue="true"
