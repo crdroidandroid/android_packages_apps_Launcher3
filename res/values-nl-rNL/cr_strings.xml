@@ -69,8 +69,8 @@
     <string name="trust_apps_auth_manager">Deblokkeer om de verborgen en beschermde apps te beheren</string>
     <string name="trust_apps_auth_open_app">Authentificeer om %1$s te openen</string>
     <string name="trust_apps_loading">Laadt\u2026</string>
-    <string name="trust_apps_no_lock_error">Stel alsjeblieft neem beveiligd vergrendelscherm in om app toegang te beperken</string>
+    <string name="trust_apps_no_lock_error">Stel een beveiligd vergrendelscherm in om de toegang van apps te beperken</string>
     <string name="trust_apps_help">Hulp</string>
     <string name="trust_apps_info_hidden">Verborgen apps en hun widgets zijn verborgen van de lade</string>
-    <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="trust_apps_info_protected">Beschermde apps vereisen dat authenticatie wordt geopend vanaf de launcher</string>
 </resources>
