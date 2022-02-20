@@ -177,7 +177,7 @@ public class PackageUpdatedTask extends BaseModelUpdateTask {
                 appsList.updateDisabledFlags(matcher, flagOp);
 
                 // We are not synchronizing here, as int operations are atomic
-                appsList.setFlags(FLAG_QUIET_MODE_ENABLED, ums.isAnyProfileQuietModeEnabled());
+                appsList.setFlags(FLAG_QUIET_MODE_ENABLED, ums.isAllProfilesQuietModeEnabled());
                 break;
             }
             default:
