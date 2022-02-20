@@ -21,13 +21,16 @@
     <string name="home_category_title">홈 화면</string>
     <string name="home_category_summary">Google Now 패널 및 관련 설정</string>
     <string name="icons_category_title">아이콘</string>
-    <string name="icons_category_summary">아이콘 모양 및 관련 설정</string>
+    <string name="icons_category_summary">아이콘 크기 및 관련 설정</string>
     <string name="app_drawer_category_title">앱 서랍</string>
     <string name="app_drawer_category_summary">앱 서랍 맞춤 설정</string>
     <string name="misc_category_title">기타 설정</string>
     <string name="misc_category_summary">기타 옵션</string>
     <string name="dev_options_title">개발자 옵션</string>
     <string name="dev_options_desc">위험할 수 있는 숨겨진 기능들을 허용합니다</string>
+    <string name="general_category_title">일반</string>
+    <string name="interface_category_title">인터페이스</string>
+    <string name="search_bar_category_title">검색 바</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">스와이프하여 Google 앱에 액세스</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -56,6 +59,18 @@
     <string name="dock_search_summary">하단에 검색 바 표시</string>
     <string name="dock_theme_title">테마형 아이콘</string>
     <string name="dock_theme_summary">테마형 아이콘을 검색 바에 사용</string>
+    <string name="search_radius_title">모서리 각도</string>
     <!-- Recents -->
     <string name="action_lens">Lens</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">상태 표시줄</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">숨겨지거나 보호된 앱</string>
+    <string name="trust_apps_auth_manager">숨겨지거나 보호된 앱을 관리하려면 잠금을 해제하세요.</string>
+    <string name="trust_apps_auth_open_app">인증하여 %1$s 열기</string>
+    <string name="trust_apps_loading">로드 중\u2026</string>
+    <string name="trust_apps_no_lock_error">앱 접근을 제한하려면 잠금 화면 보안을 설정하세요</string>
+    <string name="trust_apps_help">도움말</string>
+    <string name="trust_apps_info_hidden">숨겨진 앱과 해당 앱의 위젯은 앱 서랍에서 숨겨집니다.</string>
+    <string name="trust_apps_info_protected">실행기에서 보호된 앱을 실행하기 위해 인증이 필요합니다.</string>
 </resources>

@@ -21,13 +21,16 @@
     <string name="home_category_title">Startscherm</string>
     <string name="home_category_summary">Instellen Google Now en meer</string>
     <string name="icons_category_title">Pictogrammen</string>
-    <string name="icons_category_summary">Stel pictogram vorm en meer in</string>
+    <string name="icons_category_summary">Stel icoon formaat in en meer</string>
     <string name="app_drawer_category_title">App lade</string>
     <string name="app_drawer_category_summary">Personaliseer je app overzicht</string>
     <string name="misc_category_title">Overige</string>
     <string name="misc_category_summary">Overige opties</string>
     <string name="dev_options_title">Opties voor ontwikkelaars</string>
     <string name="dev_options_desc">Schakel enkele verborgen functies in op eigen risico</string>
+    <string name="general_category_title">Algemeen</string>
+    <string name="interface_category_title">Interface</string>
+    <string name="search_bar_category_title">Zoekbalk</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Veeg voor toegang tot de Google app</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -56,6 +59,18 @@
     <string name="dock_search_summary">Zoekbalk in het onderste dock weergeven</string>
     <string name="dock_theme_title">Thema pictogrammen</string>
     <string name="dock_theme_summary">Gebruik thema pictogrammen voor zoekbalk</string>
+    <string name="search_radius_title">Hoekradius</string>
     <!-- Recents -->
     <string name="action_lens">Lens</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Statusbalk</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Verborgen &amp; Beschermde apps</string>
+    <string name="trust_apps_auth_manager">Deblokkeer om de verborgen en beschermde apps te beheren</string>
+    <string name="trust_apps_auth_open_app">Authentificeer om %1$s te openen</string>
+    <string name="trust_apps_loading">Laadt\u2026</string>
+    <string name="trust_apps_no_lock_error">Stel een beveiligd vergrendelscherm in om de toegang van apps te beperken</string>
+    <string name="trust_apps_help">Hulp</string>
+    <string name="trust_apps_info_hidden">Verborgen apps en hun widgets zijn verborgen van de lade</string>
+    <string name="trust_apps_info_protected">Beschermde apps vereisen dat authenticatie wordt geopend vanaf de launcher</string>
 </resources>

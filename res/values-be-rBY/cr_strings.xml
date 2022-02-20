@@ -21,13 +21,16 @@
     <string name="home_category_title">Галоўны экран</string>
     <string name="home_category_summary">Усталяваць панэль Google Now і іншае</string>
     <string name="icons_category_title">Значкі</string>
-    <string name="icons_category_summary">Усталяваць форму значкоў і іншае</string>
+    <string name="icons_category_summary">Усталюйце памер значка і многае іншае</string>
     <string name="app_drawer_category_title">Спіс праграм</string>
     <string name="app_drawer_category_summary">Налада свайго спісу праграм</string>
     <string name="misc_category_title">Рознае</string>
     <string name="misc_category_summary">Іншыя налады</string>
     <string name="dev_options_title">Параметры распрацоўшчыка</string>
     <string name="dev_options_desc">Уключыце некаторыя схаваныя функцыі на свой страх і рызыку</string>
+    <string name="general_category_title">Агульныя</string>
+    <string name="interface_category_title">Інтэрфейс</string>
+    <string name="search_bar_category_title">Радок пошуку</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Правядзіце пальцам для доступу да праграмы Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -54,8 +57,20 @@
     <string name="label_voice_search">Галасавы пошук</string>
     <string name="dock_search_title">Панэль пошуку Google</string>
     <string name="dock_search_summary">Паказваць радок пошуку ў ніжняй панэлі</string>
-    <string name="dock_theme_title">Themed icons</string>
-    <string name="dock_theme_summary">Use themed icons for search bar</string>
+    <string name="dock_theme_title">Тэматычныя значкі</string>
+    <string name="dock_theme_summary">Выкарыстоўвайце тэматычныя значкі для радка пошуку</string>
+    <string name="search_radius_title">Радыус вугла</string>
     <!-- Recents -->
     <string name="action_lens">Аб’ектыў</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Радок стану</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Схаваныя і абароненыя праграмы</string>
+    <string name="trust_apps_auth_manager">Разблакуйце для кіравання ўтоенымі і абароненымі праграмамі</string>
+    <string name="trust_apps_auth_open_app">Аўтарызуйцеся, для адкрыцця %1$s</string>
+    <string name="trust_apps_loading">Загрузка\u2026</string>
+    <string name="trust_apps_no_lock_error">Калі ласка, усталюйце блакаванне экрана для абмежавання доступу да праграм</string>
+    <string name="trust_apps_help">Дапамога</string>
+    <string name="trust_apps_info_hidden">Схаваныя праграмы і іх віджэты схаваны з меню</string>
+    <string name="trust_apps_info_protected">Для адкрыцця абароненых праграм з лаунчэра патрабуецца аўтэнтыфікацыя</string>
 </resources>

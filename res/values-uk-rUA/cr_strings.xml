@@ -21,13 +21,16 @@
     <string name="home_category_title">Домашній екран</string>
     <string name="home_category_summary">Встановити панель Google Now і більше</string>
     <string name="icons_category_title">Іконки</string>
-    <string name="icons_category_summary">Встановити форму іконок та інше</string>
+    <string name="icons_category_summary">Встановити розмір іконки та багато іншого</string>
     <string name="app_drawer_category_title">Меню додатків</string>
     <string name="app_drawer_category_summary">Налаштувати меню додатків</string>
     <string name="misc_category_title">Різне</string>
     <string name="misc_category_summary">Інші параметри</string>
     <string name="dev_options_title">Параметри розробника</string>
     <string name="dev_options_desc">Увімкнути деякі приховані функції на свій страх і ризик</string>
+    <string name="general_category_title">Загальні налаштування</string>
+    <string name="interface_category_title">Інтерфейс</string>
+    <string name="search_bar_category_title">Рядок пошуку</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Проведіть для доступу до програми Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -56,6 +59,18 @@
     <string name="dock_search_summary">Показувати панель пошуку в нижній панелі</string>
     <string name="dock_theme_title">Іконки з темами</string>
     <string name="dock_theme_summary">Використовувати тематичні іконки для панелі пошуку</string>
+    <string name="search_radius_title">Радіус округлення</string>
     <!-- Recents -->
     <string name="action_lens">Лінза</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Рядок стану</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Приховані та захищені додатки</string>
+    <string name="trust_apps_auth_manager">Розблокуйте, щоб керувати прихованими та захищеними додатками</string>
+    <string name="trust_apps_auth_open_app">Автентифікуйтесь, щоб відкрити %1$s</string>
+    <string name="trust_apps_loading">Завантаження\u2026</string>
+    <string name="trust_apps_no_lock_error">Будь ласка, встановіть блокування екрану для обмеження доступу до додатків</string>
+    <string name="trust_apps_help">Допомога</string>
+    <string name="trust_apps_info_hidden">Приховані додатки і їх віджети приховані з меню</string>
+    <string name="trust_apps_info_protected">Для відкриття захищених додатків з лаунчера потрібна аутентифікація</string>
 </resources>

@@ -21,13 +21,16 @@
     <string name="home_category_title">主畫面</string>
     <string name="home_category_summary">設定 Google 即時資訊等</string>
     <string name="icons_category_title">圖示</string>
-    <string name="icons_category_summary">設定圖示形狀等</string>
+    <string name="icons_category_summary">設定圖示大小和更多</string>
     <string name="app_drawer_category_title">應用程式清單</string>
     <string name="app_drawer_category_summary">自訂您的應用程式清單</string>
     <string name="misc_category_title">雜項</string>
     <string name="misc_category_summary">其他選項</string>
     <string name="dev_options_title">開發人員選項</string>
     <string name="dev_options_desc">冒著風險開啟部分隱藏功能</string>
+    <string name="general_category_title">一般</string>
+    <string name="interface_category_title">使用者介面</string>
+    <string name="search_bar_category_title">搜尋列</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">滑動顯示 Google 即時資訊</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -56,6 +59,18 @@
     <string name="dock_search_summary">在底部顯示搜尋列</string>
     <string name="dock_theme_title">搜尋列著色</string>
     <string name="dock_theme_summary">將主題色套用於搜尋列</string>
+    <string name="search_radius_title">圓角大小</string>
     <!-- Recents -->
     <string name="action_lens">智慧鏡頭</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">狀態列</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">隱藏和受保護的應用程式</string>
+    <string name="trust_apps_auth_manager">解鎖以管理隱藏和受保護的應用程式</string>
+    <string name="trust_apps_auth_open_app">進行身份驗證以開啟 %1$s</string>
+    <string name="trust_apps_loading">載入中\u2026</string>
+    <string name="trust_apps_no_lock_error">請設置安全的鎖定方式來限制應用程式的存取權限</string>
+    <string name="trust_apps_help">說明</string>
+    <string name="trust_apps_info_hidden">隱藏應用程式及其小工具</string>
+    <string name="trust_apps_info_protected">需要身份驗證才能使用受保護的應用程式</string>
 </resources>

@@ -21,13 +21,16 @@
     <string name="home_category_title">Domovská obrazovka</string>
     <string name="home_category_summary">Nastavení panelu Google\u00a0Now a\u00a0dalších funkcí</string>
     <string name="icons_category_title">Ikony</string>
-    <string name="icons_category_summary">Nastavení tvaru ikon a\u00a0dalších parametrů</string>
+    <string name="icons_category_summary">Nastavit velikost ikon a\u00a0další parametry</string>
     <string name="app_drawer_category_title">Roleta aplikací</string>
     <string name="app_drawer_category_summary">Přizpůsobte si svou roletu aplikací</string>
     <string name="misc_category_title">Různé</string>
     <string name="misc_category_summary">Další možnosti</string>
     <string name="dev_options_title">Možnosti pro vývojáře</string>
     <string name="dev_options_desc">Zde můžete na vlastní riziko povolit některé skryté funkce</string>
+    <string name="general_category_title">Obecné</string>
+    <string name="interface_category_title">Rozhraní</string>
+    <string name="search_bar_category_title">Vyhledávací panel</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Přejetím přejít do aplikace Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -56,6 +59,18 @@
     <string name="dock_search_summary">Zobrazit vyhledávací panel ve spodním doku</string>
     <string name="dock_theme_title">Ikony motivů</string>
     <string name="dock_theme_summary">Použít ikony motivů pro vyhledávací panel</string>
+    <string name="search_radius_title">Poloměr rohu</string>
     <!-- Recents -->
     <string name="action_lens">Lens</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Stavový řádek</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Skryté a\u00a0zabezpečené aplikace</string>
+    <string name="trust_apps_auth_manager">Pro správu skrytých a\u00a0zabezpečených aplikací nejdříve odemkněte obrazovku</string>
+    <string name="trust_apps_auth_open_app">Proveďte ověření pro spuštění aplikace %1$s</string>
+    <string name="trust_apps_loading">Načítání\u2026</string>
+    <string name="trust_apps_no_lock_error">Pro omezení přístupu k\u00a0aplikaci prosím nastavte zabezpečenou obrazovku uzamčení</string>
+    <string name="trust_apps_help">Nápověda</string>
+    <string name="trust_apps_info_hidden">Skryté aplikace, včetně jejich widgetů, jsou skryty z\u00a0rolety aplikací</string>
+    <string name="trust_apps_info_protected">Zabezpečené aplikace vyžadují ověření, aby mohly být otevřeny ze spouštěče</string>
 </resources>

@@ -21,13 +21,16 @@
     <string name="home_category_title">Рабочий стол</string>
     <string name="home_category_summary">Установить панель Google now и другое</string>
     <string name="icons_category_title">Иконки</string>
-    <string name="icons_category_summary">Настроить форму иконок и другое</string>
+    <string name="icons_category_summary">Установить размер значков и многое другое</string>
     <string name="app_drawer_category_title">Меню приложений</string>
     <string name="app_drawer_category_summary">Настроить меню приложений</string>
     <string name="misc_category_title">Разное</string>
     <string name="misc_category_summary">Другие настройки</string>
     <string name="dev_options_title">Опции для разработчиков</string>
     <string name="dev_options_desc">Включить некоторые скрытые функции на свой страх и риск</string>
+    <string name="general_category_title">Общие</string>
+    <string name="interface_category_title">Интерфейс</string>
+    <string name="search_bar_category_title">Строка поиска</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Проведите пальцем для доступа к приложению Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -55,7 +58,19 @@
     <string name="dock_search_title">Панель поиска Google</string>
     <string name="dock_search_summary">Показывать строку поиска в нижней панели</string>
     <string name="dock_theme_title">Тематический значок</string>
-    <string name="dock_theme_summary">Use themed icons for search bar</string>
+    <string name="dock_theme_summary">Использовать тематические иконки для поисковой строки</string>
+    <string name="search_radius_title">Радиус скругления углов</string>
     <!-- Recents -->
     <string name="action_lens">Объектив</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Статус бар</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Скрытые &amp; Защищенные приложения</string>
+    <string name="trust_apps_auth_manager">Разблокируйте, для управления скрытыми и защищенными приложениями</string>
+    <string name="trust_apps_auth_open_app">Авторизуйтесь, для открытия %1$s</string>
+    <string name="trust_apps_loading">Загрузка\u2026</string>
+    <string name="trust_apps_no_lock_error">Пожалуйста, установите блокировку экрана для ограничения доступа к приложениям</string>
+    <string name="trust_apps_help">Помощь</string>
+    <string name="trust_apps_info_hidden">Скрытые приложения и их виджеты скрыты из меню</string>
+    <string name="trust_apps_info_protected">Для открытия защищенных приложений из лаунчера требуется аутентификация</string>
 </resources>

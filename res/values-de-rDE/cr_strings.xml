@@ -21,13 +21,16 @@
     <string name="home_category_title">Startbildschirm</string>
     <string name="home_category_summary">Google Now und weiteres anpassen</string>
     <string name="icons_category_title">Symbole</string>
-    <string name="icons_category_summary">Symbolform und weiteres anpassen</string>
+    <string name="icons_category_summary">Symbolgröße und weiteres anpassen</string>
     <string name="app_drawer_category_title">App-Übersicht</string>
     <string name="app_drawer_category_summary">App-Übersicht anpassen</string>
     <string name="misc_category_title">Sonstiges</string>
     <string name="misc_category_summary">Weitere Optionen</string>
     <string name="dev_options_title">Entwickleroptionen</string>
     <string name="dev_options_desc">Auf eigene Gefahr versteckte Funktionen aktivieren</string>
+    <string name="general_category_title">Allgemein</string>
+    <string name="interface_category_title">Benutzeroberfläche</string>
+    <string name="search_bar_category_title">Suchleiste</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Wischen, um auf die Google-App zuzugreifen</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -54,8 +57,20 @@
     <string name="label_voice_search">Sprachsuche</string>
     <string name="dock_search_title">Google-Suchleiste</string>
     <string name="dock_search_summary">Suchleiste unten im Dock anzeigen</string>
-    <string name="dock_theme_title">Symboldesigns</string>
-    <string name="dock_theme_summary">Symboldesigns in der Suchleiste verwenden</string>
+    <string name="dock_theme_title">Themenbezogene Symbole</string>
+    <string name="dock_theme_summary">Verwenden Sie thematische Symbole für die Suchleiste</string>
+    <string name="search_radius_title">Eckenradius</string>
     <!-- Recents -->
     <string name="action_lens">Lens</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Statusleiste</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Versteckte &amp; geschützte Apps</string>
+    <string name="trust_apps_auth_manager">Entsperren, um versteckte und geschützte Apps zu verwalten</string>
+    <string name="trust_apps_auth_open_app">Authentifizieren, um %1$s zu öffnen</string>
+    <string name="trust_apps_loading">Lädt \u2026</string>
+    <string name="trust_apps_no_lock_error">Bitte eine Bildschirmsperre einrichten, um den Zugriff auf Apps einzuschränken</string>
+    <string name="trust_apps_help">Hilfe</string>
+    <string name="trust_apps_info_hidden">Versteckte Apps und ihre Widgets werden in der App-Übersicht nicht angezeigt</string>
+    <string name="trust_apps_info_protected">Geschützte Apps erfordern eine Authentifizierung, um gestartet werden zu können</string>
 </resources>

@@ -21,13 +21,16 @@
     <string name="home_category_title">Layar Beranda</string>
     <string name="home_category_summary">Atur panel Google Now dan lainnya</string>
     <string name="icons_category_title">Ikon</string>
-    <string name="icons_category_summary">Atur bentuk ikon dan lainnya</string>
+    <string name="icons_category_summary">Atur ukuran ikon dan lainnya</string>
     <string name="app_drawer_category_title">Laci Aplikasi</string>
     <string name="app_drawer_category_summary">Kustomisasi laci aplikasi Anda</string>
     <string name="misc_category_title">Lain-lain</string>
     <string name="misc_category_summary">Opsi lainnya</string>
     <string name="dev_options_title">Opsi pengembang</string>
     <string name="dev_options_desc">Mengaktifkan fitur tersembunyi dengan risiko Anda</string>
+    <string name="general_category_title">Umum</string>
+    <string name="interface_category_title">Antarmuka</string>
+    <string name="search_bar_category_title">Bilah penelusuran</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Geser untuk mengakses aplikasi Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -56,6 +59,18 @@
     <string name="dock_search_summary">Tampilkan bilah pencarian di dok bawah</string>
     <string name="dock_theme_title">Ikon bertema</string>
     <string name="dock_theme_summary">Gunakan ikon bertema untuk bilah pencarian</string>
+    <string name="search_radius_title">Radius sudut</string>
     <!-- Recents -->
     <string name="action_lens">Lensa</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Bilah Status</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Tersembunyi &amp; Aplikasi dilindungi</string>
+    <string name="trust_apps_auth_manager">Buka kunci untuk mengelola aplikasi yang disembunyikan dan dilindungi</string>
+    <string name="trust_apps_auth_open_app">Autentikasi untuk membuka %1$s</string>
+    <string name="trust_apps_loading">Memuat\u2026</string>
+    <string name="trust_apps_no_lock_error">Silakan mengatur kunci layar untuk membatasi akses aplikasi</string>
+    <string name="trust_apps_help">Bantuan</string>
+    <string name="trust_apps_info_hidden">Aplikasi tersembunyi beserta widgetnya akan disembunyikan dari laci aplikasi</string>
+    <string name="trust_apps_info_protected">Aplikasi yang dilindungi memerlukan autentikasi untuk dibuka dari peluncur</string>
 </resources>
