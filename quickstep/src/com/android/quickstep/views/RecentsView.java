@@ -96,8 +96,8 @@ import android.view.ViewTreeObserver.OnScrollChangedListener;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.view.animation.Interpolator;
-import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.OverScroller;
 
@@ -379,7 +379,7 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
     private final RecentsModel mModel;
     private final int mRowSpacing;
     private final int mGridSideMargin;
-    private Button mClearAllButton;
+    private ImageView mClearAllButton;
     private final Rect mTaskViewDeadZoneRect = new Rect();
     /**
      * Reflects if Recents is currently in the middle of a gesture
@@ -766,7 +766,7 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
         mActionsView = actionsView;
         mActionsView.updateHiddenFlags(HIDDEN_NO_TASKS, getTaskViewCount() == 0);
         mSplitPlaceholderView = splitPlaceholderView;
-        mClearAllButton = (Button) mActionsView.findViewById(R.id.clear_all);
+        mClearAllButton = (ImageView) mActionsView.findViewById(R.id.clear_all);
         mClearAllButton.setOnClickListener(this::dismissAllTasks);
     }
 
