@@ -16,61 +16,61 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Configuració</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
-    <string name="dev_options_title">Developer options</string>
-    <string name="dev_options_desc">Enable some hidden features at your own risk</string>
+    <string name="home_category_title">Pàgina d\'inici</string>
+    <string name="home_category_summary">Configura el panell de Google Now i altres</string>
+    <string name="icons_category_title">Icones</string>
+    <string name="icons_category_summary">Configura la mida i altres opcions de les icones</string>
+    <string name="app_drawer_category_title">Calaix d\'aplicacions</string>
+    <string name="app_drawer_category_summary">Personalitzeu el calaix d\'aplicacions</string>
+    <string name="misc_category_title">Altres</string>
+    <string name="misc_category_summary">Altres opcions</string>
+    <string name="dev_options_title">Opcions per a desenvolupadors</string>
+    <string name="dev_options_desc">Activa algunes característiques ocultes sota la teva responsabilitat</string>
     <string name="general_category_title">General</string>
-    <string name="interface_category_title">Interface</string>
-    <string name="search_bar_category_title">Search bar</string>
+    <string name="interface_category_title">Interfície</string>
+    <string name="search_bar_category_title">Barra de cerca</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Swipe to access Google app</string>
+    <string name="title_show_google_app">Fes lliscar el dit per accedir a l\'app de Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">When you swipe left from main Home screen</string>
+    <string name="msg_minus_one_on_left">Quan feu lliscar el dit cap a l\'esquerra des de la pantalla principal d\'inici</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">When you swipe right from main Home screen</string>
+    <string name="msg_minus_one_on_right">Quan feu lliscar el dit cap a la dreta des de la pantalla principal d\'inici</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">Valor: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">per defecte</string>
+    <string name="custom_seekbar_default_value_to_set">Valor per defecte: <xliff:g id="v">%s</xliff:g>\nPulsació llarga per a definir</string>
+    <string name="custom_seekbar_default_value_is_set">Valor per defecte definit</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">Mida de les icones</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">Mida de la lletra</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">Línies màximes per les etiquetes d\'aplicació</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">Toca dues vegades per a posar en repòs</string>
+    <string name="pref_sleep_gesture_summary">Toca dues vegades a un espai buit per a apagar la pantalla</string>
     <!-- Hotseat searchbar -->
-    <string name="label_search">Search</string>
+    <string name="label_search">Cerca</string>
     <string name="label_lens">Google Lens</string>
-    <string name="label_voice_search">Voice search</string>
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Show search bar in the bottom dock</string>
-    <string name="dock_theme_title">Themed icons</string>
-    <string name="dock_theme_summary">Use themed icons for search bar</string>
-    <string name="search_radius_title">Corner radius</string>
+    <string name="label_voice_search">Cerca per veu</string>
+    <string name="dock_search_title">Barra de cerca de Google</string>
+    <string name="dock_search_summary">Mostra la barra de cerca al dock inferior</string>
+    <string name="dock_theme_title">Icones tematitzades</string>
+    <string name="dock_theme_summary">Utilitza icones tematitzades a la barra de cerca</string>
+    <string name="search_radius_title">Radi de la cantonada</string>
     <!-- Recents -->
-    <string name="action_lens">Lens</string>
+    <string name="action_lens">Lent</string>
     <!-- Homescreen Statusbar -->
-    <string name="show_statusbar_title">Status Bar</string>
+    <string name="show_statusbar_title">Barra d\'estat</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
-    <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
-    <string name="trust_apps_loading">Loading\u2026</string>
-    <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="trust_apps_help">Help</string>
-    <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
-    <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="trust_apps_manager_name">Aplicacions amagades i protegides</string>
+    <string name="trust_apps_auth_manager">Desbloqueja per gestionar les aplicacions amagades i protegides</string>
+    <string name="trust_apps_auth_open_app">Autentica\'t per obrir %1$s</string>
+    <string name="trust_apps_loading">S\'està carregant\u2026</string>
+    <string name="trust_apps_no_lock_error">Si us plau, configura un bloqueig de pantalla segur per a restringir l\'accés a aplicacions</string>
+    <string name="trust_apps_help">Ajuda</string>
+    <string name="trust_apps_info_hidden">Les aplicacions amagades i els seus widgets estan amagades del calaix</string>
+    <string name="trust_apps_info_protected">Les aplicacions protegides requereixen autentificació per poder ser obertes des del llançador</string>
 </resources>
