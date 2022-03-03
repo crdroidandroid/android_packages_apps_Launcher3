@@ -76,7 +76,7 @@ class LauncherModel(
     private val mCallbacksList = ArrayList<BgDataModel.Callbacks>(1)
 
     // < only access in worker thread >
-    private val mBgAllAppsList = AllAppsList(iconCache, appFilter)
+    private val mBgAllAppsList = AllAppsList(iconCache, appFilter, mApp.getTrustData())
 
     /**
      * All the static data should be accessed on the background thread, A lock should be acquired on
