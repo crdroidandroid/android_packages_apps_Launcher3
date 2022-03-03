@@ -29,6 +29,7 @@ import com.android.launcher3.compat.AlphabeticIndexCompat;
 import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.icons.ComponentWithLabelAndIcon;
 import com.android.launcher3.icons.IconCache;
+import com.android.launcher3.lineage.trust.db.TrustDatabaseHelper;
 import com.android.launcher3.model.data.PackageItemInfo;
 import com.android.launcher3.pm.ShortcutConfigActivityInfo;
 import com.android.launcher3.util.IntSet;
@@ -265,14 +266,19 @@ public class WidgetsModel {
 
         private final InvariantDeviceProfile mIdp;
         private final AppFilter mAppFilter;
+        private TrustDatabaseHelper mTrustData;
 
         WidgetValidityCheck(LauncherAppState app) {
             mIdp = app.getInvariantDeviceProfile();
             mAppFilter = new AppFilter(app.getContext());
+            mTrustData = app.getTrustData();
         }
 
         @Override
         public boolean test(WidgetItem item) {
+            if (mTrustData != null && mTrustData.isPackageHidden(item.componentName.getPackageName())) {
+                return false;
+            }
             if (item.widgetInfo != null) {
                 if ((item.widgetInfo.getWidgetFeatures() & WIDGET_FEATURE_HIDE_FROM_PICKER) != 0) {
                     // Widget is hidden from picker

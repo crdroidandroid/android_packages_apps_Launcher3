@@ -53,6 +53,7 @@ import androidx.annotation.WorkerThread;
 
 import com.android.launcher3.InvariantDeviceProfile;
 import com.android.launcher3.LauncherAppState;
+import com.android.launcher3.lineage.trust.db.TrustDatabaseHelper;
 import com.android.launcher3.logger.LauncherAtom;
 import com.android.launcher3.logging.InstanceId;
 import com.android.launcher3.logging.InstanceIdSequence;
@@ -301,17 +302,20 @@ public class QuickstepModelDelegate extends ModelDelegate {
             return;
         }
 
+        TrustDatabaseHelper trustData = mApp.getTrustData();
+        int totalPackageHidden = trustData != null ? trustData.getTotalPackageHidden() : 0;
+
         registerPredictor(mAllAppsState, apm.createAppPredictionSession(
                 new AppPredictionContext.Builder(context)
                         .setUiSurface("home")
-                        .setPredictedTargetCount(mIDP.numDatabaseAllAppsColumns)
+                        .setPredictedTargetCount(mIDP.numDatabaseAllAppsColumns + totalPackageHidden)
                         .build()));
 
         // TODO: get bundle
         registerPredictor(mHotseatState, apm.createAppPredictionSession(
                 new AppPredictionContext.Builder(context)
                         .setUiSurface("hotseat")
-                        .setPredictedTargetCount(mIDP.numDatabaseHotseatIcons)
+                        .setPredictedTargetCount(mIDP.numDatabaseHotseatIcons + totalPackageHidden)
                         .setExtras(convertDataModelToAppTargetBundle(context, mDataModel))
                         .build()));
 
