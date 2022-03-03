@@ -33,8 +33,10 @@ import androidx.annotation.NonNull;
 import com.android.launcher3.AppFilter;
 import com.android.launcher3.Flags;
 import com.android.launcher3.compat.AlphabeticIndexCompat;
+import com.android.launcher3.dagger.ApplicationContext;
 import com.android.launcher3.dagger.LauncherAppSingleton;
 import com.android.launcher3.icons.IconCache;
+import com.android.launcher3.lineage.trust.db.TrustDatabaseHelper;
 import com.android.launcher3.lineage.trust.HiddenAppsFilter;
 import com.android.launcher3.model.data.AppInfo;
 import com.android.launcher3.model.data.AppsListData;
@@ -84,6 +86,8 @@ public class AllAppsList {
 
     private boolean mDataChanged = false;
 
+    private TrustDatabaseHelper mTrustData;
+
     private AlphabeticIndexCompat mIndex;
 
     /**
@@ -101,10 +105,12 @@ public class AllAppsList {
     @Inject
     public AllAppsList(@NonNull IconCache iconCache,
             @NonNull HiddenAppsFilter appFilter,
-            @NonNull Provider<AppsListRepository> repositoryProvider) {
+            @NonNull Provider<AppsListRepository> repositoryProvider,
+            @ApplicationContext Context context) {
         mIconCache = iconCache;
         mAppFilter = appFilter;
         mRepo = repositoryProvider;
+        mTrustData = TrustDatabaseHelper.getInstance(context);
         mIndex = new AlphabeticIndexCompat(LocaleList.getDefault());
     }
 
@@ -156,6 +162,9 @@ public class AllAppsList {
     }
 
     public void add(AppInfo info, LauncherActivityInfo activityInfo, boolean loadIcon) {
+        if (mTrustData.isPackageHidden(info.getTargetPackage())) {
+            return;
+        }
         if (!mAppFilter.shouldShowApp(info.componentName)) {
             return;
         }
