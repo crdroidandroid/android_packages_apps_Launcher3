@@ -40,6 +40,7 @@ import com.android.launcher3.anim.AlphaUpdateListener;
 import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.keyboard.FocusIndicatorHelper;
 import com.android.launcher3.keyboard.FocusIndicatorHelper.SimpleFocusIndicatorHelper;
+import com.android.launcher3.lineage.trust.db.TrustDatabaseHelper;
 import com.android.launcher3.model.data.ItemInfo;
 import com.android.launcher3.model.data.ItemInfoWithIcon;
 import com.android.launcher3.model.data.WorkspaceItemInfo;
@@ -180,10 +181,15 @@ public class PredictionRowView<T extends Context & ActivityContext>
         applyPredictedApps(items);
     }
 
+    private boolean isAppHidden(ItemInfo itemInfo) {
+        TrustDatabaseHelper instance = TrustDatabaseHelper.getInstance(getContext());
+        return instance != null && instance.isPackageHidden(itemInfo.getTargetPackage());
+    }
+
     private void applyPredictedApps(List<ItemInfo> items) {
         mPredictedApps.clear();
         mPredictedApps.addAll(items.stream()
-                .filter(itemInfo -> itemInfo instanceof WorkspaceItemInfo)
+                .filter(itemInfo -> itemInfo instanceof WorkspaceItemInfo  && !isAppHidden(itemInfo))
                 .map(itemInfo -> (WorkspaceItemInfo) itemInfo).collect(Collectors.toList()));
         applyPredictionApps();
     }
