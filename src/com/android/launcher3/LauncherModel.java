@@ -154,7 +154,7 @@ public class LauncherModel extends LauncherApps.Callback implements InstallSessi
             final boolean isPrimaryInstance) {
         mApp = app;
         mModelDbController = new ModelDbController(context);
-        mBgAllAppsList = new AllAppsList(iconCache, appFilter);
+        mBgAllAppsList = new AllAppsList(iconCache, appFilter, app.getTrustData());
         mModelDelegate = ModelDelegate.newInstance(context, app, mBgAllAppsList, mBgDataModel,
                 isPrimaryInstance);
     }
