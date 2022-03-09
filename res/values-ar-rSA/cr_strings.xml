@@ -65,12 +65,12 @@
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">شريط الحالة</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
-    <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
-    <string name="trust_apps_loading">Loading\u2026</string>
-    <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="trust_apps_help">Help</string>
-    <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
-    <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="trust_apps_manager_name">إخفاء التطبيقات وحمايتها</string>
+    <string name="trust_apps_auth_manager">افتح لإدارة التطبيقات المخفية والمحمية</string>
+    <string name="trust_apps_auth_open_app">يرجى مصادقة البصمة لفتح %1$s</string>
+    <string name="trust_apps_loading">جارٍ التحميل…\u2026</string>
+    <string name="trust_apps_no_lock_error">يرجى إعداد شاشة قفل الجهاز لتقييد الوصول إلى التطبيق</string>
+    <string name="trust_apps_help">مساعدة</string>
+    <string name="trust_apps_info_hidden">التطبيقات المخفية و الأدوات الخاصة بها ستكون مخفية أيضاً من واجهة التشغيل</string>
+    <string name="trust_apps_info_protected">تتطلب التطبيقات المحمية مصادقة البصمة ليتم تشغيلها</string>
 </resources>
