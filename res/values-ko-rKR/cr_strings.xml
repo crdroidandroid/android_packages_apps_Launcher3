@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">환경설정</string>
+    <!-- Categories -->
+    <string name="home_category_title">홈 화면</string>
+    <string name="home_category_summary">Google Now 패널 및 관련 설정</string>
+    <string name="icons_category_title">아이콘</string>
+    <string name="icons_category_summary">아이콘 크기 및 관련 설정</string>
+    <string name="app_drawer_category_title">앱 서랍</string>
+    <string name="app_drawer_category_summary">앱 서랍 맞춤 설정</string>
+    <string name="misc_category_title">기타 설정</string>
+    <string name="misc_category_summary">기타 옵션</string>
+    <string name="dev_options_title">개발자 옵션</string>
+    <string name="dev_options_desc">위험할 수 있는 숨겨진 기능들을 허용합니다</string>
+    <string name="general_category_title">일반</string>
+    <string name="interface_category_title">인터페이스</string>
+    <string name="search_bar_category_title">검색 바</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">스와이프하여 Google 앱에 액세스</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">메인 홈 화면에서 왼쪽으로 스와이프할 때</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">메인 홈 화면에서 오른쪽으로 스와이프할 때</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">값: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">기본값으로 설정</string>
+    <string name="custom_seekbar_default_value_to_set">기본값: <xliff:g id="v">%s</xliff:g>\n길게 눌러서 설정</string>
+    <string name="custom_seekbar_default_value_is_set">기본값으로 설정됨</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">아이콘 크기</string>
+    <!-- Font size -->
+    <string name="font_size_title">글꼴 크기</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">앱 라벨의 최대 줄 개수</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">두 번 탭하여 화면 끄기</string>
+    <string name="pref_sleep_gesture_summary">화면을 끄려면 빈 공간을 두 번 탭하십시오</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">검색</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">음성 검색</string>
+    <string name="dock_search_title">Google 검색 바</string>
+    <string name="dock_search_summary">하단에 검색 바 표시</string>
+    <string name="dock_theme_title">테마형 아이콘</string>
+    <string name="dock_theme_summary">테마형 아이콘을 검색 바에 사용</string>
+    <string name="search_radius_title">모서리 각도</string>
+    <!-- Recents -->
+    <string name="action_lens">Lens</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">상태 표시줄</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">숨겨지거나 보호된 앱</string>
+    <string name="trust_apps_auth_manager">숨겨지거나 보호된 앱을 관리하려면 잠금을 해제하세요.</string>
+    <string name="trust_apps_auth_open_app">인증하여 %1$s 열기</string>
+    <string name="trust_apps_loading">로드 중\u2026</string>
+    <string name="trust_apps_no_lock_error">앱 접근을 제한하려면 잠금 화면 보안을 설정하세요</string>
+    <string name="trust_apps_help">도움말</string>
+    <string name="trust_apps_info_hidden">숨겨진 앱과 해당 앱의 위젯은 앱 서랍에서 숨겨집니다.</string>
+    <string name="trust_apps_info_protected">실행기에서 보호된 앱을 실행하기 위해 인증이 필요합니다.</string>
+</resources>
