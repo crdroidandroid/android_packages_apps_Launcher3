@@ -34,6 +34,7 @@
             android:id="@+id/action_screenshot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
             android:drawableStart="@drawable/ic_screenshot"
             android:text="@string/action_screenshot" />
 
@@ -41,9 +42,17 @@
             android:id="@+id/action_split"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/overview_actions_button_spacing"
+            android:layout_marginHorizontal="6dp"
             android:text="@string/action_split"
             android:visibility="gone" />
+
+        <Button
+            android:id="@+id/action_clear_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:drawableStart="@drawable/ic_clear_all"
+            android:text="@string/recents_clear_all" />
 
     </LinearLayout>
 
