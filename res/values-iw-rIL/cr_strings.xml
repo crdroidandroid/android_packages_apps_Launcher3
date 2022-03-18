@@ -28,9 +28,9 @@
     <string name="misc_category_summary">אפשרויות נוספות</string>
     <string name="dev_options_title">אפשרויות מפתחים</string>
     <string name="dev_options_desc">אפשר כמה תכונות נסתרות על אחריותך בלבד</string>
-    <string name="general_category_title">General</string>
-    <string name="interface_category_title">Interface</string>
-    <string name="search_bar_category_title">Search bar</string>
+    <string name="general_category_title">כללי</string>
+    <string name="interface_category_title">ממשק</string>
+    <string name="search_bar_category_title">סרגל החיפוש</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">החלק כדי לגשת לאפליקציה גוגל</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -61,16 +61,16 @@
     <string name="dock_theme_summary">Use themed icons for search bar</string>
     <string name="search_radius_title">Corner radius</string>
     <!-- Recents -->
-    <string name="action_lens">Lens</string>
+    <string name="action_lens">עדשה</string>
     <!-- Homescreen Statusbar -->
-    <string name="show_statusbar_title">Status Bar</string>
+    <string name="show_statusbar_title">שורת מצב</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
-    <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
-    <string name="trust_apps_loading">Loading\u2026</string>
+    <string name="trust_apps_manager_name">נסתרים &amp; יישומים מוגנים</string>
+    <string name="trust_apps_auth_manager">בטל נעילה כדי לנהל את היישומים מוסתרים ומוגנים</string>
+    <string name="trust_apps_auth_open_app">אימות לפתיחה %1$s</string>
+    <string name="trust_apps_loading">טוען</string>
     <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
     <string name="trust_apps_help">עזרה</string>
-    <string name="trust_apps_info_hidden">יישומים מוסתרים והווידג\'טים שלהם אינם מוצגים במגירת היישומים</string>
+    <string name="trust_apps_info_hidden">יישומים מוסתרים והווידג\'טים שלהם נסתרים במגירת היישומים</string>
     <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
 </resources>
