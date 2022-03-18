@@ -159,6 +159,7 @@ public class FallbackSwipeHandler extends
 
     @Override
     protected void finishRecentsControllerToHome(Runnable callback) {
+        mRecentsView.cleanupRemoteTargets();
         mRecentsAnimationController.finish(
                 false /* toRecents */, callback, true /* sendUserLeaveHint */);
     }
