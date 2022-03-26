@@ -3329,17 +3329,19 @@ public abstract class RecentsView<
                 splitAnimInitProps.getOriginalView(),
                 splitAnimInitProps.getOriginalBitmap(),
                 splitAnimInitProps.getIconDrawable(), startingTaskRect);
-        firstFloatingTaskView.setAlpha(1);
-        firstFloatingTaskView.addStagingAnimation(anim, startingTaskRect, mTempRect,
-                splitAnimInitProps.getFadeWithThumbnail(), splitAnimInitProps.isStagedTask());
-        mSplitSelectStateController.setFirstFloatingTaskView(firstFloatingTaskView);
+        if (firstFloatingTaskView != null) {
+            firstFloatingTaskView.setAlpha(1);
+            firstFloatingTaskView.addStagingAnimation(anim, startingTaskRect, mTempRect,
+                    splitAnimInitProps.getFadeWithThumbnail(), splitAnimInitProps.isStagedTask());
+            mSplitSelectStateController.setFirstFloatingTaskView(firstFloatingTaskView);
 
-        // Allow user to click staged app to launch into fullscreen
-        firstFloatingTaskView.setOnClickListener(view ->
-                mSplitSelectStateController.getSplitAnimationController().
-                        playAnimPlaceholderToFullscreen(mContainer, view,
-                                Optional.of(() -> mSplitSelectStateController.resetState())));
-        firstFloatingTaskView.setContentDescription(splitAnimInitProps.getContentDescription());
+            // Allow user to click staged app to launch into fullscreen
+            firstFloatingTaskView.setOnClickListener(view ->
+                    mSplitSelectStateController.getSplitAnimationController().
+                            playAnimPlaceholderToFullscreen(mContainer, view,
+                                    Optional.of(() -> mSplitSelectStateController.resetState())));
+            firstFloatingTaskView.setContentDescription(splitAnimInitProps.getContentDescription());
+        }
 
         // SplitInstructionsView: animate in
         safeRemoveDragLayerView(mSplitSelectStateController.getSplitInstructionsView());
@@ -4434,10 +4436,12 @@ public abstract class RecentsView<
             return false;
         }
 
-        firstFloatingTaskView.getBoundsOnScreen(firstTaskStartingBounds);
-        firstFloatingTaskView.addConfirmAnimation(pendingAnimation,
-                new RectF(firstTaskStartingBounds), firstTaskEndingBounds,
-                false /* fadeWithThumbnail */, true /* isStagedTask */);
+        if (firstFloatingTaskView != null) {
+            firstFloatingTaskView.getBoundsOnScreen(firstTaskStartingBounds);
+            firstFloatingTaskView.addConfirmAnimation(pendingAnimation,
+                    new RectF(firstTaskStartingBounds), firstTaskEndingBounds,
+                    false /* fadeWithThumbnail */, true /* isStagedTask */);
+        }
 
         safeRemoveDragLayerView(mSecondFloatingTaskView);
 
@@ -4574,8 +4578,10 @@ public abstract class RecentsView<
         mTempRectF.set(mTempRect);
         FloatingTaskView firstFloatingTaskView =
                 mSplitSelectStateController.getFirstFloatingTaskView();
-        firstFloatingTaskView.updateOrientationHandler(getPagedOrientationHandler());
-        firstFloatingTaskView.update(mTempRectF, /*progress=*/1f);
+        if (firstFloatingTaskView != null) {
+            firstFloatingTaskView.updateOrientationHandler(getPagedOrientationHandler());
+            firstFloatingTaskView.update(mTempRectF, /*progress=*/1f);
+        }
 
         RecentsPagedOrientationHandler orientationHandler = getPagedOrientationHandler();
         Pair<FloatProperty<RecentsView<?, ?>>, FloatProperty<RecentsView<?, ?>>> taskViewsFloat =
