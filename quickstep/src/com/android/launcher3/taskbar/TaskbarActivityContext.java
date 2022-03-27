@@ -178,8 +178,8 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
         // Get display and corners first, as views might use them in constructor.
         Display display = windowContext.getDisplay();
         Context c = display.getDisplayId() == Display.DEFAULT_DISPLAY
-                ? windowContext.getApplicationContext()
-                : windowContext.getApplicationContext().createDisplayContext(display);
+                ? windowContext.createWindowContext(TYPE_NAVIGATION_BAR_PANEL, null)
+                : windowContext.createDisplayContext(display).createWindowContext(TYPE_NAVIGATION_BAR_PANEL, null);
         mWindowManager = c.getSystemService(WindowManager.class);
         mLeftCorner = display.getRoundedCorner(RoundedCorner.POSITION_BOTTOM_LEFT);
         mRightCorner = display.getRoundedCorner(RoundedCorner.POSITION_BOTTOM_RIGHT);
