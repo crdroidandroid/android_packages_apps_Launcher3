@@ -70,7 +70,7 @@
     <string name="show_statusbar_title">Рядок стану</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Пропозиції</string>
-    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+    <string name="suggestion_pref_screen_desc">Для підказок в меню всіх додатків та на домашньому екрані</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Приховані та захищені додатки</string>
     <string name="trust_apps_auth_manager">Розблокуйте, щоб керувати прихованими та захищеними додатками</string>
@@ -81,6 +81,6 @@
     <string name="trust_apps_info_hidden">Приховані додатки і їх віджети приховані з меню</string>
     <string name="trust_apps_info_protected">Для відкриття захищених додатків з лаунчера потрібна аутентифікація</string>
     <!-- Force stop shortcut -->
-    <string name="recent_task_force_stop_app">Force stop</string>
-    <string name="recents_app_force_stopped">App force stopped</string>
+    <string name="recent_task_force_stop_app">Примусово зупинити</string>
+    <string name="recents_app_force_stopped">Примусова зупинка додатку</string>
 </resources>
