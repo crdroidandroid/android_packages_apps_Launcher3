@@ -39,8 +39,8 @@
     <string name="msg_minus_one_on_right">Când glisați dreapta din ecranul principal de pornire</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Show icon labels on desktop</string>
-    <string name="drawer_show_labels">Show icon labels in drawer</string>
+    <string name="desktop_show_labels">Arată etichetele pictogramelor de pe ecran principal</string>
+    <string name="drawer_show_labels">Arată etichetele pictogramelor în sertarul cu aplicaţii</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Valoare: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">implicit</string>
@@ -69,8 +69,8 @@
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Bara de stare</string>
     <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+    <string name="suggestion_pref_screen_title">Sugestii</string>
+    <string name="suggestion_pref_screen_desc">Pentru toate aplicațiile &amp; sugestiile pentru ecranul de pornire</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Aplicații ascunse &amp; protejate</string>
     <string name="trust_apps_auth_manager">Deblochează pentru a gestiona aplicațiile ascunse și protejate</string>
@@ -81,6 +81,6 @@
     <string name="trust_apps_info_hidden">Aplicațiile ascunse și widget-urile lor sunt ascunse din sertar</string>
     <string name="trust_apps_info_protected">Aplicațiile protejate necesită autentificare pentru a fi deschise din launcher</string>
     <!-- Force stop shortcut -->
-    <string name="recent_task_force_stop_app">Force stop</string>
-    <string name="recents_app_force_stopped">App force stopped</string>
+    <string name="recent_task_force_stop_app">Oprire forțată</string>
+    <string name="recents_app_force_stopped">Forțează aplicația oprită</string>
 </resources>
