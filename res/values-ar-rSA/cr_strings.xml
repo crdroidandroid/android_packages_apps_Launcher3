@@ -37,6 +37,10 @@
     <string name="msg_minus_one_on_left">عند التمرير يساراً من الشاشة الرئيسية</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">عندما التمرير يميناً من الشاشة الرئيسية</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Show icon labels on desktop</string>
+    <string name="drawer_show_labels">Show icon labels in drawer</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">القيمة: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">إفتراضيا</string>
@@ -64,6 +68,9 @@
     <string name="action_lens">العدسة</string>
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">شريط الحالة</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Suggestions</string>
+    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">إخفاء التطبيقات وحمايتها</string>
     <string name="trust_apps_auth_manager">افتح لإدارة التطبيقات المخفية والمحمية</string>
@@ -73,4 +80,7 @@
     <string name="trust_apps_help">مساعدة</string>
     <string name="trust_apps_info_hidden">التطبيقات المخفية و الأدوات الخاصة بها ستكون مخفية أيضاً من واجهة التشغيل</string>
     <string name="trust_apps_info_protected">التطبيقات المحمية تتطلب المصادقة لكي تُفتح</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">Force stop</string>
+    <string name="recents_app_force_stopped">App force stopped</string>
 </resources>

@@ -37,6 +37,10 @@
     <string name="msg_minus_one_on_left">Під час гортання вліво від головного екрану</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Під час гортання вправо від головного екрану</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Show icon labels on desktop</string>
+    <string name="drawer_show_labels">Show icon labels in drawer</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Значення: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">за замовчуванням</string>
@@ -64,6 +68,9 @@
     <string name="action_lens">Лінза</string>
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Рядок стану</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Suggestions</string>
+    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Приховані та захищені додатки</string>
     <string name="trust_apps_auth_manager">Розблокуйте, щоб керувати прихованими та захищеними додатками</string>
@@ -73,4 +80,7 @@
     <string name="trust_apps_help">Допомога</string>
     <string name="trust_apps_info_hidden">Приховані додатки і їх віджети приховані з меню</string>
     <string name="trust_apps_info_protected">Для відкриття захищених додатків з лаунчера потрібна аутентифікація</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">Force stop</string>
+    <string name="recents_app_force_stopped">App force stopped</string>
 </resources>

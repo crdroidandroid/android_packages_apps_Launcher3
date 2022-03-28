@@ -37,6 +37,10 @@
     <string name="msg_minus_one_on_left">Kiedy przesuniesz w lewo od ekranu głównego</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Kiedy przesuniesz w prawo od ekranu głównego</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Pokaż etykiety ikon na pulpicie</string>
+    <string name="drawer_show_labels">Pokaż etykiety ikon w szufladzie aplkacji</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Wartość: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">domyślnie</string>
@@ -64,6 +68,9 @@
     <string name="action_lens">Obiektyw</string>
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Pasek stanu</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Sugestie</string>
+    <string name="suggestion_pref_screen_desc">Dla wszystkich aplikacji &amp; Sugestie ekranu głównego</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Ukryte &amp; chronione aplikacje</string>
     <string name="trust_apps_auth_manager">Odblokuj, aby zarządzać ukrytymi i chronionymi aplikacjami</string>
@@ -73,4 +80,7 @@
     <string name="trust_apps_help">Pomoc</string>
     <string name="trust_apps_info_hidden">Ukryte aplikacje oraz ich widżety są ukryte na liście aplikacji</string>
     <string name="trust_apps_info_protected">Chronione aplikacje wymagają uwierzytelnienia, aby je otworzyć z ekranu głównego</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">Wymuś zatrzymanie</string>
+    <string name="recents_app_force_stopped">Aplikacja zatrzymana</string>
 </resources>

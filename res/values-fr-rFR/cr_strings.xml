@@ -37,6 +37,10 @@
     <string name="msg_minus_one_on_left">Lorsque vous faites glisser vers la gauche depuis l\'écran d\'accueil principal</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Lorsque vous faites glisser depuis la gauche sur l\'écran d\'accueil principal</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Afficher les libellés des icônes sur le bureau</string>
+    <string name="drawer_show_labels">Afficher les libellés des icônes dans le tiroir</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Valeur : <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">par défaut</string>
@@ -64,6 +68,9 @@
     <string name="action_lens">Lentille</string>
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Barre d\'état</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Suggestions</string>
+    <string name="suggestion_pref_screen_desc">Pour toutes les applications &amp; ajout à l\'écran d\'accueil</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Applications cachées &amp; protégées</string>
     <string name="trust_apps_auth_manager">Déverrouiller pour gérer les applications cachées et protégées</string>
@@ -73,4 +80,7 @@
     <string name="trust_apps_help">Aide</string>
     <string name="trust_apps_info_hidden">Les applications cachées et leurs widgets sont cachés du tiroir d\'applications</string>
     <string name="trust_apps_info_protected">Les applications protégées nécessitent une authentification pour être ouvertes depuis le lanceur</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">Forcer l\'arrêt</string>
+    <string name="recents_app_force_stopped">Arrêt forcé de l\'application</string>
 </resources>

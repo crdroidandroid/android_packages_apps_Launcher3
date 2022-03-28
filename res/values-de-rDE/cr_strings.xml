@@ -37,6 +37,10 @@
     <string name="msg_minus_one_on_left">Wenn auf der ersten Seite nach links gewischt wird</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Wenn auf der ersten Seite nach rechts gewischt wird</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Symbolbeschriftungen auf dem Startbildschirm anzeigen</string>
+    <string name="drawer_show_labels">Symbolbeschriftungen in der App-Übersicht anzeigen</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Wert: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">Standardmäßig</string>
@@ -64,6 +68,9 @@
     <string name="action_lens">Lens</string>
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Statusleiste</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Vorschläge</string>
+    <string name="suggestion_pref_screen_desc">Vorschläge in der App-Übersicht &amp; auf dem Startbildschirm</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Versteckte &amp; geschützte Apps</string>
     <string name="trust_apps_auth_manager">Entsperren, um versteckte und geschützte Apps zu verwalten</string>
@@ -73,4 +80,7 @@
     <string name="trust_apps_help">Hilfe</string>
     <string name="trust_apps_info_hidden">Versteckte Apps und ihre Widgets werden in der App-Übersicht nicht angezeigt</string>
     <string name="trust_apps_info_protected">Geschützte Apps erfordern eine Authentifizierung, um gestartet werden zu können</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">Beenden erzwingen</string>
+    <string name="recents_app_force_stopped">App wurde beendet</string>
 </resources>
