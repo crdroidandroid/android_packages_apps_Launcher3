@@ -458,40 +458,7 @@ public class DeviceProfile {
             workspaceBottomPadding = Math.round(paddingWorkspaceBottom * cellScaleToFit);
             extraHotseatBottomPadding = Math.round(paddingHotseatBottom * cellScaleToFit);
 
-            hotseatBarSizePx += extraHotseatBottomPadding;
-
             qsbBottomMarginPx = Math.round(qsbBottomMarginOriginalPx * cellScaleToFit);
-        } else if (!isVerticalBarLayout() && isPhone && isTallDevice) {
-            // We increase the hotseat size when there is extra space.
-
-            if (Float.compare(aspectRatio, TALLER_DEVICE_ASPECT_RATIO_THRESHOLD) >= 0
-                    && extraSpace >= Utilities.dpToPx(TALL_DEVICE_EXTRA_SPACE_THRESHOLD_DP)) {
-                // For taller devices, we will take a piece of the extra space from each row,
-                // and add it to the space above and below the hotseat.
-
-                // For devices with more extra space, we take a larger piece from each cell.
-                int piece = extraSpace < Utilities.dpToPx(TALL_DEVICE_MORE_EXTRA_SPACE_THRESHOLD_DP)
-                        ? 7 : 5;
-
-                int extraSpace = ((getCellSize().y - iconSizePx - iconDrawablePaddingPx * 2)
-                        * inv.numRows) / piece;
-
-                workspaceTopPadding = extraSpace / 8;
-                int halfLeftOver = (extraSpace - workspaceTopPadding) / 2;
-                hotseatBarTopPaddingPx += halfLeftOver;
-                hotseatBarSizeExtraSpacePx = halfLeftOver;
-            } else {
-                // ie. For a display with a large aspect ratio, we can keep the icons on the
-                // workspace in portrait mode closer together by adding more height to the hotseat.
-                // Note: This calculation was created after noticing a pattern in the design spec.
-                hotseatBarSizeExtraSpacePx = getCellSize().y - iconSizePx
-                        - iconDrawablePaddingPx * 2 - workspacePageIndicatorHeight;
-            }
-
-            updateHotseatIconSize(iconSizePx);
-
-            // Recalculate the available dimensions using the new hotseat size.
-            updateAvailableDimensions(res);
         }
 
         int cellLayoutPadding =
