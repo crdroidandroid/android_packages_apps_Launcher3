@@ -131,7 +131,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Recents screen, close app -->
     <string name="recents_close_app">إغلاق التطبيق</string>
     <string name="allow_swipe_down_clearall_title">مَرر للأسفل لإغلاق التطبيقات المفتوحة</string>
-    <string name="allow_swipe_down_clearall_desc">Enable to clear all recents in the overview screen by swiping down</string>
+    <string name="allow_swipe_down_clearall_desc">تفعيل إغلاق التطبيقات المفتوحة بالتمرير للأسفل</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">القيمة: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">بشكل افتراضي</string>
@@ -142,7 +142,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Font size -->
     <string name="font_size_title">حجم الخط</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">الأسطر القصوى لتسمية التطبيق</string>
     <!-- Scrim alpha in apps drawer -->
     <string name="all_apps_background_opacity_title">تعتيم الخلفية</string>
     <!-- AppInfo -->
@@ -157,5 +157,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_info_more">المزيد</string>
     <!-- Show dock search widget -->
     <string name="dock_search_title">بحث جوجل</string>
-    <string name="dock_search_summary">Show search bar in the bottom dock</string>
+    <string name="dock_search_summary">إظهار شريط البحث في القائمة السفلية</string>
 </resources>
