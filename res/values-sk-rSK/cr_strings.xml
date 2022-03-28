@@ -37,6 +37,10 @@
     <string name="msg_minus_one_on_left">Pri potiahnutí prstom vľavo na hlavnej obrazovke</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Pri potiahnutí prstom vpravo na hlavnej obrazovke</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Show icon labels on desktop</string>
+    <string name="drawer_show_labels">Show icon labels in drawer</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Hodnota: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">predvolená</string>
@@ -64,6 +68,9 @@
     <string name="action_lens">Objektív</string>
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Stavový riadok</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Suggestions</string>
+    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Skryté a chránené aplikácie</string>
     <string name="trust_apps_auth_manager">Odomknite pre správu skrytých a chránených aplikácií</string>
@@ -73,4 +80,7 @@
     <string name="trust_apps_help">Nápoveda</string>
     <string name="trust_apps_info_hidden">Skryté aplikácie a ich widgety se nezobrazujú v zozname aplikácií</string>
     <string name="trust_apps_info_protected">Chránené aplikácie vyžadujú pre otvorenie zo spúšťača overenie</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">Force stop</string>
+    <string name="recents_app_force_stopped">App force stopped</string>
 </resources>
