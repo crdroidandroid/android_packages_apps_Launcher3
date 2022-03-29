@@ -39,8 +39,8 @@
     <string name="msg_minus_one_on_right">Khi bạn vuốt sang phải tại Màn hình chính</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Show icon labels on desktop</string>
-    <string name="drawer_show_labels">Show icon labels in drawer</string>
+    <string name="desktop_show_labels">Hiển thị tên biểu tượng trên màn hình chính</string>
+    <string name="drawer_show_labels">Hiện tên biểu tượng trong ngăn ứng dụng</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Giá trị: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">mặc định</string>
@@ -69,8 +69,8 @@
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Thanh trạng thái</string>
     <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+    <string name="suggestion_pref_screen_title">Đề xuất</string>
+    <string name="suggestion_pref_screen_desc">Đối với tất cả ứng dụng &amp; Đề xuất ở màn hình chính</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Ứng dụng được Ẩn &amp; Bảo vệ</string>
     <string name="trust_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn và được bảo vệ</string>
@@ -81,6 +81,6 @@
     <string name="trust_apps_info_hidden">Các ứng dụng ẩn và các tiện ích con của chúng được ẩn khỏi ngăn kéo</string>
     <string name="trust_apps_info_protected">Các ứng dụng được bảo vệ yêu cầu xác thực được mở từ trình khởi chạy</string>
     <!-- Force stop shortcut -->
-    <string name="recent_task_force_stop_app">Force stop</string>
-    <string name="recents_app_force_stopped">App force stopped</string>
+    <string name="recent_task_force_stop_app">Buộc dừng</string>
+    <string name="recents_app_force_stopped">Ứng dụng đã bị buộc dừng</string>
 </resources>
