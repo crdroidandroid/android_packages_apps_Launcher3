@@ -147,6 +147,8 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
      * {@link #isFinishedSwitchingState()} ()} to return true. */
     private static final float FINISHED_SWITCHING_STATE_TRANSITION_PROGRESS = 0.5f;
 
+    private static final float SIGNIFICANT_MOVE_SCREEN_WIDTH_PERCENTAGE = 0.15f;
+
     private static final boolean ENFORCE_DRAG_EVENT_ORDER = false;
 
     private static final int ADJACENT_SCREEN_DROP_DURATION = 300;
@@ -3394,6 +3396,17 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
             return getContext().getString(R.string.home_screen);
         }
         return getContext().getString(R.string.workspace_scroll_format, page + 1, nScreens);
+    }
+
+    @Override
+    protected boolean isSignificantMove(float absoluteDelta, int pageOrientedSize) {
+        DeviceProfile deviceProfile = mLauncher.getDeviceProfile();
+        if (!deviceProfile.isTablet) {
+            return super.isSignificantMove(absoluteDelta, pageOrientedSize);
+        }
+
+        return absoluteDelta
+                > deviceProfile.availableWidthPx * SIGNIFICANT_MOVE_SCREEN_WIDTH_PERCENTAGE;
     }
 
     /**
