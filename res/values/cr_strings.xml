@@ -161,4 +161,8 @@
 
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Shake phone to clear all tasks</string>
+
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Themed icons</string>
+    <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
 </resources>
