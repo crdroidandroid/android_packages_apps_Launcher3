@@ -17,6 +17,7 @@ package com.android.launcher3.taskbar;
 
 import static com.android.launcher3.taskbar.TaskbarStashController.FLAG_IN_APP;
 import static com.android.launcher3.taskbar.TaskbarStashController.FLAG_IN_STASHED_LAUNCHER_STATE;
+import static com.android.launcher3.taskbar.TaskbarStashController.FLAG_STASHED_IN_APP_IME;
 import static com.android.launcher3.taskbar.TaskbarStashController.TASKBAR_STASH_DURATION;
 import static com.android.launcher3.taskbar.TaskbarViewController.ALPHA_INDEX_HOME;
 
@@ -249,6 +250,8 @@ import java.util.function.Supplier;
                         TaskbarStashController stashController =
                                 mControllers.taskbarStashController;
                         stashController.updateStateForFlag(FLAG_IN_APP, !isResumed);
+                        // make sure ime bg gets reset
+                        stashController.updateStateForFlag(FLAG_STASHED_IN_APP_IME, false);
                         stashController.applyState(duration);
                     }
                 });
