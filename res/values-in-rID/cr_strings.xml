@@ -39,8 +39,8 @@
     <string name="msg_minus_one_on_right">Saat Anda menggeser ke kanan dari Layar Beranda</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Show icon labels on desktop</string>
-    <string name="drawer_show_labels">Show icon labels in drawer</string>
+    <string name="desktop_show_labels">Tampilkan label ikon di desktop</string>
+    <string name="drawer_show_labels">Tampilkan label ikon di laci aplikasi</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Nilai: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">bawaan</string>
@@ -69,8 +69,8 @@
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Bilah Status</string>
     <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+    <string name="suggestion_pref_screen_title">Saran</string>
+    <string name="suggestion_pref_screen_desc">Untuk Semua Aplikasi &amp; saran Layar Utama</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Tersembunyi &amp; Aplikasi dilindungi</string>
     <string name="trust_apps_auth_manager">Buka kunci untuk mengelola aplikasi yang disembunyikan dan dilindungi</string>
@@ -81,6 +81,6 @@
     <string name="trust_apps_info_hidden">Aplikasi tersembunyi beserta widgetnya akan disembunyikan dari laci aplikasi</string>
     <string name="trust_apps_info_protected">Aplikasi yang dilindungi memerlukan autentikasi untuk dibuka dari peluncur</string>
     <!-- Force stop shortcut -->
-    <string name="recent_task_force_stop_app">Force stop</string>
-    <string name="recents_app_force_stopped">App force stopped</string>
+    <string name="recent_task_force_stop_app">Paksa berhenti</string>
+    <string name="recents_app_force_stopped">Aplikasi diberhenti paksa</string>
 </resources>

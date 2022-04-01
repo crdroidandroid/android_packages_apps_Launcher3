@@ -39,8 +39,8 @@
     <string name="msg_minus_one_on_right">Ana sayfadan sağa kaydırdığınızda</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Show icon labels on desktop</string>
-    <string name="drawer_show_labels">Show icon labels in drawer</string>
+    <string name="desktop_show_labels">Simge etiketlerini masaüstünde göster</string>
+    <string name="drawer_show_labels">Çekmecede simge etiketlerini göster</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Değer: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">varsayılan</string>
@@ -57,7 +57,7 @@
     <string name="pref_sleep_gesture_summary">Ekranı kapatmak için boş bir alana çift dokun</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Ara</string>
-    <string name="label_lens">Google Lens</string>
+    <string name="label_lens">Google lens</string>
     <string name="label_voice_search">Sesli arama</string>
     <string name="dock_search_title">Google arama çubuğu</string>
     <string name="dock_search_summary">Alt kısımda arama çubuğunu göster</string>
@@ -69,8 +69,8 @@
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Durum çubuğu</string>
     <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+    <string name="suggestion_pref_screen_title">Öneriler</string>
+    <string name="suggestion_pref_screen_desc">Tüm uygulamalar &amp; Ana ekran önerileri için</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Gizli &amp; Korunan uygulamalar</string>
     <string name="trust_apps_auth_manager">Gizli ve korunan uygulamaları yönetmek için kilidi açın</string>
@@ -81,6 +81,6 @@
     <string name="trust_apps_info_hidden">Gizli uygulamalar ve widget\'ları uygulama menüsünde gizlidir</string>
     <string name="trust_apps_info_protected">Korunan uygulamaların başlatıcıdan açılması için kimlik doğrulama gerekir</string>
     <!-- Force stop shortcut -->
-    <string name="recent_task_force_stop_app">Force stop</string>
-    <string name="recents_app_force_stopped">App force stopped</string>
+    <string name="recent_task_force_stop_app">Durmaya zorla</string>
+    <string name="recents_app_force_stopped">Uygulama zorla durduruldu</string>
 </resources>
