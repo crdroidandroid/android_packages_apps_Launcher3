@@ -111,27 +111,27 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>विस्तारित बैटरी जीवन का आनंद लें</item>
         <item>ग्राउंड जीरो से शुरू</item>
         <item>हम आपसे प्यार करते हैं 3000</item>
-        <item>Stay Home, Stay Safe</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>How is everything going?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
+        <item>घर पर रहें, सुरक्षित रहें</item>
+        <item>आज कुछ अच्छा करो</item>
+        <item>यह सबसे अच्छा पिक्सेल अनुभव है, है ना?</item>
+        <item>सब कुछ कैसा चल रहा है?</item>
+        <item>कोई भ्रम नहीं, वास्तविकता में आपका स्वागत है!</item>
+        <item>आपके सहयोग के लिए धन्यवाद</item>
+        <item>Derps के लिए कोई त्योहार नहीं - केवल पूर्णता!</item>
+        <item>बिल्डबॉट की सबसे अच्छी पसंद में से एक</item>
+        <item>आपके व्यामोह के लिए पवित्रता</item>
+        <item>आइस कोल्ड डेसर्ट ट्राई करें</item>
+        <item>कितना प्यारा अनुभव है, है ना?</item>
+        <item>विकास एक मिथक है, है ना?</item>
+        <item>तुम वही हो जो तुम चमकते हो, आलू मत बनो</item>
+        <item>आपके दिमाग मे क्या है</item>
         <item>Winner Winner ....?</item>
         <item>rm -rf \/</item>
     </string-array>
     <!-- Recents screen, close app -->
-    <string name="recents_close_app">Close app</string>
-    <string name="allow_swipe_down_clearall_title">Swipe down to clear all recents</string>
-    <string name="allow_swipe_down_clearall_desc">Enable to clear all recents in the overview screen by swiping down</string>
+    <string name="recents_close_app">ऐप बंद करें</string>
+    <string name="allow_swipe_down_clearall_title">हाल ही के सभी को साफ़ करने के लिए नीचे की ओर स्वाइप करें</string>
+    <string name="allow_swipe_down_clearall_desc">नीचे की ओर स्वाइप करके ओवरव्यू स्क्रीन में सभी रीसेंट को साफ़ करने में सक्षम करें</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">by default</string>
