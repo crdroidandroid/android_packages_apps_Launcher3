@@ -54,63 +54,63 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Icon packs -->
     <string name="icon_pack">चिह्न पैक</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">स्क्रीन बंद करने के लिए दो बार स्पर्श करें</string>
+    <string name="pref_sleep_gesture_summary">खाली जगह पर दो बार दबा के स्विच ऑफ करे</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">एक यादृच्छिक संदेश दिखाएं</string>
+    <string name="quickspace_psa_summary">कभी-कभी कुछ अच्छे संदेश एक नज़र में दिखाएँ</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>सुप्रभात!</item>
+        <item>सुप्रभात, रॉक करने का समय!</item>
+        <item>कितना अच्छा दिन है!</item>
+        <item>आपका दिन शुभ हो!</item>
+        <item>5 मिनट की छोटी झपकी के बारे में क्या?</item>
+        <item>जागने का यही एक तरीका है।</item>
+        <item>आपको अपनी अलार्म घड़ी ध्वनियों को बदलना चाहिए।</item>
+        <item>ऐसा लगता है कि यह एक सुंदर दिन है, है ना?</item>
+        <item>चलो यह रोटी लेते हैं।</item>
+        <item>बस मौसम की जाँच करें</item>
+        <item>अभी तक थोड़ी नींद आ रही है</item>
+        <item>क्या आपने अभी तक बाहर देखा है?</item>
+        <item>चलिए यह करते है।</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>शुभ रात्रि!</item>
+        <item>अच्छे से सो!</item>
+        <item>कल मिलते हैं!</item>
+        <item>सुंदर सपनों में खो जाओ!</item>
+        <item>ज्यादा देर तक न रुकें</item>
+        <item>अच्छी नींद लें</item>
+        <item>थोड़ा सो लें</item>
+        <item>आराम करने का समय</item>
+        <item>रात के मजे लो!</item>
+        <item>बैटरी चार्ज करने का समय</item>
+        <item>कल का दिन बहुत अच्छा हो सकता है</item>
+        <item>कल के लिए अपनी हड्डियाँ तैयार करें</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>उम... शुभ रात्रि</item>
+        <item>अब थोड़ी देर हो गई है</item>
+        <item>आपको अपने सोने का शेड्यूल फिक्स करना चाहिए</item>
+        <item>क्या आप इस समय अधिक उत्पादक हैं?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
-        <item>Hyped about Android 12?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
-        <item>Open goodness with crDroid</item>
-        <item>Spread love not havoc</item>
-        <item>Have fun!</item>
-        <item>Time for some good music</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
-        <item>We love you 3000</item>
+        <item>अज्ञानता परमानंद है</item>
+        <item>क्या यह पहले से ही एक और अपडेट फ्लैश करने का समय है?</item>
+        <item>Android 12 के बारे में प्रचारित?</item>
+        <item>अरे, क्या हाल है?</item>
+        <item>अपने कार्यों पर ध्यान दें</item>
+        <item>आप कितने स्क्रीनशॉट लेते हैं?</item>
+        <item>crDroid के साथ अच्छाई खोलें</item>
+        <item>प्यार फैलाओ कहर नहीं</item>
+        <item>मज़े करो!</item>
+        <item>कुछ अच्छे संगीत के लिए समय</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C सिर</item>
+        <item>इसे देखने के लिए आपको crDroid Premium चाहिए</item>
+        <item>यूनिकॉर्न की वंशावली याद रखें</item>
+        <item>विस्तारित बैटरी जीवन का आनंद लें</item>
+        <item>ग्राउंड जीरो से शुरू</item>
+        <item>हम आपसे प्यार करते हैं 3000</item>
         <item>Stay Home, Stay Safe</item>
         <item>Do something nice today</item>
         <item>This is best Pixel Experience, isn\'t it?</item>
