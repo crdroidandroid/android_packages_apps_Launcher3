@@ -27,12 +27,12 @@
     <string name="misc_category_title">अन्य तरह का</string>
     <string name="misc_category_summary">अन्य विकल्प</string>
     <string name="dev_options_title">विकासक के विकल्प</string>
-    <string name="dev_options_desc">Enable some hidden features at your own risk</string>
-    <string name="general_category_title">General</string>
-    <string name="interface_category_title">Interface</string>
-    <string name="search_bar_category_title">Search bar</string>
+    <string name="dev_options_desc">अपने स्वयं के जोखिम पर कुछ छिपी हुई विशेषताएं सक्षम करें</string>
+    <string name="general_category_title">आम</string>
+    <string name="interface_category_title">इंटरफेस</string>
+    <string name="search_bar_category_title">खोज पट्टी</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Swipe to access Google app</string>
+    <string name="title_show_google_app">Google ऐप एक्सेस करने के लिए स्वाइप करें</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_left">When you swipe left from main Home screen</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
