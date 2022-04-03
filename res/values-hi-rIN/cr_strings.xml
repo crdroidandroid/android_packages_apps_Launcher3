@@ -133,26 +133,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="allow_swipe_down_clearall_title">हाल ही के सभी को साफ़ करने के लिए नीचे की ओर स्वाइप करें</string>
     <string name="allow_swipe_down_clearall_desc">नीचे की ओर स्वाइप करके ओवरव्यू स्क्रीन में सभी रीसेंट को साफ़ करने में सक्षम करें</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">Value</string>
+    <string name="custom_seekbar_default_value">डिफ़ॉल्ट रूप से</string>
+    <string name="custom_seekbar_default_value_to_set">पूर्व निर्धारित मान:<xliff:g id="v">%s</xliff:g>\n लंबा दबा कर चालू करे।</string>
+    <string name="custom_seekbar_default_value_is_set">पूर्व निर्धारित मान पहले से सेट है।</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">‎आइकन ‎माप</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">फ़ॉन्ट परिमाण</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">ऐप लेबल के लिए अधिकतम लाइनें</string>
     <!-- Scrim alpha in apps drawer -->
-    <string name="all_apps_background_opacity_title">Background opacity</string>
+    <string name="all_apps_background_opacity_title">बैकग्राउंड अपारदर्शिता</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="app_info_subtext">ऐप्लिकेशन की जानकारी बंद करने के लिए नीचे की ओर स्वाइप करें.</string>
     <string name="app_info_version_value">%1$s (%2$d)</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="placeholder_string">प्रस्तुत होने जा रहा है...</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
+    <string name="app_info_source">स्रोत</string>
+    <string name="app_info_source_system">सिस्टम</string>
+    <string name="app_info_last_update">पिछला अपडेट</string>
     <string name="app_info_version">Version</string>
     <string name="app_info_more">More</string>
     <!-- Show dock search widget -->
