@@ -16,23 +16,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">समायोजन</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon shape and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
-    <string name="dev_options_title">Developer options</string>
-    <string name="dev_options_desc">Enable some hidden features at your own risk</string>
+    <string name="home_category_title">होम स्क्रीन</string>
+    <string name="home_category_summary">गूगल नाउ पैनल तथा अन्य सेट करें</string>
+    <string name="icons_category_title">ऑयकोन्स</string>
+    <string name="icons_category_summary">आइकॉन आकार, आकृति तथा अन्य सेट करें</string>
+    <string name="app_drawer_category_title">एप्लिकेशन दराज</string>
+    <string name="app_drawer_category_summary">अपना एप्लिकेशन ड्रॉअर कस्टमाइज़ करें</string>
+    <string name="misc_category_title">अन्य तरह का</string>
+    <string name="misc_category_summary">अन्य विकल्प</string>
+    <string name="dev_options_title">विकासक के विकल्प</string>
+    <string name="dev_options_desc">अपने स्वयं के जोखिम पर कुछ छिपी हुई विशेषताएं सक्षम करें</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">एक नज़र में</string>
     <string name="show_quickspace_summary">अपनी होम स्क्रीन के सबसे ऊपर देखे</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
+    <string name="quick_event_rom_intro_welcome">crDroid में आपका स्वागत है</string>
     <string-array name="welcome_message_variants">
         <item>Have a great day</item>
         <item>Thank you for choosing us</item>
@@ -43,119 +43,119 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>We love you 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_now_playing">अब बज रहा है</string>
+    <string name="quick_event_ambient_song_artist">%2$s के द्वारा%1$s</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Show now playing</string>
-    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance.</string>
+    <string name="quickspace_now_playing_title">अभी खेल दिखाओ</string>
+    <string name="quickspace_now_playing_summary">वह गीत दिखाता है जिसे आप एक नज़र में चला रहे हैं</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Use an alternative style</string>
-    <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
+    <string name="quickspace_alternate_style_title">एक वैकल्पिक शैली का उपयोग करें</string>
+    <string name="quickspace_alternate_style_summary">एक नज़र के लिए न्यूनतर शैली का उपयोग करें</string>
     <!-- Icon packs -->
-    <string name="icon_pack">Icon pack</string>
+    <string name="icon_pack">चिह्न पैक</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">स्क्रीन बंद करने के लिए दो बार स्पर्श करें</string>
+    <string name="pref_sleep_gesture_summary">खाली जगह पर दो बार दबा के स्विच ऑफ करे</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
+    <string name="quickspace_psa_title">एक यादृच्छिक संदेश दिखाएं</string>
+    <string name="quickspace_psa_summary">कभी-कभी कुछ अच्छे संदेश एक नज़र में दिखाएँ</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>सुप्रभात!</item>
+        <item>सुप्रभात, रॉक करने का समय!</item>
+        <item>कितना अच्छा दिन है!</item>
+        <item>आपका दिन शुभ हो!</item>
+        <item>5 मिनट की छोटी झपकी के बारे में क्या?</item>
+        <item>जागने का यही एक तरीका है।</item>
+        <item>आपको अपनी अलार्म घड़ी ध्वनियों को बदलना चाहिए।</item>
+        <item>ऐसा लगता है कि यह एक सुंदर दिन है, है ना?</item>
+        <item>चलो यह रोटी लेते हैं।</item>
+        <item>बस मौसम की जाँच करें</item>
+        <item>अभी तक थोड़ी नींद आ रही है</item>
+        <item>क्या आपने अभी तक बाहर देखा है?</item>
+        <item>चलिए यह करते है।</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>शुभ रात्रि!</item>
+        <item>अच्छे से सो!</item>
+        <item>कल मिलते हैं!</item>
+        <item>सुंदर सपनों में खो जाओ!</item>
+        <item>ज्यादा देर तक न रुकें</item>
+        <item>अच्छी नींद लें</item>
+        <item>थोड़ा सो लें</item>
+        <item>आराम करने का समय</item>
+        <item>रात के मजे लो!</item>
+        <item>बैटरी चार्ज करने का समय</item>
+        <item>कल का दिन बहुत अच्छा हो सकता है</item>
+        <item>कल के लिए अपनी हड्डियाँ तैयार करें</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>उम... शुभ रात्रि</item>
+        <item>अब थोड़ी देर हो गई है</item>
+        <item>आपको अपने सोने का शेड्यूल फिक्स करना चाहिए</item>
+        <item>क्या आप इस समय अधिक उत्पादक हैं?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
-        <item>Hyped about Android 12?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
-        <item>Open goodness with crDroid</item>
-        <item>Spread love not havoc</item>
-        <item>Have fun!</item>
-        <item>Time for some good music</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
-        <item>We love you 3000</item>
-        <item>Stay Home, Stay Safe</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>How is everything going?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
+        <item>अज्ञानता परमानंद है</item>
+        <item>क्या यह पहले से ही एक और अपडेट फ्लैश करने का समय है?</item>
+        <item>Android 12 के बारे में प्रचारित?</item>
+        <item>अरे, क्या हाल है?</item>
+        <item>अपने कार्यों पर ध्यान दें</item>
+        <item>आप कितने स्क्रीनशॉट लेते हैं?</item>
+        <item>crDroid के साथ अच्छाई खोलें</item>
+        <item>प्यार फैलाओ कहर नहीं</item>
+        <item>मज़े करो!</item>
+        <item>कुछ अच्छे संगीत के लिए समय</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C सिर</item>
+        <item>इसे देखने के लिए आपको crDroid Premium चाहिए</item>
+        <item>यूनिकॉर्न की वंशावली याद रखें</item>
+        <item>विस्तारित बैटरी जीवन का आनंद लें</item>
+        <item>ग्राउंड जीरो से शुरू</item>
+        <item>हम आपसे प्यार करते हैं 3000</item>
+        <item>घर पर रहें, सुरक्षित रहें</item>
+        <item>आज कुछ अच्छा करो</item>
+        <item>यह सबसे अच्छा पिक्सेल अनुभव है, है ना?</item>
+        <item>सब कुछ कैसा चल रहा है?</item>
+        <item>कोई भ्रम नहीं, वास्तविकता में आपका स्वागत है!</item>
+        <item>आपके सहयोग के लिए धन्यवाद</item>
+        <item>Derps के लिए कोई त्योहार नहीं - केवल पूर्णता!</item>
+        <item>बिल्डबॉट की सबसे अच्छी पसंद में से एक</item>
+        <item>आपके व्यामोह के लिए पवित्रता</item>
+        <item>आइस कोल्ड डेसर्ट ट्राई करें</item>
+        <item>कितना प्यारा अनुभव है, है ना?</item>
+        <item>विकास एक मिथक है, है ना?</item>
+        <item>तुम वही हो जो तुम चमकते हो, आलू मत बनो</item>
+        <item>आपके दिमाग मे क्या है</item>
         <item>Winner Winner ....?</item>
         <item>rm -rf \/</item>
     </string-array>
     <!-- Recents screen, close app -->
-    <string name="recents_close_app">Close app</string>
-    <string name="allow_swipe_down_clearall_title">Swipe down to clear all recents</string>
-    <string name="allow_swipe_down_clearall_desc">Enable to clear all recents in the overview screen by swiping down</string>
+    <string name="recents_close_app">ऐप बंद करें</string>
+    <string name="allow_swipe_down_clearall_title">हाल ही के सभी को साफ़ करने के लिए नीचे की ओर स्वाइप करें</string>
+    <string name="allow_swipe_down_clearall_desc">नीचे की ओर स्वाइप करके ओवरव्यू स्क्रीन में सभी रीसेंट को साफ़ करने में सक्षम करें</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">Value</string>
+    <string name="custom_seekbar_default_value">डिफ़ॉल्ट रूप से</string>
+    <string name="custom_seekbar_default_value_to_set">पूर्व निर्धारित मान:<xliff:g id="v">%s</xliff:g>\n लंबा दबा कर चालू करे।</string>
+    <string name="custom_seekbar_default_value_is_set">पूर्व निर्धारित मान पहले से सेट है।</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">‎आइकन ‎माप</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">फ़ॉन्ट परिमाण</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">ऐप लेबल के लिए अधिकतम लाइनें</string>
     <!-- Scrim alpha in apps drawer -->
-    <string name="all_apps_background_opacity_title">Background opacity</string>
+    <string name="all_apps_background_opacity_title">बैकग्राउंड अपारदर्शिता</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="app_info_subtext">ऐप्लिकेशन की जानकारी बंद करने के लिए नीचे की ओर स्वाइप करें.</string>
     <string name="app_info_version_value">%1$s (%2$d)</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="placeholder_string">प्रस्तुत होने जा रहा है...</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_source">स्रोत</string>
+    <string name="app_info_source_system">सिस्टम</string>
+    <string name="app_info_last_update">पिछला अपडेट</string>
+    <string name="app_info_version">संस्करण</string>
+    <string name="app_info_more">अधिक</string>
     <!-- Show dock search widget -->
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Show search bar in the bottom dock</string>
+    <string name="dock_search_title">गूगल सर्च बार</string>
+    <string name="dock_search_summary">निचले डॉक में खोज बार दिखाएं</string>
 </resources>
