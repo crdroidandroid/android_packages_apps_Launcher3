@@ -119,9 +119,6 @@ public class TaskOverlayFactory implements ResourceBasedOverride {
      * * The taskView to add split options is already showing split screen tasks
      * * There aren't at least 2 tasks in overview to show split options for
      * * Device is in "Lock task mode"
-     * * The taskView to show split options for is the focused task AND we haven't started
-     *   scrolling in overview (if we haven't scrolled, there's a split overview action button so
-     *   we don't need this menu option)
      */
     private static void addSplitOptions(List<SystemShortcut> outShortcuts,
             BaseDraggingActivity activity, TaskView taskView, DeviceProfile deviceProfile) {
@@ -138,8 +135,7 @@ public class TaskOverlayFactory implements ResourceBasedOverride {
                 (ActivityManager) taskView.getContext().getSystemService(Context.ACTIVITY_SERVICE);
         boolean isLockTaskMode = activityManager.isInLockTaskMode();
 
-        if (taskViewHasMultipleTasks || notEnoughTasksToSplit || isLockTaskMode ||
-                (isFocusedTask && isTaskInExpectedScrollPosition)) {
+        if (taskViewHasMultipleTasks || notEnoughTasksToSplit || isLockTaskMode) {
             return;
         }
 
