@@ -34,13 +34,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">欢迎使用 crDroid！</string>
     <string-array name="welcome_message_variants">
-        <item>Have a great day</item>
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
-        <item>We love you 3000</item>
+        <item>祝您生活愉快！</item>
+        <item>感谢您选择我们</item>
+        <item>喜欢我们？送杯啤酒吧！</item>
+        <item>有史以来最棒的 Rom</item>
+        <item>在 Telegram 上和我们打招呼吧</item>
+        <item>点击此处开始</item>
+        <item>我们爱你 3000 遍</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">正在播放</string>
