@@ -39,8 +39,8 @@
     <string name="msg_minus_one_on_right">Amikor a fő Kezdőképernyőn jobbra csúsztat</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Show icon labels on desktop</string>
-    <string name="drawer_show_labels">Show icon labels in drawer</string>
+    <string name="desktop_show_labels">Ikonfeliratok megjelenítése az asztalon</string>
+    <string name="drawer_show_labels">Ikonfeliratok megjelenítése az alkalmazásfiókban</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value"><xliff:g id="v">%s</xliff:g> értékű</string>
     <string name="custom_seekbar_default_value">alapértelmezés szerint</string>
@@ -69,8 +69,8 @@
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Értesítési sáv</string>
     <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+    <string name="suggestion_pref_screen_title">Javaslatok</string>
+    <string name="suggestion_pref_screen_desc">Javaslatok a Kezdőképernyőhöz és minden alkalmazáshoz</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Rejtett és védett alkalmazások</string>
     <string name="trust_apps_auth_manager">Feloldás a rejtett és védett alkalmazások kezeléséhez</string>
@@ -81,6 +81,6 @@
     <string name="trust_apps_info_hidden">A rejtett alkalmazások és kisalkalmazásaik az alkalmazásfiókban sem láthatóak</string>
     <string name="trust_apps_info_protected">Egy védett alkalmazás launcherből való megnyitása hitelesítést igényel</string>
     <!-- Force stop shortcut -->
-    <string name="recent_task_force_stop_app">Force stop</string>
-    <string name="recents_app_force_stopped">App force stopped</string>
+    <string name="recent_task_force_stop_app">Kényszerített leállítás</string>
+    <string name="recents_app_force_stopped">Kényszerített leállításra került</string>
 </resources>
