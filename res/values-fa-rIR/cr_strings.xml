@@ -61,8 +61,8 @@
     <string name="label_voice_search">Voice search</string>
     <string name="dock_search_title">Google search bar</string>
     <string name="dock_search_summary">Show search bar in the bottom dock</string>
-    <string name="dock_theme_title">Themed icons</string>
-    <string name="dock_theme_summary">Use themed icons for search bar</string>
+    <string name="dock_theme_title">آیکن های تم</string>
+    <string name="dock_theme_summary">استفاده کردن از آیکن های تم برای پنل جستجو</string>
     <string name="search_radius_title">Corner radius</string>
     <!-- Recents -->
     <string name="action_lens">Lens</string>
@@ -81,6 +81,6 @@
     <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
     <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
     <!-- Force stop shortcut -->
-    <string name="recent_task_force_stop_app">Force stop</string>
-    <string name="recents_app_force_stopped">App force stopped</string>
+    <string name="recent_task_force_stop_app">توقف اجباری</string>
+    <string name="recents_app_force_stopped">برنامه به اجبار بسته شد</string>
 </resources>
