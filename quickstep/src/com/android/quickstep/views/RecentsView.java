@@ -2080,6 +2080,9 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
         if (mOrientationState.setGestureActive(true)) {
             setLayoutRotation(rotationTouchHelper.getCurrentActiveRotation(),
                     rotationTouchHelper.getDisplayRotation());
+            // Force update to ensure the initial task size is computed even if the orientation has
+            // not changed.
+            updateSizeAndPadding();
         }
 
         showCurrentTask(runningTaskInfo);
