@@ -15,6 +15,8 @@ import android.os.SystemClock;
 import android.util.Log;
 import android.view.animation.Interpolator;
 
+import androidx.annotation.AnyThread;
+
 import com.android.launcher3.Utilities;
 import com.android.launcher3.Workspace;
 import com.android.launcher3.anim.Interpolators;
@@ -198,6 +200,7 @@ public class WallpaperOffsetInterpolator extends BroadcastReceiver implements
         }
     }
 
+    @AnyThread
     private void updateOffset() {
         Message.obtain(mHandler, MSG_SET_NUM_PARALLAX, getNumPagesForWallpaperParallax(), 0,
                 mWindowToken).sendToTarget();
@@ -222,9 +225,12 @@ public class WallpaperOffsetInterpolator extends BroadcastReceiver implements
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        mWallpaperIsLiveWallpaper =
-                WallpaperManager.getInstance(mWorkspace.getContext()).getWallpaperInfo() != null;
-        updateOffset();
+        UI_HELPER_EXECUTOR.execute(() -> {
+            // Updating the boolean on a background thread is fine as the assignments are atomic
+            mWallpaperIsLiveWallpaper =
+                    WallpaperManager.getInstance(context).getWallpaperInfo() != null;
+            updateOffset();
+        });
     }
 
     private static final int MSG_START_ANIMATION = 1;
