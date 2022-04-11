@@ -183,6 +183,7 @@ android_library {
         "SettingsLib",
         "view_capture",
         "animationlib",
+        "org.lineageos.platform",
     ],
     manifest: "AndroidManifest-common.xml",
     sdk_version: "current",
