@@ -34,9 +34,9 @@
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Проведите пальцем для доступа к приложению Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Когда вы проводите влево с главного Рабочего стола</string>
+    <string name="msg_minus_one_on_left">Когда вы проводите вправо с главного Рабочего стола</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">Когда вы проводите вправо с главного Рабочего стола</string>
+    <string name="msg_minus_one_on_right">Когда вы проводите влево с главного Рабочего стола</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
     <string name="desktop_show_labels">Отображать названия приложений на рабочем столе</string>
@@ -62,7 +62,7 @@
     <string name="dock_search_title">Панель поиска Google</string>
     <string name="dock_search_summary">Показывать строку поиска в нижней панели</string>
     <string name="dock_theme_title">Тематический значок</string>
-    <string name="dock_theme_summary">Использовать тематические иконки для поисковой строки</string>
+    <string name="dock_theme_summary">Использовать сторонние значки для строки поиска</string>
     <string name="search_radius_title">Радиус скругления углов</string>
     <!-- Recents -->
     <string name="action_lens">Объектив</string>
