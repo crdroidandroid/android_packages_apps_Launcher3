@@ -62,4 +62,9 @@
         android:summary="@string/dev_options_summary"
         android:fragment="com.android.launcher3.settings.DeveloperOptionsFragment"/>
 
+    <com.android.launcher3.settings.preference.RestartPreference
+        android:key="pref_restart"
+        android:title="@string/pref_restart_title"
+        android:summary="@string/pref_restart_summary" />
+
 </androidx.preference.PreferenceScreen>
