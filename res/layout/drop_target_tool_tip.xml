@@ -27,5 +27,5 @@
     android:paddingStart="16dp"
     android:paddingTop="6.5dp"
     android:textSize="14sp"
-    android:fontFamily="sans-serif"
+    android:fontFamily="@*android:string/config_bodyFontFamily"
     android:textColor="?android:attr/colorForeground" />
