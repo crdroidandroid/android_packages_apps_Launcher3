@@ -215,7 +215,7 @@ public class AppsDividerView extends View implements FloatingHeaderRow {
         if (mAllAppsLabelLayout == null) {
             mPaint.setAntiAlias(true);
             mPaint.setTypeface(Typeface.create(Flags.gsfRes() ? "variable-title-small"
-                    : "google-sans", Typeface.NORMAL));
+                    : "@*android:string/config_bodyFontFamilyMedium", Typeface.NORMAL));
             mPaint.setTextSize(
                     getResources().getDimensionPixelSize(R.dimen.all_apps_label_text_size));
 

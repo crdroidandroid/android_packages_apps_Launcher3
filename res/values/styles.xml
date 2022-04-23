@@ -573,7 +573,7 @@
             variable-title-medium
         </item>
         <item name="android:fontFamily" android:featureFlag="!com.android.launcher3.gsf_res">
-            google-sans-text-medium
+            @*android:string/config_bodyFontFamilyMedium
         </item>
         <item name="android:ellipsize">end</item>
     </style>
