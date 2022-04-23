@@ -84,8 +84,15 @@
     <string name="recent_task_force_stop_app">Vynutit ukončení</string>
     <string name="recents_app_force_stopped">Aplikace byla vynuceně zastavena</string>
     <!-- Icon pack -->
-    <string name="icon_pack_title">Icon pack</string>
-    <string name="icon_pack_default_label">Default</string>
-    <string name="icon_pack_add">Install more</string>
-    <string name="icon_pack_no_market">There\'s no available app store</string>
+    <string name="icon_pack_title">Balíček ikon</string>
+    <string name="icon_pack_default_label">Výchozí</string>
+    <string name="icon_pack_add">Instalovat další</string>
+    <string name="icon_pack_no_market">Není k\u00a0dispozici žádný obchod s\u00a0aplikacemi</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Swipe down to close app info</string>
+    <string name="app_info_source">Source</string>
+    <string name="app_info_source_system">System</string>
+    <string name="app_info_last_update">Last update</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">More</string>
 </resources>
