@@ -83,4 +83,9 @@
     <!-- Force stop shortcut -->
     <string name="recent_task_force_stop_app">Paksa berhenti</string>
     <string name="recents_app_force_stopped">Aplikasi diberhenti paksa</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Icon pack</string>
+    <string name="icon_pack_default_label">Default</string>
+    <string name="icon_pack_add">Install more</string>
+    <string name="icon_pack_no_market">There\'s no available app store</string>
 </resources>
