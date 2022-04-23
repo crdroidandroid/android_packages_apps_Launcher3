@@ -147,4 +147,9 @@ public class InfoBottomSheet extends WidgetsBottomSheet {
             return false;
         }
     }
+
+    @Override
+    protected boolean hasSeenEducationTip() {
+        return true;
+    }
 }
