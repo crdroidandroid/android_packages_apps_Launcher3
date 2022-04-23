@@ -88,4 +88,11 @@
     <string name="icon_pack_default_label">기본값</string>
     <string name="icon_pack_add">추가로 설치</string>
     <string name="icon_pack_no_market">사용할 수 있는 앱 스토어가 없습니다</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Swipe down to close app info</string>
+    <string name="app_info_source">Source</string>
+    <string name="app_info_source_system">System</string>
+    <string name="app_info_last_update">Last update</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">More</string>
 </resources>
