@@ -439,7 +439,7 @@
     <style name="PrivateSpaceHeaderTextStyle">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/material_color_on_surface</item>
-        <item name="android:fontFamily">google-sans-text-medium</item>
+        <item name="android:fontFamily">@*android:string/config_bodyFontFamilyMedium</item>
         <item name="android:ellipsize">end</item>
     </style>
 </resources>

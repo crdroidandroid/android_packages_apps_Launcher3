@@ -42,7 +42,7 @@
         parent="TextAppearance.GestureTutorial">
         <item name="android:gravity">start</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
-        <item name="android:fontFamily">google-sans</item>
+        <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
         <item name="android:letterSpacing">0.03</item>
         <item name="android:textSize">36sp</item>
         <item name="android:lineHeight">44sp</item>
@@ -79,7 +79,7 @@
     <style name="TextAppearance.GestureTutorial.Dialog.Title"
         parent="TextAppearance.GestureTutorial.Feedback.Title">
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:fontFamily">google-sans</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
         <item name="android:lineHeight">32sp</item>
         <item name="android:textSize">24sp</item>
     </style>
@@ -88,7 +88,7 @@
         parent="TextAppearance.GestureTutorial">
         <item name="android:gravity">start</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
-        <item name="android:fontFamily">google-sans-text</item>
+        <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
         <item name="android:letterSpacing">0.03</item>
         <item name="android:textSize">14sp</item>
         <item name="android:lineHeight">20sp</item>
@@ -103,7 +103,7 @@
     <style name="TextAppearance.GestureTutorial.Dialog.Subtitle"
         parent="TextAppearance.GestureTutorial.Feedback.Subtitle">
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:fontFamily">google-sans-text</item>
+        <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
         <item name="android:letterSpacing">0.025</item>
         <item name="android:lineHeight">20sp</item>
         <item name="android:textSize">14sp</item>
@@ -128,7 +128,7 @@
         <item name="android:letterSpacing">0.02</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textAllCaps">false</item>
-        <item name="android:fontFamily">google-sans-text-medium</item>
+        <item name="android:fontFamily">@*android:string/config_bodyFontFamilyMedium</item>
     </style>
 
     <style name="TextAppearance.GestureTutorial.ButtonLabel.Home"
@@ -164,7 +164,7 @@
     <style name="TextAppearance.GestureTutorial.MainTitle"
         parent="TextAppearance.GestureTutorial">
         <item name="android:textSize">36sp</item>
-        <item name="android:fontFamily">google-sans</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
     </style>
 
     <style name="TextAppearance.GestureTutorial.MainTitle.Home"
@@ -201,7 +201,7 @@
         parent="TextAppearance.GestureTutorial.Subtitle">
         <item name="android:textSize">16sp</item>
         <item name="android:letterSpacing">0.02</item>
-        <item name="android:fontFamily">google-sans-text</item>
+        <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
         <item name="android:textColor">?attr/tutorialSubtitle</item>
     </style>
 
@@ -255,18 +255,18 @@
 
     <style name="TextAppearance.TaskbarEduTooltip.Title" parent="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle">
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:fontFamily">google-sans</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
         <item name="android:textSize">24sp</item>
     </style>
 
     <style name="TextAppearance.TaskbarEduTooltip.Subtext" parent="android:TextAppearance.Material.Body1">
         <item name="android:layout_marginTop">16dp</item>
-        <item name="android:fontFamily">google-sans-text</item>
+        <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
         <item name="android:textSize">14sp</item>
     </style>
 
     <style name="KeyboardQuickSwitchText">
-        <item name="fontFamily">google-sans-text</item>
+        <item name="fontFamily">@*android:string/config_bodyFontFamily</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">?androidprv:attr/materialColorOnSurface</item>
         <item name="lineHeight">20sp</item>
@@ -305,7 +305,7 @@
     </style>
 
     <style name="IconAppChipMenuTextStyle">
-        <item name="android:fontFamily">google-sans-text-medium</item>
+        <item name="android:fontFamily">@*android:string/config_bodyFontFamilyMedium</item>
         <item name="android:textSize">@dimen/task_thumbnail_icon_menu_text_size</item>
         <item name="android:textColor">?androidprv:attr/materialColorOnSurface</item>
         <item name="android:letterSpacing">0.025</item>
