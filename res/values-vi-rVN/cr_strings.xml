@@ -84,15 +84,15 @@
     <string name="recent_task_force_stop_app">Buộc dừng</string>
     <string name="recents_app_force_stopped">Ứng dụng đã bị buộc dừng</string>
     <!-- Icon pack -->
-    <string name="icon_pack_title">Icon pack</string>
-    <string name="icon_pack_default_label">Default</string>
-    <string name="icon_pack_add">Install more</string>
-    <string name="icon_pack_no_market">There\'s no available app store</string>
+    <string name="icon_pack_title">Gói biểu tượng</string>
+    <string name="icon_pack_default_label">Mặc định</string>
+    <string name="icon_pack_add">Cài đặt thêm</string>
+    <string name="icon_pack_no_market">Không có ứng dụng nào khả dụng trong cửa hàng</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_subtext">Vuốt xuống để đóng thông tin ứng dụng</string>
+    <string name="app_info_source">Nguồn</string>
+    <string name="app_info_source_system">Hệ thống</string>
+    <string name="app_info_last_update">Cập nhật lần cuối</string>
+    <string name="app_info_version">Phiên bản</string>
+    <string name="app_info_more">Xem thêm</string>
 </resources>
