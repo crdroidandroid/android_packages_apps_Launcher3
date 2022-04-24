@@ -83,4 +83,16 @@
     <!-- Force stop shortcut -->
     <string name="recent_task_force_stop_app">Forçar parada</string>
     <string name="recents_app_force_stopped">Aplicativo encerrado</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Pacote de ícones</string>
+    <string name="icon_pack_default_label">Padrão</string>
+    <string name="icon_pack_add">Instalar mais</string>
+    <string name="icon_pack_no_market">Não há uma loja de aplicativos disponível</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Deslize para baixo para fechar as informações do aplicativo</string>
+    <string name="app_info_source">Fonte</string>
+    <string name="app_info_source_system">Sistema</string>
+    <string name="app_info_last_update">Última atualização</string>
+    <string name="app_info_version">Versão</string>
+    <string name="app_info_more">Mais</string>
 </resources>
