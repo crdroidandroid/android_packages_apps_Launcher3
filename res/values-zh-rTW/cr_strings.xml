@@ -84,15 +84,15 @@
     <string name="recent_task_force_stop_app">強制停止</string>
     <string name="recents_app_force_stopped">已強制停止應用程式</string>
     <!-- Icon pack -->
-    <string name="icon_pack_title">圖示包</string>
+    <string name="icon_pack_title">圖示套件</string>
     <string name="icon_pack_default_label">預設</string>
     <string name="icon_pack_add">安裝更多...</string>
     <string name="icon_pack_no_market">沒有可用的應用程式商店</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_subtext">向下滑動關閉應用程式資訊</string>
+    <string name="app_info_source">來源</string>
+    <string name="app_info_source_system">系統</string>
+    <string name="app_info_last_update">上次更新</string>
+    <string name="app_info_version">版本</string>
+    <string name="app_info_more">更多</string>
 </resources>
