@@ -86,13 +86,13 @@
     <!-- Icon pack -->
     <string name="icon_pack_title">Набор значков</string>
     <string name="icon_pack_default_label">По умолчанию</string>
-    <string name="icon_pack_add">Установить еще</string>
+    <string name="icon_pack_add">Установить ещё</string>
     <string name="icon_pack_no_market">Нет доступного магазина приложений</string>
     <!-- AppInfo -->
     <string name="app_info_subtext">Смахните вниз чтобы закрыть информацию о приложении</string>
     <string name="app_info_source">Источник</string>
-    <string name="app_info_source_system">Система</string>
+    <string name="app_info_source_system">Системное</string>
     <string name="app_info_last_update">Последнее обновление</string>
     <string name="app_info_version">Версия</string>
-    <string name="app_info_more">Больше</string>
+    <string name="app_info_more">Больше информации</string>
 </resources>
