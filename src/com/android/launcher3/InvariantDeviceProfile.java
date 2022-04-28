@@ -182,6 +182,8 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
 
     private final ArrayList<OnIDPChangeListener> mChangeListeners = new ArrayList<>();
 
+    private static boolean isTablet;
+
     @VisibleForTesting
     public InvariantDeviceProfile() {
     }
@@ -308,7 +310,7 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
             case DeviceProfile.KEY_PHONE_TASKBAR:
                 // Create the illusion of this taking effect immediately
                 // Also needed because TaskbarManager inits before SystemUiProxy on start
-                boolean enabled = Utilities.getPrefs(mContext).getBoolean(DeviceProfile.KEY_PHONE_TASKBAR, false);
+                boolean enabled = Utilities.getPrefs(mContext).getBoolean(DeviceProfile.KEY_PHONE_TASKBAR, isTablet);
                 SystemUiProxy.INSTANCE.get(mContext).setTaskbarEnabled(enabled);
 
                 onConfigChanged(mContext, true);
@@ -582,7 +584,7 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
         int minWidthPx = Integer.MAX_VALUE;
         int minHeightPx = Integer.MAX_VALUE;
         for (WindowBounds bounds : displayInfo.supportedBounds) {
-            boolean isTablet = displayInfo.isTablet(bounds);
+            isTablet = displayInfo.isTablet(bounds);
             if (isTablet && deviceType == TYPE_MULTI_DISPLAY) {
                 // For split displays, take half width per page
                 minWidthPx = Math.min(minWidthPx, bounds.availableSize.x / 2);
