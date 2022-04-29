@@ -95,4 +95,7 @@
     <string name="app_info_last_update">Останнє оновлення</string>
     <string name="app_info_version">Версія</string>
     <string name="app_info_more">Більше</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Use taskbar (Beta)</string>
+    <string name="pref_allow_phone_taskbar_desc">For opening and switching apps anywhere</string>
 </resources>
