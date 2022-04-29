@@ -95,4 +95,7 @@
     <string name="app_info_last_update">Posledná aktualizácia</string>
     <string name="app_info_version">Verzia</string>
     <string name="app_info_more">Viac</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Use taskbar (Beta)</string>
+    <string name="pref_allow_phone_taskbar_desc">For opening and switching apps anywhere</string>
 </resources>
