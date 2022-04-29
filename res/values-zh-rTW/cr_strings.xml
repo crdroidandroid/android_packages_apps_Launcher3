@@ -96,6 +96,6 @@
     <string name="app_info_version">版本</string>
     <string name="app_info_more">更多</string>
     <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar">Use taskbar (Beta)</string>
-    <string name="pref_allow_phone_taskbar_desc">For opening and switching apps anywhere</string>
+    <string name="pref_allow_phone_taskbar">使用工作列（測試版）</string>
+    <string name="pref_allow_phone_taskbar_desc">隨處都能開啟和切換應用程式</string>
 </resources>
