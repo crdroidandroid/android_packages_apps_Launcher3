@@ -95,4 +95,7 @@
     <string name="app_info_last_update">Son güncelleme</string>
     <string name="app_info_version">Sürüm</string>
     <string name="app_info_more">Daha fazla</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Use taskbar (Beta)</string>
+    <string name="pref_allow_phone_taskbar_desc">For opening and switching apps anywhere</string>
 </resources>
