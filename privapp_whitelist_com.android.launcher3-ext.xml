@@ -18,5 +18,6 @@
     <!-- Additional permissions on top of privapp_whitelist_com.android.launcher3.xml -->
     <privapp-permissions package="com.android.launcher3">
         <permission name="android.permission.FORCE_STOP_PACKAGES"/>
+        <permission name="android.permission.WRITE_SETTINGS"/>
     </privapp-permissions>
 </permissions>
