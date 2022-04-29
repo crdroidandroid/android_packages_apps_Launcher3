@@ -95,4 +95,7 @@
     <string name="app_info_last_update">Ostatnia aktualizacja</string>
     <string name="app_info_version">Wersja</string>
     <string name="app_info_more">Więcej</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Use taskbar (Beta)</string>
+    <string name="pref_allow_phone_taskbar_desc">For opening and switching apps anywhere</string>
 </resources>
