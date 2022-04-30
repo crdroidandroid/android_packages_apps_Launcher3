@@ -89,16 +89,16 @@
     <string name="icon_pack_add">추가로 설치</string>
     <string name="icon_pack_no_market">사용할 수 있는 앱 스토어가 없습니다</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_subtext">아래로 스와이프하여 앱 정보를 닫습니다</string>
+    <string name="app_info_source">소스</string>
+    <string name="app_info_source_system">시스템</string>
+    <string name="app_info_last_update">마지막 업데이트</string>
+    <string name="app_info_version">버전</string>
+    <string name="app_info_more">더 보기</string>
     <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar">Use taskbar (Beta)</string>
-    <string name="pref_allow_phone_taskbar_desc">For opening and switching apps anywhere</string>
+    <string name="pref_allow_phone_taskbar">작업바 사용하기 (베타)</string>
+    <string name="pref_allow_phone_taskbar_desc">어디에서나 앱을 열고 바꿀 수 있도록</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Show grid of recent apps</string>
+    <string name="pref_allow_phone_overview_grid">최근 앱의 그리드 표시</string>
     <string name="pref_allow_phone_overview_grid_desc">More recent apps in overview</string>
 </resources>
