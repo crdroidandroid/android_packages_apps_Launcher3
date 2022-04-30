@@ -95,4 +95,10 @@
     <string name="app_info_last_update">Letzte Aktualisierung</string>
     <string name="app_info_version">Version</string>
     <string name="app_info_more">Mehr</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Taskleiste verwenden (Beta)</string>
+    <string name="pref_allow_phone_taskbar_desc">Zum jederzeitigen Öffnen von und Wechseln zwischen Apps</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">App-Verlauf als Raster anzeigen</string>
+    <string name="pref_allow_phone_overview_grid_desc">Im App-Verlauf mehr Apps anzeigen</string>
 </resources>

@@ -95,4 +95,10 @@
     <string name="app_info_last_update">Laatste update</string>
     <string name="app_info_version">Versie</string>
     <string name="app_info_more">Meer</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Gebruik taakbalk (Beta)</string>
+    <string name="pref_allow_phone_taskbar_desc">Voor het overal openen en wisselen van apps</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Raster van recente apps weergeven</string>
+    <string name="pref_allow_phone_overview_grid_desc">Meer recente apps in het overzicht</string>
 </resources>

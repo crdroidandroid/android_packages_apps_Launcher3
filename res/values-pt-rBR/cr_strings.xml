@@ -95,4 +95,10 @@
     <string name="app_info_last_update">Última atualização</string>
     <string name="app_info_version">Versão</string>
     <string name="app_info_more">Mais</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Usar barra de tarefas (Beta)</string>
+    <string name="pref_allow_phone_taskbar_desc">Para abrir e alternar apps em qualquer lugar</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Mostrar a lista de apps recentes</string>
+    <string name="pref_allow_phone_overview_grid_desc">Lista completa de apps recentes</string>
 </resources>

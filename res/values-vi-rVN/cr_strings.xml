@@ -95,4 +95,10 @@
     <string name="app_info_last_update">Cập nhật lần cuối</string>
     <string name="app_info_version">Phiên bản</string>
     <string name="app_info_more">Xem thêm</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Sử dụng thanh tác vụ (Beta)</string>
+    <string name="pref_allow_phone_taskbar_desc">Để mở và chuyển đổi ứng dụng ở mọi nơi</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Hiển thị lưới các ứng dụng gần đây</string>
+    <string name="pref_allow_phone_overview_grid_desc">Tổng quan về các ứng dụng gần đây hơn</string>
 </resources>

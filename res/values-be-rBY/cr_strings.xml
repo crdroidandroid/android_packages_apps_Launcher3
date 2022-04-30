@@ -84,15 +84,21 @@
     <string name="recent_task_force_stop_app">Спынiць прымусова</string>
     <string name="recents_app_force_stopped">Праграма прымусова спынена</string>
     <!-- Icon pack -->
-    <string name="icon_pack_title">Icon pack</string>
-    <string name="icon_pack_default_label">Default</string>
-    <string name="icon_pack_add">Install more</string>
-    <string name="icon_pack_no_market">There\'s no available app store</string>
+    <string name="icon_pack_title">Набор значкоў</string>
+    <string name="icon_pack_default_label">Па змаўчанні</string>
+    <string name="icon_pack_add">Усталяваць яшчэ</string>
+    <string name="icon_pack_no_market">Няма даступнай крамы праграм</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_subtext">Правядзіце пальцам уніз, каб закрыць інфармацыю аб праграме</string>
+    <string name="app_info_source">Крыніца</string>
+    <string name="app_info_source_system">Сістэма</string>
+    <string name="app_info_last_update">Апошняе абнаўленне</string>
+    <string name="app_info_version">Версія</string>
+    <string name="app_info_more">Яшчэ</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Use taskbar (Beta)</string>
+    <string name="pref_allow_phone_taskbar_desc">For opening and switching apps anywhere</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Show grid of recent apps</string>
+    <string name="pref_allow_phone_overview_grid_desc">More recent apps in overview</string>
 </resources>
