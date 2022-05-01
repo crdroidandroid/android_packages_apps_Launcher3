@@ -70,7 +70,7 @@
     <string name="show_statusbar_title">شريط الحالة</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">الإقتراحات</string>
-    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+    <string name="suggestion_pref_screen_desc">لجميع التطبيقات &amp; اقتراحات الشاشة الرئيسية</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">إخفاء التطبيقات وحمايتها</string>
     <string name="trust_apps_auth_manager">افتح لإدارة التطبيقات المخفية والمحمية</string>
@@ -94,11 +94,11 @@
     <string name="app_info_source_system">النظام</string>
     <string name="app_info_last_update">آخر تحديث</string>
     <string name="app_info_version">الإصدار</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_more">المزيد</string>
     <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar">Use taskbar (Beta)</string>
-    <string name="pref_allow_phone_taskbar_desc">For opening and switching apps anywhere</string>
+    <string name="pref_allow_phone_taskbar">استخدام شريط المهام (تجريبي)</string>
+    <string name="pref_allow_phone_taskbar_desc">لفتح التطبيقات وتبديلها في أي مكان</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Show grid of recent apps</string>
-    <string name="pref_allow_phone_overview_grid_desc">More recent apps in overview</string>
+    <string name="pref_allow_phone_overview_grid">إظهار قائمة التطبيقات الأخيرة</string>
+    <string name="pref_allow_phone_overview_grid_desc">إظهار المزيد من التطبيقات الأخيرة</string>
 </resources>
