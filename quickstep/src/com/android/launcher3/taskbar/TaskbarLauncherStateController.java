@@ -212,24 +212,25 @@ import java.util.function.Supplier;
             boolean isResumed = isResumed();
             ObjectAnimator anim = mIconAlignmentForResumedState
                     .animateToValue(isResumed && goingToUnstashedLauncherState()
-                            ? 1 : 0)
-                    .setDuration(duration);
+                            ? 1 : 0);
+            if (isResumed) {
+                anim.setDuration(duration);
+            }
 
             anim.addListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationEnd(Animator animation) {
                     mIsAnimatingToLauncherViaResume = false;
-                }
-
-                @Override
-                public void onAnimationStart(Animator animation) {
-                    mIsAnimatingToLauncherViaResume = isResumed;
-
                     TaskbarStashController stashController = mControllers.taskbarStashController;
                     stashController.updateStateForFlag(FLAG_IN_APP, !isResumed);
                     // make sure ime bg gets reset
                     stashController.updateStateForFlag(FLAG_STASHED_IN_APP_IME, false);
                     stashController.applyState(duration);
+                }
+
+                @Override
+                public void onAnimationStart(Animator animation) {
+                    mIsAnimatingToLauncherViaResume = isResumed();
                 }
             });
             animatorSet.play(anim);
