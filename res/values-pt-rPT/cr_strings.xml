@@ -77,7 +77,7 @@
     <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
     <string name="trust_apps_loading">Loading\u2026</string>
     <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="trust_apps_help">Help</string>
+    <string name="trust_apps_help">Ajuda</string>
     <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
     <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
     <!-- Force stop shortcut -->
@@ -87,10 +87,10 @@
     <string name="icon_pack_title">Pacote de ícones</string>
     <string name="icon_pack_default_label">Padrão</string>
     <string name="icon_pack_add">Instalar mais</string>
-    <string name="icon_pack_no_market">There\'s no available app store</string>
+    <string name="icon_pack_no_market">Não há uma loja de aplicações disponível</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info</string>
-    <string name="app_info_source">Source</string>
+    <string name="app_info_subtext">Deslize para baixo para fechar as informações da aplicação</string>
+    <string name="app_info_source">Fonte</string>
     <string name="app_info_source_system">Sistema</string>
     <string name="app_info_last_update">Última atualização</string>
     <string name="app_info_version">Versão</string>
