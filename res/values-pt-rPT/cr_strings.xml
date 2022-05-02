@@ -51,18 +51,18 @@
     <!-- Font size -->
     <string name="font_size_title">Tamanho da letra</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">Máximo de linhas para o rótulo da aplicação</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">Toque duplo para desligar ecrã</string>
+    <string name="pref_sleep_gesture_summary">Toque duas vezes num espaço vazio para desligar o ecrã</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Pesquisar</string>
     <string name="label_lens">Lentes do Google</string>
     <string name="label_voice_search">Pesquisa por voz</string>
     <string name="dock_search_title">Barra de pesquisa do Google</string>
     <string name="dock_search_summary">Mostrar a barra de pesquisa na barra inferior</string>
-    <string name="dock_theme_title">Themed icons</string>
-    <string name="dock_theme_summary">Use themed icons for search bar</string>
+    <string name="dock_theme_title">Ícones temáticos</string>
+    <string name="dock_theme_summary">Usar ícones temáticos para a barra de pesquisa</string>
     <string name="search_radius_title">Corner radius</string>
     <!-- Recents -->
     <string name="action_lens">Lens</string>
