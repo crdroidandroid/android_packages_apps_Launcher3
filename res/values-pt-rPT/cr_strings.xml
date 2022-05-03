@@ -70,7 +70,7 @@
     <string name="show_statusbar_title">Barra de estado</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Sugestões</string>
-    <string name="suggestion_pref_screen_desc">Para todas as aplicações &amp; Sugestões do ecrã inicial</string>
+    <string name="suggestion_pref_screen_desc">Para todas as aplicações e ecrã inicial</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Aplicações ocultas e protegidas</string>
     <string name="trust_apps_auth_manager">Desbloquear para gerir as aplicações ocultas e protegidas</string>
@@ -78,8 +78,8 @@
     <string name="trust_apps_loading">A carregar\u2026</string>
     <string name="trust_apps_no_lock_error">Configure um ecrã de bloqueio seguro para restringir o acesso às aplicações</string>
     <string name="trust_apps_help">Ajuda</string>
-    <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
-    <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="trust_apps_info_hidden">As aplicações ocultas e seus widgets estão escondidos da gaveta de aplicações</string>
+    <string name="trust_apps_info_protected">As aplicações protegidas requerem autenticação para serem executadas</string>
     <!-- Force stop shortcut -->
     <string name="recent_task_force_stop_app">Forçar paragem</string>
     <string name="recents_app_force_stopped">Aplicação encerrada</string>
@@ -99,6 +99,6 @@
     <string name="pref_allow_phone_taskbar">Usar a barra de tarefas</string>
     <string name="pref_allow_phone_taskbar_desc">Para abrir e alternar apps em qualquer lugar</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Show grid of recent apps</string>
-    <string name="pref_allow_phone_overview_grid_desc">More recent apps in overview</string>
+    <string name="pref_allow_phone_overview_grid">Mostrar lista de aplicações recentes</string>
+    <string name="pref_allow_phone_overview_grid_desc">Visão geral das aplicações mais recentes</string>
 </resources>
