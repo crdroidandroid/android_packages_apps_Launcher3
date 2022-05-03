@@ -73,10 +73,10 @@
     <string name="suggestion_pref_screen_desc">Para todas as aplicações &amp; Sugestões do ecrã inicial</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
-    <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
+    <string name="trust_apps_auth_manager">Desbloquear para gerir as aplicações ocultas e protegidas</string>
     <string name="trust_apps_auth_open_app">Autenticar para abrir %1$s</string>
     <string name="trust_apps_loading">A carregar\u2026</string>
-    <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
+    <string name="trust_apps_no_lock_error">Configure um ecrã de bloqueio seguro para restringir o acesso às aplicações</string>
     <string name="trust_apps_help">Ajuda</string>
     <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
     <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
