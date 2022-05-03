@@ -96,9 +96,9 @@
     <string name="app_info_version">Версия</string>
     <string name="app_info_more">Больше информации</string>
     <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar">Панель задач (бета)</string>
+    <string name="pref_allow_phone_taskbar">Use taskbar</string>
     <string name="pref_allow_phone_taskbar_desc">Для открытия и переключения приложений в любом месте</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Сетка недавних приложений</string>
-    <string name="pref_allow_phone_overview_grid_desc">Видно больше недавних приложений</string>
+    <string name="pref_allow_phone_overview_grid">Показать сетку последних приложений</string>
+    <string name="pref_allow_phone_overview_grid_desc">Больше недавних приложений одновременно</string>
 </resources>
