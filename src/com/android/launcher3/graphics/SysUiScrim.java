@@ -27,6 +27,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -53,7 +54,8 @@ import com.android.systemui.plugins.ResourceProvider;
 /**
  * View scrim which draws behind hotseat and workspace
  */
-public class SysUiScrim implements View.OnAttachStateChangeListener {
+public class SysUiScrim implements View.OnAttachStateChangeListener,
+        SharedPreferences.OnSharedPreferenceChangeListener {
 
     public static final FloatProperty<SysUiScrim> SYSUI_PROGRESS =
             new FloatProperty<SysUiScrim>("sysUiProgress") {
@@ -104,6 +106,8 @@ public class SysUiScrim implements View.OnAttachStateChangeListener {
     private static final int ALPHA_MASK_BITMAP_DP = 200;
     private static final int ALPHA_MASK_WIDTH_DP = 2;
 
+    private static final String KEY_SHOW_TOP_SHADOW = "pref_show_top_shadow";
+
     private boolean mDrawTopScrim, mDrawBottomScrim, mDrawWallpaperScrim;
 
     private final RectF mWallpaperScrimRect = new RectF();
@@ -131,7 +135,9 @@ public class SysUiScrim implements View.OnAttachStateChangeListener {
                 view.getResources().getDisplayMetrics());
         mTopScrim = Themes.getAttrDrawable(view.getContext(), R.attr.workspaceStatusBarScrim);
         mBottomMask = mTopScrim == null ? null : createDitheredAlphaMask();
-        mHideSysUiScrim = mTopScrim == null;
+
+        SharedPreferences prefs = Utilities.getPrefs(view.getContext());
+        mHideSysUiScrim = mTopScrim == null || !prefs.getBoolean(KEY_SHOW_TOP_SHADOW, true);
 
         mDrawWallpaperScrim = FeatureFlags.ENABLE_WALLPAPER_SCRIM.get()
                 && !Themes.getAttrBoolean(view.getContext(), R.attr.isMainColorDark)
@@ -141,6 +147,7 @@ public class SysUiScrim implements View.OnAttachStateChangeListener {
         mWallpaperScrimMaxAlpha = Color.alpha(wallpaperScrimColor);
         mWallpaperScrimPaint.setColor(wallpaperScrimColor);
 
+        prefs.registerOnSharedPreferenceChangeListener(this);
         view.addOnAttachStateChangeListener(this);
     }
 
@@ -218,6 +225,14 @@ public class SysUiScrim implements View.OnAttachStateChangeListener {
     public void onViewDetachedFromWindow(View view) {
         if (!KEYGUARD_ANIMATION.get() && mTopScrim != null) {
             mRoot.getContext().unregisterReceiver(mReceiver);
+        }
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+        if (key.equals(KEY_SHOW_TOP_SHADOW)) {
+            mHideSysUiScrim = !prefs.getBoolean(KEY_SHOW_TOP_SHADOW, true);
+            mRoot.invalidate();
         }
     }
 
