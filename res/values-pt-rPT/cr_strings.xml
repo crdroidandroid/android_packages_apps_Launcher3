@@ -27,7 +27,7 @@
     <string name="misc_category_title">Diversos</string>
     <string name="misc_category_summary">Outras opções</string>
     <string name="dev_options_title">Opções de programador</string>
-    <string name="dev_options_desc">Ativar alguns recursos ocultos por seu próprio risco</string>
+    <string name="dev_options_desc">Ativar alguns recursos ocultos por sua conta e risco</string>
     <string name="general_category_title">Geral</string>
     <string name="interface_category_title">Interface</string>
     <string name="search_bar_category_title">Barra de pesquisa</string>
@@ -82,7 +82,7 @@
     <string name="trust_apps_info_protected">As apps protegidas requerem autenticação para serem executadas</string>
     <!-- Force stop shortcut -->
     <string name="recent_task_force_stop_app">Forçar paragem</string>
-    <string name="recents_app_force_stopped">Aplicação encerrada</string>
+    <string name="recents_app_force_stopped">App encerrada</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Pacote de ícones</string>
     <string name="icon_pack_default_label">Padrão</string>
