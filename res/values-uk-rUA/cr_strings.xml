@@ -96,9 +96,9 @@
     <string name="app_info_version">Версія</string>
     <string name="app_info_more">Більше</string>
     <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar">Use taskbar</string>
+    <string name="pref_allow_phone_taskbar">Використовувати панель завдань</string>
     <string name="pref_allow_phone_taskbar_desc">Для відкриття та перемикання додатків в будь-якому місці</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Show grid of recent apps</string>
-    <string name="pref_allow_phone_overview_grid_desc">More recent apps in overview</string>
+    <string name="pref_allow_phone_overview_grid">Показати сітку нещодавніх додатків</string>
+    <string name="pref_allow_phone_overview_grid_desc">Більше останніх програм під час огляду</string>
 </resources>
