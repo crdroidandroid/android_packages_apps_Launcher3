@@ -54,7 +54,7 @@
     <string name="icon_max_lines_title">Linee massime per l\'etichetta dell\'app</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Doppio tocco per sospendere</string>
-    <string name="pref_sleep_gesture_summary">Tocca due volte sullo spazio vuoto per spegnere il dispositivo</string>
+    <string name="pref_sleep_gesture_summary">Tocca due volte su uno spazio vuoto per spegnere il dispositivo</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Cerca</string>
     <string name="label_lens">Google Lens</string>
@@ -76,9 +76,9 @@
     <string name="trust_apps_auth_manager">Sblocca per gestire le app nascoste e protette</string>
     <string name="trust_apps_auth_open_app">Autenticati per aprire %1$s</string>
     <string name="trust_apps_loading">Caricamento\u2026</string>
-    <string name="trust_apps_no_lock_error">Sei pregato di configurare un blocco schermo sicuro per limitare l\'accesso alle app</string>
+    <string name="trust_apps_no_lock_error">Per favore imposta una schermata di blocco sicura per limitare l\'accesso alle app</string>
     <string name="trust_apps_help">Aiuto</string>
-    <string name="trust_apps_info_hidden">Le app nascoste e i relativi widget sono nascosti dal cassetto</string>
+    <string name="trust_apps_info_hidden">Le app nascoste e i relativi widget sono nascosti dal drawer</string>
     <string name="trust_apps_info_protected">Le applicazioni protette richiedono l\'autenticazione per essere aperte dal launcher</string>
     <!-- Force stop shortcut -->
     <string name="recent_task_force_stop_app">Chiusura forzata</string>
