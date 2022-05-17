@@ -294,6 +294,7 @@ constructor(@ApplicationContext private val encryptedContext: Context) {
         @JvmField val RECENTS_STYLE = backedUpItem("pref_recents_style", "default")
         @JvmField val RECENTS_OPACITY = backedUpItem("pref_recents_opacity", 40)
         @JvmField val RECENTS_SCREENSHOT = backedUpItem("pref_recents_screenshot", true)
+        @JvmField val RECENTS_SCROLL_VIBRATE = backedUpItem("pref_recents_scroll_vibrate", true)
         @JvmField val ROW_HEIGHT = backedUpItem("pref_row_height", 100)
         @JvmField val SEARCH_RADIUS_SIZE = backedUpItem("pref_search_radius_size", 100)
         @JvmField val SERAPHIX_HOLDER_ID = backedUpItem("pref_seraphix_holder_id", -1)

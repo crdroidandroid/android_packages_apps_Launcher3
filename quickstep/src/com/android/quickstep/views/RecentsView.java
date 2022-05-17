@@ -1948,6 +1948,7 @@ public abstract class RecentsView<
     }
 
     private void vibrateForScroll() {
+        if (!LauncherPrefs.RECENTS_SCROLL_VIBRATE.get(getContext())) return;
         long now = SystemClock.uptimeMillis();
         if (now - mScrollLastHapticTimestamp > mScrollHapticMinGapMillis) {
             mScrollLastHapticTimestamp = now;

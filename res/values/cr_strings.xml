@@ -497,4 +497,7 @@
     <string name="action_lock">Lock/Unlock app</string>
     <string name="unlock_app">Unlocked app in recents</string>
     <string name="lock_app">Locked app in recents</string>
+
+    <!-- Recents style -->
+    <string name="recents_scroll_vibrate_title">Scroll vibration</string>
 </resources>

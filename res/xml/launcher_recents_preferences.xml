@@ -23,6 +23,13 @@
         android:key="recents_category_general"
         android:title="@string/general_category_title">
 
+        <SwitchPreferenceCompat
+            android:key="pref_recents_scroll_vibrate"
+            android:title="@string/recents_scroll_vibrate_title"
+            android:defaultValue="true"
+            android:persistent="true"
+            launcher:iconSpaceReserved="false" />
+
         <ListPreference
             android:key="pref_recents_style"
             android:title="@string/recents_style_title"
