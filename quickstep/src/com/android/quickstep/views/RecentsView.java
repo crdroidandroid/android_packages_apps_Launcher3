@@ -140,6 +140,7 @@ import com.android.launcher3.AbstractFloatingView;
 import com.android.launcher3.BuildConfig;
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Insettable;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.MotionEventsUtils;
 import com.android.launcher3.PagedView;
 import com.android.launcher3.R;
@@ -1747,6 +1748,7 @@ public abstract class RecentsView<
     }
 
     private void vibrateForScroll() {
+        if (!LauncherPrefs.RECENTS_SCROLL_VIBRATE.get(getContext())) return;
         long now = SystemClock.uptimeMillis();
         if (now - mScrollLastHapticTimestamp > mScrollHapticMinGapMillis) {
             mScrollLastHapticTimestamp = now;

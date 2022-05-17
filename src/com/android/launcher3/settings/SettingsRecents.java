@@ -47,6 +47,7 @@ import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.display.DisplayController;
 import com.android.launcher3.display.LauncherDisplayInfo;
+import com.android.launcher3.util.VibratorWrapper;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.widget.SettingsBasePreferenceFragment;
@@ -69,6 +70,7 @@ public class SettingsRecents extends CollapsingToolbarBaseActivity
     public static final String SAVE_HIGHLIGHTED_KEY = "android:preference_highlighted";
 
     private static final String RECENTS_CATEGORY_ACTION = "recents_category_actions";
+    private static final String RECENTS_SCROLL_VIBRATE_PREF = "pref_recents_scroll_vibrate";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -184,12 +186,7 @@ public class SettingsRecents extends CollapsingToolbarBaseActivity
             setPreferencesFromResource(R.xml.launcher_recents_preferences, rootKey);
 
             PreferenceScreen screen = getPreferenceScreen();
-            for (int i = screen.getPreferenceCount() - 1; i >= 0; i--) {
-                Preference preference = screen.getPreference(i);
-                if (!initPreference(preference)) {
-                    screen.removePreference(preference);
-                }
-            }
+            removeUnsupportedPreferences(screen);
 
             // If the target preference is not in the current preference screen, find the parent
             // preference screen that contains the target preference and set it as the preference
@@ -209,6 +206,17 @@ public class SettingsRecents extends CollapsingToolbarBaseActivity
 
             if (getActivity() != null && !TextUtils.isEmpty(getPreferenceScreen().getTitle())) {
                 getActivity().setTitle(getPreferenceScreen().getTitle());
+            }
+        }
+
+        private void removeUnsupportedPreferences(PreferenceGroup group) {
+            for (int i = group.getPreferenceCount() - 1; i >= 0; i--) {
+                Preference preference = group.getPreference(i);
+                if (!initPreference(preference)) {
+                    group.removePreference(preference);
+                } else if (preference instanceof PreferenceGroup) {
+                    removeUnsupportedPreferences((PreferenceGroup) preference);
+                }
             }
         }
 
@@ -281,8 +289,12 @@ public class SettingsRecents extends CollapsingToolbarBaseActivity
             }
 
             LauncherDisplayInfo info = DisplayController.INSTANCE.get(getContext()).getInfo();
-            if (key.equals(RECENTS_CATEGORY_ACTION)) {
+            if (key.equals(RECENTS_CATEGORY_ACTION) || key.equals(RECENTS_SCROLL_VIBRATE_PREF)) {
                 return !info.isLargeScreen(info.realBounds);
+            }
+
+            if (key.equals(RECENTS_SCROLL_VIBRATE_PREF)) {
+                return VibratorWrapper.INSTANCE.get(getContext()).hasVibrator();
             }
 
             return true;
