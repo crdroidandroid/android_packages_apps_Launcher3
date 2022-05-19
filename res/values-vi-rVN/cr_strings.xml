@@ -83,4 +83,22 @@
     <!-- Force stop shortcut -->
     <string name="recent_task_force_stop_app">Buộc dừng</string>
     <string name="recents_app_force_stopped">Ứng dụng đã bị buộc dừng</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Gói biểu tượng</string>
+    <string name="icon_pack_default_label">Mặc định</string>
+    <string name="icon_pack_add">Cài đặt thêm</string>
+    <string name="icon_pack_no_market">Không có ứng dụng nào khả dụng trong cửa hàng</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Vuốt xuống để đóng thông tin ứng dụng</string>
+    <string name="app_info_source">Nguồn</string>
+    <string name="app_info_source_system">Hệ thống</string>
+    <string name="app_info_last_update">Cập nhật lần cuối</string>
+    <string name="app_info_version">Phiên bản</string>
+    <string name="app_info_more">Xem thêm</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Sử dụng thanh tác vụ</string>
+    <string name="pref_allow_phone_taskbar_desc">Để mở và chuyển đổi ứng dụng ở mọi nơi</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Hiển thị lưới các ứng dụng gần đây</string>
+    <string name="pref_allow_phone_overview_grid_desc">Nhiều ứng dụng gần đây hơn trong màn hình tổng quan</string>
 </resources>

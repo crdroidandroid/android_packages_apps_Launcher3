@@ -83,4 +83,22 @@
     <!-- Force stop shortcut -->
     <string name="recent_task_force_stop_app">Oprire forțată</string>
     <string name="recents_app_force_stopped">Forțează aplicația oprită</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Pachet de pictograme</string>
+    <string name="icon_pack_default_label">Prestabilit</string>
+    <string name="icon_pack_add">Instalează mai multe</string>
+    <string name="icon_pack_no_market">Nu există niciun magazin de aplicații disponibil</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Glisați în jos pentru a închide informațiile aplicației</string>
+    <string name="app_info_source">Sursă</string>
+    <string name="app_info_source_system">Sistem</string>
+    <string name="app_info_last_update">Ultima actualizare</string>
+    <string name="app_info_version">Versiune</string>
+    <string name="app_info_more">Mai mult</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Folosește bara de activități</string>
+    <string name="pref_allow_phone_taskbar_desc">Pentru deschiderea și schimbarea aplicațiilor oriunde</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Arată grila aplicațiilor recente</string>
+    <string name="pref_allow_phone_overview_grid_desc">Aplicații mai recente în prezentare generală</string>
 </resources>

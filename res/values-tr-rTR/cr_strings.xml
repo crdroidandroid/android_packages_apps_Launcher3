@@ -83,4 +83,22 @@
     <!-- Force stop shortcut -->
     <string name="recent_task_force_stop_app">Durmaya zorla</string>
     <string name="recents_app_force_stopped">Uygulama zorla durduruldu</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Simge paketi</string>
+    <string name="icon_pack_default_label">Varsayılan</string>
+    <string name="icon_pack_add">Daha fazla yükle</string>
+    <string name="icon_pack_no_market">Kullanılabilir uygulama mağazası yok</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Uygulama bilgilerini kapatmak için aşağı kaydırın</string>
+    <string name="app_info_source">Kaynak</string>
+    <string name="app_info_source_system">Sistem</string>
+    <string name="app_info_last_update">Son güncelleme</string>
+    <string name="app_info_version">Sürüm</string>
+    <string name="app_info_more">Daha fazla</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Görev çubuğunu kullan</string>
+    <string name="pref_allow_phone_taskbar_desc">Uygulamaları herhangi bir yerde açmak ve değiştirmek için</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Son kullanılan uygulamaları ızgara olarak göster</string>
+    <string name="pref_allow_phone_overview_grid_desc">Genel bakış listesinde daha fazla son kullanılan uygulamalar</string>
 </resources>
