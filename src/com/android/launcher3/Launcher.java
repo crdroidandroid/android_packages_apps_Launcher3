@@ -3210,10 +3210,24 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
     public void pauseExpensiveViewUpdates() {
         // Pause page indicator animations as they lead to layer trashing.
         getWorkspace().getPageIndicator().pauseAnimations();
+
+        getWorkspace().mapOverItems((info, view) -> {
+            if (view instanceof LauncherAppWidgetHostView) {
+                ((LauncherAppWidgetHostView) view).beginDeferringUpdates();
+            }
+            return false; // Return false to continue iterating through all the items.
+        });
     }
 
     /** Resumes view updates at the end of the app launch animation. */
     public void resumeExpensiveViewUpdates() {
         getWorkspace().getPageIndicator().skipAnimationsToEnd();
+
+        getWorkspace().mapOverItems((info, view) -> {
+            if (view instanceof LauncherAppWidgetHostView) {
+                ((LauncherAppWidgetHostView) view).endDeferringUpdates();
+            }
+            return false; // Return false to continue iterating through all the items.
+        });
     }
 }
