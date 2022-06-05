@@ -181,6 +181,7 @@ public class DeviceProfile {
     public final int numShownAllAppsColumns;
     public float allAppsIconTextSizePx;
     private float allAppsCellHeightMultiplier;
+    private boolean allAppsIconText;
 
     // Overview
     public final boolean overviewShowAsGrid;
@@ -289,6 +290,7 @@ public class DeviceProfile {
 
         allAppsCellHeightMultiplier =
                     (float) prefs.getInt(KEY_ROW_HEIGHT, 100) / 100F;
+        allAppsIconText = prefs.getBoolean(InvariantDeviceProfile.KEY_SHOW_DRAWER_LABELS, true);
 
         edgeMarginPx = res.getDimensionPixelSize(R.dimen.dynamic_grid_edge_margin);
 
@@ -613,6 +615,12 @@ public class DeviceProfile {
         int topBottomPadding = textHeight;
         int baseCellHeight = allAppsIconSizePx + allAppsIconDrawablePaddingPx + textHeight + (topBottomPadding * 2);
         allAppsCellHeightPx = (int) (baseCellHeight * allAppsCellHeightMultiplier);
+        if (!allAppsIconText) {
+            int leftRightPadding = desiredWorkspaceHorizontalMarginPx + cellLayoutPaddingLeftRightPx;
+            int drawerWidth = availableWidthPx - leftRightPadding * 2;
+            allAppsCellHeightPx = (int) (drawerWidth / inv.numAllAppsColumns * allAppsCellHeightMultiplier);
+            allAppsIconDrawablePaddingPx = 0;
+        }
     }
 
     private void updateAllAppsWidth() {
