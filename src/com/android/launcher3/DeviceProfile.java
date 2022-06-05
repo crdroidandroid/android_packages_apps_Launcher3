@@ -159,6 +159,7 @@ public class DeviceProfile {
     public int allAppsLeftRightMargin;
     public final int numShownAllAppsColumns;
     private float allAppsCellHeightMultiplier;
+    private boolean allAppsIconText;
 
     private final OverviewProfile overviewProfile;
 
@@ -318,6 +319,7 @@ public class DeviceProfile {
 
         allAppsCellHeightMultiplier =
                     (float) LauncherPrefs.ROW_HEIGHT.get(context) / 100F;
+        allAppsIconText = LauncherPrefs.SHOW_DRAWER_LABELS.get(context);
 
         setupAllAppsStyle(context);
 
@@ -868,7 +870,27 @@ public class DeviceProfile {
             hideWorkspaceLabelsIfNotEnoughSpace();
         }
 
+        // If drawer labels are disabled, make the All Apps cell closer to a square
+        // by basing its height on the drawer width and column count.
+        if (!allAppsIconText) {
+            int cellLayoutHorizontalPadding =
+                    (mWorkspaceProfile.getCellLayoutPaddingPx().left
+                    + mWorkspaceProfile.getCellLayoutPaddingPx().right) / 2;
+            int leftRightPadding =
+                    getWorkspaceIconProfile().getDesiredWorkspaceHorizontalMarginPx()
+                    + cellLayoutHorizontalPadding;
+            int drawerWidth =
+                    mDeviceProperties.getAvailableWidthPx() - leftRightPadding * 2;
+
+            // Use the number of shown All Apps columns for actual cell width
+            int cellWidth = drawerWidth / numShownAllAppsColumns;
+            int cellHeight = (int) (cellWidth * allAppsCellHeightMultiplier);
+
+            mAllAppsProfile = getAllAppsProfile().copyWithCellHeightPx(cellHeight);
+        }
+
         if (LauncherPrefs.ENABLE_TWOLINE_ALLAPPS_TOGGLE.get(context)
+                && allAppsIconText
                 && !(mIsResponsiveGrid && getAllAppsProfile().getMaxAllAppsTextLineCount() == 2)) {
             // Add extra textHeight to the existing allAppsCellHeight.
             mAllAppsProfile = getAllAppsProfile().copyWithCellHeightPx(
