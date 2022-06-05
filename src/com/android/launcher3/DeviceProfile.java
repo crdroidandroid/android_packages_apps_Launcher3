@@ -138,6 +138,7 @@ public class DeviceProfile {
     private TaskbarProfile mTaskbarProfile;
 
     private float allAppsCellHeightMultiplier;
+    private boolean allAppsIconText;
 
     /** Used only as an alternative to mocking when null values cannot be used. */
     @VisibleForTesting
@@ -244,6 +245,7 @@ public class DeviceProfile {
 
         allAppsCellHeightMultiplier =
                     (float) inv.getLauncherPrefs().get(LauncherPrefs.ROW_HEIGHT) / 100F;
+        allAppsIconText = inv.getLauncherPrefs().get(LauncherPrefs.SHOW_DRAWER_LABELS);
 
         mTaskbarProfile = TaskbarProfile.Factory.createTaskbarProfile(
                 res,
@@ -420,12 +422,32 @@ public class DeviceProfile {
             hideWorkspaceLabelsIfNotEnoughSpace();
         }
 
+        // If drawer labels are disabled, make the All Apps cell closer to a square
+        // by basing its height on the drawer width and column count.
+        if (!allAppsIconText) {
+            int cellLayoutHorizontalPadding =
+                    (mWorkspaceProfile.getCellLayoutPaddingPx().left
+                    + mWorkspaceProfile.getCellLayoutPaddingPx().right) / 2;
+            int leftRightPadding =
+                    getWorkspaceProfile().getDesiredWorkspaceHorizontalMarginPx()
+                    + cellLayoutHorizontalPadding;
+            int drawerWidth =
+                    mDeviceProperties.getAvailableWidthPx() - leftRightPadding * 2;
+
+            // Use the number of shown All Apps columns for actual cell width
+            int cellWidth = drawerWidth / mAllAppsProfile.getNumShownAllAppsColumns();
+            int cellHeight = (int) (cellWidth * allAppsCellHeightMultiplier);
+
+            mAllAppsProfile = getAllAppsProfile().copyWithCellHeightPx(cellHeight);
+        }
+
         if (inv.getLauncherPrefs().get(LauncherPrefs.ENABLE_TWOLINE_ALLAPPS_TOGGLE)
+                && allAppsIconText
                 && !(mIsResponsiveGrid && getAllAppsProfile().getMaxAllAppsTextLineCount() == 2)) {
             // Add extra textHeight to the existing allAppsCellHeight.
+            int cellHeight = (int) (getAllAppsProfile().getCellHeightPx() * allAppsCellHeightMultiplier);
             mAllAppsProfile = getAllAppsProfile().copyWithCellHeightPx(
-                    (getAllAppsProfile().getCellHeightPx() * allAppsCellHeightMultiplier)
-                            + Utilities.calculateTextHeight(getAllAppsProfile().getIconTextSizePx())
+                    cellHeight + Utilities.calculateTextHeight(getAllAppsProfile().getIconTextSizePx())
             );
         }
 
