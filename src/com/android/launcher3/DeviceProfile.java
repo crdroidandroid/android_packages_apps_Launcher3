@@ -137,6 +137,8 @@ public class DeviceProfile {
     // Taskbar
     private TaskbarProfile mTaskbarProfile;
 
+    private float allAppsCellHeightMultiplier;
+
     /** Used only as an alternative to mocking when null values cannot be used. */
     @VisibleForTesting
     public DeviceProfile() {
@@ -239,6 +241,9 @@ public class DeviceProfile {
         mIconSizeSteps = new IconSizeSteps(res);
 
         mTypeIndex = displayOptionSpec.typeIndex;
+
+        allAppsCellHeightMultiplier =
+                    (float) inv.getLauncherPrefs().get(LauncherPrefs.ROW_HEIGHT) / 100F;
 
         mTaskbarProfile = TaskbarProfile.Factory.createTaskbarProfile(
                 res,
@@ -419,7 +424,7 @@ public class DeviceProfile {
                 && !(mIsResponsiveGrid && getAllAppsProfile().getMaxAllAppsTextLineCount() == 2)) {
             // Add extra textHeight to the existing allAppsCellHeight.
             mAllAppsProfile = getAllAppsProfile().copyWithCellHeightPx(
-                    getAllAppsProfile().getCellHeightPx()
+                    (getAllAppsProfile().getCellHeightPx() * allAppsCellHeightMultiplier)
                             + Utilities.calculateTextHeight(getAllAppsProfile().getIconTextSizePx())
             );
         }
@@ -506,7 +511,7 @@ public class DeviceProfile {
     public int getMaxAllAppsRowCount() {
         return (int) (Math.ceil(
                 (mDeviceProperties.getAvailableHeightPx() - mAllAppsProfile.getPadding().top)
-                        / (float) getAllAppsProfile().getCellHeightPx()));
+                        / ((float) getAllAppsProfile().getCellHeightPx() * allAppsCellHeightMultiplier)));
     }
 
     /**
