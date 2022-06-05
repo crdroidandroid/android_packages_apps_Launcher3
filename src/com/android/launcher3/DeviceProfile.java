@@ -257,6 +257,7 @@ public class DeviceProfile {
     public final int numShownAllAppsColumns;
     public float allAppsIconTextSizePx;
     private float allAppsCellHeightMultiplier;
+    private boolean allAppsIconText;
 
     // Overview
     public int overviewTaskMarginPx;
@@ -417,6 +418,7 @@ public class DeviceProfile {
 
         allAppsCellHeightMultiplier =
                     (float) prefs.getInt(KEY_ROW_HEIGHT, 100) / 100F;
+        allAppsIconText = prefs.getBoolean(InvariantDeviceProfile.KEY_SHOW_DRAWER_LABELS, true);
 
         edgeMarginPx = res.getDimensionPixelSize(R.dimen.dynamic_grid_edge_margin);
         workspaceContentScale = res.getFloat(R.dimen.workspace_content_scale);
@@ -1242,6 +1244,14 @@ public class DeviceProfile {
         } else {
             updateAllAppsIconSize(scale, res);
         }
+        if (!allAppsIconText) {
+            int cellLayoutHorizontalPadding =
+                    (cellLayoutPaddingPx.left + cellLayoutPaddingPx.right) / 2;
+            int leftRightPadding = desiredWorkspaceHorizontalMarginPx + cellLayoutHorizontalPadding;
+            int drawerWidth = availableWidthPx - leftRightPadding * 2;
+            allAppsCellHeightPx = (int) (drawerWidth / inv.numAllAppsColumns * allAppsCellHeightMultiplier);
+            allAppsIconDrawablePaddingPx = 0;
+        }
         updateAllAppsContainerWidth();
         if (isVerticalBarLayout()) {
             hideWorkspaceLabelsIfNotEnoughSpace();
@@ -1393,6 +1403,14 @@ public class DeviceProfile {
         int baseCellHeight = allAppsIconSizePx + allAppsIconDrawablePaddingPx
                 + textHeight + (topBottomPadding * 2);
         allAppsCellHeightPx = (int) (baseCellHeight * allAppsCellHeightMultiplier);
+        if (!allAppsIconText) {
+            int cellLayoutHorizontalPadding =
+                    (cellLayoutPaddingPx.left + cellLayoutPaddingPx.right) / 2;
+            int leftRightPadding = desiredWorkspaceHorizontalMarginPx + cellLayoutHorizontalPadding;
+            int drawerWidth = availableWidthPx - leftRightPadding * 2;
+            allAppsCellHeightPx = (int) (drawerWidth / inv.numAllAppsColumns * allAppsCellHeightMultiplier);
+            allAppsIconDrawablePaddingPx = 0;
+        }
     }
 
     private void updateAllAppsContainerWidth() {
