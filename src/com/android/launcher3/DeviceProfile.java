@@ -27,6 +27,7 @@ import static com.android.launcher3.folder.ClippedFolderIconLayoutRule.ICON_OVER
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Path;
@@ -53,6 +54,8 @@ import java.util.List;
 
 @SuppressLint("NewApi")
 public class DeviceProfile {
+
+    public static final String KEY_ROW_HEIGHT = "pref_row_height";
 
     private static final int DEFAULT_DOT_SIZE = 100;
     // Ratio of empty space, qsb should take up to appear visually centered.
@@ -192,6 +195,7 @@ public class DeviceProfile {
     public int allAppsLeftRightMargin;
     public final int numShownAllAppsColumns;
     public float allAppsIconTextSizePx;
+    private float allAppsCellHeightMultiplier;
 
     // Overview
     public int overviewTaskMarginPx;
@@ -257,6 +261,8 @@ public class DeviceProfile {
         this.rotationHint = windowBounds.rotationHint;
         mInsets.set(windowBounds.insets);
 
+        SharedPreferences prefs = Utilities.getPrefs(context);
+
         isScalableGrid = inv.isScalable && !isVerticalBarLayout() && !isMultiWindowMode;
         // Determine device posture.
         mInfo = info;
@@ -303,6 +309,9 @@ public class DeviceProfile {
             taskbarSize = res.getDimensionPixelSize(R.dimen.taskbar_size);
             stashedTaskbarSize = res.getDimensionPixelSize(R.dimen.taskbar_stashed_size);
         }
+
+        allAppsCellHeightMultiplier =
+                    (float) prefs.getInt(KEY_ROW_HEIGHT, 100) / 100F;
 
         edgeMarginPx = res.getDimensionPixelSize(R.dimen.dynamic_grid_edge_margin);
 
@@ -624,8 +633,8 @@ public class DeviceProfile {
     public void autoResizeAllAppsCells() {
         int textHeight = Utilities.calculateTextHeight(allAppsIconTextSizePx);
         int topBottomPadding = textHeight;
-        allAppsCellHeightPx = allAppsIconSizePx + allAppsIconDrawablePaddingPx
-                + textHeight + (topBottomPadding * 2);
+        int baseCellHeight = allAppsIconSizePx + allAppsIconDrawablePaddingPx + textHeight + (topBottomPadding * 2);
+        allAppsCellHeightPx = (int) (baseCellHeight * allAppsCellHeightMultiplier);
     }
 
     private void updateAllAppsContainerWidth(Resources res) {
@@ -773,27 +782,13 @@ public class DeviceProfile {
         allAppsBorderSpacePx = new Point(
                 pxFromDp(inv.allAppsBorderSpaces[mTypeIndex].x, mMetrics, scale),
                 pxFromDp(inv.allAppsBorderSpaces[mTypeIndex].y, mMetrics, scale));
-        // AllApps cells don't have real space between cells,
-        // so we add the border space to the cell height
-        allAppsCellHeightPx = pxFromDp(inv.allAppsCellSize[mTypeIndex].y, mMetrics, scale)
-                + allAppsBorderSpacePx.y;
-        // but width is just the cell,
-        // the border is added in #updateAllAppsContainerWidth
         allAppsCellWidthPx = pxFromDp(inv.allAppsCellSize[mTypeIndex].x, mMetrics, scale);
-        if (isScalableGrid) {
-            allAppsIconSizePx =
-                    pxFromDp(inv.allAppsIconSize[mTypeIndex], mMetrics, scale);
-            allAppsIconTextSizePx =
-                    pxFromSp(inv.allAppsIconTextSize[mTypeIndex], mMetrics, scale);
-            allAppsIconDrawablePaddingPx = iconDrawablePaddingOriginalPx;
-        } else {
-            float invIconSizeDp = inv.allAppsIconSize[mTypeIndex];
-            float invIconTextSizeSp = inv.allAppsIconTextSize[mTypeIndex];
-            allAppsIconSizePx = Math.max(1, pxFromDp(invIconSizeDp, mMetrics, scale));
-            allAppsIconTextSizePx = (int) (pxFromSp(invIconTextSizeSp, mMetrics) * scale);
-            allAppsIconDrawablePaddingPx =
-                    res.getDimensionPixelSize(R.dimen.all_apps_icon_drawable_padding);
-        }
+        allAppsIconSizePx =
+                pxFromDp(inv.allAppsIconSize[mTypeIndex], mMetrics, scale);
+        allAppsIconTextSizePx =
+                pxFromSp(inv.allAppsIconTextSize[mTypeIndex], mMetrics, scale);
+        allAppsIconDrawablePaddingPx = iconDrawablePaddingOriginalPx;
+        autoResizeAllAppsCells();
 
         updateAllAppsContainerWidth(res);
         if (isVerticalBarLayout()) {
