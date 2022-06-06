@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">الإعدادات</string>
+    <!-- Categories -->
+    <string name="home_category_title">الشاشة الرئيسية</string>
+    <string name="home_category_summary">تعيين لوحة Google Now والمزيد</string>
+    <string name="icons_category_title">الأيقونات</string>
+    <string name="icons_category_summary">تعيين شكل الأيقونات والمزيد</string>
+    <string name="app_drawer_category_title">درج التطبيقات</string>
+    <string name="app_drawer_category_summary">تخصيص درج التطبيقات الخاص بك</string>
+    <string name="misc_category_title">خيارات متنوعة</string>
+    <string name="misc_category_summary">خيارات أخرى</string>
+    <string name="dev_options_title">خيارات المطور</string>
+    <string name="dev_options_desc">تمكين بعض الميزات المخفية على مسؤوليتك الخاصة</string>
+    <string name="general_category_title">العامة</string>
+    <string name="interface_category_title">واجهة المستخدم</string>
+    <string name="search_bar_category_title">شريط البحث</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">اسحب للوصول إلى تطبيق جوجل</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">عند التمرير يساراً من الشاشة الرئيسية</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">عندما التمرير يميناً من الشاشة الرئيسية</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Icon labels on desktop</string>
+    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">القيمة: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">إفتراضيا</string>
+    <string name="custom_seekbar_default_value_to_set">القيمة الافتراضية: <xliff:g id="v">%s</xliff:g>\nانقر مطولاً للتعيين</string>
+    <string name="custom_seekbar_default_value_is_set">تم تعيين القيمة الافتراضية</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">حجم الأيقونة</string>
+    <!-- Font size -->
+    <string name="font_size_title">حجم الخط</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">الأسطر القصوى لتسمية التطبيق</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">الضغط المزدوج لأطفاء الشاشة</string>
+    <string name="pref_sleep_gesture_summary">اضغط مرّتين على مكانٍ فارغ لإطفاء الشاشة</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">البحث</string>
+    <string name="label_lens">عدسة جوجل</string>
+    <string name="label_voice_search">البحث الصوتي</string>
+    <string name="dock_search_title">شريط بحث جوجل</string>
+    <string name="dock_search_summary">Search bar in the bottom dock</string>
+    <string name="dock_theme_title">أيقونات مع الثيم</string>
+    <string name="dock_theme_summary">استخدام الثيم الحالي لأيقونات شريط البحث</string>
+    <string name="search_radius_title">حدود الزاوية</string>
+    <!-- Recents -->
+    <string name="action_lens">العدسة</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">شريط الحالة</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">الإقتراحات</string>
+    <string name="suggestion_pref_screen_desc">لجميع التطبيقات &amp; اقتراحات الشاشة الرئيسية</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">إخفاء التطبيقات وحمايتها</string>
+    <string name="trust_apps_auth_manager">افتح لإدارة التطبيقات المخفية والمحمية</string>
+    <string name="trust_apps_auth_open_app">يرجى مصادقة البصمة لفتح %1$s</string>
+    <string name="trust_apps_loading">جارٍ التحميل…\u2026</string>
+    <string name="trust_apps_no_lock_error">يرجى إعداد شاشة قفل الجهاز لتقييد الوصول إلى التطبيق</string>
+    <string name="trust_apps_help">مساعدة</string>
+    <string name="trust_apps_info_hidden">التطبيقات المخفية و الأدوات الخاصة بها ستكون مخفية أيضاً من واجهة التشغيل</string>
+    <string name="trust_apps_info_protected">التطبيقات المحمية تتطلب المصادقة لكي تُفتح</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">إيقاف إجباري</string>
+    <string name="recents_app_force_stopped">توقف التطبيق إجباريا</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">حزمة الأيقونات</string>
+    <string name="icon_pack_default_label">الإفتراضي</string>
+    <string name="icon_pack_add">تثبيت المزيد</string>
+    <string name="icon_pack_no_market">لا يوجد متجر تطبيقات متاح</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Use taskbar</string>
+    <string name="pref_allow_phone_taskbar_desc">لفتح التطبيقات وتبديلها في أي مكان</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Grid style recent apps</string>
+    <string name="pref_allow_phone_overview_grid_desc">إظهار المزيد من التطبيقات الأخيرة</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Row height</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Top shadow</string>
+</resources>

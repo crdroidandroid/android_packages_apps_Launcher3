@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">设置</string>
+    <!-- Categories -->
+    <string name="home_category_title">主屏幕</string>
+    <string name="home_category_summary">设置 Google now 面板等</string>
+    <string name="icons_category_title">图标</string>
+    <string name="icons_category_summary">设置图标大小和更多</string>
+    <string name="app_drawer_category_title">应用抽屉</string>
+    <string name="app_drawer_category_summary">定制您的应用抽屉</string>
+    <string name="misc_category_title">杂项</string>
+    <string name="misc_category_summary">其他选项</string>
+    <string name="dev_options_title">开发人员选项</string>
+    <string name="dev_options_desc">开启一些隐藏功能，承担自己的风险</string>
+    <string name="general_category_title">一般</string>
+    <string name="interface_category_title">界面</string>
+    <string name="search_bar_category_title">搜索栏</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">滑动以访问 Google 应用</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">从主屏幕向左滑动时</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">从主屏幕向右滑动时</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">桌面图标标签</string>
+    <string name="drawer_show_labels">抽屉里的图标标签</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">值： <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">默认</string>
+    <string name="custom_seekbar_default_value_to_set">默认值: <xliff:g id="v">%s</xliff:g>\n长按以设置</string>
+    <string name="custom_seekbar_default_value_is_set">已设为默认值</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">图标大小</string>
+    <!-- Font size -->
+    <string name="font_size_title">字体大小</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">应用标签的最大行数</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">双击锁屏</string>
+    <string name="pref_sleep_gesture_summary">双击空白处以关机</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">搜索</string>
+    <string name="label_lens">谷歌镜头</string>
+    <string name="label_voice_search">语音搜索</string>
+    <string name="dock_search_title">谷歌搜索框</string>
+    <string name="dock_search_summary">在底部 Dock 栏处显示搜索栏</string>
+    <string name="dock_theme_title">主题图标</string>
+    <string name="dock_theme_summary">为搜索栏使用主题图标</string>
+    <string name="search_radius_title">圆角半径</string>
+    <!-- Recents -->
+    <string name="action_lens">镜头</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">状态栏</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">建议</string>
+    <string name="suggestion_pref_screen_desc">适用于所有应用程序和主屏幕的建议</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">隐藏和保护应用</string>
+    <string name="trust_apps_auth_manager">解锁以管理隐藏和受保护的应用</string>
+    <string name="trust_apps_auth_open_app">验证以开启 %1$s</string>
+    <string name="trust_apps_loading">载入中\u2026</string>
+    <string name="trust_apps_no_lock_error">请设置一个安全锁定屏幕以限制应用访问</string>
+    <string name="trust_apps_help">帮助</string>
+    <string name="trust_apps_info_hidden">从抽屉中隐藏应用和其他小部件</string>
+    <string name="trust_apps_info_protected">需要经过认证才能从启动器打开受保护的应用</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">强行停止</string>
+    <string name="recents_app_force_stopped">应用程序强行停止</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">图标包</string>
+    <string name="icon_pack_default_label">默认</string>
+    <string name="icon_pack_add">安装更多</string>
+    <string name="icon_pack_no_market">没有可用的应用商店</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">使用任务栏</string>
+    <string name="pref_allow_phone_taskbar_desc">随时随地打开和切换应用程序</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">网格式最近任务</string>
+    <string name="pref_allow_phone_overview_grid_desc">概览中更多最近的应用</string>
+    <!-- Row Height -->
+    <string name="row_height_title">行高</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">顶部阴影</string>
+</resources>

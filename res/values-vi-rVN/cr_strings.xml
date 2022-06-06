@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Cài đặt</string>
+    <!-- Categories -->
+    <string name="home_category_title">Màn hình chính</string>
+    <string name="home_category_summary">Đặt bảng điều khiển Google now và nhiều hơn</string>
+    <string name="icons_category_title">Biểu tượng</string>
+    <string name="icons_category_summary">Đặt kích cỡ biểu tượng và hơn thế nữa</string>
+    <string name="app_drawer_category_title">Ngăn chứa ứng dụng</string>
+    <string name="app_drawer_category_summary">Tùy chỉnh ngăn chứa ứng dụng</string>
+    <string name="misc_category_title">Cài đặt khác</string>
+    <string name="misc_category_summary">Tùy chọn khác</string>
+    <string name="dev_options_title">Tùy chọn nhà phát triển</string>
+    <string name="dev_options_desc">Bật một số tính năng ẩn và tự chịu rủi ro</string>
+    <string name="general_category_title">Chung</string>
+    <string name="interface_category_title">Giao diện</string>
+    <string name="search_bar_category_title">Thanh tìm kiếm</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Vuốt để truy cập ứng dụng Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Khi bạn vuốt sang trái tại Màn hình chính</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Khi bạn vuốt sang phải tại Màn hình chính</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Tên biểu tượng trên màn hình chính</string>
+    <string name="drawer_show_labels">Tên biểu tượng trong ngăn ứng dụng</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Giá trị: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">mặc định</string>
+    <string name="custom_seekbar_default_value_to_set">Giá trị mặc định: <xliff:g id="v">%s</xliff:g>\nNhấn giữ lâu để thiết lập</string>
+    <string name="custom_seekbar_default_value_is_set">Đã đặt giá trị mặc định</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Kích cỡ biểu tượng</string>
+    <!-- Font size -->
+    <string name="font_size_title">Cỡ chữ</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Số dòng tối đa cho tên ứng dụng</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Chạm hai lần để tắt màn hình</string>
+    <string name="pref_sleep_gesture_summary">Chạm hai lần vào không gian trống để tắt nguồn</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Tìm kiếm</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Tìm kiếm bằng giọng nói</string>
+    <string name="dock_search_title">Thanh tìm kiếm Google</string>
+    <string name="dock_search_summary">Thanh tìm kiếm trong thanh công cụ dưới cùng</string>
+    <string name="dock_theme_title">Biểu tượng tuỳ biến</string>
+    <string name="dock_theme_summary">Dùng biểu tượng tuỳ biến cho thanh tìm kiếm</string>
+    <string name="search_radius_title">Bán kính góc</string>
+    <!-- Recents -->
+    <string name="action_lens">Ống Kính</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Thanh trạng thái</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Đề xuất</string>
+    <string name="suggestion_pref_screen_desc">Đối với tất cả ứng dụng &amp; Đề xuất ở màn hình chính</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Ứng dụng được Ẩn &amp; Bảo vệ</string>
+    <string name="trust_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn và được bảo vệ</string>
+    <string name="trust_apps_auth_open_app">Xác thực để mở %1$s</string>
+    <string name="trust_apps_loading">Đang tải\u2026</string>
+    <string name="trust_apps_no_lock_error">Hãy thiết lập màn hình khóa an toàn để hạn chế quyền truy cập ứng dụng</string>
+    <string name="trust_apps_help">Trợ giúp</string>
+    <string name="trust_apps_info_hidden">Các ứng dụng ẩn và các tiện ích con của chúng được ẩn khỏi ngăn kéo</string>
+    <string name="trust_apps_info_protected">Các ứng dụng được bảo vệ yêu cầu xác thực được mở từ trình khởi chạy</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">Buộc dừng</string>
+    <string name="recents_app_force_stopped">Ứng dụng đã bị buộc dừng</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Gói biểu tượng</string>
+    <string name="icon_pack_default_label">Mặc định</string>
+    <string name="icon_pack_add">Cài đặt thêm</string>
+    <string name="icon_pack_no_market">Không có ứng dụng nào khả dụng trong cửa hàng</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Sử dụng thanh tác vụ</string>
+    <string name="pref_allow_phone_taskbar_desc">Để mở và chuyển đổi ứng dụng ở mọi nơi</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Ứng dụng gần đây dạng lưới</string>
+    <string name="pref_allow_phone_overview_grid_desc">Nhiều ứng dụng gần đây hơn trong màn hình tổng quan</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Chiều cao hàng</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Bóng phía trên</string>
+</resources>
