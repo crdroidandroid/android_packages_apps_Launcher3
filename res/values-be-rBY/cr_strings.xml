@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Налады</string>
+    <!-- Categories -->
+    <string name="home_category_title">Галоўны экран</string>
+    <string name="home_category_summary">Усталяваць панэль Google Now і іншае</string>
+    <string name="icons_category_title">Значкі</string>
+    <string name="icons_category_summary">Усталюйце памер значка і многае іншае</string>
+    <string name="app_drawer_category_title">Спіс праграм</string>
+    <string name="app_drawer_category_summary">Налада свайго спісу праграм</string>
+    <string name="misc_category_title">Рознае</string>
+    <string name="misc_category_summary">Іншыя налады</string>
+    <string name="dev_options_title">Параметры распрацоўшчыка</string>
+    <string name="dev_options_desc">Уключыце некаторыя схаваныя функцыі на свой страх і рызыку</string>
+    <string name="general_category_title">Агульныя</string>
+    <string name="interface_category_title">Інтэрфейс</string>
+    <string name="search_bar_category_title">Радок пошуку</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Правядзіце пальцам для доступу да праграмы Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Пры правядзенні пальцам налева ад галоўнага галоўнага экрана</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Пры правядзенні пальцам направа ад галоўнага галоўнага экрана</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Icon labels on desktop</string>
+    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Значэнне: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">па змаўчанні</string>
+    <string name="custom_seekbar_default_value_to_set">Значэнне па змаўчанні: <xliff:g id="v">%s</xliff:g>\nУтрымлівайце для ўсталёўкі</string>
+    <string name="custom_seekbar_default_value_is_set">Значэнне па змаўчанні ўжо ўсталявана</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Памер значка</string>
+    <!-- Font size -->
+    <string name="font_size_title">Памер шрыфта</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Максімальная колькасць радкоў у назве значка праграм</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Выключаць экран пры падвойным націску</string>
+    <string name="pref_sleep_gesture_summary">Двойчы націсніце на пустое месца для адключэння</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Пошук</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Галасавы пошук</string>
+    <string name="dock_search_title">Панэль пошуку Google</string>
+    <string name="dock_search_summary">Search bar in the bottom dock</string>
+    <string name="dock_theme_title">Тэматычныя значкі</string>
+    <string name="dock_theme_summary">Выкарыстоўвайце тэматычныя значкі для радка пошуку</string>
+    <string name="search_radius_title">Радыус вугла</string>
+    <!-- Recents -->
+    <string name="action_lens">Аб’ектыў</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Радок стану</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Прапановы</string>
+    <string name="suggestion_pref_screen_desc">Для прапаноў ўсіх праграм і галоўнага экрана</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Схаваныя і абароненыя праграмы</string>
+    <string name="trust_apps_auth_manager">Разблакуйце для кіравання ўтоенымі і абароненымі праграмамі</string>
+    <string name="trust_apps_auth_open_app">Аўтарызуйцеся, для адкрыцця %1$s</string>
+    <string name="trust_apps_loading">Загрузка\u2026</string>
+    <string name="trust_apps_no_lock_error">Калі ласка, усталюйце блакаванне экрана для абмежавання доступу да праграм</string>
+    <string name="trust_apps_help">Дапамога</string>
+    <string name="trust_apps_info_hidden">Схаваныя праграмы і іх віджэты схаваны з меню</string>
+    <string name="trust_apps_info_protected">Для адкрыцця абароненых праграм з лаунчэра патрабуецца аўтэнтыфікацыя</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">Спынiць прымусова</string>
+    <string name="recents_app_force_stopped">Праграма прымусова спынена</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Набор значкоў</string>
+    <string name="icon_pack_default_label">Па змаўчанні</string>
+    <string name="icon_pack_add">Усталяваць яшчэ</string>
+    <string name="icon_pack_no_market">Няма даступнай крамы праграм</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Выкарыстоўваць панэль задач</string>
+    <string name="pref_allow_phone_taskbar_desc">Для адкрыцця і пераключэння праграм у любым месцы</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Grid style recent apps</string>
+    <string name="pref_allow_phone_overview_grid_desc">Больш нядаўніх праграм адначасова</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Row height</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Top shadow</string>
+</resources>

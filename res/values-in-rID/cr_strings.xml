@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Setelan</string>
+    <!-- Categories -->
+    <string name="home_category_title">Layar Beranda</string>
+    <string name="home_category_summary">Atur panel Google Now dan lainnya</string>
+    <string name="icons_category_title">Ikon</string>
+    <string name="icons_category_summary">Atur ukuran ikon dan lainnya</string>
+    <string name="app_drawer_category_title">Laci Aplikasi</string>
+    <string name="app_drawer_category_summary">Kustomisasi laci aplikasi Anda</string>
+    <string name="misc_category_title">Lain-lain</string>
+    <string name="misc_category_summary">Opsi lainnya</string>
+    <string name="dev_options_title">Opsi pengembang</string>
+    <string name="dev_options_desc">Mengaktifkan fitur tersembunyi dengan risiko Anda</string>
+    <string name="general_category_title">Umum</string>
+    <string name="interface_category_title">Antarmuka</string>
+    <string name="search_bar_category_title">Bilah penelusuran</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Geser untuk mengakses aplikasi Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Saat Anda menggeser ke kiri dari Layar Beranda</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Saat Anda menggeser ke kanan dari Layar Beranda</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Label ikon di desktop</string>
+    <string name="drawer_show_labels">Label ikon di laci</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Nilai: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">bawaan</string>
+    <string name="custom_seekbar_default_value_to_set">Nilai bawaan: <xliff:g id="v">%s</xliff:g>\nTekan lama untuk menerapkan</string>
+    <string name="custom_seekbar_default_value_is_set">Nilai bawaan telah diterapkan</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Ukuran ikon</string>
+    <!-- Font size -->
+    <string name="font_size_title">Ukuran huruf</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Garis maksimum untuk nama aplikasi</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Ketuk dua kali untuk tidur</string>
+    <string name="pref_sleep_gesture_summary">Ketuk dua kali pada ruang kosong untuk mematikan layar</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Pencarian</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Pencarian suara</string>
+    <string name="dock_search_title">Bilah pencarian Google</string>
+    <string name="dock_search_summary">Bilah pencarian di dok bawah</string>
+    <string name="dock_theme_title">Ikon bertema</string>
+    <string name="dock_theme_summary">Gunakan ikon bertema untuk bilah pencarian</string>
+    <string name="search_radius_title">Radius sudut</string>
+    <!-- Recents -->
+    <string name="action_lens">Lensa</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Bilah Status</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Saran</string>
+    <string name="suggestion_pref_screen_desc">Untuk Semua Aplikasi &amp; saran Layar Utama</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Tersembunyi &amp; Aplikasi dilindungi</string>
+    <string name="trust_apps_auth_manager">Buka kunci untuk mengelola aplikasi yang disembunyikan dan dilindungi</string>
+    <string name="trust_apps_auth_open_app">Autentikasi untuk membuka %1$s</string>
+    <string name="trust_apps_loading">Memuat\u2026</string>
+    <string name="trust_apps_no_lock_error">Silakan mengatur kunci layar untuk membatasi akses aplikasi</string>
+    <string name="trust_apps_help">Bantuan</string>
+    <string name="trust_apps_info_hidden">Aplikasi tersembunyi beserta widgetnya akan disembunyikan dari laci aplikasi</string>
+    <string name="trust_apps_info_protected">Aplikasi yang dilindungi memerlukan autentikasi untuk dibuka dari peluncur</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">Paksa berhenti</string>
+    <string name="recents_app_force_stopped">Aplikasi diberhenti paksa</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Paket ikon</string>
+    <string name="icon_pack_default_label">Bawaan</string>
+    <string name="icon_pack_add">Instal lebih banyak</string>
+    <string name="icon_pack_no_market">Tidak ada toko aplikasi yang tersedia</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Gunakan bilah tugas</string>
+    <string name="pref_allow_phone_taskbar_desc">Untuk membuka dan beralih aplikasi di mana saja</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Aplikasi baru-baru ini gaya kisi</string>
+    <string name="pref_allow_phone_overview_grid_desc">Lebih banyak aplikasi baru-baru ini dalam ikhtisar</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Tinggi baris</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Bayangan atas</string>
+</resources>

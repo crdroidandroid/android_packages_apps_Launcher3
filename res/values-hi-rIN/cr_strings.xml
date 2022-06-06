@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">समायोजन</string>
+    <!-- Categories -->
+    <string name="home_category_title">होम स्क्रीन</string>
+    <string name="home_category_summary">गूगल नाउ पैनल तथा अन्य सेट करें</string>
+    <string name="icons_category_title">आइकन</string>
+    <string name="icons_category_summary">आइकॉन आकार, आकृति तथा अन्य सेट करें</string>
+    <string name="app_drawer_category_title">एप्लिकेशन दराज</string>
+    <string name="app_drawer_category_summary">अपना एप्लिकेशन ड्रॉअर कस्टमाइज़ करें</string>
+    <string name="misc_category_title">अन्य तरह का</string>
+    <string name="misc_category_summary">अन्य विकल्प</string>
+    <string name="dev_options_title">विकासक के विकल्प</string>
+    <string name="dev_options_desc">अपने स्वयं के जोखिम पर कुछ छिपी हुई विशेषताएं सक्षम करें</string>
+    <string name="general_category_title">आम</string>
+    <string name="interface_category_title">इंटरफेस</string>
+    <string name="search_bar_category_title">खोज पट्टी</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Google ऐप एक्सेस करने के लिए स्वाइप करें</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">When you swipe left from main Home screen</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">When you swipe right from main Home screen</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Icon labels on desktop</string>
+    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">मूल्य: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">डिफ़ॉल्ट रूप से</string>
+    <string name="custom_seekbar_default_value_to_set">पूर्व निर्धारित मान:<xliff:g id="v">%s</xliff:g>\n लंबा दबा कर चालू करे।</string>
+    <string name="custom_seekbar_default_value_is_set">पूर्व निर्धारित मान पहले से सेट है।</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">‎आइकन ‎माप</string>
+    <!-- Font size -->
+    <string name="font_size_title">फ़ॉन्ट परिमाण</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">ऐप लेबल के लिए अधिकतम लाइनें</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">स्क्रीन बंद करने के लिए दो बार स्पर्श करें</string>
+    <string name="pref_sleep_gesture_summary">खाली जगह पर दो बार दबा के स्विच ऑफ करे</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">खोजें</string>
+    <string name="label_lens">गूगल लेंस</string>
+    <string name="label_voice_search">बोलकर खोजें</string>
+    <string name="dock_search_title">गूगल सर्च बार</string>
+    <string name="dock_search_summary">Search bar in the bottom dock</string>
+    <string name="dock_theme_title">थीम वाले आइकन</string>
+    <string name="dock_theme_summary">सर्च बार के लिए थीम वाले आइकॉन का इस्तेमाल करें</string>
+    <string name="search_radius_title">कोने का अर्द्ध व्यास</string>
+    <!-- Recents -->
+    <string name="action_lens">लेंस</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">स्थिति पट्टी</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">सुझाव</string>
+    <string name="suggestion_pref_screen_desc">सभी ऐप्स के लिए &amp; होम स्क्रीन सुझाव</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">छिपा हुआ &amp; संरक्षित ऐप्स</string>
+    <string name="trust_apps_auth_manager">छिपे हुए और संरक्षित ऐप्स को प्रबंधित करने के लिए अनलॉक करें</string>
+    <string name="trust_apps_auth_open_app">खोलने केलिए प्रमाणित करे</string>
+    <string name="trust_apps_loading">लोड हो रहा है \u2026</string>
+    <string name="trust_apps_no_lock_error">एप्लिकेशन एक्सेस को प्रतिबंधित करने के लिए कृपया एक सुरक्षित लॉक स्क्रीन सेट करें</string>
+    <string name="trust_apps_help">सहायता</string>
+    <string name="trust_apps_info_hidden">छिपे हुए एप्लिकेशन और उनके विजेट दराज से छिपे हुए हैं</string>
+    <string name="trust_apps_info_protected">संरक्षित ऐप्स को लॉन्चर से खोले जाने के लिए प्रमाणीकरण की आवश्यकता होती है</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">बलपूर्वक रोकें</string>
+    <string name="recents_app_force_stopped">ऐप बल बंद हो गया</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">आइकन पैक</string>
+    <string name="icon_pack_default_label">डिफॉल्ट</string>
+    <string name="icon_pack_add">अधिक स्थापित करें</string>
+    <string name="icon_pack_no_market">कोई उपलब्ध ऐप स्टोर नहीं है</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Use taskbar</string>
+    <string name="pref_allow_phone_taskbar_desc">For opening and switching apps anywhere</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Grid style recent apps</string>
+    <string name="pref_allow_phone_overview_grid_desc">More recent apps in overview</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Row height</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Top shadow</string>
+</resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Beállítások</string>
+    <!-- Categories -->
+    <string name="home_category_title">Kezdőképernyő</string>
+    <string name="home_category_summary">A \'Google Now\' panel és egyebek beállítása</string>
+    <string name="icons_category_title">Ikonok</string>
+    <string name="icons_category_summary">Ikonméret-beállítás és egyebek</string>
+    <string name="app_drawer_category_title">Alkalmazásfiók</string>
+    <string name="app_drawer_category_summary">Testreszabhatja az Alkalmazásfiókját</string>
+    <string name="misc_category_title">Különlegességek</string>
+    <string name="misc_category_summary">Minden, ami egyedivé tesz</string>
+    <string name="dev_options_title">Fejlesztői beállítások</string>
+    <string name="dev_options_desc">Saját felelősségére rejtett beállításokat engedélyezhet</string>
+    <string name="general_category_title">Általános</string>
+    <string name="interface_category_title">Felület</string>
+    <string name="search_bar_category_title">Keresési sáv</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Google-alkalmazás csúsztatással</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Amikor a fő Kezdőképernyőn balra csúsztat</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Amikor a fő Kezdőképernyőn jobbra csúsztat</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Asztali ikonfeliratok</string>
+    <string name="drawer_show_labels">Alkalmazásfióki ikonfeliratok</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value"><xliff:g id="v">%s</xliff:g> értékű</string>
+    <string name="custom_seekbar_default_value">alapértelmezés szerint</string>
+    <string name="custom_seekbar_default_value_to_set">Alapértelmezetten <xliff:g id="v">%s</xliff:g> értékű\nÉrintse meg a beállításhoz</string>
+    <string name="custom_seekbar_default_value_is_set">Az alapértelmezett érték beállítva</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Ikonméret</string>
+    <!-- Font size -->
+    <string name="font_size_title">Betűméret</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Sorok maximális száma az ikoncímkékhez</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Alvómód duplakoppal</string>
+    <string name="pref_sleep_gesture_summary">A kikapcsoláshoz elég a duplakopp egy üres területre</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Keresés</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Hangalapú keresés</string>
+    <string name="dock_search_title">Google-keresősáv</string>
+    <string name="dock_search_summary">Alsódokki keresősáv</string>
+    <string name="dock_theme_title">Témázott ikonok</string>
+    <string name="dock_theme_summary">A keresősávban témázott ikonok használhatók</string>
+    <string name="search_radius_title">Saroklekerekítés</string>
+    <!-- Recents -->
+    <string name="action_lens">Objektív</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Értesítési sáv</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Javaslatok</string>
+    <string name="suggestion_pref_screen_desc">Javaslatok a Kezdőképernyőhöz és minden alkalmazáshoz</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Rejtett és védett alkalmazások</string>
+    <string name="trust_apps_auth_manager">Feloldás a rejtett és védett alkalmazások kezeléséhez</string>
+    <string name="trust_apps_auth_open_app">Hitelesítés a következő megnyitásához: %1$s</string>
+    <string name="trust_apps_loading">Betöltés\u2026</string>
+    <string name="trust_apps_no_lock_error">Kérjük, állítson be biztonságos (védett) képernyőzárat az alkalmazás-hozzáférések korlátozására</string>
+    <string name="trust_apps_help">Súgó</string>
+    <string name="trust_apps_info_hidden">A rejtett alkalmazások és kisalkalmazásaik az alkalmazásfiókban sem láthatóak</string>
+    <string name="trust_apps_info_protected">Egy védett alkalmazás launcherből való megnyitása hitelesítést igényel</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">Kényszerített leállítás</string>
+    <string name="recents_app_force_stopped">Kényszerített leállításra került</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Ikoncsomag</string>
+    <string name="icon_pack_default_label">Alapértelmezett</string>
+    <string name="icon_pack_add">Továbbiak telepítése</string>
+    <string name="icon_pack_no_market">Nincs hely ahonnan letölthetne</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">a Feladatkezelő használata</string>
+    <string name="pref_allow_phone_taskbar_desc">Alkalmazásinditáshoz és váltáshoz bárhol</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Rács stílusú előzmények</string>
+    <string name="pref_allow_phone_overview_grid_desc">Több alkalmazás az áttekintésben</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Sormagasság</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Felső árnyék</string>
+</resources>

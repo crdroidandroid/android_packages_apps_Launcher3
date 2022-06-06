@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">設定</string>
+    <!-- Categories -->
+    <string name="home_category_title">主畫面</string>
+    <string name="home_category_summary">設定 Google 即時資訊等</string>
+    <string name="icons_category_title">圖示</string>
+    <string name="icons_category_summary">設定圖示大小和更多</string>
+    <string name="app_drawer_category_title">應用程式清單</string>
+    <string name="app_drawer_category_summary">自訂您的應用程式清單</string>
+    <string name="misc_category_title">雜項</string>
+    <string name="misc_category_summary">其他選項</string>
+    <string name="dev_options_title">開發人員選項</string>
+    <string name="dev_options_desc">冒著風險開啟部分隱藏功能</string>
+    <string name="general_category_title">一般</string>
+    <string name="interface_category_title">使用者介面</string>
+    <string name="search_bar_category_title">搜尋列</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">滑動顯示 Google 即時資訊</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">當在主畫面向左滑動時</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">當在主畫面向右滑動時</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">在桌面上顯示圖示名稱</string>
+    <string name="drawer_show_labels">在應用程式清單中顯示圖示名稱</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">數值： <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">使用預設值</string>
+    <string name="custom_seekbar_default_value_to_set">預設值：<xliff:g id="v">%s</xliff:g>\n長按以設定</string>
+    <string name="custom_seekbar_default_value_is_set">已設定為預設值</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">圖示大小</string>
+    <!-- Font size -->
+    <string name="font_size_title">字體大小</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">應用程式名稱的最大行數</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">輕觸兩下休眠</string>
+    <string name="pref_sleep_gesture_summary">在空白處輕觸兩下來休眠</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">搜尋</string>
+    <string name="label_lens">智慧鏡頭</string>
+    <string name="label_voice_search">語音搜尋</string>
+    <string name="dock_search_title">Google 搜尋列</string>
+    <string name="dock_search_summary">在底部顯示搜尋列</string>
+    <string name="dock_theme_title">搜尋列著色</string>
+    <string name="dock_theme_summary">將主題色套用於搜尋列</string>
+    <string name="search_radius_title">圓角大小</string>
+    <!-- Recents -->
+    <string name="action_lens">智慧鏡頭</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">狀態列</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">建議</string>
+    <string name="suggestion_pref_screen_desc">在應用程式清單和主畫面上顯示建議</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">隱藏和受保護的應用程式</string>
+    <string name="trust_apps_auth_manager">解鎖以管理隱藏和受保護的應用程式</string>
+    <string name="trust_apps_auth_open_app">進行身份驗證以開啟 %1$s</string>
+    <string name="trust_apps_loading">載入中\u2026</string>
+    <string name="trust_apps_no_lock_error">請設置安全的鎖定方式來限制應用程式的存取權限</string>
+    <string name="trust_apps_help">說明</string>
+    <string name="trust_apps_info_hidden">隱藏應用程式及其小工具</string>
+    <string name="trust_apps_info_protected">需要身份驗證才能使用受保護的應用程式</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">強制停止</string>
+    <string name="recents_app_force_stopped">已強制停止應用程式</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">圖示套件</string>
+    <string name="icon_pack_default_label">預設</string>
+    <string name="icon_pack_add">安裝更多...</string>
+    <string name="icon_pack_no_market">沒有可用的應用程式商店</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">使用工作列</string>
+    <string name="pref_allow_phone_taskbar_desc">隨處都能開啟和切換應用程式</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">以網格來顯示最近使用的應用程式</string>
+    <string name="pref_allow_phone_overview_grid_desc">在應用概覽裏顯示更多應用</string>
+    <!-- Row Height -->
+    <string name="row_height_title">列高</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">頂部陰影</string>
+</resources>

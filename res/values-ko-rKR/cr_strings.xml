@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">환경설정</string>
+    <!-- Categories -->
+    <string name="home_category_title">홈 화면</string>
+    <string name="home_category_summary">Google Now 패널 및 관련 설정</string>
+    <string name="icons_category_title">아이콘</string>
+    <string name="icons_category_summary">아이콘 크기 및 관련 설정</string>
+    <string name="app_drawer_category_title">앱 서랍</string>
+    <string name="app_drawer_category_summary">앱 서랍 맞춤 설정</string>
+    <string name="misc_category_title">기타 설정</string>
+    <string name="misc_category_summary">기타 옵션</string>
+    <string name="dev_options_title">개발자 옵션</string>
+    <string name="dev_options_desc">위험할 수 있는 숨겨진 기능들을 허용합니다</string>
+    <string name="general_category_title">일반</string>
+    <string name="interface_category_title">인터페이스</string>
+    <string name="search_bar_category_title">검색 바</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">스와이프하여 Google 앱에 액세스</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">메인 홈 화면에서 왼쪽으로 스와이프할 때</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">메인 홈 화면에서 오른쪽으로 스와이프할 때</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">홈 화면에 아이콘 이름</string>
+    <string name="drawer_show_labels">앱 서랍에 아이콘 이름</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">값: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">기본값으로 설정</string>
+    <string name="custom_seekbar_default_value_to_set">기본값: <xliff:g id="v">%s</xliff:g>\n길게 눌러서 설정</string>
+    <string name="custom_seekbar_default_value_is_set">기본값으로 설정됨</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">아이콘 크기</string>
+    <!-- Font size -->
+    <string name="font_size_title">글꼴 크기</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">앱 라벨의 최대 줄 개수</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">두 번 탭하여 화면 끄기</string>
+    <string name="pref_sleep_gesture_summary">화면을 끄려면 빈 공간을 두 번 탭하십시오</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">검색</string>
+    <string name="label_lens">구글 렌즈</string>
+    <string name="label_voice_search">음성 검색</string>
+    <string name="dock_search_title">Google 검색 바</string>
+    <string name="dock_search_summary">하단에 검색 바</string>
+    <string name="dock_theme_title">테마형 아이콘</string>
+    <string name="dock_theme_summary">테마형 아이콘을 검색 바에 사용</string>
+    <string name="search_radius_title">모서리 각도</string>
+    <!-- Recents -->
+    <string name="action_lens">렌즈</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">상태 표시줄</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">제안</string>
+    <string name="suggestion_pref_screen_desc">모든 앱 &amp; 홈 화면 제안</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">숨겨지거나 보호된 앱</string>
+    <string name="trust_apps_auth_manager">숨겨지거나 보호된 앱을 관리하려면 잠금을 해제하세요.</string>
+    <string name="trust_apps_auth_open_app">인증하여 %1$s 열기</string>
+    <string name="trust_apps_loading">로드 중\u2026</string>
+    <string name="trust_apps_no_lock_error">앱 접근을 제한하려면 잠금 화면 보안을 설정하세요</string>
+    <string name="trust_apps_help">도움말</string>
+    <string name="trust_apps_info_hidden">숨겨진 앱과 해당 앱의 위젯은 앱 서랍에서 숨겨집니다.</string>
+    <string name="trust_apps_info_protected">실행기에서 보호된 앱을 실행하기 위해 인증이 필요합니다.</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">강제 종료</string>
+    <string name="recents_app_force_stopped">앱이 강제로 종료됨</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">아이콘 팩</string>
+    <string name="icon_pack_default_label">기본값</string>
+    <string name="icon_pack_add">추가로 설치</string>
+    <string name="icon_pack_no_market">사용할 수 있는 앱 스토어가 없습니다</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Use taskbar</string>
+    <string name="pref_allow_phone_taskbar_desc">어디에서나 앱을 열고 바꿀 수 있도록</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">최근 그리드 스타일 앱</string>
+    <string name="pref_allow_phone_overview_grid_desc">More recent apps in overview</string>
+    <!-- Row Height -->
+    <string name="row_height_title">행 높이</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">상단 그림자</string>
+</resources>

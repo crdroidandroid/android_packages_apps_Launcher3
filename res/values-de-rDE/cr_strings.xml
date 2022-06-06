@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Einstellungen</string>
+    <!-- Categories -->
+    <string name="home_category_title">Startbildschirm</string>
+    <string name="home_category_summary">Google Now und weiteres anpassen</string>
+    <string name="icons_category_title">Symbole</string>
+    <string name="icons_category_summary">Symbolgröße und weiteres anpassen</string>
+    <string name="app_drawer_category_title">App-Übersicht</string>
+    <string name="app_drawer_category_summary">App-Übersicht anpassen</string>
+    <string name="misc_category_title">Sonstiges</string>
+    <string name="misc_category_summary">Weitere Optionen</string>
+    <string name="dev_options_title">Entwickleroptionen</string>
+    <string name="dev_options_desc">Auf eigene Gefahr versteckte Funktionen aktivieren</string>
+    <string name="general_category_title">Allgemein</string>
+    <string name="interface_category_title">Benutzeroberfläche</string>
+    <string name="search_bar_category_title">Suchleiste</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Wischen, um auf die Google-App zuzugreifen</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Wenn auf der ersten Seite nach links gewischt wird</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Wenn auf der ersten Seite nach rechts gewischt wird</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Symbolbeschriftungen auf dem Startbildschirm</string>
+    <string name="drawer_show_labels">Symbolbeschriftungen in der Übersicht</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Wert: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">Standardmäßig</string>
+    <string name="custom_seekbar_default_value_to_set">Standardwert: <xliff:g id="v">%s</xliff:g>\nZum Einstellen gedrückt halten</string>
+    <string name="custom_seekbar_default_value_is_set">Standardwert ist eingestellt</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Symbolgröße</string>
+    <!-- Font size -->
+    <string name="font_size_title">Schriftgröße</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Max. Zeilenanzahl für App-Beschriftungen</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Doppeltippen zum Sperren</string>
+    <string name="pref_sleep_gesture_summary">Zum Sperren auf einen leeren Bereich doppeltippen</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Suche</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Sprachsuche</string>
+    <string name="dock_search_title">Google-Suchleiste</string>
+    <string name="dock_search_summary">Suchleiste im unteren Dock</string>
+    <string name="dock_theme_title">Symboldesigns</string>
+    <string name="dock_theme_summary">Symboldesigns in der Suchleiste verwenden</string>
+    <string name="search_radius_title">Eckenradius</string>
+    <!-- Recents -->
+    <string name="action_lens">Lens</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Statusleiste</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">App-Vorschläge</string>
+    <string name="suggestion_pref_screen_desc">In Liste aller Apps &amp; auf Startbildschirm</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Versteckte &amp; geschützte Apps</string>
+    <string name="trust_apps_auth_manager">Entsperren, um versteckte und geschützte Apps zu verwalten</string>
+    <string name="trust_apps_auth_open_app">Authentifizieren, um %1$s zu öffnen</string>
+    <string name="trust_apps_loading">Lädt \u2026</string>
+    <string name="trust_apps_no_lock_error">Bitte eine Bildschirmsperre einrichten, um den Zugriff auf Apps einzuschränken</string>
+    <string name="trust_apps_help">Hilfe</string>
+    <string name="trust_apps_info_hidden">Versteckte Apps und ihre Widgets werden in der App-Übersicht nicht angezeigt</string>
+    <string name="trust_apps_info_protected">Geschützte Apps erfordern eine Authentifizierung, um gestartet werden zu können</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">Beenden erzwingen</string>
+    <string name="recents_app_force_stopped">App wurde beendet</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Symbolpaket</string>
+    <string name="icon_pack_default_label">Standard</string>
+    <string name="icon_pack_add">Weitere installieren</string>
+    <string name="icon_pack_no_market">Es ist kein App-Store verfügbar</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Taskleiste verwenden</string>
+    <string name="pref_allow_phone_taskbar_desc">Zum jederzeitigen Öffnen von und Wechseln zwischen Apps</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Raster-Stil für App-Verlauf</string>
+    <string name="pref_allow_phone_overview_grid_desc">Im App-Verlauf mehr Apps anzeigen</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Zeilenhöhe</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Schatten oben</string>
+</resources>

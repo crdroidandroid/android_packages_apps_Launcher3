@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Instellingen</string>
+    <!-- Categories -->
+    <string name="home_category_title">Startscherm</string>
+    <string name="home_category_summary">Instellen Google Now en meer</string>
+    <string name="icons_category_title">Pictogrammen</string>
+    <string name="icons_category_summary">Stel icoon formaat in en meer</string>
+    <string name="app_drawer_category_title">App lade</string>
+    <string name="app_drawer_category_summary">Personaliseer je app overzicht</string>
+    <string name="misc_category_title">Overige</string>
+    <string name="misc_category_summary">Overige opties</string>
+    <string name="dev_options_title">Opties voor ontwikkelaars</string>
+    <string name="dev_options_desc">Schakel enkele verborgen functies in op eigen risico</string>
+    <string name="general_category_title">Algemeen</string>
+    <string name="interface_category_title">Interface</string>
+    <string name="search_bar_category_title">Zoekbalk</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Veeg voor toegang tot de Google app</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Wanneer je naar links veegt vanuit het startscherm</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Wanneer je naar rechts veegt vanuit het startscherm</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Pictogram labels op het bureaublad</string>
+    <string name="drawer_show_labels">Pictogram labels in app-overzicht</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Waarde: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">standaard</string>
+    <string name="custom_seekbar_default_value_to_set">Standaard waarde: <xliff:g id="v">%s</xliff:g>\nLang indrukken om in te stellen</string>
+    <string name="custom_seekbar_default_value_is_set">Standaard waarde is ingesteld</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Pictogram grootte</string>
+    <!-- Font size -->
+    <string name="font_size_title">Leterrtype grootte</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Max aantal regels voor app label</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Dubbeltikken voor slaapstand</string>
+    <string name="pref_sleep_gesture_summary">Dubbeltikken op lege ruimte om uit te schakelen</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Zoeken</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Spraakgestuurd zoeken</string>
+    <string name="dock_search_title">Google zoekbalk</string>
+    <string name="dock_search_summary">Zoekbalk in het onderste dock</string>
+    <string name="dock_theme_title">Thema pictogrammen</string>
+    <string name="dock_theme_summary">Gebruik thema pictogrammen voor zoekbalk</string>
+    <string name="search_radius_title">Hoekradius</string>
+    <!-- Recents -->
+    <string name="action_lens">Lens</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Statusbalk</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Suggesties</string>
+    <string name="suggestion_pref_screen_desc">Voor alle apps &amp; startscherm suggesties</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Verborgen &amp; Beschermde apps</string>
+    <string name="trust_apps_auth_manager">Deblokkeer om de verborgen en beschermde apps te beheren</string>
+    <string name="trust_apps_auth_open_app">Authentificeer om %1$s te openen</string>
+    <string name="trust_apps_loading">Laadt\u2026</string>
+    <string name="trust_apps_no_lock_error">Stel een beveiligd vergrendelscherm in om de toegang van apps te beperken</string>
+    <string name="trust_apps_help">Hulp</string>
+    <string name="trust_apps_info_hidden">Verborgen apps en hun widgets zijn verborgen van de lade</string>
+    <string name="trust_apps_info_protected">Beschermde apps vereisen dat authenticatie wordt geopend vanaf de launcher</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">Gedwongen stoppen</string>
+    <string name="recents_app_force_stopped">App force gestopt</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Pictogrammenpakket</string>
+    <string name="icon_pack_default_label">Standaard</string>
+    <string name="icon_pack_add">Meer installeren</string>
+    <string name="icon_pack_no_market">Er is geen beschikbare app store</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Gebruik taakbalk</string>
+    <string name="pref_allow_phone_taskbar_desc">Voor het overal openen en wisselen van apps</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Recente apps in rasterstijl</string>
+    <string name="pref_allow_phone_overview_grid_desc">Meer recente apps in het overzicht</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Rijhoogte</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Schaduw bovenzijde</string>
+</resources>

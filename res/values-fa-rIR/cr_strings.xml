@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">تنظیمات</string>
+    <!-- Categories -->
+    <string name="home_category_title">صفحه اصلی</string>
+    <string name="home_category_summary">تنظیم کردن پنل google now و بیشتر</string>
+    <string name="icons_category_title">آیکون ها</string>
+    <string name="icons_category_summary">تنظیم شکل آیکون و بیشتر</string>
+    <string name="app_drawer_category_title">کشوی برنامه ها</string>
+    <string name="app_drawer_category_summary">شخصی سازی کشوی برنامه ها</string>
+    <string name="misc_category_title">متفرقه</string>
+    <string name="misc_category_summary">گزینه های دیگر</string>
+    <string name="dev_options_title">گزینه های برنامه نویس</string>
+    <string name="dev_options_desc">ویژگی های مخفی بیشتری را با مسئولیت خود فعال کنید</string>
+    <string name="general_category_title">عمومی</string>
+    <string name="interface_category_title">رابط کاربری</string>
+    <string name="search_bar_category_title">نوار جستجو</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">کشیدن برای دسترسی به برنامه گوگل</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">When you swipe left from main Home screen</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">When you swipe right from main Home screen</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">آیکون‌ برچسب‌ها در دسکتاپ</string>
+    <string name="drawer_show_labels">آیکون برچسب‌ها در کشو</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">ارزش: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">به طور پیش فرض</string>
+    <string name="custom_seekbar_default_value_to_set">ارزش پیش‌فرض: <xliff:g id="v">%s</xliff:g>\n برای تنظیم نگه دارید</string>
+    <string name="custom_seekbar_default_value_is_set">مقدار پیش‌فرض تعیین شده است</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">اندازه آیکون</string>
+    <!-- Font size -->
+    <string name="font_size_title">اندازه قلم</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">حداکثر خطوط برای برچسب برنامه</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">دو بار ضربه برای به خواب رفتن دستگاه</string>
+    <string name="pref_sleep_gesture_summary">برای خاموش شدن دوبار در فضای خالی ضربه بزنید</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">جستجو</string>
+    <string name="label_lens">لنز Google</string>
+    <string name="label_voice_search">جستجو صوتی</string>
+    <string name="dock_search_title">نوار جست‌وجوی گوگل</string>
+    <string name="dock_search_summary">نوار جستجو در پایین</string>
+    <string name="dock_theme_title">آیکن های تم</string>
+    <string name="dock_theme_summary">استفاده کردن از آیکن های تم برای پنل جستجو</string>
+    <string name="search_radius_title">شعاع گوشه</string>
+    <!-- Recents -->
+    <string name="action_lens">لنز</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">نوار وضعیت</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">پیشنهادها</string>
+    <string name="suggestion_pref_screen_desc">پیشنهاد‌ها در صفحه خانه &amp; برای همه برنامه‌ها</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">برنامه‌های پنهان &amp; محافظت شده</string>
+    <string name="trust_apps_auth_manager">برای مدیریت برنامه‌های پنهان و محافظت شده قفل را باز کنید</string>
+    <string name="trust_apps_auth_open_app">احراز هویت برای باز کردن %1$s</string>
+    <string name="trust_apps_loading">در حال بارگزاری\u2026</string>
+    <string name="trust_apps_no_lock_error">لطفا یک قفل برای کنترل برنامه‌های پنهان و محافظت شده، تنظیم کنید</string>
+    <string name="trust_apps_help">کمک</string>
+    <string name="trust_apps_info_hidden">برنامه‌های مخفی و ویجت‌هایشان از فهرست برنامه ها پنهان هستند</string>
+    <string name="trust_apps_info_protected">برای باز کردن برنامه‌های محافظت شده از صفحه اصلی نیاز به احراز هویت می‌باشد</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">توقف اجباری</string>
+    <string name="recents_app_force_stopped">برنامه به اجبار بسته شد</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">بسته آیکون ها</string>
+    <string name="icon_pack_default_label">پیش‌فرض</string>
+    <string name="icon_pack_add">نصب بیشتر</string>
+    <string name="icon_pack_no_market">هیچ فروشگاه برنامه در دسترس نیست</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">استفاده از نوار وظیفه</string>
+    <string name="pref_allow_phone_taskbar_desc">برای باز کردن و جابجایی برنامه ها در هر کجا</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">برنامه‌های اخیر به سبک شبکه‌ای</string>
+    <string name="pref_allow_phone_overview_grid_desc">برنامه های اخیرا در نمای کلی</string>
+    <!-- Row Height -->
+    <string name="row_height_title">ارتفاع ردیف</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">سایه بالا</string>
+</resources>

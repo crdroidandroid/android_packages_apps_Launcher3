@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Ayarlar</string>
+    <!-- Categories -->
+    <string name="home_category_title">Ana ekran</string>
+    <string name="home_category_summary">Google now panelini ve daha fazlasını ayarlayın</string>
+    <string name="icons_category_title">Simgeler</string>
+    <string name="icons_category_summary">Simge boyutunu ve daha fazlasını ayarlayın</string>
+    <string name="app_drawer_category_title">Uygulama çekmecesi</string>
+    <string name="app_drawer_category_summary">Uygulama çekmecenizi özelleştirin</string>
+    <string name="misc_category_title">Çeşitli seçenekler</string>
+    <string name="misc_category_summary">Diğer seçenekler</string>
+    <string name="dev_options_title">Geliştirici seçenekleri</string>
+    <string name="dev_options_desc">Bazı gizli özellikleri kendi sorumluluğunuzda etkinleştirin</string>
+    <string name="general_category_title">Genel</string>
+    <string name="interface_category_title">Arayüz</string>
+    <string name="search_bar_category_title">Arama çubuğu</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Google uygulamasına erişmek için kaydırın</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Ana sayfadan sola kaydırdığınızda</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Ana sayfadan sağa kaydırdığınızda</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Ana ekranda simge etiketleri</string>
+    <string name="drawer_show_labels">Çekmecede simge etiketleri</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Değer: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">varsayılan</string>
+    <string name="custom_seekbar_default_value_to_set">Varsayılan değer: <xliff:g id="v">%s</xliff:g>\nAyarlamak için uzun dokunun</string>
+    <string name="custom_seekbar_default_value_is_set">Varsayılan değer ayarlandı</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Simge boyutu</string>
+    <!-- Font size -->
+    <string name="font_size_title">Yazı tipi boyutu</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Uygulama etiketi için maksimum satır sayısı</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Çift dokunarak uyutma</string>
+    <string name="pref_sleep_gesture_summary">Ekranı kapatmak için boş bir alana çift dokun</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Ara</string>
+    <string name="label_lens">Google lens</string>
+    <string name="label_voice_search">Sesli arama</string>
+    <string name="dock_search_title">Google arama çubuğu</string>
+    <string name="dock_search_summary">Alt kısımda arama çubuğu</string>
+    <string name="dock_theme_title">Temalı simgeler</string>
+    <string name="dock_theme_summary">Arama çubuğunda temalı simgeler kullan</string>
+    <string name="search_radius_title">Köşe yarıçapı</string>
+    <!-- Recents -->
+    <string name="action_lens">Lens</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Durum çubuğu</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Öneriler</string>
+    <string name="suggestion_pref_screen_desc">Tüm uygulamalar &amp; Ana ekran önerileri için</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Gizli &amp; Korunan uygulamalar</string>
+    <string name="trust_apps_auth_manager">Gizli ve korunan uygulamaları yönetmek için kilidi açın</string>
+    <string name="trust_apps_auth_open_app">%1$s açmak için kimlik doğrula</string>
+    <string name="trust_apps_loading">Yükleniyor\u2026</string>
+    <string name="trust_apps_no_lock_error">Uygulama erişimini kısıtlamak için lütfen güvenli bir kilit ekranı ayarlayın</string>
+    <string name="trust_apps_help">Yardım</string>
+    <string name="trust_apps_info_hidden">Gizli uygulamalar ve widget\'ları uygulama menüsünde gizlidir</string>
+    <string name="trust_apps_info_protected">Korunan uygulamaların başlatıcıdan açılması için kimlik doğrulama gerekir</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">Durmaya zorla</string>
+    <string name="recents_app_force_stopped">Uygulama zorla durduruldu</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Simge paketi</string>
+    <string name="icon_pack_default_label">Varsayılan</string>
+    <string name="icon_pack_add">Daha fazla yükle</string>
+    <string name="icon_pack_no_market">Kullanılabilir uygulama mağazası yok</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Görev çubuğunu kullan</string>
+    <string name="pref_allow_phone_taskbar_desc">Uygulamaları herhangi bir yerde açmak ve değiştirmek için</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Izgara stili son uygulamalar</string>
+    <string name="pref_allow_phone_overview_grid_desc">Genel bakış listesinde daha fazla son kullanılan uygulamalar</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Satır yüksekliği</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Üst gölge</string>
+</resources>

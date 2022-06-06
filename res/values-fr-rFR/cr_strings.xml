@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <string name="settings_title">Paramètres</string>
+    <!-- Categories -->
+    <string name="home_category_title">Écran d’accueil</string>
+    <string name="home_category_summary">Définir le panneau Google now et plus encore</string>
+    <string name="icons_category_title">Icônes</string>
+    <string name="icons_category_summary">Définir la taille des icônes et plus</string>
+    <string name="app_drawer_category_title">Tiroir d\'applications</string>
+    <string name="app_drawer_category_summary">Personnaliser le menu d\'applications</string>
+    <string name="misc_category_title">Divers</string>
+    <string name="misc_category_summary">Autres options</string>
+    <string name="dev_options_title">Options développeur</string>
+    <string name="dev_options_desc">Activez des fonctionalités cachées à votre propre risque</string>
+    <string name="general_category_title">Général</string>
+    <string name="interface_category_title">Interface</string>
+    <string name="search_bar_category_title">Barre de recherche</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Glisser pour accéder à l\'application Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Lorsque vous faites glisser vers la gauche depuis l\'écran d\'accueil principal</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Lorsque vous faites glisser depuis la gauche sur l\'écran d\'accueil principal</string>
+    <!-- Folder titles -->
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Étiquettes d\'icônes sur le bureau</string>
+    <string name="drawer_show_labels">Étiquettes d\'icônes dans le tiroir</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Valeur : <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">par défaut</string>
+    <string name="custom_seekbar_default_value_to_set">Valeur par défaut : <xliff:g id="v">%s</xliff:g>\nAppui long pour définir</string>
+    <string name="custom_seekbar_default_value_is_set">La valeur par défaut est définie</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Taille des icônes</string>
+    <!-- Font size -->
+    <string name="font_size_title">Taille de police</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Lignes maximales pour le libellé de l\'application</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Appui double pour mettre en veille. </string>
+    <string name="pref_sleep_gesture_summary">Double appui sur un espace vide pour éteindre </string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Rechercher</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Recherche vocale</string>
+    <string name="dock_search_title">Barre de recherche Google</string>
+    <string name="dock_search_summary">Barre de recherche dans le dock inférieur</string>
+    <string name="dock_theme_title">Icônes thématiques</string>
+    <string name="dock_theme_summary">Utiliser les icônes thématiques pour la barre de recherche</string>
+    <string name="search_radius_title">Arrondi des angles</string>
+    <!-- Recents -->
+    <string name="action_lens">Lentille</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Barre d\'état</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Suggestions</string>
+    <string name="suggestion_pref_screen_desc">Pour toutes les applications &amp; ajout à l\'écran d\'accueil</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Applications cachées &amp; protégées</string>
+    <string name="trust_apps_auth_manager">Déverrouiller pour gérer les applications cachées et protégées</string>
+    <string name="trust_apps_auth_open_app">Authentification pour ouvrir %1$s</string>
+    <string name="trust_apps_loading">Chargement\u2026</string>
+    <string name="trust_apps_no_lock_error">Veuillez configurer un écran de verrouillage pour restreindre l\'accès aux applications</string>
+    <string name="trust_apps_help">Aide</string>
+    <string name="trust_apps_info_hidden">Les applications cachées et leurs widgets sont cachés du tiroir d\'applications</string>
+    <string name="trust_apps_info_protected">Les applications protégées nécessitent une authentification pour être ouvertes depuis le lanceur</string>
+    <!-- Force stop shortcut -->
+    <string name="recent_task_force_stop_app">Forcer l\'arrêt</string>
+    <string name="recents_app_force_stopped">Arrêt forcé de l\'application</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Pack d\'icônes</string>
+    <string name="icon_pack_default_label">Par défaut</string>
+    <string name="icon_pack_add">Installer plus</string>
+    <string name="icon_pack_no_market">Il n\'y a aucun magasin d\'applications disponible</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Utiliser la barre des tâches</string>
+    <string name="pref_allow_phone_taskbar_desc">Pour ouvrir et changer d\'application n\'importe où</string>
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Apps récentes au format grille</string>
+    <string name="pref_allow_phone_overview_grid_desc">Aperçu des applications les plus récentes</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Hauteur de ligne</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Ombre en haut</string>
+</resources>
