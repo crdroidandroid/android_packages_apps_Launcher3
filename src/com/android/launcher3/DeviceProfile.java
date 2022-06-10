@@ -43,12 +43,12 @@ import com.android.launcher3.util.DisplayController;
 import com.android.launcher3.util.DisplayController.Info;
 import com.android.launcher3.util.WindowBounds;
 
-import lineageos.providers.LineageSettings;
-
 import java.io.PrintWriter;
 
 @SuppressLint("NewApi")
 public class DeviceProfile {
+
+    public static final String KEY_PHONE_TASKBAR = "pref_allow_phone_taskbar";
 
     private static final int DEFAULT_DOT_SIZE = 100;
     // Ratio of empty space, qsb should take up to appear visually centered.
@@ -272,9 +272,8 @@ public class DeviceProfile {
         }
 
         hotseatQsbHeight = res.getDimensionPixelSize(R.dimen.qsb_widget_height);
-        boolean isTaskBarEnabled = LineageSettings.System.getInt(context.getContentResolver(),
-                LineageSettings.System.ENABLE_TASKBAR, isTablet ? 1 : 0) == 1;
-        isTaskbarPresent = isTaskBarEnabled && ApiWrapper.TASKBAR_DRAWN_IN_PROCESS
+        boolean allowPhone = Utilities.getPrefs(context).getBoolean(KEY_PHONE_TASKBAR, false);
+        isTaskbarPresent = (isTablet || allowPhone) && ApiWrapper.TASKBAR_DRAWN_IN_PROCESS
                 && FeatureFlags.ENABLE_TASKBAR.get();
         if (isTaskbarPresent) {
             taskbarSize = res.getDimensionPixelSize(R.dimen.taskbar_size);

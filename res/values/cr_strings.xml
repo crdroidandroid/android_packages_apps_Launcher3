@@ -106,4 +106,8 @@
     <string name="icon_pack_default_label">Default</string>
     <string name="icon_pack_add">Install more</string>
     <string name="icon_pack_no_market">There\'s no available app store</string>
+
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Use taskbar</string>
+    <string name="pref_allow_phone_taskbar_desc">For opening and switching apps anywhere</string>
 </resources>
