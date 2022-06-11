@@ -163,14 +163,16 @@ public class ThemedLocalColorExtractor extends LocalColorExtractor implements
 
     private static void addColorsToArray(Map<Integer, Color> swatch,
             SparseIntArray resMap, SparseIntArray array) {
-        for (Map.Entry<Integer, Color> entry : swatch.entrySet()) {
-            int shade = entry.getKey();
-            int resId = resMap.get(shade, -1);
-            if (resId != -1) {
-                Srgb color = (Srgb) entry.getValue();
-                array.put(resId, 0xff000000 | color.toRgb8());
+        try {
+            for (Map.Entry<Integer, Color> entry : swatch.entrySet()) {
+                int shade = entry.getKey();
+                int resId = resMap.get(shade, -1);
+                if (resId != -1) {
+                    Srgb color = (Srgb) entry.getValue();
+                    array.put(resId, 0xff000000 | color.toRgb8());
+                }
             }
-        }
+        } catch (Exception e) { }
     }
 
     @Override
