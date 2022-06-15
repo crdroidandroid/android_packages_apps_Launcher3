@@ -440,10 +440,16 @@ public class OtherActivityInputConsumer extends ContextWrapper implements InputC
             mMainThreadHandler.removeCallbacks(mCancelRecentsAnimationRunnable);
             mMainThreadHandler.postDelayed(mCancelRecentsAnimationRunnable, 100);
         }
-        mVelocityTracker.recycle();
-        mVelocityTracker = null;
-        mMotionPauseDetector.clear();
+        cleanupAfterGesture();
         TraceHelper.INSTANCE.endSection(traceToken);
+    }
+
+    private void cleanupAfterGesture() {
+        if (mVelocityTracker != null) {
+            mVelocityTracker.recycle();
+            mVelocityTracker = null;
+        }
+        mMotionPauseDetector.clear();
     }
 
     @Override
@@ -468,6 +474,7 @@ public class OtherActivityInputConsumer extends ContextWrapper implements InputC
         Preconditions.assertUIThread();
         removeListener();
         mInteractionHandler = null;
+        cleanupAfterGesture();
         mOnCompleteCallback.accept(this);
     }
 
