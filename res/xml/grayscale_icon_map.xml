@@ -160,6 +160,7 @@
     <icon drawable="@drawable/calculator" package="com.sec.android.app.popupcalculator" />
     <icon drawable="@drawable/calendar_30" package="com.android.calendar" />
     <icon drawable="@drawable/calendar_30" package="org.lineageos.etar" />
+	<icon drawable="@drawable/calendar_30" package="com.google.android.calendar" />
     <icon drawable="@drawable/camera" package="app.grapheneos.camera" />
     <icon drawable="@drawable/camera" package="app.grapheneos.camera.play" />
     <icon drawable="@drawable/camera" package="com.GoogleCamera.Burial16" />
@@ -379,6 +380,7 @@
     <icon drawable="@drawable/firefox_beta" package="org.mozilla.firefox_beta" />
     <icon drawable="@drawable/fitbit" package="com.fitbit.FitbitMobile" />
     <icon drawable="@drawable/fiverr" package="com.fiverr.fiverr" />
+	<icon drawable="@drawable/fkm" package="com.franco.kernel" />
     <icon drawable="@drawable/flamingo" package="com.samruston.twitter" />
     <icon drawable="@drawable/flashscore" package="eu.livesport.FlashScore_com" />
     <icon drawable="@drawable/flashscore" package="eu.livesport.MyScore_ru" />
@@ -386,6 +388,7 @@
     <icon drawable="@drawable/flipkart" package="com.flipkart.android" />
     <icon drawable="@drawable/flipkz" package="kz.flip.mobile" />
     <icon drawable="@drawable/fm_radio" package="com.caf.fmradio" />
+	<icon drawable="@drawable/fm_radio" package="com.radio.helloworld" />
     <icon drawable="@drawable/fng" package="com.fb.fluid" />
     <icon drawable="@drawable/focus_todo" package="com.superelement.pomodoro" />
     <icon drawable="@drawable/fontviewer" package="com.sacredfigstudio.fontviewerplus" />
@@ -624,6 +627,7 @@
     <icon drawable="@drawable/microsoft_todo" package="com.microsoft.todos" />
     <icon drawable="@drawable/microsoft_word" package="com.microsoft.office.word" />
     <icon drawable="@drawable/midi_player" package="net.volcanomobile.midiplayer" />
+	<icon drawable="@drawable/mifit" package="com.xiaomi.hm.health" />
     <icon drawable="@drawable/mijn_hr" package="com.hogeschoolrotterdam.student" />
     <icon drawable="@drawable/milanote" package="com.milanote.milanoteApp" />
     <icon drawable="@drawable/million_az" package="com.safaroff.million_android" />
@@ -807,6 +811,7 @@
     <icon drawable="@drawable/pushbullet" package="com.pushbullet.android" />
     <icon drawable="@drawable/qiwi" package="ru.mw" />
     <icon drawable="@drawable/qr_scan" package="com.gamma.scan" />
+	<icon drawable="@drawable/qr_scan" package="com.teacapps.barcodescanner.pro" />
     <icon drawable="@drawable/quick_edit" package="com.rhmsoft.edit" />
     <icon drawable="@drawable/quick_edit" package="com.rhmsoft.edit.pro" />
     <icon drawable="@drawable/quickpic" package="com.alensw.PicFolder" />
@@ -870,7 +875,7 @@
     <icon drawable="@drawable/scores_365" package="com.scores365" />
     <icon drawable="@drawable/screeno" package="com.bytelogs.screenrecorder" />
     <icon drawable="@drawable/sdmaid" package="eu.thedarken.sdm" />
-    <icon drawable="@drawable/sdmaid" package="eu.thedarken.sdm.unlocker" />
+    <icon drawable="@drawable/sdmaidpro" package="eu.thedarken.sdm.unlocker" />
     <icon drawable="@drawable/sennheiser_smart_control" package="com.sennheiser.control" />
     <icon drawable="@drawable/sensor_box" package="imoblife.androidsensorbox" />
     <icon drawable="@drawable/settings" package="com.android.settings" />
@@ -1118,8 +1123,8 @@
     <icon drawable="@drawable/xbox" package="com.microsoft.xboxone.smartglass" />
     <icon drawable="@drawable/xbox" package="com.microsoft.xboxone.smartglass.beta" />
     <icon drawable="@drawable/xda" package="com.xda.labs.play" />
+	<icon drawable="@drawable/ximiui" package="com.xiaomiui.downloader" />
     <icon drawable="@drawable/xplayer" package="video.player.videoplayer" />
-    <icon drawable="@drawable/ximiui" package="com.xiaomiui.downloader" />
     <icon drawable="@drawable/xmanager" package="com.xc3fff0e.xmanager" />
     <icon drawable="@drawable/xprivacylua" package="eu.faircode.xlua" />
     <icon drawable="@drawable/xprivacylua_pro" package="eu.faircode.xlua.pro" />
