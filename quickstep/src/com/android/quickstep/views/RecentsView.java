@@ -4264,13 +4264,16 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
         mPendingAnimation.addEndListener(isSuccess -> {
             if (isSuccess) {
                 if (tv.getTaskIds()[1] != -1) {
-                    // TODO(b/194414938): make this part of the animations instead.
-                    TaskViewUtils.createSplitAuxiliarySurfacesAnimator(
-                            mRemoteTargetHandles[0].getTransformParams().getTargetSet().nonApps,
-                            true /*shown*/, (dividerAnimator) -> {
-                                dividerAnimator.start();
-                                dividerAnimator.end();
-                            });
+                    RemoteAnimationTargets targets =
+                            mRemoteTargetHandles[0].getTransformParams().getTargetSet();
+                    if (targets != null && targets.nonApps != null) {
+                        // TODO(b/194414938): make this part of the animations instead.
+                        TaskViewUtils.createSplitAuxiliarySurfacesAnimator(
+                                targets.nonApps, true /*shown*/, (dividerAnimator) -> {
+                                    dividerAnimator.start();
+                                    dividerAnimator.end();
+                                });
+                    }
                 }
                 if (ENABLE_QUICKSTEP_LIVE_TILE.get() && tv.isRunningTask()) {
                     finishRecentsAnimation(false /* toRecents */, null);
