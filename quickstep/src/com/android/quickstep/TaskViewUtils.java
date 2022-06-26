@@ -666,7 +666,9 @@ public final class TaskViewUtils {
         dockFadeAnimator.addUpdateListener(valueAnimator -> {
             float progress = valueAnimator.getAnimatedFraction();
             for (SurfaceControl leash : auxiliarySurfaces) {
-                t.setAlpha(leash, shown ? progress : 1 - progress);
+                if (leash.isValid()) {
+                    t.setAlpha(leash, shown ? progress : 1 - progress);
+                }
             }
             t.apply();
         });
@@ -676,8 +678,10 @@ public final class TaskViewUtils {
                 super.onAnimationStart(animation);
                 if (shown) {
                     for (SurfaceControl leash : auxiliarySurfaces) {
-                        t.setAlpha(leash, 0);
-                        t.show(leash);
+                        if (leash.isValid()) {
+                            t.setAlpha(leash, 0);
+                            t.show(leash);
+                        }
                     }
                     t.apply();
                 }
@@ -688,7 +692,9 @@ public final class TaskViewUtils {
                 super.onAnimationEnd(animation);
                 if (!shown) {
                     for (SurfaceControl leash : auxiliarySurfaces) {
-                        t.hide(leash);
+                        if (leash.isValid()) {
+                            t.hide(leash);
+                        }
                     }
                     t.apply();
                 }
