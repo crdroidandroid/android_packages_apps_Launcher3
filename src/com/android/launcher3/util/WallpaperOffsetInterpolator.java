@@ -6,6 +6,7 @@ import static com.android.launcher3.util.Executors.UI_HELPER_EXECUTOR;
 
 import android.app.WallpaperManager;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
@@ -15,6 +16,7 @@ import android.view.animation.Interpolator;
 
 import androidx.annotation.AnyThread;
 
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.Workspace;
 import com.android.launcher3.anim.Interpolators;
@@ -22,7 +24,8 @@ import com.android.launcher3.anim.Interpolators;
 /**
  * Utility class to handle wallpaper scrolling along with workspace.
  */
-public class WallpaperOffsetInterpolator {
+public class WallpaperOffsetInterpolator implements
+        SharedPreferences.OnSharedPreferenceChangeListener {
 
     private static final int[] sTempInt = new int[2];
     private static final String TAG = "WPOffsetInterpolator";
@@ -30,6 +33,8 @@ public class WallpaperOffsetInterpolator {
 
     // Don't use all the wallpaper for parallax until you have at least this many pages
     private static final int MIN_PARALLAX_PAGE_SPAN = 4;
+
+    private static final String KEY_WALLPAPER_SCROLLING = "pref_allow_wallpaper_scrolling";
 
     private final SimpleBroadcastReceiver mWallpaperChangeReceiver =
             new SimpleBroadcastReceiver(i -> onWallpaperChanged());
@@ -44,10 +49,15 @@ public class WallpaperOffsetInterpolator {
     private boolean mLockedToDefaultPage;
     private int mNumScreens;
 
+    private boolean mAllowScrolling;
+
     public WallpaperOffsetInterpolator(Workspace<?> workspace) {
         mWorkspace = workspace;
         mIsRtl = Utilities.isRtl(workspace.getResources());
         mHandler = new OffsetHandler(workspace.getContext());
+        SharedPreferences prefs = LauncherPrefs.getPrefs(workspace.getContext());
+        mAllowScrolling = prefs.getBoolean(KEY_WALLPAPER_SCROLLING, true);
+        prefs.registerOnSharedPreferenceChangeListener(this);
     }
 
     /**
@@ -61,6 +71,13 @@ public class WallpaperOffsetInterpolator {
         return mLockedToDefaultPage;
     }
 
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+        if (key.equals(KEY_WALLPAPER_SCROLLING)) {
+            mAllowScrolling = prefs.getBoolean(KEY_WALLPAPER_SCROLLING, true);
+        }
+    }
+
     /**
      * Computes the wallpaper offset as an int ratio (out[0] / out[1])
      *
@@ -71,7 +88,7 @@ public class WallpaperOffsetInterpolator {
 
         // To match the default wallpaper behavior in the system, we default to either the left
         // or right edge on initialization
-        if (mLockedToDefaultPage || numScrollableScreens <= 1) {
+        if (!mAllowScrolling || mLockedToDefaultPage || numScrollableScreens <= 1) {
             out[0] =  mIsRtl ? 1 : 0;
             return;
         }
