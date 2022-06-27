@@ -120,4 +120,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Double tap to sleep</string>
     <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
+
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
+    <string name="allow_wallpaper_scrolling_summary">Wallpaper scrolling effect for multiple screens</string>
 </resources>
