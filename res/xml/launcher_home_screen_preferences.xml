@@ -46,6 +46,12 @@
             android:defaultValue="true"
             android:persistent="true"/>
 
+        <SwitchPreference
+            android:key="pref_allow_wallpaper_scrolling"
+            android:title="@string/allow_wallpaper_scrolling"
+            android:summary="@string/allow_wallpaper_scrolling_summary"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
