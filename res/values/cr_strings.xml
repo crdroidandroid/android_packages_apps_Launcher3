@@ -120,4 +120,8 @@
 
     <!-- Top shadow -->
     <string name="show_top_shadow">Top shadow</string>
+
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
+    <string name="allow_wallpaper_scrolling_desc">Wallpaper scrolling effect for multiple screens</string>
 </resources>
