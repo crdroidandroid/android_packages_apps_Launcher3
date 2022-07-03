@@ -124,4 +124,8 @@
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
     <string name="allow_wallpaper_scrolling_desc">Wallpaper scrolling effect for multiple screens</string>
+
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zoom">Wallpaper zooming</string>
+    <string name="allow_wallpaper_zoom_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
 </resources>
