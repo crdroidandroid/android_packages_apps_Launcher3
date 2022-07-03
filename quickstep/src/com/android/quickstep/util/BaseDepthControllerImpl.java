@@ -32,6 +32,7 @@ import androidx.annotation.Nullable;
 
 import com.android.app.animation.Interpolators;
 import com.android.launcher3.Flags;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.anim.AnimatedFloat;
@@ -230,6 +231,10 @@ public class BaseDepthControllerImpl<
         float wallpaperZoom = mDepth;
         if (Flags.enableExpressiveFolderExpansion()) {
             wallpaperZoom = Math.max(wallpaperZoom, mWallpaperZoomOnly.value);
+        }
+
+        if (!LauncherPrefs.ALLOW_WALLPAPER_ZOOMING.get(mContainer)) {
+            wallpaperZoom = 1f;
         }
 
         if (windowToken != null) {
