@@ -49,6 +49,7 @@
     <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="lineageos.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER" />
 
     <!--
     Permissions required for read/write access to the workspace data. These permission name
