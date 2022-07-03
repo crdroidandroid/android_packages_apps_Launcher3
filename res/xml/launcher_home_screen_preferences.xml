@@ -52,6 +52,12 @@
             android:summary="@string/allow_wallpaper_scrolling_summary"
             android:defaultValue="true" />
 
+        <SwitchPreference
+            android:key="pref_allow_wallpaper_zooming"
+            android:title="@string/allow_wallpaper_zooming"
+            android:summary="@string/allow_wallpaper_zooming_summary"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
