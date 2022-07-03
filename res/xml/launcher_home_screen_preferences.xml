@@ -52,6 +52,11 @@
             android:summary="@string/allow_wallpaper_scrolling_desc"
             android:defaultValue="true" />
 
+        <SwitchPreference
+            android:key="pref_allow_wallpaper_zooming"
+            android:title="@string/allow_wallpaper_zooming"
+            android:summary="@string/allow_wallpaper_zooming_desc"
+            android:defaultValue="true" />
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -69,11 +74,11 @@
             android:defaultValue="true"
             android:persistent="true" />
 
-   <SwitchPreference
-        android:key="pref_show_top_shadow"
-        android:title="@string/show_top_shadow"
-        android:defaultValue="true"
-        android:persistent="true" />
+        <SwitchPreference
+            android:key="pref_show_top_shadow"
+            android:title="@string/show_top_shadow"
+            android:defaultValue="true"
+            android:persistent="true" />
         
         <SwitchPreference
             android:key="pref_desktop_show_labels"
