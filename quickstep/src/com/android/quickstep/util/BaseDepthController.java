@@ -133,12 +133,15 @@ public class BaseDepthController {
         IBinder windowToken = mLauncher.getRootView().getWindowToken();
         if (windowToken != null) {
             if (enableScalingRevealHomeAnimation()) {
-                mWallpaperManager.setWallpaperZoomOut(windowToken, depth);
+                mWallpaperManager.setWallpaperZoomOut(windowToken,
+                            Utilities.canZoomWallpaper(mLauncher) ? depth : 1);
             } else {
                 // The API's full zoom-out is three times larger than the zoom-out we apply to the
                 // icons. To keep the two consistent throughout the animation while keeping
                 // Launcher's concept of full depth unchanged, we divide the depth by 3 here.
-                mWallpaperManager.setWallpaperZoomOut(windowToken, depth / 3);
+                mWallpaperManager.setWallpaperZoomOut(windowToken,
+                            Utilities.canZoomWallpaper(mLauncher) ? depth / 3 : 1);
+
             }
         }
 
