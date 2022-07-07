@@ -171,7 +171,7 @@ public class PreviewBackground extends CellLayout.DelegatedCellDrawing {
             mShadowShader = new RadialGradient(0, 0, 1,
                     new int[]{shadowColor, Color.TRANSPARENT},
                     new float[]{radius / shadowRadius, 1},
-                    Shader.TileMode.CLAMP);
+                    Shader.TileMode.MIRROR);
         }
 
         invalidate();

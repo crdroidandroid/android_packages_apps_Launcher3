@@ -285,7 +285,7 @@ public class SysUiScrim implements View.OnAttachStateChangeListener,
                         setColorAlphaBound(Color.WHITE, (int) (0xFF * 0.95)),
                         0xFFFFFFFF},
                 new float[]{0f, 0.8f, 1f},
-                Shader.TileMode.CLAMP);
+                Shader.TileMode.MIRROR);
         paint.setShader(lg);
         c.drawRect(0, 0, width, gradientHeight, paint);
         return dst;

@@ -175,7 +175,7 @@ public class TaskThumbnailView extends View {
         if (mThumbnailData != null && mThumbnailData.thumbnail != null) {
             Bitmap bm = mThumbnailData.thumbnail;
             bm.prepareToDraw();
-            mBitmapShader = new BitmapShader(bm, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
+            mBitmapShader = new BitmapShader(bm, Shader.TileMode.MIRROR, Shader.TileMode.MIRROR);
             mPaint.setShader(mBitmapShader);
             updateThumbnailMatrix();
             if (shouldRefreshOverlay) {
