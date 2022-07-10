@@ -39,8 +39,8 @@
     <string name="msg_minus_one_on_right">Când glisați dreapta din ecranul principal de pornire</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Icon labels on desktop</string>
-    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <string name="desktop_show_labels">Etichete pictograme pe desktop</string>
+    <string name="drawer_show_labels">Etichete pictograme în sertar</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Valoare: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">implicit</string>
@@ -60,7 +60,7 @@
     <string name="label_lens">Google Lens</string>
     <string name="label_voice_search">Căutare vocală</string>
     <string name="dock_search_title">Bară de căutare Google</string>
-    <string name="dock_search_summary">Search bar in the bottom dock</string>
+    <string name="dock_search_summary">Bara de căutare în bara de jos</string>
     <string name="dock_theme_title">Pictograme cu aspect</string>
     <string name="dock_theme_summary">Folosește pictograme tematice pentru bara de căutare</string>
     <string name="search_radius_title">Raza de colț</string>
@@ -92,13 +92,13 @@
     <string name="pref_allow_phone_taskbar">Folosește bara de activități</string>
     <string name="pref_allow_phone_taskbar_desc">Pentru deschiderea și schimbarea aplicațiilor oriunde</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Grid style recent apps</string>
+    <string name="pref_allow_phone_overview_grid">Aplicații recente de stil grilă</string>
     <string name="pref_allow_phone_overview_grid_desc">Aplicații mai recente în prezentare generală</string>
     <!-- Row Height -->
     <string name="row_height_title">Înălțimea rândului</string>
     <!-- Top shadow -->
-    <string name="show_top_shadow">Top shadow</string>
+    <string name="show_top_shadow">Umbra de sus</string>
     <!-- Wallpaper scrolling -->
-    <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
-    <string name="allow_wallpaper_scrolling_desc">Wallpaper scrolling effect for multiple screens</string>
+    <string name="allow_wallpaper_scrolling">Derulare fundal</string>
+    <string name="allow_wallpaper_scrolling_desc">Efect de derulare fundal pentru mai multe ecrane</string>
 </resources>
