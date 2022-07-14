@@ -128,4 +128,10 @@
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zoom">Wallpaper zooming</string>
     <string name="allow_wallpaper_zoom_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+
+    <!-- Recents view opacity -->
+    <string name="recents_opacity_title">Recents background opacity</string>
+
+    <!-- App drawer opacity -->
+    <string name="app_drawer_opacity_title">Background opacity</string>
 </resources>
