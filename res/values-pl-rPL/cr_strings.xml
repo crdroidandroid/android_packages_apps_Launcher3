@@ -24,6 +24,8 @@
     <string name="icons_category_summary">Ustaw rozmiar ikon i więcej</string>
     <string name="app_drawer_category_title">Szuflada aplikacji</string>
     <string name="app_drawer_category_summary">Spersonalizuj szufladę aplikacji</string>
+    <string name="recents_category_title">Recents</string>
+    <string name="recents_category_summary">Revamp the overview screen</string>
     <string name="misc_category_title">Pozostałe</string>
     <string name="misc_category_summary">Inne opcje</string>
     <string name="dev_options_title">Opcje programistyczne</string>
@@ -92,7 +94,7 @@
     <string name="pref_allow_phone_taskbar">Użyj paska zadań</string>
     <string name="pref_allow_phone_taskbar_desc">Do otwierania i przełączania aplikacji gdziekolwiek</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Widok siatki dla ostatnio używanych aplikacji</string>
+    <string name="pref_allow_phone_overview_grid">Grid style</string>
     <string name="pref_allow_phone_overview_grid_desc">Więcej aplikacji w menu ostatnich aplikacji</string>
     <!-- Row Height -->
     <string name="row_height_title">Wysokość wiersza</string>
@@ -101,4 +103,9 @@
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Przewijanie tapety</string>
     <string name="allow_wallpaper_scrolling_desc">Efekt przewijania tapety dla wielu ekranów</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
+    <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Background opacity</string>
 </resources>
