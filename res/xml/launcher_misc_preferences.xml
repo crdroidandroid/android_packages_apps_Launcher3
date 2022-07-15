@@ -24,11 +24,6 @@
         android:summary="@string/pref_allow_phone_taskbar_desc" />
 
     <SwitchPreference
-        android:key="pref_allow_phone_overview_grid"
-        android:title="@string/pref_allow_phone_overview_grid"
-        android:summary="@string/pref_allow_phone_overview_grid_desc" />
-
-    <SwitchPreference
         android:key="pref_allowRotation"
         android:title="@string/allow_rotation_title"
         android:summary="@string/allow_rotation_desc"
