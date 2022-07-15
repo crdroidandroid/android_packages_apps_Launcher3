@@ -33,6 +33,7 @@
     <string name="general_category_title">عمومی</string>
     <string name="interface_category_title">رابط کاربری</string>
     <string name="search_bar_category_title">نوار جستجو</string>
+    <string name="actions_category_title">Quick actions</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">کشیدن برای دسترسی به برنامه گوگل</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -108,4 +109,8 @@
     <string name="allow_wallpaper_zooming_desc">هنگام استفاده از کشو یا برنامه های اخیر، کاغذ دیواری را بزرگ یا کوچک کنید</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">شفافیت پس‌زمینه</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Screenshot</string>
+    <string name="recents_clear_all_title">Clear all</string>
+    <string name="recents_lens_title">Lens</string>
 </resources>
