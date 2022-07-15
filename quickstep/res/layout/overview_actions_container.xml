@@ -27,6 +27,7 @@
         android:orientation="horizontal">
 
         <Space
+            android:id="@+id/screenshot_space"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1" />
@@ -37,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_screenshot"
-            android:text="@string/action_screenshot"
+            android:text="@string/recents_screenshot_title"
             android:theme="@style/ThemeControlHighlightWorkspaceColor" />
 
         <Space
@@ -66,7 +67,7 @@
             android:id="@+id/action_lens"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/action_lens"
+            android:text="@string/recents_lens_title"
             android:theme="@style/ThemeControlHighlightWorkspaceColor"
             android:visibility="gone" />
 
@@ -83,10 +84,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_clear_all"
-            android:text="@string/recents_clear_all"
+            android:text="@string/recents_clear_all_title"
             android:theme="@style/ThemeControlHighlightWorkspaceColor" />
 
         <Space
+            android:id="@+id/clear_all_space"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1" />
