@@ -55,6 +55,18 @@
     </Preference>
 
     <Preference
+        android:key="recents"
+        android:title="@string/recents_category_title"
+        android:summary="@string/recents_category_summary"
+        android:icon="@drawable/ic_settings_recents"
+        android:layout="@layout/settings_layout">
+    <intent
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:targetPackage="com.android.launcher3"
+            android:targetClass="com.android.launcher3.settings.SettingsRecents" />
+    </Preference>
+
+    <Preference
         android:key="miscellaneous"
         android:title="@string/misc_category_title"
         android:summary="@string/misc_category_summary"

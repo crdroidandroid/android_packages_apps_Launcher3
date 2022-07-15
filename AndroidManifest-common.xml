@@ -193,6 +193,14 @@
             android:exported="true"
             android:autoRemoveFromRecents="true" />
 
+        <!-- Recents -->
+        <activity
+            android:name="com.android.launcher3.settings.SettingsRecents"
+            android:label="@string/recents_category_title"
+            android:theme="@style/HomeSettings.Theme"
+            android:exported="true"
+            android:autoRemoveFromRecents="true" />
+
         <activity
             android:name="com.android.launcher3.lineage.icon.IconPackSettingsActivity"
             android:label="@string/icon_pack_title"
