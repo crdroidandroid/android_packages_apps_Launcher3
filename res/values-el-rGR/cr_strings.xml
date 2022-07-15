@@ -24,6 +24,8 @@
     <string name="icons_category_summary">Ορισμός μεγέθους εικονιδίου και πολλά άλλα</string>
     <string name="app_drawer_category_title">Καρτέλα εφαρμογών</string>
     <string name="app_drawer_category_summary">Προσαρμογή καρτέλας εφαρμογών</string>
+    <string name="recents_category_title">Recents</string>
+    <string name="recents_category_summary">Revamp the overview screen</string>
     <string name="misc_category_title">Διάφορα</string>
     <string name="misc_category_summary">Άλλες επιλογές</string>
     <string name="dev_options_title">Επιλογές για προγραμματιστές</string>
@@ -92,7 +94,7 @@
     <string name="pref_allow_phone_taskbar">Χρήση γραμμής εργασιών</string>
     <string name="pref_allow_phone_taskbar_desc">Για άνοιγμα και εναλλαγή εφαρμογών οπουδήποτε</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Πρόσφατες εφαρμογές σε στυλ πλέγματος</string>
+    <string name="pref_allow_phone_overview_grid">Grid style</string>
     <string name="pref_allow_phone_overview_grid_desc">Περισσότερες πρόσφατες εφαρμογές στην επισκόπηση</string>
     <!-- Row Height -->
     <string name="row_height_title">Ύψος σειράς</string>
@@ -101,4 +103,9 @@
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Κύλιση ταπετσαρίας</string>
     <string name="allow_wallpaper_scrolling_desc">Εφέ κύλισης ταπετσαρίας για πολλαπλές οθόνες</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
+    <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Background opacity</string>
 </resources>
