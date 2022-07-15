@@ -24,8 +24,8 @@
     <string name="icons_category_summary">تنظیم شکل آیکون و بیشتر</string>
     <string name="app_drawer_category_title">کشوی برنامه ها</string>
     <string name="app_drawer_category_summary">شخصی سازی کشوی برنامه ها</string>
-    <string name="recents_category_title">Recents</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_title">اخیر</string>
+    <string name="recents_category_summary">صفحه نمای کلی را نو نما کنید</string>
     <string name="misc_category_title">متفرقه</string>
     <string name="misc_category_summary">گزینه های دیگر</string>
     <string name="dev_options_title">گزینه های برنامه نویس</string>
@@ -94,7 +94,7 @@
     <string name="pref_allow_phone_taskbar">استفاده از نوار وظیفه</string>
     <string name="pref_allow_phone_taskbar_desc">برای باز کردن و جابجایی برنامه ها در هر کجا</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Grid style</string>
+    <string name="pref_allow_phone_overview_grid">استایل شبکه</string>
     <string name="pref_allow_phone_overview_grid_desc">برنامه های اخیرا در نمای کلی</string>
     <!-- Row Height -->
     <string name="row_height_title">ارتفاع ردیف</string>
@@ -104,8 +104,8 @@
     <string name="allow_wallpaper_scrolling">چرخش کاغذ دیواری</string>
     <string name="allow_wallpaper_scrolling_desc">جلوه چرخش کاغذ دیواری برای چندین صفحه</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">بزرگنمایی شدن کاغذ دیواری</string>
+    <string name="allow_wallpaper_zooming_desc">هنگام استفاده از کشو یا برنامه های اخیر، کاغذ دیواری را بزرگ یا کوچک کنید</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">شفافیت پس‌زمینه</string>
 </resources>
