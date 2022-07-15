@@ -24,6 +24,8 @@
     <string name="icons_category_summary">Ikonméret-beállítás és egyebek</string>
     <string name="app_drawer_category_title">Alkalmazásfiók</string>
     <string name="app_drawer_category_summary">Testreszabhatja az Alkalmazásfiókját</string>
+    <string name="recents_category_title">Recents</string>
+    <string name="recents_category_summary">Revamp the overview screen</string>
     <string name="misc_category_title">Különlegességek</string>
     <string name="misc_category_summary">Minden, ami egyedivé tesz</string>
     <string name="dev_options_title">Fejlesztői beállítások</string>
@@ -92,7 +94,7 @@
     <string name="pref_allow_phone_taskbar">a Feladatkezelő használata</string>
     <string name="pref_allow_phone_taskbar_desc">Alkalmazásinditáshoz és váltáshoz bárhol</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Rács stílusú előzmények</string>
+    <string name="pref_allow_phone_overview_grid">Grid style</string>
     <string name="pref_allow_phone_overview_grid_desc">Több alkalmazás az áttekintésben</string>
     <!-- Row Height -->
     <string name="row_height_title">Sormagasság</string>
@@ -101,4 +103,9 @@
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Háttérkép-görgetés</string>
     <string name="allow_wallpaper_scrolling_desc">Háttérképgörgetési effekt több képernyőre</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
+    <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Background opacity</string>
 </resources>
