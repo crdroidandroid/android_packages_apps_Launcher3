@@ -24,8 +24,8 @@
     <string name="icons_category_summary">Stel icoon formaat in en meer</string>
     <string name="app_drawer_category_title">App lade</string>
     <string name="app_drawer_category_summary">Personaliseer je app overzicht</string>
-    <string name="recents_category_title">Recents</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_title">Recente apps</string>
+    <string name="recents_category_summary">Herzie het overzichtsscherm</string>
     <string name="misc_category_title">Overige</string>
     <string name="misc_category_summary">Overige opties</string>
     <string name="dev_options_title">Opties voor ontwikkelaars</string>
@@ -94,7 +94,7 @@
     <string name="pref_allow_phone_taskbar">Gebruik taakbalk</string>
     <string name="pref_allow_phone_taskbar_desc">Voor het overal openen en wisselen van apps</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Grid style</string>
+    <string name="pref_allow_phone_overview_grid">Rasterstijl</string>
     <string name="pref_allow_phone_overview_grid_desc">Meer recente apps in het overzicht</string>
     <!-- Row Height -->
     <string name="row_height_title">Rijhoogte</string>
@@ -104,8 +104,8 @@
     <string name="allow_wallpaper_scrolling">Wallpaper scrollen</string>
     <string name="allow_wallpaper_scrolling_desc">Wallpaper scrolleffect voor meerdere schermen</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">Achtergrond zoomen</string>
+    <string name="allow_wallpaper_zooming_desc">Zoom de achtergrond in of uit bij gebruik van drawer of recente apps</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">Achtergrond transparantie</string>
 </resources>
