@@ -24,6 +24,8 @@
     <string name="icons_category_summary">Đặt kích cỡ biểu tượng và hơn thế nữa</string>
     <string name="app_drawer_category_title">Ngăn chứa ứng dụng</string>
     <string name="app_drawer_category_summary">Tùy chỉnh ngăn chứa ứng dụng</string>
+    <string name="recents_category_title">Recents</string>
+    <string name="recents_category_summary">Revamp the overview screen</string>
     <string name="misc_category_title">Cài đặt khác</string>
     <string name="misc_category_summary">Tùy chọn khác</string>
     <string name="dev_options_title">Tùy chọn nhà phát triển</string>
@@ -92,7 +94,7 @@
     <string name="pref_allow_phone_taskbar">Sử dụng thanh tác vụ</string>
     <string name="pref_allow_phone_taskbar_desc">Để mở và chuyển đổi ứng dụng ở mọi nơi</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Ứng dụng gần đây dạng lưới</string>
+    <string name="pref_allow_phone_overview_grid">Grid style</string>
     <string name="pref_allow_phone_overview_grid_desc">Nhiều ứng dụng gần đây hơn trong màn hình tổng quan</string>
     <!-- Row Height -->
     <string name="row_height_title">Chiều cao hàng</string>
@@ -101,4 +103,9 @@
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Cuộn hình nền</string>
     <string name="allow_wallpaper_scrolling_desc">Hiệu ứng cuộn hình nền cho nhiều màn hình</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
+    <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Background opacity</string>
 </resources>
