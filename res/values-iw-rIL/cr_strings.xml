@@ -24,6 +24,8 @@
     <string name="icons_category_summary">Set icon size and more</string>
     <string name="app_drawer_category_title">מגירת היישומים</string>
     <string name="app_drawer_category_summary">התאמה אישית של מגירת היישומים</string>
+    <string name="recents_category_title">Recents</string>
+    <string name="recents_category_summary">Revamp the overview screen</string>
     <string name="misc_category_title">שונות</string>
     <string name="misc_category_summary">אפשרויות נוספות</string>
     <string name="dev_options_title">אפשרויות מפתחים</string>
@@ -92,7 +94,7 @@
     <string name="pref_allow_phone_taskbar">Use taskbar</string>
     <string name="pref_allow_phone_taskbar_desc">For opening and switching apps anywhere</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Grid style recent apps</string>
+    <string name="pref_allow_phone_overview_grid">Grid style</string>
     <string name="pref_allow_phone_overview_grid_desc">More recent apps in overview</string>
     <!-- Row Height -->
     <string name="row_height_title">Row height</string>
@@ -101,4 +103,9 @@
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
     <string name="allow_wallpaper_scrolling_desc">Wallpaper scrolling effect for multiple screens</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
+    <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Background opacity</string>
 </resources>
