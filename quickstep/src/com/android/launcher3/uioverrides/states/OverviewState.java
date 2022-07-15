@@ -25,10 +25,12 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.os.SystemProperties;
 
+import androidx.core.graphics.ColorUtils;
+
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Launcher;
-import com.android.launcher3.LauncherState;
 import com.android.launcher3.LauncherPrefs;
+import com.android.launcher3.LauncherState;
 import com.android.launcher3.R;
 import com.android.launcher3.util.DisplayController;
 import com.android.launcher3.util.Themes;
@@ -167,9 +169,9 @@ public class OverviewState extends LauncherState {
 
     @Override
     public int getWorkspaceScrimColor(Launcher launcher) {
-        return enableOverviewBackgroundWallpaperBlur() && BlurUtils.supportsBlursOnWindows()
-                ? Themes.getAttrColor(launcher, R.attr.overviewScrimColorOverBlur)
-                : Themes.getAttrColor(launcher, R.attr.overviewScrimColor);
+        return ColorUtils.setAlphaComponent(
+                Themes.getAttrColor(launcher, R.attr.overviewScrimColor),
+                LauncherPrefs.RECENTS_OPACITY.get(launcher) * 255 / 100);
     }
 
     @Override
