@@ -24,8 +24,8 @@
     <string name="icons_category_summary">Nastavit velikost ikon a\u00a0dalšie parametry</string>
     <string name="app_drawer_category_title">Ponuka aplikácií</string>
     <string name="app_drawer_category_summary">Prispôsobiť zoznam aplikácií</string>
-    <string name="recents_category_title">Recents</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_title">Nedávne</string>
+    <string name="recents_category_summary">Zmeniť štýl obrazovky nedávnych aplikácií</string>
     <string name="misc_category_title">Rôzne</string>
     <string name="misc_category_summary">Ďalšie možnosti</string>
     <string name="dev_options_title">Možnosti vývojára</string>
@@ -94,7 +94,7 @@
     <string name="pref_allow_phone_taskbar">Použite panel úloh</string>
     <string name="pref_allow_phone_taskbar_desc">Pre otváranie a prepínanie aplikácií kdekoľvek</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Grid style</string>
+    <string name="pref_allow_phone_overview_grid">Štýl mriežky</string>
     <string name="pref_allow_phone_overview_grid_desc">Viac nedávnych aplikácií v\u00a0prehľade</string>
     <!-- Row Height -->
     <string name="row_height_title">Výška riadku</string>
@@ -104,8 +104,8 @@
     <string name="allow_wallpaper_scrolling">Posúvanie tapety</string>
     <string name="allow_wallpaper_scrolling_desc">Efekt posúvania tapety pre viacero obrazoviek</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">Priblíženie tapety</string>
+    <string name="allow_wallpaper_zooming_desc">Priblížiť alebo oddialiť tapetu pri použití ponuky aplikácií alebo nedávnych aplikácií</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">Priehľadnosť pozadia</string>
 </resources>
