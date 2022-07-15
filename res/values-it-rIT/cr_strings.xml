@@ -33,6 +33,7 @@
     <string name="general_category_title">Generale</string>
     <string name="interface_category_title">Interfaccia</string>
     <string name="search_bar_category_title">Barra di ricerca</string>
+    <string name="actions_category_title">Quick actions</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Scorri per accedere all\'app di Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -108,4 +109,8 @@
     <string name="allow_wallpaper_zooming_desc">Zoom in od out quando lo sfondo quando si utilizza il drawer o le app recenti</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Opacità sfondo</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Screenshot</string>
+    <string name="recents_clear_all_title">Clear all</string>
+    <string name="recents_lens_title">Lens</string>
 </resources>
