@@ -23,6 +23,7 @@ import android.content.Context;
 import androidx.core.graphics.ColorUtils;
 
 import com.android.launcher3.Launcher;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.LauncherState;
 import com.android.launcher3.R;
 import com.android.launcher3.util.Themes;
@@ -63,7 +64,8 @@ public class HintState extends LauncherState {
     @Override
     public int getWorkspaceScrimColor(Launcher launcher) {
         return ColorUtils.setAlphaComponent(
-                Themes.getAttrColor(launcher, R.attr.overviewScrimColor), 100);
+                Themes.getAttrColor(launcher, R.attr.overviewScrimColor),
+                LauncherPrefs.RECENTS_OPACITY.get(launcher) * 255 / 100);
     }
 
     @Override
