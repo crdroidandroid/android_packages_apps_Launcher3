@@ -24,8 +24,8 @@
     <string name="icons_category_summary">設定圖示大小和更多</string>
     <string name="app_drawer_category_title">應用程式清單</string>
     <string name="app_drawer_category_summary">自訂您的應用程式清單</string>
-    <string name="recents_category_title">Recents</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_title">最近使用</string>
+    <string name="recents_category_summary">更改排列方式</string>
     <string name="misc_category_title">雜項</string>
     <string name="misc_category_summary">其他選項</string>
     <string name="dev_options_title">開發人員選項</string>
@@ -94,7 +94,7 @@
     <string name="pref_allow_phone_taskbar">使用工作列</string>
     <string name="pref_allow_phone_taskbar_desc">隨處都能開啟和切換應用程式</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Grid style</string>
+    <string name="pref_allow_phone_overview_grid">格狀排列</string>
     <string name="pref_allow_phone_overview_grid_desc">在應用概覽裏顯示更多應用</string>
     <!-- Row Height -->
     <string name="row_height_title">列高</string>
@@ -104,8 +104,8 @@
     <string name="allow_wallpaper_scrolling">桌布滑動</string>
     <string name="allow_wallpaper_scrolling_desc">在不同頁面間滑動時使桌布跟著移動</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">桌布縮放</string>
+    <string name="allow_wallpaper_zooming_desc">在開啟應用程式清單及最近使用的介面時縮放桌布</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">背景透明度</string>
 </resources>
