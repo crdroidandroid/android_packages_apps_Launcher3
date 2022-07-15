@@ -175,8 +175,11 @@ public class OverviewState extends LauncherState {
 
     @Override
     public ScrimColors getWorkspaceScrimColor(Launcher launcher) {
+        int backgroundColor = ColorUtils.setAlphaComponent(
+                Themes.getAttrColor(launcher, R.attr.overviewScrimColor),
+                LauncherPrefs.RECENTS_OPACITY.get(launcher) * 255 / 100);
         return new ScrimColors(
-                /* backgroundColor= */ Themes.getAttrColor(launcher, R.attr.overviewScrimColor),
+                /* backgroundColor= */ backgroundColor,
                 /* foregroundColor= */ Color.TRANSPARENT);
     }
 

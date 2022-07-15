@@ -845,9 +845,10 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     }
 
     protected int getHeaderColor(float blendRatio) {
+        float alpha = blendRatio * LauncherPrefs.APP_DRAWER_OPACITY.get(getContext()) / 100;
         return isBackgroundBlurEnabled()
-                ? ColorUtils.setAlphaComponent(mHeaderProtectionColor, (int) (blendRatio * 255))
-                : ColorUtils.blendARGB(getBackgroundColor(), mHeaderProtectionColor, blendRatio);
+                ? ColorUtils.setAlphaComponent(mHeaderProtectionColor, (int) (alpha * 255))
+                : ColorUtils.blendARGB(getBackgroundColor(), mHeaderProtectionColor, alpha);
     }
 
     int getBackgroundColor() {
