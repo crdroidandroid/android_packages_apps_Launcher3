@@ -24,8 +24,8 @@
     <string name="icons_category_summary">Встановити розмір іконки та багато іншого</string>
     <string name="app_drawer_category_title">Меню додатків</string>
     <string name="app_drawer_category_summary">Налаштувати меню додатків</string>
-    <string name="recents_category_title">Recents</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_title">Останні</string>
+    <string name="recents_category_summary">Настройка останніх додатків</string>
     <string name="misc_category_title">Різне</string>
     <string name="misc_category_summary">Інші параметри</string>
     <string name="dev_options_title">Параметри розробника</string>
@@ -94,7 +94,7 @@
     <string name="pref_allow_phone_taskbar">Використовувати панель завдань</string>
     <string name="pref_allow_phone_taskbar_desc">Для відкриття та перемикання додатків в будь-якому місці</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Grid style</string>
+    <string name="pref_allow_phone_overview_grid">Стиль сітки</string>
     <string name="pref_allow_phone_overview_grid_desc">Більше останніх програм під час огляду</string>
     <!-- Row Height -->
     <string name="row_height_title">Висота рядка</string>
@@ -104,7 +104,7 @@
     <string name="allow_wallpaper_scrolling">Прокручування шпалер</string>
     <string name="allow_wallpaper_scrolling_desc">Ефект прокрутки шпалер для декількох екранів</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
+    <string name="allow_wallpaper_zooming">Масштабування шпалерів</string>
     <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Background opacity</string>
