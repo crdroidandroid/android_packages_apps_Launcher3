@@ -105,4 +105,7 @@
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Kill</string>
     <string name="recents_app_killed">App killed</string>
+
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Background opacity</string>
 </resources>

@@ -164,6 +164,8 @@ public final class Utilities {
     public @interface AdjustmentDirection{}
 
     public static final String GSA_PACKAGE = "com.google.android.googlequicksearchbox";
+    public static final String KEY_RECENTS_OPACITY = "pref_recents_opacity";
+    public static final String KEY_APP_DRAWER_OPACITY = "pref_app_drawer_opacity";
 
     /**
      * Returns true if theme is dark.
@@ -889,5 +891,15 @@ public final class Utilities {
     public static boolean hasSecureKeyguard(Context context) {
         final KeyguardManager keyguardManager = context.getSystemService(KeyguardManager.class);
         return keyguardManager != null && keyguardManager.isKeyguardSecure();
+    }
+
+    public static int getRecentsOpacity(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getInt(KEY_RECENTS_OPACITY, 40);
+    }
+
+    public static int getAllAppsOpacity(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getInt(KEY_APP_DRAWER_OPACITY, 80);
     }
 }
