@@ -24,8 +24,8 @@
     <string name="icons_category_summary">Nastavit velikost ikon a\u00a0další parametry</string>
     <string name="app_drawer_category_title">Roleta aplikací</string>
     <string name="app_drawer_category_summary">Přizpůsobte si svou roletu aplikací</string>
-    <string name="recents_category_title">Recents</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_title">Nedávné aplikace</string>
+    <string name="recents_category_summary">Změnit styl obrazovky nedávných aplikací</string>
     <string name="misc_category_title">Různé</string>
     <string name="misc_category_summary">Další možnosti</string>
     <string name="dev_options_title">Možnosti pro vývojáře</string>
@@ -94,7 +94,7 @@
     <string name="pref_allow_phone_taskbar">Použít panel úloh</string>
     <string name="pref_allow_phone_taskbar_desc">Pro otevírání a\u00a0přepínání aplikací kdekoliv</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Grid style</string>
+    <string name="pref_allow_phone_overview_grid">Styl mřížky</string>
     <string name="pref_allow_phone_overview_grid_desc">Více nedávných aplikací v\u00a0přehledu</string>
     <!-- Row Height -->
     <string name="row_height_title">Výška řádku</string>
@@ -104,8 +104,8 @@
     <string name="allow_wallpaper_scrolling">Posuv tapety</string>
     <string name="allow_wallpaper_scrolling_desc">Efekt posunu tapety pro více obrazovek</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">Přiblížení tapety</string>
+    <string name="allow_wallpaper_zooming_desc">Přiblížit nebo oddálit tapetu při použití rolety aplikací nebo nedávných aplikací</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">Neprůhlednost pozadí</string>
 </resources>
