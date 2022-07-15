@@ -115,12 +115,17 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        findViewById(R.id.action_screenshot).setOnClickListener(this);
-        findViewById(R.id.action_clear_all).setOnClickListener(this);
+        View screenshot = findViewById(R.id.action_screenshot);
+        screenshot.setOnClickListener(this);
+        screenshot.getBackground().setAlpha(80 * 255 / 100);
+        View clearall = findViewById(R.id.action_clear_all);
+        clearall.setOnClickListener(this);
+        clearall.getBackground().setAlpha(80 * 255 / 100);
         if (Utilities.isGSAEnabled(getContext())) {
             View lens = findViewById(R.id.action_lens);
-            findViewById(R.id.action_lens).setOnClickListener(this);
+            lens.setOnClickListener(this);
             lens.setVisibility(VISIBLE);
+            lens.getBackground().setAlpha(80 * 255 / 100);
             findViewById(R.id.lens_space).setVisibility(VISIBLE);
         }
 
@@ -249,6 +254,7 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
         }
 
         mSplitButton.setVisibility(visible ? VISIBLE : GONE);
+        mSplitButton.getBackground().setAlpha(80 * 255 / 100);
         findViewById(R.id.action_split_space).setVisibility(visible ? VISIBLE : GONE);
     }
 
