@@ -18,6 +18,7 @@ package com.android.quickstep.views;
 
 import android.app.ActivityManager;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Rect;
 import android.util.AttributeSet;
@@ -34,6 +35,7 @@ import androidx.annotation.Nullable;
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Flags;
 import com.android.launcher3.Insettable;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.R;
 import com.android.launcher3.anim.AnimatedFloat;
@@ -51,7 +53,8 @@ import java.util.Arrays;
  * View for showing action buttons in Overview
  */
 public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayout
-        implements OnClickListener, Insettable {
+        implements OnClickListener, Insettable, SharedPreferences.OnSharedPreferenceChangeListener {
+
     public static final String TAG = "OverviewActionsView";
     private final Rect mInsets = new Rect();
 
@@ -99,6 +102,10 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
     public @interface SplitButtonHiddenFlags { }
     public static final int FLAG_SMALL_SCREEN_HIDE_SPLIT = 1 << 0;
 
+    private static final String KEY_RECENTS_SCREENSHOT = "pref_recents_screenshot";
+    private static final String KEY_RECENTS_CLEAR_ALL = "pref_recents_clear_all";
+    private static final String KEY_RECENTS_LENS = "pref_recents_lens";
+
     /**
      * Holds an AnimatedFloat for each alpha property, used to set or animate alpha values in
      * {@link #mMultiValueAlphas}.
@@ -139,6 +146,10 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
     private boolean mIsGroupedTask = false;
     private boolean mCanSaveAppPair = false;
 
+    private boolean mScreenshot;
+    private boolean mClearAll;
+    private boolean mLens;
+
     public OverviewActionsView(Context context) {
         this(context, null);
     }
@@ -149,6 +160,11 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
 
     public OverviewActionsView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr, 0);
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context);
+        mScreenshot = prefs.getBoolean(KEY_RECENTS_SCREENSHOT, true);
+        mClearAll = prefs.getBoolean(KEY_RECENTS_CLEAR_ALL, true);
+        mLens = prefs.getBoolean(KEY_RECENTS_LENS, false);
+        prefs.registerOnSharedPreferenceChangeListener(this);
     }
 
     @Override
@@ -174,22 +190,28 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
                 }
             }, 1f /* initialValue */);
         }
+        updateVisibilities();
+    }
 
+    private void updateVisibilities() {
         // The screenshot button is implemented as a Button in launcher3 and NexusLauncher, but is
         // an ImageButton in go launcher (does not share a common class with Button). Take care when
         // casting this.
         View screenshotButton = findViewById(R.id.action_screenshot);
         screenshotButton.setOnClickListener(this);
+        screenshotButton.setVisibility(mScreenshot ? VISIBLE : GONE);
+
         mSplitButton = findViewById(R.id.action_split);
         mSplitButton.setOnClickListener(this);
         mSaveAppPairButton.setOnClickListener(this);
-        findViewById(R.id.action_clear_all).setOnClickListener(this);
 
-        if (Utilities.isGSAEnabled(getContext())) {
-            View lens = findViewById(R.id.action_lens);
-            lens.setOnClickListener(this);
-            lens.setVisibility(VISIBLE);
-        }
+        View clearallButton = findViewById(R.id.action_clear_all);
+        clearallButton.setOnClickListener(this);
+        clearallButton.setVisibility(mClearAll ? VISIBLE : GONE);
+
+        View lensButton = findViewById(R.id.action_lens);
+        lensButton.setOnClickListener(this);
+        lensButton.setVisibility(mLens && Utilities.isGSAEnabled(getContext()) ? VISIBLE : GONE);
     }
 
     /**
@@ -231,6 +253,18 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
         mInsets.set(insets);
         updateVerticalMargin(DisplayController.getNavigationMode(getContext()));
         updatePadding();
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+        if (key.equals(KEY_RECENTS_SCREENSHOT)) {
+            mScreenshot = prefs.getBoolean(KEY_RECENTS_SCREENSHOT, true);
+        } else if (key.equals(KEY_RECENTS_CLEAR_ALL)) {
+            mClearAll = prefs.getBoolean(KEY_RECENTS_CLEAR_ALL, true);
+        } else if (key.equals(KEY_RECENTS_LENS)) {
+            mLens = prefs.getBoolean(KEY_RECENTS_LENS, false);
+        }
+        updateVisibilities();
     }
 
     public void updateHiddenFlags(@ActionsHiddenFlags int visibilityFlags, boolean enable) {
