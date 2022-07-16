@@ -33,7 +33,7 @@
     <string name="general_category_title">一般</string>
     <string name="interface_category_title">界面</string>
     <string name="search_bar_category_title">搜索栏</string>
-    <string name="actions_category_title">Quick actions</string>
+    <string name="actions_category_title">快捷方式</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">滑动以访问 Google 应用</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -110,7 +110,7 @@
     <!-- Background opacity -->
     <string name="background_opacity_title">背景不透明度</string>
     <!-- Recents icons -->
-    <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Clear all</string>
-    <string name="recents_lens_title">Lens</string>
+    <string name="recents_screenshot_title">屏幕截图</string>
+    <string name="recents_clear_all_title">清除所有</string>
+    <string name="recents_lens_title">镜头</string>
 </resources>
