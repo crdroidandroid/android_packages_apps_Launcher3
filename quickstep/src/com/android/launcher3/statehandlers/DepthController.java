@@ -184,7 +184,7 @@ public class DepthController implements StateHandler<LauncherState>,
 
     private void ensureDependencies() {
         if (mWallpaperManager == null) {
-            mMaxBlurRadius = mLauncher.getResources().getInteger(R.integer.max_depth_blur_radius);
+            mMaxBlurRadius = Utilities.getBlurRadius(mLauncher);
             mWallpaperManager = mLauncher.getSystemService(WallpaperManager.class);
         }
 
