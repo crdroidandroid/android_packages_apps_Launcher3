@@ -169,6 +169,7 @@ public final class Utilities {
     public static final String KEY_SHOW_HOTSEAT_BG = "pref_show_hotseat_bg";
     public static final String KEY_ALLOW_WALLPAPER_ZOOMING = "pref_allow_wallpaper_zooming";
     public static final String KEY_STATUS_BAR = "pref_show_statusbar";
+    public static final String KEY_BLUR_DEPTH = "pref_blur_depth";
 
     /**
      * Returns true if theme is dark.
@@ -929,5 +930,11 @@ public final class Utilities {
     public static boolean showStatusbarEnabled(Context context) {
         SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_STATUS_BAR, true);
+    }
+
+    public static int getBlurRadius(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getInt(KEY_BLUR_DEPTH,
+                (int) context.getResources().getDimension(R.dimen.max_depth_blur_radius));
     }
 }
