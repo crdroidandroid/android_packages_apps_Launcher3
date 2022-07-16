@@ -387,4 +387,8 @@
     <!-- Auto-hide page indicator dots -->
     <string name="auto_hide_dots">Auto-hide page indicator</string>
     <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
+
+    <!-- Background blur -->
+    <string name="background_blur_title">Background blur depth</string>
+    <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
 </resources>
