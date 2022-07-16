@@ -60,6 +60,7 @@ import com.android.internal.view.AppearanceRegion;
 import com.android.launcher3.AbstractFloatingView;
 import com.android.launcher3.BubbleTextView;
 import com.android.launcher3.Flags;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.LauncherState;
 import com.android.launcher3.QuickstepTransitionManager;
 import com.android.launcher3.R;
@@ -629,8 +630,7 @@ public class LauncherBackAnimationController {
                 : 0;
         mWindowScaleStartCornerRadius = QuickStepContract.getWindowCornerRadius(mLauncher);
         mStatusBarHeight = SystemBarUtils.getStatusBarHeight(mLauncher);
-        mMaxBlurRadius = mLauncher.getResources().getDimensionPixelSize(
-            R.dimen.max_depth_blur_radius_enhanced);
+        mMaxBlurRadius = LauncherPrefs.BLUR_DEPTH.get(mLauncher);
     }
 
     /**

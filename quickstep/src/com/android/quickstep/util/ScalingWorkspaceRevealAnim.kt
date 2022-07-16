@@ -38,6 +38,7 @@ import com.android.launcher3.LauncherAnimUtils.HOTSEAT_SCALE_PROPERTY_FACTORY
 import com.android.launcher3.LauncherAnimUtils.SCALE_INDEX_WORKSPACE_STATE
 import com.android.launcher3.LauncherAnimUtils.VIEW_ALPHA
 import com.android.launcher3.LauncherAnimUtils.WORKSPACE_SCALE_PROPERTY_FACTORY
+import com.android.launcher3.LauncherPrefs
 import com.android.launcher3.LauncherState
 import com.android.launcher3.R
 import com.android.launcher3.anim.AnimatorListeners
@@ -184,8 +185,7 @@ class ScalingWorkspaceRevealAnim(
             )
 
             // Add a blur animation to the scrim layer.
-            val maxBlurRadius =
-                launcher.resources.getDimensionPixelSize(R.dimen.max_depth_blur_radius_enhanced)
+            val maxBlurRadius = LauncherPrefs.BLUR_DEPTH.get(launcher)
             val blurAnimator = ValueAnimator.ofFloat(1f, 0f)
             blurAnimator.interpolator = BLUR_INTERPOLATOR
             blurAnimator.addUpdateListener {

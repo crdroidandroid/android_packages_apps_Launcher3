@@ -26,6 +26,7 @@ import android.window.OnBackAnimationCallback
 import android.window.OnBackInvokedDispatcher
 import com.android.app.animation.Interpolators
 import com.android.internal.graphics.drawable.BackgroundBlurDrawable
+import com.android.launcher3.LauncherPrefs
 import com.android.launcher3.Utilities.shouldReduceWorkspaceBlurUsage
 import com.android.launcher3.dagger.LauncherComponentProvider
 import com.android.launcher3.dagger.LauncherComponentProvider.appComponent
@@ -49,7 +50,7 @@ open class QuickstepWidgetPickerActivity : WidgetPickerActivity(), WidgetPickerP
         isBlurEnabled =
             !shouldReduceWorkspaceBlurUsage(this) && WindowBlurState.getInstance(this).value
         isWallpaperZoomEnabled = !shouldReduceWorkspaceBlurUsage(this)
-        blurRadius = resources.getDimensionPixelSize(R.dimen.max_depth_blur_radius_enhanced)
+        blurRadius = LauncherPrefs.BLUR_DEPTH.get(this)
 
         widgetPickerConfig = parseIntentExtras()
         super.onCreate(savedInstanceState)

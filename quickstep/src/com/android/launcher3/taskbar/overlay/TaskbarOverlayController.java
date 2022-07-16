@@ -53,6 +53,7 @@ import androidx.annotation.Nullable;
 import com.android.launcher3.AbstractFloatingView;
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Flags;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.taskbar.TaskbarActivityContext;
@@ -155,8 +156,7 @@ public final class TaskbarOverlayController
         mProxyView = new TaskbarOverlayProxyView();
         mLayoutParams = createLayoutParams();
         mLauncherDeviceProfile = launcherDeviceProfile;
-        mMaxBlurRadius = mTaskbarContext.getResources().getDimensionPixelSize(
-                R.dimen.max_depth_blur_radius_enhanced);
+        mMaxBlurRadius = LauncherPrefs.BLUR_DEPTH.get(mTaskbarContext);
         mEarlyWakeupInfo.token = new Binder();
         mEarlyWakeupInfo.trace = TaskbarOverlayController.class.getName();
         mBubbleBarActivityStarter = BubbleActivityStarter.INSTANCE.get(taskbarContext);

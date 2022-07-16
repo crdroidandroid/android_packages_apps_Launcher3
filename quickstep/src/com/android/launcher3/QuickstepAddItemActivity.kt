@@ -20,6 +20,7 @@ import android.os.Bundle
 import android.view.WindowManager
 import com.android.app.animation.Interpolators
 import com.android.internal.graphics.drawable.BackgroundBlurDrawable
+import com.android.launcher3.LauncherPrefs
 import com.android.launcher3.dragndrop.AddItemActivity
 import com.android.launcher3.util.WindowBlurState
 import com.android.launcher3.widgetpicker.WidgetPickerProgressHandler
@@ -31,7 +32,7 @@ open class QuickstepAddItemActivity : AddItemActivity(), WidgetPickerProgressHan
 
     override fun onCreate(savedInstanceState: Bundle?) {
         isBlurEnabled = Flags.enableWidgetPickerBlur() && WindowBlurState.getInstance(this).value
-        blurRadius = resources.getDimensionPixelSize(R.dimen.max_depth_blur_radius_enhanced)
+        blurRadius = LauncherPrefs.BLUR_DEPTH.get(this)
 
         super.onCreate(savedInstanceState)
 
