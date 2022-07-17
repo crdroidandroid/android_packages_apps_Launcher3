@@ -33,7 +33,7 @@
     <string name="general_category_title">Genel</string>
     <string name="interface_category_title">Arayüz</string>
     <string name="search_bar_category_title">Arama çubuğu</string>
-    <string name="actions_category_title">Quick actions</string>
+    <string name="actions_category_title">Hızlı eylemler</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Google uygulamasına erişmek için kaydırın</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -110,7 +110,7 @@
     <!-- Background opacity -->
     <string name="background_opacity_title">Arka plan şeffaflığı</string>
     <!-- Recents icons -->
-    <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Clear all</string>
+    <string name="recents_screenshot_title">Ekran görüntüsü</string>
+    <string name="recents_clear_all_title">Tümünü temizle</string>
     <string name="recents_lens_title">Lens</string>
 </resources>
