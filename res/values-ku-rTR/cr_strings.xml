@@ -16,9 +16,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Mîhengen</string>
     <!-- Categories -->
-    <string name="home_category_title">Ekrana malê</string>
+    <string name="home_category_title">Ekrana male</string>
     <string name="home_category_summary">Panela Google niha û bêtir saz bikin</string>
     <string name="icons_category_title">Îkonên</string>
     <string name="icons_category_summary">Mezinahiya îkonê û hêj bêtir bicîh bikin</string>
@@ -103,14 +103,14 @@
     <string name="show_top_shadow">Siya jorîn</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
-    <string name="allow_wallpaper_scrolling_desc">Wallpaper scrolling effect for multiple screens</string>
+    <string name="allow_wallpaper_scrolling_desc">Ji bo gelek ekranan bandorek gerandina dîwaran</string>
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming_desc">Dema ku kêşan an serîlêdanên dawîn bikar tînin dîwarê dîwarê mezin bikin an jê bikin</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">Nerazîbûna paşperdeyê</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Clear all</string>
+    <string name="recents_clear_all_title">Hemî paqij bike</string>
     <string name="recents_lens_title">Lens</string>
 </resources>
