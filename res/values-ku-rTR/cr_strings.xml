@@ -107,7 +107,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>کاتی گوێگرتن لە میوزیکە</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C سەر</item>
         <item>پێویستت بە crDroid ی نایاب هەیە بۆ بینینی ئەمە</item>
-        <item>Remember the Lineage of the Unicorn</item>
+        <item>Xêla Unicorn bi bîr bînin</item>
         <item>چێژ لە تەمەنی پاتری زیاتر وەرگرە</item>
         <item>دەسپێک لە تەواوی سفرەوە</item>
         <item>ئێمە 3000 جار خۆشمانەوێی</item>
@@ -117,9 +117,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>شتەکان چۆن ئەڕۆن؟</item>
         <item>خەیاڵ نییە، بەخێربێی بۆ واقیع!</item>
         <item>سپاس بۆ پاڵپشتیت</item>
-        <item>No festival for Derps - only perfection!</item>
+        <item>Festîvalek ji bo Derps tune - tenê bêkêmasî!</item>
         <item>یەکێ لە باشترین هەڵبژێردراوەکانی buildbot</item>
-        <item>Sanity for your Paranoia</item>
+        <item>Ji bo Paranoya we sax be</item>
         <item>بیابانە سەهۆڵییە ساردەکانی تاقیکەوە</item>
         <item>چ ئەزموونێکی خۆشەویستە، وانییە؟</item>
         <item>گەشەکردن ئەفسانەییە، وایە؟</item>
@@ -129,33 +129,33 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>rm -rf \/</item>
     </string-array>
     <!-- Recents screen, close app -->
-    <string name="recents_close_app">Close app</string>
-    <string name="allow_swipe_down_clearall_title">Swipe down to clear all recents</string>
-    <string name="allow_swipe_down_clearall_desc">Enable to clear all recents in the overview screen by swiping down</string>
+    <string name="recents_close_app">Sepanê bigire</string>
+    <string name="allow_swipe_down_clearall_title">Li jêr bigerin da ku hemî agahdariya paşîn paqij bikin</string>
+    <string name="allow_swipe_down_clearall_desc">Paqijkirina hemî agahdariya dawî ya li ser ekrane pêşandanê bi gerandina jêrîn çalak bike</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">Nirx: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">bi xweber</string>
+    <string name="custom_seekbar_default_value_to_set">Nirxa xwerû: <xliff:g id="v">%s</xliff:g>\nJi bo danîna tikandina dirêj</string>
+    <string name="custom_seekbar_default_value_is_set">Nirxa standard tê danîn</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">Mezinahiya îkonê</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">Mezinahiya tîpan</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">Rêzikên herî zêde ji bo etîketa sepanê</string>
     <!-- Scrim alpha in apps drawer -->
-    <string name="all_apps_background_opacity_title">Background opacity</string>
+    <string name="all_apps_background_opacity_title">Nerazîbûna paşperdeyê</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="app_info_subtext">Swipe jêr da ku agahdariya appê bigire.</string>
     <string name="app_info_version_value">%1$s (%2$d)</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="placeholder_string">Barkirin...</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_source">Kanî</string>
+    <string name="app_info_source_system">Sîstem</string>
+    <string name="app_info_last_update">Rojanekirina dawî</string>
+    <string name="app_info_version">Awa</string>
+    <string name="app_info_more">Zêde</string>
     <!-- Show dock search widget -->
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Show search bar in the bottom dock</string>
+    <string name="dock_search_title">Barê lêgerîna Google</string>
+    <string name="dock_search_summary">Barê lêgerînê di doka jêrîn de nîşan bide</string>
 </resources>
