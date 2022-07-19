@@ -24,6 +24,8 @@
     <string name="icons_category_summary">Встановити розмір іконки та багато іншого</string>
     <string name="app_drawer_category_title">Меню додатків</string>
     <string name="app_drawer_category_summary">Налаштувати меню додатків</string>
+    <string name="recents_category_title">Меню \"Нещодавні\"</string>
+    <string name="recents_category_summary">Настройка останніх додатків</string>
     <string name="misc_category_title">Різне</string>
     <string name="misc_category_summary">Інші параметри</string>
     <string name="dev_options_title">Параметри розробника</string>
@@ -31,6 +33,7 @@
     <string name="general_category_title">Загальні налаштування</string>
     <string name="interface_category_title">Інтерфейс</string>
     <string name="search_bar_category_title">Рядок пошуку</string>
+    <string name="actions_category_title">Швидкі дії</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Проведіть для доступу до програми Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -92,7 +95,7 @@
     <string name="pref_allow_phone_taskbar">Використовувати панель завдань</string>
     <string name="pref_allow_phone_taskbar_desc">Для відкриття та перемикання додатків в будь-якому місці</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Стиль відображення застосунків у вигляді сітки</string>
+    <string name="pref_allow_phone_overview_grid">Стиль сітки</string>
     <string name="pref_allow_phone_overview_grid_desc">Більше останніх програм під час огляду</string>
     <!-- Row Height -->
     <string name="row_height_title">Висота рядка</string>
@@ -101,4 +104,13 @@
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Прокручування шпалер</string>
     <string name="allow_wallpaper_scrolling_desc">Ефект прокрутки шпалер для декількох екранів</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Масштабування шпалерів</string>
+    <string name="allow_wallpaper_zooming_desc">Збільшувати або зменшувати шпалери при використанні меню чи останніх програм</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Прозорість фону</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Знімок екрану</string>
+    <string name="recents_clear_all_title">Очистити все</string>
+    <string name="recents_lens_title">Об\'єктив</string>
 </resources>

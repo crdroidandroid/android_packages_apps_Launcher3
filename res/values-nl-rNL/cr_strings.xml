@@ -24,6 +24,8 @@
     <string name="icons_category_summary">Stel icoon formaat in en meer</string>
     <string name="app_drawer_category_title">App lade</string>
     <string name="app_drawer_category_summary">Personaliseer je app overzicht</string>
+    <string name="recents_category_title">Recente apps</string>
+    <string name="recents_category_summary">Herzie het overzichtsscherm</string>
     <string name="misc_category_title">Overige</string>
     <string name="misc_category_summary">Overige opties</string>
     <string name="dev_options_title">Opties voor ontwikkelaars</string>
@@ -31,6 +33,7 @@
     <string name="general_category_title">Algemeen</string>
     <string name="interface_category_title">Interface</string>
     <string name="search_bar_category_title">Zoekbalk</string>
+    <string name="actions_category_title">Snelle acties</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Veeg voor toegang tot de Google app</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -92,7 +95,7 @@
     <string name="pref_allow_phone_taskbar">Gebruik taakbalk</string>
     <string name="pref_allow_phone_taskbar_desc">Voor het overal openen en wisselen van apps</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Recente apps in rasterstijl</string>
+    <string name="pref_allow_phone_overview_grid">Rasterstijl</string>
     <string name="pref_allow_phone_overview_grid_desc">Meer recente apps in het overzicht</string>
     <!-- Row Height -->
     <string name="row_height_title">Rijhoogte</string>
@@ -101,4 +104,13 @@
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Wallpaper scrollen</string>
     <string name="allow_wallpaper_scrolling_desc">Wallpaper scrolleffect voor meerdere schermen</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Achtergrond zoomen</string>
+    <string name="allow_wallpaper_zooming_desc">Zoom de achtergrond in of uit bij gebruik van drawer of recente apps</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Achtergrond transparantie</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Schermafbeelding</string>
+    <string name="recents_clear_all_title">Alles wissen</string>
+    <string name="recents_lens_title">Lens</string>
 </resources>

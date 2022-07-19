@@ -24,6 +24,8 @@
     <string name="icons_category_summary">設定圖示大小和更多</string>
     <string name="app_drawer_category_title">應用程式清單</string>
     <string name="app_drawer_category_summary">自訂您的應用程式清單</string>
+    <string name="recents_category_title">最近使用</string>
+    <string name="recents_category_summary">更改排列方式</string>
     <string name="misc_category_title">雜項</string>
     <string name="misc_category_summary">其他選項</string>
     <string name="dev_options_title">開發人員選項</string>
@@ -31,6 +33,7 @@
     <string name="general_category_title">一般</string>
     <string name="interface_category_title">使用者介面</string>
     <string name="search_bar_category_title">搜尋列</string>
+    <string name="actions_category_title">快捷動作</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">滑動顯示 Google 即時資訊</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -92,7 +95,7 @@
     <string name="pref_allow_phone_taskbar">使用工作列</string>
     <string name="pref_allow_phone_taskbar_desc">隨處都能開啟和切換應用程式</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">以網格來顯示最近使用的應用程式</string>
+    <string name="pref_allow_phone_overview_grid">格狀排列</string>
     <string name="pref_allow_phone_overview_grid_desc">在應用概覽裏顯示更多應用</string>
     <!-- Row Height -->
     <string name="row_height_title">列高</string>
@@ -101,4 +104,13 @@
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">桌布滑動</string>
     <string name="allow_wallpaper_scrolling_desc">在不同頁面間滑動時使桌布跟著移動</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">桌布縮放</string>
+    <string name="allow_wallpaper_zooming_desc">在開啟應用程式清單及最近使用的介面時縮放桌布</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">背景透明度</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">螢幕截圖</string>
+    <string name="recents_clear_all_title">全部清除</string>
+    <string name="recents_lens_title">智慧鏡頭</string>
 </resources>

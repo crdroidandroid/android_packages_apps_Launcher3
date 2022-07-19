@@ -24,6 +24,8 @@
     <string name="icons_category_summary">تنظیم شکل آیکون و بیشتر</string>
     <string name="app_drawer_category_title">کشوی برنامه ها</string>
     <string name="app_drawer_category_summary">شخصی سازی کشوی برنامه ها</string>
+    <string name="recents_category_title">اخیر</string>
+    <string name="recents_category_summary">صفحه نمای کلی را نو نما کنید</string>
     <string name="misc_category_title">متفرقه</string>
     <string name="misc_category_summary">گزینه های دیگر</string>
     <string name="dev_options_title">گزینه های برنامه نویس</string>
@@ -31,6 +33,7 @@
     <string name="general_category_title">عمومی</string>
     <string name="interface_category_title">رابط کاربری</string>
     <string name="search_bar_category_title">نوار جستجو</string>
+    <string name="actions_category_title">اقدامات سریع</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">کشیدن برای دسترسی به برنامه گوگل</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -92,7 +95,7 @@
     <string name="pref_allow_phone_taskbar">استفاده از نوار وظیفه</string>
     <string name="pref_allow_phone_taskbar_desc">برای باز کردن و جابجایی برنامه ها در هر کجا</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">برنامه‌های اخیر به سبک شبکه‌ای</string>
+    <string name="pref_allow_phone_overview_grid">استایل شبکه</string>
     <string name="pref_allow_phone_overview_grid_desc">برنامه های اخیرا در نمای کلی</string>
     <!-- Row Height -->
     <string name="row_height_title">ارتفاع ردیف</string>
@@ -101,4 +104,13 @@
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">چرخش کاغذ دیواری</string>
     <string name="allow_wallpaper_scrolling_desc">جلوه چرخش کاغذ دیواری برای چندین صفحه</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">بزرگنمایی شدن کاغذ دیواری</string>
+    <string name="allow_wallpaper_zooming_desc">هنگام استفاده از کشو یا برنامه های اخیر، کاغذ دیواری را بزرگ یا کوچک کنید</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">شفافیت پس‌زمینه</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">عکس گرفتن از صفحه</string>
+    <string name="recents_clear_all_title">پاک کردن همه موارد</string>
+    <string name="recents_lens_title">لنز</string>
 </resources>

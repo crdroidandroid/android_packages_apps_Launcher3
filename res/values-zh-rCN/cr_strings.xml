@@ -24,6 +24,8 @@
     <string name="icons_category_summary">设置图标大小和更多</string>
     <string name="app_drawer_category_title">应用抽屉</string>
     <string name="app_drawer_category_summary">定制您的应用抽屉</string>
+    <string name="recents_category_title">最近应用</string>
+    <string name="recents_category_summary">修改后台</string>
     <string name="misc_category_title">杂项</string>
     <string name="misc_category_summary">其他选项</string>
     <string name="dev_options_title">开发人员选项</string>
@@ -31,6 +33,7 @@
     <string name="general_category_title">一般</string>
     <string name="interface_category_title">界面</string>
     <string name="search_bar_category_title">搜索栏</string>
+    <string name="actions_category_title">快捷方式</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">滑动以访问 Google 应用</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -92,7 +95,7 @@
     <string name="pref_allow_phone_taskbar">使用任务栏</string>
     <string name="pref_allow_phone_taskbar_desc">随时随地打开和切换应用程序</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">网格式最近任务</string>
+    <string name="pref_allow_phone_overview_grid">网格样式</string>
     <string name="pref_allow_phone_overview_grid_desc">概览中更多最近的应用</string>
     <!-- Row Height -->
     <string name="row_height_title">行高</string>
@@ -101,4 +104,13 @@
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">壁纸滚动</string>
     <string name="allow_wallpaper_scrolling_desc">壁纸随屏幕滚动</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">壁纸缩放</string>
+    <string name="allow_wallpaper_zooming_desc">上拉抽屉或最近应用时放大或缩小壁纸</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">背景不透明度</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">屏幕截图</string>
+    <string name="recents_clear_all_title">清除所有</string>
+    <string name="recents_lens_title">镜头</string>
 </resources>

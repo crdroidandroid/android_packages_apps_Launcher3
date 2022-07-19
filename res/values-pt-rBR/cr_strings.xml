@@ -24,6 +24,8 @@
     <string name="icons_category_summary">Definir tamanho do ícone e muito mais</string>
     <string name="app_drawer_category_title">Gaveta de aplicativos</string>
     <string name="app_drawer_category_summary">Personalizar sua gaveta de aplicativos</string>
+    <string name="recents_category_title">Recentes</string>
+    <string name="recents_category_summary">Reformular a tela inicial</string>
     <string name="misc_category_title">Diversos</string>
     <string name="misc_category_summary">Outras opções</string>
     <string name="dev_options_title">Opções de desenvolvedor</string>
@@ -31,6 +33,7 @@
     <string name="general_category_title">Geral</string>
     <string name="interface_category_title">Interface</string>
     <string name="search_bar_category_title">Barra de pesquisa</string>
+    <string name="actions_category_title">Ações rápidas</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Deslize para acessar o feed do Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -92,7 +95,7 @@
     <string name="pref_allow_phone_taskbar">Usar barra de tarefas</string>
     <string name="pref_allow_phone_taskbar_desc">Para abrir e alternar apps em qualquer lugar</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Aplicativos recentes no estilo grade</string>
+    <string name="pref_allow_phone_overview_grid">Estilo da grade</string>
     <string name="pref_allow_phone_overview_grid_desc">Lista completa de apps recentes</string>
     <!-- Row Height -->
     <string name="row_height_title">Altura da linha</string>
@@ -101,4 +104,13 @@
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Rolagem do papel de parede</string>
     <string name="allow_wallpaper_scrolling_desc">Rolar papel de parede ao alternar entre às telas</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Zoom do papel de parede</string>
+    <string name="allow_wallpaper_zooming_desc">Ampliar ou diminuir o papel de parede quando estiver usando a gaveta ou aplicativos recentes</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Opacidade do fundo</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Capturar tela</string>
+    <string name="recents_clear_all_title">Limpar tudo</string>
+    <string name="recents_lens_title">Lens</string>
 </resources>
