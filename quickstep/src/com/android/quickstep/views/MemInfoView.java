@@ -154,7 +154,7 @@ public class MemInfoView extends TextView {
             long totalMemMiB = memInfo.totalMem / (1024 * 1024);
             updateMemInfoText(availMemMiB, totalMemMiB);
 
-            mHandler.postDelayed(this, 1000);
+            mHandler.postDelayed(this, 5000); //update memory info every 5s
         }
     }
 }
