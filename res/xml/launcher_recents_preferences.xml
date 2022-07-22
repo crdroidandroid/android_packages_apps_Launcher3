@@ -23,6 +23,12 @@
         android:title="@string/general_category_title">
 
         <SwitchPreference
+            android:key="pref_recents_meminfo"
+            android:title="@string/recents_meminfo_title"
+            android:defaultValue="false"
+            android:persistent="true" />
+
+        <SwitchPreference
             android:key="pref_allow_phone_overview_grid"
             android:title="@string/pref_allow_phone_overview_grid"
             android:summary="@string/pref_allow_phone_overview_grid_desc" />
