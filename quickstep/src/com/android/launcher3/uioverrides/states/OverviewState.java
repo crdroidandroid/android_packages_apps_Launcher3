@@ -29,6 +29,7 @@ import androidx.core.graphics.ColorUtils;
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Launcher;
 import com.android.launcher3.LauncherState;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.LauncherUiState;
 import com.android.launcher3.R;
 import com.android.launcher3.uioverrides.QuickstepLauncher;
@@ -116,7 +117,7 @@ public class OverviewState extends LauncherState {
 
     @Override
     public int getVisibleElements(LauncherUiState launcherUiState) {
-        int elements = OVERVIEW_ACTIONS | MEMINFO | ADD_DESK_BUTTON;
+        int elements = OVERVIEW_ACTIONS | ADD_DESK_BUTTON;
         boolean showFloatingSearch;
         DeviceProfile dp = launcherUiState.getDeviceProfileRef().getValue();
         if (dp.getDeviceProperties().isPhone()) {
@@ -131,6 +132,9 @@ public class OverviewState extends LauncherState {
         }
         if (launcherUiState.isSplitSelectActiveRef().getValue()) {
             elements &= ~ADD_DESK_BUTTON;
+        }
+        if (LauncherPrefs.RECENTS_MEMINFO.get(launcher)) {
+            elements |= MEMINFO;
         }
         return elements;
     }
