@@ -22,6 +22,7 @@ import android.graphics.Rect;
 
 import com.android.launcher3.Launcher;
 import com.android.launcher3.LauncherState;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.views.ActivityContext;
 import com.android.quickstep.views.RecentsView;
 
@@ -45,7 +46,11 @@ public class OverviewModalTaskState extends OverviewState {
 
     @Override
     public int getVisibleElements(Launcher launcher) {
-        return OVERVIEW_ACTIONS | MEMINFO;
+        int elements = OVERVIEW_ACTIONS;
+        if (LauncherPrefs.RECENTS_MEMINFO.get(launcher)) {
+            elements |= MEMINFO;
+        }
+        return elements;
     }
 
     @Override
