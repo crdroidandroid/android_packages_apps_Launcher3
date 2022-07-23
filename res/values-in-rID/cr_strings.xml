@@ -24,8 +24,8 @@
     <string name="icons_category_summary">Atur ukuran ikon dan lainnya</string>
     <string name="app_drawer_category_title">Laci Aplikasi</string>
     <string name="app_drawer_category_summary">Kustomisasi laci aplikasi Anda</string>
-    <string name="recents_category_title">Baru-baru ini</string>
-    <string name="recents_category_summary">Mengubah layar ikhtisar</string>
+    <string name="recents_category_title">Baru saja</string>
+    <string name="recents_category_summary">Mengubah tampilan layar</string>
     <string name="misc_category_title">Lain-lain</string>
     <string name="misc_category_summary">Opsi lainnya</string>
     <string name="dev_options_title">Opsi pengembang</string>
@@ -103,7 +103,7 @@
     <string name="show_top_shadow">Bayangan atas</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Menggulir wallpaper</string>
-    <string name="allow_wallpaper_scrolling_desc">Efek pengguliran wallpaper untuk beberapa layar</string>
+    <string name="allow_wallpaper_scrolling_desc">Efek pengguliran wallpaper untuk beberapa tampilan</string>
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zooming">Pembesaran wallpaper</string>
     <string name="allow_wallpaper_zooming_desc">Perbesar atau perkecil wallpaper saat menggunakan laci atau aplikasi terbaru</string>
