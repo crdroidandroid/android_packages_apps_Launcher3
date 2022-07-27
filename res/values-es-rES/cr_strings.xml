@@ -24,8 +24,8 @@
     <string name="icons_category_summary">Configura el tamaño de los iconos y más</string>
     <string name="app_drawer_category_title">Cajón de aplicaciones</string>
     <string name="app_drawer_category_summary">Personaliza tu cajón de aplicaciones</string>
-    <string name="recents_category_title">Recents</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_title">Recientes</string>
+    <string name="recents_category_summary">Personaliza la pantalla de Recientes</string>
     <string name="misc_category_title">Varios</string>
     <string name="misc_category_summary">Otras opciones</string>
     <string name="dev_options_title">Opciones para desarrolladores</string>
@@ -33,7 +33,7 @@
     <string name="general_category_title">General</string>
     <string name="interface_category_title">Interfaz</string>
     <string name="search_bar_category_title">Barra de búsqueda</string>
-    <string name="actions_category_title">Quick actions</string>
+    <string name="actions_category_title">Acciones rápidas</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Deslizar para acceder a la aplicación de Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -96,7 +96,7 @@ Mantén presionado para establecer</string>
     <string name="pref_allow_phone_taskbar">Usar barra de tareas</string>
     <string name="pref_allow_phone_taskbar_desc">Para abrir y cambiar aplicaciones en cualquier lugar</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Grid style</string>
+    <string name="pref_allow_phone_overview_grid">Estilo de cuadrícula</string>
     <string name="pref_allow_phone_overview_grid_desc">Resumen de aplicaciones más recientes</string>
     <!-- Row Height -->
     <string name="row_height_title">Altura de las filas</string>
@@ -106,12 +106,12 @@ Mantén presionado para establecer</string>
     <string name="allow_wallpaper_scrolling">Desplazamiento de fondo de pantalla</string>
     <string name="allow_wallpaper_scrolling_desc">Efecto de desplazamiento de fondo de pantalla para múltiples pantallas</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">Zoom del fondo de pantalla</string>
+    <string name="allow_wallpaper_zooming_desc">Acercar o alejar el fondo de pantalla al usar el cajón o aplicaciones recientes</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">Opacidad del fondo</string>
     <!-- Recents icons -->
-    <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Clear all</string>
+    <string name="recents_screenshot_title">Captura de pantalla</string>
+    <string name="recents_clear_all_title">Borrar todo</string>
     <string name="recents_lens_title">Lens</string>
 </resources>
