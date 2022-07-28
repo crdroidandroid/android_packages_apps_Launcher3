@@ -37,7 +37,7 @@
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Geser untuk mengakses aplikasi Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Saat Anda menggeser ke kiri dari Layar Beranda</string>
+    <string name="msg_minus_one_on_left">Saat Anda menggeser ke kanan dari Layar Beranda</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Saat Anda menggeser ke kanan dari Layar Beranda</string>
     <!-- Folder titles -->
