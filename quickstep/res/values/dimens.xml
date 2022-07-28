@@ -33,21 +33,21 @@
     <dimen name="overview_proactive_row_bottom_margin">16dp</dimen>
 
     <dimen name="overview_minimum_next_prev_size">50dp</dimen>
-    <dimen name="overview_task_margin">16dp</dimen>
+    <dimen name="overview_task_margin">20dp</dimen>
     <dimen name="overview_task_margin_focused">12dp</dimen>
     <dimen name="overview_task_margin_grid">4dp</dimen>
     <item name="overview_max_scale" format="float" type="dimen">0.7</item>
 
     <!-- Overrideable in overlay that provides the Overview Actions. -->
-    <dimen name="overview_actions_height">80dp</dimen>
+    <dimen name="overview_actions_height">70dp</dimen>
     <dimen name="overview_actions_button_spacing">32dp</dimen>
-    <dimen name="overview_actions_button_spacing_grid">36dp</dimen>
-    <dimen name="overview_actions_margin_gesture">28dp</dimen>
-    <dimen name="overview_actions_top_margin_gesture_grid_portrait">19.37dp</dimen>
+    <dimen name="overview_actions_button_spacing_grid">25dp</dimen>
+    <dimen name="overview_actions_margin_gesture">10dp</dimen>
+    <dimen name="overview_actions_top_margin_gesture_grid_portrait">10dp</dimen>
     <dimen name="overview_actions_bottom_margin_gesture_grid_portrait">22dp</dimen>
     <dimen name="overview_actions_top_margin_gesture_grid_landscape">19.1dp</dimen>
-    <dimen name="overview_actions_bottom_margin_gesture_grid_landscape">5dp</dimen>
-    <dimen name="overview_actions_margin_three_button">8dp</dimen>
+    <dimen name="overview_actions_bottom_margin_gesture_grid_landscape">10dp</dimen>
+    <dimen name="overview_actions_margin_three_button">-15dp</dimen>
     <dimen name="overview_actions_horizontal_margin">16dp</dimen>
 
     <dimen name="overview_grid_side_margin_portrait">60dp</dimen>
