@@ -56,6 +56,8 @@ import com.android.launcher3.lineage.trust.TrustAppsActivity;
 import com.android.launcher3.states.RotationHelper;
 import com.android.launcher3.uioverrides.plugins.PluginManagerWrapper;
 
+import com.android.systemui.shared.system.BlurUtils;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -282,6 +284,8 @@ public class SettingsMisc extends CollapsingToolbarBaseActivity
                         return true;
                     });
                     return true;
+                case Utilities.KEY_BLUR_DEPTH:
+                    return BlurUtils.supportsBlursOnWindows();
             }
 
             return true;
