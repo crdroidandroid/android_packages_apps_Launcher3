@@ -114,4 +114,7 @@ Mantén presionado para establecer</string>
     <string name="recents_screenshot_title">Captura de pantalla</string>
     <string name="recents_clear_all_title">Borrar todo</string>
     <string name="recents_lens_title">Lens</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Background blur depth</string>
+    <string name="background_blur_desc">Set blur depth level for recents and app drawer</string>
 </resources>
