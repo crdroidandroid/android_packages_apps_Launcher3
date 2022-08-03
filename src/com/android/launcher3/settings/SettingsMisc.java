@@ -67,6 +67,8 @@ import com.android.launcher3.util.SettingsCache;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 
+import com.android.systemui.shared.system.BlurUtils;
+
 /**
  * Settings activity for Launcher.
  */
@@ -294,6 +296,8 @@ public class SettingsMisc extends CollapsingToolbarBaseActivity
                 case SUGGESTIONS_KEY:
                     // Show if Device Personalization Services is present.
                     return isDPSEnabled(getContext());
+                case Utilities.KEY_BLUR_DEPTH:
+                    return BlurUtils.supportsBlursOnWindows();
             }
 
             return true;
