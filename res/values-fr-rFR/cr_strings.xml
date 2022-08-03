@@ -24,8 +24,8 @@
     <string name="icons_category_summary">Définir la taille des icônes et plus</string>
     <string name="app_drawer_category_title">Tiroir d\'applications</string>
     <string name="app_drawer_category_summary">Personnaliser le menu d\'applications</string>
-    <string name="recents_category_title">Recents</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_title">Récent</string>
+    <string name="recents_category_summary">Personnaliser le menu récent</string>
     <string name="misc_category_title">Divers</string>
     <string name="misc_category_summary">Autres options</string>
     <string name="dev_options_title">Options développeur</string>
@@ -111,6 +111,6 @@
     <string name="background_opacity_title">Background opacity</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Clear all</string>
+    <string name="recents_clear_all_title">Tout effacer</string>
     <string name="recents_lens_title">Lens</string>
 </resources>
