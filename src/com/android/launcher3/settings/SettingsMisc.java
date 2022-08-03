@@ -54,6 +54,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.android.launcher3.BuildConfig;
 import com.android.launcher3.InvariantDeviceProfile;
 import com.android.launcher3.LauncherFiles;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.display.DisplayController;
 import com.android.launcher3.display.LauncherDisplayInfo;
@@ -62,6 +63,8 @@ import com.android.launcher3.util.SettingsCache;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.widget.SettingsBasePreferenceFragment;
+
+import com.android.systemui.shared.system.BlurUtils;
 
 /**
  * Settings activity for Launcher.
@@ -296,6 +299,15 @@ public class SettingsMisc extends CollapsingToolbarBaseActivity
          * will remove that preference from the list.
          */
         protected boolean initPreference(Preference preference) {
+            String key = preference.getKey();
+            if (key == null) {
+                return true;
+            }
+
+            if (key.equals(LauncherPrefs.BLUR_DEPTH.getSharedPrefKey())) {
+                return BlurUtils.supportsBlursOnWindows();
+            }
+
             LauncherDisplayInfo info = DisplayController.INSTANCE.get(getContext()).getInfo();
             switch (preference.getKey()) {
                 case DEVELOPER_OPTIONS_KEY:
