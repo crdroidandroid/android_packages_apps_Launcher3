@@ -99,6 +99,18 @@ public class MemInfoView extends TextView {
             mHandler.removeCallbacks(mWorker);
     }
 
+    @Override
+    public void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        setVisibility(VISIBLE);
+    }
+
+    @Override
+    public void onDetachedFromWindow() {
+        setVisibility(GONE);
+        super.onDetachedFromWindow();
+    }
+
     public void setDp(DeviceProfile dp) {
         mDp = dp;
     }
