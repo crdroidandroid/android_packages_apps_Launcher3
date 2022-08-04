@@ -113,4 +113,10 @@
     <string name="recents_screenshot_title">스크린샷</string>
     <string name="recents_clear_all_title">모두 지우기</string>
     <string name="recents_lens_title">렌즈</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Background blur depth</string>
+    <string name="background_blur_desc">Set blur depth level for recents and app drawer</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Available | %2$s Total</string>
+    <string name="recents_meminfo_title">Memory info</string>
 </resources>

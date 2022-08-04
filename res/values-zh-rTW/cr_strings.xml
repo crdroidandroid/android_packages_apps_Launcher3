@@ -113,4 +113,10 @@
     <string name="recents_screenshot_title">螢幕截圖</string>
     <string name="recents_clear_all_title">全部清除</string>
     <string name="recents_lens_title">智慧鏡頭</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">背景模糊度</string>
+    <string name="background_blur_desc">設定最近應用程式和應用程式抽屜的背景模糊度</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">可用 %1$s | 總共 %2$s</string>
+    <string name="recents_meminfo_title">記憶體</string>
 </resources>

@@ -22,7 +22,7 @@
     <string name="home_category_summary">Imposta il pannello Google now ed altro</string>
     <string name="icons_category_title">Icone</string>
     <string name="icons_category_summary">Imposta le dimensioni delle icone e altro ancora</string>
-    <string name="app_drawer_category_title">Menu applicazioni</string>
+    <string name="app_drawer_category_title">Cassetto app</string>
     <string name="app_drawer_category_summary">Personalizza il menù delle applicazioni</string>
     <string name="recents_category_title">Recenti</string>
     <string name="recents_category_summary">Modifica la schermata delle app recenti</string>
@@ -33,7 +33,7 @@
     <string name="general_category_title">Generale</string>
     <string name="interface_category_title">Interfaccia</string>
     <string name="search_bar_category_title">Barra di ricerca</string>
-    <string name="actions_category_title">Quick actions</string>
+    <string name="actions_category_title">Azioni rapide</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Scorri per accedere all\'app di Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -105,12 +105,18 @@
     <string name="allow_wallpaper_scrolling">Scorrimento dello sfondo</string>
     <string name="allow_wallpaper_scrolling_desc">Effetto di scorrimento dello sfondo per schermi multipli</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Scorrimento dello sfondo</string>
-    <string name="allow_wallpaper_zooming_desc">Ingrandisce o riduce lo sfondo quando si usa il drawer o le app recenti</string>
+    <string name="allow_wallpaper_zooming">Ingrandimento sfondo</string>
+    <string name="allow_wallpaper_zooming_desc">Ingrandisci o riduci lo sfondo quando si usa il cassetto app o le app recenti</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Opacità sfondo</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Clear all</string>
+    <string name="recents_clear_all_title">Cancella tutto</string>
     <string name="recents_lens_title">Lens</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Profondità sfocatura sfondo</string>
+    <string name="background_blur_desc">Imposta il livello di profondità della sfocatura per i recenti e il drawer delle app</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Available | %2$s Total</string>
+    <string name="recents_meminfo_title">Memory info</string>
 </resources>

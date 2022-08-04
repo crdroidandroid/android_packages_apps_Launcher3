@@ -37,7 +37,7 @@
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Geser untuk mengakses aplikasi Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Saat Anda menggeser ke kiri dari Layar Beranda</string>
+    <string name="msg_minus_one_on_left">Saat Anda menggeser ke kanan dari Layar Beranda</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Saat Anda menggeser ke kanan dari Layar Beranda</string>
     <!-- Folder titles -->
@@ -112,5 +112,11 @@
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Tangkapan layar</string>
     <string name="recents_clear_all_title">Bersihkan semua</string>
-    <string name="recents_lens_title">Lens</string>
+    <string name="recents_lens_title">Lensa</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Kedalaman blur latar belakang</string>
+    <string name="background_blur_desc">Setel tingkat kedalaman blur untuk baru-baru ini dan laci aplikasi</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Available | %2$s Total</string>
+    <string name="recents_meminfo_title">Memory info</string>
 </resources>

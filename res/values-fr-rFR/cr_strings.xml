@@ -24,8 +24,8 @@
     <string name="icons_category_summary">Définir la taille des icônes et plus</string>
     <string name="app_drawer_category_title">Tiroir d\'applications</string>
     <string name="app_drawer_category_summary">Personnaliser le menu d\'applications</string>
-    <string name="recents_category_title">Recents</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_title">Récent</string>
+    <string name="recents_category_summary">Personnaliser le menu récent</string>
     <string name="misc_category_title">Divers</string>
     <string name="misc_category_summary">Autres options</string>
     <string name="dev_options_title">Options développeur</string>
@@ -33,7 +33,7 @@
     <string name="general_category_title">Général</string>
     <string name="interface_category_title">Interface</string>
     <string name="search_bar_category_title">Barre de recherche</string>
-    <string name="actions_category_title">Quick actions</string>
+    <string name="actions_category_title">Action rapide</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Glisser pour accéder à l\'application Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -95,7 +95,7 @@
     <string name="pref_allow_phone_taskbar">Utiliser la barre des tâches</string>
     <string name="pref_allow_phone_taskbar_desc">Pour ouvrir et changer d\'application n\'importe où</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Grid style</string>
+    <string name="pref_allow_phone_overview_grid">Style grille</string>
     <string name="pref_allow_phone_overview_grid_desc">Aperçu des applications les plus récentes</string>
     <!-- Row Height -->
     <string name="row_height_title">Hauteur de ligne</string>
@@ -105,12 +105,18 @@
     <string name="allow_wallpaper_scrolling">Défilement du fond d\'écran</string>
     <string name="allow_wallpaper_scrolling_desc">Effet de défilement du fond d\'écran pour plusieurs écrans</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">Zoom sur le fond d\'écran</string>
+    <string name="allow_wallpaper_zooming_desc">Zoomer et dézoomer le fond d\'écran a l\'ouverture du tiroir ou du récent</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">Opacité de l\'arrière-plan</string>
     <!-- Recents icons -->
-    <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Clear all</string>
+    <string name="recents_screenshot_title">Capture d\'écran</string>
+    <string name="recents_clear_all_title">Tout effacer</string>
     <string name="recents_lens_title">Lens</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Niveau de flou</string>
+    <string name="background_blur_desc">Définir le niveau de flou pour le tiroir et récent</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Available | %2$s Total</string>
+    <string name="recents_meminfo_title">Memory info</string>
 </resources>

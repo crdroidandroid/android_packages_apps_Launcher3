@@ -113,4 +113,10 @@
     <string name="recents_screenshot_title">Képernyőkép</string>
     <string name="recents_clear_all_title">Az összes törlése</string>
     <string name="recents_lens_title">Lens</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">A háttér-elmosás mélysége</string>
+    <string name="background_blur_desc">Az előzmények és az alkalmazásfiók elmosási.értéke állítható itt</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%2$s memóból %1$s érhető el</string>
+    <string name="recents_meminfo_title">Memória-információ</string>
 </resources>

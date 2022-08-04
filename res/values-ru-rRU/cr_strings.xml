@@ -95,7 +95,7 @@
     <string name="pref_allow_phone_taskbar">Использовать панель задач</string>
     <string name="pref_allow_phone_taskbar_desc">Для открытия и переключения приложений в любом месте</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Стильная сетка</string>
+    <string name="pref_allow_phone_overview_grid">Стиль сетки</string>
     <string name="pref_allow_phone_overview_grid_desc">Больше недавних приложений одновременно</string>
     <!-- Row Height -->
     <string name="row_height_title">Высота строки</string>
@@ -113,4 +113,10 @@
     <string name="recents_screenshot_title">Снимок экрана</string>
     <string name="recents_clear_all_title">Очистить все</string>
     <string name="recents_lens_title">Объектив</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Размытие фона</string>
+    <string name="background_blur_desc">Установка глубины размытия для недавних приложений и меню приложений</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">Доступно: %1$s | Всего: %2$s</string>
+    <string name="recents_meminfo_title">Информация о памяти</string>
 </resources>

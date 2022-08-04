@@ -113,4 +113,10 @@
     <string name="recents_screenshot_title">عکس گرفتن از صفحه</string>
     <string name="recents_clear_all_title">پاک کردن همه موارد</string>
     <string name="recents_lens_title">لنز</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">عمق تاری پس زمینه</string>
+    <string name="background_blur_desc">سطح عمق تاری را برای موارد اخیر و کشوی برنامه تنظیم کنید</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s در دسترس است / در کل %2$s</string>
+    <string name="recents_meminfo_title">اطلاعات حافظه</string>
 </resources>

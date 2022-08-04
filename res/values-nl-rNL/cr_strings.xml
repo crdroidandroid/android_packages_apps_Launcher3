@@ -113,4 +113,10 @@
     <string name="recents_screenshot_title">Schermafbeelding</string>
     <string name="recents_clear_all_title">Alles wissen</string>
     <string name="recents_lens_title">Lens</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Achtergrond vervagen diepte</string>
+    <string name="background_blur_desc">Stel vervaging diepte in voor recente apps en app drawer</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Beschikbaar | %2$s Totaal</string>
+    <string name="recents_meminfo_title">Geheugen informatie</string>
 </resources>

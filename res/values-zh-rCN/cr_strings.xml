@@ -113,4 +113,10 @@
     <string name="recents_screenshot_title">屏幕截图</string>
     <string name="recents_clear_all_title">清除所有</string>
     <string name="recents_lens_title">镜头</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Background blur depth</string>
+    <string name="background_blur_desc">Set blur depth level for recents and app drawer</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Available | %2$s Total</string>
+    <string name="recents_meminfo_title">Memory info</string>
 </resources>

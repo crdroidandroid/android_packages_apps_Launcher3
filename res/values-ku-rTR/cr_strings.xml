@@ -37,9 +37,9 @@
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Swipe ji bo gihîştina sepana Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">When you swipe left from main Home screen</string>
+    <string name="msg_minus_one_on_left">Gava ku hûn ji ekrana malê ya sereke rast bişopînin</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">When you swipe right from main Home screen</string>
+    <string name="msg_minus_one_on_right">Gava ku hûn ji dîmendera malê ya sereke çepê bizivirînin</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
     <string name="desktop_show_labels">Etîketên îkonê li ser sermaseyê</string>
@@ -113,4 +113,10 @@
     <string name="recents_screenshot_title">Screenshot</string>
     <string name="recents_clear_all_title">Hemî paqij bike</string>
     <string name="recents_lens_title">Lens</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Background blur depth</string>
+    <string name="background_blur_desc">Set blur depth level for recents and app drawer</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Available | %2$s Total</string>
+    <string name="recents_meminfo_title">Memory info</string>
 </resources>
