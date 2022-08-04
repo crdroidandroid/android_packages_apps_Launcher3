@@ -117,6 +117,6 @@
     <string name="background_blur_title">Desfoque de fundo</string>
     <string name="background_blur_desc">Definir a intensidade do desfoque para os aplicativos recentes e gaveta de aplicativos</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
+    <string name="meminfo_text">%1$s Disponível - %2$s Total</string>
     <string name="recents_meminfo_title">Memory info</string>
 </resources>
