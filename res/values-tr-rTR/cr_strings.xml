@@ -116,4 +116,7 @@
     <!-- Background blur -->
     <string name="background_blur_title">Arka plan bulanıklık derinliği</string>
     <string name="background_blur_desc">Son uygulamalar ve uygulama çekmecesi için bulanıklık derinliği seviyesini ayarlayın</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Available | %2$s Total</string>
+    <string name="recents_meminfo_title">Memory info</string>
 </resources>
