@@ -117,6 +117,6 @@
     <string name="background_blur_title">عمق تاری پس زمینه</string>
     <string name="background_blur_desc">سطح عمق تاری را برای موارد اخیر و کشوی برنامه تنظیم کنید</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s در دسترس است / در کل %2$s</string>
+    <string name="recents_meminfo_title">اطلاعات حافظه</string>
 </resources>
