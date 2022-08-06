@@ -120,6 +120,6 @@
     <string name="meminfo_text">Frei: %1$s | Insgesamt: %2$s</string>
     <string name="recents_meminfo_title">RAM-Info</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <string name="hotseat_bg_title">Hintergrund im Dock</string>
+    <string name="hotseat_bg_summary">Transparenten Hintergrund im Dock anzeigen</string>
 </resources>
