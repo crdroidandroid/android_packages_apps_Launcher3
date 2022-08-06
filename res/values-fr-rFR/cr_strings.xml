@@ -117,8 +117,8 @@
     <string name="background_blur_title">Niveau de flou</string>
     <string name="background_blur_desc">Définir le niveau de flou pour le tiroir et récent</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s Disponible | %2$s Total</string>
+    <string name="recents_meminfo_title">Information sur la RAM</string>
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hotseat background</string>
     <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
