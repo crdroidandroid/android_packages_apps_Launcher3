@@ -120,6 +120,6 @@
     <string name="meminfo_text">Доступно: %1$s | Всего: %2$s</string>
     <string name="recents_meminfo_title">Информация о памяти</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <string name="hotseat_bg_title">Фон нижней панели</string>
+    <string name="hotseat_bg_summary">Добавляет прозрачный фон в нижнюю часть</string>
 </resources>
