@@ -120,6 +120,6 @@
     <string name="meminfo_text">%1$s 可用 | %2$s 总计</string>
     <string name="recents_meminfo_title">内存信息</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <string name="hotseat_bg_title">小部件背景</string>
+    <string name="hotseat_bg_summary">添加半透明背景到应用停靠栏</string>
 </resources>
