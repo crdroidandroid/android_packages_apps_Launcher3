@@ -25,7 +25,7 @@
     <string name="app_drawer_category_title">Cajón de aplicaciones</string>
     <string name="app_drawer_category_summary">Personaliza tu cajón de aplicaciones</string>
     <string name="recents_category_title">Recientes</string>
-    <string name="recents_category_summary">Personaliza tu pantalla de Recientes</string>
+    <string name="recents_category_summary">Personaliza tu pantalla de recientes</string>
     <string name="misc_category_title">Varios</string>
     <string name="misc_category_summary">Otras opciones</string>
     <string name="dev_options_title">Opciones para desarrolladores</string>
@@ -96,7 +96,7 @@ Mantén presionado para establecer</string>
     <string name="pref_allow_phone_taskbar">Usar barra de tareas</string>
     <string name="pref_allow_phone_taskbar_desc">Para abrir y cambiar aplicaciones en cualquier lugar</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Tamaño de cuadrícula</string>
+    <string name="pref_allow_phone_overview_grid">Estilo de cuadrícula</string>
     <string name="pref_allow_phone_overview_grid_desc">Resumen de aplicaciones más recientes</string>
     <!-- Row Height -->
     <string name="row_height_title">Altura de las filas</string>
@@ -113,14 +113,14 @@ Mantén presionado para establecer</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Captura de pantalla</string>
     <string name="recents_clear_all_title">Borrar todo</string>
-    <string name="recents_lens_title">Lentes</string>
+    <string name="recents_lens_title">Lens</string>
     <!-- Background blur -->
-    <string name="background_blur_title">Cantidad Del Desenfoque de fondo</string>
+    <string name="background_blur_title">Desenfoque de fondo</string>
     <string name="background_blur_desc">Establecer nivel de profundidad de desenfoque para recientes y cajón de aplicaciones</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Disponible | %2$s Total</string>
-    <string name="recents_meminfo_title">Informacion De Almacenamiento</string>
+    <string name="meminfo_text">%1$s Disponibles | %2$s Total</string>
+    <string name="recents_meminfo_title">Información de memoria RAM</string>
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Fondo del dock</string>
-    <string name="hotseat_bg_summary">Añadir Fondo Translucido A La Barra De Aplicaciones</string>
+    <string name="hotseat_bg_summary">Añade fondo translúcido al dock de aplicaciones</string>
 </resources>
