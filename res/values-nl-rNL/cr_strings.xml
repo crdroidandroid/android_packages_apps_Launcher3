@@ -119,4 +119,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Beschikbaar | %2$s Totaal</string>
     <string name="recents_meminfo_title">Geheugen informatie</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Hotseat achtergrond</string>
+    <string name="hotseat_bg_summary">Voeg doorschijnende achtergrond toe aan het app dock</string>
 </resources>

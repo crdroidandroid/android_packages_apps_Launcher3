@@ -42,8 +42,8 @@
     <string name="msg_minus_one_on_right">Lorsque vous faites glisser depuis la gauche sur l\'écran d\'accueil principal</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Étiquettes d\'icônes sur le bureau</string>
-    <string name="drawer_show_labels">Étiquettes d\'icônes dans le tiroir</string>
+    <string name="desktop_show_labels">Nom d\'application sur le bureau</string>
+    <string name="drawer_show_labels">Nom d\'application dans le tiroir</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Valeur : <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">par défaut</string>
@@ -54,9 +54,9 @@
     <!-- Font size -->
     <string name="font_size_title">Taille de police</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Lignes maximales pour le libellé de l\'application</string>
+    <string name="icon_max_lines_title">Lignes maximales pour le nom de l\'application</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Appui double pour mettre en veille. </string>
+    <string name="pref_sleep_gesture_title">Double appui pour mettre en veille</string>
     <string name="pref_sleep_gesture_summary">Double appui sur un espace vide pour éteindre </string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Rechercher</string>
@@ -68,7 +68,7 @@
     <string name="dock_theme_summary">Utiliser les icônes thématiques pour la barre de recherche</string>
     <string name="search_radius_title">Arrondi des angles</string>
     <!-- Recents -->
-    <string name="action_lens">Lentille</string>
+    <string name="action_lens">Lens</string>
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Barre d\'état</string>
     <!-- Suggestions -->
@@ -117,6 +117,9 @@
     <string name="background_blur_title">Niveau de flou</string>
     <string name="background_blur_desc">Définir le niveau de flou pour le tiroir et récent</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s Disponible | %2$s Total</string>
+    <string name="recents_meminfo_title">Information sur la RAM</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Hotseat background</string>
+    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
 </resources>

@@ -114,9 +114,12 @@
     <string name="recents_clear_all_title">Xoá tất cả</string>
     <string name="recents_lens_title">Ống Kính</string>
     <!-- Background blur -->
-    <string name="background_blur_title">Background blur depth</string>
-    <string name="background_blur_desc">Set blur depth level for recents and app drawer</string>
+    <string name="background_blur_title">Độ sâu nền mờ</string>
+    <string name="background_blur_desc">Đặt giá trị độ sâu nền mờ cho gần đây và ngăn kéo ứng dụng</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s TRỐNG | %2$s TỔNG CỘNG</string>
+    <string name="recents_meminfo_title">Thông tin bộ nhớ</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Nền thanh công cụ</string>
+    <string name="hotseat_bg_summary">Thêm nền mờ vào thanh ứng dụng</string>
 </resources>

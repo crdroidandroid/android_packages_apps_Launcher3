@@ -24,7 +24,7 @@
     <string name="icons_category_summary">Symbolgröße und weiteres anpassen</string>
     <string name="app_drawer_category_title">App-Übersicht</string>
     <string name="app_drawer_category_summary">App-Übersicht anpassen</string>
-    <string name="recents_category_title">App-Verlauf</string>
+    <string name="recents_category_title">Kategorie-Verlauf</string>
     <string name="recents_category_summary">Anpassen des App-Verlaufs</string>
     <string name="misc_category_title">Sonstiges</string>
     <string name="misc_category_summary">Weitere Optionen</string>
@@ -106,17 +106,20 @@
     <string name="allow_wallpaper_scrolling_desc">Hintergrundbild-Bewegung beim Seitenwechsel</string>
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zooming">Hintergrundbild-Zoomeffekt</string>
-    <string name="allow_wallpaper_zooming_desc">Herein- und Herauszoomen des Hintergrundbilds bei Verwendung der App-Übersicht und des App-Verlaufs</string>
+    <string name="allow_wallpaper_zooming_desc">Herein- und Herauszoomen des Hintergrundbilds bei Verwendung von App-Übersicht und -Verlauf</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Hintergrundtransparenz</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Alles schließen</string>
+    <string name="recents_clear_all_title">Alle Apps schließen</string>
     <string name="recents_lens_title">Lens</string>
     <!-- Background blur -->
     <string name="background_blur_title">Tiefenschärfegrad des Hintergrunds</string>
-    <string name="background_blur_desc">Tiefenschärfegrad von App-Verlauf und App-Übersicht anpassen</string>
+    <string name="background_blur_desc">Tiefenschärfegrad in App-Übersicht und -Verlauf anpassen</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">Frei: %1$s | Gesamt: %2$s</string>
+    <string name="recents_meminfo_title">RAM-Info</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Hintergrund im Dock</string>
+    <string name="hotseat_bg_summary">Transparenten Hintergrund im Dock anzeigen</string>
 </resources>

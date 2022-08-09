@@ -114,9 +114,12 @@
     <string name="recents_clear_all_title">Vymazať všetko</string>
     <string name="recents_lens_title">Objektív</string>
     <!-- Background blur -->
-    <string name="background_blur_title">Background blur depth</string>
-    <string name="background_blur_desc">Set blur depth level for recents and app drawer</string>
+    <string name="background_blur_title">Sila rozmazania pozadia</string>
+    <string name="background_blur_desc">Nastaviť úroveň hĺbky rozmazania pre nedávne aplikácie a ponuku aplikácií</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s Dostupných | %2$s Celkovo</string>
+    <string name="recents_meminfo_title">Informácie o pamäti</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Hotseat background</string>
+    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
 </resources>

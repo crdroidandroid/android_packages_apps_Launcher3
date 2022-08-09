@@ -117,6 +117,9 @@
     <string name="background_blur_title">Βάθος θολώματος φόντου</string>
     <string name="background_blur_desc">Ορισμός επιπέδου βάθους θαμπώματος για πρόσφατα και συρτάρι εφαρμογών</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s Διαθέσιμο | %2$s Σύνολο</string>
+    <string name="recents_meminfo_title">Πληροφορίες μνήμης</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Φόντο Hotseat</string>
+    <string name="hotseat_bg_summary">Προσθήκη ημιδιαφανούς φόντου στη γραμμή εφαρμογών</string>
 </resources>

@@ -24,7 +24,7 @@
     <string name="icons_category_summary">تعيين شكل الأيقونات والمزيد</string>
     <string name="app_drawer_category_title">درج التطبيقات</string>
     <string name="app_drawer_category_summary">تخصيص درج التطبيقات الخاص بك</string>
-    <string name="recents_category_title">Recents</string>
+    <string name="recents_category_title">التطبيقات الأخيرة</string>
     <string name="recents_category_summary">Revamp the overview screen</string>
     <string name="misc_category_title">خيارات متنوعة</string>
     <string name="misc_category_summary">خيارات أخرى</string>
@@ -33,7 +33,7 @@
     <string name="general_category_title">العامة</string>
     <string name="interface_category_title">واجهة المستخدم</string>
     <string name="search_bar_category_title">شريط البحث</string>
-    <string name="actions_category_title">Quick actions</string>
+    <string name="actions_category_title">الإختصارات السريعة</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">اسحب للوصول إلى تطبيق جوجل</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -42,8 +42,8 @@
     <string name="msg_minus_one_on_right">عندما التمرير يميناً من الشاشة الرئيسية</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Icon labels on desktop</string>
-    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <string name="desktop_show_labels">إظهار أسماء التطبيقات على الشاشة الرئيسية</string>
+    <string name="drawer_show_labels">إظهار أسماء التطبيقات في قائمة التطبيقات</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">القيمة: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">إفتراضيا</string>
@@ -63,7 +63,7 @@
     <string name="label_lens">عدسة جوجل</string>
     <string name="label_voice_search">البحث الصوتي</string>
     <string name="dock_search_title">شريط بحث جوجل</string>
-    <string name="dock_search_summary">Search bar in the bottom dock</string>
+    <string name="dock_search_summary">إظهار شريط البحث في اسفل الشاشة</string>
     <string name="dock_theme_title">أيقونات مع الثيم</string>
     <string name="dock_theme_summary">استخدام الثيم الحالي لأيقونات شريط البحث</string>
     <string name="search_radius_title">حدود الزاوية</string>
@@ -92,31 +92,34 @@
     <string name="icon_pack_add">تثبيت المزيد</string>
     <string name="icon_pack_no_market">لا يوجد متجر تطبيقات متاح</string>
     <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar">Use taskbar</string>
+    <string name="pref_allow_phone_taskbar">استخدام شريط المهام</string>
     <string name="pref_allow_phone_taskbar_desc">لفتح التطبيقات وتبديلها في أي مكان</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Grid style</string>
+    <string name="pref_allow_phone_overview_grid">نمط الشبكة</string>
     <string name="pref_allow_phone_overview_grid_desc">إظهار المزيد من التطبيقات الأخيرة</string>
     <!-- Row Height -->
-    <string name="row_height_title">Row height</string>
+    <string name="row_height_title">ارتفاع الصف</string>
     <!-- Top shadow -->
-    <string name="show_top_shadow">Top shadow</string>
+    <string name="show_top_shadow">الظل العلوي</string>
     <!-- Wallpaper scrolling -->
-    <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
-    <string name="allow_wallpaper_scrolling_desc">Wallpaper scrolling effect for multiple screens</string>
+    <string name="allow_wallpaper_scrolling">تمرير خلفية الشاشة</string>
+    <string name="allow_wallpaper_scrolling_desc">تأثير تمرير خلفية الشاشة للشاشات المتعددة</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
+    <string name="allow_wallpaper_zooming">تكبير خلفية الشاشة</string>
     <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">شفافية الخلفية</string>
     <!-- Recents icons -->
-    <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Clear all</string>
-    <string name="recents_lens_title">Lens</string>
+    <string name="recents_screenshot_title">لقطة شاشة</string>
+    <string name="recents_clear_all_title">إزالة الكل</string>
+    <string name="recents_lens_title">العدسة</string>
     <!-- Background blur -->
-    <string name="background_blur_title">Background blur depth</string>
+    <string name="background_blur_title">مستوي ضبابية الخلفية</string>
     <string name="background_blur_desc">Set blur depth level for recents and app drawer</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="recents_meminfo_title">معلومات الذاكرة</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Hotseat background</string>
+    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
 </resources>

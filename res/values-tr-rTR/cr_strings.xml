@@ -117,6 +117,9 @@
     <string name="background_blur_title">Arka plan bulanıklık derinliği</string>
     <string name="background_blur_desc">Son uygulamalar ve uygulama çekmecesi için bulanıklık derinliği seviyesini ayarlayın</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s Kullanılabilir | %2$s Toplam</string>
+    <string name="recents_meminfo_title">Bellek bilgisi</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Hotseat arka planı</string>
+    <string name="hotseat_bg_summary">Uygulama yuvasına yarı şeffaf bir arka plan ekleyin</string>
 </resources>

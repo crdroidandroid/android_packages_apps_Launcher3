@@ -117,6 +117,9 @@
     <string name="background_blur_title">Kedalaman blur latar belakang</string>
     <string name="background_blur_desc">Setel tingkat kedalaman blur untuk baru-baru ini dan laci aplikasi</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s Tersedia | %2$s Total</string>
+    <string name="recents_meminfo_title">Info memori</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Latar belakang hotseat</string>
+    <string name="hotseat_bg_summary">Tambahkan latar belakang tembus pandang di dok aplikasi</string>
 </resources>

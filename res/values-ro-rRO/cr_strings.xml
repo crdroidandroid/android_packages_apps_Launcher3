@@ -114,9 +114,12 @@
     <string name="recents_clear_all_title">Stergeti toate</string>
     <string name="recents_lens_title">Obiectiv</string>
     <!-- Background blur -->
-    <string name="background_blur_title">Background blur depth</string>
-    <string name="background_blur_desc">Set blur depth level for recents and app drawer</string>
+    <string name="background_blur_title">Adâncime încețoșare fundal</string>
+    <string name="background_blur_desc">Setaţi nivelul de adâncime încețoșare pentru aplicaţiile recente şi lista aplicaţiilor</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s Disponibil | %2$s Total</string>
+    <string name="recents_meminfo_title">Informații memorie</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Fundal andocare aplicații</string>
+    <string name="hotseat_bg_summary">Adaugă fundal translucid în andocare aplicații</string>
 </resources>

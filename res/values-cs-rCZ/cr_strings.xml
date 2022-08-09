@@ -117,6 +117,9 @@
     <string name="background_blur_title">Hloubka rozostření pozadí</string>
     <string name="background_blur_desc">Nastavit úroveň hloubky rozostření nedávných aplikací a\u00a0rolety aplikací</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s Dostupné | %2$s Celkem</string>
+    <string name="recents_meminfo_title">Informace o\u00a0paměti</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Pozadí Hotseat</string>
+    <string name="hotseat_bg_summary">Přidat průsvitné pozadí do doku aplikace</string>
 </resources>

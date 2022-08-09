@@ -114,9 +114,12 @@
     <string name="recents_clear_all_title">Limpar tudo</string>
     <string name="recents_lens_title">Lens</string>
     <!-- Background blur -->
-    <string name="background_blur_title">Background blur depth</string>
-    <string name="background_blur_desc">Set blur depth level for recents and app drawer</string>
+    <string name="background_blur_title">Desfoque de fundo</string>
+    <string name="background_blur_desc">Definir o nível de desfoque para a gaveta de apps e ecrã de recentes</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s Disponível | %2$s Total</string>
+    <string name="recents_meminfo_title">Informações da memória</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Fundo da doca</string>
+    <string name="hotseat_bg_summary">Mostrar fundo translúcido na doca de apps</string>
 </resources>

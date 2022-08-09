@@ -119,4 +119,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">可用 %1$s | 總共 %2$s</string>
     <string name="recents_meminfo_title">記憶體</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">底欄背景</string>
+    <string name="hotseat_bg_summary">在底部的應用程式列顯示透明背景</string>
 </resources>

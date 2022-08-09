@@ -119,4 +119,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%2$s memóból %1$s érhető el</string>
     <string name="recents_meminfo_title">Memória-információ</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Hotseat háttér</string>
+    <string name="hotseat_bg_summary">Áttetsző háttereket adhat az alkalmazásfiókhoz</string>
 </resources>

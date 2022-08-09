@@ -114,9 +114,12 @@
     <string name="recents_clear_all_title">Wyczyść wszystko</string>
     <string name="recents_lens_title">Obiektyw</string>
     <!-- Background blur -->
-    <string name="background_blur_title">Background blur depth</string>
-    <string name="background_blur_desc">Set blur depth level for recents and app drawer</string>
+    <string name="background_blur_title">Głębia rozmycia tła</string>
+    <string name="background_blur_desc">Ustawienie poziomu głębi rozmycia dla przypomnień i szuflady aplikacji</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s Dostępne | %2$s Łącznie</string>
+    <string name="recents_meminfo_title">Informacje o pamięci</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Tło Docka</string>
+    <string name="hotseat_bg_summary">Dodaje przezroczyste tło dla Doka</string>
 </resources>

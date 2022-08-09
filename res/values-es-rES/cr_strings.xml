@@ -25,7 +25,7 @@
     <string name="app_drawer_category_title">Cajón de aplicaciones</string>
     <string name="app_drawer_category_summary">Personaliza tu cajón de aplicaciones</string>
     <string name="recents_category_title">Recientes</string>
-    <string name="recents_category_summary">Personaliza la pantalla de Recientes</string>
+    <string name="recents_category_summary">Personaliza tu pantalla de recientes</string>
     <string name="misc_category_title">Varios</string>
     <string name="misc_category_summary">Otras opciones</string>
     <string name="dev_options_title">Opciones para desarrolladores</string>
@@ -118,6 +118,9 @@ Mantén presionado para establecer</string>
     <string name="background_blur_title">Desenfoque de fondo</string>
     <string name="background_blur_desc">Establecer nivel de profundidad de desenfoque para recientes y cajón de aplicaciones</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s Disponibles | %2$s Total</string>
+    <string name="recents_meminfo_title">Información de memoria RAM</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Fondo del dock</string>
+    <string name="hotseat_bg_summary">Añadir fondo translúcido al dock de aplicaciones</string>
 </resources>
