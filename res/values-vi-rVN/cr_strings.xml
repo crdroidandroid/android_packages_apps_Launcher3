@@ -118,8 +118,8 @@
     <string name="background_blur_desc">Đặt giá trị độ sâu nền mờ cho gần đây và ngăn kéo ứng dụng</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s TRỐNG | %2$s TỔNG CỘNG</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="recents_meminfo_title">Thông tin bộ nhớ</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <string name="hotseat_bg_title">Nền thanh công cụ</string>
+    <string name="hotseat_bg_summary">Thêm nền mờ vào thanh ứng dụng</string>
 </resources>
