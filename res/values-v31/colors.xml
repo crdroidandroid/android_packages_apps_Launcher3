@@ -139,4 +139,9 @@
     <color name="material_color_primary">@android:color/system_accent1_600</color>
     <color name="material_color_secondary">@android:color/system_accent2_600</color>
     <color name="material_color_tertiary">@android:color/system_accent3_600</color>
+
+    <color name="qsb_primary">@android:color/system_accent1_600</color>
+    <color name="qsb_secondary">@android:color/system_accent1_500</color>
+    <color name="qsb_tertiary">@android:color/system_accent1_400</color> 
+    <color name="qsb_quaternary">@android:color/system_accent1_300</color>
 </resources>
