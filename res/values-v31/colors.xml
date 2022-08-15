@@ -63,4 +63,9 @@
     <color name="preload_icon_background_color_dark">@android:color/system_neutral2_700</color>
 
     <color name="all_apps_button_color">?android:attr/textColorSecondary</color>
+
+    <color name="qsb_primary">@android:color/system_accent1_600</color>
+    <color name="qsb_secondary">@android:color/system_accent1_500</color>
+    <color name="qsb_tertiary">@android:color/system_accent1_400</color> 
+    <color name="qsb_quaternary">@android:color/system_accent1_300</color>
 </resources>

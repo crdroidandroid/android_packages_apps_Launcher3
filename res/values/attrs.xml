@@ -20,6 +20,7 @@
     <!-- Attributes used for launcher theme -->
     <attr name="allAppsScrimColor" format="color" />
     <attr name="allappsHeaderProtectionColor" format="color" />
+    <attr name="searchHintHighlight" format="color" />
     <attr name="allAppsNavBarScrimColor" format="color" />
     <attr name="allAppsTheme" format="reference" />
     <attr name="popupColorPrimary" format="color" />
@@ -57,6 +58,7 @@
     <attr name="preloadIconBackgroundColor" format="color" />
 
     <attr name="qsbFillColor" format="color" />
+    <attr name="qsbFillColorThemed" format="color" />
     <attr name="qsbIconTintPrimary" format="color" />
     <attr name="qsbIconTintQuaternary" format="color" />
     <attr name="qsbIconTintSecondary" format="color" />

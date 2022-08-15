@@ -149,7 +149,6 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
     private final RectF mTmpRectF = new RectF();
     private float[] mBottomSheetCornerRadii;
     private ScrimView mScrimView;
-    private int mHeaderColor;
     private int mBottomSheetBackgroundColor;
     private int mTabsProtectionAlpha;
 
@@ -842,48 +841,7 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
             canvas.drawPath(mTmpPath, mHeaderPaint);
         }
 
-        if (DEBUG_HEADER_PROTECTION) {
-            mHeaderPaint.setColor(Color.MAGENTA);
-            mHeaderPaint.setAlpha(255);
-        } else {
-            mHeaderPaint.setColor(mHeaderColor);
-            mHeaderPaint.setAlpha((int) (getAlpha() * Color.alpha(mHeaderColor)));
-        }
-        if (mHeaderPaint.getColor() == mScrimColor || mHeaderPaint.getColor() == 0) {
-            return;
-        }
-        int bottom = getHeaderBottom() + getVisibleContainerView().getPaddingTop();
-        FloatingHeaderView headerView = getFloatingHeaderView();
-        if (isTablet) {
-            // Start adding header protection if search bar or tabs will attach to the top.
-            if (!FeatureFlags.ENABLE_FLOATING_SEARCH_BAR.get() || mUsingTabs) {
-                View panel = (View) mBottomSheetBackground;
-                float translationY = ((View) panel.getParent()).getTranslationY();
-                mTmpRectF.set(panel.getLeft(), panel.getTop() + translationY, panel.getRight(),
-                        bottom);
-                mTmpPath.reset();
-                mTmpPath.addRoundRect(mTmpRectF, mBottomSheetCornerRadii, Direction.CW);
-                canvas.drawPath(mTmpPath, mHeaderPaint);
-            }
-        } else {
-            canvas.drawRect(0, 0, canvas.getWidth(), bottom, mHeaderPaint);
-        }
-        int tabsHeight = headerView.getPeripheralProtectionHeight();
-        if (mTabsProtectionAlpha > 0 && tabsHeight != 0) {
-            if (DEBUG_HEADER_PROTECTION) {
-                mHeaderPaint.setColor(Color.BLUE);
-                mHeaderPaint.setAlpha(255);
-            } else {
-                mHeaderPaint.setAlpha((int) (getAlpha() * mTabsProtectionAlpha));
-            }
-            int left = 0;
-            int right = canvas.getWidth();
-            if (isTablet) {
-                left = mBottomSheetBackground.getLeft();
-                right = mBottomSheetBackground.getRight();
-            }
-            canvas.drawRect(left, bottom, right, bottom + tabsHeight, mHeaderPaint);
-        }
+        mHeaderPaint.setColor(mHeaderProtectionColor);
     }
 
     /**
@@ -897,20 +855,14 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
 
     protected void updateHeaderScroll(int scrolledOffset) {
         float prog = Utilities.boundToRange((float) scrolledOffset / mHeaderThreshold, 0f, 1f);
-        int headerColor = getHeaderColor(prog);
         int tabsAlpha = mHeader.getPeripheralProtectionHeight() == 0 ? 0
                 : (int) (Utilities.boundToRange(
                         (scrolledOffset + mHeader.mSnappedScrolledY) / mHeaderThreshold, 0f, 1f)
                         * 255);
-        if (headerColor != mHeaderColor || mTabsProtectionAlpha != tabsAlpha) {
-            mHeaderColor = headerColor;
+        if (mTabsProtectionAlpha != tabsAlpha) {
             mTabsProtectionAlpha = tabsAlpha;
             invalidateHeader();
         }
-    }
-
-    protected int getHeaderColor(float blendRatio) {
-        return ColorUtils.blendARGB(mScrimColor, mHeaderProtectionColor, blendRatio);
     }
 
     protected abstract BaseAllAppsAdapter<T> createAdapter(AlphabeticalAppsList<T> mAppsList,
