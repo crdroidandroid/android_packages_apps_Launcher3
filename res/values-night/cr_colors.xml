@@ -18,4 +18,6 @@
 
     <!-- Appseat -->
     <color name="appseat_color">@*android:color/system_neutral2_900</color>
+
+    <color name="gicon_mask">#1AFFFFFF</color>
 </resources>
