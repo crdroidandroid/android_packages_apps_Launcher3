@@ -81,7 +81,7 @@ public class QsbLayout extends FrameLayout {
         float cornerRadius = getCornerRadius();
         int color = Themes.getAttrColor(mContext, R.attr.qsbFillColor);
         if (Utilities.isThemedIconsEnabled(mContext))
-            color = Themes.getColorBackgroundFloating(mContext);
+            color = Themes.getAttrColor(mContext, R.attr.qsbFillColorThemed);
         PaintDrawable pd = new PaintDrawable(color);
         pd.setCornerRadius(cornerRadius);
         inner.setClipToOutline(cornerRadius > 0);
