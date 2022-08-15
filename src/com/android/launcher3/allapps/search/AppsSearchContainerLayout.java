@@ -23,6 +23,7 @@ import static com.android.launcher3.Utilities.prefixTextWithIcon;
 import static com.android.launcher3.icons.IconNormalizer.ICON_VISIBLE_AREA_FACTOR;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.graphics.Rect;
 import android.text.Selection;
 import android.text.SpannableStringBuilder;
@@ -36,6 +37,7 @@ import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.ExtendedEditText;
 import com.android.launcher3.Insettable;
 import com.android.launcher3.R;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.allapps.ActivityAllAppsContainerView;
 import com.android.launcher3.allapps.AllAppsStore;
 import com.android.launcher3.allapps.BaseAllAppsAdapter.AdapterItem;
@@ -117,6 +119,10 @@ public class AppsSearchContainerLayout extends ExtendedEditText
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
 
+        Drawable gIcon = getContext().getDrawable(R.drawable.ic_super_g_color);
+        Drawable gIconThemed = getContext().getDrawable(R.drawable.ic_super_g_themed);
+        Drawable sIcon = getContext().getDrawable(R.drawable.ic_allapps_search);
+        
         // Shift the widget horizontally so that its centered in the parent (b/63428078)
         View parent = (View) getParent();
         int availableWidth = parent.getWidth() - parent.getPaddingLeft() - parent.getPaddingRight();
@@ -124,6 +130,14 @@ public class AppsSearchContainerLayout extends ExtendedEditText
         int expectedLeft = parent.getPaddingLeft() + (availableWidth - myWidth) / 2;
         int shift = expectedLeft - left;
         setTranslationX(shift);
+
+        if (Utilities.showQSB(getContext()) && !Utilities.isThemedIconsEnabled(getContext())) {
+          setCompoundDrawablesRelativeWithIntrinsicBounds(gIcon, null, null, null);
+        } else if (Utilities.showQSB(getContext()) && Utilities.isThemedIconsEnabled(getContext())) {
+          setCompoundDrawablesRelativeWithIntrinsicBounds(gIconThemed, null, null, null);
+        } else {
+          setCompoundDrawablesRelativeWithIntrinsicBounds(sIcon, null, null, null);
+        }
 
         offsetTopAndBottom(mContentOverlap);
     }
