@@ -25,7 +25,7 @@
     <string name="app_drawer_category_title">درج التطبيقات</string>
     <string name="app_drawer_category_summary">تخصيص درج التطبيقات الخاص بك</string>
     <string name="recents_category_title">التطبيقات الأخيرة</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_summary">تجديد شاشة العرض العام</string>
     <string name="misc_category_title">خيارات متنوعة</string>
     <string name="misc_category_summary">خيارات أخرى</string>
     <string name="dev_options_title">خيارات المطور</string>
@@ -106,7 +106,7 @@
     <string name="allow_wallpaper_scrolling_desc">تأثير تمرير خلفية الشاشة للشاشات المتعددة</string>
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zooming">تكبير خلفية الشاشة</string>
-    <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming_desc">تكبير الخلفية أو تصغيرها عند استخدام درج التطبيقات أو التطبيقات الحديثة</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">شفافية الخلفية</string>
     <!-- Recents icons -->
@@ -115,11 +115,11 @@
     <string name="recents_lens_title">العدسة</string>
     <!-- Background blur -->
     <string name="background_blur_title">مستوي ضبابية الخلفية</string>
-    <string name="background_blur_desc">Set blur depth level for recents and app drawer</string>
+    <string name="background_blur_desc">تعيين مستوى الضباب للتطبيقات الحديثة ودرج التطبيقات</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
+    <string name="meminfo_text">%1$s متاحة / %2$s كإجمالي</string>
     <string name="recents_meminfo_title">معلومات الذاكرة</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <string name="hotseat_bg_title">خلفية اللوحة السفلية</string>
+    <string name="hotseat_bg_summary">إضافة خلفية شفافة إلى قائمة التطبيقات</string>
 </resources>
