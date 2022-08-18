@@ -74,6 +74,9 @@
         <favorite
             launcher:packageName="com.oneplus.camera"
             launcher:className="com.oneplus.camera.OPCameraActivity" />
+        <favorite
+            launcher:packageName="com.oplus.camera"
+            launcher:className="com.oplus.camera.CameraImageActivity" />
     </resolve>
 
 </favorites>
