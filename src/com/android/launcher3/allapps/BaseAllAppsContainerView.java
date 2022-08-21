@@ -72,6 +72,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
+import ink.kaleidoscope.ParallelSpaceManager;
 
 /**
  * Base all apps view container.
@@ -97,9 +98,8 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
     /** Context of an activity or window that is inflating this container. */
     protected final T mActivityContext;
     protected final List<AdapterHolder> mAH;
-    protected final Predicate<ItemInfo> mPersonalMatcher = ItemInfoMatcher.ofUser(
-            Process.myUserHandle());
     private final SearchAdapterProvider<?> mMainAdapterProvider;
+    protected Predicate<ItemInfo> mPersonalMatcher;
     private final AllAppsStore mAllAppsStore = new AllAppsStore();
 
     private final RecyclerView.OnScrollListener mScrollListener =
@@ -153,6 +153,7 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
         mAH.set(AdapterHolder.MAIN, new AdapterHolder(AdapterHolder.MAIN));
         mAH.set(AdapterHolder.WORK, new AdapterHolder(AdapterHolder.WORK));
         mAH.set(AdapterHolder.SEARCH, new AdapterHolder(AdapterHolder.SEARCH));
+        updateMatcher();
 
         mNavBarScrimPaint = new Paint();
         mNavBarScrimPaint.setColor(Themes.getAttrColor(context, R.attr.allAppsNavBarScrimColor));
@@ -237,8 +238,16 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
         mBottomSheetBackground.setVisibility(deviceProfile.isTablet ? View.VISIBLE : View.GONE);
     }
 
+    private void updateMatcher() {
+        mPersonalMatcher = ItemInfoMatcher.ofUser(
+                Process.myUserHandle()).or(ItemInfoMatcher.ofUsers(
+                    ParallelSpaceManager.getInstance().getParallelUserHandles()));
+        mWorkManager.updateMatcher();
+    }
+
     private void onAppsUpdated() {
         mHasWorkApps = Stream.of(mAllAppsStore.getApps()).anyMatch(mWorkManager.getMatcher());
+        updateMatcher();
         if (!isSearching()) {
             rebindAdapters();
             if (mHasWorkApps) {
