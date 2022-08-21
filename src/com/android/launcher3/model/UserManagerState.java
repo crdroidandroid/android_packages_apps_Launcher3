@@ -36,7 +36,7 @@ public class UserManagerState {
      * Initialises the state values for all users
      */
     public void init(UserCache userCache, UserManager userManager) {
-        for (UserHandle user : userManager.getUserProfiles()) {
+        for (UserHandle user : userCache.getUserProfiles()) {
             long serialNo = userCache.getSerialNumberForUser(user);
             boolean isUserQuiet = userManager.isQuietModeEnabled(user);
             allUsers.put(serialNo, user);

@@ -56,6 +56,10 @@ public abstract class ItemInfoMatcher {
                 && packageNames.contains(getNonNullComponent(info).getPackageName());
     }
 
+    public static Predicate<ItemInfo> ofUsers(Collection<UserHandle> users) {
+        return info -> info != null && users.contains(info.user);
+    }
+
     public static Predicate<ItemInfo> ofShortcutKeys(Set<ShortcutKey> keys) {
         return info -> info != null && info.itemType == Favorites.ITEM_TYPE_DEEP_SHORTCUT
                 && keys.contains(ShortcutKey.fromItemInfo(info));

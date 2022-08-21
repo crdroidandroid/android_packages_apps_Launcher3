@@ -89,6 +89,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
+import ink.kaleidoscope.ParallelSpaceManager;
 
 /**
  * All apps container view with search support for use in a dragging activity.
@@ -110,8 +111,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
 
     protected final T mActivityContext;
     protected final List<AdapterHolder> mAH;
-    protected final Predicate<ItemInfo> mPersonalMatcher = ItemInfoMatcher.ofUser(
-            Process.myUserHandle());
+    protected Predicate<ItemInfo> mPersonalMatcher;
     protected final WorkProfileManager mWorkManager;
     protected final Point mFastScrollerOffset = new Point();
     protected final int mScrimColor;
@@ -221,6 +221,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
                 new AlphabeticalAppsList<>(mActivityContext, mAllAppsStore, mWorkManager)));
         mAH.set(SEARCH, new AdapterHolder(SEARCH,
                 new AlphabeticalAppsList<>(mActivityContext, null, null)));
+        updateMatcher();
 
         getLayoutInflater().inflate(R.layout.all_apps_content, this);
         mHeader = findViewById(R.id.all_apps_header);
@@ -836,8 +837,16 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
         // added in TaskbarAllAppsContainerView and header protection is not yet supported.
     }
 
+    private void updateMatcher() {
+        mPersonalMatcher = ItemInfoMatcher.ofUser(
+                Process.myUserHandle()).or(ItemInfoMatcher.ofUsers(
+                    ParallelSpaceManager.getInstance().getParallelUserHandles()));
+        mWorkManager.updateMatcher();
+    }
+
     private void onAppsUpdated() {
         mHasWorkApps = Stream.of(mAllAppsStore.getApps()).anyMatch(mWorkManager.getMatcher());
+        updateMatcher();
         if (TestProtocol.sDebugTracing) {
             Log.d(WORK_TAB_MISSING, "ActivityAllAppsContainerView#onAppsUpdated hasWorkApps: " +
                     mHasWorkApps + " allApps: " + mAllAppsStore.getApps().length);
