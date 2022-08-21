@@ -27,6 +27,8 @@ import com.android.launcher3.util.MainThreadInitializedObject;
 import com.android.launcher3.util.SafeCloseable;
 import com.android.launcher3.util.SimpleBroadcastReceiver;
 
+import ink.kaleidoscope.ParallelSpaceManager;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -69,7 +71,8 @@ public class UserCache {
                 // Enable caching and start listening for user broadcast
                 mUserChangeReceiver.register(mContext,
                         Intent.ACTION_MANAGED_PROFILE_ADDED,
-                        Intent.ACTION_MANAGED_PROFILE_REMOVED);
+                        Intent.ACTION_MANAGED_PROFILE_REMOVED,
+                        Intent.ACTION_PARALLEL_SPACE_CHANGED);
                 enableAndResetCache();
             }
             mUserChangeListeners.add(command);
@@ -82,6 +85,7 @@ public class UserCache {
             mUsers = new LongSparseArray<>();
             mUserToSerialMap = new ArrayMap<>();
             List<UserHandle> users = mUserManager.getUserProfiles();
+            users.addAll(ParallelSpaceManager.getInstance().getParallelUserHandles());
             if (users != null) {
                 for (UserHandle user : users) {
                     long serial = mUserManager.getSerialNumberForUser(user);
