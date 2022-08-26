@@ -1429,7 +1429,7 @@ public abstract class AbsSwipeUpHandler<T extends StatefulActivity<S>,
                 .setContext(mContext)
                 .setTaskId(runningTaskTarget.taskId)
                 .setComponentName(taskInfo.topActivity)
-                .setLeash(runningTaskTarget.leash)
+                .setLeash(runningTaskTarget.leash.getSurfaceControl())
                 .setSourceRectHint(
                         runningTaskTarget.taskInfo.pictureInPictureParams.getSourceRectHint())
                 .setAppBounds(taskInfo.configuration.windowConfiguration.getBounds())
