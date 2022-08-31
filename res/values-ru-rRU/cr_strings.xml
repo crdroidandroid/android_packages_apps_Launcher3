@@ -158,4 +158,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Show dock search widget -->
     <string name="dock_search_title">Поиск Google</string>
     <string name="dock_search_summary">Отображать строку поиска в нижней панели</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Suggestions</string>
+    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
 </resources>
