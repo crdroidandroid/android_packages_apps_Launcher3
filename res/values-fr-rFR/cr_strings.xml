@@ -24,7 +24,7 @@
     <string name="icons_category_summary">Définir la taille des icônes et plus</string>
     <string name="app_drawer_category_title">Tiroir d\'applications</string>
     <string name="app_drawer_category_summary">Personnaliser le menu d\'applications</string>
-    <string name="recents_category_title">Récent</string>
+    <string name="recents_category_title">Récents</string>
     <string name="recents_category_summary">Personnaliser le menu récent</string>
     <string name="misc_category_title">Divers</string>
     <string name="misc_category_summary">Autres options</string>
@@ -33,7 +33,7 @@
     <string name="general_category_title">Général</string>
     <string name="interface_category_title">Interface</string>
     <string name="search_bar_category_title">Barre de recherche</string>
-    <string name="actions_category_title">Action rapide</string>
+    <string name="actions_category_title">Actions rapides</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Glisser pour accéder à l\'application Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -95,7 +95,7 @@
     <string name="pref_allow_phone_taskbar">Utiliser la barre des tâches</string>
     <string name="pref_allow_phone_taskbar_desc">Pour ouvrir et changer d\'application n\'importe où</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Style grille</string>
+    <string name="pref_allow_phone_overview_grid">Style de grille</string>
     <string name="pref_allow_phone_overview_grid_desc">Aperçu des applications les plus récentes</string>
     <!-- Row Height -->
     <string name="row_height_title">Hauteur de ligne</string>
@@ -106,7 +106,7 @@
     <string name="allow_wallpaper_scrolling_desc">Effet de défilement du fond d\'écran pour plusieurs écrans</string>
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zooming">Zoom sur le fond d\'écran</string>
-    <string name="allow_wallpaper_zooming_desc">Zoomer et dézoomer le fond d\'écran a l\'ouverture du tiroir ou du récent</string>
+    <string name="allow_wallpaper_zooming_desc">Zoom avant ou arrière le fond d\'écran lors de l\'utilisation du tiroir ou des applications récentes</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Opacité de l\'arrière-plan</string>
     <!-- Recents icons -->
@@ -120,6 +120,6 @@
     <string name="meminfo_text">%1$s Disponible | %2$s Total</string>
     <string name="recents_meminfo_title">Information sur la RAM</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <string name="hotseat_bg_title">Arrière plan</string>
+    <string name="hotseat_bg_summary">Ajouter un arrière-plan translucide au tiroir d\'applications</string>
 </resources>

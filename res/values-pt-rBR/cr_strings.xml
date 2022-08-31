@@ -95,7 +95,7 @@
     <string name="pref_allow_phone_taskbar">Usar barra de tarefas</string>
     <string name="pref_allow_phone_taskbar_desc">Para abrir e alternar apps em qualquer lugar</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Estilo da grade</string>
+    <string name="pref_allow_phone_overview_grid">Mostrar como grade</string>
     <string name="pref_allow_phone_overview_grid_desc">Lista completa de apps recentes</string>
     <!-- Row Height -->
     <string name="row_height_title">Altura da linha</string>
@@ -120,6 +120,6 @@
     <string name="meminfo_text">%1$s Disponível - %2$s Total</string>
     <string name="recents_meminfo_title">Informações da memória</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Adicionar fundo transparente para a gaveta de aplicativos</string>
+    <string name="hotseat_bg_title">Fundo desfocado</string>
+    <string name="hotseat_bg_summary">Desfocar o fundo do dock de aplicativos</string>
 </resources>
