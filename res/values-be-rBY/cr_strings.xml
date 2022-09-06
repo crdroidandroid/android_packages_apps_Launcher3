@@ -24,8 +24,8 @@
     <string name="icons_category_summary">Усталюйце памер значка і многае іншае</string>
     <string name="app_drawer_category_title">Спіс праграм</string>
     <string name="app_drawer_category_summary">Налада свайго спісу праграм</string>
-    <string name="recents_category_title">Recents</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_title">Нядаўнія</string>
+    <string name="recents_category_summary">Налады экрана нядаўніх праграм</string>
     <string name="misc_category_title">Рознае</string>
     <string name="misc_category_summary">Іншыя налады</string>
     <string name="dev_options_title">Параметры распрацоўшчыка</string>
@@ -33,7 +33,7 @@
     <string name="general_category_title">Агульныя</string>
     <string name="interface_category_title">Інтэрфейс</string>
     <string name="search_bar_category_title">Радок пошуку</string>
-    <string name="actions_category_title">Quick actions</string>
+    <string name="actions_category_title">Хуткія дзеянні</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Правядзіце пальцам для доступу да праграмы Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -95,7 +95,7 @@
     <string name="pref_allow_phone_taskbar">Выкарыстоўваць панэль задач</string>
     <string name="pref_allow_phone_taskbar_desc">Для адкрыцця і пераключэння праграм у любым месцы</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Grid style</string>
+    <string name="pref_allow_phone_overview_grid">Стыль сеткі</string>
     <string name="pref_allow_phone_overview_grid_desc">Больш нядаўніх праграм адначасова</string>
     <!-- Row Height -->
     <string name="row_height_title">Вышыня радку</string>
@@ -105,13 +105,13 @@
     <string name="allow_wallpaper_scrolling">Пракрутка шпалер</string>
     <string name="allow_wallpaper_scrolling_desc">Эфект пракруткі шпалер для некалькіх экранаў</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">Маштабаванне шпалер</string>
+    <string name="allow_wallpaper_zooming_desc">Павелічэнне або памяншэнне шпалер у меню праграм і ў спісе нядаўніх праграм</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">Празрыстасць фону</string>
     <!-- Recents icons -->
-    <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Clear all</string>
+    <string name="recents_screenshot_title">Здымак экрана</string>
+    <string name="recents_clear_all_title">Ачысціць усё</string>
     <string name="recents_lens_title">Lens</string>
     <!-- Background blur -->
     <string name="background_blur_title">Background blur depth</string>
