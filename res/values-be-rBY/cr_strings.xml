@@ -112,14 +112,14 @@
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Здымак экрана</string>
     <string name="recents_clear_all_title">Ачысціць усё</string>
-    <string name="recents_lens_title">Lens</string>
+    <string name="recents_lens_title">Аб’ектыў</string>
     <!-- Background blur -->
-    <string name="background_blur_title">Background blur depth</string>
-    <string name="background_blur_desc">Set blur depth level for recents and app drawer</string>
+    <string name="background_blur_title">Глыбіня размыцця фону</string>
+    <string name="background_blur_desc">Усталюйце ўзровень глыбіні размыцця для апошніх і меню праграм</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s Даступна | %2$s Усяго</string>
+    <string name="recents_meminfo_title">Інфармацыя аб памяці</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <string name="hotseat_bg_title">Фон віджэта</string>
+    <string name="hotseat_bg_summary">Напаўпразрысты фон ніжняй панэлі праграм</string>
 </resources>
