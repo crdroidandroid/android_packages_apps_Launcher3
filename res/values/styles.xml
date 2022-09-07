@@ -29,9 +29,9 @@
     </style>
 
     <style name="LauncherTheme" parent="@style/BaseLauncherTheme">
-        <item name="android:textColorSecondary">#DE000000</item>
-        <item name="allAppsScrimColor">?android:attr/colorBackgroundFloating</item>
-        <item name="allappsHeaderProtectionColor">@color/popup_color_tertiary_light</item>
+        <item name="android:textColorSecondary">?android:attr/colorAccent</item>
+        <item name="allAppsScrimColor">@color/overview_scrim</item>
+        <item name="allappsHeaderProtectionColor">?android:attr/colorAccent</item>
         <item name="allAppsNavBarScrimColor">#66FFFFFF</item>
         <item name="allAppsTheme">@style/AllAppsTheme</item>
         <item name="popupColorPrimary">@color/popup_color_primary_light</item>
@@ -98,8 +98,8 @@
         <item name="android:textColorHint">#A0FFFFFF</item>
         <item name="android:colorControlHighlight">#19FFFFFF</item>
         <item name="android:colorPrimary">#FF212121</item>
-        <item name="allAppsScrimColor">?android:attr/colorBackgroundFloating</item>
-        <item name="allappsHeaderProtectionColor">@color/popup_color_tertiary_dark</item>
+        <item name="allAppsScrimColor">@color/overview_scrim_dark</item>
+        <item name="allappsHeaderProtectionColor">?android:attr/colorAccent</item>
         <item name="allAppsNavBarScrimColor">#80000000</item>
         <item name="allAppsTheme">@style/AllAppsTheme.Dark</item>
         <item name="popupColorPrimary">@color/popup_color_primary_dark</item>
