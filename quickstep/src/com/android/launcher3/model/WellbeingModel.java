@@ -363,7 +363,7 @@ public final class WellbeingModel implements SafeCloseable {
     public static class PauseApps<T extends ActivityContext> extends SystemShortcut<T> {
 
         public PauseApps(T target, ItemInfo itemInfo, View originalView) {
-            super(R.drawable.ic_hourglass_top, R.string.paused_apps_drop_target_label, target,
+            super(R.drawable.ic_hourglass, R.string.paused_apps_drop_target_label, target,
                     itemInfo, originalView);
         }
 
@@ -382,7 +382,6 @@ public final class WellbeingModel implements SafeCloseable {
 
             }
             new AlertDialog.Builder(context)
-                    .setIcon(R.drawable.ic_hourglass_top)
                     .setTitle(context.getString(R.string.pause_apps_dialog_title, appLabel))
                     .setMessage(context.getString(R.string.pause_apps_dialog_message, appLabel))
                     .setNegativeButton(android.R.string.cancel, null)
