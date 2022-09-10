@@ -158,4 +158,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Show dock search widget -->
     <string name="dock_search_title">Pasek wyszukiwania Google</string>
     <string name="dock_search_summary">Pokaż pasek wyszukiwania w dolnej stacji dokującej</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Propozycje</string>
+    <string name="suggestion_pref_screen_desc">Sugestie dotyczące wszystkich aplikacji i ekranu głównego</string>
 </resources>

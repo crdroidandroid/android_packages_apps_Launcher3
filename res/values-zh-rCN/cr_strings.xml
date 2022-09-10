@@ -158,4 +158,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Show dock search widget -->
     <string name="dock_search_title">Google 搜索框</string>
     <string name="dock_search_summary">在底部显示搜索框</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">建议</string>
+    <string name="suggestion_pref_screen_desc">适用于所有应用程序和主屏幕的建议</string>
 </resources>

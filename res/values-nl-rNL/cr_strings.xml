@@ -158,4 +158,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Show dock search widget -->
     <string name="dock_search_title">Google zoekbalk</string>
     <string name="dock_search_summary">Zoekbalk in het onderste dock weergeven</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Suggesties</string>
+    <string name="suggestion_pref_screen_desc">Voor alle apps &amp; startscherm suggesties</string>
 </resources>

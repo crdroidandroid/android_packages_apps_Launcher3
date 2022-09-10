@@ -158,4 +158,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Show dock search widget -->
     <string name="dock_search_title">بحث جوجل</string>
     <string name="dock_search_summary">إظهار شريط البحث في القائمة السفلية</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">الإقتراحات</string>
+    <string name="suggestion_pref_screen_desc">لجميع التطبيقات &amp; اقتراحات الشاشة الرئيسية</string>
 </resources>

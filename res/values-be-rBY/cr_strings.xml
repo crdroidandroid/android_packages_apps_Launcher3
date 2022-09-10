@@ -158,4 +158,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Show dock search widget -->
     <string name="dock_search_title">Панэль пошуку Google</string>
     <string name="dock_search_summary">Паказваць радок пошуку ў ніжняй панэлі</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Прапановы</string>
+    <string name="suggestion_pref_screen_desc">Для прапаноў ўсіх праграм і галоўнага экрана</string>
 </resources>

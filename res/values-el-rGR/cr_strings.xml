@@ -158,4 +158,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Show dock search widget -->
     <string name="dock_search_title">Γραμμή αναζήτησης Google</string>
     <string name="dock_search_summary">Εμφάνιση γραμμής αναζήτησης στην κάτω μπάρα εφαρμογών</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Προτάσεις</string>
+    <string name="suggestion_pref_screen_desc">Για όλες τις προτάσεις Εφαρμογών &amp; Αρχικής οθόνης</string>
 </resources>
