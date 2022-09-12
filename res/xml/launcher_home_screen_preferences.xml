@@ -89,6 +89,22 @@
             android:persistent="true"/>
 
         <SwitchPreference
+            android:key="pref_extended_quickspace"
+            android:title="@string/extended_quickspace_title"
+            android:summary="@string/extended_quickspace_summary"
+            android:defaultValue="true"
+            android:dependency="pref_show_quickspace"
+            android:persistent="true"/>
+
+        <SwitchPreference
+            android:key="pref_show_qs_messages"
+            android:title="@string/show_quickspace_msg_title"
+            android:summary="@string/show_quickspace_msg_summary"
+            android:defaultValue="true"
+            android:dependency="pref_show_quickspace"
+            android:persistent="true"/>
+
+        <SwitchPreference
             android:key="pref_desktop_show_labels"
             android:title="@string/desktop_show_labels"
             android:defaultValue="true"

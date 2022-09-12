@@ -38,6 +38,8 @@ import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.util.Themes;
 
+import com.android.launcher3.quickspace.QuickEventsController;
+import com.android.launcher3.quickspace.QuickspaceController;
 import com.android.launcher3.quickspace.QuickspaceController.OnDataListener;
 import com.android.launcher3.quickspace.receivers.QuickSpaceActionReceiver;
 import com.android.launcher3.quickspace.views.DateTextView;
@@ -55,7 +57,10 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     public ViewGroup mQuickspaceContent;
     public ImageView mEventSubIcon;
     public TextView mEventTitleSub;
-    public TextView mEventTitle;
+    public TextView mGreetingsExt;
+    public View mQuickEventsView;
+    public View mGreetingsExtView;
+    public View mGreetingsExtClock;
 
     public boolean mFinishedInflate;
 
@@ -77,25 +82,43 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     public void onDataUpdated() {
         mQEController.initQuickEvents();
         prepareLayout();
-        getQuickSpaceView();
         loadDoubleLine();
     }
 
     private final void loadDoubleLine() {
         setBackgroundResource(mQuickspaceBackgroundRes);
-        mEventTitle.setText(mQEController.getTitle());
-        mEventTitle.setEllipsize(TruncateAt.END);
         mEventTitleSub.setText(mQEController.getActionTitle());
-        mEventTitleSub.setEllipsize(TruncateAt.MARQUEE);
         mEventTitleSub.setSelected(true);
         mEventTitleSub.setOnClickListener(mQEController.getAction());
+        mGreetingsExt.setText(mQEController.getGreetings());
+        mGreetingsExt.setSelected(true);
+        mGreetingsExt.setOnClickListener(mQEController.getAction());
         mEventSubIcon.setImageTintList(mColorStateList);
         mEventSubIcon.setImageResource(mQEController.getActionIcon());
-        bindClock(false);
+        loadQuickEvents();
+        loadExtendedQS();
+        bindClock(true);
     }
 
+    private final void loadQuickEvents() {
+        if (Utilities.showQuickEventsMsgs(getContext())) {
+          mQuickEventsView.setVisibility(View.VISIBLE);
+        } else {
+          mQuickEventsView.setVisibility(View.GONE);
+        }
+    }
+    
+    private final void loadExtendedQS() {
+        if (Utilities.isExtendedQuickSpace(getContext())) {
+          mGreetingsExtView.setVisibility(View.VISIBLE);
+          mGreetingsExtClock.setVisibility(View.VISIBLE);
+        } else {
+          mGreetingsExtView.setVisibility(View.GONE);
+          mGreetingsExtClock.setVisibility(View.GONE);
+        }
+    }
+    
     private final void bindClock(boolean forced) {
-        mClockView.setVisibility(View.VISIBLE);
         mClockView.setOnClickListener(mActionReceiver.getCalendarAction());
         if (forced) {
             mClockView.reloadDateFormat(true);
@@ -103,9 +126,12 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     }
 
     private final void loadViews() {
-        mEventTitle = (TextView) findViewById(R.id.quick_event_title);
         mEventTitleSub = (TextView) findViewById(R.id.quick_event_title_sub);
         mEventSubIcon = (ImageView) findViewById(R.id.quick_event_icon_sub);
+        mGreetingsExt = (TextView) findViewById(R.id.extended_greetings);
+        mGreetingsExtClock = (TextView) findViewById(R.id.extended_greetings_clock);
+        mGreetingsExtView = (View) findViewById(R.id.extended_greetings_view);
+        mQuickEventsView = (View) findViewById(R.id.quick_events_messages);
         mQuickspaceContent = (ViewGroup) findViewById(R.id.quickspace_content);
         mClockView = (DateTextView) findViewById(R.id.clock_view);
     }
@@ -115,14 +141,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         removeView(mQuickspaceContent);
         addView(LayoutInflater.from(getContext()).inflate(R.layout.quickspace_doubleline, this, false), indexOfChild);
         loadViews();
-    }
-
-    private void getQuickSpaceView() {
-        if (!(mQuickspaceContent.getVisibility() == View.VISIBLE)) {
-        	mQuickspaceContent.setVisibility(View.VISIBLE);
-            mQuickspaceContent.setAlpha(0.0f);
-            mQuickspaceContent.animate().setDuration(200).alpha(1.0f);
-        }
     }
 
     @Override

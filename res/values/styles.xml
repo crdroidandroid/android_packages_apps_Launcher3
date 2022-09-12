@@ -44,6 +44,7 @@
         <item name="isMainColorDark">false</item>
         <item name="isWorkspaceDarkText">false</item>
         <item name="workspaceTextColor">@color/workspace_text_color_light</item>
+        <item name="widgetTextColor">@color/widget_accent_color_light</item>
         <item name="workspaceShadowColor">#B0000000</item>
         <item name="workspaceAmbientShadowColor">#40000000</item>
         <item name="workspaceKeyShadowColor">#89000000</item>
@@ -82,6 +83,7 @@
 
     <style name="LauncherTheme.DarkText" parent="@style/LauncherTheme">
         <item name="workspaceTextColor">@color/workspace_text_color_dark</item>
+        <item name="widgetTextColor">@color/widget_accent_color_light</item>
         <item name="workspaceShadowColor">@android:color/transparent</item>
         <item name="workspaceAmbientShadowColor">@android:color/transparent</item>
         <item name="workspaceKeyShadowColor">@android:color/transparent</item>
@@ -133,6 +135,7 @@
     <style name="LauncherTheme.Dark.DarkText" parent="@style/LauncherTheme.Dark">
         <item name="android:colorControlHighlight">#19212121</item>
         <item name="workspaceTextColor">@color/workspace_text_color_dark</item>
+        <item name="widgetTextColor">@color/widget_accent_color_light</item>
         <item name="workspaceShadowColor">@android:color/transparent</item>
         <item name="workspaceAmbientShadowColor">@android:color/transparent</item>
         <item name="workspaceKeyShadowColor">@android:color/transparent</item>
@@ -368,9 +371,19 @@
     <!-- QuickSpace -->
     <style name="QuickSpaceText">
         <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineHeight">20sp</item>
     </style>
 
     <style name="QuickSpaceSubText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineHeight">16sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
     </style>
 </resources>

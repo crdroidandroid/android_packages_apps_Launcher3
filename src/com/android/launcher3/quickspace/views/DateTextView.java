@@ -35,6 +35,7 @@ public class DateTextView extends DoubleShadowTextView {
     private DateFormat mDateFormat;
     private final BroadcastReceiver mTimeChangeReceiver;
     private boolean mIsVisible = false;
+    private String format;
 
     public DateTextView(final Context context) {
         this(context, null);
@@ -51,17 +52,24 @@ public class DateTextView extends DoubleShadowTextView {
     }
 
     public void reloadDateFormat(boolean forcedChange) {
-        String format;
+        if (Utilities.isExtendedQuickSpace(getContext())) {
             if (mDateFormat == null || forcedChange) {
                 (mDateFormat = DateFormat.getInstanceForSkeleton(getContext()
-                        .getString(R.string.custom_date_strings), Locale.getDefault()))
-                        .setContext(DisplayContext.CAPITALIZATION_FOR_STANDALONE);
+                    .getString(R.string.custom_date_strings_extended), Locale.getDefault()))
+                    .setContext(DisplayContext.CAPITALIZATION_FOR_STANDALONE);
             }
-            format = mDateFormat.format(System.currentTimeMillis());
+        } else {
+            if (mDateFormat == null || forcedChange) {
+                (mDateFormat = DateFormat.getInstanceForSkeleton(getContext()
+                    .getString(R.string.custom_date_strings), Locale.getDefault()))
+                    .setContext(DisplayContext.CAPITALIZATION_FOR_STANDALONE);
+            }
+        }
+        format = mDateFormat.format(System.currentTimeMillis());
         setText(format);
         setContentDescription(format);
     }
-
+    
     private void registerReceiver() {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(Intent.ACTION_TIME_TICK);

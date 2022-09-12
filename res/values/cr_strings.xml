@@ -144,31 +144,129 @@
 
     <!-- QuickSpace -->
     <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your home screen</string>
+    <string name="show_quickspace_summary">A companion widget for your home screen</string>
+    <string name="show_quickspace_msg_title">Random At a glance messages</string>
+    <string name="show_quickspace_msg_summary">Show random messages below widget</string>
+    <string name="extended_quickspace_title">Show more details</string>
+    <string name="extended_quickspace_summary">Extended version of the glance widget</string>
     <string name="abbrev_wday_month_day_no_year" translatable="false">EEEEMMMd</string>
 
     <string-array translatable="false" name="welcome_message_variants">
-        <item>Good Morning</item>
-        <item>Good Afternoon</item>
-        <item>Good Evening</item>
-        <item>Good Night</item>
-        <item>Too late to stay awake!</item>
+        <item>Wubba Lubba Dub Dub!</item>
+        <item>Dracarys...</item>
+        <item>Expecto Patronum.</item>
+        <item>Never Settle</item>
+        <item>Welcome to crDroid!</item>
+        <item>Enjoy your stay!</item>
+        <item>We love you 3000</item>
     </string-array>
-
+    
+    <string-array name="quickspace_psa_morning">
+        <item>A little walk seems nice.</item>
+        <item>Brush your teeth mindfully.</item>
+        <item>Start your day hydrated!</item>
+        <item>Get some exercise!</item>
+        <item>Stretch things out!</item>
+        <item>Start your day with positivity.</item>
+        <item>It is morning right now.</item>
+        <item>Always check device\'s battery levels!</item>
+        <item>Don\'t forget to prepare breakfast.</item>
+        <item>Check the weather, just in case.</item>
+        <item>Don\'t forget to check your notes!</item>
+        <item>Always check your email/messages.</item>
+        <item>Check your schedule if you have one.</item>
+        <item>Enjoy your day.</item>
+        <item>Toggling the switch can fix stucked responses.</item>
+        <item>Enjoy a cup of coffee.</item>
+        <item>Don\'t forget about protein.</item>
+        <item>Eggs make a simple, nutritious breakfast.</item>
+        <item>Enjoy your breakfast.</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon">
+        <item>Don\'t forget to stay hydrated!</item>
+        <item>Remember to eat some snacks.</item>
+        <item>UV rays are more harmful in the afternoon.</item>
+        <item>It is afternoon right now.</item>
+        <item>Always check device\'s battery levels!</item>
+        <item>Remember to check your email/messages.</item>
+        <item>Please check your to-do list if you have one.</item>
+        <item>Don\'t forget to prepare your dinner.</item>
+        <item>Enjoy your day.</item>
+        <item>Re-enable glance to fix stucked responses.</item>
+        <item>Have some fun.</item>
+    </string-array>
+    <string-array name="quickspace_psa_early_evening">
+        <item>Always stay hydrated!</item>
+        <item>8 hours of sleep is a must.</item>
+        <item>It is evening right now.</item>
+        <item>Remember to full charge me before you sleep.</item>
+        <item>Remember to check your email/messages.</item>
+        <item>Please check your to-do list if you have one.</item>
+        <item>Remember to eat dinner.</item>
+        <item>Always check the lights and sockets.</item>
+        <item>Enjoy the night.</item>
+        <item>Re-enable glance to fix stucked responses.</item>
+        <item>Relax and do some rest.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Don\'t drink too much water before sleeping.</item>
+        <item>It is evening right now.</item>
+        <item>Try to avoid overnight charging if possible.</item>
+        <item>Remember to check your email/messages.</item>
+        <item>Please check your to-do list if you have one.</item>
+        <item>Remember to eat dinner.</item>
+        <item>8 hours of sleep is a must.</item>
+        <item>Enjoy the night.</item>
+        <item>Re-enable glance to fix stucked responses.</item>
+        <item>Enjoy your sleep.</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Sleep defficiency is bad for your health.</item>
+        <item>Don\'t forget to stay hydrated.</item>
+        <item>Being sleep deficit can break melatonin production.</item>
+        <item>It is midnight right now.</item>
+        <item>Remember to take consideration for day duties.</item>
+        <item>You might have a important schedule during the day.</item>
+        <item>Don\'t forget to sleep/prepare your breakfast.</item>
+        <item>Enjoy the midnight.</item>
+        <item>Re-enable glance to fix stucked responses.</item>
+        <item>Please take care of yourself.</item>
+    </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
-        <item>Hello world! &#128072;</item>
-        <item>Its Game time &#127918;</item>
-        <item>#LightTheNight &#128154;</item>
-        <item>Positive thoughts only</item>
-        <item>See you at pochinki</item>
-        <item>Legends never die, They respawn</item>
-        <item>Winner winner chicken dinner</item>
-        <item>Touch Grass</item>
+        <item>There are easter eggs hidden on this ROM.</item>
+        <item>Try checking the SimplyWeather app.</item>
+        <item>Try to avoid UV rays during noon.</item>
+        <item>Stay Hydrated!</item>
+        <item>You need to take more water during the day.</item>
+        <item>Laughing can increase bloodflow.</item>
+        <item>Chocolate contains antioxidants.</item>
+        <item>Anxiety can make bad smells even worse.</item>
+        <item>Eating eggs improves your reflexes.</item>
+        <item>Remember to eat lunch.</item>
+        <item>Remember to check device\'s battery levels!</item>
+        <item>Check your email/messages.</item>
+        <item>Check your to-do list if you have one.</item>
+        <item>You can disable me via home settings.</item>
+        <item>Enjoy the midnight.</item>
+        <item>Re-enable glance to fix stucked responses.</item>
+        <item>Goto is also same as arroz caldo.</item>
+        <item>The chocolate hills is not made of chocolate.</item>
+        <item>Ice Ice Baby!</item>
+        <item>An ice cold drink can be very refreshing.</item>
+        <item>Always bring water to stay hydrated.</item>
+        <item>Life is short, make it fun.</item>
+        <item>Enjoy your day!</item>
     </string-array>
 
     <string name="custom_date_strings">EEE, MMM d</string>
+    <string name="custom_date_strings_extended">EEEE, MMM d</string>
+    
+   <!-- Greetings -->
+    <string name="quickspace_grt_morning">Good morning</string>
+    <string name="quickspace_grt_evening">Good evening</string>
+    <string name="quickspace_grt_afternoon">Good afternoon</string>
+    <string name="quickspace_grt_night">Good night</string>
+    <string name="quickspace_grt_midnight">Solemn midnight</string>
+    <string name="quickspace_grt_general">Good day</string>
+    <string name="extended_clock_text">It\'s</string>
 </resources>
