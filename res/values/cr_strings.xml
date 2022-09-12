@@ -141,4 +141,34 @@
     <!-- Background blur -->
     <string name="background_blur_title">Background blur depth</string>
     <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
+
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_summary">Show at the top of your home screen</string>
+    <string name="abbrev_wday_month_day_no_year" translatable="false">EEEEMMMd</string>
+
+    <string-array translatable="false" name="welcome_message_variants">
+        <item>Good Morning</item>
+        <item>Good Afternoon</item>
+        <item>Good Evening</item>
+        <item>Good Night</item>
+        <item>Too late to stay awake!</item>
+    </string-array>
+
+    <string-array name="quickspace_psa_random">
+        <item>Check the weather just in case</item>
+        <item>Feeling a bit sleepy yet</item>
+        <item>Have you looked outside yet?</item>
+        <item>Let\'s get this done.</item>
+        <item>Hello world! &#128072;</item>
+        <item>Its Game time &#127918;</item>
+        <item>#LightTheNight &#128154;</item>
+        <item>Positive thoughts only</item>
+        <item>See you at pochinki</item>
+        <item>Legends never die, They respawn</item>
+        <item>Winner winner chicken dinner</item>
+        <item>Touch Grass</item>
+    </string-array>
+
+    <string name="custom_date_strings">EEE, MMM d</string>
 </resources>

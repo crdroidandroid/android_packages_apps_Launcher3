@@ -46,6 +46,7 @@ import com.android.launcher3.util.GridOccupancy;
 import com.android.launcher3.util.IntArray;
 import com.android.launcher3.widget.LauncherAppWidgetProviderInfo;
 import com.android.launcher3.widget.WidgetManagerHelper;
+import com.android.launcher3.Utilities;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -396,8 +397,7 @@ public class GridSizeMigrationTaskV2 {
             mTrgX = trgX;
             mTrgY = trgY;
             mNextStartX = 0;
-            mNextStartY = mScreenId == 0 && FeatureFlags.QSB_ON_FIRST_SCREEN
-                    ? 1 /* smartspace */ : 0;
+            mNextStartY = mScreenId == 0  ? 1 /* smartspace */ : 0;
             List<DbEntry> existedEntries = mDestReader.mWorkspaceEntriesByScreenId.get(screenId);
             if (existedEntries != null) {
                 for (DbEntry entry : existedEntries) {

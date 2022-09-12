@@ -364,4 +364,13 @@
         <item name="qsbIconTintSecondary">@color/qsb_secondary</item>
         <item name="qsbIconTintTertiary">@color/qsb_tertiary</item>
     </style>
+    
+    <!-- QuickSpace -->
+    <style name="QuickSpaceText">
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
+    </style>
+
+    <style name="QuickSpaceSubText">
+        <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
+    </style>
 </resources>

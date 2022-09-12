@@ -223,7 +223,7 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
     // Variables relating to touch disambiguation (scrolling workspace vs. scrolling a widget)
     private float mXDown;
     private float mYDown;
-    private View mQsb;
+    private View quickSpace;
     private boolean mIsEventOverQsb;
 
     final static float START_DAMPING_TOUCH_SLOP_ANGLE = (float) Math.PI / 6;
@@ -546,19 +546,19 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
     /**
      * Initializes and binds the first page
      */
-    public void bindAndInitFirstWorkspaceScreen() {
-        if (!FeatureFlags.QSB_ON_FIRST_SCREEN) {
+    public void bindAndInitFirstWorkspaceScreen(View quickSpace) {
+        if (!Utilities.showQuickspace(getContext())) {
             return;
         }
 
         // Add the first page
         CellLayout firstPage = insertNewWorkspaceScreen(Workspace.FIRST_SCREEN_ID, getChildCount());
-        // Always add a QSB on the first screen.
-        if (mQsb == null) {
+        // Always add a quickSpace on the first screen.
+        if (quickSpace == null) {
             // In transposed layout, we add the QSB in the Grid. As workspace does not touch the
             // edges, we do not need a full width QSB.
-            mQsb = LayoutInflater.from(getContext())
-                    .inflate(R.layout.search_container_workspace, firstPage, false);
+            quickSpace = LayoutInflater.from(getContext())
+                    .inflate(R.layout.reserved_container_workspace, firstPage, false);
         }
 
         int cellVSpan = FeatureFlags.EXPANDED_SMARTSPACE.get()
@@ -566,9 +566,9 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
         int cellHSpan = mLauncher.getDeviceProfile().inv.numSearchContainerColumns;
         CellLayout.LayoutParams lp = new CellLayout.LayoutParams(0, 0, cellHSpan, cellVSpan);
         lp.canReorder = false;
-        if (!firstPage.addViewToCellLayout(mQsb, 0, R.id.search_container_workspace, lp, true)) {
+        if (!firstPage.addViewToCellLayout(quickSpace, 0, R.id.reserved_container_workspace, lp, true)) {
             Log.e(TAG, "Failed to add to item at (0, 0) to CellLayout");
-            mQsb = null;
+            quickSpace = null;
         }
     }
 
@@ -578,8 +578,8 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
         disableLayoutTransitions();
 
         // Recycle the QSB widget
-        if (mQsb != null) {
-            ((ViewGroup) mQsb.getParent()).removeView(mQsb);
+        if (quickSpace != null) {
+            ((ViewGroup) quickSpace.getParent()).removeView(quickSpace);
         }
 
         // Remove the pages and clear the screen models
@@ -592,7 +592,7 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
         mLauncher.mHandler.removeCallbacksAndMessages(DeferredWidgetRefresh.class);
 
         // Ensure that the first page is always present
-        bindAndInitFirstWorkspaceScreen();
+        bindAndInitFirstWorkspaceScreen(quickSpace);
 
         // Re-enable the layout transitions
         enableLayoutTransitions();
@@ -950,7 +950,7 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
             int id = mWorkspaceScreens.keyAt(i);
             CellLayout cl = mWorkspaceScreens.valueAt(i);
             // FIRST_SCREEN_ID can never be removed.
-            if ((!FeatureFlags.QSB_ON_FIRST_SCREEN || id > FIRST_SCREEN_ID)
+            if ((!Utilities.showQuickspace(getContext()) || id > FIRST_SCREEN_ID)
                     && cl.getShortcutsAndWidgets().getChildCount() == 0) {
                 removeScreens.add(id);
             }
@@ -1050,12 +1050,12 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
 
         mXDown = ev.getX();
         mYDown = ev.getY();
-        if (mQsb != null) {
+        if (quickSpace != null) {
             mTempFXY[0] = mXDown + getScrollX();
             mTempFXY[1] = mYDown + getScrollY();
-            Utilities.mapCoordInSelfToDescendant(mQsb, this, mTempFXY);
-            mIsEventOverQsb = mQsb.getLeft() <= mTempFXY[0] && mQsb.getRight() >= mTempFXY[0]
-                    && mQsb.getTop() <= mTempFXY[1] && mQsb.getBottom() >= mTempFXY[1];
+            Utilities.mapCoordInSelfToDescendant(quickSpace, this, mTempFXY);
+            mIsEventOverQsb = quickSpace.getLeft() <= mTempFXY[0] && quickSpace.getRight() >= mTempFXY[0]
+                    && quickSpace.getTop() <= mTempFXY[1] && quickSpace.getBottom() >= mTempFXY[1];
         } else {
             mIsEventOverQsb = false;
         }
@@ -2483,10 +2483,10 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
     }
 
     private boolean isDragObjectOverSmartSpace(DragObject dragObject) {
-        if (mQsb == null) {
+        if (quickSpace == null) {
             return false;
         }
-        getViewBoundsRelativeToWorkspace(mQsb, mTempRect);
+        getViewBoundsRelativeToWorkspace(quickSpace, mTempRect);
         return mTempRect.contains(dragObject.x, dragObject.y);
     }
 

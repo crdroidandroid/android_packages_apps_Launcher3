@@ -878,16 +878,6 @@ public class LauncherProvider extends ContentProvider {
                             Favorites.SCREEN, IntArray.wrap(-777, -778)), null);
                 }
                 case 30: {
-                    if (FeatureFlags.QSB_ON_FIRST_SCREEN) {
-                        // Clean up first row in screen 0 as it might contain junk data.
-                        Log.d(TAG, "Cleaning up first row");
-                        db.delete(Favorites.TABLE_NAME,
-                                String.format(Locale.ENGLISH,
-                                        "%1$s = %2$d AND %3$s = %4$d AND %5$s = %6$d",
-                                        Favorites.SCREEN, 0,
-                                        Favorites.CONTAINER, Favorites.CONTAINER_DESKTOP,
-                                        Favorites.CELLY, 0), null);
-                    }
                     return;
                 }
                 case 31: {
