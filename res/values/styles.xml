@@ -30,10 +30,9 @@
     </style>
 
     <style name="LauncherTheme" parent="@style/BaseLauncherTheme">
-        <item name="android:textColorSecondary">#DE000000</item>
-        <item name="allAppsScrimColor">?attr/materialColorSurfaceDim</item>
-        <item name="allappsHeaderProtectionColor">
-            @color/material_color_surface_container_highest</item>
+        <item name="android:textColorSecondary">@*android:color/system_neutral2_800</item>
+        <item name="allAppsScrimColor">@*android:color/system_neutral1_50</item>
+        <item name="allappsHeaderProtectionColor">@*android:color/system_neutral2_100</item>
         <item name="allAppsNavBarScrimColor">#66FFFFFF</item>
         <item name="popupColorPrimary">@color/popup_color_primary_light</item>
         <item name="popupColorSecondary">@color/popup_color_secondary_light</item>
@@ -106,7 +105,6 @@
         <item name="materialColorPrimaryFixed">@color/material_color_primary_fixed</item>
         <item name="materialColorOnSecondary">@color/material_color_on_secondary</item>
         <item name="materialColorOnTertiary">@color/material_color_on_tertiary</item>
-        <item name="materialColorSurfaceDim">@color/material_color_surface_dim</item>
         <item name="materialColorSurfaceBright">@color/material_color_surface_bright</item>
         <item name="materialColorOnError">@color/material_color_on_error</item>
         <item name="materialColorSurface">@color/material_color_surface</item>
@@ -145,13 +143,13 @@
 
     <style name="LauncherTheme.Dark" parent="@style/LauncherTheme">
         <item name="android:textColorPrimary">@color/text_color_primary_dark</item>
-        <item name="android:textColorSecondary">@color/text_color_secondary_dark</item>
+        <item name="android:textColorSecondary">@*android:color/system_neutral1_100</item>
         <item name="android:textColorTertiary">@color/text_color_tertiary_dark</item>
         <item name="android:textColorHint">#A0FFFFFF</item>
         <item name="android:colorControlHighlight">#19FFFFFF</item>
         <item name="android:colorPrimary">#FF212121</item>
-        <item name="allAppsScrimColor">?attr/materialColorSurfaceDim</item>
-        <item name="allappsHeaderProtectionColor">@color/material_color_surface_container_low</item>
+        <item name="allAppsScrimColor">@*android:color/system_neutral1_900</item>
+        <item name="allappsHeaderProtectionColor">@*android:color/system_neutral2_800</item>
         <item name="allAppsNavBarScrimColor">#80000000</item>
         <item name="popupColorPrimary">@color/popup_color_primary_dark</item>
         <item name="popupColorSecondary">@color/popup_color_secondary_dark</item>
