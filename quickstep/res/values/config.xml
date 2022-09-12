@@ -45,7 +45,7 @@
 
     <string name="wellbeing_provider_pkg" translatable="false"/>
 
-    <integer name="max_depth_blur_radius">23</integer>
+    <dimen name="max_depth_blur_radius">23dp</dimen>
     <dimen name="max_depth_blur_radius_enhanced">34dp</dimen>
 
     <!-- If predicted widgets from prediction service are less than this number, additional
