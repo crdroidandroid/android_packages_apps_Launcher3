@@ -210,7 +210,6 @@
 
     <!-- Theme for the widget container. -->
     <style name="WidgetContainerTheme" parent="@android:style/Theme.DeviceDefault.Settings">
-        <item name="android:colorPrimaryDark">#E8EAED</item>
         <item name="android:textColorSecondary">?android:attr/textColorPrimary</item>
         <item name="android:colorEdgeEffect">?android:attr/textColorSecondary</item>
         <item name="widgetPickerHeaderAppTitleColor">@color/app_title_text_light</item>
@@ -218,7 +217,6 @@
     </style>
     <style name="WidgetContainerTheme.Dark" parent="AppTheme.Dark">
         <item name="android:colorEdgeEffect">?android:attr/textColorSecondary</item>
-        <item name="android:colorPrimaryDark">#616161</item> <!-- Gray 700 -->
         <item name="widgetPickerHeaderAppTitleColor">@color/app_title_text_dark</item>
         <item name="widgetPickerHeaderAppSubtitleColor">@color/app_subtitle_text_dark</item>
     </style>
