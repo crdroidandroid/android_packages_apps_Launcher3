@@ -276,8 +276,7 @@
     </style>
 
     <!-- Theme for the widget container. -->
-    <style name="WidgetContainerTheme" parent="@android:style/Theme.DeviceDefault.Settings">
-        <item name="android:colorPrimaryDark">#E8EAED</item>
+    <style name="WidgetContainerTheme" parent="AppTheme">
         <item name="android:textColorSecondary">@color/materialColorOnSurface</item>
         <item name="android:colorEdgeEffect">@color/materialColorOnSurfaceVariant</item>
         <item name="widgetPickerHeaderAppTitleColor">
@@ -292,7 +291,6 @@
     </style>
     <style name="WidgetContainerTheme.Dark" parent="AppTheme.Dark">
         <item name="android:colorEdgeEffect">@color/materialColorOnSurfaceVariant</item>
-        <item name="android:colorPrimaryDark">#616161</item> <!-- Gray 700 -->
         <item name="widgetPickerHeaderAppTitleColor">
             @color/widget_picker_header_app_title_color_dark</item>
         <item name="widgetPickerHeaderAppSubtitleColor">
