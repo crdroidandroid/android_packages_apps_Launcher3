@@ -123,10 +123,10 @@
     <string name="hotseat_bg_title">小部件背景</string>
     <string name="hotseat_bg_summary">添加半透明背景到应用停靠栏</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_subtext">下滑关闭应用信息</string>
+    <string name="app_info_source">来源</string>
+    <string name="app_info_source_system">系统</string>
+    <string name="app_info_last_update">上次更新</string>
+    <string name="app_info_version">版本</string>
+    <string name="app_info_more">更多</string>
 </resources>
