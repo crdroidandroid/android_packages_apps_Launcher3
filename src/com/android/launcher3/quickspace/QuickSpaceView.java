@@ -59,8 +59,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     public TextView mEventTitleSub;
     public TextView mGreetingsExt;
     public View mQuickEventsView;
-    public View mGreetingsExtView;
-    public View mGreetingsExtClock;
 
     public boolean mFinishedInflate;
 
@@ -107,17 +105,15 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
           mQuickEventsView.setVisibility(View.GONE);
         }
     }
-    
+
     private final void loadExtendedQS() {
         if (Utilities.isExtendedQuickSpace(getContext())) {
-          mGreetingsExtView.setVisibility(View.VISIBLE);
-          mGreetingsExtClock.setVisibility(View.VISIBLE);
+          mGreetingsExt.setVisibility(View.VISIBLE);
         } else {
-          mGreetingsExtView.setVisibility(View.GONE);
-          mGreetingsExtClock.setVisibility(View.GONE);
+          mGreetingsExt.setVisibility(View.GONE);
         }
     }
-    
+
     private final void bindClock(boolean forced) {
         mClockView.setOnClickListener(mActionReceiver.getCalendarAction());
         if (forced) {
@@ -129,8 +125,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         mEventTitleSub = (TextView) findViewById(R.id.quick_event_title_sub);
         mEventSubIcon = (ImageView) findViewById(R.id.quick_event_icon_sub);
         mGreetingsExt = (TextView) findViewById(R.id.extended_greetings);
-        mGreetingsExtClock = (TextView) findViewById(R.id.extended_greetings_clock);
-        mGreetingsExtView = (View) findViewById(R.id.extended_greetings_view);
         mQuickEventsView = (View) findViewById(R.id.quick_events_messages);
         mQuickspaceContent = (ViewGroup) findViewById(R.id.quickspace_content);
         mClockView = (DateTextView) findViewById(R.id.clock_view);
