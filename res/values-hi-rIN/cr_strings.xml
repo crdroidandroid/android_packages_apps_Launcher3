@@ -24,7 +24,7 @@
     <string name="icons_category_summary">आइकॉन आकार, आकृति तथा अन्य सेट करें</string>
     <string name="app_drawer_category_title">एप्लिकेशन दराज</string>
     <string name="app_drawer_category_summary">अपना एप्लिकेशन ड्रॉअर कस्टमाइज़ करें</string>
-    <string name="recents_category_title">Recents</string>
+    <string name="recents_category_title">हाल ही के</string>
     <string name="recents_category_summary">Revamp the overview screen</string>
     <string name="misc_category_title">अन्य तरह का</string>
     <string name="misc_category_summary">अन्य विकल्प</string>
@@ -122,4 +122,11 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hotseat background</string>
     <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Swipe down to close app info</string>
+    <string name="app_info_source">Source</string>
+    <string name="app_info_source_system">System</string>
+    <string name="app_info_last_update">Last update</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">More</string>
 </resources>

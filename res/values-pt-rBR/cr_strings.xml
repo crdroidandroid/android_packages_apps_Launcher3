@@ -122,4 +122,11 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Fundo desfocado</string>
     <string name="hotseat_bg_summary">Desfocar o fundo do dock de aplicativos</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Deslize para baixo para fechar as informações do aplicativo</string>
+    <string name="app_info_source">Fonte</string>
+    <string name="app_info_source_system">Sistema</string>
+    <string name="app_info_last_update">Última atualização</string>
+    <string name="app_info_version">Versão</string>
+    <string name="app_info_more">Mais</string>
 </resources>

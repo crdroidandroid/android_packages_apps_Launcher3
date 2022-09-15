@@ -122,4 +122,11 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hotseat arka planı</string>
     <string name="hotseat_bg_summary">Uygulama yuvasına yarı şeffaf bir arka plan ekleyin</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Uygulama bilgilerini kapatmak için aşağı kaydırın</string>
+    <string name="app_info_source">Kaynak</string>
+    <string name="app_info_source_system">Sistem</string>
+    <string name="app_info_last_update">Son güncelleme</string>
+    <string name="app_info_version">Sürüm</string>
+    <string name="app_info_more">Daha fazla</string>
 </resources>

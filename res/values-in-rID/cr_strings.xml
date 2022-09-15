@@ -122,4 +122,11 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Latar belakang hotseat</string>
     <string name="hotseat_bg_summary">Tambahkan latar belakang tembus pandang di dok aplikasi</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Geser ke bawah untuk menutup info aplikasi</string>
+    <string name="app_info_source">Sumber</string>
+    <string name="app_info_source_system">Sistem</string>
+    <string name="app_info_last_update">Pembaruan terakhir</string>
+    <string name="app_info_version">Versi</string>
+    <string name="app_info_more">Selengkapnya</string>
 </resources>

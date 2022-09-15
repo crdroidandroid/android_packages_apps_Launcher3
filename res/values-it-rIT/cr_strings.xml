@@ -122,4 +122,11 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Sfondo barra inferiore</string>
     <string name="hotseat_bg_summary">Mostra lo sfondo trasparente nella barra dell\'app in basso</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Scorri verso il basso per chiudere le informazioni dell\'app</string>
+    <string name="app_info_source">Fonte</string>
+    <string name="app_info_source_system">Sistema</string>
+    <string name="app_info_last_update">Ultimo aggiornamento</string>
+    <string name="app_info_version">Versione</string>
+    <string name="app_info_more">Altro</string>
 </resources>

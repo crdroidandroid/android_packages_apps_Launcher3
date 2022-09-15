@@ -122,4 +122,11 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Фон віджэта</string>
     <string name="hotseat_bg_summary">Напаўпразрысты фон ніжняй панэлі праграм</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Правядзіце пальцам уніз, каб закрыць інфармацыю аб праграме</string>
+    <string name="app_info_source">Крыніца</string>
+    <string name="app_info_source_system">Сістэма</string>
+    <string name="app_info_last_update">Апошняе абнаўленне</string>
+    <string name="app_info_version">Версія</string>
+    <string name="app_info_more">Яшчэ</string>
 </resources>
