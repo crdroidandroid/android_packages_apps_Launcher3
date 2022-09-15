@@ -122,4 +122,11 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hotseat háttér</string>
     <string name="hotseat_bg_summary">Áttetsző háttereket adhat az alkalmazásfiókhoz</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Alkalmazásinfó bezárása lefelé csúsztatással</string>
+    <string name="app_info_source">Forrás</string>
+    <string name="app_info_source_system">Rendszer</string>
+    <string name="app_info_last_update">Utoljára frissítve</string>
+    <string name="app_info_version">Verzió</string>
+    <string name="app_info_more">Továbbiak</string>
 </resources>

@@ -123,4 +123,11 @@ Mantén presionado para establecer</string>
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Fondo del dock</string>
     <string name="hotseat_bg_summary">Añadir fondo translúcido al dock de aplicaciones</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Desliza hacia abajo para cerrar la información de la aplicación</string>
+    <string name="app_info_source">Fuentes</string>
+    <string name="app_info_source_system">Sistema</string>
+    <string name="app_info_last_update">Última actualización</string>
+    <string name="app_info_version">Versión</string>
+    <string name="app_info_more">Más</string>
 </resources>

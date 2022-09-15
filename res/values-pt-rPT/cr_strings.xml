@@ -122,4 +122,11 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Fundo da doca</string>
     <string name="hotseat_bg_summary">Mostrar fundo translúcido na doca de apps</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Deslize para baixo para fechar as informações da app</string>
+    <string name="app_info_source">Origem</string>
+    <string name="app_info_source_system">Sistema</string>
+    <string name="app_info_last_update">Última atualização</string>
+    <string name="app_info_version">Versão</string>
+    <string name="app_info_more">Mais</string>
 </resources>

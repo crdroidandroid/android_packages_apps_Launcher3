@@ -122,4 +122,11 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Nền thanh công cụ</string>
     <string name="hotseat_bg_summary">Thêm nền mờ vào thanh ứng dụng</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Vuốt xuống để đóng thông tin ứng dụng</string>
+    <string name="app_info_source">Nguồn</string>
+    <string name="app_info_source_system">Hệ thống</string>
+    <string name="app_info_last_update">Cập nhật lần cuối</string>
+    <string name="app_info_version">Phiên bản</string>
+    <string name="app_info_more">Nhiều hơn</string>
 </resources>

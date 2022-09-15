@@ -122,4 +122,11 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Фон віджета</string>
     <string name="hotseat_bg_summary">Додати напівпрозорий фон в панель додатка</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Проведіть вниз, щоб закрити інформацію про додаток</string>
+    <string name="app_info_source">Джерело</string>
+    <string name="app_info_source_system">Система</string>
+    <string name="app_info_last_update">Останнє оновлення</string>
+    <string name="app_info_version">Версія</string>
+    <string name="app_info_more">Більше</string>
 </resources>

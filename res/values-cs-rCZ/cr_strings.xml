@@ -122,4 +122,11 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Pozadí Hotseat</string>
     <string name="hotseat_bg_summary">Přidat průsvitné pozadí do doku aplikace</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Přejetím dolů informace o\u00a0aplikaci zavřete</string>
+    <string name="app_info_source">Zdroj</string>
+    <string name="app_info_source_system">Systém</string>
+    <string name="app_info_last_update">Poslední aktualizace</string>
+    <string name="app_info_version">Verze</string>
+    <string name="app_info_more">Více</string>
 </resources>

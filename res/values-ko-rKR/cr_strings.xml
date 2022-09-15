@@ -122,4 +122,11 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">독 영역 배경</string>
     <string name="hotseat_bg_summary">앱 서랍에 반투명 배경 추가</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">아래로 스와이프하여 앱 정보를 닫습니다</string>
+    <string name="app_info_source">소스</string>
+    <string name="app_info_source_system">시스템</string>
+    <string name="app_info_last_update">최근 업데이트</string>
+    <string name="app_info_version">버전</string>
+    <string name="app_info_more">더 보기</string>
 </resources>

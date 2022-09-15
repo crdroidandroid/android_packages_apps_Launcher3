@@ -122,4 +122,11 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Φόντο Hotseat</string>
     <string name="hotseat_bg_summary">Προσθήκη ημιδιαφανούς φόντου στη γραμμή εφαρμογών</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Σύρετε προς τα κάτω για κλείσιμο πληροφοριών εφαρμογής</string>
+    <string name="app_info_source">Πηγή</string>
+    <string name="app_info_source_system">Σύστημα</string>
+    <string name="app_info_last_update">Τελευταία ενημέρωση</string>
+    <string name="app_info_version">Έκδοση</string>
+    <string name="app_info_more">Περισσότερα</string>
 </resources>
