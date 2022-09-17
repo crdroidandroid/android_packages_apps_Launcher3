@@ -46,7 +46,7 @@ public final class FeatureFlags {
      *
      * To add a new flag that can be toggled through the flags UI:
      * <p>
-     * Declare a new ToggleableFlag below. Give it a unique key (e.g. "QSB_ON_FIRST_SCREEN"),
+     * Declare a new ToggleableFlag below. Give it a unique key (e.g. "USE_QUICKSPACE_VIEW"),
      * and set a default value for the flag. This will be the default value on Debug builds.
      * <p>
      */

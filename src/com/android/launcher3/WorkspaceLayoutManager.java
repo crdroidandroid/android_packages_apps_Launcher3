@@ -154,14 +154,14 @@ public interface WorkspaceLayoutManager {
         }
 
         child.setHapticFeedbackEnabled(false);
-        // The OnLongClickListener starts drag and drop, but search_container_workspace is not
+        // The OnLongClickListener starts drag and drop, but reserved_container_workspace is not
         // draggable. It doesn't implement DraggableView.
-        // Setting the OnLongClickListener on search_container_workspace leads to two issues:
+        // Setting the OnLongClickListener on reserved_container_workspace leads to two issues:
         //    1. NullPointerException attempting to invoke DraggableView::getViewType.
         //    2. DuplicateClickableBoundsCheck failure when the bounds of
-        //    search_container_workspace doesn't match its draggable child.
+        //    reserved_container_workspace doesn't match its draggable child.
         // Retain the condition to avoid regression of the two issues above.
-        if (childId != R.id.search_container_workspace) {
+        if (childId != R.id.reserved_container_workspace) {
             child.setOnLongClickListener(getWorkspaceChildOnLongClickListener());
         }
         if (child instanceof DropTarget) {
