@@ -137,18 +137,6 @@ constructor(
             settingsCache.unregister(NOTIFICATION_BADGING_URI, notificationChanges)
         }
 
-        // removable smartspace
-        if (Flags.enableSmartspaceRemovalToggle()) {
-            val smartSpacePrefChanges =
-                SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
-                    if (LoaderTask.SMARTSPACE_ON_HOME_SCREEN == key) model.forceReload()
-                }
-            getPrefs(context).registerOnSharedPreferenceChangeListener(smartSpacePrefChanges)
-            lifeCycle.addCloseable {
-                getPrefs(context).unregisterOnSharedPreferenceChangeListener(smartSpacePrefChanges)
-            }
-        }
-
         // Custom widgets
         lifeCycle.addCloseable(customWidgetManager.addWidgetRefreshCallback(model::rebindCallbacks))
 

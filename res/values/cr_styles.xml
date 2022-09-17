@@ -16,19 +16,12 @@
 -->
 <resources>
 
-     <!-- Meminfo in overview -->
-    <dimen name="meminfo_bottom_margin_gesture">18dp</dimen>
-    <dimen name="meminfo_bottom_margin_taskbar">60dp</dimen>
-    <dimen name="meminfo_bottom_margin_transient_taskbar">96dp</dimen>
-    <dimen name="meminfo_bottom_margin_three_button">42dp</dimen>
-    <dimen name="meminfo_top_margin">12dp</dimen>
-
-    <!-- Overview scrolling scale animation -->
-    <dimen name="overview_scroll_scale">0.9</dimen>
-
     <!-- QuickSpace -->
-    <dimen name="quickspace_title_size">20sp</dimen>
-    <dimen name="quickspace_subtitle_size">16sp</dimen>
-    <dimen name="quickspace_alternate_title_size">18sp</dimen>
-    <dimen name="quickspace_alternate_subtitle_size">16sp</dimen>
+    <style name="QuickSpaceText">
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
+    </style>
+
+    <style name="QuickSpaceSubText">
+        <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
+    </style>
 </resources>
