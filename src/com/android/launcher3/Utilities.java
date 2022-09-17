@@ -51,6 +51,8 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.hardware.biometrics.BiometricManager.Authenticators;
 import android.hardware.biometrics.BiometricPrompt;
+import android.icu.text.DateFormat;
+import android.icu.text.DisplayContext;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.CancellationSignal;
@@ -62,6 +64,7 @@ import android.os.TransactionTooLargeException;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
+import android.text.format.DateUtils;
 import android.text.style.TtsSpan;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -184,6 +187,11 @@ public final class Utilities {
     public static final String KEY_HOTSEAT_QSB_STROKE_WIDTH = "pref_hotseat_qsb_stroke_width";
     public static final String KEY_AUTO_KEYABORD = "pref_auto_keyboard";
     public static final String KEY_DRAWER_SCROLLBAR = "pref_drawer_scrollbar";
+    public static final String DESKTOP_SHOW_QUICKSPACE = "pref_show_quickspace";
+    public static final String KEY_SHOW_ALT_QUICKSPACE = "pref_show_alt_quickspace";
+    public static final String KEY_SHOW_QUICKSPACE_PSONALITY = "pref_quickspace_psonality";
+    public static final String KEY_SHOW_QUICKSPACE_NOWPLAYING = "pref_quickspace_np";
+    public static final String KEY_SHOW_QUICKSPACE_WEATHER = "pref_quickspace_weather";
 
     /**
      * Returns true if theme is dark.
@@ -992,6 +1000,19 @@ public final class Utilities {
         }, WAIT_BEFORE_RESTART);
     }
 
+    public static String formatDateTime(Context context) {
+        String styleText;
+        DateFormat dateFormat;
+        if (useAlternativeQuickspaceUI(context)) {
+            styleText = context.getString(R.string.quickspace_date_format_minimalistic);
+        } else {
+            styleText = context.getString(R.string.quickspace_date_format);
+        }
+        dateFormat = DateFormat.getInstanceForSkeleton(styleText, Locale.getDefault());
+        dateFormat.setContext(DisplayContext.CAPITALIZATION_FOR_STANDALONE);
+        return dateFormat.format(System.currentTimeMillis());
+    }
+
     public static boolean isWorkspaceEditAllowed(Context context) {
         SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
         return !prefs.getBoolean(InvariantDeviceProfile.KEY_WORKSPACE_LOCK, false);
@@ -1141,5 +1162,30 @@ public final class Utilities {
     public static boolean showScrollbar(Context context) {
         SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_DRAWER_SCROLLBAR, true);
+    }
+
+    public static boolean showQuickspace(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(DESKTOP_SHOW_QUICKSPACE, true);
+    }
+
+    public static boolean useAlternativeQuickspaceUI(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_SHOW_ALT_QUICKSPACE, false);
+    }
+
+    public static boolean isQuickspacePersonalityEnabled(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_SHOW_QUICKSPACE_PSONALITY, true);
+    }
+
+    public static boolean isQuickspaceNowPlaying(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_SHOW_QUICKSPACE_NOWPLAYING, true);
+    }
+
+    public static boolean isQuickspaceWeather(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_SHOW_QUICKSPACE_WEATHER, true);
     }
 }
