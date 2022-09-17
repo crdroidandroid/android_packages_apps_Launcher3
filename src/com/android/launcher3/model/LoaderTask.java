@@ -687,17 +687,8 @@ public class LoaderTask implements Runnable {
                             String savedProvider = c.getString(appWidgetProviderIndex);
                             final ComponentName component;
 
-                            boolean isSearchWidget = (c.getInt(optionsIndex)
-                                    & LauncherAppWidgetInfo.OPTION_SEARCH_WIDGET) != 0;
-                            if (isSearchWidget) {
-                                component  = QsbContainerView.getSearchComponentName(context);
-                                if (component == null) {
-                                    c.markDeleted("Discarding SearchWidget without packagename ");
-                                    continue;
-                                }
-                            } else {
-                                component = ComponentName.unflattenFromString(savedProvider);
-                            }
+                            component = ComponentName.unflattenFromString(savedProvider);
+
                             final boolean isIdValid = !c.hasRestoreFlag(
                                     LauncherAppWidgetInfo.FLAG_ID_NOT_VALID);
                             final boolean wasProviderReady = !c.hasRestoreFlag(
