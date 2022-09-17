@@ -593,9 +593,10 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
      * Initializes and binds the first page
      */
     public void bindAndInitFirstWorkspaceScreen() {
-        if ((!FeatureFlags.QSB_ON_FIRST_SCREEN
+        if ((!Utilities.showQuickspace(getContext())
                 || !mLauncher.getIsFirstPagePinnedItemEnabled())
                 || shouldShowFirstPageWidget()) {
+            insertNewWorkspaceScreen(Workspace.FIRST_SCREEN_ID, getChildCount());
             mFirstPagePinnedItem = null;
             return;
         }
@@ -607,14 +608,14 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
             // As workspace does not touch the edges, we do not need a full
             // width first page pinned item.
             mFirstPagePinnedItem = LayoutInflater.from(getContext())
-                    .inflate(R.layout.search_container_workspace, firstPage, false);
+                    .inflate(R.layout.reserved_container_workspace, firstPage, false);
         }
 
         int cellHSpan = mLauncher.getDeviceProfile().inv.numSearchContainerColumns;
         CellLayoutLayoutParams lp = new CellLayoutLayoutParams(0, 0, cellHSpan, 1);
         lp.canReorder = false;
         if (!firstPage.addViewToCellLayout(
-                mFirstPagePinnedItem, 0, R.id.search_container_workspace, lp, true)) {
+                mFirstPagePinnedItem, 0, R.id.reserved_container_workspace, lp, true)) {
             Log.e(TAG, "Failed to add to item at (0, 0) to CellLayout");
             mFirstPagePinnedItem = null;
         }
@@ -806,7 +807,7 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
 
             // We don't want to remove the first screen even if it's empty because that's where
             // first page pinned item would go if it gets turned back on.
-            if (ENABLE_SMARTSPACE_REMOVAL.get() && screenId == FIRST_SCREEN_ID) {
+            if (FeatureFlags.USE_QUICKSPACE_VIEW && screenId == FIRST_SCREEN_ID) {
                 continue;
             }
 
@@ -1034,7 +1035,7 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
             int id = mWorkspaceScreens.keyAt(i);
             CellLayout cl = mWorkspaceScreens.valueAt(i);
             // FIRST_SCREEN_ID can never be removed.
-            if (((!FeatureFlags.QSB_ON_FIRST_SCREEN
+            if (((!FeatureFlags.USE_QUICKSPACE_VIEW
                     || shouldShowFirstPageWidget())
                     || id > FIRST_SCREEN_ID)
                     && cl.getShortcutsAndWidgets().getChildCount() == 0) {

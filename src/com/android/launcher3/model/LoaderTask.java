@@ -395,9 +395,7 @@ public class LoaderTask implements Runnable {
             mModelDelegate.markActive();
             logASplit("workspaceDelegateItems");
         }
-        mBgDataModel.isFirstPagePinnedItemEnabled = FeatureFlags.QSB_ON_FIRST_SCREEN
-                && (!ENABLE_SMARTSPACE_REMOVAL.get() || LauncherPrefs.getPrefs(
-                mApp.getContext()).getBoolean(SMARTSPACE_ON_HOME_SCREEN, true));
+        mBgDataModel.isFirstPagePinnedItemEnabled = FeatureFlags.USE_QUICKSPACE_VIEW;
     }
 
     private void loadWorkspaceImpl(

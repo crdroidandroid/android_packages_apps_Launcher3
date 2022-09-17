@@ -21,4 +21,8 @@
     <dimen name="meminfo_bottom_margin_transient_taskbar">96dp</dimen>
     <dimen name="meminfo_bottom_margin_three_button">15dp</dimen>
     <dimen name="meminfo_top_margin">12dp</dimen>
+
+    <!-- QuickSpace -->
+    <dimen name="quickspace_title_size">24dp</dimen>
+    <dimen name="quickspace_alternate_title_size">22dp</dimen>
 </resources>
