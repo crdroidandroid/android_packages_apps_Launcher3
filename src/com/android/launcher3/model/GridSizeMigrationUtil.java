@@ -119,7 +119,7 @@ public class GridSizeMigrationUtil {
             DbReader destReader = new DbReader(t.getDb(), TABLE_NAME, context, validPackages);
 
             Point targetSize = new Point(destDeviceState.getColumns(), destDeviceState.getRows());
-            migrate(target, srcReader, destReader, destDeviceState.getNumHotseat(),
+            migrate(context, target, srcReader, destReader, destDeviceState.getNumHotseat(),
                     targetSize, srcDeviceState, destDeviceState);
             dropTable(t.getDb(), TMP_TABLE);
             t.commit();
@@ -138,6 +138,7 @@ public class GridSizeMigrationUtil {
     }
 
     public static boolean migrate(
+            @NonNull Context context,
             @NonNull DatabaseHelper helper,
             @NonNull final DbReader srcReader, @NonNull final DbReader destReader,
             final int destHotseatSize, @NonNull final Point targetSize,
@@ -211,7 +212,7 @@ public class GridSizeMigrationUtil {
             if (DEBUG) {
                 Log.d(TAG, "Migrating " + screenId);
             }
-            solveGridPlacement(helper, srcReader,
+            solveGridPlacement(context, helper, srcReader,
                     destReader, screenId, trgX, trgY, workspaceToBeAdded, false);
             if (workspaceToBeAdded.isEmpty()) {
                 break;
@@ -222,7 +223,7 @@ public class GridSizeMigrationUtil {
         // any of the screens, in this case we add them to new screens until all of them are placed.
         int screenId = destReader.mLastScreenId + 1;
         while (!workspaceToBeAdded.isEmpty()) {
-            solveGridPlacement(helper, srcReader,
+            solveGridPlacement(context, helper, srcReader,
                     destReader, screenId, trgX, trgY, workspaceToBeAdded, preservePages);
             screenId++;
         }
@@ -321,13 +322,13 @@ public class GridSizeMigrationUtil {
         return validPackages;
     }
 
-    private static void solveGridPlacement(@NonNull final DatabaseHelper helper,
+    private static void solveGridPlacement(@NonNull Context context, @NonNull final DatabaseHelper helper,
             @NonNull final DbReader srcReader, @NonNull final DbReader destReader,
             final int screenId, final int trgX, final int trgY,
             @NonNull final List<DbEntry> sortedItemsToPlace, final boolean matchingScreenIdOnly) {
         final GridOccupancy occupied = new GridOccupancy(trgX, trgY);
         final Point trg = new Point(trgX, trgY);
-        final Point next = new Point(0, screenId == 0 && FeatureFlags.QSB_ON_FIRST_SCREEN
+        final Point next = new Point(0, screenId == 0 && Utilities.showQuickspace(context)
                 ? 1 /* smartspace */ : 0);
         List<DbEntry> existedEntries = destReader.mWorkspaceEntriesByScreenId.get(screenId);
         if (existedEntries != null) {
