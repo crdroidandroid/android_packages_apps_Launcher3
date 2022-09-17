@@ -562,13 +562,13 @@ public class LauncherPreviewRenderer extends ContextWrapper
         }
 
         // Add first page QSB
-        if (FeatureFlags.QSB_ON_FIRST_SCREEN) {
+        if (FeatureFlags.USE_QUICKSPACE_VIEW) {
             CellLayout firstScreen = mWorkspaceScreens.get(FIRST_SCREEN_ID);
             View qsb = mHomeElementInflater.inflate(R.layout.qsb_preview, firstScreen, false);
             CellLayoutLayoutParams lp = new CellLayoutLayoutParams(
                     0, 0, firstScreen.getCountX(), 1);
             lp.canReorder = false;
-            firstScreen.addViewToCellLayout(qsb, 0, R.id.search_container_workspace, lp, true);
+            firstScreen.addViewToCellLayout(qsb, 0, R.id.reserved_container_workspace, lp, true);
         }
 
         measureView(mRootView, mDp.widthPx, mDp.heightPx);
