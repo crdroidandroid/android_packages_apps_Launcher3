@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2016-2024 crDroid Android Project
+<!-- Copyright (C) 2018-2023 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,18 +13,5 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-
-     <!-- Meminfo in overview -->
-    <dimen name="meminfo_bottom_margin_gesture">15dp</dimen>
-    <dimen name="meminfo_bottom_margin_transient_taskbar">96dp</dimen>
-    <dimen name="meminfo_bottom_margin_three_button">15dp</dimen>
-    <dimen name="meminfo_top_margin">12dp</dimen>
-
-    <!-- Overview scrolling scale animation -->
-    <dimen name="overview_scroll_scale">0.9</dimen>
-
-    <!-- QuickSpace -->
-    <dimen name="quickspace_title_size">24dp</dimen>
-    <dimen name="quickspace_alternate_title_size">22dp</dimen>
-</resources>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" />

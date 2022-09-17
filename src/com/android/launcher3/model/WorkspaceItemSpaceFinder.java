@@ -23,6 +23,7 @@ import android.util.LongSparseArray;
 import com.android.launcher3.InvariantDeviceProfile;
 import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.LauncherSettings;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.model.data.ItemInfo;
 import com.android.launcher3.util.GridOccupancy;
@@ -67,7 +68,7 @@ public class WorkspaceItemSpaceFinder {
         int screenCount = workspaceScreens.size();
         // First check the preferred screen.
         IntSet screensToExclude = new IntSet();
-        if (FeatureFlags.QSB_ON_FIRST_SCREEN
+        if (Utilities.showQuickspace(app.getContext())
                 && !shouldShowFirstPageWidget()) {
             screensToExclude.add(FIRST_SCREEN_ID);
         }
