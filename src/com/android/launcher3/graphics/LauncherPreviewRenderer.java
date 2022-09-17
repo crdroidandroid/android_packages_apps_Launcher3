@@ -603,15 +603,14 @@ public class LauncherPreviewRenderer extends BaseContext
         }
 
         // Add first page QSB
-        if (FeatureFlags.QSB_ON_FIRST_SCREEN && dataModel.isFirstPagePinnedItemEnabled
-                && !SHOULD_SHOW_FIRST_PAGE_WIDGET) {
+        if (FeatureFlags.USE_QUICKSPACE_VIEW && dataModel.isFirstPagePinnedItemEnabled) {
             CellLayout firstScreen = mWorkspaceScreens.get(FIRST_SCREEN_ID);
             View qsb = mHomeElementInflater.inflate(R.layout.qsb_preview, firstScreen, false);
             // TODO: set bgHandler on qsb when it is BaseTemplateCard, which requires API changes.
             CellLayoutLayoutParams lp = new CellLayoutLayoutParams(
                     0, 0, firstScreen.getCountX(), 1);
             lp.canReorder = false;
-            firstScreen.addViewToCellLayout(qsb, 0, R.id.search_container_workspace, lp, true);
+            firstScreen.addViewToCellLayout(qsb, 0, R.id.reserved_container_workspace, lp, true);
         }
 
         measureView(mRootView, mDp.widthPx, mDp.heightPx);

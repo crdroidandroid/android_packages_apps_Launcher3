@@ -36,4 +36,7 @@
 
     <!-- Icon pack -->
     <string name="icon_pack_settings_class" translatable="false">com.android.launcher3.icons.pack.IconPackSettingsFragment</string>
+
+    <!-- Quickspace -->
+    <item type="id" name="reserved_container_workspace" />
 </resources>
