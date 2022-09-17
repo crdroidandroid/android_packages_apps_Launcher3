@@ -843,19 +843,17 @@ public final class Utilities {
         });
     }
 
-    public static String formatDateTime(Context context, long timeInMillis) {
-        try {
-            String format = "EEEE, MMM d";
-            String formattedDate;
-            DateFormat dateFormat = DateFormat.getInstanceForSkeleton(format, Locale.getDefault());
-            dateFormat.setContext(DisplayContext.CAPITALIZATION_FOR_STANDALONE);
-            formattedDate = dateFormat.format(timeInMillis);
-            return formattedDate;
-        } catch (Throwable t) {
-            Log.e(TAG, "Error formatting At A Glance date", t);
-            return DateUtils.formatDateTime(context, timeInMillis, DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH);
+    public static String formatDateTime(Context context) {
+        String styleText;
+        DateFormat dateFormat;
+        if (useAlternativeQuickspaceUI(context)) {
+            styleText = context.getString(R.string.quickspace_date_format_minimalistic);
+        } else {
+            styleText = context.getString(R.string.quickspace_date_format);
         }
-
+        dateFormat = DateFormat.getInstanceForSkeleton(styleText, Locale.getDefault());
+        dateFormat.setContext(DisplayContext.CAPITALIZATION_FOR_STANDALONE);
+        return dateFormat.format(System.currentTimeMillis());
     }
 
     public static boolean isWorkspaceEditAllowed(Context context) {

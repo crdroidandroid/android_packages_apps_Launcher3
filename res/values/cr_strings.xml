@@ -138,7 +138,8 @@
     <!-- QuickSpace -->
     <string name="show_quickspace_title">At A Glance</string>
     <string name="show_quickspace_summary">Show at the top of your home screen</string>
-    <string name="abbrev_wday_month_day_no_year" translatable="false">EEEEMMMd</string>
+    <string name="quickspace_date_format" translatable="false">EEEE, MMM d</string>
+    <string name="quickspace_date_format_minimalistic" translatable="false">EEE, MMM d</string>
 
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
