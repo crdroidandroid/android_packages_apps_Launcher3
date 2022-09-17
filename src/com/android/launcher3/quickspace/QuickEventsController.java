@@ -187,7 +187,7 @@ public class QuickEventsController {
 
         if (!Utilities.isQuickspacePersonalityEnabled(mContext)) return;
 
-        mEventTitle = Utilities.formatDateTime(mContext, System.currentTimeMillis());
+        mEventTitle = Utilities.formatDateTime(mContext);
         mPSAMorningStr = mContext.getResources().getStringArray(R.array.quickspace_psa_morning);
         mPSAEvenStr = mContext.getResources().getStringArray(R.array.quickspace_psa_evening);
         mPSAMidniteStr = mContext.getResources().getStringArray(R.array.quickspace_psa_midnight);
