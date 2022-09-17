@@ -54,6 +54,8 @@ import com.android.launcher3.util.SettingsCache;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 
+import com.android.internal.util.crdroid.OmniJawsClient;
+
 /**
  * Settings activity for Launcher.
  */
@@ -119,6 +121,11 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
             case Utilities.KEY_DOCK_MUSIC_SEARCH:
             case Utilities.KEY_HOTSEAT_QSB_OPACITY:
             case Utilities.KEY_HOTSEAT_QSB_STROKE_WIDTH:
+            case Utilities.DESKTOP_SHOW_QUICKSPACE:
+            case Utilities.KEY_SHOW_ALT_QUICKSPACE:
+            case Utilities.KEY_SHOW_QUICKSPACE_NOWPLAYING:
+            case Utilities.KEY_SHOW_QUICKSPACE_WEATHER:
+            case Utilities.KEY_SHOW_QUICKSPACE_PSONALITY:
                 LauncherAppState.INSTANCE.executeIfCreated(app -> app.setNeedsRestart());
                 break;
             default:
@@ -182,6 +189,9 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
 
         private Preference mShowGoogleAppPref;
         private Preference mShowGoogleBarPref;
+        private Preference mWeatherPref;
+
+        private OmniJawsClient mWeatherClient;
 
         @Override
         public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -206,6 +216,13 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
             mShowGoogleBarPref = screen.findPreference(Utilities.KEY_DOCK_SEARCH);
 
             updateIsGoogleAppEnabled();
+
+            mWeatherClient = new OmniJawsClient(getContext());
+            mWeatherPref = screen.findPreference(Utilities.KEY_SHOW_QUICKSPACE_WEATHER);
+            if (!mWeatherClient.isOmniJawsEnabled()) {
+                mWeatherPref.setEnabled(false);
+                mWeatherPref.setSummary(R.string.quick_event_ambient_weather_enabled_info);
+            }
 
             // If the target preference is not in the current preference screen, find the parent
             // preference screen that contains the target preference and set it as the preference
