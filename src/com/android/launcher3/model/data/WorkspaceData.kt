@@ -43,7 +43,7 @@ sealed class WorkspaceData : Iterable<ItemInfo> {
     fun collectWorkspaceScreens(): IntArray {
         val screenSet = IntSet()
         forEach { if (it.container == CONTAINER_DESKTOP) screenSet.add(it.screenId) }
-        if (BuildConfig.QSB_ON_FIRST_SCREEN || screenSet.isEmpty) {
+        if (BuildConfig.USE_QUICKSPACE_VIEW || screenSet.isEmpty) {
             screenSet.add(Workspace.FIRST_SCREEN_ID)
         }
         return screenSet.array

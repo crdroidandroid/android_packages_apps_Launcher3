@@ -326,7 +326,7 @@ public class LauncherPreviewRenderer extends BaseContext
         populateHotseatPredictions(itemIdMap);
 
         // Add first page QSB
-        if (BuildConfig.QSB_ON_FIRST_SCREEN) {
+        if (BuildConfig.USE_QUICKSPACE_VIEW) {
             CellLayout firstScreen = mWorkspaceScreens.get(FIRST_SCREEN_ID);
             if (firstScreen != null) {
                 View qsb = mHomeElementInflater.inflate(R.layout.qsb_preview, firstScreen, false);
@@ -335,7 +335,7 @@ public class LauncherPreviewRenderer extends BaseContext
                 CellLayoutLayoutParams lp = new CellLayoutLayoutParams(
                         0, 0, firstScreen.getCountX(), 1);
                 lp.canReorder = false;
-                firstScreen.addViewToCellLayout(qsb, 0, R.id.search_container_workspace, lp, true);
+                firstScreen.addViewToCellLayout(qsb, 0, R.id.reserved_container_workspace, lp, true);
             }
         }
         measureAndLayoutRootView();

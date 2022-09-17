@@ -16,7 +16,6 @@
 
 package com.android.launcher3.model;
 
-import static com.android.launcher3.BuildConfig.QSB_ON_FIRST_SCREEN;
 import static com.android.launcher3.GridType.GRID_TYPE_NON_ONE_GRID;
 import static com.android.launcher3.GridType.GRID_TYPE_ONE_GRID;
 import static com.android.launcher3.InvariantDeviceProfile.TYPE_TABLET;
@@ -45,6 +44,7 @@ import androidx.annotation.VisibleForTesting;
 
 import com.android.launcher3.Flags;
 import com.android.launcher3.InvariantDeviceProfile;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.LauncherSettings;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.logging.StatsLogManager;
@@ -398,7 +398,8 @@ public class GridSizeMigrationDBController {
         final GridOccupancy occupied = new GridOccupancy(trgX, trgY);
         final Point trg = new Point(trgX, trgY);
         final Point next = new Point(0,
-                screenId == 0 && QSB_ON_FIRST_SCREEN ? 1 /* smartspace */ : 0);
+                screenId == 0 && LauncherPrefs.SHOW_QUICKSPACE.get(destReader.mContext)
+                ? 1 /* smartspace */ : 0);
         List<DbEntry> existedEntries = destReader.mWorkspaceEntriesByScreenId.get(screenId);
         if (existedEntries != null) {
             for (DbEntry entry : existedEntries) {
