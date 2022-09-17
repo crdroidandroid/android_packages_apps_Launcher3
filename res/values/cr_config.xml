@@ -33,4 +33,7 @@
 
     <!-- Allow rotation by default -->
     <bool name="config_allowRotation">false</bool>
+
+    <!-- Quickspace -->
+    <item type="id" name="reserved_container_workspace" />
 </resources>

@@ -350,7 +350,7 @@ public class LauncherPreviewRenderer extends BaseContext
                 CellLayoutLayoutParams lp = new CellLayoutLayoutParams(
                         0, 0, firstScreen.getCountX(), 1);
                 lp.canReorder = false;
-                firstScreen.addViewToCellLayout(qsb, 0, R.id.search_container_workspace, lp, true);
+                firstScreen.addViewToCellLayout(qsb, 0, R.id.reserved_container_workspace, lp, true);
             }
         }
         measureAndLayoutRootView();

@@ -661,14 +661,14 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
             // As workspace does not touch the edges, we do not need a full
             // width first page pinned item.
             mFirstPagePinnedItem = LayoutInflater.from(getContext())
-                    .inflate(R.layout.search_container_workspace, firstPage, false);
+                    .inflate(R.layout.reserved_container_workspace, firstPage, false);
         }
 
         int cellHSpan = mLauncher.getDeviceProfile().inv.numSearchContainerColumns;
         CellLayoutLayoutParams lp = new CellLayoutLayoutParams(0, 0, cellHSpan, 1);
         lp.canReorder = false;
         if (!firstPage.addViewToCellLayout(
-                mFirstPagePinnedItem, 0, R.id.search_container_workspace, lp, true)) {
+                mFirstPagePinnedItem, 0, R.id.reserved_container_workspace, lp, true)) {
             Log.e(TAG, "Failed to add to item at (0, 0) to CellLayout");
             mFirstPagePinnedItem = null;
         }

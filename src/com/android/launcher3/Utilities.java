@@ -161,7 +161,7 @@ public final class Utilities {
     public static final boolean IS_DEBUG_DEVICE = BuildConfig.IS_DEBUG_DEVICE;
 
     public static boolean qsbOnFirstScreen() {
-        return !injectableModelItems() && BuildConfig.QSB_ON_FIRST_SCREEN;
+        return BuildConfig.USE_QUICKSPACE_VIEW;
     }
 
     public static final int TRANSLATE_UP = 0;
