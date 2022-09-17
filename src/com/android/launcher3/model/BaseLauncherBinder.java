@@ -306,10 +306,6 @@ public class BaseLauncherBinder {
             executeCallbacksTask(c -> {
                 c.clearPendingBinds();
                 c.startBinding();
-                if (enableSmartspaceRemovalToggle()) {
-                    c.setIsFirstPagePinnedItemEnabled(
-                            mBgDataModel.isFirstPagePinnedItemEnabled);
-                }
             }, mUiExecutor);
 
             // Bind workspace screens

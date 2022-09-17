@@ -160,23 +160,6 @@ public class LauncherAppState implements SafeCloseable {
                 .addUserEventListener(mModel::onUserEvent);
         mOnTerminateCallback.add(userChangeListener::close);
 
-        if (enableSmartspaceRemovalToggle()) {
-            OnSharedPreferenceChangeListener firstPagePinnedItemListener =
-                    new OnSharedPreferenceChangeListener() {
-                        @Override
-                        public void onSharedPreferenceChanged(
-                                SharedPreferences sharedPreferences, String key) {
-                            if (SMARTSPACE_ON_HOME_SCREEN.equals(key)) {
-                                mModel.forceReload();
-                            }
-                        }
-                    };
-            LauncherPrefs.getPrefs(mContext).registerOnSharedPreferenceChangeListener(
-                    firstPagePinnedItemListener);
-            mOnTerminateCallback.add(() -> LauncherPrefs.getPrefs(mContext)
-                    .unregisterOnSharedPreferenceChangeListener(firstPagePinnedItemListener));
-        }
-
         LockedUserState.get(context).runOnUserUnlocked(() -> {
             CustomWidgetManager cwm = CustomWidgetManager.INSTANCE.get(mContext);
             mOnTerminateCallback.add(cwm.addWidgetRefreshCallback(mModel::rebindCallbacks)::close);
