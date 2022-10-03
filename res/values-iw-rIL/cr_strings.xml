@@ -42,8 +42,8 @@
     <string name="msg_minus_one_on_right">בעת החלקה ימינה ממסך הבית</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Icon labels on desktop</string>
-    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <string name="desktop_show_labels">תוויות סמלים במסך הבית</string>
+    <string name="drawer_show_labels">תוויות סמלים במגירת היישומים</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">ערך: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">כברירת מחדל</string>
@@ -63,16 +63,16 @@
     <string name="label_lens">Google Lens</string>
     <string name="label_voice_search">חיפוש קולי</string>
     <string name="dock_search_title">סרגל החיפוש של Google</string>
-    <string name="dock_search_summary">Search bar in the bottom dock</string>
-    <string name="dock_theme_title">Themed icons</string>
-    <string name="dock_theme_summary">Use themed icons for search bar</string>
-    <string name="search_radius_title">Corner radius</string>
+    <string name="dock_search_summary">שורת חיפוש בסרגל התחתון</string>
+    <string name="dock_theme_title">סמלי ערכת הנושא</string>
+    <string name="dock_theme_summary">הצגת סמלי ערכת הנושא בשורת החיפוש</string>
+    <string name="search_radius_title">רדיוס הפינות</string>
     <!-- Recents -->
     <string name="action_lens">Lens</string>
     <!-- Homescreen Statusbar -->
-    <string name="show_statusbar_title">Status Bar</string>
+    <string name="show_statusbar_title">שורת מצב</string>
     <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
+    <string name="suggestion_pref_screen_title">הצעות</string>
     <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
