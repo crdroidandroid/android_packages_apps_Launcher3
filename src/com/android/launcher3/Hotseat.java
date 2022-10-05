@@ -177,7 +177,9 @@ public class Hotseat extends CellLayout implements Insettable {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
-        int qsbWidth = mActivity.getDeviceProfile().qsbWidth;
+        int qsbWidth = mActivity.getDeviceProfile().isQsbInline
+                ? mActivity.getDeviceProfile().qsbWidth
+                : getShortcutsAndWidgets().getMeasuredWidth();
 
         mQsb.measure(MeasureSpec.makeMeasureSpec(qsbWidth, MeasureSpec.EXACTLY),
                 MeasureSpec.makeMeasureSpec(mQsbHeight, MeasureSpec.EXACTLY));
