@@ -4164,6 +4164,9 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
         }
     }
 
+    /**
+     * Called when staging a split from Home/AllApps, using the icon long-press menu.
+     */
     public void initiateSplitSelect(QuickstepSystemShortcut.SplitSelectSource splitSelectSource) {
         mSplitSelectSource = splitSelectSource;
         mSplitSelectStateController.setInitialTaskSelect(splitSelectSource.intent,
@@ -4302,6 +4305,10 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
 
         resetTaskVisuals();
         mSplitHiddenTaskViewIndex = -1;
+        if (mSplitHiddenTaskView != null) {
+            mSplitHiddenTaskView.setThumbnailVisibility(VISIBLE);
+            mSplitHiddenTaskView = null;
+        }
     }
 
     private void safeRemoveDragLayerView(@Nullable View viewToRemove) {
