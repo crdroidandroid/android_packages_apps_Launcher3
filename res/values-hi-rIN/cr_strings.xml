@@ -25,7 +25,7 @@
     <string name="app_drawer_category_title">एप्लिकेशन दराज</string>
     <string name="app_drawer_category_summary">अपना एप्लिकेशन ड्रॉअर कस्टमाइज़ करें</string>
     <string name="recents_category_title">हाल ही के</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_summary">अवलोकन स्क्रीन में सुधार करें</string>
     <string name="misc_category_title">अन्य तरह का</string>
     <string name="misc_category_summary">अन्य विकल्प</string>
     <string name="dev_options_title">विकासक के विकल्प</string>
@@ -33,7 +33,7 @@
     <string name="general_category_title">आम</string>
     <string name="interface_category_title">इंटरफेस</string>
     <string name="search_bar_category_title">खोज पट्टी</string>
-    <string name="actions_category_title">Quick actions</string>
+    <string name="actions_category_title">त्वरित क्रियाएं</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Google ऐप एक्सेस करने के लिए स्वाइप करें</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -42,8 +42,8 @@
     <string name="msg_minus_one_on_right">When you swipe right from main Home screen</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Icon labels on desktop</string>
-    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <string name="desktop_show_labels">होम स्क्रीन पर चिह्न लेबल दिखाएं</string>
+    <string name="drawer_show_labels">ड्रॉअर में चिह्न लेबल दिखाएं</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">मूल्य: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">डिफ़ॉल्ट रूप से</string>
@@ -63,7 +63,7 @@
     <string name="label_lens">गूगल लेंस</string>
     <string name="label_voice_search">बोलकर खोजें</string>
     <string name="dock_search_title">गूगल सर्च बार</string>
-    <string name="dock_search_summary">Search bar in the bottom dock</string>
+    <string name="dock_search_summary">निचले डॉक में खोज बार दिखाएं</string>
     <string name="dock_theme_title">थीम वाले आइकन</string>
     <string name="dock_theme_summary">सर्च बार के लिए थीम वाले आइकॉन का इस्तेमाल करें</string>
     <string name="search_radius_title">कोने का अर्द्ध व्यास</string>
@@ -92,17 +92,17 @@
     <string name="icon_pack_add">अधिक स्थापित करें</string>
     <string name="icon_pack_no_market">कोई उपलब्ध ऐप स्टोर नहीं है</string>
     <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar">Use taskbar</string>
-    <string name="pref_allow_phone_taskbar_desc">For opening and switching apps anywhere</string>
+    <string name="pref_allow_phone_taskbar">कार्यपट्टी का उपयोग करें</string>
+    <string name="pref_allow_phone_taskbar_desc">अनुप्रयोगों को कहीं भी खोलने और अदलाबदली करने के लिए</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Grid style</string>
-    <string name="pref_allow_phone_overview_grid_desc">More recent apps in overview</string>
+    <string name="pref_allow_phone_overview_grid">ग्रिड शैली</string>
+    <string name="pref_allow_phone_overview_grid_desc">अवलोकन में अधिक हालिया अनुप्रयोग</string>
     <!-- Row Height -->
-    <string name="row_height_title">Row height</string>
+    <string name="row_height_title">पंक्ति ऊँचाई</string>
     <!-- Top shadow -->
-    <string name="show_top_shadow">Top shadow</string>
+    <string name="show_top_shadow">ऊपरी छाया</string>
     <!-- Wallpaper scrolling -->
-    <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
+    <string name="allow_wallpaper_scrolling">वॉलपेपर स्क्रॉल</string>
     <string name="allow_wallpaper_scrolling_desc">Wallpaper scrolling effect for multiple screens</string>
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
@@ -110,23 +110,23 @@
     <!-- Background opacity -->
     <string name="background_opacity_title">Background opacity</string>
     <!-- Recents icons -->
-    <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Clear all</string>
-    <string name="recents_lens_title">Lens</string>
+    <string name="recents_screenshot_title">स्क्रीनशॉट</string>
+    <string name="recents_clear_all_title">सब कुछ मिटाएं</string>
+    <string name="recents_lens_title">लेंस</string>
     <!-- Background blur -->
     <string name="background_blur_title">Background blur depth</string>
     <string name="background_blur_desc">Set blur depth level for recents and app drawer</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="recents_meminfo_title">मेमोरी जानकारी</string>
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <string name="hotseat_bg_summary">अनुप्रयोग डॉक में पारदर्शी पृष्ठभूमि जोड़ें</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_subtext">अनुप्रयोग जानकारी बंद करने के लिए नीचे स्वाइप करें.</string>
+    <string name="app_info_source">स्रोत</string>
+    <string name="app_info_source_system">तंत्र</string>
+    <string name="app_info_last_update">पूर्व अपडेट</string>
+    <string name="app_info_version">संस्करण</string>
+    <string name="app_info_more">अधिक देखें</string>
 </resources>
