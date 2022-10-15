@@ -247,4 +247,9 @@
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Suggestions</string>
     <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">Weather condition</string>
+    <string name="quick_event_ambient_weather_summary">Display current weather condition and temperature</string>
+    <string name="quick_event_ambient_weather_enabled_info">Requires weather service to be enabled</string>
 </resources>
