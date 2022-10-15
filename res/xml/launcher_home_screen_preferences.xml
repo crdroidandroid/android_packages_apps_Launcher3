@@ -129,6 +129,14 @@
             android:defaultValue="true"
             android:persistent="true" />
 
+        <SwitchPreference
+            android:key="pref_quickspace_weather"
+            android:title="@string/quick_event_ambient_weather_title"
+            android:summary="@string/quick_event_ambient_weather_summary"
+            android:dependency="pref_show_quickspace"
+            android:defaultValue="true"
+            android:persistent="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
