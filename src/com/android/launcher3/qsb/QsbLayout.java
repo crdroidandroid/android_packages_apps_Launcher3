@@ -118,7 +118,7 @@ public class QsbLayout extends FrameLayout {
 
     private void setupGIcon() {
         Intent intent = mContext.getPackageManager().getLaunchIntentForPackage(Utilities.GSA_PACKAGE);
-        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         gIcon.setOnClickListener(view -> {
             mContext.startActivity(intent);
         });
