@@ -127,9 +127,6 @@ public class TaskbarManager implements OnSharedPreferenceChangeListener {
         mUserSetupCompleteListener = isUserSetupComplete -> recreateTaskbar();
         mNavBarKidsModeListener = isNavBarKidsMode -> recreateTaskbar();
 
-        SharedPreferences prefs = LauncherPrefs.getPrefs(mContext);
-        prefs.registerOnSharedPreferenceChangeListener(this);
-
         // TODO(b/227669780): Consolidate this w/ DisplayController callbacks
         mComponentCallbacks = new ComponentCallbacks() {
             private Configuration mOldConfig = mContext.getResources().getConfiguration();
@@ -236,6 +233,8 @@ public class TaskbarManager implements OnSharedPreferenceChangeListener {
      */
     public void onUserUnlocked() {
         mUserUnlocked = true;
+        SharedPreferences prefs = LauncherPrefs.getPrefs(mContext);
+        prefs.registerOnSharedPreferenceChangeListener(this);
         recreateTaskbar();
     }
 
