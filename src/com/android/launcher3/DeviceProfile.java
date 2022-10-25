@@ -1058,13 +1058,14 @@ public class DeviceProfile {
                     workspacePadding.bottom - hotseatBottomPadding - hotseatCellHeightPx;
 
             // Push icons to the side
-            int additionalQsbSpace = isQsbInline ? qsbWidth + hotseatBorderSpace : 0;
+            int additionalQsbSpace = isTablet && isQsbInline ? qsbWidth + hotseatBorderSpace : 0;
             int requiredWidth = iconSizePx * numShownHotseatIcons
                     + hotseatBorderSpace * (numShownHotseatIcons - 1)
                     + additionalQsbSpace;
             int endOffset = ApiWrapper.getHotseatEndOffset(context);
             int hotseatWidth = Math.min(requiredWidth, availableWidthPx - endOffset);
-            int sideSpacing = (availableWidthPx - hotseatWidth) / 2;
+            int sideSpacing = isTablet ? (availableWidthPx - hotseatWidth) / 2
+                    : (availableWidthPx - qsbWidth) / 2;
 
             mHotseatPadding.set(sideSpacing, hotseatTopPadding, sideSpacing, hotseatBottomPadding);
 
