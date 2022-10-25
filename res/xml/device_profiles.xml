@@ -305,7 +305,7 @@
         launcher:devicePaddingId="@xml/paddings_6x5"
         launcher:dbFile="launcher_6_by_5.db"
         launcher:defaultLayoutId="@xml/default_workspace_6x5"
-        launcher:deviceCategory="tablet" >
+        launcher:deviceCategory="phone|multi_display|tablet" >
 
         <display-option
             launcher:name="Tablet"
@@ -347,7 +347,7 @@
         launcher:numHotseatIcons="6"
         launcher:dbFile="launcher_6_by_6.db"
         launcher:defaultLayoutId="@xml/default_workspace_6x6"
-        launcher:deviceCategory="phone|multi_display" >
+        launcher:deviceCategory="phone|multi_display|tablet" >
 
         <display-option
             launcher:name="Large Phone"
@@ -370,7 +370,7 @@
         launcher:numHotseatIcons="6"
         launcher:dbFile="launcher_6_by_8.db"
         launcher:defaultLayoutId="@xml/default_workspace_6x8"
-        launcher:deviceCategory="phone|multi_display" >
+        launcher:deviceCategory="phone|multi_display|tablet" >
 
         <display-option
             launcher:name="Large Phone"
@@ -393,7 +393,7 @@
         launcher:numHotseatIcons="6"
         launcher:dbFile="launcher_6_by_10.db"
         launcher:defaultLayoutId="@xml/default_workspace_6x10"
-        launcher:deviceCategory="phone|multi_display" >
+        launcher:deviceCategory="phone|multi_display|tablet" >
 
         <display-option
             launcher:name="Large Phone"
