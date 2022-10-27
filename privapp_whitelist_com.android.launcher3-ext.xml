@@ -21,5 +21,6 @@
         <permission name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
         <permission name="android.permission.ACCESS_CONTEXTUAL_SEARCH"/>
         <permission name="android.permission.FORCE_STOP_PACKAGES"/>
+        <permission name="android.permission.MANAGE_APP_LOCK"/>
     </privapp-permissions>
 </permissions>

@@ -38,7 +38,7 @@ import com.android.launcher3.compat.AlphabeticIndexCompat;
 import com.android.launcher3.dagger.ApplicationContext;
 import com.android.launcher3.dagger.LauncherAppSingleton;
 import com.android.launcher3.icons.IconCache;
-import com.android.launcher3.lineage.trust.db.TrustDatabaseHelper;
+import com.android.launcher3.lineage.trust.AppLockHelper;
 import com.android.launcher3.model.data.AppInfo;
 import com.android.launcher3.model.data.AppsListData;
 import com.android.launcher3.model.data.ItemInfo;
@@ -87,7 +87,7 @@ public class AllAppsList {
 
     private boolean mDataChanged = false;
     private Consumer<AppInfo> mRemoveListener = NO_OP_CONSUMER;
-    private TrustDatabaseHelper mTrustData;
+    private AppLockHelper mAppLockHelper;
 
     private AlphabeticIndexCompat mIndex;
 
@@ -111,7 +111,7 @@ public class AllAppsList {
         mIconCache = iconCache;
         mAppFilter = appFilter;
         mRepo = repositoryProvider;
-        mTrustData = TrustDatabaseHelper.getInstance(context);
+        mAppLockHelper = AppLockHelper.getInstance(context);
         mIndex = new AlphabeticIndexCompat(LocaleList.getDefault());
     }
 
@@ -163,7 +163,7 @@ public class AllAppsList {
     }
 
     public void add(AppInfo info, LauncherActivityInfo activityInfo, boolean loadIcon) {
-        if (mTrustData != null && mTrustData.isPackageHidden(info.getTargetPackage())) {
+        if (mAppLockHelper != null && mAppLockHelper.isPackageHidden(info.getTargetPackage())) {
             return;
         }
         if (!mAppFilter.shouldShowApp(info.componentName)) {
