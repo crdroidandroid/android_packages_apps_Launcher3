@@ -49,6 +49,9 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
 
+    <!-- AppLock -->
+    <uses-permission android:name="android.permission.MANAGE_APP_LOCK" />
+
     <!--
     Permissions required for read/write access to the workspace data. These permission name
     should not conflict with that defined in other apps, as such an app should embed its package
@@ -233,6 +236,7 @@
         <activity
             android:name="com.android.launcher3.lineage.trust.TrustAppsActivity"
             android:label="@string/trust_apps_manager_name"
+            android:permission="android.permission.MANAGE_APP_LOCK"
             android:theme="@style/Theme.SubSettingsBase.Expressive"
             android:autoRemoveFromRecents="true" />
     </application>
