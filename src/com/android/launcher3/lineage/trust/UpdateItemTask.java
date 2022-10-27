@@ -20,20 +20,24 @@ import android.os.AsyncTask;
 import androidx.annotation.NonNull;
 
 import com.android.launcher3.lineage.trust.db.TrustComponent;
-import com.android.launcher3.lineage.trust.db.TrustDatabaseHelper;
+import com.android.launcher3.lineage.trust.db.HiddenAppsDBHelper;
 
 public class UpdateItemTask extends AsyncTask<TrustComponent, Void, Boolean> {
     @NonNull
-    private TrustDatabaseHelper mDbHelper;
+    private HiddenAppsDBHelper mDbHelper;
+    @NonNull
+    private AppLockHelper mAppLockHelper;
     @NonNull
     private UpdateCallback mCallback;
     @NonNull
     private TrustComponent.Kind mKind;
 
-    UpdateItemTask(@NonNull TrustDatabaseHelper dbHelper,
+    UpdateItemTask(@NonNull HiddenAppsDBHelper dbHelper,
+            @NonNull AppLockHelper appLockHelper,
             @NonNull UpdateCallback callback,
             @NonNull TrustComponent.Kind kind) {
         mDbHelper = dbHelper;
+        mAppLockHelper = appLockHelper;
         mCallback = callback;
         mKind = kind;
     }
@@ -57,9 +61,9 @@ public class UpdateItemTask extends AsyncTask<TrustComponent, Void, Boolean> {
                 break;
             case PROTECTED:
                 if (component.isProtected()) {
-                    mDbHelper.addProtectedApp(pkgName);
+                    mAppLockHelper.addProtectedApp(pkgName);
                 } else {
-                    mDbHelper.removeProtectedApp(pkgName);
+                    mAppLockHelper.removeProtectedApp(pkgName);
                 }
                 break;
         }

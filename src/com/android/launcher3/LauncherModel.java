@@ -153,7 +153,7 @@ public class LauncherModel implements InstallSessionTracker.Callback {
             final boolean isPrimaryInstance) {
         mApp = app;
         mModelDbController = new ModelDbController(context);
-        mBgAllAppsList = new AllAppsList(iconCache, appFilter, app.getTrustData());
+        mBgAllAppsList = new AllAppsList(iconCache, appFilter, app.getHiddenData());
         mModelDelegate = ModelDelegate.newInstance(context, app, mBgAllAppsList, mBgDataModel,
                 isPrimaryInstance);
     }
