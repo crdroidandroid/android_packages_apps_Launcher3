@@ -19,6 +19,7 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
+import android.os.Build;
 import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.Log;
@@ -71,7 +72,8 @@ public class LauncherIconProvider extends IconProvider {
 
     @Override
     public String getSystemIconState() {
-        return super.getSystemIconState() + (mSupportsIconTheme ? ",with-theme" : ",no-theme");
+        return super.getSystemIconState() + (mSupportsIconTheme ? ",with-theme" : ",no-theme")
+                + "," + Build.VERSION.INCREMENTAL;
     }
 
     @Override
