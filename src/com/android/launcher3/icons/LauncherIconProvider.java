@@ -18,6 +18,7 @@ package com.android.launcher3.icons;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
+import android.os.Build;
 import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.Log;
@@ -56,8 +57,7 @@ public class LauncherIconProvider extends IconProvider {
      */
     public void setIconThemeSupported(boolean isSupported) {
         mSupportsIconTheme = isSupported;
-        mThemedIconMap = isSupported && FeatureFlags.USE_LOCAL_ICON_OVERRIDES.get()
-                ? null : DISABLED_MAP;
+        buildThemedIconMap();
     }
 
     @Override
@@ -67,12 +67,14 @@ public class LauncherIconProvider extends IconProvider {
 
     @Override
     public String getSystemIconState() {
-        return super.getSystemIconState() + (mSupportsIconTheme ? ",with-theme" : ",no-theme");
+        return super.getSystemIconState() + (mSupportsIconTheme ? ",with-theme" : ",no-theme")
+                + "," + Build.VERSION.INCREMENTAL;
     }
 
-    private Map<String, ThemeData> getThemedIconMap() {
-        if (mThemedIconMap != null) {
-            return mThemedIconMap;
+    public void buildThemedIconMap() {
+        if (!mSupportsIconTheme ||  !FeatureFlags.USE_LOCAL_ICON_OVERRIDES.get()) {
+            mThemedIconMap = DISABLED_MAP;
+            return;
         }
         ArrayMap<String, ThemeData> map = new ArrayMap<>();
         Resources res = mContext.getResources();
@@ -95,10 +97,17 @@ public class LauncherIconProvider extends IconProvider {
                     }
                 }
             }
+            mThemedIconMap = map;
         } catch (Exception e) {
+            mThemedIconMap = DISABLED_MAP;
             Log.e(TAG, "Unable to parse icon map", e);
         }
-        mThemedIconMap = map;
+    }
+
+    private Map<String, ThemeData> getThemedIconMap() {
+        if (mThemedIconMap == null) {
+            buildThemedIconMap();
+        }
         return mThemedIconMap;
     }
 }
