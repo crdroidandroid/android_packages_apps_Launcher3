@@ -129,4 +129,7 @@
     <string name="app_info_last_update">Letzte Aktualisierung</string>
     <string name="app_info_version">Version</string>
     <string name="app_info_more">Mehr</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Themed icons</string>
+    <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
 </resources>
