@@ -60,7 +60,7 @@
     <string name="pref_sleep_gesture_summary">Chạm hai lần vào không gian trống để tắt nguồn</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Tìm kiếm</string>
-    <string name="label_lens">Google Lens</string>
+    <string name="label_lens">Ống kính google</string>
     <string name="label_voice_search">Tìm kiếm bằng giọng nói</string>
     <string name="dock_search_title">Thanh tìm kiếm Google</string>
     <string name="dock_search_summary">Thanh tìm kiếm trong thanh công cụ dưới cùng</string>
@@ -129,4 +129,7 @@
     <string name="app_info_last_update">Cập nhật lần cuối</string>
     <string name="app_info_version">Phiên bản</string>
     <string name="app_info_more">Xem thêm</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Biểu tượng theo chủ đề</string>
+    <string name="pref_themed_icons_summary">Sử dụng biểu tượng theo chủ đề trên màn hình chính</string>
 </resources>
