@@ -129,4 +129,7 @@
     <string name="app_info_last_update">Последнее обновление</string>
     <string name="app_info_version">Версия</string>
     <string name="app_info_more">Ещё</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Тематические значки</string>
+    <string name="pref_themed_icons_summary">Следовать тематическим значкам, которые используются на главном экране</string>
 </resources>
