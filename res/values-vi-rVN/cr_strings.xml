@@ -27,7 +27,7 @@
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_left">Khi vuốt sang phải từ màn hình chính</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">Khi bạn trượt sang trái từ màn hình chính</string>
+    <string name="msg_minus_one_on_right">Khi vuốt sang trái từ màn hình chính</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
     <string name="desktop_show_labels">Tên biểu tượng trên màn hình chính</string>
@@ -116,12 +116,12 @@
     <string name="background_blur_title">Độ sâu nền mờ</string>
     <string name="background_blur_summary">Đặt giá trị độ sâu nền mờ cho gần đây và ngăn kéo ứng dụng</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">Nhìn Thoáng qua</string>
+    <string name="show_quickspace_title">Xem nhanh</string>
     <string name="show_quickspace_summary">Hiển thị ở đầu màn hình chính của bạn</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Chào mừng đến với crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Chúc bạn một ngày tốt lành</item>
+        <item>Có một ngày tuyệt vời</item>
         <item>Cảm ơn bạn, vì đã chọn chúng tôi</item>
         <item>Yêu thích chúng tôi? Gửi cho chúng tôi một cốc bia</item>
         <item>Rom tuyệt nhất.</item>
