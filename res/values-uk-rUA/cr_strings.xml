@@ -98,73 +98,73 @@
     <string name="hotseat_bg_title">Фон віджета</string>
     <string name="hotseat_bg_summary">Додати напівпрозорий фон в панель додатка</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
+    <string name="pref_sleep_gesture_title">Подвійне натискання для сну</string>
+    <string name="pref_sleep_gesture_summary">Подвійне натискання на порожнє місце для вимкнення екрану</string>
     <!-- Wallpaper scrolling -->
-    <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
-    <string name="allow_wallpaper_scrolling_summary">Wallpaper scrolling effect for multiple screens</string>
+    <string name="allow_wallpaper_scrolling">Прокручування шпалер</string>
+    <string name="allow_wallpaper_scrolling_summary">Ефект прокрутки шпалер для декількох екранів</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_summary">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">Масштабування шпалер</string>
+    <string name="allow_wallpaper_zooming_summary">Збільшувати або зменшувати шпалери при використанні меню чи останніх програм</string>
     <!-- Homescreen Statusbar -->
-    <string name="show_statusbar_title">Status Bar</string>
+    <string name="show_statusbar_title">Рядок стану</string>
     <!-- Top shadow -->
-    <string name="show_top_shadow">Top shadow</string>
+    <string name="show_top_shadow">Верхня тінь</string>
     <!-- Row Height -->
-    <string name="row_height_title">Row height</string>
+    <string name="row_height_title">Висота рядка</string>
     <!-- Background blur -->
-    <string name="background_blur_title">Background blur depth</string>
-    <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
+    <string name="background_blur_title">Глибина розмиття фону</string>
+    <string name="background_blur_summary">Встановити глибину розмиття для нещодавніх та меню додатків</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your home screen</string>
+    <string name="show_quickspace_title">Найголовніше</string>
+    <string name="show_quickspace_summary">Показувати вгорі домашнього екрану</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
+    <string name="quick_event_rom_intro_welcome">Ласкаво просимо до crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Have a great day</item>
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
-        <item>We love you 3000</item>
+        <item>Гарного дня</item>
+        <item>Дякуємо, що обрали нас</item>
+        <item>Подобається наша робота? Віддячте матеріально</item>
+        <item>Найкраща прошивка в світі.</item>
+        <item>Привітайтесь з намт у Telegram</item>
+        <item>Натисніть тут, щоб почати</item>
+        <item>Ми вас любимо, вас 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_now_playing">Зараз грає</string>
+    <string name="quick_event_ambient_song_artist">%1$s від %2$s</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Now playing</string>
-    <string name="quickspace_now_playing_summary">Show the song you\'re playing</string>
+    <string name="quickspace_now_playing_title">Відтворюється зараз</string>
+    <string name="quickspace_now_playing_summary">Показувати пісню, яку ви відтворюєте</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Minimalistic style</string>
-    <string name="quickspace_alternate_style_summary">Switch to modern style</string>
+    <string name="quickspace_alternate_style_title">Мінімалістичний стиль</string>
+    <string name="quickspace_alternate_style_summary">Переключити на сучасний стиль</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Random messages</string>
-    <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
+    <string name="quickspace_psa_title">Випадкові повідомлення</string>
+    <string name="quickspace_psa_summary">Зробіть свого супутника більш жвавим за допомогою випадкових повідомлень</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Доброго ранку!</item>
+        <item>Доброго ранку, час запалювати!</item>
+        <item>Який гарний день!</item>
+        <item>Гарного дня!</item>
+        <item>А як щодо невеликого 5-хвилинного сну?</item>
+        <item>Це один із способів прокинутися.</item>
+        <item>Ви повинні змінити звуки будильника.</item>
+        <item>Схоже, сьогодні чудовий день, чи не так?</item>
+        <item>Давайте візьмемо цей хліб.</item>
+        <item>Перевіряйте погоду про всяк випадок</item>
+        <item>Почуваюся ще трохи сонним</item>
+        <item>Ти вже виглядував назовні?</item>
+        <item>Зробимо це.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
+        <item>На добраніч!</item>
+        <item>Приємних снів!</item>
+        <item>Побачимося завтра!</item>
+        <item>Солодких снів!</item>
+        <item>Не засиджуйтеся надто довго</item>
+        <item>Гарного сну</item>
+        <item>Поспи трохи</item>
+        <item>Час відпочинку</item>
         <item>Насолоджуйся ніччю!</item>
         <item>Час заряджати батарейки!</item>
         <item>Завтра буде чудовий день</item>
@@ -173,62 +173,62 @@
     <string-array name="quickspace_psa_midnight">
         <item>Ну... Доброї ночі?</item>
         <item>Зараз уже трохи пізно</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Вам слід виправити свій розклад сну</item>
+        <item>Ти більш продуктивний в цей час?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
-        <item>Make peace, not war</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
-        <item>Open goodness with crDroid</item>
-        <item>Spread love, not havoc</item>
-        <item>We didn\'t start the fire!</item>
-        <item>Time for some good music</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
-        <item>We love you 3000</item>
-        <item>Delicious even without Sushi</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>How is everything going?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
-        <item>Expecto Patronum</item>
+        <item>Невігластво це блаженство</item>
+        <item>Настав час прошити ще одне оновлення?</item>
+        <item>Зробіть мир, а не війну</item>
+        <item>Ой, привіт, що трапилося?</item>
+        <item>Сфокусуйтеся на ваших справах</item>
+        <item>Скільки знімків екрану ви робите?</item>
+        <item>Відкрийте добро з crDroid</item>
+        <item>Розповсюджуйте любов, а не хаос</item>
+        <item>Не ми почали пожежу!</item>
+        <item>Час для якоїсь хорошої музики</item>
+        <item>Голова</item>
+        <item>Вам потрібен crDroid Premium щоб побачити це</item>
+        <item>Згадайте Лінію Єдинорога</item>
+        <item>Насолоджуйтесь тривалим зарядом батареї</item>
+        <item>Починаючи з нуля</item>
+        <item>Ми вас любимо, вас 3000</item>
+        <item>Смачно навіть без Суші</item>
+        <item>Зроби щось гарне сьогодні</item>
+        <item>Це найкращий Pixel Experience, чи не так?</item>
+        <item>Як все відбувається?</item>
+        <item>Немає ілюзій, ласкаво просимо до реальності!</item>
+        <item>Дякуємо за вашу підтримку</item>
+        <item>Жодного святкування задля дурниць - лише досконалість!</item>
+        <item>Один із найкращих варіантів buildbot</item>
+        <item>Розсудливість для вашої Параної</item>
+        <item>Спробуйте крижані холодні десерти</item>
+        <item>Який чудовий досвід, чи не так?</item>
+        <item>Еволюція — міф, чи не так?</item>
+        <item>Ти те, що ти випромінюєш, не будь овочем</item>
+        <item>Що у тебе на думці?</item>
+        <item>Експекто Патронум</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Winner Winner ....?</item>
+        <item>Переможець ....?</item>
         <item>rm -rf \/</item>
     </string-array>
     <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+    <string name="suggestion_pref_screen_title">Пропозиції</string>
+    <string name="suggestion_pref_screen_desc">Для всіх додатків &amp; пропозиції головного екрану</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quick_event_ambient_weather_title">Weather condition</string>
-    <string name="quick_event_ambient_weather_summary">Display current weather condition and temperature</string>
-    <string name="quick_event_ambient_weather_enabled_info">Requires weather service to be enabled</string>
+    <string name="quick_event_ambient_weather_title">Погодні умови</string>
+    <string name="quick_event_ambient_weather_summary">Показувати поточну погоду і температуру</string>
+    <string name="quick_event_ambient_weather_enabled_info">Вимагає включену службу погоди</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">Прозорість фону</string>
     <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar_title">Use taskbar</string>
-    <string name="pref_allow_phone_taskbar_summary">For opening and switching apps anywhere</string>
+    <string name="pref_allow_phone_taskbar_title">Використовувати панель завдань</string>
+    <string name="pref_allow_phone_taskbar_summary">Для відкриття та перемикання додатків в будь-якому місці</string>
     <!-- Recents icons -->
-    <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Clear all</string>
-    <string name="recents_lens_title">Lens</string>
+    <string name="recents_screenshot_title">Знімок екрану</string>
+    <string name="recents_clear_all_title">Очистити все</string>
+    <string name="recents_lens_title">Об\'єктив</string>
     <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Themed icons</string>
-    <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
+    <string name="pref_themed_icons_title">Тематичні іконки</string>
+    <string name="pref_themed_icons_summary">Слідкувати за темами іконок, що використовуються на головному екрані</string>
 </resources>
