@@ -95,8 +95,8 @@
     <string name="dock_theme_summary">Użyj ikon dostosowanych do motywu dla paska wyszukiwania</string>
     <string name="search_radius_title">Zaokrąglenie rogów</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Dodaj przezroczyste tło dla Doka</string>
+    <string name="hotseat_bg_title">Tło Docka</string>
+    <string name="hotseat_bg_summary">Dodaj przezroczyste tło dla Docka</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Dotknij dwukrotnie, aby uśpić</string>
     <string name="pref_sleep_gesture_summary">Dotknij dwukrotnie w puste miejsce, aby wyłączyć ekran</string>
@@ -140,7 +140,7 @@
     <string name="quickspace_alternate_style_summary">Przełącz na styl nowoczesny</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Losowe wiadomości</string>
-    <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
+    <string name="quickspace_psa_summary">Ożyw swojego towarzysza losowymi wiadomościami</string>
     <string-array name="quickspace_psa_morning">
         <item>Dzień dobry!</item>
         <item>Dzień dobry, czas dać czadu!</item>
