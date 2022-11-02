@@ -56,70 +56,70 @@
     <string name="misc_category_summary">Opsi lainnya</string>
     <string name="general_category_title">Umum</string>
     <string name="interface_category_title">Antarmuka</string>
-    <string name="quickspace_category_title">Quickspace</string>
-    <string name="search_bar_category_title">Search bar</string>
-    <string name="actions_category_title">Quick actions</string>
+    <string name="quickspace_category_title">QuickSpace</string>
+    <string name="search_bar_category_title">Bilah penelusuran</string>
+    <string name="actions_category_title">Aksi cepat</string>
     <!-- Developer options -->
-    <string name="dev_options_title">Developer options</string>
-    <string name="dev_options_summary">Enable some hidden features at your own risk</string>
+    <string name="dev_options_title">Opsi pengembang</string>
+    <string name="dev_options_summary">Mengaktifkan fitur tersembunyi dengan risiko Anda</string>
     <!-- Pause apps shortcut -->
-    <string name="pause">Pause</string>
-    <string name="pause_apps_dialog_title">Pause %1$s?</string>
-    <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
-    <string name="paused_apps_dialog_title">App paused</string>
-    <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
-    <string name="paused_apps_drop_target_label">Pause app</string>
+    <string name="pause">Jeda</string>
+    <string name="pause_apps_dialog_title">Jeda %1$s?</string>
+    <string name="pause_apps_dialog_message">Notifikasi untuk %1$s akan dijeda</string>
+    <string name="paused_apps_dialog_title">Aplikasi dijeda</string>
+    <string name="paused_apps_dialog_message">%1$s langsung dijeda dari peluncur</string>
+    <string name="paused_apps_drop_target_label">Jeda aplikasi</string>
     <!-- Icon pack -->
-    <string name="icon_pack_title">Icon pack</string>
-    <string name="icon_pack_default_label">Default</string>
-    <string name="icon_pack_add">Install more</string>
-    <string name="icon_pack_no_market">There\'s no available app store</string>
+    <string name="icon_pack_title">Paket ikon</string>
+    <string name="icon_pack_default_label">Bawaan</string>
+    <string name="icon_pack_add">Instal lebih banyak</string>
+    <string name="icon_pack_no_market">Tidak ada toko aplikasi yang tersedia</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">Nilai: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">bawaan</string>
+    <string name="custom_seekbar_default_value_to_set">Nilai bawaan: <xliff:g id="v">%s</xliff:g>\nTekan lama untuk menerapkan</string>
+    <string name="custom_seekbar_default_value_is_set">Nilai bawaan telah diterapkan</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">Ukuran ikon</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">Ukuran font</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">Garis maksimum untuk nama aplikasi</string>
     <!-- Hotseat searchbar -->
-    <string name="label_search">Search</string>
+    <string name="label_search">Pencarian</string>
     <string name="label_lens">Google Lens</string>
-    <string name="label_voice_search">Voice search</string>
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Search bar in the bottom dock</string>
-    <string name="dock_theme_title">Themed icons</string>
-    <string name="dock_theme_summary">Use themed icons for search bar</string>
-    <string name="search_radius_title">Corner radius</string>
+    <string name="label_voice_search">Pencarian suara</string>
+    <string name="dock_search_title">Bilah pencarian Google</string>
+    <string name="dock_search_summary">Bilah pencarian di dok bawah</string>
+    <string name="dock_theme_title">Ikon bertema</string>
+    <string name="dock_theme_summary">Gunakan ikon bertema untuk bilah pencarian</string>
+    <string name="search_radius_title">Radius sudut</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <string name="hotseat_bg_title">Latar belakang hotseat</string>
+    <string name="hotseat_bg_summary">Tambahkan latar belakang tembus pandang di dok aplikasi</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
+    <string name="pref_sleep_gesture_title">Ketuk dua kali untuk tidur</string>
+    <string name="pref_sleep_gesture_summary">Ketuk dua kali pada ruang kosong untuk mematikan layar</string>
     <!-- Wallpaper scrolling -->
-    <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
-    <string name="allow_wallpaper_scrolling_summary">Wallpaper scrolling effect for multiple screens</string>
+    <string name="allow_wallpaper_scrolling">Menggulir wallpaper</string>
+    <string name="allow_wallpaper_scrolling_summary">Efek pengguliran wallpaper untuk beberapa tampilan</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_summary">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">Pembesaran wallpaper</string>
+    <string name="allow_wallpaper_zooming_summary">Perbesar atau perkecil wallpaper saat menggunakan laci atau aplikasi terbaru</string>
     <!-- Homescreen Statusbar -->
-    <string name="show_statusbar_title">Status Bar</string>
+    <string name="show_statusbar_title">Bilah Status</string>
     <!-- Top shadow -->
-    <string name="show_top_shadow">Top shadow</string>
+    <string name="show_top_shadow">Bayangan atas</string>
     <!-- Row Height -->
-    <string name="row_height_title">Row height</string>
+    <string name="row_height_title">Tinggi baris</string>
     <!-- Background blur -->
-    <string name="background_blur_title">Background blur depth</string>
-    <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
+    <string name="background_blur_title">Kedalaman blur latar belakang</string>
+    <string name="background_blur_summary">Setel tingkat kedalaman blur untuk baru-baru ini dan laci aplikasi</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your home screen</string>
+    <string name="show_quickspace_title">Sekilas</string>
+    <string name="show_quickspace_summary">Tampilkan di bagian atas layar beranda Anda</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
+    <string name="quick_event_rom_intro_welcome">Selamat datang di crDroid!</string>
     <string-array name="welcome_message_variants">
         <item>Have a great day</item>
         <item>Thank you for choosing us</item>
