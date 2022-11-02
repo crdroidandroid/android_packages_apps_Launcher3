@@ -119,60 +119,60 @@
     <string name="show_quickspace_title">Sekilas</string>
     <string name="show_quickspace_summary">Tampilkan di bagian atas layar beranda Anda</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Selamat datang di crDroid!</string>
+    <string name="quick_event_rom_intro_welcome">Selamat datang di crDroid! 𓂀</string>
     <string-array name="welcome_message_variants">
-        <item>Have a great day</item>
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
-        <item>We love you 3000</item>
+        <item>Semoga harimu menyenangkan</item>
+        <item>Terima kasih telah memilih kami</item>
+        <item>Suka dengan projek kami? Berikan kami segelas bir</item>
+        <item>Rom terbaik yang pernah ada.</item>
+        <item>Sapa kami di Telegram</item>
+        <item>Ketuk di sini untuk memulai</item>
+        <item>Kami mencintaimu 3000x</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_now_playing">Sedang Diputar</string>
+    <string name="quick_event_ambient_song_artist">%1$s oleh %2$s</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Now playing</string>
-    <string name="quickspace_now_playing_summary">Show the song you\'re playing</string>
+    <string name="quickspace_now_playing_title">Sedang Diputar</string>
+    <string name="quickspace_now_playing_summary">Tampilkan lagu yang Anda putar</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Minimalistic style</string>
-    <string name="quickspace_alternate_style_summary">Switch to modern style</string>
+    <string name="quickspace_alternate_style_title">Gaya minimalis</string>
+    <string name="quickspace_alternate_style_summary">Beralih ke gaya modern</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Random messages</string>
-    <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
+    <string name="quickspace_psa_title">Pesan random</string>
+    <string name="quickspace_psa_summary">Jadikan teman Anda lebih hidup dengan pesan random</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Selamat pagi!</item>
+        <item>Selamat pagi, waktunya bergoyang!</item>
+        <item>Sungguh hari yang indah!</item>
+        <item>Semoga harimu menyenangkan!</item>
+        <item>Bagaimana dengan tidur siang 5 menit?</item>
+        <item>Itu adalah salah satu cara untuk bangun.</item>
+        <item>Kamu sebaiknya mengubah suara nada dering alarm.</item>
+        <item>Sepertinya ini hari yang indah, bukan?</item>
+        <item>Mari kita bekerja hari ini.</item>
+        <item>Pastikan periksa cuaca untuk berjaga-jaga</item>
+        <item>Merasa sedikit mengantuk</item>
+        <item>Sudahkah kamu melihat ke luar?</item>
+        <item>Mari kita selesaikan ini.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>Selamat malam!</item>
+        <item>Tidur yang nyenyak!</item>
+        <item>Sampai jumpa besok!</item>
+        <item>Mimpi indah!</item>
+        <item>Jangan bergadang terlalu lama</item>
+        <item>Selamat tidur</item>
+        <item>Tidurlah</item>
+        <item>Waktunya bersantai</item>
+        <item>Nikmati malam!</item>
+        <item>Sudah waktunya untuk mengisi baterai!</item>
+        <item>Mungkin besok menjadi hari yang menyenangkan</item>
+        <item>Siapkan tulangmu untuk besok</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
+        <item>Um... Selamat malam?</item>
+        <item>Sudah agak terlambat sekarang</item>
         <item>You should fix your sleep schedule</item>
         <item>Are you more productive at this time?</item>
     </string-array>
