@@ -25,7 +25,6 @@ import static com.android.launcher3.taskbar.TaskbarManager.isPhoneMode;
 import static com.android.quickstep.AnimatedFloat.VALUE;
 
 import android.annotation.NonNull;
-import android.content.Intent;
 import android.graphics.Rect;
 import android.util.FloatProperty;
 import android.util.Log;
@@ -55,7 +54,6 @@ import com.android.launcher3.util.LauncherBindableItemsContainer;
 import com.android.launcher3.util.MultiPropertyFactory;
 import com.android.launcher3.util.MultiValueAlpha;
 import com.android.quickstep.AnimatedFloat;
-import com.android.quickstep.SystemUiProxy;
 
 import java.io.PrintWriter;
 import java.util.function.Predicate;
@@ -199,6 +197,10 @@ public class TaskbarViewController implements TaskbarControllers.LoggableTaskbar
 
     public Rect getIconLayoutBounds() {
         return mTaskbarView.getIconLayoutBounds();
+    }
+
+    public int getIconLayoutWidth() {
+        return mTaskbarView.getIconLayoutWidth();
     }
 
     public View[] getIconViews() {
@@ -444,13 +446,6 @@ public class TaskbarViewController implements TaskbarControllers.LoggableTaskbar
             return v -> {
                 mActivity.getStatsLogManager().logger().log(LAUNCHER_TASKBAR_ALLAPPS_BUTTON_TAP);
                 mControllers.taskbarAllAppsController.show();
-            };
-        }
-
-        public View.OnClickListener getFloatingTaskButtonListener(@NonNull Intent intent) {
-            return v -> {
-                SystemUiProxy proxy = SystemUiProxy.INSTANCE.get(v.getContext());
-                proxy.showFloatingTask(intent);
             };
         }
 

@@ -16,14 +16,11 @@
 package com.android.launcher3.taskbar;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Rect;
-import android.os.SystemProperties;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -85,12 +82,6 @@ public class TaskbarView extends FrameLayout implements FolderIcon.FolderIconPar
 
     private View mQsb;
 
-    // Only non-null when device supports having a floating task.
-    private @Nullable View mFloatingTaskButton;
-    private @Nullable Intent mFloatingTaskIntent;
-    private static final boolean FLOATING_TASKS_ENABLED =
-            SystemProperties.getBoolean("persist.wm.debug.floating_tasks", false);
-
     public TaskbarView(@NonNull Context context) {
         this(context, null);
     }
@@ -139,17 +130,6 @@ public class TaskbarView extends FrameLayout implements FolderIcon.FolderIconPar
         // TODO: Disable touch events on QSB otherwise it can crash.
         mQsb = LayoutInflater.from(context).inflate(R.layout.search_container_hotseat, this, false);
 
-        if (FLOATING_TASKS_ENABLED) {
-            mFloatingTaskIntent = FloatingTaskIntentResolver.getIntent(context);
-            if (mFloatingTaskIntent != null) {
-                mFloatingTaskButton = LayoutInflater.from(context)
-                        .inflate(R.layout.taskbar_floating_task_button, this, false);
-                mFloatingTaskButton.setPadding(mItemPadding, mItemPadding, mItemPadding,
-                        mItemPadding);
-            } else {
-                Log.d(TAG, "Floating tasks is enabled but no intent was found!");
-            }
-        }
     }
 
     private int getColorWithGivenLuminance(int color, float luminance) {
@@ -177,10 +157,6 @@ public class TaskbarView extends FrameLayout implements FolderIcon.FolderIconPar
         if (mAllAppsButton != null) {
             mAllAppsButton.setOnClickListener(mControllerCallbacks.getAllAppsButtonClickListener());
         }
-        if (mFloatingTaskButton != null) {
-            mFloatingTaskButton.setOnClickListener(
-                    mControllerCallbacks.getFloatingTaskButtonListener(mFloatingTaskIntent));
-        }
     }
 
     private void removeAndRecycle(View view) {
@@ -205,9 +181,6 @@ public class TaskbarView extends FrameLayout implements FolderIcon.FolderIconPar
         }
         removeView(mQsb);
 
-        if (mFloatingTaskButton != null) {
-            removeView(mFloatingTaskButton);
-        }
 
         for (int i = 0; i < hotseatItemInfos.length; i++) {
             ItemInfo hotseatItemInfo = hotseatItemInfos[i];
@@ -290,11 +263,6 @@ public class TaskbarView extends FrameLayout implements FolderIcon.FolderIconPar
             mQsb.setVisibility(View.INVISIBLE);
         }
 
-        if (mFloatingTaskButton != null) {
-            int index = Utilities.isRtl(getResources()) ? 0 : getChildCount();
-            addView(mFloatingTaskButton, index);
-        }
-
         mThemeIconsBackground = calculateThemeIconsBackground();
         setThemedIconsBackgroundColor(mThemeIconsBackground);
     }
@@ -325,12 +293,8 @@ public class TaskbarView extends FrameLayout implements FolderIcon.FolderIconPar
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         int count = getChildCount();
-        int countExcludingQsb = count;
         DeviceProfile deviceProfile = mActivityContext.getDeviceProfile();
-        if (deviceProfile.isQsbInline) {
-            countExcludingQsb--;
-        }
-        int spaceNeeded = countExcludingQsb * (mItemMarginLeftRight * 2 + mIconTouchSize);
+        int spaceNeeded = getIconLayoutWidth();
         int navSpaceNeeded = deviceProfile.hotseatBarEndOffset;
         boolean layoutRtl = isLayoutRtl();
         int iconEnd = right - (right - left - spaceNeeded) / 2;
@@ -418,6 +382,18 @@ public class TaskbarView extends FrameLayout implements FolderIcon.FolderIconPar
 
     public Rect getIconLayoutBounds() {
         return mIconLayoutBounds;
+    }
+
+    /**
+     * Returns the space used by the icons
+     */
+    public int getIconLayoutWidth() {
+        int countExcludingQsb = getChildCount();
+        DeviceProfile deviceProfile = mActivityContext.getDeviceProfile();
+        if (deviceProfile.isQsbInline) {
+            countExcludingQsb--;
+        }
+        return countExcludingQsb * (mItemMarginLeftRight * 2 + mIconTouchSize);
     }
 
     /**

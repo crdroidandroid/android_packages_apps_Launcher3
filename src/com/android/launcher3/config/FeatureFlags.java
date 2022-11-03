@@ -206,10 +206,6 @@ public final class FeatureFlags {
     public static final BooleanFlag ENABLE_ENFORCED_ROUNDED_CORNERS = new DeviceFlag(
             "ENABLE_ENFORCED_ROUNDED_CORNERS", true, "Enforce rounded corners on all App Widgets");
 
-    public static final BooleanFlag ENABLE_LOCAL_RECOMMENDED_WIDGETS_FILTER = new DeviceFlag(
-            "ENABLE_LOCAL_RECOMMENDED_WIDGETS_FILTER", true,
-            "Enables a local filter for recommended widgets.");
-
     public static final BooleanFlag NOTIFY_CRASHES = getDebugFlag("NOTIFY_CRASHES", false,
             "Sends a notification whenever launcher encounters an uncaught exception.");
 
@@ -252,6 +248,10 @@ public final class FeatureFlags {
     public static final BooleanFlag ENABLE_SPLIT_FROM_WORKSPACE = getDebugFlag(
             "ENABLE_SPLIT_FROM_WORKSPACE", true,
             "Enable initiating split screen from workspace.");
+
+    public static final BooleanFlag ENABLE_SPLIT_FROM_FULLSCREEN_WITH_KEYBOARD_SHORTCUTS =
+            getDebugFlag("ENABLE_SPLIT_FROM_FULLSCREEN_SHORTCUT", false,
+                    "Enable splitting from fullscreen app with keyboard shortcuts");
 
     public static final BooleanFlag ENABLE_NEW_MIGRATION_LOGIC = getDebugFlag(
             "ENABLE_NEW_MIGRATION_LOGIC", true,

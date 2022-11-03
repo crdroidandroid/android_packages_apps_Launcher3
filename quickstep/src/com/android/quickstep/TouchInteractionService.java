@@ -32,7 +32,6 @@ import static com.android.systemui.shared.system.QuickStepContract.SYSUI_STATE_N
 import static com.android.systemui.shared.system.QuickStepContract.SYSUI_STATE_TRACING_ENABLED;
 import static com.android.wm.shell.sysui.ShellSharedConstants.KEY_EXTRA_SHELL_BACK_ANIMATION;
 import static com.android.wm.shell.sysui.ShellSharedConstants.KEY_EXTRA_SHELL_DESKTOP_MODE;
-import static com.android.wm.shell.sysui.ShellSharedConstants.KEY_EXTRA_SHELL_FLOATING_TASKS;
 import static com.android.wm.shell.sysui.ShellSharedConstants.KEY_EXTRA_SHELL_ONE_HANDED;
 import static com.android.wm.shell.sysui.ShellSharedConstants.KEY_EXTRA_SHELL_PIP;
 import static com.android.wm.shell.sysui.ShellSharedConstants.KEY_EXTRA_SHELL_RECENT_TASKS;
@@ -60,6 +59,7 @@ import android.util.Log;
 import android.view.Choreographer;
 import android.view.InputEvent;
 import android.view.MotionEvent;
+import android.view.SurfaceControl;
 import android.view.accessibility.AccessibilityManager;
 
 import androidx.annotation.BinderThread;
@@ -114,7 +114,6 @@ import com.android.systemui.shared.system.smartspace.ISysuiUnlockAnimationContro
 import com.android.systemui.shared.tracing.ProtoTraceable;
 import com.android.wm.shell.back.IBackAnimation;
 import com.android.wm.shell.desktopmode.IDesktopMode;
-import com.android.wm.shell.floating.IFloatingTasks;
 import com.android.wm.shell.onehanded.IOneHanded;
 import com.android.wm.shell.pip.IPip;
 import com.android.wm.shell.recents.IRecentTasks;
@@ -172,8 +171,6 @@ public class TouchInteractionService extends Service
             IPip pip = IPip.Stub.asInterface(bundle.getBinder(KEY_EXTRA_SHELL_PIP));
             ISplitScreen splitscreen = ISplitScreen.Stub.asInterface(bundle.getBinder(
                     KEY_EXTRA_SHELL_SPLIT_SCREEN));
-            IFloatingTasks floatingTasks = IFloatingTasks.Stub.asInterface(bundle.getBinder(
-                    KEY_EXTRA_SHELL_FLOATING_TASKS));
             IOneHanded onehanded = IOneHanded.Stub.asInterface(
                     bundle.getBinder(KEY_EXTRA_SHELL_ONE_HANDED));
             IShellTransitions shellTransitions = IShellTransitions.Stub.asInterface(
@@ -191,7 +188,7 @@ public class TouchInteractionService extends Service
                     bundle.getBinder(KEY_EXTRA_SHELL_DESKTOP_MODE));
             MAIN_EXECUTOR.execute(() -> {
                 SystemUiProxy.INSTANCE.get(TouchInteractionService.this).setProxy(proxy, pip,
-                        splitscreen, floatingTasks, onehanded, shellTransitions, startingWindow,
+                        splitscreen, onehanded, shellTransitions, startingWindow,
                         recentTasks, launcherUnlockAnimationController, backAnimation, desktopMode);
                 TouchInteractionService.this.initInputMonitor("TISBinder#onInitialize()");
                 preloadOverview(true /* fromInit */);
@@ -232,12 +229,6 @@ public class TouchInteractionService extends Service
 
         @BinderThread
         @Override
-        public void onTip(int actionType, int viewType) {
-            // Please delete this method from the interface
-        }
-
-        @BinderThread
-        @Override
         public void onAssistantAvailable(boolean available) {
             MAIN_EXECUTOR.execute(() -> {
                 mDeviceState.setAssistantAvailable(available);
@@ -254,10 +245,9 @@ public class TouchInteractionService extends Service
             });
         }
 
-        @BinderThread
-        public void onBackAction(boolean completed, int downX, int downY, boolean isButton,
-                boolean gestureSwipeLeft) {
-            // Remove this method from the interface
+        @Override
+        public void onNavigationBarSurface(SurfaceControl surface) {
+            // TODO: implement
         }
 
         @BinderThread
@@ -296,6 +286,16 @@ public class TouchInteractionService extends Service
         @Override
         public void onScreenTurningOff() {
             MAIN_EXECUTOR.execute(ProxyScreenStatusProvider.INSTANCE::onScreenTurningOff);
+        }
+
+        @BinderThread
+        @Override
+        public void enterStageSplitFromRunningApp(boolean leftOrTop) {
+            StatefulActivity activity =
+                    mOverviewComponentObserver.getActivityInterface().getCreatedActivity();
+            if (activity != null) {
+                activity.enterStageSplitFromRunningApp(leftOrTop);
+            }
         }
 
         /**
