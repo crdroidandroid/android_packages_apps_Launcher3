@@ -18,9 +18,9 @@
     <!-- Application name -->
     <!-- Settings -->
     <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Bloquear edições na tela inicial</string>
-    <string name="settings_lock_layout_summary_on">Ícones e widgets não podem ser adicionados, removidos e movidos na tela inicial</string>
-    <string name="settings_lock_layout_summary_off">Ícones e widgets podem ser adicionados, removidos e movidos na tela inicial</string>
+    <string name="settings_lock_layout_title">Bloquear layout</string>
+    <string name="settings_lock_layout_summary_on">Ícones e widgets não podem ser adicionados, removidos ou movidos na tela inicial</string>
+    <string name="settings_lock_layout_summary_off">Ícones e widgets podem ser adicionados, removidos ou movidos na tela inicial</string>
     <string name="settings_edit_widgets_error">Não é possível adicionar widgets à tela inicial</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Deslize para acessar o aplicativo do Google</string>
