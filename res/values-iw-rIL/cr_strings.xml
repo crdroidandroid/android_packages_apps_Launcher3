@@ -68,23 +68,23 @@
     <string name="dock_theme_summary">הצגת סמלי ערכת הנושא בשורת החיפוש</string>
     <string name="search_radius_title">רדיוס הפינות</string>
     <!-- Recents -->
-    <string name="action_lens">Lens</string>
+    <string name="action_lens">עדשה</string>
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">שורת מצב</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">הצעות</string>
-    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+    <string name="suggestion_pref_screen_desc">עבור כל היישומים &amp; הצעות למסך הבית</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
-    <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
-    <string name="trust_apps_loading">Loading\u2026</string>
-    <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="trust_apps_help">Help</string>
-    <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
-    <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="trust_apps_manager_name">&amp; יישומים מוגנים מוסתרים</string>
+    <string name="trust_apps_auth_manager">ביטול נעילה כדי לנהל את היישומים המוסתרים והמוגנים</string>
+    <string name="trust_apps_auth_open_app">אימות לפתיחת %1$s</string>
+    <string name="trust_apps_loading">טעינת \u2026</string>
+    <string name="trust_apps_no_lock_error">נדרש להגדיר מסך נעילה מאובטח להגבלת גישה ליישומים</string>
+    <string name="trust_apps_help">עזרה</string>
+    <string name="trust_apps_info_hidden">יישומים מוסתרים והווידג\'טים שלהם אינם מוצגים במגירת היישומים</string>
+    <string name="trust_apps_info_protected">יישומים מוגנים מחייבים אימות לפתיחה מהמשגר</string>
     <!-- Force stop shortcut -->
-    <string name="recent_task_force_stop_app">Force stop</string>
+    <string name="recent_task_force_stop_app">אילוץ עצירה</string>
     <string name="recents_app_force_stopped">App force stopped</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Icon pack</string>
