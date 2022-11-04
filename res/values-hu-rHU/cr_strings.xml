@@ -60,40 +60,40 @@
     <string name="search_bar_category_title">Keresősáv</string>
     <string name="actions_category_title">Azonnali műveletek</string>
     <!-- Developer options -->
-    <string name="dev_options_title">Developer options</string>
-    <string name="dev_options_summary">Enable some hidden features at your own risk</string>
+    <string name="dev_options_title">Fejlesztői beállítások</string>
+    <string name="dev_options_summary">Saját felelősségére rejtett beállításokat engedélyezhet</string>
     <!-- Pause apps shortcut -->
-    <string name="pause">Pause</string>
-    <string name="pause_apps_dialog_title">Pause %1$s?</string>
-    <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
-    <string name="paused_apps_dialog_title">App paused</string>
-    <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
-    <string name="paused_apps_drop_target_label">Pause app</string>
+    <string name="pause">Szüneteltetés</string>
+    <string name="pause_apps_dialog_title">Szünetelteti ezt: %1$s?</string>
+    <string name="pause_apps_dialog_message">%1$s értesítései szüneteltetésre kerülnek</string>
+    <string name="paused_apps_dialog_title">Alkalmazás-szüneteltetés</string>
+    <string name="paused_apps_dialog_message">%1$s közvetlen szüneteltetése a Launcherből</string>
+    <string name="paused_apps_drop_target_label">Alkalmazás-szüneteltetés</string>
     <!-- Icon pack -->
-    <string name="icon_pack_title">Icon pack</string>
-    <string name="icon_pack_default_label">Default</string>
-    <string name="icon_pack_add">Install more</string>
-    <string name="icon_pack_no_market">There\'s no available app store</string>
+    <string name="icon_pack_title">Ikoncsomag</string>
+    <string name="icon_pack_default_label">Alapértelmezett</string>
+    <string name="icon_pack_add">Továbbiak telepítése</string>
+    <string name="icon_pack_no_market">Nincs áruház ahonnan letölthetne</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value"><xliff:g id="v">%s</xliff:g> értékű</string>
+    <string name="custom_seekbar_default_value">alapértelmezés szerint</string>
+    <string name="custom_seekbar_default_value_to_set">Alapértelmezett érték: <xliff:g id="v">%s</xliff:g>\nHosszú koppintás a beállításhoz</string>
+    <string name="custom_seekbar_default_value_is_set">Az alapértelmezett érték beállítva</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">Ikonméret</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">Betűméret</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">Sorok maximális száma az ikoncímkékhez</string>
     <!-- Hotseat searchbar -->
-    <string name="label_search">Search</string>
+    <string name="label_search">Keresés</string>
     <string name="label_lens">Google Lens</string>
-    <string name="label_voice_search">Voice search</string>
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Search bar in the bottom dock</string>
+    <string name="label_voice_search">Hangalapú keresés</string>
+    <string name="dock_search_title">Google-keresősáv</string>
+    <string name="dock_search_summary">Alsódokki keresősáv</string>
     <string name="dock_theme_title">Témázott ikonok</string>
     <string name="dock_theme_summary">A keresősávban témázott ikonok használhatók</string>
-    <string name="search_radius_title">Corner radius</string>
+    <string name="search_radius_title">Saroklekerekítés</string>
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hotseat háttér</string>
     <string name="hotseat_bg_summary">Áttetsző háttereket adhat az alkalmazásfiókhoz</string>
