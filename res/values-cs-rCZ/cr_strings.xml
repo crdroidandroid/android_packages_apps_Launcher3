@@ -18,25 +18,25 @@
     <!-- Application name -->
     <!-- Settings -->
     <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Lock layout</string>
-    <string name="settings_lock_layout_summary_on">Icons and widgets can\'t be added, removed and moved on the homescreen</string>
-    <string name="settings_lock_layout_summary_off">Icons and widgets can be added, removed and moved on the homescreen</string>
-    <string name="settings_edit_widgets_error">It\'s not possible to add widgets to the home screen</string>
+    <string name="settings_lock_layout_title">Zamknout rozložení</string>
+    <string name="settings_lock_layout_summary_on">Ikony a widgety nelze přidat, odebrat a přesunout na domovské obrazovce</string>
+    <string name="settings_lock_layout_summary_off">Ikony a widgety lze přidat, odebrat a přesunout na domovské obrazovce</string>
+    <string name="settings_edit_widgets_error">Nelze přidat widgety na domovskou obrazovku</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Swipe to access Google app</string>
+    <string name="title_show_google_app">Přejetím přejít do aplikace Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">When you swipe right from main home screen</string>
+    <string name="msg_minus_one_on_left">Při gestu tažení vpravo z hlavní domovské obrazovky</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">When you swipe left from main home screen</string>
+    <string name="msg_minus_one_on_right">Při gestu tažení vlevo z hlavní domovské obrazovky</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Icon labels on desktop</string>
-    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <string name="desktop_show_labels">Popisky ikon na ploše</string>
+    <string name="drawer_show_labels">Popisky ikon v seznamu aplikací</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
-    <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
-    <string name="trust_apps_loading">Loading\u2026</string>
+    <string name="trust_apps_manager_name">Skryté a chráněné aplikace</string>
+    <string name="trust_apps_auth_manager">Pro správu skrytých a zabezpečených aplikací nejdříve odemkněte obrazovku</string>
+    <string name="trust_apps_auth_open_app">Proveďte ověření pro spuštění aplikace %1$s</string>
+    <string name="trust_apps_loading">Načítání</string>
     <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
     <string name="trust_apps_help">Help</string>
     <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>

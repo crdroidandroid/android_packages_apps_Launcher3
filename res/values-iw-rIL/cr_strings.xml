@@ -18,40 +18,40 @@
     <!-- Application name -->
     <!-- Settings -->
     <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Lock layout</string>
-    <string name="settings_lock_layout_summary_on">Icons and widgets can\'t be added, removed and moved on the homescreen</string>
-    <string name="settings_lock_layout_summary_off">Icons and widgets can be added, removed and moved on the homescreen</string>
-    <string name="settings_edit_widgets_error">It\'s not possible to add widgets to the home screen</string>
+    <string name="settings_lock_layout_title">נעילת פריסת התצוגה</string>
+    <string name="settings_lock_layout_summary_on">לא ניתן להוסיף, להסיר ולהזיז סמלים ויישומונים על מסך הבית</string>
+    <string name="settings_lock_layout_summary_off">ניתן להוסיף, להסיר ולהזיז סמלים ויישומונים על מסך הבית</string>
+    <string name="settings_edit_widgets_error">אין אפשרות להוסיף יישומונים למסך הבית</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Swipe to access Google app</string>
+    <string name="title_show_google_app">החלקה כדי לגשת לאפליקציית גוגל</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">When you swipe right from main home screen</string>
+    <string name="msg_minus_one_on_left">בעת החלקה ימינה ממסך הבית</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">When you swipe left from main home screen</string>
+    <string name="msg_minus_one_on_right">בעת החלקה שמאלה ממסך הבית</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Icon labels on desktop</string>
-    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <string name="desktop_show_labels">תוויות סמלים במסך הבית</string>
+    <string name="drawer_show_labels">תוויות סמלים במגירת היישומים</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
-    <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
-    <string name="trust_apps_loading">Loading\u2026</string>
-    <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="trust_apps_help">Help</string>
-    <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
-    <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="trust_apps_manager_name">מוסתרים &amp; יישומים מוגנים</string>
+    <string name="trust_apps_auth_manager">ביטול נעילה כדי לנהל את היישומים המוסתרים והמוגנים</string>
+    <string name="trust_apps_auth_open_app">אימות לפתיחת %1$s</string>
+    <string name="trust_apps_loading">טעינת \u2026</string>
+    <string name="trust_apps_no_lock_error">נדרש להגדיר מסך נעילה מאובטח להגבלת גישה ליישומים</string>
+    <string name="trust_apps_help">עזרה</string>
+    <string name="trust_apps_info_hidden">יישומים מוסתרים והווידג\'טים שלהם אינם מוצגים במגירת היישומים</string>
+    <string name="trust_apps_info_protected">יישומים מוגנים מחייבים אימות לפתיחה מהמשגר</string>
     <!-- General -->
-    <string name="settings_title">Home settings</string>
+    <string name="settings_title">הגדרות דף הבית</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="recents_category_title">Recents</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="home_category_title">דף הבית</string>
+    <string name="home_category_summary">הגדרת לוח Google now ועוד</string>
+    <string name="icons_category_title">סמלים</string>
+    <string name="icons_category_summary">הגדרת גודל הסמל ועוד</string>
+    <string name="app_drawer_category_title">מגירת היישומים</string>
+    <string name="app_drawer_category_summary">התאמה אישית של מגירת היישומים</string>
+    <string name="recents_category_title">מהזמן האחרון</string>
+    <string name="recents_category_summary">ארגון מחדש של מסך התצוגה המסכמת</string>
     <string name="misc_category_title">Miscellaneous</string>
     <string name="misc_category_summary">Other options</string>
     <string name="general_category_title">General</string>
