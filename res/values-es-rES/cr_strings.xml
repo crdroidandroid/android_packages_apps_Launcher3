@@ -18,20 +18,20 @@
     <!-- Application name -->
     <!-- Settings -->
     <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Lock layout</string>
-    <string name="settings_lock_layout_summary_on">Icons and widgets can\'t be added, removed and moved on the homescreen</string>
-    <string name="settings_lock_layout_summary_off">Icons and widgets can be added, removed and moved on the homescreen</string>
-    <string name="settings_edit_widgets_error">It\'s not possible to add widgets to the home screen</string>
+    <string name="settings_lock_layout_title">Diseño de pantalla de bloqueo</string>
+    <string name="settings_lock_layout_summary_on">Iconos y widgets no pueden ser añadidos, eliminados o movidos en la pantalla de inicio</string>
+    <string name="settings_lock_layout_summary_off">Iconos y widgets pueden ser añadidos, eliminados o movidos en la pantalla de inicio</string>
+    <string name="settings_edit_widgets_error">No es posible añadir widgets a la pantalla de inicio</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Swipe to access Google app</string>
+    <string name="title_show_google_app">Desliza para acceder a la aplicación de Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">When you swipe right from main home screen</string>
+    <string name="msg_minus_one_on_left">Cuando deslizas hacia la derecha desde la pantalla principal</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">When you swipe left from main home screen</string>
+    <string name="msg_minus_one_on_right">Cuando deslizas hacia la izquierda desde la pantalla principal</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Icon labels on desktop</string>
-    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <string name="desktop_show_labels">Etiquetas de icono en el escritorio</string>
+    <string name="drawer_show_labels">Etiquetas de iconos en el cajón</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
     <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
