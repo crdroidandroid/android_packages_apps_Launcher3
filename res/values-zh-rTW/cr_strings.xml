@@ -18,69 +18,69 @@
     <!-- Application name -->
     <!-- Settings -->
     <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Lock layout</string>
-    <string name="settings_lock_layout_summary_on">Icons and widgets can\'t be added, removed and moved on the homescreen</string>
-    <string name="settings_lock_layout_summary_off">Icons and widgets can be added, removed and moved on the homescreen</string>
-    <string name="settings_edit_widgets_error">It\'s not possible to add widgets to the home screen</string>
+    <string name="settings_lock_layout_title">鎖定佈局</string>
+    <string name="settings_lock_layout_summary_on">禁止在桌面上新增、移除或移動圖示和小工具</string>
+    <string name="settings_lock_layout_summary_off">允許在桌面上新增、移除或移動圖示和小工具</string>
+    <string name="settings_edit_widgets_error">無法將小工具新增至主畫面</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Swipe to access Google app</string>
+    <string name="title_show_google_app">滑動顯示 Google 即時資訊</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">When you swipe right from main home screen</string>
+    <string name="msg_minus_one_on_left">當在主畫面向右滑動時</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">When you swipe left from main home screen</string>
+    <string name="msg_minus_one_on_right">當在主畫面向左滑動時</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Icon labels on desktop</string>
-    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <string name="desktop_show_labels">在桌面上顯示圖示名稱</string>
+    <string name="drawer_show_labels">在應用程式清單中顯示圖示名稱</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
-    <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
-    <string name="trust_apps_loading">Loading\u2026</string>
-    <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="trust_apps_help">Help</string>
-    <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
-    <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="trust_apps_manager_name">隱藏和受保護的應用程式</string>
+    <string name="trust_apps_auth_manager">解鎖以管理隱藏和受保護的應用程式</string>
+    <string name="trust_apps_auth_open_app">進行身份驗證以開啟 %1$s</string>
+    <string name="trust_apps_loading">載入中\u2026</string>
+    <string name="trust_apps_no_lock_error">請設置安全的鎖定方式來管理及限制應用程式的存取權限</string>
+    <string name="trust_apps_help">說明</string>
+    <string name="trust_apps_info_hidden">隱藏應用程式及其小工具</string>
+    <string name="trust_apps_info_protected">需要身份驗證才能開啟受保護的應用程式</string>
     <!-- General -->
-    <string name="settings_title">Home settings</string>
+    <string name="settings_title">主畫面設定</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="recents_category_title">Recents</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
-    <string name="general_category_title">General</string>
-    <string name="interface_category_title">Interface</string>
-    <string name="quickspace_category_title">Quickspace</string>
-    <string name="search_bar_category_title">Search bar</string>
-    <string name="actions_category_title">Quick actions</string>
+    <string name="home_category_title">主畫面</string>
+    <string name="home_category_summary">調整 Google 即時資訊等設定</string>
+    <string name="icons_category_title">圖示</string>
+    <string name="icons_category_summary">設定圖示大小和更多</string>
+    <string name="app_drawer_category_title">應用程式清單</string>
+    <string name="app_drawer_category_summary">自訂您的應用程式清單</string>
+    <string name="recents_category_title">總覽</string>
+    <string name="recents_category_summary">調整總覽介面</string>
+    <string name="misc_category_title">雜項</string>
+    <string name="misc_category_summary">其他選項</string>
+    <string name="general_category_title">一般</string>
+    <string name="interface_category_title">介面</string>
+    <string name="quickspace_category_title">資訊一覽</string>
+    <string name="search_bar_category_title">搜尋列</string>
+    <string name="actions_category_title">快捷動作</string>
     <!-- Developer options -->
-    <string name="dev_options_title">Developer options</string>
-    <string name="dev_options_summary">Enable some hidden features at your own risk</string>
+    <string name="dev_options_title">開發人員選項</string>
+    <string name="dev_options_summary">自負風險開啟一些隱藏功能</string>
     <!-- Pause apps shortcut -->
-    <string name="pause">Pause</string>
-    <string name="pause_apps_dialog_title">Pause %1$s?</string>
-    <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
-    <string name="paused_apps_dialog_title">App paused</string>
-    <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
-    <string name="paused_apps_drop_target_label">Pause app</string>
+    <string name="pause">暫停應用程式</string>
+    <string name="pause_apps_dialog_title">暫停 %1$s？</string>
+    <string name="pause_apps_dialog_message">%1$s 的通知將會暫停顯示</string>
+    <string name="paused_apps_dialog_title">已暫停應用程式</string>
+    <string name="paused_apps_dialog_message">%1$s 是在主畫面上被暫停的</string>
+    <string name="paused_apps_drop_target_label">暫停應用程式</string>
     <!-- Icon pack -->
-    <string name="icon_pack_title">Icon pack</string>
-    <string name="icon_pack_default_label">Default</string>
-    <string name="icon_pack_add">Install more</string>
-    <string name="icon_pack_no_market">There\'s no available app store</string>
+    <string name="icon_pack_title">圖示套件</string>
+    <string name="icon_pack_default_label">預設</string>
+    <string name="icon_pack_add">取得更多...</string>
+    <string name="icon_pack_no_market">沒有可用的應用程式商店</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">數值： <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">使用預設值</string>
+    <string name="custom_seekbar_default_value_to_set">預設值：<xliff:g id="v">%s</xliff:g>\n長按以設定</string>
+    <string name="custom_seekbar_default_value_is_set">已設定為預設值</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">圖示大小</string>
     <!-- Font size -->
     <string name="font_size_title">Font size</string>
     <!-- App label - max lines -->
@@ -151,9 +151,9 @@
         <item>You should change your alarm sounds.</item>
         <item>Looks like it\'s a beautiful day, isn\'t it?</item>
         <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
+        <item>以防萬一，看看天氣預報吧</item>
+        <item>想睡了嗎？</item>
+        <item>你今天看看窗外風景了嗎？</item>
         <item>Let\'s get this done.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
