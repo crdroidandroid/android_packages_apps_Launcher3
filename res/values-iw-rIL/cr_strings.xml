@@ -52,31 +52,31 @@
     <string name="app_drawer_category_summary">התאמה אישית של מגירת היישומים</string>
     <string name="recents_category_title">מהזמן האחרון</string>
     <string name="recents_category_summary">ארגון מחדש של מסך התצוגה המסכמת</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
-    <string name="general_category_title">General</string>
-    <string name="interface_category_title">Interface</string>
+    <string name="misc_category_title">שונות</string>
+    <string name="misc_category_summary">אפשרויות נוספות</string>
+    <string name="general_category_title">כללי</string>
+    <string name="interface_category_title">ממשק</string>
     <string name="quickspace_category_title">Quickspace</string>
-    <string name="search_bar_category_title">Search bar</string>
-    <string name="actions_category_title">Quick actions</string>
+    <string name="search_bar_category_title">סרגל החיפוש</string>
+    <string name="actions_category_title">פעולות מהירות</string>
     <!-- Developer options -->
-    <string name="dev_options_title">Developer options</string>
-    <string name="dev_options_summary">Enable some hidden features at your own risk</string>
+    <string name="dev_options_title">אפשרויות מפתח</string>
+    <string name="dev_options_summary">לאפשר מספר תכונות נסתרות על אחריותך בלבד</string>
     <!-- Pause apps shortcut -->
-    <string name="pause">Pause</string>
-    <string name="pause_apps_dialog_title">Pause %1$s?</string>
-    <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
-    <string name="paused_apps_dialog_title">App paused</string>
-    <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
-    <string name="paused_apps_drop_target_label">Pause app</string>
+    <string name="pause">השהיה</string>
+    <string name="pause_apps_dialog_title">השהיית %1$s?</string>
+    <string name="pause_apps_dialog_message">התראות עבור %1$s יושהו</string>
+    <string name="paused_apps_dialog_title">היישום מושהה</string>
+    <string name="paused_apps_dialog_message">%1$s הושהה ישירות מהמשגר</string>
+    <string name="paused_apps_drop_target_label">השהיית היישום</string>
     <!-- Icon pack -->
-    <string name="icon_pack_title">Icon pack</string>
-    <string name="icon_pack_default_label">Default</string>
-    <string name="icon_pack_add">Install more</string>
-    <string name="icon_pack_no_market">There\'s no available app store</string>
+    <string name="icon_pack_title">ערכת סמלים</string>
+    <string name="icon_pack_default_label">ברירת המחדל</string>
+    <string name="icon_pack_add">התקנת עוד</string>
+    <string name="icon_pack_no_market">אין חנות אפליקציות זמינה</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
+    <string name="custom_seekbar_value">ערך: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">כברירת מחדל</string>
     <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
     <string name="custom_seekbar_default_value_is_set">Default value is set</string>
     <!-- Icon size -->
