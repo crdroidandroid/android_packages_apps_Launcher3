@@ -56,7 +56,7 @@
     <string name="misc_category_summary">אפשרויות נוספות</string>
     <string name="general_category_title">כללי</string>
     <string name="interface_category_title">ממשק</string>
-    <string name="quickspace_category_title">Quickspace</string>
+    <string name="quickspace_category_title">החלל המהיר</string>
     <string name="search_bar_category_title">סרגל החיפוש</string>
     <string name="actions_category_title">פעולות מהירות</string>
     <!-- Developer options -->
@@ -136,67 +136,67 @@
     <string name="quickspace_now_playing_title">מתנגן כעת</string>
     <string name="quickspace_now_playing_summary">הצגת השיר המתנגן כעת</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Minimalistic style</string>
-    <string name="quickspace_alternate_style_summary">Switch to modern style</string>
+    <string name="quickspace_alternate_style_title">סגנון מינימליסטי</string>
+    <string name="quickspace_alternate_style_summary">החלפה לסגנון מודרני</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Random messages</string>
-    <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
+    <string name="quickspace_psa_title">הודעות אקראיות</string>
+    <string name="quickspace_psa_summary">אפשר להחיות את השיחה עם הודעות אקראיות</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>בוקר טוב!</item>
+        <item>בוקר טוב, הגיע הזמן לזוז!</item>
+        <item>איזה יום יפה!</item>
+        <item>שיהיה לך יום נפלא!</item>
+        <item>מה בדבר נמנום קטן של 5 דקות?</item>
+        <item>גם זו דרך להתעורר.</item>
+        <item>הגיע הזמן להחליף את צלצול המעורר שלך.</item>
+        <item>נראה שזה יום יפה, לא?</item>
+        <item>קדימה, נלך על זה.</item>
+        <item>כדאי לבדוק את מזג האוויר – ליתר בטחון</item>
+        <item>תחושת ישנוניות עדיין</item>
+        <item>הסתכלת כבר החוצה?</item>
+        <item>קדימה, נסיים את זה.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
+        <item>לילה טוב!</item>
+        <item>שינה ערבה!</item>
+        <item>נתראה מחר!</item>
+        <item>חלומות מתוקים!</item>
+        <item>לא להישאר ערים עד מאוחר</item>
+        <item>שתהיה לך שינה טובה</item>
+        <item>כדאי לתפוס תנומה</item>
+        <item>זמן להירגע</item>
+        <item>לילה מהנה!</item>
+        <item>זמן לטעון מצברים!</item>
+        <item>מחר יכול להיות יום אדיר</item>
         <item>Get your bones ready for tomorrow</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>אממ... לילה טוב?</item>
+        <item>קצת מאוחר עכשיו</item>
+        <item>כדאי להסדיר את זמני השינה שלך</item>
+        <item>מרגישים יותר יצירתיות בשלב זה?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
-        <item>Make peace, not war</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
-        <item>Open goodness with crDroid</item>
-        <item>Spread love, not havoc</item>
-        <item>We didn\'t start the fire!</item>
-        <item>Time for some good music</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
-        <item>We love you 3000</item>
-        <item>Delicious even without Sushi</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>How is everything going?</item>
+        <item>בורות היא אושר</item>
+        <item>האם כבר הגיע הזמן לצרוב עדכון נוסף?</item>
+        <item>עשו שלום, לא מלחמה</item>
+        <item>אווו היי, מה קורה?</item>
+        <item>כדאי להתמקד במשימות שלך</item>
+        <item>כמה צילומי מסך צריך?</item>
+        <item>לפתוח את הטוב עם crDroid</item>
+        <item>הפיצו אהבה, לא חורבן</item>
+        <item>לא אנחנו הצתנו את הלהבה!</item>
+        <item>הגיע הזמן לקצת מוזיקה טובה</item>
+        <item>ראש \u003C\u003C\u003C\u003C\u003C\u003C\u003C</item>
+        <item>נדרש crDroid Premium כדי לצפות בזה</item>
+        <item>זכרו את שושלת החד-קרן</item>
+        <item>תיהנו מחיי סוללה Xטרה ארוכים</item>
+        <item>התחלנו מלא-כלום ושום דבר</item>
+        <item>אנחנו אוהבים אותך 3000</item>
+        <item>ערב לחיך אפילו בלי סושי</item>
+        <item>עשו משהו נחמד היום</item>
+        <item>זוהי חוויית הפיקסל הטובה ביותר, לא?</item>
+        <item>איך הכול הולך?</item>
         <item>No illusions, welcome to reality!</item>
         <item>Thank you for your support</item>
         <item>No festival for Derps - only perfection!</item>
