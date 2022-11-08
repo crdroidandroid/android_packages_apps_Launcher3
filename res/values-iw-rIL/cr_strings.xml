@@ -77,64 +77,64 @@
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">ערך: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">כברירת מחדל</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_default_value_to_set">ברירת מחדל: <xliff:g id="v">%s</xliff:g>\nלחיצה ממושכת להגדרה</string>
+    <string name="custom_seekbar_default_value_is_set">ערך ברירת המחדל מוגדר</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">גודל הסמל</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">גודל הגופן</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">מספר שורות מירבי לתווית יישומים</string>
     <!-- Hotseat searchbar -->
-    <string name="label_search">Search</string>
+    <string name="label_search">חיפוש</string>
     <string name="label_lens">Google Lens</string>
-    <string name="label_voice_search">Voice search</string>
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Search bar in the bottom dock</string>
-    <string name="dock_theme_title">Themed icons</string>
-    <string name="dock_theme_summary">Use themed icons for search bar</string>
-    <string name="search_radius_title">Corner radius</string>
+    <string name="label_voice_search">חיפוש קולי</string>
+    <string name="dock_search_title">סרגל החיפוש של Google</string>
+    <string name="dock_search_summary">שורת חיפוש בסרגל התחתון</string>
+    <string name="dock_theme_title">סמלילי ערכת הנושא</string>
+    <string name="dock_theme_summary">הצגת סמלי ערכת הנושא בשורת החיפוש</string>
+    <string name="search_radius_title">רדיוס עיגול הפינות</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <string name="hotseat_bg_title">רקע המושב החם</string>
+    <string name="hotseat_bg_summary">הוספת רקע שקוף לסרגל היישומים</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
+    <string name="pref_sleep_gesture_title">הקשה כפולה לכיבוי המסך</string>
+    <string name="pref_sleep_gesture_summary">הקשה כפולה על מקום ריק לכיבוי המסך</string>
     <!-- Wallpaper scrolling -->
-    <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
-    <string name="allow_wallpaper_scrolling_summary">Wallpaper scrolling effect for multiple screens</string>
+    <string name="allow_wallpaper_scrolling">גלילת הטפט</string>
+    <string name="allow_wallpaper_scrolling_summary">אפקט גלילה לטפט עבור מסכים מרובים</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_summary">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">שינוי מרחק לטפט</string>
+    <string name="allow_wallpaper_zooming_summary">התקרבות או התרחקות הטפט בעת השימוש במגירת היישומים או היישומים האחרונים</string>
     <!-- Homescreen Statusbar -->
-    <string name="show_statusbar_title">Status Bar</string>
+    <string name="show_statusbar_title">שורת המצב</string>
     <!-- Top shadow -->
-    <string name="show_top_shadow">Top shadow</string>
+    <string name="show_top_shadow">צללית עילית</string>
     <!-- Row Height -->
-    <string name="row_height_title">Row height</string>
+    <string name="row_height_title">גובה השורה</string>
     <!-- Background blur -->
-    <string name="background_blur_title">Background blur depth</string>
-    <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
+    <string name="background_blur_title">עומק טשטוש הרקע</string>
+    <string name="background_blur_summary">הגדרת עומק הטשטוש למגירת היישומים וליישומים האחרונים</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your home screen</string>
+    <string name="show_quickspace_title">מבט מהיר</string>
+    <string name="show_quickspace_summary">הצגה בקצה העליון של מסך הבית שלך</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
+    <string name="quick_event_rom_intro_welcome">ברוך בואך לcrDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Have a great day</item>
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
-        <item>We love you 3000</item>
+        <item>שיהיה לך יום נפלא</item>
+        <item>תודה לך על בחירתך בנו</item>
+        <item>אהבת אותנו? אפשר לשלוח לנו כוס בירה</item>
+        <item>ה-ROM הטוב ביותר מאז ומעולם.</item>
+        <item>אפשר לאמר לנו היי בטלגרם</item>
+        <item>לחיצה כאן כדי להתחיל</item>
+        <item>אנחנו אוהבים אותך 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_now_playing">מתנגן כעת</string>
+    <string name="quick_event_ambient_song_artist">%1$s על־ידי %2$s</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Now playing</string>
-    <string name="quickspace_now_playing_summary">Show the song you\'re playing</string>
+    <string name="quickspace_now_playing_title">מתנגן כעת</string>
+    <string name="quickspace_now_playing_summary">הצגת השיר המתנגן כעת</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">Minimalistic style</string>
     <string name="quickspace_alternate_style_summary">Switch to modern style</string>
