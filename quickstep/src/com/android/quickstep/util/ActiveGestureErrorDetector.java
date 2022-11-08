@@ -33,11 +33,10 @@ public class ActiveGestureErrorDetector {
      * Enums associated to gesture navigation events.
      */
     public enum GestureEvent {
-        MOTION_DOWN, MOTION_UP, SET_END_TARGET, SET_END_TARGET_HOME, SET_END_TARGET_NEW_TASK,
-        ON_SETTLED_ON_END_TARGET, START_RECENTS_ANIMATION, FINISH_RECENTS_ANIMATION,
-        CANCEL_RECENTS_ANIMATION, SET_ON_PAGE_TRANSITION_END_CALLBACK, CANCEL_CURRENT_ANIMATION,
-        CLEANUP_SCREENSHOT, SCROLLER_ANIMATION_ABORTED, TASK_APPEARED, EXPECTING_TASK_APPEARED,
-        FLAG_USING_OTHER_ACTIVITY_INPUT_CONSUMER,
+        MOTION_DOWN, MOTION_UP, SET_END_TARGET, SET_END_TARGET_HOME, SET_END_TARGET_LAST_TASK,
+        SET_END_TARGET_NEW_TASK, ON_SETTLED_ON_END_TARGET, START_RECENTS_ANIMATION,
+        FINISH_RECENTS_ANIMATION, CANCEL_RECENTS_ANIMATION, SET_ON_PAGE_TRANSITION_END_CALLBACK,
+        CANCEL_CURRENT_ANIMATION, CLEANUP_SCREENSHOT, SCROLLER_ANIMATION_ABORTED, TASK_APPEARED,
 
         /**
          * These GestureEvents are specifically associated to state flags that get set in
@@ -92,40 +91,35 @@ public class ActiveGestureErrorDetector {
                     case MOTION_UP:
                         errorDetected |= printErrorIfTrue(
                                 !encounteredEvents.contains(GestureEvent.MOTION_DOWN),
-                                prefix,
-                                /* errorMessage= */ "Motion up detected before/without"
+                                /* errorMessage= */ prefix + "\t\tMotion up detected before/without"
                                         + " motion down.",
                                 writer);
                         break;
                     case ON_SETTLED_ON_END_TARGET:
                         errorDetected |= printErrorIfTrue(
                                 !encounteredEvents.contains(GestureEvent.SET_END_TARGET),
-                                prefix,
-                                /* errorMessage= */ "onSettledOnEndTarget called "
+                                /* errorMessage= */ prefix + "\t\tonSettledOnEndTarget called "
                                         + "before/without setEndTarget.",
                                 writer);
                         break;
                     case FINISH_RECENTS_ANIMATION:
                         errorDetected |= printErrorIfTrue(
                                 !encounteredEvents.contains(GestureEvent.START_RECENTS_ANIMATION),
-                                prefix,
-                                /* errorMessage= */ "finishRecentsAnimation called "
+                                /* errorMessage= */ prefix + "\t\tfinishRecentsAnimation called "
                                         + "before/without startRecentsAnimation.",
                                 writer);
                         break;
                     case CANCEL_RECENTS_ANIMATION:
                         errorDetected |= printErrorIfTrue(
                                 !encounteredEvents.contains(GestureEvent.START_RECENTS_ANIMATION),
-                                prefix,
-                                /* errorMessage= */ "cancelRecentsAnimation called "
+                                /* errorMessage= */ prefix + "\t\tcancelRecentsAnimation called "
                                         + "before/without startRecentsAnimation.",
                                 writer);
                         break;
                     case CLEANUP_SCREENSHOT:
                         errorDetected |= printErrorIfTrue(
                                 !encounteredEvents.contains(GestureEvent.STATE_SCREENSHOT_CAPTURED),
-                                prefix,
-                                /* errorMessage= */ "recents activity screenshot was "
+                                /* errorMessage= */ prefix + "\t\trecents activity screenshot was "
                                         + "cleaned up before/without STATE_SCREENSHOT_CAPTURED "
                                         + "being set.",
                                 writer);
@@ -135,66 +129,48 @@ public class ActiveGestureErrorDetector {
                                 encounteredEvents.contains(GestureEvent.SET_END_TARGET_HOME)
                                         && !encounteredEvents.contains(
                                                 GestureEvent.ON_SETTLED_ON_END_TARGET),
-                                prefix,
-                                /* errorMessage= */ "recents view scroller animation "
+                                /* errorMessage= */ prefix + "\t\trecents view scroller animation "
                                         + "aborted after setting end target HOME, but before"
                                         + " settling on end target.",
                                 writer);
                         break;
                     case TASK_APPEARED:
                         errorDetected |= printErrorIfTrue(
-                                !encounteredEvents.contains(GestureEvent.SET_END_TARGET_NEW_TASK),
-                                prefix,
-                                /* errorMessage= */ "onTasksAppeared called "
-                                        + "before/without setting end target to new task",
-                                writer);
-                        errorDetected |= printErrorIfTrue(
-                                !encounteredEvents.contains(GestureEvent.EXPECTING_TASK_APPEARED),
-                                prefix,
-                                /* errorMessage= */ "onTasksAppeared was not expected to be called",
-                                writer);
-                        break;
-                    case EXPECTING_TASK_APPEARED:
-                        errorDetected |= printErrorIfTrue(
-                                !encounteredEvents.contains(GestureEvent.SET_END_TARGET_NEW_TASK),
-                                prefix,
-                                /* errorMessage= */ "expecting onTasksAppeared to be called "
-                                        + "before/without setting end target to new task",
+                                !encounteredEvents.contains(GestureEvent.SET_END_TARGET_LAST_TASK)
+                                        && !encounteredEvents.contains(
+                                        GestureEvent.SET_END_TARGET_NEW_TASK),
+                                /* errorMessage= */ prefix + "\t\tonTasksAppeared called "
+                                        + "before/without setting end target to last or new task",
                                 writer);
                         break;
                     case STATE_GESTURE_COMPLETED:
                         errorDetected |= printErrorIfTrue(
                                 !encounteredEvents.contains(GestureEvent.MOTION_UP),
-                                prefix,
-                                /* errorMessage= */ "STATE_GESTURE_COMPLETED set "
+                                /* errorMessage= */ prefix + "\t\tSTATE_GESTURE_COMPLETED set "
                                         + "before/without motion up.",
                                 writer);
                         errorDetected |= printErrorIfTrue(
                                 !encounteredEvents.contains(GestureEvent.STATE_GESTURE_STARTED),
-                                prefix,
-                                /* errorMessage= */ "STATE_GESTURE_COMPLETED set "
+                                /* errorMessage= */ prefix + "\t\tSTATE_GESTURE_COMPLETED set "
                                         + "before/without STATE_GESTURE_STARTED.",
                                 writer);
                         break;
                     case STATE_GESTURE_CANCELLED:
                         errorDetected |= printErrorIfTrue(
                                 !encounteredEvents.contains(GestureEvent.MOTION_UP),
-                                prefix,
-                                /* errorMessage= */ "STATE_GESTURE_CANCELLED set "
+                                /* errorMessage= */ prefix + "\t\tSTATE_GESTURE_CANCELLED set "
                                         + "before/without motion up.",
                                 writer);
                         errorDetected |= printErrorIfTrue(
                                 !encounteredEvents.contains(GestureEvent.STATE_GESTURE_STARTED),
-                                prefix,
-                                /* errorMessage= */ "STATE_GESTURE_CANCELLED set "
+                                /* errorMessage= */ prefix + "\t\tSTATE_GESTURE_CANCELLED set "
                                         + "before/without STATE_GESTURE_STARTED.",
                                 writer);
                         break;
                     case STATE_SCREENSHOT_CAPTURED:
                         errorDetected |= printErrorIfTrue(
                                 !encounteredEvents.contains(GestureEvent.STATE_CAPTURE_SCREENSHOT),
-                                prefix,
-                                /* errorMessage= */ "STATE_SCREENSHOT_CAPTURED set "
+                                /* errorMessage= */ prefix + "\t\tSTATE_SCREENSHOT_CAPTURED set "
                                         + "before/without STATE_CAPTURE_SCREENSHOT.",
                                 writer);
                         break;
@@ -202,8 +178,7 @@ public class ActiveGestureErrorDetector {
                         errorDetected |= printErrorIfTrue(
                                 !encounteredEvents.contains(
                                         GestureEvent.SET_ON_PAGE_TRANSITION_END_CALLBACK),
-                                prefix,
-                                /* errorMessage= */ "STATE_RECENTS_SCROLLING_FINISHED "
+                                /* errorMessage= */ prefix + "\t\tSTATE_RECENTS_SCROLLING_FINISHED "
                                         + "set before/without calling "
                                         + "setOnPageTransitionEndCallback.",
                                 writer);
@@ -212,19 +187,16 @@ public class ActiveGestureErrorDetector {
                         errorDetected |= printErrorIfTrue(
                                 !encounteredEvents.contains(
                                         GestureEvent.START_RECENTS_ANIMATION),
-                                prefix,
-                                /* errorMessage= */ "STATE_RECENTS_ANIMATION_CANCELED "
+                                /* errorMessage= */ prefix + "\t\tSTATE_RECENTS_ANIMATION_CANCELED "
                                         + "set before/without startRecentsAnimation.",
                                 writer);
                         break;
                     case MOTION_DOWN:
                     case SET_END_TARGET:
                     case SET_END_TARGET_HOME:
-                    case SET_END_TARGET_NEW_TASK:
                     case START_RECENTS_ANIMATION:
                     case SET_ON_PAGE_TRANSITION_END_CALLBACK:
                     case CANCEL_CURRENT_ANIMATION:
-                    case FLAG_USING_OTHER_ACTIVITY_INPUT_CONSUMER:
                     case STATE_GESTURE_STARTED:
                     case STATE_END_TARGET_ANIMATION_FINISHED:
                     case STATE_CAPTURE_SCREENSHOT:
@@ -238,36 +210,31 @@ public class ActiveGestureErrorDetector {
             // Check that all required events were found.
             errorDetected |= printErrorIfTrue(
                     !encounteredEvents.contains(GestureEvent.MOTION_DOWN),
-                    prefix,
-                    /* errorMessage= */ "Motion down never detected.",
+                    /* errorMessage= */ prefix + "\t\tMotion down never detected.",
                     writer);
             errorDetected |= printErrorIfTrue(
                     !encounteredEvents.contains(GestureEvent.MOTION_UP),
-                    prefix,
-                    /* errorMessage= */ "Motion up never detected.",
+                    /* errorMessage= */ prefix + "\t\tMotion up never detected.",
                     writer);
 
             errorDetected |= printErrorIfTrue(
                     /* condition= */ encounteredEvents.contains(GestureEvent.SET_END_TARGET)
                             && !encounteredEvents.contains(GestureEvent.ON_SETTLED_ON_END_TARGET),
-                    prefix,
-                    /* errorMessage= */ "setEndTarget was called, but "
+                    /* errorMessage= */ prefix + "\t\tsetEndTarget was called, but "
                             + "onSettledOnEndTarget wasn't.",
                     writer);
             errorDetected |= printErrorIfTrue(
                     /* condition= */ encounteredEvents.contains(GestureEvent.SET_END_TARGET)
                             && !encounteredEvents.contains(
                                     GestureEvent.STATE_END_TARGET_ANIMATION_FINISHED),
-                    prefix,
-                    /* errorMessage= */ "setEndTarget was called, but "
+                    /* errorMessage= */ prefix + "\t\tsetEndTarget was called, but "
                             + "STATE_END_TARGET_ANIMATION_FINISHED was never set.",
                     writer);
             errorDetected |= printErrorIfTrue(
                     /* condition= */ encounteredEvents.contains(GestureEvent.SET_END_TARGET)
                             && !encounteredEvents.contains(
                                     GestureEvent.STATE_RECENTS_SCROLLING_FINISHED),
-                    prefix,
-                    /* errorMessage= */ "setEndTarget was called, but "
+                    /* errorMessage= */ prefix + "\t\tsetEndTarget was called, but "
                             + "STATE_RECENTS_SCROLLING_FINISHED was never set.",
                     writer);
             errorDetected |= printErrorIfTrue(
@@ -276,8 +243,7 @@ public class ActiveGestureErrorDetector {
                             && encounteredEvents.contains(
                                     GestureEvent.STATE_RECENTS_SCROLLING_FINISHED)
                             && !encounteredEvents.contains(GestureEvent.ON_SETTLED_ON_END_TARGET),
-                    prefix,
-                    /* errorMessage= */ "STATE_END_TARGET_ANIMATION_FINISHED and "
+                    /* errorMessage= */ prefix + "\t\tSTATE_END_TARGET_ANIMATION_FINISHED and "
                             + "STATE_RECENTS_SCROLLING_FINISHED were set, but onSettledOnEndTarget "
                             + "wasn't called.",
                     writer);
@@ -287,8 +253,7 @@ public class ActiveGestureErrorDetector {
                             GestureEvent.START_RECENTS_ANIMATION)
                             && !encounteredEvents.contains(GestureEvent.FINISH_RECENTS_ANIMATION)
                             && !encounteredEvents.contains(GestureEvent.CANCEL_RECENTS_ANIMATION),
-                    prefix,
-                    /* errorMessage= */ "startRecentsAnimation was called, but "
+                    /* errorMessage= */ prefix + "\t\tstartRecentsAnimation was called, but "
                             + "finishRecentsAnimation and cancelRecentsAnimation weren't.",
                     writer);
 
@@ -296,8 +261,7 @@ public class ActiveGestureErrorDetector {
                     /* condition= */ encounteredEvents.contains(GestureEvent.STATE_GESTURE_STARTED)
                             && !encounteredEvents.contains(GestureEvent.STATE_GESTURE_COMPLETED)
                             && !encounteredEvents.contains(GestureEvent.STATE_GESTURE_CANCELLED),
-                    prefix,
-                    /* errorMessage= */ "STATE_GESTURE_STARTED was set, but "
+                    /* errorMessage= */ prefix + "\t\tSTATE_GESTURE_STARTED was set, but "
                             + "STATE_GESTURE_COMPLETED and STATE_GESTURE_CANCELLED weren't.",
                     writer);
 
@@ -305,8 +269,7 @@ public class ActiveGestureErrorDetector {
                     /* condition= */ encounteredEvents.contains(
                             GestureEvent.STATE_CAPTURE_SCREENSHOT)
                             && !encounteredEvents.contains(GestureEvent.STATE_SCREENSHOT_CAPTURED),
-                    prefix,
-                    /* errorMessage= */ "STATE_CAPTURE_SCREENSHOT was set, but "
+                    /* errorMessage= */ prefix + "\t\tSTATE_CAPTURE_SCREENSHOT was set, but "
                             + "STATE_SCREENSHOT_CAPTURED wasn't.",
                     writer);
 
@@ -315,18 +278,15 @@ public class ActiveGestureErrorDetector {
                             GestureEvent.SET_ON_PAGE_TRANSITION_END_CALLBACK)
                             && !encounteredEvents.contains(
                                     GestureEvent.STATE_RECENTS_SCROLLING_FINISHED),
-                    prefix,
-                    /* errorMessage= */ "setOnPageTransitionEndCallback called, but "
+                    /* errorMessage= */ prefix + "\t\tsetOnPageTransitionEndCallback called, but "
                             + "STATE_RECENTS_SCROLLING_FINISHED wasn't set.",
                     writer);
 
             errorDetected |= printErrorIfTrue(
-                    /* condition= */ encounteredEvents.contains(
-                            GestureEvent.FLAG_USING_OTHER_ACTIVITY_INPUT_CONSUMER)
-                            && !encounteredEvents.contains(GestureEvent.CANCEL_CURRENT_ANIMATION)
+                    /* condition= */ !encounteredEvents.contains(
+                            GestureEvent.CANCEL_CURRENT_ANIMATION)
                             && !encounteredEvents.contains(GestureEvent.STATE_HANDLER_INVALIDATED),
-                    prefix,
-                    /* errorMessage= */ "AbsSwipeUpHandler.cancelCurrentAnimation "
+                    /* errorMessage= */ prefix + "\t\tAbsSwipeUpHandler.cancelCurrentAnimation "
                             + "wasn't called and STATE_HANDLER_INVALIDATED wasn't set.",
                     writer);
 
@@ -334,17 +294,23 @@ public class ActiveGestureErrorDetector {
                     /* condition= */ encounteredEvents.contains(
                             GestureEvent.STATE_RECENTS_ANIMATION_CANCELED)
                             && !encounteredEvents.contains(GestureEvent.CLEANUP_SCREENSHOT),
-                    prefix,
-                    /* errorMessage= */ "STATE_RECENTS_ANIMATION_CANCELED was set but "
+                    /* errorMessage= */ prefix + "\t\tSTATE_RECENTS_ANIMATION_CANCELED was set but "
                             + "the task screenshot wasn't cleaned up.",
                     writer);
 
             errorDetected |= printErrorIfTrue(
                     /* condition= */ encounteredEvents.contains(
-                            GestureEvent.EXPECTING_TASK_APPEARED)
+                            GestureEvent.SET_END_TARGET_LAST_TASK)
                             && !encounteredEvents.contains(GestureEvent.TASK_APPEARED),
-                    prefix,
-                    /* errorMessage= */ "onTaskAppeared was expected to be called but wasn't.",
+                    /* errorMessage= */ prefix + "\t\tend target set to last task, but "
+                            + "onTaskAppeared wasn't called.",
+                    writer);
+            errorDetected |= printErrorIfTrue(
+                    /* condition= */ encounteredEvents.contains(
+                            GestureEvent.SET_END_TARGET_NEW_TASK)
+                            && !encounteredEvents.contains(GestureEvent.TASK_APPEARED),
+                    /* errorMessage= */ prefix + "\t\tend target set to new task, but "
+                            + "onTaskAppeared wasn't called.",
                     writer);
 
             if (!errorDetected) {
@@ -354,11 +320,11 @@ public class ActiveGestureErrorDetector {
     }
 
     private static boolean printErrorIfTrue(
-            boolean condition, String prefix, String errorMessage, PrintWriter writer) {
+            boolean condition, String errorMessage, PrintWriter writer) {
         if (!condition) {
             return false;
         }
-        writer.println(prefix + "\t\t- " + errorMessage);
+        writer.println(errorMessage);
         return true;
     }
 }

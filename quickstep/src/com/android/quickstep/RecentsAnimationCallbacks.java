@@ -130,7 +130,7 @@ public class RecentsAnimationCallbacks implements
     public final void onAnimationCanceled(HashMap<Integer, ThumbnailData> thumbnailDatas) {
         Utilities.postAsyncCallback(MAIN_EXECUTOR.getHandler(), () -> {
             ActiveGestureLog.INSTANCE.addLog(
-                    /* event= */ "RecentsAnimationCallbacks.onAnimationCanceled",
+                    /* event= */ "onRecentsAnimationCancelled",
                     /* gestureEvent= */ CANCEL_RECENTS_ANIMATION);
             for (RecentsAnimationListener listener : getListeners()) {
                 listener.onRecentsAnimationCanceled(thumbnailDatas);
@@ -142,7 +142,7 @@ public class RecentsAnimationCallbacks implements
     @Override
     public void onTasksAppeared(RemoteAnimationTarget[] apps) {
         Utilities.postAsyncCallback(MAIN_EXECUTOR.getHandler(), () -> {
-            ActiveGestureLog.INSTANCE.addLog("RecentsAnimationCallbacks.onTasksAppeared",
+            ActiveGestureLog.INSTANCE.addLog("onTasksAppeared",
                     ActiveGestureErrorDetector.GestureEvent.TASK_APPEARED);
             for (RecentsAnimationListener listener : getListeners()) {
                 listener.onTasksAppeared(apps);
@@ -164,8 +164,6 @@ public class RecentsAnimationCallbacks implements
 
     private final void onAnimationFinished(RecentsAnimationController controller) {
         Utilities.postAsyncCallback(MAIN_EXECUTOR.getHandler(), () -> {
-            ActiveGestureLog.INSTANCE.addLog(
-                    /* event= */ "RecentsAnimationCallbacks.onAnimationFinished");
             for (RecentsAnimationListener listener : getListeners()) {
                 listener.onRecentsAnimationFinished(controller);
             }

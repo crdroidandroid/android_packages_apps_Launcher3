@@ -16,9 +16,6 @@
 
 package com.android.launcher3.tapl;
 
-import static com.android.launcher3.tapl.LauncherInstrumentation.DEFAULT_POLL_INTERVAL;
-import static com.android.launcher3.tapl.LauncherInstrumentation.WAIT_TIME_MS;
-
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.os.Bundle;
@@ -40,9 +37,6 @@ import java.util.stream.Collectors;
  * Operations on AllApps opened from Home. Also a parent for All Apps opened from Overview.
  */
 public abstract class AllApps extends LauncherInstrumentation.VisibleContainer {
-    // Defer updates flag used to defer all apps updates by a test's request.
-    private static final int DEFER_UPDATES_TEST = 1 << 1;
-
     private static final int MAX_SCROLL_ATTEMPTS = 40;
 
     private final int mHeight;
@@ -298,16 +292,12 @@ public abstract class AllApps extends LauncherInstrumentation.VisibleContainer {
      */
     public void unfreeze() {
         mLauncher.getTestInfo(TestProtocol.REQUEST_UNFREEZE_APP_LIST);
+        verifyNotFrozen("All apps freeze flags upon unfreezing");
     }
 
     private void verifyNotFrozen(String message) {
-        mLauncher.assertEquals(message, 0, getFreezeFlags() & DEFER_UPDATES_TEST);
-        mLauncher.assertTrue(message, mLauncher.waitAndGet(() -> getFreezeFlags() == 0,
-                WAIT_TIME_MS, DEFAULT_POLL_INTERVAL));
-    }
-
-    private int getFreezeFlags() {
         final Bundle testInfo = mLauncher.getTestInfo(TestProtocol.REQUEST_APP_LIST_FREEZE_FLAGS);
-        return testInfo == null ? 0 : testInfo.getInt(TestProtocol.TEST_INFO_RESPONSE_FIELD);
+        if (testInfo == null) return;
+        mLauncher.assertEquals(message, 0, testInfo.getInt(TestProtocol.TEST_INFO_RESPONSE_FIELD));
     }
 }

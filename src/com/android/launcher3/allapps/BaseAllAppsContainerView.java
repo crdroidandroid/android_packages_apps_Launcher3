@@ -107,7 +107,8 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
             new RecyclerView.OnScrollListener() {
                 @Override
                 public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
-                    updateHeaderScroll(recyclerView.computeVerticalScrollOffset());
+                    updateHeaderScroll(
+                            ((AllAppsRecyclerView) recyclerView).computeVerticalScrollOffset());
                 }
             };
 
@@ -191,6 +192,7 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
                 reset(true);
             }
         }
+
     }
 
     @Override
@@ -813,10 +815,6 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
         }
     }
 
-    protected void onInitializeRecyclerView(RecyclerView rv) {
-        rv.addOnScrollListener(mScrollListener);
-    }
-
     /** Holds a {@link BaseAllAppsAdapter} and related fields. */
     public class AdapterHolder {
         public static final int MAIN = 0;
@@ -853,7 +851,7 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
             mRecyclerView.setHasFixedSize(true);
             // No animations will occur when changes occur to the items in this RecyclerView.
             mRecyclerView.setItemAnimator(null);
-            onInitializeRecyclerView(mRecyclerView);
+            mRecyclerView.addOnScrollListener(mScrollListener);
             FocusedItemDecorator focusedItemDecorator = new FocusedItemDecorator(mRecyclerView);
             mRecyclerView.addItemDecoration(focusedItemDecorator);
             mAdapter.setIconFocusListener(focusedItemDecorator.getFocusListener());

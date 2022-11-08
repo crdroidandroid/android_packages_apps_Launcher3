@@ -204,8 +204,7 @@ public abstract class AbstractLauncherUiTest {
         };
         mTargetContext.registerReceiver(broadcastReceiver,
                 PackageManagerHelper.getPackageFilter(pkg,
-                        Intent.ACTION_PACKAGE_RESTARTED, Intent.ACTION_PACKAGE_DATA_CLEARED),
-                        Context.RECEIVER_EXPORTED/*UNAUDITED*/);
+                        Intent.ACTION_PACKAGE_RESTARTED, Intent.ACTION_PACKAGE_DATA_CLEARED));
 
         mDevice.executeShellCommand("pm clear " + pkg);
         assertTrue(pkg + " didn't restart", count.await(10, TimeUnit.SECONDS));
@@ -440,8 +439,7 @@ public abstract class AbstractLauncherUiTest {
         private Intent mIntent;
 
         public BlockingBroadcastReceiver(String action) {
-            mTargetContext.registerReceiver(this, new IntentFilter(action),
-                    Context.RECEIVER_EXPORTED/*UNAUDITED*/);
+            mTargetContext.registerReceiver(this, new IntentFilter(action));
         }
 
         @Override

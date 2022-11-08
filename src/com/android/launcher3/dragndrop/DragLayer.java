@@ -47,9 +47,7 @@ import com.android.launcher3.DropTargetBar;
 import com.android.launcher3.Launcher;
 import com.android.launcher3.R;
 import com.android.launcher3.ShortcutAndWidgetContainer;
-import com.android.launcher3.Utilities;
 import com.android.launcher3.Workspace;
-import com.android.launcher3.anim.Interpolators;
 import com.android.launcher3.anim.PendingAnimation;
 import com.android.launcher3.anim.SpringProperty;
 import com.android.launcher3.celllayout.CellLayoutLayoutParams;
@@ -58,22 +56,19 @@ import com.android.launcher3.graphics.Scrim;
 import com.android.launcher3.keyboard.ViewGroupFocusHelper;
 import com.android.launcher3.util.TouchController;
 import com.android.launcher3.views.BaseDragLayer;
-import com.android.systemui.plugins.shared.LauncherOverlayManager.LauncherOverlayCallbacks;
 
 import java.util.ArrayList;
 
 /**
  * A ViewGroup that coordinates dragging across its descendants
  */
-public class DragLayer extends BaseDragLayer<Launcher> implements LauncherOverlayCallbacks {
+public class DragLayer extends BaseDragLayer<Launcher> {
 
     public static final int ALPHA_INDEX_OVERLAY = 0;
     private static final int ALPHA_CHANNEL_COUNT = 1;
 
     public static final int ANIMATION_END_DISAPPEAR = 0;
     public static final int ANIMATION_END_REMAIN_VISIBLE = 2;
-
-    private final boolean mIsRtl;
 
     private DragController mDragController;
 
@@ -105,7 +100,6 @@ public class DragLayer extends BaseDragLayer<Launcher> implements LauncherOverla
         setChildrenDrawingOrderEnabled(true);
 
         mFocusIndicatorHelper = new ViewGroupFocusHelper(this);
-        mIsRtl = Utilities.isRtl(getResources());
     }
 
     /**
@@ -115,7 +109,6 @@ public class DragLayer extends BaseDragLayer<Launcher> implements LauncherOverla
         mDragController = dragController;
         recreateControllers();
         mWorkspaceDragScrim = new Scrim(this);
-        workspace.addOverlayCallback(this);
     }
 
     @Override
@@ -482,17 +475,5 @@ public class DragLayer extends BaseDragLayer<Launcher> implements LauncherOverla
         for (TouchController controller : mControllers) {
             controller.onOneHandedModeStateChanged(activated);
         }
-    }
-
-    @Override
-    public void onOverlayScrollChanged(float progress) {
-        float alpha = 1 - Interpolators.DEACCEL_3.getInterpolation(progress);
-        float transX = getMeasuredWidth() * progress;
-
-        if (mIsRtl) {
-            transX = -transX;
-        }
-        setTranslationX(transX);
-        getAlphaProperty(ALPHA_INDEX_OVERLAY).setValue(alpha);
     }
 }

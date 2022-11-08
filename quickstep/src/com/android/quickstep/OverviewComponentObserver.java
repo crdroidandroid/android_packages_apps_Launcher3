@@ -100,8 +100,7 @@ public final class OverviewComponentObserver {
         } catch (PackageManager.NameNotFoundException ignored) { /* Impossible */ }
 
         mContext.registerReceiver(mUserPreferenceChangeReceiver,
-                new IntentFilter(ACTION_PREFERRED_ACTIVITY_CHANGED),
-                Context.RECEIVER_EXPORTED/*UNAUDITED*/);
+                new IntentFilter(ACTION_PREFERRED_ACTIVITY_CHANGED));
         updateOverviewTargets();
     }
 
@@ -181,7 +180,7 @@ public final class OverviewComponentObserver {
                 mUpdateRegisteredPackage = defaultHome.getPackageName();
                 mContext.registerReceiver(mOtherHomeAppUpdateReceiver, getPackageFilter(
                         mUpdateRegisteredPackage, ACTION_PACKAGE_ADDED, ACTION_PACKAGE_CHANGED,
-                        ACTION_PACKAGE_REMOVED), Context.RECEIVER_EXPORTED/*UNAUDITED*/);
+                        ACTION_PACKAGE_REMOVED));
             }
         }
         mOverviewChangeListener.accept(mIsHomeAndOverviewSame);

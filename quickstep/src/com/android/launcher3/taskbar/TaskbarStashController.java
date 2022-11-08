@@ -190,13 +190,8 @@ public class TaskbarStashController implements TaskbarControllers.LoggableTaskba
         if (isPhoneMode()) {
             // DeviceProfile's taskbar vars aren't initialized w/ the flag off
             Resources resources = mActivity.getResources();
-            boolean isTransientTaskbar = DisplayController.isTransientTaskbar(mActivity);
-            mUnstashedHeight = resources.getDimensionPixelSize(isTransientTaskbar
-                    ? R.dimen.transient_taskbar_size
-                    : R.dimen.taskbar_size);
-            mStashedHeight = resources.getDimensionPixelSize(isTransientTaskbar
-                    ? R.dimen.transient_taskbar_stashed_size
-                    : R.dimen.taskbar_stashed_size);
+            mUnstashedHeight = resources.getDimensionPixelSize(R.dimen.taskbar_size);
+            mStashedHeight = resources.getDimensionPixelOffset(R.dimen.taskbar_stashed_size);
         } else {
             mUnstashedHeight = mActivity.getDeviceProfile().taskbarSize;
             mStashedHeight = mActivity.getDeviceProfile().stashedTaskbarSize;
@@ -349,8 +344,7 @@ public class TaskbarStashController implements TaskbarControllers.LoggableTaskba
      * @see WindowInsets.Type#systemBars()
      */
     public int getContentHeightToReportToApps() {
-        if ((isPhoneMode() && !mActivity.isThreeButtonNav())
-                || DisplayController.isTransientTaskbar(mActivity)) {
+        if (isPhoneMode() && !mActivity.isThreeButtonNav()) {
             return getStashedHeight();
         }
 

@@ -280,9 +280,10 @@ public class TaskbarViewController implements TaskbarControllers.LoggableTaskbar
      *                       0 => not aligned
      *                       1 => fully aligned
      */
-    public void setLauncherIconAlignment(float alignmentRatio, DeviceProfile launcherDp) {
+    public void setLauncherIconAlignment(float alignmentRatio, Float endAlignment,
+            DeviceProfile launcherDp) {
         if (mIconAlignControllerLazy == null) {
-            mIconAlignControllerLazy = createIconAlignmentController(launcherDp);
+            mIconAlignControllerLazy = createIconAlignmentController(launcherDp, endAlignment);
         }
         mIconAlignControllerLazy.setPlayFraction(alignmentRatio);
         if (alignmentRatio <= 0 || alignmentRatio >= 1) {
@@ -294,7 +295,8 @@ public class TaskbarViewController implements TaskbarControllers.LoggableTaskbar
     /**
      * Creates an animation for aligning the taskbar icons with the provided Launcher device profile
      */
-    private AnimatorPlaybackController createIconAlignmentController(DeviceProfile launcherDp) {
+    private AnimatorPlaybackController createIconAlignmentController(DeviceProfile launcherDp,
+            Float endAlignment) {
         mOnControllerPreCreateCallback.run();
         PendingAnimation setter = new PendingAnimation(100);
         DeviceProfile taskbarDp = mActivity.getDeviceProfile();
@@ -320,7 +322,7 @@ public class TaskbarViewController implements TaskbarControllers.LoggableTaskbar
         setter.addOnFrameListener(anim -> mActivity.setTaskbarWindowHeight(
                 anim.getAnimatedFraction() > 0 ? expandedHeight : collapsedHeight));
 
-        boolean isToHome = mControllers.uiController.isIconAlignedWithHotseat();
+        boolean isToHome = endAlignment != null && endAlignment == 1;
         for (int i = 0; i < mTaskbarView.getChildCount(); i++) {
             View child = mTaskbarView.getChildAt(i);
             int positionInHotseat;
