@@ -38,9 +38,8 @@ import com.android.launcher3.Utilities;
 import com.android.launcher3.anim.AnimatorListeners;
 import com.android.launcher3.statemanager.StateManager;
 import com.android.launcher3.uioverrides.QuickstepLauncher;
-import com.android.launcher3.util.MultiPropertyFactory.MultiProperty;
 import com.android.launcher3.uioverrides.states.OverviewState;
-import com.android.launcher3.util.MultiValueAlpha;
+import com.android.launcher3.util.MultiPropertyFactory.MultiProperty;
 import com.android.quickstep.AnimatedFloat;
 import com.android.quickstep.RecentsAnimationCallbacks;
 import com.android.quickstep.RecentsAnimationController;
@@ -74,6 +73,7 @@ import java.util.StringJoiner;
 
     private TaskbarControllers mControllers;
     private AnimatedFloat mTaskbarBackgroundAlpha;
+    private AnimatedFloat mTaskbarCornerRoundness;
     private MultiProperty mIconAlphaForHome;
     private QuickstepLauncher mLauncher;
 
@@ -134,6 +134,7 @@ import java.util.StringJoiner;
 
         mTaskbarBackgroundAlpha = mControllers.taskbarDragLayerController
                 .getTaskbarBackgroundAlpha();
+        mTaskbarCornerRoundness = mControllers.getTaskbarCornerRoundness();
         mIconAlphaForHome = mControllers.taskbarViewController
                 .getTaskbarIconAlpha().get(ALPHA_INDEX_HOME);
 
@@ -251,17 +252,7 @@ import java.util.StringJoiner;
 
     private Animator onStateChangeApplied(int changedFlags, long duration, boolean start) {
         boolean goingToLauncher = isInLauncher();
-        final float toAlignment;
-        if (goingToLauncher) {
-            boolean isInStashedState = mLauncherState.isTaskbarStashed(mLauncher);
-            boolean willStashVisually = isInStashedState
-                    && mControllers.taskbarStashController.supportsVisualStashing();
-            boolean isTaskbarAlignedWithHotseat =
-                    mLauncherState.isTaskbarAlignedWithHotseat(mLauncher);
-            toAlignment = isTaskbarAlignedWithHotseat && !willStashVisually ? 1 : 0;
-        } else {
-            toAlignment = 0;
-        }
+        final float toAlignment = isIconAlignedWithHotseat() ? 1 : 0;
         if (DEBUG) {
             Log.d(TAG, "onStateChangeApplied - mState: " + getStateString(mState)
                     + ", changedFlags: " + getStateString(changedFlags)
@@ -327,6 +318,19 @@ import java.util.StringJoiner;
                     .setDuration(duration));
         }
 
+        float cornerRoundness = goingToLauncher ? 0 : 1;
+        // Don't animate if corner roundness has reached desired value.
+        if (mTaskbarCornerRoundness.isAnimating()
+                || mTaskbarCornerRoundness.value != cornerRoundness) {
+            mTaskbarCornerRoundness.cancelAnimation();
+            if (DEBUG) {
+                Log.d(TAG, "onStateChangeApplied - taskbarCornerRoundness - "
+                        + mTaskbarCornerRoundness.value
+                        + " -> " + cornerRoundness + ": " + duration);
+            }
+            animatorSet.play(mTaskbarCornerRoundness.animateToValue(cornerRoundness));
+        }
+
         if (mIconAlignment.isAnimatingToValue(toAlignment)
                 || mIconAlignment.isSettledOnValue(toAlignment)) {
             // Already at desired value, but make sure we run the callback at the end.
@@ -344,6 +348,7 @@ import java.util.StringJoiner;
             }
             animatorSet.play(iconAlignAnim);
         }
+
         animatorSet.setInterpolator(EMPHASIZED);
 
         if (start) {
@@ -355,6 +360,22 @@ import java.util.StringJoiner;
     /** Returns whether we're going to a state where taskbar icons should align with launcher. */
     public boolean goingToAlignedLauncherState() {
         return mLauncherState.isTaskbarAlignedWithHotseat(mLauncher);
+    }
+
+    /**
+     * Returns if icons should be aligned to hotseat in the current transition
+     */
+    public boolean isIconAlignedWithHotseat() {
+        if (isInLauncher()) {
+            boolean isInStashedState = mLauncherState.isTaskbarStashed(mLauncher);
+            boolean willStashVisually = isInStashedState
+                    && mControllers.taskbarStashController.supportsVisualStashing();
+            boolean isTaskbarAlignedWithHotseat =
+                    mLauncherState.isTaskbarAlignedWithHotseat(mLauncher);
+            return isTaskbarAlignedWithHotseat && !willStashVisually;
+        } else {
+            return false;
+        }
     }
 
     private void playStateTransitionAnim(AnimatorSet animatorSet, long duration,
@@ -395,7 +416,7 @@ import java.util.StringJoiner;
                 || (!taskbarWillBeVisible && Float.compare(currentValue, 0) != 0);
 
         mControllers.taskbarViewController.setLauncherIconAlignment(
-                mIconAlignment.value, mIconAlignment.getEndValue(), mLauncher.getDeviceProfile());
+                mIconAlignment.value, mLauncher.getDeviceProfile());
         mControllers.navbarButtonsViewController.updateTaskbarAlignment(mIconAlignment.value);
         // Switch taskbar and hotseat in last frame
         updateIconAlphaForHome(taskbarWillBeVisible ? 1 : 0);
