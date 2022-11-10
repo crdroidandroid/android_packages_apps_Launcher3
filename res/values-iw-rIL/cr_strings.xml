@@ -85,50 +85,50 @@
     <string name="trust_apps_info_protected">יישומים מוגנים מחייבים אימות לפתיחה מהמשגר</string>
     <!-- Force stop shortcut -->
     <string name="recent_task_force_stop_app">אילוץ עצירה</string>
-    <string name="recents_app_force_stopped">App force stopped</string>
+    <string name="recents_app_force_stopped">היישום הופסק בכפייה</string>
     <!-- Icon pack -->
-    <string name="icon_pack_title">Icon pack</string>
-    <string name="icon_pack_default_label">Default</string>
-    <string name="icon_pack_add">Install more</string>
-    <string name="icon_pack_no_market">There\'s no available app store</string>
+    <string name="icon_pack_title">ערכת סמלים</string>
+    <string name="icon_pack_default_label">ברירת המחדל</string>
+    <string name="icon_pack_add">התקנת עוד</string>
+    <string name="icon_pack_no_market">אין חנות אפליקציות זמינה</string>
     <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar">Use taskbar</string>
-    <string name="pref_allow_phone_taskbar_desc">For opening and switching apps anywhere</string>
+    <string name="pref_allow_phone_taskbar">שימוש בסרגל המשימות</string>
+    <string name="pref_allow_phone_taskbar_desc">לפתיחת יישומים ולמעבר ביניהם בכל מקום</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Grid style</string>
-    <string name="pref_allow_phone_overview_grid_desc">More recent apps in overview</string>
+    <string name="pref_allow_phone_overview_grid">סגנון רשת</string>
+    <string name="pref_allow_phone_overview_grid_desc">יישומים אחרונים נוספים במבט-על</string>
     <!-- Row Height -->
-    <string name="row_height_title">Row height</string>
+    <string name="row_height_title">גובה השורה</string>
     <!-- Top shadow -->
-    <string name="show_top_shadow">Top shadow</string>
+    <string name="show_top_shadow">צללית עילית</string>
     <!-- Wallpaper scrolling -->
-    <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
-    <string name="allow_wallpaper_scrolling_desc">Wallpaper scrolling effect for multiple screens</string>
+    <string name="allow_wallpaper_scrolling">גלילת הטפט</string>
+    <string name="allow_wallpaper_scrolling_desc">אפקט גלילה לטפט עבור מסכים מרובים</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">שינוי מרחק לטפט</string>
+    <string name="allow_wallpaper_zooming_desc">התקרבות או התרחקות הטפט בעת השימוש במגירת היישומים או היישומים האחרונים</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">אטימות הרקע</string>
     <!-- Recents icons -->
-    <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Clear all</string>
-    <string name="recents_lens_title">Lens</string>
+    <string name="recents_screenshot_title">צילום המסך</string>
+    <string name="recents_clear_all_title">ניקוי הכל</string>
+    <string name="recents_lens_title">עדשה</string>
     <!-- Background blur -->
-    <string name="background_blur_title">Background blur depth</string>
-    <string name="background_blur_desc">Set blur depth level for recents and app drawer</string>
+    <string name="background_blur_title">עומק טשטוש הרקע</string>
+    <string name="background_blur_desc">הגדרת עומק הטשטוש למגירת היישומים וליישומים האחרונים</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s זמין /%2$s בסך הכל</string>
+    <string name="recents_meminfo_title">מידע אודות הזכרון</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <string name="hotseat_bg_title">רקע המושב החם</string>
+    <string name="hotseat_bg_summary">הוספת רקע שקוף לסרגל היישומים</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_subtext">החלקה מטה לסגירת פרטי היישום</string>
+    <string name="app_info_source">מקור</string>
+    <string name="app_info_source_system">מערכת</string>
+    <string name="app_info_last_update">העדכון האחרון</string>
+    <string name="app_info_version">גרסה</string>
+    <string name="app_info_more">עוד</string>
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">סמלילי ערכת הנושא</string>
     <string name="pref_themed_icons_summary">התאמת סמלילים לערכת הנושא בשימוש במסך הבית</string>
