@@ -12,7 +12,7 @@ import com.android.launcher3.icons.pack.IconResolver;
 import static com.android.launcher3.icons.BaseIconFactory.CONFIG_HINT_NO_WRAP;
 
 @SuppressWarnings("unused")
-public class ThirdPartyIconProvider extends RoundIconProvider {
+public class ThirdPartyIconProvider extends LauncherIconProvider {
     private final Context mContext;
 
     public ThirdPartyIconProvider(Context context) {
