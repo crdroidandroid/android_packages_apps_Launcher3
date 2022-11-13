@@ -69,11 +69,6 @@
     <string name="paused_apps_dialog_title">Ứng dụng bị tạm dừng</string>
     <string name="paused_apps_dialog_message">%1$s đã bị tạm dừng trực tiếp từ trình khởi chạy</string>
     <string name="paused_apps_drop_target_label">Tạm dừng ứng dụng</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Gói biểu tượng</string>
-    <string name="icon_pack_default_label">Mặc định</string>
-    <string name="icon_pack_add">Cài đặt thêm</string>
-    <string name="icon_pack_no_market">Không có ứng dụng nào khả dụng trong cửa hàng</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Giá trị: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">mặc định</string>
@@ -231,4 +226,17 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Biểu tượng theo chủ đề</string>
     <string name="pref_themed_icons_summary">Sử dụng biểu tượng theo chủ đề trên màn hình chính</string>
+    <!-- AppInfo -->
+    <string name="app_info_icon_pack">Icon pack</string>
+    <string name="app_info_icon_pack_none">None</string>
+    <string name="app_info_source">Source</string>
+    <string name="app_info_source_system">System</string>
+    <string name="app_info_last_update">Last update</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">More</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Gói biểu tượng</string>
+    <string name="icon_pack_default_label">Mặc định</string>
+    <string name="icon_pack_add">Cài đặt thêm</string>
+    <string name="icon_pack_no_market">Không có ứng dụng nào khả dụng trong cửa hàng</string>
 </resources>
