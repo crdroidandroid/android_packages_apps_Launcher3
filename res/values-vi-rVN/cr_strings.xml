@@ -19,13 +19,13 @@
     <!-- Settings -->
     <!-- Edit workspace -->
     <string name="settings_lock_layout_title">Khóa bố cục</string>
-    <string name="settings_lock_layout_summary_on">Các biểu tượng và tiện ích con không thể được thêm, xóa và di chuyển trên màn hình chính</string>
-    <string name="settings_lock_layout_summary_off">Các biểu tượng và tiện ích con có thể được thêm, xóa và di chuyển trên màn hình chính</string>
-    <string name="settings_edit_widgets_error">Không thể thêm tiện ích con vào màn hình chính</string>
+    <string name="settings_lock_layout_summary_on">Các biểu tượng và tiện ích con không thể được thêm, xóa hoặc di chuyển trên màn hình chính</string>
+    <string name="settings_lock_layout_summary_off">Các biểu tượng và tiện ích con có thể được thêm, xóa hoặc di chuyển trên màn hình chính</string>
+    <string name="settings_edit_widgets_error">Không thể thêm Widget vào màn hình chính</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Vuốt sang phải để vào tìm kiếm</string>
+    <string name="title_show_google_app">Vuốt để mở ứng dụng Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Khi vuốt sang phải từ màn hình chính</string>
+    <string name="msg_minus_one_on_left">Khi bạn vuốt sang phải từ màn hình chính</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Khi vuốt sang trái từ màn hình chính</string>
     <!-- Folder titles -->
@@ -33,7 +33,7 @@
     <string name="desktop_show_labels">Tên biểu tượng trên màn hình chính</string>
     <string name="drawer_show_labels">Tên biểu tượng trong ngăn ứng dụng</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Ẩn &amp; Bảo vệ ứng dụng</string>
+    <string name="trust_apps_manager_name">Ẩn khỏi danh sách ứng dụng</string>
     <string name="trust_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn và được bảo vệ</string>
     <string name="trust_apps_auth_open_app">Xác thực để mở %1$s</string>
     <string name="trust_apps_loading">Đang tải\u2026</string>
@@ -227,13 +227,11 @@
     <string name="pref_themed_icons_title">Biểu tượng theo chủ đề</string>
     <string name="pref_themed_icons_summary">Sử dụng biểu tượng theo chủ đề trên màn hình chính</string>
     <!-- AppInfo -->
-    <string name="app_info_icon_pack">Icon pack</string>
-    <string name="app_info_icon_pack_none">None</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_source">Nguồn</string>
+    <string name="app_info_source_system">Hệ thống</string>
+    <string name="app_info_last_update">Cập nhật mới nhất</string>
+    <string name="app_info_version">Phiên bản</string>
+    <string name="app_info_more">Xem thêm</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Gói biểu tượng</string>
     <string name="icon_pack_default_label">Mặc định</string>
