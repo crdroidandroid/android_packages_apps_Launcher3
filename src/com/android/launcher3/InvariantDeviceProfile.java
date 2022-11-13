@@ -61,6 +61,7 @@ import androidx.annotation.StyleRes;
 import androidx.annotation.XmlRes;
 
 import com.android.launcher3.concurrent.annotations.Ui;
+import com.android.launcher3.customization.IconDatabase;
 import com.android.launcher3.dagger.ApplicationContext;
 import com.android.launcher3.dagger.LauncherAppComponent;
 import com.android.launcher3.dagger.LauncherAppSingleton;
@@ -149,6 +150,7 @@ public class InvariantDeviceProfile {
     public int[] numFolderColumns;
     public float[] iconSize;
     public float[] iconTextSize;
+    public String iconPack;
     public int iconBitmapSize;
     public int fillResIconDpi;
     public @DeviceType int deviceType;
@@ -310,7 +312,8 @@ public class InvariantDeviceProfile {
                     ICON_SIZE.getSharedPrefKey().equals(key) ||
                     FONT_SIZE.getSharedPrefKey().equals(key) ||
                     ENABLE_TWOLINE_ALLAPPS_TOGGLE.getSharedPrefKey().equals(key) ||
-                    ROW_HEIGHT.getSharedPrefKey().equals(key)) {
+                    ROW_HEIGHT.getSharedPrefKey().equals(key) ||
+                    IconDatabase.KEY_ICON_PACK.equals(key)) {
                 onConfigChanged();
             }
         };
@@ -432,6 +435,8 @@ public class InvariantDeviceProfile {
         for (int i = 1; i < iconSize.length; i++) {
             maxIconSize = Math.max(maxIconSize, iconSize[i]);
         }
+        iconPack = IconDatabase.getGlobal(context);
+
         iconBitmapSize = ResourceUtils.pxFromDp(maxIconSize, metrics);
 
         fillResIconDpi = getLauncherIconDensity(iconBitmapSize);
@@ -553,7 +558,8 @@ public class InvariantDeviceProfile {
     private Object[] toModelState() {
         return new Object[]{
                 numColumns, numRows, numSearchContainerColumns, numDatabaseHotseatIcons,
-                iconBitmapSize, fillResIconDpi, numDatabaseAllAppsColumns, dbFile, mLocale};
+                iconPack, iconBitmapSize, fillResIconDpi, numDatabaseAllAppsColumns,
+                dbFile, mLocale};
     }
 
     /** Updates IDP using the provided context. Notifies listeners of change. */
