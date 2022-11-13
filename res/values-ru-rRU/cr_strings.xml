@@ -69,11 +69,6 @@
     <string name="paused_apps_dialog_title">Приложение приостановлено</string>
     <string name="paused_apps_dialog_message">%1$s был приостановлен непосредственно из лаунчера</string>
     <string name="paused_apps_drop_target_label">Приостановить приложение</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Набор значков</string>
-    <string name="icon_pack_default_label">По умолчанию</string>
-    <string name="icon_pack_add">Установить ещё</string>
-    <string name="icon_pack_no_market">Нет доступного магазина приложений</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">по умолчанию</string>
@@ -231,4 +226,17 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Тематические значки</string>
     <string name="pref_themed_icons_summary">Следовать тематическим значкам, которые используются на главном экране</string>
+    <!-- AppInfo -->
+    <string name="app_info_icon_pack">Icon pack</string>
+    <string name="app_info_icon_pack_none">None</string>
+    <string name="app_info_source">Source</string>
+    <string name="app_info_source_system">System</string>
+    <string name="app_info_last_update">Last update</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">More</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Набор значков</string>
+    <string name="icon_pack_default_label">По умолчанию</string>
+    <string name="icon_pack_add">Установить ещё</string>
+    <string name="icon_pack_no_market">Нет доступного магазина приложений</string>
 </resources>
