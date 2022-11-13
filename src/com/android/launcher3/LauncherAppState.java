@@ -38,8 +38,8 @@ import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.graphics.IconShape;
 import com.android.launcher3.icons.IconCache;
 import com.android.launcher3.icons.IconProvider;
-import com.android.launcher3.icons.LauncherIconProvider;
 import com.android.launcher3.icons.LauncherIcons;
+import com.android.launcher3.icons.ThirdPartyIconProvider;
 import com.android.launcher3.lineage.trust.HiddenAppsFilter;
 import com.android.launcher3.lineage.trust.db.TrustDatabaseHelper;
 import com.android.launcher3.notification.NotificationListener;
@@ -66,7 +66,7 @@ public class LauncherAppState implements SafeCloseable {
 
     private final Context mContext;
     private final LauncherModel mModel;
-    private final LauncherIconProvider mIconProvider;
+    private final ThirdPartyIconProvider mIconProvider;
     private final IconCache mIconCache;
     private final InvariantDeviceProfile mInvariantDeviceProfile;
     private final RunnableList mOnTerminateCallback = new RunnableList();
@@ -172,7 +172,7 @@ public class LauncherAppState implements SafeCloseable {
         mContext = context;
 
         mInvariantDeviceProfile = InvariantDeviceProfile.INSTANCE.get(context);
-        mIconProvider = new LauncherIconProvider(context);
+        mIconProvider = new ThirdPartyIconProvider(context);
         mIconCache = new IconCache(mContext, mInvariantDeviceProfile,
                 iconCacheFileName, mIconProvider);
         mModel = new LauncherModel(context, this, mIconCache, new HiddenAppsFilter(mContext),
