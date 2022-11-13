@@ -69,11 +69,6 @@
     <string name="paused_apps_dialog_title">Alkalmazás-szüneteltetés</string>
     <string name="paused_apps_dialog_message">%1$s közvetlen szüneteltetése a Launcherből</string>
     <string name="paused_apps_drop_target_label">Alkalmazás-szüneteltetés</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Ikoncsomag</string>
-    <string name="icon_pack_default_label">Alapértelmezett</string>
-    <string name="icon_pack_add">Továbbiak telepítése</string>
-    <string name="icon_pack_no_market">Nincs áruház ahonnan letölthetne</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value"><xliff:g id="v">%s</xliff:g> értékű</string>
     <string name="custom_seekbar_default_value">alapértelmezés szerint</string>
@@ -231,4 +226,17 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Témázott ikonok</string>
     <string name="pref_themed_icons_summary">A kezdőképernyőn használt tematikus ikonokhoz igazodik</string>
+    <!-- AppInfo -->
+    <string name="app_info_icon_pack">Icon pack</string>
+    <string name="app_info_icon_pack_none">None</string>
+    <string name="app_info_source">Source</string>
+    <string name="app_info_source_system">System</string>
+    <string name="app_info_last_update">Last update</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">More</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Ikoncsomag</string>
+    <string name="icon_pack_default_label">Alapértelmezett</string>
+    <string name="icon_pack_add">Továbbiak telepítése</string>
+    <string name="icon_pack_no_market">Nincs áruház ahonnan letölthetne</string>
 </resources>
