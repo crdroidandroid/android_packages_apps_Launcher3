@@ -82,12 +82,12 @@
     <string name="icon_max_lines_title">Số dòng tối đa cho tên ứng dụng</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Tìm kiếm</string>
-    <string name="label_lens">Google Ống kính</string>
+    <string name="label_lens">Ống kính Google</string>
     <string name="label_voice_search">Tìm kiếm bằng giọng nói</string>
     <string name="dock_search_title">Thanh tìm kiếm Google</string>
-    <string name="dock_search_summary">Thanh tìm kiếm trong thanh công cụ dưới cùng</string>
-    <string name="dock_theme_title">Biểu tượng tuỳ biến</string>
-    <string name="dock_theme_summary">Dùng biểu tượng tuỳ biến cho thanh tìm kiếm</string>
+    <string name="dock_search_summary">Thanh tìm kiếm trong thanh công cụ dưới</string>
+    <string name="dock_theme_title">Biểu tượng theo chủ đề</string>
+    <string name="dock_theme_summary">Dùng biểu tượng theo chủ đề cho thanh tìm kiếm</string>
     <string name="search_radius_title">Bán kính góc</string>
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Nền thanh công cụ</string>
@@ -104,7 +104,7 @@
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Thanh trạng thái</string>
     <!-- Top shadow -->
-    <string name="show_top_shadow">Bóng trên cùng</string>
+    <string name="show_top_shadow">Bóng phía trên</string>
     <!-- Row Height -->
     <string name="row_height_title">Chiều cao hàng</string>
     <!-- Background blur -->
@@ -116,8 +116,8 @@
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Chào mừng đến với crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Có một ngày tuyệt vời</item>
-        <item>Cảm ơn bạn, vì đã chọn chúng tôi</item>
+        <item>Chúc một ngày tốt lành</item>
+        <item>Cảm ơn vì đã chọn chúng tôi</item>
         <item>Yêu thích chúng tôi? Gửi cho chúng tôi một cốc bia</item>
         <item>Rom tuyệt nhất.</item>
         <item>Trò chuyện với chúng tôi trên Telegram</item>
