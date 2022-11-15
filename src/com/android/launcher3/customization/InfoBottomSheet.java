@@ -93,6 +93,15 @@ public class InfoBottomSheet extends WidgetsBottomSheet {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             mContext = getActivity();
+            mAppTransitionManager = new QuickstepTransitionManager(mContext);
+            mAppTransitionManager.registerRemoteAnimations();
+            mAppTransitionManager.registerRemoteTransitions();
+        }
+
+        @Override
+        public void onDestroy() {
+            mAppTransitionManager.onActivityDestroyed();
+            super.onDestroy();
         }
 
         @Override
