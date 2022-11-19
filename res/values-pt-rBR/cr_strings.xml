@@ -69,11 +69,6 @@
     <string name="paused_apps_dialog_title">App pausado</string>
     <string name="paused_apps_dialog_message">%1$s foi pausado diretamente do launcher</string>
     <string name="paused_apps_drop_target_label">Pausar app</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Pacote de ícones</string>
-    <string name="icon_pack_default_label">Padrão</string>
-    <string name="icon_pack_add">Instalar mais</string>
-    <string name="icon_pack_no_market">Não há uma loja de aplicativos disponível</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Valor: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">por padrão</string>
@@ -231,4 +226,15 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Ícones temáticos</string>
     <string name="pref_themed_icons_summary">Seguir ícones temáticos usados na tela inicial</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">Fonte</string>
+    <string name="app_info_source_system">Sistema</string>
+    <string name="app_info_last_update">Última atualização</string>
+    <string name="app_info_version">Versão</string>
+    <string name="app_info_more">Mais</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Pacote de ícones</string>
+    <string name="icon_pack_default_label">Padrão</string>
+    <string name="icon_pack_add">Instalar mais</string>
+    <string name="icon_pack_no_market">Não há uma loja de aplicativos disponível</string>
 </resources>

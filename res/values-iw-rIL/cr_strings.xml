@@ -69,11 +69,6 @@
     <string name="paused_apps_dialog_title">היישום מושהה</string>
     <string name="paused_apps_dialog_message">%1$s הושהה ישירות מהמשגר</string>
     <string name="paused_apps_drop_target_label">השהיית היישום</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">ערכת סמלים</string>
-    <string name="icon_pack_default_label">ברירת המחדל</string>
-    <string name="icon_pack_add">התקנת עוד</string>
-    <string name="icon_pack_no_market">אין חנות אפליקציות זמינה</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">ערך: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">כברירת מחדל</string>
@@ -168,7 +163,7 @@
         <item>לילה מהנה!</item>
         <item>זמן לטעון מצברים!</item>
         <item>מחר יכול להיות יום אדיר</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>תכין את העצמות שלך למחר</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
         <item>אממ... לילה טוב?</item>
@@ -197,7 +192,7 @@
         <item>עשו משהו נחמד היום</item>
         <item>זוהי חוויית הפיקסל הטובה ביותר, לא?</item>
         <item>איך הכול הולך?</item>
-        <item>No illusions, welcome to reality!</item>
+        <item>בלי אשליות, ברוכים הבאים למציאות!</item>
         <item>Thank you for your support</item>
         <item>No festival for Derps - only perfection!</item>
         <item>One of the buildbot\'s best picks</item>
@@ -231,4 +226,15 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Themed icons</string>
     <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">מקור</string>
+    <string name="app_info_source_system">מערכת</string>
+    <string name="app_info_last_update">העדכון האחרון</string>
+    <string name="app_info_version">גרסה</string>
+    <string name="app_info_more">עוד</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">ערכת סמלים</string>
+    <string name="icon_pack_default_label">ברירת המחדל</string>
+    <string name="icon_pack_add">התקנת עוד</string>
+    <string name="icon_pack_no_market">אין חנות אפליקציות זמינה</string>
 </resources>

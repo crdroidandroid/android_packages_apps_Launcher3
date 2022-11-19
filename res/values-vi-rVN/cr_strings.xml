@@ -19,13 +19,13 @@
     <!-- Settings -->
     <!-- Edit workspace -->
     <string name="settings_lock_layout_title">Khóa bố cục</string>
-    <string name="settings_lock_layout_summary_on">Các biểu tượng và tiện ích con không thể được thêm, xóa và di chuyển trên màn hình chính</string>
-    <string name="settings_lock_layout_summary_off">Các biểu tượng và tiện ích con có thể được thêm, xóa và di chuyển trên màn hình chính</string>
-    <string name="settings_edit_widgets_error">Không thể thêm tiện ích con vào màn hình chính</string>
+    <string name="settings_lock_layout_summary_on">Các biểu tượng và tiện ích con không thể được thêm, xóa hoặc di chuyển trên màn hình chính</string>
+    <string name="settings_lock_layout_summary_off">Các biểu tượng và tiện ích con có thể được thêm, xóa hoặc di chuyển trên màn hình chính</string>
+    <string name="settings_edit_widgets_error">Không thể thêm Widget vào màn hình chính</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Vuốt sang phải để vào tìm kiếm</string>
+    <string name="title_show_google_app">Vuốt để mở ứng dụng Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Khi vuốt sang phải từ màn hình chính</string>
+    <string name="msg_minus_one_on_left">Khi bạn vuốt sang phải từ màn hình chính</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Khi vuốt sang trái từ màn hình chính</string>
     <!-- Folder titles -->
@@ -33,7 +33,7 @@
     <string name="desktop_show_labels">Tên biểu tượng trên màn hình chính</string>
     <string name="drawer_show_labels">Tên biểu tượng trong ngăn ứng dụng</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Ẩn &amp; Bảo vệ ứng dụng</string>
+    <string name="trust_apps_manager_name">Ẩn khỏi danh sách ứng dụng</string>
     <string name="trust_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn và được bảo vệ</string>
     <string name="trust_apps_auth_open_app">Xác thực để mở %1$s</string>
     <string name="trust_apps_loading">Đang tải\u2026</string>
@@ -69,11 +69,6 @@
     <string name="paused_apps_dialog_title">Ứng dụng bị tạm dừng</string>
     <string name="paused_apps_dialog_message">%1$s đã bị tạm dừng trực tiếp từ trình khởi chạy</string>
     <string name="paused_apps_drop_target_label">Tạm dừng ứng dụng</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Gói biểu tượng</string>
-    <string name="icon_pack_default_label">Mặc định</string>
-    <string name="icon_pack_add">Cài đặt thêm</string>
-    <string name="icon_pack_no_market">Không có ứng dụng nào khả dụng trong cửa hàng</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Giá trị: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">mặc định</string>
@@ -87,12 +82,12 @@
     <string name="icon_max_lines_title">Số dòng tối đa cho tên ứng dụng</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Tìm kiếm</string>
-    <string name="label_lens">Google Ống kính</string>
+    <string name="label_lens">Ống kính Google</string>
     <string name="label_voice_search">Tìm kiếm bằng giọng nói</string>
     <string name="dock_search_title">Thanh tìm kiếm Google</string>
-    <string name="dock_search_summary">Thanh tìm kiếm trong thanh công cụ dưới cùng</string>
-    <string name="dock_theme_title">Biểu tượng tuỳ biến</string>
-    <string name="dock_theme_summary">Dùng biểu tượng tuỳ biến cho thanh tìm kiếm</string>
+    <string name="dock_search_summary">Thanh tìm kiếm trong thanh công cụ dưới</string>
+    <string name="dock_theme_title">Biểu tượng theo chủ đề</string>
+    <string name="dock_theme_summary">Dùng biểu tượng theo chủ đề cho thanh tìm kiếm</string>
     <string name="search_radius_title">Bán kính góc</string>
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Nền thanh công cụ</string>
@@ -109,7 +104,7 @@
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Thanh trạng thái</string>
     <!-- Top shadow -->
-    <string name="show_top_shadow">Bóng trên cùng</string>
+    <string name="show_top_shadow">Bóng phía trên</string>
     <!-- Row Height -->
     <string name="row_height_title">Chiều cao hàng</string>
     <!-- Background blur -->
@@ -121,8 +116,8 @@
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Chào mừng đến với crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Có một ngày tuyệt vời</item>
-        <item>Cảm ơn bạn, vì đã chọn chúng tôi</item>
+        <item>Chúc một ngày tốt lành</item>
+        <item>Cảm ơn vì đã chọn chúng tôi</item>
         <item>Yêu thích chúng tôi? Gửi cho chúng tôi một cốc bia</item>
         <item>Rom tuyệt nhất.</item>
         <item>Trò chuyện với chúng tôi trên Telegram</item>
@@ -231,4 +226,15 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Biểu tượng theo chủ đề</string>
     <string name="pref_themed_icons_summary">Sử dụng biểu tượng theo chủ đề trên màn hình chính</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">Nguồn</string>
+    <string name="app_info_source_system">Hệ thống</string>
+    <string name="app_info_last_update">Cập nhật mới nhất</string>
+    <string name="app_info_version">Phiên bản</string>
+    <string name="app_info_more">Xem thêm</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Gói biểu tượng</string>
+    <string name="icon_pack_default_label">Mặc định</string>
+    <string name="icon_pack_add">Cài đặt thêm</string>
+    <string name="icon_pack_no_market">Không có ứng dụng nào khả dụng trong cửa hàng</string>
 </resources>

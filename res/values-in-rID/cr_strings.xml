@@ -69,11 +69,6 @@
     <string name="paused_apps_dialog_title">Aplikasi dijeda</string>
     <string name="paused_apps_dialog_message">%1$s langsung dijeda dari peluncur</string>
     <string name="paused_apps_drop_target_label">Jeda aplikasi</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Paket ikon</string>
-    <string name="icon_pack_default_label">Bawaan</string>
-    <string name="icon_pack_add">Instal lebih banyak</string>
-    <string name="icon_pack_no_market">Tidak ada toko aplikasi yang tersedia</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Nilai: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">bawaan</string>
@@ -231,4 +226,15 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Ikon bertema</string>
     <string name="pref_themed_icons_summary">Ikuti ikon bertema yang digunakan di layar beranda</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">Sumber</string>
+    <string name="app_info_source_system">Sistem</string>
+    <string name="app_info_last_update">Pembaruan terakhir</string>
+    <string name="app_info_version">Versi</string>
+    <string name="app_info_more">Selengkapnya</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Paket ikon</string>
+    <string name="icon_pack_default_label">Bawaan</string>
+    <string name="icon_pack_add">Instal lebih banyak</string>
+    <string name="icon_pack_no_market">Tidak ada toko aplikasi yang tersedia</string>
 </resources>

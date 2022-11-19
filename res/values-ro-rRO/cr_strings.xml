@@ -69,11 +69,6 @@
     <string name="paused_apps_dialog_title">Aplicație întreruptă</string>
     <string name="paused_apps_dialog_message">%1$s a fost întrerupt direct din lansator</string>
     <string name="paused_apps_drop_target_label">Întrerupeți aplicația</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Pachet de pictograme</string>
-    <string name="icon_pack_default_label">Prestabilit</string>
-    <string name="icon_pack_add">Instalează mai multe</string>
-    <string name="icon_pack_no_market">Nu există niciun magazin de aplicații disponibil</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Valoare: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">implicit</string>
@@ -231,4 +226,15 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Pictograme cu aspect</string>
     <string name="pref_themed_icons_summary">Urmărește pictogramele tematice utilizate pe ecranul de pornire</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">Source</string>
+    <string name="app_info_source_system">System</string>
+    <string name="app_info_last_update">Last update</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">More</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Pachet de pictograme</string>
+    <string name="icon_pack_default_label">Prestabilit</string>
+    <string name="icon_pack_add">Instalează mai multe</string>
+    <string name="icon_pack_no_market">Nu există niciun magazin de aplicații disponibil</string>
 </resources>
