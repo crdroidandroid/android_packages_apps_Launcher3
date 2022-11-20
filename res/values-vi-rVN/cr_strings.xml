@@ -19,9 +19,9 @@
     <!-- Settings -->
     <!-- Edit workspace -->
     <string name="settings_lock_layout_title">Khóa bố cục</string>
-    <string name="settings_lock_layout_summary_on">Các biểu tượng và tiện ích con không thể được thêm, xóa hoặc di chuyển trên màn hình chính</string>
-    <string name="settings_lock_layout_summary_off">Các biểu tượng và tiện ích con có thể được thêm, xóa hoặc di chuyển trên màn hình chính</string>
-    <string name="settings_edit_widgets_error">Không thể thêm Widget vào màn hình chính</string>
+    <string name="settings_lock_layout_summary_on">Không thể thêm biểu tượng và tiện ích, xoá hoặc đặt ở trang màn hình khác</string>
+    <string name="settings_lock_layout_summary_off">Có thể thêm biểu tượng và tiện ích, xoá hoặc đặt ở trang màn hình khác</string>
+    <string name="settings_edit_widgets_error">Không thể thêm Tiện ích vào màn hình chính</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Vuốt để mở ứng dụng Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -33,14 +33,14 @@
     <string name="desktop_show_labels">Tên biểu tượng trên màn hình chính</string>
     <string name="drawer_show_labels">Tên biểu tượng trong ngăn ứng dụng</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Ẩn khỏi danh sách ứng dụng</string>
+    <string name="trust_apps_manager_name">Ẩn &amp; khỏi danh sách ứng dụng</string>
     <string name="trust_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn và được bảo vệ</string>
     <string name="trust_apps_auth_open_app">Xác thực để mở %1$s</string>
     <string name="trust_apps_loading">Đang tải\u2026</string>
-    <string name="trust_apps_no_lock_error">Hãy thiết lập màn hình khóa an toàn để hạn chế quyền truy cập ứng dụng</string>
+    <string name="trust_apps_no_lock_error">Hãy đặt mật khẩu để hạn chế quyền truy cập vào ứng dụng</string>
     <string name="trust_apps_help">Trợ giúp</string>
-    <string name="trust_apps_info_hidden">Các ứng dụng ẩn và các tiện ích con của chúng được ẩn khỏi ngăn kéo</string>
-    <string name="trust_apps_info_protected">Các ứng dụng được bảo vệ yêu cầu xác thực được mở từ trình khởi chạy</string>
+    <string name="trust_apps_info_hidden">Các ứng dụng đã ẩn và tiện ích sẽ được ẩn khỏi danh sách ứng dụng</string>
+    <string name="trust_apps_info_protected">Các ứng dụng được bảo vệ yêu cầu mật khẩu để truy cập</string>
     <!-- General -->
     <string name="settings_title">Cài đặt màn hình chính</string>
     <!-- Categories -->
@@ -141,7 +141,7 @@
         <item>Chào buổi sáng, đến giờ quẩy rồi!</item>
         <item>Thật là một ngày đẹp trời!</item>
         <item>Chúc bạn một ngày tốt lành!</item>
-        <item>Còn một giấc ngủ ngắn 5 phút thì sao?</item>
+        <item>Một giấc ngủ ngắn 5 phút thì sao?</item>
         <item>Đó là một cách để thức dậy.</item>
         <item>Bạn nên thay đổi âm thanh báo thức của mình.</item>
         <item>Có vẻ như đó là một ngày đẹp trời, phải không?</item>
