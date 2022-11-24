@@ -33,7 +33,7 @@
     <string name="desktop_show_labels">Отображать названия приложений на рабочем столе</string>
     <string name="drawer_show_labels">Отображать названия приложений в меню</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Скрытые &amp; Защищенные приложения</string>
+    <string name="trust_apps_manager_name">Скрытые и защищенные приложения</string>
     <string name="trust_apps_auth_manager">Разблокируйте, для управления скрытыми и защищенными приложениями</string>
     <string name="trust_apps_auth_open_app">Авторизуйтесь, для открытия %1$s</string>
     <string name="trust_apps_loading">Загрузка\u2026</string>
@@ -231,7 +231,7 @@
     <string name="app_info_source_system">Системное</string>
     <string name="app_info_last_update">Последнее обновление</string>
     <string name="app_info_version">Версия</string>
-    <string name="app_info_more">Ещё...</string>
+    <string name="app_info_more">Ещё</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Набор значков</string>
     <string name="icon_pack_default_label">По умолчанию</string>
