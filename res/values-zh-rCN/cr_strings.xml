@@ -51,12 +51,12 @@
     <string name="app_drawer_category_title">应用抽屉</string>
     <string name="app_drawer_category_summary">定制您的应用抽屉</string>
     <string name="recents_category_title">最近应用</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_summary">改进概览屏幕</string>
     <string name="misc_category_title">其他</string>
     <string name="misc_category_summary">其他选项</string>
     <string name="general_category_title">一般</string>
     <string name="interface_category_title">界面</string>
-    <string name="quickspace_category_title">Quickspace</string>
+    <string name="quickspace_category_title">快捷空间</string>
     <string name="search_bar_category_title">搜索栏</string>
     <string name="actions_category_title">快捷操作</string>
     <!-- Developer options -->
@@ -182,7 +182,7 @@
         <item>用爱传递正能量</item>
         <item>我们不发起战争！</item>
         <item>是时候听一些好音乐了</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>&lt;&lt;&lt;&lt;&lt;&lt;&lt; 头</item>
         <item>您需要 crDroid Premium 才能看到此内容</item>
         <item>勿忘 Lineage</item>
         <item>享受延长的电池寿命吧</item>
@@ -227,11 +227,11 @@
     <string name="pref_themed_icons_title">主题图标</string>
     <string name="pref_themed_icons_summary">跟随主屏幕上使用的主题图标</string>
     <!-- AppInfo -->
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_source">源</string>
+    <string name="app_info_source_system">系统</string>
+    <string name="app_info_last_update">上次更新</string>
+    <string name="app_info_version">版本</string>
+    <string name="app_info_more">更多</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">图标包</string>
     <string name="icon_pack_default_label">默认</string>
