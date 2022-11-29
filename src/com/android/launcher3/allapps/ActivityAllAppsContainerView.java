@@ -161,6 +161,11 @@ public class ActivityAllAppsContainerView<T extends Context & AppLauncher
     protected void onFinishInflate() {
         super.onFinishInflate();
         mSearchContainer = findViewById(R.id.search_container_all_apps);
+        if (Utilities.showSearch(getContext())) {
+            mSearchContainer.setVisibility(View.VISIBLE);
+        } else {
+            mSearchContainer.setVisibility(View.GONE);
+        }
         mSearchUiManager = (SearchUiManager) mSearchContainer;
         mSearchUiManager.initializeSearch(this);
     }
