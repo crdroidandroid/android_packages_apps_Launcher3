@@ -69,6 +69,11 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
+        if (Utilities.showSearch(getContext())) {
+            mSearchContainer.setVisibility(View.VISIBLE);
+        } else {
+            mSearchContainer.setVisibility(View.GONE);
+        }
         mSearchUiManager.initializeSearch(this);
     }
 
