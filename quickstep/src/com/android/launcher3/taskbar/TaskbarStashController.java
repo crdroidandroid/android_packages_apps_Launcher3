@@ -17,8 +17,6 @@ package com.android.launcher3.taskbar;
 
 import static android.view.HapticFeedbackConstants.LONG_PRESS;
 
-import static com.android.launcher3.anim.Interpolators.FINAL_FRAME;
-import static com.android.launcher3.anim.Interpolators.INSTANT;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_TASKBAR_LONGPRESS_HIDE;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_TASKBAR_LONGPRESS_SHOW;
 import static com.android.launcher3.taskbar.Utilities.appendFlag;
@@ -203,9 +201,7 @@ public class TaskbarStashController implements TaskbarControllers.LoggableTaskba
             Resources resources = mActivity.getResources();
             boolean isTransientTaskbar = DisplayController.isTransientTaskbar(mActivity);
             mUnstashedHeight = resources.getDimensionPixelSize(isTransientTaskbar
-                    ? (mActivity.getDeviceProfile().isTwoPanels
-                            ? R.dimen.transient_taskbar_two_panels_size
-                            : R.dimen.transient_taskbar_size)
+                    ? R.dimen.transient_taskbar_size
                     : R.dimen.taskbar_size);
             mStashedHeight = resources.getDimensionPixelSize(isTransientTaskbar
                     ? R.dimen.transient_taskbar_stashed_size
@@ -539,8 +535,6 @@ public class TaskbarStashController implements TaskbarControllers.LoggableTaskba
         final float firstHalfDurationScale;
         final float secondHalfDurationScale;
 
-        boolean isHotseatIconOnTopWhenAligned =
-                mControllers.uiController.isHotseatIconOnTopWhenAligned();
         if (isStashed) {
             firstHalfDurationScale = 0.75f;
             secondHalfDurationScale = 0.5f;
@@ -561,12 +555,6 @@ public class TaskbarStashController implements TaskbarControllers.LoggableTaskba
             secondHalfAnimatorSet.playTogether(
                     mTaskbarStashedHandleAlpha.animateToValue(1)
             );
-
-            // If Hotseat is not the top element, an already stashed Taskbar should fade in.
-            if (!isHotseatIconOnTopWhenAligned) {
-                fullLengthAnimatorSet.setInterpolator(INSTANT);
-                firstHalfAnimatorSet.setInterpolator(INSTANT);
-            }
         } else  {
             firstHalfDurationScale = 0.5f;
             secondHalfDurationScale = 0.75f;
@@ -587,13 +575,6 @@ public class TaskbarStashController implements TaskbarControllers.LoggableTaskba
             secondHalfAnimatorSet.playTogether(
                     mIconAlphaForStash.animateToValue(1)
             );
-
-            // If Hotseat is not the top element, the stashed Taskbar should fade out without
-            // unstashing.
-            if (!isHotseatIconOnTopWhenAligned) {
-                fullLengthAnimatorSet.setInterpolator(FINAL_FRAME);
-                secondHalfAnimatorSet.setInterpolator(FINAL_FRAME);
-            }
         }
 
         fullLengthAnimatorSet.play(mControllers.stashedHandleViewController
@@ -935,7 +916,6 @@ public class TaskbarStashController implements TaskbarControllers.LoggableTaskba
         private final IntPredicate mStashCondition;
 
         private boolean mIsStashed;
-        private boolean mIsHotseatIconOnTopWhenAligned;
         private int mPrevFlags;
 
         StatePropertyHolder(IntPredicate stashCondition) {
@@ -965,13 +945,7 @@ public class TaskbarStashController implements TaskbarControllers.LoggableTaskba
                 mPrevFlags = flags;
             }
             boolean isStashed = mStashCondition.test(flags);
-            boolean isHotseatIconOnTopWhenAligned =
-                    mControllers.uiController.isHotseatIconOnTopWhenAligned();
-            // If an animation has started and mIsHotseatIconOnTopWhenAligned is changed, we need
-            // to restart the animation with new parameters.
-            if (mIsStashed != isStashed
-                    || (mIsHotseatIconOnTopWhenAligned != isHotseatIconOnTopWhenAligned
-                    && mAnimator != null && mAnimator.isStarted())) {
+            if (mIsStashed != isStashed) {
                 if (TestProtocol.sDebugTracing) {
                     Log.d(TestProtocol.TASKBAR_IN_APP_STATE, String.format(
                             "setState: mIsStashed=%b, isStashed=%b, duration=%d, start=:%b",
@@ -981,7 +955,6 @@ public class TaskbarStashController implements TaskbarControllers.LoggableTaskba
                             start));
                 }
                 mIsStashed = isStashed;
-                mIsHotseatIconOnTopWhenAligned = isHotseatIconOnTopWhenAligned;
 
                 // This sets mAnimator.
                 createAnimToIsStashed(mIsStashed, duration, startDelay, /* animateBg= */ true);

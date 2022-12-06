@@ -19,7 +19,6 @@ import static com.android.launcher3.LauncherAnimUtils.SCALE_PROPERTY;
 import static com.android.launcher3.LauncherAnimUtils.VIEW_ALPHA;
 import static com.android.launcher3.LauncherAnimUtils.VIEW_TRANSLATE_Y;
 import static com.android.launcher3.Utilities.squaredHypot;
-import static com.android.launcher3.anim.Interpolators.FINAL_FRAME;
 import static com.android.launcher3.anim.Interpolators.LINEAR;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_TASKBAR_ALLAPPS_BUTTON_TAP;
 import static com.android.launcher3.taskbar.TaskbarManager.isPhoneMode;
@@ -33,7 +32,6 @@ import android.util.FloatProperty;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.animation.Interpolator;
 
 import androidx.annotation.Nullable;
 import androidx.core.graphics.ColorUtils;
@@ -114,7 +112,6 @@ public class TaskbarViewController implements TaskbarControllers.LoggableTaskbar
     private Runnable mOnControllerPreCreateCallback = NO_OP;
 
     private int mThemeIconsColor;
-    private boolean mIsHotseatIconOnTopWhenAligned;
 
     private final DeviceProfile.OnDeviceProfileChangeListener mDeviceProfileChangeListener =
             dp -> commitRunningAppsToUI();
@@ -296,12 +293,7 @@ public class TaskbarViewController implements TaskbarControllers.LoggableTaskbar
      *                       1 => fully aligned
      */
     public void setLauncherIconAlignment(float alignmentRatio, DeviceProfile launcherDp) {
-        boolean isHotseatIconOnTopWhenAligned =
-                mControllers.uiController.isHotseatIconOnTopWhenAligned();
-        // When mIsHotseatIconOnTopWhenAligned changes, animation needs to be re-created.
-        if (mIconAlignControllerLazy == null
-                || mIsHotseatIconOnTopWhenAligned != isHotseatIconOnTopWhenAligned) {
-            mIsHotseatIconOnTopWhenAligned = isHotseatIconOnTopWhenAligned;
+        if (mIconAlignControllerLazy == null) {
             mIconAlignControllerLazy = createIconAlignmentController(launcherDp);
         }
         mIconAlignControllerLazy.setPlayFraction(alignmentRatio);
@@ -326,15 +318,10 @@ public class TaskbarViewController implements TaskbarControllers.LoggableTaskbar
                 borderSpacing,
                 launcherDp.numShownHotseatIcons);
 
-        boolean isToHome = mControllers.uiController.isIconAlignedWithHotseat();
-        // If Hotseat is not the top element, Taskbar should maintain in-app state as it fades out,
-        // or fade in while already in in-app state.
-        Interpolator interpolator = mIsHotseatIconOnTopWhenAligned ? LINEAR : FINAL_FRAME;
-
         int offsetY = launcherDp.getTaskbarOffsetY();
-        setter.setFloat(mTaskbarIconTranslationYForHome, VALUE, -offsetY, interpolator);
-        setter.setFloat(mTaskbarNavButtonTranslationY, VALUE, -offsetY, interpolator);
-        setter.setFloat(mTaskbarNavButtonTranslationYForInAppDisplay, VALUE, offsetY, interpolator);
+        setter.setFloat(mTaskbarIconTranslationYForHome, VALUE, -offsetY, LINEAR);
+        setter.setFloat(mTaskbarNavButtonTranslationY, VALUE, -offsetY, LINEAR);
+        setter.setFloat(mTaskbarNavButtonTranslationYForInAppDisplay, VALUE, offsetY, LINEAR);
 
         if (Utilities.isDarkTheme(mTaskbarView.getContext())) {
             setter.addFloat(mThemeIconsBackground, VALUE, 0f, 1f, LINEAR);
@@ -345,24 +332,27 @@ public class TaskbarViewController implements TaskbarControllers.LoggableTaskbar
         setter.addOnFrameListener(anim -> mActivity.setTaskbarWindowHeight(
                 anim.getAnimatedFraction() > 0 ? expandedHeight : collapsedHeight));
 
+        boolean isToHome = mControllers.uiController.isIconAlignedWithHotseat();
         for (int i = 0; i < mTaskbarView.getChildCount(); i++) {
             View child = mTaskbarView.getChildAt(i);
             int positionInHotseat;
-            boolean isAllAppsButton = FeatureFlags.ENABLE_ALL_APPS_IN_TASKBAR.get()
-                    && child == mTaskbarView.getAllAppsButtonView();
-            if (!mIsHotseatIconOnTopWhenAligned) {
-                // When going to home, the EMPHASIZED interpolator in TaskbarLauncherStateController
-                // plays iconAlignment to 1 really fast, therefore moving the fading towards the end
-                // to avoid icons disappearing rather than fading out visually.
-                setter.setViewAlpha(child, 0, Interpolators.clampToProgress(LINEAR, 0.8f, 1f));
-            } else if ((isAllAppsButton && !FeatureFlags.ENABLE_ALL_APPS_BUTTON_IN_HOTSEAT.get())) {
-                setter.setViewAlpha(child, 0,
-                        isToHome
-                                ? Interpolators.clampToProgress(LINEAR, 0f, 0.17f)
-                                : Interpolators.clampToProgress(LINEAR, 0.72f, 0.84f));
-            }
+            if (FeatureFlags.ENABLE_ALL_APPS_IN_TASKBAR.get()
+                    && child == mTaskbarView.getAllAppsButtonView()) {
+                // Note that there is no All Apps button in the hotseat, this position is only used
+                // as its convenient for animation purposes.
+                positionInHotseat = Utilities.isRtl(child.getResources())
+                        ? -1
+                        : taskbarDp.numShownHotseatIcons;
 
-            if (child == mTaskbarView.getQsb()) {
+                if (!FeatureFlags.ENABLE_ALL_APPS_BUTTON_IN_HOTSEAT.get()) {
+                    setter.setViewAlpha(child, 0,
+                            isToHome
+                                    ? Interpolators.clampToProgress(LINEAR, 0f, 0.17f)
+                                    : Interpolators.clampToProgress(LINEAR, 0.72f, 0.84f));
+                }
+            } else if (child.getTag() instanceof ItemInfo) {
+                positionInHotseat = ((ItemInfo) child.getTag()).screenId;
+            } else if (child == mTaskbarView.getQsb()) {
                 boolean isRtl = Utilities.isRtl(child.getResources());
                 float hotseatIconCenter = isRtl
                         ? launcherDp.widthPx - hotseatPadding.right + borderSpacing
@@ -373,38 +363,26 @@ public class TaskbarViewController implements TaskbarControllers.LoggableTaskbar
                         (launcherDp.hotseatQsbWidth - taskbarDp.iconSizePx) / 2f;
                 setter.addFloat(child, ICON_TRANSLATE_X,
                         isRtl ? -halfQsbIconWidthDiff : halfQsbIconWidthDiff,
-                        hotseatIconCenter - childCenter, interpolator);
+                        hotseatIconCenter - childCenter, LINEAR);
 
                 float scale = ((float) taskbarDp.iconSizePx) / launcherDp.hotseatQsbVisualHeight;
-                setter.addFloat(child, SCALE_PROPERTY, scale, 1f, interpolator);
+                setter.addFloat(child, SCALE_PROPERTY, scale, 1f, LINEAR);
 
-                setter.setFloat(child, VIEW_TRANSLATE_Y, mTaskbarBottomMargin, interpolator);
+                setter.setFloat(child, VIEW_TRANSLATE_Y, mTaskbarBottomMargin, LINEAR);
 
-                if (mIsHotseatIconOnTopWhenAligned) {
-                    setter.addFloat(child, VIEW_ALPHA, 0f, 1f,
-                            isToHome
-                                    ? Interpolators.clampToProgress(LINEAR, 0f, 0.35f)
-                                    : Interpolators.clampToProgress(LINEAR, 0.84f, 1f));
-                }
+                setter.addFloat(child, VIEW_ALPHA, 0f, 1f,
+                        isToHome
+                                ? Interpolators.clampToProgress(LINEAR, 0f, 0.35f)
+                                : Interpolators.clampToProgress(LINEAR, 0.84f, 1f));
                 setter.addOnFrameListener(animator -> AlphaUpdateListener.updateVisibility(child));
 
                 float qsbInsetFraction = halfQsbIconWidthDiff / launcherDp.hotseatQsbWidth;
-                if (child instanceof HorizontalInsettableView) {
+                if (child instanceof  HorizontalInsettableView) {
                     setter.addFloat((HorizontalInsettableView) child,
                             HorizontalInsettableView.HORIZONTAL_INSETS, qsbInsetFraction, 0,
-                            interpolator);
+                            LINEAR);
                 }
                 continue;
-            }
-
-            if (isAllAppsButton) {
-                // Note that there is no All Apps button in the hotseat, this position is only used
-                // as its convenient for animation purposes.
-                positionInHotseat = Utilities.isRtl(child.getResources())
-                        ? -1
-                        : taskbarDp.numShownHotseatIcons;
-            } else if (child.getTag() instanceof ItemInfo) {
-                positionInHotseat = ((ItemInfo) child.getTag()).screenId;
             } else {
                 Log.w(TAG, "Unsupported view found in createIconAlignmentController, v=" + child);
                 continue;
@@ -415,11 +393,11 @@ public class TaskbarViewController implements TaskbarControllers.LoggableTaskbar
                     + hotseatCellSize / 2f;
 
             float childCenter = (child.getLeft() + child.getRight()) / 2f;
-            setter.setFloat(child, ICON_TRANSLATE_X, hotseatIconCenter - childCenter, interpolator);
+            setter.setFloat(child, ICON_TRANSLATE_X, hotseatIconCenter - childCenter, LINEAR);
 
-            setter.setFloat(child, VIEW_TRANSLATE_Y, mTaskbarBottomMargin, interpolator);
+            setter.setFloat(child, VIEW_TRANSLATE_Y, mTaskbarBottomMargin, LINEAR);
 
-            setter.setFloat(child, SCALE_PROPERTY, scaleUp, interpolator);
+            setter.setFloat(child, SCALE_PROPERTY, scaleUp, LINEAR);
         }
 
         AnimatorPlaybackController controller = setter.createPlaybackController();

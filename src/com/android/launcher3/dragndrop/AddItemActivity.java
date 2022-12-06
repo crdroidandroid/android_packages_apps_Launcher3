@@ -23,7 +23,6 @@ import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCH
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_ADD_EXTERNAL_ITEM_PLACED_AUTOMATICALLY;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_ADD_EXTERNAL_ITEM_START;
 import static com.android.launcher3.util.Executors.MODEL_EXECUTOR;
-import static com.android.launcher3.widget.WidgetSections.NO_CATEGORY;
 
 import android.annotation.TargetApi;
 import android.app.ActivityOptions;
@@ -64,11 +63,10 @@ import com.android.launcher3.R;
 import com.android.launcher3.logging.StatsLogManager;
 import com.android.launcher3.model.ItemInstallQueue;
 import com.android.launcher3.model.WidgetItem;
-import com.android.launcher3.model.WidgetsModel;
 import com.android.launcher3.model.data.ItemInfo;
-import com.android.launcher3.model.data.PackageItemInfo;
 import com.android.launcher3.pm.PinRequestHelper;
 import com.android.launcher3.util.PackageManagerHelper;
+import com.android.launcher3.util.PackageUserKey;
 import com.android.launcher3.util.SystemUiController;
 import com.android.launcher3.views.AbstractSlideInView;
 import com.android.launcher3.views.BaseDragLayer;
@@ -82,7 +80,6 @@ import com.android.launcher3.widget.WidgetCell;
 import com.android.launcher3.widget.WidgetCellPreview;
 import com.android.launcher3.widget.WidgetImageView;
 import com.android.launcher3.widget.WidgetManagerHelper;
-import com.android.launcher3.widget.WidgetSections;
 
 import java.util.function.Supplier;
 
@@ -145,16 +142,13 @@ public class AddItemActivity extends BaseActivity
         mAccessibilityManager =
                 getApplicationContext().getSystemService(AccessibilityManager.class);
 
-        final PackageItemInfo targetApp;
+        PackageUserKey targetApp = null;
         switch (mRequest.getRequestType()) {
             case PinItemRequest.REQUEST_TYPE_SHORTCUT:
                 targetApp = setupShortcut();
                 break;
             case PinItemRequest.REQUEST_TYPE_APPWIDGET:
                 targetApp = setupWidget();
-                break;
-            default:
-                targetApp = null;
                 break;
         }
         if (targetApp == null) {
@@ -163,7 +157,7 @@ public class AddItemActivity extends BaseActivity
             return;
         }
         ApplicationInfo info = new PackageManagerHelper(this)
-                .getApplicationInfo(targetApp.packageName, targetApp.user, 0);
+                .getApplicationInfo(targetApp.mPackageName, targetApp.mUser, 0);
         if (info == null) {
             finish();
             return;
@@ -183,10 +177,7 @@ public class AddItemActivity extends BaseActivity
         // Set the label synchronously instead of via IconCache as this is the first thing
         // user sees
         TextView widgetAppName = findViewById(R.id.widget_appName);
-        WidgetSections.WidgetSection section = targetApp.widgetCategory == NO_CATEGORY ? null
-                : WidgetSections.getWidgetSections(this).get(targetApp.widgetCategory);
-        widgetAppName.setText(section == null ? info.loadLabel(getPackageManager())
-                : getString(section.mSectionTitle));
+        widgetAppName.setText(info.loadLabel(getPackageManager()));
 
         mSlideInView = findViewById(R.id.add_item_bottom_sheet);
         mSlideInView.addOnCloseListener(this);
@@ -275,18 +266,19 @@ public class AddItemActivity extends BaseActivity
         }
     }
 
-    private PackageItemInfo setupShortcut() {
+    private PackageUserKey setupShortcut() {
         PinShortcutRequestActivityInfo shortcutInfo =
                 new PinShortcutRequestActivityInfo(mRequest, this);
         mWidgetCell.getWidgetView().setTag(new PendingAddShortcutInfo(shortcutInfo));
         applyWidgetItemAsync(
                 () -> new WidgetItem(shortcutInfo, mApp.getIconCache(), getPackageManager()));
-        return new PackageItemInfo(mRequest.getShortcutInfo().getPackage(),
+        return new PackageUserKey(
+                mRequest.getShortcutInfo().getPackage(),
                 mRequest.getShortcutInfo().getUserHandle());
     }
 
-    private PackageItemInfo setupWidget() {
-        final LauncherAppWidgetProviderInfo widgetInfo = LauncherAppWidgetProviderInfo
+    private PackageUserKey setupWidget() {
+        LauncherAppWidgetProviderInfo widgetInfo = LauncherAppWidgetProviderInfo
                 .fromProviderInfo(this, mRequest.getAppWidgetProviderInfo(this));
         if (widgetInfo.minSpanX > mIdp.numColumns || widgetInfo.minSpanY > mIdp.numRows) {
             // Cannot add widget
@@ -305,8 +297,7 @@ public class AddItemActivity extends BaseActivity
         mWidgetCell.getWidgetView().setTag(pendingInfo);
 
         applyWidgetItemAsync(() -> new WidgetItem(widgetInfo, mIdp, mApp.getIconCache()));
-        return WidgetsModel.newPendingItemInfo(this, widgetInfo.getComponent(),
-                widgetInfo.getUser());
+        return new PackageUserKey(widgetInfo.provider.getPackageName(), widgetInfo.getUser());
     }
 
     private void applyWidgetItemAsync(final Supplier<WidgetItem> itemProvider) {

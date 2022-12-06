@@ -128,13 +128,6 @@ public class TaskbarUIController {
         return false;
     }
 
-    /**
-     * Returns true if hotseat icons are on top of view hierarchy when aligned in the current state.
-     */
-    public boolean isHotseatIconOnTopWhenAligned() {
-        return true;
-    }
-
     @CallSuper
     protected void dumpLogs(String prefix, PrintWriter pw) {
         pw.println(String.format(

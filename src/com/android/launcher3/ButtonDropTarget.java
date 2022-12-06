@@ -423,15 +423,14 @@ public abstract class ButtonDropTarget extends TextView
         float textSize = Utilities.pxToSp(getTextSize());
 
         int availableWidth = getMeasuredWidth();
-        while (isTextTruncated(availableWidth)) {
-            textSize -= step;
-            if (textSize < minSize) {
-                textSize = minSize;
+        while (textSize > minSize) {
+            if (isTextTruncated(availableWidth)) {
+                textSize -= step;
                 setTextSize(textSize);
-                break;
+            } else {
+                return textSize;
             }
-            setTextSize(textSize);
         }
-        return textSize;
+        return minSize;
     }
 }

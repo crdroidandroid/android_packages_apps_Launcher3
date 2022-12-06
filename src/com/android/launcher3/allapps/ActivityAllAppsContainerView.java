@@ -228,9 +228,7 @@ public class ActivityAllAppsContainerView<T extends Context & AppLauncher
 
         removeCustomRules(rvContainer);
         removeCustomRules(getSearchRecyclerView());
-        if (!isSearchSupported()) {
-            layoutWithoutSearchContainer(rvContainer, showTabs);
-        } else if (FeatureFlags.ENABLE_FLOATING_SEARCH_BAR.get()) {
+        if (FeatureFlags.ENABLE_FLOATING_SEARCH_BAR.get()) {
             alignParentTop(rvContainer, showTabs);
             alignParentTop(getSearchRecyclerView(), /* tabs= */ false);
             layoutAboveSearchContainer(rvContainer);
@@ -343,22 +341,5 @@ public class ActivityAllAppsContainerView<T extends Context & AppLauncher
             BaseAdapterProvider[] adapterProviders) {
         return new AllAppsGridAdapter<>(mActivityContext, getLayoutInflater(), appsList,
                 adapterProviders);
-    }
-
-    // TODO(b/216683257): Remove when Taskbar All Apps supports search.
-    protected boolean isSearchSupported() {
-        return true;
-    }
-
-    private void layoutWithoutSearchContainer(View v, boolean includeTabsMargin) {
-        if (!(v.getLayoutParams() instanceof RelativeLayout.LayoutParams)) {
-            return;
-        }
-
-        RelativeLayout.LayoutParams layoutParams = (LayoutParams) v.getLayoutParams();
-        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
-        layoutParams.topMargin = getContext().getResources().getDimensionPixelSize(includeTabsMargin
-                ? R.dimen.all_apps_header_pill_height
-                : R.dimen.all_apps_header_top_margin);
     }
 }

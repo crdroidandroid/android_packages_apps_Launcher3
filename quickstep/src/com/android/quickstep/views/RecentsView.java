@@ -5072,15 +5072,15 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
      * Returns how many pixels the page is offset on the currently laid out dominant axis.
      */
     public int getScrollOffset(int pageIndex) {
-        int unclampedOffset = getUnclampedScrollOffset(pageIndex);
+        int unboundedOffset = getUnclampedScrollOffset(pageIndex);
         if (!mShouldClampScrollOffset) {
-            return unclampedOffset;
+            return unboundedOffset;
         }
-        if (Math.abs(unclampedOffset) < mClampedScrollOffsetBound) {
+        if (Math.abs(unboundedOffset) < mClampedScrollOffsetBound) {
             return 0;
         }
-        return unclampedOffset
-                - Math.round(Math.signum(unclampedOffset) * mClampedScrollOffsetBound);
+        return unboundedOffset
+                - Math.round(Math.signum(unboundedOffset) * mClampedScrollOffsetBound);
     }
 
     /**

@@ -1201,6 +1201,7 @@ public abstract class AbsSwipeUpHandler<T extends StatefulActivity<S>,
         final GestureEndTarget endTarget = calculateEndTarget(velocity, endVelocity,
                 isFling, isCancel);
 
+        setClampScrollOffset(false);
         // Set the state, but don't notify until the animation completes
         mGestureState.setEndTarget(endTarget, false /* isAtomic */);
         mAnimationFactory.setEndTarget(endTarget);
@@ -1278,16 +1279,13 @@ public abstract class AbsSwipeUpHandler<T extends StatefulActivity<S>,
 
         // Let RecentsView handle the scrolling to the task, which we launch in startNewTask()
         // or resumeLastTask().
-        Runnable onPageTransitionEnd = () -> {
-            mGestureState.setState(STATE_RECENTS_SCROLLING_FINISHED);
-            setClampScrollOffset(false);
-        };
         if (mRecentsView != null) {
             ActiveGestureLog.INSTANCE.trackEvent(ActiveGestureErrorDetector.GestureEvent
                     .SET_ON_PAGE_TRANSITION_END_CALLBACK);
-            mRecentsView.setOnPageTransitionEndCallback(onPageTransitionEnd);
+            mRecentsView.setOnPageTransitionEndCallback(
+                    () -> mGestureState.setState(STATE_RECENTS_SCROLLING_FINISHED));
         } else {
-            onPageTransitionEnd.run();
+            mGestureState.setState(STATE_RECENTS_SCROLLING_FINISHED);
         }
 
         animateToProgress(startShift, endShift, duration, interpolator, endTarget, velocity);

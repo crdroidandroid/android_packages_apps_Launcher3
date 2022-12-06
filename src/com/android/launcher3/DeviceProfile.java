@@ -319,9 +319,7 @@ public class DeviceProfile {
 
         if (isTaskbarPresent) {
             if (DisplayController.isTransientTaskbar(context)) {
-                taskbarSize = res.getDimensionPixelSize(isTwoPanels
-                        ? R.dimen.transient_taskbar_two_panels_size
-                        : R.dimen.transient_taskbar_size);
+                taskbarSize = res.getDimensionPixelSize(R.dimen.transient_taskbar_size);
                 stashedTaskbarSize =
                         res.getDimensionPixelSize(R.dimen.transient_taskbar_stashed_size);
                 transientTaskbarMargin =
