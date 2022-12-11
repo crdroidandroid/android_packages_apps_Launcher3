@@ -326,6 +326,7 @@ android_library {
         "androidx.compose.ui_ui-tooling",
         "androidx.navigation_navigation-compose",
         "cuebarlib",
+        "SettingsLib",
     ],
     manifest: "AndroidManifest-common.xml",
     sdk_version: "current",
