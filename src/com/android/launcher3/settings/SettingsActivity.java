@@ -38,7 +38,6 @@ import androidx.annotation.VisibleForTesting;
 import androidx.core.view.WindowCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
@@ -59,10 +58,12 @@ import com.android.launcher3.util.DisplayController;
 import com.android.launcher3.util.Executors;
 import com.android.launcher3.util.SettingsCache;
 
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+
 /**
  * Settings activity for Launcher. Currently implements the following setting: Allow rotation
  */
-public class SettingsActivity extends FragmentActivity
+public class SettingsActivity extends CollapsingToolbarBaseActivity
         implements OnPreferenceStartFragmentCallback, OnPreferenceStartScreenCallback {
 
     @VisibleForTesting
@@ -85,14 +86,9 @@ public class SettingsActivity extends FragmentActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
 
-        setActionBar(findViewById(R.id.action_bar));
         WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
 
         Intent intent = getIntent();
-        if (intent.hasExtra(EXTRA_FRAGMENT_ROOT_KEY) || intent.hasExtra(EXTRA_FRAGMENT_ARGS)
-                || intent.hasExtra(EXTRA_FRAGMENT_HIGHLIGHT_KEY)) {
-            getActionBar().setDisplayHomeAsUpEnabled(true);
-        }
 
         if (savedInstanceState == null) {
             Bundle args = intent.getBundleExtra(EXTRA_FRAGMENT_ARGS);
@@ -114,7 +110,7 @@ public class SettingsActivity extends FragmentActivity
                     getString(R.string.settings_fragment_name));
             f.setArguments(args);
             // Display the fragment as the main content.
-            fm.beginTransaction().replace(R.id.content_frame, f).commit();
+            fm.beginTransaction().replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame, f).commit();
         }
     }
 
