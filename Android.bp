@@ -153,6 +153,7 @@ android_library {
         "androidx.cardview_cardview",
         "com.google.android.material_material",
         "iconloader_base",
+        "SettingsLib",
         "view_capture"
     ],
     manifest: "AndroidManifest-common.xml",
