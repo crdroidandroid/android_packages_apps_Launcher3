@@ -402,6 +402,7 @@ android_library {
         "dagger2",
         "jsr330",
         "com_android_systemui_shared_flags_lib",
+        "SettingsLib",
     ],
     manifest: "AndroidManifest-common.xml",
     sdk_version: "current",
