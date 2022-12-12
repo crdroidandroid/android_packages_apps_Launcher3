@@ -285,11 +285,16 @@ public interface TaskShortcutFactory {
         }
     };
 
-    TaskShortcutFactory UNINSTALL = (activity, taskContainer) ->
-            PackageManagerHelper.isSystemApp(activity,
-                 taskContainer.getTask().getTopComponent().getPackageName())
-                    ? null : new SystemShortcut.UnInstall(activity,
-                    taskContainer.getItemInfo(), taskContainer.getTaskView());
+    TaskShortcutFactory UNINSTALL = new TaskShortcutFactory() {
+        @Override
+        public List<SystemShortcut> getShortcuts(BaseDraggingActivity activity,
+                TaskIdAttributeContainer taskContainer) {
+            return PackageManagerHelper.isSystemApp(activity,
+                    taskContainer.getTask().getTopComponent().getPackageName()) ? null :
+                    Collections.singletonList(new SystemShortcut.UnInstall(activity,
+                            taskContainer.getItemInfo(), taskContainer.getTaskView()));
+        }
+    };
 
     TaskShortcutFactory FREE_FORM = new TaskShortcutFactory() {
         @Override
