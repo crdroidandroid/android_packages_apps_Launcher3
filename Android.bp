@@ -492,6 +492,7 @@ android_app {
     min_sdk_version: min_launcher3_sdk_version,
     target_sdk_version: "current",
     plugins: ["dagger2-compiler"],
+    certificate: "platform",
     privileged: true,
     system_ext_specific: true,
 
@@ -635,6 +636,7 @@ android_app {
     min_sdk_version: "current",
     target_sdk_version: "current",
 
+    certificate: "platform",
     privileged: true,
     system_ext_specific: true,
     overrides: [
@@ -680,6 +682,7 @@ android_app {
         shrink_resources: true,
     },
 
+    certificate: "platform",
     privileged: true,
     system_ext_specific: true,
     overrides: [
@@ -718,6 +721,7 @@ android_app {
         shrink_resources: true,
     },
 
+    certificate: "platform",
     privileged: true,
     system_ext_specific: true,
     overrides: [
