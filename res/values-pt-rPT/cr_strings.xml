@@ -16,31 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <!-- Settings -->
-    <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Bloquear disposição</string>
-    <string name="settings_lock_layout_summary_on">Ícones e widgets não podem ser adicionados, removidos ou movidos no ecrã inicial</string>
-    <string name="settings_lock_layout_summary_off">Ícones e widgets podem ser adicionados, removidos e movidos no ecrã inicial</string>
-    <string name="settings_edit_widgets_error">Não é possível adicionar widgets ao ecrã inicial</string>
-    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Aceder ao feed do Google</string>
-    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Ao deslizar para a direita no ecrã principal</string>
-    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">Ao deslizar para a esquerda no ecrã principal</string>
     <!-- Folder titles -->
-    <!-- Hide labels -->
-    <string name="desktop_show_labels">Mostrar rótulos dos ícones</string>
-    <string name="drawer_show_labels">Mostrar rótulos dos ícones</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Apps ocultas e protegidas</string>
-    <string name="trust_apps_auth_manager">Desbloquear para gerir as apps ocultas e protegidas</string>
-    <string name="trust_apps_auth_open_app">Autenticar para abrir %1$s</string>
-    <string name="trust_apps_loading">A carregar\u2026</string>
-    <string name="trust_apps_no_lock_error">Configure um ecrã de bloqueio seguro para restringir o acesso às apps</string>
-    <string name="trust_apps_help">Ajuda</string>
-    <string name="trust_apps_info_hidden">As apps ocultas e os seus widgets estão ocultas na gaveta de apps</string>
-    <string name="trust_apps_info_protected">As apps protegidas requerem autenticação para serem executadas</string>
     <!-- General -->
     <string name="settings_title">Definições do ecrã inicial</string>
     <!-- Categories -->
@@ -62,6 +38,32 @@
     <!-- Developer options -->
     <string name="dev_options_title">Opções de programador</string>
     <string name="dev_options_summary">Ativar alguns recursos ocultos por sua conta e risco</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Bloquear disposição</string>
+    <string name="settings_lock_layout_summary_on">Ícones e widgets não podem ser adicionados, removidos ou movidos no ecrã inicial</string>
+    <string name="settings_lock_layout_summary_off">Ícones e widgets podem ser adicionados, removidos e movidos no ecrã inicial</string>
+    <string name="settings_edit_widgets_error">Não é possível adicionar widgets ao ecrã inicial</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Mostrar rótulos dos ícones</string>
+    <string name="drawer_show_labels">Mostrar rótulos dos ícones</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Aceder ao feed do Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Ao deslizar para a direita no ecrã principal</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Ao deslizar para a esquerda no ecrã principal</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Apps ocultas e protegidas</string>
+    <string name="trust_apps_auth_manager">Desbloquear para gerir as apps ocultas e protegidas</string>
+    <string name="trust_apps_auth_open_app">Autenticar para abrir %1$s</string>
+    <string name="trust_apps_loading">A carregar\u2026</string>
+    <string name="trust_apps_no_lock_error">Configure um ecrã de bloqueio seguro para restringir o acesso às apps</string>
+    <string name="trust_apps_help">Ajuda</string>
+    <string name="trust_apps_info_hidden">As apps ocultas e os seus widgets estão ocultas na gaveta de apps</string>
+    <string name="trust_apps_info_protected">As apps protegidas requerem autenticação para serem executadas</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Toque duplo para desligar</string>
+    <string name="pref_sleep_gesture_summary">Toque duas vezes num espaço vazio para desligar o ecrã</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Pausar</string>
     <string name="pause_apps_dialog_title">Pausar %1$s?</string>
@@ -92,9 +94,6 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Fundo da doca</string>
     <string name="hotseat_bg_summary">Mostrar um fundo translúcido na doca</string>
-    <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Toque duplo para desligar</string>
-    <string name="pref_sleep_gesture_summary">Toque duas vezes num espaço vazio para desligar o ecrã</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Rolar papel de parede</string>
     <string name="allow_wallpaper_scrolling_summary">Efeito de rolagem do papel de parede entre ecrãs</string>
