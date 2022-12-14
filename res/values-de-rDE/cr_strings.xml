@@ -16,31 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <!-- Settings -->
-    <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Layout-Bearbeitung sperren</string>
-    <string name="settings_lock_layout_summary_on">Symbole und Widgets können auf dem Startbildschirm nicht hinzugefügt, entfernt und verschoben werden</string>
-    <string name="settings_lock_layout_summary_off">Symbole und Widgets können auf dem Startbildschirm hinzugefügt, entfernt und verschoben werden</string>
-    <string name="settings_edit_widgets_error">Widgets können nicht zum Startbildschirm hinzugefügt werden</string>
-    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Wischen, um auf die Google-App zuzugreifen</string>
-    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Wenn auf der ersten Seite nach links gewischt wird</string>
-    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">Wenn auf der ersten Seite nach rechts gewischt wird</string>
     <!-- Folder titles -->
-    <!-- Hide labels -->
-    <string name="desktop_show_labels">Symbolbeschriftungen auf dem Startbildschirm</string>
-    <string name="drawer_show_labels">Symbolbeschriftungen in der App-Übersicht</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Versteckte &amp; geschützte Apps</string>
-    <string name="trust_apps_auth_manager">Entsperren, um versteckte und geschützte Apps zu verwalten</string>
-    <string name="trust_apps_auth_open_app">Authentifizieren, um %1$s zu öffnen</string>
-    <string name="trust_apps_loading">Lädt \u2026</string>
-    <string name="trust_apps_no_lock_error">Bitte eine Bildschirmsperre einrichten, um den Zugriff auf Apps einzuschränken</string>
-    <string name="trust_apps_help">Hilfe</string>
-    <string name="trust_apps_info_hidden">Versteckte Apps und ihre Widgets werden in der App-Übersicht nicht angezeigt</string>
-    <string name="trust_apps_info_protected">Geschützte Apps erfordern eine Authentifizierung, ehe sie gestartet werden können</string>
     <!-- General -->
     <string name="settings_title">Startbildschirm-Einstellungen</string>
     <!-- Categories -->
@@ -62,6 +38,32 @@
     <!-- Developer options -->
     <string name="dev_options_title">Entwickleroptionen</string>
     <string name="dev_options_summary">Auf eigene Gefahr versteckte Funktionen aktivieren</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Layout-Bearbeitung sperren</string>
+    <string name="settings_lock_layout_summary_on">Symbole und Widgets können auf dem Startbildschirm nicht hinzugefügt, entfernt und verschoben werden</string>
+    <string name="settings_lock_layout_summary_off">Symbole und Widgets können auf dem Startbildschirm hinzugefügt, entfernt und verschoben werden</string>
+    <string name="settings_edit_widgets_error">Widgets können nicht zum Startbildschirm hinzugefügt werden</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Symbolbeschriftungen auf dem Startbildschirm</string>
+    <string name="drawer_show_labels">Symbolbeschriftungen in der App-Übersicht</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Wischen, um auf die Google-App zuzugreifen</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Wenn auf der ersten Seite nach links gewischt wird</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Wenn auf der ersten Seite nach rechts gewischt wird</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Versteckte &amp; geschützte Apps</string>
+    <string name="trust_apps_auth_manager">Entsperren, um versteckte und geschützte Apps zu verwalten</string>
+    <string name="trust_apps_auth_open_app">Authentifizieren, um %1$s zu öffnen</string>
+    <string name="trust_apps_loading">Lädt \u2026</string>
+    <string name="trust_apps_no_lock_error">Bitte eine Bildschirmsperre einrichten, um den Zugriff auf Apps einzuschränken</string>
+    <string name="trust_apps_help">Hilfe</string>
+    <string name="trust_apps_info_hidden">Versteckte Apps und ihre Widgets werden in der App-Übersicht nicht angezeigt</string>
+    <string name="trust_apps_info_protected">Geschützte Apps erfordern eine Authentifizierung, ehe sie gestartet werden können</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Doppeltippen zum Sperren</string>
+    <string name="pref_sleep_gesture_summary">Zum Sperren auf einen leeren Bereich doppeltippen</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Pausieren</string>
     <string name="pause_apps_dialog_title">%1$s pausieren?</string>
@@ -92,9 +94,6 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hintergrund im Dock</string>
     <string name="hotseat_bg_summary">Transparenten Hintergrund im Dock anzeigen</string>
-    <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Doppeltippen zum Sperren</string>
-    <string name="pref_sleep_gesture_summary">Zum Sperren auf einen leeren Bereich doppeltippen</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Hintergrundbild-Bewegung</string>
     <string name="allow_wallpaper_scrolling_summary">Hintergrundbild-Bewegung beim Seitenwechsel</string>
