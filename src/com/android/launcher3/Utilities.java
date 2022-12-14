@@ -73,6 +73,7 @@ import androidx.core.graphics.ColorUtils;
 
 import com.android.launcher3.dragndrop.FolderAdaptiveIcon;
 import com.android.launcher3.graphics.TintedDrawableSpan;
+import com.android.launcher3.icons.LauncherIcons;
 import com.android.launcher3.icons.ShortcutCachingLogic;
 import com.android.launcher3.icons.ThemedIconDrawable;
 import com.android.launcher3.model.data.ItemInfo;
@@ -664,10 +665,8 @@ public final class Utilities {
         } else if (info.itemType == LauncherSettings.Favorites.ITEM_TYPE_FOLDER) {
             return ((FolderAdaptiveIcon) obj).getBadge();
         } else {
-            return Process.myUserHandle().equals(info.user)
-                    ? new ColorDrawable(Color.TRANSPARENT)
-                    : context.getDrawable(isIconThemed
-                            ? R.drawable.ic_work_app_badge_themed : R.drawable.ic_work_app_badge);
+            final Drawable badge = LauncherIcons.obtain(context).getBadgeForUser(info.user);
+            return badge == null ? new ColorDrawable(Color.TRANSPARENT) : badge;
         }
     }
 
