@@ -16,31 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <!-- Settings -->
-    <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Disposizione di blocco</string>
-    <string name="settings_lock_layout_summary_on">Non è possibile aggiungere, rimuovere e spostare icone e widget nella schermata home</string>
-    <string name="settings_lock_layout_summary_off">È possibile aggiungere, rimuovere e spostare icone e widget nella schermata home</string>
-    <string name="settings_edit_widgets_error">Non é possibile aggiungere widget alla schermata home</string>
-    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Scorri per accedere all\'app di Google</string>
-    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Quando scorri a sinistra dalla schermata Home</string>
-    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">Quando scorri verso destra dalla schermata home</string>
     <!-- Folder titles -->
-    <!-- Hide labels -->
-    <string name="desktop_show_labels">Etichette delle icone sul desktop</string>
-    <string name="drawer_show_labels">Etichette delle icone nel drawer</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">App nascoste &amp; protette</string>
-    <string name="trust_apps_auth_manager">Sblocca per gestire le app nascoste e protette</string>
-    <string name="trust_apps_auth_open_app">Autenticati per aprire %1$s</string>
-    <string name="trust_apps_loading">Caricamento\u2026</string>
-    <string name="trust_apps_no_lock_error">Per favore imposta una schermata di blocco sicura per limitare l\'accesso alle app</string>
-    <string name="trust_apps_help">Aiuto</string>
-    <string name="trust_apps_info_hidden">Le app nascoste e i relativi widget sono nascosti dal drawer</string>
-    <string name="trust_apps_info_protected">Le applicazioni protette richiedono l\'autenticazione per essere aperte dal launcher</string>
     <!-- General -->
     <string name="settings_title">Impostazioni schermata Home</string>
     <!-- Categories -->
@@ -62,6 +38,32 @@
     <!-- Developer options -->
     <string name="dev_options_title">Opzioni sviluppatore</string>
     <string name="dev_options_summary">Abilita alcune funzioni nascoste a tuo rischio</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Disposizione di blocco</string>
+    <string name="settings_lock_layout_summary_on">Non è possibile aggiungere, rimuovere e spostare icone e widget nella schermata home</string>
+    <string name="settings_lock_layout_summary_off">È possibile aggiungere, rimuovere e spostare icone e widget nella schermata home</string>
+    <string name="settings_edit_widgets_error">Non é possibile aggiungere widget alla schermata home</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Etichette delle icone sul desktop</string>
+    <string name="drawer_show_labels">Etichette delle icone nel drawer</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Scorri per accedere all\'app di Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Quando scorri a sinistra dalla schermata Home</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Quando scorri verso destra dalla schermata home</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">App nascoste &amp; protette</string>
+    <string name="trust_apps_auth_manager">Sblocca per gestire le app nascoste e protette</string>
+    <string name="trust_apps_auth_open_app">Autenticati per aprire %1$s</string>
+    <string name="trust_apps_loading">Caricamento\u2026</string>
+    <string name="trust_apps_no_lock_error">Per favore imposta una schermata di blocco sicura per limitare l\'accesso alle app</string>
+    <string name="trust_apps_help">Aiuto</string>
+    <string name="trust_apps_info_hidden">Le app nascoste e i relativi widget sono nascosti dal drawer</string>
+    <string name="trust_apps_info_protected">Le applicazioni protette richiedono l\'autenticazione per essere aperte dal launcher</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Doppio tocco per spegnere lo schermo</string>
+    <string name="pref_sleep_gesture_summary">Tocca due volte sullo spazio vuoto per spegnere lo schermo</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Pausa</string>
     <string name="pause_apps_dialog_title">Pausa %1$s?</string>
@@ -92,9 +94,6 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Sfondo barra inferiore</string>
     <string name="hotseat_bg_summary">Mostra lo sfondo trasparente nella barra dell\'app in basso</string>
-    <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Doppio tocco per spegnere lo schermo</string>
-    <string name="pref_sleep_gesture_summary">Tocca due volte sullo spazio vuoto per spegnere lo schermo</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Scorrimento dello sfondo</string>
     <string name="allow_wallpaper_scrolling_summary">Effetto di scorrimento dello sfondo per schermi multipli</string>
