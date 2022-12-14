@@ -16,31 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <!-- Settings -->
-    <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Забараніць рэдагаванне</string>
-    <string name="settings_lock_layout_summary_on">Значкі і віджэты немагчыма дадаваць, выдаляць і перамяшчаць па галоўным экране</string>
-    <string name="settings_lock_layout_summary_off">Значкі і віджэты можна дадаваць, выдаляць і перамяшчаць па галоўным экране</string>
-    <string name="settings_edit_widgets_error">Немагчыма дадаваць віджэты на галоўны экран</string>
-    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Правядзіце пальцам для доступу да праграмы Google</string>
-    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Пры правядзенні пальцам налева ад галоўнага галоўнага экрана</string>
-    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">Пры правядзенні пальцам направа ад галоўнага галоўнага экрана</string>
     <!-- Folder titles -->
-    <!-- Hide labels -->
-    <string name="desktop_show_labels">Назвы значкоў на працоўным стале</string>
-    <string name="drawer_show_labels">Подпіс значкоў у меню праграм</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Схаваныя і абароненыя праграмы</string>
-    <string name="trust_apps_auth_manager">Разблакіруйце для кіравання схаванымі і абароненымі праграмамі</string>
-    <string name="trust_apps_auth_open_app">Аўтарызуйцеся, для адкрыцця %1$s</string>
-    <string name="trust_apps_loading">Загрузка\u2026</string>
-    <string name="trust_apps_no_lock_error">Калі ласка, усталюйце блакаванне экрана для абмежавання доступу да праграм</string>
-    <string name="trust_apps_help">Дапамога</string>
-    <string name="trust_apps_info_hidden">Схаваныя праграмы і іх віджэты схаваны з меню</string>
-    <string name="trust_apps_info_protected">Для адкрыцця абароненых праграм з лаунчэра патрабуецца аўтэнтыфікацыя</string>
     <!-- General -->
     <string name="settings_title">Налады галоўнага экрана</string>
     <!-- Categories -->
@@ -62,47 +38,70 @@
     <!-- Developer options -->
     <string name="dev_options_title">Параметры распрацоўшчыка</string>
     <string name="dev_options_summary">Уключыце некаторыя схаваныя функцыі на свой страх і рызыку</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Забараніць рэдагаванне</string>
+    <string name="settings_lock_layout_summary_on">Значкі і віджэты немагчыма дадаваць, выдаляць і перамяшчаць па галоўным экране</string>
+    <string name="settings_lock_layout_summary_off">Значкі і віджэты можна дадаваць, выдаляць і перамяшчаць па галоўным экране</string>
+    <string name="settings_edit_widgets_error">Немагчыма дадаваць віджэты на галоўны экран</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Назвы значкоў на працоўным стале</string>
+    <string name="drawer_show_labels">Подпіс значкоў у меню праграм</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Правядзіце пальцам для доступу да праграмы Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Пры правядзенні пальцам налева ад галоўнага галоўнага экрана</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Пры правядзенні пальцам направа ад галоўнага галоўнага экрана</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Схаваныя і абароненыя праграмы</string>
+    <string name="trust_apps_auth_manager">Разблакіруйце для кіравання схаванымі і абароненымі праграмамі</string>
+    <string name="trust_apps_auth_open_app">Аўтарызуйцеся, для адкрыцця %1$s</string>
+    <string name="trust_apps_loading">Загрузка\u2026</string>
+    <string name="trust_apps_no_lock_error">Калі ласка, усталюйце блакаванне экрана для абмежавання доступу да праграм</string>
+    <string name="trust_apps_help">Дапамога</string>
+    <string name="trust_apps_info_hidden">Схаваныя праграмы і іх віджэты схаваны з меню</string>
+    <string name="trust_apps_info_protected">Для адкрыцця абароненых праграм з лаунчэра патрабуецца аўтэнтыфікацыя</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Выключаць экран пры падвойным націску</string>
+    <string name="pref_sleep_gesture_summary">Двойчы націсніце на пустое месца, каб выключыць экран</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Паўза</string>
     <string name="pause_apps_dialog_title">Прыпыніць %1$s?</string>
     <string name="pause_apps_dialog_message">Апавяшчэнні для %1$s будуць прыпынены</string>
-    <string name="paused_apps_dialog_title">App paused</string>
+    <string name="paused_apps_dialog_title">Праграма прыпынена</string>
     <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
     <string name="paused_apps_drop_target_label">Pause app</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_default_value">па змаўчанні</string>
+    <string name="custom_seekbar_default_value_to_set">Значэнне па змаўчанні: <xliff:g id="v">%s</xliff:g>\nУтрымлівайце для ўсталёўкі</string>
+    <string name="custom_seekbar_default_value_is_set">Значэнне па змаўчанні ўжо ўсталявана</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">Памер значка</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">Памер шрыфта</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">Максімальная колькасць радкоў у назве значка праграм</string>
     <!-- Hotseat searchbar -->
-    <string name="label_search">Search</string>
+    <string name="label_search">Пошук</string>
     <string name="label_lens">Google Lens</string>
-    <string name="label_voice_search">Voice search</string>
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Search bar in the bottom dock</string>
-    <string name="dock_theme_title">Themed icons</string>
-    <string name="dock_theme_summary">Use themed icons for search bar</string>
-    <string name="search_radius_title">Corner radius</string>
+    <string name="label_voice_search">Галасавы пошук</string>
+    <string name="dock_search_title">Панэль пошуку Google</string>
+    <string name="dock_search_summary">Радок пошуку ў ніжняй панэлі</string>
+    <string name="dock_theme_title">Тэматычныя значкі</string>
+    <string name="dock_theme_summary">Выкарыстоўвайце тэматычныя значкі для радка пошуку</string>
+    <string name="search_radius_title">Радыус вугла</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
-    <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
+    <string name="hotseat_bg_title">Фон віджэта</string>
+    <string name="hotseat_bg_summary">Напаўпразрысты фон ніжняй панэлі праграм</string>
     <!-- Wallpaper scrolling -->
-    <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
-    <string name="allow_wallpaper_scrolling_summary">Wallpaper scrolling effect for multiple screens</string>
+    <string name="allow_wallpaper_scrolling">Пракрутка шпалер</string>
+    <string name="allow_wallpaper_scrolling_summary">Эфект пракруткі шпалер для некалькіх экранаў</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_summary">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">Маштабаванне шпалер</string>
+    <string name="allow_wallpaper_zooming_summary">Павелічэнне або памяншэнне шпалер у меню праграм і ў спісе нядаўніх праграм</string>
     <!-- Homescreen Statusbar -->
-    <string name="show_statusbar_title">Status Bar</string>
+    <string name="show_statusbar_title">Панэль стану</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">Top shadow</string>
     <!-- Row Height -->
