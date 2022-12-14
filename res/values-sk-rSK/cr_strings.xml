@@ -16,31 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <!-- Settings -->
-    <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Uzamknúť rozloženie</string>
-    <string name="settings_lock_layout_summary_on">Ikony a miniaplikácie nie je možné pridať, odstrániť a presunúť na domovskú obrazovku</string>
-    <string name="settings_lock_layout_summary_off">Ikony a miniaplikácie je možné pridať, odstrániť a presunúť na domovskú obrazovku</string>
-    <string name="settings_edit_widgets_error">Nie je možné pridať miniaplikácie na domovskú obrazovku</string>
-    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Potiahnutím prejsť do aplikácie Google</string>
-    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Pri potiahnutí prstom vpravo na hlavnej obrazovke</string>
-    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">Pri potiahnutí prstom vľavo na hlavnej obrazovke</string>
     <!-- Folder titles -->
-    <!-- Hide labels -->
-    <string name="desktop_show_labels">Zobraziť menovky ikon na pracovnej ploche</string>
-    <string name="drawer_show_labels">Zobraziť menovky ikon v ponuke aplikácii</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
-    <string name="trust_apps_auth_manager">Odomknite pre správu skrytých a chránených aplikácií</string>
-    <string name="trust_apps_auth_open_app">Pre otvorenie %1$s potvrďte svoju totožnosť</string>
-    <string name="trust_apps_loading">Načítavanie\u2026</string>
-    <string name="trust_apps_no_lock_error">Pre obmedzenie prístupu k aplikácii prosím nastavte zabezpečenú obrazovku uzamknutia</string>
-    <string name="trust_apps_help">Nápoveda</string>
-    <string name="trust_apps_info_hidden">Skryté aplikácie a ich widgety se nezobrazujú v zozname aplikácií</string>
-    <string name="trust_apps_info_protected">Chránené aplikácie vyžadujú pre otvorenie zo spúšťača overenie</string>
     <!-- General -->
     <string name="settings_title">Domovské nastavenia</string>
     <!-- Categories -->
@@ -62,6 +38,32 @@
     <!-- Developer options -->
     <string name="dev_options_title">Možnosti pre vývojárov</string>
     <string name="dev_options_summary">Povoliť niektoré skryté funkcie na svoje vlastné riziko</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Uzamknúť rozloženie</string>
+    <string name="settings_lock_layout_summary_on">Ikony a miniaplikácie nie je možné pridať, odstrániť a presunúť na domovskú obrazovku</string>
+    <string name="settings_lock_layout_summary_off">Ikony a miniaplikácie je možné pridať, odstrániť a presunúť na domovskú obrazovku</string>
+    <string name="settings_edit_widgets_error">Nie je možné pridať miniaplikácie na domovskú obrazovku</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Zobraziť menovky ikon na pracovnej ploche</string>
+    <string name="drawer_show_labels">Zobraziť menovky ikon v ponuke aplikácii</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Potiahnutím prejsť do aplikácie Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Pri potiahnutí prstom vpravo na hlavnej obrazovke</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Pri potiahnutí prstom vľavo na hlavnej obrazovke</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
+    <string name="trust_apps_auth_manager">Odomknite pre správu skrytých a chránených aplikácií</string>
+    <string name="trust_apps_auth_open_app">Pre otvorenie %1$s potvrďte svoju totožnosť</string>
+    <string name="trust_apps_loading">Načítavanie\u2026</string>
+    <string name="trust_apps_no_lock_error">Pre obmedzenie prístupu k aplikácii prosím nastavte zabezpečenú obrazovku uzamknutia</string>
+    <string name="trust_apps_help">Nápoveda</string>
+    <string name="trust_apps_info_hidden">Skryté aplikácie a ich widgety se nezobrazujú v zozname aplikácií</string>
+    <string name="trust_apps_info_protected">Chránené aplikácie vyžadujú pre otvorenie zo spúšťača overenie</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Uspať dvojitým kliknutím</string>
+    <string name="pref_sleep_gesture_summary">Dvojitým klepnutím na prázdne miesto vypnete obrazovku</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Pozastaviť</string>
     <string name="pause_apps_dialog_title">Pozastaviť %1$s?</string>
@@ -92,9 +94,6 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hotseat background</string>
     <string name="hotseat_bg_summary">Pridať priesvitné pozadie do doku aplikácie</string>
-    <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Uspať dvojitým kliknutím</string>
-    <string name="pref_sleep_gesture_summary">Dvojitým klepnutím na prázdne miesto vypnete obrazovku</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Posúvanie tapety</string>
     <string name="allow_wallpaper_scrolling_summary">Efekt posúvania tapety pre viacero obrazoviek</string>
