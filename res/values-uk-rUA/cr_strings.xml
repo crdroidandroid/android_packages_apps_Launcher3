@@ -16,31 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <!-- Settings -->
-    <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Заблокувати переміщення піктограм</string>
-    <string name="settings_lock_layout_summary_on">Ікони та віджети не можуть бути додані, видалені та переміщені на головний екран</string>
-    <string name="settings_lock_layout_summary_off">Дозволено переміщення піктограми та віджетів на Головному екрані</string>
-    <string name="settings_edit_widgets_error">Неможливо додати віджети на головний екран</string>
-    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Увімкнути додаток Google</string>
-    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Під час гортання вправо на головному екрані</string>
-    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">Під час гортання вліво на головному екрані</string>
     <!-- Folder titles -->
-    <!-- Hide labels -->
-    <string name="desktop_show_labels">Показувати назви піктограм на головному екрані</string>
-    <string name="drawer_show_labels">Показувати назви піктограм у меню додатків</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Приховування &amp; Захист додатків</string>
-    <string name="trust_apps_auth_manager">Розблокуйте, щоб керувати прихованими та захищеними додатками</string>
-    <string name="trust_apps_auth_open_app">Пройдіть аутентифікація, щоб відкрити %1$s</string>
-    <string name="trust_apps_loading">Завантаження\u2026</string>
-    <string name="trust_apps_no_lock_error">Налаштуйте екран блокування для обмеження доступу до програм</string>
-    <string name="trust_apps_help">Допомога</string>
-    <string name="trust_apps_info_hidden">Приховані додатки і їх віджети приховані з меню</string>
-    <string name="trust_apps_info_protected">Для відкриття захищених додатків потрібна аутентифікація</string>
     <!-- General -->
     <string name="settings_title">Налаштування головного екрана</string>
     <!-- Categories -->
@@ -62,6 +38,32 @@
     <!-- Developer options -->
     <string name="dev_options_title">Параметри розробника</string>
     <string name="dev_options_summary">Увімкнути деякі приховані функції на свій страх і ризик</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Заблокувати переміщення піктограм</string>
+    <string name="settings_lock_layout_summary_on">Ікони та віджети не можуть бути додані, видалені та переміщені на головний екран</string>
+    <string name="settings_lock_layout_summary_off">Дозволено переміщення піктограми та віджетів на Головному екрані</string>
+    <string name="settings_edit_widgets_error">Неможливо додати віджети на головний екран</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Показувати назви піктограм на головному екрані</string>
+    <string name="drawer_show_labels">Показувати назви піктограм у меню додатків</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Увімкнути додаток Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Під час гортання вправо на головному екрані</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Під час гортання вліво на головному екрані</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Приховування &amp; Захист додатків</string>
+    <string name="trust_apps_auth_manager">Розблокуйте, щоб керувати прихованими та захищеними додатками</string>
+    <string name="trust_apps_auth_open_app">Пройдіть аутентифікація, щоб відкрити %1$s</string>
+    <string name="trust_apps_loading">Завантаження\u2026</string>
+    <string name="trust_apps_no_lock_error">Налаштуйте екран блокування для обмеження доступу до програм</string>
+    <string name="trust_apps_help">Допомога</string>
+    <string name="trust_apps_info_hidden">Приховані додатки і їх віджети приховані з меню</string>
+    <string name="trust_apps_info_protected">Для відкриття захищених додатків потрібна аутентифікація</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Подвійне натискання для вимкнення екрану</string>
+    <string name="pref_sleep_gesture_summary">Подвійне натискання на порожнє місце для вимкнення екрану</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Пауза</string>
     <string name="pause_apps_dialog_title">Призупинити %1$s?</string>
@@ -92,9 +94,6 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Тло панелі додатків</string>
     <string name="hotseat_bg_summary">Додати напівпрозоре тло до панелі додатків</string>
-    <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Подвійне натискання для вимкнення екрану</string>
-    <string name="pref_sleep_gesture_summary">Подвійне натискання на порожнє місце для вимкнення екрану</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Прокрутка шпалер</string>
     <string name="allow_wallpaper_scrolling_summary">Ефект прокрутки шпалер для кількох екранів</string>
