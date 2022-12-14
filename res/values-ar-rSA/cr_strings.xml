@@ -16,31 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <!-- Settings -->
-    <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">تخطيط القفل</string>
-    <string name="settings_lock_layout_summary_on">لا يمكن إضافة الرموز والأدوات وإزالتها ونقلها على الشاشة الرئيسية</string>
-    <string name="settings_lock_layout_summary_off">يمكن إضافة, حذف و نقل الأيقونات و الويدجتس على الشاشة الرئيسية</string>
-    <string name="settings_edit_widgets_error">لا يمكن إضافة الويدجت إلى الشاشة الرئيسية</string>
-    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">اسحب للوصول إلى تطبيق جوجل</string>
-    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">عند السحب لليمين من الشاشة الرئيسية الأساسية</string>
-    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">عند السحب لليسار من الشاشة الرئيسية الأساسية</string>
     <!-- Folder titles -->
-    <!-- Hide labels -->
-    <string name="desktop_show_labels">إظهار أسماء التطبيقات على الشاشة الرئيسية</string>
-    <string name="drawer_show_labels">إظهار أسماء التطبيقات في قائمة التطبيقات</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">التطبيقات المخفية و المحمية</string>
-    <string name="trust_apps_auth_manager">افتح لإدارة التطبيقات المخفية والمحمية</string>
-    <string name="trust_apps_auth_open_app">المصادقة لفتح %1$s</string>
-    <string name="trust_apps_loading">جارٍ التحميل…\u2026</string>
-    <string name="trust_apps_no_lock_error">يرجى إعداد شاشة قفل الجهاز لتقييد الوصول إلى التطبيق</string>
-    <string name="trust_apps_help">المساعدة</string>
-    <string name="trust_apps_info_hidden">التطبيقات المخفية والويدجت الخاصة بها ستكون مخفية من القائمة</string>
-    <string name="trust_apps_info_protected">التطبيقات المحمية تتطلب المصادقة لكي تُفتح في قائمة التطبيقات</string>
     <!-- General -->
     <string name="settings_title">إعدادات الشاشة الرئيسية</string>
     <!-- Categories -->
@@ -62,6 +38,32 @@
     <!-- Developer options -->
     <string name="dev_options_title">خيارات المطور</string>
     <string name="dev_options_summary">مكّن بعض الخيارات الخفية على مسؤوليتك الخاصة</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">تخطيط القفل</string>
+    <string name="settings_lock_layout_summary_on">لا يمكن إضافة الرموز والأدوات وإزالتها ونقلها على الشاشة الرئيسية</string>
+    <string name="settings_lock_layout_summary_off">يمكن إضافة, حذف و نقل الأيقونات و الويدجتس على الشاشة الرئيسية</string>
+    <string name="settings_edit_widgets_error">لا يمكن إضافة الويدجت إلى الشاشة الرئيسية</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">إظهار أسماء التطبيقات على الشاشة الرئيسية</string>
+    <string name="drawer_show_labels">إظهار أسماء التطبيقات في قائمة التطبيقات</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">اسحب للوصول إلى تطبيق جوجل</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">عند السحب لليمين من الشاشة الرئيسية الأساسية</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">عند السحب لليسار من الشاشة الرئيسية الأساسية</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">التطبيقات المخفية و المحمية</string>
+    <string name="trust_apps_auth_manager">افتح لإدارة التطبيقات المخفية والمحمية</string>
+    <string name="trust_apps_auth_open_app">المصادقة لفتح %1$s</string>
+    <string name="trust_apps_loading">جارٍ التحميل…\u2026</string>
+    <string name="trust_apps_no_lock_error">يرجى إعداد شاشة قفل الجهاز لتقييد الوصول إلى التطبيق</string>
+    <string name="trust_apps_help">المساعدة</string>
+    <string name="trust_apps_info_hidden">التطبيقات المخفية والويدجت الخاصة بها ستكون مخفية من القائمة</string>
+    <string name="trust_apps_info_protected">التطبيقات المحمية تتطلب المصادقة لكي تُفتح في قائمة التطبيقات</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
     <!-- Pause apps shortcut -->
     <string name="pause">إيقاف مؤقت</string>
     <string name="pause_apps_dialog_title">إيقاف %1$s؟</string>
@@ -92,9 +94,6 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hotseat background</string>
     <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
-    <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
     <string name="allow_wallpaper_scrolling_summary">Wallpaper scrolling effect for multiple screens</string>
