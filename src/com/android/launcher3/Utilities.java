@@ -639,7 +639,10 @@ public final class Utilities {
 
         Drawable badge = null;
         if ((info instanceof ItemInfoWithIcon iiwi) && !iiwi.getMatchingLookupFlag().useLowRes()) {
-            badge = iiwi.bitmap.getBadgeDrawable(context, useTheme, getIconShapeOrNull(context));
+            try (LauncherIcons li = LauncherIcons.obtain(context)) {
+                badge = iiwi.bitmap.withUser(iiwi.user, li).getBadgeDrawable(context, useTheme,
+                        getIconShapeOrNull(context));
+            }
         }
 
         if (info instanceof PendingAddShortcutInfo) {
@@ -715,12 +718,14 @@ public final class Utilities {
         }
 
         if (badge == null) {
-            badge = BitmapInfo.LOW_RES_INFO.withFlags(
-                    UserCache.INSTANCE.get(context)
-                            .getUserInfo(info.user)
-                            .applyBitmapInfoFlags(FlagOp.NO_OP)
-                    )
-                    .getBadgeDrawable(context, useTheme, getIconShapeOrNull(context));
+            try (LauncherIcons li = LauncherIcons.obtain(context)) {
+                badge = BitmapInfo.LOW_RES_INFO.withUser(info.user, li).withFlags(
+                        UserCache.INSTANCE.get(context)
+                                .getUserInfo(info.user)
+                                .applyBitmapInfoFlags(FlagOp.NO_OP)
+                        )
+                        .getBadgeDrawable(context, useTheme, getIconShapeOrNull(context));
+            }
             if (badge == null) {
                 badge = new ColorDrawable(Color.TRANSPARENT);
             }
