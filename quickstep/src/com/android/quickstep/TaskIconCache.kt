@@ -243,14 +243,17 @@ class TaskIconCache(
             return if (index >= 0) {
                 defaultIcons.valueAt(index).newIcon(context)
             } else {
-                val info =
-                    defaultIconBase.withFlags(
-                        UserCache.INSTANCE.get(context)
-                            .getUserInfo(UserHandle.of(userId))
-                            .applyBitmapInfoFlags(FlagOp.NO_OP)
-                    )
-                defaultIcons.put(userId, info)
-                info.newIcon(context)
+                iconFactory.use { li ->
+                    val info =
+                        defaultIconBase
+                            .withFlags(
+                                UserCache.INSTANCE.get(context)
+                                    .getUserInfo(UserHandle.of(userId))
+                                    .applyBitmapInfoFlags(FlagOp.NO_OP))
+                            .withUser(UserHandle.of(userId), li)
+                    defaultIcons.put(userId, info)
+                    info.newIcon(context)
+                }
             }
         }
     }
