@@ -232,11 +232,14 @@ public class TaskIconCache implements DisplayInfoChangeListener {
             if ((index = mDefaultIcons.indexOfKey(userId)) >= 0) {
                 return mDefaultIcons.valueAt(index).newIcon(mContext);
             } else {
-                BitmapInfo info = mDefaultIconBase.withFlags(
-                        UserCache.INSTANCE.get(mContext).getUserInfo(UserHandle.of(userId))
-                                .applyBitmapInfoFlags(FlagOp.NO_OP));
-                mDefaultIcons.put(userId, info);
-                return info.newIcon(mContext);
+                try (BaseIconFactory li = getIconFactory()) {
+                    BitmapInfo info = mDefaultIconBase.withFlags(
+                            UserCache.INSTANCE.get(mContext).getUserInfo(UserHandle.of(userId))
+                                    .applyBitmapInfoFlags(FlagOp.NO_OP))
+                                            .withUser(UserHandle.of(userId), li);
+                    mDefaultIcons.put(userId, info);
+                    return info.newIcon(mContext);
+                }
             }
         }
     }
