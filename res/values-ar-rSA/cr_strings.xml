@@ -123,13 +123,13 @@
     <string name="hotseat_bg_title">خلفية اللوحة السفلية</string>
     <string name="hotseat_bg_summary">إضافة خلفية شفافة إلى قائمة التطبيقات</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_subtext">إسحب للأسفل لإغلاق معلومات التطبيق</string>
+    <string name="app_info_source">المصدر</string>
+    <string name="app_info_source_system">النظام</string>
+    <string name="app_info_last_update">آخر تحديث</string>
+    <string name="app_info_version">الإصدار</string>
+    <string name="app_info_more">المزيد</string>
     <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Themed icons</string>
-    <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
+    <string name="pref_themed_icons_title">سمة الأيقونات</string>
+    <string name="pref_themed_icons_summary">شبيهة بسمة الأيقونات المستخدمة على الشاشة الرئيسية</string>
 </resources>
