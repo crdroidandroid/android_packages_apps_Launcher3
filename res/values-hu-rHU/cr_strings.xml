@@ -16,31 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <!-- Settings -->
-    <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Elrendezés-zárolás</string>
-    <string name="settings_lock_layout_summary_on">A kezdőképernyőn nem engedélyezett az ikon- és modulhozzáadás, eltávolítás és mozgatás</string>
-    <string name="settings_lock_layout_summary_off">A kezdőképernyőn engedélyezett az ikon- és modulhozzáadás, eltávolítás és mozgatás</string>
-    <string name="settings_edit_widgets_error">Nem lehet kisalkalmazásokat hozzáadni a kezdőképernyőhöz</string>
-    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Google-alkalmazás csúsztatással</string>
-    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Amikor a fő Kezdőképernyőn jobbra csúsztat</string>
-    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">Amikor a fő Kezdőképernyőn balra csúsztat</string>
     <!-- Folder titles -->
-    <!-- Hide labels -->
-    <string name="desktop_show_labels">Asztali ikonfeliratok</string>
-    <string name="drawer_show_labels">Alkalmazásfióki ikonfeliratok</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Rejtett és védett alkalmazások</string>
-    <string name="trust_apps_auth_manager">Feloldás a rejtett és védett alkalmazások kezeléséhez</string>
-    <string name="trust_apps_auth_open_app">Hitelesítés a következő megnyitásához: %1$s</string>
-    <string name="trust_apps_loading">Betöltés\u2026</string>
-    <string name="trust_apps_no_lock_error">Kérjük, állítson be biztonságos (védett) képernyőzárat az alkalmazás-hozzáférések korlátozására</string>
-    <string name="trust_apps_help">Súgó</string>
-    <string name="trust_apps_info_hidden">A rejtett alkalmazások és kisalkalmazásaik az alkalmazásfiókban sem láthatóak</string>
-    <string name="trust_apps_info_protected">Egy védett alkalmazás launcherből való megnyitása hitelesítést igényel</string>
     <!-- General -->
     <string name="settings_title">Kezdőoldal-beállítások</string>
     <!-- Categories -->
@@ -62,6 +38,32 @@
     <!-- Developer options -->
     <string name="dev_options_title">Fejlesztői beállítások</string>
     <string name="dev_options_summary">Saját felelősségére rejtett beállításokat engedélyezhet</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Elrendezés-zárolás</string>
+    <string name="settings_lock_layout_summary_on">A kezdőképernyőn nem engedélyezett az ikon- és modulhozzáadás, eltávolítás és mozgatás</string>
+    <string name="settings_lock_layout_summary_off">A kezdőképernyőn engedélyezett az ikon- és modulhozzáadás, eltávolítás és mozgatás</string>
+    <string name="settings_edit_widgets_error">Nem lehet kisalkalmazásokat hozzáadni a kezdőképernyőhöz</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Asztali ikonfeliratok</string>
+    <string name="drawer_show_labels">Alkalmazásfióki ikonfeliratok</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Google-alkalmazás csúsztatással</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Amikor a fő Kezdőképernyőn jobbra csúsztat</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Amikor a fő Kezdőképernyőn balra csúsztat</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Rejtett és védett alkalmazások</string>
+    <string name="trust_apps_auth_manager">Feloldás a rejtett és védett alkalmazások kezeléséhez</string>
+    <string name="trust_apps_auth_open_app">Hitelesítés a következő megnyitásához: %1$s</string>
+    <string name="trust_apps_loading">Betöltés\u2026</string>
+    <string name="trust_apps_no_lock_error">Kérjük, állítson be biztonságos (védett) képernyőzárat az alkalmazás-hozzáférések korlátozására</string>
+    <string name="trust_apps_help">Súgó</string>
+    <string name="trust_apps_info_hidden">A rejtett alkalmazások és kisalkalmazásaik az alkalmazásfiókban sem láthatóak</string>
+    <string name="trust_apps_info_protected">Egy védett alkalmazás launcherből való megnyitása hitelesítést igényel</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Alvómód duplakoppal</string>
+    <string name="pref_sleep_gesture_summary">Képernyő kikapcsoláshoz duplakopp egy üres területen</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Szüneteltetés</string>
     <string name="pause_apps_dialog_title">Szünetelteti ezt: %1$s?</string>
@@ -92,9 +94,6 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hotseat háttér</string>
     <string name="hotseat_bg_summary">Áttetsző háttereket adhat az alkalmazásfiókhoz</string>
-    <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Alvómód duplakoppal</string>
-    <string name="pref_sleep_gesture_summary">Képernyő kikapcsoláshoz duplakopp egy üres területen</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Háttérkép-görgetés</string>
     <string name="allow_wallpaper_scrolling_summary">Háttérképgörgetési effekt több képernyőre</string>

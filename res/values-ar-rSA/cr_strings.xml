@@ -16,31 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <!-- Settings -->
-    <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">تخطيط القفل</string>
-    <string name="settings_lock_layout_summary_on">لا يمكن إضافة الرموز والأدوات وإزالتها ونقلها على الشاشة الرئيسية</string>
-    <string name="settings_lock_layout_summary_off">يمكن إضافة, حذف و نقل الأيقونات و الويدجتس على الشاشة الرئيسية</string>
-    <string name="settings_edit_widgets_error">لا يمكن إضافة الويدجت إلى الشاشة الرئيسية</string>
-    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">اسحب للوصول إلى تطبيق جوجل</string>
-    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">عند السحب لليمين من الشاشة الرئيسية الأساسية</string>
-    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">عند السحب لليسار من الشاشة الرئيسية الأساسية</string>
     <!-- Folder titles -->
-    <!-- Hide labels -->
-    <string name="desktop_show_labels">إظهار أسماء التطبيقات على الشاشة الرئيسية</string>
-    <string name="drawer_show_labels">إظهار أسماء التطبيقات في قائمة التطبيقات</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">التطبيقات المخفية و المحمية</string>
-    <string name="trust_apps_auth_manager">افتح لإدارة التطبيقات المخفية والمحمية</string>
-    <string name="trust_apps_auth_open_app">المصادقة لفتح %1$s</string>
-    <string name="trust_apps_loading">جارٍ التحميل…\u2026</string>
-    <string name="trust_apps_no_lock_error">يرجى إعداد شاشة قفل الجهاز لتقييد الوصول إلى التطبيق</string>
-    <string name="trust_apps_help">المساعدة</string>
-    <string name="trust_apps_info_hidden">التطبيقات المخفية والويدجت الخاصة بها ستكون مخفية من القائمة</string>
-    <string name="trust_apps_info_protected">التطبيقات المحمية تتطلب المصادقة لكي تُفتح في قائمة التطبيقات</string>
     <!-- General -->
     <string name="settings_title">إعدادات الشاشة الرئيسية</string>
     <!-- Categories -->
@@ -51,7 +27,7 @@
     <string name="app_drawer_category_title">قائمة التطبيقات</string>
     <string name="app_drawer_category_summary">تخصيص قائمة التطبيقات الخاصة بك</string>
     <string name="recents_category_title">التطبيقات الأخيرة</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_summary">تجديد شاشة العرض العام</string>
     <string name="misc_category_title">خيارات متنوعة</string>
     <string name="misc_category_summary">خيارات أخرى</string>
     <string name="general_category_title">العامة</string>
@@ -62,6 +38,32 @@
     <!-- Developer options -->
     <string name="dev_options_title">خيارات المطور</string>
     <string name="dev_options_summary">مكّن بعض الخيارات الخفية على مسؤوليتك الخاصة</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">تخطيط القفل</string>
+    <string name="settings_lock_layout_summary_on">لا يمكن إضافة الرموز والأدوات وإزالتها ونقلها على الشاشة الرئيسية</string>
+    <string name="settings_lock_layout_summary_off">يمكن إضافة, حذف و نقل الأيقونات و الويدجتس على الشاشة الرئيسية</string>
+    <string name="settings_edit_widgets_error">لا يمكن إضافة الويدجت إلى الشاشة الرئيسية</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">إظهار أسماء التطبيقات على الشاشة الرئيسية</string>
+    <string name="drawer_show_labels">إظهار أسماء التطبيقات في قائمة التطبيقات</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">اسحب للوصول إلى تطبيق جوجل</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">عند السحب لليمين من الشاشة الرئيسية الأساسية</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">عند السحب لليسار من الشاشة الرئيسية الأساسية</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">التطبيقات المخفية و المحمية</string>
+    <string name="trust_apps_auth_manager">افتح لإدارة التطبيقات المخفية والمحمية</string>
+    <string name="trust_apps_auth_open_app">المصادقة لفتح %1$s</string>
+    <string name="trust_apps_loading">جارٍ التحميل…\u2026</string>
+    <string name="trust_apps_no_lock_error">يرجى إعداد شاشة قفل الجهاز لتقييد الوصول إلى التطبيق</string>
+    <string name="trust_apps_help">المساعدة</string>
+    <string name="trust_apps_info_hidden">التطبيقات المخفية والويدجت الخاصة بها ستكون مخفية من القائمة</string>
+    <string name="trust_apps_info_protected">التطبيقات المحمية تتطلب المصادقة لكي تُفتح في قائمة التطبيقات</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">النقر المزدوج لإطفاء الشاشة</string>
+    <string name="pref_sleep_gesture_summary">اضغط مرّتين على مكانٍ فارغ لإطفاء الشاشة</string>
     <!-- Pause apps shortcut -->
     <string name="pause">إيقاف مؤقت</string>
     <string name="pause_apps_dialog_title">إيقاف %1$s؟</string>
@@ -85,74 +87,71 @@
     <string name="label_lens">عدسة Google</string>
     <string name="label_voice_search">البحث الصوتي</string>
     <string name="dock_search_title">شريط بحث جوجل</string>
-    <string name="dock_search_summary">Search bar in the bottom dock</string>
-    <string name="dock_theme_title">Themed icons</string>
-    <string name="dock_theme_summary">Use themed icons for search bar</string>
-    <string name="search_radius_title">Corner radius</string>
+    <string name="dock_search_summary">إظهار شريط البحث في أسفل الشاشة</string>
+    <string name="dock_theme_title">سمة الأيقونات</string>
+    <string name="dock_theme_summary">استخدم سمة الأيقونات لشريط البحث</string>
+    <string name="search_radius_title">حدود الزاوية</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
-    <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
+    <string name="hotseat_bg_title">خلفية اللوحة السفلية</string>
+    <string name="hotseat_bg_summary">إضافة خلفية شفافة إلى قائمة التطبيقات</string>
     <!-- Wallpaper scrolling -->
-    <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
-    <string name="allow_wallpaper_scrolling_summary">Wallpaper scrolling effect for multiple screens</string>
+    <string name="allow_wallpaper_scrolling">تمرير خلفية الشاشة</string>
+    <string name="allow_wallpaper_scrolling_summary">تأثير تمرير خلفية الشاشة للشاشات المتعددة</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_summary">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">تكبير خلفية الشاشة</string>
+    <string name="allow_wallpaper_zooming_summary">تكبير الخلفية أو تصغيرها عند استخدام درج التطبيقات أو التطبيقات الحديثة</string>
     <!-- Homescreen Statusbar -->
-    <string name="show_statusbar_title">Status Bar</string>
+    <string name="show_statusbar_title">شريط الحالة</string>
     <!-- Top shadow -->
-    <string name="show_top_shadow">Top shadow</string>
+    <string name="show_top_shadow">الظل العلوي</string>
     <!-- Row Height -->
-    <string name="row_height_title">Row height</string>
+    <string name="row_height_title">ارتفاع الصف</string>
     <!-- Background blur -->
-    <string name="background_blur_title">Background blur depth</string>
-    <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
+    <string name="background_blur_title">مستوي ضبابية الخلفية</string>
+    <string name="background_blur_summary">تعيين مستوى العمق الضبابي للتطبيقات الحديثة ودرج التطبيقات</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your home screen</string>
+    <string name="show_quickspace_title">النظرة السريعة</string>
+    <string name="show_quickspace_summary">إظهار في الجزء العلوي من الشاشة الرئيسية</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
+    <string name="quick_event_rom_intro_welcome">مرحبا بكم في crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Have a great day</item>
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
-        <item>We love you 3000</item>
+        <item>أتمنى لك يوماً سعيداً</item>
+        <item>شكراً لك لإختيارنا</item>
+        <item>أيعجبك عملنا؟ تبرع لنا</item>
+        <item>أفضل نظام على الإطلاق.</item>
+        <item>قل لنا مرحباً على تطبيق تيليجرام</item>
+        <item>انقر هنا للبدء</item>
+        <item>نحبك 3000 مرة</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
-    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quick_event_ambient_now_playing">قيد التشغيل</string>
+    <string name="quick_event_ambient_song_artist">%1$s بواسطة %2$s</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Now playing</string>
-    <string name="quickspace_now_playing_summary">Show the song you\'re playing</string>
+    <string name="quickspace_now_playing_title">قيد التشغيل</string>
+    <string name="quickspace_now_playing_summary">عرض الأغنية التي شغلتها</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Minimalistic style</string>
-    <string name="quickspace_alternate_style_summary">Switch to modern style</string>
+    <string name="quickspace_alternate_style_title">النمط الأدنى</string>
+    <string name="quickspace_alternate_style_summary">التبديل إلى النمط الحديث</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Random messages</string>
-    <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
+    <string name="quickspace_psa_title">رسائل عشوائية</string>
+    <string name="quickspace_psa_summary">اجعل هاتفك أكثر حيوية مع الرسائل العشوائية</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>That\'s one way to wake up.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>صباح الخير!</item>
+        <item>صباح الخير ، حان وقت التألق!</item>
+        <item>يا له من يوم جميل!</item>
+        <item>نتمنى لك يوماً سعيداً!</item>
+        <item>ما رأيك بغفوة لخمس دقائق؟</item>
+        <item>هذه إحدى الطرق للإستيقاظ.</item>
+        <item>يجب عليك تغييّر أصوات منبهك.</item>
+        <item>يبدو أنه يومٌ جميل، أليس كذلك؟</item>
+        <item>دعونا ننجز ذلك.</item>
+        <item>تفحّص حالة الطقس كي تطمئن</item>
+        <item>هل بدأت الشعور بالنعاس</item>
+        <item>ألم تنظر إلى الخارج بعد؟</item>
+        <item>هيا لننجز ذلك.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
+        <item>تصبح على خير!</item>
         <item>نوماً هنيئاً!</item>
         <item>أراك غداً!</item>
         <item>أحلام جميلة!</item>
@@ -173,18 +172,18 @@
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>الجهل نعمة</item>
-        <item>Is it time to flash another update already?</item>
+        <item>أحان الوقت لتثبيت تحديث آخر بالفعل؟</item>
         <item>إصنع السلام، وليس الحرب</item>
         <item>أهلاً، كيف الحال؟</item>
         <item>ركّز على مهامّك</item>
         <item>كم عدد لقطات الشاشة التي تقوم بالتقاطها؟</item>
-        <item>Open goodness with crDroid</item>
+        <item>عرض مميزات crDroid</item>
         <item>أنشر الحب وليس الفوضى</item>
-        <item>We didn\'t start the fire!</item>
-        <item>Time for some good music</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>لم نضرم النار!</item>
+        <item>حان الوقت لبعض الموسيقى الجيدة</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C الراس</item>
         <item>تحتاج للاشتراك في crDroid Premium لرؤية هذا</item>
-        <item>Remember the Lineage of the Unicorn</item>
+        <item>تذكر سلالة وحيد القرن</item>
         <item>استمتع بعمر بطارية طويل</item>
         <item>البدء من نقطة الصفر</item>
         <item>نحبك 3000 مرة</item>
@@ -194,9 +193,9 @@
         <item>كيف يسير كل شيء؟</item>
         <item>لا أوهام ، مرحبا بالواقع!</item>
         <item>شكرا لك على دعمك</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
+        <item>يحتفل بالكمال، لا الهراء!</item>
+        <item>واحد من أفضل انتقاءات buildbot</item>
+        <item>عقلانية لجنون شكّك</item>
         <item>جرب الحلويات المتجمدة</item>
         <item>يا لها من تجربة جميلة، أليس كذلك؟</item>
         <item>التطوّر خُرافة، أليس كذلك؟</item>
@@ -209,32 +208,32 @@
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">الإقتراحات</string>
-    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+    <string name="suggestion_pref_screen_desc">لجميع التطبيقات &amp; اقتراحات الشاشة الرئيسية</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quick_event_ambient_weather_title">Weather condition</string>
-    <string name="quick_event_ambient_weather_summary">Display current weather condition and temperature</string>
-    <string name="quick_event_ambient_weather_enabled_info">Requires weather service to be enabled</string>
+    <string name="quick_event_ambient_weather_title">حالة الطقس</string>
+    <string name="quick_event_ambient_weather_summary">عرض حالة الطقس الحالية ودرجة الحرارة</string>
+    <string name="quick_event_ambient_weather_enabled_info">يتطلب تفعيل خدمة الطقس</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">شفافية الخلفية</string>
     <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar_title">Use taskbar</string>
-    <string name="pref_allow_phone_taskbar_summary">For opening and switching apps anywhere</string>
+    <string name="pref_allow_phone_taskbar_title">استخدام شريط المهام</string>
+    <string name="pref_allow_phone_taskbar_summary">لفتح التطبيقات وتبديلها في أي مكان</string>
     <!-- Recents icons -->
-    <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Clear all</string>
-    <string name="recents_lens_title">Lens</string>
+    <string name="recents_screenshot_title">لقطة شاشة</string>
+    <string name="recents_clear_all_title">إزالة الكل</string>
+    <string name="recents_lens_title">العدسة</string>
     <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Themed icons</string>
-    <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
+    <string name="pref_themed_icons_title">سمة الأيقونات</string>
+    <string name="pref_themed_icons_summary">على غرار سمة الأيقونات المستخدمة في الشاشة الرئيسية</string>
     <!-- AppInfo -->
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_source">المصدر</string>
+    <string name="app_info_source_system">النظام</string>
+    <string name="app_info_last_update">آخر تحديث</string>
+    <string name="app_info_version">الإصدار</string>
+    <string name="app_info_more">المزيد</string>
     <!-- Icon pack -->
-    <string name="icon_pack_title">Icon pack</string>
-    <string name="icon_pack_default_label">Default</string>
-    <string name="icon_pack_add">Install more</string>
-    <string name="icon_pack_no_market">There\'s no available app store</string>
+    <string name="icon_pack_title">حزمة الأيقونات</string>
+    <string name="icon_pack_default_label">الإفتراضي</string>
+    <string name="icon_pack_add">تثبيت المزيد</string>
+    <string name="icon_pack_no_market">لا يوجد متجر تطبيقات متاح</string>
 </resources>

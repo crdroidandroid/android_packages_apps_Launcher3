@@ -16,31 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <!-- Settings -->
-    <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Blokada układu ekranu głównego</string>
-    <string name="settings_lock_layout_summary_on">Ikony i widżety nie mogą być dodawane, usuwane ani przenoszone na ekranie głównym</string>
-    <string name="settings_lock_layout_summary_off">Ikony i widżety mogą być dodawane, usuwane oraz przenoszone na ekranie głównym</string>
-    <string name="settings_edit_widgets_error">Nie można dodać widżetów do ekranu głównego</string>
-    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Przesuń, aby uzyskać dostęp do aplikacji Google</string>
-    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Kiedy przesuniesz w lewo od ekranu głównego</string>
-    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">Kiedy przesuniesz w prawo od ekranu głównego</string>
     <!-- Folder titles -->
-    <!-- Hide labels -->
-    <string name="desktop_show_labels">Etykiety ikon na pulpicie</string>
-    <string name="drawer_show_labels">Etykiety ikon w liście aplikacji</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Ukryte &amp; chronione aplikacje</string>
-    <string name="trust_apps_auth_manager">Odblokuj, aby zarządzać ukrytymi i chronionymi aplikacjami</string>
-    <string name="trust_apps_auth_open_app">Uwierzytelnij, aby otworzyć %1$s</string>
-    <string name="trust_apps_loading">Wczytywanie\u2026</string>
-    <string name="trust_apps_no_lock_error">Ustaw bezpieczny ekran blokady, aby ograniczyć dostęp do aplikacji</string>
-    <string name="trust_apps_help">Pomoc</string>
-    <string name="trust_apps_info_hidden">Ukryte aplikacje oraz ich widżety są ukryte na liście aplikacji</string>
-    <string name="trust_apps_info_protected">Chronione aplikacje wymagają uwierzytelnienia, aby je otworzyć z ekranu głównego</string>
     <!-- General -->
     <string name="settings_title">Ustawienia ekranu głównego</string>
     <!-- Categories -->
@@ -62,6 +38,32 @@
     <!-- Developer options -->
     <string name="dev_options_title">Opcje programistyczne</string>
     <string name="dev_options_summary">Włącz ukryte funkcje na własne ryzyko</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Blokada układu ekranu głównego</string>
+    <string name="settings_lock_layout_summary_on">Ikony i widżety nie mogą być dodawane, usuwane ani przenoszone na ekranie głównym</string>
+    <string name="settings_lock_layout_summary_off">Ikony i widżety mogą być dodawane, usuwane oraz przenoszone na ekranie głównym</string>
+    <string name="settings_edit_widgets_error">Nie można dodać widżetów do ekranu głównego</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Etykiety ikon na pulpicie</string>
+    <string name="drawer_show_labels">Etykiety ikon w liście aplikacji</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Przesuń, aby uzyskać dostęp do aplikacji Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Kiedy przesuniesz w lewo od ekranu głównego</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Kiedy przesuniesz w prawo od ekranu głównego</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Ukryte &amp; chronione aplikacje</string>
+    <string name="trust_apps_auth_manager">Odblokuj, aby zarządzać ukrytymi i chronionymi aplikacjami</string>
+    <string name="trust_apps_auth_open_app">Uwierzytelnij, aby otworzyć %1$s</string>
+    <string name="trust_apps_loading">Wczytywanie\u2026</string>
+    <string name="trust_apps_no_lock_error">Ustaw bezpieczny ekran blokady, aby ograniczyć dostęp do aplikacji</string>
+    <string name="trust_apps_help">Pomoc</string>
+    <string name="trust_apps_info_hidden">Ukryte aplikacje oraz ich widżety są ukryte na liście aplikacji</string>
+    <string name="trust_apps_info_protected">Chronione aplikacje wymagają uwierzytelnienia, aby je otworzyć z ekranu głównego</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Dotknij dwukrotnie, aby uśpić</string>
+    <string name="pref_sleep_gesture_summary">Dotknij dwukrotnie w puste miejsce, aby wyłączyć ekran</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Wstrzymaj</string>
     <string name="pause_apps_dialog_title">Wstrzymać? %1$s?</string>
@@ -92,9 +94,6 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Tło Docka</string>
     <string name="hotseat_bg_summary">Dodaj przezroczyste tło dla Docka</string>
-    <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Dotknij dwukrotnie, aby uśpić</string>
-    <string name="pref_sleep_gesture_summary">Dotknij dwukrotnie w puste miejsce, aby wyłączyć ekran</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Przewijane tapety</string>
     <string name="allow_wallpaper_scrolling_summary">Efekt przewijania tapety dla wielu ekranów</string>

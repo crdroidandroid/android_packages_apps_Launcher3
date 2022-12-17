@@ -16,31 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <!-- Settings -->
-    <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Запретить редактирование</string>
-    <string name="settings_lock_layout_summary_on">Иконки и виджеты не могут быть добавлены, удалены и перемещены на главный экран</string>
-    <string name="settings_lock_layout_summary_off">Иконки и виджеты могут быть добавлены, удалены и перемещены на домашнем экране</string>
-    <string name="settings_edit_widgets_error">Невозможно добавить виджеты на главный экран</string>
-    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Проведите пальцем для доступа к приложению Google</string>
-    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Когда вы проводите вправо с главного Рабочего стола</string>
-    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">Когда вы проводите влево с главного Рабочего стола</string>
     <!-- Folder titles -->
-    <!-- Hide labels -->
-    <string name="desktop_show_labels">Отображать названия приложений на рабочем столе</string>
-    <string name="drawer_show_labels">Отображать названия приложений в меню</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Скрытые и защищенные приложения</string>
-    <string name="trust_apps_auth_manager">Разблокируйте, для управления скрытыми и защищенными приложениями</string>
-    <string name="trust_apps_auth_open_app">Авторизуйтесь, для открытия %1$s</string>
-    <string name="trust_apps_loading">Загрузка\u2026</string>
-    <string name="trust_apps_no_lock_error">Пожалуйста, установите блокировку экрана для ограничения доступа к приложениям</string>
-    <string name="trust_apps_help">Помощь</string>
-    <string name="trust_apps_info_hidden">Скрытые приложения и их виджеты скрыты из меню</string>
-    <string name="trust_apps_info_protected">Для открытия защищенных приложений из лаунчера требуется аутентификация</string>
     <!-- General -->
     <string name="settings_title">Настройки главного экрана</string>
     <!-- Categories -->
@@ -62,6 +38,32 @@
     <!-- Developer options -->
     <string name="dev_options_title">Для разработчиков</string>
     <string name="dev_options_summary">Включить некоторые скрытые функции на свой страх и риск</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Запретить редактирование</string>
+    <string name="settings_lock_layout_summary_on">Иконки и виджеты не могут быть добавлены, удалены и перемещены на главный экран</string>
+    <string name="settings_lock_layout_summary_off">Иконки и виджеты могут быть добавлены, удалены и перемещены на домашнем экране</string>
+    <string name="settings_edit_widgets_error">Невозможно добавить виджеты на главный экран</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Отображать названия приложений на рабочем столе</string>
+    <string name="drawer_show_labels">Отображать названия приложений в меню</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Проведите пальцем для доступа к приложению Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Когда вы проводите вправо с главного Рабочего стола</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Когда вы проводите влево с главного Рабочего стола</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Скрытые и защищенные приложения</string>
+    <string name="trust_apps_auth_manager">Разблокируйте, для управления скрытыми и защищенными приложениями</string>
+    <string name="trust_apps_auth_open_app">Авторизуйтесь, для открытия %1$s</string>
+    <string name="trust_apps_loading">Загрузка\u2026</string>
+    <string name="trust_apps_no_lock_error">Пожалуйста, установите блокировку экрана для ограничения доступа к приложениям</string>
+    <string name="trust_apps_help">Помощь</string>
+    <string name="trust_apps_info_hidden">Скрытые приложения и их виджеты скрыты из меню</string>
+    <string name="trust_apps_info_protected">Для открытия защищенных приложений из лаунчера требуется аутентификация</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Выключение экрана двойным нажатием</string>
+    <string name="pref_sleep_gesture_summary">Двойное нажатие на пустом месте для выключения экрана</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Пауза</string>
     <string name="pause_apps_dialog_title">Приостановить %1$s?</string>
@@ -92,9 +94,6 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Фон нижней панели</string>
     <string name="hotseat_bg_summary">Добавить прозрачный фон в нижнюю часть</string>
-    <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Выключение экрана двойным нажатием</string>
-    <string name="pref_sleep_gesture_summary">Двойное нажатие на пустом месте для выключения экрана</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Прокрутка обоев</string>
     <string name="allow_wallpaper_scrolling_summary">Эффект прокрутки обоев для нескольких экранов</string>

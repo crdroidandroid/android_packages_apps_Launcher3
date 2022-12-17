@@ -16,31 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <!-- Settings -->
-    <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">נעילת פריסת התצוגה</string>
-    <string name="settings_lock_layout_summary_on">לא ניתן להוסיף, להסיר ולהזיז סמלים ויישומונים על מסך הבית</string>
-    <string name="settings_lock_layout_summary_off">ניתן להוסיף, להסיר ולהזיז סמלים ויישומונים על מסך הבית</string>
-    <string name="settings_edit_widgets_error">אין אפשרות להוסיף יישומונים למסך הבית</string>
-    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">החלקה כדי לגשת לאפליקציית גוגל</string>
-    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">בעת החלקה ימינה ממסך הבית</string>
-    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">בעת החלקה שמאלה ממסך הבית</string>
     <!-- Folder titles -->
-    <!-- Hide labels -->
-    <string name="desktop_show_labels">תוויות סמלים במסך הבית</string>
-    <string name="drawer_show_labels">תוויות סמלים במגירת היישומים</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">מוסתרים &amp; יישומים מוגנים</string>
-    <string name="trust_apps_auth_manager">ביטול נעילה כדי לנהל את היישומים המוסתרים והמוגנים</string>
-    <string name="trust_apps_auth_open_app">אימות לפתיחת %1$s</string>
-    <string name="trust_apps_loading">טעינת \u2026</string>
-    <string name="trust_apps_no_lock_error">נדרש להגדיר מסך נעילה מאובטח להגבלת גישה ליישומים</string>
-    <string name="trust_apps_help">עזרה</string>
-    <string name="trust_apps_info_hidden">יישומים מוסתרים והווידג\'טים שלהם אינם מוצגים במגירת היישומים</string>
-    <string name="trust_apps_info_protected">יישומים מוגנים מחייבים אימות לפתיחה מהמשגר</string>
     <!-- General -->
     <string name="settings_title">הגדרות דף הבית</string>
     <!-- Categories -->
@@ -62,6 +38,32 @@
     <!-- Developer options -->
     <string name="dev_options_title">אפשרויות מפתח</string>
     <string name="dev_options_summary">לאפשר מספר תכונות נסתרות על אחריותך בלבד</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">נעילת פריסת התצוגה</string>
+    <string name="settings_lock_layout_summary_on">לא ניתן להוסיף, להסיר ולהזיז סמלים ויישומונים על מסך הבית</string>
+    <string name="settings_lock_layout_summary_off">ניתן להוסיף, להסיר ולהזיז סמלים ויישומונים על מסך הבית</string>
+    <string name="settings_edit_widgets_error">אין אפשרות להוסיף יישומונים למסך הבית</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">תוויות סמלים במסך הבית</string>
+    <string name="drawer_show_labels">תוויות סמלים במגירת היישומים</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">החלקה כדי לגשת לאפליקציית גוגל</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">בעת החלקה ימינה ממסך הבית</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">בעת החלקה שמאלה ממסך הבית</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">מוסתרים &amp; יישומים מוגנים</string>
+    <string name="trust_apps_auth_manager">ביטול נעילה כדי לנהל את היישומים המוסתרים והמוגנים</string>
+    <string name="trust_apps_auth_open_app">אימות לפתיחת %1$s</string>
+    <string name="trust_apps_loading">טעינת \u2026</string>
+    <string name="trust_apps_no_lock_error">נדרש להגדיר מסך נעילה מאובטח להגבלת גישה ליישומים</string>
+    <string name="trust_apps_help">עזרה</string>
+    <string name="trust_apps_info_hidden">יישומים מוסתרים והווידג\'טים שלהם אינם מוצגים במגירת היישומים</string>
+    <string name="trust_apps_info_protected">יישומים מוגנים מחייבים אימות לפתיחה מהמשגר</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">הקשה כפולה לכיבוי המסך</string>
+    <string name="pref_sleep_gesture_summary">הקשה כפולה על מקום ריק לכיבוי המסך</string>
     <!-- Pause apps shortcut -->
     <string name="pause">השהיה</string>
     <string name="pause_apps_dialog_title">השהיית %1$s?</string>
@@ -92,9 +94,6 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">רקע המושב החם</string>
     <string name="hotseat_bg_summary">הוספת רקע שקוף לסרגל היישומים</string>
-    <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">הקשה כפולה לכיבוי המסך</string>
-    <string name="pref_sleep_gesture_summary">הקשה כפולה על מקום ריק לכיבוי המסך</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">גלילת הטפט</string>
     <string name="allow_wallpaper_scrolling_summary">אפקט גלילה לטפט עבור מסכים מרובים</string>

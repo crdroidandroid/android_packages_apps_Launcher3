@@ -16,31 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <!-- Settings -->
-    <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Kunci tata letak</string>
-    <string name="settings_lock_layout_summary_on">Ikon dan widget tidak dapat ditambahkan, dihapus dan dipindahkan pada layar beranda</string>
-    <string name="settings_lock_layout_summary_off">Ikon dan widget dapat ditambahkan, dihapus dan dipindahkan pada layar beranda</string>
-    <string name="settings_edit_widgets_error">Hal ini tidak mungkin untuk menambahkan widget ke layar beranda</string>
-    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Geser untuk mengakses aplikasi Google</string>
-    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Saat Anda menggeser ke kanan dari layar beranda</string>
-    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">Saat Anda menggeser ke kanan dari layar beranda</string>
     <!-- Folder titles -->
-    <!-- Hide labels -->
-    <string name="desktop_show_labels">Label ikon di desktop</string>
-    <string name="drawer_show_labels">Label ikon di laci</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Tersembunyi &amp; Aplikasi dilindungi</string>
-    <string name="trust_apps_auth_manager">Buka kunci untuk mengelola aplikasi yang disembunyikan dan dilindungi</string>
-    <string name="trust_apps_auth_open_app">Autentikasi untuk membuka %1$s</string>
-    <string name="trust_apps_loading">Memuat\u2026</string>
-    <string name="trust_apps_no_lock_error">Silakan mengatur kunci layar untuk membatasi akses aplikasi</string>
-    <string name="trust_apps_help">Bantuan</string>
-    <string name="trust_apps_info_hidden">Aplikasi tersembunyi beserta widgetnya akan disembunyikan dari laci aplikasi</string>
-    <string name="trust_apps_info_protected">Aplikasi yang dilindungi memerlukan autentikasi untuk dibuka dari peluncur</string>
     <!-- General -->
     <string name="settings_title">Setelan beranda</string>
     <!-- Categories -->
@@ -62,6 +38,32 @@
     <!-- Developer options -->
     <string name="dev_options_title">Opsi pengembang</string>
     <string name="dev_options_summary">Mengaktifkan fitur tersembunyi dengan risiko Anda</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Kunci tata letak</string>
+    <string name="settings_lock_layout_summary_on">Ikon dan widget tidak dapat ditambahkan, dihapus dan dipindahkan pada layar beranda</string>
+    <string name="settings_lock_layout_summary_off">Ikon dan widget dapat ditambahkan, dihapus dan dipindahkan pada layar beranda</string>
+    <string name="settings_edit_widgets_error">Hal ini tidak mungkin untuk menambahkan widget ke layar beranda</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Label ikon di desktop</string>
+    <string name="drawer_show_labels">Label ikon di laci</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Geser untuk mengakses aplikasi Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Saat Anda menggeser ke kanan dari layar beranda</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Saat Anda menggeser ke kanan dari layar beranda</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Tersembunyi &amp; Aplikasi dilindungi</string>
+    <string name="trust_apps_auth_manager">Buka kunci untuk mengelola aplikasi yang disembunyikan dan dilindungi</string>
+    <string name="trust_apps_auth_open_app">Autentikasi untuk membuka %1$s</string>
+    <string name="trust_apps_loading">Memuat\u2026</string>
+    <string name="trust_apps_no_lock_error">Silakan mengatur kunci layar untuk membatasi akses aplikasi</string>
+    <string name="trust_apps_help">Bantuan</string>
+    <string name="trust_apps_info_hidden">Aplikasi tersembunyi beserta widgetnya akan disembunyikan dari laci aplikasi</string>
+    <string name="trust_apps_info_protected">Aplikasi yang dilindungi memerlukan autentikasi untuk dibuka dari peluncur</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Ketuk dua kali untuk tidur</string>
+    <string name="pref_sleep_gesture_summary">Ketuk dua kali pada ruang kosong untuk mematikan layar</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Jeda</string>
     <string name="pause_apps_dialog_title">Jeda %1$s?</string>
@@ -92,9 +94,6 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Latar belakang hotseat</string>
     <string name="hotseat_bg_summary">Tambahkan latar belakang tembus pandang di dok aplikasi</string>
-    <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Ketuk dua kali untuk tidur</string>
-    <string name="pref_sleep_gesture_summary">Ketuk dua kali pada ruang kosong untuk mematikan layar</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Menggulir wallpaper</string>
     <string name="allow_wallpaper_scrolling_summary">Efek pengguliran wallpaper untuk beberapa tampilan</string>

@@ -16,31 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <!-- Settings -->
-    <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Khóa bố cục</string>
-    <string name="settings_lock_layout_summary_on">Không thể thêm biểu tượng và tiện ích, xoá hoặc đặt ở trang màn hình khác</string>
-    <string name="settings_lock_layout_summary_off">Có thể thêm biểu tượng và tiện ích, xoá hoặc đặt ở trang màn hình khác</string>
-    <string name="settings_edit_widgets_error">Không thể thêm Tiện ích vào màn hình chính</string>
-    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Vuốt để mở ứng dụng Google</string>
-    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Khi bạn vuốt sang phải từ màn hình chính</string>
-    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">Khi vuốt sang trái từ màn hình chính</string>
     <!-- Folder titles -->
-    <!-- Hide labels -->
-    <string name="desktop_show_labels">Tên biểu tượng trên màn hình chính</string>
-    <string name="drawer_show_labels">Tên biểu tượng trong ngăn ứng dụng</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Ẩn &amp; khỏi danh sách ứng dụng</string>
-    <string name="trust_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn và được bảo vệ</string>
-    <string name="trust_apps_auth_open_app">Xác thực để mở %1$s</string>
-    <string name="trust_apps_loading">Đang tải\u2026</string>
-    <string name="trust_apps_no_lock_error">Hãy đặt mật khẩu để hạn chế quyền truy cập vào ứng dụng</string>
-    <string name="trust_apps_help">Trợ giúp</string>
-    <string name="trust_apps_info_hidden">Các ứng dụng đã ẩn và tiện ích sẽ được ẩn khỏi danh sách ứng dụng</string>
-    <string name="trust_apps_info_protected">Các ứng dụng được bảo vệ yêu cầu mật khẩu để truy cập</string>
     <!-- General -->
     <string name="settings_title">Cài đặt màn hình chính</string>
     <!-- Categories -->
@@ -62,6 +38,32 @@
     <!-- Developer options -->
     <string name="dev_options_title">Tùy chọn nhà phát triển</string>
     <string name="dev_options_summary">Bật một số tính năng ẩn và tự chịu rủi ro</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Khóa bố cục</string>
+    <string name="settings_lock_layout_summary_on">Không thể thêm biểu tượng và tiện ích, xoá hoặc đặt ở trang màn hình khác</string>
+    <string name="settings_lock_layout_summary_off">Có thể thêm biểu tượng và tiện ích, xoá hoặc đặt ở trang màn hình khác</string>
+    <string name="settings_edit_widgets_error">Không thể thêm Tiện ích vào màn hình chính</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Tên biểu tượng trên màn hình chính</string>
+    <string name="drawer_show_labels">Tên biểu tượng trong ngăn ứng dụng</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Vuốt để mở ứng dụng Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Khi bạn vuốt sang phải từ màn hình chính</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Khi vuốt sang trái từ màn hình chính</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Ẩn &amp; khỏi danh sách ứng dụng</string>
+    <string name="trust_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn và được bảo vệ</string>
+    <string name="trust_apps_auth_open_app">Xác thực để mở %1$s</string>
+    <string name="trust_apps_loading">Đang tải\u2026</string>
+    <string name="trust_apps_no_lock_error">Hãy đặt mật khẩu để hạn chế quyền truy cập vào ứng dụng</string>
+    <string name="trust_apps_help">Trợ giúp</string>
+    <string name="trust_apps_info_hidden">Các ứng dụng đã ẩn và tiện ích sẽ được ẩn khỏi danh sách ứng dụng</string>
+    <string name="trust_apps_info_protected">Các ứng dụng được bảo vệ yêu cầu mật khẩu để truy cập</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Chạm hai lần để tắt màn hình</string>
+    <string name="pref_sleep_gesture_summary">Nhấn đúp vào không gian trống để tắt màn hình</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Tạm dừng</string>
     <string name="pause_apps_dialog_title">Tạm dừng %1$s?</string>
@@ -92,9 +94,6 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Nền thanh công cụ</string>
     <string name="hotseat_bg_summary">Thêm nền mờ vào thanh ứng dụng</string>
-    <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Chạm hai lần để tắt màn hình</string>
-    <string name="pref_sleep_gesture_summary">Nhấn đúp vào không gian trống để tắt màn hình</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Cuộn hình nền</string>
     <string name="allow_wallpaper_scrolling_summary">Hiệu ứng cuộn hình nền cho nhiều màn hình</string>

@@ -16,31 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Application name -->
-    <!-- Settings -->
-    <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Verrouiller la mise en page</string>
-    <string name="settings_lock_layout_summary_on">Les icônes et widgets ne peuvent pas être ajoutés, supprimés ou déplacés sur l\'écran d\'accueil</string>
-    <string name="settings_lock_layout_summary_off">Les icônes et widgets peuvent être ajoutés, supprimés ou déplacés sur l\'écran d\'accueil</string>
-    <string name="settings_edit_widgets_error">Il n\'est pas possible d\'ajouter des widgets à l\'écran d\'accueil</string>
-    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Glisser pour accéder à l\'application Google</string>
-    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">When you swipe right from main home screen</string>
-    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">When you swipe left from main home screen</string>
     <!-- Folder titles -->
-    <!-- Hide labels -->
-    <string name="desktop_show_labels">Icon labels on desktop</string>
-    <string name="drawer_show_labels">Icon labels in drawer</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
-    <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
-    <string name="trust_apps_loading">Loading\u2026</string>
-    <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="trust_apps_help">Aide</string>
-    <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
-    <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
     <!-- General -->
     <string name="settings_title">Home settings</string>
     <!-- Categories -->
@@ -62,6 +38,32 @@
     <!-- Developer options -->
     <string name="dev_options_title">Options développeur</string>
     <string name="dev_options_summary">Enable some hidden features at your own risk</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Verrouiller la mise en page</string>
+    <string name="settings_lock_layout_summary_on">Les icônes et widgets ne peuvent pas être ajoutés, supprimés ou déplacés sur l\'écran d\'accueil</string>
+    <string name="settings_lock_layout_summary_off">Les icônes et widgets peuvent être ajoutés, supprimés ou déplacés sur l\'écran d\'accueil</string>
+    <string name="settings_edit_widgets_error">Il n\'est pas possible d\'ajouter des widgets à l\'écran d\'accueil</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Nom d\'application sur l\'écran d\'accueil</string>
+    <string name="drawer_show_labels">Nom d\'application dans le tiroir d\'application</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Glisser pour accéder à l\'application Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Lors d\'un balayage vers la droite sur l\'écran d\'accueil principal</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Lors d\'un balayage vers la gauche sur l\'écran d\'accueil principal</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
+    <string name="trust_apps_auth_manager">Déverrouiller pour gérer les applications cachées et protégées</string>
+    <string name="trust_apps_auth_open_app">Authentification pour ouvrir %1$s</string>
+    <string name="trust_apps_loading">Loading\u2026</string>
+    <string name="trust_apps_no_lock_error">Veuillez configurer un écran de verrouillage pour restreindre l\'accès aux applications</string>
+    <string name="trust_apps_help">Aide</string>
+    <string name="trust_apps_info_hidden">Les applications cachées et leurs widgets sont cachés du tiroir d\'applications</string>
+    <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Double appui pour mettre en veille</string>
+    <string name="pref_sleep_gesture_summary">Double appui sur un espace vide pour éteindre l\'écran</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Pause</string>
     <string name="pause_apps_dialog_title">Pause %1$s?</string>
@@ -92,9 +94,6 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hotseat background</string>
     <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
-    <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double appui pour mettre en veille</string>
-    <string name="pref_sleep_gesture_summary">Double appui sur un espace vide pour éteindre l\'écran</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Défilement du fond d\'écran</string>
     <string name="allow_wallpaper_scrolling_summary">Wallpaper scrolling effect for multiple screens</string>
