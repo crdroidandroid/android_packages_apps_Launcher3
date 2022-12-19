@@ -417,7 +417,8 @@ public class DeviceProfile {
         hotseatQsbSpace = Utilities.showQSB(context)
                 ? pxFromDp(inv.hotseatQsbSpace[mTypeIndex], mMetrics) : 0;
         // Have a little space between the inset and the QSB
-        if (mInsets.bottom + minQsbMargin > hotseatBarBottomSpace) {
+        if (Utilities.showQSB(context) &&
+                (mInsets.bottom + minQsbMargin) > hotseatBarBottomSpace) {
             int availableSpace = hotseatQsbSpace - (mInsets.bottom - hotseatBarBottomSpace);
 
             // Only change the spaces if there is space
