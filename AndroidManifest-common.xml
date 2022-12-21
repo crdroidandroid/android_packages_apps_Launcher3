@@ -51,6 +51,7 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
     <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
 
     <!--
     Permissions required for read/write access to the workspace data. These permission name
