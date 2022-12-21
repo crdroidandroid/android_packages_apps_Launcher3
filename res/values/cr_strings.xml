@@ -101,4 +101,8 @@
 
     <!-- App label - max lines -->
     <string name="icon_max_lines_title">Max lines for app label</string>
+   
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Kill</string>
+    <string name="recents_app_killed">App killed</string>
 </resources>
