@@ -51,6 +51,7 @@
     <uses-permission android:name="android.permission.DEVICE_POWER" />
     <uses-permission android:name="android.permission.ACCESS_CONTEXTUAL_SEARCH"/>
     <uses-permission android:name="android.permission.INJECT_EVENTS" />
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
 
     <!--
     Permissions required for read/write access to the workspace data. These permission name
