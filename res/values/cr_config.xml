@@ -39,4 +39,7 @@
 
     <!-- Icon pack -->
     <string name="icon_pack_settings_class" translatable="false">com.android.launcher3.icons.pack.IconPackSettingsFragment</string>
+
+    <!-- Whether to place memory info below action buttons. -->
+    <bool name="config_placeMemInfoBelowActions">true</bool>
 </resources>
