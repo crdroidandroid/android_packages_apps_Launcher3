@@ -237,9 +237,9 @@
     <string name="icon_pack_add">取得更多...</string>
     <string name="icon_pack_no_market">沒有可用的應用程式商店</string>
     <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">強制停止</string>
+    <string name="recents_app_killed">已強制停止應用程式</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">可用 %1$s | 總共 %2$s</string>
+    <string name="recents_meminfo_title">記憶體</string>
 </resources>
