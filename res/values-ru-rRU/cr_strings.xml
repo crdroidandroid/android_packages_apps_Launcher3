@@ -237,9 +237,9 @@
     <string name="icon_pack_add">Установить ещё</string>
     <string name="icon_pack_no_market">Нет доступного магазина приложений</string>
     <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">Завершить</string>
+    <string name="recents_app_killed">Приложение закрыто</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">Доступно: %1$s | Всего: %2$s</string>
+    <string name="recents_meminfo_title">Информация о памяти</string>
 </resources>
