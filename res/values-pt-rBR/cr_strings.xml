@@ -237,9 +237,9 @@
     <string name="icon_pack_add">Instalar mais</string>
     <string name="icon_pack_no_market">Não há uma loja de aplicativos disponível</string>
     <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">Encerrar</string>
+    <string name="recents_app_killed">Aplicativo encerrado</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s Disponível - %2$s Total</string>
+    <string name="recents_meminfo_title">Informações da memória</string>
 </resources>
