@@ -237,9 +237,9 @@
     <string name="icon_pack_add">Εγκαταστήστε περισσότερα</string>
     <string name="icon_pack_no_market">Δεν υπάρχει διαθέσιμο κατάστημα εφαρμογών</string>
     <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">Τερματισμός</string>
+    <string name="recents_app_killed">Η εφαρμογή τερματίστηκε</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s Διαθέσιμο | %2$s Σύνολο</string>
+    <string name="recents_meminfo_title">Πληροφορίες μνήμης</string>
 </resources>
