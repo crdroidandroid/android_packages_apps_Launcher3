@@ -237,9 +237,9 @@
     <string name="icon_pack_add">Instalovat další</string>
     <string name="icon_pack_no_market">Není dostupný žádný obchod s aplikacemi</string>
     <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">Ukončit</string>
+    <string name="recents_app_killed">Aplikace ukončena</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s k dispozici | %2$s celkem</string>
+    <string name="recents_meminfo_title">Informace o\u00a0paměti</string>
 </resources>
