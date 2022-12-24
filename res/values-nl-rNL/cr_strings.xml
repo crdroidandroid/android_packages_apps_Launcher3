@@ -236,4 +236,10 @@
     <string name="icon_pack_default_label">Standaard</string>
     <string name="icon_pack_add">Meer installeren</string>
     <string name="icon_pack_no_market">Er is geen beschikbare app store</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Kill</string>
+    <string name="recents_app_killed">App killed</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Available | %2$s Total</string>
+    <string name="recents_meminfo_title">Memory info</string>
 </resources>
