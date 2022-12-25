@@ -236,4 +236,10 @@
     <string name="icon_pack_default_label">За замовчанням</string>
     <string name="icon_pack_add">Встановити ще</string>
     <string name="icon_pack_no_market">Немає доступного магазину додатків</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Зупинити</string>
+    <string name="recents_app_killed">Програму закрито</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Доступно | %2$s Загалом</string>
+    <string name="recents_meminfo_title">Інформація про пам\'ять</string>
 </resources>

@@ -236,4 +236,10 @@
     <string name="icon_pack_default_label">Alapértelmezett</string>
     <string name="icon_pack_add">Továbbiak telepítése</string>
     <string name="icon_pack_no_market">Nincs áruház ahonnan letölthetne</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Leállítás</string>
+    <string name="recents_app_killed">Az alkalmazás leállt</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%2$s memóból %1$s érhető el</string>
+    <string name="recents_meminfo_title">Memória-információ</string>
 </resources>
