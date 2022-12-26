@@ -113,7 +113,23 @@ public class QuickspaceController implements NotificationListener.NotificationsC
 
     public String getWeatherTemp() {
         if (mWeatherInfo != null) {
-            String weatherTemp = mWeatherInfo.temp + mWeatherInfo.tempUnits;
+            String formattedCondition = mWeatherInfo.condition;
+            if (formattedCondition.toLowerCase().contains("clouds")) {
+               formattedCondition = "Cloudy";
+            } else if (formattedCondition.toLowerCase().contains("rain")) {
+              formattedCondition = "Rainy";
+            } else if (formattedCondition.toLowerCase().contains("clear")) {
+              formattedCondition = "Sunny";
+            } else if (formattedCondition.toLowerCase().contains("storm")) {
+              formattedCondition = "Stormy";
+            } else if (formattedCondition.toLowerCase().contains("snow")) {
+              formattedCondition = "Snowy";
+            } else if (formattedCondition.toLowerCase().contains("wind")) {
+              formattedCondition = "Windy";
+            } else if (formattedCondition.toLowerCase().contains("mist")) {
+              formattedCondition = "Misty";
+            }
+            String weatherTemp = mWeatherInfo.temp + mWeatherInfo.tempUnits + " ~ "  + formattedCondition;
             return weatherTemp;
         }
         return null;
@@ -147,13 +163,13 @@ public class QuickspaceController implements NotificationListener.NotificationsC
 
     @Override
     public void onNotificationPosted(PackageUserKey postedPackageUserKey,
-                                     NotificationKeyData notificationKey) {
+                     NotificationKeyData notificationKey) {
         updateMediaInfo();
     }
 
     @Override
     public void onNotificationRemoved(PackageUserKey removedPackageUserKey,
-                                      NotificationKeyData notificationKey) {
+                      NotificationKeyData notificationKey) {
         updateMediaInfo();
     }
 
