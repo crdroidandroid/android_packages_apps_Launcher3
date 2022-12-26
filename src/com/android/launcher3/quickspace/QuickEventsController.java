@@ -40,6 +40,8 @@ public class QuickEventsController {
 
     private String mEventTitle;
     private String mEventTitleSub;
+    private String mGreetings;
+    private String mClockExt;
     private OnClickListener mEventTitleSubAction = null;
     private int mEventSubIcon;
 
@@ -54,8 +56,10 @@ public class QuickEventsController {
     // PSA + Personality
     private String[] mPSAMorningStr;
     private String[] mPSAEvenStr;
+    private String[] mPSAAfterNoonStr;
     private String[] mPSAMidniteStr;
     private String[] mPSARandomStr;
+    private String[] mPSAEarlyEvenStr;
     private String[] mWelcomeStr;
     private BroadcastReceiver mPSAListener = new BroadcastReceiver() {
         @Override
@@ -115,6 +119,8 @@ public class QuickEventsController {
         mWelcomeStr = mContext.getResources().getStringArray(R.array.welcome_message_variants);
         mEventTitleSub = mWelcomeStr[getLuckyNumber(0,mWelcomeStr.length - 1)];
         mEventSubIcon = R.drawable.ic_quickspace_crdroid;
+        mGreetings = mContext.getResources().getString(R.string.quickspace_grt_general);
+        mClockExt = mContext.getResources().getString(R.string.quickspace_ext_three);
 
         mEventTitleSubAction = new OnClickListener() {
             @Override
@@ -156,12 +162,13 @@ public class QuickEventsController {
 
         if (mNowPlayingTitle == null) return;
         
-        mEventTitle = mContext.getResources().getString(R.string.quick_event_ambient_now_playing);
+        mEventTitle = mNowPlayingTitle;
+        mGreetings = mContext.getResources().getString(R.string.qe_now_playing_ext_one);
+        mClockExt = mContext.getResources().getString(R.string.qe_now_playing_ext_two);
         if (mNowPlayingArtist == null ) {
-            mEventTitleSub = mNowPlayingTitle;
+            mEventTitleSub = mContext.getResources().getString(R.string.qe_now_playing_unknown_artist);
         } else {
-            mEventTitleSub = String.format(mContext.getResources().getString(
-                    R.string.quick_event_ambient_song_artist), mNowPlayingTitle, mNowPlayingArtist);
+            mEventTitleSub = mNowPlayingArtist;
         }
         mEventSubIcon = R.drawable.ic_music_note_24dp;
         mIsQuickEvent = true;
@@ -186,13 +193,13 @@ public class QuickEventsController {
 
     public void psonalityEvent() {
         if (!mIsFirstTimeDone || mEventNowPlaying) return;
-
-        if (!Utilities.isQuickspacePersonalityEnabled(mContext)) return;
-
-        mEventTitle = Utilities.formatDateTime(mContext);
+	
+	mEventTitle = Utilities.formatDateTime(mContext);
         mPSAMorningStr = mContext.getResources().getStringArray(R.array.quickspace_psa_morning);
         mPSAEvenStr = mContext.getResources().getStringArray(R.array.quickspace_psa_evening);
+        mPSAEarlyEvenStr = mContext.getResources().getStringArray(R.array.quickspace_psa_early_evening);
         mPSAMidniteStr = mContext.getResources().getStringArray(R.array.quickspace_psa_midnight);
+        mPSAAfterNoonStr = mContext.getResources().getStringArray(R.array.quickspace_psa_noon);
         mPSARandomStr = mContext.getResources().getStringArray(R.array.quickspace_psa_random);
         int psaLength;
 
@@ -205,24 +212,52 @@ public class QuickEventsController {
         };
 
         switch (Calendar.getInstance().get(Calendar.HOUR_OF_DAY)) {
-            case 5: case 6: case 7: case 8: case 9:
+        
+            case 5: case 6: case 7: case 8: case 9: case 10:
                 psaLength = mPSAMorningStr.length - 1;
                 mEventTitleSub = mPSAMorningStr[getLuckyNumber(0, psaLength)];
-                mEventSubIcon = R.drawable.ic_quickspace_morning;
+                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_morning);
+                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_one);
                 mIsQuickEvent = true;
                 break;
 
-            case 19: case 20: case 21: case 22: case 23:
+            case 21: case 22: case 23:
                 psaLength = mPSAEvenStr.length - 1;
                 mEventTitleSub = mPSAEvenStr[getLuckyNumber(0, psaLength)];
-                mEventSubIcon = R.drawable.ic_quickspace_evening;
+                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_evening);
+                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_three);
                 mIsQuickEvent = true;
                 break;
 
-            case 0: case 1: case 2: case 3: case 4:
+             case 18: case 19: case 20:
+                psaLength = mPSAEarlyEvenStr.length - 1;
+                mEventTitleSub = mPSAEarlyEvenStr[getLuckyNumber(0, psaLength)];
+                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_evening);
+                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_two);
+                mIsQuickEvent = true;
+                break;
+
+            case 15: case 16: case 17:
+                psaLength = mPSAAfterNoonStr.length - 1;
+                mEventTitleSub = mPSAAfterNoonStr[getLuckyNumber(0, psaLength)];
+                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_afternoon);
+                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_three);
+                mIsQuickEvent = true;
+                break;
+
+           case 0: case 1: case 2: case 3: case 4:
                 psaLength = mPSAMidniteStr.length - 1;
                 mEventTitleSub = mPSAMidniteStr[getLuckyNumber(0, psaLength)];
-                mEventSubIcon = R.drawable.ic_quickspace_midnight;
+                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_midnight);
+                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_three);
+                mIsQuickEvent = true;
+                break;
+
+           case 11: case 12: case 13: case 14:
+                psaLength = mPSARandomStr.length - 1;
+                mEventTitleSub = mPSARandomStr[getLuckyNumber(0, psaLength)];
+                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_general);
+                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_three);
                 mIsQuickEvent = true;
                 break;
 
@@ -255,6 +290,14 @@ public class QuickEventsController {
         return mEventTitleSub;
     }
 
+    public String getClockExt() {
+        return mClockExt;
+    }
+
+    public String getGreetings() {
+        return mGreetings;
+    }
+
     public OnClickListener getAction() {
         return mEventTitleSubAction;
     }
@@ -277,6 +320,10 @@ public class QuickEventsController {
         mNowPlayingArtist = artist;
         mClientLost = clientLost;
         mPlayingActive = activePlayback;
+    }
+
+    public boolean isNowPlaying() {
+        return mPlayingActive;
     }
 
     public void onPause() {
