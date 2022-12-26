@@ -22,5 +22,7 @@
         <permission name="android.permission.MANAGE_APP_LOCK"/>
         <permission name="android.permission.MEDIA_CONTENT_CONTROL"/>
         <permission name="android.permission.FORCE_STOP_PACKAGES"/>
+        <permission name="android.permission.GET_INTENT_SENDER_INTENT"/>
+        <permission name="com.android.alarm.permission.SET_ALARM"/>
     </privapp-permissions>
 </permissions>
