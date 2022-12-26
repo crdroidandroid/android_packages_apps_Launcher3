@@ -26,6 +26,8 @@
     <dimen name="overview_scroll_scale">0.9</dimen>
 
     <!-- QuickSpace -->
-    <dimen name="quickspace_title_size">24dp</dimen>
-    <dimen name="quickspace_alternate_title_size">22dp</dimen>
+    <dimen name="quickspace_title_size">20sp</dimen>
+    <dimen name="quickspace_subtitle_size">16sp</dimen>
+    <dimen name="quickspace_alternate_title_size">18sp</dimen>
+    <dimen name="quickspace_alternate_subtitle_size">16sp</dimen>
 </resources>
