@@ -15,13 +15,25 @@
  */
 package com.android.launcher3.quickspace;
 
+import android.app.PendingIntent;
 import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.content.SharedPreferences;
+import android.media.MediaMetadata;
+import android.media.session.MediaController;
+import android.media.session.MediaSession;
+import android.media.session.MediaSessionManager;
+import android.net.Uri;
+import android.provider.AlarmClock;
 import android.provider.Settings;
+import android.text.TextUtils;
+import android.widget.Toast;
 import android.view.View;
 import android.view.View.OnClickListener;
 
@@ -33,6 +45,8 @@ import com.android.launcher3.Utilities;
 import java.util.Calendar;
 import java.util.Random;
 
+import java.util.List;
+
 public class QuickEventsController {
 
     private static final String SETTING_DEVICE_INTRO_COMPLETED = "device_introduction_completed";
@@ -40,6 +54,8 @@ public class QuickEventsController {
 
     private String mEventTitle;
     private String mEventTitleSub;
+    private String mGreetings;
+    private String mClockExt;
     private OnClickListener mEventTitleSubAction = null;
     private int mEventSubIcon;
 
@@ -54,8 +70,10 @@ public class QuickEventsController {
     // PSA + Personality
     private String[] mPSAMorningStr;
     private String[] mPSAEvenStr;
+    private String[] mPSAAfterNoonStr;
     private String[] mPSAMidniteStr;
     private String[] mPSARandomStr;
+    private String[] mPSAEarlyEvenStr;
     private String[] mWelcomeStr;
     private BroadcastReceiver mPSAListener = new BroadcastReceiver() {
         @Override
@@ -110,11 +128,19 @@ public class QuickEventsController {
         if (!mRunning) return;
 
         if (mIsFirstTimeDone) return;
+        
         mIsQuickEvent = true;
-        mEventTitle = mContext.getResources().getString(R.string.quick_event_rom_intro_welcome);
+
+        if (Utilities.useAlternativeQuickspaceUI(mContext)) {
+            mEventTitle = mContext.getResources().getString(R.string.quick_event_rom_intro_welcome_ext);
+        } else {
+            mEventTitle = mContext.getResources().getString(R.string.quick_event_rom_intro_welcome);
+        }
         mWelcomeStr = mContext.getResources().getStringArray(R.array.welcome_message_variants);
         mEventTitleSub = mWelcomeStr[getLuckyNumber(0,mWelcomeStr.length - 1)];
         mEventSubIcon = R.drawable.ic_quickspace_crdroid;
+        mGreetings = mContext.getResources().getString(R.string.quickspace_grt_general);
+        mClockExt = mContext.getResources().getString(R.string.quickspace_ext_three);
 
         mEventTitleSubAction = new OnClickListener() {
             @Override
@@ -156,73 +182,161 @@ public class QuickEventsController {
 
         if (mNowPlayingTitle == null) return;
         
-        mEventTitle = mContext.getResources().getString(R.string.quick_event_ambient_now_playing);
+        mEventTitle = mNowPlayingTitle;
+        mGreetings = mContext.getResources().getString(R.string.qe_now_playing_ext_one);
+        mClockExt = mContext.getResources().getString(R.string.qe_now_playing_ext_two);
         if (mNowPlayingArtist == null ) {
-            mEventTitleSub = mNowPlayingTitle;
+            mEventTitleSub = mContext.getResources().getString(R.string.qe_now_playing_unknown_artist);
         } else {
-            mEventTitleSub = String.format(mContext.getResources().getString(
-                    R.string.quick_event_ambient_song_artist), mNowPlayingTitle, mNowPlayingArtist);
+            mEventTitleSub = mNowPlayingArtist;
         }
         mEventSubIcon = R.drawable.ic_music_note_24dp;
         mIsQuickEvent = true;
         mEventNowPlaying = true;
 
-        mEventTitleSubAction = new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (mPlayingActive) {
-                    // Work required for local media actions
-                    Intent npIntent = new Intent(Intent.ACTION_MAIN);
-                    npIntent.addCategory(Intent.CATEGORY_APP_MUSIC);
-                    npIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    try {
-                        Launcher.getLauncher(mContext).startActivitySafely(view, npIntent, null);
-                    } catch (ActivityNotFoundException ex) {
-                    }
-                }
-            }
-        };
+        mEventTitleSubAction = new View.OnClickListener() {
+	        @Override
+	        public void onClick(View view) {
+		    if (mPlayingActive) {
+		        MediaSessionManager mediaSessionManager = (MediaSessionManager) mContext.getSystemService(Context.MEDIA_SESSION_SERVICE);
+		        List<MediaController> sessions = mediaSessionManager.getActiveSessions(null);
+
+		        if (sessions != null && !sessions.isEmpty()) {
+		            MediaController mediaController = sessions.get(0);
+		            MediaSession.Token token = mediaController.getSessionToken();
+		            PendingIntent sessionActivity = mediaController.getSessionActivity();
+
+		            if (sessionActivity != null) {
+		                Intent intent = sessionActivity.getIntent();
+
+		                if (intent != null) {
+		                    ComponentName componentName = intent.getComponent();
+		                    if (componentName != null) {
+		                        String packageName = componentName.getPackageName();
+		                        if (packageName != null) {
+		                            Intent launchIntent = mContext.getPackageManager().getLaunchIntentForPackage(packageName);
+
+		                            if (launchIntent != null) {
+		                                launchIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		                                try {
+		                                    // try if package name launch intent works
+		                                    mContext.startActivity(launchIntent);
+		                                    return; // Exit the method after starting the activity
+		                                } catch (Exception e) {}
+		                            }
+		                        }
+		                    }
+
+		                    try {
+		                        // try session activity
+		                        mContext.startActivity(intent);
+		                        return; // Exit the method after starting the activity
+		                    } catch (Exception e) {}
+		                }
+		            }
+
+		            // last resort: Work required for local media actions
+		            Intent npIntent = new Intent(Intent.ACTION_MAIN);
+		            npIntent.addCategory(Intent.CATEGORY_APP_MUSIC);
+		            npIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+		            try {
+		                Launcher.getLauncher(mContext).startActivitySafely(view, npIntent, null);
+		            } catch (ActivityNotFoundException ex) {}
+		        }
+		    }
+	        }
+	    };
     }
 
     public void psonalityEvent() {
         if (!mIsFirstTimeDone || mEventNowPlaying) return;
-
-        if (!Utilities.isQuickspacePersonalityEnabled(mContext)) return;
-
-        mEventTitle = Utilities.formatDateTime(mContext);
+	
+	mEventTitle = Utilities.formatDateTime(mContext);
         mPSAMorningStr = mContext.getResources().getStringArray(R.array.quickspace_psa_morning);
         mPSAEvenStr = mContext.getResources().getStringArray(R.array.quickspace_psa_evening);
+        mPSAEarlyEvenStr = mContext.getResources().getStringArray(R.array.quickspace_psa_early_evening);
         mPSAMidniteStr = mContext.getResources().getStringArray(R.array.quickspace_psa_midnight);
+        mPSAAfterNoonStr = mContext.getResources().getStringArray(R.array.quickspace_psa_noon);
         mPSARandomStr = mContext.getResources().getStringArray(R.array.quickspace_psa_random);
         int psaLength;
 
-        // Clean the onClick event to avoid any weird behavior
-        mEventTitleSubAction = new OnClickListener() {
+        mEventTitleSubAction = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // haha yes
+                Intent calendarIntent = new Intent(Intent.ACTION_MAIN);
+                calendarIntent.addCategory(Intent.CATEGORY_APP_CALENDAR);
+
+                Intent clockIntent = new Intent(AlarmClock.ACTION_SHOW_ALARMS);
+
+                PackageManager packageManager = mContext.getPackageManager();
+                List<ResolveInfo> calendarApps = packageManager.queryIntentActivities(calendarIntent, PackageManager.MATCH_DEFAULT_ONLY);
+                List<ResolveInfo> clockApps = packageManager.queryIntentActivities(clockIntent, PackageManager.MATCH_DEFAULT_ONLY);
+
+                if (!calendarApps.isEmpty()) {
+                    calendarIntent.setPackage(calendarApps.get(0).activityInfo.packageName);
+                    try {
+                        mContext.startActivity(calendarIntent);
+                    } catch (ActivityNotFoundException e) {
+                    }
+                } else if (!clockApps.isEmpty()) {
+                    clockIntent.setPackage(clockApps.get(0).activityInfo.packageName);
+                    try {
+                        mContext.startActivity(clockIntent);
+                    } catch (ActivityNotFoundException e) {
+                    }
+                } else {
+                    Toast.makeText(mContext, R.string.intent_no_app_clock_found, Toast.LENGTH_SHORT).show();
+                }
             }
         };
 
         switch (Calendar.getInstance().get(Calendar.HOUR_OF_DAY)) {
-            case 5: case 6: case 7: case 8: case 9:
+            case 5: case 6: case 7: case 8: case 9: case 10:
                 psaLength = mPSAMorningStr.length - 1;
                 mEventTitleSub = mPSAMorningStr[getLuckyNumber(0, psaLength)];
-                mEventSubIcon = R.drawable.ic_quickspace_morning;
+                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_morning);
+                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_one);
                 mIsQuickEvent = true;
                 break;
 
-            case 19: case 20: case 21: case 22: case 23:
+            case 21: case 22: case 23:
                 psaLength = mPSAEvenStr.length - 1;
                 mEventTitleSub = mPSAEvenStr[getLuckyNumber(0, psaLength)];
-                mEventSubIcon = R.drawable.ic_quickspace_evening;
+                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_evening);
+                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_three);
+                mIsQuickEvent = true;
+                break;
+
+            case 18: case 19: case 20:
+                psaLength = mPSAEarlyEvenStr.length - 1;
+                mEventTitleSub = mPSAEarlyEvenStr[getLuckyNumber(0, psaLength)];
+                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_evening);
+                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_two);
+                mIsQuickEvent = true;
+                break;
+
+            case 15: case 16: case 17:
+                psaLength = mPSAAfterNoonStr.length - 1;
+                mEventTitleSub = mPSAAfterNoonStr[getLuckyNumber(0, psaLength)];
+                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_afternoon);
+                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_three);
                 mIsQuickEvent = true;
                 break;
 
             case 0: case 1: case 2: case 3: case 4:
                 psaLength = mPSAMidniteStr.length - 1;
                 mEventTitleSub = mPSAMidniteStr[getLuckyNumber(0, psaLength)];
-                mEventSubIcon = R.drawable.ic_quickspace_midnight;
+                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_midnight);
+                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_three);
+                mIsQuickEvent = true;
+                break;
+
+            case 11: case 12: case 13: case 14:
+                psaLength = mPSARandomStr.length - 1;
+                mEventTitleSub = mPSARandomStr[getLuckyNumber(0, psaLength)];
+                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_general);
+                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_three);
                 mIsQuickEvent = true;
                 break;
 
@@ -255,6 +369,14 @@ public class QuickEventsController {
         return mEventTitleSub;
     }
 
+    public String getClockExt() {
+        return mClockExt;
+    }
+
+    public String getGreetings() {
+        return mGreetings;
+    }
+
     public OnClickListener getAction() {
         return mEventTitleSubAction;
     }
@@ -277,6 +399,10 @@ public class QuickEventsController {
         mNowPlayingArtist = artist;
         mClientLost = clientLost;
         mPlayingActive = activePlayback;
+    }
+
+    public boolean isNowPlaying() {
+        return mPlayingActive;
     }
 
     public void onPause() {
