@@ -240,6 +240,6 @@
     <string name="recent_task_option_kill_app">Đóng</string>
     <string name="recents_app_killed">Ứng dụng đã tắt</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Trống | %2$s Tổng cộng</string>
-    <string name="recents_meminfo_title">Thông tin bộ nhớ</string>
+    <string name="meminfo_text">Còn trống: %1$s | Tổng số: %2$s</string>
+    <string name="recents_meminfo_title">Hiện bộ nhớ truy cập ứng dụng</string>
 </resources>
