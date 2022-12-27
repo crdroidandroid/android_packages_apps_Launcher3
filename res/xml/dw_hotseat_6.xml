@@ -73,7 +73,7 @@
         launcher:y="0" >
         <favorite
             launcher:packageName="org.lineageos.aperture"
-            launcher:className="com.android.camera.CameraLauncher" />
+            launcher:className="org.lineageos.aperture.CameraLauncher" />
         <favorite
             launcher:packageName="com.android.camera2"
             launcher:className="com.android.camera.CameraActivity" />
