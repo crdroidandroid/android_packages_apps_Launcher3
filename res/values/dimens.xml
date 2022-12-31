@@ -141,7 +141,7 @@
     <dimen name="all_apps_paged_view_top_padding">40dp</dimen>
 
     <dimen name="all_apps_icon_drawable_padding">8dp</dimen>
-    <dimen name="all_apps_predicted_icon_vertical_padding">8dp</dimen>
+    <dimen name="all_apps_predicted_icon_vertical_padding">16dp</dimen>
     <!-- The size of corner radius of the arrow in the arrow toast. -->
     <dimen name="arrow_toast_corner_radius">2dp</dimen>
     <dimen name="arrow_toast_elevation">2dp</dimen>
