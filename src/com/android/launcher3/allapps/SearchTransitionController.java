@@ -193,7 +193,7 @@ public class SearchTransitionController {
             appRowComplete |= appRowHeight > 0 && spanIndex == 0;
             // We don't animate the first (currently only) app row we see, as that is assumed to be
             // predicted/prefix-matched apps.
-            boolean shouldAnimate = !isAppIcon(searchResultView) || appRowComplete;
+            boolean shouldAnimate = appRowComplete;
 
             float contentAlpha = 1f;
             float backgroundAlpha = 1f;
