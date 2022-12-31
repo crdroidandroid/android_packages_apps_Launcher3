@@ -188,23 +188,6 @@ public class SearchTransitionController {
                 top = searchResultView.getTop();
             }
 
-            if (searchResultView instanceof BubbleTextView
-                    && searchResultView.getTag() instanceof ItemInfo
-                    && ((ItemInfo) searchResultView.getTag()).itemType == ITEM_TYPE_APPLICATION) {
-                // The first app icon will set appRowHeight, which will also contribute to
-                // totalHeight. Additional app icons should remove the appRowHeight to remain in
-                // the same row as the first app.
-                searchResultView.setY(top + totalHeight - appRowHeight);
-                if (appRowHeight == 0) {
-                    appRowHeight = searchResultView.getHeight();
-                    totalHeight += appRowHeight;
-                }
-                // Don't scale/fade app row.
-                searchResultView.setScaleY(1);
-                searchResultView.setAlpha(1);
-                continue;
-            }
-
             // Adjust content alpha based on start progress and stagger.
             float startContentFadeProgress = Math.max(0,
                     TOP_CONTENT_FADE_PROGRESS_START - CONTENT_STAGGER * numSearchResultsAnimated);
