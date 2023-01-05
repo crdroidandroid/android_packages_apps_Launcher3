@@ -21,7 +21,7 @@
     <string name="settings_title">主屏幕设置</string>
     <!-- Categories -->
     <string name="home_category_title">主屏幕</string>
-    <string name="home_category_summary">设置 Google now 面板等</string>
+    <string name="home_category_summary">设置 Google 信息流等</string>
     <string name="icons_category_title">图标</string>
     <string name="icons_category_summary">设置图标大小等</string>
     <string name="app_drawer_category_title">应用抽屉</string>
@@ -30,14 +30,14 @@
     <string name="recents_category_summary">改进概览屏幕</string>
     <string name="misc_category_title">其他</string>
     <string name="misc_category_summary">其他选项</string>
-    <string name="general_category_title">一般</string>
+    <string name="general_category_title">通用</string>
     <string name="interface_category_title">界面</string>
     <string name="quickspace_category_title">快捷空间</string>
     <string name="search_bar_category_title">搜索栏</string>
     <string name="actions_category_title">快捷操作</string>
     <!-- Developer options -->
     <string name="dev_options_title">开发者选项</string>
-    <string name="dev_options_summary">冒险开启一些隐藏功能</string>
+    <string name="dev_options_summary">开启一些可能造成问题的隐藏功能</string>
     <!-- Edit workspace -->
     <string name="settings_lock_layout_title">锁定布局</string>
     <string name="settings_lock_layout_summary_on">不可在主屏幕上添加、删除和移动图标及小部件</string>
