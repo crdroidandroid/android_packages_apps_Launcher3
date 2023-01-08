@@ -210,5 +210,5 @@
     <string name="floating_task_action" translatable="false"></string>
 
     <!-- Whether to place memory info below action buttons. -->
-    <bool name="config_placeMemInfoBelowActions">false</bool>
+    <bool name="config_placeMemInfoBelowActions">true</bool>
 </resources>
