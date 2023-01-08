@@ -242,4 +242,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Beschikbaar | %2$s Totaal</string>
     <string name="recents_meminfo_title">Geheugen informatie</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">App zoekbalk</string>
+    <string name="drawer_search_summary">Zoekbalk bovenaan het app-overzicht</string>
 </resources>

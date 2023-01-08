@@ -242,4 +242,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s k dispozici | %2$s celkem</string>
     <string name="recents_meminfo_title">Informace o\u00a0paměti</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Vyhledávací panel aplikací</string>
+    <string name="drawer_search_summary">Vyhledávací panel v horní části rolety aplikací</string>
 </resources>

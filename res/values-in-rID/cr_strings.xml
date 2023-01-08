@@ -242,4 +242,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Tersedia | %2$s Total</string>
     <string name="recents_meminfo_title">Info memori</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Bilah pencarian aplikasi</string>
+    <string name="drawer_search_summary">Bilah pencarian di atas laci aplikasi</string>
 </resources>

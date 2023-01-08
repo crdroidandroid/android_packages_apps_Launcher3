@@ -242,4 +242,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Доступно | %2$s Загалом</string>
     <string name="recents_meminfo_title">Інформація про пам\'ять</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Панель пошуку додатків</string>
+    <string name="drawer_search_summary">Рядок пошуку поверх списку додатків</string>
 </resources>

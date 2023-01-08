@@ -242,4 +242,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s متاحة / %2$s كإجمالي</string>
     <string name="recents_meminfo_title">معلومات الذاكرة</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">شريط بحث البرامج</string>
+    <string name="drawer_search_summary">شريط البحث في أعلى قائمة التطبيقات</string>
 </resources>

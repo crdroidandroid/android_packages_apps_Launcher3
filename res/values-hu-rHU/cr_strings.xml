@@ -242,4 +242,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%2$s memóból %1$s érhető el</string>
     <string name="recents_meminfo_title">Memória-információ</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Alkalmazásfiók-keresősáv</string>
+    <string name="drawer_search_summary">A keresősáv az Alkalmazásfiók tetején</string>
 </resources>

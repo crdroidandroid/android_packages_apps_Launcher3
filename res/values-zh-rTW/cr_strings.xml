@@ -242,4 +242,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">可用 %1$s | 總共 %2$s</string>
     <string name="recents_meminfo_title">記憶體</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">搜尋列</string>
+    <string name="drawer_search_summary">應用程式清單頂部的搜尋列</string>
 </resources>
