@@ -14,7 +14,9 @@ public class AssistantIconView extends ImageView {
         super(context, attrs);
         setScaleType(ScaleType.CENTER);
         setOnClickListener(view -> {
-            Intent intent = new Intent(Intent.ACTION_VOICE_COMMAND).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK).setPackage(QsbContainerView.getSearchWidgetPackageName(context));
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.setAction("com.google.android.googlequicksearchbox.MUSIC_SEARCH");
             context.startActivity(intent);
         });
     }
@@ -23,7 +25,9 @@ public class AssistantIconView extends ImageView {
         super(context, attrs, defStyle);
         setScaleType(ScaleType.CENTER);
         setOnClickListener(view -> {
-            Intent intent = new Intent(Intent.ACTION_VOICE_COMMAND).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK).setPackage(QsbContainerView.getSearchWidgetPackageName(context));
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.setAction("com.google.android.googlequicksearchbox.MUSIC_SEARCH");
             context.startActivity(intent);
         });
     }
