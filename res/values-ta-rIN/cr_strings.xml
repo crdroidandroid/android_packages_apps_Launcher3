@@ -92,44 +92,44 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>Um... good night?</item>
         <item>It\'s a bit late now</item>
         <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>இந்த நேரத்தில் நீங்கள் அதிக வேலை செய்கிறீர்களா?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
+        <item>அறியாமையே பேரின்பம்</item>
         <item>Is it time to flash another update already?</item>
         <item>Hyped about Android 12?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
-        <item>Open goodness with crDroid</item>
-        <item>Spread love not havoc</item>
-        <item>Have fun!</item>
-        <item>Time for some good music</item>
+        <item>வணக்கம், என்ன நடக்கிறது?</item>
+        <item>உங்கள் பணிகளில் கவனம் செலுத்துங்கள்</item>
+        <item>எத்தனை திரைப்பதிவுகளை எடுக்கிறீர்கள்?</item>
+        <item>CrDroid உடன் நன்மைகளை அனுபவிங்கள்</item>
+        <item>அன்பை பரப்புங்கள் அழிவை அல்ல</item>
+        <item>மகிழுங்கள்!</item>
+        <item>இது நல்ல இசைக்கான நேரம்</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
-        <item>We love you 3000</item>
-        <item>Stay Home, Stay Safe</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>How is everything going?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
+        <item>இதைப் பார்க்க உங்களுக்கு crDroid பிரீமியம் தேவை</item>
+        <item>யூனிகார்னின் பரம்பரையை நினைவில் கொள்க</item>
+        <item>நீட்டிக்கப்பட்ட மின்கல ஆயுளை அனுபவிக்கவும்</item>
+        <item>முதலில் இருந்து தொடங்குகிறது</item>
+        <item>நாங்கள் உங்களை 3000 மடங்கு நேசிக்கிறோம்</item>
+        <item>வீட்டிலேயே இருங்கள், பாதுகாப்பாக இருங்கள்</item>
+        <item>இன்று ஏதாவது நல்லது செய்யுங்கள்</item>
+        <item>இதுதான் சிறந்த Pixel அனுபவம், இல்லையா?</item>
+        <item>எல்லாம் எப்படி நடக்கிறது?</item>
+        <item>மாயை அல்ல, உண்மைக்கு வருக!</item>
+        <item>தங்கள் ஆதரவுக்கு நன்றி</item>
+        <item>முட்டாள்தனத்திற்கு கொண்டாட்டம் அல்ல - முழுமை மட்டுமே!</item>
+        <item>தரவியக்கியின் சிறந்த தேர்வுகளில் ஒன்று</item>
+        <item>உங்கள் பிரம்மைக்கு நல்லறிவு</item>
+        <item>குளிர் இனிப்புகளை சுவைக்கவும்</item>
+        <item>என்ன ஒரு அழகான அனுபவம், இல்லையா?</item>
+        <item>பரிணாம வளர்ச்சி என்பது ஒரு கட்டுக்கதை, இல்லையா?</item>
         <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
+        <item>உங்கள் மனதில் என்ன இருக்கிறது?</item>
         <item>Winner Winner ....?</item>
         <item>rm -rf \/</item>
     </string-array>
     <!-- Recents screen, close app -->
-    <string name="recents_close_app">Close app</string>
+    <string name="recents_close_app">செயலியை மூடு</string>
     <string name="allow_swipe_down_clearall_title">Swipe down to clear all recents</string>
     <string name="allow_swipe_down_clearall_desc">Enable to clear all recents in the overview screen by swiping down</string>
     <!-- Custom seekbar -->
@@ -154,9 +154,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_info_source_system">System</string>
     <string name="app_info_last_update">Last update</string>
     <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_more">மேலும்</string>
     <!-- Show dock search widget -->
-    <string name="dock_search_title">Google search bar</string>
+    <string name="dock_search_title">Google தேடல்</string>
     <string name="dock_search_summary">Show search bar in the bottom dock</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Suggestions</string>
