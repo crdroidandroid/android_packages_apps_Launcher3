@@ -133,7 +133,6 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
     private final int mHeaderProtectionColor;
     protected final float mHeaderThreshold;
     private ScrimView mScrimView;
-    private int mHeaderColor;
     private int mTabsProtectionAlpha;
 
     protected BaseAllAppsContainerView(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -737,32 +736,7 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
         if (!mHeader.isHeaderProtectionSupported()) {
             return;
         }
-        if (DEBUG_HEADER_PROTECTION) {
-            mHeaderPaint.setColor(Color.MAGENTA);
-            mHeaderPaint.setAlpha(255);
-        } else {
-            mHeaderPaint.setColor(mHeaderColor);
-            mHeaderPaint.setAlpha((int) (getAlpha() * Color.alpha(mHeaderColor)));
-        }
-        if (mHeaderPaint.getColor() != mScrimColor && mHeaderPaint.getColor() != 0) {
-            int bottom = getHeaderBottom();
-            FloatingHeaderView headerView = getFloatingHeaderView();
-            if (!mUsingTabs) {
-                // Add protection which is otherwise added when tabs scroll up.
-                bottom += headerView.getTabsAdditionalPaddingTop();
-            }
-            canvas.drawRect(0, 0, canvas.getWidth(), bottom, mHeaderPaint);
-            int tabsHeight = headerView.getPeripheralProtectionHeight();
-            if (mTabsProtectionAlpha > 0 && tabsHeight != 0) {
-                if (DEBUG_HEADER_PROTECTION) {
-                    mHeaderPaint.setColor(Color.BLUE);
-                    mHeaderPaint.setAlpha(255);
-                } else {
-                    mHeaderPaint.setAlpha((int) (getAlpha() * mTabsProtectionAlpha));
-                }
-                canvas.drawRect(0, bottom, canvas.getWidth(), bottom + tabsHeight, mHeaderPaint);
-            }
-        }
+        mHeaderPaint.setColor(mHeaderProtectionColor);
     }
 
     /**
@@ -776,20 +750,14 @@ public abstract class BaseAllAppsContainerView<T extends Context & ActivityConte
 
     protected void updateHeaderScroll(int scrolledOffset) {
         float prog = Utilities.boundToRange((float) scrolledOffset / mHeaderThreshold, 0f, 1f);
-        int headerColor = getHeaderColor(prog);
         int tabsAlpha = mHeader.getPeripheralProtectionHeight() == 0 ? 0
                 : (int) (Utilities.boundToRange(
                         (scrolledOffset + mHeader.mSnappedScrolledY) / mHeaderThreshold, 0f, 1f)
                         * 255);
-        if (headerColor != mHeaderColor || mTabsProtectionAlpha != tabsAlpha) {
-            mHeaderColor = headerColor;
+        if (mTabsProtectionAlpha != tabsAlpha) {
             mTabsProtectionAlpha = tabsAlpha;
             invalidateHeader();
         }
-    }
-
-    protected int getHeaderColor(float blendRatio) {
-        return ColorUtils.blendARGB(mScrimColor, mHeaderProtectionColor, blendRatio);
     }
 
     protected abstract BaseAllAppsAdapter<T> createAdapter(AlphabeticalAppsList<T> mAppsList,
