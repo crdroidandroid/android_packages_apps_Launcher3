@@ -32,7 +32,7 @@
             android:key="pref_recents_opacity"
             android:title="@string/background_opacity_title"
             android:persistent="true"
-            android:max="100"
+            android:max="80"
             android:min="0"
             settings:units="%"
             android:defaultValue="40" />
