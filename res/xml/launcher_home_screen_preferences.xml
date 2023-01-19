@@ -161,8 +161,7 @@
             android:min="0"
             settings:interval="5"
             settings:units="%"
-            android:defaultValue="100"
-            android:dependency="pref_dock_search" />
+            android:defaultValue="100" />
 
     </PreferenceCategory>
 
