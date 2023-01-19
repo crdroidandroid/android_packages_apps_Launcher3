@@ -148,22 +148,23 @@ public class AppsSearchContainerLayout extends ExtendedEditText
     }
 
     private void setUpBackground() {
-        float cornerRadius = getCornerRadius();
-        int color = Themes.getAttrColor(getContext(), R.attr.qsbFillColor);
-        if (Utilities.isThemedIconsEnabled(getContext()))
-            color = Themes.getColorBackgroundFloating(getContext());
+        Context context = getContext();
+        float cornerRadius = getCornerRadius(context);
+        int color = Themes.getAttrColor(context, R.attr.qsbFillColor);
+        if (Utilities.isThemedIconsEnabled(context))
+            color = Themes.getAttrColor(context, R.attr.qsbFillColorThemed);
         PaintDrawable pd = new PaintDrawable(color);
         pd.setCornerRadius(cornerRadius);
         setClipToOutline(cornerRadius > 0);
         setBackground(pd);
     }
 
-    private float getCornerRadius() {
-        Resources res = getContext().getResources();
+    private float getCornerRadius(Context context) {
+        Resources res = context.getResources();
         float qsbWidgetHeight = res.getDimension(R.dimen.qsb_widget_height);
         float qsbWidgetPadding = res.getDimension(R.dimen.qsb_widget_vertical_padding);
         float innerHeight = qsbWidgetHeight - 2 * qsbWidgetPadding;
-        return (innerHeight / 2) * ((float)Utilities.getCornerRadius(getContext()) / 100f);
+        return (innerHeight / 2) * ((float)Utilities.getCornerRadius(context) / 100f);
     }
 
     @Override
