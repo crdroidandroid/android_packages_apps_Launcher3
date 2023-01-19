@@ -23,7 +23,9 @@ import static com.android.launcher3.Utilities.prefixTextWithIcon;
 import static com.android.launcher3.icons.IconNormalizer.ICON_VISIBLE_AREA_FACTOR;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.PaintDrawable;
 import android.graphics.Rect;
 import android.text.Selection;
 import android.text.SpannableStringBuilder;
@@ -43,6 +45,7 @@ import com.android.launcher3.allapps.AllAppsStore;
 import com.android.launcher3.allapps.BaseAllAppsAdapter.AdapterItem;
 import com.android.launcher3.allapps.SearchUiManager;
 import com.android.launcher3.search.SearchCallback;
+import com.android.launcher3.util.Themes;
 import com.android.launcher3.views.ActivityContext;
 
 import java.util.ArrayList;
@@ -140,6 +143,27 @@ public class AppsSearchContainerLayout extends ExtendedEditText
         }
 
         offsetTopAndBottom(mContentOverlap);
+
+        setUpBackground();
+    }
+
+    private void setUpBackground() {
+        float cornerRadius = getCornerRadius();
+        int color = Themes.getAttrColor(getContext(), R.attr.qsbFillColor);
+        if (Utilities.isThemedIconsEnabled(getContext()))
+            color = Themes.getColorBackgroundFloating(getContext());
+        PaintDrawable pd = new PaintDrawable(color);
+        pd.setCornerRadius(cornerRadius);
+        setClipToOutline(cornerRadius > 0);
+        setBackground(pd);
+    }
+
+    private float getCornerRadius() {
+        Resources res = getContext().getResources();
+        float qsbWidgetHeight = res.getDimension(R.dimen.qsb_widget_height);
+        float qsbWidgetPadding = res.getDimension(R.dimen.qsb_widget_vertical_padding);
+        float innerHeight = qsbWidgetHeight - 2 * qsbWidgetPadding;
+        return (innerHeight / 2) * ((float)Utilities.getCornerRadius(getContext()) / 100f);
     }
 
     @Override
