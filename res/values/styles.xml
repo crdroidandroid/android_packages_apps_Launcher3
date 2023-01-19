@@ -229,11 +229,11 @@
     </style>
 
     <!-- Theme for the widget container. -->
-    <style name="WidgetContainerTheme" parent="@android:style/Theme.DeviceDefault.Settings">
+    <style name="WidgetContainerTheme" parent="AppTheme">
         <item name="android:textColorSecondary">?android:attr/textColorPrimary</item>
         <item name="android:colorEdgeEffect">?android:attr/textColorSecondary</item>
     </style>
-    <style name="WidgetContainerTheme.Dark" parent="AppTheme.Dark">
+    <style name="WidgetContainerTheme.Dark" parent="AppTheme.DarkMainColor">
         <item name="android:colorEdgeEffect">?android:attr/textColorSecondary</item>
     </style>
 
