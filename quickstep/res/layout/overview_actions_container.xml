@@ -24,6 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/overview_actions_height"
         android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:orientation="horizontal">
 
         <Space
