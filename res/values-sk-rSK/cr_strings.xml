@@ -123,13 +123,13 @@
     <string name="hotseat_bg_title">Hotseat background</string>
     <string name="hotseat_bg_summary">Pridať priesvitné pozadie do doku aplikácie</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_subtext">Potiahnutím prstom nadol zatvoríte informácie o aplikácii</string>
+    <string name="app_info_source">Zdroj</string>
+    <string name="app_info_source_system">Systém</string>
+    <string name="app_info_last_update">Posledná aktualizácia</string>
+    <string name="app_info_version">Verzia</string>
+    <string name="app_info_more">Viac</string>
     <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Themed icons</string>
+    <string name="pref_themed_icons_title">Tematické ikony</string>
     <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
 </resources>
