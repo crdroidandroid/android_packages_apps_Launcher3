@@ -111,6 +111,7 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
             case Utilities.KEY_SHOW_QUICKSPACE_NOWPLAYING:
             case Utilities.KEY_SHOW_QUICKSPACE_WEATHER:
             case Utilities.KEY_SHOW_QUICKSPACE_PSONALITY:
+            case Utilities.KEY_DOCK_MUSIC_SEARCH:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:
