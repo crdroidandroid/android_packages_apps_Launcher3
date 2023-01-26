@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016-2021 crDroid Android Project
+     Copyright (C) 2016-2023 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -19,5 +19,5 @@
     <color name="disabled_text_color">#66000000</color> <!-- 38% black -->
     
     <!-- Appseat -->
-    <color name="appseat_color">#50181c1f</color>
+    <color name="appseat_color">#50D9DADB</color>
 </resources>
