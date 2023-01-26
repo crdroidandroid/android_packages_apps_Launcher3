@@ -140,6 +140,13 @@
             launcher:iconSpaceReserved="false" />
 
         <SwitchPreferenceCompat
+            android:key="pref_dock_music_search"
+            android:title="@string/dock_music_search_title"
+            android:summary="@string/dock_music_search_summary"
+            android:defaultValue="false"
+            launcher:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
             android:key="pref_dock_theme"
             android:title="@string/dock_theme_title"
             android:summary="@string/dock_theme_summary"
