@@ -56,13 +56,14 @@ public class LauncherIconProvider extends IconProvider {
      * Enables or disables icon theme support
      */
     public void setIconThemeSupported(boolean isSupported) {
-        mSupportsIconTheme = isSupported && FeatureFlags.USE_LOCAL_ICON_OVERRIDES.get();
-        mThemedIconMap = isSupported ? buildThemedIconMap() : DISABLED_MAP;
+        mSupportsIconTheme = isSupported;
+        mThemedIconMap = isSupported && FeatureFlags.USE_LOCAL_ICON_OVERRIDES.get()
+                ? null : DISABLED_MAP;
     }
 
     @Override
     protected ThemeData getThemeDataForPackage(String packageName) {
-        return mSupportsIconTheme ? mThemedIconMap.get(packageName) : null;
+        return getThemedIconMap().get(packageName);
     }
 
     @Override
@@ -71,7 +72,10 @@ public class LauncherIconProvider extends IconProvider {
                 + "," + Build.VERSION.INCREMENTAL;
     }
 
-    private Map<String, ThemeData> buildThemedIconMap() {
+    private Map<String, ThemeData> getThemedIconMap() {
+        if (mThemedIconMap != null) {
+            return mThemedIconMap;
+        }
         ArrayMap<String, ThemeData> map = new ArrayMap<>();
         Resources res = mContext.getResources();
         try (XmlResourceParser parser = res.getXml(R.xml.grayscale_icon_map)) {
@@ -94,8 +98,7 @@ public class LauncherIconProvider extends IconProvider {
                 }
             }
         } catch (Exception e) {
-            mThemedIconMap = DISABLED_MAP;
-            return mThemedIconMap;
+            Log.e(TAG, "Unable to parse icon map", e);
         }
         mThemedIconMap = map;
         return mThemedIconMap;
