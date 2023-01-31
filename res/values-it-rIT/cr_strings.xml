@@ -237,12 +237,12 @@
     <string name="icon_pack_add">Installa altro</string>
     <string name="icon_pack_no_market">Nessun app store disponibile</string>
     <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">Termina</string>
+    <string name="recents_app_killed">Applicazione terminata</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s Available | %2$s Total</string>
-    <string name="recents_meminfo_title">Memory info</string>
+    <string name="meminfo_text">%1$s Disponibile | %2$s Totale</string>
+    <string name="recents_meminfo_title">Informazioni sulla memoria</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar</string>
-    <string name="drawer_search_summary">Search bar on top of the app drawer</string>
+    <string name="drawer_search_title">Barra di ricerca delle applicazioni</string>
+    <string name="drawer_search_summary">Barra di ricerca all\'inizio del cassetto delle applicazioni</string>
 </resources>
