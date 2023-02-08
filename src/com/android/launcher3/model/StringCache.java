@@ -193,15 +193,15 @@ public class StringCache {
         workProfileEduAccept = getEnterpriseString(
                 context, WORK_PROFILE_EDU_ACCEPT, R.string.work_profile_edu_accept);
         workProfilePausedTitle = getEnterpriseString(
-                context, WORK_PROFILE_PAUSED_TITLE, R.string.work_apps_paused_title);
+                context, WORK_PROFILE_PAUSED_TITLE, R.string.work_apps_paused_title_custom);
         workProfilePausedDescription = getEnterpriseString(
                 context,
                 WORK_PROFILE_PAUSED_DESCRIPTION,
                 () -> getDefaultWorkProfilePausedDescriptionString(context));
         workProfilePauseButton = getEnterpriseString(
-                context, WORK_PROFILE_PAUSE_BUTTON, R.string.work_apps_pause_btn_text);
+                context, WORK_PROFILE_PAUSE_BUTTON, R.string.work_apps_pause_btn_text_custom);
         workProfileEnableButton = getEnterpriseString(
-                context, WORK_PROFILE_ENABLE_BUTTON, R.string.work_apps_enable_btn_text);
+                context, WORK_PROFILE_ENABLE_BUTTON, R.string.work_apps_enable_btn_text_custom);
         allAppsWorkTab = getEnterpriseString(
                 context, ALL_APPS_WORK_TAB, R.string.all_apps_work_tab);
         allAppsPersonalTab = getEnterpriseString(
@@ -228,8 +228,8 @@ public class StringCache {
                     dpm.getManagedSubscriptionsPolicy().getPolicyType()
                             == ManagedSubscriptionsPolicy.TYPE_ALL_MANAGED_SUBSCRIPTIONS;
             return telephonyIsUnavailable
-                    ? context.getString(R.string.work_apps_paused_telephony_unavailable_body)
-                    : context.getString(R.string.work_apps_paused_info_body);
+                    ? context.getString(R.string.work_apps_paused_telephony_unavailable_body_custom)
+                    : context.getString(R.string.work_apps_paused_info_body_custom);
         }
         return context.getString(R.string.work_apps_paused_body);
     }
