@@ -93,6 +93,16 @@
             android:summary="@string/hotseat_bg_summary"
             android:defaultValue="false" />
 
+        <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+            android:key="pref_hotseat_opacity"
+            android:title="@string/background_opacity_title"
+            android:persistent="true"
+            android:max="100"
+            android:min="0"
+            settings:units="%"
+            android:dependency="pref_show_hotseat_bg"
+            android:defaultValue="40" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
