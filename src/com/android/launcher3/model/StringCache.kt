@@ -79,7 +79,7 @@ private constructor(
                 workProfilePausedTitle =
                     context.getEnterpriseString(
                         WORK_PROFILE_PAUSED_TITLE,
-                        R.string.work_apps_paused_title,
+                        R.string.work_apps_paused_title_calyx,
                     ),
                 workProfilePausedDescription =
                     context.getEnterpriseString(WORK_PROFILE_PAUSED_DESCRIPTION) {
@@ -88,20 +88,20 @@ private constructor(
                                 !Utilities.ATLEAST_U -> R.string.work_apps_paused_body
                                 context.dm().managedSubscriptionsPolicy.policyType ==
                                     ManagedSubscriptionsPolicy.TYPE_ALL_MANAGED_SUBSCRIPTIONS ->
-                                    R.string.work_apps_paused_telephony_unavailable_body
-                                else -> R.string.work_apps_paused_info_body
+                                    R.string.work_apps_paused_telephony_unavailable_body_custom
+                                else -> R.string.work_apps_paused_info_body_custom
                             }
                         )
                     },
                 workProfilePauseButton =
                     context.getEnterpriseString(
                         WORK_PROFILE_PAUSE_BUTTON,
-                        R.string.work_apps_pause_btn_text,
+                        R.string.work_apps_pause_btn_text_calyx,
                     ),
                 workProfileEnableButton =
                     context.getEnterpriseString(
                         WORK_PROFILE_ENABLE_BUTTON,
-                        R.string.work_apps_enable_btn_text,
+                        R.string.work_apps_enable_btn_text_calyx,
                     ),
                 allAppsWorkTab =
                     context.getEnterpriseString(ALL_APPS_WORK_TAB, R.string.all_apps_work_tab),
