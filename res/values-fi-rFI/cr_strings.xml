@@ -21,67 +21,67 @@
     <string name="settings_title">Aloitusnäytön asetukset</string>
     <!-- Categories -->
     <string name="home_category_title">Aloitusnäyttö</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
+    <string name="home_category_summary">Aseta Google now -paneeli ja paljon muuta</string>
     <string name="icons_category_title">Kuvakkeet</string>
     <string name="icons_category_summary">Aseta kuvakkeen koko ja paljon muuta</string>
     <string name="app_drawer_category_title">Sovellusvalikko</string>
     <string name="app_drawer_category_summary">Muokkaa sovellusvalikkoa</string>
     <string name="recents_category_title">Viimeaikaiset</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
-    <string name="general_category_title">General</string>
-    <string name="interface_category_title">Interface</string>
+    <string name="recents_category_summary">Määritä yleiskuvanäyttö</string>
+    <string name="misc_category_title">Sekalaiset</string>
+    <string name="misc_category_summary">Muut valinnat</string>
+    <string name="general_category_title">Yleiset</string>
+    <string name="interface_category_title">Käyttöliittymä</string>
     <string name="quickspace_category_title">Quickspace</string>
-    <string name="search_bar_category_title">Search bar</string>
-    <string name="actions_category_title">Quick actions</string>
+    <string name="search_bar_category_title">Hakupalkki</string>
+    <string name="actions_category_title">Pikatoiminnot</string>
     <!-- Developer options -->
-    <string name="dev_options_title">Developer options</string>
-    <string name="dev_options_summary">Enable some hidden features at your own risk</string>
+    <string name="dev_options_title">Kehittäjäasetukset</string>
+    <string name="dev_options_summary">Ota käyttöön joitain piilotettuja ominaisuuksia omalla vastuullasi</string>
     <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Lock layout</string>
-    <string name="settings_lock_layout_summary_on">Icons and widgets can\'t be added, removed and moved on the homescreen</string>
-    <string name="settings_lock_layout_summary_off">Icons and widgets can be added, removed and moved on the homescreen</string>
-    <string name="settings_edit_widgets_error">It\'s not possible to add widgets to the home screen</string>
+    <string name="settings_lock_layout_title">Lukitse asettelu</string>
+    <string name="settings_lock_layout_summary_on">Kuvakkeita ja widgettejä ei voi lisätä, poistaa tai siirtää aloitusnäytöllä</string>
+    <string name="settings_lock_layout_summary_off">Kuvakkeita ja widgettejä voi lisätä, poistaa ja siirtää aloitusnäytöllä</string>
+    <string name="settings_edit_widgets_error">Aloitusnäytölle ei ole mahdollista lisätä widgettejä</string>
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Icon labels on desktop</string>
-    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <string name="desktop_show_labels">Kuvakkeiden otsikot aloitusnäytöllä</string>
+    <string name="drawer_show_labels">Kuvakkeiden otsikot sovellusvalikossa</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Swipe to access Google app</string>
+    <string name="title_show_google_app">Pyyhkäise käyttääksesi Google-sovellusta</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">When you swipe right from main home screen</string>
+    <string name="msg_minus_one_on_left">Kun pyyhkäiset oikealle pääaloitusnäytöltä</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">When you swipe left from main home screen</string>
+    <string name="msg_minus_one_on_right">Kun pyyhkäiset vasemmalle pääaloitusnäytöltä</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
-    <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
-    <string name="trust_apps_loading">Loading\u2026</string>
-    <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="trust_apps_help">Help</string>
-    <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
-    <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="trust_apps_manager_name">Piilotetut &amp; Suojatut sovellukset</string>
+    <string name="trust_apps_auth_manager">Avaa hallitaksesi piilotettuja ja suojattuja sovelluksia</string>
+    <string name="trust_apps_auth_open_app">Todenna avataksesi %1$s</string>
+    <string name="trust_apps_loading">Ladataan\u2026</string>
+    <string name="trust_apps_no_lock_error">Aseta turvallinen näytön lukitus rajataksesi pääsyä sovelluksiin</string>
+    <string name="trust_apps_help">Ohje</string>
+    <string name="trust_apps_info_hidden">Piilotetut sovellukset ja niiden widgetit piilotetaan sovellusvalikosta</string>
+    <string name="trust_apps_info_protected">Suojatut sovellukset tarvitsevat todennuksen jotta ne voidaan avata</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
+    <string name="pref_sleep_gesture_title">Kaksoisnapauta lepotilaan</string>
+    <string name="pref_sleep_gesture_summary">Kaksoisnapauta tyhjää tilaa sammuttaaksesi näytön</string>
     <!-- Pause apps shortcut -->
-    <string name="pause">Pause</string>
-    <string name="pause_apps_dialog_title">Pause %1$s?</string>
-    <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
-    <string name="paused_apps_dialog_title">App paused</string>
-    <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
-    <string name="paused_apps_drop_target_label">Pause app</string>
+    <string name="pause">Pysäytä</string>
+    <string name="pause_apps_dialog_title">Pysäytetäänkö %1$s?</string>
+    <string name="pause_apps_dialog_message">Ilmoitukset kohteelle %1$s pysäytetään</string>
+    <string name="paused_apps_dialog_title">Sovellus pysäytetty</string>
+    <string name="paused_apps_dialog_message">%1$s pysäytettiin suoraan käynnistimestä</string>
+    <string name="paused_apps_drop_target_label">Pysäytä sovellus</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">Arvo: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">oletuksena</string>
+    <string name="custom_seekbar_default_value_to_set">Oletusarvo: <xliff:g id="v">%s</xliff:g>\nAseta napauttamalla pitkään</string>
+    <string name="custom_seekbar_default_value_is_set">Oletusarvo on asetettu</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">Kuvakkeen koko</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">Tekstin koko</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">Maksimirivit sovelluksen otsikolle</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Search</string>
     <string name="label_lens">Google Lens</string>
@@ -148,53 +148,53 @@
         <item>Looks like it\'s a beautiful day, isn\'t it?</item>
         <item>Let\'s get this bread.</item>
         <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
+        <item>Hieman uninen olo vielä</item>
+        <item>Oletko katsonut vielä ulos?</item>
+        <item>Tehdään tämä valmiiksi.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
+        <item>Hyvää yötä!</item>
+        <item>Nuku hyvin!</item>
+        <item>Nähdään huomenna!</item>
+        <item>Kauniita unia!</item>
+        <item>Älä valvo liian myöhään</item>
+        <item>Nuku hyvin</item>
+        <item>Mene nukkumaan</item>
+        <item>Aika rentoutua</item>
+        <item>Nauti yöstä!</item>
+        <item>Aika ladata akut!</item>
+        <item>Huominen saattaa olla hieno päivä</item>
+        <item>Valmistaudu huomiseen</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
-        <item>It\'s a bit late now</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Hmm... hyvää yötä?</item>
+        <item>Nyt on jo vähän myöhä</item>
+        <item>Sinun pitäisi korjata unirytmiäsi</item>
+        <item>Oletko tuottavampi tällä hetkellä?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
-        <item>Make peace, not war</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
-        <item>Open goodness with crDroid</item>
-        <item>Spread love, not havoc</item>
-        <item>We didn\'t start the fire!</item>
-        <item>Time for some good music</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
-        <item>We love you 3000</item>
-        <item>Delicious even without Sushi</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>How is everything going?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
+        <item>Tieto lisää tuskaa</item>
+        <item>Onko aika asentaa toinen päivitys jo?</item>
+        <item>Solmi rauha, älä sodi</item>
+        <item>Ai hei, mitä kuuluu?</item>
+        <item>Keskity tehtäviisi</item>
+        <item>Kuinka monta kuvakaappausta otat?</item>
+        <item>Avaa hyvyys crDroidilla</item>
+        <item>Levitä rakkautta, älä tuhoa</item>
+        <item>Emme aloittaneet tulta!</item>
+        <item>Aika kuunnella hyvää musiikkia</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C PÄÄ</item>
+        <item>Tarvitset crDroid Premiumin nähdäksesi tämän</item>
+        <item>Muista yksisarvisen linja</item>
+        <item>Nauti pidennetystä akun kestosta</item>
+        <item>Aloita alkupisteestä</item>
+        <item>Rakastamme sinua 3000</item>
+        <item>Herkullista jopa ilman Sushiä</item>
+        <item>Tee jotain mukavaa tänään</item>
+        <item>Tämä on paras Pixel Kokemus, eikö vain?</item>
+        <item>Miten kaikki sujuu?</item>
+        <item>Ei illuusioita, tervetuloa todellisuuteen!</item>
+        <item>Kiitos tuestasi</item>
         <item>No festival for Derps - only perfection!</item>
         <item>One of the buildbot\'s best picks</item>
         <item>Sanity for your Paranoia</item>
