@@ -87,9 +87,6 @@ public class TaskbarViewController implements TaskbarControllers.LoggableTaskbar
     private AnimatedFloat mTaskbarNavButtonTranslationY;
     private AnimatedFloat mTaskbarNavButtonTranslationYForInAppDisplay;
 
-    private final AnimatedFloat mThemeIconsBackground = new AnimatedFloat(
-            this::updateIconsBackground);
-
     private final TaskbarModelCallbacks mModelCallbacks;
 
     // Initialized in init.
@@ -217,15 +214,6 @@ public class TaskbarViewController implements TaskbarControllers.LoggableTaskbar
                 + mTaskbarIconTranslationYForStash.value);
     }
 
-    private void updateIconsBackground() {
-        mTaskbarView.setThemedIconsBackgroundColor(
-                ColorUtils.blendARGB(
-                        mThemeIconsColor,
-                        mTaskbarView.mThemeIconsBackground,
-                        mThemeIconsBackground.value
-                ));
-    }
-
     /**
      * Sets the taskbar icon alignment relative to Launcher hotseat icons
      * @param alignmentRatio [0, 1]
@@ -264,10 +252,6 @@ public class TaskbarViewController implements TaskbarControllers.LoggableTaskbar
         setter.setFloat(mTaskbarIconTranslationYForHome, VALUE, -offsetY, LINEAR);
         setter.setFloat(mTaskbarNavButtonTranslationY, VALUE, -offsetY, LINEAR);
         setter.setFloat(mTaskbarNavButtonTranslationYForInAppDisplay, VALUE, offsetY, LINEAR);
-
-        if (Utilities.isDarkTheme(mTaskbarView.getContext())) {
-            setter.addFloat(mThemeIconsBackground, VALUE, 0f, 1f, LINEAR);
-        }
 
         int collapsedHeight = mActivity.getDefaultTaskbarWindowHeight();
         int expandedHeight = Math.max(collapsedHeight, taskbarDp.taskbarSize + offsetY);
