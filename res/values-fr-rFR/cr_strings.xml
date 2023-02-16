@@ -32,7 +32,7 @@
     <string name="misc_category_summary">Autres options</string>
     <string name="general_category_title">Général</string>
     <string name="interface_category_title">Interface</string>
-    <string name="quickspace_category_title">Quickspace</string>
+    <string name="quickspace_category_title">Espace rapide</string>
     <string name="search_bar_category_title">Barre de recherche</string>
     <string name="actions_category_title">Actions rapides</string>
     <!-- Developer options -->
@@ -86,8 +86,8 @@
     <string name="label_search">Rechercher</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_voice_search">Recherche vocale</string>
-    <string name="dock_music_search_title">Music search</string>
-    <string name="dock_music_search_summary">Start music search on pressing mic icon</string>
+    <string name="dock_music_search_title">Recherche de musique</string>
+    <string name="dock_music_search_summary">Démarrer la recherche de musique en appuyant sur l\'icône du micro</string>
     <string name="dock_search_title">Barre de recherche Google</string>
     <string name="dock_search_summary">Barre de recherche dans le dock inférieur</string>
     <string name="dock_theme_title">Icônes thématiques</string>
@@ -95,24 +95,24 @@
     <string name="search_radius_title">Rayon des angles</string>
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <string name="hotseat_bg_summary">Ajouter un arrière-plan translucide au tiroir d\'applications</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Défilement du fond d\'écran</string>
-    <string name="allow_wallpaper_scrolling_summary">Wallpaper scrolling effect for multiple screens</string>
+    <string name="allow_wallpaper_scrolling_summary">Effet de défilement du fond d\'écran pour plusieurs écrans</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_summary">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">Zoom sur le fond d\'écran</string>
+    <string name="allow_wallpaper_zooming_summary">Zoomer et dézoomer le fond d\'écran à l\'ouverture du tiroir ou des applications récentes</string>
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Barre d\'état</string>
     <!-- Top shadow -->
-    <string name="show_top_shadow">Top shadow</string>
+    <string name="show_top_shadow">Ombre en haut</string>
     <!-- Row Height -->
-    <string name="row_height_title">Row height</string>
+    <string name="row_height_title">Hauteur de ligne</string>
     <!-- Background blur -->
     <string name="background_blur_title">Niveau de flou</string>
     <string name="background_blur_summary">Définir le niveau de flou pour le tiroir et récent</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_title">En bref</string>
     <string name="show_quickspace_summary">Montrer en haut de votre écran d\'accueil</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Bienvenue sur crDroid !</string>
@@ -136,7 +136,7 @@
     <string name="quickspace_alternate_style_summary">Basculer vers le style moderne</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Messages aléatoires</string>
-    <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
+    <string name="quickspace_psa_summary">Rendre votre compagnon plus vivant avec des messages aléatoires</string>
     <string-array name="quickspace_psa_morning">
         <item>Bonjour !</item>
         <item>Bonjour, il est temps d\'y aller !</item>
@@ -246,5 +246,5 @@
     <string name="recents_meminfo_title">Information RAM</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Barre de recherche de l\'application</string>
-    <string name="drawer_search_summary">Search bar on top of the app drawer</string>
+    <string name="drawer_search_summary">Barre de recherche en haut du tiroir d\'applications</string>
 </resources>
