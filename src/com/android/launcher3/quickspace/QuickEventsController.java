@@ -113,8 +113,14 @@ public class QuickEventsController {
         if (!mRunning) return;
 
         if (mIsFirstTimeDone) return;
+        
         mIsQuickEvent = true;
-        mEventTitle = mContext.getResources().getString(R.string.quick_event_rom_intro_welcome);
+
+        if (Utilities.useAlternativeQuickspaceUI(mContext)) {
+            mEventTitle = mContext.getResources().getString(R.string.quick_event_rom_intro_welcome_ext);
+        } else {
+            mEventTitle = mContext.getResources().getString(R.string.quick_event_rom_intro_welcome);
+        }
         mEventTitleSub = mContext.getResources().getStringArray(R.array.welcome_message_variants)[getLuckyNumber(0,6)];
         mEventSubIcon = R.drawable.ic_quickspace_crdroid;
         mGreetings = mContext.getResources().getString(R.string.quickspace_grt_general);
