@@ -25,6 +25,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.DiffUtil;
 
 import com.android.launcher3.Flags;
+import com.android.launcher3.R;
 import com.android.launcher3.allapps.BaseAllAppsAdapter.AdapterItem;
 import com.android.launcher3.model.data.AppInfo;
 import com.android.launcher3.model.data.ItemInfo;
@@ -33,7 +34,6 @@ import com.android.launcher3.views.ActivityContext;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Objects;
 import java.util.TreeMap;
 import java.util.function.Predicate;
@@ -93,6 +93,7 @@ public class AlphabeticalAppsList<T extends Context & ActivityContext> implement
     private int mNumAppsPerRowAllApps;
     private int mNumAppRowsInAdapter;
     private Predicate<ItemInfo> mItemFilter;
+    private final boolean mSortSections;
 
     public AlphabeticalAppsList(Context context, @Nullable AllAppsStore<T> appsStore,
             WorkProfileManager workProfileManager, PrivateProfileManager privateProfileManager) {
@@ -105,6 +106,7 @@ public class AlphabeticalAppsList<T extends Context & ActivityContext> implement
         if (mAllAppsStore != null) {
             mAllAppsStore.addUpdateListener(this);
         }
+        mSortSections = context.getResources().getBoolean(R.bool.config_appsListSortSections);
     }
 
     /** Set the number of apps per row when device profile changes. */
@@ -223,9 +225,7 @@ public class AlphabeticalAppsList<T extends Context & ActivityContext> implement
 
         // As a special case for some languages (currently only Simplified Chinese), we may need to
         // coalesce sections
-        Locale curLocale = mActivityContext.getResources().getConfiguration().locale;
-        boolean localeRequiresSectionSorting = curLocale.equals(Locale.SIMPLIFIED_CHINESE);
-        if (localeRequiresSectionSorting) {
+        if (mSortSections) {
             // Compute the section headers. We use a TreeMap with the section name comparator to
             // ensure that the sections are ordered when we iterate over it later
             appSteam = appSteam.collect(Collectors.groupingBy(
