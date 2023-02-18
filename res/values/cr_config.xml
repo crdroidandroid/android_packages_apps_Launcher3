@@ -30,4 +30,8 @@
 
     <!-- String representing the fragment class for recents view settings activity.-->
     <string name="recents_settings_fragment_name" translatable="false">com.android.launcher3.settings.SettingsRecents$RecentsSettingsFragment</string>
+
+    <!-- Sort sections of apps list, in case AlphabeticIndex (of current locale)
+         returns duplicate labels for some reasons. -->
+    <bool name="config_appsListSortSections">false</bool>
 </resources>
