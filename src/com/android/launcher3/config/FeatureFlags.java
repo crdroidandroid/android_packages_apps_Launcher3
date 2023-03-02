@@ -204,6 +204,10 @@ public final class FeatureFlags {
             "ENABLE_BACK_SWIPE_HOME_ANIMATION", true,
             "Enables home animation to icon when user swipes back.");
 
+    public static final BooleanFlag ENABLE_BACK_SWIPE_LAUNCHER_ANIMATION = getDebugFlag(270614790,
+            "ENABLE_BACK_SWIPE_LAUNCHER_ANIMATION", false,
+            "Enables predictive back aniamtion from all apps and widgets to home");
+
     public static final BooleanFlag ENABLE_ICON_LABEL_AUTO_SCALING = getDebugFlag(270393294,
             "ENABLE_ICON_LABEL_AUTO_SCALING", true,
             "Enables scaling/spacing for icon labels to make more characters visible");
@@ -215,10 +219,6 @@ public final class FeatureFlags {
     public static final BooleanFlag ENABLE_ALL_APPS_ONE_SEARCH_IN_TASKBAR = getDebugFlag(270393900,
             "ENABLE_ALL_APPS_ONE_SEARCH_IN_TASKBAR", false,
             "Enables One Search box in Taskbar All Apps.");
-
-    public static final BooleanFlag ENABLE_TASKBAR_IN_OVERVIEW = getDebugFlag(270393449,
-            "ENABLE_TASKBAR_IN_OVERVIEW", true,
-            "Enables accessing the system Taskbar in overview.");
 
     public static final BooleanFlag ENABLE_SPLIT_FROM_WORKSPACE = getDebugFlag(270393906,
             "ENABLE_SPLIT_FROM_WORKSPACE", true,
@@ -250,10 +250,6 @@ public final class FeatureFlags {
     public static final BooleanFlag ENABLE_SEARCH_RESULT_LAUNCH_TRANSITION = getReleaseFlag(
             270394392, "ENABLE_SEARCH_RESULT_LAUNCH_TRANSITION", false,
             "Enable option to launch search results using the new view container transitions");
-
-    public static final BooleanFlag TWO_PREDICTED_ROWS_ALL_APPS_SEARCH = getReleaseFlag(270394225,
-            "TWO_PREDICTED_ROWS_ALL_APPS_SEARCH", false,
-            "Use 2 rows of app predictions in All Apps search zero-state");
 
     public static final BooleanFlag ENABLE_SHOW_KEYBOARD_OPTION_IN_ALL_APPS = getReleaseFlag(
             270394468, "ENABLE_SHOW_KEYBOARD_OPTION_IN_ALL_APPS", true,
@@ -360,10 +356,6 @@ public final class FeatureFlags {
             "ENABLE_FORCED_MONO_ICON", false,
             "Enable the ability to generate monochromatic icons, if it is not provided by the app"
     );
-
-    public static final BooleanFlag ENABLE_DREAM_TRANSITION = getDebugFlag(270396364,
-            "ENABLE_DREAM_TRANSITION", true,
-            "Enable the launcher transition when the device enters a dream");
 
     public static final BooleanFlag ENABLE_TASKBAR_EDU_TOOLTIP = getDebugFlag(270396268,
             "ENABLE_TASKBAR_EDU_TOOLTIP", true,
