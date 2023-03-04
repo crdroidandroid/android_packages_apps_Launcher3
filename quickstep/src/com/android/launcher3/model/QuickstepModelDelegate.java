@@ -60,7 +60,7 @@ import com.android.launcher3.InvariantDeviceProfile;
 import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.config.FeatureFlags;
-import com.android.launcher3.lineage.trust.db.HiddenAppsDBHelper;
+import com.android.launcher3.lineage.trust.AppLockHelper;
 import com.android.launcher3.logger.LauncherAtom;
 import com.android.launcher3.logging.InstanceId;
 import com.android.launcher3.logging.InstanceIdSequence;
@@ -350,8 +350,8 @@ public class QuickstepModelDelegate extends ModelDelegate {
             return;
         }
 
-        HiddenAppsDBHelper hiddenData = mApp.getHiddenData();
-        int totalPackageHidden = hiddenData != null ? hiddenData.getTotalPackageHidden() : 0;
+        AppLockHelper appLockHelper = AppLockHelper.getInstance(context);
+        int totalPackageHidden = appLockHelper != null ? appLockHelper.getHiddenPackagesCount() : 0;
 
         registerPredictor(mAllAppsState, apm.createAppPredictionSession(
                 new AppPredictionContext.Builder(context)
@@ -385,8 +385,8 @@ public class QuickstepModelDelegate extends ModelDelegate {
     }
 
     private void registerHotseatPredictor(AppPredictionManager apm, Context context) {
-        HiddenAppsDBHelper hiddenData = mApp.getHiddenData();
-        int totalPackageHidden = hiddenData != null ? hiddenData.getTotalPackageHidden() : 0;
+        AppLockHelper appLockHelper = AppLockHelper.getInstance(context);
+        int totalPackageHidden = appLockHelper != null ? appLockHelper.getHiddenPackagesCount() : 0;
 
         registerPredictor(mHotseatState, apm.createAppPredictionSession(
                 new AppPredictionContext.Builder(context)
