@@ -19,20 +19,23 @@ import android.content.ComponentName;
 import android.content.Context;
 
 import com.android.launcher3.AppFilter;
-import com.android.launcher3.lineage.trust.db.HiddenAppsDBHelper;
+
+import androidx.annotation.NonNull;
 
 @SuppressWarnings("unused")
 public class HiddenAppsFilter extends AppFilter {
-    private HiddenAppsDBHelper mDbHelper;
+
+    @NonNull
+    private AppLockHelper mAppLockHelper;
 
     public HiddenAppsFilter(Context context) {
         super(context);
 
-        mDbHelper = HiddenAppsDBHelper.getInstance(context);
+        mAppLockHelper = AppLockHelper.getInstance(context);
     }
 
     @Override
     public boolean shouldShowApp(ComponentName app) {
-        return !mDbHelper.isPackageHidden(app.getPackageName()) && super.shouldShowApp(app);
+        return !mAppLockHelper.isPackageHidden(app.getPackageName()) && super.shouldShowApp(app);
     }
 }
