@@ -50,7 +50,6 @@ import com.android.launcher3.icons.IconProvider;
 import com.android.launcher3.icons.LauncherIconProvider;
 import com.android.launcher3.icons.LauncherIcons;
 import com.android.launcher3.lineage.trust.HiddenAppsFilter;
-import com.android.launcher3.lineage.trust.db.HiddenAppsDBHelper;
 import com.android.launcher3.notification.NotificationListener;
 import com.android.launcher3.pm.InstallSessionHelper;
 import com.android.launcher3.pm.InstallSessionTracker;
@@ -250,10 +249,6 @@ public class LauncherAppState implements SafeCloseable {
 
     public InvariantDeviceProfile getInvariantDeviceProfile() {
         return mInvariantDeviceProfile;
-    }
-
-    public HiddenAppsDBHelper getHiddenData() {
-        return HiddenAppsDBHelper.getInstance(this.mContext);
     }
 
     /**
