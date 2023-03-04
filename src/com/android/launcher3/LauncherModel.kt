@@ -26,6 +26,7 @@ import android.util.Pair
 import androidx.annotation.WorkerThread
 import com.android.launcher3.celllayout.CellPosMapper
 import com.android.launcher3.icons.IconCache
+import com.android.launcher3.lineage.trust.AppLockHelper
 import com.android.launcher3.model.AddWorkspaceItemsTask
 import com.android.launcher3.model.AllAppsList
 import com.android.launcher3.model.BaseLauncherBinder
@@ -76,7 +77,7 @@ class LauncherModel(
     private val mCallbacksList = ArrayList<BgDataModel.Callbacks>(1)
 
     // < only access in worker thread >
-    private val mBgAllAppsList = AllAppsList(iconCache, appFilter, mApp.getHiddenData())
+    private val mBgAllAppsList = AllAppsList(iconCache, appFilter, AppLockHelper.getInstance(context))
 
     /**
      * All the static data should be accessed on the background thread, A lock should be acquired on
