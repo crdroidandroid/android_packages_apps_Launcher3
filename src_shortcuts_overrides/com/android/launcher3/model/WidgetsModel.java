@@ -29,7 +29,7 @@ import com.android.launcher3.compat.AlphabeticIndexCompat;
 import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.icons.ComponentWithLabelAndIcon;
 import com.android.launcher3.icons.IconCache;
-import com.android.launcher3.lineage.trust.db.HiddenAppsDBHelper;
+import com.android.launcher3.lineage.trust.AppLockHelper;
 import com.android.launcher3.model.data.PackageItemInfo;
 import com.android.launcher3.pm.ShortcutConfigActivityInfo;
 import com.android.launcher3.util.IntSet;
@@ -266,17 +266,17 @@ public class WidgetsModel {
 
         private final InvariantDeviceProfile mIdp;
         private final AppFilter mAppFilter;
-        private HiddenAppsDBHelper mHiddenData;
+        private AppLockHelper mAppLockHelper;
 
         WidgetValidityCheck(LauncherAppState app) {
             mIdp = app.getInvariantDeviceProfile();
             mAppFilter = new AppFilter(app.getContext());
-            mHiddenData = app.getHiddenData();
+            mAppLockHelper = AppLockHelper.getInstance(app.getContext());
         }
 
         @Override
         public boolean test(WidgetItem item) {
-            if (mHiddenData != null && mHiddenData.isPackageHidden(item.componentName.getPackageName())) {
+            if (mAppLockHelper != null && mAppLockHelper.isPackageHidden(item.componentName.getPackageName())) {
                 return false;
             }
             if (item.widgetInfo != null) {

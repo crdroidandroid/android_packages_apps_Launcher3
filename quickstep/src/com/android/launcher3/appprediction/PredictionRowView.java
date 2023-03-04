@@ -38,7 +38,7 @@ import com.android.launcher3.allapps.FloatingHeaderView;
 import com.android.launcher3.anim.AlphaUpdateListener;
 import com.android.launcher3.keyboard.FocusIndicatorHelper;
 import com.android.launcher3.keyboard.FocusIndicatorHelper.SimpleFocusIndicatorHelper;
-import com.android.launcher3.lineage.trust.db.HiddenAppsDBHelper;
+import com.android.launcher3.lineage.trust.AppLockHelper;
 import com.android.launcher3.model.data.ItemInfo;
 import com.android.launcher3.model.data.ItemInfoWithIcon;
 import com.android.launcher3.model.data.WorkspaceItemInfo;
@@ -168,7 +168,7 @@ public class PredictionRowView<T extends Context & ActivityContext>
     }
 
     private boolean isAppHidden(ItemInfo itemInfo) {
-        HiddenAppsDBHelper instance = HiddenAppsDBHelper.getInstance(getContext());
+        AppLockHelper instance = AppLockHelper.getInstance(getContext());
         return instance != null && instance.isPackageHidden(itemInfo.getTargetPackage());
     }
 
