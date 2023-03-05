@@ -247,4 +247,7 @@
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">搜尋列</string>
     <string name="drawer_search_summary">應用程式清單頂部的搜尋列</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">重新啟動</string>
+    <string name="pref_restart_summary">重新啟動主畫面來套用設定</string>
 </resources>
