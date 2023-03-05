@@ -247,4 +247,7 @@
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Γραμμή αναζήτησης εφαρμογών</string>
     <string name="drawer_search_summary">Γραμμή αναζήτησης πάνω από το συρτάρι εφαρμογών</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Επανεκκίνηση</string>
+    <string name="pref_restart_summary">Επανεκκινήστε τον launcher χειροκίνητα για να εφαρμόσετε οποιεσδήποτε ρυθμίσεις σε εκκρεμότητα</string>
 </resources>
