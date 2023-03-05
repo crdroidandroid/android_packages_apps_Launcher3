@@ -248,6 +248,6 @@
     <string name="drawer_search_title">Строка поиска</string>
     <string name="drawer_search_summary">Строка поиска в верхней части меню приложений</string>
     <!-- Restart launcher -->
-    <string name="pref_restart_title">Restart</string>
-    <string name="pref_restart_summary">Restart the launcher manually to apply any pending settings</string>
+    <string name="pref_restart_title">Перезапустить</string>
+    <string name="pref_restart_summary">Перезапустить лаунчер вручную, чтобы применить все ожидающие настройки</string>
 </resources>
