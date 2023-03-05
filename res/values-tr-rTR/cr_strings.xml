@@ -247,4 +247,7 @@
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Uygulama arama çubuğu</string>
     <string name="drawer_search_summary">Uygulama sayfasının üstündeki arama çubuğu</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Yeniden Başlat</string>
+    <string name="pref_restart_summary">Ayarları Uygulamak İçin Yeniden Başlat</string>
 </resources>

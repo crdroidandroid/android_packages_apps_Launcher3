@@ -247,4 +247,7 @@
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">شريط بحث البرامج</string>
     <string name="drawer_search_summary">شريط البحث في أعلى قائمة التطبيقات</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Restart</string>
+    <string name="pref_restart_summary">Restart the launcher manually to apply any pending settings</string>
 </resources>

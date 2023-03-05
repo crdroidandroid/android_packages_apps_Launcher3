@@ -247,4 +247,7 @@
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Панель пошуку додатків</string>
     <string name="drawer_search_summary">Рядок пошуку зверху списку додатків</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Перезапустити</string>
+    <string name="pref_restart_summary">Перезапустіть лаунчер вручну для подальшого застосування налаштувань</string>
 </resources>

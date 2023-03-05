@@ -18,7 +18,7 @@
     <!-- Application name -->
     <!-- Folder titles -->
     <!-- General -->
-    <string name="settings_title">Setări acasă</string>
+    <string name="settings_title">Setări ecran de pornire</string>
     <!-- Categories -->
     <string name="home_category_title">Ecranul principal</string>
     <string name="home_category_summary">Setează panoul Google Now și altele</string>
@@ -247,4 +247,7 @@
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Bara de căutare aplicaţii</string>
     <string name="drawer_search_summary">Bara de căutare în partea de sus a sertarului de aplicații</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Repornire</string>
+    <string name="pref_restart_summary">Repornește lansatorul manual pentru a aplica orice setări în așteptare</string>
 </resources>

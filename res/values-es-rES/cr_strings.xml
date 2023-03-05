@@ -248,4 +248,7 @@ Mantén presionado para establecer</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Barra de búsqueda</string>
     <string name="drawer_search_summary">Barra de búsqueda encima del cajón de aplicaciones</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Reiniciar</string>
+    <string name="pref_restart_summary">Reinicia el lanzador manualmente para aplicar cualquier configuración pendiente</string>
 </resources>

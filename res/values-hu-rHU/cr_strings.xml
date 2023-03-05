@@ -247,4 +247,7 @@
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Alkalmazásfiók-keresősáv</string>
     <string name="drawer_search_summary">A keresősáv az Alkalmazásfiók tetején</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Újraindítás</string>
+    <string name="pref_restart_summary">Launcher-újraindítás a függőben lévő változások alkalmazásához</string>
 </resources>

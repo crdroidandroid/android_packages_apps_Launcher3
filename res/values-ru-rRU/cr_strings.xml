@@ -69,7 +69,7 @@
     <string name="pause_apps_dialog_title">Приостановить %1$s?</string>
     <string name="pause_apps_dialog_message">Уведомления для %1$s будут приостановлены</string>
     <string name="paused_apps_dialog_title">Приложение приостановлено</string>
-    <string name="paused_apps_dialog_message">%1$s был приостановлен непосредственно из лаунчера</string>
+    <string name="paused_apps_dialog_message">Программа %1$s была приостановлена непосредственно из лаунчера</string>
     <string name="paused_apps_drop_target_label">Приостановить приложение</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
@@ -247,4 +247,7 @@
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Строка поиска</string>
     <string name="drawer_search_summary">Строка поиска в верхней части меню приложений</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Перезапустить</string>
+    <string name="pref_restart_summary">Перезапустить лаунчер вручную, чтобы применить все ожидающие настройки</string>
 </resources>
