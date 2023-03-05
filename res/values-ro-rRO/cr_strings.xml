@@ -247,4 +247,7 @@
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Bara de căutare aplicaţii</string>
     <string name="drawer_search_summary">Bara de căutare în partea de sus a sertarului de aplicații</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Repornire</string>
+    <string name="pref_restart_summary">Repornește lansatorul manual pentru a aplica orice setări în așteptare</string>
 </resources>
