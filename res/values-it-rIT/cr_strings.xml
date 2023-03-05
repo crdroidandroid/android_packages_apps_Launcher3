@@ -247,4 +247,7 @@
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Barra di ricerca delle applicazioni</string>
     <string name="drawer_search_summary">Barra di ricerca all\'inizio del cassetto delle applicazioni</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Restart</string>
+    <string name="pref_restart_summary">Restart the launcher manually to apply any pending settings</string>
 </resources>
