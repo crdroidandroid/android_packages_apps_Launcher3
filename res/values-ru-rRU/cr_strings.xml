@@ -69,7 +69,7 @@
     <string name="pause_apps_dialog_title">Приостановить %1$s?</string>
     <string name="pause_apps_dialog_message">Уведомления для %1$s будут приостановлены</string>
     <string name="paused_apps_dialog_title">Приложение приостановлено</string>
-    <string name="paused_apps_dialog_message">%1$s был приостановлен непосредственно из лаунчера</string>
+    <string name="paused_apps_dialog_message">Программа %1$s была приостановлена непосредственно из лаунчера</string>
     <string name="paused_apps_drop_target_label">Приостановить приложение</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
