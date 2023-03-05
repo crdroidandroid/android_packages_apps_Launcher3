@@ -247,4 +247,7 @@
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Barra de pesquisa de apps</string>
     <string name="drawer_search_summary">Barra de pesquisa no topo da gaveta de apps</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Restart</string>
+    <string name="pref_restart_summary">Restart the launcher manually to apply any pending settings</string>
 </resources>
