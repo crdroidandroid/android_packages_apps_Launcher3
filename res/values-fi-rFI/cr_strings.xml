@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">Aloitusnäytön asetukset</string>
+    <!-- Categories -->
+    <string name="home_category_title">Aloitusnäyttö</string>
+    <string name="home_category_summary">Aseta Google now -paneeli ja paljon muuta</string>
+    <string name="icons_category_title">Kuvakkeet</string>
+    <string name="icons_category_summary">Aseta kuvakkeen koko ja paljon muuta</string>
+    <string name="app_drawer_category_title">Sovellusvalikko</string>
+    <string name="app_drawer_category_summary">Muokkaa sovellusvalikkoa</string>
+    <string name="recents_category_title">Viimeaikaiset</string>
+    <string name="recents_category_summary">Määritä yleiskuvanäyttö</string>
+    <string name="misc_category_title">Sekalaiset</string>
+    <string name="misc_category_summary">Muut valinnat</string>
+    <string name="general_category_title">Yleiset</string>
+    <string name="interface_category_title">Käyttöliittymä</string>
+    <string name="quickspace_category_title">Quickspace</string>
+    <string name="search_bar_category_title">Hakupalkki</string>
+    <string name="actions_category_title">Pikatoiminnot</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">Kehittäjäasetukset</string>
+    <string name="dev_options_summary">Ota käyttöön joitain piilotettuja ominaisuuksia omalla vastuullasi</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Lukitse asettelu</string>
+    <string name="settings_lock_layout_summary_on">Kuvakkeita ja widgettejä ei voi lisätä, poistaa tai siirtää aloitusnäytöllä</string>
+    <string name="settings_lock_layout_summary_off">Kuvakkeita ja widgettejä voi lisätä, poistaa ja siirtää aloitusnäytöllä</string>
+    <string name="settings_edit_widgets_error">Aloitusnäytölle ei ole mahdollista lisätä widgettejä</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Kuvakkeiden otsikot aloitusnäytöllä</string>
+    <string name="drawer_show_labels">Kuvakkeiden otsikot sovellusvalikossa</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Pyyhkäise käyttääksesi Google-sovellusta</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Kun pyyhkäiset oikealle pääaloitusnäytöltä</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Kun pyyhkäiset vasemmalle pääaloitusnäytöltä</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Piilotetut &amp; Suojatut sovellukset</string>
+    <string name="trust_apps_auth_manager">Avaa hallitaksesi piilotettuja ja suojattuja sovelluksia</string>
+    <string name="trust_apps_auth_open_app">Todenna avataksesi %1$s</string>
+    <string name="trust_apps_loading">Ladataan\u2026</string>
+    <string name="trust_apps_no_lock_error">Aseta turvallinen näytön lukitus rajataksesi pääsyä sovelluksiin</string>
+    <string name="trust_apps_help">Ohje</string>
+    <string name="trust_apps_info_hidden">Piilotetut sovellukset ja niiden widgetit piilotetaan sovellusvalikosta</string>
+    <string name="trust_apps_info_protected">Suojatut sovellukset tarvitsevat todennuksen jotta ne voidaan avata</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Kaksoisnapauta lepotilaan</string>
+    <string name="pref_sleep_gesture_summary">Kaksoisnapauta tyhjää tilaa sammuttaaksesi näytön</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">Pysäytä</string>
+    <string name="pause_apps_dialog_title">Pysäytetäänkö %1$s?</string>
+    <string name="pause_apps_dialog_message">Ilmoitukset kohteelle %1$s pysäytetään</string>
+    <string name="paused_apps_dialog_title">Sovellus pysäytetty</string>
+    <string name="paused_apps_dialog_message">%1$s pysäytettiin suoraan käynnistimestä</string>
+    <string name="paused_apps_drop_target_label">Pysäytä sovellus</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Arvo: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">oletuksena</string>
+    <string name="custom_seekbar_default_value_to_set">Oletusarvo: <xliff:g id="v">%s</xliff:g>\nAseta napauttamalla pitkään</string>
+    <string name="custom_seekbar_default_value_is_set">Oletusarvo on asetettu</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Kuvakkeen koko</string>
+    <!-- Font size -->
+    <string name="font_size_title">Tekstin koko</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Maksimirivit sovelluksen otsikolle</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Haku</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Puhehaku</string>
+    <string name="dock_music_search_title">Musiikkihaku</string>
+    <string name="dock_music_search_summary">Aloita musiikkihaku painamalla mikrofonikuvaketta</string>
+    <string name="dock_search_title">Google-hakupalkki</string>
+    <string name="dock_search_summary">Hakupalkki alhaalla</string>
+    <string name="dock_theme_title">Teemakuvakkeet</string>
+    <string name="dock_theme_summary">Käytä teemakuvakkeita hakupalkille</string>
+    <string name="search_radius_title">Kulman säde</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Sovellusvalikon tausta</string>
+    <string name="hotseat_bg_summary">Lisää läpikuultava tausta sovellusvalikolle</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Taustakuvan vieritys</string>
+    <string name="allow_wallpaper_scrolling_summary">Taustakuvan vierintäefekti usealle näytölle</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Taustakuvan zoomaus</string>
+    <string name="allow_wallpaper_zooming_summary">Suurenna tai loitonna taustakuvaa käyttäessäsi sovellusvalikkoa tai viimeaikaisia sovelluksia</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Tilapalkki</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Yläosan varjostus</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Rivin korkeus</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Taustan sumennuksen syvyys</string>
+    <string name="background_blur_summary">Aseta sumennuksen syvyys viimeaikaisille ja sovellusvalikko</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Pikakatselu</string>
+    <string name="show_quickspace_summary">Näytä aloitusnäytön yläosassa</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Tervetuloa crDroidiin!</string>
+    <string-array name="welcome_message_variants">
+        <item>Hyvää päivän jatkoa</item>
+        <item>Kiitos että valitsit meidät</item>
+        <item>Rakastatko meitä? Lähetä meille olutta</item>
+        <item>Paras Rom Ikinä.</item>
+        <item>Tule moikkaamaan meitä Telegramissa</item>
+        <item>Aloita napauttamalla tätä</item>
+        <item>Rakastamme sinua 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Nyt soi</string>
+    <string name="quick_event_ambient_song_artist">%1$s, %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Nyt toistetaan</string>
+    <string name="quickspace_now_playing_summary">Näytä kappale, jota toistat</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Minimalistinen tyyli</string>
+    <string name="quickspace_alternate_style_summary">Vaihda moderniin tyyliin</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Satunnaiset viestit</string>
+    <string name="quickspace_psa_summary">Tee kumppanisi vilkkaammaksi satunnaisten viestien avulla</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Hyvää huomenta!</item>
+        <item>Hyvää huomenta, aika rokata!</item>
+        <item>Onpa kaunis päivä!</item>
+        <item>Hyvää päivän jatkoa!</item>
+        <item>Miten olisi pieni 5 minuutin nokonen?</item>
+        <item>Tuo on yksi tapa herätä.</item>
+        <item>Sinun pitäisi muuttaa hälytysäänesi.</item>
+        <item>Näyttää siltä, että on kaunis päivä, eikö niin?</item>
+        <item>Otetaan tämä leipä.</item>
+        <item>Tarkista sää varmuuden vuoksi</item>
+        <item>Hieman uninen olo vielä</item>
+        <item>Oletko katsonut vielä ulos?</item>
+        <item>Tehdään tämä valmiiksi.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Hyvää yötä!</item>
+        <item>Nuku hyvin!</item>
+        <item>Nähdään huomenna!</item>
+        <item>Kauniita unia!</item>
+        <item>Älä valvo liian myöhään</item>
+        <item>Nuku hyvin</item>
+        <item>Mene nukkumaan</item>
+        <item>Aika rentoutua</item>
+        <item>Nauti yöstä!</item>
+        <item>Aika ladata akut!</item>
+        <item>Huominen saattaa olla hieno päivä</item>
+        <item>Valmistaudu huomiseen</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Hmm... hyvää yötä?</item>
+        <item>Nyt on jo vähän myöhä</item>
+        <item>Sinun pitäisi korjata unirytmiäsi</item>
+        <item>Oletko tuottavampi tällä hetkellä?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Tieto lisää tuskaa</item>
+        <item>Onko aika asentaa toinen päivitys jo?</item>
+        <item>Solmi rauha, älä sodi</item>
+        <item>Ai hei, mitä kuuluu?</item>
+        <item>Keskity tehtäviisi</item>
+        <item>Kuinka monta kuvakaappausta otat?</item>
+        <item>Avaa hyvyys crDroidilla</item>
+        <item>Levitä rakkautta, älä tuhoa</item>
+        <item>Emme aloittaneet tulta!</item>
+        <item>Aika kuunnella hyvää musiikkia</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C PÄÄ</item>
+        <item>Tarvitset crDroid Premiumin nähdäksesi tämän</item>
+        <item>Muista yksisarvisen linja</item>
+        <item>Nauti pidennetystä akun kestosta</item>
+        <item>Aloita alkupisteestä</item>
+        <item>Rakastamme sinua 3000</item>
+        <item>Herkullista jopa ilman Sushiä</item>
+        <item>Tee jotain mukavaa tänään</item>
+        <item>Tämä on paras Pixel Kokemus, eikö vain?</item>
+        <item>Miten kaikki sujuu?</item>
+        <item>Ei illuusioita, tervetuloa todellisuuteen!</item>
+        <item>Kiitos tuestasi</item>
+        <item>Ei juhlaa urpoille - vain täydellisyyttä!</item>
+        <item>Yksi buildbotin parhaista valinnoista</item>
+        <item>Järki vainoharhaisuudellesi</item>
+        <item>Kokeile jääkylmiä jälkiruokia</item>
+        <item>Mikä ihana kokemus, eikö olekin?</item>
+        <item>Evoluutio on myytti, eikö?</item>
+        <item>Olet mitä asennat, älä ole peruna</item>
+        <item>Mitä sinulla on mielessäsi?</item>
+        <item>Expecto Patronum</item>
+        <item>Wubba Lubba Dub Dub</item>
+        <item>Voittaja Voittaja ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Ehdotukset</string>
+    <string name="suggestion_pref_screen_desc">Kaikille sovelluksille &amp; aloitusnäytön ehdotuksille</string>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">Säätila</string>
+    <string name="quick_event_ambient_weather_summary">Näytä nykyinen sää- ja lämpötila</string>
+    <string name="quick_event_ambient_weather_enabled_info">Vaatii sääpalvelun käyttöönottamisen</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Taustan läpinäkyvyys</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">Käytä tehtäväpalkkia</string>
+    <string name="pref_allow_phone_taskbar_summary">Sovellusten avaamiseen ja siirtymiseen missä tahansa</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Kuvakaappaus</string>
+    <string name="recents_clear_all_title">Tyhjennä kaikki</string>
+    <string name="recents_lens_title">Lens</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Teemakuvakkeet</string>
+    <string name="pref_themed_icons_summary">Seuraa teemakuvakkeita, joita käytetään aloitusnäytöllä</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">Lähde</string>
+    <string name="app_info_source_system">Järjestelmä</string>
+    <string name="app_info_last_update">Päivitetty viimeksi</string>
+    <string name="app_info_version">Versio</string>
+    <string name="app_info_more">Lisää</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Kuvakepaketti</string>
+    <string name="icon_pack_default_label">Oletus</string>
+    <string name="icon_pack_add">Asenna lisää</string>
+    <string name="icon_pack_no_market">Sovelluskauppaa ei ole käytettävissä</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Tapa</string>
+    <string name="recents_app_killed">Sovellus tapettu</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Käytettävissä | %2$s Yhteensä</string>
+    <string name="recents_meminfo_title">Muistin tiedot</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Sovelluksen hakupalkki</string>
+    <string name="drawer_search_summary">Hakupalkki sovellusvalikon yläpuolella</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Restart</string>
+    <string name="pref_restart_summary">Restart the launcher manually to apply any pending settings</string>
+</resources>

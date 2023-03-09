@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">Setări ecran de pornire</string>
+    <!-- Categories -->
+    <string name="home_category_title">Ecranul principal</string>
+    <string name="home_category_summary">Setează panoul Google Now și altele</string>
+    <string name="icons_category_title">Pictograme</string>
+    <string name="icons_category_summary">Setează forma pictogramei și mai multe</string>
+    <string name="app_drawer_category_title">Sertar aplicații</string>
+    <string name="app_drawer_category_summary">Personalizați sertarul de aplicații</string>
+    <string name="recents_category_title">Recente</string>
+    <string name="recents_category_summary">Renovați ecranul de prezentare generală</string>
+    <string name="misc_category_title">Diverse</string>
+    <string name="misc_category_summary">Alte opțiuni</string>
+    <string name="general_category_title">General</string>
+    <string name="interface_category_title">Interfață</string>
+    <string name="quickspace_category_title">Spațiu rapid</string>
+    <string name="search_bar_category_title">Bara de căutare</string>
+    <string name="actions_category_title">Actiuni rapide</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">Opțiuni dezvoltator</string>
+    <string name="dev_options_summary">Activează pe propriul risc unele caracteristici ascunse</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Blocare aspect</string>
+    <string name="settings_lock_layout_summary_on">Iconițele și widget-urile nu pot fi adăugate, eliminate și mutate pe ecranul principal</string>
+    <string name="settings_lock_layout_summary_off">Iconițele și widget-urile pot fi adăugate, eliminate și mutate pe ecranul principal</string>
+    <string name="settings_edit_widgets_error">Nu este posibil să adăugați widget-uri pe ecranul de pornire</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Etichete pictograme pe desktop</string>
+    <string name="drawer_show_labels">Etichete pictograme în sertar</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Glisați pentru a accesa aplicația Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Când glisați dreapta din ecranul de pornire principal</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Când glisați stânga din ecranul de pornire principal</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Aplicații ascunse &amp; protejate</string>
+    <string name="trust_apps_auth_manager">Deblochează pentru a gestiona aplicațiile ascunse și protejate</string>
+    <string name="trust_apps_auth_open_app">Autentifică-te pentru a deschide %1$s</string>
+    <string name="trust_apps_loading">Se încarcă\u2026</string>
+    <string name="trust_apps_no_lock_error">Vă rugăm să configurați un ecran de blocare securizat pentru a restricționa accesul aplicației</string>
+    <string name="trust_apps_help">Ajutor</string>
+    <string name="trust_apps_info_hidden">Aplicațiile ascunse și widget-urile lor sunt ascunse din sertar</string>
+    <string name="trust_apps_info_protected">Aplicațiile protejate necesită autentificare pentru a fi deschise din launcher</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Dublă atingere pentru oprire ecran</string>
+    <string name="pref_sleep_gesture_summary">Atingeți de două ori spațiul gol pentru oprirea ecranului</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">Pauză</string>
+    <string name="pause_apps_dialog_title">Întrerupeți %1$s?</string>
+    <string name="pause_apps_dialog_message">Notificările pentru %1$s vor fi întrerupte</string>
+    <string name="paused_apps_dialog_title">Aplicație întreruptă</string>
+    <string name="paused_apps_dialog_message">%1$s a fost întrerupt direct din lansator</string>
+    <string name="paused_apps_drop_target_label">Întrerupeți aplicația</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Valoare: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">implicit</string>
+    <string name="custom_seekbar_default_value_to_set">Valoare implicită: <xliff:g id="v">%s</xliff:g>\nAtingeți lung pentru a seta</string>
+    <string name="custom_seekbar_default_value_is_set">Valoarea implicită este setată</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Dimensiune pictogramă</string>
+    <!-- Font size -->
+    <string name="font_size_title">Dimensiune font</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Linii maxime pentru eticheta aplicatiei</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Căutare</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Căutare vocală</string>
+    <string name="dock_music_search_title">Căutare muzică</string>
+    <string name="dock_music_search_summary">Pornește căutarea muzicii la apăsarea pictogramei microfonului</string>
+    <string name="dock_search_title">Bară de căutare Google</string>
+    <string name="dock_search_summary">Bara de căutare în bara de jos</string>
+    <string name="dock_theme_title">Pictograme cu aspect</string>
+    <string name="dock_theme_summary">Folosește pictograme tematice pentru bara de căutare</string>
+    <string name="search_radius_title">Raza de colț</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Fundal Scaun fierbinte</string>
+    <string name="hotseat_bg_summary">Adaugă fundal translucid în andocarea aplicației</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Derulare fundal</string>
+    <string name="allow_wallpaper_scrolling_summary">Efect de derulare fundal pentru mai multe ecrane</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Zooming wallpaper</string>
+    <string name="allow_wallpaper_zooming_summary">Măriți imaginea de fundal atunci când utilizați sertarul sau aplicațiile recente</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Bara de stare</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Umbra de sus</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Înălțimea rândului</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Adâncime blur de fundal</string>
+    <string name="background_blur_summary">Setaţi nivelul de adâncime blur pentru aplicaţiile recente şi lista aplicaţiilor</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Pe scurt</string>
+    <string name="show_quickspace_summary">O copie a widgetului Google dintr-o privire</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Bine ai venit la crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>O zi bună</item>
+        <item>Vă mulțumim că ne-ați ales</item>
+        <item>Ne iubiti? Trimite-ne o bere</item>
+        <item>Cel mai bun Rom din totdeauna.</item>
+        <item>Spune-ne salut pe Telegram</item>
+        <item>Atingeți aici pentru a începe</item>
+        <item>Te iubim 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Acum se redă</string>
+    <string name="quick_event_ambient_song_artist">%1$s de %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Redare acum</string>
+    <string name="quickspace_now_playing_summary">Arată melodia pe care o redă</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Stil minimalist</string>
+    <string name="quickspace_alternate_style_summary">Treceți la stilul modern</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Mesaje aleatorii</string>
+    <string name="quickspace_psa_summary">Fă-ți prietenul tău mai viu cu mesaje aleatoare</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Bună dimineața!</item>
+        <item>Bună dimineața, timpul de rock!</item>
+        <item>Ce zi frumoasă!</item>
+        <item>O zi bună!</item>
+        <item>Ce zici de o pauză de 5 minute?</item>
+        <item>Acesta este un mod de a te trezi.</item>
+        <item>Ar trebui să vă schimbați sunetele de alarmă.</item>
+        <item>Se pare că este o zi frumoasă, nu-i așa?</item>
+        <item>Hai să obținem această pâine.</item>
+        <item>Verificați vremea pentru orice eventualitate</item>
+        <item>Te simti somnoros deja</item>
+        <item>Te-ai uitat afară?</item>
+        <item>Să terminăm asta.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Noapte bună!</item>
+        <item>Somn ușor!</item>
+        <item>Pe mâine!</item>
+        <item>Vise plăcute!</item>
+        <item>Nu sta prea mult</item>
+        <item>Somn usor</item>
+        <item>Odihnestete</item>
+        <item>Timpul pentru relaxare</item>
+        <item>Bucura-te de noapte!</item>
+        <item>Este timpul să încărcăm bateriile!</item>
+        <item>Mâine ar putea fi o zi grozavă</item>
+        <item>Pregătește-ți oasele pentru mâine</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Um... noapte bună?</item>
+        <item>E cam târziu acum</item>
+        <item>Ar trebui să vă stabiliți programul de somn</item>
+        <item>Ești mai productiv în acest moment?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Ignoranta este Bliss</item>
+        <item>Este timpul să instalezi o nouă actualizare deja?</item>
+        <item>Fă pace, nu război</item>
+        <item>Oh, hei, ce se întâmplă?</item>
+        <item>Focalizează sarcinile tale</item>
+        <item>Câte capturi de ecran faceți?</item>
+        <item>Deschide bunătatea cu crDroid</item>
+        <item>Dragostea răsunătoare, nu haos</item>
+        <item>Nu am început focul!</item>
+        <item>Timp pentru muzica buna</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>Ai nevoie de crDroid Premium pentru a vedea asta</item>
+        <item>Amintiți-vă Lineage of the Unicorn</item>
+        <item>Bucură-te de durata bateriei Xtended</item>
+        <item>Pornind de la zero</item>
+        <item>Te iubim 3000</item>
+        <item>Delicios chiar și fără Sushi</item>
+        <item>Fă ceva drăguț astăzi</item>
+        <item>Aceasta este cea mai bună experiență Pixel, nu-i așa?</item>
+        <item>Cum se duce totul?</item>
+        <item>Nicio iluzie, bun venit în realitate!</item>
+        <item>Vă mulțumim pentru sprijin</item>
+        <item>Niciun festival pentru Derps - doar perfecţiune!</item>
+        <item>Una dintre cele mai bune alegeri ale buildbot-ului</item>
+        <item>Sanitatea ta pentru Paranoia</item>
+        <item>Încearcă deserturile de gheață</item>
+        <item>Ce experiență minunată, nu-i așa?</item>
+        <item>Evoluția e un mit, nu?</item>
+        <item>Ești ceea ce faci flăcări, nu fii Cartofi</item>
+        <item>La ce te gandesti?</item>
+        <item>Expecto Patronum</item>
+        <item>Wubba Lubba Dub Dub</item>
+        <item>Câștigător ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Sugestii</string>
+    <string name="suggestion_pref_screen_desc">Pentru toate aplicațiile &amp; sugestiile pentru ecranul de pornire</string>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">Condiție meteo</string>
+    <string name="quick_event_ambient_weather_summary">Afişează starea meteo curentă şi temperatura</string>
+    <string name="quick_event_ambient_weather_enabled_info">Necesită activarea serviciului meteo</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Opacitate fundal</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">Folosește bara de activități</string>
+    <string name="pref_allow_phone_taskbar_summary">Pentru deschiderea și schimbarea aplicațiilor oriunde</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Captură ecran</string>
+    <string name="recents_clear_all_title">Șterge tot</string>
+    <string name="recents_lens_title">Obiectiv</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Pictograme cu aspect</string>
+    <string name="pref_themed_icons_summary">Urmărește pictogramele tematice utilizate pe ecranul de pornire</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">Sursă</string>
+    <string name="app_info_source_system">Sistem</string>
+    <string name="app_info_last_update">Ultima actualizare</string>
+    <string name="app_info_version">Versiune</string>
+    <string name="app_info_more">Mai mult</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Pachet de pictograme</string>
+    <string name="icon_pack_default_label">Prestabilit</string>
+    <string name="icon_pack_add">Instalează mai multe</string>
+    <string name="icon_pack_no_market">Nu există niciun magazin de aplicații disponibil</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Termină</string>
+    <string name="recents_app_killed">Aplicaţie terminată</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Disponibil | %2$s Total</string>
+    <string name="recents_meminfo_title">Informații memorie</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Bara de căutare aplicaţii</string>
+    <string name="drawer_search_summary">Bara de căutare în partea de sus a sertarului de aplicații</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Repornire</string>
+    <string name="pref_restart_summary">Repornește lansatorul manual pentru a aplica orice setări în așteptare</string>
+</resources>

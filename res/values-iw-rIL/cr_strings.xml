@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">הגדרות דף הבית</string>
+    <!-- Categories -->
+    <string name="home_category_title">דף הבית</string>
+    <string name="home_category_summary">הגדרת לוח Google now ועוד</string>
+    <string name="icons_category_title">סמלים</string>
+    <string name="icons_category_summary">הגדרת גודל הסמל ועוד</string>
+    <string name="app_drawer_category_title">מגירת היישומים</string>
+    <string name="app_drawer_category_summary">התאמה אישית של מגירת היישומים</string>
+    <string name="recents_category_title">מהזמן האחרון</string>
+    <string name="recents_category_summary">ארגון מחדש של מסך התצוגה המסכמת</string>
+    <string name="misc_category_title">שונות</string>
+    <string name="misc_category_summary">אפשרויות נוספות</string>
+    <string name="general_category_title">כללי</string>
+    <string name="interface_category_title">ממשק</string>
+    <string name="quickspace_category_title">החלל המהיר</string>
+    <string name="search_bar_category_title">סרגל החיפוש</string>
+    <string name="actions_category_title">פעולות מהירות</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">אפשרויות מפתח</string>
+    <string name="dev_options_summary">לאפשר מספר תכונות נסתרות על אחריותך בלבד</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">נעילת פריסת התצוגה</string>
+    <string name="settings_lock_layout_summary_on">לא ניתן להוסיף, להסיר ולהזיז סמלים ויישומונים על מסך הבית</string>
+    <string name="settings_lock_layout_summary_off">ניתן להוסיף, להסיר ולהזיז סמלים ויישומונים על מסך הבית</string>
+    <string name="settings_edit_widgets_error">אין אפשרות להוסיף יישומונים למסך הבית</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">תוויות סמלים במסך הבית</string>
+    <string name="drawer_show_labels">תוויות סמלים במגירת היישומים</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">החלקה כדי לגשת לאפליקציית גוגל</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">בעת החלקה ימינה ממסך הבית</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">בעת החלקה שמאלה ממסך הבית</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">מוסתרים &amp; יישומים מוגנים</string>
+    <string name="trust_apps_auth_manager">ביטול נעילה כדי לנהל את היישומים המוסתרים והמוגנים</string>
+    <string name="trust_apps_auth_open_app">אימות לפתיחת %1$s</string>
+    <string name="trust_apps_loading">טעינת \u2026</string>
+    <string name="trust_apps_no_lock_error">נדרש להגדיר מסך נעילה מאובטח להגבלת גישה ליישומים</string>
+    <string name="trust_apps_help">עזרה</string>
+    <string name="trust_apps_info_hidden">יישומים מוסתרים והווידג\'טים שלהם אינם מוצגים במגירת היישומים</string>
+    <string name="trust_apps_info_protected">יישומים מוגנים מחייבים אימות לפתיחה מהמשגר</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">הקשה כפולה לכיבוי המסך</string>
+    <string name="pref_sleep_gesture_summary">הקשה כפולה על מקום ריק לכיבוי המסך</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">השהיה</string>
+    <string name="pause_apps_dialog_title">השהיית %1$s?</string>
+    <string name="pause_apps_dialog_message">התראות עבור %1$s יושהו</string>
+    <string name="paused_apps_dialog_title">היישום מושהה</string>
+    <string name="paused_apps_dialog_message">%1$s הושהה ישירות מהמשגר</string>
+    <string name="paused_apps_drop_target_label">השהיית היישום</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">ערך: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">כברירת מחדל</string>
+    <string name="custom_seekbar_default_value_to_set">ברירת מחדל: <xliff:g id="v">%s</xliff:g>\nלחיצה ממושכת להגדרה</string>
+    <string name="custom_seekbar_default_value_is_set">ערך ברירת המחדל מוגדר</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">גודל הסמל</string>
+    <!-- Font size -->
+    <string name="font_size_title">גודל הגופן</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">מספר שורות מירבי לתווית יישומים</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">חיפוש</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">חיפוש קולי</string>
+    <string name="dock_music_search_title">חיפוש מוסיקה</string>
+    <string name="dock_music_search_summary">הפעלת חיפוש מוסיקה בלחיצה על סמל המיקרופון</string>
+    <string name="dock_search_title">סרגל החיפוש של Google</string>
+    <string name="dock_search_summary">שורת חיפוש בסרגל התחתון</string>
+    <string name="dock_theme_title">סמלילי ערכת הנושא</string>
+    <string name="dock_theme_summary">הצגת סמלי ערכת הנושא בשורת החיפוש</string>
+    <string name="search_radius_title">רדיוס עיגול הפינות</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">רקע המושב החם</string>
+    <string name="hotseat_bg_summary">הוספת רקע שקוף לסרגל היישומים</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">גלילת הטפט</string>
+    <string name="allow_wallpaper_scrolling_summary">אפקט גלילה לטפט עבור מסכים מרובים</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">שינוי מרחק לטפט</string>
+    <string name="allow_wallpaper_zooming_summary">התקרבות או התרחקות הטפט בעת השימוש במגירת היישומים או היישומים האחרונים</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">שורת המצב</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">צללית עילית</string>
+    <!-- Row Height -->
+    <string name="row_height_title">גובה השורה</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">עומק טשטוש הרקע</string>
+    <string name="background_blur_summary">הגדרת עומק הטשטוש למגירת היישומים וליישומים האחרונים</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">מבט מהיר</string>
+    <string name="show_quickspace_summary">הצגה בקצה העליון של מסך הבית שלך</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">ברוך בואך לcrDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>שיהיה לך יום נפלא</item>
+        <item>תודה לך על בחירתך בנו</item>
+        <item>אהבת אותנו? אפשר לשלוח לנו כוס בירה</item>
+        <item>ה-ROM הטוב ביותר מאז ומעולם.</item>
+        <item>אפשר לאמר לנו היי בטלגרם</item>
+        <item>לחיצה כאן כדי להתחיל</item>
+        <item>אנחנו אוהבים אותך 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">מתנגן כעת</string>
+    <string name="quick_event_ambient_song_artist">%1$s על־ידי %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">מתנגן כעת</string>
+    <string name="quickspace_now_playing_summary">הצגת השיר המתנגן כעת</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">סגנון מינימליסטי</string>
+    <string name="quickspace_alternate_style_summary">החלפה לסגנון מודרני</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">הודעות אקראיות</string>
+    <string name="quickspace_psa_summary">אפשר להחיות את השיחה עם הודעות אקראיות</string>
+    <string-array name="quickspace_psa_morning">
+        <item>בוקר טוב!</item>
+        <item>בוקר טוב, הגיע הזמן לזוז!</item>
+        <item>איזה יום יפה!</item>
+        <item>שיהיה לך יום נפלא!</item>
+        <item>מה בדבר נמנום קטן של 5 דקות?</item>
+        <item>גם זו דרך להתעורר.</item>
+        <item>הגיע הזמן להחליף את צלצול המעורר שלך.</item>
+        <item>נראה שזה יום יפה, לא?</item>
+        <item>קדימה, נלך על זה.</item>
+        <item>כדאי לבדוק את מזג האוויר – ליתר בטחון</item>
+        <item>תחושת ישנוניות עדיין</item>
+        <item>הסתכלת כבר החוצה?</item>
+        <item>קדימה, נסיים את זה.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>לילה טוב!</item>
+        <item>שינה ערבה!</item>
+        <item>נתראה מחר!</item>
+        <item>חלומות מתוקים!</item>
+        <item>לא להישאר ערים עד מאוחר</item>
+        <item>שתהיה לך שינה טובה</item>
+        <item>כדאי לתפוס תנומה</item>
+        <item>זמן להירגע</item>
+        <item>לילה מהנה!</item>
+        <item>זמן לטעון מצברים!</item>
+        <item>מחר יכול להיות יום אדיר</item>
+        <item>תכין את העצמות שלך למחר</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>אממ... לילה טוב?</item>
+        <item>קצת מאוחר עכשיו</item>
+        <item>כדאי להסדיר את זמני השינה שלך</item>
+        <item>מרגישים יותר יצירתיות בשלב זה?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>בורות היא אושר</item>
+        <item>האם כבר הגיע הזמן לצרוב עדכון נוסף?</item>
+        <item>עשו שלום, לא מלחמה</item>
+        <item>אווו היי, מה קורה?</item>
+        <item>כדאי להתמקד במשימות שלך</item>
+        <item>כמה צילומי מסך צריך?</item>
+        <item>לפתוח את הטוב עם crDroid</item>
+        <item>הפיצו אהבה, לא חורבן</item>
+        <item>לא אנחנו הצתנו את הלהבה!</item>
+        <item>הגיע הזמן לקצת מוזיקה טובה</item>
+        <item>ראש \u003C\u003C\u003C\u003C\u003C\u003C\u003C</item>
+        <item>נדרש crDroid Premium כדי לצפות בזה</item>
+        <item>זכרו את שושלת החד-קרן</item>
+        <item>תיהנו מחיי סוללה Xטרה ארוכים</item>
+        <item>התחלנו מלא-כלום ושום דבר</item>
+        <item>אנחנו אוהבים אותך 3000</item>
+        <item>ערב לחיך אפילו בלי סושי</item>
+        <item>עשו משהו נחמד היום</item>
+        <item>זוהי חוויית הפיקסל הטובה ביותר, לא?</item>
+        <item>איך הכול הולך?</item>
+        <item>בלי אשליות, ברוכים הבאים למציאות!</item>
+        <item>תודה על תמיכתך</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>שפיות בשביל הפרנויה שלך</item>
+        <item>Try Ice Cold desserts</item>
+        <item>איזו חוויה מקסימה, לא כך?</item>
+        <item>האבולוציה היא מיתוס, נכון?</item>
+        <item>You are what you flash, don\'t be Potato</item>
+        <item>על מה אתה חושב?</item>
+        <item>Expecto Patronum</item>
+        <item>Wubba Lubba Dub Dub</item>
+        <item>Winner Winner ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">הצעות</string>
+    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">מצב מזג־אוויר</string>
+    <string name="quick_event_ambient_weather_summary">Display current weather condition and temperature</string>
+    <string name="quick_event_ambient_weather_enabled_info">Requires weather service to be enabled</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Background opacity</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">שימוש בסרגל המשימות</string>
+    <string name="pref_allow_phone_taskbar_summary">For opening and switching apps anywhere</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Screenshot</string>
+    <string name="recents_clear_all_title">נקה הכל</string>
+    <string name="recents_lens_title">עדשה</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Themed icons</string>
+    <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">מקור</string>
+    <string name="app_info_source_system">מערכת</string>
+    <string name="app_info_last_update">העדכון האחרון</string>
+    <string name="app_info_version">גרסה</string>
+    <string name="app_info_more">עוד</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">ערכת סמלים</string>
+    <string name="icon_pack_default_label">ברירת המחדל</string>
+    <string name="icon_pack_add">התקנת עוד</string>
+    <string name="icon_pack_no_market">אין חנות אפליקציות זמינה</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">כפיית הפסקת היישום</string>
+    <string name="recents_app_killed">היישום נסגר</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s זמין /%2$s בסך הכל</string>
+    <string name="recents_meminfo_title">מידע אודות הזכרון</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">סרגל חיפוש יישומים</string>
+    <string name="drawer_search_summary">הצגת סרגל חיפוש בראש מגירת היישומים</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">הפעלה מחדש</string>
+    <string name="pref_restart_summary">הפעלה מחדש של משגר היישומים (לאונצ\'ר) להחלת הגדרות ששונו</string>
+</resources>

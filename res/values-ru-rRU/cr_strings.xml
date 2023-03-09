@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">Настройки главного экрана</string>
+    <!-- Categories -->
+    <string name="home_category_title">Главный экран</string>
+    <string name="home_category_summary">Установить панель Google Now и другое</string>
+    <string name="icons_category_title">Значки</string>
+    <string name="icons_category_summary">Установить размер значков и многое другое</string>
+    <string name="app_drawer_category_title">Меню приложений</string>
+    <string name="app_drawer_category_summary">Настроить меню приложений</string>
+    <string name="recents_category_title">Недавние</string>
+    <string name="recents_category_summary">Настройка экрана недавних приложений</string>
+    <string name="misc_category_title">Разное</string>
+    <string name="misc_category_summary">Другие настройки</string>
+    <string name="general_category_title">Общие</string>
+    <string name="interface_category_title">Интерфейс</string>
+    <string name="quickspace_category_title">Быстрое пространство</string>
+    <string name="search_bar_category_title">Строка поиска</string>
+    <string name="actions_category_title">Быстрые действия</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">Для разработчиков</string>
+    <string name="dev_options_summary">Включить некоторые скрытые функции на свой страх и риск</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Запретить редактирование</string>
+    <string name="settings_lock_layout_summary_on">Иконки и виджеты не могут быть добавлены, удалены и перемещены на главный экран</string>
+    <string name="settings_lock_layout_summary_off">Иконки и виджеты могут быть добавлены, удалены и перемещены на домашнем экране</string>
+    <string name="settings_edit_widgets_error">Невозможно добавить виджеты на главный экран</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Отображать названия приложений на рабочем столе</string>
+    <string name="drawer_show_labels">Отображать названия приложений в меню</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Проведите пальцем для доступа к приложению Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Когда вы проводите вправо с главного Рабочего стола</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Когда вы проводите влево с главного Рабочего стола</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Скрытые и защищенные приложения</string>
+    <string name="trust_apps_auth_manager">Разблокируйте, для управления скрытыми и защищенными приложениями</string>
+    <string name="trust_apps_auth_open_app">Авторизуйтесь, для открытия %1$s</string>
+    <string name="trust_apps_loading">Загрузка\u2026</string>
+    <string name="trust_apps_no_lock_error">Пожалуйста, установите блокировку экрана для ограничения доступа к приложениям</string>
+    <string name="trust_apps_help">Помощь</string>
+    <string name="trust_apps_info_hidden">Скрытые приложения и их виджеты скрыты из меню</string>
+    <string name="trust_apps_info_protected">Для открытия защищенных приложений из лаунчера требуется аутентификация</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Выключение экрана двойным нажатием</string>
+    <string name="pref_sleep_gesture_summary">Двойное нажатие на пустом месте для выключения экрана</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">Пауза</string>
+    <string name="pause_apps_dialog_title">Приостановить %1$s?</string>
+    <string name="pause_apps_dialog_message">Уведомления для %1$s будут приостановлены</string>
+    <string name="paused_apps_dialog_title">Приложение приостановлено</string>
+    <string name="paused_apps_dialog_message">Программа %1$s была приостановлена непосредственно из лаунчера</string>
+    <string name="paused_apps_drop_target_label">Приостановить приложение</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">по умолчанию</string>
+    <string name="custom_seekbar_default_value_to_set">Значение по умолчанию: <xliff:g id="v">%s</xliff:g>\nУдерживайте для установки</string>
+    <string name="custom_seekbar_default_value_is_set">Значение по умолчанию установлено</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Размер значков</string>
+    <!-- Font size -->
+    <string name="font_size_title">Размер шрифта</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Максимальное количество строк в названии ярлыка приложений</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Поиск</string>
+    <string name="label_lens">Google Объектив</string>
+    <string name="label_voice_search">Голосовой поиск</string>
+    <string name="dock_music_search_title">Поиск музыки</string>
+    <string name="dock_music_search_summary">Поиск музыки при нажатии на микрофон</string>
+    <string name="dock_search_title">Панель поиска Google</string>
+    <string name="dock_search_summary">Строка поиска в нижней панели</string>
+    <string name="dock_theme_title">Тематические значки</string>
+    <string name="dock_theme_summary">Использовать тематические значки для панели поиска</string>
+    <string name="search_radius_title">Радиус скругления углов</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Фон нижней панели</string>
+    <string name="hotseat_bg_summary">Добавить прозрачный фон в нижнюю часть</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Прокрутка обоев</string>
+    <string name="allow_wallpaper_scrolling_summary">Эффект прокрутки обоев для нескольких экранов</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Масштабирование обоев</string>
+    <string name="allow_wallpaper_zooming_summary">Увеличение или уменьшение обоев в меню приложений и в списке недавних приложений</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Строка состояния</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Тень сверху</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Высота строки</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Глубина размытия фона</string>
+    <string name="background_blur_summary">Установка глубины размытия для недавних и меню приложений</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Самое главное</string>
+    <string name="show_quickspace_summary">Показывать в верхней части экрана</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Добро пожаловать в crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>Хорошего дня</item>
+        <item>Спасибо за то, что выбрали нас</item>
+        <item>Вы нас любите? Отправьте нам тогда, пиво</item>
+        <item>Лучшая прошивка в мире.</item>
+        <item>Поздоровайтесь с нами в Telegram</item>
+        <item>Нажмите сюда, чтобы начать</item>
+        <item>Мы любим вас 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Сейчас играет</string>
+    <string name="quick_event_ambient_song_artist">%1$s от %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Сейчас играет</string>
+    <string name="quickspace_now_playing_summary">Показать песню, которую вы слушаете</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Минималистичний стиль</string>
+    <string name="quickspace_alternate_style_summary">Переключиться на современный стиль</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Случайные сообщения</string>
+    <string name="quickspace_psa_summary">Сделайте своего спутника более живым со случайными сообщениями</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Доброе утро!</item>
+        <item>Доброе утро, время зажигать!</item>
+        <item>Какой чудесный день!</item>
+        <item>Хорошего дня!</item>
+        <item>Как насчет небольшого 5-минутного перерыва?</item>
+        <item>Это один из способов проснуться.</item>
+        <item>Вы должны изменить звук будильника.</item>
+        <item>Похоже, сегодня превосходный день, не правда ли?</item>
+        <item>Давайте затащим.</item>
+        <item>На всякий случай проверьте погоду</item>
+        <item>Еще не чувствуете сонливости?</item>
+        <item>Вы уже выглядывали на улицу?</item>
+        <item>Давайте сделаем это.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Доброй ночи!</item>
+        <item>Приятных снов!</item>
+        <item>До завтра!</item>
+        <item>Сладких снов!</item>
+        <item>Не засиживайтесь слишком долго</item>
+        <item>Приятных снов</item>
+        <item>Пора спать</item>
+        <item>Время расслабиться</item>
+        <item>Наслаждайтесь ночью!</item>
+        <item>Время зарядить батарею!</item>
+        <item>Завтра может быть отличный день</item>
+        <item>Готовь свои кости к завтрашнему дню</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Эм... доброй ночи?</item>
+        <item>Сейчас уже поздновато</item>
+        <item>Вы должны исправить свой график сна</item>
+        <item>Вы сейчас более продуктивны?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Неведение - Благо</item>
+        <item>Не пора ли уже установить еще одно обновление?</item>
+        <item>Цените мир</item>
+        <item>О, привет, что случилось?</item>
+        <item>Сосредоточьтесь на своих задачах</item>
+        <item>Сколько скриншотов вы делаете?</item>
+        <item>Открой лучшее с crDroid</item>
+        <item>Распространяйте любовь, а не хаос</item>
+        <item>Не мы разожгли огонь!</item>
+        <item>Время для хорошей музыки</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C ГЛАВНЫЙ</item>
+        <item>Вам нужна подписка crDroid Premium, чтобы использовать это</item>
+        <item>Помните родословную единорога</item>
+        <item>Наслаждайтесь долгим сроком службы батареи</item>
+        <item>Начинайте с нуля</item>
+        <item>Мы любим вас 3000</item>
+        <item>Вкусно даже без Суши</item>
+        <item>Сделайте сегодня что-то приятное</item>
+        <item>Это же лучший опыт Pixel, не так ли?</item>
+        <item>Как дела?</item>
+        <item>Никаких иллюзий, добро пожаловать в реальность!</item>
+        <item>Спасибо за Вашу поддержку</item>
+        <item>Никакого фестиваля для сумасшедших - только идеал!</item>
+        <item>Одна из лучших сборок</item>
+        <item>Безопасность для вашей паранойи</item>
+        <item>Попробуйте ледянные десерты</item>
+        <item>Какой прекрасный опыт, не правда ли?</item>
+        <item>Эволюция - это миф, да?</item>
+        <item>Ты - это то что ты шьёшь, не будь Картошкой</item>
+        <item>О чем думаете?</item>
+        <item>Экспекто Патронум</item>
+        <item>Вабба лабба даб даб</item>
+        <item>Победитель, Победитель ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Предложения</string>
+    <string name="suggestion_pref_screen_desc">Рекомендации в меню приложений &amp; На рабочем столе</string>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">Погодные условия</string>
+    <string name="quick_event_ambient_weather_summary">Показывать текущие погодные условия и температуру</string>
+    <string name="quick_event_ambient_weather_enabled_info">Требуется включенная служба погоды</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Прозрачность фона</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">Использовать панель задач</string>
+    <string name="pref_allow_phone_taskbar_summary">Для открытия и переключения приложений в любом месте</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Скриншот</string>
+    <string name="recents_clear_all_title">Очистить все</string>
+    <string name="recents_lens_title">Объектив</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Тематические значки</string>
+    <string name="pref_themed_icons_summary">Следовать тематическим значкам, которые используются на главном экране</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">Источник</string>
+    <string name="app_info_source_system">Системное</string>
+    <string name="app_info_last_update">Последнее обновление</string>
+    <string name="app_info_version">Версия</string>
+    <string name="app_info_more">Ещё</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Набор значков</string>
+    <string name="icon_pack_default_label">По умолчанию</string>
+    <string name="icon_pack_add">Установить ещё</string>
+    <string name="icon_pack_no_market">Нет доступного магазина приложений</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Завершить</string>
+    <string name="recents_app_killed">Приложение закрыто</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">Доступно: %1$s | Всего: %2$s</string>
+    <string name="recents_meminfo_title">Информация о памяти</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Строка поиска</string>
+    <string name="drawer_search_summary">Строка поиска в верхней части меню приложений</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Перезапустить</string>
+    <string name="pref_restart_summary">Перезапустить лаунчер вручную, чтобы применить все ожидающие настройки</string>
+</resources>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">主畫面設定</string>
+    <!-- Categories -->
+    <string name="home_category_title">主畫面</string>
+    <string name="home_category_summary">調整 Google 即時資訊等設定</string>
+    <string name="icons_category_title">圖示</string>
+    <string name="icons_category_summary">設定圖示大小和更多</string>
+    <string name="app_drawer_category_title">應用程式清單</string>
+    <string name="app_drawer_category_summary">自訂您的應用程式清單</string>
+    <string name="recents_category_title">總覽</string>
+    <string name="recents_category_summary">調整總覽介面</string>
+    <string name="misc_category_title">雜項</string>
+    <string name="misc_category_summary">其他選項</string>
+    <string name="general_category_title">一般</string>
+    <string name="interface_category_title">介面</string>
+    <string name="quickspace_category_title">資訊一覽</string>
+    <string name="search_bar_category_title">搜尋列</string>
+    <string name="actions_category_title">快捷動作</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">開發人員選項</string>
+    <string name="dev_options_summary">自負風險開啟一些隱藏功能</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">鎖定佈局</string>
+    <string name="settings_lock_layout_summary_on">禁止在桌面上新增、移除或移動圖示和小工具</string>
+    <string name="settings_lock_layout_summary_off">允許在桌面上新增、移除或移動圖示和小工具</string>
+    <string name="settings_edit_widgets_error">無法將小工具新增至主畫面</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">在桌面上顯示圖示名稱</string>
+    <string name="drawer_show_labels">在應用程式清單中顯示圖示名稱</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">滑動顯示 Google 即時資訊</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">當在主畫面向右滑動時</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">當在主畫面向左滑動時</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">隱藏和受保護的應用程式</string>
+    <string name="trust_apps_auth_manager">解鎖以管理隱藏和受保護的應用程式</string>
+    <string name="trust_apps_auth_open_app">進行身份驗證以開啟 %1$s</string>
+    <string name="trust_apps_loading">載入中\u2026</string>
+    <string name="trust_apps_no_lock_error">請設置安全的鎖定方式來管理及限制應用程式的存取權限</string>
+    <string name="trust_apps_help">說明</string>
+    <string name="trust_apps_info_hidden">隱藏應用程式及其小工具</string>
+    <string name="trust_apps_info_protected">需要身份驗證才能開啟受保護的應用程式</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">輕觸兩下休眠</string>
+    <string name="pref_sleep_gesture_summary">在空白處點兩下以關閉螢幕</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">暫停應用程式</string>
+    <string name="pause_apps_dialog_title">暫停 %1$s？</string>
+    <string name="pause_apps_dialog_message">%1$s 的通知將會暫停顯示</string>
+    <string name="paused_apps_dialog_title">已暫停應用程式</string>
+    <string name="paused_apps_dialog_message">%1$s 是在主畫面上被暫停的</string>
+    <string name="paused_apps_drop_target_label">暫停應用程式</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">數值： <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">使用預設值</string>
+    <string name="custom_seekbar_default_value_to_set">預設值：<xliff:g id="v">%s</xliff:g>\n長按以設定</string>
+    <string name="custom_seekbar_default_value_is_set">已設定為預設值</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">圖示大小</string>
+    <!-- Font size -->
+    <string name="font_size_title">字體大小</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">圖示名稱的最大行數</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">搜尋</string>
+    <string name="label_lens">智慧鏡頭</string>
+    <string name="label_voice_search">語音搜尋</string>
+    <string name="dock_music_search_title">Music search</string>
+    <string name="dock_music_search_summary">Start music search on pressing mic icon</string>
+    <string name="dock_search_title">Google 搜尋列</string>
+    <string name="dock_search_summary">在底部顯示搜尋列</string>
+    <string name="dock_theme_title">圖示套用主題色</string>
+    <string name="dock_theme_summary">將主題色套用於搜尋列</string>
+    <string name="search_radius_title">圓角大小</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">底欄背景</string>
+    <string name="hotseat_bg_summary">在底部的應用程式列顯示透明背景</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">桌布滑動</string>
+    <string name="allow_wallpaper_scrolling_summary">在不同頁面間滑動時使桌布跟著移動</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">桌布縮放</string>
+    <string name="allow_wallpaper_zooming_summary">在執行各種操作時縮放桌布</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">狀態列</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">頂部陰影</string>
+    <!-- Row Height -->
+    <string name="row_height_title">列高</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">背景模糊度</string>
+    <string name="background_blur_summary">設定最近應用程式和應用程式清單的背景模糊度</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">快速查看</string>
+    <string name="show_quickspace_summary">在主畫面頂端顯示</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">歡迎來到 crDroid ！</string>
+    <string-array name="welcome_message_variants">
+        <item>祝你有個美好的一天</item>
+        <item>感謝您選用 crDroid</item>
+        <item>喜歡 crDroid 嗎？請我們喝杯啤酒吧</item>
+        <item>史上最棒的系統</item>
+        <item>到 Telegram 群組跟我們打個招呼吧</item>
+        <item>輕觸此處開始</item>
+        <item>我們愛你 3000 次</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">正在播放</string>
+    <string name="quick_event_ambient_song_artist">%2$s - %1$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">現正播放</string>
+    <string name="quickspace_now_playing_summary">顯示正在播放的曲目</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">簡約風</string>
+    <string name="quickspace_alternate_style_summary">切換至現代風格</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">隨機訊息</string>
+    <string name="quickspace_psa_summary">在頂端顯示各式各樣隨機的訊息</string>
+    <string-array name="quickspace_psa_morning">
+        <item>早安！</item>
+        <item>早安，該上工了！</item>
+        <item>多麼美好的一天！</item>
+        <item>祝你有個美好的一天！</item>
+        <item>再睡五分鐘怎麼樣？</item>
+        <item>這樣醒來也不錯。</item>
+        <item>你該換換你的鬧鐘鈴聲了。</item>
+        <item>今天天氣看起來不錯呢。</item>
+        <item>去賺大錢吧！</item>
+        <item>以防萬一，看看天氣預報吧</item>
+        <item>想睡了嗎？</item>
+        <item>你今天看看窗外風景了嗎？</item>
+        <item>是時候開工了。</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>晚安！</item>
+        <item>祝你一夜好夢！</item>
+        <item>明天見！</item>
+        <item>祝您好夢！</item>
+        <item>早點睡吧</item>
+        <item>祝您一覺好眠</item>
+        <item>去睡一會吧</item>
+        <item>該放鬆一下囉</item>
+        <item>祝您有個美好的夜晚！</item>
+        <item>該充電了！</item>
+        <item>明天應該也是好日子</item>
+        <item>為明天做好準備吧</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>嗯… 晚安？</item>
+        <item>不覺得現在的時間有點晚了嗎？</item>
+        <item>你該調整你的作息了。</item>
+        <item>你習慣熬夜工作嗎？</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>天真也是一種幸福</item>
+        <item>是不是該更新系統了？</item>
+        <item>只要和平，不要戰爭</item>
+        <item>嘿，今天過得如何？</item>
+        <item>專心工作</item>
+        <item>你截了幾張螢幕截圖？</item>
+        <item>和 crDroid 一同迎接美好吧</item>
+        <item>用愛傳遞正能量</item>
+        <item>先起頭的可不是我們！</item>
+        <item>是時候聽些不錯的音樂了</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C 標頭</item>
+        <item>你需要 crDroid Premium 才能看到這個內容 :)</item>
+        <item>牢牢記住獨角獸的悠長血統</item>
+        <item>享受更極限延長的電池壽命吧</item>
+        <item>從零開始</item>
+        <item>我們愛你 3000 次</item>
+        <item>不加壽司也很美味</item>
+        <item>日行一善</item>
+        <item>這不就是最棒的 Pixel 體驗嗎？</item>
+        <item>今天過得如何？</item>
+        <item>這不是幻覺，歡迎來到現實！</item>
+        <item>非常感謝您的支持</item>
+        <item>沒有慶祝小呆子的節日 － 只有完美！</item>
+        <item>Buildbot 的最佳選擇之一</item>
+        <item>在你的偏執上灑上一點點理智</item>
+        <item>試試一些冰涼甜品吧</item>
+        <item>多麼美妙的體驗，對吧？</item>
+        <item>進化是個謎題，沒錯吧？</item>
+        <item>你刷什麼就是什麼，別像個馬鈴薯</item>
+        <item>在想什麼？</item>
+        <item>疾疾，護法現身</item>
+        <item>Wubba Lubba Dub Dub</item>
+        <item>大吉大利...？</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">建議的應用程式</string>
+    <string name="suggestion_pref_screen_desc">在應用程式清單和主畫面上顯示建議</string>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">天氣</string>
+    <string name="quick_event_ambient_weather_summary">顯示目前的氣溫和天氣狀況</string>
+    <string name="quick_event_ambient_weather_enabled_info">需要啟用天氣服務</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">背景透明度</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">啟用工作列</string>
+    <string name="pref_allow_phone_taskbar_summary">隨處都能開啟和切換應用程式</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">螢幕截圖</string>
+    <string name="recents_clear_all_title">全部清除</string>
+    <string name="recents_lens_title">智慧鏡頭</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">圖示套用主題色</string>
+    <string name="pref_themed_icons_summary">將應用程式清單中的圖示也套用主題色</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">安裝來源</string>
+    <string name="app_info_source_system">系統</string>
+    <string name="app_info_last_update">上次更新</string>
+    <string name="app_info_version">版本</string>
+    <string name="app_info_more">更多</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">圖示套件</string>
+    <string name="icon_pack_default_label">預設</string>
+    <string name="icon_pack_add">取得更多...</string>
+    <string name="icon_pack_no_market">沒有可用的應用程式商店</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">強制停止</string>
+    <string name="recents_app_killed">已強制停止應用程式</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">可用 %1$s | 總共 %2$s</string>
+    <string name="recents_meminfo_title">記憶體</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">搜尋列</string>
+    <string name="drawer_search_summary">應用程式清單頂部的搜尋列</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">重新啟動</string>
+    <string name="pref_restart_summary">重新啟動主畫面來套用設定</string>
+</resources>
