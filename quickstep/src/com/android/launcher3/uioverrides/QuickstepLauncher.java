@@ -40,6 +40,9 @@ import static com.android.launcher3.config.FeatureFlags.RECEIVE_UNFOLD_EVENTS_FR
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_APP_LAUNCH_TAP;
 import static com.android.launcher3.model.data.ItemInfo.NO_MATCHING_ID;
 import static com.android.launcher3.popup.QuickstepSystemShortcut.getSplitSelectShortcutByPosition;
+import static com.android.launcher3.popup.SystemShortcut.APP_INFO;
+import static com.android.launcher3.popup.SystemShortcut.INSTALL;
+import static com.android.launcher3.popup.SystemShortcut.WIDGETS;
 import static com.android.launcher3.taskbar.LauncherTaskbarUIController.ALL_APPS_PAGE_PROGRESS_INDEX;
 import static com.android.launcher3.taskbar.LauncherTaskbarUIController.MINUS_ONE_PAGE_PROGRESS_INDEX;
 import static com.android.launcher3.taskbar.LauncherTaskbarUIController.WIDGETS_PAGE_PROGRESS_INDEX;
@@ -80,7 +83,6 @@ import android.view.Display;
 import android.view.HapticFeedbackConstants;
 import android.view.RemoteAnimationTarget;
 import android.view.View;
-import android.view.WindowManagerGlobal;
 import android.window.BackEvent;
 import android.window.OnBackAnimationCallback;
 import android.window.OnBackInvokedDispatcher;
@@ -186,6 +188,8 @@ import com.android.systemui.unfold.updates.RotationChangeProvider;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Predicate;
@@ -385,22 +389,30 @@ public class QuickstepLauncher extends Launcher {
 
     @Override
     public Stream<SystemShortcut.Factory> getSupportedShortcuts() {
-        Stream<SystemShortcut.Factory> base = Stream.of(WellbeingModel.SHORTCUT_FACTORY);
-        if (ENABLE_SPLIT_FROM_WORKSPACE.get() && mDeviceProfile.isTablet) {
-            RecentsView recentsView = getOverviewPanel();
-            // TODO(b/266482558): Pull it out of PagedOrentationHandler for split from workspace.
-            List<SplitPositionOption> positions =
-                    recentsView.getPagedOrientationHandler().getSplitPositionOptions(
-                            mDeviceProfile);
-            List<SystemShortcut.Factory<QuickstepLauncher>> splitShortcuts = new ArrayList<>();
-            for (SplitPositionOption position : positions) {
-                splitShortcuts.add(getSplitSelectShortcutByPosition(position));
-            }
-            base = Stream.concat(base, splitShortcuts.stream());
+        // Order matters as it affects order of appearance in popup container
+        List<SystemShortcut.Factory> shortcuts = new ArrayList(Arrays.asList(
+                APP_INFO, WellbeingModel.SHORTCUT_FACTORY, mHotseatPredictionController));
+        shortcuts.addAll(getSplitShortcuts());
+        shortcuts.add(WIDGETS);
+        shortcuts.add(INSTALL);
+        return shortcuts.stream();
+    }
+
+    private List<SystemShortcut.Factory<QuickstepLauncher>> getSplitShortcuts() {
+
+        if (!ENABLE_SPLIT_FROM_WORKSPACE.get() || !mDeviceProfile.isTablet) {
+            return Collections.emptyList();
         }
-        return Stream.concat(
-                Stream.of(mHotseatPredictionController),
-                Stream.concat(base, super.getSupportedShortcuts()));
+        RecentsView recentsView = getOverviewPanel();
+        // TODO(b/266482558): Pull it out of PagedOrentationHandler for split from workspace.
+        List<SplitPositionOption> positions =
+                recentsView.getPagedOrientationHandler().getSplitPositionOptions(
+                        mDeviceProfile);
+        List<SystemShortcut.Factory<QuickstepLauncher>> splitShortcuts = new ArrayList<>();
+        for (SplitPositionOption position : positions) {
+            splitShortcuts.add(getSplitSelectShortcutByPosition(position));
+        }
+        return splitShortcuts;
     }
 
     /**
@@ -408,15 +420,18 @@ public class QuickstepLauncher extends Launcher {
      */
     private void onStateOrResumeChanging(boolean inTransition) {
         LauncherState state = getStateManager().getState();
-        if (!ENABLE_PIP_KEEP_CLEAR_ALGORITHM) {
-            boolean started = ((getActivityFlags() & ACTIVITY_STATE_STARTED)) != 0;
-            if (started) {
-                DeviceProfile profile = getDeviceProfile();
-                boolean willUserBeActive =
-                        (getActivityFlags() & ACTIVITY_STATE_USER_WILL_BE_ACTIVE) != 0;
-                boolean visible = (state == NORMAL || state == OVERVIEW)
-                        && (willUserBeActive || isUserActive())
-                        && !profile.isVerticalBarLayout();
+        boolean started = ((getActivityFlags() & ACTIVITY_STATE_STARTED)) != 0;
+        if (started) {
+            DeviceProfile profile = getDeviceProfile();
+            boolean willUserBeActive =
+                    (getActivityFlags() & ACTIVITY_STATE_USER_WILL_BE_ACTIVE) != 0;
+            boolean visible = (state == NORMAL || state == OVERVIEW)
+                    && (willUserBeActive || isUserActive())
+                    && !profile.isVerticalBarLayout();
+            if (ENABLE_PIP_KEEP_CLEAR_ALGORITHM)  {
+                SystemUiProxy.INSTANCE.get(this)
+                        .setLauncherKeepClearAreaHeight(visible, profile.hotseatBarSizePx);
+            } else {
                 SystemUiProxy.INSTANCE.get(this).setShelfHeight(visible, profile.hotseatBarSizePx);
             }
         }
