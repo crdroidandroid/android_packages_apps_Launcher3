@@ -248,6 +248,6 @@
     <string name="drawer_search_title">App-Suchleiste</string>
     <string name="drawer_search_summary">Suchleiste oben in der App-Übersicht</string>
     <!-- Restart launcher -->
-    <string name="pref_restart_title">Restart</string>
-    <string name="pref_restart_summary">Restart the launcher manually to apply any pending settings</string>
+    <string name="pref_restart_title">Neu starten</string>
+    <string name="pref_restart_summary">Startet den Startbildschirm neu, um ausstehende Änderungen an den Einstellungen anzuwenden</string>
 </resources>
