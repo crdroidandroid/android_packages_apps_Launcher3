@@ -286,7 +286,7 @@ public final class FeatureFlags {
             "Use local overrides for search request timeout");
 
     public static final BooleanFlag CONTINUOUS_VIEW_TREE_CAPTURE = getDebugFlag(270395171,
-            "CONTINUOUS_VIEW_TREE_CAPTURE", true, "Capture View tree every frame");
+            "CONTINUOUS_VIEW_TREE_CAPTURE", false, "Capture View tree every frame");
 
     public static final BooleanFlag SECONDARY_DRAG_N_DROP_TO_PIN = getDebugFlag(
             270395140, "SECONDARY_DRAG_N_DROP_TO_PIN", false,
@@ -348,7 +348,7 @@ public final class FeatureFlags {
             "ENABLE_APP_ICON_IN_INLINE_SHORTCUTS", false, "Show app icon for inline shortcut");
 
     public static final BooleanFlag SHOW_DOT_PAGINATION = getDebugFlag(270395278,
-            "SHOW_DOT_PAGINATION", false, "Enable showing dot pagination in workspace");
+            "SHOW_DOT_PAGINATION", true, "Enable showing dot pagination in workspace");
 
     public static final BooleanFlag LARGE_SCREEN_WIDGET_PICKER = getDebugFlag(270395809,
             "LARGE_SCREEN_WIDGET_PICKER", false, "Enable new widget picker that takes "
