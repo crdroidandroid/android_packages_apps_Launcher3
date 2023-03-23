@@ -32,7 +32,6 @@ import static com.android.launcher3.taskbar.TaskbarManager.FLAG_HIDE_NAVBAR_WIND
 import static com.android.launcher3.testing.shared.ResourceUtils.getBoolByName;
 import static com.android.systemui.shared.system.QuickStepContract.SYSUI_STATE_NOTIFICATION_PANEL_EXPANDED;
 import static com.android.systemui.shared.system.QuickStepContract.SYSUI_STATE_QUICK_SETTINGS_EXPANDED;
-import static com.android.systemui.shared.system.QuickStepContract.SYSUI_STATE_SCREEN_STATE_MASK;
 import static com.android.systemui.shared.system.QuickStepContract.SYSUI_STATE_VOICE_INTERACTION_WINDOW_SHOWING;
 
 import android.animation.AnimatorSet;
@@ -80,6 +79,7 @@ import com.android.launcher3.model.data.AppInfo;
 import com.android.launcher3.model.data.FolderInfo;
 import com.android.launcher3.model.data.ItemInfo;
 import com.android.launcher3.model.data.WorkspaceItemInfo;
+import com.android.launcher3.popup.PopupContainerWithArrow;
 import com.android.launcher3.popup.PopupDataProvider;
 import com.android.launcher3.taskbar.TaskbarAutohideSuspendController.AutohideSuspendFlag;
 import com.android.launcher3.taskbar.TaskbarTranslationController.TransitionCallback;
@@ -234,6 +234,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
                 new TaskbarInsetsController(this),
                 new VoiceInteractionWindowController(this),
                 new TaskbarTranslationController(this),
+                new TaskbarSpringOnStashController(this),
                 isDesktopMode
                         ? new DesktopTaskbarRecentAppsController(this)
                         : TaskbarRecentAppsController.DEFAULT,
@@ -525,6 +526,16 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
         setTaskbarWindowFocusable(isVisible);
     }
 
+    @Override
+    public void onSplitScreenMenuButtonClicked() {
+        PopupContainerWithArrow popup = PopupContainerWithArrow.getOpen(this);
+        if (popup != null) {
+            popup.addOnCloseCallback(() -> {
+                mControllers.taskbarStashController.updateAndAnimateTransientTaskbar(true);
+            });
+        }
+    }
+
     /**
      * Sets a new data-source for this taskbar instance
      */
@@ -580,8 +591,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
         mControllers.voiceInteractionWindowController.setIsVoiceInteractionWindowVisible(
                 (systemUiStateFlags & SYSUI_STATE_VOICE_INTERACTION_WINDOW_SHOWING) != 0, fromInit);
 
-        mControllers.uiController.onChangeScreenState(
-                systemUiStateFlags & SYSUI_STATE_SCREEN_STATE_MASK);
+        mControllers.uiController.updateStateForSysuiFlags(systemUiStateFlags, fromInit);
     }
 
     /**
