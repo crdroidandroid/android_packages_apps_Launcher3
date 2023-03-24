@@ -1954,6 +1954,9 @@ public class DeviceProfile {
         boolean isTaskbarPresent = this.isTaskbarPresent &&
                 SettingsCache.INSTANCE.get(context).getValue(ENABLE_TASKBAR, isTablet ? 1 : 0);
         Rect hotseatBarPadding = new Rect();
+        int iconExtraSpacePx = iconSizePx - getIconVisibleSizePx(iconSizePx);
+        int hotseatWidth = getHotseatRequiredWidth();
+        boolean isRtl = Utilities.isRtl(context.getResources());
         if (isVerticalBarLayout()) {
             // The hotseat icons will be placed in the middle of the hotseat cells.
             // Changing the hotseatCellHeightPx is not affecting hotseat icon positions
@@ -1996,52 +1999,48 @@ public class DeviceProfile {
             int hotseatBarTopPadding =
                     hotseatBarSizePx - hotseatBarBottomPadding - hotseatCellHeightPx;
 
-            int hotseatWidth = getHotseatRequiredWidth();
-            int startSpacing;
-            int endSpacing;
             // Hotseat aligns to the left with nav buttons
             if (hotseatBarEndOffset > 0) {
-                startSpacing = inlineNavButtonsEndSpacingPx;
-                endSpacing = availableWidthPx - hotseatWidth - startSpacing + hotseatBorderSpace;
+                int startSpacing = inlineNavButtonsEndSpacingPx;
+                int endSpacing = availableWidthPx - hotseatWidth - startSpacing + hotseatBorderSpace;
+
+                startSpacing += getAdditionalQsbSpace();
+
+                if (isRtl) {
+                    hotseatBarPadding.left = endSpacing;
+                    hotseatBarPadding.right = startSpacing;
+                } else {
+                    hotseatBarPadding.left = startSpacing;
+                    hotseatBarPadding.right = endSpacing;
+                }
             } else {
-                startSpacing = (availableWidthPx - hotseatWidth) / 2;
-                endSpacing = startSpacing;
+                int sideSpacing = isQsbInline ? (availableWidthPx - hotseatWidth) / 2 : 
+                        (availableWidthPx - (hotseatQsbWidth + iconExtraSpacePx)) / 2;
+                if (isRtl) {
+                    hotseatBarPadding.left = sideSpacing + mInsets.left;
+                    hotseatBarPadding.right = sideSpacing + getAdditionalQsbSpace() + mInsets.right;
+                } else {
+                    hotseatBarPadding.left = sideSpacing + getAdditionalQsbSpace() + mInsets.left;
+                    hotseatBarPadding.right = sideSpacing + mInsets.right;
+                }
             }
-            startSpacing += getAdditionalQsbSpace();
 
             hotseatBarPadding.top = hotseatBarTopPadding;
             hotseatBarPadding.bottom = hotseatBarBottomPadding;
-            boolean isRtl = Utilities.isRtl(context.getResources());
-            if (isRtl) {
-                hotseatBarPadding.left = endSpacing;
-                hotseatBarPadding.right = startSpacing;
-            } else {
-                hotseatBarPadding.left = startSpacing;
-                hotseatBarPadding.right = endSpacing;
-            }
-
-        } else if (mIsScalableGrid) {
-            int iconExtraSpacePx = iconSizePx - getIconVisibleSizePx(iconSizePx);
-            int sideSpacing = (availableWidthPx - (hotseatQsbWidth + iconExtraSpacePx)) / 2;
-            hotseatBarPadding.set(sideSpacing,
-                    0,
-                    sideSpacing,
-                    getHotseatBarBottomPadding());
         } else {
-            // We want the edges of the hotseat to line up with the edges of the workspace, but the
-            // icons in the hotseat are a different size, and so don't line up perfectly. To account
-            // for this, we pad the left and right of the hotseat with half of the difference of a
-            // workspace cell vs a hotseat cell.
-            float workspaceCellWidth = (float) widthPx / inv.numColumns;
-            float hotseatCellWidth = (float) widthPx / numShownHotseatIcons;
-            int hotseatAdjustment = Math.round((workspaceCellWidth - hotseatCellWidth) / 2);
-            hotseatBarPadding.set(
-                    hotseatAdjustment + workspacePadding.left + cellLayoutPaddingPx.left
-                            + mInsets.left,
-                    0,
-                    hotseatAdjustment + workspacePadding.right + cellLayoutPaddingPx.right
-                            + mInsets.right,
-                    getHotseatBarBottomPadding());
+            int sideSpacing = isQsbInline ? (availableWidthPx - hotseatWidth) / 2 : 
+                            (availableWidthPx - (hotseatQsbWidth + iconExtraSpacePx)) / 2;
+            if (isRtl) {
+                hotseatBarPadding.set(sideSpacing + mInsets.left,
+                        0,
+                        sideSpacing + getAdditionalQsbSpace() + mInsets.right,
+                        getHotseatBarBottomPadding());
+            } else {
+                hotseatBarPadding.set(sideSpacing + getAdditionalQsbSpace() + mInsets.left,
+                        0,
+                        sideSpacing + mInsets.right,
+                        getHotseatBarBottomPadding());
+            }
         }
         return hotseatBarPadding;
     }
