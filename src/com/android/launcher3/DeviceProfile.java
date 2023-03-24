@@ -810,7 +810,8 @@ public class DeviceProfile {
                     - hotseatBorderSpace * numShownHotseatIcons;
         } else {
             int columns = inv.hotseatColumnSpan[mTypeIndex];
-            return getIconToIconWidthForColumns(columns);
+            return getIconToIconWidthForColumns(columns)
+                    - hotseatBorderSpace;
         }
     }
 
@@ -1813,7 +1814,7 @@ public class DeviceProfile {
             // workspace cell vs a hotseat cell.
             float workspaceCellWidth = (float) widthPx / inv.numColumns;
             float hotseatCellWidth = (float) widthPx / numShownHotseatIcons;
-            int hotseatAdjustment = Math.round((workspaceCellWidth - hotseatCellWidth) / 2);
+            int hotseatAdjustment = hotseatBorderSpace / 2;
             hotseatBarPadding.set(
                     hotseatAdjustment + workspacePadding.left + cellLayoutPaddingPx.left
                             + mInsets.left,
