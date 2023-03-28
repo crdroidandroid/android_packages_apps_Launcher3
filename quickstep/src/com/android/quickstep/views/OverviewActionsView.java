@@ -304,7 +304,7 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
             mDisabledFlags &= ~disabledFlags;
         }
         boolean isEnabled = (mDisabledFlags & ~DISABLED_ROTATED) == 0;
-        LayoutUtils.setViewEnabled(this, isEnabled);
+        LayoutUtils.setViewEnabled(this, isEnabled, (v) -> v.getId() != R.id.action_clear_all);
     }
 
     /**

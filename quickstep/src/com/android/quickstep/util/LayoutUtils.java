@@ -26,6 +26,8 @@ import com.android.launcher3.util.NavigationMode;
 import com.android.quickstep.BaseContainerInterface;
 import com.android.quickstep.orientation.RecentsPagedOrientationHandler;
 
+import java.util.function.Function;
+
 public class LayoutUtils {
 
     private static final float SQUARE_ASPECT_RATIO_TOLERANCE = 0.05f;
@@ -57,12 +59,15 @@ public class LayoutUtils {
      * Recursively sets view and all children enabled/disabled.
      * @param view Top most parent view to change.
      * @param enabled True = enable, False = disable.
+     * @param filter Lambda to filter the view(s).
      */
-    public static void setViewEnabled(View view, boolean enabled) {
-        view.setEnabled(enabled);
+    public static void setViewEnabled(View view, boolean enabled, Function<View, Boolean> filter) {
+        if (filter.apply(view)) {
+            view.setEnabled(enabled);
+        }
         if (view instanceof ViewGroup) {
             for (int i = 0; i < ((ViewGroup) view).getChildCount(); i++) {
-                setViewEnabled(((ViewGroup) view).getChildAt(i), enabled);
+                setViewEnabled(((ViewGroup) view).getChildAt(i), enabled, filter);
             }
         }
     }
@@ -74,5 +79,14 @@ public class LayoutUtils {
     public static boolean isAspectRatioSquare(float aspectRatio) {
         return Float.compare(aspectRatio, 1f - SQUARE_ASPECT_RATIO_TOLERANCE) >= 0
                 && Float.compare(aspectRatio, 1f + SQUARE_ASPECT_RATIO_TOLERANCE) <= 0;
+    }
+
+    /**
+     * Recursively sets view and all children enabled/disabled.
+     * @param view Top most parent view to change.
+     * @param enabled True = enable, False = disable.
+     */
+    public static void setViewEnabled(View view, boolean enabled) {
+        setViewEnabled(view, enabled, (v)-> true);
     }
 }
