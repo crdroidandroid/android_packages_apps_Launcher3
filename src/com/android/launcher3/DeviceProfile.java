@@ -1073,13 +1073,6 @@ public class DeviceProfile {
                     allAppsBorderSpacePx.x = 0;
                 }
             }
-
-            int cellContentHeight = allAppsIconSizePx
-                    + Utilities.calculateTextHeight(allAppsIconTextSizePx) + allAppsBorderSpacePx.y;
-            if (allAppsCellHeightPx < cellContentHeight) {
-                // Increase allAppsCellHeight to fit its content.
-                allAppsCellHeightPx = cellContentHeight;
-            }
         } else {
             float invIconSizeDp = inv.allAppsIconSize[mTypeIndex];
             float invIconTextSizeSp = inv.allAppsIconTextSize[mTypeIndex];
@@ -1097,6 +1090,13 @@ public class DeviceProfile {
             int drawerWidth = availableWidthPx - leftRightPadding * 2;
             allAppsCellHeightPx = (int) (drawerWidth / inv.numAllAppsColumns * allAppsCellHeightMultiplier);
             allAppsIconDrawablePaddingPx = 0;
+        }
+
+        int cellContentHeight = allAppsIconSizePx + allAppsBorderSpacePx.y
+                + (allAppsIconText ? Utilities.calculateTextHeight(allAppsIconTextSizePx) : 0);
+        if (allAppsCellHeightPx < cellContentHeight) {
+            // Increase allAppsCellHeight to fit its content.
+            allAppsCellHeightPx = cellContentHeight;
         }
 
         updateAllAppsContainerWidth(res);
