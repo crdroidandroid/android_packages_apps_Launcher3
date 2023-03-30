@@ -1390,6 +1390,12 @@ public class DeviceProfile {
             allAppsCellHeightPx = (int) (drawerWidth / inv.numAllAppsColumns * allAppsCellHeightMultiplier);
             allAppsIconDrawablePaddingPx = 0;
         }
+        int cellContentHeight = allAppsIconSizePx + allAppsBorderSpacePx.y
+                + (allAppsIconText ? Utilities.calculateTextHeight(allAppsIconTextSizePx) : 0);
+        if (allAppsCellHeightPx < cellContentHeight) {
+            // Increase allAppsCellHeight to fit its content.
+            allAppsCellHeightPx = cellContentHeight;
+        }
         updateAllAppsContainerWidth();
         if (isVerticalLayout && !mIsResponsiveGrid) {
             hideWorkspaceLabelsIfNotEnoughSpace();
@@ -1473,13 +1479,6 @@ public class DeviceProfile {
                     allAppsIconSizePx = Math.min(allAppsIconSizePx, allAppsCellWidthPx);
                     allAppsBorderSpacePx.x = 0;
                 }
-            }
-
-            int cellContentHeight = allAppsIconSizePx
-                    + Utilities.calculateTextHeight(allAppsIconTextSizePx) + allAppsBorderSpacePx.y;
-            if (allAppsCellHeightPx < cellContentHeight) {
-                // Increase allAppsCellHeight to fit its content.
-                allAppsCellHeightPx = cellContentHeight;
             }
         } else {
             float invIconSizeDp = inv.allAppsIconSize[mTypeIndex];
