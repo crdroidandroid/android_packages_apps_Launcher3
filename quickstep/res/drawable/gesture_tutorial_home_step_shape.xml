@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2022 The Android Open Source Project
+<!-- Copyright (C) 2023 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,10 +12,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
-<com.android.launcher3.pageindicators.PageIndicatorDots xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/page_indicator"
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/workspace_page_indicator_height"
-    android:layout_gravity="bottom | center_horizontal"
-    android:theme="@style/HomeScreenElementTheme" />
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="364dp"
+    android:height="66dp"
+    android:viewportWidth="364"
+    android:viewportHeight="66">
+  <path
+      android:pathData="M283.8,0H80.2C40.7,0 8,28.5 1.3,66H362.8C356,28.5 323.3,0 283.8,0Z"
+      android:fillColor="#4B67AE"/>
+</vector>

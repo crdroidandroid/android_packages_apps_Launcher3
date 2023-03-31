@@ -85,6 +85,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.os.Build;
@@ -1352,6 +1353,10 @@ public class Launcher extends StatefulActivity<LauncherState>
 
         if (SHOW_DOT_PAGINATION.get()) {
             mWorkspace.getPageIndicator().setShouldAutoHide(true);
+            mWorkspace.getPageIndicator().setPaintColor(
+                    Themes.getAttrBoolean(this, R.attr.isWorkspaceDarkText)
+                            ? Color.BLACK
+                            : Color.WHITE);
         }
     }
 
@@ -3255,6 +3260,10 @@ public class Launcher extends StatefulActivity<LauncherState>
     protected LauncherAccessibilityDelegate createAccessibilityDelegate() {
         return new LauncherAccessibilityDelegate(this);
     }
+
+    /** Enables/disabled the hotseat prediction icon long press edu for testing. */
+    @VisibleForTesting
+    public void enableHotseatEdu(boolean enable) {}
 
     /**
      * @see LauncherState#getOverviewScaleAndOffset(Launcher)
