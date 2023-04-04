@@ -155,8 +155,6 @@ android_library {
         "iconloader_base",
         "libGoogleFeed",
         "SettingsLib",
-        "colorkt",
-        "themelib",
         "view_capture"
     ],
     manifest: "AndroidManifest-common.xml",
