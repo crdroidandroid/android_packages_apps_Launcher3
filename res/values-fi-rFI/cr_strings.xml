@@ -55,12 +55,12 @@
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Piilotetut &amp; Suojatut sovellukset</string>
     <string name="trust_apps_auth_manager">Avaa hallitaksesi piilotettuja ja suojattuja sovelluksia</string>
-    <string name="trust_apps_auth_open_app">Todenna avataksesi %1$s</string>
+    <string name="trust_apps_auth_open_app">Tunnistaudu avataksesi %1$s</string>
     <string name="trust_apps_loading">Ladataan\u2026</string>
     <string name="trust_apps_no_lock_error">Aseta turvallinen näytön lukitus rajataksesi pääsyä sovelluksiin</string>
     <string name="trust_apps_help">Ohje</string>
     <string name="trust_apps_info_hidden">Piilotetut sovellukset ja niiden widgetit piilotetaan sovellusvalikosta</string>
-    <string name="trust_apps_info_protected">Suojatut sovellukset tarvitsevat todennuksen jotta ne voidaan avata</string>
+    <string name="trust_apps_info_protected">Suojatut sovellukset tarvitsevat tunnistautumisen, jotta ne voidaan avata</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Kaksoisnapauta lepotilaan</string>
     <string name="pref_sleep_gesture_summary">Kaksoisnapauta tyhjää tilaa sammuttaaksesi näytön</string>
@@ -95,7 +95,7 @@
     <string name="search_radius_title">Kulman säde</string>
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Sovellusvalikon tausta</string>
-    <string name="hotseat_bg_summary">Lisää läpikuultava tausta sovellusvalikolle</string>
+    <string name="hotseat_bg_summary">Lisää läpikuultava tausta sovellustelakkaan</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Taustakuvan vieritys</string>
     <string name="allow_wallpaper_scrolling_summary">Taustakuvan vierintäefekti usealle näytölle</string>
@@ -248,6 +248,6 @@
     <string name="drawer_search_title">Sovelluksen hakupalkki</string>
     <string name="drawer_search_summary">Hakupalkki sovellusvalikon yläpuolella</string>
     <!-- Restart launcher -->
-    <string name="pref_restart_title">Restart</string>
-    <string name="pref_restart_summary">Restart the launcher manually to apply any pending settings</string>
+    <string name="pref_restart_title">Käynnistä uudelleen</string>
+    <string name="pref_restart_summary">Käynnistä käynnistin uudelleen manuaalisesti ottaaksesi käyttöön kaikki odottavat asetukset</string>
 </resources>
