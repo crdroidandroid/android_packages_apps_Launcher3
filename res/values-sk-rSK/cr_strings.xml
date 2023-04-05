@@ -120,7 +120,7 @@
     <string name="meminfo_text">%1$s Dostupných | %2$s Celkovo</string>
     <string name="recents_meminfo_title">Informácie o pamäti</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
+    <string name="hotseat_bg_title">Hotseat pozadie</string>
     <string name="hotseat_bg_summary">Pridať priesvitné pozadie do doku aplikácie</string>
     <!-- AppInfo -->
     <string name="app_info_subtext">Potiahnutím prstom nadol zatvoríte informácie o aplikácii</string>
@@ -131,5 +131,5 @@
     <string name="app_info_more">Viac</string>
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Tematické ikony</string>
-    <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
+    <string name="pref_themed_icons_summary">Použiť tému ikon ako na domovskej obrazovke</string>
 </resources>
