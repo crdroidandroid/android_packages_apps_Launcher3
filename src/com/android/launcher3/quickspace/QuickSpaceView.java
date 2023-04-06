@@ -102,8 +102,12 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
             mGreetingsExt.setVisibility(View.VISIBLE);
             mGreetingsExt.setText(mController.getEventController().getGreetings());
             mGreetingsExt.setEllipsize(TruncateAt.END);
-            mGreetingsExtClock.setVisibility(View.VISIBLE);
-            mGreetingsExtClock.setText(mController.getEventController().getClockExt());
+            if (!mController.getEventController().getClockExt().isEmpty()) {
+                mGreetingsExtClock.setVisibility(View.VISIBLE);
+                mGreetingsExtClock.setText(mController.getEventController().getClockExt());
+            } else {
+                mGreetingsExtClock.setVisibility(View.GONE);
+            }
         }
         if (Utilities.isQuickspacePersonalityEnabled(getContext()) || mController.getEventController().isNowPlaying()) {
             mEventTitle.setEllipsize(TruncateAt.MARQUEE);
