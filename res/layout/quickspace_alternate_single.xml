@@ -30,7 +30,7 @@
         android:clickable="true"
         android:maxLines="1"
         android:paddingLeft="16dp"
-        android:textColor="?workspaceTextColor"
+        android:textColor="?workspaceAccentColor"
         android:textSize="@dimen/quickspace_alternate_title_size"
         launcher:ambientShadowBlur="3dp"
         launcher:ambientShadowColor="?workspaceAmbientShadowColor"
@@ -54,15 +54,15 @@
 
         <ImageView
             android:id="@+id/weather_icon"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:visibility="gone"
             android:scaleType="fitXY" />
 
         <com.android.launcher3.quickspace.views.DoubleShadowTextView
             android:id="@+id/weather_temp"
-            style="@style/QuickSpaceText"
+            style="@style/QuickSpaceSubText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawablePadding="6dp"
@@ -70,7 +70,7 @@
             android:singleLine="true"
             android:alpha="0.75"
             android:textColor="?workspaceTextColor"
-            android:textSize="14dp"
+            android:textSize="@dimen/quickspace_alternate_subtitle_size"
             launcher:ambientShadowBlur="3dp"
             launcher:ambientShadowColor="?workspaceAmbientShadowColor"
             launcher:keyShadowBlur="2dp"
