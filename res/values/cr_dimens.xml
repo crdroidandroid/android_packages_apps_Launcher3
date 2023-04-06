@@ -17,8 +17,10 @@
 <resources>
 
     <!-- QuickSpace -->
-    <dimen name="quickspace_title_size">18dp</dimen>
-    <dimen name="quickspace_alternate_title_size">18dp</dimen>
+    <dimen name="quickspace_title_size">20sp</dimen>
+    <dimen name="quickspace_subtitle_size">16sp</dimen>
+    <dimen name="quickspace_alternate_title_size">20sp</dimen>
+    <dimen name="quickspace_alternate_subtitle_size">16sp</dimen>
 
      <!-- Meminfo in overview -->
     <dimen name="meminfo_bottom_margin_gesture">15dp</dimen>
