@@ -16,6 +16,8 @@
 
 package com.android.launcher3.settings;
 
+import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
+
 import static androidx.core.view.accessibility.AccessibilityNodeInfoCompat.ACTION_ACCESSIBILITY_FOCUS;
 
 import static com.android.launcher3.config.FeatureFlags.IS_STUDIO_BUILD;
@@ -24,8 +26,12 @@ import static com.android.launcher3.states.RotationHelper.ALLOW_ROTATION_PREFERE
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.om.IOverlayManager;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.RemoteException;
+import android.os.ServiceManager;
+import android.os.UserHandle;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
@@ -42,6 +48,7 @@ import androidx.preference.PreferenceFragmentCompat.OnPreferenceStartFragmentCal
 import androidx.preference.PreferenceFragmentCompat.OnPreferenceStartScreenCallback;
 import androidx.preference.PreferenceGroup.PreferencePositionCallback;
 import androidx.preference.PreferenceScreen;
+import androidx.preference.SwitchPreference;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.launcher3.DeviceProfile;
@@ -146,6 +153,19 @@ public class SettingsMisc extends CollapsingToolbarBaseActivity
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) { 
         switch (key) {
             case DeviceProfile.KEY_PHONE_TASKBAR:
+                boolean showTaskbar = sharedPreferences.getBoolean(key, false);
+                if (showTaskbar) {
+                    IOverlayManager overlayManager = IOverlayManager.Stub.asInterface(
+                            ServiceManager.getService(Context.OVERLAY_SERVICE));
+                    try {
+                        overlayManager.setEnabledExclusiveInCategory(NAV_BAR_MODE_GESTURAL_OVERLAY,
+                                UserHandle.USER_CURRENT);
+                    } catch (RemoteException e) {
+                        throw e.rethrowFromSystemServer();
+                    }
+                }
+                LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                break;
             case Utilities.KEY_BLUR_DEPTH:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
