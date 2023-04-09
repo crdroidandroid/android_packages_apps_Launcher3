@@ -31,15 +31,18 @@ import android.view.animation.Interpolator;
 import android.window.OnBackInvokedDispatcher;
 
 import androidx.annotation.Nullable;
+import androidx.core.graphics.ColorUtils;
 
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Insettable;
 import com.android.launcher3.R;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.anim.AnimatorListeners;
 import com.android.launcher3.anim.PendingAnimation;
 import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.taskbar.allapps.TaskbarAllAppsViewController.TaskbarAllAppsCallbacks;
 import com.android.launcher3.taskbar.overlay.TaskbarOverlayContext;
+import com.android.launcher3.util.Themes;
 import com.android.launcher3.views.AbstractSlideInView;
 
 /** Wrapper for taskbar all apps with slide-in behavior. */
@@ -215,7 +218,9 @@ public class TaskbarAllAppsSlideInView extends AbstractSlideInView<TaskbarOverla
 
     @Override
     protected int getScrimColor(Context context) {
-        return context.getColor(R.color.widgets_picker_scrim);
+        return ColorUtils.setAlphaComponent(mActivityContext.getDeviceProfile().isTablet
+                ? mActivityContext.getResources().getColor(R.color.widgets_picker_scrim)
+                : Themes.getAttrColor(mActivityContext, R.attr.allAppsScrimColor), Utilities.getAllAppsOpacity(mActivityContext) * 255 / 100);
     }
 
     @Override
