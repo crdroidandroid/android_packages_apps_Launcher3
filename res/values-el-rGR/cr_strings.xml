@@ -250,4 +250,6 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Επανεκκίνηση</string>
     <string name="pref_restart_summary">Επανεκκινήστε τον launcher χειροκίνητα για να εφαρμόσετε οποιεσδήποτε ρυθμίσεις σε εκκρεμότητα</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Ανακινήστε το τηλέφωνο για να εκκαθαρίσετε όλες τις εργασίες</string>
 </resources>

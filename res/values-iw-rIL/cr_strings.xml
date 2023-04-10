@@ -250,4 +250,6 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">הפעלה מחדש</string>
     <string name="pref_restart_summary">הפעלה מחדש של משגר היישומים (לאונצ\'ר) להחלת הגדרות ששונו</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Shake phone to clear all tasks</string>
 </resources>

@@ -250,4 +250,6 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Herstarten</string>
     <string name="pref_restart_summary">Herstart de launcher handmatig om eventuele instellingen in afwachting toe te passen</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Schud telefoon om alle taken te wissen</string>
 </resources>

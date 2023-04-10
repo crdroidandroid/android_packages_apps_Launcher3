@@ -251,4 +251,6 @@ Mantén presionado para establecer</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Reiniciar</string>
     <string name="pref_restart_summary">Reinicia el lanzador manualmente para aplicar cualquier configuración pendiente</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Shake phone to clear all tasks</string>
 </resources>

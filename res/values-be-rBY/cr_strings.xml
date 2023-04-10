@@ -250,4 +250,6 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Перазапуск</string>
     <string name="pref_restart_summary">Перазапусціць лаўнчар уручную, каб прымяніць усе налады</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Shake phone to clear all tasks</string>
 </resources>

@@ -250,4 +250,6 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Reinicia</string>
     <string name="pref_restart_summary">Reinicia el llançador manualment per aplicar qualsevol canvi pendent</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Shake phone to clear all tasks</string>
 </resources>

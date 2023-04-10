@@ -250,4 +250,6 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Перезапустить</string>
     <string name="pref_restart_summary">Перезапустить лаунчер вручную, чтобы применить все ожидающие настройки</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Встряхнуть, для очистки всех задач</string>
 </resources>

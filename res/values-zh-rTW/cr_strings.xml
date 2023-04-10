@@ -250,4 +250,6 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">重新啟動</string>
     <string name="pref_restart_summary">重新啟動主畫面來套用設定</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">晃動手機以關閉所有應用程式</string>
 </resources>

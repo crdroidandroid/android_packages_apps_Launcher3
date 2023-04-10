@@ -250,4 +250,6 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Újraindítás</string>
     <string name="pref_restart_summary">Launcher-újraindítás a függőben lévő változások alkalmazásához</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Az összes feladat törléséhez rázza meg a telefont</string>
 </resources>

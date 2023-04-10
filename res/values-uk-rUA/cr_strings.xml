@@ -250,4 +250,6 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Перезапустити</string>
     <string name="pref_restart_summary">Перезапустіть лаунчер вручну для подальшого застосування налаштувань</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Струсніть телефон, щоб очистити всі завдання</string>
 </resources>

@@ -250,4 +250,6 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">重新启动</string>
     <string name="pref_restart_summary">手动重启启动器以应用未生效的设置</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">晃动手机来清除所有任务</string>
 </resources>

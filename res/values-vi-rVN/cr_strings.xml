@@ -250,4 +250,6 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Khởi động lại</string>
     <string name="pref_restart_summary">Khởi động lại trình khởi chạy để áp dụng các cài đặt đang chờ xử lý</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Lắc điện thoại để xóa hết các tác vụ</string>
 </resources>
