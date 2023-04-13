@@ -39,7 +39,6 @@ import com.android.launcher3.AutoInstallsLayout.LayoutParserCallback;
 import com.android.launcher3.InvariantDeviceProfile;
 import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.LauncherPrefs;
-import com.android.launcher3.LauncherProvider;
 import com.android.launcher3.LauncherSettings;
 import com.android.launcher3.LauncherSettings.Favorites;
 import com.android.launcher3.Utilities;
@@ -72,11 +71,12 @@ public class DatabaseHelper extends NoLocaleSQLiteHelper implements
      * Represents the schema of the database. Changes in scheme need not be backwards compatible.
      * When increasing the scheme version, ensure that downgrade_schema.json is updated
      */
-    public static final int SCHEMA_VERSION = 31;
+    public static final int SCHEMA_VERSION = 32;
     private static final String TAG = "DatabaseHelper";
     private static final boolean LOGD = false;
 
     private static final String DOWNGRADE_SCHEMA_FILE = "downgrade_schema.json";
+    public static final String EMPTY_DATABASE_CREATED = "EMPTY_DATABASE_CREATED";
 
     private final Context mContext;
     private final boolean mForMigration;
@@ -165,8 +165,7 @@ public class DatabaseHelper extends NoLocaleSQLiteHelper implements
      */
     protected void onEmptyDbCreated() {
         // Set the flag for empty DB
-        LauncherPrefs.getPrefs(mContext).edit().putBoolean(getKey(
-                        LauncherProvider.EMPTY_DATABASE_CREATED), true)
+        LauncherPrefs.getPrefs(mContext).edit().putBoolean(getKey(EMPTY_DATABASE_CREATED), true)
                 .commit();
     }
 
@@ -327,6 +326,10 @@ public class DatabaseHelper extends NoLocaleSQLiteHelper implements
                 return;
             }
             case 31: {
+                LauncherDbUtils.migrateLegacyShortcuts(mContext, db);
+            }
+            // Fall through
+            case 32: {
                 // DB Upgraded successfully
                 return;
             }
