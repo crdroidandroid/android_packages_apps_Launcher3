@@ -493,9 +493,11 @@ public class TaskViewSimulator implements TransformParams.BuilderProxy {
         mInversePositionMatrix.mapRect(mTempRectF);
         mTempRectF.roundOut(mTmpCropRect);
 
-        params.setProgress(1f - fullScreenProgress);
-        params.applySurfaceParams(surfaceTransaction == null
-                ? params.createSurfaceParams(this) : surfaceTransaction);
+        if (params.getTargetSet() != null) {
+            params.setProgress(1f - fullScreenProgress);
+            params.applySurfaceParams(surfaceTransaction == null
+                    ? params.createSurfaceParams(this) : surfaceTransaction);
+        }
 
         if (!DEBUG) {
             return;
