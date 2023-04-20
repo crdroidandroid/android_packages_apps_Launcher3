@@ -350,7 +350,7 @@ public final class FeatureFlags {
             "Enable dragging and dropping to pin apps within secondary display");
 
     public static final BooleanFlag SHOW_DOT_PAGINATION = getDebugFlag(
-            "SHOW_DOT_PAGINATION", true, "Enable showing dot pagination in workspace");
+            "SHOW_DOT_PAGINATION", false, "Enable showing dot pagination in workspace");
 
     public static final BooleanFlag LARGE_SCREEN_WIDGET_PICKER = getDebugFlag(
             "LARGE_SCREEN_WIDGET_PICKER", false, "Enable new widget picker that takes "
