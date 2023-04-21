@@ -44,6 +44,18 @@
                 launcher:keyShadowColor="?workspaceKeyShadowColor"
                 launcher:keyShadowOffsetX="0.5dip" />
 
+        <ImageView
+            android:id="@+id/now_playing_icon_sub"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:visibility="gone"
+            android:layout_marginStart="2dp"
+            android:src="@drawable/baseline_audiotrack_24"
+            android:tint="?workspaceAccentColor"
+            android:layout_gravity="start|center_vertical"
+            android:scaleType="fitXY"
+            android:layout_weight="0.0" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -113,7 +125,7 @@
 
             <com.android.launcher3.quickspace.views.DoubleShadowTextView
                 android:id="@+id/quick_event_weather_temp"
-                style="@style/QuickSpaceSubText"
+                style="@style/QuickSpaceText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start|center_vertical"
@@ -149,7 +161,7 @@
 
         <com.android.launcher3.quickspace.views.DoubleShadowTextView
             android:id="@+id/quick_event_title_sub_colored"
-            style="@style/QuickSpaceSubText"
+            style="@style/QuickSpaceText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
