@@ -533,7 +533,7 @@ public class TaskbarDragController extends DragController<BaseTaskbarContext> im
 
     @VisibleForTesting
     private void maybeOnDragEnd() {
-        if (!isDragging()) {
+        if (mDragObject != null && !isDragging()) {
             ((BubbleTextView) mDragObject.originalView).setIconDisabled(false);
             mControllers.taskbarAutohideSuspendController.updateFlag(
                     TaskbarAutohideSuspendController.FLAG_AUTOHIDE_SUSPEND_DRAGGING, false);
@@ -578,7 +578,7 @@ public class TaskbarDragController extends DragController<BaseTaskbarContext> im
 
     @Override
     protected void endDrag() {
-        if (mDisallowGlobalDrag && !mIsDropHandledByDropTarget) {
+        if (mDragObject != null && mDisallowGlobalDrag && !mIsDropHandledByDropTarget) {
             // We need to explicitly set deferDragViewCleanupPostAnimation to true here so the
             // super call doesn't remove it from the drag layer before the animation completes.
             // This variable gets set in to false in super.dispatchDropComplete() because it
