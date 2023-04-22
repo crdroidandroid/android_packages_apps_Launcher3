@@ -695,7 +695,7 @@ public class TaskbarDragController extends DragController implements
         // maybeOnDragEnd() is called after callOnDragEnd() and endDrag() where isDragging() can
         // change, we should update mIsTaskbarDragging before checking the value.
         updateIsDragging();
-        if (!isDragging()) {
+        if (mDragObject != null && !isDragging()) {
             if (mDragObject.originalView instanceof BubbleTextView originalView) {
                 originalView.setIconDisabled(false);
                 if (enableTaskbarDragAndDrop()) {
@@ -736,7 +736,7 @@ public class TaskbarDragController extends DragController implements
 
     @Override
     protected void endDrag() {
-        if (mDisallowGlobalDrag && !mIsDropHandledByDropTarget) {
+        if (mDragObject != null && mDisallowGlobalDrag && !mIsDropHandledByDropTarget) {
             // We need to explicitly set deferDragViewCleanupPostAnimation to true here so the
             // super call doesn't remove it from the drag layer before the animation completes.
             // This variable gets set in to false in super.dispatchDropComplete() because it
