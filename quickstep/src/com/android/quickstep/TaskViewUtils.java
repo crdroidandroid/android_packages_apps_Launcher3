@@ -609,6 +609,9 @@ public final class TaskViewUtils {
         boolean skipLauncherChanges = !launcherClosing;
 
         TaskView taskView = findTaskViewToLaunch(recentsView, v, appTargets);
+        if (taskView == null) {
+            return;
+        }
         PendingAnimation pa = new PendingAnimation(RECENTS_LAUNCH_DURATION);
         createRecentsWindowAnimator(taskView, skipLauncherChanges, appTargets, wallpaperTargets,
                 nonAppTargets, depthController, pa);
