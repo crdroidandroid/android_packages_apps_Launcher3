@@ -156,6 +156,7 @@ public class HotseatEduController {
     void showEdu() {
         int childCount = mHotseat.getShortcutsAndWidgets().getChildCount();
         CellLayout cellLayout = mLauncher.getWorkspace().getScreenWithId(Workspace.FIRST_SCREEN_ID);
+        if (cellLayout == null) return;
         // hotseat is already empty and does not require migration. show edu tip
         boolean requiresMigration = IntStream.range(0, childCount).anyMatch(i -> {
             View v = mHotseat.getShortcutsAndWidgets().getChildAt(i);
