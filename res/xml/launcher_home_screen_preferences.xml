@@ -58,6 +58,18 @@
             android:summary="@string/allow_wallpaper_zooming_summary"
             android:defaultValue="true" />
 
+        <SwitchPreference
+            android:key="pref_short_parallax"
+            android:title="@string/short_parallax_title"
+            android:summary="@string/short_parallax_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="pref_single_page_center"
+            android:title="@string/single_page_center_title"
+            android:summary="@string/single_page_center_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
