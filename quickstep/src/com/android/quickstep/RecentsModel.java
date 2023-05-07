@@ -79,7 +79,7 @@ public class RecentsModel implements IconChangeListener, TaskStackChangeListener
                 context.getSystemService(KeyguardManager.class),
                 SystemUiProxy.INSTANCE.get(context));
 
-        IconProvider iconProvider = new IconProvider(context);
+        IconProvider iconProvider = IconProvider.INSTANCE.get(context);
         mIconCache = new TaskIconCache(context, RECENTS_MODEL_EXECUTOR, iconProvider);
         mIconCache.registerTaskVisualsChangeListener(this);
         mThumbnailCache = new TaskThumbnailCache(context, RECENTS_MODEL_EXECUTOR);
