@@ -31,7 +31,7 @@ import androidx.preference.CheckBoxPreference;
 import androidx.preference.PreferenceViewHolder;
 
 import com.android.launcher3.R;
-import com.android.launcher3.icons.ThirdPartyIconProvider;
+import com.android.launcher3.icons.IconProvider;
 
 
 public class IconPackHeaderPreference extends RadioHeaderPreference {
@@ -88,7 +88,7 @@ public class IconPackHeaderPreference extends RadioHeaderPreference {
             return;
         }
 
-        final ThirdPartyIconProvider iconProvider = new ThirdPartyIconProvider(context);
+        final IconProvider iconProvider = IconProvider.INSTANCE.get(context);
         final PackageManager pm = context.getPackageManager();
         final LauncherApps launcherApps = context.getSystemService(LauncherApps.class);
         new GetLaunchableInfoTask(pm, launcherApps, PREVIEW_ICON_NUM, (aiList) -> {

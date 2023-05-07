@@ -637,7 +637,8 @@ public final class Utilities {
             LauncherActivityInfo activityInfo = context.getSystemService(LauncherApps.class)
                     .resolveActivity(info.getIntent(), info.user);
             outObj[0] = activityInfo;
-            return activityInfo == null ? null : IconProvider.INSTANCE.get(context).getIcon(
+            return activityInfo == null ? null : LauncherAppState.getInstance(context)
+                    .getIconProvider().getIcon(
                             activityInfo, activity.getDeviceProfile().inv.fillResIconDpi);
         } else if (info.itemType == LauncherSettings.Favorites.ITEM_TYPE_DEEP_SHORTCUT) {
             List<ShortcutInfo> si = ShortcutKey.fromItemInfo(info)
