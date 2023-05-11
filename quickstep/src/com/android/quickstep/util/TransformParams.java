@@ -141,6 +141,7 @@ public class TransformParams {
     public SurfaceTransaction createSurfaceParams(BuilderProxy proxy) {
         RemoteAnimationTargets targets = mTargetSet;
         SurfaceTransaction transaction = new SurfaceTransaction();
+        if (targets == null) return transaction;
         mRecentsSurface = getRecentsSurface(targets);
 
         for (int i = 0; i < targets.unfilteredApps.length; i++) {
