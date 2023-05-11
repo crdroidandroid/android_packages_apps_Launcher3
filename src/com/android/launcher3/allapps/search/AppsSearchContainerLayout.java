@@ -23,6 +23,7 @@ import static com.android.launcher3.Utilities.prefixTextWithIcon;
 import static com.android.launcher3.icons.IconNormalizer.ICON_VISIBLE_AREA_FACTOR;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.PaintDrawable;
@@ -32,6 +33,7 @@ import android.text.SpannableStringBuilder;
 import android.text.method.TextKeyListener;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup.MarginLayoutParams;
 
@@ -66,6 +68,8 @@ public class AppsSearchContainerLayout extends ExtendedEditText
     // The amount of pixels to shift down and overlap with the rest of the content.
     private final int mContentOverlap;
 
+    private final int mSearchSideMargin;
+
     public AppsSearchContainerLayout(Context context) {
         this(context, null);
     }
@@ -85,6 +89,8 @@ public class AppsSearchContainerLayout extends ExtendedEditText
 
         mContentOverlap =
                 getResources().getDimensionPixelSize(R.dimen.all_apps_search_bar_content_overlap);
+        mSearchSideMargin =
+                getResources().getDimensionPixelSize(R.dimen.all_apps_search_bar_margin_side);
     }
 
     @Override
@@ -122,10 +128,6 @@ public class AppsSearchContainerLayout extends ExtendedEditText
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
 
-        Drawable gIcon = getContext().getDrawable(R.drawable.ic_super_g_color);
-        Drawable gIconThemed = getContext().getDrawable(R.drawable.ic_super_g_themed);
-        Drawable sIcon = getContext().getDrawable(R.drawable.ic_allapps_search);
-        
         // Shift the widget horizontally so that its centered in the parent (b/63428078)
         View parent = (View) getParent();
         int availableWidth = parent.getWidth() - parent.getPaddingLeft() - parent.getPaddingRight();
@@ -134,13 +136,41 @@ public class AppsSearchContainerLayout extends ExtendedEditText
         int shift = expectedLeft - left;
         setTranslationX(shift);
 
-        if (Utilities.showQSB(getContext()) && !Utilities.isThemedIconsEnabled(getContext())) {
-          setCompoundDrawablesRelativeWithIntrinsicBounds(gIcon, null, null, null);
-        } else if (Utilities.showQSB(getContext()) && Utilities.isThemedIconsEnabled(getContext())) {
-          setCompoundDrawablesRelativeWithIntrinsicBounds(gIconThemed, null, null, null);
+        boolean showQSB = Utilities.showQSB(getContext());
+        boolean isThemed = Utilities.isThemedIconsEnabled(getContext());
+
+        if (showQSB && !isThemed) {
+            Drawable gIcon = getContext().getDrawable(R.drawable.ic_super_g_color);
+            setCompoundDrawablesRelativeWithIntrinsicBounds(gIcon, null, null, null);
+        } else if (showQSB && isThemed) {
+            Drawable gIconThemed = getContext().getDrawable(R.drawable.ic_super_g_themed);
+            setCompoundDrawablesRelativeWithIntrinsicBounds(gIconThemed, null, null, null);
         } else {
-          setCompoundDrawablesRelativeWithIntrinsicBounds(sIcon, null, null, null);
+            Drawable sIcon = getContext().getDrawable(R.drawable.ic_allapps_search);
+            setCompoundDrawablesRelativeWithIntrinsicBounds(sIcon, null, null, null);
         }
+
+        setOnTouchListener(new OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                final int DRAWABLE_LEFT = 0;
+                final int DRAWABLE_TOP = 1;
+                final int DRAWABLE_RIGHT = 2;
+                final int DRAWABLE_BOTTOM = 3;
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (Utilities.showQSB(getContext()) &&
+                            event.getRawX() <= (getCompoundDrawables()[DRAWABLE_LEFT].getBounds().width()
+                            + getPaddingStart() + mSearchSideMargin)) {
+                        Intent intent = getContext().getPackageManager().getLaunchIntentForPackage(Utilities.GSA_PACKAGE);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        getContext().startActivity(intent);
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
 
         offsetTopAndBottom(mContentOverlap);
 
