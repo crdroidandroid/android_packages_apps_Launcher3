@@ -119,6 +119,12 @@
         <favorite
             launcher:packageName="com.oplus.camera"
             launcher:className="com.oplus.camera.Camera" />
+        <favorite
+            launcher:packageName="com.motorola.camera2"
+            launcher:className="com.motorola.camera.Camera" />
+        <favorite
+            launcher:packageName="com.motorola.camera3"
+            launcher:className="com.motorola.camera.Camera" />
     </resolve>
 
     <resolve
