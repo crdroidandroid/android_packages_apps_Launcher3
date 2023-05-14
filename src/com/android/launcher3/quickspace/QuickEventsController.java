@@ -15,13 +15,25 @@
  */
 package com.android.launcher3.quickspace;
 
+import android.app.PendingIntent;
 import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.content.SharedPreferences;
+import android.media.MediaMetadata;
+import android.media.session.MediaController;
+import android.media.session.MediaSession;
+import android.media.session.MediaSessionManager;
+import android.net.Uri;
+import android.provider.AlarmClock;
 import android.provider.Settings;
+import android.text.TextUtils;
+import android.widget.Toast;
 import android.view.View;
 import android.view.View.OnClickListener;
 
@@ -32,6 +44,8 @@ import com.android.launcher3.Utilities;
 
 import java.util.Calendar;
 import java.util.Random;
+
+import java.util.List;
 
 public class QuickEventsController {
 
@@ -178,21 +192,59 @@ public class QuickEventsController {
         mIsQuickEvent = true;
         mEventNowPlaying = true;
 
-        mEventTitleSubAction = new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (mPlayingActive) {
-                    // Work required for local media actions
-                    Intent npIntent = new Intent(Intent.ACTION_MAIN);
-                    npIntent.addCategory(Intent.CATEGORY_APP_MUSIC);
-                    npIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    try {
-                        Launcher.getLauncher(mContext).startActivitySafely(view, npIntent, null);
-                    } catch (ActivityNotFoundException ex) {
-                    }
-                }
-            }
-        };
+        mEventTitleSubAction = new View.OnClickListener() {
+	        @Override
+	        public void onClick(View view) {
+		    if (mPlayingActive) {
+		        MediaSessionManager mediaSessionManager = (MediaSessionManager) mContext.getSystemService(Context.MEDIA_SESSION_SERVICE);
+		        List<MediaController> sessions = mediaSessionManager.getActiveSessions(null);
+
+		        if (sessions != null && !sessions.isEmpty()) {
+		            MediaController mediaController = sessions.get(0);
+		            MediaSession.Token token = mediaController.getSessionToken();
+		            PendingIntent sessionActivity = mediaController.getSessionActivity();
+
+		            if (sessionActivity != null) {
+		                Intent intent = sessionActivity.getIntent();
+
+		                if (intent != null) {
+		                    ComponentName componentName = intent.getComponent();
+		                    if (componentName != null) {
+		                        String packageName = componentName.getPackageName();
+		                        if (packageName != null) {
+		                            Intent launchIntent = mContext.getPackageManager().getLaunchIntentForPackage(packageName);
+
+		                            if (launchIntent != null) {
+		                                launchIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		                                try {
+		                                    // try if package name launch intent works
+		                                    mContext.startActivity(launchIntent);
+		                                    return; // Exit the method after starting the activity
+		                                } catch (Exception e) {}
+		                            }
+		                        }
+		                    }
+
+		                    try {
+		                        // try session activity
+		                        mContext.startActivity(intent);
+		                        return; // Exit the method after starting the activity
+		                    } catch (Exception e) {}
+		                }
+		            }
+
+		            // last resort: Work required for local media actions
+		            Intent npIntent = new Intent(Intent.ACTION_MAIN);
+		            npIntent.addCategory(Intent.CATEGORY_APP_MUSIC);
+		            npIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+		            try {
+		                Launcher.getLauncher(mContext).startActivitySafely(view, npIntent, null);
+		            } catch (ActivityNotFoundException ex) {}
+		        }
+		    }
+	        }
+	    };
     }
 
     public void psonalityEvent() {
@@ -207,11 +259,33 @@ public class QuickEventsController {
         mPSARandomStr = mContext.getResources().getStringArray(R.array.quickspace_psa_random);
         int psaLength;
 
-        // Clean the onClick event to avoid any weird behavior
-        mEventTitleSubAction = new OnClickListener() {
+        mEventTitleSubAction = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // haha yes
+                Intent calendarIntent = new Intent(Intent.ACTION_MAIN);
+                calendarIntent.addCategory(Intent.CATEGORY_APP_CALENDAR);
+
+                Intent clockIntent = new Intent(AlarmClock.ACTION_SHOW_ALARMS);
+
+                PackageManager packageManager = mContext.getPackageManager();
+                List<ResolveInfo> calendarApps = packageManager.queryIntentActivities(calendarIntent, PackageManager.MATCH_DEFAULT_ONLY);
+                List<ResolveInfo> clockApps = packageManager.queryIntentActivities(clockIntent, PackageManager.MATCH_DEFAULT_ONLY);
+
+                if (!calendarApps.isEmpty()) {
+                    calendarIntent.setPackage(calendarApps.get(0).activityInfo.packageName);
+                    try {
+                        mContext.startActivity(calendarIntent);
+                    } catch (ActivityNotFoundException e) {
+                    }
+                } else if (!clockApps.isEmpty()) {
+                    clockIntent.setPackage(clockApps.get(0).activityInfo.packageName);
+                    try {
+                        mContext.startActivity(clockIntent);
+                    } catch (ActivityNotFoundException e) {
+                    }
+                } else {
+                    Toast.makeText(mContext, R.string.intent_no_app_clock_found, Toast.LENGTH_SHORT).show();
+                }
             }
         };
 

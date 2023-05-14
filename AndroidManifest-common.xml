@@ -63,6 +63,9 @@
 
     <!-- AppLock -->
     <uses-permission android:name="android.permission.MANAGE_APP_LOCK" />
+    
+    <uses-permission android:name="android.permission.GET_INTENT_SENDER_INTENT" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
     <!--
     Permissions required for read/write access to the workspace data. These permission name
