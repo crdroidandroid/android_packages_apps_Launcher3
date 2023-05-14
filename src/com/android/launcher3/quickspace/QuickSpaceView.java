@@ -103,9 +103,11 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
             mGreetingsExt.setVisibility(View.VISIBLE);
             mGreetingsExt.setText(mController.getEventController().getGreetings());
             mGreetingsExt.setEllipsize(TruncateAt.END);
+            mGreetingsExt.setOnClickListener(mController.getEventController().getAction());
             if (!mController.getEventController().getClockExt().isEmpty()) {
                 mGreetingsExtClock.setVisibility(View.VISIBLE);
                 mGreetingsExtClock.setText(mController.getEventController().getClockExt());
+                mGreetingsExtClock.setOnClickListener(mController.getEventController().getAction());
             } else {
                 mGreetingsExtClock.setVisibility(View.GONE);
             }
@@ -114,6 +116,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
             mEventTitle.setEllipsize(TruncateAt.MARQUEE);
             mEventTitle.setMarqueeRepeatLimit(3);
             mEventTitle.setSelected(true);
+            mEventTitle.setOnClickListener(mController.getEventController().getAction());
             mEventTitleSub.setVisibility(View.VISIBLE);
             mEventTitleSub.setText(mController.getEventController().getActionTitle());
             mEventTitleSub.setEllipsize(TruncateAt.MARQUEE);
@@ -125,11 +128,14 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
                   mEventSubIcon.setVisibility(View.GONE);
                   mEventTitleSubColored.setVisibility(View.VISIBLE);
                   mNowPlayingIcon.setVisibility(View.VISIBLE);
+                  mNowPlayingIcon.setOnClickListener(mController.getEventController().getAction());
                   mEventTitleSubColored.setText(getContext().getString(R.string.qe_now_playing_by));
+                  mEventTitleSubColored.setOnClickListener(mController.getEventController().getAction());
                } else {
                   mEventSubIcon.setVisibility(View.VISIBLE);
                   mEventSubIcon.setImageTintList(mColorStateList);
                   mEventSubIcon.setImageResource(mController.getEventController().getActionIcon());
+                  mEventSubIcon.setOnClickListener(mController.getEventController().getAction());
                   mEventTitleSubColored.setText("");
                   mEventTitleSubColored.setVisibility(View.GONE);
                   mNowPlayingIcon.setVisibility(View.GONE);
@@ -138,6 +144,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
               mEventSubIcon.setVisibility(View.VISIBLE);
               mEventSubIcon.setImageTintList(mColorStateList);
               mEventSubIcon.setImageResource(mController.getEventController().getActionIcon());
+              mEventSubIcon.setOnClickListener(mController.getEventController().getAction());
             }
         } else {
           mEventTitleSub.setVisibility(View.GONE);
