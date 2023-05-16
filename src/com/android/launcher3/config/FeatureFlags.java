@@ -142,10 +142,6 @@ public final class FeatureFlags {
             "Enables haptics opening/closing All apps");
 
     // TODO(Block 6): Clean up flags
-    public static final BooleanFlag WIDGETS_IN_LAUNCHER_PREVIEW = getDebugFlag(270393268,
-            "WIDGETS_IN_LAUNCHER_PREVIEW", ENABLED,
-            "Enables widgets in Launcher preview for the Wallpaper app.");
-
     public static final BooleanFlag ENABLE_ALL_APPS_SEARCH_IN_TASKBAR = getDebugFlag(270393900,
             "ENABLE_ALL_APPS_SEARCH_IN_TASKBAR", DISABLED,
             "Enables Search box in Taskbar All Apps.");
@@ -211,16 +207,8 @@ public final class FeatureFlags {
             "Allows on device search in all apps logging");
 
     // TODO(Block 14): Cleanup flags
-    public static final BooleanFlag ASSISTANT_GIVES_LAUNCHER_FOCUS = getDebugFlag(270391641,
-            "ASSISTANT_GIVES_LAUNCHER_FOCUS", DISABLED,
-            "Allow Launcher to handle nav bar gestures while Assistant is running over it");
-
     public static final BooleanFlag NOTIFY_CRASHES = getDebugFlag(270393108, "NOTIFY_CRASHES",
             DISABLED, "Sends a notification whenever launcher encounters an uncaught exception.");
-
-    public static final BooleanFlag FORCE_PERSISTENT_TASKBAR = getDebugFlag(270395077,
-            "FORCE_PERSISTENT_TASKBAR", DISABLED, "Forces taskbar to be persistent, even in gesture"
-                    + " nav mode and when transient taskbar is enabled.");
 
     public static final BooleanFlag ENABLE_TRANSIENT_TASKBAR = getDebugFlag(270395798,
             "ENABLE_TRANSIENT_TASKBAR", ENABLED, "Enables transient taskbar.");
@@ -394,7 +382,7 @@ public final class FeatureFlags {
             "Enable initiating split screen from workspace to workspace.");
 
     public static final BooleanFlag ENABLE_TRACKPAD_GESTURE = getDebugFlag(271010401,
-            "ENABLE_TRACKPAD_GESTURE", ENABLED, "Enables trackpad gesture.");
+            "ENABLE_TRACKPAD_GESTURE", DISABLED, "Enables trackpad gesture.");
 
     // TODO(Block 29): Clean up flags
     public static final BooleanFlag ENABLE_ALL_APPS_BUTTON_IN_HOTSEAT = getDebugFlag(270393897,
@@ -403,6 +391,10 @@ public final class FeatureFlags {
 
     public static final BooleanFlag ENABLE_KEYBOARD_QUICK_SWITCH = getDebugFlag(270396844,
             "ENABLE_KEYBOARD_QUICK_SWITCH", ENABLED, "Enables keyboard quick switching");
+
+    public static final BooleanFlag ENABLE_KEYBOARD_TASKBAR_TOGGLE = getDebugFlag(281726846,
+            "ENABLE_KEYBOARD_TASKBAR_TOGGLE", ENABLED,
+            "Enables keyboard taskbar stash toggling");
 
     // TODO(Block 30): Clean up flags
     public static final BooleanFlag USE_SEARCH_REQUEST_TIMEOUT_OVERRIDES = getDebugFlag(270395010,
