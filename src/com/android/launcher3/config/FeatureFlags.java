@@ -86,7 +86,7 @@ public final class FeatureFlags {
             "ENABLE_ONE_SEARCH_MOTION", ENABLED, "Enables animations in OneSearch.");
 
     public static final BooleanFlag ENABLE_SEARCH_RESULT_BACKGROUND_DRAWABLES = getReleaseFlag(
-            270394041, "ENABLE_SEARCH_RESULT_BACKGROUND_DRAWABLES", TEAMFOOD,
+            270394041, "ENABLE_SEARCH_RESULT_BACKGROUND_DRAWABLES", DISABLED,
             "Enable option to replace decorator-based search result backgrounds with drawables");
 
     public static final BooleanFlag ENABLE_SEARCH_RESULT_LAUNCH_TRANSITION = getReleaseFlag(
@@ -301,6 +301,10 @@ public final class FeatureFlags {
             "RECEIVE_UNFOLD_EVENTS_FROM_SYSUI", ENABLED,
             "Enables receiving unfold animation events from sysui instead of calculating "
                     + "them in launcher process using hinge sensor values.");
+
+    public static final BooleanFlag ENABLE_WIDGET_TRANSITION_FOR_RESIZING = getDebugFlag(268553314,
+            "ENABLE_WIDGET_TRANSITION_FOR_RESIZING", DISABLED,
+            "Enable widget transition animation when resizing the widgets");
 
     public static final BooleanFlag PREEMPTIVE_UNFOLD_ANIMATION_START = getDebugFlag(270397209,
             "PREEMPTIVE_UNFOLD_ANIMATION_START", ENABLED,
