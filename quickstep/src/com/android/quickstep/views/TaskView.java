@@ -963,6 +963,8 @@ public class TaskView extends FrameLayout implements Reusable {
                             () -> recentsView.finishRecentsAnimation(true /* toRecents */,
                                     false /* shouldPip */,
                                     () -> showTaskMenu(iconView)));
+                    recentsView.onGestureAnimationEnd();
+                    recentsView.onSwipeUpAnimationSuccess();
 		} else {
 	    	    // finishRecentsAnimation causes white snapshots on click, 
 	    	    // finish the animation on AbsSwipeUPHandler instead as WA
