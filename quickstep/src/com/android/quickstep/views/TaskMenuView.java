@@ -193,6 +193,8 @@ public class TaskMenuView extends AbstractFloatingView {
                         () -> recentsView.finishRecentsAnimation(true /* toRecents */,
                                 false /* shouldPip */,
                                 () -> menuOption.onClick(view)));
+                recentsView.onGestureAnimationEnd();
+                recentsView.onSwipeUpAnimationSuccess();
 	    } else {
 	    	// finishRecentsAnimation causes white snapshots on click, 
 	    	// finish the animation on AbsSwipeUPHandler instead as WA
