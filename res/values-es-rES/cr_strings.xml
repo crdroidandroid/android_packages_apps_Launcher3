@@ -253,4 +253,9 @@ Mantén presionado para establecer</string>
     <string name="pref_restart_summary">Reinicia el lanzador manualmente para aplicar cualquier configuración pendiente</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Agitar el teléfono para limpiar todas las apps de recientes</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Allow short parallax</string>
+    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
+    <string name="single_page_center_title">Single page center</string>
+    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
 </resources>
