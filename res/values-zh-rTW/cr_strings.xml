@@ -253,8 +253,8 @@
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">晃動手機以關閉所有應用程式</string>
     <!-- Parallax -->
-    <string name="short_parallax_title">Allow short parallax</string>
-    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
-    <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <string name="short_parallax_title">桌布滾動</string>
+    <string name="short_parallax_summary">在主畫面頁數較少時也使用完整的桌布滾動，而非裁切出部分桌布</string>
+    <string name="single_page_center_title">單頁桌布置中</string>
+    <string name="single_page_center_summary">主畫面頁數只有一頁時使桌布置中</string>
 </resources>
