@@ -253,8 +253,8 @@
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Az összes feladat törléséhez rázza meg a telefont</string>
     <!-- Parallax -->
-    <string name="short_parallax_title">Allow short parallax</string>
-    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
-    <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <string name="short_parallax_title">Rövid paralaxis engedélyezése</string>
+    <string name="short_parallax_summary">Engedélyezze a teljes háttérképgörgetési hatását kisebb oldalszámon a háttérkép levágása helyett</string>
+    <string name="single_page_center_title">Centerezett egyoldalas</string>
+    <string name="single_page_center_summary">Helyezze középre a háttérképet, ha csak egyetlen oldalt használ</string>
 </resources>
