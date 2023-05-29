@@ -179,34 +179,31 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
     private static final String CONTROL_REMOTE_APP_TRANSITION_PERMISSION =
             "android.permission.CONTROL_REMOTE_APP_TRANSITION_ANIMATIONS";
 
-    private static final long APP_LAUNCH_DURATION = 500;
+    private static final long APP_LAUNCH_DURATION;
 
     private static final long APP_LAUNCH_ALPHA_DURATION = 50;
     private static final long APP_LAUNCH_ALPHA_START_DELAY = 25;
 
-    public static final int ANIMATION_NAV_FADE_IN_DURATION = 266;
-    public static final int ANIMATION_NAV_FADE_OUT_DURATION = 133;
-    public static final long ANIMATION_DELAY_NAV_FADE_IN =
-            APP_LAUNCH_DURATION - ANIMATION_NAV_FADE_IN_DURATION;
-    public static final Interpolator NAV_FADE_IN_INTERPOLATOR =
-            new PathInterpolator(0f, 0f, 0f, 1f);
-    public static final Interpolator NAV_FADE_OUT_INTERPOLATOR =
-            new PathInterpolator(0.2f, 0f, 1f, 1f);
+    public static final int ANIMATION_NAV_FADE_IN_DURATION;
+    public static final int ANIMATION_NAV_FADE_OUT_DURATION;
+    public static final long ANIMATION_DELAY_NAV_FADE_IN;
+    public static final Interpolator NAV_FADE_IN_INTERPOLATOR;
+    public static final Interpolator NAV_FADE_OUT_INTERPOLATOR;
 
-    public static final int RECENTS_LAUNCH_DURATION = 336;
-    private static final int LAUNCHER_RESUME_START_DELAY = 100;
-    private static final int CLOSING_TRANSITION_DURATION_MS = 250;
-    public static final int SPLIT_LAUNCH_DURATION = 370;
-    public static final int SPLIT_DIVIDER_ANIM_DURATION = 100;
+    public static final int RECENTS_LAUNCH_DURATION;
+    private static final int LAUNCHER_RESUME_START_DELAY;
+    private static final int CLOSING_TRANSITION_DURATION_MS;
+    public static final int SPLIT_LAUNCH_DURATION;
+    public static final int SPLIT_DIVIDER_ANIM_DURATION;
 
-    public static final int CONTENT_ALPHA_DURATION = 217;
+    public static final int CONTENT_ALPHA_DURATION;
     public static final int TRANSIENT_TASKBAR_TRANSITION_DURATION = 417;
     public static final int TASKBAR_TO_APP_DURATION = 600;
     // TODO(b/236145847): Tune TASKBAR_TO_HOME_DURATION to 383 after conflict with unlock animation
     // is solved.
     public static final int TASKBAR_TO_HOME_DURATION = 300;
-    protected static final int CONTENT_SCALE_DURATION = 350;
-    protected static final int CONTENT_SCRIM_DURATION = 350;
+    protected static final int CONTENT_SCALE_DURATION;
+    protected static final int CONTENT_SCRIM_DURATION;
 
     private static final int MAX_NUM_TASKS = 5;
 
@@ -252,6 +249,25 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
 
     private final Interpolator mOpeningXInterpolator;
     private final Interpolator mOpeningInterpolator;
+
+    static {
+        long duration = getDuration(500);
+        APP_LAUNCH_DURATION = duration;
+        int duration2 = getDuration(266);
+        ANIMATION_NAV_FADE_IN_DURATION = duration2;
+        ANIMATION_NAV_FADE_OUT_DURATION = getDuration(133);
+        ANIMATION_DELAY_NAV_FADE_IN = duration - duration2;
+        NAV_FADE_IN_INTERPOLATOR = new PathInterpolator(0.0f, 0.0f, 0.0f, 1.0f);
+        NAV_FADE_OUT_INTERPOLATOR = new PathInterpolator(0.2f, 0.0f, 1.0f, 1.0f);
+        RECENTS_LAUNCH_DURATION = getDuration(336);
+        LAUNCHER_RESUME_START_DELAY = getDuration(100);
+        CLOSING_TRANSITION_DURATION_MS = getDuration(250);
+        SPLIT_LAUNCH_DURATION = getDuration(370);
+        SPLIT_DIVIDER_ANIM_DURATION = getDuration(100);
+        CONTENT_ALPHA_DURATION = getDuration(217);
+        CONTENT_SCALE_DURATION = getDuration(350);
+        CONTENT_SCRIM_DURATION = getDuration(350);
+    }
 
     public QuickstepTransitionManager(Context context) {
         mLauncher = Launcher.cast(Launcher.getLauncher(context));
@@ -1025,6 +1041,13 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
             animatorSet.playTogether(appAnimator, getBackgroundAnimator());
         }
         return animatorSet;
+    }
+
+    public static int getDuration(int duration) {
+        Float sAnimScale = 60.0f;
+        float animScale2 = Math.max(0.0f, Math.min(1.0f, sAnimScale / 100.0f));
+        sAnimScale = Float.valueOf(animScale2);
+        return (int) (duration * sAnimScale);
     }
 
     /**
