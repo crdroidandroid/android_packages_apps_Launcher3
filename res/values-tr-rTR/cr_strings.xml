@@ -253,8 +253,8 @@
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Tüm görevleri silmek için telefonu sallayın</string>
     <!-- Parallax -->
-    <string name="short_parallax_title">Allow short parallax</string>
-    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
-    <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <string name="short_parallax_title">Kısa parallax\'a izin ver</string>
+    <string name="short_parallax_summary">Duvar kağıdını kırpmak yerine daha az sayıda sayfada tam duvar kağıdı kaydırma efektini etkinleştirin</string>
+    <string name="single_page_center_title">Tek sayfayı ortalayın</string>
+    <string name="single_page_center_summary">Yalnızca tek bir sayfa kullanılıyorsa duvar kağıdını ortalayın</string>
 </resources>
