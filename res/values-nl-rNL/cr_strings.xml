@@ -252,4 +252,9 @@
     <string name="pref_restart_summary">Herstart de launcher handmatig om eventuele instellingen in afwachting toe te passen</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Schud telefoon om alle taken te wissen</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Korte parallax toestaan</string>
+    <string name="short_parallax_summary">Schakel volledige achtergrond scroll effect in op kleinere aantallen pagina\'s in plaats van de achtergrond bij te snijden</string>
+    <string name="single_page_center_title">Enkele pagina midden</string>
+    <string name="single_page_center_summary">Achtergrond centreren bij gebruik van één pagina</string>
 </resources>

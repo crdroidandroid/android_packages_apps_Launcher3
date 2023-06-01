@@ -252,4 +252,9 @@
     <string name="pref_restart_summary">Khởi động lại trình khởi chạy để áp dụng các cài đặt đang chờ xử lý</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Lắc điện thoại để xóa hết các tác vụ</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Độ lệch của góc ngắn</string>
+    <string name="short_parallax_summary">Dùng hiệu ứng để cuộn trên các trang khác thay vì cắt hình nền</string>
+    <string name="single_page_center_title">Căn chỉnh ở giữa</string>
+    <string name="single_page_center_summary">Căn chỉnh trang chủ giữa hình nền nếu chỉ có một</string>
 </resources>

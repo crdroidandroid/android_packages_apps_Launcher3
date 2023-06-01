@@ -252,4 +252,9 @@
     <string name="pref_restart_summary">Reiniciar manualmente o launcher para aplicar qualquer configuração pendente</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Agite o telefone para limpar todas as tarefas</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Permitir sobreposição curta</string>
+    <string name="short_parallax_summary">Ativar o efeito de rolagem de papel de parede completo em um número menor de páginas, em vez de cortar o papel de parede</string>
+    <string name="single_page_center_title">Página única centralizada</string>
+    <string name="single_page_center_summary">Centraliza o papel de parede ao usar apenas uma página</string>
 </resources>

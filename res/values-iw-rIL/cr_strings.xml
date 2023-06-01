@@ -252,4 +252,9 @@
     <string name="pref_restart_summary">הפעלה מחדש של משגר היישומים (לאונצ\'ר) להחלת הגדרות ששונו</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Shake phone to clear all tasks</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">התרת היסט (פרלקסה) קצר</string>
+    <string name="short_parallax_summary">הפעלת אפקט גלילה מלא לטפט על פני מספר קטן יותר של דפים במקום חיתוך הטפט</string>
+    <string name="single_page_center_title">מירכוז בדף יחיד</string>
+    <string name="single_page_center_summary">התמקדות הטפט במרכז בשימוש בדף יחיד </string>
 </resources>

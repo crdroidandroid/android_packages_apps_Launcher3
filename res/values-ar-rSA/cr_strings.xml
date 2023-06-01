@@ -86,8 +86,8 @@
     <string name="label_search">البحث</string>
     <string name="label_lens">عدسة Google</string>
     <string name="label_voice_search">البحث الصوتي</string>
-    <string name="dock_music_search_title">Music search</string>
-    <string name="dock_music_search_summary">Start music search on pressing mic icon</string>
+    <string name="dock_music_search_title">بحث المعازف</string>
+    <string name="dock_music_search_summary">ابحث عن المعازف عند الضغط على أيقونة مسجل الصوت</string>
     <string name="dock_search_title">شريط بحث جوجل</string>
     <string name="dock_search_summary">إظهار شريط البحث في أسفل الشاشة</string>
     <string name="dock_theme_title">سمة الأيقونات</string>
@@ -248,8 +248,13 @@
     <string name="drawer_search_title">شريط بحث البرامج</string>
     <string name="drawer_search_summary">شريط البحث في أعلى قائمة التطبيقات</string>
     <!-- Restart launcher -->
-    <string name="pref_restart_title">Restart</string>
-    <string name="pref_restart_summary">Restart the launcher manually to apply any pending settings</string>
+    <string name="pref_restart_title">إعادة التشغيل</string>
+    <string name="pref_restart_summary">إعادة التشغيل يدويًا لتطبيق أي تعديلات في الإعدادات</string>
     <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Shake phone to clear all tasks</string>
+    <string name="recents_shake_clear_all_title">هز الهاتف لمسح جميع المهام</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">السماح بالمبرالية القصيرة</string>
+    <string name="short_parallax_summary">تمكين تأثير التمرير الكامل للخلفية على عدد أصغر من الصفحات بدلاً من اقتطاع الخلفية</string>
+    <string name="single_page_center_title">مركز صفحة واحدة</string>
+    <string name="single_page_center_summary">وسِّط الخلفية إن كانت هناك صفحة واحدة فقط</string>
 </resources>

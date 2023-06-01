@@ -252,4 +252,9 @@
     <string name="pref_restart_summary">Επανεκκινήστε τον launcher χειροκίνητα για να εφαρμόσετε οποιεσδήποτε ρυθμίσεις σε εκκρεμότητα</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Ανακινήστε το τηλέφωνο για να εκκαθαρίσετε όλες τις εργασίες</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Να επιτρέπονται σύντομα parallax</string>
+    <string name="short_parallax_summary">Ενεργοποιήστε το εφέ κύλισης πλήρους ταπετσαρίας σε μικρότερο αριθμό σελίδων αντί να περικόψετε την ταπετσαρία</string>
+    <string name="single_page_center_title">Κέντρο μιας σελίδας</string>
+    <string name="single_page_center_summary">Κεντράρισμα ταπετσαρίας αν χρησιμοποιείτε μόνο μια σελίδα</string>
 </resources>

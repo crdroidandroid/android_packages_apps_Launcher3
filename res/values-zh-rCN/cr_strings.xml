@@ -252,4 +252,9 @@
     <string name="pref_restart_summary">手动重启启动器以应用未生效的设置</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">摇晃手机清除所有任务</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">壁纸滚动</string>
+    <string name="short_parallax_summary">对数量较少的页面启用完整的壁纸滚动效果，而不是裁剪壁纸</string>
+    <string name="single_page_center_title">单页居中</string>
+    <string name="single_page_center_summary">如果只使用一个页面则居中壁纸</string>
 </resources>

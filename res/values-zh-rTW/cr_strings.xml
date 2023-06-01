@@ -252,4 +252,9 @@
     <string name="pref_restart_summary">重新啟動主畫面來套用設定</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">晃動手機以關閉所有應用程式</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">桌布滾動</string>
+    <string name="short_parallax_summary">在主畫面頁數較少時使用桌布滾動，而非裁切部分桌布</string>
+    <string name="single_page_center_title">單頁桌布置中</string>
+    <string name="single_page_center_summary">主畫面頁數只有一頁時，使桌布置中</string>
 </resources>

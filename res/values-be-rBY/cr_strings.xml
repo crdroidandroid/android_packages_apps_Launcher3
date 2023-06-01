@@ -252,4 +252,9 @@
     <string name="pref_restart_summary">Перазапусціць лаўнчар уручную, каб прымяніць усе налады</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Падтрасіце тэлефон, каб ачысціць усе задачы</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Дазволіць кароткі паралакс</string>
+    <string name="short_parallax_summary">Уключыце эфект поўнай пракруткі шпалер на меншай колькасці старонак замест абразання шпалер</string>
+    <string name="single_page_center_title">Single page center</string>
+    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
 </resources>

@@ -253,4 +253,9 @@ Mantén presionado para establecer</string>
     <string name="pref_restart_summary">Reinicia el lanzador manualmente para aplicar cualquier configuración pendiente</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Agitar el teléfono para limpiar todas las apps de recientes</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Permitir paralax corto</string>
+    <string name="short_parallax_summary">Activar efecto de desplazamiento del fondo de pantalla completo en un número menor de páginas en lugar de recortar el fondo de pantalla</string>
+    <string name="single_page_center_title">Título de página única centrado</string>
+    <string name="single_page_center_summary">Centrar fondo de pantalla si hay una sola página</string>
 </resources>

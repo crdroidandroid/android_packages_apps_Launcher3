@@ -252,4 +252,9 @@
     <string name="pref_restart_summary">Ak chcete použiť všetky neuložené zmeny nastavení, tak reštartujte launcher ručne</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Zatvoriť všetky úlohy zatrasením telefónu</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Povoliť krátku paralaxu</string>
+    <string name="short_parallax_summary">Namiesto odstrihnutia pozadia povoliť pri menšom počte stránok skrolovanie celého pozadia</string>
+    <string name="single_page_center_title">Vycentrovať jedinú stránku</string>
+    <string name="single_page_center_summary">Vycentrovať pozadie len pri použití jednej stránky</string>
 </resources>

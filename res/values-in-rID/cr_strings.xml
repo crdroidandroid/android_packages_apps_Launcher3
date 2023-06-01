@@ -252,4 +252,9 @@
     <string name="pref_restart_summary">Mulai ulang peluncur secara manual untuk menerapkan setelan yang tertunda</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Goyang ponsel untuk menghapus semua tugas</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Izinkan paralaks pendek</string>
+    <string name="short_parallax_summary">Aktifkan efek gulir wallpaper penuh pada sejumlah kecil halaman alih-alih memotong wallpaper</string>
+    <string name="single_page_center_title">Pusat satu halaman</string>
+    <string name="single_page_center_summary">Tengahkan wallpaper jika hanya menggunakan satu halaman</string>
 </resources>

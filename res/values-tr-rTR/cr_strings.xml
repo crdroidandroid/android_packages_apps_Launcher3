@@ -252,4 +252,9 @@
     <string name="pref_restart_summary">Ayarları Uygulamak İçin Yeniden Başlat</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Tüm görevleri silmek için telefonu sallayın</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Kısa parallax\'a izin ver</string>
+    <string name="short_parallax_summary">Duvar kağıdını kırpmak yerine daha az sayıda sayfada tam duvar kağıdı kaydırma efektini etkinleştirin</string>
+    <string name="single_page_center_title">Tek sayfayı ortalayın</string>
+    <string name="single_page_center_summary">Yalnızca tek bir sayfa kullanılıyorsa duvar kağıdını ortalayın</string>
 </resources>
