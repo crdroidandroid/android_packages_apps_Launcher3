@@ -250,9 +250,9 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Herstarten</string>
     <string name="pref_restart_summary">Herstart de launcher handmatig om eventuele instellingen in afwachting toe te passen</string>
-    <string name="restarting_launcher">Restarting launcher...</string>
-    <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
-    <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
+    <string name="restarting_launcher">Launcher herstarten...</string>
+    <string name="restarting_launcher_changes">Launcher opnieuw opstarten om wijzigingen toe te passen...</string>
+    <string name="updating_launcher_components">Launcher herstarten om de launcher componenten bij te werken...</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Schud telefoon om alle taken te wissen</string>
     <!-- Parallax -->
