@@ -250,9 +250,9 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Yeniden Başlat</string>
     <string name="pref_restart_summary">Ayarları Uygulamak İçin Yeniden Başlat</string>
-    <string name="restarting_launcher">Restarting launcher...</string>
-    <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
-    <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
+    <string name="restarting_launcher">Başlatıcı yeniden başlatılıyor...</string>
+    <string name="restarting_launcher_changes">Değişiklikleri uygulamak için yeniden başlatılıyor...</string>
+    <string name="updating_launcher_components">Başlatıcı bileşenlerini güncellemek için başlatıcı yeniden başlatılıyor...</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Tüm görevleri silmek için telefonu sallayın</string>
     <!-- Parallax -->
