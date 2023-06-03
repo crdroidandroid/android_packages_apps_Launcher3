@@ -250,6 +250,9 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">重新启动</string>
     <string name="pref_restart_summary">手动重启启动器以应用未生效的设置</string>
+    <string name="restarting_launcher">Restarting launcher...</string>
+    <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
+    <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">摇晃手机清除所有任务</string>
     <!-- Parallax -->
