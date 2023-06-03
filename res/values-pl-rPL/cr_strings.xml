@@ -250,6 +250,9 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Uruchom ponownie</string>
     <string name="pref_restart_summary">Uruchom ponownie launcher ręcznie, aby zastosować wszystkie oczekujące ustawienia</string>
+    <string name="restarting_launcher">Restarting launcher...</string>
+    <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
+    <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Potrząśnij telefonem, aby wyczyścić wszystkie zadania</string>
     <!-- Parallax -->
