@@ -250,9 +250,9 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Neu starten</string>
     <string name="pref_restart_summary">Startet den Startbildschirm neu, um ausstehende Änderungen an den Einstellungen anzuwenden</string>
-    <string name="restarting_launcher">Restarting launcher...</string>
-    <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
-    <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
+    <string name="restarting_launcher">Launcher wird neu gestartet …</string>
+    <string name="restarting_launcher_changes">Launcher wird neu gestartet, um Änderungen anzuwenden …</string>
+    <string name="updating_launcher_components">Launcher wird neu gestartet, um Launcher-Elemente zu aktualisieren …</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Telefon schütteln zum Schließen aller Apps</string>
     <!-- Parallax -->
