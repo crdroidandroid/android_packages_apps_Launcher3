@@ -250,9 +250,9 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Перезапустити</string>
     <string name="pref_restart_summary">Перезапустіть лаунчер вручну для подальшого застосування налаштувань</string>
-    <string name="restarting_launcher">Restarting launcher...</string>
-    <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
-    <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
+    <string name="restarting_launcher">Перезавантаження оболонки...</string>
+    <string name="restarting_launcher_changes">Перезапуск лаунчера для застосування змін...</string>
+    <string name="updating_launcher_components">Перезапуск лаунчера для оновлення компонентів...</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Струсніть телефон, щоб очистити всі завдання</string>
     <!-- Parallax -->
