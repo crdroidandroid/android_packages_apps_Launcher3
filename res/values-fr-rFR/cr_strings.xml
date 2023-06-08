@@ -250,11 +250,14 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Redémarrer</string>
     <string name="pref_restart_summary">Redémarrez le lanceur manuellement pour appliquer tous les paramètres en attente</string>
+    <string name="restarting_launcher">Redémarrage du lanceur...</string>
+    <string name="restarting_launcher_changes">Redémarrage du lanceur pour appliquer les modifications...</string>
+    <string name="updating_launcher_components">Redémarrage du lanceur pour mettre à jour les composants...</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Secouer le téléphone pour effacer toutes les tâches</string>
     <!-- Parallax -->
-    <string name="short_parallax_title">Allow short parallax</string>
-    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
+    <string name="short_parallax_title">Autoriser la parallaxe courte</string>
+    <string name="short_parallax_summary">Activer l\'effet de défilement complet du fond d\'écran sur un nombre réduit de pages au lieu de le recadrer</string>
     <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <string name="single_page_center_summary">Centrer le fond d\'écran si une seule page est utilisée</string>
 </resources>
