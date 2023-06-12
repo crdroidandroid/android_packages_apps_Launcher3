@@ -988,9 +988,9 @@ public class DeviceProfile {
      */
     private int calculateHotseatBorderSpace(float hotseatWidthPx, int numExtraBorder) {
         float hotseatIconsTotalPx = iconSizePx * numShownHotseatIcons;
-        int hotseatBorderSpace =
+        int hotseatBorderSpace = numShownHotseatIcons > (1 - numExtraBorder) ?
                 (int) (hotseatWidthPx - hotseatIconsTotalPx)
-                        / (numShownHotseatIcons - 1 + numExtraBorder);
+                        / (numShownHotseatIcons - 1 + numExtraBorder) : maxHotseatIconSpacePx;
         return Math.min(hotseatBorderSpace, maxHotseatIconSpacePx);
     }
 
