@@ -163,7 +163,7 @@
         <item>該放鬆一下囉</item>
         <item>祝您有個美好的夜晚！</item>
         <item>該充電了！</item>
-        <item>明天應該也是好日子</item>
+        <item>明天也是個美好的一天</item>
         <item>為明天做好準備吧</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
@@ -251,8 +251,8 @@
     <string name="pref_restart_title">重新啟動</string>
     <string name="pref_restart_summary">重新啟動主畫面來套用設定</string>
     <string name="restarting_launcher">正在重新啟動桌面...</string>
-    <string name="restarting_launcher_changes">正在重新啟動桌面以套用變更…</string>
-    <string name="updating_launcher_components">正在重新啟動桌面以更新組件…</string>
+    <string name="restarting_launcher_changes">正在重新啟動桌面以套用變更...</string>
+    <string name="updating_launcher_components">正在重新啟動桌面以更新組件...</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">晃動手機以關閉所有應用程式</string>
     <!-- Parallax -->
