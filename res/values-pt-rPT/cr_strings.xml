@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">Definições do ecrã inicial</string>
+    <!-- Categories -->
+    <string name="home_category_title">Ecrã inicial</string>
+    <string name="home_category_summary">Definir o feed do Google e mais</string>
+    <string name="icons_category_title">Ícones</string>
+    <string name="icons_category_summary">Definir o tamanho dos ícones e mais</string>
+    <string name="app_drawer_category_title">Gaveta de apps</string>
+    <string name="app_drawer_category_summary">Personalize a sua gaveta de apps</string>
+    <string name="recents_category_title">Recentes</string>
+    <string name="recents_category_summary">Personalizar o ecrã de recentes</string>
+    <string name="misc_category_title">Diversos</string>
+    <string name="misc_category_summary">Outras opções</string>
+    <string name="general_category_title">Geral</string>
+    <string name="interface_category_title">Interface</string>
+    <string name="quickspace_category_title">Espaço rápido</string>
+    <string name="search_bar_category_title">Barra de pesquisa</string>
+    <string name="actions_category_title">Ações rápidas</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">Opções de programador</string>
+    <string name="dev_options_summary">Ativar alguns recursos ocultos por sua conta e risco</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Bloquear disposição</string>
+    <string name="settings_lock_layout_summary_on">Ícones e widgets não podem ser adicionados, removidos ou movidos no ecrã inicial</string>
+    <string name="settings_lock_layout_summary_off">Ícones e widgets podem ser adicionados, removidos e movidos no ecrã inicial</string>
+    <string name="settings_edit_widgets_error">Não é possível adicionar widgets ao ecrã inicial</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Mostrar rótulos dos ícones</string>
+    <string name="drawer_show_labels">Mostrar rótulos dos ícones</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Aceder ao feed do Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Ao deslizar para a direita no ecrã principal</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Ao deslizar para a esquerda no ecrã principal</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Apps ocultas e protegidas</string>
+    <string name="trust_apps_auth_manager">Desbloquear para gerir as apps ocultas e protegidas</string>
+    <string name="trust_apps_auth_open_app">Autenticar para abrir %1$s</string>
+    <string name="trust_apps_loading">A carregar\u2026</string>
+    <string name="trust_apps_no_lock_error">Configure um ecrã de bloqueio seguro para restringir o acesso às apps</string>
+    <string name="trust_apps_help">Ajuda</string>
+    <string name="trust_apps_info_hidden">As apps ocultas e os seus widgets estão ocultas na gaveta de apps</string>
+    <string name="trust_apps_info_protected">As apps protegidas requerem autenticação para serem executadas</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Toque duplo para desligar</string>
+    <string name="pref_sleep_gesture_summary">Toque duas vezes num espaço vazio para desligar o ecrã</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">Pausar</string>
+    <string name="pause_apps_dialog_title">Pausar %1$s?</string>
+    <string name="pause_apps_dialog_message">As notificações de %1$s serão pausadas</string>
+    <string name="paused_apps_dialog_title">App pausada</string>
+    <string name="paused_apps_dialog_message">%1$s foi pausada diretamente a partir do launcher</string>
+    <string name="paused_apps_drop_target_label">Pausar app</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Valor: <xliff:g id="value">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">padrão</string>
+    <string name="custom_seekbar_default_value_to_set">Valor padrão: <xliff:g id="v">%s</xliff:g>\nToque longo para definir</string>
+    <string name="custom_seekbar_default_value_is_set">O valor padrão está definido</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Tamanho dos ícones</string>
+    <!-- Font size -->
+    <string name="font_size_title">Tamanho da fonte</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Máx. de linhas para os rótulos</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Pesquisar</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Pesquisa por voz</string>
+    <string name="dock_music_search_title">Pesquisa de música</string>
+    <string name="dock_music_search_summary">Iniciar pesquisa de música ao pressionar o ícone do microfone</string>
+    <string name="dock_search_title">Barra de pesquisa do Google</string>
+    <string name="dock_search_summary">Mostrar barra de pesquisa na doca</string>
+    <string name="dock_theme_title">Ícones temáticos</string>
+    <string name="dock_theme_summary">Usar ícones temáticos na barra de pesquisa</string>
+    <string name="search_radius_title">Cantos arredondados</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Fundo da doca</string>
+    <string name="hotseat_bg_summary">Mostrar um fundo translúcido na doca</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Rolar papel de parede</string>
+    <string name="allow_wallpaper_scrolling_summary">Efeito de rolagem do papel de parede entre ecrãs</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Zoom do papel de parede</string>
+    <string name="allow_wallpaper_zooming_summary">Ampliar ou diminuir o papel de parede ao usar a gaveta de apps ou o ecrã de recentes</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Barra de estado</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Sombra superior</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Altura das linhas</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Nível de desfoque do fundo</string>
+    <string name="background_blur_summary">Definir o nível de desfoque para a gaveta de apps e ecrã de recentes</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Em resumo</string>
+    <string name="show_quickspace_summary">Mostrado no topo do ecrã inicial</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Bem-vindo à crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>Tenha um ótimo dia</item>
+        <item>Obrigado por nos escolher</item>
+        <item>A gostar de nós? Envie-nos uma cerveja</item>
+        <item>A melhor Rom de sempre.</item>
+        <item>Diga-nos olá no Telegram</item>
+        <item>Toque aqui para começar</item>
+        <item>Nós te amamos 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">A reproduzir</string>
+    <string name="quick_event_ambient_song_artist">%1$s por %2$s</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Em reprodução</string>
+    <string name="quickspace_now_playing_summary">Mostrar a música que está a tocar</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Estilo minimalista</string>
+    <string name="quickspace_alternate_style_summary">Mudar para o estilo moderno</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Mensagens aleatórias</string>
+    <string name="quickspace_psa_summary">Uma companhia mais animada com mensagens aleatórias</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Bom dia!</item>
+        <item>Bom dia, hora de ir à luta!</item>
+        <item>Que lindo dia!</item>
+        <item>Tenha um bom dia!</item>
+        <item>Que tal uma soneca de 5 min?</item>
+        <item>Essa é uma maneira de acordar.</item>
+        <item>Devia mudar o som do seu alarme.</item>
+        <item>Parece estar um belo dia, não?</item>
+        <item>Vamos lá pôr mãos à obra.</item>
+        <item>Verifique o tempo, pelo sim pelo não</item>
+        <item>Ainda um pouco sonolento</item>
+        <item>Já olhou lá para fora?</item>
+        <item>Vamos lá fazer isto.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Boa noite!</item>
+        <item>Durma bem!</item>
+        <item>Vemo-nos amanhã!</item>
+        <item>Bons sonhos!</item>
+        <item>Não fique acordado até tarde</item>
+        <item>Tenha um bom sono</item>
+        <item>Durma um pouco</item>
+        <item>Hora de relaxar</item>
+        <item>Aproveite a noite!</item>
+        <item>Altura de carregar as baterias!</item>
+        <item>Amanhã poderá ser um grande dia</item>
+        <item>Prepare os seus ossos para amanhã</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Hmm... boa noite?</item>
+        <item>É um pouco tarde</item>
+        <item>Devia corrigir o seu horário de sono</item>
+        <item>É mais produtivo a esta hora?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>A ignorância é uma benção</item>
+        <item>Já é altura de instalar outra atualização?</item>
+        <item>Faça a paz, não a guerra</item>
+        <item>Olá! Tudo bem?</item>
+        <item>Foque-se nas suas tarefas</item>
+        <item>Quantas capturas de ecrã tira?</item>
+        <item>Descubra o que há de melhor com crDroid</item>
+        <item>Espalhe amor, não devastação</item>
+        <item>Não iniciámos o fogo!</item>
+        <item>Está na hora de boa música</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>Necessita da crDroid Premium para ver isto</item>
+        <item>Lembre-se da Lineagem do Unicórnio</item>
+        <item>Desfrute da duração Xtendida da bateria</item>
+        <item>Começando do zero</item>
+        <item>Nós te amamos 3000</item>
+        <item>Delicioso mesmo sem Sushi</item>
+        <item>Faça algo de bom hoje</item>
+        <item>Esta é a melhor Experiência Pixel, não é?</item>
+        <item>Como vão as coisas?</item>
+        <item>Sem ilusões, bem-vindo à realidade!</item>
+        <item>Obrigado pelo seu apoio</item>
+        <item>Não há festival para Derps - só a perfeição!</item>
+        <item>Uma das melhores escolhas do buildbot</item>
+        <item>Sanidade para a sua Paranoia</item>
+        <item>Experimente sobremesas Ice Cold</item>
+        <item>Que experiência adorável, não é?</item>
+        <item>A Evolução é um mito, certo?</item>
+        <item>Você é o que você instala, não seja Batata</item>
+        <item>No que está a pensar?</item>
+        <item>Expecto Patronum</item>
+        <item>Wubba Lubba Dub Dub</item>
+        <item>Vitória Vitória ...?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Sugestões</string>
+    <string name="suggestion_pref_screen_desc">Para a gaveta de apps e ecrã inicial</string>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">Condições meteorológicas</string>
+    <string name="quick_event_ambient_weather_summary">Mostrar as condições meteorológicas atuais</string>
+    <string name="quick_event_ambient_weather_enabled_info">Requer que o serviço meteorológico esteja ativado</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Opacidade do fundo</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">Usar a barra de tarefas</string>
+    <string name="pref_allow_phone_taskbar_summary">Para abrir e alternar apps em qualquer lugar</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Capturar ecrã</string>
+    <string name="recents_clear_all_title">Limpar tudo</string>
+    <string name="recents_lens_title">Lens</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Ícones temáticos</string>
+    <string name="pref_themed_icons_summary">Seguir ícones temáticos usados no ecrã inicial</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">Origem</string>
+    <string name="app_info_source_system">Sistema</string>
+    <string name="app_info_last_update">Última atualização</string>
+    <string name="app_info_version">Versão</string>
+    <string name="app_info_more">Mais</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Pacote de ícones</string>
+    <string name="icon_pack_default_label">Padrão</string>
+    <string name="icon_pack_add">Instalar mais</string>
+    <string name="icon_pack_no_market">Não há uma loja de apps disponível</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Terminar</string>
+    <string name="recents_app_killed">App terminada</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Disponível | %2$s Total</string>
+    <string name="recents_meminfo_title">Informações da memória</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Barra de pesquisa de apps</string>
+    <string name="drawer_search_summary">Barra de pesquisa no topo da gaveta de apps</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Reiniciar</string>
+    <string name="pref_restart_summary">Reinicie o launcher manualmente para aplicar qualquer configuração pendente</string>
+    <string name="restarting_launcher">Restarting launcher...</string>
+    <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
+    <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Shake phone to clear all tasks</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Allow short parallax</string>
+    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
+    <string name="single_page_center_title">Single page center</string>
+    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+</resources>
