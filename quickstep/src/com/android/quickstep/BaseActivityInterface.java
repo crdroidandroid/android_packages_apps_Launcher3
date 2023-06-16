@@ -509,9 +509,13 @@ public abstract class BaseActivityInterface<STATE_TYPE extends BaseState<STATE_T
             mActivity.getStateManager().setCurrentUserControlledAnimation(controller);
 
             // Since we are changing the start position of the UI, reapply the state, at the end
-            controller.setEndAction(() -> mActivity.getStateManager().goToState(
-                    controller.getInterpolatedProgress() > 0.5 ? mTargetState : mBackgroundState,
-                    false));
+            controller.setEndAction(() -> {
+                    if(mBackgroundState == mActivity.getStateManager().getState()) {
+                            mActivity.getStateManager().goToState(
+                            controller.getInterpolatedProgress() > 0.5 ? mTargetState
+                              : mBackgroundState, false);
+                    }
+            });
 
             RecentsView recentsView = mActivity.getOverviewPanel();
             AnimatorControllerWithResistance controllerWithResistance =
