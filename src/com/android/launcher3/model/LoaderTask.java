@@ -17,6 +17,7 @@
 package com.android.launcher3.model;
 
 import static com.android.launcher3.LauncherSettings.Favorites.TABLE_NAME;
+import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_HAS_MULTIPLE_PROFILES;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_HAS_SHORTCUT_PERMISSION;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_QUIET_MODE_CHANGE_PERMISSION;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_QUIET_MODE_ENABLED;
@@ -1009,7 +1010,9 @@ public class LoaderTask implements Runnable {
         }
 
         mBgAllAppsList.setFlags(FLAG_QUIET_MODE_ENABLED,
-                mUserManagerState.isAnyProfileQuietModeEnabled());
+                mUserManagerState.isAllProfilesQuietModeEnabled());
+        mBgAllAppsList.setFlags(FLAG_HAS_MULTIPLE_PROFILES,
+                mUserManagerState.hasMultipleProfiles());
         mBgAllAppsList.setFlags(FLAG_HAS_SHORTCUT_PERMISSION,
                 hasShortcutsPermission(mApp.getContext()));
         mBgAllAppsList.setFlags(FLAG_QUIET_MODE_CHANGE_PERMISSION,
