@@ -25,6 +25,7 @@ import static com.android.launcher3.LauncherPrefs.SHOULD_SHOW_SMARTSPACE;
 import static com.android.launcher3.LauncherSettings.Favorites.DESKTOP_ICON_FLAG;
 import static com.android.launcher3.icons.CacheableShortcutInfo.convertShortcutsToCacheableShortcuts;
 import static com.android.launcher3.icons.cache.CacheLookupFlag.DEFAULT_LOOKUP_FLAG;
+import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_HAS_MULTIPLE_PROFILES;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_HAS_SHORTCUT_PERMISSION;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_PRIVATE_PROFILE_QUIET_MODE_ENABLED;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_QUIET_MODE_CHANGE_PERMISSION;
@@ -48,6 +49,7 @@ import android.content.pm.PackageInstaller.SessionInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ShortcutInfo;
 import android.os.Bundle;
+import android.os.Process;
 import android.os.Trace;
 import android.os.UserHandle;
 import android.os.UserManager;
@@ -728,9 +730,12 @@ public class LoaderTask implements Runnable {
             // Query for the set of apps
             final List<LauncherActivityInfo> apps = mLauncherApps.getActivityList(null, user);
             // Fail if we don't have any apps
-            // TODO: Fix this. Only fail for the current user.
             if (apps == null || apps.isEmpty()) {
-                return allActivityList;
+                if (Process.myUserHandle().equals(user)) {
+                    return allActivityList;
+                } else {
+                    continue;
+                }
             }
             boolean quietMode = mUserManagerState.isUserQuiet(user);
 
@@ -810,11 +815,16 @@ public class LoaderTask implements Runnable {
         }
 
         if (Flags.enablePrivateSpace()) {
-            mBgAllAppsList.setFlags(FLAG_WORK_PROFILE_QUIET_MODE_ENABLED, isWorkProfileQuiet);
+            mBgAllAppsList.setFlags(FLAG_HAS_MULTIPLE_PROFILES,
+                    mUserManagerState.hasMultipleWorkProfiles());
+            mBgAllAppsList.setFlags(FLAG_WORK_PROFILE_QUIET_MODE_ENABLED,
+                    mUserManagerState.isAllWorkProfilesQuietModeEnabled());
             mBgAllAppsList.setFlags(FLAG_PRIVATE_PROFILE_QUIET_MODE_ENABLED, isPrivateProfileQuiet);
         } else {
             mBgAllAppsList.setFlags(FLAG_QUIET_MODE_ENABLED,
-                    mUserManagerState.isAnyProfileQuietModeEnabled());
+                    mUserManagerState.isAllProfilesQuietModeEnabled());
+            mBgAllAppsList.setFlags(FLAG_HAS_MULTIPLE_PROFILES,
+                    mUserManagerState.hasMultipleProfiles());
         }
         mBgAllAppsList.setFlags(FLAG_HAS_SHORTCUT_PERMISSION,
                 hasShortcutsPermission(mContext));

@@ -15,6 +15,7 @@
  */
 package com.android.launcher3.model;
 
+import android.os.Process;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.Log;
@@ -35,10 +36,13 @@ public class UserManagerState {
     private final LongSparseArray<Boolean> mQuietUsersSerialNoMap = new LongSparseArray<>();
     private final SparseBooleanArray mQuietUsersHashCodeMap = new SparseBooleanArray();
 
+    private UserCache mUserCache;
+
     /**
      * Initialises the state values for all users
      */
     public void init(UserCache userCache, UserManager userManager) {
+        mUserCache = userCache;
         for (UserHandle user : userManager.getUserProfiles()) {
             long serialNo = userCache.getSerialNumberForUser(user);
             boolean isUserQuiet = userManager.isQuietModeEnabled(user);
@@ -70,17 +74,75 @@ public class UserManagerState {
     }
 
     /**
-     * Returns true if any user profile has quiet mode enabled.
-     * <p>
-     * Do not use this for determining if a specific profile has quiet mode enabled, as their can
-     * be more than one profile in quiet mode.
+     * Returns true if all managed profiles have quiet mode enabled.
      */
-    public boolean isAnyProfileQuietModeEnabled() {
-        for (int i = mQuietUsersHashCodeMap.size() - 1; i >= 0; i--) {
-            if (mQuietUsersHashCodeMap.valueAt(i)) {
-                return true;
+    public boolean isAllProfilesQuietModeEnabled() {
+        // Because the parent user is included, there will always be at least one user returned
+        // by getUserProfiles and tracked by allUsers, even if there are no managed profiles.
+        final int numProfilesIncludingParent = allUsers.size();
+        if (numProfilesIncludingParent <= 1) {
+            // There are no managed profiles, only the parent user, so we can return early.
+            return false;
+        }
+        for (int i = 0; i < numProfilesIncludingParent; i++) {
+            if (Process.myUserHandle().equals(allUsers.valueAt(i))) {
+                // Skip the parent user.
+                continue;
+            }
+            long serialNo = allUsers.keyAt(i);
+            if (!isUserQuiet(serialNo)) {
+                return false;
             }
         }
-        return false;
+        // Quiet mode is on for all users.
+        return true;
     }
+
+    public boolean hasMultipleProfiles() {
+        final int numProfiles = allUsers.size() - 1; // not including the parent
+        return numProfiles > 1;
+    }
+
+    /**
+     * Returns true if all managed work profiles have quiet mode enabled.
+     */
+    public boolean isAllWorkProfilesQuietModeEnabled() {
+        // Because the parent user is included, there will always be at least one user returned
+        // by getUserProfiles and tracked by allUsers, even if there are no managed profiles.
+        final int numProfilesIncludingParent = allUsers.size();
+        if (numProfilesIncludingParent <= 1) {
+            // There are no managed profiles, only the parent user, so we can return early.
+            return false;
+        }
+        for (int i = 0; i < numProfilesIncludingParent; i++) {
+            if (!mUserCache.getUserInfo(allUsers.valueAt(i)).isWork()) {
+                // Skip if it's not work profile
+                continue;
+            }
+            long serialNo = allUsers.keyAt(i);
+            if (!isUserQuiet(serialNo)) {
+                return false;
+            }
+        }
+        // Quiet mode is on for all work profiles.
+        return true;
+    }
+
+    public boolean hasMultipleWorkProfiles() {
+        // Because the parent user is included, there will always be at least one user returned
+        // by getUserProfiles and tracked by allUsers, even if there are no managed profiles.
+        final int numProfilesIncludingParent = allUsers.size();
+        if (numProfilesIncludingParent <= 1) {
+            // There are no managed profiles, only the parent user, so we can return early.
+            return false;
+        }
+        int workProfileCount = 0;
+        for (int i = 0; i < numProfilesIncludingParent; i++) {
+            if (mUserCache.getUserInfo(allUsers.valueAt(i)).isWork()) {
+                workProfileCount++;
+            }
+        }
+        return workProfileCount > 1;
+    }
+
 }
