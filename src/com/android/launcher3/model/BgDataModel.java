@@ -484,6 +484,8 @@ public class BgDataModel {
         int FLAG_WORK_PROFILE_QUIET_MODE_ENABLED = 1 << 3;
         // If quiet mode is enabled for private profile user
         int FLAG_PRIVATE_PROFILE_QUIET_MODE_ENABLED = 1 << 4;
+        // If user has more than one work profile
+        int FLAG_HAS_MULTIPLE_PROFILES = 1 << 5;
 
         /**
          * Returns an IntSet of page ids to bind first, synchronously if possible

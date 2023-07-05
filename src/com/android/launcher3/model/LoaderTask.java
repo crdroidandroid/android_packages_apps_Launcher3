@@ -24,6 +24,7 @@ import static com.android.launcher3.LauncherSettings.Favorites.ITEM_TYPE_APP_PAI
 import static com.android.launcher3.LauncherSettings.Favorites.TABLE_NAME;
 import static com.android.launcher3.config.FeatureFlags.ENABLE_SMARTSPACE_REMOVAL;
 import static com.android.launcher3.config.FeatureFlags.SMARTSPACE_AS_A_WIDGET;
+import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_HAS_MULTIPLE_PROFILES;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_HAS_SHORTCUT_PERMISSION;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_PRIVATE_PROFILE_QUIET_MODE_ENABLED;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_QUIET_MODE_CHANGE_PERMISSION;
@@ -723,7 +724,9 @@ public class LoaderTask implements Runnable {
             mBgAllAppsList.setFlags(FLAG_PRIVATE_PROFILE_QUIET_MODE_ENABLED, isPrivateProfileQuiet);
         } else {
             mBgAllAppsList.setFlags(FLAG_QUIET_MODE_ENABLED,
-                    mUserManagerState.isAnyProfileQuietModeEnabled());
+                    mUserManagerState.isAllProfilesQuietModeEnabled());
+            mBgAllAppsList.setFlags(FLAG_HAS_MULTIPLE_PROFILES,
+                    mUserManagerState.hasMultipleProfiles());
         }
         mBgAllAppsList.setFlags(FLAG_HAS_SHORTCUT_PERMISSION,
                 hasShortcutsPermission(mApp.getContext()));
