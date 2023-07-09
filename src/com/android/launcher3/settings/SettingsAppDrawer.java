@@ -109,6 +109,7 @@ public class SettingsAppDrawer extends CollapsingToolbarBaseActivity
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) { 
         switch (key) {
             case Utilities.KEY_DRAWER_SEARCH:
+            case Utilities.KEY_FORCE_MONOCHROME_ICON:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:
