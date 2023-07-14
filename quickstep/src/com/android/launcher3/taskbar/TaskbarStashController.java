@@ -324,7 +324,6 @@ public class TaskbarStashController implements TaskbarControllers.LoggableTaskba
         // that taskbar unstashes when going to 3 button mode (supportsVisualStashing() false).
         boolean isManuallyStashedInApp = supportsVisualStashing()
                 && !isTransientTaskbar
-                && !FORCE_PERSISTENT_TASKBAR.get()
                 && mPrefs.getBoolean(SHARED_PREFS_STASHED_KEY, DEFAULT_STASHED_PREF);
         boolean isInSetup = !mActivity.isUserSetupComplete() || setupUIVisible;
         updateStateForFlag(FLAG_STASHED_IN_APP_MANUAL, isManuallyStashedInApp);
@@ -353,9 +352,6 @@ public class TaskbarStashController implements TaskbarControllers.LoggableTaskba
      * Returns whether the user can manually stash the taskbar based on the current device state.
      */
     protected boolean supportsManualStashing() {
-        if (FORCE_PERSISTENT_TASKBAR.get()) {
-            return false;
-        }
         return supportsVisualStashing()
                 && isInApp()
                 && (!Utilities.isRunningInTestHarness() || mEnableManualStashingDuringTests)
