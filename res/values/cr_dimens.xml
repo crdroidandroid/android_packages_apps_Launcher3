@@ -22,7 +22,10 @@
 
      <!-- Meminfo in overview -->
     <dimen name="meminfo_bottom_margin_gesture">15dp</dimen>
+    <dimen name="meminfo_bottom_margin_transient_taskbar">96dp</dimen>
+    <dimen name="meminfo_bottom_margin_persistent_taskbar">64dp</dimen>
     <dimen name="meminfo_bottom_margin_three_button">15dp</dimen>
+    <dimen name="meminfo_top_margin">12dp</dimen>
 
     <!-- Search bar margin -->
     <dimen name="all_apps_search_bar_margin_side">38dp</dimen>
