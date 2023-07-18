@@ -256,8 +256,8 @@
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Telefon schütteln zum Schließen aller Apps</string>
     <!-- Parallax -->
-    <string name="short_parallax_title">Kurzes Parallax Scrolling erlauben</string>
+    <string name="short_parallax_title">Kurzes Parallax Scrollen erlauben</string>
     <string name="short_parallax_summary">Beschränkt den Scroll-Effekt auf eine kleinere Seitenanzahl, anstatt das Hintergrundbild zu beschneiden</string>
-    <string name="single_page_center_title">Zentrieren bei nur einer Seite</string>
+    <string name="single_page_center_title">Bei nur einer Seite zentrieren</string>
     <string name="single_page_center_summary">Zentriert das Hintergrundbild, wenn nur eine einzelne Seite verwendet wird</string>
 </resources>
