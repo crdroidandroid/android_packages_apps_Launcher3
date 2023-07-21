@@ -21,7 +21,7 @@
     <string name="settings_title">Cài đặt màn hình chính</string>
     <!-- Categories -->
     <string name="home_category_title">Màn hình chính</string>
-    <string name="home_category_summary">Đặt bảng điều khiển Google và nhiều hơn</string>
+    <string name="home_category_summary">Tùy chỉnh các thiết lập trên màn hình chính</string>
     <string name="icons_category_title">Biểu tượng</string>
     <string name="icons_category_summary">Đặt kích cỡ biểu tượng và hơn thế nữa</string>
     <string name="app_drawer_category_title">Ngăn chứa ứng dụng</string>
@@ -49,7 +49,7 @@
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Vuốt để mở ứng dụng Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Khi bạn vuốt sang phải từ màn hình chính</string>
+    <string name="msg_minus_one_on_left">Khi vuốt trượt sang phải</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Khi vuốt sang trái từ màn hình chính</string>
     <!-- Trust apps -->
@@ -258,6 +258,6 @@
     <!-- Parallax -->
     <string name="short_parallax_title">Cho phép thị sai ngắn</string>
     <string name="short_parallax_summary">Dùng hiệu ứng để cuộn trên các trang khác thay vì cắt hình nền</string>
-    <string name="single_page_center_title">Chia hình nền vừa màn hình</string>
-    <string name="single_page_center_summary">Căn chỉnh hình nền vừa màn hình từ trái sang phải</string>
+    <string name="single_page_center_title">Hình nền vị trí trung tâm</string>
+    <string name="single_page_center_summary">Hình nền ở vị trí trung tâm khi dùng một trang</string>
 </resources>

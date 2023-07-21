@@ -94,7 +94,7 @@
     <string name="dock_theme_summary">Käytä teemakuvakkeita hakupalkille</string>
     <string name="search_radius_title">Kulman säde</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Sovellusvalikon tausta</string>
+    <string name="hotseat_bg_title">Sovellustelakan tausta</string>
     <string name="hotseat_bg_summary">Lisää läpikuultava tausta sovellustelakkaan</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Taustakuvan vieritys</string>
@@ -250,14 +250,14 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Käynnistä uudelleen</string>
     <string name="pref_restart_summary">Käynnistä käynnistin uudelleen manuaalisesti ottaaksesi käyttöön kaikki odottavat asetukset</string>
-    <string name="restarting_launcher">Restarting launcher...</string>
-    <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
-    <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
+    <string name="restarting_launcher">Käynnistetään käynnistysohjelma uudelleen...</string>
+    <string name="restarting_launcher_changes">Käynnistetään käynnistysohjelma uudelleen, jotta muutokset otetaan käyttöön...</string>
+    <string name="updating_launcher_components">Käynnistetään käynnistysohjelma uudelleen käynnistimen komponenttien päivittämiseksi...</string>
     <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Shake phone to clear all tasks</string>
+    <string name="recents_shake_clear_all_title">Ravista puhelinta poistaaksesi kaikki tehtävät</string>
     <!-- Parallax -->
-    <string name="short_parallax_title">Allow short parallax</string>
-    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
-    <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <string name="short_parallax_title">Salli lyhyt parallaksi</string>
+    <string name="short_parallax_summary">Ota käyttöön koko taustakuvan vierintätehoste pienimmillä sivumäärillä taustakuvan rajaamisen sijaan</string>
+    <string name="single_page_center_title">Yhden sivun keskitys</string>
+    <string name="single_page_center_summary">Keskitä taustakuva jos vain yksi sivu on käytössä</string>
 </resources>
