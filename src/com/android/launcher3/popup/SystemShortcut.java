@@ -4,13 +4,18 @@ import static android.content.pm.SuspendDialogInfo.BUTTON_ACTION_UNSUSPEND;
 
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_SYSTEM_SHORTCUT_APP_INFO_TAP;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_SYSTEM_SHORTCUT_WIDGETS_TAP;
+import static com.android.launcher3.LauncherSettings.Favorites.ITEM_TYPE_APPLICATION;
 
 import android.app.ActivityOptions;
 import android.app.AlertDialog;
 import android.app.AppGlobals;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.LauncherActivityInfo;
+import android.content.pm.LauncherApps;
 import android.content.pm.SuspendDialogInfo;
 import android.graphics.Rect;
 import android.net.Uri;
@@ -21,6 +26,8 @@ import android.view.View;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.os.UserHandle;
 
 import androidx.annotation.Nullable;
 
@@ -333,13 +340,44 @@ public abstract class SystemShortcut<T extends Context & ActivityContext> extend
                     target, itemInfo, originalView);
         }
 
+        /**
+         * @return the component name that should be uninstalled or null.
+         */
+        private ComponentName getUninstallTarget(ItemInfo item, Context context) {
+            Intent intent = null;
+            UserHandle user = null;
+            if (item != null &&
+                    item.itemType == ITEM_TYPE_APPLICATION) {
+                intent = item.getIntent();
+                user = item.user;
+            }
+            if (intent != null) {
+                LauncherActivityInfo info = context.getSystemService(LauncherApps.class)
+                        .resolveActivity(intent, user);
+                if (info != null
+                        && (info.getApplicationInfo().flags & ApplicationInfo.FLAG_SYSTEM) == 0) {
+                    return info.getComponentName();
+                }
+            }
+            return null;
+        }
+
         @Override
         public void onClick(View view) {
+            ComponentName cn = getUninstallTarget(mItemInfo, view.getContext());
+            if (cn == null) {
+                // System applications cannot be installed. For now, show a toast explaining that.
+                // We may give them the option of disabling apps this way.
+                Toast.makeText(view.getContext(), R.string.uninstall_system_app_text, Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             try {
                 Intent intent = Intent.parseUri(view.getContext().getString(R.string.delete_package_intent), 0)
-                    .setData(Uri.fromParts("package", mItemInfo.getTargetComponent().getPackageName(),
-                    mItemInfo.getTargetComponent().getClassName())).putExtra(Intent.EXTRA_USER, mItemInfo.user);
-                mTarget.startActivitySafely(view, intent, mItemInfo);
+                    .setData(Uri.fromParts("package", cn.getPackageName(), cn.getClassName()))
+                    .putExtra(Intent.EXTRA_USER, mItemInfo.user);
+
+                mTarget.startActivity(intent);
                 AbstractFloatingView.closeAllOpenViews(mTarget);
             } catch (URISyntaxException e) {
                 // Do nothing.
