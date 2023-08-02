@@ -256,8 +256,8 @@
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Vymazat všechny úlohy zatřepáním telefonem</string>
     <!-- Parallax -->
-    <string name="short_parallax_title">Allow short parallax</string>
-    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
-    <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <string name="short_parallax_title">Povolit krátkou paralaxu</string>
+    <string name="short_parallax_summary">Povolit efekt posouvání celé tapety na menším počtu stránek namísto oříznutí tapety</string>
+    <string name="single_page_center_title">Střed jedné stránky</string>
+    <string name="single_page_center_summary">Vycentrovaní tapety lze pouze při použití jedné stránky</string>
 </resources>
