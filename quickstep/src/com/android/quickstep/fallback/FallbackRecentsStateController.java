@@ -81,7 +81,7 @@ public class FallbackRecentsStateController implements StateHandler<RecentsState
         setter.addOnFrameCallback(() -> mRecentsView.loadVisibleTaskData(FLAG_UPDATE_ALL));
         setter.addEndListener(success -> {
             if (!success) {
-                mRecentsView.reset();
+                mRecentsView.reset(false);
             }
         });
         mRecentsView.updateEmptyMessage();
