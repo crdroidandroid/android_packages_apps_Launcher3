@@ -350,9 +350,8 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
 
         requestLayout();
 
-        mSplitButton.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                (dp.isLandscape ? R.drawable.ic_split_horizontal : R.drawable.ic_split_vertical),
-                0, 0, 0);
+        mSplitButton.setForeground(getResources().getDrawable(dp.isLandscape ?
+                R.drawable.ic_split_horizontal : R.drawable.ic_split_vertical));
     }
 
     /**
