@@ -250,14 +250,14 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Reiniciar</string>
     <string name="pref_restart_summary">Reinicie o launcher manualmente para aplicar qualquer configuração pendente</string>
-    <string name="restarting_launcher">Restarting launcher...</string>
-    <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
-    <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
+    <string name="restarting_launcher">Reiniciando launcher...</string>
+    <string name="restarting_launcher_changes">Reiniciando o launcher para aplicar as mudanças...</string>
+    <string name="updating_launcher_components">Reiniciando o launcher para atualizar os componentes do launcher...</string>
     <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Shake phone to clear all tasks</string>
+    <string name="recents_shake_clear_all_title">Agite o telefone para limpar todas as tarefas</string>
     <!-- Parallax -->
-    <string name="short_parallax_title">Allow short parallax</string>
-    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
-    <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <string name="short_parallax_title">Permitir parallax curto</string>
+    <string name="short_parallax_summary">Ativar o efeito de rolagem do papel de parede completo em números menores de páginas ao invés de cortar o papel de parede</string>
+    <string name="single_page_center_title">Vista de uma só página</string>
+    <string name="single_page_center_summary">Centralizar papel de parede se apenas usando uma única página</string>
 </resources>

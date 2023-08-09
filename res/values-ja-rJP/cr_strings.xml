@@ -37,12 +37,12 @@
     <string name="actions_category_title">クイックアクション</string>
     <!-- Developer options -->
     <string name="dev_options_title">開発者オプション</string>
-    <string name="dev_options_summary">Enable some hidden features at your own risk</string>
+    <string name="dev_options_summary">非表示の機能を有効にします(自己責任)</string>
     <!-- Edit workspace -->
     <string name="settings_lock_layout_title">レイアウトをロック</string>
-    <string name="settings_lock_layout_summary_on">Icons and widgets can\'t be added, removed and moved on the homescreen</string>
-    <string name="settings_lock_layout_summary_off">Icons and widgets can be added, removed and moved on the homescreen</string>
-    <string name="settings_edit_widgets_error">It\'s not possible to add widgets to the home screen</string>
+    <string name="settings_lock_layout_summary_on">アイコンやウィジェットの追加、削除、移動を許可しない</string>
+    <string name="settings_lock_layout_summary_off">アイコンやウィジェットの追加、削除、移動を許可します</string>
+    <string name="settings_edit_widgets_error">ホーム画面にウィジェットを追加することはできません</string>
     <!-- Hide labels -->
     <string name="desktop_show_labels">デスクトップのアイコンラベル</string>
     <string name="drawer_show_labels">ドロワーのアイコンラベル</string>
@@ -53,67 +53,67 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">When you swipe left from main home screen</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
-    <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
-    <string name="trust_apps_loading">Loading\u2026</string>
-    <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
+    <string name="trust_apps_manager_name">非表示 &amp; 保護アプリ</string>
+    <string name="trust_apps_auth_manager">ロックを解除して非表示と保護アプリを管理</string>
+    <string name="trust_apps_auth_open_app">認証して %1$s を開く</string>
+    <string name="trust_apps_loading">\u2026 を読み込んでいます...</string>
+    <string name="trust_apps_no_lock_error">アプリのアクセス制限をするには画面ロックの設定をしてください</string>
     <string name="trust_apps_help">ヘルプ</string>
-    <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
-    <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="trust_apps_info_hidden">非表示アプリとそのウィジェットはドロワー内で非表示になります</string>
+    <string name="trust_apps_info_protected">保護されているアプリは開くのに認証が必要になります</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
+    <string name="pref_sleep_gesture_title">ダブルタップでスリープ</string>
+    <string name="pref_sleep_gesture_summary">ホーム画面の空きスペースをダブルタップして画面を消灯します</string>
     <!-- Pause apps shortcut -->
     <string name="pause">一時停止</string>
     <string name="pause_apps_dialog_title">%1$s を一時停止しますか？</string>
-    <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
-    <string name="paused_apps_dialog_title">App paused</string>
+    <string name="pause_apps_dialog_message">%1$s の通知を一時停止します</string>
+    <string name="paused_apps_dialog_title">アプリを一時停止しました</string>
     <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
-    <string name="paused_apps_drop_target_label">Pause app</string>
+    <string name="paused_apps_drop_target_label">アプリを一時停止</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_default_value_to_set">デフォルト <xliff:g id="v">%s</xliff:g>\n長押しで設定</string>
+    <string name="custom_seekbar_default_value_is_set">デフォルトに戻す</string>
     <!-- Icon size -->
     <string name="icon_size_title">アイコンのサイズ</string>
     <!-- Font size -->
     <string name="font_size_title">フォントのサイズ</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">アプリラベルの最大行数</string>
     <!-- Hotseat searchbar -->
-    <string name="label_search">Search</string>
+    <string name="label_search">検索</string>
     <string name="label_lens">Google レンズ</string>
     <string name="label_voice_search">音声検索</string>
     <string name="dock_music_search_title">音楽の検索</string>
-    <string name="dock_music_search_summary">Start music search on pressing mic icon</string>
+    <string name="dock_music_search_summary">マイクアイコンを押して音楽検索を開始します</string>
     <string name="dock_search_title">Google 検索バー</string>
     <string name="dock_search_summary">ドックの下部に検索バーを表示します</string>
-    <string name="dock_theme_title">Themed icons</string>
-    <string name="dock_theme_summary">Use themed icons for search bar</string>
-    <string name="search_radius_title">Corner radius</string>
+    <string name="dock_theme_title">テーマアイコン</string>
+    <string name="dock_theme_summary">検索バーにテーマアイコンを使用する</string>
+    <string name="search_radius_title">角の丸み</string>
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <string name="hotseat_bg_summary">アプリドックに半透明の背景を追加します</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">壁紙をスクロール</string>
-    <string name="allow_wallpaper_scrolling_summary">Wallpaper scrolling effect for multiple screens</string>
+    <string name="allow_wallpaper_scrolling_summary">複数ページでの壁紙のスクロール効果</string>
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zooming">壁紙の拡大</string>
-    <string name="allow_wallpaper_zooming_summary">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming_summary">ドロワーやアプリ履歴を使用しているときに壁紙をズームインやズームアウトをします</string>
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">ステータスバー</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">上部を暗くする</string>
     <!-- Row Height -->
-    <string name="row_height_title">Row height</string>
+    <string name="row_height_title">行の高さ</string>
     <!-- Background blur -->
-    <string name="background_blur_title">Background blur depth</string>
-    <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
+    <string name="background_blur_title">背景のぼかし</string>
+    <string name="background_blur_summary">アプリ履歴とアプリドロワーのぼかす度合いを設定します</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your home screen</string>
+    <string name="show_quickspace_summary">ホーム画面の上部に表示します</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">crDroid にようこそ！</string>
     <string-array name="welcome_message_variants">
@@ -126,14 +126,14 @@
         <item>We love you 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="quick_event_ambient_now_playing">Now Playing</string>
+    <string name="quick_event_ambient_now_playing">再生中</string>
     <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">再生中</string>
-    <string name="quickspace_now_playing_summary">Show the song you\'re playing</string>
+    <string name="quickspace_now_playing_summary">再生中の曲を表示します</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Minimalistic style</string>
-    <string name="quickspace_alternate_style_summary">Switch to modern style</string>
+    <string name="quickspace_alternate_style_title">ミニマルスタイル</string>
+    <string name="quickspace_alternate_style_summary">モダンスタイルに切り替えます</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Random messages</string>
     <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
@@ -210,13 +210,13 @@
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">候補</string>
-    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+    <string name="suggestion_pref_screen_desc">すべてのアプリとホーム画面の候補</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quick_event_ambient_weather_title">Weather condition</string>
-    <string name="quick_event_ambient_weather_summary">Display current weather condition and temperature</string>
-    <string name="quick_event_ambient_weather_enabled_info">Requires weather service to be enabled</string>
+    <string name="quick_event_ambient_weather_title">天気予報</string>
+    <string name="quick_event_ambient_weather_summary">現在の天気と気温を表示します</string>
+    <string name="quick_event_ambient_weather_enabled_info">天気サービスを有効にする必要があります</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">背景の透明度</string>
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">タスクバーを使用する</string>
     <string name="pref_allow_phone_taskbar_summary">For opening and switching apps anywhere</string>
@@ -225,8 +225,8 @@
     <string name="recents_clear_all_title">すべてクリア</string>
     <string name="recents_lens_title">レンズ</string>
     <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Themed icons</string>
-    <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
+    <string name="pref_themed_icons_title">テーマアイコン</string>
+    <string name="pref_themed_icons_summary">ホーム画面で使われているテーマのアイコンを使用します</string>
     <!-- AppInfo -->
     <string name="app_info_source">ソース</string>
     <string name="app_info_source_system">システム</string>
@@ -237,7 +237,7 @@
     <string name="icon_pack_title">アイコンパック</string>
     <string name="icon_pack_default_label">デフォルト</string>
     <string name="icon_pack_add">その他をインストール</string>
-    <string name="icon_pack_no_market">There\'s no available app store</string>
+    <string name="icon_pack_no_market">利用可能なアプリストアがありません</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">強制停止</string>
     <string name="recents_app_killed">アプリを強制停止しました</string>
@@ -246,18 +246,18 @@
     <string name="recents_meminfo_title">メモリ情報</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">アプリ検索バー</string>
-    <string name="drawer_search_summary">Search bar on top of the app drawer</string>
+    <string name="drawer_search_summary">アプリドロワー上部の検索バーを表示します</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">再起動</string>
-    <string name="pref_restart_summary">Restart the launcher manually to apply any pending settings</string>
-    <string name="restarting_launcher">Restarting launcher...</string>
-    <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
-    <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
+    <string name="pref_restart_summary">設定を適用するにはランチャーを再起動してください</string>
+    <string name="restarting_launcher">ランチャーを再起動しています..</string>
+    <string name="restarting_launcher_changes">変更を適用するためにランチャーを再起動しています...</string>
+    <string name="updating_launcher_components">ランチャーを再起動してランチャーのコンポーネントを更新しています...</string>
     <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Shake phone to clear all tasks</string>
+    <string name="recents_shake_clear_all_title">端末をシェイクしてすべてのタスクをクリア</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Allow short parallax</string>
     <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
     <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <string name="single_page_center_summary">ホーム画面が単一ページの場合は壁紙を中央に表示します</string>
 </resources>
