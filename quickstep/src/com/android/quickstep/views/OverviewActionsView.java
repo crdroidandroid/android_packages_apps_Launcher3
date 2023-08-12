@@ -349,9 +349,6 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
         updateVerticalMargin(DisplayController.getNavigationMode(getContext()));
 
         requestLayout();
-
-        mSplitButton.setForeground(getResources().getDrawable(dp.isLandscape ?
-                R.drawable.ic_split_horizontal : R.drawable.ic_split_vertical));
     }
 
     /**
