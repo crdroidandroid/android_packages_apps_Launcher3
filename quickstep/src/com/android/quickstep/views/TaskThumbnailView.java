@@ -357,12 +357,6 @@ public class TaskThumbnailView extends View {
 
     public void drawOnCanvas(Canvas canvas, float x, float y, float width, float height,
             float cornerRadius) {
-        if (mTask != null && getTaskView().isRunningTask() && !getTaskView().showScreenshot()) {
-            canvas.drawRoundRect(x, y, width, height, cornerRadius, cornerRadius, mClearPaint);
-            canvas.drawRoundRect(x, y, width, height, cornerRadius, cornerRadius,
-                    mDimmingPaintAfterClearing);
-            return;
-        }
 
         // Always draw the background since the snapshots might be translucent or partially empty
         // (For example, tasks been reparented out of dismissing split root when drag-to-dismiss

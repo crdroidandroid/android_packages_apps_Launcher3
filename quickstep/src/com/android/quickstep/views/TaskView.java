@@ -406,8 +406,6 @@ public class TaskView extends FrameLayout implements Reusable {
 
     protected final PointF mLastTouchDownPosition = new PointF();
 
-    private boolean mIsClickableAsLiveTile = true;
-
     @Nullable private final BorderAnimator mBorderAnimator;
 
     public TaskView(Context context) {
@@ -791,15 +789,6 @@ public class TaskView extends FrameLayout implements Reusable {
             if (ActivityManagerWrapper.getInstance()
                     .startActivityFromRecents(mTask.key, opts.options)) {
                 RecentsView recentsView = getRecentsView();
-                if (recentsView.getRunningTaskViewId() != -1) {
-                    recentsView.onTaskLaunchedInLiveTileMode();
-
-                    // Return a fresh callback in the live tile case, so that it's not accidentally
-                    // triggered by QuickstepTransitionManager.AppLaunchAnimationRunner.
-                    RunnableList callbackList = new RunnableList();
-                    recentsView.addSideTaskLaunchCallback(callbackList);
-                    return callbackList;
-                }
                 return opts.onEndCallback;
             } else {
                 notifyTaskLaunchFailed(TAG);
@@ -872,84 +861,7 @@ public class TaskView extends FrameLayout implements Reusable {
     public RunnableList launchTasks() {
         RecentsView recentsView = getRecentsView();
         RemoteTargetHandle[] remoteTargetHandles = recentsView.mRemoteTargetHandles;
-        if (isRunningTask() && remoteTargetHandles != null) {
-            if (!mIsClickableAsLiveTile) {
-                Log.e(TAG, "TaskView is not clickable as a live tile; returning to home.");
-                return null;
-            }
-
-            mIsClickableAsLiveTile = false;
-            RemoteAnimationTargets targets;
-            if (remoteTargetHandles.length == 1) {
-                targets = remoteTargetHandles[0].getTransformParams().getTargetSet();
-            } else {
-                TransformParams topLeftParams = remoteTargetHandles[0].getTransformParams();
-                TransformParams rightBottomParams = remoteTargetHandles[1].getTransformParams();
-                RemoteAnimationTarget[] apps = Stream.concat(
-                        Arrays.stream(topLeftParams.getTargetSet().apps),
-                        Arrays.stream(rightBottomParams.getTargetSet().apps))
-                        .toArray(RemoteAnimationTarget[]::new);
-                RemoteAnimationTarget[] wallpapers = Stream.concat(
-                        Arrays.stream(topLeftParams.getTargetSet().wallpapers),
-                        Arrays.stream(rightBottomParams.getTargetSet().wallpapers))
-                        .toArray(RemoteAnimationTarget[]::new);
-                targets = new RemoteAnimationTargets(apps, wallpapers,
-                        topLeftParams.getTargetSet().nonApps,
-                        topLeftParams.getTargetSet().targetMode);
-            }
-            if (targets == null) {
-                // If the recents animation is cancelled somehow between the parent if block and
-                // here, try to launch the task as a non live tile task.
-                RunnableList runnableList = launchTaskAnimated();
-                if (runnableList == null) {
-                    Log.e(TAG, "Recents animation cancelled and cannot launch task as non-live tile"
-                            + "; returning to home");
-                }
-                mIsClickableAsLiveTile = true;
-                return runnableList;
-            }
-
-            RunnableList runnableList = new RunnableList();
-            AnimatorSet anim = new AnimatorSet();
-            TaskViewUtils.composeRecentsLaunchAnimator(
-                    anim, this, targets.apps,
-                    targets.wallpapers, targets.nonApps, true /* launcherClosing */,
-                    mActivity.getStateManager(), recentsView,
-                    recentsView.getDepthController());
-            anim.addListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationStart(Animator animation) {
-                    recentsView.runActionOnRemoteHandles(
-                            (Consumer<RemoteTargetHandle>) remoteTargetHandle ->
-                                    remoteTargetHandle
-                                            .getTaskViewSimulator()
-                                            .setDrawsBelowRecents(false));
-                }
-
-                @Override
-                public void onAnimationEnd(Animator animator) {
-                    if (mTask != null && mTask.key.displayId != getRootViewDisplayId()) {
-                        launchTaskAnimated();
-                    }
-                    mIsClickableAsLiveTile = true;
-                    runEndCallback();
-                }
-
-                @Override
-                public void onAnimationCancel(Animator animation) {
-                    runEndCallback();
-                }
-
-                private void runEndCallback() {
-                    runnableList.executeAllAndDestroy();
-                }
-            });
-            anim.start();
-            recentsView.onTaskLaunchedInLiveTileMode();
-            return runnableList;
-        } else {
-            return launchTaskAnimated();
-        }
+        return launchTaskAnimated();
     }
 
     /**
@@ -1063,20 +975,7 @@ public class TaskView extends FrameLayout implements Reusable {
                 if (confirmSecondSplitSelectApp()) {
                     return;
                 }
-                RecentsView recentsView = getRecentsView();
-                // TODO: find the reason why this is no-op on landscape
-                if (!recentsView.getLandScape()) {
-                    recentsView.switchToScreenshot(
-                            () -> recentsView.finishRecentsAnimation(true /* toRecents */,
-                                    false /* shouldPip */,
-                                    () -> showTaskMenu(iconView)));
-                    recentsView.onGestureAnimationEnd();
-                    recentsView.onSwipeUpAnimationSuccess();
-                } else {
-                    // finishRecentsAnimation causes white snapshots on click, 
-                    // finish the animation on AbsSwipeUPHandler instead as WA
-                    showTaskMenu(iconView);
-                }
+                showTaskMenu(iconView);
             });
             iconView.setOnLongClickListener(v -> {
                 requestDisallowInterceptTouchEvent(true);

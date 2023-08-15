@@ -406,9 +406,7 @@ public final class RecentsActivity extends StatefulActivity<RecentsState> {
     }
 
     public void startHome() {
-        RecentsView recentsView = getOverviewPanel();
-        recentsView.switchToScreenshot(() -> recentsView.finishRecentsAnimation(true,
-                this::startHomeInternal));
+        startHomeInternal();
     }
 
     private void startHomeInternal() {

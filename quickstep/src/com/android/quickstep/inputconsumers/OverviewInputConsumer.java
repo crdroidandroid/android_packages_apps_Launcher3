@@ -98,24 +98,9 @@ public class OverviewInputConsumer<S extends BaseState<S>, T extends StatefulAct
     }
 
     @Override
-    public void onHoverEvent(MotionEvent ev) {
-        mActivity.dispatchGenericMotionEvent(ev);
-    }
+    public void onHoverEvent(MotionEvent ev) {}
 
     @Override
-    public void onKeyEvent(KeyEvent ev) {
-        switch (ev.getKeyCode()) {
-            case KeyEvent.KEYCODE_VOLUME_DOWN:
-            case KeyEvent.KEYCODE_VOLUME_UP:
-            case KeyEvent.KEYCODE_VOLUME_MUTE:
-                MediaSessionManager mgr = mActivity.getSystemService(MediaSessionManager.class);
-                mgr.dispatchVolumeKeyEventAsSystemService(ev,
-                        AudioManager.USE_DEFAULT_STREAM_TYPE);
-                break;
-            default:
-                break;
-        }
-        mActivity.dispatchKeyEvent(ev);
-    }
+    public void onKeyEvent(KeyEvent ev) {}
 }
 

@@ -760,10 +760,6 @@ public class QuickstepLauncher extends Launcher {
     @Override
     protected void onScreenOnChanged(boolean isOn) {
         super.onScreenOnChanged(isOn);
-        if (!isOn) {
-            RecentsView recentsView = getOverviewPanel();
-            recentsView.finishRecentsAnimation(true /* toRecents */, null);
-        }
     }
 
     @Override

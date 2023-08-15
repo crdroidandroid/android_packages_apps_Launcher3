@@ -204,8 +204,10 @@ public final class LauncherActivityInterface extends
     @UiThread
     private Launcher getVisibleLauncher() {
         Launcher launcher = getCreatedActivity();
+        boolean enableLiveTile = false;
         return (launcher != null) && launcher.isStarted()
-                && (isInLiveTileMode() || launcher.hasBeenResumed()) ? launcher : null;
+                && ((enableLiveTile && isInLiveTileMode())
+                || launcher.hasBeenResumed()) ? launcher : null;
     }
 
     @Override
@@ -214,7 +216,8 @@ public final class LauncherActivityInterface extends
         if (launcher == null) {
             return false;
         }
-        if (isInLiveTileMode()) {
+        boolean enableLiveTile = false;
+        if (enableLiveTile && isInLiveTileMode()) {
             RecentsView recentsView = getVisibleRecentsView();
             if (recentsView == null) {
                 return false;

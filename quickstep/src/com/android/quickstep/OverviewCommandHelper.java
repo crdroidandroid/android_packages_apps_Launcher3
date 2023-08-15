@@ -157,7 +157,7 @@ public class OverviewCommandHelper {
         RunnableList callbackList = null;
         if (taskView != null) {
             taskView.setEndQuickswitchCuj(true);
-            callbackList = taskView.launchTasks();
+            callbackList = taskView.launchTaskAnimated();
         }
 
         if (callbackList != null) {

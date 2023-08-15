@@ -671,9 +671,6 @@ public final class TaskViewUtils {
             };
         }
         pa.add(launcherAnim);
-        if (recentsView.getRunningTaskIndex() != -1) {
-            pa.addOnFrameCallback(recentsView::redrawLiveTile);
-        }
         anim.play(pa.buildAnim());
 
         // Set the current animation first, before adding windowAnimEndListener. Setting current

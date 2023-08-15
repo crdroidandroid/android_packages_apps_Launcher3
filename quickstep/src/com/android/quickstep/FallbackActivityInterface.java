@@ -114,7 +114,8 @@ public final class FallbackActivityInterface extends
     public RecentsView getVisibleRecentsView() {
         RecentsActivity activity = getCreatedActivity();
         if (activity != null) {
-            if (activity.hasBeenResumed() || isInLiveTileMode()) {
+            boolean enableLiveTile = false;
+            if (activity.hasBeenResumed() || (enableLiveTile && isInLiveTileMode())) {
                 return activity.getOverviewPanel();
             }
         }
