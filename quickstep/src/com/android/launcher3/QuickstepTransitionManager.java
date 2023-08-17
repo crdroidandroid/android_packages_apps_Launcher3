@@ -894,11 +894,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
 
         // If app targets are translucent, do not animate the background as it causes a visible
         // flicker when it resets itself at the end of its animation.
-        if (appTargetsAreTranslucent || !launcherClosing) {
-            animatorSet.play(appAnimator);
-        } else {
-            animatorSet.playTogether(appAnimator, getBackgroundAnimator());
-        }
+        animatorSet.play(appAnimator);
         return animatorSet;
     }
 
@@ -1035,11 +1031,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
 
         // If app targets are translucent, do not animate the background as it causes a visible
         // flicker when it resets itself at the end of its animation.
-        if (appTargetsAreTranslucent || !launcherClosing) {
-            animatorSet.play(appAnimator);
-        } else {
-            animatorSet.playTogether(appAnimator, getBackgroundAnimator());
-        }
+        animatorSet.play(appAnimator);
         return animatorSet;
     }
 
@@ -1048,46 +1040,6 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
         float animScale2 = Math.max(0.0f, Math.min(1.0f, sAnimScale / 100.0f));
         sAnimScale = Float.valueOf(animScale2);
         return (int) (duration * sAnimScale);
-    }
-
-    /**
-     * Returns animator that controls depth/blur of the background.
-     */
-    private ObjectAnimator getBackgroundAnimator() {
-        // When launching an app from overview that doesn't map to a task, we still want to just
-        // blur the wallpaper instead of the launcher surface as well
-        boolean allowBlurringLauncher = mLauncher.getStateManager().getState() != OVERVIEW
-                && BlurUtils.supportsBlursOnWindows();
-
-        MyDepthController depthController = new MyDepthController(mLauncher);
-        ObjectAnimator backgroundRadiusAnim = ObjectAnimator.ofFloat(depthController.stateDepth,
-                        MULTI_PROPERTY_VALUE, BACKGROUND_APP.getDepth(mLauncher))
-                .setDuration(APP_LAUNCH_DURATION);
-
-        if (allowBlurringLauncher) {
-            // Create a temporary effect layer, that lives on top of launcher, so we can apply
-            // the blur to it. The EffectLayer will be fullscreen, which will help with caching
-            // optimizations on the SurfaceFlinger side:
-            // - Results would be able to be cached as a texture
-            // - There won't be texture allocation overhead, because EffectLayers don't have
-            //   buffers
-            ViewRootImpl viewRootImpl = mLauncher.getDragLayer().getViewRootImpl();
-            SurfaceControl parent = viewRootImpl != null
-                    ? viewRootImpl.getSurfaceControl()
-                    : null;
-            SurfaceControl dimLayer = new SurfaceControl.Builder()
-                    .setName("Blur layer")
-                    .setParent(parent)
-                    .setOpaque(false)
-                    .setHidden(false)
-                    .setEffectLayer()
-                    .build();
-
-            backgroundRadiusAnim.addListener(AnimatorListeners.forEndCallback(() ->
-                    new SurfaceControl.Transaction().remove(dimLayer).apply()));
-        }
-
-        return backgroundRadiusAnim;
     }
 
     /**
@@ -1630,12 +1582,6 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
                 } else if (!fromPredictiveBack) {
                     anim.play(new StaggeredWorkspaceAnim(mLauncher, velocity.y,
                             true /* animateOverviewScrim */, launcherView).getAnimators());
-
-                    if (!areAllTargetsTranslucent(appTargets)) {
-                        anim.play(ObjectAnimator.ofFloat(mLauncher.getDepthController().stateDepth,
-                                MULTI_PROPERTY_VALUE,
-                                BACKGROUND_APP.getDepth(mLauncher), NORMAL.getDepth(mLauncher)));
-                    }
 
                     // We play StaggeredWorkspaceAnim as a part of the closing window animation.
                     playWorkspaceReveal = false;
