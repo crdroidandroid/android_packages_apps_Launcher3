@@ -220,7 +220,10 @@ public class TaskOverlayFactory implements ResourceBasedOverride {
         }
 
         private void clearAllTasks() {
-            final RecentsView recentsView = mThumbnailView.getTaskView().getRecentsView();
+            if (mThumbnailView == null || mThumbnailView.getTaskView() == null || mThumbnailView.getTaskView().getRecentsView() == null) {
+                return;
+            }
+            RecentsView recentsView = mThumbnailView.getTaskView().getRecentsView();
             recentsView.dismissAllTasks();
         }
 
