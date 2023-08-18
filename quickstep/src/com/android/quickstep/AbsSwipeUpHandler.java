@@ -1262,13 +1262,6 @@ public abstract class AbsSwipeUpHandler<T extends StatefulActivity<S>,
             float endVelocityPxPerMs, boolean isFling, PointF velocityPxPerMs, boolean isCancel) {
         long duration = MAX_SWIPE_DURATION;
         float currentShift = mCurrentShift.value;
-        boolean recentsVisible = mRecentsView != null
-                && (mRecentsView.getWindowVisibility() == View.VISIBLE);
-        if (!recentsVisible) {
-            // We've hit a case where Launcher is been stopped mid-gesture, in this case, force
-            // a LAST_TASK end target
-            isCancel = true;
-        }
         final GestureEndTarget endTarget = calculateEndTarget(
                 velocityPxPerMs, endVelocityPxPerMs, isFling, isCancel);
         // Set the state, but don't notify until the animation completes
@@ -1352,7 +1345,7 @@ public abstract class AbsSwipeUpHandler<T extends StatefulActivity<S>,
             mGestureState.setState(STATE_RECENTS_SCROLLING_FINISHED);
             setClampScrollOffset(false);
         };
-        if (recentsVisible) {
+        if (mRecentsView != null) {
             ActiveGestureLog.INSTANCE.trackEvent(ActiveGestureErrorDetector.GestureEvent
                     .SET_ON_PAGE_TRANSITION_END_CALLBACK);
             mRecentsView.setOnPageTransitionEndCallback(onPageTransitionEnd);
