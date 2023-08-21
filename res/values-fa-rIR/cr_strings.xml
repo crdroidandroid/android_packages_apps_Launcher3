@@ -20,7 +20,7 @@
     <!-- General -->
     <string name="settings_title">Home settings</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
+    <string name="home_category_title">صفحه اصلی</string>
     <string name="home_category_summary">Set Google now panel and more</string>
     <string name="icons_category_title">آیکون ها</string>
     <string name="icons_category_summary">Set icon size and more</string>
@@ -29,14 +29,14 @@
     <string name="recents_category_title">Recents</string>
     <string name="recents_category_summary">Revamp the overview screen</string>
     <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
+    <string name="misc_category_summary">گزینه های دیگر</string>
     <string name="general_category_title">عمومی</string>
-    <string name="interface_category_title">Interface</string>
+    <string name="interface_category_title">رابط کاربری</string>
     <string name="quickspace_category_title">Quickspace</string>
-    <string name="search_bar_category_title">Search bar</string>
+    <string name="search_bar_category_title">نوار جستجو</string>
     <string name="actions_category_title">Quick actions</string>
     <!-- Developer options -->
-    <string name="dev_options_title">Developer options</string>
+    <string name="dev_options_title">گزینه های برنامه نویس</string>
     <string name="dev_options_summary">Enable some hidden features at your own risk</string>
     <!-- Edit workspace -->
     <string name="settings_lock_layout_title">Lock layout</string>
@@ -62,10 +62,10 @@
     <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
     <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
+    <string name="pref_sleep_gesture_title">برای حالت خواب دوبار ضربه بزنید</string>
+    <string name="pref_sleep_gesture_summary">برای خاموش کردن صفحه نمایش روی فضای خالی صفحه دوبار ضربه بزنید</string>
     <!-- Pause apps shortcut -->
-    <string name="pause">Pause</string>
+    <string name="pause">توقف</string>
     <string name="pause_apps_dialog_title">Pause %1$s?</string>
     <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
     <string name="paused_apps_dialog_title">App paused</string>
@@ -83,10 +83,10 @@
     <!-- App label - max lines -->
     <string name="icon_max_lines_title">Max lines for app label</string>
     <!-- Hotseat searchbar -->
-    <string name="label_search">Search</string>
+    <string name="label_search">جستجو</string>
     <string name="label_lens">Google Lens</string>
-    <string name="label_voice_search">Voice search</string>
-    <string name="dock_music_search_title">Music search</string>
+    <string name="label_voice_search">جستجو صوتی</string>
+    <string name="dock_music_search_title">جستجو موسیقی</string>
     <string name="dock_music_search_summary">Start music search on pressing mic icon</string>
     <string name="dock_search_title">نوار جست‌وجوی گوگل</string>
     <string name="dock_search_summary">Search bar in the bottom dock</string>
@@ -97,8 +97,8 @@
     <string name="hotseat_bg_title">Hotseat background</string>
     <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
     <!-- Wallpaper scrolling -->
-    <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
-    <string name="allow_wallpaper_scrolling_summary">Wallpaper scrolling effect for multiple screens</string>
+    <string name="allow_wallpaper_scrolling">چرخش کاغذ دیواری</string>
+    <string name="allow_wallpaper_scrolling_summary">جلوه چرخش کاغذ دیواری برای چندین صفحه</string>
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
     <string name="allow_wallpaper_zooming_summary">Zoom in or out the wallpaper when using drawer or recent apps</string>
@@ -158,7 +158,7 @@
         <item>فردا می‌بینمت!</item>
         <item>Sweet dreams!</item>
         <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
+        <item>خواب خوبی داشته باشی</item>
         <item>Get some sleep</item>
         <item>Time to relax</item>
         <item>Enjoy the night!</item>
@@ -202,7 +202,7 @@
         <item>What a lovely experience, isn\'t it?</item>
         <item>Evolution is a myth, right?</item>
         <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
+        <item>چی تو ذهنته؟</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
         <item>Winner Winner ....?</item>
@@ -223,18 +223,18 @@
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Screenshot</string>
     <string name="recents_clear_all_title">Clear all</string>
-    <string name="recents_lens_title">Lens</string>
+    <string name="recents_lens_title">لنز</string>
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Themed icons</string>
     <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
     <!-- AppInfo -->
-    <string name="app_info_source">Source</string>
+    <string name="app_info_source">منبع</string>
     <string name="app_info_source_system">سیستم</string>
-    <string name="app_info_last_update">Last update</string>
+    <string name="app_info_last_update">آخرین بروزرسانی</string>
     <string name="app_info_version">نسخه</string>
     <string name="app_info_more">بیشتر</string>
     <!-- Icon pack -->
-    <string name="icon_pack_title">Icon pack</string>
+    <string name="icon_pack_title">بسته آیکون ها</string>
     <string name="icon_pack_default_label">پیش‌فرض</string>
     <string name="icon_pack_add">Install more</string>
     <string name="icon_pack_no_market">There\'s no available app store</string>
