@@ -136,7 +136,6 @@ class TaskMenuViewWithArrow<T : BaseDraggingActivity> : ArrowPopup<T> {
         this.taskContainer = taskContainer
         this.alignedOptionIndex = alignedOptionIndex
         if (!populateMenu()) return false
-        addScrim()
         show()
         return true
     }
