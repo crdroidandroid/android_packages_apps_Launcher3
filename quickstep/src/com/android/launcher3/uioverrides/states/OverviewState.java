@@ -26,6 +26,7 @@ import androidx.core.graphics.ColorUtils;
 
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Launcher;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.LauncherState;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
@@ -110,7 +111,8 @@ public class OverviewState extends LauncherState {
 
     @Override
     public int getVisibleElements(Launcher launcher) {
-        return OVERVIEW_ACTIONS | MEMINFO;
+        boolean clearAll = LauncherPrefs.getPrefs(launcher).getBoolean("pref_recents_clear_all", true);
+        return OVERVIEW_ACTIONS | MEMINFO | (!clearAll ? CLEAR_ALL_BUTTON : 0);
     }
 
     @Override
