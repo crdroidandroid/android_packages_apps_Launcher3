@@ -112,6 +112,7 @@ public class OverviewState extends LauncherState {
     @Override
     public int getVisibleElements(Launcher launcher) {
         boolean memInfo = LauncherPrefs.getPrefs(launcher).getBoolean("pref_recents_meminfo", false);
+        boolean clearAll = LauncherPrefs.getPrefs(launcher).getBoolean("pref_recents_clear_all", true);
         int elements = OVERVIEW_ACTIONS;
         DeviceProfile dp = launcher.getDeviceProfile();
         boolean showFloatingSearch;
@@ -127,6 +128,9 @@ public class OverviewState extends LauncherState {
         }
         if (memInfo) {
             elements |= MEMINFO;
+        }
+        if (!clearAll) {
+            elements |= CLEAR_ALL_BUTTON;
         }
         return elements;
     }
