@@ -27,7 +27,7 @@
     <string name="app_drawer_category_title">アプリドロワー</string>
     <string name="app_drawer_category_summary">アプリドロワーのカスタマイズが行えます</string>
     <string name="recents_category_title">アプリ履歴</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_summary">アプリ履歴の表示を編集します</string>
     <string name="misc_category_title">その他</string>
     <string name="misc_category_summary">その他のオプション</string>
     <string name="general_category_title">一般</string>
@@ -69,11 +69,11 @@
     <string name="pause_apps_dialog_title">%1$s を一時停止しますか？</string>
     <string name="pause_apps_dialog_message">%1$s の通知を一時停止します</string>
     <string name="paused_apps_dialog_title">アプリを一時停止しました</string>
-    <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
+    <string name="paused_apps_dialog_message">%1$s を一時停止しました</string>
     <string name="paused_apps_drop_target_label">アプリを一時停止</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
+    <string name="custom_seekbar_value">値: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">デフォルト</string>
     <string name="custom_seekbar_default_value_to_set">デフォルト <xliff:g id="v">%s</xliff:g>\n長押しで設定</string>
     <string name="custom_seekbar_default_value_is_set">デフォルトに戻す</string>
     <!-- Icon size -->
@@ -135,7 +135,7 @@
     <string name="quickspace_alternate_style_title">ミニマルスタイル</string>
     <string name="quickspace_alternate_style_summary">モダンスタイルに切り替えます</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Random messages</string>
+    <string name="quickspace_psa_title">ランダムメッセージ</string>
     <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
     <string-array name="quickspace_psa_morning">
         <item>おはようございます!</item>
