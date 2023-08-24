@@ -5901,6 +5901,7 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
                     mRecentsAnimationController.screenshotTask(container.getTask().key.id);
             TaskThumbnailView thumbnailView = container.getThumbnailView();
             if (td != null) {
+                container.getTask().thumbnail = td;
                 thumbnailView.setThumbnail(container.getTask(), td);
             } else {
                 thumbnailView.refresh();
