@@ -1849,11 +1849,8 @@ public abstract class AbsSwipeUpHandler<T extends StatefulActivity<S>,
     }
 
     private void invalidateHandler() {
-        if (!mActivityInterface.isInLiveTileMode()
-                || mGestureState.getEndTarget() != RECENTS) {
-            mInputConsumerProxy.destroy();
-            mTaskAnimationManager.setLiveTileCleanUpHandler(null);
-        }
+        mInputConsumerProxy.destroy();
+        mTaskAnimationManager.setLiveTileCleanUpHandler(null);
         mInputConsumerProxy.unregisterCallback();
         endRunningWindowAnim(false /* cancel */);
 
@@ -2048,11 +2045,6 @@ public abstract class AbsSwipeUpHandler<T extends StatefulActivity<S>,
         }
         endLauncherTransitionController();
         mRecentsView.onSwipeUpAnimationSuccess();
-        mTaskAnimationManager.setLiveTileCleanUpHandler(() -> {
-            mRecentsView.cleanupRemoteTargets();
-            mInputConsumerProxy.destroy();
-        });
-        mTaskAnimationManager.enableLiveTileRestartListener();
 
         SystemUiProxy.INSTANCE.get(mContext).onOverviewShown(false, TAG);
         doLogGesture(RECENTS, mRecentsView.getCurrentPageTaskView());
