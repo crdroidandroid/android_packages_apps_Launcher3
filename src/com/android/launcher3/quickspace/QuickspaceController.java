@@ -35,6 +35,8 @@ import com.android.launcher3.notification.NotificationListener;
 import com.android.launcher3.util.PackageUserKey;
 
 import java.util.ArrayList;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ExecutorService;
 import java.util.List;
 
 public class QuickspaceController implements NotificationListener.NotificationsChangedListener, OmniJawsClient.OmniJawsObserver {
@@ -58,6 +60,7 @@ public class QuickspaceController implements NotificationListener.NotificationsC
     private RemoteController mRemoteController;
     private boolean mClientLost = true;
     private boolean mMediaActive = false;
+    private ExecutorService executorService = Executors.newSingleThreadExecutor();
 
     public interface OnDataListener {
         void onDataUpdated();
@@ -192,16 +195,21 @@ public class QuickspaceController implements NotificationListener.NotificationsC
     }
 
     private void queryAndUpdateWeather() {
-        try {
-            mWeatherClient.queryWeather();
-            mWeatherInfo = mWeatherClient.getWeatherInfo();
-            if (mWeatherInfo != null) {
-                mConditionImage = mWeatherClient.getWeatherConditionImage(mWeatherInfo.conditionCode);
+        executorService.execute(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    mWeatherClient.queryWeather();
+                    mWeatherInfo = mWeatherClient.getWeatherInfo();
+                    if (mWeatherInfo != null) {
+                        mConditionImage = mWeatherClient.getWeatherConditionImage(mWeatherInfo.conditionCode);
+                    }
+                    notifyListeners();
+                } catch(Exception e) {
+                    // Do nothing
+                }
             }
-            notifyListeners();
-        } catch(Exception e) {
-            // Do nothing
-        }
+        });
     }
 
     public void notifyListeners() {
