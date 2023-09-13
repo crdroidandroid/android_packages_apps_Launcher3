@@ -250,14 +250,14 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Riavvia</string>
     <string name="pref_restart_summary">Riavvia manualmente il launcher per applicare tutte le impostazioni in sospeso</string>
-    <string name="restarting_launcher">Restarting launcher...</string>
-    <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
-    <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
+    <string name="restarting_launcher">Riavvio del launcher...</string>
+    <string name="restarting_launcher_changes">Riavvio del launcher per applicare le modifiche...</string>
+    <string name="updating_launcher_components">Riavvio del launcher per aggiornare i componenti del launcher...</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Agita il telefono per rimuovere tutte le attività</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Allow short parallax</string>
     <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
     <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <string name="single_page_center_summary">Centra lo sfondo se si utilizza solo una singola pagina</string>
 </resources>
