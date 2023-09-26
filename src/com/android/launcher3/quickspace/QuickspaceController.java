@@ -115,19 +115,19 @@ public class QuickspaceController implements NotificationListener.NotificationsC
         if (mWeatherInfo != null) {
             String formattedCondition = mWeatherInfo.condition;
             if (formattedCondition.toLowerCase().contains("clouds")) {
-               formattedCondition = "Cloudy";
+               formattedCondition = mContext.getResources().getString(R.string.quick_event_weather_clouds);
             } else if (formattedCondition.toLowerCase().contains("rain")) {
-              formattedCondition = "Rainy";
+              formattedCondition = mContext.getResources().getString(R.string.quick_event_weather_rain);
             } else if (formattedCondition.toLowerCase().contains("clear")) {
-              formattedCondition = "Sunny";
+              formattedCondition = mContext.getResources().getString(R.string.quick_event_weather_clear);
             } else if (formattedCondition.toLowerCase().contains("storm")) {
-              formattedCondition = "Stormy";
+              formattedCondition = mContext.getResources().getString(R.string.quick_event_weather_storm);
             } else if (formattedCondition.toLowerCase().contains("snow")) {
-              formattedCondition = "Snowy";
+              formattedCondition = mContext.getResources().getString(R.string.quick_event_weather_snow);
             } else if (formattedCondition.toLowerCase().contains("wind")) {
-              formattedCondition = "Windy";
+              formattedCondition = mContext.getResources().getString(R.string.quick_event_weather_wind);
             } else if (formattedCondition.toLowerCase().contains("mist")) {
-              formattedCondition = "Misty";
+              formattedCondition = mContext.getResources().getString(R.string.quick_event_weather_mist);
             }
             String weatherTemp = mWeatherInfo.temp + mWeatherInfo.tempUnits + " · "  + formattedCondition;
             return weatherTemp;
