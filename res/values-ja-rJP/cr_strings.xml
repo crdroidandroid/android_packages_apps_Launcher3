@@ -45,24 +45,24 @@
     <string name="desktop_show_labels">Icon labels on desktop</string>
     <string name="drawer_show_labels">Icon labels in drawer</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
+    <string name="custom_seekbar_value">値: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">デフォルト</string>
     <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
     <string name="custom_seekbar_default_value_is_set">Default value is set</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">アイコンのサイズ</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">フォントのサイズ</string>
     <!-- App label - max lines -->
     <string name="icon_max_lines_title">Max lines for app label</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
+    <string name="pref_sleep_gesture_title">ダブルタップでスリープ</string>
     <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Search</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_voice_search">Voice search</string>
-    <string name="dock_search_title">Google search bar</string>
+    <string name="dock_search_title">Google 検索バー</string>
     <string name="dock_search_summary">Search bar in the bottom dock</string>
     <string name="dock_theme_title">Themed icons</string>
     <string name="dock_theme_summary">Use themed icons for search bar</string>
