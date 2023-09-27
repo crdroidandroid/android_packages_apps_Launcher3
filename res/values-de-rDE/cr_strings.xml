@@ -116,7 +116,7 @@
     <string name="show_quickspace_summary">Oben auf dem Startbildschirm anzeigen</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Willkommen zu crDroid!</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">Zeit für crDroid!</string>
     <string-array name="welcome_message_variants">
         <item>Schönen Tag dir</item>
         <item>Danke, dass du dich für uns entschieden hast</item>
@@ -127,20 +127,20 @@
         <item>Wir haben dich lieb, mal 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_midnight">Solemn midnight.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
-    <string name="quickspace_ext_two">It\'s</string>
-    <string name="quickspace_ext_three">It\'s</string>
+    <string name="quickspace_grt_morning">Guten Morgen.</string>
+    <string name="quickspace_grt_evening">Guten Abend.</string>
+    <string name="quickspace_grt_afternoon">Schönen Nachmittag.</string>
+    <string name="quickspace_grt_night">Gute Nacht.</string>
+    <string name="quickspace_grt_midnight">Feierliche Mitternacht.</string>
+    <string name="quickspace_grt_general">Guten Tag.</string>
+    <string name="quickspace_ext_one">Heute ist</string>
+    <string name="quickspace_ext_two">Es ist</string>
+    <string name="quickspace_ext_three">Es ist</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
-    <string name="qe_now_playing_ext_one">Now playing</string>
+    <string name="qe_now_playing_unknown_artist">Unbekannter Interpret</string>
+    <string name="qe_now_playing_ext_one">Gerade läuft</string>
     <string name="qe_now_playing_ext_two"></string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_by">von</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Aktuelle Wiedergabe</string>
     <string name="quickspace_now_playing_summary">Zeigt das Lied, das gerade gespielt wird</string>
@@ -164,25 +164,25 @@
         <item>Na, noch ein bisschen müde?</item>
         <item>Heute schon aus dem Fenster geschaut?</item>
         <item>Auf geht’s.</item>
-        <item>Good luck today!</item>
-        <item>Toggling the switch can fix stucked responses.</item>
+        <item>Viel Erfolg für heute!</item>
+        <item>Das Umlegen des Schalters kann festgefahrene Antworten beheben.</item>
         <item>Start your day snuke.</item>
-        <item>Don\'t forget about mental health.</item>
-        <item>Life is good.</item>
-        <item>Enjoy your breakfast.</item>
+        <item>Denk an deine seelische Gesundheit.</item>
+        <item>Das Leben ist schön.</item>
+        <item>Lass dir dein Frühstück schmecken.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Don\'t forget to stay hydrated!</item>
-        <item>Remember to eat some snacks.</item>
-        <item>UV rays are more harmful in the afternoon.</item>
-        <item>It is afternoon right now.</item>
-        <item>Always check device\'s battery levels!</item>
-        <item>Remember to check your email/messages.</item>
-        <item>Please check your to-do list if you have one.</item>
-        <item>Don\'t forget to prepare your dinner.</item>
-        <item>Enjoy your day.</item>
-        <item>Hang on! The day is almost done!</item>
-        <item>Have some fun.</item>
+        <item>Denk dran, genügend Wasser zu trinken!</item>
+        <item>Denk dran, dir ein paar Snacks zu gönnen.</item>
+        <item>Nachmittags ist UV-Strahlung besonders schädlich.</item>
+        <item>Gerade ist es nachmittags.</item>
+        <item>Immer den Akkustand checken!</item>
+        <item>Denk dran, deine Mails und Nachrichten zu checken.</item>
+        <item>Denk bitte an deine To-do-Liste, falls du eine hast.</item>
+        <item>Vergiss nicht, dir was zum Abendessen zu machen.</item>
+        <item>Einen schönen Tag dir.</item>
+        <item>Halt durch! Der Tag ist fast rum!</item>
+        <item>Gönn dir ein Bisschen Spaß.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
         <item>Always stay hydrated!</item>
