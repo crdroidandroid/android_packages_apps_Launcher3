@@ -116,7 +116,7 @@
     <string name="show_quickspace_summary">Oben auf dem Startbildschirm anzeigen</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Willkommen zu crDroid!</string>
-    <string name="quick_event_rom_intro_welcome_ext">Zeit für crDroid!</string>
+    <string name="quick_event_rom_intro_welcome_ext">crDroid Zeit!</string>
     <string-array name="welcome_message_variants">
         <item>Schönen Tag dir</item>
         <item>Danke, dass du dich für uns entschieden hast</item>
@@ -129,7 +129,7 @@
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Guten Morgen.</string>
     <string name="quickspace_grt_evening">Guten Abend.</string>
-    <string name="quickspace_grt_afternoon">Schönen Nachmittag.</string>
+    <string name="quickspace_grt_afternoon">Guten Nachmittag.</string>
     <string name="quickspace_grt_night">Gute Nacht.</string>
     <string name="quickspace_grt_midnight">Feierliche Mitternacht.</string>
     <string name="quickspace_grt_general">Guten Tag.</string>
@@ -140,7 +140,7 @@
     <string name="qe_now_playing_unknown_artist">Unbekannter Interpret</string>
     <string name="qe_now_playing_ext_one">Gerade läuft</string>
     <string name="qe_now_playing_ext_two"></string>
-    <string name="qe_now_playing_by">von</string>
+    <string name="qe_now_playing_by">Von</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Aktuelle Wiedergabe</string>
     <string name="quickspace_now_playing_summary">Zeigt das Lied, das gerade gespielt wird</string>
