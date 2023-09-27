@@ -40,8 +40,8 @@
     <string name="dev_options_summary">리스크 있는 숨겨진 기능들을 활성화</string>
     <!-- Edit workspace -->
     <string name="settings_lock_layout_title">레이아웃 잠금</string>
-    <string name="settings_lock_layout_summary_on">Icons and widgets can\'t be added, removed and moved on the homescreen</string>
-    <string name="settings_lock_layout_summary_off">Icons and widgets can be added, removed and moved on the homescreen</string>
+    <string name="settings_lock_layout_summary_on">아이콘과 위젯을 홈 화면에 추가하거나 제거, 이동할 수 없습니다</string>
+    <string name="settings_lock_layout_summary_off">아이콘 및 위젯을 홈 화면에 추가, 제거, 이동할 수 있습니다</string>
     <string name="settings_edit_widgets_error">It\'s not possible to add widgets to the home screen</string>
     <!-- Hide labels -->
     <string name="desktop_show_labels">Icon labels on desktop</string>
