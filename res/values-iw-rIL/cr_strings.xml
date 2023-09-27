@@ -116,7 +116,7 @@
     <string name="show_quickspace_summary">הצגה בקצה העליון של מסך הבית שלך</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">ברוך בואך לcrDroid!</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">בדיוק הזמן ל-crDroid!</string>
     <string-array name="welcome_message_variants">
         <item>שיהיה לך יום נפלא</item>
         <item>תודה לך על בחירתך בנו</item>
@@ -127,20 +127,20 @@
         <item>אנחנו אוהבים אותך 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_midnight">Solemn midnight.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
+    <string name="quickspace_grt_morning">בוקר טוב.</string>
+    <string name="quickspace_grt_evening">ערב טוב.</string>
+    <string name="quickspace_grt_afternoon">אחר הצהריים טובים.</string>
+    <string name="quickspace_grt_night">לילה טוב.</string>
+    <string name="quickspace_grt_midnight">חצות חגיגי.</string>
+    <string name="quickspace_grt_general">יום טוב.</string>
+    <string name="quickspace_ext_one">היום הוא</string>
     <string name="quickspace_ext_two">It\'s</string>
     <string name="quickspace_ext_three">It\'s</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
-    <string name="qe_now_playing_ext_one">Now playing</string>
+    <string name="qe_now_playing_unknown_artist">אמן לא ידוע</string>
+    <string name="qe_now_playing_ext_one">מתנגן כעת</string>
     <string name="qe_now_playing_ext_two"></string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_by">על ידי</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">מתנגן כעת</string>
     <string name="quickspace_now_playing_summary">הצגת השיר המתנגן כעת</string>
@@ -164,16 +164,16 @@
         <item>תחושת ישנוניות עדיין</item>
         <item>הסתכלת כבר החוצה?</item>
         <item>קדימה, נסיים את זה.</item>
-        <item>Good luck today!</item>
-        <item>Toggling the switch can fix stucked responses.</item>
+        <item>בהצלחה היום!</item>
+        <item>שינוי מצב המתג עשוי לתקן תגובות שנתקעו.</item>
         <item>Start your day snuke.</item>
-        <item>Don\'t forget about mental health.</item>
-        <item>Life is good.</item>
-        <item>Enjoy your breakfast.</item>
+        <item>לא לשכוח את בריאות הנפש.</item>
+        <item>החיים טובים.</item>
+        <item>תיהנו מארוחת הבוקר שלכם.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Don\'t forget to stay hydrated!</item>
-        <item>Remember to eat some snacks.</item>
+        <item>לא לשכוח לשתות מספיק!</item>
+        <item>זיכרו לנשנש מעט חטיפים.</item>
         <item>UV rays are more harmful in the afternoon.</item>
         <item>It is afternoon right now.</item>
         <item>Always check device\'s battery levels!</item>
