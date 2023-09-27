@@ -16,11 +16,11 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">அமைப்புகள்</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
+    <string name="home_category_title">முகப்புத்திரை</string>
+    <string name="home_category_summary">கூகுள் நவ் பேனல் மற்றும் பல</string>
+    <string name="icons_category_title">சின்னங்கள்</string>
     <string name="icons_category_summary">Set icon size and more</string>
     <string name="app_drawer_category_title">App drawer</string>
     <string name="app_drawer_category_summary">Customize your app drawer</string>
@@ -62,7 +62,7 @@
     <string name="label_search">Search</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_voice_search">Voice search</string>
-    <string name="dock_search_title">Google search bar</string>
+    <string name="dock_search_title">Google தேடல்</string>
     <string name="dock_search_summary">Search bar in the bottom dock</string>
     <string name="dock_theme_title">Themed icons</string>
     <string name="dock_theme_summary">Use themed icons for search bar</string>
@@ -128,7 +128,7 @@
     <string name="app_info_source_system">System</string>
     <string name="app_info_last_update">Last update</string>
     <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_more">மேலும்</string>
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Themed icons</string>
     <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
