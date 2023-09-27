@@ -29,7 +29,7 @@
     <string name="misc_category_title">Разни</string>
     <string name="misc_category_summary">Други опции</string>
     <string name="dev_options_title">Опции на програмиста</string>
-    <string name="dev_options_desc">Enable some hidden features at your own risk</string>
+    <string name="dev_options_desc">Активирайте някои скрити функции на собствен риск</string>
     <string name="general_category_title">General</string>
     <string name="interface_category_title">Interface</string>
     <string name="search_bar_category_title">Search bar</string>
@@ -45,24 +45,24 @@
     <string name="desktop_show_labels">Icon labels on desktop</string>
     <string name="drawer_show_labels">Icon labels in drawer</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">по подразбиране</string>
+    <string name="custom_seekbar_default_value_to_set">Стойност по подразбиране: <xliff:g id="v">%s</xliff:g>\nПродължително натискане за задаване</string>
+    <string name="custom_seekbar_default_value_is_set">По подразбиране стойността е зададена</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">Размер на иконата</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">Размер на шрифта</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">Макс. редове за етикета на приложението</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">Двукратно почукване за заспиване</string>
+    <string name="pref_sleep_gesture_summary">Докоснете двата пъти на празно място за изключване</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Search</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_voice_search">Voice search</string>
-    <string name="dock_search_title">Google search bar</string>
+    <string name="dock_search_title">Google лента за търсене</string>
     <string name="dock_search_summary">Search bar in the bottom dock</string>
     <string name="dock_theme_title">Themed icons</string>
     <string name="dock_theme_summary">Use themed icons for search bar</string>
@@ -124,11 +124,11 @@
     <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
     <!-- AppInfo -->
     <string name="app_info_subtext">Swipe down to close app info</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_source">Източник</string>
+    <string name="app_info_source_system">Система</string>
+    <string name="app_info_last_update">Последно обновяване</string>
+    <string name="app_info_version">Версия</string>
+    <string name="app_info_more">Още</string>
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Themed icons</string>
     <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
