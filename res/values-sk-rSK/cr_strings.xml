@@ -116,7 +116,7 @@
     <string name="show_quickspace_summary">Zobraziť v hornej časti domovskej obrazovky</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Vitajte v crDroid!</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">Čas na crDroid!</string>
     <string-array name="welcome_message_variants">
         <item>Prajem Vám krásny deň</item>
         <item>Ďakujeme, že ste si nás vybrali</item>
@@ -127,20 +127,20 @@
         <item>Milujeme ťa 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
+    <string name="quickspace_grt_morning">Dobré ráno.</string>
+    <string name="quickspace_grt_evening">Dobrý večer</string>
+    <string name="quickspace_grt_afternoon">Dobrý deň</string>
+    <string name="quickspace_grt_night">Dobrú noc</string>
     <string name="quickspace_grt_midnight">Solemn midnight.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
-    <string name="quickspace_ext_two">It\'s</string>
-    <string name="quickspace_ext_three">It\'s</string>
+    <string name="quickspace_grt_general">Dobrý deň</string>
+    <string name="quickspace_ext_one">Dnes je</string>
+    <string name="quickspace_ext_two">Je</string>
+    <string name="quickspace_ext_three">Je</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
-    <string name="qe_now_playing_ext_one">Now playing</string>
+    <string name="qe_now_playing_unknown_artist">Neznámy interpret</string>
+    <string name="qe_now_playing_ext_one">Práve hrá</string>
     <string name="qe_now_playing_ext_two"></string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_by">Od</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Prehráva sa</string>
     <string name="quickspace_now_playing_summary">Zobraziť práve prehrávanú skladbu</string>
@@ -164,30 +164,30 @@
         <item>Cítim sa trochu ospalo</item>
         <item>Pozreli ste sa už von?</item>
         <item>Poďme na to.</item>
-        <item>Good luck today!</item>
+        <item>Veľa šťastia!</item>
         <item>Toggling the switch can fix stucked responses.</item>
         <item>Start your day snuke.</item>
-        <item>Don\'t forget about mental health.</item>
-        <item>Life is good.</item>
-        <item>Enjoy your breakfast.</item>
+        <item>Nezabudni na duševné zdravie.</item>
+        <item>Život je fajn.</item>
+        <item>Vychutnaj si raňajky.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Don\'t forget to stay hydrated!</item>
+        <item>Dodržiavaj pitný režim!</item>
         <item>Remember to eat some snacks.</item>
-        <item>UV rays are more harmful in the afternoon.</item>
-        <item>It is afternoon right now.</item>
-        <item>Always check device\'s battery levels!</item>
-        <item>Remember to check your email/messages.</item>
+        <item>UV žiarenie je škodlivejšie popoludní.</item>
+        <item>Práve je popoludnie.</item>
+        <item>Vždy kontroluj stav batérie!</item>
+        <item>Nezabudni si skontrolovať emaily/správy.</item>
         <item>Please check your to-do list if you have one.</item>
-        <item>Don\'t forget to prepare your dinner.</item>
-        <item>Enjoy your day.</item>
+        <item>Nezabudni pripraviť večeru.</item>
+        <item>Uži si deň.</item>
         <item>Hang on! The day is almost done!</item>
-        <item>Have some fun.</item>
+        <item>Zabav sa.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Always stay hydrated!</item>
-        <item>8 hours of sleep is a must.</item>
-        <item>It is evening right now.</item>
+        <item>Dodržuj pitný režim!</item>
+        <item>Potrebuješ spať 8 hodín.</item>
+        <item>Teraz je večer.</item>
         <item>Remember to full charge me before you sleep.</item>
         <item>Remember to check your email/messages.</item>
         <item>Please check your to-do list if you have one.</item>
