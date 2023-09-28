@@ -291,64 +291,72 @@ public class QuickEventsController {
             }
         };
 
-        switch (Calendar.getInstance().get(Calendar.HOUR_OF_DAY)) {
-            case 5: case 6: case 7: case 8: case 9: case 10:
+        int hourOfDay = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+
+        if (hourOfDay >= 5 && hourOfDay <= 9) {
+            mGreetings = mContext.getResources().getString(R.string.quickspace_grt_morning);
+            mClockExt = mContext.getResources().getString(R.string.quickspace_ext_one);
+        } else if (hourOfDay >= 12 && hourOfDay <= 15) {
+            mGreetings = mContext.getResources().getString(R.string.quickspace_grt_afternoon);
+            mClockExt = mContext.getResources().getString(R.string.quickspace_ext_two);
+        } else if (hourOfDay >= 16 && hourOfDay <= 20) {
+            mGreetings = mContext.getResources().getString(R.string.quickspace_grt_evening);
+            mClockExt = mContext.getResources().getString(R.string.quickspace_ext_two);
+        } else if (hourOfDay >= 21 && hourOfDay <= 23) {
+            mGreetings = mContext.getResources().getString(R.string.quickspace_grt_night);
+            mClockExt = mContext.getResources().getString(R.string.quickspace_ext_three);
+        } else if (hourOfDay >= 0 && hourOfDay <= 3) {
+            mGreetings = mContext.getResources().getString(R.string.quickspace_grt_midnight);
+            mClockExt = mContext.getResources().getString(R.string.quickspace_ext_two);
+        } else {
+            mGreetings = mContext.getResources().getString(R.string.quickspace_grt_general);
+            mClockExt = mContext.getResources().getString(R.string.quickspace_ext_two);
+        }
+
+        if (getLuckyNumber(13) <= 7) {
+            mIsQuickEvent = false;
+            return;
+        } else if (getLuckyNumber(13) == 7) {
+            psaLength = mPSARandomStr.length - 1;
+            mEventTitleSub = mPSARandomStr[getLuckyNumber(0, psaLength)];
+            mEventSubIcon = R.drawable.ic_quickspace_crdroid;
+            mIsQuickEvent = true;
+            return;
+        }
+
+        switch (hourOfDay) {
+            case 5: case 6: case 7: case 8: case 9:
                 psaLength = mPSAMorningStr.length - 1;
                 mEventTitleSub = mPSAMorningStr[getLuckyNumber(0, psaLength)];
-                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_morning);
-                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_one);
                 mIsQuickEvent = true;
                 break;
 
-            case 21: case 22: case 23:
+            case 19: case 20: case 21:
                 psaLength = mPSAEvenStr.length - 1;
                 mEventTitleSub = mPSAEvenStr[getLuckyNumber(0, psaLength)];
-                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_evening);
-                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_three);
                 mIsQuickEvent = true;
                 break;
 
-            case 18: case 19: case 20:
+            case 16: case 17: case 18:
                 psaLength = mPSAEarlyEvenStr.length - 1;
                 mEventTitleSub = mPSAEarlyEvenStr[getLuckyNumber(0, psaLength)];
-                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_evening);
-                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_two);
                 mIsQuickEvent = true;
                 break;
 
-            case 15: case 16: case 17:
+            case 12: case 13: case 14: case 15:
                 psaLength = mPSAAfterNoonStr.length - 1;
                 mEventTitleSub = mPSAAfterNoonStr[getLuckyNumber(0, psaLength)];
-                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_afternoon);
-                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_three);
                 mIsQuickEvent = true;
                 break;
 
-            case 0: case 1: case 2: case 3: case 4:
+            case 0: case 1: case 2: case 3:
                 psaLength = mPSAMidniteStr.length - 1;
                 mEventTitleSub = mPSAMidniteStr[getLuckyNumber(0, psaLength)];
-                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_midnight);
-                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_three);
-                mIsQuickEvent = true;
-                break;
-
-            case 11: case 12: case 13: case 14:
-                psaLength = mPSARandomStr.length - 1;
-                mEventTitleSub = mPSARandomStr[getLuckyNumber(0, psaLength)];
-                mGreetings = mContext.getResources().getString(R.string.quickspace_grt_general);
-                mClockExt = mContext.getResources().getString(R.string.quickspace_ext_three);
                 mIsQuickEvent = true;
                 break;
 
             default:
-                if (getLuckyNumber(13) == 7) {
-                    psaLength = mPSARandomStr.length - 1;
-                    mEventTitleSub = mPSARandomStr[getLuckyNumber(0, psaLength)];
-                    mEventSubIcon = R.drawable.ic_quickspace_crdroid;
-                    mIsQuickEvent = true;
-                } else {
-                    mIsQuickEvent = false;
-                }
+                mIsQuickEvent = false;
                 break;
         }
     }
