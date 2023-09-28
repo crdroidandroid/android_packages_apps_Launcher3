@@ -185,17 +185,17 @@
         <item>Повеселись немного.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Always stay hydrated!</item>
-        <item>8 hours of sleep is a must.</item>
-        <item>It is evening right now.</item>
-        <item>Remember to full charge me before you sleep.</item>
-        <item>Remember to check your email/messages.</item>
-        <item>Please check your to-do list if you have one.</item>
-        <item>Remember to eat dinner.</item>
-        <item>Always check the lights and sockets.</item>
-        <item>Enjoy the night.</item>
-        <item>Hey there! Give yourself some rest!</item>
-        <item>Relax and do some rest.</item>
+        <item>Пейте жидкости!</item>
+        <item>8 часов сна - это обязательное условие.</item>
+        <item>Сейчас уже вечер.</item>
+        <item>Не забудь полностью зарядить меня перед сном.</item>
+        <item>Не забудьте проверить свою электронную почту/сообщения.</item>
+        <item>Пожалуйста, проверьте свой список дел, если он у вас есть.</item>
+        <item>Не забудь поужинать.</item>
+        <item>Всегда проверяй свет и розетки.</item>
+        <item>Наслаждайся ночью.</item>
+        <item>Эй, дай себе немного отдохнуть!</item>
+        <item>Расслабьтесь и немного отдохните.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
         <item>Не пейте слишком много перед сном.</item>
@@ -214,12 +214,12 @@
         <item>Сейчас уже поздновато</item>
         <item>Вы должны исправить свой график сна</item>
         <item>Вы сейчас более продуктивны?</item>
-        <item>Sleeping late is not healthy.</item>
-        <item>You need to sleep now.</item>
-        <item>Don\'t forget to sleep/prepare your breakfast.</item>
-        <item>Enjoy the midnight.</item>
-        <item>Sleep deficiency affects your body clock.</item>
-        <item>Please take care of yourself.</item>
+        <item>Недостаток сна вреден для вашего здоровья.</item>
+        <item>А сейчас тебе нужно спать.</item>
+        <item>Не забывайте ложиться спать/готовить себе завтрак.</item>
+        <item>Наслаждайся полуночью.</item>
+        <item>Недостаток сна влияет на биологические часы вашего организма.</item>
+        <item>Пожалуйста, береги себя. Ты мне нужен.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Неведение - Благо</item>
@@ -256,28 +256,28 @@
         <item>Вабба лабба даб даб</item>
         <item>Победитель, Победитель ....?</item>
         <item>rm -rf \/</item>
-        <item>There are easter eggs hidden on this ROM.</item>
-        <item>Try checking the weather settings.</item>
-        <item>Try to avoid UV rays during noon.</item>
-        <item>Stay Hydrated!</item>
-        <item>Pringles aren\'t actually potato chips..</item>
-        <item>Laughing can increase bloodflow.</item>
-        <item>Coffee contains antioxidants.</item>
-        <item>Ketchup was once sold as medicine.</item>
-        <item>Cotton candy was invented by a dentist.</item>
-        <item>Don\'t skip your meal!</item>
-        <item>Remember to check device\'s battery levels!</item>
-        <item>Check your email/messages.</item>
-        <item>Check your to-do list if you have one.</item>
-        <item>You can disable quickspace via home settings.</item>
-        <item>Go get them!</item>
-        <item>Time to buy some rice!</item>
-        <item>Time for lunch!</item>
-        <item>All white rice starts brown.</item>
-        <item>Want some soda?</item>
-        <item>Always bring water to stay hydrated.</item>
-        <item>Space smells like seared steak..</item>
-        <item>Enjoy your day!</item>
+        <item>В этой прошивке спрятаны пасхалки.</item>
+        <item>Попробуйте проверить настройки погоды.</item>
+        <item>Старайтесь избегать ультрафиолетовых лучей в полдень.</item>
+        <item>Пейте воду!</item>
+        <item>Pringles, на самом деле, не картофельные чипсы..</item>
+        <item>Смех увеличивает кровоток.</item>
+        <item>Кофе содержит антиоксиданты.</item>
+        <item>Когда-то кетчуп продавался как лекарство.</item>
+        <item>Сахарная вата была изобретена стоматологом.</item>
+        <item>Не пропускайте время приёма пищи!</item>
+        <item>Не забудьте проверить уровень заряда батареи своих устройств!</item>
+        <item>Проверьте свою электронную почту/сообщения.</item>
+        <item>Проверьте свой список дел, если он у вас есть.</item>
+        <item>Вы можете отключить «С первого взгляда» в настройках рабочего стола.</item>
+        <item>Иди и возьми их!</item>
+        <item>Пора купить немного риса!</item>
+        <item>Время обедать!</item>
+        <item>Весь белый рис изначально коричневого цвета.</item>
+        <item>Хотите минералки?</item>
+        <item>Всегда берите с собой воду, чтобы избежать обезвоживания.</item>
+        <item>Вокруг пахнет поджаренным стейком..</item>
+        <item>Приятного вам дня!</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Предложения</string>
@@ -341,7 +341,7 @@
     <string name="single_page_center_title">Одностраничный центр</string>
     <string name="single_page_center_summary">Центрировать обои, если используется только одна страница</string>
     <!-- Dark Status Bar -->
-    <string name="perf_dark_status_bar_title">Dark status bar</string>
-    <string name="perf_dark_status_bar_summary">Use dark status bar on Home screen</string>
-    <string name="intent_no_app_clock_found">Unable to find calendar or clock activity</string>
+    <string name="perf_dark_status_bar_title">Тёмная строка состояния</string>
+    <string name="perf_dark_status_bar_summary">Использовать тёмную строку состояния на главном экране</string>
+    <string name="intent_no_app_clock_found">Невозможно найти календарь или часы</string>
 </resources>
