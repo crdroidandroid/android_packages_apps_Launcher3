@@ -341,7 +341,7 @@
     <string name="single_page_center_title">מירכוז בדף יחיד</string>
     <string name="single_page_center_summary">התמקדות הטפט במרכז בשימוש בדף יחיד </string>
     <!-- Dark Status Bar -->
-    <string name="perf_dark_status_bar_title">Dark status bar</string>
-    <string name="perf_dark_status_bar_summary">Use dark status bar on Home screen</string>
-    <string name="intent_no_app_clock_found">Unable to find calendar or clock activity</string>
+    <string name="perf_dark_status_bar_title">שורת המצב כהה</string>
+    <string name="perf_dark_status_bar_summary">בחירת עיצוב כהה לשורת המצב במסך הבית</string>
+    <string name="intent_no_app_clock_found">לא נמצאו פעילויות יומן או שעון</string>
 </resources>
