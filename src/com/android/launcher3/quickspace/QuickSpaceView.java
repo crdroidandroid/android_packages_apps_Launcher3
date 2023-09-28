@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018-2022 crDroid Android Project
+ * Copyright (C) 2018-2023 crDroid Android Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ import com.android.launcher3.quickspace.QuickspaceController.OnDataListener;
 import com.android.launcher3.quickspace.receivers.QuickSpaceActionReceiver;
 import com.android.launcher3.quickspace.views.DateTextView;
 
-public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListener, Runnable, OnDataListener {
+public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListener, OnDataListener {
 
     private static final String TAG = "Launcher3:QuickSpaceView";
     private static final boolean DEBUG = false;
@@ -62,9 +62,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     public ImageView mWeatherIconSub;
     public TextView mWeatherTempSub;
     public TextView mEventTitle;
-    public ViewGroup mWeatherContent;
-    public ImageView mWeatherIcon;
-    public TextView mWeatherTemp;
 
     public boolean mIsQuickEvent;
     public boolean mFinishedInflate;
@@ -86,7 +83,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     @Override
     public void onDataUpdated() {
         mController.getEventController().initQuickEvents();
-        if (mIsQuickEvent != mController.isQuickEvent()) {
+        if (mIsQuickEvent != mController.isQuickEvent() || mQuickspaceContent == null) {
             mIsQuickEvent = mController.isQuickEvent();
             prepareLayout();
         }
@@ -184,12 +181,9 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         mEventTitleSubColored = (TextView) findViewById(R.id.quick_event_title_sub_colored);
         mNowPlayingIcon = (ImageView) findViewById(R.id.now_playing_icon_sub);
         mEventSubIcon = (ImageView) findViewById(R.id.quick_event_icon_sub);
-        mWeatherIcon = (ImageView) findViewById(R.id.weather_icon);
         mWeatherIconSub = (ImageView) findViewById(R.id.quick_event_weather_icon);
         mQuickspaceContent = (ViewGroup) findViewById(R.id.quickspace_content);
-        mWeatherContent = (ViewGroup) findViewById(R.id.weather_content);
         mWeatherContentSub = (ViewGroup) findViewById(R.id.quick_event_weather_content);
-        mWeatherTemp = (TextView) findViewById(R.id.weather_temp);
         mWeatherTempSub = (TextView) findViewById(R.id.quick_event_weather_temp);
         if (Utilities.useAlternativeQuickspaceUI(getContext())) {
             mGreetingsExtClock = (TextView) findViewById(R.id.extended_greetings_clock);
@@ -210,7 +204,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     }
 
     private void getQuickSpaceView() {
-        if (!(mQuickspaceContent.getVisibility() == View.VISIBLE)) {
+        if (mQuickspaceContent.getVisibility() != View.VISIBLE) {
         	mQuickspaceContent.setVisibility(View.VISIBLE);
             mQuickspaceContent.setAlpha(0.0f);
             mQuickspaceContent.animate().setDuration(200).alpha(1.0f);
@@ -285,9 +279,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
 
     public void onResume() {
         mController.onResume();
-    }
-
-    public void run() {
     }
 
     public void setPadding(int n, int n2, int n3, int n4) {

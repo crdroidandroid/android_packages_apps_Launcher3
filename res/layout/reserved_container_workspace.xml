@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2018-2022 crDroid Android Project
+     Copyright (C) 2018-2023 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -31,5 +31,5 @@
             android:layout_height="36dp"
             android:contentDescription="" />
 
-    <include layout="@layout/quickspace_singleline" />
+    <include layout="@layout/quickspace_doubleline" />
 </com.android.launcher3.quickspace.QuickSpaceView>
