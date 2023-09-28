@@ -116,7 +116,7 @@
     <string name="show_quickspace_summary">Показувати вгорі домашнього екрана</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Ласкаво просимо до crDroid!</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">crDroid час!</string>
     <string-array name="welcome_message_variants">
         <item>Гарного дня</item>
         <item>Дякуємо, що обрали нас</item>
@@ -127,20 +127,20 @@
         <item>Ми вас любимо, вас 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_midnight">Solemn midnight.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
-    <string name="quickspace_ext_two">It\'s</string>
-    <string name="quickspace_ext_three">It\'s</string>
+    <string name="quickspace_grt_morning">Доброго ранку.</string>
+    <string name="quickspace_grt_evening">Доброго вечора.</string>
+    <string name="quickspace_grt_afternoon">Доброго дня.</string>
+    <string name="quickspace_grt_night">Спокійної ночі.</string>
+    <string name="quickspace_grt_midnight">Усе, опівніч.</string>
+    <string name="quickspace_grt_general">Гарного дня.</string>
+    <string name="quickspace_ext_one">Сьогодні є</string>
+    <string name="quickspace_ext_two">Це</string>
+    <string name="quickspace_ext_three">Це</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
-    <string name="qe_now_playing_ext_one">Now playing</string>
+    <string name="qe_now_playing_unknown_artist">Невідомий виконавець</string>
+    <string name="qe_now_playing_ext_one">Відтворюється зараз</string>
     <string name="qe_now_playing_ext_two"></string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_by">Від</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Відтворюється зараз</string>
     <string name="quickspace_now_playing_summary">Показувати пісню, яку ви відтворюєте</string>
@@ -164,25 +164,25 @@
         <item>Почуваюся ще трохи сонним</item>
         <item>Ти вже виглядував назовні?</item>
         <item>Зробимо це.</item>
-        <item>Good luck today!</item>
-        <item>Toggling the switch can fix stucked responses.</item>
+        <item>Хай щастить сьогодні!</item>
+        <item>Тоді, зміна перемикача може виправити приглушені відповіді.</item>
         <item>Start your day snuke.</item>
-        <item>Don\'t forget about mental health.</item>
-        <item>Life is good.</item>
-        <item>Enjoy your breakfast.</item>
+        <item>Не забувайте про психічне здоров\'я.</item>
+        <item>Життя прекрасне.</item>
+        <item>Насолоджуйся сніданком.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Don\'t forget to stay hydrated!</item>
-        <item>Remember to eat some snacks.</item>
-        <item>UV rays are more harmful in the afternoon.</item>
-        <item>It is afternoon right now.</item>
-        <item>Always check device\'s battery levels!</item>
-        <item>Remember to check your email/messages.</item>
-        <item>Please check your to-do list if you have one.</item>
-        <item>Don\'t forget to prepare your dinner.</item>
-        <item>Enjoy your day.</item>
-        <item>Hang on! The day is almost done!</item>
-        <item>Have some fun.</item>
+        <item>Не забудьте випити склянку води!</item>
+        <item>Не забудь з\'їсти трохи закусів.</item>
+        <item>УФ промені вдень більш шкідливі.</item>
+        <item>Зараз після обіду.</item>
+        <item>Завжди перевіряйте рівень заряду акумулятора пристрою!</item>
+        <item>Не забудьте перевірити свої повідомлення електронної пошти.</item>
+        <item>Перевірте свій запланований список, якщо у вас є.</item>
+        <item>Не забувайте підготувати вечерю.</item>
+        <item>Насолоджуйся днем.</item>
+        <item>Тримайся! День майже закінчений!</item>
+        <item>Отримуй задоволення.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
         <item>Always stay hydrated!</item>
