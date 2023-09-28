@@ -30,7 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="dev_options_desc">Включить некоторые скрытые функции на свой страх и риск</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Самое главное</string>
-    <string name="show_quickspace_summary">Отображать в верхней части Домашнего экрана</string>
+    <string name="show_quickspace_summary">Отображать в верхней части домашнего экрана</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Добро пожаловать в crDroid!</string>
     <string-array name="welcome_message_variants">
@@ -50,7 +50,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="quickspace_now_playing_summary">Показывать проигрываемую песню в Самом Главном.</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">Использовать альтернативный стиль</string>
-    <string name="quickspace_alternate_style_summary">Использовать минималистический стиль для взгляда At A Glance</string>
+    <string name="quickspace_alternate_style_summary">Переключиться на расширенный стиль</string>
     <!-- Icon packs -->
     <string name="icon_pack">Набор значков</string>
     <!-- DT2S -->
