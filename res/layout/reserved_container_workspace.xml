@@ -31,5 +31,5 @@
             android:layout_height="36dp"
             android:contentDescription="" />
 
-    <include layout="@layout/quickspace_singleline" />
+    <include layout="@layout/quickspace_doubleline" />
 </com.android.launcher3.quickspace.QuickSpaceView>
