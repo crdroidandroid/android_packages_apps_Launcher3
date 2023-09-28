@@ -116,7 +116,7 @@
     <string name="show_quickspace_summary">Ana ekranınızın üst kısmında göster</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">CrDroid\'e hoş geldiniz!</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">crDroid zamanı!</string>
     <string-array name="welcome_message_variants">
         <item>İyi günler</item>
         <item>Bizi seçtiğiniz için teşekkürler</item>
@@ -127,10 +127,10 @@
         <item>Seni 3000 kez seviyoruz</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
+    <string name="quickspace_grt_morning">Günaydın.</string>
+    <string name="quickspace_grt_evening">İyi akşamlar.</string>
+    <string name="quickspace_grt_afternoon">Tünaydın.</string>
+    <string name="quickspace_grt_night">İyi geceler.</string>
     <string name="quickspace_grt_midnight">Solemn midnight.</string>
     <string name="quickspace_grt_general">Good day.</string>
     <string name="quickspace_ext_one">Today is</string>
