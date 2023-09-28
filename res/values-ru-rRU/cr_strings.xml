@@ -18,9 +18,9 @@
     <!-- Application name -->
     <!-- Folder titles -->
     <!-- General -->
-    <string name="settings_title">Настройки главного экрана</string>
+    <string name="settings_title">Настройки</string>
     <!-- Categories -->
-    <string name="home_category_title">Главный экран</string>
+    <string name="home_category_title">Рабочий стол</string>
     <string name="home_category_summary">Установить панель Google Now и другое</string>
     <string name="icons_category_title">Значки</string>
     <string name="icons_category_summary">Установить размер значков и многое другое</string>
@@ -32,7 +32,7 @@
     <string name="misc_category_summary">Другие настройки</string>
     <string name="general_category_title">Общие</string>
     <string name="interface_category_title">Интерфейс</string>
-    <string name="quickspace_category_title">Быстрое пространство</string>
+    <string name="quickspace_category_title">«С первого взгляда»</string>
     <string name="search_bar_category_title">Строка поиска</string>
     <string name="actions_category_title">Быстрые действия</string>
     <!-- Developer options -->
@@ -113,7 +113,7 @@
     <string name="background_blur_summary">Установка глубины размытия для недавних и меню приложений</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Самое главное</string>
-    <string name="show_quickspace_summary">Показывать в верхней части экрана</string>
+    <string name="show_quickspace_summary">Показывать в верхней части домашнего экрана</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Добро пожаловать в crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">Время crDroid!</string>
@@ -210,10 +210,10 @@
         <item>Приятного вам сна.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Эм... доброй ночи?</item>
-        <item>Сейчас уже поздновато</item>
-        <item>Вы должны исправить свой график сна</item>
-        <item>Вы сейчас более продуктивны?</item>
+        <item>Недостаток сна вредит здоровью.</item>
+        <item>Не забывайте пить воду.</item>
+        <item>Дефицит сна может привести к нарушению выработки мелатонина.</item>
+        <item>Сейчас полночь.</item>
         <item>Недостаток сна вреден для вашего здоровья.</item>
         <item>А сейчас тебе нужно спать.</item>
         <item>Не забывайте ложиться спать/готовить себе завтрак.</item>
