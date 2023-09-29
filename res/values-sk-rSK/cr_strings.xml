@@ -166,7 +166,7 @@
         <item>Poďme na to.</item>
         <item>Veľa šťastia!</item>
         <item>Prepnutie prepínača môže opraviť zaseknuté odpovede.</item>
-        <item>Start your day snuke.</item>
+        <item>Začni svoj deň.</item>
         <item>Nezabudni na duševné zdravie.</item>
         <item>Život je fajn.</item>
         <item>Vychutnaj si raňajky.</item>
@@ -256,7 +256,7 @@
         <item>Wubba Lubba Dub Dub</item>
         <item>Víťaz, víťaz ....?</item>
         <item>rm -rf \/</item>
-        <item>There are easter eggs hidden on this ROM.</item>
+        <item>V tejto ROMke sú ukryté Easter eggy.</item>
         <item>Skús skontrolovať nastavenia počasia.</item>
         <item>Vyhni sa UV žiareniu počas obeda.</item>
         <item>Dodržuj pitný režim!</item>
@@ -267,15 +267,15 @@
         <item>Cukrovú vatu vynašiel zubár.</item>
         <item>Nevynechávaj jedlo!</item>
         <item>Vždy kontroluj stav batérie!</item>
-        <item>Check your email/messages.</item>
-        <item>Check your to-do list if you have one.</item>
-        <item>You can disable quickspace via home settings.</item>
-        <item>Go get them!</item>
+        <item>Skontroluj svoje emaily/správy.</item>
+        <item>Skontroluj si zoznam úloh, ak nejaký máš.</item>
+        <item>Quickspace môžeš zakázať v nastaveniach domovskej obrazovky.</item>
+        <item>Poď na to!</item>
         <item>Čas kúpiť nejakú ryžu!</item>
         <item>Čas na obed!</item>
-        <item>All white rice starts brown.</item>
+        <item>Všetka biela ryža sa rodí ako hnedá.</item>
         <item>Dáš si sódu?</item>
-        <item>Always bring water to stay hydrated.</item>
+        <item>Vždy maj poruke vodu, kvôli hydratácii.</item>
         <item>Vesmír vonia ako spečený steak..</item>
         <item>Uži si deň!</item>
     </string-array>
@@ -342,6 +342,6 @@
     <string name="single_page_center_summary">Vycentrovať pozadie len pri použití jednej stránky</string>
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">Tmavý stavový riadok</string>
-    <string name="perf_dark_status_bar_summary">Use dark status bar on Home screen</string>
-    <string name="intent_no_app_clock_found">Unable to find calendar or clock activity</string>
+    <string name="perf_dark_status_bar_summary">Použiť tmavý stavový riadok na ploche</string>
+    <string name="intent_no_app_clock_found">Aktivita kalendára alebo hodín sa nenašla</string>
 </resources>
