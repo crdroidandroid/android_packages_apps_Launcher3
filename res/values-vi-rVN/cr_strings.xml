@@ -116,7 +116,7 @@
     <string name="show_quickspace_summary">Hiển thị ở đầu màn hình chính của bạn</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Chào mừng đến với crDroid!</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">Thời đại crDroid!</string>
     <string-array name="welcome_message_variants">
         <item>Chúc một ngày tốt lành</item>
         <item>Cảm ơn vì đã chọn chúng tôi</item>
@@ -127,20 +127,20 @@
         <item>Chúng tôi yêu bạn 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_midnight">Solemn midnight.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
-    <string name="quickspace_ext_two">It\'s</string>
-    <string name="quickspace_ext_three">It\'s</string>
+    <string name="quickspace_grt_morning">Chào buổi sáng.</string>
+    <string name="quickspace_grt_evening">Chào buổi tối.</string>
+    <string name="quickspace_grt_afternoon">Chào buổi chiều.</string>
+    <string name="quickspace_grt_night">Chúc ngủ ngon.</string>
+    <string name="quickspace_grt_midnight">Nửa đêm vui vẻ.</string>
+    <string name="quickspace_grt_general">Ngày tốt lành.</string>
+    <string name="quickspace_ext_one">Hôm nay là</string>
+    <string name="quickspace_ext_two">Bây giờ là</string>
+    <string name="quickspace_ext_three">Bây giờ là</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
-    <string name="qe_now_playing_ext_one">Now playing</string>
+    <string name="qe_now_playing_unknown_artist">Nghệ sĩ không xác định</string>
+    <string name="qe_now_playing_ext_one">Đang phát</string>
     <string name="qe_now_playing_ext_two"></string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_by">Bởi</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Đang phát</string>
     <string name="quickspace_now_playing_summary">Hiển thị bài hát bạn đang phát</string>
@@ -164,7 +164,7 @@
         <item>Cảm thấy hơi buồn ngủ</item>
         <item>Bạn đã thử nhìn ra ngoài chưa?</item>
         <item>Hoàn thành việc hôm nay của bạn đi.</item>
-        <item>Good luck today!</item>
+        <item>Chúc bạn may mắn hôm nay!</item>
         <item>Toggling the switch can fix stucked responses.</item>
         <item>Start your day snuke.</item>
         <item>Don\'t forget about mental health.</item>
