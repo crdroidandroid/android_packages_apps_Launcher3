@@ -118,28 +118,23 @@
     <string name="quick_event_rom_intro_welcome">Ласкаво просимо до crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">crDroid час!</string>
     <string-array name="welcome_message_variants">
-        <item>Гарного дня</item>
-        <item>Дякуємо, що обрали нас</item>
-        <item>Подобається наша робота? Віддячте матеріально</item>
-        <item>Найкраща прошивка у світі.</item>
-        <item>Привітайтесь з нами у Telegram</item>
-        <item>Натисніть тут, щоб почати</item>
-        <item>Ми вас любимо, вас 3000</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Доброго ранку.</string>
     <string name="quickspace_grt_evening">Доброго вечора.</string>
     <string name="quickspace_grt_afternoon">Доброго дня.</string>
     <string name="quickspace_grt_night">Спокійної ночі.</string>
-    <string name="quickspace_grt_midnight">Усе, опівніч.</string>
     <string name="quickspace_grt_general">Гарного дня.</string>
     <string name="quickspace_ext_one">Сьогодні є</string>
     <string name="quickspace_ext_two">Це</string>
-    <string name="quickspace_ext_three">Це</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="qe_now_playing_unknown_artist">Невідомий виконавець</string>
     <string name="qe_now_playing_ext_one">Відтворюється зараз</string>
-    <string name="qe_now_playing_ext_two"></string>
     <string name="qe_now_playing_by">Від</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Відтворюється зараз</string>
@@ -156,70 +151,103 @@
         <item>Який гарний день!</item>
         <item>Гарного дня!</item>
         <item>А як щодо невеликого 5-хвилинного сну?</item>
-        <item>Це один зі способів прокинутися.</item>
-        <item>Ви повинні змінити звуки будильника.</item>
-        <item>Схоже, сьогодні чудовий день, чи не так?</item>
-        <item>Давайте візьмімо цей хліб.</item>
-        <item>Перевіряйте погоду про всяк випадок</item>
-        <item>Почуваюся ще трохи сонним</item>
-        <item>Ти вже виглядував назовні?</item>
-        <item>Зробимо це.</item>
-        <item>Хай щастить сьогодні!</item>
-        <item>Тоді, зміна перемикача може виправити приглушені відповіді.</item>
-        <item>Розпочніть свій день.</item>
-        <item>Не забувайте про психічне здоров\'я.</item>
-        <item>Життя прекрасне.</item>
-        <item>Насолоджуйся сніданком.</item>
+        <item>Let\'s get this bread.</item>
+        <item>Mornings are a fresh canvas for your daily masterpiece.</item>
+        <item>Embrace the sunrise of opportunity each morning.</item>
+        <item>In the early light, find the power to illuminate your path.</item>
+        <item>Your day begins with endless possibilities.</item>
+        <item>Every sunrise is a reminder that you can start anew.</item>
+        <item>Awake with purpose, conquer the day ahead.</item>
+        <item>Your thoughts can be the foundation of great achievements.</item>
+        <item>The world awakens, and so does your potential.</item>
+        <item>The first chapter in your daily adventure.</item>
+        <item>Let your morning routine be the launchpad for success.</item>
+        <item>Sunrise or not, your potential is always on the rise.</item>
+        <item>It\s time for fresh ideas and bold actions.</item>
+        <item>The early bird catches the worm, but you can catch your dreams.</item>
+        <item>Find the courage to chase your aspirations.</item>
+        <item>Rise and shine, for greatness awaits.</item>
+        <item>The best time to start is now.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Не забудьте випити склянку води!</item>
-        <item>Не забудь з\'їсти трохи закусів.</item>
-        <item>УФ промені вдень більш шкідливі.</item>
-        <item>Зараз після обіду.</item>
-        <item>Завжди перевіряйте рівень заряду акумулятора пристрою!</item>
-        <item>Не забудьте перевірити свої повідомлення електронної пошти.</item>
-        <item>Перевірте свій запланований список, якщо у вас є.</item>
-        <item>Не забувайте підготувати вечерю.</item>
-        <item>Насолоджуйся днем.</item>
-        <item>Тримайся! День майже закінчений!</item>
-        <item>Отримуй задоволення.</item>
+        <item>Chase your dreams, not the minutes.</item>
+        <item>In every moment, a new opportunity.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Today is a gift, that\'s why it\'s called the present.</item>
+        <item>Let your smile change the world.</item>
+        <item>Life is a story; make each chapter count.</item>
+        <item>Find joy in the ordinary moments.</item>
+        <item>The best is yet to come, keep it up.</item>
+        <item>Your chance to turn \'what if\' into \'what is.\'</item>
+        <item>Seize the day, starting right now.</item>
+        <item>Happiness is a choice you can make any time.</item>
+        <item>Believe in yourself, even on a sleepy afternoon.</item>
+        <item>Let your actions speak louder than the clock.</item>
+        <item>Your life is what you make of it; make it amazing.</item>
+        <item>Dream big, work hard, and never give up.</item>
+        <item>You are stronger than you think.</item>
+        <item>Every setback is a setup for a comeback.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Chase your goals, not your fears.</item>
+        <item>Your potential is endless; unlock it.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Завжди залишайтеся зволоженими!</item>
-        <item>Спати потрібно 8 годин на день.</item>
-        <item>Просто зараз ввечері.</item>
-        <item>Не забудь зарядити мене перед сном.</item>
-        <item>Не забудьте перевірити свої повідомлення електронної пошти.</item>
-        <item>Перевірте свій запланований список, якщо у вас є.</item>
-        <item>Не забудьте повечеряти.</item>
-        <item>Завжди перевіряйте світло і розетки.</item>
-        <item>Насолоджуйся ніччю.</item>
-        <item>Привіт! Дай хоч трохи відпочинути!</item>
-        <item>Розслабтеся і відпочивайте.</item>
+        <item>Embrace the present moment, no matter the hour.</item>
+        <item>In every dusk, find a new dawn of opportunity.</item>
+        <item>Life is a journey; enjoy the scenery along the way.</item>
+        <item>Your attitude shapes your reality.</item>
+        <item>Your story is still being written, even as the sun sets.</item>
+        <item>Capture the beauty in the ordinary moments.</item>
+        <item>It\'s time to reflect and reset.</item>
+        <item>Choose joy, no matter the time on the clock.</item>
+        <item>Opportunities don\'t clock out in the evening.</item>
+        <item>Be the reason someone smiles.</item>
+        <item>Your potential knows no bounds.</item>
+        <item>Moments of magic can happen at any hour.</item>
+        <item>Your life is what you make of it; make it extraordinary.</item>
+        <item>Stay curious, stay grateful.</item>
+        <item>Be the change you wish to see in the world.</item>
+        <item>Believe in yourself; you are capable of amazing things.</item>
+        <item>The only limit is the one you set for yourself.</item>
+        <item>Success begins with a single step.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>На добраніч!</item>
-        <item>Приємних снів!</item>
-        <item>Побачимося завтра!</item>
-        <item>Солодких снів!</item>
-        <item>Не засиджуйтеся надто довго</item>
-        <item>Гарного сну</item>
-        <item>Поспи трохи</item>
-        <item>Час відпочинку</item>
-        <item>Насолоджуйся ніччю!</item>
-        <item>Час заряджати батарейки!</item>
+        <item>Seize the night, for it holds its own mysteries.</item>
+        <item>In the quiet of the this evening, find serenity.</item>
+        <item>Life\'s greatest adventures can start in the darkness.</item>
+        <item>Your journey continues even after the sun has set.</item>
+        <item>Let the night be your canvas; paint it with dreams.</item>
+        <item>In the stillness of this evening, find your inner peace.</item>
+        <item>Stars shine brightest in the darkest hours.</item>
+        <item>Dream big, even in the late hours of the day.</item>
+        <item>Your life is a story waiting to be written.</item>
+        <item>It\'s time for reflection and renewal.</item>
+        <item>Late night thoughts can lead to early morning revelations.</item>
+        <item>Find joy in the stillness of this evening.</item>
+        <item>The night sky is a vast canvas of dreams.</item>
+        <item>Your potential knows no bedtime; pursue your passions.</item>
+        <item>Stay hopeful, even in the darkest hours.</item>
+        <item>In the midst of chaos, find your inner calm.</item>
+        <item>Stay positive, work hard, make it happen.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Ну... Доброї ночі?</item>
-        <item>Зараз уже трохи пізно</item>
-        <item>Вам слід виправити свій розклад сну</item>
-        <item>Ти більш продуктивний в цей час?</item>
-        <item>Сон пізно не здоровий.</item>
-        <item>Тобі треба зараз спати.</item>
-        <item>Не забудь спати/підготувати сніданок.</item>
-        <item>Насолоджуйся північчю.</item>
-        <item>Дефіцит сну впливає на годинник вашого тіла.</item>
-        <item>Будь ласка, бережіть себе.</item>
+        <item>Nights are the quiet whispers of opportunity.</item>
+        <item>In the stillness of the night, find your inner strength.</item>
+        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
+        <item>The world sleeps, but your potential is wide awake.</item>
+        <item>The night may be late, but your ambitions are timeless.</item>
+        <item>Stay curious, stay awake, and let nights guide you.</item>
+        <item>Find the courage to chase your dreams.</item>
+        <item>Great things never come from comfort zones.</item>
+        <item>You have the power to create your own destiny.</item>
+        <item>Happiness is a choice; choose it every day.</item>
+        <item>Life is what you make it, so make it count.</item>
+        <item>Stay focused, stay determined, stay unstoppable.</item>
+        <item>You are the author of your own story.</item>
+        <item>Strive for progress, not perfection.</item>
+        <item>Every day is a new beginning; make it a great one.</item>
+        <item>Inspire others by being your authentic self.</item>
+        <item>Your attitude determines your direction.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Невігластво це блаженство</item>
@@ -241,43 +269,25 @@
         <item>Смачно навіть без Суші</item>
         <item>Зроби щось гарне сьогодні</item>
         <item>Це найкращий Pixel Experience, чи не так?</item>
-        <item>Як все відбувається?</item>
-        <item>Немає ілюзій, ласкаво просимо до реальності!</item>
-        <item>Дякуємо за вашу підтримку</item>
-        <item>Жодного святкування задля дурниць - лише досконалість!</item>
-        <item>Один із найкращих варіантів buildbot</item>
-        <item>Розсудливість для вашої Параної</item>
-        <item>Спробуйте крижані холодні десерти</item>
-        <item>Який чудовий досвід, чи не так?</item>
-        <item>Еволюція — міф, чи не так?</item>
-        <item>Ти те, що ти випромінюєш, не будь овочем</item>
-        <item>Що у тебе на думці?</item>
+        <item>No illusions, welcome to reality!</item>
+        <item>Thank you for your support</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>Sanity for your Paranoia</item>
+        <item>Try Ice Cold desserts</item>
+        <item>What a lovely experience, isn\'t it?</item>
+        <item>Evolution is a myth, right?</item>
+        <item>You are what you flash, don\'t be Potato</item>
+        <item>What\'s on your mind?</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Переможець ....?</item>
+        <item>Winner Winner ....?</item>
         <item>rm -rf \/</item>
-        <item>В цій прошивці ховаються пасхалки.</item>
-        <item>Спробуйте перевірити налаштування погоди.</item>
-        <item>Спробуйте уникнути УФ-променів у полудні.</item>
-        <item>Уникайте зневоднення!</item>
-        <item>Pringles — це не лише картопляні чіпси..</item>
-        <item>Сміх може збільшити кровотік.</item>
-        <item>Кава містить антиоксиданти.</item>
-        <item>Кетчуп колись був проданий як ліки.</item>
-        <item>Цукрову вату винайшов зубний лікар.</item>
-        <item>Не пропустіть їжу!</item>
-        <item>Завжди перевіряйте рівень заряду акумулятора пристрою!</item>
-        <item>Завжди перевіряти повідомлення електронної пошти.</item>
-        <item>Перевірте свій запланований список, якщо у вас є.</item>
-        <item>Можна вимкнути швидку область в налаштуваннях будинку.</item>
-        <item>Взяти їх!</item>
-        <item>Час купити трохи рису!</item>
-        <item>Час на обід!</item>
-        <item>Всі білі риси починають коричневі.</item>
-        <item>Хочеш содової?</item>
-        <item>Завжди пий воду, щоб залишатися наповненим.</item>
-        <item>Космос пахне смаженим стейком..</item>
-        <item>Насолоджуйся днем!</item>
+        <item>Pringles aren\'t actually potato chips..</item>
+        <item>Remember to check device\'s battery level!</item>
+        <item>Check your email/messages.</item>
+        <item>Check your to-do list if you have one.</item>
+        <item>You can disable quickspace via home settings.</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Пропозиції</string>
