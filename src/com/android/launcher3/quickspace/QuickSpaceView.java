@@ -113,8 +113,8 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
                 mGreetingsExtClock.setVisibility(View.GONE);
             }
         }
-        if (Utilities.isQuickspacePersonalityEnabled(getContext()) ||
-                        mController.getEventController().isNowPlaying()) {
+        if (mIsQuickEvent && (Utilities.isQuickspacePersonalityEnabled(getContext()) ||
+                        mController.getEventController().isNowPlaying())) {
             mEventTitle.setEllipsize(TruncateAt.MARQUEE);
             mEventTitle.setMarqueeRepeatLimit(3);
             mEventTitle.setSelected(true);
