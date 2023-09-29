@@ -82,21 +82,21 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
 
     @Override
     public void onDataUpdated() {
+        boolean altUI = Utilities.useAlternativeQuickspaceUI(getContext());
         mController.getEventController().initQuickEvents();
-        if (mIsQuickEvent != mController.isQuickEvent() || mQuickspaceContent == null) {
-            mIsQuickEvent = mController.isQuickEvent();
-            prepareLayout();
+        mIsQuickEvent = mController.isQuickEvent();
+        if (mEventTitle == null || (altUI && mGreetingsExt == null)) {
+            prepareLayout(altUI);
         }
         mWeatherAvailable = mController.isWeatherAvailable() && 
                 mController.getEventController().isDeviceIntroCompleted();
-        getQuickSpaceView();
-        loadDoubleLine();
+        loadDoubleLine(altUI);
     }
 
-    private final void loadDoubleLine() {
+    private final void loadDoubleLine(boolean useAlternativeQuickspaceUI) {
         setBackgroundResource(mQuickspaceBackgroundRes);
         mEventTitle.setText(mController.getEventController().getTitle());
-        if (Utilities.useAlternativeQuickspaceUI(getContext())) {
+        if (useAlternativeQuickspaceUI) {
             if (!mController.getEventController().getGreetings().isEmpty()) {
                 mGreetingsExt.setVisibility(View.VISIBLE);
                 mGreetingsExt.setText(mController.getEventController().getGreetings());
@@ -125,38 +125,44 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
             mEventTitleSub.setMarqueeRepeatLimit(3);
             mEventTitleSub.setSelected(true);
             mEventTitleSub.setOnClickListener(mController.getEventController().getAction());
-            if (Utilities.useAlternativeQuickspaceUI(getContext())) {
-               if (mController.getEventController().isNowPlaying()) {
-                  mEventSubIcon.setVisibility(View.GONE);
-                  mEventTitleSubColored.setVisibility(View.VISIBLE);
-                  mNowPlayingIcon.setVisibility(View.VISIBLE);
-                  mNowPlayingIcon.setOnClickListener(mController.getEventController().getAction());
-                  mEventTitleSubColored.setText(getContext().getString(R.string.qe_now_playing_by));
-                  mEventTitleSubColored.setOnClickListener(mController.getEventController().getAction());
-               } else {
-                  mEventSubIcon.setVisibility(View.VISIBLE);
-                  mEventSubIcon.setImageTintList(mColorStateList);
-                  mEventSubIcon.setImageResource(mController.getEventController().getActionIcon());
-                  mEventSubIcon.setOnClickListener(mController.getEventController().getAction());
-                  mEventTitleSubColored.setText("");
-                  mEventTitleSubColored.setVisibility(View.GONE);
-                  mNowPlayingIcon.setVisibility(View.GONE);
-               }
+            if (useAlternativeQuickspaceUI) {
+                if (mController.getEventController().isNowPlaying()) {
+                    mEventSubIcon.setVisibility(View.GONE);
+                    mEventTitleSubColored.setVisibility(View.VISIBLE);
+                    mNowPlayingIcon.setVisibility(View.VISIBLE);
+                    mNowPlayingIcon.setOnClickListener(mController.getEventController().getAction());
+                    mEventTitleSubColored.setText(getContext().getString(R.string.qe_now_playing_by));
+                    mEventTitleSubColored.setOnClickListener(mController.getEventController().getAction());
+                } else {
+                    setEventSubIcon();
+                    mEventTitleSubColored.setText("");
+                    mEventTitleSubColored.setVisibility(View.GONE);
+                    mNowPlayingIcon.setVisibility(View.GONE);
+                }
             } else {
-              mEventSubIcon.setVisibility(View.VISIBLE);
-              mEventSubIcon.setImageTintList(mColorStateList);
-              mEventSubIcon.setImageResource(mController.getEventController().getActionIcon());
-              mEventSubIcon.setOnClickListener(mController.getEventController().getAction());
+                setEventSubIcon();
             }
         } else {
-          mEventTitleSub.setVisibility(View.GONE);
-          mEventSubIcon.setVisibility(View.GONE);
-          if (Utilities.useAlternativeQuickspaceUI(getContext())) {
-              mEventTitleSubColored.setVisibility(View.GONE);
-              mNowPlayingIcon.setVisibility(View.GONE);
-          }
+            mEventTitleSub.setVisibility(View.GONE);
+            mEventSubIcon.setVisibility(View.GONE);
+            if (useAlternativeQuickspaceUI) {
+                mEventTitleSubColored.setVisibility(View.GONE);
+                mNowPlayingIcon.setVisibility(View.GONE);
+            }
         }
         bindWeather(mWeatherContentSub, mWeatherTempSub, mWeatherIconSub);
+    }
+
+    private void setEventSubIcon() {
+        int icon = mController.getEventController().getActionIcon();
+        if (icon > 0) {
+            mEventSubIcon.setVisibility(View.VISIBLE);
+            mEventSubIcon.setImageTintList(mColorStateList);
+            mEventSubIcon.setImageResource(mController.getEventController().getActionIcon());
+            mEventSubIcon.setOnClickListener(mController.getEventController().getAction());
+        } else {
+            mEventSubIcon.setVisibility(View.GONE);
+        }
     }
 
     private final void bindWeather(View container, TextView title, ImageView icon) {
@@ -192,16 +198,17 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         }
     }
 
-    private void prepareLayout() {
+    private void prepareLayout(boolean useAlternativeQuickspaceUI) {
         int indexOfChild = indexOfChild(mQuickspaceContent);
         removeView(mQuickspaceContent);
-        if (Utilities.useAlternativeQuickspaceUI(getContext())) {
+        if (useAlternativeQuickspaceUI) {
             addView(LayoutInflater.from(getContext()).inflate(R.layout.quickspace_alternate_double, this, false), indexOfChild);
         } else {
             addView(LayoutInflater.from(getContext()).inflate(R.layout.quickspace_doubleline, this, false), indexOfChild);
         }
 
         loadViews();
+        getQuickSpaceView();
     }
 
     private void getQuickSpaceView() {
