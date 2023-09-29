@@ -118,28 +118,23 @@
     <string name="quick_event_rom_intro_welcome">Vítejte v crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">Čas na crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Mějte krásný den</item>
-        <item>Děkujeme, že jste si vybrali právě nás</item>
-        <item>Máte nás rádi? Pošlete nám příspěvek na pivo :)</item>
-        <item>Vůbec nejlepší ROM.</item>
-        <item>Pozdravte nás na Telegramu</item>
-        <item>Začněte klepnutím sem</item>
-        <item>Milujeme tě 3000</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Dobré ráno.</string>
     <string name="quickspace_grt_evening">Dobrý večer.</string>
     <string name="quickspace_grt_afternoon">Dobré odpoledne.</string>
     <string name="quickspace_grt_night">Dobrou noc.</string>
-    <string name="quickspace_grt_midnight">Slavnostní půlnoc.</string>
     <string name="quickspace_grt_general">Dobrý den.</string>
     <string name="quickspace_ext_one">Dnes je</string>
     <string name="quickspace_ext_two">Je</string>
-    <string name="quickspace_ext_three">Je</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="qe_now_playing_unknown_artist">Neznámý umělec</string>
     <string name="qe_now_playing_ext_one">Právě hraje</string>
-    <string name="qe_now_playing_ext_two"></string>
     <string name="qe_now_playing_by">Od</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Nyní se přehrává</string>
@@ -156,70 +151,103 @@
         <item>Dneska je venku hezky!</item>
         <item>Měj se fanfárově!</item>
         <item>Což takhle si ještě na 5\u00a0minut zdřímnout?</item>
-        <item>Taky jedna z\u00a0možností, jak se probudit.</item>
-        <item>Což takhle změnit si zvuk budíku?</item>
-        <item>Zdá se, že je krásný den, že?</item>
-        <item>Pojď na to, zlato.</item>
-        <item>Raději se podívej, jaké je venku počasí</item>
-        <item>Ještě se cítím trochu ospalý</item>
-        <item>Což takhle vykouknout ven?</item>
-        <item>Pojďme se na to vrhnout!</item>
-        <item>Mějte dnes hodně štěstí!</item>
-        <item>Přepnutí přepínače může opravit zaseknuté odpovědi.</item>
-        <item>Začni svůj den.</item>
-        <item>Nezapomeň na duševní zdraví.</item>
-        <item>Život je fajn.</item>
-        <item>Vychutnej si snídani.</item>
+        <item>Let\'s get this bread.</item>
+        <item>Mornings are a fresh canvas for your daily masterpiece.</item>
+        <item>Embrace the sunrise of opportunity each morning.</item>
+        <item>In the early light, find the power to illuminate your path.</item>
+        <item>Your day begins with endless possibilities.</item>
+        <item>Every sunrise is a reminder that you can start anew.</item>
+        <item>Awake with purpose, conquer the day ahead.</item>
+        <item>Your thoughts can be the foundation of great achievements.</item>
+        <item>The world awakens, and so does your potential.</item>
+        <item>The first chapter in your daily adventure.</item>
+        <item>Let your morning routine be the launchpad for success.</item>
+        <item>Sunrise or not, your potential is always on the rise.</item>
+        <item>It\s time for fresh ideas and bold actions.</item>
+        <item>The early bird catches the worm, but you can catch your dreams.</item>
+        <item>Find the courage to chase your aspirations.</item>
+        <item>Rise and shine, for greatness awaits.</item>
+        <item>The best time to start is now.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Nezapomeň dodržovat pitný režim!</item>
-        <item>Nezapomeň na svačiny.</item>
-        <item>UV paprsky jsou v\u00a0poledne škodlivější.</item>
-        <item>Právě odbilo poledne.</item>
-        <item>Nezapomeň průběžně kontrolovat stav baterie zařízení!</item>
-        <item>Nezapomeň průběžně kontrolovat svůj e-mail a\u00a0zprávy.</item>
-        <item>Zkontroluj svůj seznam věcí k dokončení, pokud nějaký máš.</item>
-        <item>Nezapomeň si připravit večeři.</item>
-        <item>Užij si den.</item>
-        <item>Vydrž! Den je skoro u\u00a0konce!</item>
-        <item>Bav se.</item>
+        <item>Chase your dreams, not the minutes.</item>
+        <item>In every moment, a new opportunity.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Today is a gift, that\'s why it\'s called the present.</item>
+        <item>Let your smile change the world.</item>
+        <item>Life is a story; make each chapter count.</item>
+        <item>Find joy in the ordinary moments.</item>
+        <item>The best is yet to come, keep it up.</item>
+        <item>Your chance to turn \'what if\' into \'what is.\'</item>
+        <item>Seize the day, starting right now.</item>
+        <item>Happiness is a choice you can make any time.</item>
+        <item>Believe in yourself, even on a sleepy afternoon.</item>
+        <item>Let your actions speak louder than the clock.</item>
+        <item>Your life is what you make of it; make it amazing.</item>
+        <item>Dream big, work hard, and never give up.</item>
+        <item>You are stronger than you think.</item>
+        <item>Every setback is a setup for a comeback.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Chase your goals, not your fears.</item>
+        <item>Your potential is endless; unlock it.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Dodržuj pitný režim!</item>
-        <item>8 hodin spánku je nutnost.</item>
-        <item>Právě je večer.</item>
-        <item>Nezapomeň mě před spaním plně nabít.</item>
-        <item>Nezapomeň průběžně kontrolovat svůj e-mail a\u00a0zprávy.</item>
-        <item>Zkontroluj svůj seznam věcí k dokončení, pokud nějaký máš.</item>
-        <item>Nezapomeň sníst večeři.</item>
-        <item>Vždy zkontroluj světla a\u00a0zásuvky.</item>
-        <item>Užij si noc.</item>
-        <item>Ahoj! Odpočiň si trochu!</item>
-        <item>Uvolni se a\u00a0odpočiň si.</item>
+        <item>Embrace the present moment, no matter the hour.</item>
+        <item>In every dusk, find a new dawn of opportunity.</item>
+        <item>Life is a journey; enjoy the scenery along the way.</item>
+        <item>Your attitude shapes your reality.</item>
+        <item>Your story is still being written, even as the sun sets.</item>
+        <item>Capture the beauty in the ordinary moments.</item>
+        <item>It\'s time to reflect and reset.</item>
+        <item>Choose joy, no matter the time on the clock.</item>
+        <item>Opportunities don\'t clock out in the evening.</item>
+        <item>Be the reason someone smiles.</item>
+        <item>Your potential knows no bounds.</item>
+        <item>Moments of magic can happen at any hour.</item>
+        <item>Your life is what you make of it; make it extraordinary.</item>
+        <item>Stay curious, stay grateful.</item>
+        <item>Be the change you wish to see in the world.</item>
+        <item>Believe in yourself; you are capable of amazing things.</item>
+        <item>The only limit is the one you set for yourself.</item>
+        <item>Success begins with a single step.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Nepij před spaním příliš mnoho vody.</item>
-        <item>Právě je večer.</item>
-        <item>Vyhni se nabíjení přes noc, pokud je to možné.</item>
-        <item>Nezapomeň průběžně kontrolovat svůj e-mail a\u00a0zprávy.</item>
-        <item>Zkontroluj svůj seznam věcí k dokončení, pokud nějaký máš.</item>
-        <item>Nezapomeň sníst večeři.</item>
-        <item>8 hodin spánku je nutnost.</item>
-        <item>Užij si noc.</item>
-        <item>Lugaw je dobrý recept na večeři.</item>
-        <item>Užij si spánek.</item>
+        <item>Seize the night, for it holds its own mysteries.</item>
+        <item>In the quiet of the this evening, find serenity.</item>
+        <item>Life\'s greatest adventures can start in the darkness.</item>
+        <item>Your journey continues even after the sun has set.</item>
+        <item>Let the night be your canvas; paint it with dreams.</item>
+        <item>In the stillness of this evening, find your inner peace.</item>
+        <item>Stars shine brightest in the darkest hours.</item>
+        <item>Dream big, even in the late hours of the day.</item>
+        <item>Your life is a story waiting to be written.</item>
+        <item>It\'s time for reflection and renewal.</item>
+        <item>Late night thoughts can lead to early morning revelations.</item>
+        <item>Find joy in the stillness of this evening.</item>
+        <item>The night sky is a vast canvas of dreams.</item>
+        <item>Your potential knows no bedtime; pursue your passions.</item>
+        <item>Stay hopeful, even in the darkest hours.</item>
+        <item>In the midst of chaos, find your inner calm.</item>
+        <item>Stay positive, work hard, make it happen.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Spánkový deficit je zdraví škodlivý.</item>
-        <item>Nezapomeň dodržovat pitný režim.</item>
-        <item>Spánkový deficit může narušit produkci melatoninu.</item>
-        <item>Právě je půlnoc.</item>
-        <item>Usínání v\u00a0pozdních hodinách není zdravé.</item>
-        <item>Jdi spát teď hned.</item>
-        <item>Nezapomeň jít spát a\u00a0připravit si snídani.</item>
-        <item>Užij si půlnoc.</item>
-        <item>Nedostatek spánku ovlivňuje tvé tělesné hodiny.</item>
-        <item>Pečuj o\u00a0sebe, prosím.</item>
+        <item>Nights are the quiet whispers of opportunity.</item>
+        <item>In the stillness of the night, find your inner strength.</item>
+        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
+        <item>The world sleeps, but your potential is wide awake.</item>
+        <item>The night may be late, but your ambitions are timeless.</item>
+        <item>Stay curious, stay awake, and let nights guide you.</item>
+        <item>Find the courage to chase your dreams.</item>
+        <item>Great things never come from comfort zones.</item>
+        <item>You have the power to create your own destiny.</item>
+        <item>Happiness is a choice; choose it every day.</item>
+        <item>Life is what you make it, so make it count.</item>
+        <item>Stay focused, stay determined, stay unstoppable.</item>
+        <item>You are the author of your own story.</item>
+        <item>Strive for progress, not perfection.</item>
+        <item>Every day is a new beginning; make it a great one.</item>
+        <item>Inspire others by being your authentic self.</item>
+        <item>Your attitude determines your direction.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Nevědomost je síla</item>
@@ -241,43 +269,25 @@
         <item>Vynikající i bez Sushi</item>
         <item>Udělejte dnes něco pěkného</item>
         <item>Toto je nejlepší Pixel Experience, že?</item>
-        <item>Jak ti dupou králíci?</item>
-        <item>Žádné iluze, vítejte ve skutečnosti!</item>
-        <item>Děkujeme ti za podporu</item>
-        <item>Blbosti zde nemají místo\u00a0– pouze dokonalost!</item>
-        <item>Jeden z\u00a0nejlepších výběrů buildbota</item>
-        <item>Trochu Normálnosti pro tvou Paranoiu</item>
-        <item>Zakus ledově vychlazené dezerty</item>
-        <item>Úžasný zážitek, že?</item>
-        <item>Evoluce je mýtus, že?</item>
-        <item>Jsi to, co flashuješ. Nebuď brambora</item>
-        <item>Co se ti honí hlavou?</item>
+        <item>No illusions, welcome to reality!</item>
+        <item>Thank you for your support</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>Sanity for your Paranoia</item>
+        <item>Try Ice Cold desserts</item>
+        <item>What a lovely experience, isn\'t it?</item>
+        <item>Evolution is a myth, right?</item>
+        <item>You are what you flash, don\'t be Potato</item>
+        <item>What\'s on your mind?</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Vítěz vítěz ....?</item>
+        <item>Winner Winner ....?</item>
         <item>rm -rf \/</item>
-        <item>V této ROM jsou ukryty easter eggy.</item>
-        <item>Zkus zkontrolovat nastavení počasí.</item>
-        <item>Pokus se během poledne vyhnout UV paprskům.</item>
-        <item>Buď hydratovaný!</item>
-        <item>Pringles ve skutečnosti nejsou bramborové chipsy.</item>
-        <item>Smích může zvýšit průtok krve.</item>
-        <item>Káva obsahuje antioxidanty.</item>
-        <item>Kečup se kdysi prodával jako lék.</item>
-        <item>Cukrová vata byla vynalezena zubařem.</item>
-        <item>Nevynechávej jídlo!</item>
-        <item>Nezapomeň kontrolovat úroveň baterie zařízení!</item>
-        <item>Zkontroluj svůj e‑mail a\u00a0zprávy.</item>
-        <item>Zkontroluj svůj seznam věcí k\u00a0dokončení, pokud nějaký máš.</item>
-        <item>Quickspace můžeš zakázat v nastavení Domovské obrazovky.</item>
-        <item>Pojďme na ně!</item>
-        <item>Je čas koupit nějakou rýži!</item>
-        <item>Čas na oběd!</item>
-        <item>Všechna bílá rýže pochází z\u00a0hnědé slupky.</item>
-        <item>Chceš sodovku?</item>
-        <item>Vždy u sebe měj vodu, abys byl(a) hydratován(a).</item>
-        <item>Prostor voní jako pečený steak.</item>
-        <item>Užij si den!</item>
+        <item>Pringles aren\'t actually potato chips..</item>
+        <item>Remember to check device\'s battery level!</item>
+        <item>Check your email/messages.</item>
+        <item>Check your to-do list if you have one.</item>
+        <item>You can disable quickspace via home settings.</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Návrhy</string>
