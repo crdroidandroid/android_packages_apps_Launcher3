@@ -116,7 +116,7 @@
     <string name="show_quickspace_summary">Az Ön kezdőképernyőjének tetején jelenik meg</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Üdvözöli a crDroid!</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">Itt a crDroid ideje!</string>
     <string-array name="welcome_message_variants">
         <item>Legyen szép napja!</item>
         <item>Köszönjük, hogy minket választott</item>
@@ -127,20 +127,20 @@
         <item>Ne telefonozzon! Szerelmeskedjen!</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_midnight">Solemn midnight.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
-    <string name="quickspace_ext_two">It\'s</string>
-    <string name="quickspace_ext_three">It\'s</string>
+    <string name="quickspace_grt_morning">Jó reggelt.</string>
+    <string name="quickspace_grt_evening">Jó estét.</string>
+    <string name="quickspace_grt_afternoon">Jó napot.</string>
+    <string name="quickspace_grt_night">Jó éjszakát.</string>
+    <string name="quickspace_grt_midnight">Ünnepélyes éjfélt.</string>
+    <string name="quickspace_grt_general">Jó napot.</string>
+    <string name="quickspace_ext_one">Ma</string>
+    <string name="quickspace_ext_two">Ez </string>
+    <string name="quickspace_ext_three">Ez </string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
-    <string name="qe_now_playing_ext_one">Now playing</string>
+    <string name="qe_now_playing_unknown_artist">Ismeretlen előadó</string>
+    <string name="qe_now_playing_ext_one">Most hallható </string>
     <string name="qe_now_playing_ext_two"></string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_by">Előadja </string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Most hallható </string>
     <string name="quickspace_now_playing_summary">Az épp hallható szám kiírása</string>
@@ -164,38 +164,38 @@
         <item>Még egy kicsit álmos lehet</item>
         <item>Szétnézett már odakinn?</item>
         <item>Lásson neki a munkának.</item>
-        <item>Good luck today!</item>
-        <item>Toggling the switch can fix stucked responses.</item>
-        <item>Start your day snuke.</item>
-        <item>Don\'t forget about mental health.</item>
-        <item>Life is good.</item>
-        <item>Enjoy your breakfast.</item>
+        <item>Sok szerencsét mára!</item>
+        <item>A kapcsoló átkapcsolása javíthatja a beragadt válaszokat</item>
+        <item>Csendben induljon a napod.</item>
+        <item>Ne feledkezz meg a mentális egészségről.</item>
+        <item>Az élet szép!</item>
+        <item>Élvezd ki a reggelidet.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Don\'t forget to stay hydrated!</item>
-        <item>Remember to eat some snacks.</item>
-        <item>UV rays are more harmful in the afternoon.</item>
-        <item>It is afternoon right now.</item>
-        <item>Always check device\'s battery levels!</item>
-        <item>Remember to check your email/messages.</item>
-        <item>Please check your to-do list if you have one.</item>
-        <item>Don\'t forget to prepare your dinner.</item>
-        <item>Enjoy your day.</item>
-        <item>Hang on! The day is almost done!</item>
-        <item>Have some fun.</item>
+        <item>Igyál eleget!</item>
+        <item>Ne feljts el enni!</item>
+        <item>Az UV-sugarak délutánonként károsabbak.</item>
+        <item>Most délután van.</item>
+        <item>Mindig legyen feltöltve az akku!</item>
+        <item>Nézze meg, jött-e új e-mailje / üzenete.</item>
+        <item>Nézzen rá nincs-e valami új elvégzendő dolga.</item>
+        <item>Ne felejtsen el vacsorát készíteni.</item>
+        <item>Élvezze ezt a napot!</item>
+        <item>Várjon csak! Mindjárt vége a napnak!</item>
+        <item>Szórakozzon is kicsit.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Always stay hydrated!</item>
-        <item>8 hours of sleep is a must.</item>
-        <item>It is evening right now.</item>
-        <item>Remember to full charge me before you sleep.</item>
-        <item>Remember to check your email/messages.</item>
-        <item>Please check your to-do list if you have one.</item>
-        <item>Remember to eat dinner.</item>
-        <item>Always check the lights and sockets.</item>
-        <item>Enjoy the night.</item>
-        <item>Hey there! Give yourself some rest!</item>
-        <item>Relax and do some rest.</item>
+        <item>Mindig igyon eleget!</item>
+        <item>8 órát kellene aludjon.</item>
+        <item>Most már este van.</item>
+        <item>Töltse fel telefonját mielőtt eleludna.</item>
+        <item>Nézze meg, jött-e új e-mailje / üzenete.</item>
+        <item>Nézzen rá nincs-e valami új elvégzendő dolga.</item>
+        <item>Ne felejtsen el vacsorázni.</item>
+        <item>Alvás előtt nézze át a kapcsolókat és konnektorokat.</item>
+        <item>Élvezze az éjszakát.</item>
+        <item>Hé! Adjon magának pihenőidőt!</item>
+        <item>Lazítson és pihenjen egy kicsit.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
         <item>Jó éjszakát!</item>
@@ -214,12 +214,12 @@
         <item>Egy kicsit már késő van</item>
         <item>Alvási ütemtervet kéne készítenie</item>
         <item>Még ebben az órában is tevékeny?</item>
-        <item>Sleeping late is not healthy.</item>
-        <item>You need to sleep now.</item>
-        <item>Don\'t forget to sleep/prepare your breakfast.</item>
-        <item>Enjoy the midnight.</item>
-        <item>Sleep deficiency affects your body clock.</item>
-        <item>Please take care of yourself.</item>
+        <item>Túl későn elaludni nem egészséges.</item>
+        <item>Most már aludnia kell.</item>
+        <item>Ne felejtsen el aludni / elkészíteni a reggelit.</item>
+        <item>Jöjjenek az éjféli élvezetek.</item>
+        <item>A szervezetének szüksége van alvásra.</item>
+        <item>Kérjük, vigyázzon magára.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Boldogok a lelki-szegények</item>
