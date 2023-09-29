@@ -116,7 +116,7 @@
     <string name="show_quickspace_summary">在主屏幕的顶部显示</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">欢迎使用 crDroid！</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">crDroid 时间！</string>
     <string-array name="welcome_message_variants">
         <item>享受美好的一天！</item>
         <item>感谢您选择我们</item>
@@ -127,20 +127,20 @@
         <item>我们爱你 3000 遍</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_midnight">Solemn midnight.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
-    <string name="quickspace_ext_two">It\'s</string>
-    <string name="quickspace_ext_three">It\'s</string>
+    <string name="quickspace_grt_morning">早上好。</string>
+    <string name="quickspace_grt_evening">晚上好。</string>
+    <string name="quickspace_grt_afternoon">下午好。</string>
+    <string name="quickspace_grt_night">晚安。</string>
+    <string name="quickspace_grt_midnight">静谧的午夜。</string>
+    <string name="quickspace_grt_general">日安。</string>
+    <string name="quickspace_ext_one">今天是</string>
+    <string name="quickspace_ext_two">现在是</string>
+    <string name="quickspace_ext_three">现在是</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
-    <string name="qe_now_playing_ext_one">Now playing</string>
+    <string name="qe_now_playing_unknown_artist">未知艺人</string>
+    <string name="qe_now_playing_ext_one">正在播放</string>
     <string name="qe_now_playing_ext_two"></string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_by">作者</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">正在播放</string>
     <string name="quickspace_now_playing_summary">显示您正在播放的歌曲</string>
@@ -164,18 +164,18 @@
         <item>唔……还有点困吗</item>
         <item>有没有看窗外的风景呢？</item>
         <item>行动起来。</item>
-        <item>Good luck today!</item>
-        <item>Toggling the switch can fix stucked responses.</item>
-        <item>Start your day snuke.</item>
-        <item>Don\'t forget about mental health.</item>
-        <item>Life is good.</item>
-        <item>Enjoy your breakfast.</item>
+        <item>祝你好运！</item>
+        <item>如未响应请切换开关。</item>
+        <item>开始新的一天。</item>
+        <item>别忘了健康心态。</item>
+        <item>生活多美好。</item>
+        <item>享受您的早餐。</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Don\'t forget to stay hydrated!</item>
-        <item>Remember to eat some snacks.</item>
-        <item>UV rays are more harmful in the afternoon.</item>
-        <item>It is afternoon right now.</item>
+        <item>别忘了多喝水！</item>
+        <item>记得吃些零食。</item>
+        <item>下午的紫外线更危险。</item>
+        <item>现在是下午。</item>
         <item>Always check device\'s battery levels!</item>
         <item>Remember to check your email/messages.</item>
         <item>Please check your to-do list if you have one.</item>
