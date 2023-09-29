@@ -117,26 +117,26 @@ Mantén presionado para establecer</string>
     <string name="show_quickspace_summary">Mostrar en la parte superior de la pantalla de inicio</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">¡Bienvenido a crDroid!</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">¡Tiempo de crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
+        <item>Gracias por elegirnos</item>
+        <item>¿Amarnos? Envíanos una cerveza</item>
+        <item>La mejor rom siempre.</item>
+        <item>Dinos Hola en Telegram</item>
+        <item>Toca aquí para comenzar</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
-    <string name="quickspace_ext_two">It\'s</string>
+    <string name="quickspace_grt_morning">Buenos Días.</string>
+    <string name="quickspace_grt_evening">Buenas Noches.</string>
+    <string name="quickspace_grt_afternoon">Buenas Tardes.</string>
+    <string name="quickspace_grt_night">Buenas Noches.</string>
+    <string name="quickspace_grt_general">Buen Día.</string>
+    <string name="quickspace_ext_one">Hoy es</string>
+    <string name="quickspace_ext_two">Es</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
-    <string name="qe_now_playing_ext_one">Now playing</string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_unknown_artist">Artista desconocido</string>
+    <string name="qe_now_playing_ext_one">Jugando ahora</string>
+    <string name="qe_now_playing_by">Por</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Reproduciendo</string>
     <string name="quickspace_now_playing_summary">Muestra la canción que estás reproduciendo</string>
@@ -152,42 +152,42 @@ Mantén presionado para establecer</string>
         <item>¡Qué bonito día!</item>
         <item>¡Que tengas un buen día!</item>
         <item>¿Qué tal una pequeña siesta de 5 minutos?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Mornings are a fresh canvas for your daily masterpiece.</item>
-        <item>Embrace the sunrise of opportunity each morning.</item>
-        <item>In the early light, find the power to illuminate your path.</item>
-        <item>Your day begins with endless possibilities.</item>
-        <item>Every sunrise is a reminder that you can start anew.</item>
-        <item>Awake with purpose, conquer the day ahead.</item>
-        <item>Your thoughts can be the foundation of great achievements.</item>
-        <item>The world awakens, and so does your potential.</item>
-        <item>The first chapter in your daily adventure.</item>
-        <item>Let your morning routine be the launchpad for success.</item>
-        <item>Sunrise or not, your potential is always on the rise.</item>
-        <item>It\s time for fresh ideas and bold actions.</item>
-        <item>The early bird catches the worm, but you can catch your dreams.</item>
-        <item>Find the courage to chase your aspirations.</item>
-        <item>Rise and shine, for greatness awaits.</item>
-        <item>The best time to start is now.</item>
+        <item>Consigamos este pan.</item>
+        <item>Las mañanas son un lienzo fresco para tu obra maestra diaria.</item>
+        <item>Abraza el amanecer de la oportunidad cada mañana.</item>
+        <item>En las primeras luces, encuentra el poder para iluminar tu camino.</item>
+        <item>Tu día comienza con infinitas posibilidades.</item>
+        <item>Cada amanecer es un recordatorio de que puedes empezar de nuevo.</item>
+        <item>Despierta con propósito, conquista el día que te espera.</item>
+        <item>Tus pensamientos pueden ser la base de grandes logros.</item>
+        <item>El mundo despierta y tu potencial también.</item>
+        <item>El primer capítulo de tu aventura diaria.</item>
+        <item>Deje que su rutina matutina sea la plataforma de lanzamiento hacia el éxito.</item>
+        <item>Amanecer o no, su potencial siempre está en aumento.</item>
+        <item>Es hora de ideas nuevas y acciones audaces.</item>
+        <item>El que madruga, atrapa al gusano, pero tú puedes atrapar tus sueños.</item>
+        <item>Encuentra el coraje para perseguir tus aspiraciones.</item>
+        <item>Levántate y brilla, porque la grandeza te espera.</item>
+        <item>El mejor momento para empezar es ahora.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Chase your dreams, not the minutes.</item>
-        <item>In every moment, a new opportunity.</item>
-        <item>Embrace the journey, not just the destination.</item>
-        <item>Today is a gift, that\'s why it\'s called the present.</item>
-        <item>Let your smile change the world.</item>
-        <item>Life is a story; make each chapter count.</item>
-        <item>Find joy in the ordinary moments.</item>
-        <item>The best is yet to come, keep it up.</item>
-        <item>Your chance to turn \'what if\' into \'what is.\'</item>
-        <item>Seize the day, starting right now.</item>
-        <item>Happiness is a choice you can make any time.</item>
-        <item>Believe in yourself, even on a sleepy afternoon.</item>
-        <item>Let your actions speak louder than the clock.</item>
-        <item>Your life is what you make of it; make it amazing.</item>
-        <item>Dream big, work hard, and never give up.</item>
-        <item>You are stronger than you think.</item>
-        <item>Every setback is a setup for a comeback.</item>
+        <item>Persigue tus sueños, no los minutos.</item>
+        <item>En cada momento, una nueva oportunidad.</item>
+        <item>Acepta el viaje, no sólo el destino.</item>
+        <item>Hoy es un regalo, por eso se llama presente.</item>
+        <item>Deja que tu sonrisa cambie el mundo.</item>
+        <item>La vida es una historia; haz que cada capítulo cuente.</item>
+        <item>Encuentra alegría en los momentos ordinarios.</item>
+        <item>Lo mejor está por llegar, sigue así.</item>
+        <item>Tu oportunidad de convertir el \"qué pasaría si\" en \"lo que es\"</item>
+        <item>Aprovecha el día, empezando ahora mismo.</item>
+        <item>La felicidad es una elección que puedes tomar en cualquier momento.</item>
+        <item>Cree en ti mismo, incluso en una tarde de sueño.</item>
+        <item>Deja que tus acciones hablen más que el reloj.</item>
+        <item>Tu vida es lo que haces con ella; hazlo increíble.</item>
+        <item>Sueña en grande, trabaja duro y nunca te rindas.</item>
+        <item>Eres más fuerte de lo que piensas.</item>
+        <item>Cada revés es una preparación para una remontada.</item>
         <item>Embrace the journey, not just the destination.</item>
         <item>Chase your goals, not your fears.</item>
         <item>Your potential is endless; unlock it.</item>
