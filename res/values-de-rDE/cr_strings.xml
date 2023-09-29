@@ -118,28 +118,23 @@
     <string name="quick_event_rom_intro_welcome">Willkommen zu crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">crDroid Zeit!</string>
     <string-array name="welcome_message_variants">
-        <item>Schönen Tag dir</item>
-        <item>Danke, dass du dich für uns entschieden hast</item>
-        <item>Gefällt dir unsere Rom? Dann schick uns doch mal ’n Bier</item>
-        <item>Beste Rom aller Zeiten.</item>
-        <item>Besuch uns doch mal auf Telegram</item>
-        <item>Hier tippen, um zu beginnen</item>
-        <item>Wir haben dich lieb, mal 3000</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Guten Morgen.</string>
     <string name="quickspace_grt_evening">Guten Abend.</string>
     <string name="quickspace_grt_afternoon">Guten Nachmittag.</string>
     <string name="quickspace_grt_night">Gute Nacht.</string>
-    <string name="quickspace_grt_midnight">Feierliche Mitternacht.</string>
     <string name="quickspace_grt_general">Guten Tag.</string>
     <string name="quickspace_ext_one">Heute ist</string>
     <string name="quickspace_ext_two">Es ist</string>
-    <string name="quickspace_ext_three">Es ist</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="qe_now_playing_unknown_artist">Unbekannter Interpret</string>
     <string name="qe_now_playing_ext_one">Gerade läuft</string>
-    <string name="qe_now_playing_ext_two"></string>
     <string name="qe_now_playing_by">Von</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Aktuelle Wiedergabe</string>
@@ -156,70 +151,103 @@
         <item>Was für ein schöner Tag!</item>
         <item>Hab einen schönen Tag!</item>
         <item>Wie wäre es mit noch einem kurzen Nickerchen?</item>
-        <item>So kann man auch aufwachen.</item>
-        <item>Du solltest deinen Weckton ändern.</item>
-        <item>Sieht nach einem wunderschönen Tag aus, meinst du nicht auch?</item>
-        <item>Schaffe, schaffe, Häusle baue.</item>
-        <item>Schau mal nach, wie das Wetter wird. Man weiß ja nie.</item>
-        <item>Na, noch ein bisschen müde?</item>
-        <item>Heute schon aus dem Fenster geschaut?</item>
-        <item>Auf geht’s.</item>
-        <item>Viel Erfolg für heute!</item>
-        <item>Das Umlegen des Schalters kann festgefahrene Antworten beheben.</item>
-        <item>Schönen Start in den Tag.</item>
-        <item>Denk an deine seelische Gesundheit.</item>
-        <item>Das Leben ist schön.</item>
-        <item>Lass dir dein Frühstück schmecken.</item>
+        <item>Let\'s get this bread.</item>
+        <item>Mornings are a fresh canvas for your daily masterpiece.</item>
+        <item>Embrace the sunrise of opportunity each morning.</item>
+        <item>In the early light, find the power to illuminate your path.</item>
+        <item>Your day begins with endless possibilities.</item>
+        <item>Every sunrise is a reminder that you can start anew.</item>
+        <item>Awake with purpose, conquer the day ahead.</item>
+        <item>Your thoughts can be the foundation of great achievements.</item>
+        <item>The world awakens, and so does your potential.</item>
+        <item>The first chapter in your daily adventure.</item>
+        <item>Let your morning routine be the launchpad for success.</item>
+        <item>Sunrise or not, your potential is always on the rise.</item>
+        <item>It\s time for fresh ideas and bold actions.</item>
+        <item>The early bird catches the worm, but you can catch your dreams.</item>
+        <item>Find the courage to chase your aspirations.</item>
+        <item>Rise and shine, for greatness awaits.</item>
+        <item>The best time to start is now.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Denk dran, genügend Wasser zu trinken!</item>
-        <item>Denk dran, dir ein paar Snacks zu gönnen.</item>
-        <item>Nachmittags ist UV-Strahlung besonders schädlich.</item>
-        <item>Gerade ist es nachmittags.</item>
-        <item>Immer den Akkustand checken!</item>
-        <item>Denk dran, deine Mails und Nachrichten zu checken.</item>
-        <item>Denk bitte an deine To-do-Liste, falls du eine hast.</item>
-        <item>Vergiss nicht, dir was zum Abendessen zu machen.</item>
-        <item>Einen schönen Tag dir.</item>
-        <item>Halt durch! Der Tag ist fast rum!</item>
-        <item>Gönn dir ein Bisschen Spaß.</item>
+        <item>Chase your dreams, not the minutes.</item>
+        <item>In every moment, a new opportunity.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Today is a gift, that\'s why it\'s called the present.</item>
+        <item>Let your smile change the world.</item>
+        <item>Life is a story; make each chapter count.</item>
+        <item>Find joy in the ordinary moments.</item>
+        <item>The best is yet to come, keep it up.</item>
+        <item>Your chance to turn \'what if\' into \'what is.\'</item>
+        <item>Seize the day, starting right now.</item>
+        <item>Happiness is a choice you can make any time.</item>
+        <item>Believe in yourself, even on a sleepy afternoon.</item>
+        <item>Let your actions speak louder than the clock.</item>
+        <item>Your life is what you make of it; make it amazing.</item>
+        <item>Dream big, work hard, and never give up.</item>
+        <item>You are stronger than you think.</item>
+        <item>Every setback is a setup for a comeback.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Chase your goals, not your fears.</item>
+        <item>Your potential is endless; unlock it.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Immer genug Wasser trinken!</item>
-        <item>Acht Stunden Schlaf müssen sein.</item>
-        <item>Gerade ist es Abend.</item>
-        <item>Denk dran, mich vorm Schlafengehen aufzuladen.</item>
-        <item>Denk dran, deine Mails und Nachrichten zu checken.</item>
-        <item>Denk bitte an deine To-do-Liste, falls du eine hast.</item>
-        <item>Denk ans Abendessen.</item>
-        <item>Immer nach dem Licht und den Steckdosen schauen.</item>
-        <item>Genieß die Nacht.</item>
-        <item>Hey, du! Ruh dich doch ein Bisschen aus!</item>
-        <item>Lehn dich zurück und entspann dich.</item>
+        <item>Embrace the present moment, no matter the hour.</item>
+        <item>In every dusk, find a new dawn of opportunity.</item>
+        <item>Life is a journey; enjoy the scenery along the way.</item>
+        <item>Your attitude shapes your reality.</item>
+        <item>Your story is still being written, even as the sun sets.</item>
+        <item>Capture the beauty in the ordinary moments.</item>
+        <item>It\'s time to reflect and reset.</item>
+        <item>Choose joy, no matter the time on the clock.</item>
+        <item>Opportunities don\'t clock out in the evening.</item>
+        <item>Be the reason someone smiles.</item>
+        <item>Your potential knows no bounds.</item>
+        <item>Moments of magic can happen at any hour.</item>
+        <item>Your life is what you make of it; make it extraordinary.</item>
+        <item>Stay curious, stay grateful.</item>
+        <item>Be the change you wish to see in the world.</item>
+        <item>Believe in yourself; you are capable of amazing things.</item>
+        <item>The only limit is the one you set for yourself.</item>
+        <item>Success begins with a single step.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Vorm Schlafen nicht zu viel Wasser trinken.</item>
-        <item>Gerade ist es Abend.</item>
-        <item>Versuche so weit es geht, dein Handy nachts nicht angesteckt zu lassen.</item>
-        <item>Denk dran, deine Mails und Nachrichten zu checken.</item>
-        <item>Denk bitte an deine To-do-Liste, falls du eine hast.</item>
-        <item>Denk ans Abendessen.</item>
-        <item>Acht Stunden Schlaf müssen sein.</item>
-        <item>Genieß die Nacht.</item>
-        <item>Lugaw ist ein tolles Rezept zum Abendessen.</item>
-        <item>Schlaf gut.</item>
+        <item>Seize the night, for it holds its own mysteries.</item>
+        <item>In the quiet of the this evening, find serenity.</item>
+        <item>Life\'s greatest adventures can start in the darkness.</item>
+        <item>Your journey continues even after the sun has set.</item>
+        <item>Let the night be your canvas; paint it with dreams.</item>
+        <item>In the stillness of this evening, find your inner peace.</item>
+        <item>Stars shine brightest in the darkest hours.</item>
+        <item>Dream big, even in the late hours of the day.</item>
+        <item>Your life is a story waiting to be written.</item>
+        <item>It\'s time for reflection and renewal.</item>
+        <item>Late night thoughts can lead to early morning revelations.</item>
+        <item>Find joy in the stillness of this evening.</item>
+        <item>The night sky is a vast canvas of dreams.</item>
+        <item>Your potential knows no bedtime; pursue your passions.</item>
+        <item>Stay hopeful, even in the darkest hours.</item>
+        <item>In the midst of chaos, find your inner calm.</item>
+        <item>Stay positive, work hard, make it happen.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Schlafmangel ist sehr ungesund.</item>
-        <item>Denk dran, genügend Wasser zu trinken.</item>
-        <item>Schlafmangel kann die Melatoninproduktion negativ beeinflussen.</item>
-        <item>Es ist Mitternacht.</item>
-        <item>Zu spät ins Bett zu gehen ist ungesund.</item>
-        <item>Du musst jetzt mal ins Bett.</item>
-        <item>Denk ans Schlafen und Frühstückvorbereiten.</item>
-        <item>Genieiß deine Mitternacht.</item>
-        <item>Schlafmangel wirkt sich auf die innere Uhr aus.</item>
-        <item>Bitte pass auf dich auf.</item>
+        <item>Nights are the quiet whispers of opportunity.</item>
+        <item>In the stillness of the night, find your inner strength.</item>
+        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
+        <item>The world sleeps, but your potential is wide awake.</item>
+        <item>The night may be late, but your ambitions are timeless.</item>
+        <item>Stay curious, stay awake, and let nights guide you.</item>
+        <item>Find the courage to chase your dreams.</item>
+        <item>Great things never come from comfort zones.</item>
+        <item>You have the power to create your own destiny.</item>
+        <item>Happiness is a choice; choose it every day.</item>
+        <item>Life is what you make it, so make it count.</item>
+        <item>Stay focused, stay determined, stay unstoppable.</item>
+        <item>You are the author of your own story.</item>
+        <item>Strive for progress, not perfection.</item>
+        <item>Every day is a new beginning; make it a great one.</item>
+        <item>Inspire others by being your authentic self.</item>
+        <item>Your attitude determines your direction.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Ignorance is Bliss</item>
@@ -241,43 +269,25 @@
         <item>Sehr schmackhaft, auch ohne Sushi!</item>
         <item>Eine gute Tat pro Tag.</item>
         <item>crDroid bietet ’ne tolle Pixel-Experience, oder?</item>
-        <item>Wie läuft’s bei dir so?</item>
-        <item>Keine Illusionen, willkommen in der crDroid-Realität!</item>
-        <item>Danke für deine Unterstützung!</item>
-        <item>Kein DerpFest, sondern nur Perfektion hier bei crDroid!</item>
-        <item>Feinste Wahl vom Buildbot.</item>
-        <item>crDroid heilt deine Paranoia.</item>
-        <item>Ice Cold mag cool sein, doch crDroid ist heiß.</item>
-        <item>Was für ein schönes Betriebssystem, oder?</item>
-        <item>Evolution ist doch nur ein Mythos, oder nicht?</item>
-        <item>Du bist, was du flashst. Sei keine Potato.</item>
-        <item>Was hast du auf dem Herzen?</item>
+        <item>No illusions, welcome to reality!</item>
+        <item>Thank you for your support</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>Sanity for your Paranoia</item>
+        <item>Try Ice Cold desserts</item>
+        <item>What a lovely experience, isn\'t it?</item>
+        <item>Evolution is a myth, right?</item>
+        <item>You are what you flash, don\'t be Potato</item>
+        <item>What\'s on your mind?</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Winner Winner …?</item>
+        <item>Winner Winner ....?</item>
         <item>rm -rf \/</item>
-        <item>In dieser ROM sind Easter Eggs versteckt.</item>
-        <item>Schau mal in die Wettereinstellungen.</item>
-        <item>Versuch zur Mittagszeit UV-Strahlung zu meiden.</item>
-        <item>Trinken nicht vergessen!</item>
-        <item>Pringles sind genau genommen gar keine Kartoffelchips.</item>
-        <item>Lachen kann die Durchblutung verbessern.</item>
-        <item>Kaffee enthält Antioxidantien.</item>
-        <item>Ketchup hat man früher als Medizin verkauft.</item>
-        <item>Zuckerwatte wurde von einem Zahnarzt erfunden.</item>
-        <item>Keine Mahlzeit auslassen!</item>
-        <item>Denk dran, den Akkustand zu checken!</item>
-        <item>Check deine Mails und Nachrichten.</item>
-        <item>Denk an deine To-do-Liste, falls du eine hast.</item>
-        <item>Quickspace kannst du in den Startbildschirm-Einstellungen deaktivieren.</item>
-        <item>Zeig’s ihnen!</item>
-        <item>Zeit, Reis einkaufen zu gehen!</item>
-        <item>Zeit fürs Mittagessen!</item>
-        <item>Weißer Reis war mal braun.</item>
-        <item>Lust auf ’ne Limo?</item>
-        <item>Hab immer Wasser dabei, um hydriert zu bleiben.</item>
-        <item>Im Weltraum riecht es nach gebratenem Steak.</item>
-        <item>Einen schönen Tag dir!</item>
+        <item>Pringles aren\'t actually potato chips..</item>
+        <item>Remember to check device\'s battery level!</item>
+        <item>Check your email/messages.</item>
+        <item>Check your to-do list if you have one.</item>
+        <item>You can disable quickspace via home settings.</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">App-Vorschläge</string>
