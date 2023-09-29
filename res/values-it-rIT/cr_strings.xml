@@ -118,28 +118,23 @@
     <string name="quick_event_rom_intro_welcome">Benvenuto in crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">Tempo di crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Buona giornata</item>
-        <item>Grazie per averci scelto!</item>
-        <item>Ti piacciamo? Mandaci una birra</item>
-        <item>Migliore Rom Di Sempre.</item>
-        <item>Salutaci su Telegram</item>
-        <item>Tocca qui per iniziare</item>
-        <item>Ti amiamo 3000</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Buongiorno.</string>
     <string name="quickspace_grt_evening">Buonasera.</string>
     <string name="quickspace_grt_afternoon">Buon pomeriggio.</string>
     <string name="quickspace_grt_night">Buonanotte.</string>
-    <string name="quickspace_grt_midnight">Felice mezzanotte.</string>
     <string name="quickspace_grt_general">Buona giornata.</string>
     <string name="quickspace_ext_one">Oggi è</string>
     <string name="quickspace_ext_two">Sono le</string>
-    <string name="quickspace_ext_three">Sono le</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="qe_now_playing_unknown_artist">Artista Sconosciuto</string>
     <string name="qe_now_playing_ext_one">In riproduzione</string>
-    <string name="qe_now_playing_ext_two"></string>
     <string name="qe_now_playing_by">Da</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">In riproduzione</string>
@@ -156,70 +151,103 @@
         <item>Che bella giornata!</item>
         <item>Buona giornata!</item>
         <item>Che ne dici di un sonnellino di 5 minuti?</item>
-        <item>Così ci si sveglia.</item>
-        <item>Dovresti cambiare la suoneria della sveglia.</item>
-        <item>Sembra che sia una bella giornata, vero?</item>
-        <item>Mettiamoci al lavoro.</item>
-        <item>Controlla il meteo, non si sa mai</item>
-        <item>Ti senti ancora assonnato</item>
-        <item>Hai già guardato fuori?</item>
-        <item>Facciamolo.</item>
-        <item>Buona fortuna oggi!</item>
-        <item>Attivando l\'interruttore si possono correggere le risposte bloccate.</item>
-        <item>Inizia la tua giornata furtivo.</item>
-        <item>Non dimenticare la salute mentale.</item>
-        <item>La vita è bella.</item>
-        <item>Goditi la colazione.</item>
+        <item>Let\'s get this bread.</item>
+        <item>Mornings are a fresh canvas for your daily masterpiece.</item>
+        <item>Embrace the sunrise of opportunity each morning.</item>
+        <item>In the early light, find the power to illuminate your path.</item>
+        <item>Your day begins with endless possibilities.</item>
+        <item>Every sunrise is a reminder that you can start anew.</item>
+        <item>Awake with purpose, conquer the day ahead.</item>
+        <item>Your thoughts can be the foundation of great achievements.</item>
+        <item>The world awakens, and so does your potential.</item>
+        <item>The first chapter in your daily adventure.</item>
+        <item>Let your morning routine be the launchpad for success.</item>
+        <item>Sunrise or not, your potential is always on the rise.</item>
+        <item>It\s time for fresh ideas and bold actions.</item>
+        <item>The early bird catches the worm, but you can catch your dreams.</item>
+        <item>Find the courage to chase your aspirations.</item>
+        <item>Rise and shine, for greatness awaits.</item>
+        <item>The best time to start is now.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Non dimenticare d\'idratarti!</item>
-        <item>Ricordati di mangiare qualche spuntino.</item>
-        <item>I raggi UV sono più dannosi nel pomeriggio.</item>
-        <item>È pomeriggio in questo momento.</item>
-        <item>Controlla sempre il livello della batteria del dispositivo!</item>
-        <item>Ricordati di controllare le tue email/messaggi.</item>
-        <item>Per favore controlla la tua lista di cose da fare se ne hai una.</item>
-        <item>Non dimenticate di preparare la cena.</item>
-        <item>Goditi la giornata.</item>
-        <item>Resisti! La giornata è quasi finita!</item>
-        <item>Divertiti un po\'.</item>
+        <item>Chase your dreams, not the minutes.</item>
+        <item>In every moment, a new opportunity.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Today is a gift, that\'s why it\'s called the present.</item>
+        <item>Let your smile change the world.</item>
+        <item>Life is a story; make each chapter count.</item>
+        <item>Find joy in the ordinary moments.</item>
+        <item>The best is yet to come, keep it up.</item>
+        <item>Your chance to turn \'what if\' into \'what is.\'</item>
+        <item>Seize the day, starting right now.</item>
+        <item>Happiness is a choice you can make any time.</item>
+        <item>Believe in yourself, even on a sleepy afternoon.</item>
+        <item>Let your actions speak louder than the clock.</item>
+        <item>Your life is what you make of it; make it amazing.</item>
+        <item>Dream big, work hard, and never give up.</item>
+        <item>You are stronger than you think.</item>
+        <item>Every setback is a setup for a comeback.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Chase your goals, not your fears.</item>
+        <item>Your potential is endless; unlock it.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Rimani sempre idratato!</item>
-        <item>8 ore di sonno sono un must.</item>
-        <item>È sera in questo momento.</item>
-        <item>Ricordati di caricarmi completamente prima di dormire.</item>
-        <item>Ricordati di controllare le tue email/messaggi.</item>
-        <item>Per favore controlla la tua lista di cose da fare se ne hai una.</item>
-        <item>Ricordati di cenare.</item>
-        <item>Controlla sempre le luci e le prese di corrente.</item>
-        <item>Goditi la notte.</item>
-        <item>Ehi tu! Riposati un po\'!</item>
-        <item>Rilassati e riposa un po\'.</item>
+        <item>Embrace the present moment, no matter the hour.</item>
+        <item>In every dusk, find a new dawn of opportunity.</item>
+        <item>Life is a journey; enjoy the scenery along the way.</item>
+        <item>Your attitude shapes your reality.</item>
+        <item>Your story is still being written, even as the sun sets.</item>
+        <item>Capture the beauty in the ordinary moments.</item>
+        <item>It\'s time to reflect and reset.</item>
+        <item>Choose joy, no matter the time on the clock.</item>
+        <item>Opportunities don\'t clock out in the evening.</item>
+        <item>Be the reason someone smiles.</item>
+        <item>Your potential knows no bounds.</item>
+        <item>Moments of magic can happen at any hour.</item>
+        <item>Your life is what you make of it; make it extraordinary.</item>
+        <item>Stay curious, stay grateful.</item>
+        <item>Be the change you wish to see in the world.</item>
+        <item>Believe in yourself; you are capable of amazing things.</item>
+        <item>The only limit is the one you set for yourself.</item>
+        <item>Success begins with a single step.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Buonanotte!</item>
-        <item>Dormi bene!</item>
-        <item>Ci vediamo domani!</item>
-        <item>Sogni d\'oro!</item>
-        <item>Non stare sveglio troppo a lungo</item>
-        <item>Fatti una bella dormita</item>
-        <item>Vai a riposare</item>
-        <item>Goditi la notte.</item>
-        <item>Lugaw è una bella ricetta per la cena.</item>
-        <item>Goditi il sonno.</item>
+        <item>Seize the night, for it holds its own mysteries.</item>
+        <item>In the quiet of the this evening, find serenity.</item>
+        <item>Life\'s greatest adventures can start in the darkness.</item>
+        <item>Your journey continues even after the sun has set.</item>
+        <item>Let the night be your canvas; paint it with dreams.</item>
+        <item>In the stillness of this evening, find your inner peace.</item>
+        <item>Stars shine brightest in the darkest hours.</item>
+        <item>Dream big, even in the late hours of the day.</item>
+        <item>Your life is a story waiting to be written.</item>
+        <item>It\'s time for reflection and renewal.</item>
+        <item>Late night thoughts can lead to early morning revelations.</item>
+        <item>Find joy in the stillness of this evening.</item>
+        <item>The night sky is a vast canvas of dreams.</item>
+        <item>Your potential knows no bedtime; pursue your passions.</item>
+        <item>Stay hopeful, even in the darkest hours.</item>
+        <item>In the midst of chaos, find your inner calm.</item>
+        <item>Stay positive, work hard, make it happen.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>La carenza di sonno fa male alla tua salute.</item>
-        <item>Non dimenticare d\'idratarti.</item>
-        <item>Essere in deficit di sonno può influire sulla produzione di melatonina.</item>
-        <item>È mezzanotte in questo momento.</item>
-        <item>Dormire tardi non è salutare.</item>
-        <item>Devi dormire ora.</item>
-        <item>Non dimenticare di dormire/preparare la colazione.</item>
-        <item>Goditi la notte.</item>
-        <item>La carenza di sonno influisce sull’orologio biologico.</item>
-        <item>Per favore, prenditi cura di te stesso.</item>
+        <item>Nights are the quiet whispers of opportunity.</item>
+        <item>In the stillness of the night, find your inner strength.</item>
+        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
+        <item>The world sleeps, but your potential is wide awake.</item>
+        <item>The night may be late, but your ambitions are timeless.</item>
+        <item>Stay curious, stay awake, and let nights guide you.</item>
+        <item>Find the courage to chase your dreams.</item>
+        <item>Great things never come from comfort zones.</item>
+        <item>You have the power to create your own destiny.</item>
+        <item>Happiness is a choice; choose it every day.</item>
+        <item>Life is what you make it, so make it count.</item>
+        <item>Stay focused, stay determined, stay unstoppable.</item>
+        <item>You are the author of your own story.</item>
+        <item>Strive for progress, not perfection.</item>
+        <item>Every day is a new beginning; make it a great one.</item>
+        <item>Inspire others by being your authentic self.</item>
+        <item>Your attitude determines your direction.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Beata ignoranza</item>
@@ -241,43 +269,25 @@
         <item>Delizioso anche senza Sushi</item>
         <item>Fai qualcosa di bello oggi</item>
         <item>Questa è la migliore Esperienza Pixel, vero?</item>
-        <item>Come vanno le cose?</item>
-        <item>Nessuna illusione, benvenuto alla realtà!</item>
-        <item>Grazie per il tuo supporto</item>
-        <item>Nessun festival per gli stupidi - solo perfezione!</item>
-        <item>Una delle migliori scelte del buildbot</item>
-        <item>Sanità per la tua Paranoia</item>
-        <item>Prova i dolci freddi</item>
-        <item>Che bella esperienza, vero?</item>
-        <item>L\'evoluzione è un mito, vero?</item>
-        <item>Sei quello che flashi, non essere una patata</item>
-        <item>Che pensi?</item>
+        <item>No illusions, welcome to reality!</item>
+        <item>Thank you for your support</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>Sanity for your Paranoia</item>
+        <item>Try Ice Cold desserts</item>
+        <item>What a lovely experience, isn\'t it?</item>
+        <item>Evolution is a myth, right?</item>
+        <item>You are what you flash, don\'t be Potato</item>
+        <item>What\'s on your mind?</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Vincitore Vincitore ....?</item>
+        <item>Winner Winner ....?</item>
         <item>rm -rf \/</item>
-        <item>Ci sono uova pasquali nascoste su questa ROM.</item>
-        <item>Prova a controllare le impostazioni del meteo.</item>
-        <item>Cerca di evitare i raggi UV durante mezzogiorno.</item>
-        <item>Idratati!</item>
-        <item>Le Pringles non sono in realtà patatine..</item>
-        <item>La risata può aumentare il flusso sanguigno.</item>
-        <item>Il caffè contiene antiossidanti.</item>
-        <item>Il Ketchup è stato venduto una volta come medicina.</item>
-        <item>Lo zucchero filato è stato inventato da un dentista.</item>
-        <item>Non saltare il pasto!</item>
-        <item>Ricordati di controllare il livello della batteria del dispositivo!</item>
-        <item>Controlla le tue email/messaggi.</item>
-        <item>Controlla la tua lista di cose da fare se ne hai una.</item>
-        <item>È possibile disattivare lo spazio rapido tramite le impostazioni home.</item>
-        <item>Vai a prenderli!</item>
-        <item>È ora di comprare un po\' di riso!</item>
-        <item>Ora di pranzo!</item>
-        <item>Tutto il riso bianco nasce integrale.</item>
-        <item>Vuoi della soda?</item>
-        <item>Porta sempre dell\'acqua per idratarti.</item>
-        <item>Lo spazio odora di bistecca scottata..</item>
-        <item>Goditi la giornata!</item>
+        <item>Pringles aren\'t actually potato chips..</item>
+        <item>Remember to check device\'s battery level!</item>
+        <item>Check your email/messages.</item>
+        <item>Check your to-do list if you have one.</item>
+        <item>You can disable quickspace via home settings.</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Suggerimenti</string>
