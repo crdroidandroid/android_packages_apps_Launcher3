@@ -118,28 +118,23 @@
     <string name="quick_event_rom_intro_welcome">Welkom bij crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">crDroid tijd!</string>
     <string-array name="welcome_message_variants">
-        <item>Geniet van je dag!</item>
-        <item>Bedankt dat je voor ons hebt gekozen</item>
-        <item>Hou je van ons? Stuur ons een biertje</item>
-        <item>Beste Rom ooit.</item>
-        <item>Zeg hallo tegen ons op Telegram</item>
-        <item>Tik hier om te beginnen</item>
-        <item>We houden van je 3000</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Goedemorgen.</string>
     <string name="quickspace_grt_evening">Goedenavond.</string>
     <string name="quickspace_grt_afternoon">Goedemiddag.</string>
     <string name="quickspace_grt_night">Goede nacht.</string>
-    <string name="quickspace_grt_midnight">Plechtige middernacht.</string>
     <string name="quickspace_grt_general">Goede dag.</string>
     <string name="quickspace_ext_one">Vandaag is</string>
     <string name="quickspace_ext_two">Het is</string>
-    <string name="quickspace_ext_three">Het is</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="qe_now_playing_unknown_artist">Onbekende artiest</string>
     <string name="qe_now_playing_ext_one">Wordt nu afgespeeld</string>
-    <string name="qe_now_playing_ext_two"></string>
     <string name="qe_now_playing_by">Door</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Nu aan het afspelen</string>
@@ -156,70 +151,103 @@
         <item>Wat een mooie dag!</item>
         <item>Geniet van je dag!</item>
         <item>Wat denk je van een 5 minuten dutje?</item>
-        <item>Dat is één manier om wakker te worden.</item>
-        <item>U moet uw alarmgeluiden wijzigen.</item>
-        <item>Het lijkt erop dat het een mooie dag is, nietwaar?</item>
-        <item>Laten we dit brood halen.</item>
-        <item>Controleer het weer in het geval van</item>
-        <item>Voel je je een beetje slaperig</item>
-        <item>Heb je al naar buiten gekeken?</item>
-        <item>Laten we dit doen.</item>
-        <item>Veel succes vandaag!</item>
-        <item>Schakelaar inschakelen kan vastgezette reacties corrigeren.</item>
-        <item>Begin je dag snuke.</item>
-        <item>Vergeet de geestelijke gezondheid niet.</item>
-        <item>Het leven is goed.</item>
-        <item>Geniet van je ontbijt.</item>
+        <item>Let\'s get this bread.</item>
+        <item>Mornings are a fresh canvas for your daily masterpiece.</item>
+        <item>Embrace the sunrise of opportunity each morning.</item>
+        <item>In the early light, find the power to illuminate your path.</item>
+        <item>Your day begins with endless possibilities.</item>
+        <item>Every sunrise is a reminder that you can start anew.</item>
+        <item>Awake with purpose, conquer the day ahead.</item>
+        <item>Your thoughts can be the foundation of great achievements.</item>
+        <item>The world awakens, and so does your potential.</item>
+        <item>The first chapter in your daily adventure.</item>
+        <item>Let your morning routine be the launchpad for success.</item>
+        <item>Sunrise or not, your potential is always on the rise.</item>
+        <item>It\s time for fresh ideas and bold actions.</item>
+        <item>The early bird catches the worm, but you can catch your dreams.</item>
+        <item>Find the courage to chase your aspirations.</item>
+        <item>Rise and shine, for greatness awaits.</item>
+        <item>The best time to start is now.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Vergeet niet gehydrateerd te blijven!</item>
-        <item>Vergeet niet wat snacks te eten.</item>
-        <item>Vanmiddag zijn UV-straling schadelijker.</item>
-        <item>Het is nu middag.</item>
-        <item>Controleer altijd de batterij van het apparaat!</item>
-        <item>Vergeet niet om je e-mail/berichten te controleren.</item>
-        <item>Controleer uw takenlijst als u er een hebt.</item>
-        <item>Vergeet je avondeten niet voor te bereiden.</item>
-        <item>Geniet van je dag.</item>
-        <item>Wacht! De dag is bijna klaar!</item>
-        <item>Veel plezier.</item>
+        <item>Chase your dreams, not the minutes.</item>
+        <item>In every moment, a new opportunity.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Today is a gift, that\'s why it\'s called the present.</item>
+        <item>Let your smile change the world.</item>
+        <item>Life is a story; make each chapter count.</item>
+        <item>Find joy in the ordinary moments.</item>
+        <item>The best is yet to come, keep it up.</item>
+        <item>Your chance to turn \'what if\' into \'what is.\'</item>
+        <item>Seize the day, starting right now.</item>
+        <item>Happiness is a choice you can make any time.</item>
+        <item>Believe in yourself, even on a sleepy afternoon.</item>
+        <item>Let your actions speak louder than the clock.</item>
+        <item>Your life is what you make of it; make it amazing.</item>
+        <item>Dream big, work hard, and never give up.</item>
+        <item>You are stronger than you think.</item>
+        <item>Every setback is a setup for a comeback.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Chase your goals, not your fears.</item>
+        <item>Your potential is endless; unlock it.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Blijf altijd gehydrateerd!</item>
-        <item>8 uur slaap is een must.</item>
-        <item>Het is nu avond.</item>
-        <item>Vergeet niet om me volledig op te laden voordat je slaapt.</item>
-        <item>Vergeet niet om je e-mail/berichten te controleren.</item>
-        <item>Controleer uw takenlijst als u er een hebt.</item>
-        <item>Vergeet niet om te eten.</item>
-        <item>Controleer altijd de lampen en sockets.</item>
-        <item>Geniet van de nacht.</item>
-        <item>Hallo daar! Geef jezelf wat rust!</item>
-        <item>Relax en rust wat.</item>
+        <item>Embrace the present moment, no matter the hour.</item>
+        <item>In every dusk, find a new dawn of opportunity.</item>
+        <item>Life is a journey; enjoy the scenery along the way.</item>
+        <item>Your attitude shapes your reality.</item>
+        <item>Your story is still being written, even as the sun sets.</item>
+        <item>Capture the beauty in the ordinary moments.</item>
+        <item>It\'s time to reflect and reset.</item>
+        <item>Choose joy, no matter the time on the clock.</item>
+        <item>Opportunities don\'t clock out in the evening.</item>
+        <item>Be the reason someone smiles.</item>
+        <item>Your potential knows no bounds.</item>
+        <item>Moments of magic can happen at any hour.</item>
+        <item>Your life is what you make of it; make it extraordinary.</item>
+        <item>Stay curious, stay grateful.</item>
+        <item>Be the change you wish to see in the world.</item>
+        <item>Believe in yourself; you are capable of amazing things.</item>
+        <item>The only limit is the one you set for yourself.</item>
+        <item>Success begins with a single step.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Goede nacht!</item>
-        <item>Slaap lekker!</item>
-        <item>Tot morgen!</item>
-        <item>Droom zacht!</item>
-        <item>Niet te lang opblijven</item>
-        <item>Geniet van een goede slaap</item>
-        <item>Slaap maar wat</item>
-        <item>Tijd om te ontspannen</item>
-        <item>Geniet van de nacht!</item>
-        <item>Tijd om de batterijen op te laden!</item>
+        <item>Seize the night, for it holds its own mysteries.</item>
+        <item>In the quiet of the this evening, find serenity.</item>
+        <item>Life\'s greatest adventures can start in the darkness.</item>
+        <item>Your journey continues even after the sun has set.</item>
+        <item>Let the night be your canvas; paint it with dreams.</item>
+        <item>In the stillness of this evening, find your inner peace.</item>
+        <item>Stars shine brightest in the darkest hours.</item>
+        <item>Dream big, even in the late hours of the day.</item>
+        <item>Your life is a story waiting to be written.</item>
+        <item>It\'s time for reflection and renewal.</item>
+        <item>Late night thoughts can lead to early morning revelations.</item>
+        <item>Find joy in the stillness of this evening.</item>
+        <item>The night sky is a vast canvas of dreams.</item>
+        <item>Your potential knows no bedtime; pursue your passions.</item>
+        <item>Stay hopeful, even in the darkest hours.</item>
+        <item>In the midst of chaos, find your inner calm.</item>
+        <item>Stay positive, work hard, make it happen.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... goede nacht?</item>
-        <item>Het is nu een beetje laat</item>
-        <item>Je moet je slaapschema verbeteren</item>
-        <item>Ben je productiever op dit moment?</item>
-        <item>Laat slapen is niet gezond.</item>
-        <item>Je moet nu slapen.</item>
-        <item>Vergeet je ontbijt niet voor te bereiden.</item>
-        <item>Geniet van middernacht.</item>
-        <item>Slaapdeficiëntie heeft invloed op uw lichaamsklok.</item>
-        <item>Zorg alsjeblieft voor jezelf.</item>
+        <item>Nights are the quiet whispers of opportunity.</item>
+        <item>In the stillness of the night, find your inner strength.</item>
+        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
+        <item>The world sleeps, but your potential is wide awake.</item>
+        <item>The night may be late, but your ambitions are timeless.</item>
+        <item>Stay curious, stay awake, and let nights guide you.</item>
+        <item>Find the courage to chase your dreams.</item>
+        <item>Great things never come from comfort zones.</item>
+        <item>You have the power to create your own destiny.</item>
+        <item>Happiness is a choice; choose it every day.</item>
+        <item>Life is what you make it, so make it count.</item>
+        <item>Stay focused, stay determined, stay unstoppable.</item>
+        <item>You are the author of your own story.</item>
+        <item>Strive for progress, not perfection.</item>
+        <item>Every day is a new beginning; make it a great one.</item>
+        <item>Inspire others by being your authentic self.</item>
+        <item>Your attitude determines your direction.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Negeren is Bliss</item>
@@ -241,43 +269,25 @@
         <item>Heerlijk zelfs zonder Sushi</item>
         <item>Doe iets leuks vandaag</item>
         <item>Dit is de beste Pixel Experience, nietwaar?</item>
-        <item>Hoe gaat het met alles?</item>
-        <item>Geen illusies, welkom bij de realiteit!</item>
-        <item>Bedankt voor je steun</item>
-        <item>Geen festival voor Derps - enkel perfectie!</item>
-        <item>Een van buildbot\'s beste keuze</item>
-        <item>Gezondheid voor je Paranoia</item>
-        <item>Probeer Ijs Koude toetjes</item>
-        <item>Wat een mooie ervaring, nietwaar?</item>
-        <item>Evolutie is een mythe, toch?</item>
-        <item>Je bent wat je flasht, dus ben geen Potato</item>
-        <item>Waar denk je aan?</item>
+        <item>No illusions, welcome to reality!</item>
+        <item>Thank you for your support</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>Sanity for your Paranoia</item>
+        <item>Try Ice Cold desserts</item>
+        <item>What a lovely experience, isn\'t it?</item>
+        <item>Evolution is a myth, right?</item>
+        <item>You are what you flash, don\'t be Potato</item>
+        <item>What\'s on your mind?</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Winnaar ....?</item>
+        <item>Winner Winner ....?</item>
         <item>rm -rf \/</item>
-        <item>Er zijn paaseieren verborgen op deze ROM.</item>
-        <item>Controleer de weerinstellingen.</item>
-        <item>Probeer UV-straling te vermijden tijdens het middag.</item>
-        <item>Blijf gehydrateerd!</item>
-        <item>Pringels zijn eigenlijk geen aardappelchips..</item>
-        <item>Lach kan de bloedstroom doen toenemen.</item>
-        <item>Koffie bevat antioxidanten.</item>
-        <item>Ketchup werd ooit als geneesmiddel verkocht.</item>
-        <item>Een tandarts heeft katoensnoep uitgevonden.</item>
-        <item>Sla je maaltijd niet over!</item>
-        <item>Vergeet niet om de batterij van het apparaat te controleren!</item>
-        <item>Controleer je e-mail/berichten.</item>
-        <item>Controleer je todo lijst als je er een hebt.</item>
-        <item>U kunt quickspace uitschakelen via de home instellingen.</item>
-        <item>Ga ze krijgen!</item>
-        <item>Tijd om wat rijst te kopen!</item>
-        <item>Tijd voor lunch!</item>
-        <item>Alle witte rijst begint bruin.</item>
-        <item>Wil je wat soda?</item>
-        <item>Altijd water meenemen om gehydrateerd te blijven.</item>
-        <item>De ruimte ruikt als gebaande biefstuk..</item>
-        <item>Geniet van je dag!</item>
+        <item>Pringles aren\'t actually potato chips..</item>
+        <item>Remember to check device\'s battery level!</item>
+        <item>Check your email/messages.</item>
+        <item>Check your to-do list if you have one.</item>
+        <item>You can disable quickspace via home settings.</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Suggesties</string>
