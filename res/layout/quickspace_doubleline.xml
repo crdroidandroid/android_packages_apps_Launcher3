@@ -90,11 +90,12 @@
 
         <ImageView
             android:id="@+id/quick_event_icon_sub"
-            android:layout_width="20dp"
+            android:layout_width="26dp"
             android:layout_height="20dp"
             android:layout_gravity="start|center_vertical"
             android:scaleType="fitXY"
-            android:layout_weight="0.0" />
+            android:layout_weight="0.0"
+            android:paddingEnd="6dp" />
 
         <com.android.launcher3.quickspace.views.DoubleShadowTextView
             android:id="@+id/quick_event_title_sub"
@@ -104,7 +105,6 @@
             android:layout_gravity="start|center_vertical"
             android:layout_weight="1.0"
             android:drawablePadding="8dp"
-            android:paddingStart="6dp"
             android:includeFontPadding="false"
             android:singleLine="true"
             android:scrollHorizontally="true"
