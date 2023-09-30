@@ -118,11 +118,11 @@
     <string name="quick_event_rom_intro_welcome">Καλώς όρισες στο crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">ώρα crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
+        <item>Ευχαριστούμε που μας επιλέξατε</item>
+        <item>Μας αγαπάς; Στείλτε μας μια μπύρα</item>
+        <item>Η καλύτερη Rom όλων.</item>
+        <item>Πες μας γεια στο Telegram</item>
+        <item>Πατήστε εδώ για να ξεκινήσετε</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Καλημέρα.</string>
@@ -151,103 +151,103 @@
         <item>Τι όμορφη μέρα!</item>
         <item>Να έχεις μια όμορφη μέρα!</item>
         <item>Τι λες για έναν μικρό υπνάκο 5 λεπτών;</item>
-        <item>Let\'s get this bread.</item>
-        <item>Mornings are a fresh canvas for your daily masterpiece.</item>
-        <item>Embrace the sunrise of opportunity each morning.</item>
-        <item>In the early light, find the power to illuminate your path.</item>
-        <item>Your day begins with endless possibilities.</item>
-        <item>Every sunrise is a reminder that you can start anew.</item>
-        <item>Awake with purpose, conquer the day ahead.</item>
-        <item>Your thoughts can be the foundation of great achievements.</item>
-        <item>The world awakens, and so does your potential.</item>
-        <item>The first chapter in your daily adventure.</item>
-        <item>Let your morning routine be the launchpad for success.</item>
-        <item>Sunrise or not, your potential is always on the rise.</item>
-        <item>It\s time for fresh ideas and bold actions.</item>
-        <item>The early bird catches the worm, but you can catch your dreams.</item>
-        <item>Find the courage to chase your aspirations.</item>
-        <item>Rise and shine, for greatness awaits.</item>
-        <item>The best time to start is now.</item>
+        <item>Ας αδράξουμε τη μέρα.</item>
+        <item>Τα πρωινά είναι ένας φρέσκος καμβάς για το καθημερινό σας αριστούργημα.</item>
+        <item>Αγκαλιάστε την ανατολή της ευκαιρίας κάθε πρωί.</item>
+        <item>Στο πρώιμο φως, βρείτε τη δύναμη να φωτίσετε το μονοπάτι σας.</item>
+        <item>Η μέρα σας ξεκινά με ατελείωτες δυνατότητες.</item>
+        <item>Κάθε ανατολή του ηλίου είναι μια υπενθύμιση ότι μπορείτε να ξεκινήσετε εκ νέου.</item>
+        <item>Ξυπνήστε με σκοπό, κατακτήστε την επόμενη μέρα.</item>
+        <item>Οι σκέψεις σας μπορούν να αποτελέσουν το θεμέλιο για μεγάλα επιτεύγματα.</item>
+        <item>Ο κόσμος ξυπνά, το ίδιο και οι δυνατότητές σας.</item>
+        <item>Το πρώτο κεφάλαιο στην καθημερινή σας περιπέτεια.</item>
+        <item>Αφήστε την πρωινή σας ρουτίνα να είναι η βάση για την επιτυχία.</item>
+        <item>Ανατολή ή όχι, οι δυνατότητές σας είναι πάντα σε άνοδο.</item>
+        <item>Ήρθε η ώρα για νέες ιδέες και τολμηρές ενέργειες.</item>
+        <item>Το πρώιμο πουλί πιάνει το σκουλήκι, αλλά μπορείς να πιάσεις τα όνειρά σου.</item>
+        <item>Βρείτε το θάρρος να κυνηγήσετε τις φιλοδοξίες σας.</item>
+        <item>Σηκωθείτε και λάμψτε, γιατί το μεγαλείο περιμένει.</item>
+        <item>Η καλύτερη στιγμή για να ξεκινήσετε είναι τώρα.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Chase your dreams, not the minutes.</item>
-        <item>In every moment, a new opportunity.</item>
-        <item>Embrace the journey, not just the destination.</item>
-        <item>Today is a gift, that\'s why it\'s called the present.</item>
-        <item>Let your smile change the world.</item>
-        <item>Life is a story; make each chapter count.</item>
-        <item>Find joy in the ordinary moments.</item>
-        <item>The best is yet to come, keep it up.</item>
-        <item>Your chance to turn \'what if\' into \'what is.\'</item>
-        <item>Seize the day, starting right now.</item>
-        <item>Happiness is a choice you can make any time.</item>
-        <item>Believe in yourself, even on a sleepy afternoon.</item>
-        <item>Let your actions speak louder than the clock.</item>
-        <item>Your life is what you make of it; make it amazing.</item>
-        <item>Dream big, work hard, and never give up.</item>
-        <item>You are stronger than you think.</item>
-        <item>Every setback is a setup for a comeback.</item>
-        <item>Embrace the journey, not just the destination.</item>
-        <item>Chase your goals, not your fears.</item>
-        <item>Your potential is endless; unlock it.</item>
+        <item>Κυνηγήστε τα όνειρά σας, όχι τα λεπτά.</item>
+        <item>Σε κάθε στιγμή, μια νέα ευκαιρία.</item>
+        <item>Αγκαλιάστε το ταξίδι, όχι μόνο τον προορισμό.</item>
+        <item>Σήμερα είναι ένα δώρο, γι \'αυτό ονομάζεται το παρόν.</item>
+        <item>Αφήστε το χαμόγελό σας να αλλάξει τον κόσμο.</item>
+        <item>Η ζωή είναι μια ιστορία. κάντε κάθε κεφάλαιο να μετράει.</item>
+        <item>Βρείτε χαρά στις συνηθισμένες στιγμές.</item>
+        <item>Τα καλύτερα έρχονται, συνεχίστε έτσι.</item>
+        <item>Η ευκαιρία σας να μετατρέψετε το «τι θα γινόταν αν» σε «τι είναι»</item>
+        <item>Αδράξτε τη μέρα, ξεκινώντας τώρα.</item>
+        <item>Η ευτυχία είναι μια επιλογή που μπορείς να κάνεις ανά πάσα στιγμή.</item>
+        <item>Πιστέψτε στον εαυτό σας, ακόμη και σε ένα βραδινό μες.</item>
+        <item>Αφήστε τις ενέργειές σας να μιλήσουν πιο δυνατά από το ρολόι.</item>
+        <item>Η ζωή σας είναι αυτό που φτιάχνετε από αυτήν. κάντε το καταπληκτικό.</item>
+        <item>Ονειρέψου πολύ, δούλεψε σκληρά και μην τα παρατάς ποτέ.</item>
+        <item>Είσαι δυνατότερος απ \'όσο νομίζεις.</item>
+        <item>Κάθε οπισθοδρόμηση είναι μια ρύθμιση για μια επιστροφή.</item>
+        <item>Αγκαλιάστε το ταξίδι, όχι μόνο τον προορισμό.</item>
+        <item>Κυνηγήστε τους στόχους σας, όχι τους φόβους σας.</item>
+        <item>Οι δυνατότητές σας είναι ατελείωτες, ξεκλειδώστε τες.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Embrace the present moment, no matter the hour.</item>
-        <item>In every dusk, find a new dawn of opportunity.</item>
-        <item>Life is a journey; enjoy the scenery along the way.</item>
-        <item>Your attitude shapes your reality.</item>
-        <item>Your story is still being written, even as the sun sets.</item>
-        <item>Capture the beauty in the ordinary moments.</item>
-        <item>It\'s time to reflect and reset.</item>
-        <item>Choose joy, no matter the time on the clock.</item>
-        <item>Opportunities don\'t clock out in the evening.</item>
-        <item>Be the reason someone smiles.</item>
-        <item>Your potential knows no bounds.</item>
-        <item>Moments of magic can happen at any hour.</item>
-        <item>Your life is what you make of it; make it extraordinary.</item>
-        <item>Stay curious, stay grateful.</item>
-        <item>Be the change you wish to see in the world.</item>
-        <item>Believe in yourself; you are capable of amazing things.</item>
-        <item>The only limit is the one you set for yourself.</item>
-        <item>Success begins with a single step.</item>
+        <item>Αγκαλιάστε την παρούσα στιγμή, ανεξάρτητα από την ώρα.</item>
+        <item>Σε κάθε σούρουπο, βρείτε μια νέα αυγή ευκαιρίας.</item>
+        <item>Η ζωή είναι ένα ταξίδι, απολαύστε το τοπίο στην πορεία.</item>
+        <item>Η στάση σας διαμορφώνει την πραγματικότητά σας.</item>
+        <item>Η ιστορία σας εξακολουθεί να γράφεται, ακόμη και όταν ο ήλιος δύει.</item>
+        <item>Αποτυπώστε την ομορφιά στις συνηθισμένες στιγμές.</item>
+        <item>Ήρθε η ώρα να αναστοχαστείτε και να επαναφέρετε.</item>
+        <item>Επιλέξτε τη χαρά, ανεξάρτητα από την ώρα του ρολογιού.</item>
+        <item>Οι ευκαιρίες δεν τελειώνουν το βράδυ.</item>
+        <item>Γίνε ο λόγος που κάποιος χαμογελά.</item>
+        <item>Οι δυνατότητές σας δεν έχουν όρια.</item>
+        <item>Στιγμές μαγείας μπορεί να συμβεί σε οποιαδήποτε ώρα.</item>
+        <item>Η ζωή σας είναι αυτό που φτιάχνετε από αυτήν, κάντε το καταπληκτικό.</item>
+        <item>Μείνετε περίεργοι, μείνετε ευγνώμονες.</item>
+        <item>Γίνε η αλλαγή που θέλεις να δεις στον κόσμο.</item>
+        <item>Πίστεψε στον εαυτό σου, είσαι ικανός για καταπληκτικά πράγματα.</item>
+        <item>Το μόνο όριο είναι αυτό που θέτεις εσύ στον εαυτό σου.</item>
+        <item>Η επιτυχία ξεκινά με ένα μόνο βήμα.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Seize the night, for it holds its own mysteries.</item>
-        <item>In the quiet of the this evening, find serenity.</item>
-        <item>Life\'s greatest adventures can start in the darkness.</item>
-        <item>Your journey continues even after the sun has set.</item>
-        <item>Let the night be your canvas; paint it with dreams.</item>
-        <item>In the stillness of this evening, find your inner peace.</item>
-        <item>Stars shine brightest in the darkest hours.</item>
-        <item>Dream big, even in the late hours of the day.</item>
-        <item>Your life is a story waiting to be written.</item>
-        <item>It\'s time for reflection and renewal.</item>
-        <item>Late night thoughts can lead to early morning revelations.</item>
-        <item>Find joy in the stillness of this evening.</item>
-        <item>The night sky is a vast canvas of dreams.</item>
-        <item>Your potential knows no bedtime; pursue your passions.</item>
-        <item>Stay hopeful, even in the darkest hours.</item>
-        <item>In the midst of chaos, find your inner calm.</item>
-        <item>Stay positive, work hard, make it happen.</item>
+        <item>Αδράξτε τη νύχτα, γιατί έχει τα δικά της μυστήρια.</item>
+        <item>Στην ησυχία του απόψε, βρείτε γαλήνη.</item>
+        <item>Οι μεγαλύτερες περιπέτειες της ζωής μπορούν να ξεκινήσουν στο σκοτάδι.</item>
+        <item>Το ταξίδι σας συνεχίζεται ακόμα και μετά τη δύση του ήλιου.</item>
+        <item>Αφήστε τη νύχτα να είναι ο καμβάς σας, ζωγραφίστε το με όνειρα.</item>
+        <item>Στην ηρεμία αυτής της βραδιάς, βρείτε την εσωτερική σας γαλήνη.</item>
+        <item>Τα αστέρια λάμπουν φωτεινότερα στις πιο σκοτεινές ώρες.</item>
+        <item>Ονειρευτείτε πολύ, ακόμη και στις τελευταίες ώρες της ημέρας.</item>
+        <item>Η ζωή σου είναι μια ιστορία που περιμένει να γραφτεί.</item>
+        <item>Είναι ώρα για προβληματισμό και ανανέωση.</item>
+        <item>Οι σκέψεις αργά το βράδυ μπορεί να οδηγήσουν σε αποκαλύψεις νωρίς το πρωί.</item>
+        <item>Βρείτε χαρά στην ηρεμία αυτής της βραδιάς.</item>
+        <item>Ο νυχτερινός ουρανός είναι ένας απέραντος καμβάς ονείρων.</item>
+        <item>Οι δυνατότητές σας δεν γνωρίζουν την ώρα του ύπνου, κυνηγήστε τα πάθη σας.</item>
+        <item>Μείνετε αισιόδοξοι, ακόμα και στις πιο σκοτεινές ώρες.</item>
+        <item>Μέσα στο χάος, βρείτε την εσωτερική σας ηρεμία.</item>
+        <item>Μείνετε θετικοί, δουλέψτε σκληρά, κάντε το πραγματικότητα.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Nights are the quiet whispers of opportunity.</item>
-        <item>In the stillness of the night, find your inner strength.</item>
-        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
-        <item>The world sleeps, but your potential is wide awake.</item>
-        <item>The night may be late, but your ambitions are timeless.</item>
-        <item>Stay curious, stay awake, and let nights guide you.</item>
-        <item>Find the courage to chase your dreams.</item>
-        <item>Great things never come from comfort zones.</item>
-        <item>You have the power to create your own destiny.</item>
-        <item>Happiness is a choice; choose it every day.</item>
-        <item>Life is what you make it, so make it count.</item>
-        <item>Stay focused, stay determined, stay unstoppable.</item>
-        <item>You are the author of your own story.</item>
-        <item>Strive for progress, not perfection.</item>
-        <item>Every day is a new beginning; make it a great one.</item>
-        <item>Inspire others by being your authentic self.</item>
-        <item>Your attitude determines your direction.</item>
+        <item>Οι νύχτες είναι οι ήσυχοι ψίθυροι ευκαιρίας.</item>
+        <item>Στην ησυχία της νύχτας, βρείτε την εσωτερική σας δύναμη.</item>
+        <item>Αγκάλιασε το σκοτάδι, γιατί κρατάει τα κλειδιά των ονείρων σου.</item>
+        <item>Ο κόσμος κοιμάται, αλλά οι δυνατότητές σας είναι πολύ ξύπνιες.</item>
+        <item>Η νύχτα μπορεί να είναι αργά, αλλά οι φιλοδοξίες σας είναι διαχρονικές.</item>
+        <item>Μείνετε περίεργοι, μείνετε ξύπνιοι και αφήστε τις νύχτες να σας καθοδηγήσουν.</item>
+        <item>Βρείτε το κουράγιο να κυνηγήσετε τα όνειρά σας.</item>
+        <item>Τα σπουδαία πράγματα δεν προέρχονται ποτέ από τις ζώνες άνεσης.</item>
+        <item>Έχετε τη δύναμη να δημιουργήσετε τη μοίρα σας.</item>
+        <item>Η ευτυχία είναι επιλογή, επιλέξτε την κάθε μέρα.</item>
+        <item>Η ζωή είναι αυτό που τη φτιάχνεις, γι\' αυτό κάνε τη να μετράει.</item>
+        <item>Μείνετε συγκεντρωμένοι, μείνετε αποφασισμένοι, μείνετε ασταμάτητοι.</item>
+        <item>Είστε ο συγγραφέας της δικής σας ιστορίας.</item>
+        <item>Προσπαθήστε για πρόοδο, όχι τελειότητα.</item>
+        <item>Κάθε μέρα είναι ένα νέο ξεκίνημα, κάντε το υπέροχο.</item>
+        <item>Εμπνεύστε τους άλλους με το να είστε ο αυθεντικός εαυτός σας.</item>
+        <item>Η στάση σας καθορίζει την κατεύθυνση σας.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Η Άγνοια είναι Ευτυχία</item>
@@ -269,25 +269,25 @@
         <item>Νόστιμο ακόμη και χωρίς Sushi</item>
         <item>Κάνε κάτι ωραίο σήμερα</item>
         <item>Αυτή είναι η καλύτερη εμπειρία Pixel, έτσι δεν είναι;</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
+        <item>Χωρίς αυταπάτες, καλώς ήρθες στην πραγματικότητα!</item>
+        <item>Ευχαριστούμε για την υποστήριξη</item>
+        <item>Χωρίς φεστιβάλ για Derps - μόνο τελειότητα!</item>
+        <item>Μία από τις καλύτερες επιλογές του buildbot</item>
+        <item>Λογική για την Παράνοιά σας</item>
+        <item>Δοκιμάστε το Ice Cold επιδόρπια</item>
+        <item>Τι υπέροχη εμπειρία, έτσι δεν είναι;</item>
+        <item>Η Εξέλιξη είναι μύθος, σωστά;</item>
+        <item>Είσαι ότι flashάρεις, μην είσαι Πατάτα</item>
+        <item>Τι έχεις στο μυαλό σου;</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Winner Winner ....?</item>
+        <item>Νικητής Νικητής ....;</item>
         <item>rm -rf \/</item>
-        <item>Pringles aren\'t actually potato chips..</item>
-        <item>Remember to check device\'s battery level!</item>
-        <item>Check your email/messages.</item>
-        <item>Check your to-do list if you have one.</item>
-        <item>You can disable quickspace via home settings.</item>
+        <item>Τα Pringles στην πραγματικότητα δεν είναι πατατάκια..</item>
+        <item>Θυμήσου να ελέγχεις τα επίπεδα μπαταρίας της συσκευής!</item>
+        <item>Ελέγξτε τα email/μηνύματά σας.</item>
+        <item>Ελέγξτε τη λίστα υποχρεώσεών σας εάν έχετε μια.</item>
+        <item>Μπορείτε να απενεργοποιήσετε το quickspace μέσω των ρυθμίσεων αρχικής οθόνης.</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Προτάσεις</string>
