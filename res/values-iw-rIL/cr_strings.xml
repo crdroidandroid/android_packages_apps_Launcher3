@@ -118,11 +118,11 @@
     <string name="quick_event_rom_intro_welcome">ברוך בואך לcrDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">בדיוק הזמן ל-crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
+        <item>תודה לך על בחירתך בנו</item>
+        <item>אהבת אותנו? אפשר לשלוח לנו כוס בירה</item>
+        <item>ה-ROM הטוב ביותר מאז ומעולם.</item>
+        <item>אפשר לאמר לנו היי בטלגרם</item>
+        <item>לחיצה כאן כדי להתחיל</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">בוקר טוב.</string>
@@ -151,54 +151,54 @@
         <item>איזה יום יפה!</item>
         <item>שיהיה לך יום נפלא!</item>
         <item>מה בדבר נמנום קטן של 5 דקות?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Mornings are a fresh canvas for your daily masterpiece.</item>
-        <item>Embrace the sunrise of opportunity each morning.</item>
-        <item>In the early light, find the power to illuminate your path.</item>
-        <item>Your day begins with endless possibilities.</item>
-        <item>Every sunrise is a reminder that you can start anew.</item>
-        <item>Awake with purpose, conquer the day ahead.</item>
-        <item>Your thoughts can be the foundation of great achievements.</item>
-        <item>The world awakens, and so does your potential.</item>
-        <item>The first chapter in your daily adventure.</item>
-        <item>Let your morning routine be the launchpad for success.</item>
-        <item>Sunrise or not, your potential is always on the rise.</item>
-        <item>It\s time for fresh ideas and bold actions.</item>
-        <item>The early bird catches the worm, but you can catch your dreams.</item>
-        <item>Find the courage to chase your aspirations.</item>
-        <item>Rise and shine, for greatness awaits.</item>
-        <item>The best time to start is now.</item>
+        <item>קדימה, נלך על זה.</item>
+        <item>בקרים הם בד ציור ריק ליצירות היומיות שלך.</item>
+        <item>אמצו את זריחת השמש של הזדמנויות כל בוקר.</item>
+        <item>אורו המוקדם של הבוקר יכול להאיר את הדרך שלך.</item>
+        <item>יומך מתחיל עם אינסוף אפשרויות.</item>
+        <item>כל זריחה היא תזכורת לכך שאפשר להתחיל מחדש.</item>
+        <item>התעוררו עם מטרה, כיבשו את היום שלפניכם.</item>
+        <item>מחשבותיך יכולות לשמש בסיס להישגים אדירים.</item>
+        <item>העולם מתעורר, וכך גם הפוטנציאל שלך.</item>
+        <item>הפרק הראשון בהרפתקה היומית שלך.</item>
+        <item>שגרת הבוקר שלך היא כן השיגור להצלחה.</item>
+        <item>זריחה או לא, הפוטנציאל שלך תמיד בעלייה.</item>
+        <item>זה הזמן לרעיונות טריים ולעשייה נועזת.</item>
+        <item>המקדים להשכים זוכה בפרס, אבל תוכלו ללכוד את חלומותיכם.</item>
+        <item>איזרו אומץ לחתור למימוש השאיפות שלכם.</item>
+        <item>עורו, קומו, כי מחכה לכם גדוּלה.</item>
+        <item>הזמן הטוב ביותר להתחיל הוא עכשיו.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Chase your dreams, not the minutes.</item>
-        <item>In every moment, a new opportunity.</item>
-        <item>Embrace the journey, not just the destination.</item>
+        <item>רידפו אחר חלומותיכם, לא אחר הדקות.</item>
+        <item>בכל רגע, הזדמנות חדשה.</item>
+        <item>תיהנו מהמסע, לא רק מהיעד.</item>
         <item>Today is a gift, that\'s why it\'s called the present.</item>
-        <item>Let your smile change the world.</item>
-        <item>Life is a story; make each chapter count.</item>
-        <item>Find joy in the ordinary moments.</item>
-        <item>The best is yet to come, keep it up.</item>
-        <item>Your chance to turn \'what if\' into \'what is.\'</item>
-        <item>Seize the day, starting right now.</item>
-        <item>Happiness is a choice you can make any time.</item>
-        <item>Believe in yourself, even on a sleepy afternoon.</item>
-        <item>Let your actions speak louder than the clock.</item>
-        <item>Your life is what you make of it; make it amazing.</item>
-        <item>Dream big, work hard, and never give up.</item>
-        <item>You are stronger than you think.</item>
-        <item>Every setback is a setup for a comeback.</item>
-        <item>Embrace the journey, not just the destination.</item>
-        <item>Chase your goals, not your fears.</item>
-        <item>Your potential is endless; unlock it.</item>
+        <item>תנו לחיוך שלכם לשנות את העולם.</item>
+        <item>החיים הם סיפור; עשו שכל פרק יהיה משמעותי.</item>
+        <item>מיצאו הנאה ברגע הרגיל.</item>
+        <item>הטוב ביותר עוד יגיע, תמשיכו כך.</item>
+        <item>ההזדמנות שלך להפוך את \'הלואי\' ל\'הווה\'</item>
+        <item>תיפסו את היום, התחילו ממש עכשיו.</item>
+        <item>האושר הוא בחירה שניתן לבחור בכל זמן.</item>
+        <item>האמינו בעצמכם, גם באחה\"ץ מנומנם.</item>
+        <item>תנו למעשיכם להשמיע קול חזק משל השעון.</item>
+        <item>חייכם הם מה שתעשו מהם; עשו אותם מדהימים.</item>
+        <item>חילמו בגדול, עיבדו קשה, ולעולם אל תוותרו.</item>
+        <item>יש בכם עוצמה גדולה יותר ממה שאתם חושבים.</item>
+        <item>כל נסיגה היא הכנה לשיבה.</item>
+        <item>אמצו את המסע, לא רק את היעד.</item>
+        <item>רידפו אחר מטרותיכם, לא אחר חששותיכם.</item>
+        <item>הפונציאל שלכם אינסופי; שחררו אותו.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Embrace the present moment, no matter the hour.</item>
-        <item>In every dusk, find a new dawn of opportunity.</item>
-        <item>Life is a journey; enjoy the scenery along the way.</item>
-        <item>Your attitude shapes your reality.</item>
-        <item>Your story is still being written, even as the sun sets.</item>
-        <item>Capture the beauty in the ordinary moments.</item>
-        <item>It\'s time to reflect and reset.</item>
+        <item>אמצו את הרגע הנוכחי, לא משנה מה השעה.</item>
+        <item>בכל דמדומי ערב, מיצאו שחר חדש של הזדמנויות.</item>
+        <item>החיים הם מסע; תיהנו מהנוף שבדרך.</item>
+        <item>הגישה שלך מעצבת את המציאות שלך.</item>
+        <item>הסיפור שלך ממשיך להיכתב, גם כאשר השמש שוקעת.</item>
+        <item>מיצאו את היופי שברגעים הרגילים.</item>
+        <item>זה הזמן להרהר ולאתחל מחדש.</item>
         <item>Choose joy, no matter the time on the clock.</item>
         <item>Opportunities don\'t clock out in the evening.</item>
         <item>Be the reason someone smiles.</item>
