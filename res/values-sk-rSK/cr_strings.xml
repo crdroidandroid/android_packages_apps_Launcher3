@@ -118,11 +118,11 @@
     <string name="quick_event_rom_intro_welcome">Vitajte v crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">Čas na crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
+        <item>Ďakujeme, že ste si nás vybrali</item>
+        <item>Máte nás radi? Pošlite nám pivo</item>
+        <item>Vôbec najlepšia ROM.</item>
+        <item>Pozdrav nás na Telegrame</item>
+        <item>Začnite klepnutím sem</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Dobré ráno.</string>
@@ -151,13 +151,13 @@
         <item>Aký krásny deň!</item>
         <item>Prajeme pekný deň!</item>
         <item>Čo tak malý 5 minútový spánok?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Mornings are a fresh canvas for your daily masterpiece.</item>
-        <item>Embrace the sunrise of opportunity each morning.</item>
+        <item>Poďme na to.</item>
+        <item>Rána sú čistým plátnom pre tvoje každodenné umelecké diela.</item>
+        <item>Chop sa príležitosti každé ráno.</item>
         <item>In the early light, find the power to illuminate your path.</item>
-        <item>Your day begins with endless possibilities.</item>
-        <item>Every sunrise is a reminder that you can start anew.</item>
-        <item>Awake with purpose, conquer the day ahead.</item>
+        <item>Tvoj deň začína nekonečnými možnosťami.</item>
+        <item>Každý východ slnka Ti pripomína, že vždy môžeš začať znova.</item>
+        <item>Prebuď sa s poslaním a dobi deň pre sebou.</item>
         <item>Your thoughts can be the foundation of great achievements.</item>
         <item>The world awakens, and so does your potential.</item>
         <item>The first chapter in your daily adventure.</item>
@@ -206,7 +206,7 @@
         <item>Moments of magic can happen at any hour.</item>
         <item>Your life is what you make of it; make it extraordinary.</item>
         <item>Stay curious, stay grateful.</item>
-        <item>Be the change you wish to see in the world.</item>
+        <item>Buď zmenou, ktorú chceš vidieť vo svete.</item>
         <item>Believe in yourself; you are capable of amazing things.</item>
         <item>The only limit is the one you set for yourself.</item>
         <item>Success begins with a single step.</item>
@@ -281,13 +281,13 @@
         <item>What\'s on your mind?</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Winner Winner ....?</item>
+        <item>Víťaz, víťaz ....?</item>
         <item>rm -rf \/</item>
-        <item>Pringles aren\'t actually potato chips..</item>
-        <item>Remember to check device\'s battery level!</item>
-        <item>Check your email/messages.</item>
-        <item>Check your to-do list if you have one.</item>
-        <item>You can disable quickspace via home settings.</item>
+        <item>Pringles v skutočnosti nie sú zemiakové chipsy..</item>
+        <item>Vždy kontroluj stav batérie!</item>
+        <item>Skontroluj svoje emaily/správy.</item>
+        <item>Skontroluj si zoznam úloh, ak nejaký máš.</item>
+        <item>Quickspace môžeš zakázať v nastaveniach domovskej obrazovky.</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Návrhy</string>
