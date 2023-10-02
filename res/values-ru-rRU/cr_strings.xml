@@ -42,15 +42,15 @@
     <string name="msg_minus_one_on_right">Когда вы проводите влево с главного Рабочего стола</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Названия приложений на рабочем столе</string>
-    <string name="drawer_show_labels">Названия приложений в меню</string>
+    <string name="desktop_show_labels">Показывать подписи значков</string>
+    <string name="drawer_show_labels">Показывать подписи значков</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">по умолчанию</string>
     <string name="custom_seekbar_default_value_to_set">Значение по умолчанию: <xliff:g id="v">%s</xliff:g>\nУдерживайте для установки</string>
     <string name="custom_seekbar_default_value_is_set">Установлено значение по умолчанию</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Размер иконки</string>
+    <string name="icon_size_title">Размер значка</string>
     <!-- Font size -->
     <string name="font_size_title">Размер шрифта</string>
     <!-- App label - max lines -->
@@ -64,8 +64,8 @@
     <string name="label_voice_search">Голосовой поиск</string>
     <string name="dock_search_title">Панель поиска Google</string>
     <string name="dock_search_summary">Строка поиска в нижней панели</string>
-    <string name="dock_theme_title">Тематический значок</string>
-    <string name="dock_theme_summary">Использовать сторонние значки для строки поиска</string>
+    <string name="dock_theme_title">Значок из темы</string>
+    <string name="dock_theme_summary">Для панели поиска использовать значки из темы</string>
     <string name="search_radius_title">Радиус скругления углов</string>
     <!-- Recents -->
     <string name="action_lens">Объектив</string>
