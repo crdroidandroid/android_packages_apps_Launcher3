@@ -40,12 +40,12 @@
     <string name="dev_options_summary">Включить некоторые скрытые функции на свой страх и риск</string>
     <!-- Edit workspace -->
     <string name="settings_lock_layout_title">Запретить редактирование</string>
-    <string name="settings_lock_layout_summary_on">Иконки и виджеты не могут быть добавлены, удалены и перемещены на главный экран</string>
-    <string name="settings_lock_layout_summary_off">Иконки и виджеты могут быть добавлены, удалены и перемещены на домашнем экране</string>
+    <string name="settings_lock_layout_summary_on">Значки и виджеты не могут быть добавлены, удалены или перемещены на рабочий стол</string>
+    <string name="settings_lock_layout_summary_off">Значки и виджеты могут быть добавлены, удалены и перемещены на домашнем экране</string>
     <string name="settings_edit_widgets_error">Невозможно добавить виджеты на главный экран</string>
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Отображать названия приложений на рабочем столе</string>
-    <string name="drawer_show_labels">Отображать названия приложений в меню</string>
+    <string name="desktop_show_labels">Показывать подписи значков</string>
+    <string name="drawer_show_labels">Показывать подписи значков</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Проведите пальцем для доступа к приложению Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -77,7 +77,7 @@
     <string name="custom_seekbar_default_value_to_set">Значение по умолчанию: <xliff:g id="v">%s</xliff:g>\nУдерживайте для установки</string>
     <string name="custom_seekbar_default_value_is_set">Значение по умолчанию установлено</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Размер значков</string>
+    <string name="icon_size_title">Размер значка</string>
     <!-- Font size -->
     <string name="font_size_title">Размер шрифта</string>
     <!-- App label - max lines -->
@@ -90,8 +90,8 @@
     <string name="dock_music_search_summary">Поиск музыки при нажатии на микрофон</string>
     <string name="dock_search_title">Панель поиска Google</string>
     <string name="dock_search_summary">Строка поиска в нижней панели</string>
-    <string name="dock_theme_title">Тематические значки</string>
-    <string name="dock_theme_summary">Использовать тематические значки для панели поиска</string>
+    <string name="dock_theme_title">Значок из темы</string>
+    <string name="dock_theme_summary">Для панели поиска использовать значки из темы</string>
     <string name="search_radius_title">Радиус скругления углов</string>
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Фон нижней панели</string>
