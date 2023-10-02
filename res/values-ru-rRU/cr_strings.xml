@@ -20,8 +20,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Categories -->
     <string name="home_category_title">Главный экран</string>
     <string name="home_category_summary">Установить панель Google now и другое</string>
-    <string name="icons_category_title">Иконки</string>
-    <string name="icons_category_summary">Настроить форму иконок и другое</string>
+    <string name="icons_category_title">Значки</string>
+    <string name="icons_category_summary">Настроить форму значков и другое</string>
     <string name="app_drawer_category_title">Меню приложений</string>
     <string name="app_drawer_category_summary">Настроить меню приложений</string>
     <string name="misc_category_title">Разное</string>
@@ -138,7 +138,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="custom_seekbar_default_value_to_set">Значение по умолчанию: <xliff:g id="v">%s</xliff:g>\nУстановите долгим нажатием</string>
     <string name="custom_seekbar_default_value_is_set">Установлено значение по умолчанию</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Размер значков</string>
+    <string name="icon_size_title">Размер значка</string>
     <!-- Font size -->
     <string name="font_size_title">Размер шрифта</string>
     <!-- App label - max lines -->
