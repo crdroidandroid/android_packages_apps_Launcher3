@@ -99,6 +99,7 @@ public class TaskViewSimulator implements TransformParams.BuilderProxy {
     public final AnimatedFloat taskSecondaryTranslation = new AnimatedFloat();
     public final AnimatedFloat taskGridTranslationX = new AnimatedFloat();
     public final AnimatedFloat taskGridTranslationY = new AnimatedFloat();
+    public final AnimatedFloat scrollScale = new AnimatedFloat();
 
     // Carousel properties
     public final AnimatedFloat carouselScale = new AnimatedFloat();
@@ -142,6 +143,9 @@ public class TaskViewSimulator implements TransformParams.BuilderProxy {
         Resources resources = context.getResources();
         mIsRecentsRtl = mOrientationState.getOrientationHandler().getRecentsRtlSetting(resources);
         carouselScale.value = 1f;
+        //nick@lmo-20231004 this does belong here to avoid flicker in animation due to race of setting
+        // value to 1. other code assumes it starts with 1 anyway, so let's just do it here
+        this.scrollScale.value = 1;
     }
 
     /**
@@ -452,6 +456,7 @@ public class TaskViewSimulator implements TransformParams.BuilderProxy {
         }
 
         float fullScreenProgress = Utilities.boundToRange(this.fullScreenProgress.value, 0, 1);
+        float scrollScale = this.scrollScale.value * (1f - fullScreenProgress) + fullScreenProgress;
         mCurrentFullscreenParams.setProgress(fullScreenProgress, recentsViewScale.value,
                 carouselScale.value);
 
@@ -463,6 +468,8 @@ public class TaskViewSimulator implements TransformParams.BuilderProxy {
 
         // Apply TaskView matrix: taskRect, optional transform, translate
         mMatrix.postTranslate(mTaskRect.left, mTaskRect.top);
+        mMatrix.postScale(scrollScale, scrollScale, mTaskRect.left + (mTaskRect.width() / 2),
+                mTaskRect.top + (mTaskRect.height() / 2));
         if (mTaskRectTransform != null) {
             mMatrix.postConcat(mTaskRectTransform);
 
@@ -526,6 +533,8 @@ public class TaskViewSimulator implements TransformParams.BuilderProxy {
                 + " recentsPrimaryT: " + recentsViewPrimaryTranslation.value
                 + " recentsSecondaryT: " + recentsViewSecondaryTranslation.value
                 + " recentsScroll: " + recentsViewScroll.value
+                + " scrollScale: " + scrollScale
+                + " this.scrollScale.value: " + this.scrollScale.value
                 + " pivot: " + mPivot
         );
     }
