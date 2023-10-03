@@ -3893,17 +3893,43 @@ public abstract class RecentsView<
                     && dismissedTaskView != null && dismissedTaskView.isLargeTile()
                     && nextFocusedTaskView == null && !dismissingForSplitSelection)) {
 
+                int offset = getOffsetToDismissedTask(scrollDiffPerPage, dismissedIndex, taskCount);
+                int scrollDiff = newScroll[i] - oldScroll[i] + offset;
                 if (i == dismissedIndex + 1 ||
                         dismissedIndex == taskCount -1 && i == dismissedIndex - 1) {
-                    if (child.getScaleX() <= dismissedTaskView.getScaleX())
+                    if (child.getScaleX() <= dismissedTaskView.getScaleX()) {
                         anim.setFloat(child, SCALE_PROPERTY,
                             dismissedTaskView.getScaleX(), LINEAR);
-                    else
+                        if (child instanceof TaskView && mRemoteTargetHandles != null) {
+                            TaskView tv = (TaskView) child;
+                            for (RemoteTargetHandle rth : mRemoteTargetHandles) {
+                                TransformParams params = rth.getTransformParams();
+                                RemoteAnimationTargets targets = params.getTargetSet();
+                                boolean match = false;
+                                for (int id : tv.getTaskIds()) {
+                                    if (targets != null && targets.findTask(id) != null) {
+                                        match = true;
+                                    }
+                                }
+                                if (match) {
+                                    anim.addOnFrameCallback(() -> {
+                                        rth.getTaskViewSimulator().scrollScale.value =
+                                                getPagedOrientationHandler().getPrimaryValue(
+                                                    tv.getScaleX(),
+                                                    tv.getScaleY()
+                                                );
+                                        // if scrollDiff != 0, we redraw in later(AOSP) code
+                                        if (mEnableDrawingLiveTile && scrollDiff == 0) {
+                                            redrawLiveTile();
+                                        }
+                                    });
+                                }
+                            }
+                        }
+                    } else
                         anim.setFloat(child, SCALE_PROPERTY, 1f, LINEAR);
                 }
 
-                int offset = getOffsetToDismissedTask(scrollDiffPerPage, dismissedIndex, taskCount);
-                int scrollDiff = newScroll[i] - oldScroll[i] + offset;
                 if (scrollDiff != 0) {
                     translateTaskWhenDismissed(
                             child,
@@ -6682,10 +6708,16 @@ public abstract class RecentsView<
         if (showAsGrid())
             return;
 
-        boolean isInLandscape = mOrientationState.getTouchRotation() != ROTATION_0
+        //nick@lmo-20231004 if rotating launcher is enabled, rotation works differently
+        // There are many edge cases (going from landscape app to recents, rotating in recents etc)
+        boolean touchInLandscape = mOrientationState.getTouchRotation() != ROTATION_0
                                 && mOrientationState.getTouchRotation() != ROTATION_180;
+        boolean layoutInLandscape = mOrientationState.getRecentsActivityRotation() != ROTATION_0
+                                && mOrientationState.getRecentsActivityRotation() != ROTATION_180;
+        boolean canRotateRecents = mOrientationState.isRecentsActivityRotationAllowed();
         int childCount = Math.min(mPageScrolls.length, getChildCount());
-        int curScroll = isInLandscape ? getScrollY() : getScrollX();
+        int curScroll = !canRotateRecents && touchInLandscape && !layoutInLandscape
+                             ? getScrollY() : getScrollX();
 
         for (int i = 0; i < childCount; i++) {
             View child = getChildAt(i);
@@ -6700,7 +6732,42 @@ public abstract class RecentsView<
                 child.setScaleX(scale);
                 child.setScaleY(scale);
             }
+            if (!(child instanceof TaskView && mRemoteTargetHandles != null)) continue;
+            TaskView tv = (TaskView) child;
+            for (RemoteTargetHandle rth : mRemoteTargetHandles) {
+                TransformParams params = rth.getTransformParams();
+                RemoteAnimationTargets targets = params.getTargetSet();
+                for (int id : tv.getTaskIds()) {
+                    if (targets != null && targets.findTask(id) != null) {
+                        rth.getTaskViewSimulator().scrollScale.value =
+                                getPagedOrientationHandler().getPrimaryValue(
+                                    tv.getScaleX(),
+                                    tv.getScaleY()
+                                );
+                    }
+                }
+            }
         }
+    }
+
+    public float getScrollScale(RemoteTargetHandle rth) {
+        int childCount = Math.min(mPageScrolls.length, getChildCount());
+        for (int i = 0; i < childCount; i++) {
+            View child = getChildAt(i);
+            if (!(child instanceof TaskView && !showAsGrid())) continue;
+            TaskView tv = (TaskView) child;
+            TransformParams params = rth.getTransformParams();
+            RemoteAnimationTargets targets = params.getTargetSet();
+            for (int id : tv.getTaskIds()) {
+                if (targets != null && targets.findTask(id) != null) {
+                    return getPagedOrientationHandler().getPrimaryValue(
+                                tv.getScaleX(),
+                                tv.getScaleY()
+                           );
+                }
+            }
+        }
+        return 1f;
     }
 
     /**
