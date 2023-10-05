@@ -116,26 +116,26 @@
     <string name="show_quickspace_summary">Tampilkan di bagian atas layar beranda Anda</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Selamat datang di crDroid! 𓂀</string>
-    <string name="quick_event_rom_intro_welcome_ext">saatnya crDroid!</string>
+    <string name="quick_event_rom_intro_welcome_ext">waktunya crDroid!</string>
     <string-array name="welcome_message_variants">
         <item>Terima kasih telah mimilih kami</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
+        <item>Suka dengan yang kami kerjakan? Berikan kami segelas bir</item>
+        <item>Rom terbaik yang pernah ada.</item>
+        <item>Sampaikan salam kepada kami di Telegram</item>
+        <item>Ketuk di sini untuk memulai</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
-    <string name="quickspace_ext_two">It\'s</string>
+    <string name="quickspace_grt_morning">Selamat pagi.</string>
+    <string name="quickspace_grt_evening">Selamat malam.</string>
+    <string name="quickspace_grt_afternoon">Selamat siang.</string>
+    <string name="quickspace_grt_night">Selamat malam.</string>
+    <string name="quickspace_grt_general">Hari yang indah.</string>
+    <string name="quickspace_ext_one">Hari ini adalah</string>
+    <string name="quickspace_ext_two">Ini</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
-    <string name="qe_now_playing_ext_one">Now playing</string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_unknown_artist">Artis tidak diketahui</string>
+    <string name="qe_now_playing_ext_one">Sedang diputar</string>
+    <string name="qe_now_playing_by">Oleh</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Sedang Diputar</string>
     <string name="quickspace_now_playing_summary">Tampilkan lagu yang Anda putar</string>
@@ -151,48 +151,48 @@
         <item>Sungguh hari yang indah!</item>
         <item>Semoga harimu menyenangkan!</item>
         <item>Bagaimana dengan tidur siang 5 menit?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Mornings are a fresh canvas for your daily masterpiece.</item>
-        <item>Embrace the sunrise of opportunity each morning.</item>
-        <item>In the early light, find the power to illuminate your path.</item>
-        <item>Your day begins with endless possibilities.</item>
-        <item>Every sunrise is a reminder that you can start anew.</item>
-        <item>Awake with purpose, conquer the day ahead.</item>
-        <item>Your thoughts can be the foundation of great achievements.</item>
-        <item>The world awakens, and so does your potential.</item>
-        <item>The first chapter in your daily adventure.</item>
-        <item>Let your morning routine be the launchpad for success.</item>
-        <item>Sunrise or not, your potential is always on the rise.</item>
-        <item>It\s time for fresh ideas and bold actions.</item>
-        <item>The early bird catches the worm, but you can catch your dreams.</item>
-        <item>Find the courage to chase your aspirations.</item>
-        <item>Rise and shine, for greatness awaits.</item>
-        <item>The best time to start is now.</item>
+        <item>Mari kita bekerja hari ini.</item>
+        <item>Pagi hari adalah kanvas segar untuk mahakarya harian Anda.</item>
+        <item>Rangkullah terbitnya peluang setiap pagi.</item>
+        <item>Di awal cahaya, temukan kekuatan untuk menerangi jalan Anda.</item>
+        <item>Hari Anda dimulai dengan kemungkinan yang tak terbatas.</item>
+        <item>Setiap matahari terbit adalah pengingat bahwa Anda dapat memulai hal baru.</item>
+        <item>Bangunlah dengan tujuan, taklukkan hari yang akan datang.</item>
+        <item>Pikiran Anda bisa menjadi landasan pencapaian besar.</item>
+        <item>Dunia bangkit, begitu pula potensi Anda.</item>
+        <item>Bab pertama dalam petualangan harian Anda.</item>
+        <item>Biarkan rutinitas pagi Anda menjadi landasan menuju kesuksesan.</item>
+        <item>Matahari terbit atau tidak, potensi Anda selalu meningkat.</item>
+        <item>Saatnya untuk ide-ide segar dan tindakan berani.</item>
+        <item>Burung yang datang lebih awal akan menangkap cacing, tetapi Anda dapat menangkap impian Anda.</item>
+        <item>Temukan keberanian untuk mengejar aspirasi Anda.</item>
+        <item>Bangkit dan bersinar, karena kehebatan menanti.</item>
+        <item>Waktu terbaik untuk memulai adalah sekarang.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Chase your dreams, not the minutes.</item>
-        <item>In every moment, a new opportunity.</item>
-        <item>Embrace the journey, not just the destination.</item>
-        <item>Today is a gift, that\'s why it\'s called the present.</item>
-        <item>Let your smile change the world.</item>
-        <item>Life is a story; make each chapter count.</item>
-        <item>Find joy in the ordinary moments.</item>
-        <item>The best is yet to come, keep it up.</item>
-        <item>Your chance to turn \'what if\' into \'what is.\'</item>
-        <item>Seize the day, starting right now.</item>
-        <item>Happiness is a choice you can make any time.</item>
-        <item>Believe in yourself, even on a sleepy afternoon.</item>
-        <item>Let your actions speak louder than the clock.</item>
-        <item>Your life is what you make of it; make it amazing.</item>
-        <item>Dream big, work hard, and never give up.</item>
-        <item>You are stronger than you think.</item>
-        <item>Every setback is a setup for a comeback.</item>
-        <item>Embrace the journey, not just the destination.</item>
-        <item>Chase your goals, not your fears.</item>
-        <item>Your potential is endless; unlock it.</item>
+        <item>Kejar impianmu, bukan menitnya.</item>
+        <item>Setiap saat, ada peluang baru.</item>
+        <item>Rangkullah perjalanannya, bukan hanya tujuannya.</item>
+        <item>Hari ini adalah anugerah, makanya disebut hadiah.</item>
+        <item>Biarkan senyummu mengubah dunia.</item>
+        <item>Hidup adalah sebuah cerita; membuat setiap bab berarti.</item>
+        <item>Temukan kegembiraan di momen-momen biasa.</item>
+        <item>Yang terbaik masih akan datang, pertahankan.</item>
+        <item>Kesempatan Anda untuk mengubah \'bagaimana jika\' menjadi \'apa adanya\'</item>
+        <item>Manfaatkan hari ini, mulai sekarang juga.</item>
+        <item>Kebahagiaan adalah pilihan yang bisa Anda buat kapan saja.</item>
+        <item>Percayalah pada diri sendiri, bahkan di sore hari yang mengantuk.</item>
+        <item>Biarkan tindakan Anda berbicara lebih keras daripada waktu.</item>
+        <item>Hidup Anda adalah apa yang Anda hasilkan; menjadikannya luar biasa.</item>
+        <item>Bermimpilah yang besar, bekerja keras, dan pantang menyerah.</item>
+        <item>Anda lebih kuat dari yang Anda kira.</item>
+        <item>Setiap kemunduran adalah persiapan untuk bangkit kembali.</item>
+        <item>Rangkullah perjalanannya, bukan hanya tujuannya.</item>
+        <item>Kejar tujuan Anda, bukan ketakutan Anda.</item>
+        <item>Potensi Anda tidak terbatas; membukanya.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Embrace the present moment, no matter the hour.</item>
+        <item>Rangkullah momen saat ini, kapan pun waktunya.</item>
         <item>In every dusk, find a new dawn of opportunity.</item>
         <item>Life is a journey; enjoy the scenery along the way.</item>
         <item>Your attitude shapes your reality.</item>
@@ -243,11 +243,11 @@
         <item>Happiness is a choice; choose it every day.</item>
         <item>Life is what you make it, so make it count.</item>
         <item>Stay focused, stay determined, stay unstoppable.</item>
-        <item>You are the author of your own story.</item>
-        <item>Strive for progress, not perfection.</item>
-        <item>Every day is a new beginning; make it a great one.</item>
-        <item>Inspire others by being your authentic self.</item>
-        <item>Your attitude determines your direction.</item>
+        <item>Anda adalah penulis cerita Anda sendiri.</item>
+        <item>Berusahalah untuk kemajuan, bukan kesempurnaan.</item>
+        <item>Setiap hari adalah awal yang baru; menjadikannya sesuatu yang hebat.</item>
+        <item>Menginspirasi orang lain dengan menjadi diri-sejati Anda.</item>
+        <item>Sikap Anda menentukan arah Anda.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Ketidaktahuan adalah kebahagiaan</item>
@@ -269,25 +269,25 @@
         <item>Lezat bahkan tanpa Sushi</item>
         <item>Lakukan sesuatu yang baik hari ini</item>
         <item>Inilah Pengalaman Pixel yang terbaik, kan?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
-        <item>Expecto Patronum</item>
-        <item>Wubba Lubba Dub Dub</item>
-        <item>Winner Winner ....?</item>
+        <item>Jangan ilusi, selamat datang di kenyataan!</item>
+        <item>Terima kasih atas dukungan Anda</item>
+        <item>Tidak ada festival untuk Derps - hanya kesempurnaan!</item>
+        <item>Salah satu pilihan buildbot terbaik</item>
+        <item>Kewarasan untuk Paranoia Anda</item>
+        <item>Cobalah makanan penutup Ice Cold</item>
+        <item>Sungguh pengalaman yang menyenangkan, bukan?</item>
+        <item>Evolusi hanyalah mitos, bukan?</item>
+        <item>Anda adalah apa yang Anda flash, jangan menjadi Kentang</item>
+        <item>Apa yang Anda pikirkan?</item>
+        <item>Harapkan Patronum</item>
+        <item>Sulih Suara Wubba Lubba</item>
+        <item>Menang Menang ....?</item>
         <item>rm -rf \/</item>
-        <item>Pringles aren\'t actually potato chips..</item>
-        <item>Remember to check device\'s battery level!</item>
-        <item>Check your email/messages.</item>
-        <item>Check your to-do list if you have one.</item>
-        <item>You can disable quickspace via home settings.</item>
+        <item>Pringles sebenarnya bukan keripik kentang..</item>
+        <item>Ingatlah untuk memeriksa level baterai perangkat!</item>
+        <item>Periksa email/pesan Anda.</item>
+        <item>Periksa daftar tugasmu jika kamu memilikinya.</item>
+        <item>Kamu dapat menonaktifkan quickspace melalui setelan beranda.</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Saran</string>
@@ -296,15 +296,15 @@
     <string name="quick_event_ambient_weather_title">Kondisi cuaca</string>
     <string name="quick_event_ambient_weather_summary">Tampilkan kondisi cuaca dan suhu saat ini</string>
     <string name="quick_event_ambient_weather_enabled_info">Membutuhkan layanan cuaca untuk diaktifkan</string>
-    <string name="quick_event_weather_clouds">Cloudy</string>
-    <string name="quick_event_weather_rain">Rainy</string>
-    <string name="quick_event_weather_clear">Sunny</string>
-    <string name="quick_event_weather_storm">Stormy</string>
-    <string name="quick_event_weather_snow">Snowy</string>
-    <string name="quick_event_weather_wind">Windy</string>
-    <string name="quick_event_weather_mist">Misty</string>
-    <string name="quick_event_weather_city_title">Current location</string>
-    <string name="quick_event_weather_city_summary">Display current location</string>
+    <string name="quick_event_weather_clouds">Berawan</string>
+    <string name="quick_event_weather_rain">Hujan</string>
+    <string name="quick_event_weather_clear">Cerah</string>
+    <string name="quick_event_weather_storm">Badai</string>
+    <string name="quick_event_weather_snow">Bersalju</string>
+    <string name="quick_event_weather_wind">Berangin</string>
+    <string name="quick_event_weather_mist">Berkabut</string>
+    <string name="quick_event_weather_city_title">Lokasi saat ini</string>
+    <string name="quick_event_weather_city_summary">Menampilkan lokasi saat ini</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Transparansi Latar Belakang</string>
     <!-- Taskbar -->
@@ -351,7 +351,7 @@
     <string name="single_page_center_title">Pusat satu halaman</string>
     <string name="single_page_center_summary">Tengahkan wallpaper jika hanya menggunakan satu halaman</string>
     <!-- Dark Status Bar -->
-    <string name="perf_dark_status_bar_title">Dark status bar</string>
-    <string name="perf_dark_status_bar_summary">Use dark status bar on Home screen</string>
-    <string name="intent_no_app_clock_found">Unable to find calendar or clock activity</string>
+    <string name="perf_dark_status_bar_title">Bilah status gelap</string>
+    <string name="perf_dark_status_bar_summary">Gunakan bilah status gelap di layar beranda</string>
+    <string name="intent_no_app_clock_found">Tidak dapat menemukan aktivitas kalender atau jam</string>
 </resources>
