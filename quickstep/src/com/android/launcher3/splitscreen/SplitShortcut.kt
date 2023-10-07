@@ -73,7 +73,7 @@ T : ActivityContext? {
                 SplitConfigurationOptions.getLogEventForPosition(position.stagePosition)
             return SplitSelectSource(
                 mOriginalView,
-                BitmapDrawable(bitmap),
+                BitmapDrawable(mOriginalView.context.resources, bitmap),
                 intent,
                 position,
                 mItemInfo,
