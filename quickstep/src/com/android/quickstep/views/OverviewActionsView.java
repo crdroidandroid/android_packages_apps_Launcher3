@@ -160,10 +160,10 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
     @Override
     public void onVisibilityAggregated(boolean isVisible) {
         super.onVisibilityAggregated(isVisible);
-        if (isVisible) {
-            mShakeUtils.bindShakeListener(this);
+        if (isVisible && mShakeClearAll) {
+            mShakeUtils.registerShakeListener(this);
         } else {
-            mShakeUtils.unBindShakeListener(this);
+            mShakeUtils.unregisterShakeListener(this);
         }
     }
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.util;
+package com.android.launcher3.util
 
 import android.content.Context
 import android.hardware.Sensor
@@ -24,7 +24,9 @@ import android.hardware.SensorManager
 import kotlin.math.sqrt
 
 class ShakeUtils(context: Context) : SensorEventListener {
-    private var mOnShakeListeners: ArrayList<OnShakeListener>? = null
+    private val mSensorManager = context.getSystemService(Context.SENSOR_SERVICE) as SensorManager
+    private val sensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+    private var mOnShakeListeners = ArrayList<OnShakeListener>()
 
     // Last time we triggered shake
     private var mLastShakeTime = 0L
@@ -39,20 +41,40 @@ class ShakeUtils(context: Context) : SensorEventListener {
         fun onShake(speed: Double)
     }
 
-    fun bindShakeListener(listener: OnShakeListener?) {
-        if (listener != null) {
-            mOnShakeListeners?.add(listener)
-        }
+    companion object {
+        //  Minimal time interval of position changes
+        private const val MIN_SHAKE_INTERVAL = 1024
+
+        // Minimal shake speed
+        private const val SPEED_SHAKE_MILLISECONDS = 400
+
+        // Minimal time interval between two shakes
+        private const val SHAKE_INTERVAL_MILLISECOND = 55
     }
 
-    fun unBindShakeListener(listener: OnShakeListener) {
-        mOnShakeListeners?.remove(listener)
+    private var registered = false
+        set(value) {
+            if (value != field) {
+                field = value
+                if (value) {
+                    mSensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_UI)
+                } else {
+                    mSensorManager.unregisterListener(this)
+                }
+            }
+        }
+
+    fun registerShakeListener(listener: OnShakeListener) {
+        mOnShakeListeners.add(listener)
+        registered = mOnShakeListeners.size > 0
+    }
+
+    fun unregisterShakeListener(listener: OnShakeListener) {
+        mOnShakeListeners.remove(listener)
+        registered = mOnShakeListeners.size > 0
     }
 
     override fun onSensorChanged(event: SensorEvent) {
-        if (event == null) {
-            return
-        }
         val curUpdateTime = System.currentTimeMillis()
         // Times between two shakes
         val timeInterval = curUpdateTime - mLastUpdateTime
@@ -85,31 +107,8 @@ class ShakeUtils(context: Context) : SensorEventListener {
             return
         }
         mLastShakeTime = curShakeTime
-        mOnShakeListeners?.let {
-            for (i in it.indices) {
-                it[i].onShake(speed)
-            }
-        }
+        mOnShakeListeners.forEach { it.onShake(speed) }
     }
 
     override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {}
-
-    companion object {
-
-        //  Minimal time interval of position changes
-        private const val MIN_SHAKE_INTERVAL = 1024
-
-        // Minimal shake speed
-        private const val SPEED_SHAKE_MILLISECONDS = 400
-
-        // Minimal time interval between two shakes
-        private const val SHAKE_INTERVAL_MILLISECOND = 55
-    }
-
-    init {
-        val mSensorManager = context.getSystemService(Context.SENSOR_SERVICE) as SensorManager
-        val sensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
-        mSensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_UI)
-        mOnShakeListeners = ArrayList()
-    }
 }
