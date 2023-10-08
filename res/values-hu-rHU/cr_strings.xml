@@ -116,31 +116,26 @@
     <string name="show_quickspace_summary">Az Ön kezdőképernyőjének tetején jelenik meg</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Üdvözöli a crDroid!</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">Itt a crDroid ideje!</string>
     <string-array name="welcome_message_variants">
-        <item>Legyen szép napja!</item>
         <item>Köszönjük, hogy minket választott</item>
         <item>Kedvel minket? Küldjön nekünk sört!</item>
         <item>Minden idők legjobb rendszere.</item>
-        <item>Írjon ránk a Telegramon</item>
+        <item>Köszönjön ránk a Telegramon</item>
         <item>Érintse meg itt a kezdéshez</item>
-        <item>Ne telefonozzon! Szerelmeskedjen!</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_midnight">Solemn midnight.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
-    <string name="quickspace_ext_two">It\'s</string>
-    <string name="quickspace_ext_three">It\'s</string>
+    <string name="quickspace_grt_morning">Jó reggelt.</string>
+    <string name="quickspace_grt_evening">Jó estét.</string>
+    <string name="quickspace_grt_afternoon">Jó napot.</string>
+    <string name="quickspace_grt_night">Jó éjszakát.</string>
+    <string name="quickspace_grt_general">Jó napot.</string>
+    <string name="quickspace_ext_one">Ma</string>
+    <string name="quickspace_ext_two">Ez </string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
-    <string name="qe_now_playing_ext_one">Now playing</string>
-    <string name="qe_now_playing_ext_two"></string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_unknown_artist">Ismeretlen előadó</string>
+    <string name="qe_now_playing_ext_one">Most hallható </string>
+    <string name="qe_now_playing_by">Előadja </string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Most hallható </string>
     <string name="quickspace_now_playing_summary">Az épp hallható szám kiírása</string>
@@ -156,70 +151,103 @@
         <item>Micsoda szép nap!</item>
         <item>Legyen szép napja!</item>
         <item>Mit szólna egy 5 perces szunyókáláshoz?</item>
-        <item>Ez is egy módja az ébredésnek.</item>
-        <item>Meg kell változtatnia az ébresztési hangot.</item>
-        <item>Ez egy szép napnak tűnik, nem?</item>
         <item>Lásson neki a reggelinek.</item>
-        <item>Mindenképp ellenőrizze az időjárást</item>
-        <item>Még egy kicsit álmos lehet</item>
-        <item>Szétnézett már odakinn?</item>
-        <item>Lásson neki a munkának.</item>
-        <item>Good luck today!</item>
-        <item>Toggling the switch can fix stucked responses.</item>
-        <item>Start your day snuke.</item>
-        <item>Don\'t forget about mental health.</item>
-        <item>Life is good.</item>
-        <item>Enjoy your breakfast.</item>
+        <item>A reggelek adják a friss vásznat a napi remekművéhez.</item>
+        <item>Élje át minden reggel a lehetőségek napfelkeltéjét.</item>
+        <item>Találja meg a korai fényben azt az erőt, amellyel megvilágíthatja az utat.</item>
+        <item>Minden nap végtelen lehetőségekkel kezdődik.</item>
+        <item>Minden napfelkelte emlékeztet arra, hogy minden újrakezdhető.</item>
+        <item>Ébredjen céltudatosan, győzze le az Ön előtt álló napot.</item>
+        <item>Gondolataiból születhetnek a nagyszerű eredmények</item>
+        <item>A világ felébred, és az Ön lehetőségei is.</item>
+        <item>Így indul az Ön napi kalandja.</item>
+        <item>A reggeli megszokásaiból alakul ki a sikerességének indítópultja.</item>
+        <item>Napkelte vagy sem, az Ön potenciálja folyton növekszik.</item>
+        <item>Itt az ideje a friss ötleteknek és a merész tetteknek.</item>
+        <item>A hajnali madár elkapja a férget, ahogy te is elérheted az álmaidat.</item>
+        <item>Találja meg bátorságát és érje el céljait.</item>
+        <item>Kelj fel és ragyogj, hogy naggyá válhass.</item>
+        <item>Most jött el az ideje elkezdeni.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Don\'t forget to stay hydrated!</item>
-        <item>Remember to eat some snacks.</item>
-        <item>UV rays are more harmful in the afternoon.</item>
-        <item>It is afternoon right now.</item>
-        <item>Always check device\'s battery levels!</item>
-        <item>Remember to check your email/messages.</item>
-        <item>Please check your to-do list if you have one.</item>
-        <item>Don\'t forget to prepare your dinner.</item>
-        <item>Enjoy your day.</item>
-        <item>Hang on! The day is almost done!</item>
-        <item>Have some fun.</item>
+        <item>Az álmait hajszolja, ne a perceket.</item>
+        <item>Minden másodperc egy új lehetőség.</item>
+        <item>Hogy a célodhoz érj, utaznod is kell.</item>
+        <item>A mai nap ajándék, ezért hívják meglepetésnek.</item>
+        <item>Az Ön mosolya változtathatja meg a világot.</item>
+        <item>Az élet egy történet; minden fejezete számít.</item>
+        <item>Találja meg az örömöt a hétköznapi pillanatokban.</item>
+        <item>A legjobb még hátravan, ne adja fel!</item>
+        <item>Változtassa a \'mi lenne ha\'-t \'mi van\'-ra.</item>
+        <item>Kaparintsa meg a mai napot, kezdje most.</item>
+        <item>A boldogság egy lehetőség, Ön dönt hogy választja-e.</item>
+        <item>Bízzon magában még egy álmos délutánon is.</item>
+        <item>Hagyja, hogy tettei hangosabban ketyegjenek, mint az óra.</item>
+        <item>Az Ön élete olyan, amilyenné alakítja; tegye bámulatossá.</item>
+        <item>Álmodjon nagyot, dolgozzon keményen és sose adja fel.</item>
+        <item>Ön sokkal erősebb, mint gondolná.</item>
+        <item>Minden hanyatlás egy felemelkedés előkészülete.</item>
+        <item>Hogy a célodhoz érj, utaznod is kell.</item>
+        <item>A céljaival törődjön, ne a félelmeivel.</item>
+        <item>A lehetőségek végtelenek. Használja ki őket!</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Always stay hydrated!</item>
-        <item>8 hours of sleep is a must.</item>
-        <item>It is evening right now.</item>
-        <item>Remember to full charge me before you sleep.</item>
-        <item>Remember to check your email/messages.</item>
-        <item>Please check your to-do list if you have one.</item>
-        <item>Remember to eat dinner.</item>
-        <item>Always check the lights and sockets.</item>
-        <item>Enjoy the night.</item>
-        <item>Hey there! Give yourself some rest!</item>
-        <item>Relax and do some rest.</item>
+        <item>Élje meg a pillanatot! Ne foglalkozzon az órákkal.</item>
+        <item>Minden alkonyatban találja meg egy lehetőség új hajnalát.</item>
+        <item>Az élet egy utazás; élvezze a tájat útközben.</item>
+        <item>Az Ön hozzáállása alakítja az Ön valóságát.</item>
+        <item>Az Ön élettörténete folyamatosan íródik, még akkor is, amikor a nap lenyugszik.</item>
+        <item>Ragadja meg a szépséget a hétköznapi pillanatokban.</item>
+        <item>Ideje újragondolni és újrakezdeni.</item>
+        <item>Válassza az örömöt, nem számít, mennyi időt lát az órán.</item>
+        <item>Este sem fogynak el a lehetőségek.</item>
+        <item>Mosolyogtasson meg valakit.</item>
+        <item>Az Ön lehetőségei nem ismernek határokat.</item>
+        <item>A varázslatos pillanatok bármelyik percben megtörténhetnek.</item>
+        <item>Az Ön élete olyan, amilyenné alakítja; tegye rendkívülivé.</item>
+        <item>Maradjon kíváncsi, maradjon hálás.</item>
+        <item>Legyen Ön a változás, amit a világban látni kíván.</item>
+        <item>Bízzon magában; Ön csodálatos dolgokra képes.</item>
+        <item>Egyetlen korlát létezik: amit az ember önmagának szab.</item>
+        <item>Minden siker egy lépéssel kezdődik.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Jó éjszakát!</item>
-        <item>Aludjon jól!</item>
-        <item>Holnap találkozunk!</item>
-        <item>Szép álmokat!</item>
-        <item>Ne maradjon ébren túl későig</item>
-        <item>Legyen pihentető az álma</item>
-        <item>Többet kéne aludnia</item>
-        <item>Eljött a relaxálás ideje</item>
-        <item>Élvezze az éjszakát!</item>
-        <item>Eljött az akkufeltöltés ideje!</item>
+        <item>Ragadja meg az éjszakát, mert megvannak a maga titkai.</item>
+        <item>Az este csendjében találja meg a nyugalmat.</item>
+        <item>Az élet legnagyobb kalandjai a sötétben kezdődhetnek.</item>
+        <item>Az Ön útja a naplemente után is folytatódik.</item>
+        <item>Legyen az éjszaka az Ön festővászona, fesse tele álmokkal.</item>
+        <item>Az este csendjében találja meg belső békéjét.</item>
+        <item>A csillagok a legsötétebb órákban ragyognak a legfényesebben.</item>
+        <item>A késői órákban is álmodjon nagyot.</item>
+        <item>Az élet egy történet, amely megírásra vár.</item>
+        <item>Itt az ideje a gondolkodásnak és a megújulásnak.</item>
+        <item>A késő esti gondolatok kora reggeli kinyilatkoztatásokhoz vezethetnek.</item>
+        <item>Találja meg az örömöt a mai este csendjében.</item>
+        <item>Az éjszakai égbolt az álmok hatalmas vászna.</item>
+        <item>A Ön lehetőségei nem ismerik az alvásidőt; űzze-hajtsa a szenvedélyeit.</item>
+        <item>Legyen bizakodó, még a legsötétebb órákban is.</item>
+        <item>A káosz közepette is találja meg belső nyugalmát.</item>
+        <item>Maradjon pozitív, dolgozzon keményen, valósítsa meg.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Hm... jó éjt?</item>
-        <item>Egy kicsit már késő van</item>
-        <item>Alvási ütemtervet kéne készítenie</item>
-        <item>Még ebben az órában is tevékeny?</item>
-        <item>Sleeping late is not healthy.</item>
-        <item>You need to sleep now.</item>
-        <item>Don\'t forget to sleep/prepare your breakfast.</item>
-        <item>Enjoy the midnight.</item>
-        <item>Sleep deficiency affects your body clock.</item>
-        <item>Please take care of yourself.</item>
+        <item>Az éjszaka a lehetőségek csendes suttogása.</item>
+        <item>Az éjszaka csendjében találja meg belső erejét.</item>
+        <item>Ölelje át a sötétséget, mert abban vannak álmai kulcsai.</item>
+        <item>A világ alszik, de a lehetőségek ébren vannak.</item>
+        <item>Lehet, hogy késő este van, de az ambíciók időtlenek.</item>
+        <item>Maradjon kíváncsi, maradjon ébren, és hagyja, hogy az éjszaka kalauzolja.</item>
+        <item>Találja meg bátorságát és érje el álmait.</item>
+        <item>A legjobb dolgok soha nem a komfortzónából jönnek.</item>
+        <item>Megvan az ereje, hogy létrehozza saját sorsát.</item>
+        <item>A boldogság egy lehetőség; válassza ezt minden nap.</item>
+        <item>Számítson rá, hogy az élete olyan, amilyenné Ön alakítja.</item>
+        <item>Maradjon koncentrált, maradjon határozott, maradjon megállíthatatlan.</item>
+        <item>Ön írja saját életének regényét.</item>
+        <item>Ne a tökéletességre törekedjen, hanem a fejlődésre.</item>
+        <item>Minden nap egy új kezdet; tegye naggyá.</item>
+        <item>Inspiráljon másokat azzal, hogy hiteles marad.</item>
+        <item>A hozzáállása határozza meg az irányt.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Boldogok a lelki-szegények</item>
@@ -241,8 +269,7 @@
         <item>Szusi nélkül is finom</item>
         <item>Tegyen ma valami kedveset</item>
         <item>Ez a legmenőbb Pixel Experience, vagy mégsem?</item>
-        <item>Hogy mennek a dolgok?</item>
-        <item>Nem ámítás, legyen üdvözölve a valóságban!</item>
+        <item>Nincs illúzió, legyen üdvözölve a valóságban!</item>
         <item>Köszönjük a támogatását!</item>
         <item>Nincs ostobák fesztiválja - csak a tökéletesség!</item>
         <item>Az építőrobot egyik legjobb válogatása</item>
@@ -252,32 +279,15 @@
         <item>Az evolúció csak kitaláció, ugye?</item>
         <item>Azzá válik, amit flessel...ne legyen már Krumpli</item>
         <item>Mi jár a fejében?</item>
-        <item>Expecto Patronum</item>
+        <item>Expecto Patrorum (Támogatást elfogadunk)</item>
         <item>Subi-Dubi-Dúúúúú</item>
-        <item>A győztes pedig.......?</item>
+        <item>Győztes-Győztes szituáció...?</item>
         <item>rm -rf \/</item>
-        <item>There are easter eggs hidden on this ROM.</item>
-        <item>Try checking the weather settings.</item>
-        <item>Try to avoid UV rays during noon.</item>
-        <item>Stay Hydrated!</item>
-        <item>Pringles aren\'t actually potato chips..</item>
-        <item>Laughing can increase bloodflow.</item>
-        <item>Coffee contains antioxidants.</item>
-        <item>Ketchup was once sold as medicine.</item>
-        <item>Cotton candy was invented by a dentist.</item>
-        <item>Don\'t skip your meal!</item>
-        <item>Remember to check device\'s battery levels!</item>
-        <item>Check your email/messages.</item>
-        <item>Check your to-do list if you have one.</item>
-        <item>You can disable quickspace via home settings.</item>
-        <item>Go get them!</item>
-        <item>Time to buy some rice!</item>
-        <item>Time for lunch!</item>
-        <item>All white rice starts brown.</item>
-        <item>Want some soda?</item>
-        <item>Always bring water to stay hydrated.</item>
-        <item>Space smells like seared steak..</item>
-        <item>Enjoy your day!</item>
+        <item>A Pringles valójában nem burgonyacsipsz.</item>
+        <item>Tudja mindig mennyire van feltöltve az akksi!</item>
+        <item>Nézze át e-mailjeit / üzeneteit.</item>
+        <item>Nézzen rá nincs-e valami új elvégzendő dolga.</item>
+        <item>A beállításokban módosíthat a Belepillantás viselkedésén</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Javaslatok</string>
@@ -286,15 +296,15 @@
     <string name="quick_event_ambient_weather_title">Időjárási helyzet</string>
     <string name="quick_event_ambient_weather_summary">Megjeleníti az épp aktuális hőfokot és adatokat</string>
     <string name="quick_event_ambient_weather_enabled_info">Az időjárás-szolgáltatás engedélyezése szükséges</string>
-    <string name="quick_event_weather_clouds">Cloudy</string>
-    <string name="quick_event_weather_rain">Rainy</string>
-    <string name="quick_event_weather_clear">Sunny</string>
-    <string name="quick_event_weather_storm">Stormy</string>
-    <string name="quick_event_weather_snow">Snowy</string>
-    <string name="quick_event_weather_wind">Windy</string>
-    <string name="quick_event_weather_mist">Misty</string>
-    <string name="quick_event_weather_city_title">Current location</string>
-    <string name="quick_event_weather_city_summary">Display current location</string>
+    <string name="quick_event_weather_clouds">Felhős</string>
+    <string name="quick_event_weather_rain">Esős</string>
+    <string name="quick_event_weather_clear">Napos</string>
+    <string name="quick_event_weather_storm">Viharos</string>
+    <string name="quick_event_weather_snow">Havas</string>
+    <string name="quick_event_weather_wind">Szeles</string>
+    <string name="quick_event_weather_mist">Ködös</string>
+    <string name="quick_event_weather_city_title">Jelenlegi tartózkodási hely</string>
+    <string name="quick_event_weather_city_summary">Jelenítse meg az aktuális pozíciót</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Háttérátlátszóság</string>
     <!-- Taskbar -->
@@ -341,7 +351,7 @@
     <string name="single_page_center_title">Centerezett egyoldalas</string>
     <string name="single_page_center_summary">Helyezze középre a háttérképet, ha csak egyetlen oldalt használ</string>
     <!-- Dark Status Bar -->
-    <string name="perf_dark_status_bar_title">Dark status bar</string>
-    <string name="perf_dark_status_bar_summary">Use dark status bar on Home screen</string>
-    <string name="intent_no_app_clock_found">Unable to find calendar or clock activity</string>
+    <string name="perf_dark_status_bar_title">Sötét állapotsor</string>
+    <string name="perf_dark_status_bar_summary">Használja a sötét állapotsort a kezdőképernyőn</string>
+    <string name="intent_no_app_clock_found">Nem található naptári vagy óratevékenység</string>
 </resources>

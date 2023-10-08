@@ -118,28 +118,23 @@
     <string name="quick_event_rom_intro_welcome">Сардэчна запрашаем у crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
     <string-array name="welcome_message_variants">
-        <item>Добрага дня</item>
-        <item>Дзякуй, што выбралі нас</item>
-        <item>Любіце нас? Дашліце нам піва</item>
-        <item>Лепшая прашыўка ў свеце.</item>
-        <item>Пагаварыце з намі ў Telegram</item>
-        <item>Дакраніцеся тут, каб пачаць</item>
-        <item>Мы любім цябе 3000</item>
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Good morning.</string>
     <string name="quickspace_grt_evening">Good evening.</string>
     <string name="quickspace_grt_afternoon">Good afternoon.</string>
     <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_midnight">Solemn midnight.</string>
     <string name="quickspace_grt_general">Good day.</string>
     <string name="quickspace_ext_one">Today is</string>
     <string name="quickspace_ext_two">It\'s</string>
-    <string name="quickspace_ext_three">It\'s</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
     <string name="qe_now_playing_ext_one">Now playing</string>
-    <string name="qe_now_playing_ext_two"></string>
     <string name="qe_now_playing_by">By</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Зараз гучыць</string>
@@ -156,70 +151,103 @@
         <item>Які цудоўны дзень!</item>
         <item>Добрага дня!</item>
         <item>А як з невялікім 5-хвілінным сном?</item>
-        <item>Гэта адзін са спосабаў прачнуцца.</item>
-        <item>Вы павінны змяніць гукі будзільніка.</item>
-        <item>Падобна, гэта цудоўны дзень, ці не так?</item>
-        <item>Давайце зробім гэта.</item>
-        <item>Праверце надвор\'е на ўсялякі выпадак</item>
-        <item>Яшчэ адчуваю сябе крыху сонным</item>
-        <item>Вы ўжо глядзелі на вуліцу?</item>
-        <item>Давайце зробім гэта.</item>
-        <item>Good luck today!</item>
-        <item>Toggling the switch can fix stucked responses.</item>
-        <item>Start your day snuke.</item>
-        <item>Don\'t forget about mental health.</item>
-        <item>Life is good.</item>
-        <item>Enjoy your breakfast.</item>
+        <item>Let\'s get this bread.</item>
+        <item>Mornings are a fresh canvas for your daily masterpiece.</item>
+        <item>Embrace the sunrise of opportunity each morning.</item>
+        <item>In the early light, find the power to illuminate your path.</item>
+        <item>Your day begins with endless possibilities.</item>
+        <item>Every sunrise is a reminder that you can start anew.</item>
+        <item>Awake with purpose, conquer the day ahead.</item>
+        <item>Your thoughts can be the foundation of great achievements.</item>
+        <item>The world awakens, and so does your potential.</item>
+        <item>The first chapter in your daily adventure.</item>
+        <item>Let your morning routine be the launchpad for success.</item>
+        <item>Sunrise or not, your potential is always on the rise.</item>
+        <item>It\s time for fresh ideas and bold actions.</item>
+        <item>The early bird catches the worm, but you can catch your dreams.</item>
+        <item>Find the courage to chase your aspirations.</item>
+        <item>Rise and shine, for greatness awaits.</item>
+        <item>The best time to start is now.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Don\'t forget to stay hydrated!</item>
-        <item>Remember to eat some snacks.</item>
-        <item>UV rays are more harmful in the afternoon.</item>
-        <item>It is afternoon right now.</item>
-        <item>Always check device\'s battery levels!</item>
-        <item>Remember to check your email/messages.</item>
-        <item>Please check your to-do list if you have one.</item>
-        <item>Don\'t forget to prepare your dinner.</item>
-        <item>Enjoy your day.</item>
-        <item>Hang on! The day is almost done!</item>
-        <item>Have some fun.</item>
+        <item>Chase your dreams, not the minutes.</item>
+        <item>In every moment, a new opportunity.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Today is a gift, that\'s why it\'s called the present.</item>
+        <item>Let your smile change the world.</item>
+        <item>Life is a story; make each chapter count.</item>
+        <item>Find joy in the ordinary moments.</item>
+        <item>The best is yet to come, keep it up.</item>
+        <item>Your chance to turn \'what if\' into \'what is.\'</item>
+        <item>Seize the day, starting right now.</item>
+        <item>Happiness is a choice you can make any time.</item>
+        <item>Believe in yourself, even on a sleepy afternoon.</item>
+        <item>Let your actions speak louder than the clock.</item>
+        <item>Your life is what you make of it; make it amazing.</item>
+        <item>Dream big, work hard, and never give up.</item>
+        <item>You are stronger than you think.</item>
+        <item>Every setback is a setup for a comeback.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Chase your goals, not your fears.</item>
+        <item>Your potential is endless; unlock it.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Always stay hydrated!</item>
-        <item>8 hours of sleep is a must.</item>
-        <item>It is evening right now.</item>
-        <item>Remember to full charge me before you sleep.</item>
-        <item>Remember to check your email/messages.</item>
-        <item>Please check your to-do list if you have one.</item>
-        <item>Remember to eat dinner.</item>
-        <item>Always check the lights and sockets.</item>
-        <item>Enjoy the night.</item>
-        <item>Hey there! Give yourself some rest!</item>
-        <item>Relax and do some rest.</item>
+        <item>Embrace the present moment, no matter the hour.</item>
+        <item>In every dusk, find a new dawn of opportunity.</item>
+        <item>Life is a journey; enjoy the scenery along the way.</item>
+        <item>Your attitude shapes your reality.</item>
+        <item>Your story is still being written, even as the sun sets.</item>
+        <item>Capture the beauty in the ordinary moments.</item>
+        <item>It\'s time to reflect and reset.</item>
+        <item>Choose joy, no matter the time on the clock.</item>
+        <item>Opportunities don\'t clock out in the evening.</item>
+        <item>Be the reason someone smiles.</item>
+        <item>Your potential knows no bounds.</item>
+        <item>Moments of magic can happen at any hour.</item>
+        <item>Your life is what you make of it; make it extraordinary.</item>
+        <item>Stay curious, stay grateful.</item>
+        <item>Be the change you wish to see in the world.</item>
+        <item>Believe in yourself; you are capable of amazing things.</item>
+        <item>The only limit is the one you set for yourself.</item>
+        <item>Success begins with a single step.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Дабранач!</item>
-        <item>Прыемных сноў!</item>
-        <item>Убачымся заўтра!</item>
-        <item>Салодкіх сноў!</item>
-        <item>Не заседжвайся занадта доўга</item>
-        <item>Добра выспацца</item>
-        <item>Пара спаць</item>
-        <item>Час расслабіцца</item>
-        <item>Атрымлівайце асалоду ад ночы!</item>
-        <item>Час зарадзіць батарэю!</item>
+        <item>Seize the night, for it holds its own mysteries.</item>
+        <item>In the quiet of the this evening, find serenity.</item>
+        <item>Life\'s greatest adventures can start in the darkness.</item>
+        <item>Your journey continues even after the sun has set.</item>
+        <item>Let the night be your canvas; paint it with dreams.</item>
+        <item>In the stillness of this evening, find your inner peace.</item>
+        <item>Stars shine brightest in the darkest hours.</item>
+        <item>Dream big, even in the late hours of the day.</item>
+        <item>Your life is a story waiting to be written.</item>
+        <item>It\'s time for reflection and renewal.</item>
+        <item>Late night thoughts can lead to early morning revelations.</item>
+        <item>Find joy in the stillness of this evening.</item>
+        <item>The night sky is a vast canvas of dreams.</item>
+        <item>Your potential knows no bedtime; pursue your passions.</item>
+        <item>Stay hopeful, even in the darkest hours.</item>
+        <item>In the midst of chaos, find your inner calm.</item>
+        <item>Stay positive, work hard, make it happen.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Гм... дабранач?</item>
-        <item>Цяпер ужо крыху позна</item>
-        <item>Вы павінны выправіць свой рэжым сну</item>
-        <item>Вы больш прадуктыўныя ў гэты час?</item>
-        <item>Sleeping late is not healthy.</item>
-        <item>You need to sleep now.</item>
-        <item>Don\'t forget to sleep/prepare your breakfast.</item>
-        <item>Enjoy the midnight.</item>
-        <item>Sleep deficiency affects your body clock.</item>
-        <item>Please take care of yourself.</item>
+        <item>Nights are the quiet whispers of opportunity.</item>
+        <item>In the stillness of the night, find your inner strength.</item>
+        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
+        <item>The world sleeps, but your potential is wide awake.</item>
+        <item>The night may be late, but your ambitions are timeless.</item>
+        <item>Stay curious, stay awake, and let nights guide you.</item>
+        <item>Find the courage to chase your dreams.</item>
+        <item>Great things never come from comfort zones.</item>
+        <item>You have the power to create your own destiny.</item>
+        <item>Happiness is a choice; choose it every day.</item>
+        <item>Life is what you make it, so make it count.</item>
+        <item>Stay focused, stay determined, stay unstoppable.</item>
+        <item>You are the author of your own story.</item>
+        <item>Strive for progress, not perfection.</item>
+        <item>Every day is a new beginning; make it a great one.</item>
+        <item>Inspire others by being your authentic self.</item>
+        <item>Your attitude determines your direction.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Няведанне - гэта шчасце</item>
@@ -241,43 +269,25 @@
         <item>Смачна нават без Сушы</item>
         <item>Зрабі што-небудзь прыемнае сёння</item>
         <item>Гэта лепшы Pixel Experience, ці не так?</item>
-        <item>Як усё адбываецца?</item>
-        <item>Ніякіх ілюзій, сардэчна запрашаем у рэальнасць!</item>
-        <item>Дзякуй за вашу падтрымку</item>
-        <item>Ніякага фестывалю для вар\'ятаў - толькі ідэал!</item>
-        <item>Адзін з лепшых выбаршчыкаў</item>
-        <item>Разважлівасць для вашай паранойі</item>
-        <item>Паспрабуйце ледзяныя дэсерты</item>
-        <item>Які цудоўны вопыт, ці не так?</item>
-        <item>Evolution гэта міф, праўда?</item>
-        <item>Вы тое, што прашываеце, не будзьце бульбай</item>
-        <item>Што вы маеце на ўвазе?</item>
+        <item>No illusions, welcome to reality!</item>
+        <item>Thank you for your support</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>Sanity for your Paranoia</item>
+        <item>Try Ice Cold desserts</item>
+        <item>What a lovely experience, isn\'t it?</item>
+        <item>Evolution is a myth, right?</item>
+        <item>You are what you flash, don\'t be Potato</item>
+        <item>What\'s on your mind?</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Пераможца Пераможца ....?</item>
+        <item>Winner Winner ....?</item>
         <item>rm -rf \/</item>
-        <item>There are easter eggs hidden on this ROM.</item>
-        <item>Try checking the weather settings.</item>
-        <item>Try to avoid UV rays during noon.</item>
-        <item>Stay Hydrated!</item>
         <item>Pringles aren\'t actually potato chips..</item>
-        <item>Laughing can increase bloodflow.</item>
-        <item>Coffee contains antioxidants.</item>
-        <item>Ketchup was once sold as medicine.</item>
-        <item>Cotton candy was invented by a dentist.</item>
-        <item>Don\'t skip your meal!</item>
-        <item>Remember to check device\'s battery levels!</item>
+        <item>Remember to check device\'s battery level!</item>
         <item>Check your email/messages.</item>
         <item>Check your to-do list if you have one.</item>
         <item>You can disable quickspace via home settings.</item>
-        <item>Go get them!</item>
-        <item>Time to buy some rice!</item>
-        <item>Time for lunch!</item>
-        <item>All white rice starts brown.</item>
-        <item>Want some soda?</item>
-        <item>Always bring water to stay hydrated.</item>
-        <item>Space smells like seared steak..</item>
-        <item>Enjoy your day!</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Прапановы</string>

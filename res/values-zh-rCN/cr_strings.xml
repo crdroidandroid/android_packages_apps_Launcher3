@@ -116,31 +116,26 @@
     <string name="show_quickspace_summary">在主屏幕的顶部显示</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">欢迎使用 crDroid！</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">crDroid 时间！</string>
     <string-array name="welcome_message_variants">
-        <item>享受美好的一天！</item>
         <item>感谢您选择我们</item>
-        <item>喜欢我们？送杯啤酒吧</item>
-        <item>有史以来最棒的 Rom。</item>
+        <item>喜欢我们吗？请我们一杯啤酒吧</item>
+        <item>有史以来最棒的 Rom</item>
         <item>在 Telegram 上和我们打招呼吧</item>
         <item>点击此处开始</item>
-        <item>我们爱你 3000 遍</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_midnight">Solemn midnight.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
-    <string name="quickspace_ext_two">It\'s</string>
-    <string name="quickspace_ext_three">It\'s</string>
+    <string name="quickspace_grt_morning">早上好。</string>
+    <string name="quickspace_grt_evening">晚上好。</string>
+    <string name="quickspace_grt_afternoon">下午好。</string>
+    <string name="quickspace_grt_night">晚安。</string>
+    <string name="quickspace_grt_general">日安。</string>
+    <string name="quickspace_ext_one">今天是</string>
+    <string name="quickspace_ext_two">现在是</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
-    <string name="qe_now_playing_ext_one">Now playing</string>
-    <string name="qe_now_playing_ext_two"></string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_unknown_artist">未知艺人</string>
+    <string name="qe_now_playing_ext_one">正在播放</string>
+    <string name="qe_now_playing_by">作者</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">正在播放</string>
     <string name="quickspace_now_playing_summary">显示您正在播放的歌曲</string>
@@ -156,70 +151,103 @@
         <item>多么美好的一天！</item>
         <item>祝您生活愉快！</item>
         <item>再睡 5 分钟？</item>
-        <item>这样醒来也不错。</item>
-        <item>换一下闹钟铃声试试？</item>
-        <item>今天还不错，不是吗？</item>
         <item>行动起来。</item>
-        <item>以防万一，看看天气预报吧</item>
-        <item>唔……还有点困吗</item>
-        <item>有没有看窗外的风景呢？</item>
-        <item>行动起来。</item>
-        <item>Good luck today!</item>
-        <item>Toggling the switch can fix stucked responses.</item>
-        <item>Start your day snuke.</item>
-        <item>Don\'t forget about mental health.</item>
-        <item>Life is good.</item>
-        <item>Enjoy your breakfast.</item>
+        <item>早晨是你每日杰作的新画布。</item>
+        <item>每天早上都有机会出现。</item>
+        <item>在早期阶段，找到照亮您道路的力量。</item>
+        <item>你的日子从无尽的可能开始。</item>
+        <item>每个日出都提醒你可以重新开始。</item>
+        <item>Awake with purpose, conquer the day ahead.</item>
+        <item>Your thoughts can be the foundation of great achievements.</item>
+        <item>The world awakens, and so does your potential.</item>
+        <item>The first chapter in your daily adventure.</item>
+        <item>Let your morning routine be the launchpad for success.</item>
+        <item>Sunrise or not, your potential is always on the rise.</item>
+        <item>It\s time for fresh ideas and bold actions.</item>
+        <item>The early bird catches the worm, but you can catch your dreams.</item>
+        <item>Find the courage to chase your aspirations.</item>
+        <item>Rise and shine, for greatness awaits.</item>
+        <item>The best time to start is now.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Don\'t forget to stay hydrated!</item>
-        <item>Remember to eat some snacks.</item>
-        <item>UV rays are more harmful in the afternoon.</item>
-        <item>It is afternoon right now.</item>
-        <item>Always check device\'s battery levels!</item>
-        <item>Remember to check your email/messages.</item>
-        <item>Please check your to-do list if you have one.</item>
-        <item>Don\'t forget to prepare your dinner.</item>
-        <item>Enjoy your day.</item>
-        <item>Hang on! The day is almost done!</item>
-        <item>Have some fun.</item>
+        <item>Chase your dreams, not the minutes.</item>
+        <item>In every moment, a new opportunity.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Today is a gift, that\'s why it\'s called the present.</item>
+        <item>Let your smile change the world.</item>
+        <item>Life is a story; make each chapter count.</item>
+        <item>Find joy in the ordinary moments.</item>
+        <item>The best is yet to come, keep it up.</item>
+        <item>Your chance to turn \'what if\' into \'what is.\'</item>
+        <item>Seize the day, starting right now.</item>
+        <item>Happiness is a choice you can make any time.</item>
+        <item>Believe in yourself, even on a sleepy afternoon.</item>
+        <item>Let your actions speak louder than the clock.</item>
+        <item>Your life is what you make of it; make it amazing.</item>
+        <item>Dream big, work hard, and never give up.</item>
+        <item>You are stronger than you think.</item>
+        <item>Every setback is a setup for a comeback.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Chase your goals, not your fears.</item>
+        <item>Your potential is endless; unlock it.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Always stay hydrated!</item>
-        <item>8 hours of sleep is a must.</item>
-        <item>It is evening right now.</item>
-        <item>Remember to full charge me before you sleep.</item>
-        <item>Remember to check your email/messages.</item>
-        <item>Please check your to-do list if you have one.</item>
-        <item>Remember to eat dinner.</item>
-        <item>Always check the lights and sockets.</item>
-        <item>Enjoy the night.</item>
-        <item>Hey there! Give yourself some rest!</item>
-        <item>Relax and do some rest.</item>
+        <item>Embrace the present moment, no matter the hour.</item>
+        <item>In every dusk, find a new dawn of opportunity.</item>
+        <item>Life is a journey; enjoy the scenery along the way.</item>
+        <item>Your attitude shapes your reality.</item>
+        <item>Your story is still being written, even as the sun sets.</item>
+        <item>Capture the beauty in the ordinary moments.</item>
+        <item>It\'s time to reflect and reset.</item>
+        <item>Choose joy, no matter the time on the clock.</item>
+        <item>Opportunities don\'t clock out in the evening.</item>
+        <item>Be the reason someone smiles.</item>
+        <item>Your potential knows no bounds.</item>
+        <item>Moments of magic can happen at any hour.</item>
+        <item>Your life is what you make of it; make it extraordinary.</item>
+        <item>Stay curious, stay grateful.</item>
+        <item>Be the change you wish to see in the world.</item>
+        <item>Believe in yourself; you are capable of amazing things.</item>
+        <item>The only limit is the one you set for yourself.</item>
+        <item>Success begins with a single step.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>晚安！</item>
-        <item>好好睡吧!</item>
-        <item>明天见！</item>
-        <item>祝您好梦！</item>
-        <item>不要睡得太晚了哦</item>
-        <item>睡个好觉</item>
-        <item>休息一会儿</item>
-        <item>放松一下吧</item>
-        <item>祝您有个美好的夜晚！</item>
-        <item>该充电了！</item>
+        <item>Seize the night, for it holds its own mysteries.</item>
+        <item>In the quiet of the this evening, find serenity.</item>
+        <item>Life\'s greatest adventures can start in the darkness.</item>
+        <item>Your journey continues even after the sun has set.</item>
+        <item>Let the night be your canvas; paint it with dreams.</item>
+        <item>In the stillness of this evening, find your inner peace.</item>
+        <item>Stars shine brightest in the darkest hours.</item>
+        <item>Dream big, even in the late hours of the day.</item>
+        <item>Your life is a story waiting to be written.</item>
+        <item>It\'s time for reflection and renewal.</item>
+        <item>Late night thoughts can lead to early morning revelations.</item>
+        <item>Find joy in the stillness of this evening.</item>
+        <item>The night sky is a vast canvas of dreams.</item>
+        <item>Your potential knows no bedtime; pursue your passions.</item>
+        <item>Stay hopeful, even in the darkest hours.</item>
+        <item>In the midst of chaos, find your inner calm.</item>
+        <item>Stay positive, work hard, make it happen.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>还不睡吗？</item>
-        <item>很晚了</item>
-        <item>考虑优化一下作息时间吧</item>
-        <item>你在这段时间工作，效率更高吗？</item>
-        <item>Sleeping late is not healthy.</item>
-        <item>You need to sleep now.</item>
-        <item>Don\'t forget to sleep/prepare your breakfast.</item>
-        <item>Enjoy the midnight.</item>
-        <item>Sleep deficiency affects your body clock.</item>
-        <item>Please take care of yourself.</item>
+        <item>Nights are the quiet whispers of opportunity.</item>
+        <item>In the stillness of the night, find your inner strength.</item>
+        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
+        <item>The world sleeps, but your potential is wide awake.</item>
+        <item>The night may be late, but your ambitions are timeless.</item>
+        <item>Stay curious, stay awake, and let nights guide you.</item>
+        <item>Find the courage to chase your dreams.</item>
+        <item>Great things never come from comfort zones.</item>
+        <item>You have the power to create your own destiny.</item>
+        <item>Happiness is a choice; choose it every day.</item>
+        <item>Life is what you make it, so make it count.</item>
+        <item>Stay focused, stay determined, stay unstoppable.</item>
+        <item>You are the author of your own story.</item>
+        <item>Strive for progress, not perfection.</item>
+        <item>Every day is a new beginning; make it a great one.</item>
+        <item>Inspire others by being your authentic self.</item>
+        <item>Your attitude determines your direction.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>天真是种幸福</item>
@@ -241,43 +269,25 @@
         <item>即使没有寿司也很美味</item>
         <item>日行一善</item>
         <item>这是最好的 Pixel 体验，不是吗？</item>
-        <item>最近怎么样？</item>
-        <item>这不是幻觉，欢迎来到现实！</item>
-        <item>感谢您的支持</item>
-        <item>没有给白痴庆祝的节日——只有完美！</item>
-        <item>Buildbot 的最佳选择之一</item>
-        <item>给偏执添点儿理智</item>
-        <item>来点儿冰镇甜点</item>
-        <item>多么美妙的经历，不是吗？</item>
-        <item>进化就像神话，是吧？</item>
-        <item>走自己的路，让别人说去吧</item>
-        <item>您在想什么呢？</item>
-        <item>守护神咒</item>
-        <item>我很痛苦，请帮帮我</item>
-        <item>大吉大利……？</item>
+        <item>No illusions, welcome to reality!</item>
+        <item>Thank you for your support</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>Sanity for your Paranoia</item>
+        <item>Try Ice Cold desserts</item>
+        <item>What a lovely experience, isn\'t it?</item>
+        <item>Evolution is a myth, right?</item>
+        <item>You are what you flash, don\'t be Potato</item>
+        <item>What\'s on your mind?</item>
+        <item>Expecto Patronum</item>
+        <item>Wubba Lubba Dub Dub</item>
+        <item>Winner Winner ....?</item>
         <item>rm -rf \/</item>
-        <item>There are easter eggs hidden on this ROM.</item>
-        <item>Try checking the weather settings.</item>
-        <item>Try to avoid UV rays during noon.</item>
-        <item>Stay Hydrated!</item>
         <item>Pringles aren\'t actually potato chips..</item>
-        <item>Laughing can increase bloodflow.</item>
-        <item>Coffee contains antioxidants.</item>
-        <item>Ketchup was once sold as medicine.</item>
-        <item>Cotton candy was invented by a dentist.</item>
-        <item>Don\'t skip your meal!</item>
-        <item>Remember to check device\'s battery levels!</item>
+        <item>Remember to check device\'s battery level!</item>
         <item>Check your email/messages.</item>
         <item>Check your to-do list if you have one.</item>
         <item>You can disable quickspace via home settings.</item>
-        <item>Go get them!</item>
-        <item>Time to buy some rice!</item>
-        <item>Time for lunch!</item>
-        <item>All white rice starts brown.</item>
-        <item>Want some soda?</item>
-        <item>Always bring water to stay hydrated.</item>
-        <item>Space smells like seared steak..</item>
-        <item>Enjoy your day!</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">建议</string>

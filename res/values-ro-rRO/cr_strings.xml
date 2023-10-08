@@ -118,28 +118,23 @@
     <string name="quick_event_rom_intro_welcome">Bine ai venit la crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">Timp pentru crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>O zi bună</item>
         <item>Vă mulțumim că ne-ați ales</item>
         <item>Ne iubiti? Trimite-ne o bere</item>
         <item>Cel mai bun Rom din totdeauna.</item>
         <item>Spune-ne salut pe Telegram</item>
         <item>Atingeți aici pentru a începe</item>
-        <item>Te iubim 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Bună dimineața.</string>
     <string name="quickspace_grt_evening">Bună seara.</string>
     <string name="quickspace_grt_afternoon">Bună ziua.</string>
     <string name="quickspace_grt_night">Noapte bună.</string>
-    <string name="quickspace_grt_midnight">Miezul nopții fericit.</string>
     <string name="quickspace_grt_general">O zi bună.</string>
     <string name="quickspace_ext_one">Astăzi este</string>
     <string name="quickspace_ext_two">Este</string>
-    <string name="quickspace_ext_three">Este</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="qe_now_playing_unknown_artist">Artist Necunoscut</string>
     <string name="qe_now_playing_ext_one">Se redă acum</string>
-    <string name="qe_now_playing_ext_two"></string>
     <string name="qe_now_playing_by">De</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Redare acum</string>
@@ -156,70 +151,103 @@
         <item>Ce zi frumoasă!</item>
         <item>O zi bună!</item>
         <item>Ce zici de o pauză de 5 minute?</item>
-        <item>Acesta este un mod de a te trezi.</item>
-        <item>Ar trebui să vă schimbați sunetele de alarmă.</item>
-        <item>Se pare că este o zi frumoasă, nu-i așa?</item>
-        <item>Hai să obținem această pâine.</item>
-        <item>Verificați vremea pentru orice eventualitate</item>
-        <item>Te simti somnoros deja</item>
-        <item>Te-ai uitat afară?</item>
-        <item>Să terminăm asta.</item>
-        <item>Mult noroc astăzi!</item>
-        <item>Comutarea comutatorului poate remedia răspunsurile blocate.</item>
-        <item>Începe ziua ta.</item>
-        <item>Nu uita de sănătatea mintală.</item>
-        <item>Viața este bună.</item>
-        <item>Bucură-te de micul dejun.</item>
+        <item>Sa obtinem aceasta paine.</item>
+        <item>Dimineațele sunt o pânză nouă pentru capodopera zilnică.</item>
+        <item>Încurajează răsărirea oportunităţilor în fiecare dimineaţă.</item>
+        <item>În lumina timpurie, găsește puterea de a vă ilumina calea.</item>
+        <item>Ziua ta începe cu posibilități nesfârșite.</item>
+        <item>Fiecare răsărit este un memento că poți începe din nou.</item>
+        <item>Awake with purpose, conquer the day ahead.</item>
+        <item>Gândurile tale pot sta la baza marilor realizări.</item>
+        <item>Lumea se trezește, la fel și potențialul tău.</item>
+        <item>Primul capitol din aventura ta zilnică.</item>
+        <item>Lăsați rutina de dimineață să fie panoul de lansare pentru succes.</item>
+        <item>Potențialul tău este mereu în creștere.</item>
+        <item>Este timpul pentru idei noi și acțiuni îndrăznețe.</item>
+        <item>The early bird catches the worm, but you can catch your dreams.</item>
+        <item>Find the courage to chase your aspirations.</item>
+        <item>Rise and shine, for greatness awaits.</item>
+        <item>The best time to start is now.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Nu uita să rămâi hidratat!</item>
-        <item>Amintește-ți să mănânci niște gustări.</item>
-        <item>Razele UV sunt mai dăunătoare după-amiaza.</item>
-        <item>Este după-amiaza acum.</item>
-        <item>Verifică întotdeauna nivelul bateriei dispozitivului!</item>
-        <item>Nu uita să vă verifici e-mailul/mesajele.</item>
-        <item>Vă rugăm să verificaţi lista de sarcini dacă aveţi una.</item>
-        <item>Nu uita să pregătești cina.</item>
-        <item>Bucură-te de ziua ta.</item>
-        <item>Rezistă! Ziua este aproape gata!</item>
-        <item>Distrează-te.</item>
+        <item>Chase your dreams, not the minutes.</item>
+        <item>In every moment, a new opportunity.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Today is a gift, that\'s why it\'s called the present.</item>
+        <item>Let your smile change the world.</item>
+        <item>Life is a story; make each chapter count.</item>
+        <item>Find joy in the ordinary moments.</item>
+        <item>The best is yet to come, keep it up.</item>
+        <item>Your chance to turn \'what if\' into \'what is.\'</item>
+        <item>Seize the day, starting right now.</item>
+        <item>Happiness is a choice you can make any time.</item>
+        <item>Believe in yourself, even on a sleepy afternoon.</item>
+        <item>Let your actions speak louder than the clock.</item>
+        <item>Your life is what you make of it; make it amazing.</item>
+        <item>Dream big, work hard, and never give up.</item>
+        <item>You are stronger than you think.</item>
+        <item>Every setback is a setup for a comeback.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Chase your goals, not your fears.</item>
+        <item>Your potential is endless; unlock it.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Rămâi mereu hidratat!</item>
-        <item>8 ore de somn sunt obligatorii.</item>
-        <item>Este seara acum.</item>
-        <item>Amintește-ți să mă încarci complet înainte de a adormi.</item>
-        <item>Nu uita să vă verifici e-mailul/mesajele.</item>
-        <item>Vă rugăm să verificaţi lista de sarcini dacă aveţi una.</item>
-        <item>Amintește-ți să mănânci cină.</item>
-        <item>Verifică întotdeauna luminile și prizele.</item>
-        <item>Bucura-te de noapte.</item>
-        <item>Hei acolo! Odihnește-te!</item>
-        <item>Relaxează-te și odihnește-te puțin.</item>
+        <item>Embrace the present moment, no matter the hour.</item>
+        <item>In every dusk, find a new dawn of opportunity.</item>
+        <item>Life is a journey; enjoy the scenery along the way.</item>
+        <item>Your attitude shapes your reality.</item>
+        <item>Your story is still being written, even as the sun sets.</item>
+        <item>Capture the beauty in the ordinary moments.</item>
+        <item>It\'s time to reflect and reset.</item>
+        <item>Choose joy, no matter the time on the clock.</item>
+        <item>Opportunities don\'t clock out in the evening.</item>
+        <item>Be the reason someone smiles.</item>
+        <item>Your potential knows no bounds.</item>
+        <item>Moments of magic can happen at any hour.</item>
+        <item>Your life is what you make of it; make it extraordinary.</item>
+        <item>Stay curious, stay grateful.</item>
+        <item>Be the change you wish to see in the world.</item>
+        <item>Believe in yourself; you are capable of amazing things.</item>
+        <item>The only limit is the one you set for yourself.</item>
+        <item>Success begins with a single step.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Nu bea prea multă apă înainte de a dormi.</item>
-        <item>Este seara acum.</item>
-        <item>Încercați să evitați încărcarea peste noapte, dacă este posibil.</item>
-        <item>Amintește-ți să verifici e-mailul/mesajele.</item>
-        <item>Vă rugăm să verificaţi lista de sarcini dacă aveţi una.</item>
-        <item>Amintește-ți să mănânci cină.</item>
-        <item>8 ore de somn sunt obligatorii.</item>
-        <item>Bucura-te de noapte.</item>
-        <item>Lugaw este o reţetă frumoasă pentru cină.</item>
-        <item>Bucuraţi-vă de somn.</item>
+        <item>Seize the night, for it holds its own mysteries.</item>
+        <item>In the quiet of the this evening, find serenity.</item>
+        <item>Life\'s greatest adventures can start in the darkness.</item>
+        <item>Your journey continues even after the sun has set.</item>
+        <item>Let the night be your canvas; paint it with dreams.</item>
+        <item>In the stillness of this evening, find your inner peace.</item>
+        <item>Stars shine brightest in the darkest hours.</item>
+        <item>Dream big, even in the late hours of the day.</item>
+        <item>Your life is a story waiting to be written.</item>
+        <item>It\'s time for reflection and renewal.</item>
+        <item>Late night thoughts can lead to early morning revelations.</item>
+        <item>Find joy in the stillness of this evening.</item>
+        <item>The night sky is a vast canvas of dreams.</item>
+        <item>Your potential knows no bedtime; pursue your passions.</item>
+        <item>Rămâi optimist, chiar şi în cele mai întunecate ore.</item>
+        <item>În mijlocul haosului, găsește-ți calmul interior.</item>
+        <item>Stay positive, work hard, make it happen.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Deficitul somnului este dăunător pentru sănătatea ta.</item>
-        <item>Nu uita să rămâi hidratat.</item>
-        <item>Deficitul de somn poate rupe producţia de melatonină.</item>
-        <item>Este miezul nopții.</item>
-        <item>Somnul târziu nu este sănătos.</item>
-        <item>Trebuie să dormi acum.</item>
-        <item>Nu uita să dormi/pregătești micul dejun.</item>
-        <item>Bucură-te de miezul nopții.</item>
-        <item>Deficitul de somn afectează timpul corpului dumneavoastră.</item>
-        <item>Te rog să ai grijă de tine.</item>
+        <item>Nights are the quiet whispers of opportunity.</item>
+        <item>In the stillness of the night, find your inner strength.</item>
+        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
+        <item>The world sleeps, but your potential is wide awake.</item>
+        <item>The night may be late, but your ambitions are timeless.</item>
+        <item>Stay curious, stay awake, and let nights guide you.</item>
+        <item>Find the courage to chase your dreams.</item>
+        <item>Great things never come from comfort zones.</item>
+        <item>You have the power to create your own destiny.</item>
+        <item>Happiness is a choice; choose it every day.</item>
+        <item>Life is what you make it, so make it count.</item>
+        <item>Stay focused, stay determined, stay unstoppable.</item>
+        <item>You are the author of your own story.</item>
+        <item>Strive for progress, not perfection.</item>
+        <item>Every day is a new beginning; make it a great one.</item>
+        <item>Inspire others by being your authentic self.</item>
+        <item>Your attitude determines your direction.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Ignoranta este Bliss</item>
@@ -241,43 +269,25 @@
         <item>Delicios chiar și fără Sushi</item>
         <item>Fă ceva drăguț astăzi</item>
         <item>Aceasta este cea mai bună experiență Pixel, nu-i așa?</item>
-        <item>Cum se duce totul?</item>
-        <item>Nicio iluzie, bun venit în realitate!</item>
-        <item>Vă mulțumim pentru sprijin</item>
-        <item>Niciun festival pentru Derps - doar perfecţiune!</item>
-        <item>Una dintre cele mai bune alegeri ale buildbot-ului</item>
-        <item>Sanitatea ta pentru Paranoia</item>
-        <item>Încearcă deserturile de gheață</item>
-        <item>Ce experiență minunată, nu-i așa?</item>
-        <item>Evoluția e un mit, nu?</item>
-        <item>Ești ceea ce faci flăcări, nu fii Cartofi</item>
-        <item>La ce te gandesti?</item>
+        <item>No illusions, welcome to reality!</item>
+        <item>Thank you for your support</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>Sanity for your Paranoia</item>
+        <item>Try Ice Cold desserts</item>
+        <item>What a lovely experience, isn\'t it?</item>
+        <item>Evolution is a myth, right?</item>
+        <item>You are what you flash, don\'t be Potato</item>
+        <item>What\'s on your mind?</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Câștigător ....?</item>
+        <item>Winner Winner ....?</item>
         <item>rm -rf \/</item>
-        <item>Există ouă de Paște ascunse în acest ROM.</item>
-        <item>Încercați să verificați setările de vreme.</item>
-        <item>Încercaţi să evitaţi razele UV în timpul prânzului.</item>
-        <item>Rămâi hidratat!</item>
-        <item>Pringles nu sunt de fapt chipsuri de cartofi..</item>
-        <item>Râsul poate crește fluxul sangvin.</item>
-        <item>Cafeaua conține antioxidanți.</item>
-        <item>Ketchup era cândva vândut ca medicament.</item>
-        <item>Bumbacul a fost inventat de un dentist.</item>
-        <item>Nu omite masa!</item>
-        <item>Nu uita să verifici nivelul bateriei dispozitivului!</item>
+        <item>Pringles aren\'t actually potato chips..</item>
+        <item>Remember to check device\'s battery level!</item>
         <item>Verifică-ți e-mailul/mesajele.</item>
         <item>Verifică lista de lucruri de făcut dacă ai una.</item>
         <item>Poți dezactiva spațiul rapid în setările lansatorului.</item>
-        <item>Du-te să le obții!</item>
-        <item>E timpul să cumperi niște orez!</item>
-        <item>E timpul pentru prânz!</item>
-        <item>Tot orezul alb începe brun.</item>
-        <item>Vrei niște suc?</item>
-        <item>Ia întotdeauna apă pentru a te menține hidratat.</item>
-        <item>Spațiul miroase a friptură prăjită..</item>
-        <item>Bucură-te de ziua ta!</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Sugestii</string>

@@ -118,28 +118,23 @@
     <string name="quick_event_rom_intro_welcome">Willkommen zu crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">crDroid Zeit!</string>
     <string-array name="welcome_message_variants">
-        <item>Schönen Tag dir</item>
         <item>Danke, dass du dich für uns entschieden hast</item>
         <item>Gefällt dir unsere Rom? Dann schick uns doch mal ’n Bier</item>
         <item>Beste Rom aller Zeiten.</item>
         <item>Besuch uns doch mal auf Telegram</item>
-        <item>Hier tippen, um zu beginnen</item>
-        <item>Wir haben dich lieb, mal 3000</item>
+        <item>Hier tippen zum Einrichten</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Guten Morgen.</string>
     <string name="quickspace_grt_evening">Guten Abend.</string>
     <string name="quickspace_grt_afternoon">Guten Nachmittag.</string>
     <string name="quickspace_grt_night">Gute Nacht.</string>
-    <string name="quickspace_grt_midnight">Feierliche Mitternacht.</string>
     <string name="quickspace_grt_general">Guten Tag.</string>
     <string name="quickspace_ext_one">Heute ist</string>
     <string name="quickspace_ext_two">Es ist</string>
-    <string name="quickspace_ext_three">Es ist</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="qe_now_playing_unknown_artist">Unbekannter Interpret</string>
     <string name="qe_now_playing_ext_one">Gerade läuft</string>
-    <string name="qe_now_playing_ext_two"></string>
     <string name="qe_now_playing_by">Von</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Aktuelle Wiedergabe</string>
@@ -156,70 +151,103 @@
         <item>Was für ein schöner Tag!</item>
         <item>Hab einen schönen Tag!</item>
         <item>Wie wäre es mit noch einem kurzen Nickerchen?</item>
-        <item>So kann man auch aufwachen.</item>
-        <item>Du solltest deinen Weckton ändern.</item>
-        <item>Sieht nach einem wunderschönen Tag aus, meinst du nicht auch?</item>
         <item>Schaffe, schaffe, Häusle baue.</item>
-        <item>Schau mal nach, wie das Wetter wird. Man weiß ja nie.</item>
-        <item>Na, noch ein bisschen müde?</item>
-        <item>Heute schon aus dem Fenster geschaut?</item>
-        <item>Auf geht’s.</item>
-        <item>Viel Erfolg für heute!</item>
-        <item>Das Umlegen des Schalters kann festgefahrene Antworten beheben.</item>
-        <item>Schönen Start in den Tag.</item>
-        <item>Denk an deine seelische Gesundheit.</item>
-        <item>Das Leben ist schön.</item>
-        <item>Lass dir dein Frühstück schmecken.</item>
+        <item>Die Morgenstunden sind wie eine frische Leinwand für dein tägliches Meisterwerk.</item>
+        <item>Ergreife jeden Morgen die aufgehende Sonne der Gelegenheiten.</item>
+        <item>In den ersten Lichtstrahlen finde die Kraft, deinen Weg zu erhellen.</item>
+        <item>Dein Tag beginnt mit unendlichen Möglichkeiten.</item>
+        <item>Ein jeder Sonnenaufgang ist wie eine Erinnerung an einen möglichen Neuanfang.</item>
+        <item>Erwache mit einem Ziel und bezwinge den bevorstehenden Tag.</item>
+        <item>Deine Gedanken können das Fundament großer Errungenschaften sein.</item>
+        <item>Mit der Welt erwacht auch dein Potential.</item>
+        <item>Das erste Kapitel deines täglichen Abenteuers.</item>
+        <item>Lass deine Morgenroutine zum Startpunkt für Erfolg werden.</item>
+        <item>Ob die Sonne nun aufgeht oder nicht; deine Pläne werden es.</item>
+        <item>Es ist Zeit für frische Ideen und mutige Taten.</item>
+        <item>Der frühe Vogel fängt zwar den Wurm, doch du kannst deine Träume einfangen.</item>
+        <item>Finde den Mut, deinen Sehnsüchten zu folgen.</item>
+        <item>Munter ans Werk, es steht Großes an.</item>
+        <item>Die beste Zeit, um anzufangen, ist jetzt.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Denk dran, genügend Wasser zu trinken!</item>
-        <item>Denk dran, dir ein paar Snacks zu gönnen.</item>
-        <item>Nachmittags ist UV-Strahlung besonders schädlich.</item>
-        <item>Gerade ist es nachmittags.</item>
-        <item>Immer den Akkustand checken!</item>
-        <item>Denk dran, deine Mails und Nachrichten zu checken.</item>
-        <item>Denk bitte an deine To-do-Liste, falls du eine hast.</item>
-        <item>Vergiss nicht, dir was zum Abendessen zu machen.</item>
-        <item>Einen schönen Tag dir.</item>
-        <item>Halt durch! Der Tag ist fast rum!</item>
-        <item>Gönn dir ein Bisschen Spaß.</item>
+        <item>Jage deinen Träumen und nicht den Minuten nach.</item>
+        <item>In jedem Augenblick verbirgt sich eine neue Gelegenheit.</item>
+        <item>Der Weg ist das Ziel.</item>
+        <item>Der heutige Tag ist ein Geschenk, sofern du ihn so verpackst.</item>
+        <item>Lass dein Lächeln die Welt verändern.</item>
+        <item>Das Leben ist eine Geschichte; mach ein jedes Kapitel bedeutungsvoll.</item>
+        <item>Sieh das Schöne auch in gewöhnlichen Augenblicken.</item>
+        <item>Das Beste kommt noch, also bleib dran.</item>
+        <item>Deine Gelegenheit, aus dem ‚Was wäre‘ ein ‚Was ist‘ zu machen.</item>
+        <item>Nutze den Tag, ab diesem Moment.</item>
+        <item>Glücklichsein ist eine Entscheidung, die du jederzeit fällen kannst.</item>
+        <item>Glaub an dich, auch an verschlafenen Nachmittagen.</item>
+        <item>Lass deine Taten lauter sprechen als die Zeit.</item>
+        <item>Dein Leben ist, was du daraus machst; mach es zu was Tollem.</item>
+        <item>Träum groß, arbeite hart und gib niemals auf.</item>
+        <item>Du bist stärker als du meinst.</item>
+        <item>Ein jeder Rückschlag ist die Chance auf ein Comeback.</item>
+        <item>Der Weg ist das Ziel.</item>
+        <item>Jage deinen Zielen nach, nicht deinen Ängsten.</item>
+        <item>Dein Potential ist schier endlos; nutze es.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Immer genug Wasser trinken!</item>
-        <item>Acht Stunden Schlaf müssen sein.</item>
-        <item>Gerade ist es Abend.</item>
-        <item>Denk dran, mich vorm Schlafengehen aufzuladen.</item>
-        <item>Denk dran, deine Mails und Nachrichten zu checken.</item>
-        <item>Denk bitte an deine To-do-Liste, falls du eine hast.</item>
-        <item>Denk ans Abendessen.</item>
-        <item>Immer nach dem Licht und den Steckdosen schauen.</item>
-        <item>Genieß die Nacht.</item>
-        <item>Hey, du! Ruh dich doch ein Bisschen aus!</item>
-        <item>Lehn dich zurück und entspann dich.</item>
+        <item>Schätze den gegenwärtigen Moment, unabhängig von der Stunde.</item>
+        <item>In jedem Dämmerlicht finde eine neue Morgendämmerung der Möglichkeiten.</item>
+        <item>Das Leben ist eine Reise; genieß die Landschaft unterwegs.</item>
+        <item>Deine Einstellung prägt deine Realität.</item>
+        <item>Deine Geschichte wird noch immer geschrieben, selbst wenn die Sonne untergeht.</item>
+        <item>Fange die Schönheit auch im Gewöhnlichen ein.</item>
+        <item>Es ist Zeit zum Nachdenken und Neustarten.</item>
+        <item>Entscheide dich fürs Glück, unabhängig von der Uhrzeit.</item>
+        <item>Chancen haben niemals Feierabend.</item>
+        <item>Sei der Grund für jemandes Lächeln.</item>
+        <item>Dein Potential kennt keine Grenzen.</item>
+        <item>Magische Momente gibt es zu jeder Stund.</item>
+        <item>Dein Leben ist, was du daraus machst; mach es zu was Besonderem.</item>
+        <item>Bleib neugierig, bleib dankbar.</item>
+        <item>Sei die Veränderung, die du in der Welt sehen möchtest.</item>
+        <item>Glaub an dich; du bist zu großen Dingen fähig.</item>
+        <item>Die einzige Grenze ist die Selbstauferlegte.</item>
+        <item>Erfolg beginnt mit einem einzelnen Schritt.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Vorm Schlafen nicht zu viel Wasser trinken.</item>
-        <item>Gerade ist es Abend.</item>
-        <item>Versuche so weit es geht, dein Handy nachts nicht angesteckt zu lassen.</item>
-        <item>Denk dran, deine Mails und Nachrichten zu checken.</item>
-        <item>Denk bitte an deine To-do-Liste, falls du eine hast.</item>
-        <item>Denk ans Abendessen.</item>
-        <item>Acht Stunden Schlaf müssen sein.</item>
-        <item>Genieß die Nacht.</item>
-        <item>Lugaw ist ein tolles Rezept zum Abendessen.</item>
-        <item>Schlaf gut.</item>
+        <item>Nutze die Nacht, denn sie birgt ihre eigenen Geheimnisse.</item>
+        <item>Finde Seelenfrieden in der Stille dieses Abends.</item>
+        <item>Die größten Abenteuer im Leben können im Dunkeln beginnen.</item>
+        <item>Deine Reise geht auch nach Sonnenuntergang noch weiter.</item>
+        <item>Lass die Nacht deine Leinwand sein; bemale sie mit Träumen.</item>
+        <item>Finde in der Stille dieses Abends inneren Frieden.</item>
+        <item>Die Sterne leuchten zu den dunkelsten Stunden am hellsten.</item>
+        <item>Träume groß, auch zu später Stund.</item>
+        <item>Dein Leben ist eine Geschichte, die nur darauf wartet, geschrieben zu werden.</item>
+        <item>Es ist Zeit zum Nachdenken und Neustarten.</item>
+        <item>Spätnächtliche Gedanken können zu frühmorgendlichen Offenbarungen führen.</item>
+        <item>Finde Freude in der Ruhe dieses Abends.</item>
+        <item>Der Nachthimmel ist eine riesige Leinwand der Träume.</item>
+        <item>Dein Potential kennt keine Schlafenszeit; folge deinen Leidenschaften.</item>
+        <item>Verlier nie die Hoffnung, auch nicht in den dunkelsten Stunden.</item>
+        <item>Finde inmitten des Chaos inneren Frieden.</item>
+        <item>Bleib positiv, arbeite hart, zieh es durch.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Schlafmangel ist sehr ungesund.</item>
-        <item>Denk dran, genügend Wasser zu trinken.</item>
-        <item>Schlafmangel kann die Melatoninproduktion negativ beeinflussen.</item>
-        <item>Es ist Mitternacht.</item>
-        <item>Zu spät ins Bett zu gehen ist ungesund.</item>
-        <item>Du musst jetzt mal ins Bett.</item>
-        <item>Denk ans Schlafen und Frühstückvorbereiten.</item>
-        <item>Genieiß deine Mitternacht.</item>
-        <item>Schlafmangel wirkt sich auf die innere Uhr aus.</item>
-        <item>Bitte pass auf dich auf.</item>
+        <item>Nächte sind leises Geflüster der Möglichkeiten.</item>
+        <item>Finde in der Stille der Nacht innere Stärke.</item>
+        <item>Genieße die Dunkelheit, denn sie hat die Schlüssel zu deinen Träumen in der Hand.</item>
+        <item>Die Welt schläft, doch dein Potential ist hellwach.</item>
+        <item>Die Nacht mag schon spät sein, doch deine Ambitionen sind zeitlos.</item>
+        <item>Bleib neugierig, bleib wach und lass dir von den Nächten den Weg zeigen.</item>
+        <item>Finde den Mut, deinen Träumen zu folgen.</item>
+        <item>Großes geschieht niemals von der Komfortzone aus.</item>
+        <item>Du hast die Macht, dein eigenes Schicksal zu schaffen.</item>
+        <item>Glücklich zu sein ist eine Entscheidung; fälle sie jeden Tag.</item>
+        <item>Das Leben ist, was du daraus machst, also mach was daraus.</item>
+        <item>Bleib fokussiert, bleib entschlossen, bleib unaufhaltsam.</item>
+        <item>Du bist der Autor deiner eigenen Geschichte.</item>
+        <item>Strebe nach Fortschritt, nicht nach Perfektion.</item>
+        <item>Jeder Tag ist ein Neuanfang; mach ihn zu einem Großen.</item>
+        <item>Inspiriere andere, indem du authentisch und du selbst bist.</item>
+        <item>Deine Einstellung bestimmt deine Richtung.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Ignorance is Bliss</item>
@@ -241,43 +269,25 @@
         <item>Sehr schmackhaft, auch ohne Sushi!</item>
         <item>Eine gute Tat pro Tag.</item>
         <item>crDroid bietet ’ne tolle Pixel-Experience, oder?</item>
-        <item>Wie läuft’s bei dir so?</item>
         <item>Keine Illusionen, willkommen in der crDroid-Realität!</item>
-        <item>Danke für deine Unterstützung!</item>
+        <item>Danke für deine Unterstützung</item>
         <item>Kein DerpFest, sondern nur Perfektion hier bei crDroid!</item>
-        <item>Feinste Wahl vom Buildbot.</item>
-        <item>crDroid heilt deine Paranoia.</item>
-        <item>Ice Cold mag cool sein, doch crDroid ist heiß.</item>
-        <item>Was für ein schönes Betriebssystem, oder?</item>
-        <item>Evolution ist doch nur ein Mythos, oder nicht?</item>
-        <item>Du bist, was du flashst. Sei keine Potato.</item>
+        <item>Feinste Wahl vom Buildbot</item>
+        <item>crDroid heilt deine Paranoia</item>
+        <item>Ice Cold mag cool sein, doch crDroid ist heiß</item>
+        <item>Was für eine zauberhafte Erfahrung, nicht wahr?</item>
+        <item>Evolution ist doch nur ein Mythos, nicht wahr?</item>
+        <item>Du bist, was du flashst. Sei keine Kartoffel</item>
         <item>Was hast du auf dem Herzen?</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
         <item>Winner Winner …?</item>
         <item>rm -rf \/</item>
-        <item>In dieser ROM sind Easter Eggs versteckt.</item>
-        <item>Schau mal in die Wettereinstellungen.</item>
-        <item>Versuch zur Mittagszeit UV-Strahlung zu meiden.</item>
-        <item>Trinken nicht vergessen!</item>
         <item>Pringles sind genau genommen gar keine Kartoffelchips.</item>
-        <item>Lachen kann die Durchblutung verbessern.</item>
-        <item>Kaffee enthält Antioxidantien.</item>
-        <item>Ketchup hat man früher als Medizin verkauft.</item>
-        <item>Zuckerwatte wurde von einem Zahnarzt erfunden.</item>
-        <item>Keine Mahlzeit auslassen!</item>
         <item>Denk dran, den Akkustand zu checken!</item>
-        <item>Check deine Mails und Nachrichten.</item>
-        <item>Denk an deine To-do-Liste, falls du eine hast.</item>
+        <item>Prüfe deine Mails und Nachrichten.</item>
+        <item>Überprüfe Deine ToDo-Liste, wenn Du eine hast.</item>
         <item>Quickspace kannst du in den Startbildschirm-Einstellungen deaktivieren.</item>
-        <item>Zeig’s ihnen!</item>
-        <item>Zeit, Reis einkaufen zu gehen!</item>
-        <item>Zeit fürs Mittagessen!</item>
-        <item>Weißer Reis war mal braun.</item>
-        <item>Lust auf ’ne Limo?</item>
-        <item>Hab immer Wasser dabei, um hydriert zu bleiben.</item>
-        <item>Im Weltraum riecht es nach gebratenem Steak.</item>
-        <item>Einen schönen Tag dir!</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">App-Vorschläge</string>

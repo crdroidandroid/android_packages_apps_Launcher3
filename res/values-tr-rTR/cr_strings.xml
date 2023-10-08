@@ -116,31 +116,26 @@
     <string name="show_quickspace_summary">Ana ekranınızın üst kısmında göster</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">CrDroid\'e hoş geldiniz!</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">crDroid zamanı!</string>
     <string-array name="welcome_message_variants">
-        <item>İyi günler</item>
         <item>Bizi seçtiğiniz için teşekkürler</item>
         <item>Bizi seviyor musunuz? Bize bir bira ısmarla</item>
         <item>Gelmiş geçmiş en iyi Rom.</item>
         <item>Telegram\'da bize merhaba de</item>
         <item>Başlamak için buraya dokun</item>
-        <item>Seni 3000 kez seviyoruz</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_midnight">Solemn midnight.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
+    <string name="quickspace_grt_morning">Günaydın.</string>
+    <string name="quickspace_grt_evening">İyi akşamlar.</string>
+    <string name="quickspace_grt_afternoon">Tünaydın.</string>
+    <string name="quickspace_grt_night">İyi geceler.</string>
+    <string name="quickspace_grt_general">İyi günler.</string>
+    <string name="quickspace_ext_one">Bugün</string>
     <string name="quickspace_ext_two">It\'s</string>
-    <string name="quickspace_ext_three">It\'s</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
-    <string name="qe_now_playing_ext_one">Now playing</string>
-    <string name="qe_now_playing_ext_two"></string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_unknown_artist">Bilinmeyen Sanatçı</string>
+    <string name="qe_now_playing_ext_one">Şimdi oynatılıyor</string>
+    <string name="qe_now_playing_by">Tarafından</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Şimdi oynatılıyor</string>
     <string name="quickspace_now_playing_summary">Çalmakta olduğunuz şarkıyı gösterin</string>
@@ -156,70 +151,103 @@
         <item>Ne kadar güzel bir gün!</item>
         <item>İyi günler!</item>
         <item>Peki ya 5 dakikalık küçük bir şekerlemeye nedersin?</item>
-        <item>Uyanmanın yollarından biri de bu.</item>
-        <item>Alarm seslerinizi değiştirmelisiniz.</item>
-        <item>Güzel bir gün gibi görünüyor, değil mi?</item>
         <item>Haydi sorunu çözelim.</item>
-        <item>Her ihtimale karşı hava durumunu kontrol edin</item>
-        <item>Henüz biraz uykulu hissediyorum</item>
-        <item>Dışarıya baktın mı?</item>
-        <item>Bunu halledelim.</item>
-        <item>Good luck today!</item>
-        <item>Toggling the switch can fix stucked responses.</item>
-        <item>Start your day snuke.</item>
-        <item>Don\'t forget about mental health.</item>
-        <item>Life is good.</item>
-        <item>Enjoy your breakfast.</item>
+        <item>Sabahlar, günlük şaheseriniz için taze bir tuvaldir.</item>
+        <item>Her sabah fırsat güneşinin doğuşunu kucaklayın.</item>
+        <item>Günün ilk ışıklarıyla yolunuzu aydınlatacak gücü bulun.</item>
+        <item>Gününüz sonsuz olasılıklarla başlıyor.</item>
+        <item>Her gün doğumu, yeniden başlayabileceğinizi hatırlatır.</item>
+        <item>Amacınızla uyanın, önünüzdeki günü fethedin.</item>
+        <item>Düşünceleriniz büyük başarıların temeli olabilir.</item>
+        <item>Dünya uyanır ve potansiyeliniz de uyanır.</item>
+        <item>Günlük maceranızın ilk bölümü.</item>
+        <item>Sabah rutininizin başarı için bir fırlatma rampası olmasına izin verin.</item>
+        <item>Güneş doğsun ya da doğmasın, potansiyeliniz her zaman yükseliştedir.</item>
+        <item>Şimdi yeni fikirler ve cesur adımlar atma zamanı.</item>
+        <item>Erken kalkan yol alır ama siz hayallerinizi yakalayabilirsiniz.</item>
+        <item>Hedeflerinizin peşinden gidecek cesareti bulun.</item>
+        <item>Yükselin ve parlayın, çünkü büyüklük sizi bekliyor.</item>
+        <item>Başlamak için en iyi zaman şimdi.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Don\'t forget to stay hydrated!</item>
-        <item>Remember to eat some snacks.</item>
-        <item>UV rays are more harmful in the afternoon.</item>
-        <item>It is afternoon right now.</item>
-        <item>Always check device\'s battery levels!</item>
-        <item>Remember to check your email/messages.</item>
-        <item>Please check your to-do list if you have one.</item>
-        <item>Don\'t forget to prepare your dinner.</item>
-        <item>Enjoy your day.</item>
-        <item>Hang on! The day is almost done!</item>
-        <item>Have some fun.</item>
+        <item>Hayallerinizin peşinden gidin, dakikaların değil.</item>
+        <item>Her an, yeni bir fırsat.</item>
+        <item>Sadece varış noktasını değil, yolculuğu da kucaklayın.</item>
+        <item>Bugün bir hediye, sonuna kadar keyfini çıkarmaya bakın.</item>
+        <item>Gülümsemenizin dünyayı değiştirmesine izin verin.</item>
+        <item>Hayat bir hikayedir; her bölümün hakkını verin.</item>
+        <item>Sıradan anlarda neşeyi bulun.</item>
+        <item>En iyisi henüz gelmedi, böyle devam edin.</item>
+        <item>\"Eğer\"\'i \"olan\"\'a dönüştürme şansınız</item>
+        <item>Şu andan itibaren günü yakalayın.</item>
+        <item>Mutluluk her zaman yapabileceğiniz bir seçimdir.</item>
+        <item>Uykulu bir öğleden sonra bile kendinize inanın.</item>
+        <item>Bırakın eylemleriniz saatten daha yüksek sesle konuşsun.</item>
+        <item>Hayatınız ondan ne yaptığınızdır; onu muhteşem kılın.</item>
+        <item>Büyük hayaller kurun, çok çalışın ve asla pes etmeyin.</item>
+        <item>Sandığınızdan daha güçlüsünüz.</item>
+        <item>Her başarısızlık, geri dönüş için bir hazırlıktır.</item>
+        <item>Sadece varış noktasını değil, yolculuğu da kucaklayın.</item>
+        <item>Hedeflerinizin peşinden gidin, korkularınızın değil.</item>
+        <item>Potansiyeliniz sonsuz; onu ortaya çıkarın.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Always stay hydrated!</item>
-        <item>8 hours of sleep is a must.</item>
-        <item>It is evening right now.</item>
-        <item>Remember to full charge me before you sleep.</item>
-        <item>Remember to check your email/messages.</item>
-        <item>Please check your to-do list if you have one.</item>
-        <item>Remember to eat dinner.</item>
-        <item>Always check the lights and sockets.</item>
-        <item>Enjoy the night.</item>
-        <item>Hey there! Give yourself some rest!</item>
-        <item>Relax and do some rest.</item>
+        <item>Şu anı kucaklayın, saat kaç olursa olsun.</item>
+        <item>Her alacakaranlıkta, yeni bir fırsat şafağı bulun.</item>
+        <item>Hayat bir yolculuktur; yol boyunca manzaranın tadını çıkarın.</item>
+        <item>Tutumunuz gerçekliğinizi şekillendirir.</item>
+        <item>Güneş batarken bile hikayeniz yazılmaya devam ediyor.</item>
+        <item>Sıradan anlardaki güzelliği yakalayın.</item>
+        <item>Düşünme ve sıfırlama zamanı.</item>
+        <item>Saat kaç olursa olsun neşeyi seçin.</item>
+        <item>Fırsatlar akşamları bitmez.</item>
+        <item>Birinin gülümsemesinin sebebi olun.</item>
+        <item>Potansiyeliniz sınır tanımıyor.</item>
+        <item>Sihirli anlar her an gerçekleşebilir.</item>
+        <item>Hayatınız ondan ne yaptığınızdır; onu olağanüstü kılın.</item>
+        <item>Meraklı kalın, minnettar kalın.</item>
+        <item>Dünyada görmek istediğiniz değişimin kendisi olun.</item>
+        <item>Kendinize inanın; inanılmaz şeyler yapabilecek kapasitedesiniz.</item>
+        <item>Tek sınır sizin kendiniz için belirlediğiniz sınırdır.</item>
+        <item>Başarı tek bir adımla başlar.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>İyi geceler!</item>
-        <item>İyi uykular!</item>
-        <item>Yarın görüşürüz!</item>
-        <item>Tatlı rüyalar!</item>
-        <item>Çok uzun süre uyanık kalma</item>
-        <item>İyi uykular</item>
-        <item>Biraz uyu</item>
-        <item>Rahatlama zamanı</item>
-        <item>Gecenin tadını çıkart!</item>
-        <item>Pilleri şarj etme zamanı!</item>
+        <item>Geceyi yakalayın, çünkü kendi gizemlerini barındırır.</item>
+        <item>Bu akşamın sessizliğinde huzuru bulun.</item>
+        <item>Hayatın en büyük maceraları karanlıkta başlayabilir.</item>
+        <item>Yolculuğunuz güneş battıktan sonra bile devam eder.</item>
+        <item>Bırakın gece tuvaliniz olsun; onu hayallerle boyayın.</item>
+        <item>Bu akşamın dinginliğinde, iç huzurunuzu bulun.</item>
+        <item>Yıldızlar en karanlık saatlerde parlar.</item>
+        <item>Günün geç saatlerinde bile büyük hayaller kurun.</item>
+        <item>Hayatınız yazılmayı bekleyen bir hikayedir.</item>
+        <item>Düşünme ve yenilenme zamanı.</item>
+        <item>Gece geç saatlere kadar süren düşünceler sabahın erken saatlerinde açığa çıkabilir.</item>
+        <item>Bu akşamın dinginliğinde neşeyi bulun.</item>
+        <item>Gece gökyüzü uçsuz bucaksız bir rüya tuvalidir.</item>
+        <item>Potansiyelinizin uyku saati yoktur; tutkularınızın peşinden gidin.</item>
+        <item>En karanlık saatlerde bile umutlu kalın.</item>
+        <item>Kaosun ortasında, içinizdeki sükûneti bulun.</item>
+        <item>Pozitif kalın, çok çalışın, başarın.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... iyi geceler?</item>
-        <item>Şimdi biraz geç</item>
-        <item>Uyku zamanlamanızı düzeltmelisiniz</item>
-        <item>Şu anda daha üretken misiniz?</item>
-        <item>Sleeping late is not healthy.</item>
-        <item>You need to sleep now.</item>
-        <item>Don\'t forget to sleep/prepare your breakfast.</item>
-        <item>Enjoy the midnight.</item>
-        <item>Sleep deficiency affects your body clock.</item>
-        <item>Please take care of yourself.</item>
+        <item>Geceler fırsatların sessiz fısıltılarıdır.</item>
+        <item>Gecenin sessizliğinde, içinizdeki gücü bulun.</item>
+        <item>Karanlığı kucaklayın, çünkü hayallerinizin anahtarı ondadır.</item>
+        <item>Dünya uyuyor ama sizin potansiyeliniz tamamen uyanık.</item>
+        <item>Gece geç olabilir, ancak tutkularınız zamansızdır.</item>
+        <item>Meraklı kalın, uyanık kalın ve gecenin size rehberlik etmesine izin verin.</item>
+        <item>Hayallerinizin peşinden gidecek cesareti bulun.</item>
+        <item>Büyük işler asla konfor alanlarından gelmez.</item>
+        <item>Kendi kaderinizi yaratma gücüne sahipsiniz.</item>
+        <item>Mutluluk bir seçimdir; onu her gün seçin.</item>
+        <item>Hayat yaptığınız şeydir, bu yüzden onu değerlendirin.</item>
+        <item>Odaklanın, kararlı olun, durdurulamaz olun.</item>
+        <item>Kendi hikayenizin yazarı sizsiniz.</item>
+        <item>İlerleme için çabalayın, mükemmellik için değil.</item>
+        <item>Her gün yeni bir başlangıçtır; bunu harika bir başlangıç haline getirin.</item>
+        <item>Özgün benliğiniz olarak başkalarına ilham verin.</item>
+        <item>Tutumunuz yönünüzü belirler.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Cehalet mutluluktur</item>
@@ -241,7 +269,6 @@
         <item>Suşi olmadan bile lezzetli</item>
         <item>Bugün güzel bir şey yap</item>
         <item>Bu en iyi Pixel Experience, değil mi?</item>
-        <item>Her şey nasıl gidiyor?</item>
         <item>İllüzyon yok, gerçeğe hoş geldiniz!</item>
         <item>Desteğiniz için teşekkürler</item>
         <item>Derpler için festival yok - sadece mükemmellik!</item>
@@ -254,30 +281,13 @@
         <item>Aklınızdan ne geçiyor?</item>
         <item>Bir gardiyan bekliyorum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Kazanan Kazanan ....?</item>
+        <item>Hadi iyisin, çorba par....?</item>
         <item>rm -rf \/</item>
-        <item>There are easter eggs hidden on this ROM.</item>
-        <item>Try checking the weather settings.</item>
-        <item>Try to avoid UV rays during noon.</item>
-        <item>Stay Hydrated!</item>
-        <item>Pringles aren\'t actually potato chips..</item>
-        <item>Laughing can increase bloodflow.</item>
-        <item>Coffee contains antioxidants.</item>
-        <item>Ketchup was once sold as medicine.</item>
-        <item>Cotton candy was invented by a dentist.</item>
-        <item>Don\'t skip your meal!</item>
-        <item>Remember to check device\'s battery levels!</item>
-        <item>Check your email/messages.</item>
-        <item>Check your to-do list if you have one.</item>
-        <item>You can disable quickspace via home settings.</item>
-        <item>Go get them!</item>
-        <item>Time to buy some rice!</item>
-        <item>Time for lunch!</item>
-        <item>All white rice starts brown.</item>
-        <item>Want some soda?</item>
-        <item>Always bring water to stay hydrated.</item>
-        <item>Space smells like seared steak..</item>
-        <item>Enjoy your day!</item>
+        <item>Pringles aslında patates cipsi değil..</item>
+        <item>Cihazın pil seviyelerini kontrol etmeyi unutmayın!</item>
+        <item>E-postanızı/mesajlarınızı kontrol edin.</item>
+        <item>Yapılacaklar listeniz varsa kontrol edin.</item>
+        <item>Hızlı alanı ana ekran ayarlarından devre dışı bırakabilirsiniz.</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Öneriler</string>
@@ -286,15 +296,15 @@
     <string name="quick_event_ambient_weather_title">Hava durumu</string>
     <string name="quick_event_ambient_weather_summary">Mevcut hava durumunu ve sıcaklığı göster</string>
     <string name="quick_event_ambient_weather_enabled_info">Hava durumu hizmetinin etkinleştirilmesi gerekir</string>
-    <string name="quick_event_weather_clouds">Cloudy</string>
-    <string name="quick_event_weather_rain">Rainy</string>
-    <string name="quick_event_weather_clear">Sunny</string>
-    <string name="quick_event_weather_storm">Stormy</string>
-    <string name="quick_event_weather_snow">Snowy</string>
-    <string name="quick_event_weather_wind">Windy</string>
-    <string name="quick_event_weather_mist">Misty</string>
-    <string name="quick_event_weather_city_title">Current location</string>
-    <string name="quick_event_weather_city_summary">Display current location</string>
+    <string name="quick_event_weather_clouds">Bulutlu</string>
+    <string name="quick_event_weather_rain">Yağmurlu</string>
+    <string name="quick_event_weather_clear">Güneşli</string>
+    <string name="quick_event_weather_storm">Fırtınalı</string>
+    <string name="quick_event_weather_snow">Kar yağışlı</string>
+    <string name="quick_event_weather_wind">Rüzgarlı</string>
+    <string name="quick_event_weather_mist">Puslu</string>
+    <string name="quick_event_weather_city_title">Mevcut konum</string>
+    <string name="quick_event_weather_city_summary">Geçerli konumu göster</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Arka plan şeffaflığı</string>
     <!-- Taskbar -->
@@ -341,7 +351,7 @@
     <string name="single_page_center_title">Tek sayfayı ortalayın</string>
     <string name="single_page_center_summary">Yalnızca tek bir sayfa kullanılıyorsa duvar kağıdını ortalayın</string>
     <!-- Dark Status Bar -->
-    <string name="perf_dark_status_bar_title">Dark status bar</string>
-    <string name="perf_dark_status_bar_summary">Use dark status bar on Home screen</string>
-    <string name="intent_no_app_clock_found">Unable to find calendar or clock activity</string>
+    <string name="perf_dark_status_bar_title">Koyu durum çubuğu</string>
+    <string name="perf_dark_status_bar_summary">Ana ekranda koyu durum çubuğunu kullan</string>
+    <string name="intent_no_app_clock_found">Takvim veya saat etkinliği bulunamıyor</string>
 </resources>

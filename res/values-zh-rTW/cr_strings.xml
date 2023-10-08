@@ -118,28 +118,23 @@
     <string name="quick_event_rom_intro_welcome">歡迎來到 crDroid ！</string>
     <string name="quick_event_rom_intro_welcome_ext">crDroid 時間！</string>
     <string-array name="welcome_message_variants">
-        <item>祝你有個美好的一天</item>
         <item>感謝您選用 crDroid</item>
         <item>喜歡 crDroid 嗎？請我們喝杯啤酒吧</item>
         <item>史上最棒的系統</item>
         <item>到 Telegram 群組跟我們打個招呼吧</item>
         <item>輕觸此處開始</item>
-        <item>我們愛你 3000 次</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">早安。</string>
     <string name="quickspace_grt_evening">晚安。</string>
     <string name="quickspace_grt_afternoon">午安。</string>
     <string name="quickspace_grt_night">晚安。</string>
-    <string name="quickspace_grt_midnight">一夜好眠。</string>
     <string name="quickspace_grt_general">您好</string>
     <string name="quickspace_ext_one">今天是</string>
     <string name="quickspace_ext_two">現在是</string>
-    <string name="quickspace_ext_three">現在是</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="qe_now_playing_unknown_artist">未知的演出者</string>
     <string name="qe_now_playing_ext_one">現正播放</string>
-    <string name="qe_now_playing_ext_two"></string>
     <string name="qe_now_playing_by">作者</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">現正播放</string>
@@ -156,70 +151,103 @@
         <item>多麼美好的一天！</item>
         <item>祝你有個美好的一天！</item>
         <item>再睡五分鐘怎麼樣？</item>
-        <item>這樣醒來也不錯。</item>
-        <item>你該換換你的鬧鐘鈴聲了。</item>
-        <item>今天天氣看起來不錯呢。</item>
-        <item>去賺大錢吧！</item>
-        <item>以防萬一，看看天氣預報吧</item>
-        <item>想睡了嗎？</item>
-        <item>你今天看看窗外風景了嗎？</item>
-        <item>是時候開工了。</item>
-        <item>祝好運！</item>
-        <item>問候語卡住時可以藉由重新開關選項來解決</item>
-        <item>Start your day snuke.</item>
-        <item>保持心靈健康。</item>
-        <item>美好的一天就從早上開始。</item>
-        <item>盡情享受您的早餐。</item>
+        <item>Let\'s get this bread.</item>
+        <item>Mornings are a fresh canvas for your daily masterpiece.</item>
+        <item>Embrace the sunrise of opportunity each morning.</item>
+        <item>In the early light, find the power to illuminate your path.</item>
+        <item>Your day begins with endless possibilities.</item>
+        <item>Every sunrise is a reminder that you can start anew.</item>
+        <item>Awake with purpose, conquer the day ahead.</item>
+        <item>Your thoughts can be the foundation of great achievements.</item>
+        <item>The world awakens, and so does your potential.</item>
+        <item>The first chapter in your daily adventure.</item>
+        <item>Let your morning routine be the launchpad for success.</item>
+        <item>Sunrise or not, your potential is always on the rise.</item>
+        <item>It\s time for fresh ideas and bold actions.</item>
+        <item>The early bird catches the worm, but you can catch your dreams.</item>
+        <item>Find the courage to chase your aspirations.</item>
+        <item>Rise and shine, for greatness awaits.</item>
+        <item>The best time to start is now.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>記得多補充水分！</item>
-        <item>別讓自己餓著了。</item>
-        <item>午後出門記得多注意防曬。</item>
-        <item>現在是下午。</item>
-        <item>時刻注意電量！</item>
-        <item>記得看看您的信箱和訊息。</item>
-        <item>記得完成您的待辦事項。</item>
-        <item>別忘記準備晚餐。</item>
-        <item>祝您有愉快的一天。</item>
-        <item>今天已經撐過一半了！</item>
-        <item>玩得開心。</item>
+        <item>Chase your dreams, not the minutes.</item>
+        <item>In every moment, a new opportunity.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Today is a gift, that\'s why it\'s called the present.</item>
+        <item>Let your smile change the world.</item>
+        <item>Life is a story; make each chapter count.</item>
+        <item>Find joy in the ordinary moments.</item>
+        <item>The best is yet to come, keep it up.</item>
+        <item>Your chance to turn \'what if\' into \'what is.\'</item>
+        <item>Seize the day, starting right now.</item>
+        <item>Happiness is a choice you can make any time.</item>
+        <item>Believe in yourself, even on a sleepy afternoon.</item>
+        <item>Let your actions speak louder than the clock.</item>
+        <item>Your life is what you make of it; make it amazing.</item>
+        <item>Dream big, work hard, and never give up.</item>
+        <item>You are stronger than you think.</item>
+        <item>Every setback is a setup for a comeback.</item>
+        <item>Embrace the journey, not just the destination.</item>
+        <item>Chase your goals, not your fears.</item>
+        <item>Your potential is endless; unlock it.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>記得多多補充水分！</item>
-        <item>每天一定要睡滿八小時。</item>
-        <item>現在是晚上。</item>
-        <item>睡前記得充電。</item>
-        <item>記得看看您的信箱和訊息。</item>
-        <item>記得完成您的待辦事項。</item>
-        <item>要記得吃晚餐。</item>
-        <item>睡前記得檢查電燈和電器插座。</item>
-        <item>祝您有個美好的夜晚。</item>
-        <item>嘿，早點休息吧！</item>
-        <item>放鬆休息一下吧。</item>
+        <item>Embrace the present moment, no matter the hour.</item>
+        <item>In every dusk, find a new dawn of opportunity.</item>
+        <item>Life is a journey; enjoy the scenery along the way.</item>
+        <item>Your attitude shapes your reality.</item>
+        <item>Your story is still being written, even as the sun sets.</item>
+        <item>Capture the beauty in the ordinary moments.</item>
+        <item>It\'s time to reflect and reset.</item>
+        <item>Choose joy, no matter the time on the clock.</item>
+        <item>Opportunities don\'t clock out in the evening.</item>
+        <item>Be the reason someone smiles.</item>
+        <item>Your potential knows no bounds.</item>
+        <item>Moments of magic can happen at any hour.</item>
+        <item>Your life is what you make of it; make it extraordinary.</item>
+        <item>Stay curious, stay grateful.</item>
+        <item>Be the change you wish to see in the world.</item>
+        <item>Believe in yourself; you are capable of amazing things.</item>
+        <item>The only limit is the one you set for yourself.</item>
+        <item>Success begins with a single step.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>晚安！</item>
-        <item>祝你一夜好夢！</item>
-        <item>明天見！</item>
-        <item>祝您好夢！</item>
-        <item>早點睡吧</item>
-        <item>祝您一覺好眠</item>
-        <item>去睡一會吧</item>
-        <item>該放鬆一下囉</item>
-        <item>祝您有個美好的夜晚！</item>
-        <item>該充電了！</item>
+        <item>Seize the night, for it holds its own mysteries.</item>
+        <item>In the quiet of the this evening, find serenity.</item>
+        <item>Life\'s greatest adventures can start in the darkness.</item>
+        <item>Your journey continues even after the sun has set.</item>
+        <item>Let the night be your canvas; paint it with dreams.</item>
+        <item>In the stillness of this evening, find your inner peace.</item>
+        <item>Stars shine brightest in the darkest hours.</item>
+        <item>Dream big, even in the late hours of the day.</item>
+        <item>Your life is a story waiting to be written.</item>
+        <item>It\'s time for reflection and renewal.</item>
+        <item>Late night thoughts can lead to early morning revelations.</item>
+        <item>Find joy in the stillness of this evening.</item>
+        <item>The night sky is a vast canvas of dreams.</item>
+        <item>Your potential knows no bedtime; pursue your passions.</item>
+        <item>Stay hopeful, even in the darkest hours.</item>
+        <item>In the midst of chaos, find your inner calm.</item>
+        <item>Stay positive, work hard, make it happen.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>嗯… 晚安？</item>
-        <item>不覺得現在的時間有點晚了嗎？</item>
-        <item>你該調整你的作息了。</item>
-        <item>你習慣熬夜工作嗎？</item>
-        <item>太晚睡對身體不好。</item>
-        <item>您該睡了。</item>
-        <item>早點休息，記得準備早餐。</item>
-        <item>祝您有個美好的午夜。</item>
-        <item>過少的睡眠會影響生理時鐘。</item>
-        <item>請多注重身體健康。</item>
+        <item>Nights are the quiet whispers of opportunity.</item>
+        <item>In the stillness of the night, find your inner strength.</item>
+        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
+        <item>The world sleeps, but your potential is wide awake.</item>
+        <item>The night may be late, but your ambitions are timeless.</item>
+        <item>Stay curious, stay awake, and let nights guide you.</item>
+        <item>Find the courage to chase your dreams.</item>
+        <item>Great things never come from comfort zones.</item>
+        <item>You have the power to create your own destiny.</item>
+        <item>Happiness is a choice; choose it every day.</item>
+        <item>Life is what you make it, so make it count.</item>
+        <item>Stay focused, stay determined, stay unstoppable.</item>
+        <item>You are the author of your own story.</item>
+        <item>Strive for progress, not perfection.</item>
+        <item>Every day is a new beginning; make it a great one.</item>
+        <item>Inspire others by being your authentic self.</item>
+        <item>Your attitude determines your direction.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>天真也是一種幸福</item>
@@ -241,43 +269,25 @@
         <item>不加壽司也很美味</item>
         <item>日行一善</item>
         <item>這不就是最棒的 Pixel 體驗嗎？</item>
-        <item>今天過得如何？</item>
-        <item>這不是幻覺，歡迎來到現實！</item>
-        <item>非常感謝您的支持</item>
-        <item>沒有慶祝小呆子的節日 － 只有完美！</item>
-        <item>Buildbot 的最佳選擇之一</item>
-        <item>在你的偏執上灑上一點點理智</item>
-        <item>試試一些冰涼甜品吧</item>
-        <item>多麼美妙的體驗，對吧？</item>
-        <item>進化是個謎題，沒錯吧？</item>
-        <item>你刷什麼就是什麼，別像個馬鈴薯</item>
-        <item>在想什麼？</item>
-        <item>疾疾，護法現身</item>
+        <item>No illusions, welcome to reality!</item>
+        <item>Thank you for your support</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>Sanity for your Paranoia</item>
+        <item>Try Ice Cold desserts</item>
+        <item>What a lovely experience, isn\'t it?</item>
+        <item>Evolution is a myth, right?</item>
+        <item>You are what you flash, don\'t be Potato</item>
+        <item>What\'s on your mind?</item>
+        <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>大吉大利...？</item>
+        <item>Winner Winner ....?</item>
         <item>rm -rf \/</item>
-        <item>這個系統中藏了許多彩蛋。</item>
-        <item>看看天氣相關功能和設定。</item>
-        <item>中午時請多注意防曬。</item>
-        <item>Stay Hydrated!</item>
         <item>Pringles aren\'t actually potato chips..</item>
-        <item>Laughing can increase bloodflow.</item>
-        <item>Coffee contains antioxidants.</item>
-        <item>Ketchup was once sold as medicine.</item>
-        <item>Cotton candy was invented by a dentist.</item>
-        <item>Don\'t skip your meal!</item>
-        <item>Remember to check device\'s battery levels!</item>
+        <item>Remember to check device\'s battery level!</item>
         <item>Check your email/messages.</item>
         <item>Check your to-do list if you have one.</item>
         <item>You can disable quickspace via home settings.</item>
-        <item>Go get them!</item>
-        <item>Time to buy some rice!</item>
-        <item>Time for lunch!</item>
-        <item>All white rice starts brown.</item>
-        <item>Want some soda?</item>
-        <item>Always bring water to stay hydrated.</item>
-        <item>Space smells like seared steak..</item>
-        <item>Enjoy your day!</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">建議的應用程式</string>

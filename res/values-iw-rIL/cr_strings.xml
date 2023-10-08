@@ -118,28 +118,23 @@
     <string name="quick_event_rom_intro_welcome">ברוך בואך לcrDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">בדיוק הזמן ל-crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>שיהיה לך יום נפלא</item>
         <item>תודה לך על בחירתך בנו</item>
         <item>אהבת אותנו? אפשר לשלוח לנו כוס בירה</item>
         <item>ה-ROM הטוב ביותר מאז ומעולם.</item>
         <item>אפשר לאמר לנו היי בטלגרם</item>
         <item>לחיצה כאן כדי להתחיל</item>
-        <item>אנחנו אוהבים אותך 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">בוקר טוב.</string>
     <string name="quickspace_grt_evening">ערב טוב.</string>
     <string name="quickspace_grt_afternoon">אחר הצהריים טובים.</string>
     <string name="quickspace_grt_night">לילה טוב.</string>
-    <string name="quickspace_grt_midnight">חצות חגיגי.</string>
     <string name="quickspace_grt_general">יום טוב.</string>
     <string name="quickspace_ext_one">היום הוא</string>
     <string name="quickspace_ext_two">It\'s</string>
-    <string name="quickspace_ext_three">It\'s</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="qe_now_playing_unknown_artist">אמן לא ידוע</string>
     <string name="qe_now_playing_ext_one">מתנגן כעת</string>
-    <string name="qe_now_playing_ext_two"></string>
     <string name="qe_now_playing_by">על ידי</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">מתנגן כעת</string>
@@ -156,70 +151,103 @@
         <item>איזה יום יפה!</item>
         <item>שיהיה לך יום נפלא!</item>
         <item>מה בדבר נמנום קטן של 5 דקות?</item>
-        <item>גם זו דרך להתעורר.</item>
-        <item>הגיע הזמן להחליף את צלצול המעורר שלך.</item>
-        <item>נראה שזה יום יפה, לא?</item>
         <item>קדימה, נלך על זה.</item>
-        <item>כדאי לבדוק את מזג האוויר – ליתר בטחון</item>
-        <item>תחושת ישנוניות עדיין</item>
-        <item>הסתכלת כבר החוצה?</item>
-        <item>קדימה, נסיים את זה.</item>
-        <item>בהצלחה היום!</item>
-        <item>שינוי מצב המתג עשוי לתקן תגובות שנתקעו.</item>
-        <item>התחילו את היום שלכם בפצצות לגבות.</item>
-        <item>לא לשכוח את בריאות הנפש.</item>
-        <item>החיים טובים.</item>
-        <item>תיהנו מארוחת הבוקר שלכם.</item>
+        <item>בקרים הם בד ציור ריק ליצירות היומיות שלך.</item>
+        <item>אמצו את זריחת השמש של הזדמנויות כל בוקר.</item>
+        <item>אורו המוקדם של הבוקר יכול להאיר את הדרך שלך.</item>
+        <item>יומך מתחיל עם אינסוף אפשרויות.</item>
+        <item>כל זריחה היא תזכורת לכך שאפשר להתחיל מחדש.</item>
+        <item>התעוררו עם מטרה, כיבשו את היום שלפניכם.</item>
+        <item>מחשבותיך יכולות לשמש בסיס להישגים אדירים.</item>
+        <item>העולם מתעורר, וכך גם הפוטנציאל שלך.</item>
+        <item>הפרק הראשון בהרפתקה היומית שלך.</item>
+        <item>שגרת הבוקר שלך היא כן השיגור להצלחה.</item>
+        <item>זריחה או לא, הפוטנציאל שלך תמיד בעלייה.</item>
+        <item>זה הזמן לרעיונות טריים ולעשייה נועזת.</item>
+        <item>המקדים להשכים זוכה בפרס, אבל תוכלו ללכוד את חלומותיכם.</item>
+        <item>איזרו אומץ לחתור למימוש השאיפות שלכם.</item>
+        <item>עורו, קומו, כי מחכה לכם גדוּלה.</item>
+        <item>הזמן הטוב ביותר להתחיל הוא עכשיו.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>לא לשכוח לשתות מספיק!</item>
-        <item>זיכרו לנשנש מעט חטיפים.</item>
-        <item>קרינת UV מזיקה יותר בשעות אחר-הצהריים.</item>
-        <item>כעת אחר הצהריים.</item>
-        <item>בידקו תמיד את רמת הסוללה!</item>
-        <item>זיכרו לבדוק את הדוא\"ל/ההודעות שלכם.</item>
-        <item>בבקשה בידקו את רשימת המשימות שלכם אם יש לכם כזו.</item>
-        <item>לא לשכוח להכין את ארוחת הערב שלך.</item>
-        <item>שיהיה לך יום מהנה.</item>
-        <item>תחזיקו מעמד! היום כמעט נגמר!</item>
-        <item>שיהיה לך כייף.</item>
+        <item>רידפו אחר חלומותיכם, לא אחר הדקות.</item>
+        <item>בכל רגע, הזדמנות חדשה.</item>
+        <item>תיהנו מהמסע, לא רק מהיעד.</item>
+        <item>Today is a gift, that\'s why it\'s called the present.</item>
+        <item>תנו לחיוך שלכם לשנות את העולם.</item>
+        <item>החיים הם סיפור; עשו שכל פרק יהיה משמעותי.</item>
+        <item>מיצאו הנאה ברגע הרגיל.</item>
+        <item>הטוב ביותר עוד יגיע, תמשיכו כך.</item>
+        <item>ההזדמנות שלך להפוך את \'הלואי\' ל\'הווה\'</item>
+        <item>תיפסו את היום, התחילו ממש עכשיו.</item>
+        <item>האושר הוא בחירה שניתן לבחור בכל זמן.</item>
+        <item>האמינו בעצמכם, גם באחה\"ץ מנומנם.</item>
+        <item>תנו למעשיכם להשמיע קול חזק משל השעון.</item>
+        <item>חייכם הם מה שתעשו מהם; עשו אותם מדהימים.</item>
+        <item>חילמו בגדול, עיבדו קשה, ולעולם אל תוותרו.</item>
+        <item>יש בכם עוצמה גדולה יותר ממה שאתם חושבים.</item>
+        <item>כל נסיגה היא הכנה לשיבה.</item>
+        <item>אמצו את המסע, לא רק את היעד.</item>
+        <item>רידפו אחר מטרותיכם, לא אחר חששותיכם.</item>
+        <item>הפונציאל שלכם אינסופי; שחררו אותו.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>שתו מים!</item>
-        <item>8 שעות שינה זה הכרחי.</item>
-        <item>כעת ערב.</item>
-        <item>זיכרו להטעין אותי לפני שהולכים לישון.</item>
-        <item>זיכרו לבדוק את הדוא\"ל/ההודעות שלכם.</item>
-        <item>בבקשה בידקו את רשימת המשימות שלכם אם יש לכם כזו.</item>
-        <item>זיכרו לאכול ארוחת ערב.</item>
-        <item>בידקו תמיד אורות ושקעים.</item>
-        <item>לילה מהנה.</item>
-        <item>היי אתם! תנו לעצמכם מעט מנוחה!</item>
-        <item>הירגעו ונוחו מעט.</item>
+        <item>אמצו את הרגע הנוכחי, לא משנה מה השעה.</item>
+        <item>בכל דמדומי ערב, מיצאו שחר חדש של הזדמנויות.</item>
+        <item>החיים הם מסע; תיהנו מהנוף שבדרך.</item>
+        <item>הגישה שלך מעצבת את המציאות שלך.</item>
+        <item>הסיפור שלך ממשיך להיכתב, גם כאשר השמש שוקעת.</item>
+        <item>מיצאו את היופי שברגעים הרגילים.</item>
+        <item>זה הזמן להרהר ולאתחל מחדש.</item>
+        <item>ביחרו בהנאה, לא משנה השעה.</item>
+        <item>Opportunities don\'t clock out in the evening.</item>
+        <item>Be the reason someone smiles.</item>
+        <item>Your potential knows no bounds.</item>
+        <item>Moments of magic can happen at any hour.</item>
+        <item>Your life is what you make of it; make it extraordinary.</item>
+        <item>Stay curious, stay grateful.</item>
+        <item>Be the change you wish to see in the world.</item>
+        <item>Believe in yourself; you are capable of amazing things.</item>
+        <item>The only limit is the one you set for yourself.</item>
+        <item>Success begins with a single step.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>לילה טוב!</item>
-        <item>שינה ערבה!</item>
-        <item>נתראה מחר!</item>
-        <item>חלומות מתוקים!</item>
-        <item>לא להישאר ערים עד מאוחר</item>
-        <item>שתהיה לך שינה טובה</item>
-        <item>כדאי לתפוס תנומה</item>
-        <item>זמן להירגע</item>
-        <item>לילה מהנה!</item>
-        <item>זמן לטעון מצברים!</item>
+        <item>Seize the night, for it holds its own mysteries.</item>
+        <item>In the quiet of the this evening, find serenity.</item>
+        <item>Life\'s greatest adventures can start in the darkness.</item>
+        <item>Your journey continues even after the sun has set.</item>
+        <item>Let the night be your canvas; paint it with dreams.</item>
+        <item>In the stillness of this evening, find your inner peace.</item>
+        <item>Stars shine brightest in the darkest hours.</item>
+        <item>Dream big, even in the late hours of the day.</item>
+        <item>Your life is a story waiting to be written.</item>
+        <item>It\'s time for reflection and renewal.</item>
+        <item>Late night thoughts can lead to early morning revelations.</item>
+        <item>Find joy in the stillness of this evening.</item>
+        <item>The night sky is a vast canvas of dreams.</item>
+        <item>Your potential knows no bedtime; pursue your passions.</item>
+        <item>Stay hopeful, even in the darkest hours.</item>
+        <item>In the midst of chaos, find your inner calm.</item>
+        <item>Stay positive, work hard, make it happen.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>אממ... לילה טוב?</item>
-        <item>קצת מאוחר עכשיו</item>
-        <item>כדאי להסדיר את זמני השינה שלך</item>
-        <item>מרגישים יותר יצירתיות בשלב זה?</item>
-        <item>לא בריא להתעורר מאוחר.</item>
-        <item>אתם זקוקים לשינה כעת.</item>
-        <item>לא לשכוח לישון/להכין לך ארוחת בוקר.</item>
-        <item>חצות לילה מהנה.</item>
-        <item>מחסור בשינה משפיע על השעון הפנימי של הגוף.</item>
-        <item>בבקשה לשים לב לעצמך.</item>
+        <item>Nights are the quiet whispers of opportunity.</item>
+        <item>In the stillness of the night, find your inner strength.</item>
+        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
+        <item>The world sleeps, but your potential is wide awake.</item>
+        <item>The night may be late, but your ambitions are timeless.</item>
+        <item>Stay curious, stay awake, and let nights guide you.</item>
+        <item>Find the courage to chase your dreams.</item>
+        <item>Great things never come from comfort zones.</item>
+        <item>You have the power to create your own destiny.</item>
+        <item>Happiness is a choice; choose it every day.</item>
+        <item>Life is what you make it, so make it count.</item>
+        <item>Stay focused, stay determined, stay unstoppable.</item>
+        <item>You are the author of your own story.</item>
+        <item>Strive for progress, not perfection.</item>
+        <item>Every day is a new beginning; make it a great one.</item>
+        <item>Inspire others by being your authentic self.</item>
+        <item>Your attitude determines your direction.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>בורות היא אושר</item>
@@ -241,43 +269,25 @@
         <item>ערב לחיך אפילו בלי סושי</item>
         <item>עשו משהו נחמד היום</item>
         <item>זוהי חוויית הפיקסל הטובה ביותר, לא?</item>
-        <item>איך הכול הולך?</item>
-        <item>בלי אשליות, ברוכים הבאים למציאות!</item>
-        <item>תודה על תמיכתך</item>
-        <item>אין פסטיבל לדרפס - רק שלמות!</item>
-        <item>אחת מהבחירות הטובות ביותר של הבוטים</item>
-        <item>שפיות בשביל הפרנויה שלך</item>
-        <item>נסה קינוחים קרים</item>
+        <item>No illusions, welcome to reality!</item>
+        <item>Thank you for your support</item>
+        <item>No festival for Derps - only perfection!</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>Sanity for your Paranoia</item>
+        <item>נסו קינוחים קרים כקרח</item>
         <item>איזו חוויה מקסימה, לא כך?</item>
         <item>האבולוציה היא מיתוס, נכון?</item>
-        <item>אתה מה שאתה צורב, אל תהיה תפו\"א</item>
-        <item>על מה אתה חושב?</item>
-        <item>Expecto Patronum</item>
+        <item>אתה מה שאתה צורב, אל תהיה תפוח-אדמה</item>
+        <item>מה במחשבותיך?</item>
+        <item>אקספקטו פטרונום</item>
         <item>Wubba Lubba Dub Dub</item>
         <item>ווינר ווינר ....?</item>
         <item>rm -rf \/</item>
-        <item>ישנן \"ביצי פסחא\" חבויות ב-ROM הזה.</item>
-        <item>נסו לבדוק את הגדרות מזג האויר.</item>
-        <item>נסו להימנע מקרינת UV במהלך הצהריים.</item>
-        <item>שתו כמה שצריך!</item>
         <item>פרינגלס הם לא באמת צ\'יפס תפוחי אדמה..</item>
-        <item>צחוק יכול להגביר את קצב זרימת הדם.</item>
-        <item>קפה מכיל נוגדי-חימצון.</item>
-        <item>קטשופ נמכר בעבר כתרופה.</item>
-        <item>צמר גפן מתוק הומצא ע\"י רופא שיניים.</item>
-        <item>אל תפסחו על הארוחה שלכם!</item>
         <item>זיכרו לבדוק את רמת הסוללה!</item>
         <item>בידקו את הדוא\"ל/ההודעות שלכם.</item>
         <item>בידקו את רשימת המשימות שלכם אם יש לכם כזו.</item>
         <item>ניתן להשבית את quickspace באמצעות הגדרות הבית.</item>
-        <item>קדימה!</item>
-        <item>הגיע הזמן לקנות קצת אורז!</item>
-        <item>זמן לארוחת צהריים!</item>
-        <item>כל אורז לבן מתחיל חוּם.</item>
-        <item>רוצה משקה קל?</item>
-        <item>תמיד הביאו מים ושתו כמה שצריך.</item>
-        <item>החלל מריח כמו סטייק חרוך..</item>
-        <item>שיהיה לך יום מהנה!</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">הצעות</string>
