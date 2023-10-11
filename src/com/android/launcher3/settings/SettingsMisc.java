@@ -302,6 +302,11 @@ public class SettingsMisc extends CollapsingToolbarBaseActivity
                         // Launcher supports rotation by default. No need to show this setting.
                         return false;
                     }
+                    if (!getContext().getResources().getBoolean(
+                            com.android.internal.R.bool.config_supportAutoRotation)) {
+                        // Not supported by the device, hide setting.
+                        return false;
+                    }
                     // Initialize the UI once
                     preference.setDefaultValue(
                             RotationHelper.getAllowRotationDefaultValue(getContext(), info));
