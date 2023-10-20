@@ -117,25 +117,25 @@ Mantén presionado para establecer</string>
     <string name="show_quickspace_summary">Mostrar en la parte superior de la pantalla de inicio</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">¡Bienvenido a crDroid!</string>
-    <string name="quick_event_rom_intro_welcome_ext">¡Tiempo de crDroid!</string>
+    <string name="quick_event_rom_intro_welcome_ext">¡Es hora de crDroid!</string>
     <string-array name="welcome_message_variants">
         <item>Gracias por elegirnos</item>
-        <item>¿Amarnos? Envíanos una cerveza</item>
-        <item>La mejor rom siempre.</item>
-        <item>Dinos Hola en Telegram</item>
+        <item>¿Nos amas? Envíanos una cerveza</item>
+        <item>La mejor ROM del mundo.</item>
+        <item>Dinos \"hola\" en Telegram</item>
         <item>Toca aquí para comenzar</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Buenos Días.</string>
-    <string name="quickspace_grt_evening">Buenas Noches.</string>
-    <string name="quickspace_grt_afternoon">Buenas Tardes.</string>
-    <string name="quickspace_grt_night">Buenas Noches.</string>
-    <string name="quickspace_grt_general">Buen Día.</string>
+    <string name="quickspace_grt_morning">Buenos días.</string>
+    <string name="quickspace_grt_evening">Buenas noches.</string>
+    <string name="quickspace_grt_afternoon">Buenas tardes.</string>
+    <string name="quickspace_grt_night">Buenas noches.</string>
+    <string name="quickspace_grt_general">Buen día.</string>
     <string name="quickspace_ext_one">Hoy es</string>
     <string name="quickspace_ext_two">Es</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="qe_now_playing_unknown_artist">Artista desconocido</string>
-    <string name="qe_now_playing_ext_one">Jugando ahora</string>
+    <string name="qe_now_playing_ext_one">Reproduciendo</string>
     <string name="qe_now_playing_by">Por</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Reproduciendo</string>
@@ -152,20 +152,20 @@ Mantén presionado para establecer</string>
         <item>¡Qué bonito día!</item>
         <item>¡Que tengas un buen día!</item>
         <item>¿Qué tal una pequeña siesta de 5 minutos?</item>
-        <item>Consigamos este pan.</item>
+        <item>Vamos a ganarnos el pan.</item>
         <item>Las mañanas son un lienzo fresco para tu obra maestra diaria.</item>
         <item>Abraza el amanecer de la oportunidad cada mañana.</item>
         <item>En las primeras luces, encuentra el poder para iluminar tu camino.</item>
         <item>Tu día comienza con infinitas posibilidades.</item>
         <item>Cada amanecer es un recordatorio de que puedes empezar de nuevo.</item>
-        <item>Despierta con propósito, conquista el día que te espera.</item>
+        <item>Despierta con un propósito, conquista el día que te espera.</item>
         <item>Tus pensamientos pueden ser la base de grandes logros.</item>
         <item>El mundo despierta y tu potencial también.</item>
         <item>El primer capítulo de tu aventura diaria.</item>
-        <item>Deje que su rutina matutina sea la plataforma de lanzamiento hacia el éxito.</item>
-        <item>Amanecer o no, su potencial siempre está en aumento.</item>
+        <item>Deje que su rutina matutina sea la plataforma de despegue hacia el éxito.</item>
+        <item>Amaneciendo o no, tu potencial siempre está en aumento.</item>
         <item>Es hora de ideas nuevas y acciones audaces.</item>
-        <item>El que madruga, atrapa al gusano, pero tú puedes atrapar tus sueños.</item>
+        <item>El madrugador atrapa al gusano, pero tú puedes atrapar tus sueños.</item>
         <item>Encuentra el coraje para perseguir tus aspiraciones.</item>
         <item>Levántate y brilla, porque la grandeza te espera.</item>
         <item>El mejor momento para empezar es ahora.</item>
@@ -184,10 +184,10 @@ Mantén presionado para establecer</string>
         <item>La felicidad es una elección que puedes tomar en cualquier momento.</item>
         <item>Cree en ti mismo, incluso en una tarde de sueño.</item>
         <item>Deja que tus acciones hablen más que el reloj.</item>
-        <item>Tu vida es lo que haces con ella; hazlo increíble.</item>
+        <item>Tu vida es lo que haces con ella; hazla increíble.</item>
         <item>Sueña en grande, trabaja duro y nunca te rindas.</item>
         <item>Eres más fuerte de lo que piensas.</item>
-        <item>Cada revés es una preparación para una remontada.</item>
+        <item>Cada revés es una preparación para un retorno.</item>
         <item>Acepta el viaje, no sólo el destino.</item>
         <item>Busca tus objetivos, no tus miedos.</item>
         <item>Tu potencial es interminable; desbloquéalo.</item>
@@ -245,10 +245,10 @@ Mantén presionado para establecer</string>
         <item>La vida es lo que haces con ella, así que hazla contar.</item>
         <item>Mantente enfocado, mantente determinado, permanece imparable.</item>
         <item>Tú eres el autor de tu propia historia.</item>
-        <item>Esfuerzate por progresar, no por ser perfecto.</item>
-        <item>Todos los días es un nuevo comienzo, que tengas hoy uno bueno!</item>
-        <item>Inspira a otros a ser su verdadera version.</item>
-        <item>La actitud determina la dirección.</item>
+        <item>Esfuérzate por progresar, no por ser perfecto.</item>
+        <item>Todos los días son un nuevo comienzo, que tengas hoy uno bueno.</item>
+        <item>Inspira a otros a ser su \"yo\" verdadero.</item>
+        <item>Tu actitud determina la dirección.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>La ignorancia es una virtud</item>
@@ -270,25 +270,25 @@ Mantén presionado para establecer</string>
         <item>Delicioso incluso sin Sushi</item>
         <item>Haz algo bueno hoy</item>
         <item>Esta es la mejor Pixel Experience ¿no?</item>
-        <item>Sin ilusiones, bienvenido a la realidad!</item>
-        <item>Muchas gracias por tu apoyo</item>
-        <item>No hay festival para zopencos, solo la perfección!</item>
+        <item>¡Sin ilusiones, bienvenido a la realidad!</item>
+        <item>Gracias por tu apoyo</item>
+        <item>No hay festival para zopencos, ¡solo la perfección!</item>
         <item>Una de las mejores selecciones del buildbot</item>
         <item>Cordura para tu paranoia</item>
         <item>Prueba los postres helados</item>
         <item>Qué experiencia tan encantadora, ¿no?</item>
         <item>La evolución es un mito, ¿verdad?</item>
-        <item>Eres lo que eres, ten confianza en ti</item>
+        <item>Eres lo que flasheas, no seas una patata</item>
         <item>¿En qué estás pensando?</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Ganador Ganador ....?</item>
+        <item>¿Ganador, ganador....?</item>
         <item>rm -rf \/</item>
         <item>Las Pringles no son patatas fritas de verdad..</item>
         <item>¡Recuerda comprobar el nivel de batería del dispositivo!</item>
         <item>Revisa tu correo electrónico/mensajes.</item>
         <item>Comprueba tu lista de tareas, si es que tienes una.</item>
-        <item>Puedes desactivar el espacio rápido en la configuracion de inicio.</item>
+        <item>Puedes desactivar el espacio rápido en la configuración de inicio.</item>
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Sugerencias</string>
@@ -303,7 +303,7 @@ Mantén presionado para establecer</string>
     <string name="quick_event_weather_storm">Tormentoso</string>
     <string name="quick_event_weather_snow">Nevado</string>
     <string name="quick_event_weather_wind">Ventoso</string>
-    <string name="quick_event_weather_mist">Nieblado</string>
+    <string name="quick_event_weather_mist">Neblina</string>
     <string name="quick_event_weather_city_title">Ubicación actual</string>
     <string name="quick_event_weather_city_summary">Mostrar ubicación actual</string>
     <!-- Background opacity -->
