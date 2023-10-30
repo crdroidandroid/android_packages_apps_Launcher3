@@ -84,17 +84,17 @@
     <string name="icon_max_lines_title">Max lines for app label</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">جستجو</string>
-    <string name="label_lens">Google Lens</string>
+    <string name="label_lens">گوگل لنز</string>
     <string name="label_voice_search">جستجو صوتی</string>
     <string name="dock_music_search_title">جستجو موسیقی</string>
-    <string name="dock_music_search_summary">Start music search on pressing mic icon</string>
+    <string name="dock_music_search_summary">با فشار دادن آیکون میکروفون، جستجوی موسیقی را آغاز کنید</string>
     <string name="dock_search_title">نوار جست‌وجوی گوگل</string>
-    <string name="dock_search_summary">Search bar in the bottom dock</string>
-    <string name="dock_theme_title">Themed icons</string>
-    <string name="dock_theme_summary">Use themed icons for search bar</string>
-    <string name="search_radius_title">Corner radius</string>
+    <string name="dock_search_summary">نوار جستجو در پایین</string>
+    <string name="dock_theme_title">آیکون های تم دار</string>
+    <string name="dock_theme_summary">استفاده کردن از آیکون های تم دار برای نوار جستجو</string>
+    <string name="search_radius_title">گردی گوشه ها</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
+    <string name="hotseat_bg_title">پس زمینه Hotseat</string>
     <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">چرخش کاغذ دیواری</string>
