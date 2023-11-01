@@ -48,12 +48,14 @@ import com.android.launcher3.R;
 import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.logging.StatsLogManager.LauncherEvent;
 import com.android.launcher3.model.WellbeingModel;
+import com.android.launcher3.model.data.ItemInfo;
 import com.android.launcher3.popup.SystemShortcut;
 import com.android.launcher3.popup.SystemShortcut.AppInfo;
 import com.android.launcher3.touch.PagedOrientationHandler;
 import com.android.launcher3.util.InstantAppResolver;
 import com.android.launcher3.util.PackageManagerHelper;
 import com.android.launcher3.util.SplitConfigurationOptions.SplitPositionOption;
+import com.android.quickstep.util.RecentHelper;
 import com.android.quickstep.views.RecentsView;
 import com.android.quickstep.views.TaskThumbnailView;
 import com.android.quickstep.views.TaskView;
@@ -112,6 +114,69 @@ public interface TaskShortcutFactory {
             return true;
         }
     };
+
+    TaskShortcutFactory LOCKED = new TaskShortcutFactory() {
+        @Override
+        public List<SystemShortcut> getShortcuts(BaseDraggingActivity activity,
+                                                 TaskIdAttributeContainer taskContainer) {
+            TaskView taskView = taskContainer.getTaskView();
+            Task task = taskView.getTask();
+            boolean isLocked = RecentHelper.getInstance().isAppLocked(task.key.getPackageName(), taskView.getContext());
+
+            return Collections.singletonList(new LockedSystemShortcut(
+                    isLocked ? R.drawable.ic_protected_unlocked : R.drawable.ic_protected_locked,
+                    isLocked ? R.string.task_menu_item_unlock : R.string.task_menu_item_lock,
+                    activity, taskContainer.getItemInfo (), taskContainer.getTaskView(), taskView));
+        }
+
+        @Override
+        public boolean showForSplitscreen() {
+            // TODO Add support when split
+            return false;
+        }
+    };
+
+    class LockedSystemShortcut extends SystemShortcut<BaseDraggingActivity> {
+
+        final Task mTask;
+        final TaskView taskView;
+
+        public LockedSystemShortcut(int iconResId,
+                                    int labelResId,
+                                    BaseDraggingActivity target,
+                                    ItemInfo itemInfo,
+                                    View originalView, TaskView taskView) {
+            super (iconResId , labelResId , target , itemInfo , originalView);
+            this.mTask = taskView.getTask();
+            this.taskView = taskView;
+        }
+
+        @Override
+        public void onClick(View view) {
+            Task task = taskView.getTask();
+            if (task == null) {
+                return;
+            }
+            getLockTask (task, taskView);
+            dismissTaskMenuView(mTarget);
+        }
+
+        static void getLockTask(Task task, TaskView tv){
+            boolean isLocked = !RecentHelper.getInstance().isAppLocked(task.key.getPackageName (), tv.getContext());
+            StringBuilder sb = new StringBuilder();
+            sb.append("Lock Click# id: ");
+            sb.append(task.key.id);
+            sb.append(" component: ");
+            sb.append(task.key.baseIntent.getComponent());
+            sb.append(" state: ");
+            sb.append(isLocked);
+            sb.append(" -> ");
+            sb.append(!isLocked);
+            Log.d(LockedSystemShortcut.class.getName () , "getLockTask: ");
+            TaskUtilLockState.setTaskLockState(tv.getContext(), task.key.baseIntent.getComponent(), isLocked, task.key);
+            tv.updateLockedView(isLocked, false);
+        }
+    }
 
     class SplitSelectSystemShortcut extends SystemShortcut {
         private final TaskView mTaskView;

@@ -66,12 +66,29 @@
         android:importantForAccessibility="no"
         android:src="@drawable/ic_select_windows" />
 
+    <FrameLayout
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <com.android.quickstep.views.IconView
         android:id="@+id/icon"
         android:layout_width="@dimen/task_thumbnail_icon_size"
         android:layout_height="@dimen/task_thumbnail_icon_size"
         android:focusable="false"
         android:importantForAccessibility="no"/>
+
+    <ImageView
+        android:id="@+id/dis_lock"
+        android:layout_width="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="38dp"
+        android:layout_height="20dp"
+        android:alpha="0.8"
+        android:visibility="invisible"
+        android:src="@drawable/ic_protected_locked" />
+    </FrameLayout>
 
     <com.android.quickstep.views.IconView
         android:id="@+id/bottomRight_icon"

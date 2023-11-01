@@ -87,6 +87,7 @@
          in various configurations -->
     <dimen name="task_card_menu_option_vertical_padding">16dp</dimen>
     <dimen name="task_menu_vertical_padding">8dp</dimen>
+    <dimen name="task_menu_top_bottom_padding">16dp</dimen>
     <dimen name="task_card_margin">8dp</dimen>
     <dimen name="task_card_menu_shadow_height">3dp</dimen>
     <dimen name="task_menu_option_start_margin">16dp</dimen>

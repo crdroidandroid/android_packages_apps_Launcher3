@@ -74,7 +74,6 @@ public class RecentTasksList {
     private RecentsModel.RunningTasksListener mRunningTasksListener;
     // Tasks are stored in order of least recently launched to most recently launched.
     private ArrayList<ActivityManager.RunningTaskInfo> mRunningTasks;
-
     public RecentTasksList(LooperExecutor mainThreadExecutor, KeyguardManager keyguardManager,
             SystemUiProxy sysUiProxy) {
         mMainThreadExecutor = mainThreadExecutor;
