@@ -17,7 +17,9 @@
 package com.android.quickstep.views;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.graphics.Rect;
 import android.util.AttributeSet;
@@ -33,6 +35,7 @@ import androidx.annotation.Nullable;
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Flags;
 import com.android.launcher3.Insettable;
+import com.android.launcher3.Launcher;
 import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
@@ -135,6 +138,8 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
     private boolean mLens;
     private boolean mShakeClearAll;
 
+    private final Launcher mLauncher;
+
     public OverviewActionsView(Context context) {
         this(context, null);
     }
@@ -152,6 +157,7 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
         prefs.registerOnSharedPreferenceChangeListener(this);
         mShakeUtils = new ShakeUtils(context);
         mShakeClearAll = prefs.getBoolean(KEY_RECENTS_SHAKE_CLEAR_ALL, true);
+        mLauncher = isHomeApp(context) ? Launcher.getLauncher(context) : null;
     }
 
     @Override
@@ -194,7 +200,8 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
 
     @Override
     public void onShake(double speed) {
-        if (mCallbacks != null && mShakeClearAll) {
+        if (mCallbacks != null && mShakeClearAll && mLauncher != null &&
+                mLauncher.getOverviewPanel().getVisibility() == View.VISIBLE) {
             mCallbacks.onClearAllTasksRequested();
         }
     }
@@ -410,4 +417,14 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
         mSplitButton.setEnabled(shouldBeEnabled);
     }
 
+    private boolean isHomeApp(Context context) {
+        final Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        final ResolveInfo res = context.getPackageManager().resolveActivity(intent, 0);
+        if (res.activityInfo != null && context.getPackageName()
+                .equals(res.activityInfo.packageName)) {
+            return true;
+        }
+        return false;
+    }
 }
