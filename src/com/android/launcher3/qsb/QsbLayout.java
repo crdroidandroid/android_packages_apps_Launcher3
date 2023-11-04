@@ -136,7 +136,7 @@ public class QsbLayout extends FrameLayout {
                 bundle.putString("caller_package", Utilities.GSA_PACKAGE);
                 bundle.putLong("start_activity_time_nanos", SystemClock.elapsedRealtimeNanos());
                 lensIntent.setComponent(new ComponentName(Utilities.GSA_PACKAGE, Utilities.LENS_ACTIVITY))
-                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK)
                         .setPackage(Utilities.GSA_PACKAGE)
                         .setData(Uri.parse(Utilities.LENS_URI))
                         .putExtra("lens_activity_params", bundle);
