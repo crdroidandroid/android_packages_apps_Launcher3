@@ -29,80 +29,80 @@
     <string name="misc_category_title">Разни</string>
     <string name="misc_category_summary">Други опции</string>
     <string name="dev_options_title">Опции на програмиста</string>
-    <string name="dev_options_desc">Enable some hidden features at your own risk</string>
-    <string name="general_category_title">General</string>
-    <string name="interface_category_title">Interface</string>
-    <string name="search_bar_category_title">Search bar</string>
-    <string name="actions_category_title">Quick actions</string>
+    <string name="dev_options_desc">Активирайте някои скрити функции на собствен риск</string>
+    <string name="general_category_title">Основни</string>
+    <string name="interface_category_title">Интерфейс</string>
+    <string name="search_bar_category_title">Лента за търсене</string>
+    <string name="actions_category_title">Бързи действия</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Swipe to access Google app</string>
+    <string name="title_show_google_app">Плъзнете за достъп до Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_left">When you swipe left from main Home screen</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">When you swipe right from main Home screen</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Icon labels on desktop</string>
-    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <string name="desktop_show_labels">Етикети на иконите на началния екран</string>
+    <string name="drawer_show_labels">Етикети на иконите в менюто с приложения</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">Стойност: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">по подразбиране</string>
+    <string name="custom_seekbar_default_value_to_set">Стойност по подразбиране: <xliff:g id="v">%s</xliff:g>\nПродължително натискане за задаване</string>
+    <string name="custom_seekbar_default_value_is_set">Стойността по подразбиране е зададена</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">Размер на иконата</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">Размер на шрифта</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">Макс. редове за етикета на приложението</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off</string>
+    <string name="pref_sleep_gesture_title">Двукратно почукване за заспиване</string>
+    <string name="pref_sleep_gesture_summary">Докоснете двата пъти на празно място за изключване</string>
     <!-- Hotseat searchbar -->
-    <string name="label_search">Search</string>
+    <string name="label_search">Търсене</string>
     <string name="label_lens">Google Lens</string>
-    <string name="label_voice_search">Voice search</string>
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Search bar in the bottom dock</string>
-    <string name="dock_theme_title">Themed icons</string>
-    <string name="dock_theme_summary">Use themed icons for search bar</string>
-    <string name="search_radius_title">Corner radius</string>
+    <string name="label_voice_search">Гласово търсене</string>
+    <string name="dock_search_title">Google лента за търсене</string>
+    <string name="dock_search_summary">Покажи лентата за търсене на долната част на екрана</string>
+    <string name="dock_theme_title">Тематични икони</string>
+    <string name="dock_theme_summary">Използване на тематични икони за лентата за търсене</string>
+    <string name="search_radius_title">Радиус на ъгъл</string>
     <!-- Recents -->
     <string name="action_lens">Lens</string>
     <!-- Homescreen Statusbar -->
-    <string name="show_statusbar_title">Status Bar</string>
+    <string name="show_statusbar_title">Лента на състоянието</string>
     <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+    <string name="suggestion_pref_screen_title">Предложения</string>
+    <string name="suggestion_pref_screen_desc">За всички приложения &amp; Предложения на началния екран</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
-    <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
-    <string name="trust_apps_loading">Loading\u2026</string>
-    <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="trust_apps_help">Help</string>
-    <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
-    <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="trust_apps_manager_name">Скрити &amp; Защитени приложения</string>
+    <string name="trust_apps_auth_manager">Отключете за да управлявате скритите и защитените приложения</string>
+    <string name="trust_apps_auth_open_app">Идентифицирайте се за да отворите %1$s</string>
+    <string name="trust_apps_loading">Зарежда се\u2026</string>
+    <string name="trust_apps_no_lock_error">Моля, задайте сигурно заключване на екрана за да ограничи достъпа до дадено приложение</string>
+    <string name="trust_apps_help">Помощ</string>
+    <string name="trust_apps_info_hidden">Скритите приложения и техните приспособления са скрити от менюто с приложения</string>
+    <string name="trust_apps_info_protected">Защитените приложения изискват удостоверяване за да бъдат отворени от стартовия панел</string>
     <!-- Force stop shortcut -->
-    <string name="recent_task_force_stop_app">Force stop</string>
-    <string name="recents_app_force_stopped">App force stopped</string>
+    <string name="recent_task_force_stop_app">Принудително спиране</string>
+    <string name="recents_app_force_stopped">Приложението е принудително спряно</string>
     <!-- Icon pack -->
-    <string name="icon_pack_title">Icon pack</string>
-    <string name="icon_pack_default_label">Default</string>
-    <string name="icon_pack_add">Install more</string>
-    <string name="icon_pack_no_market">There\'s no available app store</string>
+    <string name="icon_pack_title">Пакет икони</string>
+    <string name="icon_pack_default_label">По подразбиране</string>
+    <string name="icon_pack_add">Инсталиране на още</string>
+    <string name="icon_pack_no_market">Няма наличен магазин за приложения</string>
     <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar">Use taskbar</string>
-    <string name="pref_allow_phone_taskbar_desc">For opening and switching apps anywhere</string>
+    <string name="pref_allow_phone_taskbar">Използване на лентата на задачите</string>
+    <string name="pref_allow_phone_taskbar_desc">За отваряне и превключване на приложенията навсякъде</string>
     <!-- Recent Grid -->
-    <string name="pref_allow_phone_overview_grid">Grid style</string>
-    <string name="pref_allow_phone_overview_grid_desc">More recent apps in overview</string>
+    <string name="pref_allow_phone_overview_grid">Стил решетка</string>
+    <string name="pref_allow_phone_overview_grid_desc">Още последно използвани приложения в общ преглед</string>
     <!-- Row Height -->
-    <string name="row_height_title">Row height</string>
+    <string name="row_height_title">Височина на реда</string>
     <!-- Top shadow -->
-    <string name="show_top_shadow">Top shadow</string>
+    <string name="show_top_shadow">Горна сянка</string>
     <!-- Wallpaper scrolling -->
-    <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
+    <string name="allow_wallpaper_scrolling">Превъртане на тапета</string>
     <string name="allow_wallpaper_scrolling_desc">Wallpaper scrolling effect for multiple screens</string>
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
