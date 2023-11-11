@@ -18,28 +18,28 @@
     <!-- Application name -->
     <!-- Folder titles -->
     <!-- General -->
-    <string name="settings_title">Home settings</string>
+    <string name="settings_title">تنظیمات صفحه اصلی</string>
     <!-- Categories -->
     <string name="home_category_title">صفحه اصلی</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
+    <string name="home_category_summary">تنظیمات پنل دستیار صوتی گوگل و بیشتر</string>
     <string name="icons_category_title">آیکون ها</string>
-    <string name="icons_category_summary">Set icon size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="recents_category_title">Recents</string>
+    <string name="icons_category_summary">تنظیم اندازه آیکون و بیشتر</string>
+    <string name="app_drawer_category_title">منوی برنامه ها</string>
+    <string name="app_drawer_category_summary">شخصی سازی منوی برنامه ها</string>
+    <string name="recents_category_title">برنامه‌های اخیر</string>
     <string name="recents_category_summary">Revamp the overview screen</string>
-    <string name="misc_category_title">Miscellaneous</string>
+    <string name="misc_category_title">سایر</string>
     <string name="misc_category_summary">گزینه های دیگر</string>
     <string name="general_category_title">عمومی</string>
     <string name="interface_category_title">رابط کاربری</string>
-    <string name="quickspace_category_title">Quickspace</string>
+    <string name="quickspace_category_title">فضای سریع</string>
     <string name="search_bar_category_title">نوار جستجو</string>
-    <string name="actions_category_title">Quick actions</string>
+    <string name="actions_category_title">اقدامات سریع</string>
     <!-- Developer options -->
     <string name="dev_options_title">گزینه های برنامه نویس</string>
-    <string name="dev_options_summary">Enable some hidden features at your own risk</string>
+    <string name="dev_options_summary">بعضی از ویژگیهای پنهان را با مسئولیت خودتان فعال کنید</string>
     <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Lock layout</string>
+    <string name="settings_lock_layout_title">قفل کردن طرح چیدمان</string>
     <string name="settings_lock_layout_summary_on">Icons and widgets can\'t be added, removed and moved on the homescreen</string>
     <string name="settings_lock_layout_summary_off">Icons and widgets can be added, removed and moved on the homescreen</string>
     <string name="settings_edit_widgets_error">It\'s not possible to add widgets to the home screen</string>
@@ -68,7 +68,7 @@
     <string name="pause">توقف</string>
     <string name="pause_apps_dialog_title">Pause %1$s?</string>
     <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
-    <string name="paused_apps_dialog_title">App paused</string>
+    <string name="paused_apps_dialog_title">برنامه متوقف شده است</string>
     <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
     <string name="paused_apps_drop_target_label">Pause app</string>
     <!-- Custom seekbar -->
@@ -84,17 +84,17 @@
     <string name="icon_max_lines_title">Max lines for app label</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">جستجو</string>
-    <string name="label_lens">Google Lens</string>
+    <string name="label_lens">گوگل لنز</string>
     <string name="label_voice_search">جستجو صوتی</string>
     <string name="dock_music_search_title">جستجو موسیقی</string>
-    <string name="dock_music_search_summary">Start music search on pressing mic icon</string>
+    <string name="dock_music_search_summary">با فشار دادن آیکون میکروفون، جستجوی موسیقی را آغاز کنید</string>
     <string name="dock_search_title">نوار جست‌وجوی گوگل</string>
-    <string name="dock_search_summary">Search bar in the bottom dock</string>
-    <string name="dock_theme_title">Themed icons</string>
-    <string name="dock_theme_summary">Use themed icons for search bar</string>
-    <string name="search_radius_title">Corner radius</string>
+    <string name="dock_search_summary">نوار جستجو در پایین</string>
+    <string name="dock_theme_title">آیکون های تم دار</string>
+    <string name="dock_theme_summary">استفاده کردن از آیکون های تم دار برای نوار جستجو</string>
+    <string name="search_radius_title">گردی گوشه ها</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
+    <string name="hotseat_bg_title">پس زمینه Hotseat</string>
     <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">چرخش کاغذ دیواری</string>
