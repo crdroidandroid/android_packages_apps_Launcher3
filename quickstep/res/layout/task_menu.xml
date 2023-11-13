@@ -35,11 +35,16 @@
         android:paddingBottom="@dimen/task_menu_top_bottom_padding"
         android:textSize="16sp"/>
 
-    <LinearLayout
-        android:id="@+id/menu_option_layout"
+    <ScrollView
+        android:id="@+id/menu_options_scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:showDividers="middle" />
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/menu_option_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:showDividers="middle" />
+    </ScrollView>
 
 </com.android.quickstep.views.TaskMenuView>
