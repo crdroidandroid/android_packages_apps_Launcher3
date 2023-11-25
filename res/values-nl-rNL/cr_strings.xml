@@ -352,4 +352,7 @@
     <string name="quick_event_weather_city_title">Huidige locatie</string>
     <string name="quick_event_weather_city_summary">Toon huidige locatie</string>
     <string name="intent_no_app_clock_found">Kan agenda of klok activiteit niet vinden</string>
+    <!-- Freed memory on clear all tasks -->
+    <string name="freed_memory_text">Freed up %1$s</string>
+    <string name="optimal_memory_text">Your system is now in optimal condition</string>
 </resources>
