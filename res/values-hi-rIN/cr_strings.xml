@@ -108,7 +108,7 @@
     <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
     <string name="allow_wallpaper_zooming_desc">Zoom in or out the wallpaper when using drawer or recent apps</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">बैकग्राउंड अपारदर्शिता</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">स्क्रीनशॉट</string>
     <string name="recents_clear_all_title">सब कुछ मिटाएं</string>
@@ -130,6 +130,6 @@
     <string name="app_info_version">संस्करण</string>
     <string name="app_info_more">अधिक देखें</string>
     <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Themed icons</string>
+    <string name="pref_themed_icons_title">थीम वाले आइकन</string>
     <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
 </resources>
