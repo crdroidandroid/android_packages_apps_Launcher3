@@ -20,49 +20,49 @@
     <!-- General -->
     <string name="settings_title">Home settings</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
-    <string name="icons_category_summary">Set icon size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="recents_category_title">Recents</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
-    <string name="general_category_title">General</string>
-    <string name="interface_category_title">Interface</string>
+    <string name="home_category_title">Начален екран</string>
+    <string name="home_category_summary">Приложи Google now панела и още</string>
+    <string name="icons_category_title">Икони</string>
+    <string name="icons_category_summary">Задай размер на икона и още</string>
+    <string name="app_drawer_category_title">Списък с приложения</string>
+    <string name="app_drawer_category_summary">Персонализиране на менюто с приложения</string>
+    <string name="recents_category_title">Скорошни</string>
+    <string name="recents_category_summary">Промени екрана за преглеждания</string>
+    <string name="misc_category_title">Разни</string>
+    <string name="misc_category_summary">Други опции</string>
+    <string name="general_category_title">Основни</string>
+    <string name="interface_category_title">Интерфейс</string>
     <string name="quickspace_category_title">Quickspace</string>
-    <string name="search_bar_category_title">Search bar</string>
-    <string name="actions_category_title">Quick actions</string>
+    <string name="search_bar_category_title">Лента за търсене</string>
+    <string name="actions_category_title">Бързи действия</string>
     <!-- Developer options -->
-    <string name="dev_options_title">Developer options</string>
-    <string name="dev_options_summary">Enable some hidden features at your own risk</string>
+    <string name="dev_options_title">Опции за разработчици</string>
+    <string name="dev_options_summary">Активирайте някои скрити функции на собствен риск</string>
     <!-- Edit workspace -->
     <string name="settings_lock_layout_title">Lock layout</string>
     <string name="settings_lock_layout_summary_on">Icons and widgets can\'t be added, removed and moved on the homescreen</string>
     <string name="settings_lock_layout_summary_off">Icons and widgets can be added, removed and moved on the homescreen</string>
     <string name="settings_edit_widgets_error">It\'s not possible to add widgets to the home screen</string>
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Icon labels on desktop</string>
-    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <string name="desktop_show_labels">Етикети на иконите на началния екран</string>
+    <string name="drawer_show_labels">Етикети на иконите в менюто с приложения</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Swipe to access Google app</string>
+    <string name="title_show_google_app">Плъзнете за достъп до Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">When you swipe right from main home screen</string>
+    <string name="msg_minus_one_on_left">When you swipe left from main Home screen</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">When you swipe left from main home screen</string>
+    <string name="msg_minus_one_on_right">When you swipe right from main Home screen</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
-    <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
+    <string name="trust_apps_manager_name">Скрити &amp; Защитени приложения</string>
+    <string name="trust_apps_auth_manager">Отключете за да управлявате скритите и защитените приложения</string>
     <string name="trust_apps_auth_open_app">Удостоверяване за отваряне%1$s</string>
     <string name="trust_apps_loading">Зарежда се\u2026</string>
     <string name="trust_apps_no_lock_error">Моля задайте сигурно заключване на екрана за да ограничавате достъп до приложения</string>
     <string name="trust_apps_help">Помощ</string>
     <string name="trust_apps_info_hidden">Скрити приложения и техните добавки са скрити от чекмеджето с приложения</string>
-    <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="trust_apps_info_protected">Защитените приложения изискват удостоверяване за да бъдат отворени от стартовия панел</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
+    <string name="pref_sleep_gesture_title">Двукратно почукване за заспиване</string>
     <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Pause</string>
@@ -72,50 +72,50 @@
     <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
     <string name="paused_apps_drop_target_label">Pause app</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">по подразбиране</string>
+    <string name="custom_seekbar_default_value_to_set">Стойност по подразбиране: <xliff:g id="v">%s</xliff:g>\nПродължително натискане за задаване</string>
+    <string name="custom_seekbar_default_value_is_set">По подразбиране стойността е зададена</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">Размер на иконата</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">Размер на шрифта</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">Макс. редове за етикета на приложението</string>
     <!-- Hotseat searchbar -->
-    <string name="label_search">Search</string>
+    <string name="label_search">Търсене</string>
     <string name="label_lens">Google Lens</string>
-    <string name="label_voice_search">Voice search</string>
+    <string name="label_voice_search">Гласово търсене</string>
     <string name="dock_music_search_title">Music search</string>
     <string name="dock_music_search_summary">Start music search on pressing mic icon</string>
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Search bar in the bottom dock</string>
-    <string name="dock_theme_title">Themed icons</string>
-    <string name="dock_theme_summary">Use themed icons for search bar</string>
-    <string name="search_radius_title">Corner radius</string>
+    <string name="dock_search_title">Google лента за търсене</string>
+    <string name="dock_search_summary">Покажи лентата за търсене на долната част на екрана</string>
+    <string name="dock_theme_title">Тематични икони</string>
+    <string name="dock_theme_summary">Използване на тематични икони за лентата за търсене</string>
+    <string name="search_radius_title">Радиус на ъгъл</string>
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hotseat background</string>
     <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
     <!-- Wallpaper scrolling -->
-    <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
+    <string name="allow_wallpaper_scrolling">Превъртане на тапета</string>
     <string name="allow_wallpaper_scrolling_summary">Wallpaper scrolling effect for multiple screens</string>
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
     <string name="allow_wallpaper_zooming_summary">Zoom in or out the wallpaper when using drawer or recent apps</string>
     <!-- Homescreen Statusbar -->
-    <string name="show_statusbar_title">Status Bar</string>
+    <string name="show_statusbar_title">Лента на състоянието</string>
     <!-- Top shadow -->
-    <string name="show_top_shadow">Top shadow</string>
+    <string name="show_top_shadow">Горна сянка</string>
     <!-- Row Height -->
-    <string name="row_height_title">Row height</string>
+    <string name="row_height_title">Височина на реда</string>
     <!-- Background blur -->
     <string name="background_blur_title">Background blur depth</string>
     <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_title">Бърз поглед</string>
     <string name="show_quickspace_summary">Show at the top of your home screen</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
+    <string name="quick_event_rom_intro_welcome">Добре дошъл в crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
     <string-array name="welcome_message_variants">
         <item>Thank you for choosing us</item>
@@ -146,12 +146,12 @@
     <string name="quickspace_psa_title">Random messages</string>
     <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>Let\'s get this bread.</item>
+        <item>Добро утро!</item>
+        <item>Добро утро, време е за рок!</item>
+        <item>Какъв чудесен ден!</item>
+        <item>Приятен ден!</item>
+        <item>Какво ще кажете за малка 5-минутна дрямка?</item>
+        <item>Нека вземем този хляб.</item>
         <item>Mornings are a fresh canvas for your daily masterpiece.</item>
         <item>Embrace the sunrise of opportunity each morning.</item>
         <item>In the early light, find the power to illuminate your path.</item>
@@ -250,38 +250,38 @@
         <item>Your attitude determines your direction.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
+        <item>Невежеството е блаженство</item>
+        <item>Време ли е вече за инсталиране на друга актуализация?</item>
         <item>Make peace, not war</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
-        <item>Open goodness with crDroid</item>
+        <item>О, хей, какво има?</item>
+        <item>Съсредоточете се върху задачите си</item>
+        <item>Колко скрийншота правите?</item>
+        <item>Отворете най-доброто с crDroid</item>
         <item>Spread love, not havoc</item>
         <item>We didn\'t start the fire!</item>
-        <item>Time for some good music</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
+        <item>Време за хубава музика</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C ГЛАВА</item>
+        <item>Необходим Ви е crDroid Premium за да използвате това</item>
+        <item>Спомнете си Lineage на Unicorn</item>
+        <item>Насладете се на Удължен живот на батерията</item>
+        <item>Започнете от нулата</item>
         <item>We love you 3000</item>
         <item>Delicious even without Sushi</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
+        <item>Направете нещо хубаво днес</item>
+        <item>Това е най-добрият Pixel, нали?</item>
+        <item>Без илюзии, добре дошли в реалността!</item>
+        <item>Благодарим ви за подкрепата</item>
+        <item>Не е фестивал за пустиняци - само перфе</item>
+        <item>Една от най-добрите разработки</item>
+        <item>Разум за вашата параноя</item>
+        <item>Опитайте Ice Cold десерти</item>
+        <item>Какво прекрасно преживяване, нали?</item>
+        <item>Еволюцията е мит, нали?</item>
+        <item>Ти си това което показваш, не бъди ботор.</item>
+        <item>Какво мислите?</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Winner Winner ....?</item>
+        <item>Победител, Победител ....?</item>
         <item>rm -rf \/</item>
         <item>Pringles aren\'t actually potato chips..</item>
         <item>Remember to check device\'s battery level!</item>
@@ -290,8 +290,8 @@
         <item>You can disable quickspace via home settings.</item>
     </string-array>
     <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+    <string name="suggestion_pref_screen_title">Предложения</string>
+    <string name="suggestion_pref_screen_desc">За всички приложения &amp; Предложения на началния екран</string>
     <!-- QuickSpace: QuickEvent: Weather -->
     <string name="quick_event_ambient_weather_title">Weather condition</string>
     <string name="quick_event_ambient_weather_summary">Display current weather condition and temperature</string>
@@ -306,28 +306,28 @@
     <string name="quick_event_weather_city_title">Current location</string>
     <string name="quick_event_weather_city_summary">Display current location</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">Прозрачност на фона</string>
     <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar_title">Use taskbar</string>
-    <string name="pref_allow_phone_taskbar_summary">For opening and switching apps anywhere</string>
+    <string name="pref_allow_phone_taskbar_title">Използване на лентата на задачите</string>
+    <string name="pref_allow_phone_taskbar_summary">За отваряне и превключване на приложенията навсякъде</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Screenshot</string>
     <string name="recents_clear_all_title">Clear all</string>
     <string name="recents_lens_title">Lens</string>
     <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Themed icons</string>
+    <string name="pref_themed_icons_title">Тематични икони</string>
     <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
     <!-- AppInfo -->
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_source">Източник</string>
+    <string name="app_info_source_system">Система</string>
+    <string name="app_info_last_update">Последно обновяване</string>
+    <string name="app_info_version">Версия</string>
+    <string name="app_info_more">Още</string>
     <!-- Icon pack -->
-    <string name="icon_pack_title">Icon pack</string>
-    <string name="icon_pack_default_label">Default</string>
-    <string name="icon_pack_add">Install more</string>
-    <string name="icon_pack_no_market">There\'s no available app store</string>
+    <string name="icon_pack_title">Пакет икони</string>
+    <string name="icon_pack_default_label">По подразбиране</string>
+    <string name="icon_pack_add">Инсталиране на още</string>
+    <string name="icon_pack_no_market">Няма наличен магазин за приложения</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Kill</string>
     <string name="recents_app_killed">App killed</string>
