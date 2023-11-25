@@ -27,7 +27,7 @@
     <string name="app_drawer_category_title">منوی برنامه ها</string>
     <string name="app_drawer_category_summary">شخصی سازی منوی برنامه ها</string>
     <string name="recents_category_title">برنامه‌های اخیر</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_summary">صفحه نمای کلی را نو نما کنید</string>
     <string name="misc_category_title">سایر</string>
     <string name="misc_category_summary">گزینه های دیگر</string>
     <string name="general_category_title">عمومی</string>
@@ -44,23 +44,23 @@
     <string name="settings_lock_layout_summary_off">Icons and widgets can be added, removed and moved on the homescreen</string>
     <string name="settings_edit_widgets_error">It\'s not possible to add widgets to the home screen</string>
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Icon labels on desktop</string>
-    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <string name="desktop_show_labels">نمایش نام برنامه ها در صفحه اصلی</string>
+    <string name="drawer_show_labels">نمایش نام برنامه ها در کشو برنامه ها</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Swipe to access Google app</string>
+    <string name="title_show_google_app">کشیدن برای دسترسی به برنامه گوگل</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">When you swipe right from main home screen</string>
+    <string name="msg_minus_one_on_left">When you swipe left from main Home screen</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">When you swipe left from main home screen</string>
+    <string name="msg_minus_one_on_right">When you swipe right from main Home screen</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
-    <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
-    <string name="trust_apps_loading">Loading\u2026</string>
-    <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
+    <string name="trust_apps_manager_name">برنامه‌های پنهان &amp; محافظت شده</string>
+    <string name="trust_apps_auth_manager">برای مدیریت برنامه‌های پنهان و محافظت شده قفل را باز کنید</string>
+    <string name="trust_apps_auth_open_app">احراز هویت برای باز کردن %1$s</string>
+    <string name="trust_apps_loading">در حال بارگزاری\u2026</string>
+    <string name="trust_apps_no_lock_error">لطفا یک قفل برای کنترل برنامه‌های پنهان و محافظت شده، تنظیم کنید</string>
     <string name="trust_apps_help">کمک</string>
-    <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
-    <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="trust_apps_info_hidden">برنامه‌های مخفی و ویجت‌هایشان از فهرست برنامه ها پنهان هستند</string>
+    <string name="trust_apps_info_protected">برای باز کردن برنامه‌های محافظت شده از صفحه اصلی نیاز به احراز هویت می‌باشد</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">برای حالت خواب دوبار ضربه بزنید</string>
     <string name="pref_sleep_gesture_summary">برای خاموش کردن صفحه نمایش روی فضای خالی صفحه دوبار ضربه بزنید</string>
@@ -72,16 +72,16 @@
     <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
     <string name="paused_apps_drop_target_label">Pause app</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">ارزش: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">بطور پیش‌فرض</string>
+    <string name="custom_seekbar_default_value_to_set">ارزش پیش‌فرض: <xliff:g id="v">%s</xliff:g>\n برای تنظیم نگه دارید</string>
+    <string name="custom_seekbar_default_value_is_set">مقدار پیش‌فرض تعیین شده است</string>
     <!-- Icon size -->
     <string name="icon_size_title">اندازه آیکون</string>
     <!-- Font size -->
     <string name="font_size_title">اندازه قلم</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">حداکثر خطوط برای برچسب برنامه</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">جستجو</string>
     <string name="label_lens">گوگل لنز</string>
@@ -100,22 +100,22 @@
     <string name="allow_wallpaper_scrolling">چرخش کاغذ دیواری</string>
     <string name="allow_wallpaper_scrolling_summary">جلوه چرخش کاغذ دیواری برای چندین صفحه</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_summary">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">بزرگنمایی شدن کاغذ دیواری</string>
+    <string name="allow_wallpaper_zooming_summary">هنگام استفاده از کشو یا برنامه های اخیر، کاغذ دیواری را بزرگ یا کوچک کنید</string>
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">نوار وضعیت</string>
     <!-- Top shadow -->
-    <string name="show_top_shadow">Top shadow</string>
+    <string name="show_top_shadow">سایه بالا</string>
     <!-- Row Height -->
-    <string name="row_height_title">Row height</string>
+    <string name="row_height_title">ارتفاع ردیف</string>
     <!-- Background blur -->
-    <string name="background_blur_title">Background blur depth</string>
-    <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
+    <string name="background_blur_title">عمق تاری پس زمینه</string>
+    <string name="background_blur_summary">سطح عمق تاری را برای موارد اخیر و کشوی برنامه تنظیم کنید</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_title">در یک دید</string>
     <string name="show_quickspace_summary">Show at the top of your home screen</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
+    <string name="quick_event_rom_intro_welcome">به crDroid خوش آمدید!</string>
     <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
     <string-array name="welcome_message_variants">
         <item>Thank you for choosing us</item>
@@ -147,11 +147,11 @@
     <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
     <string-array name="quickspace_psa_morning">
         <item>صبح بخیر!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
+        <item>صبح بخیر، وقتشه بترکونیم!</item>
+        <item>چه روز قشنگی!</item>
         <item>روز خوبی داشته باشی!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>Let\'s get this bread.</item>
+        <item>نظرتون در مورد یک چرت کوچک ۵ دقیقه ای چیه؟</item>
+        <item>بریم یه نون بخوریم.</item>
         <item>Mornings are a fresh canvas for your daily masterpiece.</item>
         <item>Embrace the sunrise of opportunity each morning.</item>
         <item>In the early light, find the power to illuminate your path.</item>
@@ -250,38 +250,39 @@
         <item>Your attitude determines your direction.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
-        <item>Is it time to flash another update already?</item>
+        <item>نادیده بگیر تا شادروان شوی</item>
+        <item>به این زودی موقع فلش کردن یه به‌روزرسانی دیگه رسید؟</item>
         <item>Make peace, not war</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
-        <item>Open goodness with crDroid</item>
+        <item>هی، چه خبرا؟</item>
+        <item>روی کارات تمرکز کن</item>
+        <item>چقدر اسکرین‌شات می‌گیری؟</item>
+        <item>با crDroid به خوبی‌ها سلام کن</item>
         <item>Spread love, not havoc</item>
         <item>We didn\'t start the fire!</item>
-        <item>Time for some good music</item>
+        <item>وقت چندتا آهنگ خوبه</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
+        <item>برای دیدن این قسمت، به نسخه کامل crDroid نیاز داری</item>
+        <item>اصل و نسب تک‌شاخ رو بخاطر داشته باش
+Remember the Lineage of the Unicorn</item>
+        <item>از طول عمر Xtended باتری لذت ببر</item>
+        <item>از صفر شروع کن</item>
         <item>We love you 3000</item>
         <item>Delicious even without Sushi</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
+        <item>امروز یه کار خوب انجام بده</item>
+        <item>این بهترین تجربه کاربری پیکسلیه، مگه نه؟</item>
+        <item>توهم بی توهم، به واقعیت خوش اومدی!</item>
+        <item>از حمایتت ممنونیم</item>
         <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
+        <item>یکی از بهترین‌های buildbot</item>
         <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
+        <item>دسرهای یخیو امتحان کن</item>
+        <item>چه تجربه‌ی باحالی، مگه نه؟</item>
+        <item>تکامل یه افسانه‌س، نه؟</item>
+        <item>تو چیزی هستی که فلشش می‌کنی، سیب‌زمینی نباش</item>
+        <item>چی تو ذهنته؟</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Winner Winner ....?</item>
+        <item>تو بردی و تو بردی ....؟</item>
         <item>rm -rf \/</item>
         <item>Pringles aren\'t actually potato chips..</item>
         <item>Remember to check device\'s battery level!</item>
@@ -291,7 +292,7 @@
     </string-array>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">پیشنهادها</string>
-    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+    <string name="suggestion_pref_screen_desc">پیشنهاد‌ها در صفحه خانه &amp; برای همه برنامه‌ها</string>
     <!-- QuickSpace: QuickEvent: Weather -->
     <string name="quick_event_ambient_weather_title">Weather condition</string>
     <string name="quick_event_ambient_weather_summary">Display current weather condition and temperature</string>
@@ -306,16 +307,16 @@
     <string name="quick_event_weather_city_title">Current location</string>
     <string name="quick_event_weather_city_summary">Display current location</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">شفافیت پس‌زمینه</string>
     <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar_title">Use taskbar</string>
-    <string name="pref_allow_phone_taskbar_summary">For opening and switching apps anywhere</string>
+    <string name="pref_allow_phone_taskbar_title">استفاده از نوار وظیفه</string>
+    <string name="pref_allow_phone_taskbar_summary">برای باز کردن و جابجایی برنامه ها در هر کجا</string>
     <!-- Recents icons -->
-    <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Clear all</string>
+    <string name="recents_screenshot_title">عکس گرفتن از صفحه</string>
+    <string name="recents_clear_all_title">پاک کردن همه موارد</string>
     <string name="recents_lens_title">لنز</string>
     <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Themed icons</string>
+    <string name="pref_themed_icons_title">آیکن های تم</string>
     <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
     <!-- AppInfo -->
     <string name="app_info_source">منبع</string>
@@ -326,8 +327,8 @@
     <!-- Icon pack -->
     <string name="icon_pack_title">بسته آیکون ها</string>
     <string name="icon_pack_default_label">پیش‌فرض</string>
-    <string name="icon_pack_add">Install more</string>
-    <string name="icon_pack_no_market">There\'s no available app store</string>
+    <string name="icon_pack_add">نصب بیشتر</string>
+    <string name="icon_pack_no_market">هیچ فروشگاه برنامه در دسترس نیست</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Kill</string>
     <string name="recents_app_killed">برنامه بسته شد</string>
