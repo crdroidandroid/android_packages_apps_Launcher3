@@ -37,7 +37,7 @@
     <string name="actions_category_title">Accions ràpides</string>
     <!-- Developer options -->
     <string name="dev_options_title">Opcions per a desenvolupadors</string>
-    <string name="dev_options_summary">Enable some hidden features at your own risk</string>
+    <string name="dev_options_summary">Activa algunes característiques ocultes baix la teva responsabilitat</string>
     <!-- Edit workspace -->
     <string name="settings_lock_layout_title">Lock layout</string>
     <string name="settings_lock_layout_summary_on">Icons and widgets can\'t be added, removed and moved on the homescreen</string>
@@ -47,20 +47,20 @@
     <string name="desktop_show_labels">Icon labels on desktop</string>
     <string name="drawer_show_labels">Icon labels in drawer</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Swipe to access Google app</string>
+    <string name="title_show_google_app">Fes lliscar el dit per accedir a l\'app de Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">When you swipe right from main home screen</string>
+    <string name="msg_minus_one_on_left">Quan feu lliscar el dit cap a l\'esquerra des de la pantalla principal d\'inici</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">When you swipe left from main home screen</string>
+    <string name="msg_minus_one_on_right">Quan feu lliscar el dit cap a la dreta des de la pantalla principal d\'inici</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
-    <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
+    <string name="trust_apps_manager_name">Aplicacions amagades i protegides</string>
+    <string name="trust_apps_auth_manager">Desbloqueja per gestionar les aplicacions amagades i protegides</string>
+    <string name="trust_apps_auth_open_app">Autentifica\'t per obrir %1$s</string>
     <string name="trust_apps_loading">S\'està carregant\u2026</string>
-    <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
+    <string name="trust_apps_no_lock_error">Si us plau, configura un bloqueig de pantalla segur per a restringir l\'accés a aplicacions</string>
     <string name="trust_apps_help">Ajuda</string>
-    <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
-    <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="trust_apps_info_hidden">Les aplicacions amagades i els seus widgets estan amagades del calaix</string>
+    <string name="trust_apps_info_protected">Les aplicacions protegides requereixen autentificació per poder ser obertes des del llançador</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Toqueu dues vegades per a posar en repòs</string>
     <string name="pref_sleep_gesture_summary">Toqueu dues vegades a un espai buit per a apagar la pantalla</string>
@@ -81,7 +81,7 @@
     <!-- Font size -->
     <string name="font_size_title">Mida de la lletra</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">Max línies per a l\'etiqueta d\'aplicació</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Cerca</string>
     <string name="label_lens">Google Lens</string>
@@ -91,8 +91,8 @@
     <string name="dock_search_title">Barra de cerca de Google</string>
     <string name="dock_search_summary">Search bar in the bottom dock</string>
     <string name="dock_theme_title">Icones temàtiques</string>
-    <string name="dock_theme_summary">Use themed icons for search bar</string>
-    <string name="search_radius_title">Corner radius</string>
+    <string name="dock_theme_summary">Utilitza icones tematitzades a la barra de cerca</string>
+    <string name="search_radius_title">Radi de la cantonada</string>
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hotseat background</string>
     <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
@@ -112,7 +112,7 @@
     <string name="background_blur_title">Background blur depth</string>
     <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_title">D\'una ullada</string>
     <string name="show_quickspace_summary">Show at the top of your home screen</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Benvingut al crDroid!</string>
@@ -134,7 +134,7 @@
     <string name="quickspace_ext_two">It\'s</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
-    <string name="qe_now_playing_ext_one">Now playing</string>
+    <string name="qe_now_playing_ext_one">S\'està reproduint</string>
     <string name="qe_now_playing_by">By</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">S\'està reproduint</string>
@@ -146,12 +146,12 @@
     <string name="quickspace_psa_title">Random messages</string>
     <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>Let\'s get this bread.</item>
+        <item>Bon dia!</item>
+        <item>Bon dia, moment de moure\'s!</item>
+        <item>Quin dia més bonic!</item>
+        <item>Que tingues un bon dia!</item>
+        <item>Què et sembla fer una migdiada de cinc minutets?</item>
+        <item>Anem a guanyar-nos el pa.</item>
         <item>Mornings are a fresh canvas for your daily masterpiece.</item>
         <item>Embrace the sunrise of opportunity each morning.</item>
         <item>In the early light, find the power to illuminate your path.</item>
@@ -259,29 +259,29 @@
         <item>Descobreix el millor amb crDroid</item>
         <item>Spread love, not havoc</item>
         <item>We didn\'t start the fire!</item>
-        <item>Time for some good music</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
+        <item>Moment d\'escoltar un poc de bona música</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C CAP</item>
+        <item>Necessites crDroid Prèmium per a poder vore açò</item>
+        <item>Recorda el llinatge de l\'unicorn</item>
+        <item>Gaudeix de la vida extesa de la bateria</item>
+        <item>Començant des de zero</item>
         <item>We love you 3000</item>
         <item>Delicious even without Sushi</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
+        <item>Fes alguna cosa bona avui</item>
+        <item>Aquesta és la millor Pixel Experience, oi?</item>
+        <item>Res d\'il·lusions, benvingut a la realitat!</item>
+        <item>Gràcies pel teu suport</item>
+        <item>No hi ha festivals per als babaus - només perfecció!</item>
+        <item>Una de les millors tries del «buildbot»</item>
+        <item>Trellat per a la teva paranoia</item>
+        <item>Prova les postres gelades</item>
+        <item>Quina experiència més plaentera, veritat?</item>
+        <item>L\'evolució és un mite, veritat?</item>
+        <item>Ets allò que instal·les, així que tingues trellat</item>
+        <item>En què estàs pensant?</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Winner Winner ....?</item>
+        <item>Ganador Ganador ....?</item>
         <item>rm -rf \/</item>
         <item>Pringles aren\'t actually potato chips..</item>
         <item>Remember to check device\'s battery level!</item>
@@ -306,7 +306,7 @@
     <string name="quick_event_weather_city_title">Current location</string>
     <string name="quick_event_weather_city_summary">Display current location</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">Opacitat del fons</string>
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Use taskbar</string>
     <string name="pref_allow_phone_taskbar_summary">For opening and switching apps anywhere</string>
