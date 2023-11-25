@@ -166,7 +166,7 @@
     <string name="quick_event_rom_intro_welcome">Witaj w crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">Czas na crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Dziękujemy za wybranie nas</item>
+        <item>Dziękujemy, że nas wybrałeś</item>
         <item>Lubisz nas? Kup nam piwo</item>
         <item>Najlepszy ROM wszechczasów.</item>
         <item>Przywitaj się z nami na Telegramie</item>
@@ -354,5 +354,5 @@
     <string name="intent_no_app_clock_found">Nie można odnaleźć kalendarza lub aktywności zegara</string>
     <!-- Freed memory on clear all tasks -->
     <string name="freed_memory_text">Zwolniono %1$s</string>
-    <string name="optimal_memory_text">Twój system jest teraz w optymalnym stanie</string>
+    <string name="optimal_memory_text">Twój system jest teraz w optymalnej kondycji</string>
 </resources>
