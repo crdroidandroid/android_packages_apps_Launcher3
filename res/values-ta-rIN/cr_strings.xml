@@ -20,9 +20,9 @@
     <!-- General -->
     <string name="settings_title">Home settings</string>
     <!-- Categories -->
-    <string name="home_category_title">Home screen</string>
-    <string name="home_category_summary">Set Google now panel and more</string>
-    <string name="icons_category_title">Icons</string>
+    <string name="home_category_title">முகப்புத்திரை</string>
+    <string name="home_category_summary">கூகுள் நவ் பேனல் மற்றும் பல</string>
+    <string name="icons_category_title">சின்னங்கள்</string>
     <string name="icons_category_summary">Set icon size and more</string>
     <string name="app_drawer_category_title">App drawer</string>
     <string name="app_drawer_category_summary">Customize your app drawer</string>
@@ -88,7 +88,7 @@
     <string name="label_voice_search">Voice search</string>
     <string name="dock_music_search_title">Music search</string>
     <string name="dock_music_search_summary">Start music search on pressing mic icon</string>
-    <string name="dock_search_title">Google search bar</string>
+    <string name="dock_search_title">Google தேடல்</string>
     <string name="dock_search_summary">Search bar in the bottom dock</string>
     <string name="dock_theme_title">Themed icons</string>
     <string name="dock_theme_summary">Use themed icons for search bar</string>
@@ -112,7 +112,7 @@
     <string name="background_blur_title">Background blur depth</string>
     <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_title">முகப்புத் தகவல்</string>
     <string name="show_quickspace_summary">Show at the top of your home screen</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
@@ -250,35 +250,35 @@
         <item>Your attitude determines your direction.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Ignorance is Bliss</item>
+        <item>அறியாமையே பேரின்பம்</item>
         <item>Is it time to flash another update already?</item>
         <item>Make peace, not war</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Focus on your tasks</item>
-        <item>How many screenshots do you take?</item>
-        <item>Open goodness with crDroid</item>
+        <item>வணக்கம், என்ன நடக்கிறது?</item>
+        <item>உங்கள் பணிகளில் கவனம் செலுத்துங்கள்</item>
+        <item>எத்தனை திரைப்பதிவுகளை எடுக்கிறீர்கள்?</item>
+        <item>CrDroid உடன் நன்மைகளை அனுபவிங்கள்</item>
         <item>Spread love, not havoc</item>
         <item>We didn\'t start the fire!</item>
-        <item>Time for some good music</item>
+        <item>இது நல்ல இசைக்கான நேரம்</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need crDroid Premium to see this</item>
-        <item>Remember the Lineage of the Unicorn</item>
-        <item>Enjoy Xtended battery life</item>
-        <item>Starting from the ground zero</item>
+        <item>இதைப் பார்க்க உங்களுக்கு crDroid பிரீமியம் தேவை</item>
+        <item>யூனிகார்னின் பரம்பரையை நினைவில் கொள்க</item>
+        <item>நீட்டிக்கப்பட்ட மின்கல ஆயுளை அனுபவிக்கவும்</item>
+        <item>முதலில் இருந்து தொடங்குகிறது</item>
         <item>We love you 3000</item>
         <item>Delicious even without Sushi</item>
-        <item>Do something nice today</item>
-        <item>This is best Pixel Experience, isn\'t it?</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
+        <item>இன்று ஏதாவது நல்லது செய்யுங்கள்</item>
+        <item>இதுதான் சிறந்த Pixel அனுபவம், இல்லையா?</item>
+        <item>மாயை அல்ல, உண்மைக்கு வருக!</item>
+        <item>தங்கள் ஆதரவுக்கு நன்றி</item>
+        <item>முட்டாள்தனத்திற்கு கொண்டாட்டம் அல்ல - முழுமை மட்டுமே!</item>
+        <item>தரவியக்கியின் சிறந்த தேர்வுகளில் ஒன்று</item>
+        <item>உங்கள் பிரம்மைக்கு நல்லறிவு</item>
+        <item>குளிர் இனிப்புகளை சுவைக்கவும்</item>
+        <item>என்ன ஒரு அழகான அனுபவம், இல்லையா?</item>
+        <item>பரிணாம வளர்ச்சி என்பது ஒரு கட்டுக்கதை, இல்லையா?</item>
         <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
+        <item>உங்கள் மனதில் என்ன இருக்கிறது?</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
         <item>Winner Winner ....?</item>
@@ -322,7 +322,7 @@
     <string name="app_info_source_system">System</string>
     <string name="app_info_last_update">Last update</string>
     <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_more">மேலும்</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Icon pack</string>
     <string name="icon_pack_default_label">Default</string>
