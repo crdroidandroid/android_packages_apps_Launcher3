@@ -166,12 +166,12 @@
     <string name="quick_event_rom_intro_welcome">¡Bienvenido a crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">¡Es hora de crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
-        <item>We love you 3000</item>
+        <item>Gracias por elegirnos</item>
+        <item>¿Nos amas? Envíanos una cerveza</item>
+        <item>La mejor Rom del mundo.</item>
+        <item>Salúdanos en Telegram</item>
+        <item>Toca aquí para comenzar</item>
+        <item>Te queremos 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Buenos días.</string>
@@ -212,7 +212,7 @@
         <item>El primer capítulo de tu aventura diaria.</item>
         <item>Deje que su rutina matutina sea la plataforma de despegue hacia el éxito.</item>
         <item>Amaneciendo o no, tu potencial siempre está en aumento.</item>
-        <item>It\'s time for fresh ideas and bold actions.</item>
+        <item>Es hora de nuevas ideas y acciones audaces.</item>
         <item>El madrugador atrapa al gusano, pero tú puedes atrapar tus sueños.</item>
         <item>Encuentra el valor para perseguir tus aspiraciones.</item>
         <item>Levántate y brilla, porque la grandeza te espera.</item>
@@ -314,7 +314,7 @@
         <item>Recuerda el Linaje (Lineage) del Unicornio (Unicorn)</item>
         <item>Disfruta la vida extendida de batería</item>
         <item>Empezando de cero</item>
-        <item>We love you 3000</item>
+        <item>Te amamos 3000</item>
         <item>Delicioso incluso sin Sushi</item>
         <item>Haz algo bueno hoy</item>
         <item>Esta es la mejor experiencia Pixel (Pixel experience), ¿verdad?</item>
@@ -353,6 +353,6 @@
     <string name="quick_event_weather_city_summary">Mostrar ubicación actual</string>
     <string name="intent_no_app_clock_found">No se puede encontrar el calendario o la actividad del reloj</string>
     <!-- Freed memory on clear all tasks -->
-    <string name="freed_memory_text">Freed up %1$s</string>
-    <string name="optimal_memory_text">Your system is now in optimal condition</string>
+    <string name="freed_memory_text">Liberado %1$s</string>
+    <string name="optimal_memory_text">Su sistema ahora está en óptimas condiciones</string>
 </resources>
