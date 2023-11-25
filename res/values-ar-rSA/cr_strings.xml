@@ -116,16 +116,16 @@
     <string name="show_quickspace_summary">إظهار في الجزء العلوي من الشاشة الرئيسية</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">مرحبا بكم في crDroid!</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">حان الوقت لcrDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
+        <item>شكراً لك لاختيارنا</item>
+        <item>هل أعجبك عملنا ؟ أرسل لنا شراب</item>
+        <item>أفضل روم</item>
+        <item>راسلنا على Telegram</item>
+        <item>اضغط هنا للبدا </item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
+    <string name="quickspace_grt_morning">صباح الخير.</string>
     <string name="quickspace_grt_evening">Good evening.</string>
     <string name="quickspace_grt_afternoon">Good afternoon.</string>
     <string name="quickspace_grt_night">Good night.</string>
@@ -134,7 +134,7 @@
     <string name="quickspace_ext_two">It\'s</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
-    <string name="qe_now_playing_ext_one">Now playing</string>
+    <string name="qe_now_playing_ext_one">قيد التشغيل</string>
     <string name="qe_now_playing_by">By</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">قيد التشغيل</string>
@@ -151,7 +151,7 @@
         <item>يا له من يوم جميل!</item>
         <item>نتمنى لك يوماً سعيداً!</item>
         <item>ما رأيك بغفوة لخمس دقائق؟</item>
-        <item>Let\'s get this bread.</item>
+        <item>دعونا ننجز ذلك.</item>
         <item>Mornings are a fresh canvas for your daily masterpiece.</item>
         <item>Embrace the sunrise of opportunity each morning.</item>
         <item>In the early light, find the power to illuminate your path.</item>
@@ -269,19 +269,19 @@
         <item>لذيذة حتى بدون سوشي</item>
         <item>قم بعمل شيء لطيف اليوم</item>
         <item>هذه أفضل تجربة بيكسيل، أليس كذلك؟</item>
-        <item>No illusions, welcome to reality!</item>
-        <item>Thank you for your support</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
+        <item>لا أوهام ، مرحبا بالواقع!</item>
+        <item>شكرا لك على دعمك</item>
+        <item>لا يوجد مهرجان للأغبياء - فقط للكاملين!</item>
+        <item>واحدة من أفضل اختيارات آلي البناء</item>
+        <item>عقلانية لجنون عظمتك</item>
+        <item>جرب الحلويات المتجمدة</item>
+        <item>يا لها من تجربة جميلة، أليس كذلك؟</item>
+        <item>التطور خرافة، أليس كذلك؟</item>
+        <item>ما تقوم بتثبيته يعبر عنك، لا تكن ليناً</item>
+        <item>ما الذي يدور في خاطرك؟</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Winner Winner ....?</item>
+        <item>الفائز ....؟</item>
         <item>rm -rf \/</item>
         <item>Pringles aren\'t actually potato chips..</item>
         <item>Remember to check device\'s battery level!</item>
