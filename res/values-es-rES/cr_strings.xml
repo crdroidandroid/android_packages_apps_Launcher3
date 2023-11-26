@@ -339,8 +339,8 @@
         <item>Puedes desactivar el espacio rápido en la configuración de inicio.</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quick_event_ambient_weather_title">Condiciones meteorológicas</string>
-    <string name="quick_event_ambient_weather_summary">Muestra la temperatura y las condiciones meteorológicas actuales</string>
+    <string name="quick_event_ambient_weather_title">Weather update</string>
+    <string name="quick_event_ambient_weather_summary">Display current weather update</string>
     <string name="quick_event_ambient_weather_enabled_info">Requiere que el servicio meteorológico esté habilitado</string>
     <string name="quick_event_weather_clouds">Nublado</string>
     <string name="quick_event_weather_rain">Lluvioso</string>
@@ -350,7 +350,9 @@
     <string name="quick_event_weather_wind">Ventoso</string>
     <string name="quick_event_weather_mist">Neblina</string>
     <string name="quick_event_weather_city_title">Ubicación actual</string>
-    <string name="quick_event_weather_city_summary">Mostrar ubicación actual</string>
+    <string name="quick_event_weather_city_summary">Display current weather location</string>
+    <string name="quick_event_weather_text_title">Current condition</string>
+    <string name="quick_event_weather_text_summary">Display current weather condition summary</string>
     <string name="intent_no_app_clock_found">No se puede encontrar el calendario o la actividad del reloj</string>
     <!-- Freed memory on clear all tasks -->
     <string name="freed_memory_text">Liberado %1$s</string>
