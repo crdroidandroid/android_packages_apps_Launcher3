@@ -123,7 +123,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>Wypróbuj lodowe desery</item>
         <item>Ale cudowne doświadczenie, nieprawdaż?</item>
         <item>Ewolucja jest mitem, prawda?</item>
-        <item>Jesteś tym co wgrywasz, nie bądź ziemniakiem</item>
+        <item>Jesteś tym, co wgrywasz, nie bądź frajerzyną</item>
         <item>Co ci chodzi po głowie?</item>
         <item>Zwycięzca Wygrywa....?</item>
         <item>rm -rf \/</item>
@@ -135,7 +135,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Wartość: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">domyślnie</string>
-    <string name="custom_seekbar_default_value_to_set">Wartość domyślna: <xliff:g id="v">%s</xliff:g>\nPrzytrzymaj dłużej by ustawić</string>
+    <string name="custom_seekbar_default_value_to_set">Wartość domyślna: <xliff:g id="v">%s</xliff:g>\nPrzytrzymaj dłużej, aby ustawić</string>
     <string name="custom_seekbar_default_value_is_set">Wartość domyślna jest ustawiona</string>
     <!-- Icon size -->
     <string name="icon_size_title">Rozmiar ikon</string>
@@ -157,8 +157,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_info_more">Więcej</string>
     <!-- Show dock search widget -->
     <string name="dock_search_title">Pasek wyszukiwania Google</string>
-    <string name="dock_search_summary">Pokaż pasek wyszukiwania w dolnej stacji dokującej</string>
+    <string name="dock_search_summary">Pokaż pasek wyszukiwania w dolnym panelu</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Propozycje</string>
-    <string name="suggestion_pref_screen_desc">Sugestie dotyczące wszystkich aplikacji i ekranu głównego</string>
+    <string name="suggestion_pref_screen_desc">Propozycje dotyczące wszystkich aplikacji i ekranu głównego</string>
 </resources>
