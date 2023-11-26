@@ -339,8 +339,8 @@
         <item>Bạn có thể tắt thông báo ngẫu nhiên thông qua cài đặt trang chủ.</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quick_event_ambient_weather_title">Điều kiện thời tiết</string>
-    <string name="quick_event_ambient_weather_summary">Hiển thị điều kiện thời tiết và nhiệt độ hiện tại</string>
+    <string name="quick_event_ambient_weather_title">Weather update</string>
+    <string name="quick_event_ambient_weather_summary">Display current weather update</string>
     <string name="quick_event_ambient_weather_enabled_info">Yêu cầu bật dịch vụ thời tiết</string>
     <string name="quick_event_weather_clouds">Trời nhiều mây</string>
     <string name="quick_event_weather_rain">Trời mưa</string>
@@ -350,7 +350,9 @@
     <string name="quick_event_weather_wind">Có gió</string>
     <string name="quick_event_weather_mist">Sương mù</string>
     <string name="quick_event_weather_city_title">Vị trí hiện tại</string>
-    <string name="quick_event_weather_city_summary">Hiển thị vị trí hiện tại</string>
+    <string name="quick_event_weather_city_summary">Display current weather location</string>
+    <string name="quick_event_weather_text_title">Current condition</string>
+    <string name="quick_event_weather_text_summary">Display current weather condition summary</string>
     <string name="intent_no_app_clock_found">Không thể tìm thấy lịch hoặc hoạt động đồng hồ</string>
     <!-- Freed memory on clear all tasks -->
     <string name="freed_memory_text">Đã giải phóng %1$s</string>
