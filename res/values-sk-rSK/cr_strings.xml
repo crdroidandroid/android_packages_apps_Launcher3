@@ -339,8 +339,8 @@
         <item>Quickspace môžeš zakázať v nastaveniach domovskej obrazovky.</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quick_event_ambient_weather_title">Počasie</string>
-    <string name="quick_event_ambient_weather_summary">Zobrazenie aktuálneho počasia a teploty</string>
+    <string name="quick_event_ambient_weather_title">Weather update</string>
+    <string name="quick_event_ambient_weather_summary">Display current weather update</string>
     <string name="quick_event_ambient_weather_enabled_info">Vyžaduje aktiváciu meteorologickej služby</string>
     <string name="quick_event_weather_clouds">Zamračené</string>
     <string name="quick_event_weather_rain">Daždivo</string>
@@ -350,7 +350,9 @@
     <string name="quick_event_weather_wind">Veterno</string>
     <string name="quick_event_weather_mist">Hmla</string>
     <string name="quick_event_weather_city_title">Aktuálna poloha</string>
-    <string name="quick_event_weather_city_summary">Zobrazenie počasia podľa aktuálnej polohy</string>
+    <string name="quick_event_weather_city_summary">Display current weather location</string>
+    <string name="quick_event_weather_text_title">Current condition</string>
+    <string name="quick_event_weather_text_summary">Display current weather condition summary</string>
     <string name="intent_no_app_clock_found">Aktivita kalendára alebo hodín sa nenašla</string>
     <!-- Freed memory on clear all tasks -->
     <string name="freed_memory_text">Freed up %1$s</string>
