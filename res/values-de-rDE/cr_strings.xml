@@ -166,12 +166,12 @@
     <string name="quick_event_rom_intro_welcome">Willkommen zu crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">crDroid Zeit!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
-        <item>We love you 3000</item>
+        <item>Danke, dass du dich für uns entschieden hast</item>
+        <item>Gefällt dir unsere Rom? Schick uns doch ein Bier</item>
+        <item>Beste Rom aller Zeiten.</item>
+        <item>Besuch uns doch mal auf Telegram</item>
+        <item>Hier tippen zum Einrichten</item>
+        <item>Wir haben dich lieb, mal 3 000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Guten Morgen.</string>
@@ -212,7 +212,7 @@
         <item>Das erste Kapitel deines täglichen Abenteuers.</item>
         <item>Lass deine Morgenroutine zum Startpunkt für Erfolg werden.</item>
         <item>Ob die Sonne nun aufgeht oder nicht; deine Pläne werden es.</item>
-        <item>It\'s time for fresh ideas and bold actions.</item>
+        <item>Es ist Zeit für frische Ideen und mutige Taten.</item>
         <item>Der frühe Vogel fängt zwar den Wurm, doch du kannst deine Träume einfangen.</item>
         <item>Finde den Mut, deinen Sehnsüchten zu folgen.</item>
         <item>Munter ans Werk, es steht Großes an.</item>
@@ -314,7 +314,7 @@
         <item>Lineage &amp; Unicorn haben bei uns nichts verloren.</item>
         <item>Viel Spaß mit der „Xtended“ Akkulaufzeit</item>
         <item>Zu Ground Zero sag ich nie „No“.</item>
-        <item>We love you 3000</item>
+        <item>Wir haben dich lieb, mal 3 000</item>
         <item>Sehr schmackhaft, auch ohne Sushi!</item>
         <item>Eine gute Tat pro Tag.</item>
         <item>crDroid bietet ’ne tolle Pixel-Experience, oder?</item>
@@ -353,6 +353,6 @@
     <string name="quick_event_weather_city_summary">Aktuellen Standort anzeigen</string>
     <string name="intent_no_app_clock_found">Keine Kalender- oder Weckeraktivität gefunden</string>
     <!-- Freed memory on clear all tasks -->
-    <string name="freed_memory_text">Freed up %1$s</string>
-    <string name="optimal_memory_text">Your system is now in optimal condition</string>
+    <string name="freed_memory_text">%1$s freigegeben</string>
+    <string name="optimal_memory_text">Dein System ist jetzt im optimalen Zustand</string>
 </resources>
