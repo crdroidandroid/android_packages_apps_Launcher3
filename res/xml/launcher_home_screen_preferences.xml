@@ -177,11 +177,20 @@
             launcher:iconSpaceReserved="false" />
 
         <SwitchPreferenceCompat
-            android:key="pref_quickspace_city"
+            android:key="pref_quickspace_weather_city"
             android:title="@string/quick_event_weather_city_title"
             android:summary="@string/quick_event_weather_city_summary"
             android:dependency="pref_quickspace_weather"
             android:defaultValue="false"
+            android:persistent="true"
+            launcher:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="pref_quickspace_weather_text"
+            android:title="@string/quick_event_weather_text_title"
+            android:summary="@string/quick_event_weather_text_summary"
+            android:dependency="pref_quickspace_weather"
+            android:defaultValue="true"
             android:persistent="true"
             launcher:iconSpaceReserved="false" />
 
