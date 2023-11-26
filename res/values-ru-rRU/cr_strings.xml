@@ -212,7 +212,7 @@
         <item>Первая глава вашего ежедневного приключения</item>
         <item>Пусть ваша утренняя рутина станет стартовой площадкой для успеха</item>
         <item>Восходит солнце или нет, но ваш потенциал всегда растёт</item>
-        <item>It\'s time for fresh ideas and bold actions.</item>
+        <item>Пришло время для свежих идей и смелых действий</item>
         <item>Ранняя пташка ловит червяка, а вы - ловите свои мечты</item>
         <item>Найдите в себе смелость преследовать свои стремления</item>
         <item>Восстаньте и сияйте, ибо величие ждёт</item>
@@ -353,6 +353,6 @@
     <string name="quick_event_weather_city_summary">Показывать текущее местоположение</string>
     <string name="intent_no_app_clock_found">Невозможно найти календарь или часы</string>
     <!-- Freed memory on clear all tasks -->
-    <string name="freed_memory_text">Freed up %1$s</string>
-    <string name="optimal_memory_text">Your system is now in optimal condition</string>
+    <string name="freed_memory_text">Освобождено %1$s</string>
+    <string name="optimal_memory_text">Ваша система находится в оптимальном состоянии</string>
 </resources>
