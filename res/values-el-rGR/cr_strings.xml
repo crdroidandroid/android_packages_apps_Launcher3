@@ -339,8 +339,8 @@
         <item>Μπορείτε να απενεργοποιήσετε το quickspace μέσω των ρυθμίσεων αρχικής οθόνης.</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quick_event_ambient_weather_title">Weather update</string>
-    <string name="quick_event_ambient_weather_summary">Display current weather update</string>
+    <string name="quick_event_ambient_weather_title">Ενημέρωση καιρού</string>
+    <string name="quick_event_ambient_weather_summary">Εμφάνιση τρέχουσας ενημέρωσης καιρού</string>
     <string name="quick_event_ambient_weather_enabled_info">Απαιτεί την ενεργοποίηση της υπηρεσίας καιρού</string>
     <string name="quick_event_weather_clouds">Συννεφιά</string>
     <string name="quick_event_weather_rain">Βροχερός</string>
@@ -350,11 +350,11 @@
     <string name="quick_event_weather_wind">Θυελλώδεις</string>
     <string name="quick_event_weather_mist">Ομιχλώδες</string>
     <string name="quick_event_weather_city_title">Τρέχουσα τοποθεσία</string>
-    <string name="quick_event_weather_city_summary">Display current weather location</string>
-    <string name="quick_event_weather_text_title">Current condition</string>
-    <string name="quick_event_weather_text_summary">Display current weather condition summary</string>
+    <string name="quick_event_weather_city_summary">Εμφάνιση της τρέχουσας τοποθεσίας του καιρού</string>
+    <string name="quick_event_weather_text_title">Τρέχουσα κατάσταση</string>
+    <string name="quick_event_weather_text_summary">Εμφάνιση σύνοψης της τρέχουσας καιρικής κατάστασης</string>
     <string name="intent_no_app_clock_found">Αδυναμία εύρεσης δραστηριότητας ημερολογίου ή ρολογιού</string>
     <!-- Freed memory on clear all tasks -->
-    <string name="freed_memory_text">Freed up %1$s</string>
-    <string name="optimal_memory_text">Your system is now in optimal condition</string>
+    <string name="freed_memory_text">Απελευθερώθηκαν %s</string>
+    <string name="optimal_memory_text">Το σύστημά σας βρίσκεται τώρα σε βέλτιστη κατάσταση</string>
 </resources>
