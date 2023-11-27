@@ -92,7 +92,7 @@
     <string name="icon_pack_add">Установить ещё</string>
     <string name="icon_pack_no_market">Нет доступного магазина приложений</string>
     <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar">Использовать панель задач</string>
+    <string name="pref_allow_phone_taskbar">Панель задач</string>
     <string name="pref_allow_phone_taskbar_desc">Для открытия и переключения приложений в любом месте</string>
     <!-- Recent Grid -->
     <string name="pref_allow_phone_overview_grid">Стиль сетки</string>
@@ -103,7 +103,7 @@
     <string name="show_top_shadow">Тень сверху</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Прокрутка обоев</string>
-    <string name="allow_wallpaper_scrolling_desc">Эффект прокрутки обоев для нескольких экранов</string>
+    <string name="allow_wallpaper_scrolling_desc">Прокрутка обоев для нескольких экранов</string>
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zooming">Масштабирование обоев</string>
     <string name="allow_wallpaper_zooming_desc">Увеличение или уменьшение обоев в меню приложений и в списке недавних приложений</string>
