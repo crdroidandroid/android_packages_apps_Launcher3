@@ -300,11 +300,11 @@
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Неведение - благо</item>
-        <item>Не пора ли уже установить еще одно обновление?</item>
+        <item>Не пора ли уже прошить ещё одно обновление?</item>
         <item>Цените мир</item>
         <item>О, привет, что случилось?</item>
         <item>Сосредоточьтесь на своих задачах</item>
-        <item>Сколько скриншотов вы сделали?</item>
+        <item>Сколько снимков экрана вы сделали?</item>
         <item>Открой лучшее с crDroid</item>
         <item>Распространяйте любовь, а не хаос</item>
         <item>Не мы разожгли огонь!</item>
@@ -316,17 +316,17 @@
         <item>Начинайте с нуля</item>
         <item>Мы любим тебя 3000</item>
         <item>Вкусно даже без Суши</item>
-        <item>Сделайте сегодня что-то приятное</item>
+        <item>Сделайте сегодня кому-то что-то приятное</item>
         <item>Это же лучше Pixel Experience, не так ли?</item>
-        <item>Никаких иллюзий, это реальность!</item>
-        <item>Спасибо за вашу помощь</item>
+        <item>Никаких иллюзий, добро пожаловать в реальность!</item>
+        <item>Спасибо за вашу поддержку!</item>
         <item>Никакого праздника для сумасшедших – только совершенство!</item>
         <item>Одна из лучших сборок</item>
         <item>Безопасность для вашей паранойи</item>
         <item>Попробуйте холодные десерты</item>
         <item>Какой прекрасный опыт, не правда ли?</item>
         <item>Эволюция - это миф, правда?</item>
-        <item>Ты - это то что ты прошиваешь, не будь картошкой</item>
+        <item>Ты - это то, что прошиваешь, не будь картошкой</item>
         <item>Что у тебя на уме?</item>
         <item>Я жду опекуна (лат.)</item>
         <item>Тили-тили, трали-вали...</item>
@@ -341,7 +341,7 @@
     <!-- QuickSpace: QuickEvent: Weather -->
     <string name="quick_event_ambient_weather_title">Обновление погоды</string>
     <string name="quick_event_ambient_weather_summary">Показывать текущее обновление погоды</string>
-    <string name="quick_event_ambient_weather_enabled_info">Требуется включенная служба погоды</string>
+    <string name="quick_event_ambient_weather_enabled_info">Требуется, чтобы служба погоды была запущена</string>
     <string name="quick_event_weather_clouds">Пасмурно</string>
     <string name="quick_event_weather_rain">Дождь</string>
     <string name="quick_event_weather_clear">Солнечно</string>
