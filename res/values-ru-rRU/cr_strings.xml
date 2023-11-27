@@ -20,7 +20,7 @@
     <!-- General -->
     <string name="settings_title">Настройки</string>
     <!-- Categories -->
-    <string name="home_category_title">Главный экран</string>
+    <string name="home_category_title">Рабочий стол</string>
     <string name="home_category_summary">Установить панель Google now и другое</string>
     <string name="icons_category_title">Значки</string>
     <string name="icons_category_summary">Установить размер значков и многое другое</string>
@@ -29,68 +29,68 @@
     <string name="recents_category_title">Недавние</string>
     <string name="recents_category_summary">Настройка экрана недавних приложений</string>
     <string name="misc_category_title">Разное</string>
-    <string name="misc_category_summary">Другие настройки</string>
+    <string name="misc_category_summary">Прочие настройки</string>
     <string name="general_category_title">Общие</string>
     <string name="interface_category_title">Интерфейс</string>
     <string name="quickspace_category_title">«С первого взгляда»</string>
-    <string name="search_bar_category_title">Строка поиска</string>
+    <string name="search_bar_category_title">Панель поиска</string>
     <string name="actions_category_title">Быстрые действия</string>
     <!-- Developer options -->
     <string name="dev_options_title">Параметры разработчика</string>
     <string name="dev_options_summary">Включить некоторые скрытые функции на свой страх и риск</string>
     <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Запретить редактирование</string>
+    <string name="settings_lock_layout_title">Блокировка изменений</string>
     <string name="settings_lock_layout_summary_on">Значки и виджеты не могут быть добавлены, удалены или перемещены на рабочий стол</string>
-    <string name="settings_lock_layout_summary_off">Значки и виджеты могут быть добавлены, удалены и перемещены на домашнем экране</string>
-    <string name="settings_edit_widgets_error">Невозможно добавить виджеты на главный экран</string>
+    <string name="settings_lock_layout_summary_off">Значки и виджеты могут быть добавлены, удалены и перемещены на рабочем столе</string>
+    <string name="settings_edit_widgets_error">Невозможно добавить виджеты на рабочий стол</string>
     <!-- Hide labels -->
     <string name="desktop_show_labels">Показывать подписи значков</string>
     <string name="drawer_show_labels">Показывать подписи значков</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Проведите пальцем для доступа к приложению Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Когда вы проводите вправо с главного Рабочего стола</string>
+    <string name="msg_minus_one_on_left">Когда открываете правый Рабочий стол</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">Когда вы проводите влево с главного Рабочего стола</string>
+    <string name="msg_minus_one_on_right">Когда открываете левый Рабочий стол</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Скрытые &amp; Защищенные приложения</string>
-    <string name="trust_apps_auth_manager">Разблокируйте, для управления скрытыми и защищенными приложениями</string>
-    <string name="trust_apps_auth_open_app">Авторизуйтесь, для открытия %1$s</string>
+    <string name="trust_apps_manager_name">Скрыть и защитить приложения</string>
+    <string name="trust_apps_auth_manager">Разблокируйте, чтобы управлять скрытыми и защищёнными приложениями</string>
+    <string name="trust_apps_auth_open_app">Авторизуйтесь, чтобы открыть %1$s</string>
     <string name="trust_apps_loading">Загрузка\u2026</string>
-    <string name="trust_apps_no_lock_error">Пожалуйста, установите блокировку экрана для ограничения доступа к приложениям</string>
+    <string name="trust_apps_no_lock_error">Пожалуйста, настройте блокировку экрана, чтобы ограничить доступ к приложениям</string>
     <string name="trust_apps_help">Помощь</string>
-    <string name="trust_apps_info_hidden">Скрытые приложения и их виджеты скрыты из меню</string>
-    <string name="trust_apps_info_protected">Для открытия защищенных приложений из лаунчера требуется аутентификация</string>
+    <string name="trust_apps_info_hidden">Не показывать скрытые приложения и их виджеты в меню приложений</string>
+    <string name="trust_apps_info_protected">Для запуска защищённых приложений требуется авторизация</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Рекомендации</string>
-    <string name="suggestion_pref_screen_desc">Рекомендации в списке всех приложений и на главном экране</string>
+    <string name="suggestion_pref_screen_desc">Рекомендации в меню приложений и на рабочем столе</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Пауза</string>
     <string name="pause_apps_dialog_title">Приостановить %1$s?</string>
     <string name="pause_apps_dialog_message">Уведомления для %1$s будут приостановлены</string>
     <string name="paused_apps_dialog_title">Приложение приостановлено</string>
-    <string name="paused_apps_dialog_message">Программа %1$s была приостановлена непосредственно из лаунчера</string>
+    <string name="paused_apps_dialog_message">%1$s приостановлено из главного экрана</string>
     <string name="paused_apps_drop_target_label">Приостановить приложение</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Выключение экрана двойным нажатием</string>
-    <string name="pref_sleep_gesture_summary">Двойное нажатие на пустом месте для выключения экрана</string>
+    <string name="pref_sleep_gesture_summary">Дважды коснитесь пустого места экрана для его выключения</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">по умолчанию</string>
-    <string name="custom_seekbar_default_value_to_set">Значение по умолчанию: <xliff:g id="v">%s</xliff:g>\nУстановите долгим нажатием</string>
+    <string name="custom_seekbar_default_value_to_set">Значение по умолчанию: <xliff:g id="v">%s</xliff:g>\nУдерживайте для установки</string>
     <string name="custom_seekbar_default_value_is_set">Установлено значение по умолчанию</string>
     <!-- Icon size -->
     <string name="icon_size_title">Размер значка</string>
     <!-- Font size -->
     <string name="font_size_title">Размер шрифта</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Максимальное количество строк в названии ярлыка приложений</string>
+    <string name="icon_max_lines_title">Количество строк в названии приложения</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Завершить</string>
     <string name="recents_app_killed">Приложение закрыто</string>
     <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar_title">Использовать панель задач</string>
-    <string name="pref_allow_phone_taskbar_summary">Для открытия и переключения приложений в любом месте</string>
+    <string name="pref_allow_phone_taskbar_title">Панель задач</string>
+    <string name="pref_allow_phone_taskbar_summary">Для запуска и переключения приложений в любом месте</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Поиск</string>
     <string name="label_lens">Google Объектив</string>
@@ -98,18 +98,18 @@
     <string name="dock_music_search_title">Поиск музыки</string>
     <string name="dock_music_search_summary">Поиск музыки при нажатии на микрофон</string>
     <string name="dock_search_title">Поиск Google</string>
-    <string name="dock_search_summary">Строка поиска в нижней панели</string>
+    <string name="dock_search_summary">Показывать строку поиска снизу</string>
     <string name="dock_theme_title">Значок из темы</string>
     <string name="dock_theme_summary">Для панели поиска использовать значки из темы</string>
-    <string name="search_radius_title">Радиус скругления углов</string>
+    <string name="search_radius_title">Радиус закругления углов</string>
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Фон нижней панели</string>
     <string name="hotseat_bg_summary">Полупрозрачный фон нижней панели приложений</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Непрозрачность фона</string>
+    <string name="background_opacity_title">Прозрачность фона</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Прокрутка обоев</string>
-    <string name="allow_wallpaper_scrolling_summary">Эффект прокрутки обоев для нескольких экранов</string>
+    <string name="allow_wallpaper_scrolling_summary">Прокрутка обоев для нескольких экранов</string>
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zooming">Масштабирование обоев</string>
     <string name="allow_wallpaper_zooming_summary">Увеличение или уменьшение обоев в меню приложений и в списке недавних приложений</string>
@@ -127,43 +127,43 @@
     <string name="background_blur_summary">Установка глубины размытия для недавних и меню приложений</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Снимок экрана</string>
-    <string name="recents_clear_all_title">Очистить все</string>
+    <string name="recents_clear_all_title">Очистить всё</string>
     <string name="recents_lens_title">Объектив</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Встряхнуть, для очистки всех задач</string>
     <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Значок из темы</string>
-    <string name="pref_themed_icons_summary">Следовать тематическим значкам, которые используются на главном экране</string>
+    <string name="pref_themed_icons_title">Тематические значки</string>
+    <string name="pref_themed_icons_summary">Следовать тематическим значкам, которые используются на рабочем столе</string>
     <!-- AppInfo -->
     <string name="app_info_source">Источник</string>
-    <string name="app_info_source_system">Система</string>
-    <string name="app_info_last_update">Последние обновления</string>
+    <string name="app_info_source_system">Системное</string>
+    <string name="app_info_last_update">Последнее обновление</string>
     <string name="app_info_version">Версия</string>
-    <string name="app_info_more">Дополнительно</string>
+    <string name="app_info_more">Дополнительно...</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Набор значков</string>
     <string name="icon_pack_default_label">По умолчанию</string>
     <string name="icon_pack_add">Установить ещё</string>
     <string name="icon_pack_no_market">Нет доступного магазина приложений</string>
     <!-- Parallax -->
-    <string name="short_parallax_title">Разрешить короткий параллакс</string>
-    <string name="short_parallax_summary">Включить эффект полной прокрутки обоев на меньшем количестве страниц вместо обрезки обоев</string>
-    <string name="single_page_center_title">Одностраничный центр</string>
+    <string name="short_parallax_title">Разрешить короткое смещение</string>
+    <string name="short_parallax_summary">Включить полную прокрутку обоев, на малом количестве страниц, вместо обрезки обоев</string>
+    <string name="single_page_center_title">Центр, если одна страница</string>
     <string name="single_page_center_summary">Центрировать обои, если используется только одна страница</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Строка поиска</string>
     <string name="drawer_search_summary">Строка поиска в верхней части меню приложений</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Перезапустить</string>
-    <string name="pref_restart_summary">Перезапустить лаунчер вручную, чтобы применить все ожидающие настройки</string>
-    <string name="restarting_launcher">Перезапуск лаунчера...</string>
-    <string name="restarting_launcher_changes">Перезапуск лаунчера для применения изменений...</string>
-    <string name="updating_launcher_components">Перезапуск лаунчера для обновления компонентов лаунчера...</string>
+    <string name="pref_restart_summary">Перезапустить главный экран вручную, чтобы применить все ожидающие настройки</string>
+    <string name="restarting_launcher">Перезапуск главного экрана...</string>
+    <string name="restarting_launcher_changes">Перезапуск главного экрана для применения изменений...</string>
+    <string name="updating_launcher_components">Перезапуск главного экрана для обновления компонентов...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Самое главное</string>
-    <string name="show_quickspace_summary">Показывать в верхней части домашнего экрана</string>
+    <string name="show_quickspace_summary">Показывать в верхней части рабочего стола</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Добро пожаловать в crDroid!</string>
+    <string name="quick_event_rom_intro_welcome">Приветствуем в crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">Время crDroid!</string>
     <string-array name="welcome_message_variants">
         <item>Благодарим, что выбрали нас</item>
@@ -187,16 +187,16 @@
     <string name="qe_now_playing_by">Автор</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Сейчас играет</string>
-    <string name="quickspace_now_playing_summary">Показать песню, которую вы слушаете</string>
+    <string name="quickspace_now_playing_summary">Показать песню, которая сейчас звучит</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">Расширенный стиль</string>
     <string name="quickspace_alternate_style_summary">Переключиться на расширенный стиль</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Случайные сообщения</string>
-    <string name="quickspace_psa_summary">Сделайте своего спутника более живым со случайными сообщениями</string>
+    <string name="quickspace_psa_summary">Сделайте своего спутника более живым с помощью случайных сообщений</string>
     <string-array name="quickspace_psa_morning">
-        <item>Доброе утро!</item>
-        <item>Доброе утро, время зажигать!</item>
+        <item>Доброго утра!</item>
+        <item>Доброго утра! Время зажигать!</item>
         <item>Какой чудесный день!</item>
         <item>Хорошего дня!</item>
         <item>Как насчет небольшого 5-минутного перерыва?</item>
@@ -236,7 +236,7 @@
         <item>Мечтай о многом, работай усердно и никогда не сдавайся</item>
         <item>Ты сильнее чем ты думаешь</item>
         <item>Каждая неудача – это подготовка к возвращению</item>
-        <item>Охватите путешествие, а не только пункт назначения</item>
+        <item>Создай путешествие, а не дорогу до пункта назначения</item>
         <item>Преследуйте свои цели, а не свои страхи</item>
         <item>Ваш потенциал безграничен. Разблокируйте его</item>
     </string-array>
@@ -257,7 +257,7 @@
         <item>Оставайтесь любопытными, оставайтесь благодарными</item>
         <item>Станьте тем изменением, которое вы хотите увидеть в мире</item>
         <item>Верьте в себя. Вы способны на удивительные вещи</item>
-        <item>Единственный предел — тот, который вы сами для себя установили</item>
+        <item>Единственный предел тот, который вы сами для себя установили</item>
         <item>Успех начинается с первого шага</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
@@ -299,7 +299,7 @@
         <item>Ваше отношение определяет ваше направление</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Невежество - это блаженство</item>
+        <item>Неведение - благо</item>
         <item>Не пора ли уже установить еще одно обновление?</item>
         <item>Цените мир</item>
         <item>О, привет, что случилось?</item>
