@@ -21,7 +21,7 @@
     <string name="settings_title">Cài đặt màn hình chính</string>
     <!-- Categories -->
     <string name="home_category_title">Màn hình chính</string>
-    <string name="home_category_summary">Tùy chỉnh các thiết lập trên màn hình chính</string>
+    <string name="home_category_summary">Thiết lập bảng thông tin Google Now và các tùy chọn khác</string>
     <string name="icons_category_title">Biểu tượng</string>
     <string name="icons_category_summary">Đặt kích cỡ biểu tượng và hơn thế nữa</string>
     <string name="app_drawer_category_title">Ngăn chứa ứng dụng</string>
@@ -53,13 +53,13 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Khi bạn vuốt sang phải tại Màn hình chính</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Ẩn &amp; bảo mật ứng dụng</string>
+    <string name="trust_apps_manager_name">Ẩn &amp; Bảo mật ứng dụng</string>
     <string name="trust_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn và được bảo vệ</string>
     <string name="trust_apps_auth_open_app">Xác thực để mở %1$s</string>
     <string name="trust_apps_loading">Đang tải\u2026</string>
     <string name="trust_apps_no_lock_error">Hãy thiết lập màn hình khóa an toàn để hạn chế quyền truy cập ứng dụng</string>
     <string name="trust_apps_help">Trợ giúp</string>
-    <string name="trust_apps_info_hidden">Các ứng dụng ẩn và tiện ích của chúng bị ẩn khỏi ngăn chứa ứng dụng</string>
+    <string name="trust_apps_info_hidden">Các ứng dụng đã ẩn và tiện ích sẽ được ẩn khỏi danh sách ứng dụng</string>
     <string name="trust_apps_info_protected">Các ứng dụng được bảo vệ yêu cầu xác thực được mở từ trình khởi chạy</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Đề xuất</string>
@@ -73,12 +73,12 @@
     <string name="paused_apps_drop_target_label">Tạm dừng ứng dụng</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Chạm hai lần để tắt màn hình</string>
-    <string name="pref_sleep_gesture_summary">Nhấn liên tiếp hai lần vào khoảng trống để tắt màn hình</string>
+    <string name="pref_sleep_gesture_summary">Nhấn đúp vào không gian trống để tắt màn hình</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Giá trị: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">theo mặc định</string>
     <string name="custom_seekbar_default_value_to_set">Giá trị mặc định: <xliff:g id="v">%s</xliff:g>\nNhấn giữ lâu để thiết lập</string>
-    <string name="custom_seekbar_default_value_is_set">Giá trị mặc định được đặt</string>
+    <string name="custom_seekbar_default_value_is_set">Giá trị mặc định được thiết lập</string>
     <!-- Icon size -->
     <string name="icon_size_title">Kích thước biểu tượng</string>
     <!-- Font size -->
@@ -87,7 +87,7 @@
     <string name="icon_max_lines_title">Số dòng tối đa cho tên ứng dụng</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Đóng</string>
-    <string name="recents_app_killed">Ứng dụng đã được tắt</string>
+    <string name="recents_app_killed">Ứng dụng đã tắt</string>
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Sử dụng thanh tác vụ</string>
     <string name="pref_allow_phone_taskbar_summary">Để mở và chuyển đổi ứng dụng ở mọi nơi</string>
@@ -97,7 +97,7 @@
     <string name="label_voice_search">Tìm kiếm bằng giọng nói</string>
     <string name="dock_music_search_title">Tìm kiếm nhạc</string>
     <string name="dock_music_search_summary">Tìm kiếm nhạc khi ấn vào biểu tượng</string>
-    <string name="dock_search_title">Thanh tìm kiếm dưới cùng</string>
+    <string name="dock_search_title">Thanh tìm kiếm Google</string>
     <string name="dock_search_summary">Thanh tìm kiếm trong thanh công cụ dưới cùng</string>
     <string name="dock_theme_title">Biểu tượng tuỳ biến</string>
     <string name="dock_theme_summary">Dùng biểu tượng theo chủ đề cho thanh tìm kiếm</string>
@@ -121,14 +121,14 @@
     <string name="row_height_title">Chiều cao hàng</string>
     <!-- Memory info -->
     <string name="meminfo_text">Còn trống: %1$s | Tổng số: %2$s</string>
-    <string name="recents_meminfo_title">Hiện bộ nhớ truy cập ứng dụng</string>
+    <string name="recents_meminfo_title">Thông tin bộ nhớ</string>
     <!-- Background blur -->
     <string name="background_blur_title">Độ sâu nền mờ</string>
     <string name="background_blur_summary">Đặt giá trị độ sâu nền mờ cho gần đây và ngăn kéo ứng dụng</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Chụp ảnh màn hình</string>
     <string name="recents_clear_all_title">Xoá tất cả</string>
-    <string name="recents_lens_title">Ống kính</string>
+    <string name="recents_lens_title">Lens</string>
     <!-- Shake Clear Recents -->
     <string name="recents_shake_clear_all_title">Lắc điện thoại để xóa hết các tác vụ</string>
     <!-- All apps themed icons -->
@@ -146,7 +146,7 @@
     <string name="icon_pack_add">Cài đặt thêm</string>
     <string name="icon_pack_no_market">Không có ứng dụng nào khả dụng trong cửa hàng</string>
     <!-- Parallax -->
-    <string name="short_parallax_title">Cho phép thị sai ngắn</string>
+    <string name="short_parallax_title">Cho phép hiệu ứng parallax ngắn</string>
     <string name="short_parallax_summary">Dùng hiệu ứng để cuộn trên các trang khác thay vì cắt hình nền</string>
     <string name="single_page_center_title">Hình nền vị trí trung tâm</string>
     <string name="single_page_center_summary">Hình nền ở vị trí trung tâm khi dùng một trang</string>
@@ -161,17 +161,17 @@
     <string name="updating_launcher_components">Đang mở lại trình khởi chạy để cập nhật các thành phần...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Xem nhanh</string>
-    <string name="show_quickspace_summary">Hiển thị trên đầu màn hình chính</string>
+    <string name="show_quickspace_summary">Hiển thị ở đầu màn hình chính của bạn</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Chào mừng người dùng!</string>
+    <string name="quick_event_rom_intro_welcome">Chào mừng đến với crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">Thời gian của crdroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Cảm ơn vì đã chọn chúng tôi</item>
-        <item>Yêu thích chúng tôi? Gửi cho chúng tôi một cốc bia</item>
-        <item>Có lẽ nó là tuyệt nhất.</item>
-        <item>Trò chuyện cùng nhau trên ứng dụng điện tín</item>
+        <item>Cảm ơn bạn vì đã chọn chúng tôi</item>
+        <item>Yêu thích chúng tôi? Gửi chúng tôi một cốc bia</item>
+        <item>Rom tuyệt nhất.</item>
+        <item>Trò chuyện với chúng tôi trên Telegram</item>
         <item>Chạm vào đây để bắt đầu</item>
-        <item>Chúng tôi yêu người dùng lắm luôn</item>
+        <item>We love you 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Chào buổi sáng.</string>
@@ -187,18 +187,18 @@
     <string name="qe_now_playing_by">Bởi</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Đang phát</string>
-    <string name="quickspace_now_playing_summary">Hiển thị bài hát đang phát</string>
+    <string name="quickspace_now_playing_summary">Hiển thị bài hát bạn đang phát</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">Phong cách tối giản</string>
     <string name="quickspace_alternate_style_summary">Chuyển sang phong cách hiện đại</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Tin nhắn ngẫu nhiên</string>
-    <string name="quickspace_psa_summary">Làm cho người đồng hành trở nên sinh động hơn với những tin nhắn ngẫu nhiên</string>
+    <string name="quickspace_psa_summary">Làm cho người đồng hành của bạn trở nên sống động hơn với các tin nhắn ngẫu nhiên</string>
     <string-array name="quickspace_psa_morning">
         <item>Chào buổi sáng!</item>
         <item>Chào buổi sáng, đến giờ quẩy rồi!</item>
         <item>Thật là một ngày đẹp trời!</item>
-        <item>Chúc một ngày tốt lành!</item>
+        <item>Chúc bạn một ngày tốt lành!</item>
         <item>Còn một giấc ngủ ngắn 5 phút thì sao?</item>
         <item>Dậy ăn sáng thôi nào.</item>
         <item>Buổi sáng là một bức tranh kiệt tác tươi mới cho hàng ngày.</item>
@@ -212,7 +212,7 @@
         <item>Chương đầu tiên trong cuộc phiêu lưu hàng ngày.</item>
         <item>Hãy để thói quen buổi sáng là bệ phóng cho thành công.</item>
         <item>Bình minh hay không, tiềm năng luôn tăng lên.</item>
-        <item>Đã đến lúc có những ý tưởng mới và hành động táo bạo.</item>
+        <item>Đã đến lúc cho những ý tưởng mới mẻ và hành động táo bạo.</item>
         <item>Con chim đến sớm bắt được con sâu như ta có thể bắt được giấc mơ của mình.</item>
         <item>Hãy dũng cảm theo đuổi khát vọng của mình.</item>
         <item>Hãy trỗi dậy và tỏa sáng, vì sự vĩ đại đang chờ đợi.</item>
@@ -314,7 +314,7 @@
         <item>Hãy nhớ lineage của unicorn</item>
         <item>Tận hưởng thời lượng pin dài hơn</item>
         <item>Bắt đầu từ con số 0</item>
-        <item>Chúng tôi yêu người dùng lắm luôn</item>
+        <item>We love you 3000</item>
         <item>Ngon ngay cả khi không có Sushi</item>
         <item>Làm điều gì đó tốt đẹp hôm nay</item>
         <item>Đây là trải nghiệm Pixel tốt nhất, phải không?</item>
@@ -356,5 +356,5 @@
     <string name="intent_no_app_clock_found">Không thể tìm thấy lịch hoặc hoạt động đồng hồ</string>
     <!-- Freed memory on clear all tasks -->
     <string name="freed_memory_text">Đã giải phóng %1$s</string>
-    <string name="optimal_memory_text">Hệ thống đang ở trạng thái tối ưu</string>
+    <string name="optimal_memory_text">Hệ thống của bạn hiện đang ở trạng thái tối ưu</string>
 </resources>
