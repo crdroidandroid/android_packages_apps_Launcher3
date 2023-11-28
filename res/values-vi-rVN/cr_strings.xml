@@ -40,16 +40,16 @@
     <string name="dev_options_summary">Bật một số tính năng ẩn và tự chịu rủi ro</string>
     <!-- Edit workspace -->
     <string name="settings_lock_layout_title">Khóa bố cục</string>
-    <string name="settings_lock_layout_summary_on">Không thể thêm vào hãy xoá hoặc đặt ở trang màn hình khác</string>
-    <string name="settings_lock_layout_summary_off">Có thể thêm vào và xoá hoặc đặt ở trang màn hình</string>
-    <string name="settings_edit_widgets_error">Không thể thêm vào màn hình chính</string>
+    <string name="settings_lock_layout_summary_on">Biểu tượng và tiện ích không thể được thêm, xóa và di chuyển trên màn hình chính</string>
+    <string name="settings_lock_layout_summary_off">Các biểu tượng và tiện ích có thể được thêm, xóa và di chuyển trên màn hình chính</string>
+    <string name="settings_edit_widgets_error">Không thể thêm tiện ích vào màn hình chính</string>
     <!-- Hide labels -->
     <string name="desktop_show_labels">Tên biểu tượng trên màn hình chính</string>
     <string name="drawer_show_labels">Tên biểu tượng trong ngăn chứa ứng dụng</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Vuốt để truy cập ứng dụng Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">Khi vuốt trượt sang phải</string>
+    <string name="msg_minus_one_on_left">Khi bạn vuốt sang phải từ màn hình chính</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Khi bạn vuốt sang phải tại Màn hình chính</string>
     <!-- Trust apps -->
