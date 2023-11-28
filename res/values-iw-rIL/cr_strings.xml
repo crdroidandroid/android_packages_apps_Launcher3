@@ -166,12 +166,12 @@
     <string name="quick_event_rom_intro_welcome">ברוכים הבאים לcrDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">בדיוק הזמן ל-crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
-        <item>We love you 3000</item>
+        <item>תודה לך על בחירתך בנו</item>
+        <item>אהבת אותנו? אפשר לשלוח לנו כוס בירה</item>
+        <item>ה-ROM הטוב ביותר מאז ומעולם.</item>
+        <item>אפשר לאמר לנו היי בטלגרם</item>
+        <item>לחיצה כאן כדי להתחיל</item>
+        <item>אנחנו אוהבים אותך 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">בוקר טוב.</string>
@@ -180,7 +180,7 @@
     <string name="quickspace_grt_night">לילה טוב.</string>
     <string name="quickspace_grt_general">יום טוב.</string>
     <string name="quickspace_ext_one">היום הוא</string>
-    <string name="quickspace_ext_two">It\'s</string>
+    <string name="quickspace_ext_two">כעת</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="qe_now_playing_unknown_artist">אמן לא ידוע</string>
     <string name="qe_now_playing_ext_one">מתנגן כעת</string>
@@ -212,7 +212,7 @@
         <item>הפרק הראשון בהרפתקה היומית שלך.</item>
         <item>שגרת הבוקר שלך היא כן השיגור להצלחה.</item>
         <item>זריחה או לא, הפוטנציאל שלך תמיד בעלייה.</item>
-        <item>It\'s time for fresh ideas and bold actions.</item>
+        <item>זה הזמן לרעיונות טריים ולעשייה נועזת.</item>
         <item>המקדים להשכים זוכה בפרס, אבל תוכלו ללכוד את חלומותיכם.</item>
         <item>איזרו אומץ לחתור למימוש השאיפות שלכם.</item>
         <item>עורו, קומו, כי מחכה לכם גדוּלה.</item>
@@ -249,16 +249,16 @@
         <item>מיצאו את היופי שברגעים הרגילים.</item>
         <item>זה הזמן להרהר ולאתחל מחדש.</item>
         <item>ביחרו בהנאה, לא משנה השעה.</item>
-        <item>Opportunities don\'t clock out in the evening.</item>
-        <item>Be the reason someone smiles.</item>
-        <item>Your potential knows no bounds.</item>
-        <item>Moments of magic can happen at any hour.</item>
-        <item>Your life is what you make of it; make it extraordinary.</item>
-        <item>Stay curious, stay grateful.</item>
-        <item>Be the change you wish to see in the world.</item>
-        <item>Believe in yourself; you are capable of amazing things.</item>
-        <item>The only limit is the one you set for yourself.</item>
-        <item>Success begins with a single step.</item>
+        <item>הזדמנויות אינן נועלות את המשרד בסוף היום.</item>
+        <item>היו אתם הסיבה לחיוך של מישהו.</item>
+        <item>אין גבול לפוטנציאל שלך.</item>
+        <item>רגעי קסם יכולים להתחולל בכל זמן.</item>
+        <item>חייכם הם מה שתעשו מהם; עשו אותם מדהימים.</item>
+        <item>היו סקרנים, היו מלאי תודה.</item>
+        <item>היו אתם השינוי שהייתם רוצים לראות בעולם.</item>
+        <item>האמינו בעצמכם; יש בכם יכולת לדברים מדהימים.</item>
+        <item>המגבלה היחידה היא זו שהטלת על עצמך.</item>
+        <item>ההצלחה מתחילה בצעד יחיד.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
         <item>Seize the night, for it holds its own mysteries.</item>
