@@ -168,8 +168,8 @@
     <string-array name="welcome_message_variants">
         <item>Cảm ơn bạn vì đã chọn chúng tôi</item>
         <item>Yêu thích chúng tôi? Gửi chúng tôi một cốc bia</item>
-        <item>Rom tuyệt nhất.</item>
-        <item>Trò chuyện với chúng tôi trên Telegram</item>
+        <item>Có lẽ nó là tuyệt nhất.</item>
+        <item>Trò chuyện cùng nhau trên ứng dụng điện tín</item>
         <item>Chạm vào đây để bắt đầu</item>
         <item>We love you 3000</item>
     </string-array>
@@ -356,5 +356,5 @@
     <string name="intent_no_app_clock_found">Không thể tìm thấy lịch hoặc hoạt động đồng hồ</string>
     <!-- Freed memory on clear all tasks -->
     <string name="freed_memory_text">Đã giải phóng %1$s</string>
-    <string name="optimal_memory_text">Hệ thống của bạn hiện đang ở trạng thái tối ưu</string>
+    <string name="optimal_memory_text">Đã xóa ứng dụng ngầm và tối ưu</string>
 </resources>
