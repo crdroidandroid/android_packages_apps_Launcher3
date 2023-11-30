@@ -23,18 +23,18 @@
     <string name="home_category_title">Màn hình chính</string>
     <string name="home_category_summary">Tùy chỉnh các thiết lập trên màn hình chính</string>
     <string name="icons_category_title">Biểu tượng</string>
-    <string name="icons_category_summary">Đặt kích cỡ biểu tượng và hơn thế nữa</string>
+    <string name="icons_category_summary">Đặt kích cỡ biểu tượng và nhiều hơn</string>
     <string name="app_drawer_category_title">Ngăn chứa ứng dụng</string>
     <string name="app_drawer_category_summary">Tùy chỉnh ngăn chứa ứng dụng</string>
     <string name="recents_category_title">Gần đây</string>
-    <string name="recents_category_summary">Làm mới màn hình tổng quan</string>
+    <string name="recents_category_summary">Các thiết lập màn hình ứng dụng gần đây</string>
     <string name="misc_category_title">Cài đặt khác</string>
     <string name="misc_category_summary">Tùy chọn khác</string>
     <string name="general_category_title">Chung</string>
     <string name="interface_category_title">Giao diện</string>
     <string name="quickspace_category_title">Thông báo ngẫu nhiên</string>
     <string name="search_bar_category_title">Thanh tìm kiếm</string>
-    <string name="actions_category_title">Xem nhanh</string>
+    <string name="actions_category_title">Thao tác nhanh</string>
     <!-- Developer options -->
     <string name="dev_options_title">Tùy chọn nhà phát triển</string>
     <string name="dev_options_summary">Bật một số tính năng ẩn và tự chịu rủi ro</string>
@@ -47,19 +47,19 @@
     <string name="desktop_show_labels">Tên biểu tượng trên màn hình chính</string>
     <string name="drawer_show_labels">Tên biểu tượng trong ngăn chứa ứng dụng</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Vuốt để truy cập ứng dụng Google</string>
+    <string name="title_show_google_app">Vuốt để truy cập ứng dụng nguồn cấp dữ liệu</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_left">Khi vuốt trượt sang phải</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Khi vuốt trượt sang trái</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Ẩn &amp; bảo mật ứng dụng</string>
+    <string name="trust_apps_manager_name">Ẩn &amp; Bảo mật ứng dụng</string>
     <string name="trust_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn và được bảo vệ</string>
     <string name="trust_apps_auth_open_app">Xác thực để mở %1$s</string>
     <string name="trust_apps_loading">Đang tải\u2026</string>
     <string name="trust_apps_no_lock_error">Hãy thiết lập màn hình khóa an toàn để hạn chế quyền truy cập ứng dụng</string>
     <string name="trust_apps_help">Trợ giúp</string>
-    <string name="trust_apps_info_hidden">Các ứng dụng ẩn và tiện ích của chúng bị ẩn khỏi ngăn chứa ứng dụng</string>
+    <string name="trust_apps_info_hidden">Ứng dụng cùng với tiện ích sẽ bị ẩn khỏi ngăn chứa ứng dụng</string>
     <string name="trust_apps_info_protected">Các ứng dụng được bảo vệ yêu cầu xác thực được mở từ trình khởi chạy</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Đề xuất</string>
@@ -78,7 +78,7 @@
     <string name="custom_seekbar_value">Giá trị: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">theo mặc định</string>
     <string name="custom_seekbar_default_value_to_set">Giá trị mặc định: <xliff:g id="v">%s</xliff:g>\nNhấn giữ để thiết lập</string>
-    <string name="custom_seekbar_default_value_is_set">Giá trị mặc định được đặt</string>
+    <string name="custom_seekbar_default_value_is_set">Giá trị mặc định được thiết lập</string>
     <!-- Icon size -->
     <string name="icon_size_title">Kích thước biểu tượng</string>
     <!-- Font size -->
@@ -121,7 +121,7 @@
     <string name="row_height_title">Chiều cao hàng</string>
     <!-- Memory info -->
     <string name="meminfo_text">Còn trống: %1$s | Tổng số: %2$s</string>
-    <string name="recents_meminfo_title">Hiện bộ nhớ truy cập ứng dụng</string>
+    <string name="recents_meminfo_title">Tình trạng bộ nhớ</string>
     <!-- Background blur -->
     <string name="background_blur_title">Độ sâu nền mờ</string>
     <string name="background_blur_summary">Thiết lập độ mờ của hình nền cho ứng dụng gần đây và ngăn chứa ứng dụng</string>
@@ -135,11 +135,11 @@
     <string name="pref_themed_icons_title">Biểu tượng theo chủ đề</string>
     <string name="pref_themed_icons_summary">Sử dụng biểu tượng theo chủ đề trên màn hình chính</string>
     <!-- AppInfo -->
-    <string name="app_info_source">Nguồn</string>
+    <string name="app_info_source">Nguồn cài đặt</string>
     <string name="app_info_source_system">Hệ thống</string>
     <string name="app_info_last_update">Cập nhật mới nhất</string>
     <string name="app_info_version">Phiên bản</string>
-    <string name="app_info_more">Xem thêm</string>
+    <string name="app_info_more">Xem thêm chi tiết về ứng dụng</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Gói biểu tượng</string>
     <string name="icon_pack_default_label">Mặc định</string>
@@ -171,7 +171,7 @@
         <item>Có lẽ nó là tuyệt nhất.</item>
         <item>Trò chuyện cùng nhau trên ứng dụng điện tín</item>
         <item>Chạm vào đây để bắt đầu</item>
-        <item>Chúng tôi yêu người dùng lắm luôn</item>
+        <item>Chúng tôi yêu người dùng</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Chào buổi sáng.</string>
@@ -314,7 +314,7 @@
         <item>Hãy nhớ lineage của unicorn</item>
         <item>Tận hưởng thời lượng pin dài hơn</item>
         <item>Bắt đầu từ con số 0</item>
-        <item>Chúng tôi yêu người dùng lắm luôn</item>
+        <item>Chúng tôi yêu người dùng</item>
         <item>Ngon ngay cả khi không có Sushi</item>
         <item>Làm điều gì đó tốt đẹp hôm nay</item>
         <item>Đây là trải nghiệm Pixel tốt nhất, phải không?</item>
