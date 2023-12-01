@@ -19,11 +19,11 @@
     <string name="settings_title">Ustawienia</string>
     <!-- Categories -->
     <string name="home_category_title">Ekran główny</string>
-    <string name="home_category_summary">Ustaw panel Google Now i więcej</string>
+    <string name="home_category_summary">Ustaw panel Google Now i inne</string>
     <string name="icons_category_title">Ikony</string>
-    <string name="icons_category_summary">Ustaw rozmiar ikon i więcej</string>
+    <string name="icons_category_summary">Ustaw rozmiar ikon i inne</string>
     <string name="app_drawer_category_title">Szuflada aplikacji</string>
-    <string name="app_drawer_category_summary">Spersonalizuj szufladę aplikacji</string>
+    <string name="app_drawer_category_summary">Dostosuj szufladę aplikacji</string>
     <string name="recents_category_title">Ostatnio używane</string>
     <string name="recents_category_summary">Odśwież ekran podglądu</string>
     <string name="misc_category_title">Pozostałe</string>
@@ -43,11 +43,11 @@
     <!-- Folder titles -->
     <!-- Hide labels -->
     <string name="desktop_show_labels">Etykiety ikon na pulpicie</string>
-    <string name="drawer_show_labels">Etykiety ikon w panelu</string>
+    <string name="drawer_show_labels">Etykiety ikon w szufladzie aplikacji</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Wartość: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">domyślnie</string>
-    <string name="custom_seekbar_default_value_to_set">Wartość domyślna: <xliff:g id="v">%s</xliff:g>\nPrzytrzymaj dłużej, by ustawić</string>
+    <string name="custom_seekbar_default_value_to_set">Wartość domyślna: <xliff:g id="v">%s</xliff:g>\nPrzytrzymaj dłużej, aby ustawić</string>
     <string name="custom_seekbar_default_value_is_set">Domyślna wartość jest ustawiona</string>
     <!-- Icon size -->
     <string name="icon_size_title">Rozmiar ikon</string>
@@ -56,8 +56,8 @@
     <!-- App label - max lines -->
     <string name="icon_max_lines_title">Maksymalna ilość linii dla etykiety aplikacji</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Stuknij dwukrotnie, aby uśpić</string>
-    <string name="pref_sleep_gesture_summary">Dwukrotnie stuknij pustą przestrzeń, aby wyłączyć</string>
+    <string name="pref_sleep_gesture_title">Dotknij dwukrotnie, aby uśpić</string>
+    <string name="pref_sleep_gesture_summary">Dotknij dwukrotnie w pustym miejscu, aby wyłączyć ekran</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Szukaj</string>
     <string name="label_lens">Obiektyw Google</string>
@@ -72,16 +72,16 @@
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Pasek stanu</string>
     <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Sugestie</string>
-    <string name="suggestion_pref_screen_desc">Dla wszystkich aplikacji &amp; Sugestie ekranu głównego</string>
+    <string name="suggestion_pref_screen_title">Propozycje</string>
+    <string name="suggestion_pref_screen_desc">Propozycje dotyczące wszystkich aplikacji i ekranu głównego</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Ukryte &amp; chronione aplikacje</string>
+    <string name="trust_apps_manager_name">Ukryte i chronione aplikacje</string>
     <string name="trust_apps_auth_manager">Odblokuj, aby zarządzać ukrytymi i chronionymi aplikacjami</string>
     <string name="trust_apps_auth_open_app">Uwierzytelnij, aby otworzyć %1$s</string>
     <string name="trust_apps_loading">Wczytywanie\u2026</string>
     <string name="trust_apps_no_lock_error">Ustaw bezpieczny ekran blokady, aby ograniczyć dostęp do aplikacji</string>
     <string name="trust_apps_help">Pomoc</string>
-    <string name="trust_apps_info_hidden">Ukryte aplikacje oraz ich widżety są ukryte na liście aplikacji</string>
+    <string name="trust_apps_info_hidden">Ukryte aplikacje oraz ich widżety są ukryte również w szufladzie aplikacji</string>
     <string name="trust_apps_info_protected">Chronione aplikacje wymagają uwierzytelnienia, aby je otworzyć z ekranu głównego</string>
     <!-- Force stop shortcut -->
     <string name="recent_task_force_stop_app">Wymuś zatrzymanie</string>
@@ -106,9 +106,9 @@
     <string name="allow_wallpaper_scrolling_desc">Efekt przewijania tapety dla wielu ekranów</string>
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zooming">Powiększanie tapety</string>
-    <string name="allow_wallpaper_zooming_desc">Powiększ lub pomniejsz tapetę podczas używania listy aplikacji lub widoku ostatnio używanych aplikacji</string>
+    <string name="allow_wallpaper_zooming_desc">Powiększaj, pomniejszaj tapetę podczas używania szuflady aplikacji lub widoku ostatnio używanych aplikacji</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Przezroczystość tła</string>
+    <string name="background_opacity_title">Nieprzezroczystość tła</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Zrzut ekranu</string>
     <string name="recents_clear_all_title">Wyczyść wszystko</string>
@@ -120,8 +120,8 @@
     <string name="meminfo_text">%1$s Dostępne | %2$s Łącznie</string>
     <string name="recents_meminfo_title">Informacje o pamięci</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Tło Docka</string>
-    <string name="hotseat_bg_summary">Dodaje przezroczyste tło dla Doka</string>
+    <string name="hotseat_bg_title">Tło dolnego panelu</string>
+    <string name="hotseat_bg_summary">Dodaje przezroczyste tło dla panelu aplikacji</string>
     <!-- AppInfo -->
     <string name="app_info_subtext">Przesuń w dół, aby zamknąć informacje o aplikacji</string>
     <string name="app_info_source">Źródło</string>
