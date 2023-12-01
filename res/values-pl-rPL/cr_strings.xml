@@ -21,11 +21,11 @@
     <string name="settings_title">Ustawienia ekranu głównego</string>
     <!-- Categories -->
     <string name="home_category_title">Ekran główny</string>
-    <string name="home_category_summary">Ustaw panel Google Now i więcej</string>
+    <string name="home_category_summary">Ustaw panel Google Now i inne</string>
     <string name="icons_category_title">Ikony</string>
-    <string name="icons_category_summary">Ustaw rozmiar ikon i więcej</string>
+    <string name="icons_category_summary">Ustaw rozmiar ikon i inne</string>
     <string name="app_drawer_category_title">Szuflada aplikacji</string>
-    <string name="app_drawer_category_summary">Spersonalizuj szufladę aplikacji</string>
+    <string name="app_drawer_category_summary">Dostosuj szufladę aplikacji</string>
     <string name="recents_category_title">Ostatnio używane</string>
     <string name="recents_category_summary">Odśwież ekran podglądu</string>
     <string name="misc_category_title">Pozostałe</string>
@@ -45,7 +45,7 @@
     <string name="settings_edit_widgets_error">Nie można dodać widżetów do ekranu głównego</string>
     <!-- Hide labels -->
     <string name="desktop_show_labels">Etykiety ikon na pulpicie</string>
-    <string name="drawer_show_labels">Etykiety ikon w panelu</string>
+    <string name="drawer_show_labels">Etykiety ikon w szufladzie aplikacji</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Przesuń, aby uzyskać dostęp do aplikacji Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -53,17 +53,17 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Kiedy przesuniesz w prawo od ekranu głównego</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Ukryte &amp; chronione aplikacje</string>
+    <string name="trust_apps_manager_name">Ukryte i chronione aplikacje</string>
     <string name="trust_apps_auth_manager">Odblokuj, aby zarządzać ukrytymi i chronionymi aplikacjami</string>
     <string name="trust_apps_auth_open_app">Uwierzytelnij, aby otworzyć %1$s</string>
     <string name="trust_apps_loading">Wczytywanie\u2026</string>
     <string name="trust_apps_no_lock_error">Ustaw bezpieczny ekran blokady, aby ograniczyć dostęp do aplikacji</string>
     <string name="trust_apps_help">Pomoc</string>
-    <string name="trust_apps_info_hidden">Ukryte aplikacje oraz ich widżety są ukryte na liście aplikacji</string>
+    <string name="trust_apps_info_hidden">Ukryte aplikacje oraz ich widżety są ukryte również w szufladzie aplikacji</string>
     <string name="trust_apps_info_protected">Chronione aplikacje wymagają uwierzytelnienia, aby je otworzyć z ekranu głównego</string>
     <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Sugestie</string>
-    <string name="suggestion_pref_screen_desc">Dla wszystkich aplikacji &amp; Sugestie ekranu głównego</string>
+    <string name="suggestion_pref_screen_title">Propozycje</string>
+    <string name="suggestion_pref_screen_desc">Propozycje dotyczące wszystkich aplikacji i ekranu głównego</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Wstrzymaj</string>
     <string name="pause_apps_dialog_title">Wstrzymać? %1$s?</string>
@@ -72,12 +72,12 @@
     <string name="paused_apps_dialog_message">Aplikacja %1$s została wstrzymana z ekranu głównego</string>
     <string name="paused_apps_drop_target_label">Wstrzymaj aplikację</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Stuknij dwukrotnie, aby uśpić</string>
+    <string name="pref_sleep_gesture_title">Dotknij dwukrotnie, aby uśpić</string>
     <string name="pref_sleep_gesture_summary">Dotknij dwukrotnie w puste miejsce, aby wyłączyć ekran</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Wartość: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">domyślnie</string>
-    <string name="custom_seekbar_default_value_to_set">Wartość domyślna: <xliff:g id="v">%s</xliff:g>\nPrzytrzymaj dłużej by ustawić</string>
+    <string name="custom_seekbar_default_value_to_set">Wartość domyślna: <xliff:g id="v">%s</xliff:g>\nPrzytrzymaj dłużej, aby ustawić</string>
     <string name="custom_seekbar_default_value_is_set">Wartość domyślna jest ustawiona</string>
     <!-- Icon size -->
     <string name="icon_size_title">Rozmiar ikon</string>
@@ -103,16 +103,16 @@
     <string name="dock_theme_summary">Użyj ikon tematycznych dla paska wyszukiwania</string>
     <string name="search_radius_title">Zaokrąglenie rogów</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Tło Docka</string>
-    <string name="hotseat_bg_summary">Dodaje przezroczyste tło dla Doka</string>
+    <string name="hotseat_bg_title">Tło dolnego panelu</string>
+    <string name="hotseat_bg_summary">Dodaje przezroczyste tło dla panelu aplikacji</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Przezroczystość tła</string>
+    <string name="background_opacity_title">Nieprzezroczystość tła</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Przewijane tapety</string>
     <string name="allow_wallpaper_scrolling_summary">Efekt przewijania tapety dla wielu ekranów</string>
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zooming">Powiększanie tapety</string>
-    <string name="allow_wallpaper_zooming_summary">Powiększ lub pomniejsz tapetę podczas używania listy aplikacji lub widoku ostatnio używanych aplikacji</string>
+    <string name="allow_wallpaper_zooming_summary">Powiększaj, pomniejszaj tapetę podczas używania szuflady aplikacji lub widoku ostatnio używanych aplikacji</string>
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Pasek stanu</string>
     <!-- Top shadow -->
@@ -166,12 +166,12 @@
     <string name="quick_event_rom_intro_welcome">Witaj w crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">Czas na crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
-        <item>We love you 3000</item>
+        <item>Dziękujemy za wybranie nas</item>
+        <item>Lubisz nas? Kup nam piwo</item>
+        <item>Najlepszy system wszechczasów.</item>
+        <item>Przywitaj się z nami na Telegramie</item>
+        <item>Dotknij tutaj, aby rozpocząć</item>
+        <item>Uwielbiamy Cię tysiąckrotnie</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Dzień dobry.</string>
@@ -212,7 +212,7 @@
         <item>Pierwszy rozdział twojej codziennej przygody.</item>
         <item>Niech twoja poranna rutyna będzie wyjściem dla sukcesu.</item>
         <item>Wschód słońca lub nie, Twój potencjał zawsze rośnie.</item>
-        <item>It\'s time for fresh ideas and bold actions.</item>
+        <item>Nadszedł czas na świeże pomysły i odważne działania.</item>
         <item>Skowronki łapią robaki, ale Ty możesz złapać swoje marzenia.</item>
         <item>Znajdź w sobie odwagę, by podążać za swoimi pragnieniami.</item>
         <item>Powstań i zabłyśnij, bo wielkość czeka.</item>
@@ -305,7 +305,7 @@
         <item>Hej, co słychać?</item>
         <item>Skoncentruj się na swoich zadaniach</item>
         <item>Ile zrzutów ekranu robisz?</item>
-        <item>Otwórz dobroć z crDroid</item>
+        <item>Spersonalizuj swój system z crDroid</item>
         <item>Szerz miłość nie spustoszenie</item>
         <item>Nie rozpoczęliśmy ognia!</item>
         <item>Czas na dobrą muzykę</item>
@@ -314,7 +314,7 @@
         <item>Pamiętaj the Lineage of the Unicorn</item>
         <item>Ciesz się wydłużonym czasem baterii</item>
         <item>Zaczynamy od początku</item>
-        <item>We love you 3000</item>
+        <item>Uwielbiamy Cię tysiąckrotnie</item>
         <item>Pyszny nawet bez Sushi</item>
         <item>Zrób dziś coś miłego</item>
         <item>To najlepsze Pixel Experience, prawda?</item>
@@ -326,7 +326,7 @@
         <item>Wypróbuj lodowe desery</item>
         <item>Ale cudowne doświadczenie, nieprawdaż?</item>
         <item>Ewolucja jest mitem, prawda?</item>
-        <item>Jesteś tym co wgrywasz, nie bądź ziemniakiem</item>
+        <item>Jesteś tym, co wgrywasz, nie bądź frajerzyną</item>
         <item>Co ci chodzi po głowie?</item>
         <item>Expecto Patronum</item>
         <item>Łabudi dajda łabudi daj</item>
@@ -339,8 +339,8 @@
         <item>Możesz wyłączyć szybką przestrzeń za pomocą ustawień ekranu głównego.</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quick_event_ambient_weather_title">Warunki pogodowe</string>
-    <string name="quick_event_ambient_weather_summary">Pokaż bieżące warunki pogodowe i temperaturę</string>
+    <string name="quick_event_ambient_weather_title">Aktualizacja pogodowa</string>
+    <string name="quick_event_ambient_weather_summary">Pokaż aktualną informację pogodową według lokalizacji</string>
     <string name="quick_event_ambient_weather_enabled_info">Wymaga włączenia usługi pogodowej</string>
     <string name="quick_event_weather_clouds">Pochmurno</string>
     <string name="quick_event_weather_rain">Deszczowo</string>
@@ -350,6 +350,11 @@
     <string name="quick_event_weather_wind">Wietrznie</string>
     <string name="quick_event_weather_mist">Mgliście</string>
     <string name="quick_event_weather_city_title">Obecna lokalizacja</string>
-    <string name="quick_event_weather_city_summary">Wyświetl bieżącą lokalizację</string>
+    <string name="quick_event_weather_city_summary">Wyświetl bieżącą lokalizację pogody</string>
+    <string name="quick_event_weather_text_title">Aktualne warunki</string>
+    <string name="quick_event_weather_text_summary">Wyświetl podsumowanie warunków pogodowych</string>
     <string name="intent_no_app_clock_found">Nie można odnaleźć kalendarza lub aktywności zegara</string>
+    <!-- Freed memory on clear all tasks -->
+    <string name="freed_memory_text">Zwolniono %1$s</string>
+    <string name="optimal_memory_text">Twój system jest teraz w optymalnej kondycji</string>
 </resources>

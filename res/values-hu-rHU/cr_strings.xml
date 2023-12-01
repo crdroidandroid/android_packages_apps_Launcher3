@@ -166,12 +166,12 @@
     <string name="quick_event_rom_intro_welcome">Üdvözöli a crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">Itt a crDroid ideje!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
-        <item>We love you 3000</item>
+        <item>Köszönjük, hogy minket választott</item>
+        <item>Kedvel minket? Küldjön nekünk sört!</item>
+        <item>Minden idők legjobb rendszere.</item>
+        <item>Írjon ránk a Telegramon</item>
+        <item>Érintse meg itt a kezdéshez</item>
+        <item>Ne telefonozzon! Szerelmeskedjen!</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Jó reggelt.</string>
@@ -212,7 +212,7 @@
         <item>Így indul az Ön napi kalandja.</item>
         <item>A reggeli megszokásaiból alakul ki a sikerességének indítópultja.</item>
         <item>Napkelte vagy sem, az Ön potenciálja folyton növekszik.</item>
-        <item>It\'s time for fresh ideas and bold actions.</item>
+        <item>Itt az ideje a friss ötleteknek és a merész tetteknek.</item>
         <item>A hajnali madár elkapja a férget, ahogy te is elérheted az álmaidat.</item>
         <item>Találja meg bátorságát és érje el céljait.</item>
         <item>Kelj fel és ragyogj, hogy naggyá válhass.</item>
@@ -314,7 +314,7 @@
         <item>Emlékezzen az Egyszarvú eredetére</item>
         <item>Élvezze a Kiterjesztett akkuidőt</item>
         <item>Induljunk újra nulláról</item>
-        <item>We love you 3000</item>
+        <item>Ne telefonozzon! Szerelmeskedjen!</item>
         <item>Szusi nélkül is finom</item>
         <item>Tegyen ma valami kedveset</item>
         <item>Ez a legmenőbb Pixel Experience, vagy mégsem?</item>
@@ -339,8 +339,8 @@
         <item>A beállításokban módosíthat a Belepillantás viselkedésén</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quick_event_ambient_weather_title">Időjárási helyzet</string>
-    <string name="quick_event_ambient_weather_summary">Megjeleníti az épp aktuális hőfokot és adatokat</string>
+    <string name="quick_event_ambient_weather_title">Az \'Időjárás\" frissítése</string>
+    <string name="quick_event_ambient_weather_summary">A jelenlegi tartózkodási hely adatait frissíti</string>
     <string name="quick_event_ambient_weather_enabled_info">Az időjárás-szolgáltatás engedélyezése szükséges</string>
     <string name="quick_event_weather_clouds">Felhős</string>
     <string name="quick_event_weather_rain">Esős</string>
@@ -350,6 +350,11 @@
     <string name="quick_event_weather_wind">Szeles</string>
     <string name="quick_event_weather_mist">Ködös</string>
     <string name="quick_event_weather_city_title">Jelenlegi tartózkodási hely</string>
-    <string name="quick_event_weather_city_summary">Jelenítse meg az aktuális pozíciót</string>
+    <string name="quick_event_weather_city_summary">A jelenlegi tartózkodási hely adatait jeleníti meg</string>
+    <string name="quick_event_weather_text_title">Jelenlegi időjárás</string>
+    <string name="quick_event_weather_text_summary">Megjeleníti az épp aktuális hőfokot és adatokat</string>
     <string name="intent_no_app_clock_found">Nem található naptári vagy óratevékenység</string>
+    <!-- Freed memory on clear all tasks -->
+    <string name="freed_memory_text">%1$s felszabadítva</string>
+    <string name="optimal_memory_text">Az Ön rendszere most optimális állapotba került</string>
 </resources>

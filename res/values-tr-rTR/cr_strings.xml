@@ -166,12 +166,12 @@
     <string name="quick_event_rom_intro_welcome">CrDroid\'e hoş geldiniz!</string>
     <string name="quick_event_rom_intro_welcome_ext">crDroid zamanı!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
-        <item>We love you 3000</item>
+        <item>Bizi seçtiğiniz için teşekkürler</item>
+        <item>Bizi seviyor musunuz? Bize bir çay ısmarla</item>
+        <item>Gelmiş geçmiş en iyi Rom.</item>
+        <item>Telegram\'da bize bir selam ver</item>
+        <item>Başlamak için buraya dokunun</item>
+        <item>Seni 3000 kez seviyoruz</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Günaydın.</string>
@@ -212,7 +212,7 @@
         <item>Günlük maceranızın ilk bölümü.</item>
         <item>Sabah rutininizin başarı için bir fırlatma rampası olmasına izin verin.</item>
         <item>Güneş doğsun ya da doğmasın, potansiyeliniz her zaman yükseliştedir.</item>
-        <item>It\'s time for fresh ideas and bold actions.</item>
+        <item>Şimdi yeni fikirler ve cesur adımlar atma zamanı.</item>
         <item>Erken kalkan yol alır ama siz hayallerinizi yakalayabilirsiniz.</item>
         <item>Hedeflerinizin peşinden gidecek cesareti bulun.</item>
         <item>Yükselin ve parlayın, çünkü büyüklük sizi bekliyor.</item>
@@ -314,7 +314,7 @@
         <item>Unicorn soyunu hatırla</item>
         <item>Daha uzun pil ömrünün keyfini çıkarın</item>
         <item>Sıfırdan başlayarak</item>
-        <item>We love you 3000</item>
+        <item>Seni 3000 kez seviyoruz</item>
         <item>Suşi olmadan bile lezzetli</item>
         <item>Bugün güzel bir şey yap</item>
         <item>Bu en iyi Pixel Experience, değil mi?</item>
@@ -339,8 +339,8 @@
         <item>Hızlı alanı ana ekran ayarlarından devre dışı bırakabilirsiniz.</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quick_event_ambient_weather_title">Hava durumu</string>
-    <string name="quick_event_ambient_weather_summary">Mevcut hava durumunu ve sıcaklığı göster</string>
+    <string name="quick_event_ambient_weather_title">Hava durumu güncellemesi</string>
+    <string name="quick_event_ambient_weather_summary">Geçerli hava durumu güncellemesini görüntüle</string>
     <string name="quick_event_ambient_weather_enabled_info">Hava durumu hizmetinin etkinleştirilmesi gerekir</string>
     <string name="quick_event_weather_clouds">Bulutlu</string>
     <string name="quick_event_weather_rain">Yağmurlu</string>
@@ -350,6 +350,11 @@
     <string name="quick_event_weather_wind">Rüzgarlı</string>
     <string name="quick_event_weather_mist">Puslu</string>
     <string name="quick_event_weather_city_title">Mevcut konum</string>
-    <string name="quick_event_weather_city_summary">Geçerli konumu göster</string>
+    <string name="quick_event_weather_city_summary">Mevcut hava durumu konumunu göster</string>
+    <string name="quick_event_weather_text_title">Geçerli durum</string>
+    <string name="quick_event_weather_text_summary">Mevcut hava durumu özetini görüntüle</string>
     <string name="intent_no_app_clock_found">Takvim veya saat etkinliği bulunamıyor</string>
+    <!-- Freed memory on clear all tasks -->
+    <string name="freed_memory_text">%1$s ram temizlendi</string>
+    <string name="optimal_memory_text">Sisteminiz şu an optimal durumda</string>
 </resources>

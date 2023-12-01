@@ -166,12 +166,12 @@
     <string name="quick_event_rom_intro_welcome">Vitajte v crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">Čas na crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
-        <item>We love you 3000</item>
+        <item>Ďakujeme, že ste si nás vybrali</item>
+        <item>Máte nás radi? Pošlite nám pivo</item>
+        <item>Úplne najlepšia ROM.</item>
+        <item>Pozdrav nás na Telegrame</item>
+        <item>Začnite klepnutím sem</item>
+        <item>Milujeme ťa 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Dobré ráno.</string>
@@ -212,7 +212,7 @@
         <item>Prvá kapitola v Tvojom každodennom dobrodružstve.</item>
         <item>Nech je tvoja ranná rutina odrazovým mostíkom k úspechu.</item>
         <item>Východ slnka alebo nie, Tvoj potenciál je vždy na vzostupe.</item>
-        <item>It\'s time for fresh ideas and bold actions.</item>
+        <item>Je čas na nové nápady a odvážne činy.</item>
         <item>Ranné vtáča chytí červíka, ale Ty môžeš chytiť svoje sny.</item>
         <item>Nájdi odvahu ísť za svojimi túžbami.</item>
         <item>Vstaň a zažiar, veľké veci čakajú.</item>
@@ -266,37 +266,37 @@
         <item>Najväčšie dobrodružstvá môžu začať v temnote.</item>
         <item>Tvoja cesta pokračuje aj po západe slnka.</item>
         <item>Nech je noc tvojím plátnom, vymaľuj ju snami.</item>
-        <item>In the stillness of this evening, find your inner peace.</item>
-        <item>Stars shine brightest in the darkest hours.</item>
-        <item>Dream big, even in the late hours of the day.</item>
-        <item>Your life is a story waiting to be written.</item>
-        <item>It\'s time for reflection and renewal.</item>
-        <item>Late night thoughts can lead to early morning revelations.</item>
-        <item>Find joy in the stillness of this evening.</item>
-        <item>The night sky is a vast canvas of dreams.</item>
-        <item>Your potential knows no bedtime; pursue your passions.</item>
-        <item>Stay hopeful, even in the darkest hours.</item>
-        <item>In the midst of chaos, find your inner calm.</item>
-        <item>Stay positive, work hard, make it happen.</item>
+        <item>Nájdi svoj vnútorný mier, v kľude tohoto večera.</item>
+        <item>V najtemnejších časoch žiaria hviezdy najviac.</item>
+        <item>Snívaj vo veľkom aj v neskorých hodinách.</item>
+        <item>Tvoj život je príbeh čakajúci na napísanie.</item>
+        <item>Je čas na zamyslenie a obnovu.</item>
+        <item>Neskoré večerné myšlienky môžu viesť ku skorým ranným objavom.</item>
+        <item>Nájdi radosť v kľude tohoto večera.</item>
+        <item>Nočná obloha je obrovské plátno snov.</item>
+        <item>Tvoj potenciál nepozná hraníc, nasleduj svoje vášne.</item>
+        <item>Zachovaj si nádej aj v najtemnejších časoch.</item>
+        <item>Nájdi svoj vnútorný pokoj uprostred chaosu.</item>
+        <item>Zostaň pozitívny, tvrdo pracuj, urob to.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Nights are the quiet whispers of opportunity.</item>
-        <item>In the stillness of the night, find your inner strength.</item>
-        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
-        <item>The world sleeps, but your potential is wide awake.</item>
-        <item>The night may be late, but your ambitions are timeless.</item>
-        <item>Stay curious, stay awake, and let nights guide you.</item>
-        <item>Find the courage to chase your dreams.</item>
-        <item>Great things never come from comfort zones.</item>
-        <item>You have the power to create your own destiny.</item>
-        <item>Happiness is a choice; choose it every day.</item>
-        <item>Life is what you make it, so make it count.</item>
-        <item>Stay focused, stay determined, stay unstoppable.</item>
-        <item>You are the author of your own story.</item>
-        <item>Strive for progress, not perfection.</item>
-        <item>Every day is a new beginning; make it a great one.</item>
-        <item>Inspire others by being your authentic self.</item>
-        <item>Your attitude determines your direction.</item>
+        <item>Noci sú tichým šepotom príležitosti.</item>
+        <item>Nájdi svoj vnútorný mier, v kľude tohoto večera.</item>
+        <item>Pijmi temnotu, pretože má kľúče k tvojim snom.</item>
+        <item>Svet spí, ale tvoj potenciál nie.</item>
+        <item>Môže byť neskoro v noci, ale tvoje ambície nepoznajú čas.</item>
+        <item>Zostaň zvedavý, zostaň hore a nechaj sa viesť nocou.</item>
+        <item>Nájdi odvahu ísť za svojimi túžbami.</item>
+        <item>Veľké vecí nepochádzajú z komfortných zón.</item>
+        <item>Máš moc vytvárať svoj vlastný osud.</item>
+        <item>Šťastie je voľba, vyber si ho každý deň.</item>
+        <item>Život je taký, aký si ho urobíš, tak nech stojí za to.</item>
+        <item>Zostaň sústredený, zostaň odhodlaný, zostaň nezastaviteľný.</item>
+        <item>Si autorom svojho vlastného príbehu.</item>
+        <item>Snaž sa o pokrok, nie o dokonalosť.</item>
+        <item>Každý deň je nový začiatok, urob ho skvelým.</item>
+        <item>Inšpiruj ostatných svojím pravým ja.</item>
+        <item>Tvoj postoj určuje tvoj smer.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Sladká nevedomosť</item>
@@ -314,7 +314,7 @@
         <item>Pamätaj na Lineage of the Unicorn</item>
         <item>Uži si dlhšiu výdrž batérie</item>
         <item>Začíname od piky</item>
-        <item>We love you 3000</item>
+        <item>Milujeme ťa 3000</item>
         <item>Chutné aj bez sushi</item>
         <item>Urob dnes niečo pekné</item>
         <item>Toto je najlepší Pixel Experience, však?</item>
@@ -339,8 +339,8 @@
         <item>Quickspace môžeš zakázať v nastaveniach domovskej obrazovky.</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quick_event_ambient_weather_title">Počasie</string>
-    <string name="quick_event_ambient_weather_summary">Zobrazenie aktuálneho počasia a teploty</string>
+    <string name="quick_event_ambient_weather_title">Aktualizácia počasia</string>
+    <string name="quick_event_ambient_weather_summary">Zobrazenie aktuálne počasie</string>
     <string name="quick_event_ambient_weather_enabled_info">Vyžaduje aktiváciu meteorologickej služby</string>
     <string name="quick_event_weather_clouds">Zamračené</string>
     <string name="quick_event_weather_rain">Daždivo</string>
@@ -350,6 +350,11 @@
     <string name="quick_event_weather_wind">Veterno</string>
     <string name="quick_event_weather_mist">Hmla</string>
     <string name="quick_event_weather_city_title">Aktuálna poloha</string>
-    <string name="quick_event_weather_city_summary">Zobrazenie počasia podľa aktuálnej polohy</string>
+    <string name="quick_event_weather_city_summary">Zobraziť polohu aktuálneho počasia</string>
+    <string name="quick_event_weather_text_title">Aktuálne podmienky</string>
+    <string name="quick_event_weather_text_summary">Zobraziť súhrn aktuálneho počasia</string>
     <string name="intent_no_app_clock_found">Aktivita kalendára alebo hodín sa nenašla</string>
+    <!-- Freed memory on clear all tasks -->
+    <string name="freed_memory_text">Uvoľnené %1$s</string>
+    <string name="optimal_memory_text">Tvoj systém je optimalizovaný</string>
 </resources>
