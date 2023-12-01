@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="icons_category_title">Ikony</string>
     <string name="icons_category_summary">Ustaw kształt ikon i inne</string>
     <string name="app_drawer_category_title">Szuflada aplikacji</string>
-    <string name="app_drawer_category_summary">Spersonalizuj szufladę aplikacji</string>
+    <string name="app_drawer_category_summary">Dostosuj szufladę aplikacji</string>
     <string name="misc_category_title">Pozostałe</string>
     <string name="misc_category_summary">Inne opcje</string>
     <string name="dev_options_title">Opcje programistyczne</string>
@@ -55,7 +55,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="icon_pack">Pakiet ikon</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Dotknij dwukrotnie, aby uśpić</string>
-    <string name="pref_sleep_gesture_summary">Dotknij dwukrotnie w pustym miejscu, aby wyłączyć ekran</string>
+    <string name="pref_sleep_gesture_summary">Kliknij dwukrotnie w puste miejsce, aby wyłączyć ekran</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Pokaż losową wiadomość</string>
     <string name="quickspace_psa_summary">Wyświetl fajne wiadomości w widżecie \"W skrócie\".</string>
@@ -144,7 +144,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- App label - max lines -->
     <string name="icon_max_lines_title">Maksymalna ilość linii dla etykiety aplikacji</string>
     <!-- Scrim alpha in apps drawer -->
-    <string name="all_apps_background_opacity_title">Przezroczystość tła</string>
+    <string name="all_apps_background_opacity_title">Nieprzezroczystość tła</string>
     <!-- AppInfo -->
     <string name="app_info_subtext">Przesuń w dół, aby zamknąć informacje o aplikacji.</string>
     <string name="app_info_version_value">%1$s (%2$d)</string>
