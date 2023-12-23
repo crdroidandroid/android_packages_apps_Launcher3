@@ -209,6 +209,7 @@ public class TaskbarDragController extends DragController<BaseTaskbarContext> im
                     mDragView = dragObject.dragView;
 
                     if (FeatureFlags.ENABLE_TASKBAR_POPUP_MENU.get()
+                            && mDragView != null
                             && !shouldStartDrag(0)) {
                         mDragView.setOnAnimationEndCallback(() -> {
                             // Drag might be cancelled during the DragView animation, so check
@@ -484,18 +485,22 @@ public class TaskbarDragController extends DragController<BaseTaskbarContext> im
             DragView dragView = mDragObject.dragView;
             setupReturnDragAnimator(fromX, fromY, (View) mDragObject.originalView,
                     (x, y, scale, alpha) -> {
-                        dragView.setTranslationX(x);
-                        dragView.setTranslationY(y);
-                        dragView.setScaleX(scale);
-                        dragView.setScaleY(scale);
-                        dragView.setAlpha(alpha);
+                        if (dragView != null) {
+                            dragView.setTranslationX(x);
+                            dragView.setTranslationY(y);
+                            dragView.setScaleX(scale);
+                            dragView.setScaleY(scale);
+                            dragView.setAlpha(alpha);
+                        }
                     });
             mReturnAnimator.addListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationEnd(Animator animation) {
                     callOnDragEnd();
-                    dragView.remove();
-                    dragView.clearAnimation();
+                    if (dragView != null) {
+                        dragView.remove();
+                        dragView.clearAnimation();
+                    }
                     // Do this after callOnDragEnd(), because we use mReturnAnimator != null to
                     // imply the drag was canceled rather than successful.
                     mReturnAnimator = null;
@@ -661,7 +666,7 @@ public class TaskbarDragController extends DragController<BaseTaskbarContext> im
 
     @Override
     protected void exitDrag() {
-        if (mDragObject != null && !mDisallowGlobalDrag) {
+        if (mDragObject != null && mDragObject.dragView != null && !mDisallowGlobalDrag) {
             mActivity.getDragLayer().removeView(mDragObject.dragView);
         }
     }
