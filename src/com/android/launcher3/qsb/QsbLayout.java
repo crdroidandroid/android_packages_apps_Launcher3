@@ -117,26 +117,34 @@ public class QsbLayout extends FrameLayout {
     }
 
     private void setupGIcon() {
-        Intent intent = mContext.getPackageManager().getLaunchIntentForPackage(Utilities.GSA_PACKAGE);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        gIcon.setOnClickListener(view -> {
-            mContext.startActivity(intent);
-        });
+        try {
+            Intent intent = mContext.getPackageManager().getLaunchIntentForPackage(Utilities.GSA_PACKAGE);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            gIcon.setOnClickListener(view -> {
+                mContext.startActivity(intent);
+            });
+        } catch (Exception e) {
+            // Do nothing
+        }
     }
 
     private void setupLensIcon() {
-        lensIcon.setOnClickListener(view -> {
-            Intent lensIntent = new Intent();
-            Bundle bundle = new Bundle();
-            bundle.putString("caller_package", Utilities.GSA_PACKAGE);
-            bundle.putLong("start_activity_time_nanos", SystemClock.elapsedRealtimeNanos());
-            lensIntent.setComponent(new ComponentName(Utilities.GSA_PACKAGE, Utilities.LENS_ACTIVITY))
-                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    .setPackage(Utilities.GSA_PACKAGE)
-                    .setData(Uri.parse(Utilities.LENS_URI))
-                    .putExtra("lens_activity_params", bundle);
-            mContext.startActivity(lensIntent);
-        });
+        try {
+            lensIcon.setOnClickListener(view -> {
+                Intent lensIntent = new Intent();
+                Bundle bundle = new Bundle();
+                bundle.putString("caller_package", Utilities.GSA_PACKAGE);
+                bundle.putLong("start_activity_time_nanos", SystemClock.elapsedRealtimeNanos());
+                lensIntent.setComponent(new ComponentName(Utilities.GSA_PACKAGE, Utilities.LENS_ACTIVITY))
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        .setPackage(Utilities.GSA_PACKAGE)
+                        .setData(Uri.parse(Utilities.LENS_URI))
+                        .putExtra("lens_activity_params", bundle);
+                mContext.startActivity(lensIntent);
+            });
+        } catch (Exception e) {
+            lensIcon.setVisibility(View.GONE);
+        }
     }
 
     private float getCornerRadius() {
