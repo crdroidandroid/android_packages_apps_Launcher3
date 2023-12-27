@@ -1077,6 +1077,6 @@ public final class Utilities {
     }
 
     public static boolean isMusicSearchEnabled(Context context) {
-        return LauncherPrefs.DOCK_MUSIC_SEARCH.get(context);
+        return isGSAEnabled(context) && LauncherPrefs.DOCK_MUSIC_SEARCH.get(context);
     }
 }
