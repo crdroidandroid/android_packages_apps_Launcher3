@@ -143,6 +143,7 @@
             android:key="pref_dock_music_search"
             android:title="@string/dock_music_search_title"
             android:summary="@string/dock_music_search_summary"
+            android:dependency="pref_dock_search"
             android:defaultValue="false"
             launcher:iconSpaceReserved="false" />
 
