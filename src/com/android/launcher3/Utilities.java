@@ -961,7 +961,7 @@ public final class Utilities {
 
     public static boolean isMusicSearchEnabled(Context context) {
         SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
-        return prefs.getBoolean(KEY_DOCK_MUSIC_SEARCH, false);
+        return isGSAEnabled(context) && prefs.getBoolean(KEY_DOCK_MUSIC_SEARCH, false);
     }
 
     public static boolean isThemedIconsEnabled(Context context) {
