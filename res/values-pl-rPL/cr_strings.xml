@@ -66,7 +66,7 @@
     <string name="suggestion_pref_screen_desc">Propozycje dotyczące wszystkich aplikacji i ekranu głównego</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Wstrzymaj</string>
-    <string name="pause_apps_dialog_title">Wstrzymać? %1$s?</string>
+    <string name="pause_apps_dialog_title">Wstrzymać %1$s?</string>
     <string name="pause_apps_dialog_message">Powiadomienia dla %1$s zostaną wstrzymane</string>
     <string name="paused_apps_dialog_title">Aplikacja wstrzymana</string>
     <string name="paused_apps_dialog_message">Aplikacja %1$s została wstrzymana z ekranu głównego</string>
@@ -96,7 +96,7 @@
     <string name="label_lens">Obiektyw Google</string>
     <string name="label_voice_search">Wyszukiwanie głosowe</string>
     <string name="dock_music_search_title">Wyszukiwanie muzyki</string>
-    <string name="dock_music_search_summary">Rozpocznij wyszukiwanie muzyki po naciśnięciu ikony mikrofonu</string>
+    <string name="dock_music_search_summary">Rozpocznij wyszukiwanie muzyki po dotknięciu ikony mikrofonu</string>
     <string name="dock_search_title">Pasek wyszukiwania Google</string>
     <string name="dock_search_summary">Pasek wyszukiwania w dolnym panelu</string>
     <string name="dock_theme_title">Ikony tematyczne</string>
