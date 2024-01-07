@@ -112,7 +112,8 @@ public class OverviewState extends LauncherState {
     @Override
     public int getVisibleElements(Launcher launcher) {
         boolean clearAll = LauncherPrefs.getPrefs(launcher).getBoolean("pref_recents_clear_all", true);
-        int elements = OVERVIEW_ACTIONS | MEMINFO | (!clearAll ? CLEAR_ALL_BUTTON : 0);
+        boolean memInfo = LauncherPrefs.getPrefs(launcher).getBoolean("pref_recents_meminfo", false);
+        int elements = OVERVIEW_ACTIONS;
         DeviceProfile dp = launcher.getDeviceProfile();
         boolean showFloatingSearch;
         if (dp.isPhone) {
@@ -124,6 +125,12 @@ public class OverviewState extends LauncherState {
         }
         if (showFloatingSearch) {
             elements |= FLOATING_SEARCH_BAR;
+        }
+        if (!clearAll) {
+            elements |= CLEAR_ALL_BUTTON;
+        }
+        if (memInfo) {
+            elements |= MEMINFO;
         }
         return elements;
     }
