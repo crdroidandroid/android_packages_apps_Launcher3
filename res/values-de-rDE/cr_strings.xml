@@ -358,6 +358,6 @@
     <string name="freed_memory_text">%1$s freigegeben</string>
     <string name="optimal_memory_text">Dein System ist jetzt im optimalen Zustand</string>
     <!-- Task lock -->
-    <string name="task_menu_item_unlock">Unlock</string>
-    <string name="task_menu_item_lock">Lock</string>
+    <string name="task_menu_item_unlock">Entsperren</string>
+    <string name="task_menu_item_lock">Sperren</string>
 </resources>
