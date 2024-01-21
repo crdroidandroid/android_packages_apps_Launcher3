@@ -358,6 +358,6 @@
     <string name="freed_memory_text">已釋放記憶體 %1$s</string>
     <string name="optimal_memory_text">您的系統目前處於最佳狀態</string>
     <!-- Task lock -->
-    <string name="task_menu_item_unlock">Unlock</string>
-    <string name="task_menu_item_lock">Lock</string>
+    <string name="task_menu_item_unlock">解鎖</string>
+    <string name="task_menu_item_lock">鎖定</string>
 </resources>
