@@ -358,6 +358,6 @@
     <string name="freed_memory_text">%1$s felszabadítva</string>
     <string name="optimal_memory_text">Az Ön rendszere most optimális állapotba került</string>
     <!-- Task lock -->
-    <string name="task_menu_item_unlock">Unlock</string>
-    <string name="task_menu_item_lock">Lock</string>
+    <string name="task_menu_item_unlock">Feloldás</string>
+    <string name="task_menu_item_lock">Lezárás</string>
 </resources>
