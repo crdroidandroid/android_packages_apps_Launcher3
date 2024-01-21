@@ -358,6 +358,6 @@
     <string name="freed_memory_text">Звільнено з %1$s</string>
     <string name="optimal_memory_text">Ваша система знаходиться в оптимальному стані</string>
     <!-- Task lock -->
-    <string name="task_menu_item_unlock">Unlock</string>
-    <string name="task_menu_item_lock">Lock</string>
+    <string name="task_menu_item_unlock">Розблокувати</string>
+    <string name="task_menu_item_lock">Блокування</string>
 </resources>
