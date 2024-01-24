@@ -357,4 +357,7 @@
     <!-- Freed memory on clear all tasks -->
     <string name="freed_memory_text">Zwolniono %1$s</string>
     <string name="optimal_memory_text">Twój system jest teraz w optymalnej kondycji</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Odblokuj</string>
+    <string name="task_menu_item_lock">Zablokuj</string>
 </resources>

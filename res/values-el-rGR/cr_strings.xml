@@ -357,4 +357,7 @@
     <!-- Freed memory on clear all tasks -->
     <string name="freed_memory_text">Απελευθερώθηκαν %s</string>
     <string name="optimal_memory_text">Το σύστημά σας βρίσκεται τώρα σε βέλτιστη κατάσταση</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Ξεκλείδωμα</string>
+    <string name="task_menu_item_lock">Κλείδωμα</string>
 </resources>

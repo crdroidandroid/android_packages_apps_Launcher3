@@ -357,4 +357,7 @@
     <!-- Freed memory on clear all tasks -->
     <string name="freed_memory_text">%1$s temizlendi</string>
     <string name="optimal_memory_text">Sisteminiz şu an en uygun durumda</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Kilidi aç</string>
+    <string name="task_menu_item_lock">Kilitle</string>
 </resources>

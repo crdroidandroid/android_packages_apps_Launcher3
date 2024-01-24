@@ -18,28 +18,28 @@
     <!-- Application name -->
     <!-- Folder titles -->
     <!-- General -->
-    <string name="settings_title">Domovské nastavenia</string>
+    <string name="settings_title">Nastavenia domovskej obrazovky</string>
     <!-- Categories -->
     <string name="home_category_title">Domovská obrazovka</string>
-    <string name="home_category_summary">Nastavenie panelu Google Now a ďalších funkcií</string>
+    <string name="home_category_summary">Nastavenie panelu Google Teraz a ďalších funkcií</string>
     <string name="icons_category_title">Ikony</string>
-    <string name="icons_category_summary">Nastavit velikost ikon a\u00a0dalšie parametry</string>
+    <string name="icons_category_summary">Nastaviť veľkosť ikon a ďalšie parametre</string>
     <string name="app_drawer_category_title">Zoznam aplikácií</string>
     <string name="app_drawer_category_summary">Prispôsobiť zoznam aplikácií</string>
-    <string name="recents_category_title">Nedávne</string>
+    <string name="recents_category_title">Nedávne aplikácie</string>
     <string name="recents_category_summary">Zmeniť štýl obrazovky nedávnych aplikácií</string>
     <string name="misc_category_title">Rôzne</string>
     <string name="misc_category_summary">Ďalšie možnosti</string>
-    <string name="general_category_title">Obecné</string>
+    <string name="general_category_title">Všeobecné</string>
     <string name="interface_category_title">Rozhranie</string>
     <string name="quickspace_category_title">QuickSpace</string>
     <string name="search_bar_category_title">Vyhľadávací panel</string>
     <string name="actions_category_title">Rýchle akcie</string>
     <!-- Developer options -->
-    <string name="dev_options_title">Možnosti vývojára</string>
+    <string name="dev_options_title">Možnosti pre vývojárov</string>
     <string name="dev_options_summary">Povoliť niektoré skryté funkcie na svoje vlastné riziko</string>
     <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Uzamknúť rozloženie</string>
+    <string name="settings_lock_layout_title">Zamknúť rozloženie</string>
     <string name="settings_lock_layout_summary_on">Ikony a miniaplikácie nie je možné pridať, odstrániť a presunúť na domovskú obrazovku</string>
     <string name="settings_lock_layout_summary_off">Ikony a miniaplikácie je možné pridať, odstrániť a presunúť na domovskú obrazovku</string>
     <string name="settings_edit_widgets_error">Nie je možné pridať miniaplikácie na domovskú obrazovku</string>
@@ -357,4 +357,7 @@
     <!-- Freed memory on clear all tasks -->
     <string name="freed_memory_text">Uvoľnené %1$s</string>
     <string name="optimal_memory_text">Tvoj systém je optimalizovaný</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Odomknúť</string>
+    <string name="task_menu_item_lock">Zamknúť</string>
 </resources>

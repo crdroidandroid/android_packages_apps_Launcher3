@@ -166,7 +166,7 @@
     <string name="quick_event_rom_intro_welcome">Selamat datang di crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">waktunya crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
+        <item>Terima kasih telah mimilih kami</item>
         <item>Loving us? Send us a beer</item>
         <item>Best Rom Ever.</item>
         <item>Say hi to us on Telegram</item>
@@ -357,4 +357,7 @@
     <!-- Freed memory on clear all tasks -->
     <string name="freed_memory_text">Freed up %1$s</string>
     <string name="optimal_memory_text">Your system is now in optimal condition</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Buka kunci</string>
+    <string name="task_menu_item_lock">Kunci</string>
 </resources>

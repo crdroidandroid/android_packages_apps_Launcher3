@@ -357,4 +357,7 @@
     <!-- Freed memory on clear all tasks -->
     <string name="freed_memory_text">Uvolněno %1$s</string>
     <string name="optimal_memory_text">Váš systém je nyní v optimálním stavu</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Odemknout</string>
+    <string name="task_menu_item_lock">Zamknout</string>
 </resources>

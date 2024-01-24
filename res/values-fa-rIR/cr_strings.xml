@@ -358,4 +358,7 @@ Remember the Lineage of the Unicorn</item>
     <!-- Freed memory on clear all tasks -->
     <string name="freed_memory_text">Freed up %1$s</string>
     <string name="optimal_memory_text">Your system is now in optimal condition</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Unlock</string>
+    <string name="task_menu_item_lock">Lock</string>
 </resources>

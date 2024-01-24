@@ -357,4 +357,7 @@
     <!-- Freed memory on clear all tasks -->
     <string name="freed_memory_text">Vrijgegeven %1$s</string>
     <string name="optimal_memory_text">Uw systeem is nu in optimale staat</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Ontgrendelen</string>
+    <string name="task_menu_item_lock">Vergrendel</string>
 </resources>

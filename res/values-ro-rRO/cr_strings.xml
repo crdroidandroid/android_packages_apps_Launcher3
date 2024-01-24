@@ -357,4 +357,7 @@
     <!-- Freed memory on clear all tasks -->
     <string name="freed_memory_text">S-au eliberat %1$s</string>
     <string name="optimal_memory_text">Sistemul dumneavoastră se află acum într-o stare optimă</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Deblocheaza</string>
+    <string name="task_menu_item_lock">Blochează</string>
 </resources>
