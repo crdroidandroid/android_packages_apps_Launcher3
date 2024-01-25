@@ -27,7 +27,7 @@
         android:layout_gravity="start|center_vertical"
         android:gravity="start|center_vertical"
         android:paddingStart="16dp"
-        android:paddingTop="8dp">
+        android:paddingTop="7dp">
 
         <com.android.launcher3.quickspace.views.DoubleShadowTextView
             android:id="@+id/extended_greetings"
@@ -35,10 +35,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
-            android:textColor="?workspaceAccentColor"
-            android:textSize="@dimen/quickspace_alternate_title_size"
+            android:textColor="?android:attr/colorAccent"
+            android:textSize="23dp"
             android:visibility="gone"
-            android:paddingEnd="6dp"
             launcher:ambientShadowBlur="3dp"
             launcher:ambientShadowColor="?workspaceAmbientShadowColor"
             launcher:keyShadowBlur="2dp"
@@ -47,51 +46,15 @@
 
         <ImageView
             android:id="@+id/now_playing_icon_sub"
-            android:layout_width="24dp"
-            android:layout_height="18dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:visibility="gone"
+            android:layout_marginStart="2dp"
             android:src="@drawable/baseline_audiotrack_24"
-            android:tint="?workspaceAccentColor"
+            android:tint="?android:attr/colorAccent"
             android:layout_gravity="start|center_vertical"
             android:scaleType="fitXY"
-            android:layout_weight="0.0"
-            android:paddingEnd="6dp" />
-
-        <LinearLayout
-            android:id="@+id/quick_event_weather_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start|center_vertical"
-            android:layout_weight="0.0"
-            android:clickable="true"
-            android:gravity="start|center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/quick_event_weather_icon"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="start|center_vertical"
-                android:scaleType="fitXY" />
-
-            <com.android.launcher3.quickspace.views.DoubleShadowTextView
-                android:id="@+id/quick_event_weather_temp"
-                style="@style/QuickSpaceText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start|center_vertical"
-                android:drawablePadding="8dp"
-                android:paddingStart="6dp"
-                android:textColor="?workspaceTextColor"
-                android:textSize="@dimen/quickspace_alternate_subtitle_size"
-                android:letterSpacing="0.01"
-                launcher:ambientShadowBlur="3dp"
-                launcher:ambientShadowColor="?workspaceAmbientShadowColor"
-                launcher:keyShadowBlur="2dp"
-                launcher:keyShadowColor="?workspaceKeyShadowColor"
-                launcher:keyShadowOffsetX="0.5dip" />
-
-        </LinearLayout>
+            android:layout_weight="0.0" />
 
     </LinearLayout>
 
@@ -103,15 +66,15 @@
         android:gravity="start|center_vertical"
         android:paddingStart="16dp"
         android:paddingTop="8dp">
-
+        
         <com.android.launcher3.quickspace.views.DoubleShadowTextView
             android:id="@+id/extended_greetings_clock"
             style="@style/QuickSpaceText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
-            android:textColor="?workspaceAccentColor"
-            android:textSize="@dimen/quickspace_alternate_title_size"
+            android:textColor="?android:attr/colorAccent"
+            android:textSize="14dp"
             android:paddingEnd="6dp"
             android:visibility="gone"
             launcher:ambientShadowBlur="3dp"
@@ -130,8 +93,8 @@
             android:scrollHorizontally="true"
             android:focusable="true"
             android:focusableInTouchMode="true"
-            android:textColor="?workspaceTextColor"
-            android:textSize="@dimen/quickspace_alternate_title_size"
+            android:textColor="@android:color/white"
+            android:textSize="14dp"
             launcher:ambientShadowBlur="3dp"
             launcher:ambientShadowColor="?workspaceAmbientShadowColor"
             launcher:keyShadowBlur="2dp"
@@ -139,6 +102,44 @@
             launcher:keyShadowOffsetX="0.5dip" />
 
     </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/quick_event_weather_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_weight="0.0"
+            android:background="@drawable/bg_quickspace"
+            android:clickable="true"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:id="@+id/quick_event_weather_icon"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="start|center_vertical"
+                android:scaleType="fitXY" />
+
+            <com.android.launcher3.quickspace.views.DoubleShadowTextView
+                android:id="@+id/quick_event_weather_temp"
+                style="@style/QuickSpaceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:drawablePadding="8dp"
+                android:paddingStart="6dp"
+                android:textColor="@android:color/white"
+                android:textSize="14dp"
+                android:letterSpacing="0.01"
+                launcher:ambientShadowBlur="3dp"
+                launcher:ambientShadowColor="?workspaceAmbientShadowColor"
+                launcher:keyShadowBlur="2dp"
+                launcher:keyShadowColor="?workspaceKeyShadowColor"
+                launcher:keyShadowOffsetX="0.5dip" />
+        </LinearLayout>
 
     <LinearLayout
         android:id="@+id/subtitle_line"
@@ -173,8 +174,8 @@
             android:scrollHorizontally="true"
             android:focusable="true"
             android:focusableInTouchMode="true"
-            android:textColor="?workspaceAccentColor"
-            android:textSize="@dimen/quickspace_alternate_subtitle_size"
+            android:textColor="?android:attr/colorAccent"
+            android:textSize="14dp"
             android:letterSpacing="0.01"
             android:paddingEnd="6dp"
             launcher:ambientShadowBlur="3dp"
@@ -196,8 +197,8 @@
             android:scrollHorizontally="true"
             android:focusable="true"
             android:focusableInTouchMode="true"
-            android:textColor="?workspaceTextColor"
-            android:textSize="@dimen/quickspace_alternate_subtitle_size"
+            android:textColor="@android:color/white"
+            android:textSize="14dp"
             android:letterSpacing="0.01"
             launcher:ambientShadowBlur="3dp"
             launcher:ambientShadowColor="?workspaceAmbientShadowColor"
