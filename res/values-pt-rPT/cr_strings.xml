@@ -351,13 +351,13 @@
     <string name="quick_event_weather_mist">Misty</string>
     <string name="quick_event_weather_city_title">Current location</string>
     <string name="quick_event_weather_city_summary">Display current weather location</string>
-    <string name="quick_event_weather_text_title">Current condition</string>
-    <string name="quick_event_weather_text_summary">Display current weather condition summary</string>
-    <string name="intent_no_app_clock_found">Unable to find calendar or clock activity</string>
+    <string name="quick_event_weather_text_title">Condições atuais</string>
+    <string name="quick_event_weather_text_summary">Mostrar as condições meteorológicas atuais</string>
+    <string name="intent_no_app_clock_found">Não foi possível encontrar o calendário ou a atividade do relógio</string>
     <!-- Freed memory on clear all tasks -->
     <string name="freed_memory_text">Freed up %1$s</string>
-    <string name="optimal_memory_text">Your system is now in optimal condition</string>
+    <string name="optimal_memory_text">O seu sistema está agora em ótimas condições</string>
     <!-- Task lock -->
-    <string name="task_menu_item_unlock">Unlock</string>
-    <string name="task_menu_item_lock">Lock</string>
+    <string name="task_menu_item_unlock">Desbloquear</string>
+    <string name="task_menu_item_lock">Bloquear</string>
 </resources>
