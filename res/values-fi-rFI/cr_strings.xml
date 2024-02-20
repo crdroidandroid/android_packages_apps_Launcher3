@@ -81,7 +81,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>Kauniita unia!</item>
         <item>Älä valvo liian myöhään</item>
         <item>Nuku hyvät unet</item>
-        <item>Get some sleep</item>
+        <item>Nuku vähän</item>
         <item>Aika rentoutua</item>
         <item>Nauti yöstä!</item>
         <item>Akun lataamiseen kuluva aika!</item>
@@ -89,7 +89,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>Palaudu huomiseksi</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
+        <item>Hmm... hyvää yötä?</item>
         <item>Nyt on vähän myöhäistä</item>
         <item>Sinun pitäisi korjata unirytmiäsi</item>
         <item>Oletko tuottavampi tällä hetkellä?</item>
@@ -98,66 +98,66 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>Tieto lisää tuskaa</item>
         <item>Onko aika asentaa toinen päivitys jo?</item>
         <item>Innoissaan Android 12: sta?</item>
-        <item>Oh hey, what\'s up?</item>
+        <item>Ai hei, mitä kuuluu?</item>
         <item>Keskity tehtäviisi</item>
-        <item>How many screenshots do you take?</item>
+        <item>Kuinka monta kuvakaappausta otat?</item>
         <item>Avaa hyvyys crDroidilla</item>
-        <item>Spread love not havoc</item>
+        <item>Levitä rakkautta, älä tuhoa</item>
         <item>Pidä hauskaa!</item>
         <item>Aika kuunnella hyvää musiikkia</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C PÄÄ</item>
         <item>Tarvitset crDroid Premiumin nähdäksesi tämän</item>
-        <item>Remember the Lineage of the Unicorn</item>
+        <item>Muista yksisarvisen sukulinja</item>
         <item>Nauti Xtended akun kestosta</item>
         <item>Aloita alkupisteestä</item>
-        <item>We love you 3000</item>
+        <item>Rakastamme sinua 3000</item>
         <item>Pysy kotona, pysy turvassa</item>
         <item>Tee jotain mukavaa tänään</item>
         <item>Tämä on paras Pixel Kokemus, eikö vain?</item>
-        <item>How is everything going?</item>
-        <item>No illusions, welcome to reality!</item>
+        <item>Miten kaikki sujuu?</item>
+        <item>Ei illuusioita, tervetuloa todellisuuteen!</item>
         <item>Kiitos tuestasi</item>
-        <item>No festival for Derps - only perfection!</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>Sanity for your Paranoia</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Evolution is a myth, right?</item>
-        <item>You are what you flash, don\'t be Potato</item>
-        <item>What\'s on your mind?</item>
-        <item>Winner Winner ....?</item>
+        <item>Ei juhlaa urpoille - vain täydellisyyttä!</item>
+        <item>Yksi buildbotin parhaista valinnoista</item>
+        <item>Järkevyyttä vainoharhaisuudellesi</item>
+        <item>Kokeile jääkylmiä jälkiruokia</item>
+        <item>Mikä ihana kokemus, eikö olekin?</item>
+        <item>Evoluutio on myytti, eikö?</item>
+        <item>Olet mitä asennat, älä ole peruna</item>
+        <item>Mitä sinulla on mielessäsi?</item>
+        <item>Voittaja Voittaja ....?</item>
         <item>rm -rf \/</item>
     </string-array>
     <!-- Recents screen, close app -->
-    <string name="recents_close_app">Close app</string>
-    <string name="allow_swipe_down_clearall_title">Swipe down to clear all recents</string>
-    <string name="allow_swipe_down_clearall_desc">Enable to clear all recents in the overview screen by swiping down</string>
+    <string name="recents_close_app">Sulje sovellus</string>
+    <string name="allow_swipe_down_clearall_title">Pyyhkäise alas tyhjentääksesi kaikki viimeaikaiset</string>
+    <string name="allow_swipe_down_clearall_desc">Ota käyttöön tyhjentääksesi kaikki viimeisimmät näkymänäytössä pyyhkäisemällä alas</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">Arvo: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">oletuksena</string>
+    <string name="custom_seekbar_default_value_to_set">Oletusarvo: <xliff:g id="v">%s</xliff:g>\nAseta napauttamalla pitkään</string>
+    <string name="custom_seekbar_default_value_is_set">Oletusarvo asetettu</string>
     <!-- Icon size -->
-    <string name="icon_size_title">Icon size</string>
+    <string name="icon_size_title">Kuvakkeen koko</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">Tekstin koko</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">Maksimirivit sovelluksen otsikolle</string>
     <!-- Scrim alpha in apps drawer -->
-    <string name="all_apps_background_opacity_title">Background opacity</string>
+    <string name="all_apps_background_opacity_title">Taustan läpinäkyvyys</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info.</string>
+    <string name="app_info_subtext">Sulje sovellustiedot pyyhkäisemällä alas.</string>
     <string name="app_info_version_value">%1$s (%2$d)</string>
-    <string name="placeholder_string">Loading...</string>
+    <string name="placeholder_string">Ladataan...</string>
     <!-- Used for preference height loading. -->
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Last update</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">More</string>
+    <string name="app_info_source">Lähde</string>
+    <string name="app_info_source_system">Järjestelmä</string>
+    <string name="app_info_last_update">Päivitetty viimeksi</string>
+    <string name="app_info_version">Versio</string>
+    <string name="app_info_more">Lisää</string>
     <!-- Show dock search widget -->
-    <string name="dock_search_title">Google search bar</string>
-    <string name="dock_search_summary">Show search bar in the bottom dock</string>
+    <string name="dock_search_title">Google-hakupalkki</string>
+    <string name="dock_search_summary">Näytä hakupalkki alareunan telakassa</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Ehdotukset</string>
     <string name="suggestion_pref_screen_desc">Kaikille sovelluksille &amp; aloitusnäytön ehdotuksille</string>
