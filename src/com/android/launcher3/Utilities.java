@@ -879,8 +879,7 @@ public final class Utilities {
 
     public static boolean isGSAEnabled(Context context) {
         try {
-            return (context.getPackageManager().getApplicationInfo(GSA_PACKAGE, 0).enabled &&
-                context.getPackageManager().getApplicationInfo(GSA_PACKAGE, 0).isProduct());
+            return context.getPackageManager().getApplicationInfo(GSA_PACKAGE, 0).enabled;
         } catch (PackageManager.NameNotFoundException e) {
             return false;
         }
