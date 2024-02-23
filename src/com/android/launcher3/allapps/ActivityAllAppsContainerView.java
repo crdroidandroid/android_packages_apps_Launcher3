@@ -161,6 +161,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
 
     /** {@code true} when rendered view is in search state instead of the scroll state. */
     private boolean mIsSearching;
+    private boolean mShowFastScroller;
     private boolean mRebindAdaptersAfterSearchAnimation;
     private int mNavBarScrimHeight = 0;
     private SearchRecyclerView mSearchRecyclerView;
@@ -242,6 +243,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
      *   onFinishInflate -> onPostCreate
      */
     protected void initContent() {
+        mShowFastScroller = Utilities.showScrollbar(getContext());
         mMainAdapterProvider = mSearchUiDelegate.createMainAdapterProvider();
         if (Flags.enablePrivateSpace()) {
             mPrivateSpaceHeaderViewController =
@@ -265,6 +267,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
         mSearchRecyclerView = findViewById(R.id.search_results_list_view);
         mFastScroller = findViewById(R.id.fast_scroller);
         mFastScroller.setPopupView(findViewById(R.id.fast_scroller_popup));
+        mFastScroller.setVisibility(mShowFastScroller ? VISIBLE : INVISIBLE);
 
         mSearchContainer = inflateSearchBar();
         if (!isSearchBarFloating()) {
@@ -397,6 +400,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
         } else if (mAllAppsTransitionController != null) {
             // If exiting search, revert predictive back scale on all apps
             mAllAppsTransitionController.animateAllAppsToNoScale();
+            mFastScroller.setVisibility(mShowFastScroller ? VISIBLE : INVISIBLE);
         }
         setScrollbarVisibility(!goingToSearch);
         mSearchTransitionController.animateToState(goingToSearch, durationMs,
