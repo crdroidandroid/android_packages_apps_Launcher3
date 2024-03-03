@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2023 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">Ana ekran ayarları</string>
+    <!-- Categories -->
+    <string name="home_category_title">Ana ekran</string>
+    <string name="home_category_summary">Google now panelini ve daha fazlasını ayarlayın</string>
+    <string name="icons_category_title">Simgeler</string>
+    <string name="icons_category_summary">Simge boyutunu ve daha fazlasını ayarlayın</string>
+    <string name="app_drawer_category_title">Uygulama menüsü</string>
+    <string name="app_drawer_category_summary">Uygulama menünüzü özelleştirin</string>
+    <string name="recents_category_title">Son uygulamalar</string>
+    <string name="recents_category_summary">Son uygulamalar ekranını yenileyin</string>
+    <string name="misc_category_title">Çeşitli</string>
+    <string name="misc_category_summary">Diğer seçenekler</string>
+    <string name="general_category_title">Genel</string>
+    <string name="interface_category_title">Arayüz</string>
+    <string name="quickspace_category_title">Hızlı alan</string>
+    <string name="search_bar_category_title">Arama çubuğu</string>
+    <string name="actions_category_title">Hızlı eylemler</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">Geliştirici seçenekleri</string>
+    <string name="dev_options_summary">Bazı gizli özellikleri kendi sorumluluğunuzda etkinleştirin</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Düzeni kilitle</string>
+    <string name="settings_lock_layout_summary_on">Simgeler ve widget\'lar ana ekrana eklenemez, kaldırılamaz ve taşınamaz</string>
+    <string name="settings_lock_layout_summary_off">Simgeler ve widget\'lar ana ekrana eklenebilir, kaldırılabilir ve taşınabilir</string>
+    <string name="settings_edit_widgets_error">Ana ekrana widget eklemek mümkün değil</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Ana ekranda simge etiketleri</string>
+    <string name="drawer_show_labels">Çekmecede simge etiketleri</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Google uygulamasına erişmek için kaydırın</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Ana sayfadan sola kaydırdığınızda</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Ana sayfadan sağa kaydırdığınızda</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Gizli &amp; Korunan uygulamalar</string>
+    <string name="trust_apps_auth_manager">Gizli ve korunan uygulamaları yönetmek için kilidi açın</string>
+    <string name="trust_apps_auth_open_app">%1$s açmak için kimlik doğrula</string>
+    <string name="trust_apps_loading">Yükleniyor\u2026</string>
+    <string name="trust_apps_no_lock_error">Uygulama erişimini kısıtlamak için lütfen güvenli bir kilit ekranı ayarlayın</string>
+    <string name="trust_apps_help">Yardım</string>
+    <string name="trust_apps_info_hidden">Gizli uygulamalar ve widget\'ları uygulama menüsünde gizlidir</string>
+    <string name="trust_apps_info_protected">Korunan uygulamaların başlatıcıdan açılması için kimlik doğrulama gerekir</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Öneriler</string>
+    <string name="suggestion_pref_screen_desc">Tüm uygulamalar &amp; Ana ekran önerileri için</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">Duraklat</string>
+    <string name="pause_apps_dialog_title">%1$s duraklatılsın mı?</string>
+    <string name="pause_apps_dialog_message">%1$s için bildirimler duraklatılacak</string>
+    <string name="paused_apps_dialog_title">Uygulama duraklatıldı</string>
+    <string name="paused_apps_dialog_message">%1$s doğrudan başlatıcıdan duraklatıldı</string>
+    <string name="paused_apps_drop_target_label">Uygulamayı duraklat</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Çift dokunuşla uyutma</string>
+    <string name="pref_sleep_gesture_summary">Ekranı kapatmak için boş bir yere çift dokunun</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Değer: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">Varsayılan</string>
+    <string name="custom_seekbar_default_value_to_set">Varsayılan değer: <xliff:g id="v">%s</xliff:g>\nAyarlamak için uzun dokunun</string>
+    <string name="custom_seekbar_default_value_is_set">Varsayılan değer ayarlandı</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Simge boyutu</string>
+    <!-- Font size -->
+    <string name="font_size_title">Yazı tipi boyutu</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Uygulama etiketi için maksimum satır</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Sonlandır</string>
+    <string name="recents_app_killed">Uygulama sonlandırıldı</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">Görev çubuğunu kullan</string>
+    <string name="pref_allow_phone_taskbar_summary">Uygulamaları herhangi bir yerde açmak ve değiştirmek için</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Ara</string>
+    <string name="label_lens">Google lens</string>
+    <string name="label_voice_search">Sesli arama</string>
+    <string name="dock_music_search_title">Müzik ara</string>
+    <string name="dock_music_search_summary">Mikrofon simgesine basarak müzik aramayı başlatın</string>
+    <string name="dock_search_title">Google arama çubuğu</string>
+    <string name="dock_search_summary">Alt kısımda arama çubuğu</string>
+    <string name="dock_theme_title">Temalı simgeler</string>
+    <string name="dock_theme_summary">Arama çubuğunda temalı simgeler kullan</string>
+    <string name="search_radius_title">Köşe yarıçapı</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Hotseat arka planı</string>
+    <string name="hotseat_bg_summary">Uygulama yuvasına yarı şeffaf bir arka plan ekleyin</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Arka plan şeffaflığı</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Duvar kağıdı kaydırma</string>
+    <string name="allow_wallpaper_scrolling_summary">Birden çok ekran için duvar kağıdı kaydırma efekti</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Duvar kağıdı yakınlaştırma</string>
+    <string name="allow_wallpaper_zooming_summary">Çekmeceyi veya son uygulamaları kullanırken duvar kağıdını yakınlaştırın veya uzaklaştırın</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Durum çubuğu</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Üst gölge</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Satır yüksekliği</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Mevcut | %2$s Toplam</string>
+    <string name="recents_meminfo_title">Bellek bilgisi</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Arka plan bulanıklık derinliği</string>
+    <string name="background_blur_summary">Son uygulamalar ve uygulama çekmecesi için bulanıklık derinliği seviyesini ayarlayın</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Ekran görüntüsü</string>
+    <string name="recents_clear_all_title">Tümünü temizle</string>
+    <string name="recents_lens_title">Lens</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Tüm görevleri silmek için telefonu sallayın</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Temalı simgeler</string>
+    <string name="pref_themed_icons_summary">Ana ekranda kullanılan temalı simgeleri takip edin</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">Kaynak</string>
+    <string name="app_info_source_system">Sistem</string>
+    <string name="app_info_last_update">Son güncelleme</string>
+    <string name="app_info_version">Sürüm</string>
+    <string name="app_info_more">Daha fazla</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Simge paketi</string>
+    <string name="icon_pack_default_label">Varsayılan</string>
+    <string name="icon_pack_add">Daha fazla yükle</string>
+    <string name="icon_pack_no_market">Kullanılabilir uygulama mağazası yok</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Kısa paralaksa izin ver</string>
+    <string name="short_parallax_summary">Duvar kağıdını kırpmak yerine daha az sayıda sayfada tam duvar kağıdı kaydırma efektini etkinleştirin</string>
+    <string name="single_page_center_title">Tek sayfayı ortalayın</string>
+    <string name="single_page_center_summary">Yalnızca tek bir sayfa kullanılıyorsa duvar kağıdını ortalayın</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Uygulama arama çubuğu</string>
+    <string name="drawer_search_summary">Uygulama sayfasının üstündeki arama çubuğu</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Yeniden Başlat</string>
+    <string name="pref_restart_summary">Ayarları Uygulamak İçin Yeniden Başlat</string>
+    <string name="restarting_launcher">Ana ekran yeniden başlatılıyor...</string>
+    <string name="restarting_launcher_changes">Değişiklikleri uygulamak için yeniden başlatılıyor...</string>
+    <string name="updating_launcher_components">Başlatıcı bileşenlerini güncellemek için başlatıcı yeniden başlatılıyor...</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Bir Bakışta</string>
+    <string name="show_quickspace_summary">Ana ekranınızın üst kısmında göster</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">CrDroid\'e hoş geldiniz!</string>
+    <string name="quick_event_rom_intro_welcome_ext">crDroid zamanı!</string>
+    <string-array name="welcome_message_variants">
+        <item>Bizi seçtiğin için teşekkür ederiz</item>
+        <item>Bizi seviyor musun? İçecek bir şeyler ısmarlayabilirsin</item>
+        <item>Gelmiş Geçmiş En İyi Rom.</item>
+        <item>Telegram\'da bize bir selam ver</item>
+        <item>Başlamak için buraya dokun</item>
+        <item>Seni her şeyden çok seviyoruz</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Greetings -->
+    <string name="quickspace_grt_morning">Günaydın.</string>
+    <string name="quickspace_grt_evening">İyi akşamlar.</string>
+    <string name="quickspace_grt_afternoon">Tünaydın.</string>
+    <string name="quickspace_grt_night">İyi geceler.</string>
+    <string name="quickspace_grt_general">İyi günler.</string>
+    <string name="quickspace_ext_one">Bugün</string>
+    <string name="quickspace_ext_two">Şu an</string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="qe_now_playing_unknown_artist">Bilinmeyen Sanatçı</string>
+    <string name="qe_now_playing_ext_one">Şimdi oynatılıyor</string>
+    <string name="qe_now_playing_by">Tarafından</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Şimdi oynatılıyor</string>
+    <string name="quickspace_now_playing_summary">Çalmakta olduğunuz şarkıyı gösterin</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Minimalist still</string>
+    <string name="quickspace_alternate_style_summary">Modern stile geç</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Rastgele mesajlar</string>
+    <string name="quickspace_psa_summary">Rastgele mesajlarla arkadaşınızı daha canlı hale getirin</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Günaydın!</item>
+        <item>Günaydın, rock zamanı!</item>
+        <item>Ne kadar güzel bir gün!</item>
+        <item>İyi günler dilerim!</item>
+        <item>Peki ya 5 dakikalık küçük bir şekerlemeye nedersin?</item>
+        <item>Haydi sorunu çözelim.</item>
+        <item>Sabahlar, günlük şaheseriniz için taze bir tuvaldir.</item>
+        <item>Her sabah fırsat güneşinin doğuşunu kucaklayın.</item>
+        <item>Günün ilk ışıklarıyla yolunuzu aydınlatacak gücü bulun.</item>
+        <item>Gününüz sonsuz olasılıklarla başlıyor.</item>
+        <item>Her gün doğumu, yeniden başlayabileceğinizi hatırlatır.</item>
+        <item>Amacınızla uyanın, önünüzdeki günü fethedin.</item>
+        <item>Düşünceleriniz büyük başarıların temeli olabilir.</item>
+        <item>Dünya uyanır ve potansiyeliniz de uyanır.</item>
+        <item>Günlük maceranızın ilk bölümü.</item>
+        <item>Sabah rutininizin başarı için bir fırlatma rampası olmasına izin verin.</item>
+        <item>Güneş doğsun ya da doğmasın, potansiyeliniz her zaman yükseliştedir.</item>
+        <item>Şimdi yeni fikirler ve cesur adımlar atma zamanı.</item>
+        <item>Erken kalkan yol alır ama siz hayallerinizi yakalayabilirsiniz.</item>
+        <item>Hedeflerinizin peşinden gidecek cesareti bulun.</item>
+        <item>Yükselin ve parlayın, çünkü büyüklük sizi bekliyor.</item>
+        <item>Başlamak için en iyi zaman şimdi.</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon">
+        <item>Hayallerinizin peşinden gidin, dakikaların değil.</item>
+        <item>Her an, yeni bir fırsat.</item>
+        <item>Sadece varış noktasını değil, yolculuğu da kucaklayın.</item>
+        <item>Bugün bir hediye, sonuna kadar keyfini çıkarmaya bakın.</item>
+        <item>Gülümsemenizin dünyayı değiştirmesine izin verin.</item>
+        <item>Hayat bir hikayedir; her bölümün hakkını verin.</item>
+        <item>Sıradan anlarda neşeyi bulun.</item>
+        <item>En iyisi henüz gelmedi, böyle devam edin.</item>
+        <item>\"Eğer\"\'i \"olan\"\'a dönüştürme şansınız</item>
+        <item>Şu andan itibaren günü yakalayın.</item>
+        <item>Mutluluk her zaman yapabileceğiniz bir seçimdir.</item>
+        <item>Uykulu bir öğleden sonra bile kendinize inanın.</item>
+        <item>Bırakın eylemleriniz saatten daha yüksek sesle konuşsun.</item>
+        <item>Hayatınız ondan ne yaptığınızdır; onu muhteşem kılın.</item>
+        <item>Büyük hayaller kurun, çok çalışın ve asla pes etmeyin.</item>
+        <item>Sandığınızdan daha güçlüsünüz.</item>
+        <item>Her başarısızlık, geri dönüş için bir hazırlıktır.</item>
+        <item>Sadece varış noktasını değil, yolculuğu da kucaklayın.</item>
+        <item>Hedeflerinizin peşinden gidin, korkularınızın değil.</item>
+        <item>Potansiyeliniz sonsuz; onu ortaya çıkarın.</item>
+    </string-array>
+    <string-array name="quickspace_psa_early_evening">
+        <item>Şu anı kucaklayın, saat kaç olursa olsun.</item>
+        <item>Her alacakaranlıkta, yeni bir fırsat şafağı bulun.</item>
+        <item>Hayat bir yolculuktur; yol boyunca manzaranın tadını çıkarın.</item>
+        <item>Tutumunuz gerçekliğinizi şekillendirir.</item>
+        <item>Güneş batarken bile hikayeniz yazılmaya devam ediyor.</item>
+        <item>Sıradan anlardaki güzelliği yakalayın.</item>
+        <item>Düşünme ve sıfırlama zamanı.</item>
+        <item>Saat kaç olursa olsun neşeyi seçin.</item>
+        <item>Fırsatlar akşamları bitmez.</item>
+        <item>Birinin gülümsemesinin sebebi olun.</item>
+        <item>Potansiyeliniz sınır tanımıyor.</item>
+        <item>Sihirli anlar her an gerçekleşebilir.</item>
+        <item>Hayatınız ondan ne yaptığınızdır; onu olağanüstü kılın.</item>
+        <item>Meraklı kalın, minnettar kalın.</item>
+        <item>Dünyada görmek istediğiniz değişimin kendisi olun.</item>
+        <item>Kendinize inanın; inanılmaz şeyler yapabilecek kapasitedesiniz.</item>
+        <item>Tek sınır sizin kendiniz için belirlediğiniz sınırdır.</item>
+        <item>Başarı tek bir adımla başlar.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Geceyi yakalayın, çünkü kendi gizemlerini barındırır.</item>
+        <item>Bu akşamın sessizliğinde huzuru bulun.</item>
+        <item>Hayatın en büyük maceraları karanlıkta başlayabilir.</item>
+        <item>Yolculuğunuz güneş battıktan sonra bile devam eder.</item>
+        <item>Bırakın gece tuvaliniz olsun; onu hayallerle boyayın.</item>
+        <item>Bu akşamın dinginliğinde, iç huzurunuzu bulun.</item>
+        <item>Yıldızlar en karanlık saatlerde parlar.</item>
+        <item>Günün geç saatlerinde bile büyük hayaller kurun.</item>
+        <item>Hayatınız yazılmayı bekleyen bir hikayedir.</item>
+        <item>Düşünme ve yenilenme zamanı.</item>
+        <item>Gece geç saatlere kadar süren düşünceler sabahın erken saatlerinde açığa çıkabilir.</item>
+        <item>Bu akşamın dinginliğinde neşeyi bulun.</item>
+        <item>Gece gökyüzü uçsuz bucaksız bir rüya tuvalidir.</item>
+        <item>Potansiyelinizin uyku saati yoktur; tutkularınızın peşinden gidin.</item>
+        <item>En karanlık saatlerde bile umutlu kalın.</item>
+        <item>Kaosun ortasında, içinizdeki sükûneti bulun.</item>
+        <item>Pozitif kalın, çok çalışın, başarın.</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Geceler fırsatların sessiz fısıltılarıdır.</item>
+        <item>Gecenin sessizliğinde, içinizdeki gücü bulun.</item>
+        <item>Karanlığı kucaklayın, çünkü hayallerinizin anahtarı ondadır.</item>
+        <item>Dünya uyuyor ama sizin potansiyeliniz tamamen uyanık.</item>
+        <item>Gece geç olabilir, ancak tutkularınız zamansızdır.</item>
+        <item>Meraklı kalın, uyanık kalın ve gecenin size rehberlik etmesine izin verin.</item>
+        <item>Hayallerinizin peşinden gidecek cesareti bulun.</item>
+        <item>Büyük işler asla konfor alanlarından gelmez.</item>
+        <item>Kendi kaderinizi yaratma gücüne sahipsiniz.</item>
+        <item>Mutluluk bir seçimdir; onu her gün seçin.</item>
+        <item>Hayat yaptığınız şeydir, bu yüzden onu değerlendirin.</item>
+        <item>Odaklanın, kararlı olun, durdurulamaz olun.</item>
+        <item>Kendi hikayenizin yazarı sizsiniz.</item>
+        <item>İlerleme için çabalayın, mükemmellik için değil.</item>
+        <item>Her gün yeni bir başlangıçtır; bunu harika bir başlangıç haline getirin.</item>
+        <item>Özgün benliğiniz olarak başkalarına ilham verin.</item>
+        <item>Tutumunuz yönünüzü belirler.</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Cehalet mutluluktur</item>
+        <item>Çoktan başka güncelleme flaş etme zamanı gelmedi mi?</item>
+        <item>Savaş değil, barış yapın</item>
+        <item>Hey, nasıl gidiyor?</item>
+        <item>Görevlerinize odaklanın</item>
+        <item>Kaç tane ekran görüntüsü alıyorsunuz?</item>
+        <item>Crdroid ile çeşitli özelleştirmeler</item>
+        <item>Sevgiyi yay, tahribatı değil</item>
+        <item>Yangını biz başlatmadık!</item>
+        <item>Bazı güzel müzikler için doğru zaman</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C BAŞ</item>
+        <item>Bunu görmek için crDroid Premium\'a ihtiyacınız var</item>
+        <item>Unicorn soyunu hatırla</item>
+        <item>Daha uzun pil ömrünün keyfini çıkarın</item>
+        <item>Sıfırdan başlayarak</item>
+        <item>Seni her şeyden çok seviyoruz</item>
+        <item>Suşi olmadan bile lezzetli</item>
+        <item>Bugün güzel bir şey yap</item>
+        <item>Bu en iyi Pixel Experience, değil mi?</item>
+        <item>Yanılsama yok, gerçeğe hoş geldiniz!</item>
+        <item>Desteğiniz için teşekkür ederiz</item>
+        <item>Derps için festival yok - sadece mükemmellik!</item>
+        <item>Buildbot\'ların en iyi seçimlerinden biri</item>
+        <item>Paranoya için akıl sağlığı</item>
+        <item>Buz gibi tatlıları deneyin</item>
+        <item>Ne hoş bir deneyim değil mi?</item>
+        <item>Evrim bir efsanedir, değil mi?</item>
+        <item>Sen, ne kullanıyorsan osun. Sakın patates olma</item>
+        <item>Aklınızdan ne geçiyor?</item>
+        <item>Bir gardiyan bekliyorum</item>
+        <item>Wubba Lubba Dub Dub</item>
+        <item>Kazanan Kazanan ....?</item>
+        <item>rm -rf \/</item>
+        <item>Pringles aslında patates cipsi değil..</item>
+        <item>Cihazın pil seviyelerini kontrol etmeyi unutmayın!</item>
+        <item>E-postanızı/mesajlarınızı kontrol edin.</item>
+        <item>Yapılacaklar listeniz varsa kontrol edin.</item>
+        <item>Hızlı alanı ana ekran ayarlarından devre dışı bırakabilirsiniz.</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">Hava durumu güncellemesi</string>
+    <string name="quick_event_ambient_weather_summary">Geçerli hava durumu güncellemesini görüntüle</string>
+    <string name="quick_event_ambient_weather_enabled_info">Hava durumu hizmetinin etkinleştirilmesi gerekir</string>
+    <string name="quick_event_weather_clouds">Bulutlu</string>
+    <string name="quick_event_weather_rain">Yağmurlu</string>
+    <string name="quick_event_weather_clear">Güneşli</string>
+    <string name="quick_event_weather_storm">Fırtınalı</string>
+    <string name="quick_event_weather_snow">Kar yağışlı</string>
+    <string name="quick_event_weather_wind">Rüzgarlı</string>
+    <string name="quick_event_weather_mist">Puslu</string>
+    <string name="quick_event_weather_city_title">Mevcut konum</string>
+    <string name="quick_event_weather_city_summary">Mevcut hava durumu konumunu göster</string>
+    <string name="quick_event_weather_text_title">Geçerli durum</string>
+    <string name="quick_event_weather_text_summary">Mevcut hava durumu özetini görüntüle</string>
+    <string name="intent_no_app_clock_found">Takvim veya saat etkinliği bulunamıyor</string>
+    <!-- Freed memory on clear all tasks -->
+    <string name="freed_memory_text">%1$s temizlendi</string>
+    <string name="optimal_memory_text">Sisteminiz şu an en uygun durumda</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Kilidi aç</string>
+    <string name="task_menu_item_lock">Kilitle</string>
+</resources>

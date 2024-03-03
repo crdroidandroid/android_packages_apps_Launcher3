@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2023 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">Nastavení domovské obrazovky</string>
+    <!-- Categories -->
+    <string name="home_category_title">Domovská obrazovka</string>
+    <string name="home_category_summary">Nastavení panelu Google\u00a0Now a\u00a0dalších funkcí</string>
+    <string name="icons_category_title">Ikony</string>
+    <string name="icons_category_summary">Nastavit velikost ikon a\u00a0další parametry</string>
+    <string name="app_drawer_category_title">Roleta aplikací</string>
+    <string name="app_drawer_category_summary">Přizpůsobte si svou roletu aplikací</string>
+    <string name="recents_category_title">Nedávné aplikace</string>
+    <string name="recents_category_summary">Změnit styl obrazovky nedávných aplikací</string>
+    <string name="misc_category_title">Různé</string>
+    <string name="misc_category_summary">Další možnosti</string>
+    <string name="general_category_title">Obecné</string>
+    <string name="interface_category_title">Rozhraní</string>
+    <string name="quickspace_category_title">QuickSpace</string>
+    <string name="search_bar_category_title">Vyhledávací panel</string>
+    <string name="actions_category_title">Rychlé akce</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">Možnosti pro vývojáře</string>
+    <string name="dev_options_summary">Zde můžete na vlastní riziko povolit některé skryté funkce</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Zamknout rozložení</string>
+    <string name="settings_lock_layout_summary_on">Ikony a widgety nelze přidat, odebrat a přesunout na domovské obrazovce</string>
+    <string name="settings_lock_layout_summary_off">Ikony a widgety lze přidat, odebrat a přesunout na domovské obrazovce</string>
+    <string name="settings_edit_widgets_error">Nelze přidat widgety na domovskou obrazovku</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Popisky ikon na ploše</string>
+    <string name="drawer_show_labels">Popisky ikon v\u00a0seznamu aplikací</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Přejetím přejít do aplikace Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Při gestu přejetím vlevo z\u00a0domovské obrazovky</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Při gestu přejetím vpravo z\u00a0domovské obrazovky</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Skryté a\u00a0zabezpečené aplikace</string>
+    <string name="trust_apps_auth_manager">Pro správu skrytých a\u00a0zabezpečených aplikací nejdříve odemkněte obrazovku</string>
+    <string name="trust_apps_auth_open_app">Proveďte ověření pro spuštění aplikace %1$s</string>
+    <string name="trust_apps_loading">Načítání\u2026</string>
+    <string name="trust_apps_no_lock_error">Pro omezení přístupu k\u00a0aplikaci prosím nastavte zabezpečenou obrazovku uzamčení</string>
+    <string name="trust_apps_help">Nápověda</string>
+    <string name="trust_apps_info_hidden">Skryté aplikace, včetně jejich widgetů, jsou skryty z\u00a0rolety aplikací</string>
+    <string name="trust_apps_info_protected">Zabezpečené aplikace vyžadují ověření, aby mohly být otevřeny ze spouštěče</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Návrhy</string>
+    <string name="suggestion_pref_screen_desc">Pro všechny aplikace a\u00a0návrhy na domácí obrazovce</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">Pozastavit</string>
+    <string name="pause_apps_dialog_title">Pozastavit %1$s?</string>
+    <string name="pause_apps_dialog_message">Oznámení pro %1$s budou pozastavena</string>
+    <string name="paused_apps_dialog_title">Aplikace pozastavena</string>
+    <string name="paused_apps_dialog_message">Aplikace %1$s byla přímo pozastavena ze spouštěče</string>
+    <string name="paused_apps_drop_target_label">Pozastavit aplikaci</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Uspat dvojím poklepáním</string>
+    <string name="pref_sleep_gesture_summary">Dvojím poklepáním do prázdného prostoru uspat zařízení</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Hodnota: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">výchozí hodnota</string>
+    <string name="custom_seekbar_default_value_to_set">Výchozí hodnota: <xliff:g id="v">%s</xliff:g>\nDlouhým klepnutím ji nastavíte</string>
+    <string name="custom_seekbar_default_value_is_set">Výchozí hodnota je nastavena</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Velikost ikon</string>
+    <!-- Font size -->
+    <string name="font_size_title">Velikost písma</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Maximální počet řádků pro popisek aplikace</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Ukončit</string>
+    <string name="recents_app_killed">Aplikace ukončena</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">Použít panel úloh</string>
+    <string name="pref_allow_phone_taskbar_summary">Pro otevírání a\u00a0přepínání aplikací kdekoliv</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Vyhledat</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Hlasové vyhledávání</string>
+    <string name="dock_music_search_title">Vyhledání hudby</string>
+    <string name="dock_music_search_summary">Spustit vyhledání hudby při stisknutí ikony mikrofonu</string>
+    <string name="dock_search_title">Vyhledávací panel Google</string>
+    <string name="dock_search_summary">Vyhledávací lišta ve spodním doku</string>
+    <string name="dock_theme_title">Ikony motivů</string>
+    <string name="dock_theme_summary">Použít ikony motivů pro vyhledávací panel</string>
+    <string name="search_radius_title">Poloměr rohu</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Pozadí Hotseat</string>
+    <string name="hotseat_bg_summary">Přidat průsvitné pozadí do doku aplikace</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Neprůhlednost pozadí</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Posuv tapety</string>
+    <string name="allow_wallpaper_scrolling_summary">Efekt posunu tapety pro více obrazovek</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Přiblížení tapety</string>
+    <string name="allow_wallpaper_zooming_summary">Přiblížit nebo oddálit tapetu při použití rolety aplikací nebo nedávných aplikací</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Stavový řádek</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Horní stín</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Výška řádku</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s k dispozici | %2$s</string>
+    <string name="recents_meminfo_title">Informace o\u00a0paměti</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Hloubka rozostření pozadí</string>
+    <string name="background_blur_summary">Nastavit úroveň hloubky rozostření nedávných aplikací a\u00a0rolety aplikací</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Snímek obrazovky</string>
+    <string name="recents_clear_all_title">Vymazat vše</string>
+    <string name="recents_lens_title">Lens</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Vymazat všechny úlohy zatřepáním telefonem</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Ikony motivů</string>
+    <string name="pref_themed_icons_summary">Následovat ikony motivů používaných na domovské obrazovce</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">Zdroj</string>
+    <string name="app_info_source_system">Systém</string>
+    <string name="app_info_last_update">Poslední aktualizace</string>
+    <string name="app_info_version">Verze</string>
+    <string name="app_info_more">Více</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Balíček ikon</string>
+    <string name="icon_pack_default_label">Výchozí</string>
+    <string name="icon_pack_add">Instalovat další</string>
+    <string name="icon_pack_no_market">Není k\u00a0dispozici žádný obchod s\u00a0aplikacemi</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Povolit krátkou paralaxu</string>
+    <string name="short_parallax_summary">Povolit efekt posouvání celé tapety na menším počtu stránek namísto oříznutí tapety</string>
+    <string name="single_page_center_title">Vycentrovat jedinou stránku</string>
+    <string name="single_page_center_summary">Vycentrovat tapetu pouze při použití jedné stránky</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Vyhledávací panel aplikací</string>
+    <string name="drawer_search_summary">Vyhledávací panel v horní části rolety aplikací</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Restartovat</string>
+    <string name="pref_restart_summary">Chcete-li aplikovat všechna čekající nastavení, restartujte spouštěč ručně</string>
+    <string name="restarting_launcher">Restartování spouštěče…</string>
+    <string name="restarting_launcher_changes">Restartování spouštěče pro použití změn…</string>
+    <string name="updating_launcher_components">Restartování spouštěče pro aktualizaci komponent spouštěče…</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Přehled událostí</string>
+    <string name="show_quickspace_summary">Zobrazit v horní části Domovské obrazovky</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Vítejte v\u00a0crDroidu!</string>
+    <string name="quick_event_rom_intro_welcome_ext">Čas na crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>Děkujeme, že jste si vybrali právě nás</item>
+        <item>Máte nás rádi? Pošlete nám příspěvek na pivo :)</item>
+        <item>Vůbec nejlepší ROM.</item>
+        <item>Pozdravte nás na Telegramu</item>
+        <item>Začněte klepnutím sem</item>
+        <item>Milujeme tě 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Greetings -->
+    <string name="quickspace_grt_morning">Dobré ráno.</string>
+    <string name="quickspace_grt_evening">Dobrý večer.</string>
+    <string name="quickspace_grt_afternoon">Dobré odpoledne.</string>
+    <string name="quickspace_grt_night">Dobrou noc.</string>
+    <string name="quickspace_grt_general">Dobrý den.</string>
+    <string name="quickspace_ext_one">Dnes je</string>
+    <string name="quickspace_ext_two">Je</string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="qe_now_playing_unknown_artist">Neznámý umělec</string>
+    <string name="qe_now_playing_ext_one">Nyní se přehrává</string>
+    <string name="qe_now_playing_by">Od</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Nyní se přehrává</string>
+    <string name="quickspace_now_playing_summary">Zobrazit skladbu, která se právě přehrává</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Minimalistický styl</string>
+    <string name="quickspace_alternate_style_summary">Přepnout na moderní styl</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Náhodné zprávy</string>
+    <string name="quickspace_psa_summary">Udělejte svého společníka živějším pomocí náhodných zpráv</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Dobré ránko!</item>
+        <item>Dobré ráno! Je načase vstávat a\u00a0cvičit!</item>
+        <item>Dneska je venku hezky!</item>
+        <item>Měj se fanfárově!</item>
+        <item>Což takhle si ještě na 5\u00a0minut zdřímnout?</item>
+        <item>Pojď na to, zlato.</item>
+        <item>Rána jsou čistým plátnem pro tvá každodenní umělecká díla.</item>
+        <item>Každé ráno se chop východu příležitosti.</item>
+        <item>Najdi sílu osvětlovat svoji cestu v\u00a0raném světle.</item>
+        <item>Tvůj den začíná nekonečnými možnostmi.</item>
+        <item>Každý východ slunce je připomínkou, že můžeš začít znovu.</item>
+        <item>Probuď se s posláním, dobyj den před sebou.</item>
+        <item>Tvé myšlenky mohou být základem velkých úspěchů.</item>
+        <item>Svět se probouzí, a\u00a0stejně tak tvůj potenciál.</item>
+        <item>První kapitola ve tvém každodenním dobrodružství.</item>
+        <item>Nechť je tvá ranní rutina spouštěčem pro úspěch.</item>
+        <item>Ať již východ slunce je či není, tvůj potenciál je vždy na vzestupu.</item>
+        <item>Je čas na nové nápady a\u00a0odvážné činy.</item>
+        <item>Ranní ptáče chytá červy, ale ty můžeš chytit své sny.</item>
+        <item>Najdi odvahu usilovat o\u00a0své touhy.</item>
+        <item>Vstávat a\u00a0cvičit, chystají se velké věci.</item>
+        <item>Nejlepší čas začít nastal nyní.</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon">
+        <item>Proháněj se za svými sny, ne za minutami.</item>
+        <item>V každém okamžiku je nová příležitost.</item>
+        <item>Vydej se na cestu, ne jen k\u00a0cíli.</item>
+        <item>Dnešek je dar, proto se mu říká přítomnost (the present).</item>
+        <item>Nech tvůj úsměv změnit svět.</item>
+        <item>Život je příběh. Tak ať každá kapitola stojí za to.</item>
+        <item>Najdi radost v\u00a0běžných okamžicích.</item>
+        <item>To nejlepší teprve přijde. Pokračuj v\u00a0tom, co děláš.</item>
+        <item>Tvoje šance proměnit „co kdyby“ na „co je“.</item>
+        <item>Využij den smysluplně, začni právě teď.</item>
+        <item>Štěstí je volba, kterou můžeš udělat kdykoliv.</item>
+        <item>Věř si i při ospalém odpoledni.</item>
+        <item>Nechť tvoje činy mluví hlasitěji než hodiny.</item>
+        <item>Tvůj život je takový, jaký si ho uděláš. Učiň jej úžasným.</item>
+        <item>Sni o\u00a0velkých věcech, tvrdě pracuj, a\u00a0nikdy se nevzdávej.</item>
+        <item>Jsi silnější, než si myslíš.</item>
+        <item>Každý nezdar je šance pro návrat.</item>
+        <item>Vydej se na cestu, ne jen k\u00a0cíli.</item>
+        <item>Proháněj se za svými cíli, ne za svými obavami.</item>
+        <item>Tvůj potenciál je nekonečný; odemkni jej.</item>
+    </string-array>
+    <string-array name="quickspace_psa_early_evening">
+        <item>Přijmi současný okamžik bez ohledu na hodinu.</item>
+        <item>V každém šeru najdi úsvit nové příležitosti.</item>
+        <item>Život je jízda; užij si krajinu podél cesty.</item>
+        <item>Tvůj přístup formuje tvoji realitu.</item>
+        <item>Tvůj příběh je stále psán, i\u00a0když slunce zapadá.</item>
+        <item>Zachyť krásu běžných okamžiků.</item>
+        <item>Je čas se zamyslet a\u00a0začít od znova.</item>
+        <item>Zvol si radost, bez ohledu na čas na hodinách.</item>
+        <item>Příležitosti nevyprší k\u00a0večeru.</item>
+        <item>Buď důvodem, proč se někdo usměje.</item>
+        <item>Tvůj potenciál nezná žádné hranice.</item>
+        <item>Kouzelné chvíle se mohou stát ve kteroukoliv hodinu.</item>
+        <item>Tvůj život je takový, jaký si ho uděláš. Učiň jej neobyčejným.</item>
+        <item>Zůstaň zvědavý, zůstaň vděčný.</item>
+        <item>Staň se změnou, kterou si přeješ vidět ve světě.</item>
+        <item>Věř si, dokážeš úžasných věcí.</item>
+        <item>Jediný limit je ten, který sis stanovil(a) pro sebe.</item>
+        <item>Úspěch začíná jediným krokem.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Využij noc, protože drží svá vlastní tajemství.</item>
+        <item>Najdi pokoj v\u00a0klidu dnešního večera.</item>
+        <item>Největší dobrodružství života mohou začít ve tmě.</item>
+        <item>Tvá cesta pokračuje i\u00a0po západu slunce.</item>
+        <item>Nechť je noc tvým plátnem; vymaluj jej sny.</item>
+        <item>Najdi svůj vnitřní mír v\u00a0klidu dnešního večera.</item>
+        <item>V nejtemnějších hodinách září hvězdy nejjasněji.</item>
+        <item>Sni o\u00a0velkých věcech, i\u00a0v\u00a0pozdních hodinách dne.</item>
+        <item>Tvůj život je příběh, který čeká na napsání.</item>
+        <item>Je čas na zamyšlení a\u00a0obnovu.</item>
+        <item>Pozdní noční myšlenky mohou vést k\u00a0časně ranním objevům.</item>
+        <item>Najdi radost ve stálosti dnešního večera.</item>
+        <item>Noční obloha je rozsáhlé plátno snů.</item>
+        <item>Tvůj potenciál nezná čas na odpočinek; usiluj o\u00a0své vášně.</item>
+        <item>I v nejtemnějších hodinách zůstaň v\u00a0naději.</item>
+        <item>Uprostřed chaosu najdi svůj vnitřní klid.</item>
+        <item>Zůstaň pozitivní, tvrdě pracuj, uskutečni to.</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Noci jsou tichým šepotem příležitosti.</item>
+        <item>Najdi svou vnitřní sílu v\u00a0klidu této noci.</item>
+        <item>Využij temnotu, protože drží klíče ke tvým snům.</item>
+        <item>Svět spí, zatímco tvůj potenciál bdí.</item>
+        <item>Noc může být pokročilá, ale tvé ambice jsou věčné.</item>
+        <item>Zůstaň zvědavý, zůstaň vzhůru, a\u00a0nech noci tě vést.</item>
+        <item>Najdi odvahu usilovat o\u00a0své sny.</item>
+        <item>Skvělé věci nikdy nepocházejí z\u00a0komfortních zón.</item>
+        <item>Máš tu moc vytvářet svůj vlastní osud.</item>
+        <item>Štěstí je volba; zvol si ji každý den.</item>
+        <item>Život je takový, jaký si ho uděláš. Tak ať stojí za to.</item>
+        <item>Zůstaň soustředěný, zůstaň odhodlaný, zůstaň nezastavitelný.</item>
+        <item>Jsi autorem svého vlastního příběhu.</item>
+        <item>Usiluj o\u00a0pokrok, nikoliv dokonalost.</item>
+        <item>Každý den je nový začátek; udělej jej skvělý.</item>
+        <item>Inspiruj ostatní tím, že budete svým autentickým já.</item>
+        <item>Tvůj postoj určuje tvé směřování.</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Nevědomost je síla</item>
+        <item>Že už by bylo načase flashnout další aktualizaci?</item>
+        <item>Udržujte mír, ne válku</item>
+        <item>Hej hola, jak je?</item>
+        <item>Soustřeď se na své úkoly</item>
+        <item>Kolik snímků obrazovky vytvoříš?</item>
+        <item>S crDroidem zpřístupníš lecjaké vychytávky</item>
+        <item>Šiř lásku, nikoliv chaos</item>
+        <item>Nezahájili jsme palbu!</item>
+        <item>Je čas na nějakou dobrou hudbu</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HROT</item>
+        <item>Pro zobrazení tohoto obsahu potřebuješ mít crDroid Premium</item>
+        <item>Pamatuj na Lineage of the Unicorn</item>
+        <item>Užij si Xtended výdrž baterie</item>
+        <item>Začínáme od píky</item>
+        <item>Milujeme tě 3000</item>
+        <item>Vynikající i bez Sushi</item>
+        <item>Vykonej dneska něco dobrého</item>
+        <item>Toto je nejlepší Pixel Experience, že?</item>
+        <item>Žádné iluze, vítej ve tvrdé realitě!</item>
+        <item>Děkujeme ti za podporu</item>
+        <item>Blbosti zde nemají místo\u00a0– pouze dokonalost!</item>
+        <item>Jeden z\u00a0nejlepších výběrů buildbota</item>
+        <item>Trochu Normálnosti pro tvou Paranoiu</item>
+        <item>Zakus ledově vychlazené dezerty</item>
+        <item>Úžasný zážitek, že?</item>
+        <item>Evoluce je mýtus, že?</item>
+        <item>Jsi to, co flashuješ. Nebuď labuť</item>
+        <item>Co se ti honí hlavou?</item>
+        <item>Expecto Patronum</item>
+        <item>Wubba Lubba Dub Dub</item>
+        <item>Vítěz vítěz ....?</item>
+        <item>rm -rf \/</item>
+        <item>Pringles ve skutečnosti nejsou bramborové chipsy.</item>
+        <item>Nezapomeň kontrolovat úroveň baterie zařízení!</item>
+        <item>Zkontroluj svůj e‑mail a\u00a0zprávy.</item>
+        <item>Zkontroluj svůj seznam věcí k\u00a0dokončení, pokud nějaký máš.</item>
+        <item>Quickspace můžeš zakázat v\u00a0nastavení Domovské obrazovky.</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">Aktualizace počasí</string>
+    <string name="quick_event_ambient_weather_summary">Zobrazit aktuální aktualizaci počasí</string>
+    <string name="quick_event_ambient_weather_enabled_info">Vyžaduje povolení služby počasí</string>
+    <string name="quick_event_weather_clouds">Oblačno</string>
+    <string name="quick_event_weather_rain">Deštivo</string>
+    <string name="quick_event_weather_clear">Slunečno</string>
+    <string name="quick_event_weather_storm">Bouřka</string>
+    <string name="quick_event_weather_snow">Sněžení</string>
+    <string name="quick_event_weather_wind">Větrno</string>
+    <string name="quick_event_weather_mist">Mlhavo</string>
+    <string name="quick_event_weather_city_title">Aktuální poloha</string>
+    <string name="quick_event_weather_city_summary">Zobrazit aktuální polohu počasí</string>
+    <string name="quick_event_weather_text_title">Aktuální stav</string>
+    <string name="quick_event_weather_text_summary">Zobrazit souhrn aktuálních podmínek počasí</string>
+    <string name="intent_no_app_clock_found">Nelze najít aktivitu kalendáře nebo hodin</string>
+    <!-- Freed memory on clear all tasks -->
+    <string name="freed_memory_text">Uvolněno %1$s</string>
+    <string name="optimal_memory_text">Váš systém je nyní v optimálním stavu</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Odemknout</string>
+    <string name="task_menu_item_lock">Zamknout</string>
+</resources>

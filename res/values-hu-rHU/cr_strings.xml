@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2023 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">Kezdőoldal-beállítások</string>
+    <!-- Categories -->
+    <string name="home_category_title">Kezdőképernyő</string>
+    <string name="home_category_summary">A \'Google Now\' panel és egyebek beállítása</string>
+    <string name="icons_category_title">Ikonok</string>
+    <string name="icons_category_summary">Ikonméret-beállítás és egyebek</string>
+    <string name="app_drawer_category_title">Alkalmazásfiók</string>
+    <string name="app_drawer_category_summary">Testreszabhatja az Alkalmazásfiókját</string>
+    <string name="recents_category_title">Előzmények</string>
+    <string name="recents_category_summary">Az áttekintési nézet újraformálása</string>
+    <string name="misc_category_title">Különlegességek</string>
+    <string name="misc_category_summary">Minden, ami egyedivé tesz</string>
+    <string name="general_category_title">Általános</string>
+    <string name="interface_category_title">Felület</string>
+    <string name="quickspace_category_title">Gyorselérés</string>
+    <string name="search_bar_category_title">Keresési sáv</string>
+    <string name="actions_category_title">Azonnali műveletek</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">Fejlesztői beállítások</string>
+    <string name="dev_options_summary">Saját felelősségére rejtett beállításokat engedélyezhet</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Elrendezés-zárolás</string>
+    <string name="settings_lock_layout_summary_on">A kezdőképernyőn nem engedélyezett az ikon- és modulhozzáadás, eltávolítás és mozgatás</string>
+    <string name="settings_lock_layout_summary_off">A kezdőképernyőn engedélyezett az ikon- és modulhozzáadás, eltávolítás és mozgatás</string>
+    <string name="settings_edit_widgets_error">Nem lehet kisalkalmazásokat hozzáadni a kezdőképernyőhöz</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Asztali ikonfeliratok</string>
+    <string name="drawer_show_labels">Alkalmazásfióki ikonfeliratok</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Google-alkalmazás csúsztatással</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Amikor a fő Kezdőképernyőn balra csúsztat</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Amikor a fő Kezdőképernyőn jobbra csúsztat</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Rejtett és védett alkalmazások</string>
+    <string name="trust_apps_auth_manager">Feloldás a rejtett és védett alkalmazások kezeléséhez</string>
+    <string name="trust_apps_auth_open_app">Hitelesítés a következő megnyitásához: %1$s</string>
+    <string name="trust_apps_loading">Betöltés\u2026</string>
+    <string name="trust_apps_no_lock_error">Kérjük, állítson be biztonságos (védett) képernyőzárat az alkalmazás-hozzáférések korlátozására</string>
+    <string name="trust_apps_help">Súgó</string>
+    <string name="trust_apps_info_hidden">A rejtett alkalmazások és kisalkalmazásaik az alkalmazásfiókban sem láthatóak</string>
+    <string name="trust_apps_info_protected">Egy védett alkalmazás launcherből való megnyitása hitelesítést igényel</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Javaslatok</string>
+    <string name="suggestion_pref_screen_desc">Javaslatok a Kezdőképernyőhöz és minden alkalmazáshoz</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">Szüneteltetés</string>
+    <string name="pause_apps_dialog_title">Szünetelteti ezt: %1$s?</string>
+    <string name="pause_apps_dialog_message">%1$s értesítései szüneteltetésre kerülnek</string>
+    <string name="paused_apps_dialog_title">Alkalmazás-szüneteltetés</string>
+    <string name="paused_apps_dialog_message">%1$s közvetlen szüneteltetése a Launcherből</string>
+    <string name="paused_apps_drop_target_label">Alkalmazás-szüneteltetés</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Alvómód duplakoppal</string>
+    <string name="pref_sleep_gesture_summary">Képernyő kikapcsoláshoz duplakopp egy üres területen</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value"><xliff:g id="v">%s</xliff:g> értékű</string>
+    <string name="custom_seekbar_default_value">alapértelmezés szerint</string>
+    <string name="custom_seekbar_default_value_to_set">Alapértelmezetten <xliff:g id="v">%s</xliff:g> értékű\nNyomja hosszan a beállításhoz</string>
+    <string name="custom_seekbar_default_value_is_set">Az alapértelmezett érték beállítva</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Ikonméret</string>
+    <!-- Font size -->
+    <string name="font_size_title">Betűméret</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Sorok maximális száma az ikoncímkékhez</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Leállítás</string>
+    <string name="recents_app_killed">Az alkalmazás leállt</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">a Feladatkezelő használata</string>
+    <string name="pref_allow_phone_taskbar_summary">Alkalmazásinditáshoz és váltáshoz bárhol</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Keresés</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Hangalapú keresés</string>
+    <string name="dock_music_search_title">Zenekeresés</string>
+    <string name="dock_music_search_summary">A mikrofonikon megnyomásával indíthat keresést</string>
+    <string name="dock_search_title">Google-keresősáv</string>
+    <string name="dock_search_summary">Alsódokki keresősáv</string>
+    <string name="dock_theme_title">Témázott ikonok</string>
+    <string name="dock_theme_summary">A keresősávban témázott ikonok használhatók</string>
+    <string name="search_radius_title">Saroklekerekítés</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Hotseat háttér</string>
+    <string name="hotseat_bg_summary">Áttetsző háttereket adhat az alkalmazásfiókhoz</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Háttérátlátszóság</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Háttérkép-görgetés</string>
+    <string name="allow_wallpaper_scrolling_summary">Háttérképgörgetési effekt több képernyőre</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Háttérkép-zoomolás</string>
+    <string name="allow_wallpaper_zooming_summary">Nagyítsa vagy kicsinyítse a háttérképet az alkalmazásfiók vagy az előzmények használatakor</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Értesítési sáv</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Felső árnyék</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Sormagasság</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%2$s memóból %1$s érhető el</string>
+    <string name="recents_meminfo_title">Memória-információ</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">A háttér-elmosás mélysége</string>
+    <string name="background_blur_summary">Az előzmények és az alkalmazásfiók elmosási.értéke állítható itt</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Képernyőkép</string>
+    <string name="recents_clear_all_title">Az összes törlése</string>
+    <string name="recents_lens_title">Objektív</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Az összes feladat törléséhez rázza meg a telefont</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Témázott ikonok</string>
+    <string name="pref_themed_icons_summary">A kezdőképernyőn használt tematikus ikonokhoz igazodik</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">Forrás</string>
+    <string name="app_info_source_system">Rendszer</string>
+    <string name="app_info_last_update">Utoljára frissítve</string>
+    <string name="app_info_version">Verzió</string>
+    <string name="app_info_more">Továbbiak</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Ikoncsomag</string>
+    <string name="icon_pack_default_label">Alapértelmezett</string>
+    <string name="icon_pack_add">Továbbiak telepítése</string>
+    <string name="icon_pack_no_market">Nincs hely ahonnan letölthetne</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Rövid paralaxis engedélyezése</string>
+    <string name="short_parallax_summary">Engedélyezze a teljes háttérképgörgetési hatását kisebb oldalszámon a háttérkép levágása helyett</string>
+    <string name="single_page_center_title">Centerezett egyoldalas</string>
+    <string name="single_page_center_summary">Helyezze középre a háttérképet, ha csak egyetlen oldalt használ</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Alkalmazásfiók-keresősáv</string>
+    <string name="drawer_search_summary">A keresősáv az Alkalmazásfiók tetején</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Újraindítás</string>
+    <string name="pref_restart_summary">Launcher-újraindítás a függőben lévő változások alkalmazásához</string>
+    <string name="restarting_launcher">A Launcher újraindítása...</string>
+    <string name="restarting_launcher_changes">A változások miatti újraindulás...</string>
+    <string name="updating_launcher_components">Launcher alkotóelem frissítése miatti újraindulás...</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Belepillantás</string>
+    <string name="show_quickspace_summary">Az Ön kezdőképernyőjének tetején jelenik meg</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Üdvözöli a crDroid!</string>
+    <string name="quick_event_rom_intro_welcome_ext">Itt a crDroid ideje!</string>
+    <string-array name="welcome_message_variants">
+        <item>Köszönjük, hogy minket választott</item>
+        <item>Kedvel minket? Küldjön nekünk sört!</item>
+        <item>Minden idők legjobb rendszere.</item>
+        <item>Írjon ránk a Telegramon</item>
+        <item>Érintse meg itt a kezdéshez</item>
+        <item>Ne telefonozzon! Szerelmeskedjen!</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Greetings -->
+    <string name="quickspace_grt_morning">Jó reggelt.</string>
+    <string name="quickspace_grt_evening">Jó estét.</string>
+    <string name="quickspace_grt_afternoon">Jó napot.</string>
+    <string name="quickspace_grt_night">Jó éjszakát.</string>
+    <string name="quickspace_grt_general">Jó napot.</string>
+    <string name="quickspace_ext_one">Ma</string>
+    <string name="quickspace_ext_two">Ez </string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="qe_now_playing_unknown_artist">Ismeretlen előadó</string>
+    <string name="qe_now_playing_ext_one">Most hallható </string>
+    <string name="qe_now_playing_by">Előadja </string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Most hallható </string>
+    <string name="quickspace_now_playing_summary">Az épp hallható szám kiírása</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Minimálstílus</string>
+    <string name="quickspace_alternate_style_summary">Átkapcsolás egy modern stílusra</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Véletlenszerű üzenetek</string>
+    <string name="quickspace_psa_summary">Minden élénkebbé válik véletlenszerű üzenetekkel</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Jó reggelt!</item>
+        <item>Jó reggelt, szóljon a rock!</item>
+        <item>Micsoda szép nap!</item>
+        <item>Legyen szép napja!</item>
+        <item>Mit szólna egy 5 perces szunyókáláshoz?</item>
+        <item>Lásson neki a reggelinek.</item>
+        <item>A reggelek adják a friss vásznat a napi remekművéhez.</item>
+        <item>Élje át minden reggel a lehetőségek napfelkeltéjét.</item>
+        <item>Találja meg a korai fényben azt az erőt, amellyel megvilágíthatja az utat.</item>
+        <item>Minden nap végtelen lehetőségekkel kezdődik.</item>
+        <item>Minden napfelkelte emlékeztet arra, hogy minden újrakezdhető.</item>
+        <item>Ébredjen céltudatosan, győzze le az Ön előtt álló napot.</item>
+        <item>Gondolataiból születhetnek a nagyszerű eredmények</item>
+        <item>A világ felébred, és az Ön lehetőségei is.</item>
+        <item>Így indul az Ön napi kalandja.</item>
+        <item>A reggeli megszokásaiból alakul ki a sikerességének indítópultja.</item>
+        <item>Napkelte vagy sem, az Ön potenciálja folyton növekszik.</item>
+        <item>Itt az ideje a friss ötleteknek és a merész tetteknek.</item>
+        <item>A hajnali madár elkapja a férget, ahogy te is elérheted az álmaidat.</item>
+        <item>Találja meg bátorságát és érje el céljait.</item>
+        <item>Kelj fel és ragyogj, hogy naggyá válhass.</item>
+        <item>Most jött el az ideje elkezdeni.</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon">
+        <item>Az álmait hajszolja, ne a perceket.</item>
+        <item>Minden másodperc egy új lehetőség.</item>
+        <item>Hogy a célodhoz érj, utaznod is kell.</item>
+        <item>A mai nap ajándék, ezért hívják meglepetésnek.</item>
+        <item>Az Ön mosolya változtathatja meg a világot.</item>
+        <item>Az élet egy történet; minden fejezete számít.</item>
+        <item>Találja meg az örömöt a hétköznapi pillanatokban.</item>
+        <item>A legjobb még hátravan, ne adja fel!</item>
+        <item>Változtassa a \'mi lenne ha\'-t \'mi van\'-ra.</item>
+        <item>Kaparintsa meg a mai napot, kezdje most.</item>
+        <item>A boldogság egy lehetőség, Ön dönt hogy választja-e.</item>
+        <item>Bízzon magában még egy álmos délutánon is.</item>
+        <item>Hagyja, hogy tettei hangosabban ketyegjenek, mint az óra.</item>
+        <item>Az Ön élete olyan, amilyenné alakítja; tegye bámulatossá.</item>
+        <item>Álmodjon nagyot, dolgozzon keményen és sose adja fel.</item>
+        <item>Ön sokkal erősebb, mint gondolná.</item>
+        <item>Minden hanyatlás egy felemelkedés előkészülete.</item>
+        <item>Hogy a célodhoz érj, utaznod is kell.</item>
+        <item>A céljaival törődjön, ne a félelmeivel.</item>
+        <item>A lehetőségek végtelenek. Használja ki őket!</item>
+    </string-array>
+    <string-array name="quickspace_psa_early_evening">
+        <item>Élje meg a pillanatot! Ne foglalkozzon az órákkal.</item>
+        <item>Minden alkonyatban találja meg egy lehetőség új hajnalát.</item>
+        <item>Az élet egy utazás; élvezze a tájat útközben.</item>
+        <item>Az Ön hozzáállása alakítja az Ön valóságát.</item>
+        <item>Az Ön élettörténete folyamatosan íródik, még akkor is, amikor a nap lenyugszik.</item>
+        <item>Ragadja meg a szépséget a hétköznapi pillanatokban.</item>
+        <item>Ideje újragondolni és újrakezdeni.</item>
+        <item>Válassza az örömöt, nem számít, mennyi időt lát az órán.</item>
+        <item>Este sem fogynak el a lehetőségek.</item>
+        <item>Mosolyogtasson meg valakit.</item>
+        <item>Az Ön lehetőségei nem ismernek határokat.</item>
+        <item>A varázslatos pillanatok bármelyik percben megtörténhetnek.</item>
+        <item>Az Ön élete olyan, amilyenné alakítja; tegye rendkívülivé.</item>
+        <item>Maradjon kíváncsi, maradjon hálás.</item>
+        <item>Legyen Ön a változás, amit a világban látni kíván.</item>
+        <item>Bízzon magában; Ön csodálatos dolgokra képes.</item>
+        <item>Egyetlen korlát létezik: amit az ember önmagának szab.</item>
+        <item>Minden siker egy lépéssel kezdődik.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Ragadja meg az éjszakát, mert megvannak a maga titkai.</item>
+        <item>Az este csendjében találja meg a nyugalmat.</item>
+        <item>Az élet legnagyobb kalandjai a sötétben kezdődhetnek.</item>
+        <item>Az Ön útja a naplemente után is folytatódik.</item>
+        <item>Legyen az éjszaka az Ön festővászona, fesse tele álmokkal.</item>
+        <item>Az este csendjében találja meg belső békéjét.</item>
+        <item>A csillagok a legsötétebb órákban ragyognak a legfényesebben.</item>
+        <item>A késői órákban is álmodjon nagyot.</item>
+        <item>Az élet egy történet, amely megírásra vár.</item>
+        <item>Itt az ideje a gondolkodásnak és a megújulásnak.</item>
+        <item>A késő esti gondolatok kora reggeli kinyilatkoztatásokhoz vezethetnek.</item>
+        <item>Találja meg az örömöt a mai este csendjében.</item>
+        <item>Az éjszakai égbolt az álmok hatalmas vászna.</item>
+        <item>A Ön lehetőségei nem ismerik az alvásidőt; űzze-hajtsa a szenvedélyeit.</item>
+        <item>Legyen bizakodó, még a legsötétebb órákban is.</item>
+        <item>A káosz közepette is találja meg belső nyugalmát.</item>
+        <item>Maradjon pozitív, dolgozzon keményen, valósítsa meg.</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Az éjszaka a lehetőségek csendes suttogása.</item>
+        <item>Az éjszaka csendjében találja meg belső erejét.</item>
+        <item>Ölelje át a sötétséget, mert abban vannak álmai kulcsai.</item>
+        <item>A világ alszik, de a lehetőségek ébren vannak.</item>
+        <item>Lehet, hogy késő este van, de az ambíciók időtlenek.</item>
+        <item>Maradjon kíváncsi, maradjon ébren, és hagyja, hogy az éjszaka kalauzolja.</item>
+        <item>Találja meg bátorságát és érje el álmait.</item>
+        <item>A legjobb dolgok soha nem a komfortzónából jönnek.</item>
+        <item>Megvan az ereje, hogy létrehozza saját sorsát.</item>
+        <item>A boldogság egy lehetőség; válassza ezt minden nap.</item>
+        <item>Számítson rá, hogy az élete olyan, amilyenné Ön alakítja.</item>
+        <item>Maradjon koncentrált, maradjon határozott, maradjon megállíthatatlan.</item>
+        <item>Ön írja saját életének regényét.</item>
+        <item>Ne a tökéletességre törekedjen, hanem a fejlődésre.</item>
+        <item>Minden nap egy új kezdet; tegye naggyá.</item>
+        <item>Inspiráljon másokat azzal, hogy hiteles marad.</item>
+        <item>A hozzáállása határozza meg az irányt.</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Boldogok a lelki-szegények</item>
+        <item>Itt az ideje már egy új frissítést telepíteni?</item>
+        <item>Hozz békét, ne háborút</item>
+        <item>Ó, helló, mi a helyzet?</item>
+        <item>Fókuszáljon a feladataira</item>
+        <item>Hány képernyőképet készített?</item>
+        <item>Találjon klassz funkciókat a crDroidban</item>
+        <item>Szeretetet árasszon, ne pusztítást</item>
+        <item>Nem mi gyújtottunk tüzet!</item>
+        <item>Ideje jó zenét hallgatni!</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C FEJ</item>
+        <item>crDroid Prémium-ra van szüksége, hogy láthassa ezt</item>
+        <item>Emlékezzen az Egyszarvú eredetére</item>
+        <item>Élvezze a Kiterjesztett akkuidőt</item>
+        <item>Induljunk újra nulláról</item>
+        <item>Ne telefonozzon! Szerelmeskedjen!</item>
+        <item>Szusi nélkül is finom</item>
+        <item>Tegyen ma valami kedveset</item>
+        <item>Ez a legmenőbb Pixel Experience, vagy mégsem?</item>
+        <item>Nem ámítás, legyen üdvözölve a valóságban!</item>
+        <item>Köszönjük a támogatását!</item>
+        <item>Nincs ostobák fesztiválja - csak a tökéletesség!</item>
+        <item>Az építőrobot egyik legjobb válogatása</item>
+        <item>Kivezető út a Paranoiájából</item>
+        <item>Próbáljon egy jeges deszertet</item>
+        <item>Milyen remek élmény, nem igaz?</item>
+        <item>Az evolúció csak kitaláció, ugye?</item>
+        <item>Azzá válik, amit flessel...ne legyen már Krumpli</item>
+        <item>Mi jár a fejében?</item>
+        <item>Expecto Patrorum (Támogatást elfogadunk)</item>
+        <item>Subi-Dubi-Dúúúúú</item>
+        <item>A győztes pedig.......?</item>
+        <item>rm -rf \/</item>
+        <item>A Pringles valójában nem burgonyacsipsz.</item>
+        <item>Tudja mindig mennyire van feltöltve az akksi!</item>
+        <item>Nézze át e-mailjeit / üzeneteit.</item>
+        <item>Nézzen rá nincs-e valami új elvégzendő dolga.</item>
+        <item>A beállításokban módosíthat a Belepillantás viselkedésén</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">Az \'Időjárás\" frissítése</string>
+    <string name="quick_event_ambient_weather_summary">A jelenlegi tartózkodási hely adatait frissíti</string>
+    <string name="quick_event_ambient_weather_enabled_info">Az időjárás-szolgáltatás engedélyezése szükséges</string>
+    <string name="quick_event_weather_clouds">Felhős</string>
+    <string name="quick_event_weather_rain">Esős</string>
+    <string name="quick_event_weather_clear">Napos</string>
+    <string name="quick_event_weather_storm">Viharos</string>
+    <string name="quick_event_weather_snow">Havas</string>
+    <string name="quick_event_weather_wind">Szeles</string>
+    <string name="quick_event_weather_mist">Ködös</string>
+    <string name="quick_event_weather_city_title">Jelenlegi tartózkodási hely</string>
+    <string name="quick_event_weather_city_summary">A jelenlegi tartózkodási hely adatait jeleníti meg</string>
+    <string name="quick_event_weather_text_title">Jelenlegi időjárás</string>
+    <string name="quick_event_weather_text_summary">Megjeleníti az épp aktuális hőfokot és adatokat</string>
+    <string name="intent_no_app_clock_found">Nem található naptári vagy óratevékenység</string>
+    <!-- Freed memory on clear all tasks -->
+    <string name="freed_memory_text">%1$s felszabadítva</string>
+    <string name="optimal_memory_text">Az Ön rendszere most optimális állapotba került</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Feloldás</string>
+    <string name="task_menu_item_lock">Lezárás</string>
+</resources>
