@@ -6180,7 +6180,7 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
     }
 
     private void doScrollScale() {
-        if (showAsGrid())
+        if (showAsGrid() || mActivity.getDeviceProfile().isTablet)
             return;
 
         //nick@lmo-20231004 if rotating launcher is enabled, rotation works differently
