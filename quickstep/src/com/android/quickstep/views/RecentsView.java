@@ -4398,7 +4398,7 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
                         .setScroll(getScrollOffset()));
         setImportantForAccessibility(isModal() ? IMPORTANT_FOR_ACCESSIBILITY_NO
                 : IMPORTANT_FOR_ACCESSIBILITY_AUTO);
-        doScrollScale();
+        if(!mActivity.getDeviceProfile().isTablet) doScrollScale();
     }
 
     private void updatePivots() {
@@ -6026,7 +6026,7 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
     protected void onScrollChanged(int l, int t, int oldl, int oldt) {
         super.onScrollChanged(l, t, oldl, oldt);
         dispatchScrollChanged();
-        doScrollScale();
+        if(!mActivity.getDeviceProfile().isTablet) doScrollScale();
     }
 
     private void doScrollScale() {
