@@ -161,10 +161,10 @@
     <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">در یک دید</string>
-    <string name="show_quickspace_summary">Show at the top of your home screen</string>
+    <string name="show_quickspace_summary">در بالای صفحه اصلی نمایش داده شود</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">به crDroid خوش آمدید!</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">زمان crDroid!</string>
     <string-array name="welcome_message_variants">
         <item>Thank you for choosing us</item>
         <item>Loving us? Send us a beer</item>
@@ -174,26 +174,30 @@
         <item>We love you 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
-    <string name="quickspace_ext_two">It\'s</string>
+    <string name="quickspace_grt_morning">صبح بخیر.</string>
+    <string name="quickspace_grt_evening">عصر بخیر.</string>
+    <string name="quickspace_grt_afternoon">عصر بخیر.</string>
+    <string name="quickspace_grt_night">شب بخیر.
+شب خوش.</string>
+    <string name="quickspace_grt_general">روز بخیر.
+روز خوش.</string>
+    <string name="quickspace_ext_one">امروز است</string>
+    <string name="quickspace_ext_two">این است
+اینه</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
-    <string name="qe_now_playing_ext_one">Now playing</string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_unknown_artist">هنرمند ناشناس</string>
+    <string name="qe_now_playing_ext_one">در حال بازی کردن</string>
+    <string name="qe_now_playing_by">توسط
+با</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Now playing</string>
-    <string name="quickspace_now_playing_summary">Show the song you\'re playing</string>
+    <string name="quickspace_now_playing_title">در حال بازی کردن</string>
+    <string name="quickspace_now_playing_summary">آهنگی را که در حال پخش آن هستید نشان دهید</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">Minimalistic style</string>
     <string name="quickspace_alternate_style_summary">Switch to modern style</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Random messages</string>
-    <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
+    <string name="quickspace_psa_title">پیام های تصادفی</string>
+    <string name="quickspace_psa_summary">با پیام های تصادفی همراه خود را سرزنده تر کنید</string>
     <string-array name="quickspace_psa_morning">
         <item>صبح بخیر!</item>
         <item>صبح بخیر، وقتشه بترکونیم!</item>
@@ -201,25 +205,26 @@
         <item>روز خوبی داشته باشید!</item>
         <item>نظرتون در مورد یک چرت کوچک ۵ دقیقه ای چیه؟</item>
         <item>بریم یه نون بخوریم.</item>
-        <item>Mornings are a fresh canvas for your daily masterpiece.</item>
-        <item>Embrace the sunrise of opportunity each morning.</item>
-        <item>In the early light, find the power to illuminate your path.</item>
-        <item>Your day begins with endless possibilities.</item>
-        <item>Every sunrise is a reminder that you can start anew.</item>
-        <item>Awake with purpose, conquer the day ahead.</item>
-        <item>Your thoughts can be the foundation of great achievements.</item>
-        <item>The world awakens, and so does your potential.</item>
-        <item>The first chapter in your daily adventure.</item>
-        <item>Let your morning routine be the launchpad for success.</item>
-        <item>Sunrise or not, your potential is always on the rise.</item>
+        <item>صبح ها بوم تازه ای برای شاهکار روزانه شماست.</item>
+        <item>هر روز صبح طلوع فرصت را در آغوش بگیرید.</item>
+        <item>در نور اولیه، قدرت روشن کردن مسیر خود را پیدا کنید.</item>
+        <item>روزتان با امکانات بی پایان آغاز می شود.</item>
+        <item>هر طلوع خورشید یادآوری است که می توانید از نو شروع کنید.</item>
+        <item>با هدف بیدار شوید، روز پیش رو را فتح کنید.</item>
+        <item>افکار شما می تواند پایه و اساس دستاوردهای بزرگ باشد.</item>
+        <item>جهان بیدار می شود و پتانسیل شما نیز بیدار می شود.</item>
+        <item>فصل اول در ماجراجویی روزانه شما.</item>
+        <item>بگذارید روال صبحگاهی شما سکوی پرتاب موفقیت باشد.</item>
+        <item>طلوع خورشید یا نه، پتانسیل شما همیشه در حال افزایش است.</item>
         <item>It\'s time for fresh ideas and bold actions.</item>
-        <item>The early bird catches the worm, but you can catch your dreams.</item>
-        <item>Find the courage to chase your aspirations.</item>
-        <item>Rise and shine, for greatness awaits.</item>
-        <item>The best time to start is now.</item>
+        <item>پرنده اولیه کرم را می گیرد، اما شما می توانید رویاهای خود را بگیرید.</item>
+        <item>شجاعتِ دنبال کردنِ آرزوهای خود را پیدا کنید.</item>
+        <item>برخیز و بدرخش، زیرا بزرگی در انتظار است.</item>
+        <item>بهترین زمان برای شروع همین الان است.
+بهترین زمان برای شروع همین حالا است.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Chase your dreams, not the minutes.</item>
+        <item>دنبال رویاهات برو نه دقیقه ها.</item>
         <item>In every moment, a new opportunity.</item>
         <item>Embrace the journey, not just the destination.</item>
         <item>Today is a gift, that\'s why it\'s called the present.</item>
