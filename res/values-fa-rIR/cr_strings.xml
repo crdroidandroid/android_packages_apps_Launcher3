@@ -40,9 +40,9 @@
     <string name="dev_options_summary">ویژگی های مخفی بیشتری را با مسئولیت خود فعال کنید</string>
     <!-- Edit workspace -->
     <string name="settings_lock_layout_title">قفل کردن طرح چیدمان</string>
-    <string name="settings_lock_layout_summary_on">Icons and widgets can\'t be added, removed and moved on the homescreen</string>
-    <string name="settings_lock_layout_summary_off">Icons and widgets can be added, removed and moved on the homescreen</string>
-    <string name="settings_edit_widgets_error">It\'s not possible to add widgets to the home screen</string>
+    <string name="settings_lock_layout_summary_on">نمادها و ویجت ها را نمی توان اضافه، حذف و در صفحه اصلی منتقل کرد</string>
+    <string name="settings_lock_layout_summary_off">آیکون ها و ویجت ها را می توان در صفحه اصلی اضافه، حذف و منتقل کرد</string>
+    <string name="settings_edit_widgets_error">امکان افزودن ویجت ها به صفحه اصلی وجود ندارد</string>
     <!-- Hide labels -->
     <string name="desktop_show_labels">نمایش نام برنامه ها در صفحه اصلی</string>
     <string name="drawer_show_labels">نمایش نام برنامه ها در کشو برنامه ها</string>
@@ -66,11 +66,11 @@
     <string name="suggestion_pref_screen_desc">پیشنهاد‌ها در صفحه خانه &amp; برای همه برنامه‌ها</string>
     <!-- Pause apps shortcut -->
     <string name="pause">توقف</string>
-    <string name="pause_apps_dialog_title">Pause %1$s?</string>
-    <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
+    <string name="pause_apps_dialog_title">%1$s مکث شود?</string>
+    <string name="pause_apps_dialog_message">اعلان‌های %1$s متوقف می‌شوند</string>
     <string name="paused_apps_dialog_title">برنامه متوقف شده است</string>
-    <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
-    <string name="paused_apps_drop_target_label">Pause app</string>
+    <string name="paused_apps_dialog_message">%1$s مستقیماً از راه‌انداز متوقف شد</string>
+    <string name="paused_apps_drop_target_label">مکث برنامه</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">برای حالت خواب دوبار ضربه بزنید</string>
     <string name="pref_sleep_gesture_summary">برای خاموش کردن صفحه نمایش روی فضای خالی صفحه دوبار ضربه بزنید</string>
@@ -103,8 +103,8 @@
     <string name="dock_theme_summary">استفاده کردن از آیکن های تم برای پنل جستجو</string>
     <string name="search_radius_title">شعاع گوشه</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <string name="hotseat_bg_title">پس زمینه صندلی داغ</string>
+    <string name="hotseat_bg_summary">پس زمینه شفاف را به داک برنامه اضافه کنید</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">شفافیت پس‌زمینه</string>
     <!-- Wallpaper scrolling -->
@@ -133,7 +133,7 @@
     <string name="recents_shake_clear_all_title">Shake phone to clear all tasks</string>
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">آیکن های تم</string>
-    <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
+    <string name="pref_themed_icons_summary">نمادهای مضمون مورد استفاده در صفحه اصلی را دنبال کنید</string>
     <!-- AppInfo -->
     <string name="app_info_source">منبع</string>
     <string name="app_info_source_system">سیستم</string>
