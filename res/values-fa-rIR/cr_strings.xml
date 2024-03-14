@@ -120,10 +120,10 @@
     <string name="meminfo_text">%1$s در دسترس است / در کل %2$s</string>
     <string name="recents_meminfo_title">اطلاعات حافظه</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <string name="hotseat_bg_title">پس زمینه صندلی داغ</string>
+    <string name="hotseat_bg_summary">پس زمینه شفاف را به داک برنامه اضافه کنید</string>
     <!-- AppInfo -->
-    <string name="app_info_subtext">Swipe down to close app info</string>
+    <string name="app_info_subtext">برای بستن اطلاعات برنامه، انگشت خود را به پایین بکشید</string>
     <string name="app_info_source">منبع</string>
     <string name="app_info_source_system">سیستم</string>
     <string name="app_info_last_update">آخرین بروزرسانی</string>
@@ -131,5 +131,5 @@
     <string name="app_info_more">بیشتر</string>
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">آیکن های تم</string>
-    <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
+    <string name="pref_themed_icons_summary">نمادهای مضمون مورد استفاده در صفحه اصلی را دنبال کنید</string>
 </resources>
