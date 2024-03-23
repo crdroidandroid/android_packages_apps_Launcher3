@@ -116,26 +116,26 @@
     <string name="show_quickspace_summary">Mostrado no topo do ecrã inicial</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Bem-vindo à crDroid!</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">Hora do crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
+        <item>Obrigado por nos escolher</item>
+        <item>A gostar de nós? Envie-nos uma cerveja</item>
+        <item>A melhor ROM de sempre.</item>
+        <item>Diga-nos olá no Telegram</item>
+        <item>Toque aqui para começar</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
-    <string name="quickspace_ext_two">It\'s</string>
+    <string name="quickspace_grt_morning">Bom dia.</string>
+    <string name="quickspace_grt_evening">Boa noite.</string>
+    <string name="quickspace_grt_afternoon">Boa tarde.</string>
+    <string name="quickspace_grt_night">Boa noite.</string>
+    <string name="quickspace_grt_general">Bom dia.</string>
+    <string name="quickspace_ext_one">Hoje é</string>
+    <string name="quickspace_ext_two">É</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
+    <string name="qe_now_playing_unknown_artist">Artista Desconhecido</string>
     <string name="qe_now_playing_ext_one">Em reprodução</string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_by">Por</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Em reprodução</string>
     <string name="quickspace_now_playing_summary">Mostrar a música que está a tocar</string>
