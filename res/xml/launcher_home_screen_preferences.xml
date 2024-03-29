@@ -29,7 +29,8 @@
             android:defaultValue="true"
             android:persistent="true"
             launcher:logIdOn="613"
-            launcher:logIdOff="614" />
+            launcher:logIdOff="614"
+            launcher:iconSpaceReserved="false" />
 
     </PreferenceCategory>
 
