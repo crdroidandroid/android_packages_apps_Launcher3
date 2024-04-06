@@ -26,8 +26,8 @@
     <string name="icons_category_summary">アイコンサイズとその他を設定します</string>
     <string name="app_drawer_category_title">アプリドロワー</string>
     <string name="app_drawer_category_summary">アプリドロワーのカスタマイズが行えます</string>
-    <string name="recents_category_title">Recents</string>
-    <string name="recents_category_summary">Revamp the overview screen</string>
+    <string name="recents_category_title">最近</string>
+    <string name="recents_category_summary">概要画面を更新します</string>
     <string name="misc_category_title">その他</string>
     <string name="misc_category_summary">その他のオプション</string>
     <string name="general_category_title">一般</string>
@@ -44,16 +44,16 @@
     <string name="settings_lock_layout_summary_off">アイコンやウィジェットの追加、削除、移動を許可します</string>
     <string name="settings_edit_widgets_error">ホーム画面にウィジェットを追加することはできません</string>
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Icon labels on desktop</string>
-    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <string name="desktop_show_labels">デスクトップ上のアイコンラベル</string>
+    <string name="drawer_show_labels">ドロワーのアイコンラベル</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Swipe to access Google app</string>
+    <string name="title_show_google_app">スワイプしてGoogleアプリを開く</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">When you swipe right from main home screen</string>
+    <string name="msg_minus_one_on_left">メインホーム画面から右にスワイプして表示</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">When you swipe left from main home screen</string>
+    <string name="msg_minus_one_on_right">メインホーム画面から左にスワイプして表示</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
+    <string name="trust_apps_manager_name">非表示 &amp; 保護アプリ</string>
     <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
     <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
     <string name="trust_apps_loading">\u2026 を読み込み中...</string>
