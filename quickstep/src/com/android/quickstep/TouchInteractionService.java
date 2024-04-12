@@ -553,7 +553,11 @@ public class TouchInteractionService extends Service {
                 mOverviewComponentObserver, mTaskAnimationManager);
         mResetGestureInputConsumer = new ResetGestureInputConsumer(
                 mTaskAnimationManager, mTaskbarManager::getCurrentActivityContext);
-        mInputConsumer.registerInputConsumer();
+        try {
+            mInputConsumer.registerInputConsumer();
+        } catch (Exception e) {
+            Log.e(TAG, "Failure registering InputConsumer", e);
+        }
         onSystemUiFlagsChanged(mDeviceState.getSystemUiStateFlags());
         onAssistantVisibilityChanged();
 
