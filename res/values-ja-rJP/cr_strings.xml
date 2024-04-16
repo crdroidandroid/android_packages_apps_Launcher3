@@ -54,16 +54,16 @@
     <string name="msg_minus_one_on_right">メインホーム画面から左にスワイプして表示</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">非表示 &amp; 保護アプリ</string>
-    <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
-    <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
+    <string name="trust_apps_auth_manager">ロック解除して非表示と保護されたアプリを管理する</string>
+    <string name="trust_apps_auth_open_app">認証して %1$s を開く</string>
     <string name="trust_apps_loading">\u2026 を読み込み中...</string>
-    <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
+    <string name="trust_apps_no_lock_error">アプリのアクセス制限をするには画面ロックの設定をしてください</string>
     <string name="trust_apps_help">ヘルプ</string>
-    <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
-    <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
+    <string name="trust_apps_info_hidden">非表示アプリとそのウィジェットはドロワー内で非表示になります</string>
+    <string name="trust_apps_info_protected">保護されているアプリを開くには認証が必要です</string>
     <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Suggestions</string>
-    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+    <string name="suggestion_pref_screen_title">提案</string>
+    <string name="suggestion_pref_screen_desc">全てのアプリとホーム画面の候補</string>
     <!-- Pause apps shortcut -->
     <string name="pause">一時停止</string>
     <string name="pause_apps_dialog_title">%1$s を一時停止しますか？</string>
@@ -77,29 +77,29 @@
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">値: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">デフォルト</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_default_value_to_set">デフォルト値: <xliff:g id="v">%s</xliff:g>\n長押しで設定</string>
+    <string name="custom_seekbar_default_value_is_set">デフォルトの値が設定されています</string>
     <!-- Icon size -->
     <string name="icon_size_title">アイコンのサイズ</string>
     <!-- Font size -->
     <string name="font_size_title">フォントのサイズ</string>
     <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Max lines for app label</string>
+    <string name="icon_max_lines_title">アプリラベルの最大行数</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">強制停止</string>
     <string name="recents_app_killed">アプリを強制停止しました</string>
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">タスクバーを使用する</string>
-    <string name="pref_allow_phone_taskbar_summary">For opening and switching apps anywhere</string>
+    <string name="pref_allow_phone_taskbar_summary">アプリをどこでも開いたり切り替えたりできます</string>
     <!-- Hotseat searchbar -->
-    <string name="label_search">Search</string>
-    <string name="label_lens">Google Lens</string>
-    <string name="label_voice_search">Voice search</string>
+    <string name="label_search">検索</string>
+    <string name="label_lens">Google レンズ</string>
+    <string name="label_voice_search">音声検索</string>
     <string name="dock_music_search_title">音楽の検索</string>
     <string name="dock_music_search_summary">マイクアイコンを押して音楽検索を開始します</string>
     <string name="dock_search_title">Google 検索バー</string>
-    <string name="dock_search_summary">Search bar in the bottom dock</string>
-    <string name="dock_theme_title">Themed icons</string>
+    <string name="dock_search_summary">ドックの下部に検索バーを表示します</string>
+    <string name="dock_theme_title">テーマアイコン</string>
     <string name="dock_theme_summary">Use themed icons for search bar</string>
     <string name="search_radius_title">Corner radius</string>
     <!-- Hotseat Background -->
