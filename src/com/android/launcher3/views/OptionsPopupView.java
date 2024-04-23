@@ -209,10 +209,10 @@ public class OptionsPopupView<T extends Context & ActivityContext> extends Arrow
     public static ArrayList<OptionItem> getOptions(Launcher launcher) {
         ArrayList<OptionItem> options = new ArrayList<>();
         options.add(new OptionItem(launcher,
-                R.string.styles_wallpaper_button_text,
-                R.drawable.ic_palette,
-                IGNORE,
-                OptionsPopupView::startWallpaperPicker));
+                R.string.settings_title,
+                R.drawable.ic_setting,
+                LAUNCHER_SETTINGS_BUTTON_TAP_OR_LONGPRESS,
+                OptionsPopupView::startSettings));
         if (WIDGETS_ENABLED && !LauncherPrefs.WORKSPACE_LOCK.get(launcher)) {
             options.add(new OptionItem(launcher,
                     R.string.widget_button_text,
@@ -233,10 +233,10 @@ public class OptionsPopupView<T extends Context & ActivityContext> extends Arrow
                 LAUNCHER_ALL_APPS_TAP_OR_LONGPRESS,
                 OptionsPopupView::enterAllApps));
         options.add(new OptionItem(launcher,
-                R.string.settings_title,
-                R.drawable.ic_setting,
-                LAUNCHER_SETTINGS_BUTTON_TAP_OR_LONGPRESS,
-                OptionsPopupView::startSettings));
+                R.string.styles_wallpaper_button_text,
+                R.drawable.ic_palette,
+                IGNORE,
+                OptionsPopupView::startWallpaperPicker));
         return options;
     }
 
