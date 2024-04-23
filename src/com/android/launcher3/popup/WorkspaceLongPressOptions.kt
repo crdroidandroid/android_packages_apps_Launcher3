@@ -55,14 +55,23 @@ object WorkspaceLongPressOptions {
     fun getAll(ctx: Context): List<PopupData> = buildList {
         add(
             PopupData(
-                R.drawable.ic_palette,
-                R.string.styles_wallpaper_button_text,
+                R.drawable.ic_setting,
+                R.string.settings_title,
                 SYSTEM_SHORTCUT,
-                IGNORE,
-            ) { ac, _, v ->
-                startWallpaperPicker(ac, v)
+                LAUNCHER_SETTINGS_BUTTON_TAP_OR_LONGPRESS,
+            ) { ac, _, _ ->
+                TestLogging.recordEvent(TestProtocol.SEQUENCE_MAIN, "start: startSettings")
+                ac.asContext()
+                    .startActivity(
+                        Intent(Intent.ACTION_APPLICATION_PREFERENCES)
+                            .setPackage(ac.asContext().packageName)
+                            .addFlags(
+                                Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                            )
+                    )
             }
         )
+
         if (BuildConfig.WIDGETS_ENABLED && !LauncherPrefs.WORKSPACE_LOCK.get(ctx)) {
             add(
                 PopupData(
@@ -139,20 +148,12 @@ object WorkspaceLongPressOptions {
 
         add(
             PopupData(
-                R.drawable.ic_setting,
-                R.string.settings_title,
+                R.drawable.ic_palette,
+                R.string.styles_wallpaper_button_text,
                 SYSTEM_SHORTCUT,
-                LAUNCHER_SETTINGS_BUTTON_TAP_OR_LONGPRESS,
-            ) { ac, _, _ ->
-                TestLogging.recordEvent(TestProtocol.SEQUENCE_MAIN, "start: startSettings")
-                ac.asContext()
-                    .startActivity(
-                        Intent(Intent.ACTION_APPLICATION_PREFERENCES)
-                            .setPackage(ac.asContext().packageName)
-                            .addFlags(
-                                Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                            )
-                    )
+                IGNORE,
+            ) { ac, _, v ->
+                startWallpaperPicker(ac, v)
             }
         )
 
