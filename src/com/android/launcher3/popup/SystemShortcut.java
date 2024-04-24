@@ -16,6 +16,7 @@ import static android.app.ActivityOptions.MODE_BACKGROUND_ACTIVITY_START_ALLOWED
 import android.app.Activity;
 import android.app.ActivityManagerNative;
 import android.app.ActivityOptions;
+import android.app.IActivityManager;
 import android.app.AlertDialog;
 import android.app.AppGlobals;
 import android.content.ComponentName;
@@ -570,6 +571,35 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
                     MODE_BACKGROUND_ACTIVITY_START_ALLOWED);
             activityOptions.setPendingIntentBackgroundActivityLaunchAllowedByPermission(true);
             return activityOptions;
+        }
+    }
+
+
+    public static final Factory<ActivityContext> KILL_APP = (activity, itemInfo, originalView) -> {
+        String packageName = itemInfo.getTargetComponent().getPackageName();
+        return packageName == null ? null : new KillApp(activity, itemInfo, originalView);
+    };
+
+    public static class KillApp extends SystemShortcut<ActivityContext> {
+        private final String mPackageName;
+
+        public KillApp(ActivityContext target, ItemInfo itemInfo, View originalView) {
+            super(R.drawable.ic_kill_app, R.string.recent_task_option_kill_app,
+                    target, itemInfo, originalView);
+            mPackageName = itemInfo.getTargetComponent().getPackageName();
+        }
+
+        @Override
+        public void onClick(View view) {
+            if (mPackageName != null) {
+                IActivityManager iam = ActivityManagerNative.getDefault();
+                try {
+                    iam.forceStopPackage(mPackageName, UserHandle.USER_CURRENT);
+                    Toast appKilled = Toast.makeText(view.getContext(), R.string.recents_app_killed, Toast.LENGTH_SHORT);
+                    appKilled.show();
+                    AbstractFloatingView.closeAllOpenViews(mTarget);
+                } catch (RemoteException e) { }
+            }
         }
     }
 
