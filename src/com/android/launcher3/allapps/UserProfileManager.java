@@ -85,7 +85,8 @@ public abstract class UserProfileManager {
      * Sets Quiet Mode for Private Profile.
      * If {@link SecurityException} is thrown, prompts the user to set this launcher as HOME app.
      */
-    private void setQuietModeSafely(boolean enable, UserHandle userHandle, Context context) {
+    protected final void setQuietModeSafely(boolean enable, UserHandle userHandle,
+            Context context) {
         try {
             mUserManager.requestQuietModeEnabled(enable, userHandle);
         } catch (SecurityException ex) {

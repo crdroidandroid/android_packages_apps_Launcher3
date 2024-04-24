@@ -28,7 +28,9 @@ import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_HAS_SHORTCU
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_QUIET_MODE_CHANGE_PERMISSION;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_QUIET_MODE_ENABLED;
 import static com.android.launcher3.model.BgDataModel.Callbacks.FLAG_WORK_PROFILE_QUIET_MODE_ENABLED;
+import static com.android.launcher3.util.Executors.UI_HELPER_EXECUTOR;
 
+import android.content.Context;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.Log;
@@ -65,10 +67,15 @@ public class WorkProfileManager extends UserProfileManager
 
     private boolean mHasMultipleProfiles;
 
+    private final UserManager mUserManager;
+    private final UserCache mUserCache;
+
     public WorkProfileManager(
             UserManager userManager, ActivityAllAppsContainerView allApps,
             StatsLogManager statsLogManager, UserCache userCache) {
         super(userManager, statsLogManager, userCache);
+        mUserManager = userManager;
+        mUserCache = userCache;
         mAllApps = allApps;
         mWorkProfileMatcher = (user) -> userCache.getUserInfo(user).isWork();
     }
@@ -254,5 +261,15 @@ public class WorkProfileManager extends UserProfileManager
     @Override
     public Predicate<UserHandle> getUserMatcher() {
         return mWorkProfileMatcher;
+    }
+
+    @Override
+    protected void setQuietMode(boolean enabled, Context context) {
+        UI_HELPER_EXECUTOR.post(() ->
+                mUserCache.getUserProfiles()
+                        .stream()
+                        .filter(getUserMatcher())
+                        .forEach(userHandle ->
+                                setQuietModeSafely(enabled, userHandle, context)));
     }
 }
