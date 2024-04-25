@@ -135,13 +135,13 @@ public class WorkProfileManager extends UserProfileManager
         if (getAH() != null) {
             getAH().mAppsList.updateAdapterItems();
         }
-        if (mWorkUtilityView != null) {
-            updateWorkUtilityViews(mAllApps.getCurrentPage());
-        }
         if (shouldShowWorkApps()) {
             attachWorkUtilityViews();
         } else if (getCurrentState() == STATE_DISABLED) {
             detachWorkUtilityViews();
+        }
+        if (mWorkUtilityView != null) {
+            updateWorkUtilityViews(mAllApps.getCurrentPage());
         }
     }
 
