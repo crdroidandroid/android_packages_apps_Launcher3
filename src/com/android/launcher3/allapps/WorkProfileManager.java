@@ -122,13 +122,13 @@ public class WorkProfileManager extends UserProfileManager
         if (getAH() != null) {
             getAH().mAppsList.updateAdapterItems();
         }
-        if (mWorkModeSwitch != null) {
-            updateWorkFAB(mAllApps.getCurrentPage());
-        }
         if (getCurrentState() == STATE_ENABLED) {
             attachWorkModeSwitch();
         } else if (getCurrentState() == STATE_DISABLED) {
             detachWorkModeSwitch();
+        }
+        if (mWorkModeSwitch != null) {
+            updateWorkFAB(mAllApps.getCurrentPage());
         }
     }
 
