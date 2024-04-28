@@ -60,7 +60,6 @@ public class QuickEventsController {
     private int mEventSubIcon = 0;
 
     private boolean mIsQuickEvent = false;
-    private boolean mRunning = true;
     private boolean mRegistered = false;
 
     // Device Intro
@@ -68,13 +67,7 @@ public class QuickEventsController {
     private SharedPreferences mPreferences;
 
     // PSA + Personality
-    private String[] mPSAMorningStr;
-    private String[] mPSAEvenStr;
-    private String[] mPSAAfterNoonStr;
-    private String[] mPSAMidniteStr;
-    private String[] mPSARandomStr;
-    private String[] mPSAEarlyEvenStr;
-    private String[] mWelcomeStr;
+    private String[] mPSAStr;
     private BroadcastReceiver mPSAListener = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -118,17 +111,17 @@ public class QuickEventsController {
     }
 
     public void updateQuickEvents() {
-        deviceIntroEvent();
-        nowPlayingEvent();
-        initNowPlayingEvent();
-        psonalityEvent();
+        if (!mRegistered) return;
+        if (mIsFirstTimeDone) {
+            nowPlayingEvent();
+            initNowPlayingEvent();
+            psonalityEvent();
+        } else {
+            deviceIntroEvent();
+        }
     }
 
     private void deviceIntroEvent() {
-        if (!mRunning) return;
-
-        if (mIsFirstTimeDone) return;
-        
         mIsQuickEvent = true;
 
         if (Utilities.useAlternativeQuickspaceUI(mContext)) {
@@ -136,8 +129,8 @@ public class QuickEventsController {
         } else {
             mEventTitle = mContext.getResources().getString(R.string.quick_event_rom_intro_welcome);
         }
-        mWelcomeStr = mContext.getResources().getStringArray(R.array.welcome_message_variants);
-        mEventTitleSub = mWelcomeStr[getLuckyNumber(0,mWelcomeStr.length - 1)];
+        mPSAStr = mContext.getResources().getStringArray(R.array.welcome_message_variants);
+        mEventTitleSub = mPSAStr[getLuckyNumber(0, mPSAStr.length - 1)];
         mEventSubIcon = R.drawable.ic_quickspace_crdroid;
         mGreetings = mContext.getResources().getString(R.string.quickspace_grt_general);
         mClockExt = mContext.getResources().getString(R.string.quickspace_ext_two);
@@ -161,7 +154,7 @@ public class QuickEventsController {
         };
     }
 
-    public void nowPlayingEvent() {
+    private void nowPlayingEvent() {
         if (mEventNowPlaying) {
             boolean infoExpired = !mPlayingActive || mClientLost;
             if (infoExpired) {
@@ -171,17 +164,13 @@ public class QuickEventsController {
         }
     }
 
-    public void initNowPlayingEvent() {
-        if (!mRunning) return;
-
-        if (!mIsFirstTimeDone) return;
-
+    private void initNowPlayingEvent() {
         if (!Utilities.isQuickspaceNowPlaying(mContext)) return;
 
         if (!mPlayingActive) return;
 
         if (mNowPlayingTitle == null) return;
-        
+
         mEventTitle = mNowPlayingTitle;
         mGreetings = mContext.getResources().getString(R.string.qe_now_playing_ext_one);
         mClockExt = "";
@@ -249,18 +238,10 @@ public class QuickEventsController {
 	    };
     }
 
-    public void psonalityEvent() {
-        if (!mIsFirstTimeDone || mEventNowPlaying) return;
-	
-	mEventTitle = Utilities.formatDateTime(mContext);
-        mPSAMorningStr = mContext.getResources().getStringArray(R.array.quickspace_psa_morning);
-        mPSAEvenStr = mContext.getResources().getStringArray(R.array.quickspace_psa_evening);
-        mPSAEarlyEvenStr = mContext.getResources().getStringArray(R.array.quickspace_psa_early_evening);
-        mPSAMidniteStr = mContext.getResources().getStringArray(R.array.quickspace_psa_midnight);
-        mPSAAfterNoonStr = mContext.getResources().getStringArray(R.array.quickspace_psa_noon);
-        mPSARandomStr = mContext.getResources().getStringArray(R.array.quickspace_psa_random);
-        int psaLength;
+    private void psonalityEvent() {
+        if (mEventNowPlaying) return;
 
+	    mEventTitle = Utilities.formatDateTime(mContext);
         mEventTitleSubAction = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -313,12 +294,18 @@ public class QuickEventsController {
             mClockExt = mContext.getResources().getString(R.string.quickspace_ext_two);
         }
 
-        if (getLuckyNumber(13) <= 7) {
+        if (!Utilities.isQuickspacePersonalityEnabled(mContext)) {
             mIsQuickEvent = false;
             return;
-        } else if (getLuckyNumber(13) == 7) {
-            psaLength = mPSARandomStr.length - 1;
-            mEventTitleSub = mPSARandomStr[getLuckyNumber(0, psaLength)];
+        }
+
+        int luckNumber = getLuckyNumber(13);
+        if (luckNumber < 7) {
+            mIsQuickEvent = false;
+            return;
+        } else if (luckNumber == 7) {
+            mPSAStr = mContext.getResources().getStringArray(R.array.quickspace_psa_random);
+            mEventTitleSub = mPSAStr[getLuckyNumber(0, mPSAStr.length - 1)];
             mEventSubIcon = R.drawable.ic_quickspace_crdroid;
             mIsQuickEvent = true;
             return;
@@ -328,32 +315,32 @@ public class QuickEventsController {
 
         switch (hourOfDay) {
             case 5: case 6: case 7: case 8: case 9:
-                psaLength = mPSAMorningStr.length - 1;
-                mEventTitleSub = mPSAMorningStr[getLuckyNumber(0, psaLength)];
+                mPSAStr = mContext.getResources().getStringArray(R.array.quickspace_psa_morning);
+                mEventTitleSub = mPSAStr[getLuckyNumber(0, mPSAStr.length - 1)];
                 mIsQuickEvent = true;
                 break;
 
             case 19: case 20: case 21:
-                psaLength = mPSAEvenStr.length - 1;
-                mEventTitleSub = mPSAEvenStr[getLuckyNumber(0, psaLength)];
+                mPSAStr = mContext.getResources().getStringArray(R.array.quickspace_psa_evening);
+                mEventTitleSub = mPSAStr[getLuckyNumber(0, mPSAStr.length - 1)];
                 mIsQuickEvent = true;
                 break;
 
             case 16: case 17: case 18:
-                psaLength = mPSAEarlyEvenStr.length - 1;
-                mEventTitleSub = mPSAEarlyEvenStr[getLuckyNumber(0, psaLength)];
+                mPSAStr = mContext.getResources().getStringArray(R.array.quickspace_psa_early_evening);
+                mEventTitleSub = mPSAStr[getLuckyNumber(0, mPSAStr.length - 1)];
                 mIsQuickEvent = true;
                 break;
 
             case 12: case 13: case 14: case 15:
-                psaLength = mPSAAfterNoonStr.length - 1;
-                mEventTitleSub = mPSAAfterNoonStr[getLuckyNumber(0, psaLength)];
+                mPSAStr = mContext.getResources().getStringArray(R.array.quickspace_psa_noon);
+                mEventTitleSub = mPSAStr[getLuckyNumber(0, mPSAStr.length - 1)];
                 mIsQuickEvent = true;
                 break;
 
             case 0: case 1: case 2: case 3:
-                psaLength = mPSAMidniteStr.length - 1;
-                mEventTitleSub = mPSAMidniteStr[getLuckyNumber(0, psaLength)];
+                mPSAStr = mContext.getResources().getStringArray(R.array.quickspace_psa_midnight);
+                mEventTitleSub = mPSAStr[getLuckyNumber(0, mPSAStr.length - 1)];
                 mIsQuickEvent = true;
                 break;
 
@@ -416,12 +403,10 @@ public class QuickEventsController {
     }
 
     public void onPause() {
-        mRunning = false;
         unregisterPSAListener();
     }
 
     public void onResume() {
-        mRunning = true;
         registerPSAListener();
     }
 }

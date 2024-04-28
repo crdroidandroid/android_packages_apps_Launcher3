@@ -139,25 +139,21 @@ public class QuickspaceController implements NotificationListener.NotificationsC
     }
 
     private void playbackStateUpdate(int state) {
-        boolean active;
         switch (state) {
             case RemoteControlClient.PLAYSTATE_PLAYING:
-                active = true;
+                mMediaActive = true;
                 break;
             case RemoteControlClient.PLAYSTATE_ERROR:
             case RemoteControlClient.PLAYSTATE_PAUSED:
             default:
-                active = false;
+                mMediaActive = false;
                 break;
-        }
-        if (active != mMediaActive) {
-            mMediaActive = active;
         }
         updateMediaInfo();
     }
 
     public void updateMediaInfo() {
-        if (mEventsController != null) {
+        if (mEventsController != null && Utilities.isQuickspaceNowPlaying(mContext)) {
             mEventsController.setMediaInfo(mMetadata.trackTitle, mMetadata.trackArtist, mClientLost, mMediaActive);
             mEventsController.updateQuickEvents();
             notifyListeners();
