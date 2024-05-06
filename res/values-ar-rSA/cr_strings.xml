@@ -175,16 +175,16 @@
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">صباح الخير.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
-    <string name="quickspace_ext_two">It\'s</string>
+    <string name="quickspace_grt_evening">مساء الخير.</string>
+    <string name="quickspace_grt_afternoon">طابت ظهيرتك.</string>
+    <string name="quickspace_grt_night">طابت ليلتك.</string>
+    <string name="quickspace_grt_general">يوم سعيد.</string>
+    <string name="quickspace_ext_one">اليوم هو</string>
+    <string name="quickspace_ext_two">إنها</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="qe_now_playing_unknown_artist">فنان غير معروف</string>
     <string name="qe_now_playing_ext_one">قيد التشغيل</string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_by">بواسطة</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">قيد التشغيل</string>
     <string name="quickspace_now_playing_summary">عرض الأغنية التي شغلتها</string>
@@ -201,7 +201,7 @@
         <item>نتمنى لك يوماً سعيداً!</item>
         <item>ما رأيك بغفوة لخمس دقائق؟</item>
         <item>دعونا ننجز ذلك.</item>
-        <item>Mornings are a fresh canvas for your daily masterpiece.</item>
+        <item>الصباح هو لوحة قماشية جديدة لتحفتك اليومية.</item>
         <item>Embrace the sunrise of opportunity each morning.</item>
         <item>In the early light, find the power to illuminate your path.</item>
         <item>Your day begins with endless possibilities.</item>
