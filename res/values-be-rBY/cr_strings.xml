@@ -164,7 +164,9 @@
     <string name="show_quickspace_summary">Паказваць у верхняй частцы экрана</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">Сардэчна запрашаем у crDroid!</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">Ідэнтыфікатар (ключ): quick_event_rom_intro_welcome_ext
+quick_event_rom_intro_welcome_ext
+Файл: cr_strings.xml</string>
     <string-array name="welcome_message_variants">
         <item>Thank you for choosing us</item>
         <item>Loving us? Send us a beer</item>
