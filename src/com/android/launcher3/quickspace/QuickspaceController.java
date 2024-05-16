@@ -15,15 +15,19 @@
  */
 package com.android.launcher3.quickspace;
 
+import android.annotation.NonNull;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
 import android.media.AudioManager;
-import android.media.MediaMetadataRetriever;
-import android.media.RemoteControlClient;
-import android.media.RemoteController;
+import android.media.MediaMetadata;
+import android.media.session.MediaController;
+import android.media.session.MediaSession;
+import android.media.session.MediaSessionManager;
+import android.media.session.PlaybackState;
 import android.os.Handler;
 import android.service.notification.StatusBarNotification;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.android.internal.util.crdroid.OmniJawsClient;
@@ -56,24 +60,36 @@ public class QuickspaceController implements NotificationListener.NotificationsC
     private boolean mUseImperialUnit;
 
     private AudioManager mAudioManager;
-    private Metadata mMetadata = new Metadata();
-    private RemoteController mRemoteController;
-    private boolean mClientLost = true;
-    private boolean mMediaActive = false;
+    private MediaController mController;
+    private MediaMetadata mMediaMetadata;
+    private String mLastTrackTitle = null;
+
     private ExecutorService executorService = Executors.newSingleThreadExecutor();
 
     public interface OnDataListener {
         void onDataUpdated();
     }
 
+    private final MediaController.Callback mMediaCallback = new MediaController.Callback() {
+        @Override
+        public void onPlaybackStateChanged(@NonNull PlaybackState state) {
+            updateMediaController();
+        }
+        @Override
+        public void onMetadataChanged(MediaMetadata metadata) {
+            super.onMetadataChanged(metadata);
+            mMediaMetadata = metadata;
+            updateMediaController();
+        }
+    };
+
     public QuickspaceController(Context context) {
         mContext = context;
         mHandler = new Handler();
         mEventsController = new QuickEventsController(context);
         mWeatherClient = new OmniJawsClient(context);
-        mRemoteController = new RemoteController(context, mRCClientUpdateListener);
         mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
-        mAudioManager.registerRemoteController(mRemoteController);
+        updateMediaController();
     }
 
     private void addWeatherProvider() {
@@ -138,43 +154,43 @@ public class QuickspaceController implements NotificationListener.NotificationsC
         return null;
     }
 
-    private void playbackStateUpdate(int state) {
-        switch (state) {
-            case RemoteControlClient.PLAYSTATE_PLAYING:
-                mMediaActive = true;
-                break;
-            case RemoteControlClient.PLAYSTATE_ERROR:
-            case RemoteControlClient.PLAYSTATE_PAUSED:
-            default:
-                mMediaActive = false;
-                break;
-        }
-        updateMediaInfo();
-    }
-
     public void updateMediaInfo() {
+        boolean isPlaying = isMediaControllerAvailable() 
+            && PlaybackState.STATE_PLAYING == getMediaControllerPlaybackState(mController);
+        String trackArtist = mMediaMetadata != null ? mMediaMetadata.getString(MediaMetadata.METADATA_KEY_ARTIST) : "";
+        String trackTitle = mMediaMetadata != null ? mMediaMetadata.getString(MediaMetadata.METADATA_KEY_TITLE) : "";
         if (mEventsController != null && Utilities.isQuickspaceNowPlaying(mContext)) {
-            mEventsController.setMediaInfo(mMetadata.trackTitle, mMetadata.trackArtist, mClientLost, mMediaActive);
+            mEventsController.setMediaInfo(trackTitle, trackArtist, isPlaying);
             mEventsController.updateQuickEvents();
             notifyListeners();
         }
     }
 
+    private int getMediaControllerPlaybackState(MediaController controller) {
+        if (controller != null) {
+            final PlaybackState playbackState = controller.getPlaybackState();
+            if (playbackState != null) {
+                return playbackState.getState();
+            }
+        }
+        return PlaybackState.STATE_NONE;
+    }
+
     @Override
     public void onNotificationPosted(PackageUserKey postedPackageUserKey,
                                      NotificationKeyData notificationKey) {
-        updateMediaInfo();
+        updateMediaController();
     }
 
     @Override
     public void onNotificationRemoved(PackageUserKey removedPackageUserKey,
                                       NotificationKeyData notificationKey) {
-        updateMediaInfo();
+        updateMediaController();
     }
 
     @Override
     public void onNotificationFullRefresh(List<StatusBarNotification> activeNotifications) {
-        updateMediaInfo();
+        updateMediaController();
     }
 
     public void onPause() {
@@ -183,7 +199,7 @@ public class QuickspaceController implements NotificationListener.NotificationsC
 
     public void onResume() {
         if (mEventsController != null) {
-            updateMediaInfo();
+            updateMediaController();
             mEventsController.onResume();
             notifyListeners();
         }
@@ -238,54 +254,70 @@ public class QuickspaceController implements NotificationListener.NotificationsC
         });
     }
 
-   private RemoteController.OnClientUpdateListener mRCClientUpdateListener =
-            new RemoteController.OnClientUpdateListener() {
+    private boolean isMediaControllerAvailable() {
+        final MediaController mediaController = getActiveLocalMediaController();
+        return mediaController != null && !TextUtils.isEmpty(mediaController.getPackageName());
+    }
 
-        @Override
-        public void onClientChange(boolean clearing) {
-            if (clearing) {
-                mMetadata.clear();
-                mMediaActive = false;
-                mClientLost = true;
+    private MediaController getActiveLocalMediaController() {
+        MediaSessionManager mediaSessionManager =
+                mContext.getSystemService(MediaSessionManager.class);
+        MediaController localController = null;
+        final List<String> remoteMediaSessionLists = new ArrayList<>();
+        for (MediaController controller : mediaSessionManager.getActiveSessions(null)) {
+            final MediaController.PlaybackInfo pi = controller.getPlaybackInfo();
+            if (pi == null) {
+                continue;
             }
-            updateMediaInfo();
+            final PlaybackState playbackState = controller.getPlaybackState();
+            if (playbackState == null) {
+                continue;
+            }
+            if (playbackState.getState() != PlaybackState.STATE_PLAYING) {
+                continue;
+            }
+            if (pi.getPlaybackType() == MediaController.PlaybackInfo.PLAYBACK_TYPE_REMOTE) {
+                if (localController != null
+                        && TextUtils.equals(
+                                localController.getPackageName(), controller.getPackageName())) {
+                    localController = null;
+                }
+                if (!remoteMediaSessionLists.contains(controller.getPackageName())) {
+                    remoteMediaSessionLists.add(controller.getPackageName());
+                }
+                continue;
+            }
+            if (pi.getPlaybackType() == MediaController.PlaybackInfo.PLAYBACK_TYPE_LOCAL) {
+                if (localController == null
+                        && !remoteMediaSessionLists.contains(controller.getPackageName())) {
+                    localController = controller;
+                }
+            }
         }
-
-        @Override
-        public void onClientPlaybackStateUpdate(int state, long stateChangeTimeMs,
-                long currentPosMs, float speed) {
-            mClientLost = false;
-            playbackStateUpdate(state);
+        return localController;
+    }
+    
+    private void updateMediaController() {
+        MediaController localController = getActiveLocalMediaController();
+        if (localController != null && !sameSessions(mController, localController)) {
+            if (mController != null) {
+                mController.unregisterCallback(mMediaCallback);
+                mController = null;
+            }
+            mController = localController;
+            mController.registerCallback(mMediaCallback);
         }
-
-        @Override
-        public void onClientPlaybackStateUpdate(int state) {
-            mClientLost = false;
-            playbackStateUpdate(state);
+        mMediaMetadata = isMediaControllerAvailable() ? mController.getMetadata() : null;
+        updateMediaInfo();
+    }
+    
+    private boolean sameSessions(MediaController a, MediaController b) {
+        if (a == b) {
+            return true;
         }
-
-        @Override
-        public void onClientMetadataUpdate(RemoteController.MetadataEditor data) {
-            mMetadata.trackTitle = data.getString(MediaMetadataRetriever.METADATA_KEY_TITLE,
-                    mMetadata.trackTitle);
-            mMetadata.trackArtist = data.getString(MediaMetadataRetriever.METADATA_KEY_ARTIST,
-                    mMetadata.trackArtist);
-            mClientLost = false;
-            updateMediaInfo();
+        if (a == null) {
+            return false;
         }
-
-        @Override
-        public void onClientTransportControlUpdate(int transportControlFlags) {
-        }
-    };
-
-    class Metadata {
-        private String trackTitle;
-        private String trackArtist;
-
-         public void clear() {
-            trackTitle = null;
-            trackArtist = null;
-        }
+        return a.controlsSameSession(b);
     }
 }
