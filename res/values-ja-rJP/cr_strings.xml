@@ -49,9 +49,9 @@
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">スワイプで Google アプリにアクセス</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">When you swipe right from main home screen</string>
+    <string name="msg_minus_one_on_left">メインのホーム画面で右にスワイプしたときの動作</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">When you swipe left from main home screen</string>
+    <string name="msg_minus_one_on_right">メインのホーム画面で左にスワイプしたときの動作</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">非表示 &amp; 保護アプリ</string>
     <string name="trust_apps_auth_manager">ロックを解除して非表示と保護アプリを管理</string>
