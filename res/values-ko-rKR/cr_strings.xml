@@ -66,10 +66,10 @@
     <string name="suggestion_pref_screen_desc">모든 앱 &amp; 홈 화면 제안</string>
     <!-- Pause apps shortcut -->
     <string name="pause">일시중지</string>
-    <string name="pause_apps_dialog_title">Pause %1$s?</string>
+    <string name="pause_apps_dialog_title">%1$s간 일시정지할까요?</string>
     <string name="pause_apps_dialog_message">%1$s의 알림이 일시중지됩니다</string>
     <string name="paused_apps_dialog_title">앱 일시중지됨</string>
-    <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
+    <string name="paused_apps_dialog_message">런처에 의해 %1$s간 일시정지합니다</string>
     <string name="paused_apps_drop_target_label">앱 일시중지</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">두 번 탭하여 화면 끄기</string>
@@ -96,7 +96,7 @@
     <string name="label_lens">구글 렌즈</string>
     <string name="label_voice_search">음성 검색</string>
     <string name="dock_music_search_title">음악 검색</string>
-    <string name="dock_music_search_summary">Start music search on pressing mic icon</string>
+    <string name="dock_music_search_summary">마이크 아이콘을 눌러 음악 검색을 시작하세요</string>
     <string name="dock_search_title">Google 검색 바</string>
     <string name="dock_search_summary">하단에 검색 바</string>
     <string name="dock_theme_title">테마형 아이콘</string>
@@ -146,16 +146,16 @@
     <string name="icon_pack_add">추가로 설치</string>
     <string name="icon_pack_no_market">사용할 수 있는 앱 스토어가 없습니다</string>
     <!-- Parallax -->
-    <string name="short_parallax_title">Allow short parallax</string>
-    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
+    <string name="short_parallax_title">짧은 패럴랙스 허용</string>
+    <string name="short_parallax_summary">적은 수의 페이지일 때 배경을 자르기보다 전체 배경을 스크롤하기</string>
     <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <string name="single_page_center_summary">단일 페이지만 사용할 때 배경을 가운데 정렬하기</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar</string>
-    <string name="drawer_search_summary">Search bar on top of the app drawer</string>
+    <string name="drawer_search_title">앱 검색창</string>
+    <string name="drawer_search_summary">앱서랍 상단에 검색창</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">재시작</string>
-    <string name="pref_restart_summary">Restart the launcher manually to apply any pending settings</string>
+    <string name="pref_restart_summary">변경한 설정을 적용하려면 런처를 재실행하세요</string>
     <string name="restarting_launcher">런처 재시작 중...</string>
     <string name="restarting_launcher_changes">변경 사항을 적용하기 위해 런처 재시작 중...</string>
     <string name="updating_launcher_components">런처 구성요소를 업데이트하기 위해 런처 재시작 중...</string>
@@ -169,17 +169,17 @@
         <item>우리를 선택해 주셔서 감사합니다</item>
         <item>후원하기</item>
         <item>최고의 롬.</item>
-        <item>Say hi to us on Telegram</item>
+        <item>Telegram에서 만나요!</item>
         <item>시작하려면 여기를 누르십시오</item>
-        <item>We love you 3000</item>
+        <item>3000만큼 사랑해요.</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
+    <string name="quickspace_grt_morning">좋은 아침이에요!</string>
+    <string name="quickspace_grt_evening">안녕하세요!</string>
+    <string name="quickspace_grt_afternoon">안녕하세요!</string>
+    <string name="quickspace_grt_night">좋은 밤 보내세요.</string>
+    <string name="quickspace_grt_general">좋은 하루!</string>
+    <string name="quickspace_ext_one">오늘은</string>
     <string name="quickspace_ext_two">It\'s</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="qe_now_playing_unknown_artist">알 수 없는 아티스트</string>
@@ -192,7 +192,7 @@
     <string name="quickspace_alternate_style_title">Minimalistic style</string>
     <string name="quickspace_alternate_style_summary">Switch to modern style</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Random messages</string>
+    <string name="quickspace_psa_title">랜덤 메시지</string>
     <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
     <string-array name="quickspace_psa_morning">
         <item>굿모닝!</item>
@@ -223,25 +223,25 @@
         <item>In every moment, a new opportunity.</item>
         <item>Embrace the journey, not just the destination.</item>
         <item>Today is a gift, that\'s why it\'s called the present.</item>
-        <item>Let your smile change the world.</item>
+        <item>당신의 미소가 세상을 바꿉니다.</item>
         <item>Life is a story; make each chapter count.</item>
-        <item>Find joy in the ordinary moments.</item>
-        <item>The best is yet to come, keep it up.</item>
-        <item>Your chance to turn \'what if\' into \'what is.\'</item>
-        <item>Seize the day, starting right now.</item>
-        <item>Happiness is a choice you can make any time.</item>
+        <item>일상 속의 행복을 찾아서</item>
+        <item>최고는 아직 남아 있어요, 계속 해봐요.</item>
+        <item>\"만약에\"를 실현할 기회</item>
+        <item>오늘을 즐기세요. 지금 당장.</item>
+        <item>행복은 매 순간 당신이 결정하는 선택지입니다.</item>
         <item>Believe in yourself, even on a sleepy afternoon.</item>
         <item>Let your actions speak louder than the clock.</item>
-        <item>Your life is what you make of it; make it amazing.</item>
-        <item>Dream big, work hard, and never give up.</item>
-        <item>You are stronger than you think.</item>
+        <item>당신의 인생은 당신이 만들어갑니다. 멋진 삶을 살아가세요</item>
+        <item>꿈은 크게, 일은 열심히, 그리고 절대 포기하지 마세요.</item>
+        <item>당신이 생각하는 것 보다 당신은 강합니다.</item>
         <item>Every setback is a setup for a comeback.</item>
-        <item>Embrace the journey, not just the destination.</item>
-        <item>Chase your goals, not your fears.</item>
-        <item>Your potential is endless; unlock it.</item>
+        <item>목적지만이 아니라, 과정도 즐기세요</item>
+        <item>두려움이 아닌 목표를 쫒아가세요</item>
+        <item>당신의 가능성은 무한합니다. 도전하세요.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Embrace the present moment, no matter the hour.</item>
+        <item>시간에 관계없이, 지금 이 순간을 만끽하세요</item>
         <item>In every dusk, find a new dawn of opportunity.</item>
         <item>Life is a journey; enjoy the scenery along the way.</item>
         <item>Your attitude shapes your reality.</item>
