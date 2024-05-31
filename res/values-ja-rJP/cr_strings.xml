@@ -35,11 +35,11 @@
     <string name="search_bar_category_title">検索バー</string>
     <string name="actions_category_title">クイックアクション</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Swipe to access Google app</string>
+    <string name="title_show_google_app">スワイプでGoogleアプリにアクセス</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_left">When you swipe right from main home screen</string>
+    <string name="msg_minus_one_on_left">メインのホーム画面で右にスワイプしたときの動作</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
-    <string name="msg_minus_one_on_right">When you swipe left from main home screen</string>
+    <string name="msg_minus_one_on_right">メインのホーム画面で左にスワイプしたときの動作</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
     <string name="desktop_show_labels">Icon labels on desktop</string>
