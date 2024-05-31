@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2023 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">إعدادات الشاشة الرئيسية</string>
+    <!-- Categories -->
+    <string name="home_category_title">الشاشة الرئيسية</string>
+    <string name="home_category_summary">تعيين لوحة Google Now والمزيد</string>
+    <string name="icons_category_title">أيقونات</string>
+    <string name="icons_category_summary">تعيين شكل الأيقونات والمزيد</string>
+    <string name="app_drawer_category_title">قائمة التطبيقات</string>
+    <string name="app_drawer_category_summary">تخصيص قائمة التطبيقات الخاصة بك</string>
+    <string name="recents_category_title">تطبيقات الأخيرة</string>
+    <string name="recents_category_summary">تجديد شاشة العرض العام</string>
+    <string name="misc_category_title">خيارات متنوعة</string>
+    <string name="misc_category_summary">خيارات أخرى</string>
+    <string name="general_category_title">العامة</string>
+    <string name="interface_category_title">واجهة المستخدم</string>
+    <string name="quickspace_category_title">مساحة سريعة</string>
+    <string name="search_bar_category_title">شريط البحث</string>
+    <string name="actions_category_title">الإختصارات السريعة</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">خيارات المطور</string>
+    <string name="dev_options_summary">تمكين بعض الميزات المخفية على مسؤوليتك الخاصة</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">تخطيط القفل</string>
+    <string name="settings_lock_layout_summary_on">لا يمكن إضافة الرموز والأدوات وإزالتها ونقلها على الشاشة الرئيسية</string>
+    <string name="settings_lock_layout_summary_off">يمكن إضافة, حذف و نقل الأيقونات و الويدجتس على الشاشة الرئيسية</string>
+    <string name="settings_edit_widgets_error">لا يمكن إضافة الويدجت إلى الشاشة الرئيسية</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">إظهار أسماء التطبيقات على الشاشة الرئيسية</string>
+    <string name="drawer_show_labels">إظهار أسماء التطبيقات في قائمة التطبيقات</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">اسحب للوصول إلى تطبيق جوجل</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">عند التمرير يساراً من الشاشة الرئيسية</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">عندما التمرير يميناً من الشاشة الرئيسية</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">إخفاء التطبيقات وحمايتها</string>
+    <string name="trust_apps_auth_manager">افتح لإدارة التطبيقات المخفية والمحمية</string>
+    <string name="trust_apps_auth_open_app">يرجى مصادقة البصمة لفتح %1$s</string>
+    <string name="trust_apps_loading">جارٍ التحميل…\u2026</string>
+    <string name="trust_apps_no_lock_error">يرجى إعداد شاشة قفل الجهاز لتقييد الوصول إلى التطبيق</string>
+    <string name="trust_apps_help">مساعدة</string>
+    <string name="trust_apps_info_hidden">التطبيقات المخفية و الأدوات الخاصة بها ستكون مخفية أيضاً من واجهة التشغيل</string>
+    <string name="trust_apps_info_protected">التطبيقات المحمية تتطلب المصادقة لكي تُفتح</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">الإقتراحات</string>
+    <string name="suggestion_pref_screen_desc">لجميع التطبيقات &amp; اقتراحات الشاشة الرئيسية</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">إيقاف مؤقت</string>
+    <string name="pause_apps_dialog_title">إيقاف %1$s؟</string>
+    <string name="pause_apps_dialog_message">الإشعارات لـ %1$s سيتم إيقافها مؤقتاً</string>
+    <string name="paused_apps_dialog_title">تم إيقاف التطبيق مؤقتًا</string>
+    <string name="paused_apps_dialog_message">تم إيقاف %1$s بشكل مباشر من المشغل</string>
+    <string name="paused_apps_drop_target_label">إيقاف مؤقت للتطبيق</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">انقر نقرًا مزدوجًا للنوم</string>
+    <string name="pref_sleep_gesture_summary">اضغط مرّتين على مكانٍ فارغ لإطفاء الشاشة</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">القيمة: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">بشكل افتراضي</string>
+    <string name="custom_seekbar_default_value_to_set">القيمة الافتراضية: <xliff:g id="v">%s</xliff:g>\nانقر لفترة طويلة لتعيين</string>
+    <string name="custom_seekbar_default_value_is_set">تم تعيين القيمة الافتراضية</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">حجم الأيقونة</string>
+    <!-- Font size -->
+    <string name="font_size_title">حجم الخط</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">الأسطر القصوى لتسمية التطبيق</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">إيقاف</string>
+    <string name="recents_app_killed">تم إيقاف التطبيق</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">استخدام شريط المهام</string>
+    <string name="pref_allow_phone_taskbar_summary">لفتح التطبيقات وتبديلها في أي مكان</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">البحث</string>
+    <string name="label_lens">عدسة جوجل</string>
+    <string name="label_voice_search">البحث الصوتي</string>
+    <string name="dock_music_search_title">بحث المعازف</string>
+    <string name="dock_music_search_summary">ابحث عن المعازف عند الضغط على أيقونة مسجل الصوت</string>
+    <string name="dock_search_title">بحث جوجل</string>
+    <string name="dock_search_summary">إظهار شريط البحث في اسفل الشاشة</string>
+    <string name="dock_theme_title">أيقونات مع الثيم</string>
+    <string name="dock_theme_summary">استخدام الثيم الحالي لأيقونات شريط البحث</string>
+    <string name="search_radius_title">حدود الزاوية</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">خلفية اللوحة السفلية</string>
+    <string name="hotseat_bg_summary">إضافة خلفية شفافة إلى قائمة التطبيقات</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">تعتيم الخلفية</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">تمرير خلفية الشاشة</string>
+    <string name="allow_wallpaper_scrolling_summary">تأثير تمرير خلفية الشاشة للشاشات المتعددة</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">تكبير خلفية الشاشة</string>
+    <string name="allow_wallpaper_zooming_summary">تكبير الخلفية أو تصغيرها عند استخدام درج التطبيقات أو التطبيقات الحديثة</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">شريط الحالة</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">الظل العلوي</string>
+    <!-- Row Height -->
+    <string name="row_height_title">ارتفاع الصف</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s متاحة / %2$s كإجمالي</string>
+    <string name="recents_meminfo_title">معلومات الذاكرة</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">مستوي ضبابية الخلفية</string>
+    <string name="background_blur_summary">تعيين مستوى الضباب للتطبيقات الحديثة ودرج التطبيقات</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">لقطة شاشة</string>
+    <string name="recents_clear_all_title">إزالة الكل</string>
+    <string name="recents_lens_title">العدسة</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">هز الهاتف لمسح جميع المهام</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">أيقونات مع الثيم</string>
+    <string name="pref_themed_icons_summary">شبيهة بسمة الأيقونات المستخدمة على الشاشة الرئيسية</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">المصدر</string>
+    <string name="app_info_source_system">النظام</string>
+    <string name="app_info_last_update">آخر تحديث</string>
+    <string name="app_info_version">الإصدار</string>
+    <string name="app_info_more">المزيد</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">حزمة الايقونات</string>
+    <string name="icon_pack_default_label">الإفتراضي</string>
+    <string name="icon_pack_add">تثبيت المزيد</string>
+    <string name="icon_pack_no_market">لا يوجد متجر تطبيقات متاح</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">السماح بالمبرالية القصيرة</string>
+    <string name="short_parallax_summary">تمكين تأثير التمرير الكامل للخلفية على عدد أصغر من الصفحات بدلاً من اقتطاع الخلفية</string>
+    <string name="single_page_center_title">مركز صفحة واحدة</string>
+    <string name="single_page_center_summary">وسِّط الخلفية إن كانت هناك صفحة واحدة فقط</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">شريط بحث البرامج</string>
+    <string name="drawer_search_summary">شريط البحث في أعلى قائمة التطبيقات</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">إعادة التشغيل</string>
+    <string name="pref_restart_summary">إعادة التشغيل يدويًا لتطبيق أي تعديلات في الإعدادات</string>
+    <string name="restarting_launcher">إعادة تشغيل المشغل...</string>
+    <string name="restarting_launcher_changes">إعادة تشغيل المشغل لتطبيق التغييرات...</string>
+    <string name="updating_launcher_components">إعادة تشغيل المشغل لتحديث مكونات المشغل...</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">النظرة السريعة</string>
+    <string name="show_quickspace_summary">إظهار في الجزء العلوي من الشاشة الرئيسية</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">مرحبا بكم في crDroid!</string>
+    <string name="quick_event_rom_intro_welcome_ext">حان الوقت لcrDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>شكراً لك، لاختيارنا</item>
+        <item>أيعجبك عملنا؟ تبرع لنا</item>
+        <item>أفضل نظام على الإطلاق.</item>
+        <item>قُل مرحبا لنا على تطبيق تلي جرام</item>
+        <item>اضغط هنا للبدا</item>
+        <item>نُحِبكْ 3000 مرة</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Greetings -->
+    <string name="quickspace_grt_morning">صباح الخير.</string>
+    <string name="quickspace_grt_evening">مساء الخير.</string>
+    <string name="quickspace_grt_afternoon">طابت ظهيرتك.</string>
+    <string name="quickspace_grt_night">طابت ليلتك.</string>
+    <string name="quickspace_grt_general">يوم سعيد.</string>
+    <string name="quickspace_ext_one">اليوم هو</string>
+    <string name="quickspace_ext_two">إنها</string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="qe_now_playing_unknown_artist">فنان غير معروف</string>
+    <string name="qe_now_playing_ext_one">قيد التشغيل</string>
+    <string name="qe_now_playing_by">بواسطة</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">قيد التشغيل</string>
+    <string name="quickspace_now_playing_summary">عرض الأغنية التي شغلتها</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">النمط الأدنى</string>
+    <string name="quickspace_alternate_style_summary">التبديل إلى النمط الحديث</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">رسائل عشوائية</string>
+    <string name="quickspace_psa_summary">اجعل هاتفك أكثر حيوية مع الرسائل العشوائية</string>
+    <string-array name="quickspace_psa_morning">
+        <item>صباح الخير!</item>
+        <item>صباح الخير ، حان وقت التألق!</item>
+        <item>يا له من يوم جميل!</item>
+        <item>نتمنى لك يوماً سعيداً!</item>
+        <item>ما رأيك بغفوة لخمس دقائق؟</item>
+        <item>دعونا ننجز ذلك.</item>
+        <item>الصباح هو لوحة قماشية جديدة لتحفتك اليومية.</item>
+        <item>تبلور شروق الفرصة كل صباح.</item>
+        <item>في الضوء، اكتشف القوة لإضاءة مسارك.</item>
+        <item>يومك يبدأ بإمكانيات لا نهاية لها.</item>
+        <item>كل شروق الشمس هي تذكرة بأنه يمكنك البدء من جديد.</item>
+        <item>أيقظة، غادر اليوم القادم.</item>
+        <item>إن أفكاركم يمكن أن تكون أساس الإنجازات العظيمة.</item>
+        <item>إن العالم يستيقظ، وكذلك إمكانياتكم.</item>
+        <item>الفصل الأول في مغامرتك اليومية.</item>
+        <item>فلنجعل الروتينية الصباحية منطلقا للنجاح.</item>
+        <item>شروق الشمس أم لا، إن إمكاناتك دائما في ازدياد.</item>
+        <item>لقد حانَ الوقتُ لأفكارٍ جديدة وإجراءاتٍ جريئة.</item>
+        <item>الطائر المُبكر يَصطاد الديدان، ولكن يمكنك أن تلتقط أحلامك.</item>
+        <item>ابحث عن الشجاعة لمطاردة تطلعاتك.</item>
+        <item>يرتفع ويظل، للعظمة في انتظار.</item>
+        <item>وأفضل وقت للبدء هو الآن.</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon">
+        <item>قم بإزالة أحلامك، وليس الدقائق.</item>
+        <item>في كل لحظة، فرصة جديدة.</item>
+        <item>إحتواء الرحلة، وليس فقط الوجهة.</item>
+        <item>اليوم هدية, لهذا السبب تسمى الحاضر.</item>
+        <item>دع ابتسامتك تغير العالم.</item>
+        <item>الحياة هي قصة؛ وجعل كل فصل يعد.</item>
+        <item>ابحث عن الفرح في اللحظات العادية.</item>
+        <item>إن أفضل شيء لم يأت بعد، ولا يزال قائما.</item>
+        <item>فرصتك لتحويل \'ماذا إذا\' إلى \'ما هو.\'</item>
+        <item>استولي على اليوم، بدءاً الآن.</item>
+        <item>السعادة هي خيار يمكنك القيام به في أي وقت.</item>
+        <item>صدقوا بنفسك، حتى في عصر النعاس.</item>
+        <item>دع إجراءاتك تتكلم بصوت أعلى من الساعة.</item>
+        <item>حياتك هي ما تصنعه منها وجعلها مذهلة.</item>
+        <item>الأحلام كبيرة، تعمل بجد ولا تستسلم أبدا.</item>
+        <item>أنت أقوى مما تعتقد.</item>
+        <item>كل انتكاسة هي إعداد للتراجع.</item>
+        <item>إحتواء الرحلة، وليس فقط الوجهة.</item>
+        <item>صقل أهدافك، وليس مخاوفك.</item>
+        <item>إمكاناتك لا تنتهي؛ قم بفتحها.</item>
+    </string-array>
+    <string-array name="quickspace_psa_early_evening">
+        <item>احترموا اللحظة الحالية، مهما كانت الساعة.</item>
+        <item>في كل غبار، العثور على فجر جديد من الفرص.</item>
+        <item>الحياة هي رحلة؛ استمتع بشعرة على طول الطريق.</item>
+        <item>موقفك يشكل واقعك.</item>
+        <item>لا تزال قصتك مكتوبة، حتى مع اشتعال الشمس.</item>
+        <item>التقط الجمال في اللحظات العادية.</item>
+        <item>حان الوقت للتفكير وإعادة الضبط.</item>
+        <item>اختر الفرح، بغض النظر عن الوقت على مدار الساعة.</item>
+        <item>الفُرص لا تَخرُج في المساء.</item>
+        <item>كُن السببَ في ابتسام أحدهم.</item>
+        <item>إمكاناتك لا تعرف حدودا.</item>
+        <item>لحظات السِحر يُمكن أن تحدث في أي ساعة.</item>
+        <item>حياتك هي ما تصنعهُ مِنها وجَعلهِا مُذهِلة.</item>
+        <item>ابقى فضوليًا، ابقى ممتنًا.</item>
+        <item>يَجبْ أن تَكون أنتَ التغيير الذي ترغب في رؤيتهُ في العالم.</item>
+        <item>صَدقوا بنفسكَ، أنتَ قادر على أشياء مُذهلة.</item>
+        <item>الحد الوحيد هو الذي تُعيينه لِنفسك.</item>
+        <item>يبدأ النجاح بخطوة واحدة.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>استولي على الليل، لأنها تحمل أسرارها الخاصة.</item>
+        <item>في هدوء هذا المساء ، اكتشف الصبر.</item>
+        <item>أعظمْ مُغامرات الحياةِ يمكن أن تبدأ في الظلام.</item>
+        <item>رِحلتك مُستمرة حتى بعدَ غروب الشمس.</item>
+        <item>دَعوا الليلةِ تَكون قِماشتك؛ ورَسمُها بالأحلام.</item>
+        <item>في بطء هذا المساءِ، أجد سلامك الداخلي.</item>
+        <item>النجوم تألق في أحلك الساعات.</item>
+        <item>الأحلام كبيرة، حتى في الساعات المُتأخِرة من اليوم.</item>
+        <item>حياتك هي قصة تَنتظر أن تُكتب.</item>
+        <item>حانَ الوقتُ للتفكيرْ وإعادةِ الضّبط.</item>
+        <item>مِن المُمكن أن تؤدي الأفكار الليلية المُتأخرة إلى الكشفِ عَنها في وقتٍ مُبكر مِن الصباح.</item>
+        <item>ابحث عن السَعادةِ في مِيلاد هذا المساء.</item>
+        <item>السماء الليلية هي قماش كبير من الأحلام.</item>
+        <item>إمكاناتك لا تعرف وقت النوم ؛ متابعة مشاعرك.</item>
+        <item>ابقى مُتفائلاً، حتى في أحلك الساعات.</item>
+        <item>في وَسْط الفَوضى، أجد هدوءك الداخلي.</item>
+        <item>أبقى إيجابيا, اعمل بجدٍ و اجعل ذلكَ يحدُث.</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>الليالي هي هوامش الفرصة الهادئة.</item>
+        <item>In the stillness of the night, find your inner strength.</item>
+        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
+        <item>The world sleeps, but your potential is wide awake.</item>
+        <item>The night may be late, but your ambitions are timeless.</item>
+        <item>Stay curious, stay awake, and let nights guide you.</item>
+        <item>Find the courage to chase your dreams.</item>
+        <item>Great things never come from comfort zones.</item>
+        <item>You have the power to create your own destiny.</item>
+        <item>Happiness is a choice; choose it every day.</item>
+        <item>Life is what you make it, so make it count.</item>
+        <item>Stay focused, stay determined, stay unstoppable.</item>
+        <item>You are the author of your own story.</item>
+        <item>Strive for progress, not perfection.</item>
+        <item>Every day is a new beginning; make it a great one.</item>
+        <item>Inspire others by being your authentic self.</item>
+        <item>Your attitude determines your direction.</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>التجاهل نعمة</item>
+        <item>هل حان الوقت لتثبيت تحديث آخر بالفعل؟</item>
+        <item>إصنع السلام، وليس الحرب</item>
+        <item>أوه أهلاً، كيف الحال؟</item>
+        <item>ركز على مهامك</item>
+        <item>كم عدد لقطات الشاشة التي تقوم بالتقاطها؟</item>
+        <item>عرض مميزات crDroid</item>
+        <item>أنشر الحب وليس الفوضى</item>
+        <item>لم نضرم النار!</item>
+        <item>حان الوقت للقليل من الموسيقى الجيدة</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C الراس</item>
+        <item>تحتاج للاشتراك في crDroid Premium لرؤية هذا</item>
+        <item>تذكرLineage للUnicorn</item>
+        <item>استمتع بعمر بطارية طويل</item>
+        <item>البدء من نقطة الصفر</item>
+        <item>We love you 3000</item>
+        <item>لذيذة حتى بدون سوشي</item>
+        <item>قم بعمل شيء لطيف اليوم</item>
+        <item>هذه أفضل تجربة رقمية، أليس كذلك؟</item>
+        <item>لا أوهام ، مرحبا بالواقع!</item>
+        <item>شكرا لك على دعمك</item>
+        <item>لا يوجد مهرجان للأغبياء - فقط للكاملين!</item>
+        <item>واحدة من أفضل اختيارات آلي البناء</item>
+        <item>عقلانية لجنون عظمتك</item>
+        <item>جرب الحلويات المتجمدة</item>
+        <item>يا لها من تجربة جميلة، أليس كذلك؟</item>
+        <item>التطور خرافة، أليس كذلك؟</item>
+        <item>ما تقوم بتثبيته يعبر عنك، لا تكن ليناً</item>
+        <item>ما الذي يدور في خاطرك؟</item>
+        <item>Expecto Patronum</item>
+        <item>Wubba Lubba Dub Dub</item>
+        <item>الفائز ....؟</item>
+        <item>rm -rf \/</item>
+        <item>Pringles aren\'t actually potato chips..</item>
+        <item>Remember to check device\'s battery level!</item>
+        <item>Check your email/messages.</item>
+        <item>تحقق من قائمة العمل الخاصة بك إذا كان لديك واحدة.</item>
+        <item>يمكنك تعطيل الفضاء السريع عن طريق إعدادات المنزل.</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">Weather update</string>
+    <string name="quick_event_ambient_weather_summary">Display current weather update</string>
+    <string name="quick_event_ambient_weather_enabled_info">يتطلب تفعيل خدمة الطقس</string>
+    <string name="quick_event_weather_clouds">غائم</string>
+    <string name="quick_event_weather_rain">مُمطر</string>
+    <string name="quick_event_weather_clear">مُشمِس</string>
+    <string name="quick_event_weather_storm">عاصف</string>
+    <string name="quick_event_weather_snow">مُثلج</string>
+    <string name="quick_event_weather_wind">رِياح قوية</string>
+    <string name="quick_event_weather_mist">ضبابي</string>
+    <string name="quick_event_weather_city_title">الموقعْ الحالي</string>
+    <string name="quick_event_weather_city_summary">Display current weather location</string>
+    <string name="quick_event_weather_text_title">Current condition</string>
+    <string name="quick_event_weather_text_summary">Display current weather condition summary</string>
+    <string name="intent_no_app_clock_found">تعذر العثور على التقويم أو نشاط الساعة</string>
+    <!-- Freed memory on clear all tasks -->
+    <string name="freed_memory_text">Freed up %1$s</string>
+    <string name="optimal_memory_text">Your system is now in optimal condition</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Unlock</string>
+    <string name="task_menu_item_lock">Lock</string>
+</resources>

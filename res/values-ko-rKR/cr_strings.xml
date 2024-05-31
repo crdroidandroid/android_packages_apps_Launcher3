@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2023 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">홈 설정</string>
+    <!-- Categories -->
+    <string name="home_category_title">홈 화면</string>
+    <string name="home_category_summary">구글 나우 패널 및 관련 설정</string>
+    <string name="icons_category_title">아이콘</string>
+    <string name="icons_category_summary">아이콘 크기 및 관련 설정</string>
+    <string name="app_drawer_category_title">앱 서랍</string>
+    <string name="app_drawer_category_summary">앱 서랍 맞춤 설정</string>
+    <string name="recents_category_title">최근 앱</string>
+    <string name="recents_category_summary">오버뷰 화면 개량</string>
+    <string name="misc_category_title">기타 설정</string>
+    <string name="misc_category_summary">기타 옵션</string>
+    <string name="general_category_title">일반</string>
+    <string name="interface_category_title">인터페이스</string>
+    <string name="quickspace_category_title">퀵스페이스</string>
+    <string name="search_bar_category_title">검색 바</string>
+    <string name="actions_category_title">빠른 동작</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">개발자 옵션</string>
+    <string name="dev_options_summary">위험할 수 있는 숨겨진 기능들을 허용합니다</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">레이아웃 잠금</string>
+    <string name="settings_lock_layout_summary_on">아이콘과 위젯을 홈 화면에 추가하거나 제거, 이동할 수 없습니다</string>
+    <string name="settings_lock_layout_summary_off">아이콘 및 위젯을 홈 화면에 추가, 제거, 이동할 수 있습니다</string>
+    <string name="settings_edit_widgets_error">홈 화면에 위젯을 추가할 수 없습니다</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">홈 화면에 아이콘 이름</string>
+    <string name="drawer_show_labels">앱 서랍에 아이콘 이름</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">스와이프하여 Google 앱에 액세스</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">메인 홈 화면에서 왼쪽으로 스와이프할 때</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">메인 홈 화면에서 오른쪽으로 스와이프할 때</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">숨겨지거나 보호된 앱</string>
+    <string name="trust_apps_auth_manager">숨겨지거나 보호된 앱을 관리하려면 잠금을 해제하세요.</string>
+    <string name="trust_apps_auth_open_app">인증하여 %1$s 열기</string>
+    <string name="trust_apps_loading">로드 중\u2026</string>
+    <string name="trust_apps_no_lock_error">앱 접근을 제한하려면 잠금 화면 보안을 설정하세요</string>
+    <string name="trust_apps_help">도움말</string>
+    <string name="trust_apps_info_hidden">숨겨진 앱과 해당 앱의 위젯은 앱 서랍에서 숨겨집니다.</string>
+    <string name="trust_apps_info_protected">실행기에서 보호된 앱을 실행하기 위해 인증이 필요합니다.</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">제안</string>
+    <string name="suggestion_pref_screen_desc">모든 앱 &amp; 홈 화면 제안</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">일시중지</string>
+    <string name="pause_apps_dialog_title">%1$s간 일시정지할까요?</string>
+    <string name="pause_apps_dialog_message">%1$s의 알림이 일시중지됩니다</string>
+    <string name="paused_apps_dialog_title">앱 일시중지됨</string>
+    <string name="paused_apps_dialog_message">런처에 의해 %1$s간 일시정지합니다</string>
+    <string name="paused_apps_drop_target_label">앱 일시중지</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">두 번 탭하여 화면 끄기</string>
+    <string name="pref_sleep_gesture_summary">빈 공간을 두 번 탭하여 화면 끄기</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">값: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">기본값</string>
+    <string name="custom_seekbar_default_value_to_set">기본값: <xliff:g id="v">%s</xliff:g>\n길게 눌러서 설정</string>
+    <string name="custom_seekbar_default_value_is_set">기본값으로 설정됨</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">아이콘 크기</string>
+    <!-- Font size -->
+    <string name="font_size_title">글꼴 크기</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">앱 라벨의 최대 줄 개수</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">작업 지우기</string>
+    <string name="recents_app_killed">앱 종료됨</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">네비바 사용</string>
+    <string name="pref_allow_phone_taskbar_summary">어디에서나 앱을 열고 바꿀 수 있도록</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">검색</string>
+    <string name="label_lens">구글 렌즈</string>
+    <string name="label_voice_search">음성 검색</string>
+    <string name="dock_music_search_title">음악 검색</string>
+    <string name="dock_music_search_summary">마이크 아이콘을 눌러 음악 검색을 시작하세요</string>
+    <string name="dock_search_title">Google 검색 바</string>
+    <string name="dock_search_summary">하단에 검색 바</string>
+    <string name="dock_theme_title">테마형 아이콘</string>
+    <string name="dock_theme_summary">테마형 아이콘을 검색 바에 사용</string>
+    <string name="search_radius_title">모서리 각도</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">독 영역 배경</string>
+    <string name="hotseat_bg_summary">앱 서랍에 반투명 배경 추가</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">배경 불투명도</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">배경화면 스크롤</string>
+    <string name="allow_wallpaper_scrolling_summary">여러개의 화면을 위한 배경화면 스크롤링 효과</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">배경화면 줌</string>
+    <string name="allow_wallpaper_zooming_summary">앱 서랍이나 최근 앱을 사용할 때 배경화면을 줌인하거나 줌아웃</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">상태 표시줄</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">상단 그림자</string>
+    <!-- Row Height -->
+    <string name="row_height_title">행 높이</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Available | %2$s Total</string>
+    <string name="recents_meminfo_title">메모리 정보</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">배경 흐림</string>
+    <string name="background_blur_summary">최근 앱과 앱 서랍에서 블러 깊이 레벨 설정</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">스크린샷</string>
+    <string name="recents_clear_all_title">모두 지우기</string>
+    <string name="recents_lens_title">렌즈</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">휴대전화를 흔들어 작업 지우기</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">테마형 아이콘</string>
+    <string name="pref_themed_icons_summary">홈화면에 사용된 테마화 아이콘 따라하기</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">출처</string>
+    <string name="app_info_source_system">시스템</string>
+    <string name="app_info_last_update">마지막 업데이트</string>
+    <string name="app_info_version">버전</string>
+    <string name="app_info_more">더 보기</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">아이콘 팩</string>
+    <string name="icon_pack_default_label">기본값</string>
+    <string name="icon_pack_add">추가로 설치</string>
+    <string name="icon_pack_no_market">사용할 수 있는 앱 스토어가 없습니다</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">짧은 패럴랙스 허용</string>
+    <string name="short_parallax_summary">적은 수의 페이지일 때 배경을 자르기보다 전체 배경을 스크롤하기</string>
+    <string name="single_page_center_title">Single page center</string>
+    <string name="single_page_center_summary">단일 페이지만 사용할 때 배경을 가운데 정렬하기</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">앱 검색창</string>
+    <string name="drawer_search_summary">앱서랍 상단에 검색창</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">재시작</string>
+    <string name="pref_restart_summary">변경한 설정을 적용하려면 런처를 재실행하세요</string>
+    <string name="restarting_launcher">런처 재시작 중...</string>
+    <string name="restarting_launcher_changes">변경 사항을 적용하기 위해 런처 재시작 중...</string>
+    <string name="updating_launcher_components">런처 구성요소를 업데이트하기 위해 런처 재시작 중...</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">한 눈에 보기</string>
+    <string name="show_quickspace_summary">홈 화면 상단에 표시</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">crDroid에 오신 것을 환영합니다!</string>
+    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string-array name="welcome_message_variants">
+        <item>우리를 선택해 주셔서 감사합니다</item>
+        <item>후원하기</item>
+        <item>최고의 롬.</item>
+        <item>Telegram에서 만나요!</item>
+        <item>시작하려면 여기를 누르십시오</item>
+        <item>3000만큼 사랑해요.</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Greetings -->
+    <string name="quickspace_grt_morning">좋은 아침이에요!</string>
+    <string name="quickspace_grt_evening">안녕하세요!</string>
+    <string name="quickspace_grt_afternoon">안녕하세요!</string>
+    <string name="quickspace_grt_night">좋은 밤 보내세요.</string>
+    <string name="quickspace_grt_general">좋은 하루!</string>
+    <string name="quickspace_ext_one">오늘은</string>
+    <string name="quickspace_ext_two">It\'s</string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="qe_now_playing_unknown_artist">알 수 없는 아티스트</string>
+    <string name="qe_now_playing_ext_one">지금 재생 중</string>
+    <string name="qe_now_playing_by">By</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">지금 재생 중</string>
+    <string name="quickspace_now_playing_summary">Show the song you\'re playing</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Minimalistic style</string>
+    <string name="quickspace_alternate_style_summary">Switch to modern style</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">랜덤 메시지</string>
+    <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
+    <string-array name="quickspace_psa_morning">
+        <item>굿모닝!</item>
+        <item>좋은 아침입니다. 일어나세요!</item>
+        <item>아름다운 날이네요!</item>
+        <item>좋은 하루 보내세요!</item>
+        <item>5 분 낮잠은 어떻습니까?</item>
+        <item>오늘 하루도 힘냅시다.</item>
+        <item>아침은 오늘이란 명작을 그려나갈 깨끗한 캔버스에요.</item>
+        <item>매 아침마다 생겨나는 가능성을 만끽하세요.</item>
+        <item>새벽이 당신의 앞길을 비춥니다.</item>
+        <item>오늘 하루를 무한한 가능성으로 시작합니다.</item>
+        <item>Every sunrise is a reminder that you can start anew.</item>
+        <item>목적을 가지고 일어난다면, 하루를 먼저 정복할 수 있어요.</item>
+        <item>당신의 생각이 위대한 성취의 원천입니다.</item>
+        <item>세상이 깨어납니다. 당신의 가능성처럼요.</item>
+        <item>오늘 모험의 첫 페이지.</item>
+        <item>아침 습관이 성공을 위한 발판이 되어줄거에요.</item>
+        <item>내일 해가 뜨지 않더라도, 당신의 가능성은 떠오를 거에요.</item>
+        <item>신선한 발상과 담대한 행동을 보여줄 때.</item>
+        <item>일찍 일어난 새는 벌레를 잡지만, 당신은 꿈을 잡을 수 있어요.</item>
+        <item>당신의 꿈을 쫒을 용기를 내봐요.</item>
+        <item>위대함이 기다립니다. 밝게 빛나세요!</item>
+        <item>시작하기 가장 좋은 순간은 지금입니다.</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon">
+        <item>시계바늘 말고, 꿈을 쫓으세요.</item>
+        <item>매 순간 새로운 기회가 찾아옵니다.</item>
+        <item>목적지만이 아니라, 과정도 즐기세요</item>
+        <item>오늘은 선물로 주어진 금과 같습니다. 지금이요.</item>
+        <item>당신의 미소가 세상을 바꿉니다.</item>
+        <item>인생은 이야기와 같아요. 매 순간을 멋지게 장식하세요!</item>
+        <item>일상 속의 행복을 찾아서</item>
+        <item>최고는 아직 남아 있어요, 계속 해봐요.</item>
+        <item>\"만약에\"를 실현할 기회</item>
+        <item>오늘을 즐기세요. 지금 당장.</item>
+        <item>행복은 매 순간 당신이 결정하는 선택지입니다.</item>
+        <item>자신을 가져요, 졸린 오후라도요!</item>
+        <item>당신의 행동이 시곗바늘보다 많은 것을 증명합니다.</item>
+        <item>당신의 인생은 당신이 만들어갑니다. 멋진 삶을 살아가세요</item>
+        <item>꿈은 크게, 일은 열심히, 그리고 절대 포기하지 마세요.</item>
+        <item>당신이 생각하는 것 보다 당신은 강합니다.</item>
+        <item>Every setback is a setup for a comeback.</item>
+        <item>목적지만이 아니라, 과정도 즐기세요</item>
+        <item>두려움이 아닌 목표를 쫒아가세요</item>
+        <item>당신의 가능성은 무한합니다. 도전하세요.</item>
+    </string-array>
+    <string-array name="quickspace_psa_early_evening">
+        <item>시간에 관계없이, 지금 이 순간을 만끽하세요</item>
+        <item>노을이 진 후에, 새로운 기회의 여명이 찾아옵니다.</item>
+        <item>Life is a journey; enjoy the scenery along the way.</item>
+        <item>당신의 태도가 당신을 만듭니다.</item>
+        <item>Your story is still being written, even as the sun sets.</item>
+        <item>일상속에서 아름다움을 간직하세요.</item>
+        <item>It\'s time to reflect and reset.</item>
+        <item>Choose joy, no matter the time on the clock.</item>
+        <item>Opportunities don\'t clock out in the evening.</item>
+        <item>다른 사람이 웃을 수 있는 이유가 되어주세요.</item>
+        <item>당신의 가능성에는 한계가 없습니다.</item>
+        <item>마법같은 순간은 언제라도 찾아옵니다.</item>
+        <item>당신의 인생은 당신이 만들어갑니다. 특별한 삶을 살아가세요.</item>
+        <item>호기심을 가지고, 위대해지세요.</item>
+        <item>당신이 바라는 세상을 만드는 변화를 일으켜 보세요.</item>
+        <item>자신을 믿어요. 멋진 일들을 해낼 수 있어요.</item>
+        <item>유일한 한계는 스스로 정하는거에요.</item>
+        <item>성공도 첫걸음에서 시작합니다.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>밤을 즐겨요. 밤은 신비로우니까요.</item>
+        <item>In the quiet of the this evening, find serenity.</item>
+        <item>인생의 위대한 여정은 어둠속에서 시작할 수도 있습니다.</item>
+        <item>해가 지더라도 당신의 여정은 계속됩니다.</item>
+        <item>밤이란 캔버스 위에 꿈을 그려요.</item>
+        <item>오후의 정적속에서 내면의 평화를 찾습니다.</item>
+        <item>별은 가장 어두울 때 가장 밝게 빛납니다.</item>
+        <item>Dream big, even in the late hours of the day.</item>
+        <item>Your life is a story waiting to be written.</item>
+        <item>It\'s time for reflection and renewal.</item>
+        <item>늦은 밤의 고민이 이른 아침의 변화로 이어집니다.</item>
+        <item>Find joy in the stillness of this evening.</item>
+        <item>밤하늘은 꿈을 위한 넓은 캔버스와 같아요.</item>
+        <item>당신의 가능성은 잠들 때를 모릅니다. 열정을 불태우세요.</item>
+        <item>가장 어두운 때에도 희망을 버리지 마세요.</item>
+        <item>혼란의 한 가운데서도 내면의 침착함을 찾아보세요.</item>
+        <item>긍정적인 태도로, 열심히, 이뤄나가요.</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>밤은 기회의 조용한 속삭임입니다.</item>
+        <item>In the stillness of the night, find your inner strength.</item>
+        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
+        <item>세계는 잠들었지만, 당신의 가능성은 맑게 깨어있습니다.</item>
+        <item>밤이 늦어도, 당신의 야망은 영향받지 않아요.</item>
+        <item>Stay curious, stay awake, and let nights guide you.</item>
+        <item>당신의 꿈을 쫓을 용기를 내봐요.</item>
+        <item>위대함은 편한데서 오지 않아요.</item>
+        <item>당신은 당신의 운명을 스스로 결정할 힘이 있습니다.</item>
+        <item>행복은 선택입니다. 매일 선택하세요.</item>
+        <item>Life is what you make it, so make it count.</item>
+        <item>Stay focused, stay determined, stay unstoppable.</item>
+        <item>자신만의 이야기의 지은이는 자시자신입니다.</item>
+        <item>Strive for progress, not perfection.</item>
+        <item>Every day is a new beginning; make it a great one.</item>
+        <item>Inspire others by being your authentic self.</item>
+        <item>당신의 태도가 당신의 방향을 결정합니다.</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>무지는 축복입니다!</item>
+        <item>다른 ROM을 플래시해야합니까?</item>
+        <item>전쟁보다 평화</item>
+        <item>오, 무슨 일이에요?</item>
+        <item>당신에 작업에 집중하세요</item>
+        <item>얼마나 많은 스크린샷을 찍으셨나요?</item>
+        <item>Open goodness with crDroid</item>
+        <item>Spread love, not havoc</item>
+        <item>We didn\'t start the fire!</item>
+        <item>좋은 음악을 들을 시간이에요.</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>이것을 보려면 crDroid Premium이 필요합니다</item>
+        <item>유니콘의 혈통을 기억하십시오</item>
+        <item>더 나은 배터리 수명을 즐기세요</item>
+        <item>제로에서 시작</item>
+        <item>3000만큼 사랑해요.</item>
+        <item>스시가 없어도 맛있어요</item>
+        <item>오늘 좋은 일을 해 보세요</item>
+        <item>이것이 최고의 픽셀 경험이죠, 그렇지 않나요?</item>
+        <item>환상이 없습니다. 현실에 오신 것을 환영합니다!</item>
+        <item>후원해 주셔서 감사합니다.</item>
+        <item>Derps를 위한 축제는 없습니다 - 오직 완벽함!</item>
+        <item>빌드 봇의 최고의 선택 중 하나</item>
+        <item>편집증에 대한 정신</item>
+        <item>차가운 디저트를 먹어보세요</item>
+        <item>정말 멋진 경험이지 않나요?</item>
+        <item>진화는 신화입니다.</item>
+        <item>당신이 깜박이는 것입니다, 감자가되지 마십시오?</item>
+        <item>무슨 생각을 하고 계신가요?</item>
+        <item>익스펙토 페트로눔</item>
+        <item>Wubba Lubba Dub Dub</item>
+        <item>이겼닭 ....?</item>
+        <item>rm -rf \/</item>
+        <item>사실 프링글스는 감자칩이 아니에요..</item>
+        <item>배터리 충전상태를 확인하세요!</item>
+        <item>이메일/메시지를 확인하세요</item>
+        <item>Check your to-do list if you have one.</item>
+        <item>홈 설정에서 퀵스페이스를 해제할 수 있습니다.</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">날씨 업데이트</string>
+    <string name="quick_event_ambient_weather_summary">현재 위치의 날씨 표시</string>
+    <string name="quick_event_ambient_weather_enabled_info">날씨 정보 서비스 활성화가 필요합니다</string>
+    <string name="quick_event_weather_clouds">흐림</string>
+    <string name="quick_event_weather_rain">비</string>
+    <string name="quick_event_weather_clear">맑음</string>
+    <string name="quick_event_weather_storm">폭풍</string>
+    <string name="quick_event_weather_snow">눈</string>
+    <string name="quick_event_weather_wind">바람</string>
+    <string name="quick_event_weather_mist">안개</string>
+    <string name="quick_event_weather_city_title">현재 위치</string>
+    <string name="quick_event_weather_city_summary">현재 위치의 날씨 표시</string>
+    <string name="quick_event_weather_text_title">현재 상태</string>
+    <string name="quick_event_weather_text_summary">현재 날씨 요약 표시</string>
+    <string name="intent_no_app_clock_found">일정이나 알림을 찾을 수 없습니다</string>
+    <!-- Freed memory on clear all tasks -->
+    <string name="freed_memory_text">Freed up %1$s</string>
+    <string name="optimal_memory_text">시스템이 최적화 되었습니다.</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">잠금해제</string>
+    <string name="task_menu_item_lock">잠금</string>
+</resources>

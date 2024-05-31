@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2023 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">Ρυθμίσεις Αρχικής Οθόνης</string>
+    <!-- Categories -->
+    <string name="home_category_title">Αρχική οθόνη</string>
+    <string name="home_category_summary">Ρύθμιση πλαισίου Google now και άλλα</string>
+    <string name="icons_category_title">Εικονίδια</string>
+    <string name="icons_category_summary">Ορισμός μεγέθους εικονιδίου και πολλά άλλα</string>
+    <string name="app_drawer_category_title">Καρτέλα εφαρμογών</string>
+    <string name="app_drawer_category_summary">Προσαρμογή καρτέλας εφαρμογών</string>
+    <string name="recents_category_title">Πρόσφατα</string>
+    <string name="recents_category_summary">Ανανεώστε την οθόνη επισκόπησης</string>
+    <string name="misc_category_title">Διάφορα</string>
+    <string name="misc_category_summary">Άλλες επιλογές</string>
+    <string name="general_category_title">Γενικά</string>
+    <string name="interface_category_title">Διεπαφή</string>
+    <string name="quickspace_category_title">Quickspace</string>
+    <string name="search_bar_category_title">Μπάρα αναζήτησης</string>
+    <string name="actions_category_title">Γρήγορες ενέργειες</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">Επιλογές για προγραμματιστές</string>
+    <string name="dev_options_summary">Ενεργοποιήστε μερικές κρυφές λειτουργίες με δική σας ευθύνη</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Κλείδωμα διάταξης</string>
+    <string name="settings_lock_layout_summary_on">Εικονίδια και widgets δεν μπορούν να προστεθούν, να αφαιρεθούν και να μετακινηθούν στην αρχική οθόνη</string>
+    <string name="settings_lock_layout_summary_off">Εικονίδια και widgets μπορούν να προστεθούν, να αφαιρεθούν και να μετακινηθούν στην αρχική οθόνη</string>
+    <string name="settings_edit_widgets_error">Δεν είναι δυνατή η προσθήκη widget στην αρχική οθόνη</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Ετικέτες εικονιδίων στην επιφάνεια εργασίας</string>
+    <string name="drawer_show_labels">Ετικέτες εικονιδίων στο συρτάρι εφαρμογών</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Σύρετε για πρόσβαση στην εφαρμογή Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Όταν σύρετε προς τα αριστερά από την κύρια αρχική οθόνη</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Όταν σύρετε προς τα δεξιά από την κύρια Αρχική οθόνη</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Κρυφές &amp; Προστατευόμενες εφαρμογές</string>
+    <string name="trust_apps_auth_manager">Ξεκλειδώστε για να διαχειριστείτε τις κρυφές και προστατευόμενες εφαρμογές</string>
+    <string name="trust_apps_auth_open_app">Πιστοποίηση για άνοιγμα %1$s</string>
+    <string name="trust_apps_loading">Φόρτωση\u2026</string>
+    <string name="trust_apps_no_lock_error">Παρακαλώ ρυθμίστε ένα ασφαλές κλείδωμα οθόνης για να περιορίσετε την πρόσβαση στις εφαρμογές</string>
+    <string name="trust_apps_help">Βοήθεια</string>
+    <string name="trust_apps_info_hidden">Οι κρυφές εφαρμογές και τα widget τους αποκρύπτονται από το συρτάρι</string>
+    <string name="trust_apps_info_protected">Οι προστατευμένες εφαρμογές απαιτούν έλεγχο ταυτότητας για να ανοιχτούν από τον εκκινητή</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Προτάσεις</string>
+    <string name="suggestion_pref_screen_desc">Προτάσεις για Όλες τις Εφαρμογές &amp; Αρχικής οθόνης</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">Παύση</string>
+    <string name="pause_apps_dialog_title">Παύση %1$s;</string>
+    <string name="pause_apps_dialog_message">Οι ειδοποιήσεις για %1$s θα τεθούν σε παύση</string>
+    <string name="paused_apps_dialog_title">Η εφαρμογή τέθηκε σε παύση</string>
+    <string name="paused_apps_dialog_message">%1$s τέθηκε απευθείας σε παύση από τον εκκινητή</string>
+    <string name="paused_apps_drop_target_label">Παύση εφαρμογής</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Διπλό πάτημα για ύπνο</string>
+    <string name="pref_sleep_gesture_summary">Πατήστε δύο φορές σε κενό χώρο για απενεργοποίηση της οθόνης</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Τιμή: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">από προεπιλογή</string>
+    <string name="custom_seekbar_default_value_to_set">Προεπιλεγμένη τιμή: <xliff:g id="v">%s</xliff:g>\nΠατήστε παρατεταμένα για να ορίσετε</string>
+    <string name="custom_seekbar_default_value_is_set">Η προεπιλεγμένη τιμή έχει οριστεί</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Μέγεθος εικονιδίου</string>
+    <!-- Font size -->
+    <string name="font_size_title">Μέγεθος γραμ/σειράς</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Μέγιστες γραμμές για την ετικέτα εφαρμογής</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Τερματισμός</string>
+    <string name="recents_app_killed">Η εφαρμογή τερματίστηκε</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">Χρήση γραμμής εργασιών</string>
+    <string name="pref_allow_phone_taskbar_summary">Για άνοιγμα και εναλλαγή εφαρμογών οπουδήποτε</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Αναζήτηση</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Φωνητική αναζήτηση</string>
+    <string name="dock_music_search_title">Αναζήτηση Μουσικής</string>
+    <string name="dock_music_search_summary">Εκκίνηση της αναζήτησης μουσικής πατώντας το εικονίδιο μικροφώνου</string>
+    <string name="dock_search_title">Γραμμή αναζήτησης Google</string>
+    <string name="dock_search_summary">Γραμμή αναζήτησης στην κάτω μπάρα εφαρμογών</string>
+    <string name="dock_theme_title">Θεματικά εικονίδια</string>
+    <string name="dock_theme_summary">Χρήση θεματικών εικονιδίων για γραμμή αναζήτησης</string>
+    <string name="search_radius_title">Γωνιακή ακτίνα</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Φόντο Hotseat</string>
+    <string name="hotseat_bg_summary">Προσθήκη ημιδιαφανούς φόντου στη γραμμή εφαρμογών</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Αδιαφάνεια φόντου</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Κύλιση ταπετσαρίας</string>
+    <string name="allow_wallpaper_scrolling_summary">Εφέ κύλισης ταπετσαρίας για πολλαπλές οθόνες</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Μεγέθυνση ταπετσαρίας</string>
+    <string name="allow_wallpaper_zooming_summary">Μεγέθυνση ή σμίκρυνση της ταπετσαρίας όταν χρησιμοποιείτε συρτάρι ή πρόσφατες εφαρμογές</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Γραμμή Κατάστασης</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Πάνω σκιά</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Ύψος σειράς</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Διαθέσιμο | %2$s Σύνολο</string>
+    <string name="recents_meminfo_title">Πληροφορίες μνήμης</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Βάθμος θολώματος φόντου</string>
+    <string name="background_blur_summary">Ορισμός επιπέδου βάθους θαμπώματος για πρόσφατα και συρτάρι εφαρμογών</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Στιγμιότυπο οθόνης</string>
+    <string name="recents_clear_all_title">Διαγραφή όλων</string>
+    <string name="recents_lens_title">Lens</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Ανακινήστε το τηλέφωνο για να εκκαθαρίσετε όλες τις εργασίες</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Θεματικά εικονίδια</string>
+    <string name="pref_themed_icons_summary">Ακολουθήστε τα θεματικά εικονίδια που χρησιμοποιούνται στην αρχική οθόνη</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">Πηγή</string>
+    <string name="app_info_source_system">Σύστημα</string>
+    <string name="app_info_last_update">Τελευταία ενημέρωση</string>
+    <string name="app_info_version">Έκδοση</string>
+    <string name="app_info_more">Περισσότερα</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Πακέτο εικονιδίων</string>
+    <string name="icon_pack_default_label">Προεπιλογή</string>
+    <string name="icon_pack_add">Εγκαταστήστε περισσότερα</string>
+    <string name="icon_pack_no_market">Δεν υπάρχει κανένα διαθέσιμο κατάστημα εφαρμογών</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Να επιτρέπονται σύντομα parallax</string>
+    <string name="short_parallax_summary">Ενεργοποιήστε το εφέ κύλισης πλήρους ταπετσαρίας σε μικρότερο αριθμό σελίδων αντί να περικόψετε την ταπετσαρία</string>
+    <string name="single_page_center_title">Κέντρο μιας σελίδας</string>
+    <string name="single_page_center_summary">Κεντράρισμα ταπετσαρίας αν χρησιμοποιείτε μόνο μια σελίδα</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Γραμμή αναζήτησης εφαρμογών</string>
+    <string name="drawer_search_summary">Γραμμή αναζήτησης πάνω από το συρτάρι εφαρμογών</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Επανεκκίνηση</string>
+    <string name="pref_restart_summary">Επανεκκινήστε τον launcher χειροκίνητα για να εφαρμόσετε οποιεσδήποτε ρυθμίσεις σε εκκρεμότητα</string>
+    <string name="restarting_launcher">Επανεκκίνηση του launcher...</string>
+    <string name="restarting_launcher_changes">Επανεκκίνηση του launcher για την εφαρμογή αλλαγών...</string>
+    <string name="updating_launcher_components">Επανεκκίνηση του launcher για ενημέρωση των στοιχείων του launcher...</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Με μια Ματιά</string>
+    <string name="show_quickspace_summary">Εμφάνιση στο επάνω μέρος της αρχικής σας οθόνης</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Καλώς ήλθατε στο crDroid!</string>
+    <string name="quick_event_rom_intro_welcome_ext">ώρα crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>Ευχαριστούμε που μας επιλέξατε</item>
+        <item>Μας αγαπάτε; Στείλτε μας μια μπύρα</item>
+        <item>Η καλύτερη Rom όλων.</item>
+        <item>Πείτε μας γεια στο Telegram</item>
+        <item>Πατήστε εδώ για να ξεκινήσετε</item>
+        <item>Σε αγαπάμε 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Greetings -->
+    <string name="quickspace_grt_morning">Καλημέρα.</string>
+    <string name="quickspace_grt_evening">Καλό απόγευμα.</string>
+    <string name="quickspace_grt_afternoon">Καλό μεσημέρι.</string>
+    <string name="quickspace_grt_night">Καληνύχτα.</string>
+    <string name="quickspace_grt_general">Καλή σας ημέρα.</string>
+    <string name="quickspace_ext_one">Σήμερα είναι</string>
+    <string name="quickspace_ext_two">Είναι</string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="qe_now_playing_unknown_artist">Άγνωστος Καλλιτέχνης</string>
+    <string name="qe_now_playing_ext_one">Τώρα Παίζει</string>
+    <string name="qe_now_playing_by">Από</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Τώρα Παίζει</string>
+    <string name="quickspace_now_playing_summary">Εμφάνιση του τραγουδιού που αναπαράγετε</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Εκτεταμένο στυλ</string>
+    <string name="quickspace_alternate_style_summary">Εναλλαγή σε εκτεταμένο στυλ</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Τυχαία μηνύματα</string>
+    <string name="quickspace_psa_summary">Κάντε τον σύντροφό σας πιο ζωντανό με τυχαία μηνύματα</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Καλημέρα!</item>
+        <item>Καλημέρα, ώρα να ροκάρουμε!</item>
+        <item>Τι όμορφη μέρα!</item>
+        <item>Να έχεις μια όμορφη μέρα!</item>
+        <item>Τι λες για έναν μικρό υπνάκο 5 λεπτών;</item>
+        <item>Ας πάρουμε αυτό το ψωμί.</item>
+        <item>Τα πρωινά είναι ένας φρέσκος καμβάς για το καθημερινό σας αριστούργημα.</item>
+        <item>Αγκαλιάστε την ανατολή της ευκαιρίας κάθε πρωί.</item>
+        <item>Στο πρώιμο φως, βρείτε τη δύναμη να φωτίσετε το μονοπάτι σας.</item>
+        <item>Η μέρα σας ξεκινά με ατελείωτες δυνατότητες.</item>
+        <item>Κάθε ανατολή του ηλίου είναι μια υπενθύμιση ότι μπορείτε να ξεκινήσετε εκ νέου.</item>
+        <item>Ξυπνήστε με σκοπό, κατακτήστε την επόμενη μέρα.</item>
+        <item>Οι σκέψεις σας μπορούν να αποτελέσουν το θεμέλιο για μεγάλα επιτεύγματα.</item>
+        <item>Ο κόσμος ξυπνά, το ίδιο και οι δυνατότητές σας.</item>
+        <item>Το πρώτο κεφάλαιο στην καθημερινή σας περιπέτεια.</item>
+        <item>Αφήστε την πρωινή σας ρουτίνα να είναι η βάση για την επιτυχία.</item>
+        <item>Ανατολή ή όχι, οι δυνατότητές σας είναι πάντα σε άνοδο.</item>
+        <item>Είναι ώρα για νέες ιδέες και τολμηρές πράξεις.</item>
+        <item>Το πρώιμο πουλί πιάνει το σκουλήκι, αλλά μπορείς να πιάσεις τα όνειρά σου.</item>
+        <item>Βρείτε το θάρρος να κυνηγήσετε τις φιλοδοξίες σας.</item>
+        <item>Σηκωθείτε και λάμψτε, γιατί το μεγαλείο περιμένει.</item>
+        <item>Η καλύτερη στιγμή για να ξεκινήσετε είναι τώρα.</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon">
+        <item>Κυνηγήστε τα όνειρά σας, όχι τα λεπτά.</item>
+        <item>Σε κάθε στιγμή, μια νέα ευκαιρία.</item>
+        <item>Αγκαλιάστε το ταξίδι, όχι μόνο τον προορισμό.</item>
+        <item>Σήμερα είναι ένα δώρο, γι \'αυτό ονομάζεται το παρόν.</item>
+        <item>Αφήστε το χαμόγελό σας να αλλάξει τον κόσμο.</item>
+        <item>Η ζωή είναι μια ιστορία. κάντε κάθε κεφάλαιο να μετράει.</item>
+        <item>Βρείτε χαρά στις συνηθισμένες στιγμές.</item>
+        <item>Τα καλύτερα έρχονται, συνεχίστε έτσι.</item>
+        <item>Η ευκαιρία σας να μετατρέψετε το «τι θα γινόταν αν» σε «τι είναι»</item>
+        <item>Αδράξτε τη μέρα, ξεκινώντας τώρα.</item>
+        <item>Η ευτυχία είναι μια επιλογή που μπορείς να κάνεις ανά πάσα στιγμή.</item>
+        <item>Πιστέψτε στον εαυτό σας, ακόμη και σε ένα βραδινό μες.</item>
+        <item>Αφήστε τις ενέργειές σας να μιλήσουν πιο δυνατά από το ρολόι.</item>
+        <item>Η ζωή σας είναι αυτό που φτιάχνετε από αυτήν. κάντε το καταπληκτικό.</item>
+        <item>Ονειρέψου πολύ, δούλεψε σκληρά και μην τα παρατάς ποτέ.</item>
+        <item>Είσαι δυνατότερος απ \'όσο νομίζεις.</item>
+        <item>Κάθε οπισθοδρόμηση είναι μια ρύθμιση για μια επιστροφή.</item>
+        <item>Αγκαλιάστε το ταξίδι, όχι μόνο τον προορισμό.</item>
+        <item>Κυνηγήστε τους στόχους σας, όχι τους φόβους σας.</item>
+        <item>Οι δυνατότητές σας είναι ατελείωτες, ξεκλειδώστε τες.</item>
+    </string-array>
+    <string-array name="quickspace_psa_early_evening">
+        <item>Αγκαλιάστε την παρούσα στιγμή, ανεξάρτητα από την ώρα.</item>
+        <item>Σε κάθε σούρουπο, βρείτε μια νέα αυγή ευκαιρίας.</item>
+        <item>Η ζωή είναι ένα ταξίδι, απολαύστε το τοπίο στην πορεία.</item>
+        <item>Η στάση σας διαμορφώνει την πραγματικότητά σας.</item>
+        <item>Η ιστορία σας εξακολουθεί να γράφεται, ακόμη και όταν ο ήλιος δύει.</item>
+        <item>Αποτυπώστε την ομορφιά στις συνηθισμένες στιγμές.</item>
+        <item>Ήρθε η ώρα να αναστοχαστείτε και να επαναφέρετε.</item>
+        <item>Επιλέξτε τη χαρά, ανεξάρτητα από την ώρα του ρολογιού.</item>
+        <item>Οι ευκαιρίες δεν τελειώνουν το βράδυ.</item>
+        <item>Γίνε ο λόγος που κάποιος χαμογελά.</item>
+        <item>Οι δυνατότητές σας δεν έχουν όρια.</item>
+        <item>Στιγμές μαγείας μπορεί να συμβεί σε οποιαδήποτε ώρα.</item>
+        <item>Η ζωή σας είναι αυτό που φτιάχνετε από αυτήν, κάντε το καταπληκτικό.</item>
+        <item>Μείνετε περίεργοι, μείνετε ευγνώμονες.</item>
+        <item>Γίνε η αλλαγή που θέλεις να δεις στον κόσμο.</item>
+        <item>Πίστεψε στον εαυτό σου, είσαι ικανός για καταπληκτικά πράγματα.</item>
+        <item>Το μόνο όριο είναι αυτό που θέτεις εσύ στον εαυτό σου.</item>
+        <item>Η επιτυχία ξεκινά με ένα μόνο βήμα.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Αδράξτε τη νύχτα, γιατί έχει τα δικά της μυστήρια.</item>
+        <item>Στην ησυχία του απόψε, βρείτε γαλήνη.</item>
+        <item>Οι μεγαλύτερες περιπέτειες της ζωής μπορούν να ξεκινήσουν στο σκοτάδι.</item>
+        <item>Το ταξίδι σας συνεχίζεται ακόμα και μετά τη δύση του ήλιου.</item>
+        <item>Αφήστε τη νύχτα να είναι ο καμβάς σας, ζωγραφίστε το με όνειρα.</item>
+        <item>Στην ηρεμία αυτής της βραδιάς, βρείτε την εσωτερική σας γαλήνη.</item>
+        <item>Τα αστέρια λάμπουν φωτεινότερα στις πιο σκοτεινές ώρες.</item>
+        <item>Ονειρευτείτε πολύ, ακόμη και στις τελευταίες ώρες της ημέρας.</item>
+        <item>Η ζωή σου είναι μια ιστορία που περιμένει να γραφτεί.</item>
+        <item>Είναι ώρα για προβληματισμό και ανανέωση.</item>
+        <item>Οι σκέψεις αργά το βράδυ μπορεί να οδηγήσουν σε αποκαλύψεις νωρίς το πρωί.</item>
+        <item>Βρείτε χαρά στην ηρεμία αυτής της βραδιάς.</item>
+        <item>Ο νυχτερινός ουρανός είναι ένας απέραντος καμβάς ονείρων.</item>
+        <item>Οι δυνατότητές σας δεν γνωρίζουν την ώρα του ύπνου, κυνηγήστε τα πάθη σας.</item>
+        <item>Μείνετε αισιόδοξοι, ακόμα και στις πιο σκοτεινές ώρες.</item>
+        <item>Μέσα στο χάος, βρείτε την εσωτερική σας ηρεμία.</item>
+        <item>Μείνετε θετικοί, δουλέψτε σκληρά, κάντε το πραγματικότητα.</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Οι νύχτες είναι οι ήσυχοι ψίθυροι ευκαιρίας.</item>
+        <item>Στην ησυχία της νύχτας, βρείτε την εσωτερική σας δύναμη.</item>
+        <item>Αγκάλιασε το σκοτάδι, γιατί κρατάει τα κλειδιά των ονείρων σου.</item>
+        <item>Ο κόσμος κοιμάται, αλλά οι δυνατότητές σας είναι πολύ ξύπνιες.</item>
+        <item>Η νύχτα μπορεί να είναι αργά, αλλά οι φιλοδοξίες σας είναι διαχρονικές.</item>
+        <item>Μείνετε περίεργοι, μείνετε ξύπνιοι και αφήστε τις νύχτες να σας καθοδηγήσουν.</item>
+        <item>Βρείτε το κουράγιο να κυνηγήσετε τα όνειρά σας.</item>
+        <item>Τα σπουδαία πράγματα δεν προέρχονται ποτέ από τις ζώνες άνεσης.</item>
+        <item>Έχετε τη δύναμη να δημιουργήσετε τη μοίρα σας.</item>
+        <item>Η ευτυχία είναι επιλογή, επιλέξτε την κάθε μέρα.</item>
+        <item>Η ζωή είναι αυτό που τη φτιάχνεις, γι\' αυτό κάνε τη να μετράει.</item>
+        <item>Μείνετε συγκεντρωμένοι, μείνετε αποφασισμένοι, μείνετε ασταμάτητοι.</item>
+        <item>Είστε ο συγγραφέας της δικής σας ιστορίας.</item>
+        <item>Προσπαθήστε για πρόοδο, όχι τελειότητα.</item>
+        <item>Κάθε μέρα είναι ένα νέο ξεκίνημα, κάντε το υπέροχο.</item>
+        <item>Εμπνεύστε τους άλλους με το να είστε ο αυθεντικός εαυτός σας.</item>
+        <item>Η στάση σας καθορίζει την κατεύθυνση σας.</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Η άγνοια είναι Ευτυχία</item>
+        <item>Ήρθε ήδη η ώρα να flashaρουμε ακόμα μια ενημέρωση;</item>
+        <item>Κάντε ειρήνη, όχι πόλεμο</item>
+        <item>Ω γεια, τι λέει;</item>
+        <item>Επικεντρώσου στις εργασίες σου</item>
+        <item>Πόσα στιγμιότυπα οθόνης παίρνεις;</item>
+        <item>Ανοιχτή καλοσύνη με crDroid</item>
+        <item>Διαδώστε αγάπη, όχι καταστροφή</item>
+        <item>Δεν ανάψαμε εμείς τη φωτιά!</item>
+        <item>Ώρα για λίγη καλή μουσική</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>Χρειάζεστε το crDroid Premium για να το δείτε αυτό</item>
+        <item>Θυμήσου το Lineage του Unicorn</item>
+        <item>Απόλαυσε την Xtended διάρκεια ζωής της μπαταρίας</item>
+        <item>Ξεκινώντας από το απόλυτο μηδέν</item>
+        <item>Σε αγαπάμε 3000</item>
+        <item>Νόστιμο ακόμη και χωρίς Sushi</item>
+        <item>Κάνε κάτι ωραίο σήμερα</item>
+        <item>Αυτή είναι η καλύτερη εμπειρία Pixel, έτσι δεν είναι;</item>
+        <item>Χωρίς ψευδαισθήσεις, καλώς ήρθατε στην πραγματικότητα!</item>
+        <item>Ευχαριστούμε για την υποστήριξη</item>
+        <item>Χωρίς φεστιβάλ για Derps - μόνο τελειότητα!</item>
+        <item>Μία από τις καλύτερες επιλογές του buildbot</item>
+        <item>Λογική για την Παράνοιά σας</item>
+        <item>Δοκιμάστε το Ice Cold επιδόρπια</item>
+        <item>Τι υπέροχη εμπειρία, έτσι δεν είναι;</item>
+        <item>Η εξέλιξη είναι μύθος, σωστά;</item>
+        <item>Είσαι ότι flashάρεις, μην είσαι Πατάτα</item>
+        <item>Τι έχεις στο μυαλό σου;</item>
+        <item>Expecto Patronum</item>
+        <item>Wubba Lubba Dub Dub</item>
+        <item>Winner Winner ....?</item>
+        <item>rm -rf \/</item>
+        <item>Τα Pringles στην πραγματικότητα δεν είναι πατατάκια..</item>
+        <item>Θυμήσου να ελέγχεις τα επίπεδα μπαταρίας της συσκευής!</item>
+        <item>Ελέγξτε τα email/μηνύματά σας.</item>
+        <item>Ελέγξτε τη λίστα υποχρεώσεών σας εάν έχετε μια.</item>
+        <item>Μπορείτε να απενεργοποιήσετε το quickspace μέσω των ρυθμίσεων αρχικής οθόνης.</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">Ενημέρωση καιρού</string>
+    <string name="quick_event_ambient_weather_summary">Εμφάνιση τρέχουσας ενημέρωσης καιρού</string>
+    <string name="quick_event_ambient_weather_enabled_info">Απαιτεί την ενεργοποίηση της υπηρεσίας καιρού</string>
+    <string name="quick_event_weather_clouds">Συννεφιά</string>
+    <string name="quick_event_weather_rain">Βροχερός</string>
+    <string name="quick_event_weather_clear">Ηλιοφάνεια</string>
+    <string name="quick_event_weather_storm">Καταιγίδες</string>
+    <string name="quick_event_weather_snow">Χιονώδης</string>
+    <string name="quick_event_weather_wind">Θυελλώδεις</string>
+    <string name="quick_event_weather_mist">Ομιχλώδες</string>
+    <string name="quick_event_weather_city_title">Τρέχουσα τοποθεσία</string>
+    <string name="quick_event_weather_city_summary">Εμφάνιση της τρέχουσας τοποθεσίας του καιρού</string>
+    <string name="quick_event_weather_text_title">Τρέχουσα κατάσταση</string>
+    <string name="quick_event_weather_text_summary">Εμφάνιση σύνοψης της τρέχουσας καιρικής κατάστασης</string>
+    <string name="intent_no_app_clock_found">Αδυναμία εύρεσης δραστηριότητας ημερολογίου ή ρολογιού</string>
+    <!-- Freed memory on clear all tasks -->
+    <string name="freed_memory_text">Απελευθερώθηκαν %s</string>
+    <string name="optimal_memory_text">Το σύστημά σας βρίσκεται τώρα σε βέλτιστη κατάσταση</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Ξεκλείδωμα</string>
+    <string name="task_menu_item_lock">Κλείδωμα</string>
+</resources>

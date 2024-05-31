@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2023 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">Налаштування головного екрана</string>
+    <!-- Categories -->
+    <string name="home_category_title">Домашній екран</string>
+    <string name="home_category_summary">Встановити панель Google Now та інше</string>
+    <string name="icons_category_title">Іконки</string>
+    <string name="icons_category_summary">Встановити розмір іконки та багато іншого</string>
+    <string name="app_drawer_category_title">Меню додатків</string>
+    <string name="app_drawer_category_summary">Налаштувати меню додатків</string>
+    <string name="recents_category_title">Меню \"Нещодавні\"</string>
+    <string name="recents_category_summary">Настройка останніх додатків</string>
+    <string name="misc_category_title">Різне</string>
+    <string name="misc_category_summary">Інші параметри</string>
+    <string name="general_category_title">Загальні налаштування</string>
+    <string name="interface_category_title">Інтерфейс</string>
+    <string name="quickspace_category_title">Найголовніше</string>
+    <string name="search_bar_category_title">Рядок пошуку</string>
+    <string name="actions_category_title">Швидкі дії</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">Параметри розробника</string>
+    <string name="dev_options_summary">Увімкнути деякі приховані функції на свій страх і ризик</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Заблокувати переміщення піктограм</string>
+    <string name="settings_lock_layout_summary_on">Ікони та віджети не можуть бути додані, видалені та переміщені на головний екран</string>
+    <string name="settings_lock_layout_summary_off">Дозволено переміщення піктограми та віджетів на Головному екрані</string>
+    <string name="settings_edit_widgets_error">Неможливо додати віджети на головний екран</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Назви іконок на робочому столі</string>
+    <string name="drawer_show_labels">Підписи іконок в меню програм</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Проведіть для доступу до програми Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Під час гортання вліво від головного екрану</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Під час гортання вправо від головного екрану</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Приховані та захищені додатки</string>
+    <string name="trust_apps_auth_manager">Розблокуйте, щоб керувати прихованими та захищеними додатками</string>
+    <string name="trust_apps_auth_open_app">Автентифікуйтесь, щоб відкрити %1$s</string>
+    <string name="trust_apps_loading">Завантаження\u2026</string>
+    <string name="trust_apps_no_lock_error">Будь ласка, встановіть блокування екрану для обмеження доступу до додатків</string>
+    <string name="trust_apps_help">Допомога</string>
+    <string name="trust_apps_info_hidden">Приховані додатки і їх віджети приховані з меню</string>
+    <string name="trust_apps_info_protected">Для відкриття захищених додатків з лаунчера потрібна аутентифікація</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Пропозиції</string>
+    <string name="suggestion_pref_screen_desc">Для підказок в меню всіх додатків та на домашньому екрані</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">Пауза</string>
+    <string name="pause_apps_dialog_title">Призупинити %1$s?</string>
+    <string name="pause_apps_dialog_message">Сповіщення для %1$s буде призупинено</string>
+    <string name="paused_apps_dialog_title">Додаток призупинено</string>
+    <string name="paused_apps_dialog_message">%1$s Був зупинений безпосередньо з лаунчера</string>
+    <string name="paused_apps_drop_target_label">Призупинити додаток</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Подвійне натискання для блокування екрану</string>
+    <string name="pref_sleep_gesture_summary">Подвійне натискання на порожнє місце для вимкнення екрану</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Значення: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">за замовчуванням</string>
+    <string name="custom_seekbar_default_value_to_set">Значення за замовчуванням: <xliff:g id="v">%s</xliff:g>\nДовге натискання для встановлення</string>
+    <string name="custom_seekbar_default_value_is_set">Значення за замовчуванням встановлено</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Розмір значків</string>
+    <!-- Font size -->
+    <string name="font_size_title">Розмір шрифту</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Максимум рядків для мітки додатку</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Зупинити</string>
+    <string name="recents_app_killed">Програму закрито</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">Використовувати панель завдань</string>
+    <string name="pref_allow_phone_taskbar_summary">Для відкриття та перемикання додатків в будь-якому місці</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Пошук</string>
+    <string name="label_lens">Google Ленс</string>
+    <string name="label_voice_search">Голосовий пошук</string>
+    <string name="dock_music_search_title">Пошук музики</string>
+    <string name="dock_music_search_summary">Почати пошук музики при натисканні на іконку із мікрофона</string>
+    <string name="dock_search_title">Панель пошуку Google</string>
+    <string name="dock_search_summary">Рядок пошуку у нижній панелі</string>
+    <string name="dock_theme_title">Іконки з темами</string>
+    <string name="dock_theme_summary">Використовувати тематичні іконки для панелі пошуку</string>
+    <string name="search_radius_title">Радіус округлення</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Фон віджета</string>
+    <string name="hotseat_bg_summary">Додати напівпрозорий фон в панель додатка</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Прозорість фону</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Прокручування шпалер</string>
+    <string name="allow_wallpaper_scrolling_summary">Ефект прокрутки шпалер для декількох екранів</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Масштабування шпалерів</string>
+    <string name="allow_wallpaper_zooming_summary">Збільшувати або зменшувати шпалери при використанні меню чи останніх програм</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Рядок стану</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Верхня тінь</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Висота рядка</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Доступно | %2$s Загалом</string>
+    <string name="recents_meminfo_title">Інформація про пам\'ять</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Глибина розмиття фону</string>
+    <string name="background_blur_summary">Встановити глибину розмиття для нещодавніх та меню додатків</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Знімок екрану</string>
+    <string name="recents_clear_all_title">Очистити все</string>
+    <string name="recents_lens_title">Лінза</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Струсніть телефон, щоб очистити всі завдання</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Іконки з темами</string>
+    <string name="pref_themed_icons_summary">Слідкувати за темами іконок, що використовуються на головному екрані</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">Джерело</string>
+    <string name="app_info_source_system">Система</string>
+    <string name="app_info_last_update">Останнє оновлення</string>
+    <string name="app_info_version">Версія</string>
+    <string name="app_info_more">Більше</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Пакет іконок</string>
+    <string name="icon_pack_default_label">За замовчанням</string>
+    <string name="icon_pack_add">Встановити ще</string>
+    <string name="icon_pack_no_market">Немає доступного магазину додатків</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Дозволити короткий паралакс</string>
+    <string name="short_parallax_summary">Увімкнути можливість повної прокрутки при гортанні на меншу кількість сторінок замість обрізання шпалер</string>
+    <string name="single_page_center_title">У центрі на одній сторінці</string>
+    <string name="single_page_center_summary">Центрувати шпалери, якщо тільки одна сторінка</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Панель пошуку додатків</string>
+    <string name="drawer_search_summary">Рядок пошуку зверху списку додатків</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Перезапустити</string>
+    <string name="pref_restart_summary">Перезапустіть лаунчер вручну для подальшого застосування налаштувань</string>
+    <string name="restarting_launcher">Перезавантаження оболонки...</string>
+    <string name="restarting_launcher_changes">Перезапуск оболонки для застосування змін...</string>
+    <string name="updating_launcher_components">Перезапуск лаунчера для оновлення компонентів...</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Найголовніше</string>
+    <string name="show_quickspace_summary">Показувати вгорі домашнього екрана</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Ласкаво просимо до crDroid!</string>
+    <string name="quick_event_rom_intro_welcome_ext">crDroid час!</string>
+    <string-array name="welcome_message_variants">
+        <item>Дякуємо, що обрали нас</item>
+        <item>Подобається наша робота? Віддячте матеріально</item>
+        <item>Найкраща прошивка у світі.</item>
+        <item>Привітайтесь з нами у Telegram</item>
+        <item>Натисніть тут, щоб почати</item>
+        <item>Ми вас любимо, вас 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Greetings -->
+    <string name="quickspace_grt_morning">Доброго ранку.</string>
+    <string name="quickspace_grt_evening">Доброго вечора.</string>
+    <string name="quickspace_grt_afternoon">Доброго дня.</string>
+    <string name="quickspace_grt_night">Спокійної ночі.</string>
+    <string name="quickspace_grt_general">Гарного дня.</string>
+    <string name="quickspace_ext_one">Сьогодні є</string>
+    <string name="quickspace_ext_two">Це</string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="qe_now_playing_unknown_artist">Невідомий виконавець</string>
+    <string name="qe_now_playing_ext_one">Відтворюється зараз</string>
+    <string name="qe_now_playing_by">Від</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Відтворюється зараз</string>
+    <string name="quickspace_now_playing_summary">Показувати пісню, яку ви відтворюєте</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Мінімалістичний стиль</string>
+    <string name="quickspace_alternate_style_summary">Перемикнути на сучасний стиль</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Випадкові повідомлення</string>
+    <string name="quickspace_psa_summary">Зробіть свого супутника більш жвавим за допомогою випадкових повідомлень</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Доброго ранку!</item>
+        <item>Доброго ранку, час запалювати!</item>
+        <item>Який гарний день!</item>
+        <item>Гарного дня!</item>
+        <item>Як щодо маленької 5 хвилинної дрімоти?</item>
+        <item>Зробімо це.</item>
+        <item>Рани - це свіже полотно для вашого щоденного шедевру.</item>
+        <item>Обійняти схід можливого сонця щоранку.</item>
+        <item>У ранньому світлі знаходить силу для освітлення вашого шляху.</item>
+        <item>Ваш день починається з нескінченних можливостей.</item>
+        <item>Кожен світанок - це нагадування, що ви можете почати заново.</item>
+        <item>Прокинувшись з метою, завоюйте день вперед.</item>
+        <item>Ваші думки можуть бути основою великих досягнень.</item>
+        <item>Світ пробуджується, і також має і свій потенціал.</item>
+        <item>Перший розділ твоєї щоденної пригоди.</item>
+        <item>Нехай ранкова рутина стає стартовим майданчиком успіху.</item>
+        <item>Світанок чи ні, ваш потенціал завжди зростає.</item>
+        <item>Це час для свіжих ідей і сміливих дій.</item>
+        <item>Птах рано вловлює хробака, але ви можете упіймати свої мрії.</item>
+        <item>Знайдіть сміливість аби переслідувати ваші прагнення.</item>
+        <item>Повз і сяйво, велич чекає.</item>
+        <item>Найкращий час розпочати зараз.</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon">
+        <item>Чекай свої мрії, а не хвилини.</item>
+        <item>У кожну мить нова можливість.</item>
+        <item>Гляньте дорогу, а не лише місце призначення.</item>
+        <item>Сьогодні це подарунок, тому його називають теперішнім.</item>
+        <item>Нехай ваша посмішка змінить світ.</item>
+        <item>Життя - це історія, зробіть кожен розділ граф.</item>
+        <item>Знайдіть радість в звичайний момент.</item>
+        <item>Найкраще ще приходити, тримайте.</item>
+        <item>Ваш шанс перетворити \"що\" в \"що\" на \"що це.\"</item>
+        <item>Хапай вдень, починаючи просто зараз.</item>
+        <item>Щастя - це вибір, який можна зробити будь-коли.</item>
+        <item>Вірите у себе, навіть у сонний день.</item>
+        <item>Нехай ваші дії говорять голосніше, ніж годинник.</item>
+        <item>Ваше життя - це те, що ти робиш від цього; зробіть це дивовижним.</item>
+        <item>Замріяні великі, багато працювати і ніколи не здавайся.</item>
+        <item>Ти сильніший, ніж ти думаєш.</item>
+        <item>Кожна невдача є налаштуванням для повернення.</item>
+        <item>Гляньте дорогу, а не лише місце призначення.</item>
+        <item>Вистримуйте свої цілі, а не страхи.</item>
+        <item>Ваш потенціал є безкінечним; розблокувати його.</item>
+    </string-array>
+    <string-array name="quickspace_psa_early_evening">
+        <item>Приймайте теперішній момент, незалежно від години.</item>
+        <item>У кожному сутінку знайдіть нове зорі можливостей.</item>
+        <item>Життя - це подорож, насолоджуйтесь крадіжкою на шляху.</item>
+        <item>Ваше ставлення формує вашу реальність.</item>
+        <item>Ваша історія все ще записується, навіть як сонце.</item>
+        <item>Захопіть красу в звичайні миті.</item>
+        <item>Настав час показати та скинути.</item>
+        <item>Виберіть радість, незалежно від часу на годиннику.</item>
+        <item>Угоди не демонструють вже ввечері.</item>
+        <item>Будьте причиною того, що хтось посміхається.</item>
+        <item>Ваш потенціал не знає меж.</item>
+        <item>Моменти магії можуть трапитися в будь-яку годину.</item>
+        <item>Ваше життя - це те, що ти робиш від цього; зробіть це дивовижним.</item>
+        <item>Будьте допитливі, будьте вдячні.</item>
+        <item>Якщо бажаєш, щоб світ змінився, - змінися сам.</item>
+        <item>Повірте в себе; ви в змозі вражаючі речі.</item>
+        <item>Єдина межа - та, яку ви встановлюєте самостійно.</item>
+        <item>Успіх починається з одного кроку.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Схопіть ніч на те, що вона має свої таємниці.</item>
+        <item>У тиху вечора зтався безтурботність.</item>
+        <item>Найвеличніші життєві пригоди можуть початися в темряві.</item>
+        <item>Ваша подорож триває навіть після заходу сонця.</item>
+        <item>А ніч все нехай буде вашим полотном; пофарбуйте його в сни.</item>
+        <item>Цього вечора знайдіть свій внутрішній мир.</item>
+        <item>Зірки світять найяскравіші в найтемніші години.</item>
+        <item>Сон великий, навіть після пізньої години дня.</item>
+        <item>Ваше життя - це історія, яка чекає на написання.</item>
+        <item>Настав час для роздумів і поновлення.</item>
+        <item>Пізні думки про ніч можуть призвести до одкровень раннього ранку.</item>
+        <item>Знайдіть радість у тиші цього вечора.</item>
+        <item>Нічне небо - це величезне полотно мрії.</item>
+        <item>Ваш потенціал не знає часу спати, переслідуйте за своїми пристрастями.</item>
+        <item>Залишайся надією, навіть у найтемніших годинах.</item>
+        <item>У розпал хаосу знайдіть ваше внутрішнє тіло.</item>
+        <item>Тримайте позитивний, наполегливо працюйте, зроби це реальним.</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Ночі — тихі шепоти нагоди.</item>
+        <item>У нічній тиші ви знайдете свою внутрішню силу.</item>
+        <item>Включає темряву, бо вона тримає ключі для вашої мрії.</item>
+        <item>Світ спить, але ваш потенціал є пробудженим.</item>
+        <item>Ніч може запізнитися, але ваші амбіції безчасові.</item>
+        <item>Залишайся допитливим, не спайте, а ночі підводьте вас.</item>
+        <item>Знайдіть мужність, щоб переслідувати свої мрії.</item>
+        <item>Великі речі з зони комфорту ніколи не будуть.</item>
+        <item>Ви маєте можливість створити свою власну долю.</item>
+        <item>Щастя - це вибір; обирайте його щодня.</item>
+        <item>Життя - це те, що ти робиш, тому зробиш його такт.</item>
+        <item>Залишайтеся сфокусованими, залишайтеся вимкненими.</item>
+        <item>Ви - автор власної історії.</item>
+        <item>Боротьба за прогрес, не досконалості.</item>
+        <item>Кожен день - це новий початок, зробити його великим.</item>
+        <item>Надихайте інших, будучи вашим справжнім собою.</item>
+        <item>Ваша позиція визначає ваш напрямок.</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Невігластво це блаженство</item>
+        <item>Настав час прошити ще одне оновлення?</item>
+        <item>Зробіть мир, а не війну</item>
+        <item>Привіт, що відбувається?</item>
+        <item>Сфокусуйтеся на ваших справах</item>
+        <item>Скільки знімків екрану ви робите?</item>
+        <item>Відкрийте добро з crDroid</item>
+        <item>Розповсюджуйте любов, а не хаос</item>
+        <item>Не ми почали пожежу!</item>
+        <item>Час для якоїсь хорошої музики</item>
+        <item>Голова</item>
+        <item>Вам потрібен crDroid Premium щоб побачити це</item>
+        <item>Пам\'ятайте схему єдинорога</item>
+        <item>Насолоджуйтесь подовженим життям батарейки</item>
+        <item>Починаючи з нуля</item>
+        <item>Ми вас любимо, вас 3000</item>
+        <item>Смачно навіть без Суші</item>
+        <item>Зроби щось гарне сьогодні</item>
+        <item>Це найкращий Pixel Experience, чи не так?</item>
+        <item>Немає ілюзій, ласкаво просимо до реальності!</item>
+        <item>Дякуємо за вашу підтримку</item>
+        <item>Жодного святкування задля дурниць - лише досконалість!</item>
+        <item>Один з найкращих виборців будівельного робота</item>
+        <item>Здоров’я для вашої Параної</item>
+        <item>Спробуйте крижані холодні десерти</item>
+        <item>Який чудовий досвід, чи не так?</item>
+        <item>Еволюція — міф, чи не так?</item>
+        <item>Ви саме те, що формуєте, не будьте байдужими</item>
+        <item>Що у тебе на думці?</item>
+        <item>Експекто патронум</item>
+        <item>Wubba Lubba Dub Dub</item>
+        <item>Переможець ....?</item>
+        <item>rm -rf \/</item>
+        <item>Pringles — це не лише картопляні чіпси..</item>
+        <item>Завжди перевіряйте рівень заряду акумулятора пристрою!</item>
+        <item>Завжди перевіряти повідомлення електронної пошти.</item>
+        <item>Перевірте свій запланований список, якщо у вас є.</item>
+        <item>Можна вимкнути швидку область в налаштуваннях будинку.</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">Оновлення погоди</string>
+    <string name="quick_event_ambient_weather_summary">Відображати поточне оновлення погоди</string>
+    <string name="quick_event_ambient_weather_enabled_info">Потрібно ввімкнути службу погоди</string>
+    <string name="quick_event_weather_clouds">Хмарно</string>
+    <string name="quick_event_weather_rain">Дощова</string>
+    <string name="quick_event_weather_clear">Сонячно</string>
+    <string name="quick_event_weather_storm">Гроза</string>
+    <string name="quick_event_weather_snow">Йде сніг</string>
+    <string name="quick_event_weather_wind">Вітряно</string>
+    <string name="quick_event_weather_mist">Димка</string>
+    <string name="quick_event_weather_city_title">Інформація про місто за місцерозташуванням</string>
+    <string name="quick_event_weather_city_summary">Показувати поточну погоду</string>
+    <string name="quick_event_weather_text_title">Поточний стан</string>
+    <string name="quick_event_weather_text_summary">Показувати поточний стан погоди</string>
+    <string name="intent_no_app_clock_found">Не вдалося знайти календар або годинник активності</string>
+    <!-- Freed memory on clear all tasks -->
+    <string name="freed_memory_text">Звільнено з %1$s</string>
+    <string name="optimal_memory_text">Ваша система знаходиться в оптимальному стані</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Розблокувати</string>
+    <string name="task_menu_item_lock">Блокування</string>
+</resources>

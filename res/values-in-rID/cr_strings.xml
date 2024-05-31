@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2023 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">Setelan beranda</string>
+    <!-- Categories -->
+    <string name="home_category_title">Layar utama</string>
+    <string name="home_category_summary">Atur panel Google Now dan lainnya</string>
+    <string name="icons_category_title">Ikon</string>
+    <string name="icons_category_summary">Atur ukuran ikon dan lainnya</string>
+    <string name="app_drawer_category_title">Semua aplikasi</string>
+    <string name="app_drawer_category_summary">Kustomisasi tampilan aplikasi anda</string>
+    <string name="recents_category_title">Baru-baru ini</string>
+    <string name="recents_category_summary">Mengubah tampilan layar</string>
+    <string name="misc_category_title">Lain-lain</string>
+    <string name="misc_category_summary">Opsi lainnya</string>
+    <string name="general_category_title">Umum</string>
+    <string name="interface_category_title">Antarmuka</string>
+    <string name="quickspace_category_title">QuickSpace</string>
+    <string name="search_bar_category_title">Bilah penelusuran</string>
+    <string name="actions_category_title">Aksi cepat</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">Opsi pengembang</string>
+    <string name="dev_options_summary">Mengaktifkan fitur tersembunyi dengan risiko</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Kunci tata letak</string>
+    <string name="settings_lock_layout_summary_on">Ikon dan widget tidak dapat ditambahkan, dihapus dan dipindahkan pada layar beranda</string>
+    <string name="settings_lock_layout_summary_off">Ikon dan widget dapat ditambahkan, dihapus dan dipindahkan pada layar beranda</string>
+    <string name="settings_edit_widgets_error">Hal ini tidak mungkin untuk menambahkan widget ke layar beranda</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Label ikon di desktop</string>
+    <string name="drawer_show_labels">Label ikon di laci</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Geser untuk mengakses aplikasi Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Saat Anda menggeser ke kanan dari Layar Beranda</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Saat Anda menggeser ke kanan dari Layar Beranda</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Tersembunyi &amp; Aplikasi dilindungi</string>
+    <string name="trust_apps_auth_manager">Buka kunci untuk mengelola aplikasi yang disembunyikan dan dilindungi</string>
+    <string name="trust_apps_auth_open_app">Autentikasi untuk membuka %1$s</string>
+    <string name="trust_apps_loading">Memuat\u2026</string>
+    <string name="trust_apps_no_lock_error">Silakan mengatur kunci layar untuk membatasi akses aplikasi</string>
+    <string name="trust_apps_help">Bantuan</string>
+    <string name="trust_apps_info_hidden">Aplikasi tersembunyi beserta widgetnya akan disembunyikan dari laci aplikasi</string>
+    <string name="trust_apps_info_protected">Aplikasi yang dilindungi memerlukan autentikasi untuk dibuka dari peluncur</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Saran</string>
+    <string name="suggestion_pref_screen_desc">Untuk Semua Aplikasi &amp; saran Layar Utama</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">Jeda</string>
+    <string name="pause_apps_dialog_title">Jeda %1$s?</string>
+    <string name="pause_apps_dialog_message">Notifikasi untuk %1$s akan dijeda</string>
+    <string name="paused_apps_dialog_title">Aplikasi dijeda</string>
+    <string name="paused_apps_dialog_message">%1$s langsung dijeda dari peluncur</string>
+    <string name="paused_apps_drop_target_label">Jeda aplikasi</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Ketuk dua kali untuk tidur</string>
+    <string name="pref_sleep_gesture_summary">Ketuk dua kali pada ruang kosong untuk mematikan layar</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Nilai: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">bawaan</string>
+    <string name="custom_seekbar_default_value_to_set">Nilai defaulf: <xliff:g id="v">%s</xliff:g>\nTekan lama untuk mengatur</string>
+    <string name="custom_seekbar_default_value_is_set">Nilai default tekah diterapkan</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Ukuran ikon</string>
+    <!-- Font size -->
+    <string name="font_size_title">Ukuran huruf</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Garis maksimum untuk pekerja aplikasi</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Matikan</string>
+    <string name="recents_app_killed">Aplikasi dimatikan</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">Gunakan bilah tugas</string>
+    <string name="pref_allow_phone_taskbar_summary">Untuk membuka dan beralih aplikasi di mana saja</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Pencarian</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Pencarian suara</string>
+    <string name="dock_music_search_title">Pencarian musik</string>
+    <string name="dock_music_search_summary">Mulai pencarian musik dengan menekan ikon mikrofon</string>
+    <string name="dock_search_title">Bilah pencarian Google</string>
+    <string name="dock_search_summary">Bilah pencarian di dok bawah</string>
+    <string name="dock_theme_title">Ikon bertema</string>
+    <string name="dock_theme_summary">Gunakan ikon bertema untuk bilah pencarian</string>
+    <string name="search_radius_title">Radius sudut</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Latar belakang hotseat</string>
+    <string name="hotseat_bg_summary">Tambahkan latar belakang tembus pandang di dok aplikasi</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Transparansi latar Belakang</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Menggulir wallpaper</string>
+    <string name="allow_wallpaper_scrolling_summary">Efek pengguliran wallpaper untuk beberapa tampilan</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Pembesaran wallpaper</string>
+    <string name="allow_wallpaper_zooming_summary">Perbesar atau perkecil wallpaper saat menggunakan laci atau aplikasi terbaru</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Bilah Status</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Bayangan atas</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Tinggi baris</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Tersedia | %2$s Total</string>
+    <string name="recents_meminfo_title">Info memori</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Kedalaman blur latar belakang</string>
+    <string name="background_blur_summary">Setel tingkat kedalaman blur untuk baru-baru ini dan laci aplikasi</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Tangkapan layar</string>
+    <string name="recents_clear_all_title">Bersihkan semua</string>
+    <string name="recents_lens_title">Lensa</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Goyang ponsel untuk menghapus semua tugas</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Ikon bertema</string>
+    <string name="pref_themed_icons_summary">Ikuti ikon bertema yang digunakan di layar beranda</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">Sumber</string>
+    <string name="app_info_source_system">Sistem</string>
+    <string name="app_info_last_update">Update yang lalu</string>
+    <string name="app_info_version">Versi</string>
+    <string name="app_info_more">Lainnya</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Paket ikon</string>
+    <string name="icon_pack_default_label">Bawaan</string>
+    <string name="icon_pack_add">Instal lebih banyak</string>
+    <string name="icon_pack_no_market">Tidak ada toko aplikasi yang tersedia</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Izinkan paralaks pendek</string>
+    <string name="short_parallax_summary">Aktifkan efek gulir wallpaper penuh pada sejumlah kecil halaman alih-alih memotong wallpaper</string>
+    <string name="single_page_center_title">Pusat satu halaman</string>
+    <string name="single_page_center_summary">Tengahkan wallpaper jika hanya menggunakan satu halaman</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Bilah pencarian aplikasi</string>
+    <string name="drawer_search_summary">Bilah pencarian di atas laci aplikasi</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Mulai ulang</string>
+    <string name="pref_restart_summary">Mulai ulang peluncur secara manual untuk menerapkan setelan yang tertunda</string>
+    <string name="restarting_launcher">Memulai ulang peluncur...</string>
+    <string name="restarting_launcher_changes">Memulai ulang peluncur untuk menerapkan perubahan...</string>
+    <string name="updating_launcher_components">Memulai ulang peluncur untuk memperbarui komponen peluncur...</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Sekilas</string>
+    <string name="show_quickspace_summary">Tampilkan di bagian atas layar beranda Anda</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Selamat datang di crDroid!</string>
+    <string name="quick_event_rom_intro_welcome_ext">waktunya crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>Terima kasih telah mimilih kami</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
+        <item>We love you 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Greetings -->
+    <string name="quickspace_grt_morning">Selamat pagi.</string>
+    <string name="quickspace_grt_evening">Selamat malam.</string>
+    <string name="quickspace_grt_afternoon">Selamat siang.</string>
+    <string name="quickspace_grt_night">Selamat malam.</string>
+    <string name="quickspace_grt_general">Hari yang indah.</string>
+    <string name="quickspace_ext_one">Hari ini adalah</string>
+    <string name="quickspace_ext_two">Ini</string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="qe_now_playing_unknown_artist">Artis tidak diketahui</string>
+    <string name="qe_now_playing_ext_one">Sedang Diputar</string>
+    <string name="qe_now_playing_by">Oleh</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Sedang Diputar</string>
+    <string name="quickspace_now_playing_summary">Tampilkan lagu yang Anda putar</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Gaya minimalis</string>
+    <string name="quickspace_alternate_style_summary">Beralih ke gaya modern</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Pesan random</string>
+    <string name="quickspace_psa_summary">Jadikan teman Anda lebih hidup dengan pesan random</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Selamat Pagi</item>
+        <item>Selamat pagi, saatnya bergoyang</item>
+        <item>Hari yang indah</item>
+        <item>Semoga harimu menyenangkan</item>
+        <item>Bagaimana dengan tidur siang kecil selama 5 menit</item>
+        <item>Mari bekerja keras.</item>
+        <item>Pagi hari adalah kanvas segar untuk mahakarya harian Anda.</item>
+        <item>Rangkullah terbitnya peluang setiap pagi.</item>
+        <item>Di awal cahaya, temukan kekuatan untuk menerangi jalan Anda.</item>
+        <item>Hari Anda dimulai dengan kemungkinan yang tak terbatas.</item>
+        <item>Setiap matahari terbit adalah pengingat bahwa Anda dapat memulai hal baru.</item>
+        <item>Bangunlah dengan tujuan, taklukkan hari yang akan datang.</item>
+        <item>Pikiran Anda bisa menjadi landasan pencapaian besar.</item>
+        <item>Dunia bangkit, begitu pula potensi Anda.</item>
+        <item>Bab pertama dalam petualangan harian Anda.</item>
+        <item>Biarkan rutinitas pagi Anda menjadi landasan menuju kesuksesan.</item>
+        <item>Matahari terbit atau tidak, potensi Anda selalu meningkat.</item>
+        <item>It\'s time for fresh ideas and bold actions.</item>
+        <item>Burung yang datang lebih awal akan menangkap cacing, tetapi Anda dapat menangkap impian Anda.</item>
+        <item>Temukan keberanian untuk mengejar aspirasi Anda.</item>
+        <item>Bangkit dan bersinar, karena kehebatan menanti.</item>
+        <item>Waktu terbaik untuk memulai adalah sekarang.</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon">
+        <item>Kejar impianmu, bukan menitnya.</item>
+        <item>Setiap saat, ada peluang baru.</item>
+        <item>Rangkullah perjalanannya, bukan hanya tujuannya.</item>
+        <item>Hari ini adalah anugerah, makanya disebut hadiah.</item>
+        <item>Biarkan senyummu mengubah dunia.</item>
+        <item>Hidup adalah sebuah cerita; membuat setiap bab berarti.</item>
+        <item>Temukan kegembiraan di momen-momen biasa.</item>
+        <item>Yang terbaik masih akan datang, pertahankan.</item>
+        <item>Kesempatan Anda untuk mengubah \'bagaimana jika\' menjadi \'apa adanya\'</item>
+        <item>Manfaatkan hari ini, mulai sekarang juga.</item>
+        <item>Kebahagiaan adalah pilihan yang bisa Anda buat kapan saja.</item>
+        <item>Percayalah pada diri sendiri, bahkan di sore hari yang mengantuk.</item>
+        <item>Biarkan tindakan Anda berbicara lebih keras daripada waktu.</item>
+        <item>Hidup Anda adalah apa yang Anda hasilkan; menjadikannya luar biasa.</item>
+        <item>Bermimpilah yang besar, bekerja keras, dan pantang menyerah.</item>
+        <item>Anda lebih kuat dari yang Anda kira.</item>
+        <item>Setiap kemunduran adalah persiapan untuk bangkit kembali.</item>
+        <item>Rangkullah perjalanannya, bukan hanya tujuannya.</item>
+        <item>Kejar tujuan Anda, bukan ketakutan Anda.</item>
+        <item>Potensi Anda tidak terbatas; membukanya.</item>
+    </string-array>
+    <string-array name="quickspace_psa_early_evening">
+        <item>Rangkul lah momen saat ini, kapan pun waktunya.</item>
+        <item>Di setiap senja, temukan peluang baru.</item>
+        <item>Hidup adalah perjalanan; menikmati pemandangan sepanjang perjalanan.</item>
+        <item>Sikap Anda membentuk realitas Anda.</item>
+        <item>Kisahmu masih ditulis, bahkan saat matahari terbenam.</item>
+        <item>Abadikan keindahan dalam momen biasa.</item>
+        <item>Saatnya untuk merenung dan mengatur ulang.</item>
+        <item>Pilihlah kegembiraan, tidak peduli jam berapa pun.</item>
+        <item>Peluang tidak akan habis di malam hari.</item>
+        <item>Jadilah alasan seseorang tersenyum.</item>
+        <item>Potensi Anda tidak mengenal batas.</item>
+        <item>Momen ajaib bisa terjadi kapan saja.</item>
+        <item>Hidup Anda adalah apa yang Anda hasilkan; menjadikannya luar biasa.</item>
+        <item>Tetap penasaran, tetap bersyukur.</item>
+        <item>Jadilah perubahan yang ingin Anda lihat di dunia.</item>
+        <item>Percaya pada dirimu sendiri; kamu mampu melakukan hal-hal menakjubkan.</item>
+        <item>Satu-satunya batasan adalah batasan yang Anda tentukan sendiri.</item>
+        <item>Kesuksesan dimulai dengan satu langkah.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Manfaatkan malam, karena ia menyimpan misteri tersendiri.</item>
+        <item>Dalam kesunyian malam ini, temukanlah ketenangan.</item>
+        <item>Petualangan terbesar dalam hidup bisa dimulai dalam kegelapan.</item>
+        <item>Perjalanan Anda berlanjut bahkan setelah matahari terbenam.</item>
+        <item>Biarkan malam menjadi kanvasmu; melukisnya dengan mimpi.</item>
+        <item>Dalam keheningan malam ini, temukan kedamaian batinmu.</item>
+        <item>Bintang bersinar paling terang di saat-saat paling gelap.</item>
+        <item>Bermimpilah yang besar, bahkan di pengujung hari.</item>
+        <item>Hidup Anda adalah cerita yang menunggu untuk ditulis.</item>
+        <item>Saatnya untuk refleksi dan pembaharuan.</item>
+        <item>Pikiran larut malam bisa mengarah pada wahyu di pagi hari.</item>
+        <item>Temukan kegembiraan dalam keheningan malam ini.</item>
+        <item>Langit malam adalah kanvas mimpi yang luas.</item>
+        <item>Potensi Anda tidak mengenal waktu tidur; kejar passionmu.</item>
+        <item>Tetaplah berharap, bahkan di saat-saat tergelap sekalipun.</item>
+        <item>Di tengah kekacauan, temukan ketenangan batin Anda.</item>
+        <item>Tetap positif, bekerja keras, wujudkan.</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Malam adalah bisikan tenang tentang peluang.</item>
+        <item>Dalam keheningan malam, temukan kekuatan batinmu.</item>
+        <item>Rangkullah kegelapan, karena kegelapan menyimpan kunci impian Anda.</item>
+        <item>Dunia tertidur, namun potensi Anda tetap terjaga.</item>
+        <item>Malam mungkin sudah larut, tetapi ambisi Anda tidak lekang oleh waktu.</item>
+        <item>Tetaplah penasaran, tetap terjaga, dan biarkan malam membimbing Anda.</item>
+        <item>Temukan keberanian untuk mengejar impian Anda.</item>
+        <item>Hal-hal besar tidak pernah datang dari zona nyaman.</item>
+        <item>Anda memiliki kekuatan untuk menciptakan takdir Anda sendiri.</item>
+        <item>Kebahagiaan adalah pilihan; memilihnya setiap hari.</item>
+        <item>Hidup adalah apa yang Anda buat, jadi buatlah itu berarti.</item>
+        <item>Tetap fokus, tetap bertekad, tetap tak terhentikan.</item>
+        <item>Anda adalah penulis cerita Anda sendiri.</item>
+        <item>Berusahalah untuk kemajuan, bukan kesempurnaan.</item>
+        <item>Setiap hari adalah awal yang baru; menjadikannya sesuatu yang hebat.</item>
+        <item>Menginspirasi orang lain dengan menjadi diri-sejati Anda.</item>
+        <item>Sikap Anda menentukan arah Anda.</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Ketidaktahuan adalah kebahagiaan sejati</item>
+        <item>Apakah ini waktu yang tepat untuk menginstal pembaruan?</item>
+        <item>Berdamai, bukan perang</item>
+        <item>Oh hai, apa kabar?</item>
+        <item>Fokus terhadap tugasmu</item>
+        <item>Berapa banyak tangkapan layar yang kamu ambil?</item>
+        <item>Kebaikan terbuka dengan crDroid</item>
+        <item>Sebarkan cinta, bukan malapetaka</item>
+        <item>Kami tidak menyalakan api!</item>
+        <item>Waktunya mendengarkan musik</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>Anda membutuhkan crDroid Premium untuk melihat ini</item>
+        <item>Ingat garis keturunan Unicorn</item>
+        <item>Nikmati daya tahan baterai yang bertambah</item>
+        <item>Dimulai dari paling nol</item>
+        <item>We love you 3000</item>
+        <item>Lezat bahkan tanpa Sushi</item>
+        <item>Lakukan sesuatu yang baik hari ini</item>
+        <item>Inilah pengalaman Pixel yang terbaik, betul tidak?</item>
+        <item>Tidak ada ilusi, selamat datang ke kenyataan!</item>
+        <item>Terima kasih atas dukungan anda</item>
+        <item>Tidak ada festival untuk kebodohan - hanya kesempurnaan!</item>
+        <item>Salah satu pilihan terbaik Buildbot</item>
+        <item>Sanitas untuk Paranoia Anda</item>
+        <item>Cobalah makanan penutup Ice Cold</item>
+        <item>Benar-benar pengalaman yang menyenangkan, bukan?</item>
+        <item>Evolusi adalah mitos, bukan?</item>
+        <item>Anda adalah apa yang Anda flash, jangan menjadi Kentang</item>
+        <item>Apa yang ada di pikiran Anda?</item>
+        <item>Harapkan Patronum</item>
+        <item>Sulih Suara Wubba Lubba</item>
+        <item>Menang Menang ....?</item>
+        <item>rm -rf \/</item>
+        <item>Pringles sebenarnya bukan keripik kentang..</item>
+        <item>Ingatlah untuk memeriksa level baterai perangkat!</item>
+        <item>Periksa email/pesan Anda.</item>
+        <item>Periksa daftar tugasmu jika kamu memilikinya.</item>
+        <item>Kamu dapat menonaktifkan quickspace melalui setelan beranda.</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">Weather update</string>
+    <string name="quick_event_ambient_weather_summary">Display current weather update</string>
+    <string name="quick_event_ambient_weather_enabled_info">Membutuhkan layanan cuaca untuk diaktifkan</string>
+    <string name="quick_event_weather_clouds">Berawan</string>
+    <string name="quick_event_weather_rain">Hujan</string>
+    <string name="quick_event_weather_clear">Cerah</string>
+    <string name="quick_event_weather_storm">Badai</string>
+    <string name="quick_event_weather_snow">Bersalju</string>
+    <string name="quick_event_weather_wind">Berangin</string>
+    <string name="quick_event_weather_mist">Berkabut</string>
+    <string name="quick_event_weather_city_title">Lokasi saat ini</string>
+    <string name="quick_event_weather_city_summary">Display current weather location</string>
+    <string name="quick_event_weather_text_title">Current condition</string>
+    <string name="quick_event_weather_text_summary">Display current weather condition summary</string>
+    <string name="intent_no_app_clock_found">Tidak dapat menemukan aktivitas kalender atau jam</string>
+    <!-- Freed memory on clear all tasks -->
+    <string name="freed_memory_text">Freed up %1$s</string>
+    <string name="optimal_memory_text">Your system is now in optimal condition</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Buka kunci</string>
+    <string name="task_menu_item_lock">Kunci</string>
+</resources>

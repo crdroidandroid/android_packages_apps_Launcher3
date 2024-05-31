@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2023 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">Cài đặt màn hình chính</string>
+    <!-- Categories -->
+    <string name="home_category_title">Màn hình chính</string>
+    <string name="home_category_summary">Tùy chỉnh các thiết lập trên màn hình chính</string>
+    <string name="icons_category_title">Biểu tượng</string>
+    <string name="icons_category_summary">Đặt kích cỡ biểu tượng và nhiều hơn</string>
+    <string name="app_drawer_category_title">Ngăn chứa ứng dụng</string>
+    <string name="app_drawer_category_summary">Tùy chỉnh ngăn chứa ứng dụng</string>
+    <string name="recents_category_title">Gần đây</string>
+    <string name="recents_category_summary">Các thiết lập màn hình ứng dụng gần đây</string>
+    <string name="misc_category_title">Cài đặt khác</string>
+    <string name="misc_category_summary">Tùy chọn khác</string>
+    <string name="general_category_title">Chung</string>
+    <string name="interface_category_title">Giao diện</string>
+    <string name="quickspace_category_title">Thông báo ngẫu nhiên</string>
+    <string name="search_bar_category_title">Thanh tìm kiếm</string>
+    <string name="actions_category_title">Thao tác nhanh</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">Tùy chọn nhà phát triển</string>
+    <string name="dev_options_summary">Bật một số tính năng ẩn và tự chịu rủi ro</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Khóa bố cục</string>
+    <string name="settings_lock_layout_summary_on">Không thể thêm vào hãy xoá hoặc đặt ở trang màn hình khác</string>
+    <string name="settings_lock_layout_summary_off">Có thể thêm vào và xoá hoặc đặt ở trang màn hình</string>
+    <string name="settings_edit_widgets_error">Không thể thêm vào màn hình chính</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Tên biểu tượng trên màn hình chính</string>
+    <string name="drawer_show_labels">Tên biểu tượng trong ngăn chứa ứng dụng</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Vuốt để truy cập ứng dụng nguồn cấp dữ liệu</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Khi vuốt trượt sang phải</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Khi vuốt trượt sang trái</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Ẩn &amp; Bảo mật ứng dụng</string>
+    <string name="trust_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn và được bảo vệ</string>
+    <string name="trust_apps_auth_open_app">Xác thực để mở %1$s</string>
+    <string name="trust_apps_loading">Đang tải\u2026</string>
+    <string name="trust_apps_no_lock_error">Hãy thiết lập màn hình khóa an toàn để hạn chế quyền truy cập ứng dụng</string>
+    <string name="trust_apps_help">Trợ giúp</string>
+    <string name="trust_apps_info_hidden">Ứng dụng cùng với tiện ích sẽ bị ẩn khỏi ngăn chứa ứng dụng</string>
+    <string name="trust_apps_info_protected">Các ứng dụng được bảo vệ yêu cầu xác thực được mở từ trình khởi chạy</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Đề xuất</string>
+    <string name="suggestion_pref_screen_desc">Đối với tất cả ứng dụng &amp; Đề xuất ở màn hình chính</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">Tạm dừng</string>
+    <string name="pause_apps_dialog_title">Tạm dừng %1$s?</string>
+    <string name="pause_apps_dialog_message">Thông báo cho %1$s sẽ bị tạm dừng</string>
+    <string name="paused_apps_dialog_title">Ứng dụng bị tạm dừng</string>
+    <string name="paused_apps_dialog_message">%1$s đã bị tạm dừng trực tiếp từ trình khởi chạy</string>
+    <string name="paused_apps_drop_target_label">Tạm dừng ứng dụng</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Chạm hai lần để tắt màn hình</string>
+    <string name="pref_sleep_gesture_summary">Nhấn liên tiếp hai lần vào khoảng trống để tắt màn hình</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Giá trị: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">theo mặc định</string>
+    <string name="custom_seekbar_default_value_to_set">Giá trị mặc định: <xliff:g id="v">%s</xliff:g>\nNhấn giữ để thiết lập</string>
+    <string name="custom_seekbar_default_value_is_set">Giá trị mặc định được thiết lập</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Kích thước biểu tượng</string>
+    <!-- Font size -->
+    <string name="font_size_title">Kích thước phông chữ</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Số dòng tối đa cho tên ứng dụng</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Đóng</string>
+    <string name="recents_app_killed">Ứng dụng đã được tắt</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">Sử dụng thanh tác vụ</string>
+    <string name="pref_allow_phone_taskbar_summary">Để mở và chuyển đổi ứng dụng ở mọi nơi</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Tìm kiếm</string>
+    <string name="label_lens">Ống kính google</string>
+    <string name="label_voice_search">Tìm kiếm bằng giọng nói</string>
+    <string name="dock_music_search_title">Tìm kiếm nhạc</string>
+    <string name="dock_music_search_summary">Tìm kiếm nhạc khi ấn vào biểu tượng</string>
+    <string name="dock_search_title">Thanh tìm kiếm dưới cùng</string>
+    <string name="dock_search_summary">Thanh tìm kiếm trong thanh công cụ dưới cùng</string>
+    <string name="dock_theme_title">Biểu tượng theo chủ đề</string>
+    <string name="dock_theme_summary">Dùng biểu tượng theo chủ đề cho thanh tìm kiếm</string>
+    <string name="search_radius_title">Bán kính góc</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Nền thanh công cụ</string>
+    <string name="hotseat_bg_summary">Thêm nền mờ vào thanh ứng dụng</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Độ mờ của nền</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Cuộn hình nền</string>
+    <string name="allow_wallpaper_scrolling_summary">Hiệu ứng cuộn hình nền cho nhiều màn hình</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Thu phóng hình nền</string>
+    <string name="allow_wallpaper_zooming_summary">Thu to nhỏ hình nền khi dùng khay ứng dụng hoặc ứng dụng gần đây</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Thanh trạng thái</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Bóng phía trên</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Chiều cao hàng</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">Còn trống: %1$s | Tổng số: %2$s</string>
+    <string name="recents_meminfo_title">Tình trạng bộ nhớ</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Độ sâu nền mờ</string>
+    <string name="background_blur_summary">Thiết lập độ mờ của hình nền cho ứng dụng gần đây và ngăn chứa ứng dụng</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Chụp ảnh màn hình</string>
+    <string name="recents_clear_all_title">Xoá tất cả</string>
+    <string name="recents_lens_title">Ống kính</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Lắc điện thoại để xóa hết các tác vụ</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Biểu tượng theo chủ đề</string>
+    <string name="pref_themed_icons_summary">Sử dụng biểu tượng theo chủ đề trên màn hình chính</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">Nguồn cài đặt</string>
+    <string name="app_info_source_system">Hệ thống</string>
+    <string name="app_info_last_update">Cập nhật mới nhất</string>
+    <string name="app_info_version">Phiên bản</string>
+    <string name="app_info_more">Xem thêm chi tiết về ứng dụng</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Gói biểu tượng</string>
+    <string name="icon_pack_default_label">Mặc định</string>
+    <string name="icon_pack_add">Cài đặt thêm</string>
+    <string name="icon_pack_no_market">Không có ứng dụng nào khả dụng trong cửa hàng</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Cho phép thị sai ngắn</string>
+    <string name="short_parallax_summary">Dùng hiệu ứng để cuộn trên các trang khác thay vì cắt hình nền</string>
+    <string name="single_page_center_title">Hình nền vị trí trung tâm</string>
+    <string name="single_page_center_summary">Hình nền ở vị trí trung tâm khi dùng một trang</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Hiện thanh tìm kiếm</string>
+    <string name="drawer_search_summary">Hiện thanh tìm kiếm ứng dụng</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Khởi động lại</string>
+    <string name="pref_restart_summary">Khởi động lại trình khởi chạy để áp dụng các cài đặt đang chờ xử lý</string>
+    <string name="restarting_launcher">Đang mở lại trình khởi chạy...</string>
+    <string name="restarting_launcher_changes">Đang mở lại trình khởi chạy để áp dụng thay đổi...</string>
+    <string name="updating_launcher_components">Đang mở lại trình khởi chạy để cập nhật các thành phần...</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Xem nhanh</string>
+    <string name="show_quickspace_summary">Hiển thị trên đầu màn hình chính</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Chào mừng người dùng!</string>
+    <string name="quick_event_rom_intro_welcome_ext">Thời gian của crdroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>Cảm ơn vì đã chọn chúng tôi</item>
+        <item>Yêu thích chúng tôi? Gửi chúng tôi một cốc bia</item>
+        <item>Có lẽ nó là tuyệt nhất.</item>
+        <item>Trò chuyện cùng nhau trên ứng dụng điện tín</item>
+        <item>Chạm vào đây để bắt đầu</item>
+        <item>Chúng tôi yêu người dùng</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Greetings -->
+    <string name="quickspace_grt_morning">Chào buổi sáng.</string>
+    <string name="quickspace_grt_evening">Chào buổi tối.</string>
+    <string name="quickspace_grt_afternoon">Chào buổi chiều.</string>
+    <string name="quickspace_grt_night">Chúc ngủ ngon.</string>
+    <string name="quickspace_grt_general">Ngày tốt lành.</string>
+    <string name="quickspace_ext_one">Hôm nay là</string>
+    <string name="quickspace_ext_two">Bây giờ là</string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="qe_now_playing_unknown_artist">Nghệ sĩ không xác định</string>
+    <string name="qe_now_playing_ext_one">Đang phát</string>
+    <string name="qe_now_playing_by">Bởi</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Đang phát</string>
+    <string name="quickspace_now_playing_summary">Hiển thị bài hát đang phát</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Phong cách tối giản</string>
+    <string name="quickspace_alternate_style_summary">Chuyển sang phong cách hiện đại</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Tin nhắn ngẫu nhiên</string>
+    <string name="quickspace_psa_summary">Làm cho người đồng hành trở nên sinh động hơn với những tin nhắn ngẫu nhiên</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Chào buổi sáng!</item>
+        <item>Chào buổi sáng, đến giờ quẩy rồi!</item>
+        <item>Thật là một ngày đẹp trời!</item>
+        <item>Chúc một ngày tốt lành!</item>
+        <item>Còn một giấc ngủ ngắn 5 phút thì sao?</item>
+        <item>Dậy ăn sáng thôi nào.</item>
+        <item>Buổi sáng là một bức tranh kiệt tác tươi mới cho hàng ngày.</item>
+        <item>Hãy đón nhận ánh bình minh vào mỗi buổi sáng.</item>
+        <item>Trong ánh bình minh, hãy tìm sức mạnh soi sáng con đường.</item>
+        <item>Ngày bắt đầu với những khả năng vô tận.</item>
+        <item>Mỗi bình minh là một lời nhắc nhở ta có thể bắt đầu lại.</item>
+        <item>Thức dậy có mục đích, chinh phục ngày mới.</item>
+        <item>Suy nghĩ có thể là nền tảng của những thành tựu to lớn.</item>
+        <item>Thế giới thức tỉnh và tiềm năng cũng vậy.</item>
+        <item>Chương đầu tiên trong cuộc phiêu lưu hàng ngày.</item>
+        <item>Hãy để thói quen buổi sáng là bệ phóng cho thành công.</item>
+        <item>Bình minh hay không, tiềm năng luôn tăng lên.</item>
+        <item>Đã đến lúc cho những ý tưởng mới mẻ và hành động táo bạo.</item>
+        <item>Con chim đến sớm bắt được con sâu như ta có thể bắt được giấc mơ của mình.</item>
+        <item>Hãy dũng cảm theo đuổi khát vọng của mình.</item>
+        <item>Hãy trỗi dậy và tỏa sáng, vì sự vĩ đại đang chờ đợi.</item>
+        <item>Thời điểm tốt nhất để bắt đầu là bây giờ.</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon">
+        <item>Hãy theo đuổi ước mơ chứ không phải theo từng phút.</item>
+        <item>Trong mỗi khoảnh khắc, một cơ hội mới.</item>
+        <item>Hãy trân trọng hành trình chứ không chỉ đích đến.</item>
+        <item>Hôm nay là một món quà, tại sao đó được gọi hiện tại.</item>
+        <item>Hãy để nụ cười thay đổi cả thế giới.</item>
+        <item>Cuộc sống là một câu chuyện; làm cho mỗi chương đều có giá trị.</item>
+        <item>Tìm niềm vui trong những khoảnh khắc đời thường.</item>
+        <item>Điều tốt đẹp nhất vẫn chưa đến, hãy cố gắng nhé.</item>
+        <item>Cơ hội để biến \'nếu như\' thành \'là gì.\'</item>
+        <item>Hãy nắm bắt ngày hôm nay, bắt đầu ngay bây giờ.</item>
+        <item>Hạnh phúc là sự lựa chọn có thể thực hiện bất cứ lúc nào.</item>
+        <item>Hãy tin vào chính mình, ngay cả trong một buổi chiều buồn ngủ.</item>
+        <item>Hãy để hành động nói to hơn đồng hồ.</item>
+        <item>Cuộc sống là thứ tạo nên nó; làm cho nó tuyệt vời.</item>
+        <item>Hãy ước mơ lớn, làm việc chăm chỉ không bao giờ bỏ cuộc.</item>
+        <item>Chúng ta mạnh mẽ hơn ta nghĩ.</item>
+        <item>Mỗi thất bại là một sự chuẩn bị cho sự trở lại.</item>
+        <item>Hãy trân trọng hành trình chứ không chỉ đích đến.</item>
+        <item>Hãy theo đuổi mục tiêu chứ không phải nỗi sợ hãi.</item>
+        <item>Tiềm năng của ta là vô tận; mở khóa nó.</item>
+    </string-array>
+    <string-array name="quickspace_psa_early_evening">
+        <item>Hãy trân trọng khoảnh khắc hiện tại, bất kể thời gian.</item>
+        <item>Trong mỗi hoàng hôn, hãy tìm một bình minh mới của cơ hội.</item>
+        <item>Cuộc đời là một chuyến đi; thưởng thức phong cảnh trên đường đi.</item>
+        <item>Thái độ của ta định hình thực tế của ta.</item>
+        <item>Câu chuyện vẫn đang được viết, ngay cả khi mặt trời lặn.</item>
+        <item>Ghi lại vẻ đẹp trong những khoảnh khắc đời thường.</item>
+        <item>Đã đến lúc phải suy ngẫm và thiết lập lại.</item>
+        <item>Chọn niềm vui, bất kể thời gian trên đồng hồ.</item>
+        <item>Cơ hội không kết thúc vào buổi tối.</item>
+        <item>Hãy là lý do khiến ai đó mỉm cười.</item>
+        <item>Tiềm năng của mình không có giới hạn.</item>
+        <item>Những khoảnh khắc kỳ diệu có thể xảy ra bất cứ lúc nào.</item>
+        <item>Cuộc sống của ta là do ta tạo nên nó; làm cho nó trở nên phi thường.</item>
+        <item>Hãy luôn tò mò, hãy biết ơn.</item>
+        <item>Hãy là sự thay đổi mà mình muốn thấy trên thế giới.</item>
+        <item>Hãy tin vào chính mình; có khả năng làm được những điều tuyệt vời.</item>
+        <item>Giới hạn duy nhất là giới hạn mình đặt ra cho chính mình.</item>
+        <item>Thành công bắt đầu từ một bước duy nhất.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Hãy nắm bắt màn đêm, vì nó chứa đựng những bí ẩn của riêng nó.</item>
+        <item>Trong sự tĩnh lặng của buổi tối nay, tìm thấy sự thanh thản.</item>
+        <item>Những cuộc phiêu lưu vĩ đại nhất trong cuộc đời có thể bắt đầu trong bóng tối.</item>
+        <item>Cuộc hành trình vẫn tiếp tục ngay cả sau khi mặt trời lặn.</item>
+        <item>Hãy để màn đêm trở thành bức vẽ; vẽ nó bằng những giấc mơ.</item>
+        <item>Trong sự tĩnh lặng của buổi tối nay, hãy tìm thấy sự bình yên nội tâm.</item>
+        <item>Những ngôi sao tỏa sáng nhất trong những giờ phút đen tối nhất.</item>
+        <item>Hãy mơ lớn, ngay cả vào những giờ cuối ngày.</item>
+        <item>Cuộc đời là một câu chuyện đang chờ được viết ra.</item>
+        <item>Đã đến lúc suy ngẫm và đổi mới.</item>
+        <item>Những suy nghĩ lúc đêm khuya có thể dẫn tới những khám phá vào sáng sớm.</item>
+        <item>Tìm niềm vui trong sự tĩnh lặng của buổi tối nay.</item>
+        <item>Bầu trời đêm là một bức tranh rộng lớn của những giấc mơ.</item>
+        <item>Tiềm năng không biết đi ngủ; theo đuổi đam mê.</item>
+        <item>Hãy luôn hy vọng, ngay cả trong những giờ phút đen tối nhất.</item>
+        <item>Giữa sự hỗn loạn, hãy tìm thấy sự bình tĩnh bên trong.</item>
+        <item>Hãy sống tích cực, làm việc chăm chỉ và biến nó thành hiện thực</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Đêm là những lời thì thầm lặng lẽ của cơ hội.</item>
+        <item>Trong sự tĩnh lặng của màn đêm, hãy tìm thấy sức mạnh bên trong.</item>
+        <item>Hãy ôm lấy bóng tối, vì nó nắm giữ chìa khóa cho những giấc mơ.</item>
+        <item>Thế giới đang ngủ, nhưng tiềm năng vẫn còn thức.</item>
+        <item>Đêm có thể đã khuya nhưng hoài bão là vô tận.</item>
+        <item>Hãy luôn tò mò, tỉnh táo và để màn đêm dẫn đường.</item>
+        <item>Hãy dũng cảm theo đuổi ước mơ.</item>
+        <item>Những điều tuyệt vời không bao giờ đến từ vùng an toàn.</item>
+        <item>Có sức mạnh để tạo ra số phận của bản thân.</item>
+        <item>Hạnh phúc là một sự lựa chọn; chọn nó mỗi ngày.</item>
+        <item>Cuộc sống là do ta tạo ra nên hãy trân trọng nó.</item>
+        <item>Hãy tập trung, luôn quyết tâm, không thể ngăn cản.</item>
+        <item>Ta là tác giả của câu chuyện của riêng ta.</item>
+        <item>Phấn đấu để tiến bộ chứ không phải sự hoàn hảo.</item>
+        <item>Mỗi ngày đều là một khởi đầu mới; Hãy làm nó trở nên tuyệt vời.</item>
+        <item>Truyền cảm hứng cho người khác bằng cách sống thật với chính mình.</item>
+        <item>Thái độ quyết định hướng đi.</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Điếc không sợ súng</item>
+        <item>Đã đến lúc cập nhật một bản Rom khác chưa?</item>
+        <item>Hòa bình, không chiến tranh</item>
+        <item>Oh này, có chuyện gì thế?</item>
+        <item>Hãy tập chung vào nhiệm vụ</item>
+        <item>Bạn chụp bao nhiêu ảnh chụp màn hình?</item>
+        <item>Mở thứ tốt nhất với crDroid</item>
+        <item>Lan tỏa tình yêu, không tàn phá</item>
+        <item>Chúng tôi đã không bắt đầu ngọn lửa!</item>
+        <item>Khoảng thời gian cho một số bản nhạc hay</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C CÁI ĐẦU</item>
+        <item>Bạn cần crDroid Premium để xem điều này</item>
+        <item>Hãy nhớ lineage của unicorn</item>
+        <item>Tận hưởng thời lượng pin dài hơn</item>
+        <item>Bắt đầu từ con số 0</item>
+        <item>Chúng tôi yêu người dùng</item>
+        <item>Ngon ngay cả khi không có Sushi</item>
+        <item>Làm điều gì đó tốt đẹp hôm nay</item>
+        <item>Đây là trải nghiệm Pixel tốt nhất, phải không?</item>
+        <item>Không ảo tưởng, chào mừng bạn đến với thực tế!</item>
+        <item>Cảm ơn sự giúp đỡ của bạn</item>
+        <item>Không có lễ hội cho Derps - chỉ có sự hoàn hảo!</item>
+        <item>Một trong những lựa chọn tốt nhất của buildbot</item>
+        <item>Hãy tỉnh táo chứ đừng hoang tưởng</item>
+        <item>Thử món tráng miệng Đá lạnh</item>
+        <item>Thật là một trải nghiệm đáng yêu phải không?</item>
+        <item>Evolution là một huyền thoại, phải không?</item>
+        <item>Hãy nạp rom bạn muốn, đừng thử Potato</item>
+        <item>Bạn đang nghĩ gì?</item>
+        <item>Tôi đang chờ một người giám hộ</item>
+        <item>Luôn mang theo nước để luôn đủ nước</item>
+        <item>Người chiến thắng Người chiến thắng ....?</item>
+        <item>rm -rf \/</item>
+        <item>Không thực sự là khoai tây chiên..</item>
+        <item>Hãy nhớ kiểm tra mức pin của thiết bị!</item>
+        <item>Kiểm tra hộp thư hoặc tin nhắn.</item>
+        <item>Kiểm tra danh sách việc cần làm nếu có.</item>
+        <item>Bạn có thể tắt thông báo ngẫu nhiên thông qua cài đặt trang chủ.</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">Cập nhật thời tiết</string>
+    <string name="quick_event_ambient_weather_summary">Hiển thị cập nhật thời tiết hiện tại</string>
+    <string name="quick_event_ambient_weather_enabled_info">Yêu cầu bật dịch vụ thời tiết</string>
+    <string name="quick_event_weather_clouds">Trời nhiều mây</string>
+    <string name="quick_event_weather_rain">Trời mưa</string>
+    <string name="quick_event_weather_clear">Trời nắng</string>
+    <string name="quick_event_weather_storm">Trời bão</string>
+    <string name="quick_event_weather_snow">Tuyết rơi</string>
+    <string name="quick_event_weather_wind">Có gió</string>
+    <string name="quick_event_weather_mist">Sương mù</string>
+    <string name="quick_event_weather_city_title">Vị trí hiện tại</string>
+    <string name="quick_event_weather_city_summary">Hiển thị vị trí thời tiết hiện tại</string>
+    <string name="quick_event_weather_text_title">Tình trạng hiện tại</string>
+    <string name="quick_event_weather_text_summary">Hiển thị tóm tắt tình trạng thời tiết hiện tại</string>
+    <string name="intent_no_app_clock_found">Không thể tìm thấy lịch hoặc hoạt động đồng hồ</string>
+    <!-- Freed memory on clear all tasks -->
+    <string name="freed_memory_text">Đã giải phóng %1$s</string>
+    <string name="optimal_memory_text">Đã xóa ứng dụng ngầm và tối ưu</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Mở khóa</string>
+    <string name="task_menu_item_lock">Khóa</string>
+</resources>

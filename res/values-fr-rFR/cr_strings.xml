@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2023 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">Paramètres d\'accueil</string>
+    <!-- Categories -->
+    <string name="home_category_title">Écran d’accueil</string>
+    <string name="home_category_summary">Activer Google Now et autres</string>
+    <string name="icons_category_title">Icônes</string>
+    <string name="icons_category_summary">Définir la taille des icônes et plus</string>
+    <string name="app_drawer_category_title">Tiroir d\'applications</string>
+    <string name="app_drawer_category_summary">Personnaliser votre tiroir d\'applications</string>
+    <string name="recents_category_title">Récents</string>
+    <string name="recents_category_summary">Personnaliser le menu récent</string>
+    <string name="misc_category_title">Divers</string>
+    <string name="misc_category_summary">Autres options</string>
+    <string name="general_category_title">Général</string>
+    <string name="interface_category_title">Interface</string>
+    <string name="quickspace_category_title">Espace rapide</string>
+    <string name="search_bar_category_title">Barre de recherche</string>
+    <string name="actions_category_title">Actions rapides</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">Options pour les développeurs</string>
+    <string name="dev_options_summary">Activez certaines fonctionnalités cachées à vos risques et périls</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">Verrouiller la mise en page</string>
+    <string name="settings_lock_layout_summary_on">Les icônes et widgets ne peuvent pas être ajoutés, supprimés ou déplacés sur l\'écran d\'accueil</string>
+    <string name="settings_lock_layout_summary_off">Les icônes et widgets peuvent être ajoutés, supprimés ou déplacés sur l\'écran d\'accueil</string>
+    <string name="settings_edit_widgets_error">Il n\'est pas possible d\'ajouter des widgets à l\'écran d\'accueil</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Nom d\'application sur le bureau</string>
+    <string name="drawer_show_labels">Nom d\'application dans le tiroir</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Glisser pour accéder à l\'application Google</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Lorsque vous faites glisser vers la gauche depuis l\'écran d\'accueil principal</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Lorsque vous faites glisser depuis la gauche sur l\'écran d\'accueil principal</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Applications cachées &amp; protégées</string>
+    <string name="trust_apps_auth_manager">Déverrouiller pour gérer les applications cachées et protégées</string>
+    <string name="trust_apps_auth_open_app">Authentification pour ouvrir %1$s</string>
+    <string name="trust_apps_loading">Chargement\u2026</string>
+    <string name="trust_apps_no_lock_error">Veuillez configurer un écran de verrouillage pour restreindre l\'accès aux applications</string>
+    <string name="trust_apps_help">Aide</string>
+    <string name="trust_apps_info_hidden">Les applications cachées et leurs widgets sont cachés du tiroir d\'applications</string>
+    <string name="trust_apps_info_protected">Les applications protégées nécessitent une authentification pour être ouvertes depuis le lanceur</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Suggestions</string>
+    <string name="suggestion_pref_screen_desc">Pour toutes les applications &amp; ajout à l\'écran d\'accueil</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">Pause</string>
+    <string name="pause_apps_dialog_title">Pause %1$s?</string>
+    <string name="pause_apps_dialog_message">Les notifications pour %1$s seront suspendues</string>
+    <string name="paused_apps_dialog_title">Application en pause</string>
+    <string name="paused_apps_dialog_message">%1$s a été mis en pause directement depuis le lanceur</string>
+    <string name="paused_apps_drop_target_label">Mettre en pause l\'application</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Double-cliquez pour mettre en veille</string>
+    <string name="pref_sleep_gesture_summary">Double appui sur un espace vide pour éteindre l\'écran</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Valeur : <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">par défaut</string>
+    <string name="custom_seekbar_default_value_to_set">Valeur par défaut : <xliff:g id="v">%s</xliff:g>\nAppui long pour définir</string>
+    <string name="custom_seekbar_default_value_is_set">Valeur par défaut définie</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">Taille des icônes</string>
+    <!-- Font size -->
+    <string name="font_size_title">Taille de police</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Lignes max pour le libellé de l\'application</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Terminer</string>
+    <string name="recents_app_killed">Application terminée</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">Utiliser la barre des tâches</string>
+    <string name="pref_allow_phone_taskbar_summary">Pour ouvrir et changer d\'application n\'importe où</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Rechercher</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Recherche vocale</string>
+    <string name="dock_music_search_title">Recherche de musique</string>
+    <string name="dock_music_search_summary">Démarrer la recherche de musique en appuyant sur l\'icône du micro</string>
+    <string name="dock_search_title">Barre de recherche inférieure</string>
+    <string name="dock_search_summary">Barre de recherche dans le dock inférieur</string>
+    <string name="dock_theme_title">Icônes thématiques</string>
+    <string name="dock_theme_summary">Utiliser les icônes thématiques pour la barre de recherche</string>
+    <string name="search_radius_title">Arrondi des angles</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Arrière plan</string>
+    <string name="hotseat_bg_summary">Ajouter un arrière-plan translucide au tiroir d\'applications</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Opacité de l\'arrière-plan</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Défilement du fond d\'écran</string>
+    <string name="allow_wallpaper_scrolling_summary">Effet de défilement du fond d\'écran pour plusieurs écrans</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Zoom sur le fond d\'écran</string>
+    <string name="allow_wallpaper_zooming_summary">Zoomer ou dézoomer sur le fond d\'écran à l\'ouverture du tiroir ou des applications récentes</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Barre d\'état</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Ombre en haut</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Hauteur de ligne</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Disponible | %2$s Total</string>
+    <string name="recents_meminfo_title">Information sur la RAM</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Niveau de flou</string>
+    <string name="background_blur_summary">Définir le niveau de flou pour le tiroir et récent</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Capture d\'écran</string>
+    <string name="recents_clear_all_title">Tout effacer</string>
+    <string name="recents_lens_title">Lens</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">Secouer le téléphone pour effacer toutes les tâches</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Icônes thématiques</string>
+    <string name="pref_themed_icons_summary">Suivre le style d\'icônes utilisées sur l\'écran d\'accueil</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">Source</string>
+    <string name="app_info_source_system">Système</string>
+    <string name="app_info_last_update">Dernière mise à jour</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">Plus</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Pack d\'icônes</string>
+    <string name="icon_pack_default_label">Par défaut</string>
+    <string name="icon_pack_add">Installer plus</string>
+    <string name="icon_pack_no_market">Il n\'y a aucun magasin d\'applications disponible</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Autoriser la parallaxe courte</string>
+    <string name="short_parallax_summary">Activer l\'effet de défilement complet du fond d\'écran sur un nombre réduit de pages au lieu de le recadrer</string>
+    <string name="single_page_center_title">Centre de page unique</string>
+    <string name="single_page_center_summary">Centrer le fond d\'écran si une seule page est utilisée</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Barre de recherche de l\'application</string>
+    <string name="drawer_search_summary">Barre de recherche en haut du tiroir d\'applications</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Redémarrer</string>
+    <string name="pref_restart_summary">Redémarrez le lanceur manuellement pour appliquer tous les paramètres en attente</string>
+    <string name="restarting_launcher">Redémarrage du lanceur...</string>
+    <string name="restarting_launcher_changes">Redémarrage du lanceur pour appliquer les modifications...</string>
+    <string name="updating_launcher_components">Redémarrage du lanceur pour mettre à jour les composants...</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">«En un coup d\'œil»</string>
+    <string name="show_quickspace_summary">Montrer en haut de votre écran d\'accueil</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Bienvenue sur crDroid!</string>
+    <string name="quick_event_rom_intro_welcome_ext">C\'est l\'heure de crDroid !</string>
+    <string-array name="welcome_message_variants">
+        <item>Merci de nous avoir choisi</item>
+        <item>Vous nous aimez ? Envoyez-nous une bière</item>
+        <item>La meilleure ROM qui soit.</item>
+        <item>Dites nous bonjour sur Telegram</item>
+        <item>Tapez ici pour commencer</item>
+        <item>On vous aime aussi</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Greetings -->
+    <string name="quickspace_grt_morning">Bonjour.</string>
+    <string name="quickspace_grt_evening">Bonsoir.</string>
+    <string name="quickspace_grt_afternoon">Bon après-midi.</string>
+    <string name="quickspace_grt_night">Bonne nuit.</string>
+    <string name="quickspace_grt_general">Bonne journée.</string>
+    <string name="quickspace_ext_one">Nous sommes le</string>
+    <string name="quickspace_ext_two">Nous sommes le</string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="qe_now_playing_unknown_artist">Artiste Inconnu</string>
+    <string name="qe_now_playing_ext_one">Lecture en cours</string>
+    <string name="qe_now_playing_by">Par</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Lecture en cours</string>
+    <string name="quickspace_now_playing_summary">Afficher la musique que vous jouez</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Style minimaliste</string>
+    <string name="quickspace_alternate_style_summary">Basculer vers le style moderne</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Messages aléatoires</string>
+    <string name="quickspace_psa_summary">Rendre votre compagnon plus vivant avec des messages aléatoires</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Bonjour !</item>
+        <item>Bonjour, il est temps d\'y aller !</item>
+        <item>Quelle belle journée !</item>
+        <item>Bonne journée !</item>
+        <item>Que diriez-vous d\'une pause de 5 minutes ?</item>
+        <item>Allez, on se motive !</item>
+        <item>Le matin est une toile fraîche pour votre chef-d\'œuvre quotidien.</item>
+        <item>Saisissez chaque matin l\'opportunité qui s\'offre à vous.</item>
+        <item>Dans les premières lueurs du jour, trouvez le pouvoir d\'éclairer votre chemin.</item>
+        <item>Votre journée commence par des possibilités infinies.</item>
+        <item>Chaque lever de soleil nous rappelle qu\'il est possible de prendre un nouveau départ.</item>
+        <item>Réveillez-vous avec un but précis, et partez à la conquête de la journée qui s\'annonce.</item>
+        <item>Vos pensées peuvent être à l\'origine de grandes réalisations.</item>
+        <item>Le monde se réveille et votre potentiel aussi.</item>
+        <item>Le premier chapitre de votre aventure quotidienne.</item>
+        <item>Faites de votre routine matinale le point de départ de votre réussite.</item>
+        <item>Que le soleil se lève ou non, votre potentiel est toujours en hausse.</item>
+        <item>Il est temps d\'adopter des idées nouvelles et d\'agir avec audace.</item>
+        <item>L\'avenir appartient à ceux qui se lèvent tôt.</item>
+        <item>Trouvez le courage de poursuivre vos aspirations.</item>
+        <item>Haut les cœurs, car la grandeur vous attend.</item>
+        <item>Le meilleur moment pour commencer est maintenant.</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon">
+        <item>Poursuivez vos rêves, pas les minutes.</item>
+        <item>À chaque instant, une nouvelle opportunité.</item>
+        <item>Appréciez le trajet, pas seulement la destination.</item>
+        <item>Aujourd\'hui est un cadeau, c\'est pourquoi on l\'appelle le présent.</item>
+        <item>Laissez votre sourire changer le monde.</item>
+        <item>La vie est une histoire : faites compter chaque chapitre.</item>
+        <item>Trouvez de la joie dans les moments ordinaires.</item>
+        <item>Le meilleur reste encore à venir, continuez comme ça.</item>
+        <item>Saisissez votre chance de changer \"j\'aurais dû faire\" en \"j\'ai fait\".</item>
+        <item>Saisissez l\'occasion, dès maintenant.</item>
+        <item>Le bonheur est un choix que vous pouvez faire à tout moment.</item>
+        <item>Croyez en vous, même par un après-midi tranquille.</item>
+        <item>Laissez vos actes parler plus fort que l\'horloge.</item>
+        <item>Votre vie est ce que vous en faites. Rendez-la incroyable.</item>
+        <item>Rêvez grand, travaillez dur, et n\'abandonnez jamais.</item>
+        <item>Vous êtes plus fort que vous ne le pensez.</item>
+        <item>Chaque pas en arrière est un tremplin pour avancer.</item>
+        <item>Appréciez le trajet, pas seulement la destination.</item>
+        <item>Poursuivez vos objectifs, pas vos craintes.</item>
+        <item>Votre potentiel est infini, libérez-le.</item>
+    </string-array>
+    <string-array name="quickspace_psa_early_evening">
+        <item>Profitez du moment présent, peu importe l\'heure.</item>
+        <item>À chaque crépuscule, il y a une nouvelle aube d\'opportunité.</item>
+        <item>La vie est un voyage, profitez du paysage tout au long de la route.</item>
+        <item>Votre attitude façonne votre réalité.</item>
+        <item>Votre histoire continue de s\'écrire, même quand le soleil se couche.</item>
+        <item>Capturez la beauté des moments ordinaires.</item>
+        <item>Il est temps de réfléchir et de repartir à zéro.</item>
+        <item>Choisissez la joie, peu importe l\'heure.</item>
+        <item>Les opportunités n\'attendent pas le soir.</item>
+        <item>Soyez la raison pour laquelle quelqu\'un sourit.</item>
+        <item>Votre potentiel ne connaît aucune limite.</item>
+        <item>Des moments de magie peuvent se produire à n\'importe quelle heure.</item>
+        <item>Votre vie est ce que vous en faites. Rendez-la incroyable.</item>
+        <item>Restez curieux, restez reconnaissant.</item>
+        <item>Soyez le changement que vous voulez voir dans ce monde.</item>
+        <item>Croyez en vous-même : vous êtes capable de choses étonnantes.</item>
+        <item>La seule limite est celle que vous avez fixée.</item>
+        <item>La réussite commence par un premier pas.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Saisissez la nuit, car elle contient ses propres mystères.</item>
+        <item>Dans le calme de cette soirée, trouvez la sérénité.</item>
+        <item>Les plus grandes aventures de la vie peuvent commencer dans les ténèbres.</item>
+        <item>Votre voyage se poursuit même après le coucher du soleil.</item>
+        <item>Laissez la nuit être votre toile ; peignez-la de rêves.</item>
+        <item>Dans le calme de cette soirée, trouvez votre paix intérieure.</item>
+        <item>Les étoiles brillent dans les heures les plus sombres.</item>
+        <item>Rêvez grand, même à la fin de la journée.</item>
+        <item>Votre vie est une histoire qui attend d\'être écrite.</item>
+        <item>Il est temps de réfléchir et de se renouveler.</item>
+        <item>Les réflexions de fin de soirée peuvent déboucher sur des révélations au petit matin.</item>
+        <item>Trouvez de la joie dans le calme de cette soirée.</item>
+        <item>Le ciel nocturne est une vaste toile de rêves.</item>
+        <item>Votre potentiel ne se repose pas, vivez vos passions.</item>
+        <item>Restez optimiste, même dans les heures les plus sombres.</item>
+        <item>Au milieu du chaos, trouvez votre calme intérieur.</item>
+        <item>Restez positif, travaillez dur, faites en sorte que cela se produise.</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Les nuits sont les chuchotements silencieux de l\'opportunité.</item>
+        <item>Dans le calme de la nuit, trouvez votre force intérieure.</item>
+        <item>Embrassez les ténèbres, car elles détiennent les clés de vos rêves.</item>
+        <item>Le monde est endormi, mais votre potentiel est bien éveillé.</item>
+        <item>La nuit est peut-être avancée, mais vos ambitions sont intemporelles.</item>
+        <item>Restez curieux, restez éveillé et laissez les nuits vous guider.</item>
+        <item>Trouvez le courage de poursuivre vos rêves.</item>
+        <item>Les bonnes choses ne viennent jamais des zones de confort.</item>
+        <item>Vous avez le pouvoir de créer votre propre destin.</item>
+        <item>Le bonheur est un choix : choisissez-le tous les jours.</item>
+        <item>La vie est ce que vous en faites, alors faites en sorte qu\'elle compte.</item>
+        <item>Restez concentré, restez déterminé, soyez inarrêtable.</item>
+        <item>Vous êtes l\'auteur de votre propre histoire.</item>
+        <item>Luttez pour le progrès, pas pour la perfection.</item>
+        <item>Chaque jour est un nouveau commencement  : faites qu\'il soit grandiose.</item>
+        <item>Inspirez les autres en étant authentique.</item>
+        <item>Votre attitude détermine votre orientation.</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Heureux sont les ignorants</item>
+        <item>Est-ce déjà le moment de flasher une autre mise à jour ?</item>
+        <item>Faire la paix, pas la guerre</item>
+        <item>Hey ! Quoi de neuf ?</item>
+        <item>Concentrez-vous sur vos tâches</item>
+        <item>Combien de captures d\'écran prenez-vous ?</item>
+        <item>Libérez ce qui est bon avec crDroid</item>
+        <item>Répandez l\'amour, pas le chaos</item>
+        <item>Nous n\'avons pas déclenché l\'incendie !</item>
+        <item>Il est temps d\'écouter de la bonne musique</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>Vous avez besoin de crDroid Premium pour voir ceci</item>
+        <item>Souviens-toi de l\'héritage de la licorne</item>
+        <item>Profitez d\'une durée de vie de la batterie prolongée</item>
+        <item>A partir du début</item>
+        <item>Nous vous aimons 3000</item>
+        <item>Délicieux même sans sushi</item>
+        <item>Faites quelque chose de bien aujourd\'hui</item>
+        <item>Ceci est la meilleure expérience Pixel, n\'est-ce pas ?</item>
+        <item>Pas d\'illusion, bienvenue dans la réalité !</item>
+        <item>Merci pour votre soutien</item>
+        <item>Rien d\'autre que la perfection !</item>
+        <item>Un des meilleurs choix de Buildbot</item>
+        <item>Pas de Paranoïa ici</item>
+        <item>Goûtez les desserts Ice Cold</item>
+        <item>Quelle belle expérience, n\'est-ce-pas ?</item>
+        <item>L\'évolution est un mythe, n\'est-ce pas ?</item>
+        <item>On est ce qu\'on flashe, ne sois pas une Potato</item>
+        <item>Tu penses à quoi ?</item>
+        <item>Expecto Patronum</item>
+        <item>Wubba Lubba Dub Dub</item>
+        <item>Et le vainqueur est...</item>
+        <item>rm -rf \/</item>
+        <item>Les Pringles ne sont pas des chips...</item>
+        <item>N\'oubliez pas de vérifier le niveau de batterie de l\'appareil !</item>
+        <item>Vérifiez vos emails/messages.</item>
+        <item>Vérifiez votre liste de tâches si vous en avez une.</item>
+        <item>Vous pouvez désactiver l\'espace rapide via les paramètres du menu principal.</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">Mise à jour météo</string>
+    <string name="quick_event_ambient_weather_summary">Afficher la météo actuelle</string>
+    <string name="quick_event_ambient_weather_enabled_info">Nécessite que le service météo soit activé</string>
+    <string name="quick_event_weather_clouds">Nuageux</string>
+    <string name="quick_event_weather_rain">Pluvieux</string>
+    <string name="quick_event_weather_clear">Ensoleillé</string>
+    <string name="quick_event_weather_storm">Orageux</string>
+    <string name="quick_event_weather_snow">Neigeux</string>
+    <string name="quick_event_weather_wind">Venteux</string>
+    <string name="quick_event_weather_mist">Brumeux</string>
+    <string name="quick_event_weather_city_title">Emplacement actuel</string>
+    <string name="quick_event_weather_city_summary">Afficher la position actuelle de la météo</string>
+    <string name="quick_event_weather_text_title">Conditions météo</string>
+    <string name="quick_event_weather_text_summary">Afficher le résumé des conditions météo actuelles</string>
+    <string name="intent_no_app_clock_found">Impossible de trouver l\'activité du calendrier ou de l\'horloge</string>
+    <!-- Freed memory on clear all tasks -->
+    <string name="freed_memory_text">%1$s libérés </string>
+    <string name="optimal_memory_text">Votre système est maintenant en état optimal</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">Déverrouiller</string>
+    <string name="task_menu_item_lock">Verrouiller</string>
+</resources>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2023 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Application name -->
+    <!-- Folder titles -->
+    <!-- General -->
+    <string name="settings_title">הגדרות דף הבית</string>
+    <!-- Categories -->
+    <string name="home_category_title">דף הבית</string>
+    <string name="home_category_summary">הגדר את פאנל Google now כעת ועוד</string>
+    <string name="icons_category_title">סמלים</string>
+    <string name="icons_category_summary">הגדרת גודל הסמל ועוד</string>
+    <string name="app_drawer_category_title">מגירת היישומים</string>
+    <string name="app_drawer_category_summary">התאמה אישית של מגירת היישומים</string>
+    <string name="recents_category_title">מהזמן האחרון</string>
+    <string name="recents_category_summary">ארגון מחדש של מסך התצוגה המסכמת</string>
+    <string name="misc_category_title">שונות</string>
+    <string name="misc_category_summary">אפשרויות נוספות</string>
+    <string name="general_category_title">כללי</string>
+    <string name="interface_category_title">ממשק</string>
+    <string name="quickspace_category_title">החלל המהיר</string>
+    <string name="search_bar_category_title">סרגל החיפוש</string>
+    <string name="actions_category_title">פעולות מהירות</string>
+    <!-- Developer options -->
+    <string name="dev_options_title">אפשרויות מפתחים</string>
+    <string name="dev_options_summary">אפשר כמה תכונות נסתרות על אחריותך בלבד</string>
+    <!-- Edit workspace -->
+    <string name="settings_lock_layout_title">נעילת פריסת התצוגה</string>
+    <string name="settings_lock_layout_summary_on">לא ניתן להוסיף, להסיר ולהזיז סמלים ויישומונים על מסך הבית</string>
+    <string name="settings_lock_layout_summary_off">ניתן להוסיף, להסיר ולהזיז סמלים ויישומונים על מסך הבית</string>
+    <string name="settings_edit_widgets_error">אין אפשרות להוסיף יישומונים למסך הבית</string>
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">תוויות סמלים במסך הבית</string>
+    <string name="drawer_show_labels">תוויות סמלים במגירת היישומים</string>
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">החלק כדי לגשת לאפליקציה גוגל</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">בעת החלקה שמאלה ממסך הבית</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">בעת החלקה ימינה ממסך הבית</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">&amp; יישומים מוגנים מוסתרים</string>
+    <string name="trust_apps_auth_manager">ביטול נעילה כדי לנהל את היישומים המוסתרים והמוגנים</string>
+    <string name="trust_apps_auth_open_app">אימות לפתיחת %1$s</string>
+    <string name="trust_apps_loading">טעינת \u2026</string>
+    <string name="trust_apps_no_lock_error">נדרש להגדיר מסך נעילה מאובטח להגבלת גישה ליישומים</string>
+    <string name="trust_apps_help">עזרה</string>
+    <string name="trust_apps_info_hidden">יישומים מוסתרים והווידג\'טים שלהם אינם מוצגים במגירת היישומים</string>
+    <string name="trust_apps_info_protected">יישומים מוגנים מחייבים אימות לפתיחה מהמשגר</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">הצעות</string>
+    <string name="suggestion_pref_screen_desc">עבור כל היישומים &amp; הצעות למסך הבית</string>
+    <!-- Pause apps shortcut -->
+    <string name="pause">השהיה</string>
+    <string name="pause_apps_dialog_title">השהיית %1$s?</string>
+    <string name="pause_apps_dialog_message">התראות עבור %1$s יושהו</string>
+    <string name="paused_apps_dialog_title">היישום מושהה</string>
+    <string name="paused_apps_dialog_message">%1$s הושהה ישירות מהמשגר</string>
+    <string name="paused_apps_drop_target_label">השהיית היישום</string>
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">הקשה כפולה לכיבוי המסך</string>
+    <string name="pref_sleep_gesture_summary">הקשה כפולה על מקום ריק לכיבוי המסך</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">ערך: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">כברירת מחדל</string>
+    <string name="custom_seekbar_default_value_to_set">ערך ברירת מחדל: <xliff:g id="v">%s</xliff:g>\nלחיצה ממושכת להגדרה</string>
+    <string name="custom_seekbar_default_value_is_set">ערך ברירת מחדל מוגדר</string>
+    <!-- Icon size -->
+    <string name="icon_size_title">גודל הסמל</string>
+    <!-- Font size -->
+    <string name="font_size_title">גודל גופן</string>
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">מקסימום שורות עבור תווית יישומים</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">כפיית הפסקת היישום</string>
+    <string name="recents_app_killed">היישום נסגר</string>
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">שימוש בסרגל המשימות</string>
+    <string name="pref_allow_phone_taskbar_summary">לפתיחת יישומים ולמעבר ביניהם בכל מקום</string>
+    <!-- Hotseat searchbar -->
+    <string name="label_search">חיפוש</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">חיפוש קולי</string>
+    <string name="dock_music_search_title">חיפוש מוסיקה</string>
+    <string name="dock_music_search_summary">הפעלת חיפוש מוסיקה בלחיצה על סמל המיקרופון</string>
+    <string name="dock_search_title">סרגל החיפוש של Google</string>
+    <string name="dock_search_summary">שורת חיפוש בסרגל התחתון</string>
+    <string name="dock_theme_title">סמלי ערכת הנושא</string>
+    <string name="dock_theme_summary">הצגת סמלי ערכת הנושא בשורת החיפוש</string>
+    <string name="search_radius_title">רדיוס הפינות</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">רקע המושב החם</string>
+    <string name="hotseat_bg_summary">הוספת רקע שקוף לסרגל היישומים</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">שקיפות הרקע</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">גלילת הטפט</string>
+    <string name="allow_wallpaper_scrolling_summary">אפקט גלילה לטפט עבור מסכים מרובים</string>
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">שינוי מרחק לטפט</string>
+    <string name="allow_wallpaper_zooming_summary">התקרבות או התרחקות הטפט בעת השימוש במגירת היישומים או היישומים האחרונים</string>
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">שורת מצב</string>
+    <!-- Top shadow -->
+    <string name="show_top_shadow">צללית עילית</string>
+    <!-- Row Height -->
+    <string name="row_height_title">גובה השורה</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s זמין /%2$s בסך הכל</string>
+    <string name="recents_meminfo_title">מידע אודות הזכרון</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">עומק טשטוש הרקע</string>
+    <string name="background_blur_summary">הגדרת עומק הטשטוש למגירת היישומים וליישומים האחרונים</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">צילום המסך</string>
+    <string name="recents_clear_all_title">ניקוי הכל</string>
+    <string name="recents_lens_title">עדשה</string>
+    <!-- Shake Clear Recents -->
+    <string name="recents_shake_clear_all_title">נער את הטלפון כדי לנקות משימות</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">סמלי ערכת הנושא</string>
+    <string name="pref_themed_icons_summary">התאמת סמלילים לערכת הנושא בשימוש במסך הבית</string>
+    <!-- AppInfo -->
+    <string name="app_info_source">מקור</string>
+    <string name="app_info_source_system">מערכת</string>
+    <string name="app_info_last_update">עודכן לאחרונה</string>
+    <string name="app_info_version">גרסא</string>
+    <string name="app_info_more">עוד</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">ערכת סמלים</string>
+    <string name="icon_pack_default_label">ברירת המחדל</string>
+    <string name="icon_pack_add">התקנת עוד</string>
+    <string name="icon_pack_no_market">אין חנות אפליקציות זמינה</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">התרת היסט (פרלקסה) קצר</string>
+    <string name="short_parallax_summary">הפעלת אפקט גלילה מלא לטפט על פני מספר קטן יותר של דפים במקום חיתוך הטפט</string>
+    <string name="single_page_center_title">מירכוז בדף יחיד</string>
+    <string name="single_page_center_summary">התמקדות הטפט במרכז בשימוש בדף יחיד </string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">סרגל חיפוש יישומים</string>
+    <string name="drawer_search_summary">הצגת סרגל חיפוש בראש מגירת היישומים</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">הפעלה מחדש</string>
+    <string name="pref_restart_summary">הפעלה מחדש של משגר היישומים (לאונצ\'ר) להחלת הגדרות ששונו</string>
+    <string name="restarting_launcher">הפעלה מחדש של הלאונצ\'ר...</string>
+    <string name="restarting_launcher_changes">הפעלה מחדש של הלאונצ\'ר להחלת השינויים...</string>
+    <string name="updating_launcher_components">הפעלה מחדש של הלאונצ\'ר לעדכון רכיבי הלאונצ\'ר...</string>
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">בקצרה</string>
+    <string name="show_quickspace_summary">הצגה בקצה העליון של מסך הבית שלך</string>
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">ברוכים הבאים לcrDroid!</string>
+    <string name="quick_event_rom_intro_welcome_ext">בדיוק הזמן ל-crDroid!</string>
+    <string-array name="welcome_message_variants">
+        <item>תודה לך על בחירתך בנו</item>
+        <item>אהבת אותנו? אפשר לשלוח לנו כוס בירה</item>
+        <item>ה-ROM הטוב ביותר מאז ומעולם.</item>
+        <item>אפשר לאמר לנו היי בטלגרם</item>
+        <item>לחיצה כאן כדי להתחיל</item>
+        <item>אנחנו אוהבים אותך 3000</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Greetings -->
+    <string name="quickspace_grt_morning">בוקר טוב.</string>
+    <string name="quickspace_grt_evening">ערב טוב.</string>
+    <string name="quickspace_grt_afternoon">אחר הצהריים טובים.</string>
+    <string name="quickspace_grt_night">לילה טוב.</string>
+    <string name="quickspace_grt_general">יום טוב.</string>
+    <string name="quickspace_ext_one">היום הוא</string>
+    <string name="quickspace_ext_two">כעת</string>
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="qe_now_playing_unknown_artist">אמן לא ידוע</string>
+    <string name="qe_now_playing_ext_one">מתנגן כעת</string>
+    <string name="qe_now_playing_by">על ידי</string>
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">מתנגן כעת</string>
+    <string name="quickspace_now_playing_summary">הצגת השיר המתנגן כעת</string>
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">סגנון מינימליסטי</string>
+    <string name="quickspace_alternate_style_summary">החלפה לסגנון מודרני</string>
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">הודעות אקראיות</string>
+    <string name="quickspace_psa_summary">אפשר להחיות את השיחה עם הודעות אקראיות</string>
+    <string-array name="quickspace_psa_morning">
+        <item>בוקר טוב!</item>
+        <item>בוקר טוב, הגיע הזמן לזוז!</item>
+        <item>איזה יום יפה בחוץ!</item>
+        <item>שיהיה לך יום נפלא!</item>
+        <item>מה לגבי שנ\"צ של חמש דקות?</item>
+        <item>בוא נעשה את זה.</item>
+        <item>בקרים הם בד ציור ריק ליצירות היומיות שלך.</item>
+        <item>אמצו את זריחת השמש של הזדמנויות כל בוקר.</item>
+        <item>אורו המוקדם של הבוקר יכול להאיר את הדרך שלך.</item>
+        <item>יומך מתחיל עם אינסוף אפשרויות.</item>
+        <item>כל זריחה היא תזכורת לכך שאפשר להתחיל מחדש.</item>
+        <item>התעוררו עם מטרה, כיבשו את היום שלפניכם.</item>
+        <item>מחשבותיך יכולות לשמש בסיס להישגים אדירים.</item>
+        <item>העולם מתעורר, וכך גם הפוטנציאל שלך.</item>
+        <item>הפרק הראשון בהרפתקה היומית שלך.</item>
+        <item>שגרת הבוקר שלך היא כן השיגור להצלחה.</item>
+        <item>זריחה או לא, הפוטנציאל שלך תמיד בעלייה.</item>
+        <item>זה הזמן לרעיונות טריים ולעשייה נועזת.</item>
+        <item>המקדים להשכים זוכה בפרס, אבל תוכלו ללכוד את חלומותיכם.</item>
+        <item>איזרו אומץ לחתור למימוש השאיפות שלכם.</item>
+        <item>עורו, קומו, כי מחכה לכם גדוּלה.</item>
+        <item>הזמן הטוב ביותר להתחיל הוא עכשיו.</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon">
+        <item>רידפו אחר חלומותיכם, לא אחר הדקות.</item>
+        <item>בכל רגע, הזדמנות חדשה.</item>
+        <item>תיהנו מהמסע, לא רק מהיעד.</item>
+        <item>Today is a gift, that\'s why it\'s called the present.</item>
+        <item>תנו לחיוך שלכם לשנות את העולם.</item>
+        <item>החיים הם סיפור; עשו שכל פרק יהיה משמעותי.</item>
+        <item>מיצאו הנאה ברגע הרגיל.</item>
+        <item>הטוב ביותר עוד יגיע, תמשיכו כך.</item>
+        <item>ההזדמנות שלך להפוך את \'הלואי\' ל\'הווה\'</item>
+        <item>תיפסו את היום, התחילו ממש עכשיו.</item>
+        <item>האושר הוא בחירה שניתן לבחור בכל זמן.</item>
+        <item>האמינו בעצמכם, גם באחה\"ץ מנומנם.</item>
+        <item>תנו למעשיכם להשמיע קול חזק משל השעון.</item>
+        <item>חייכם הם מה שתעשו מהם; עשו אותם מדהימים.</item>
+        <item>חילמו בגדול, עיבדו קשה, ולעולם אל תוותרו.</item>
+        <item>יש בכם עוצמה גדולה יותר ממה שאתם חושבים.</item>
+        <item>כל נסיגה היא הכנה לשיבה.</item>
+        <item>תיהנו מהמסע, לא רק מהיעד.</item>
+        <item>רידפו אחר מטרותיכם, לא אחר חששותיכם.</item>
+        <item>הפונציאל שלכם אינסופי; שחררו אותו.</item>
+    </string-array>
+    <string-array name="quickspace_psa_early_evening">
+        <item>אמצו את הרגע הנוכחי, לא משנה מה השעה.</item>
+        <item>בכל דמדומי ערב, מיצאו שחר חדש של הזדמנויות.</item>
+        <item>החיים הם מסע; תיהנו מהנוף שבדרך.</item>
+        <item>הגישה שלך מעצבת את המציאות שלך.</item>
+        <item>הסיפור שלך ממשיך להיכתב, גם כאשר השמש שוקעת.</item>
+        <item>מיצאו את היופי שברגעים הרגילים.</item>
+        <item>זה הזמן להרהר ולאתחל מחדש.</item>
+        <item>ביחרו בהנאה, לא משנה השעה.</item>
+        <item>הזדמנויות אינן נועלות את המשרד בסוף היום.</item>
+        <item>היו אתם הסיבה לחיוך של מישהו.</item>
+        <item>אין גבול לפוטנציאל שלך.</item>
+        <item>רגעי קסם יכולים להתחולל בכל זמן.</item>
+        <item>חייכם הם מה שתעשו מהם; עשו אותם מדהימים.</item>
+        <item>היו סקרנים, היו מלאי תודה.</item>
+        <item>היו אתם השינוי שהייתם רוצים לראות בעולם.</item>
+        <item>האמינו בעצמכם; יש בכם יכולת לדברים מדהימים.</item>
+        <item>המגבלה היחידה היא זו שהטלת על עצמך.</item>
+        <item>ההצלחה מתחילה בצעד יחיד.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>איחזו בלילה, כי הוא אוצר תעלומות משלו.</item>
+        <item>In the quiet of the this evening, find serenity.</item>
+        <item>ההרפתקה הגדולה של החיים יכולה להתחיל בחשיכה.</item>
+        <item>המסע שלך נמשך גם אחרי שקיעת החמה.</item>
+        <item>הלילה הוא בד ציור ריק; ציבעו אותו בחלומות.</item>
+        <item>בדממת הערב מיצאו את השלום הפנימי שלכם.</item>
+        <item>הכוכבים זורחים חזק יותר בשעות הכי חשוכות.</item>
+        <item>חילמו חלומות גדולים, אפילו בשעות המאוחרות של היום.</item>
+        <item>חייך הם סיפור שממתין להיכתב.</item>
+        <item>זה הזמן להרהר ולאתחל מחדש.</item>
+        <item>מחשבות בשעת לילה מאוחרת יכולות להוביל להארות בשעות הבוקר המוקדמות.</item>
+        <item>הפיקו הנאה מהשלווה של הערב.</item>
+        <item>שמי הלילה הם בד ציור ענק של חלומות.</item>
+        <item>Your potential knows no bedtime; pursue your passions.</item>
+        <item>Stay hopeful, even in the darkest hours.</item>
+        <item>In the midst of chaos, find your inner calm.</item>
+        <item>Stay positive, work hard, make it happen.</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Nights are the quiet whispers of opportunity.</item>
+        <item>In the stillness of the night, find your inner strength.</item>
+        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
+        <item>The world sleeps, but your potential is wide awake.</item>
+        <item>The night may be late, but your ambitions are timeless.</item>
+        <item>Stay curious, stay awake, and let nights guide you.</item>
+        <item>Find the courage to chase your dreams.</item>
+        <item>Great things never come from comfort zones.</item>
+        <item>You have the power to create your own destiny.</item>
+        <item>Happiness is a choice; choose it every day.</item>
+        <item>Life is what you make it, so make it count.</item>
+        <item>Stay focused, stay determined, stay unstoppable.</item>
+        <item>You are the author of your own story.</item>
+        <item>Strive for progress, not perfection.</item>
+        <item>Every day is a new beginning; make it a great one.</item>
+        <item>Inspire others by being your authentic self.</item>
+        <item>Your attitude determines your direction.</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>בורות היא אושר</item>
+        <item>האם הגיע כבר הזמן לצרוב עדכון נוסף?</item>
+        <item>עשו שלום, לא מלחמה</item>
+        <item>היי, מה קורה?</item>
+        <item>תתמקד במשימות שלך</item>
+        <item>כמה צילומי מסך אתה מצלם?</item>
+        <item>טוב לב עם crDroid</item>
+        <item>הפיצו אהבה, לא חורבן</item>
+        <item>לא אנחנו הצתנו את הלהבה!</item>
+        <item>הגיע הזמן לקצת מוזיקה טובה</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>אתה צריך crDroid Premium כדי לראות את זה</item>
+        <item>זכור מאין הגעת ולאן אתה הולך</item>
+        <item>תיהנה מחיי סוללה ארוכים</item>
+        <item>והתחלנו מכלום ושום דבר...</item>
+        <item>We love you 3000</item>
+        <item>ערב לחיך אפילו בלי סושי</item>
+        <item>תעשו משהו נחמד היום</item>
+        <item>זו חוויית הפיקסל הטובה ביותר, לא?</item>
+        <item>בלי אשליות, ברוכים הבאים למציאות!</item>
+        <item>תודה על תמיכתך!</item>
+        <item>אין פסטיבל לדרפס - רק שלמות!</item>
+        <item>אחת מהבחירות הטובות ביותר של הבוטים</item>
+        <item>קח קצת שפיות בשביל הפרנויה שלך</item>
+        <item>נסה קינוחים קרים</item>
+        <item>איזו חוויה מקסימה, לא?</item>
+        <item>האבולוציה היא מיתוס, נכון?</item>
+        <item>אתה מה שאתה צורב, אל תהיה תפו\"א</item>
+        <item>על מה אתה חושב?</item>
+        <item>אקספקטו פטרונום</item>
+        <item>Wubba Lubba Dub Dub</item>
+        <item>ווינר ווינר ....?</item>
+        <item>rm -rf \/</item>
+        <item>פרינגלס הם לא באמת צ\'יפס תפוחי אדמה..</item>
+        <item>זיכרו לבדוק את רמת הסוללה!</item>
+        <item>בידקו את הדוא\"ל/ההודעות שלכם.</item>
+        <item>בידקו את רשימת המשימות שלכם אם יש לכם כזו.</item>
+        <item>ניתן להשבית את quickspace באמצעות הגדרות הבית.</item>
+    </string-array>
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">עדכון מזג האוויר</string>
+    <string name="quick_event_ambient_weather_summary">הצגת העדכון הנוכחי של מזג-האוויר</string>
+    <string name="quick_event_ambient_weather_enabled_info">נדרש ששירות מזג-האוויר יהיה פעיל</string>
+    <string name="quick_event_weather_clouds">מעונן</string>
+    <string name="quick_event_weather_rain">גשום</string>
+    <string name="quick_event_weather_clear">שמשי</string>
+    <string name="quick_event_weather_storm">סוער</string>
+    <string name="quick_event_weather_snow">מושלג</string>
+    <string name="quick_event_weather_wind">משבי רוח</string>
+    <string name="quick_event_weather_mist">מעורפל</string>
+    <string name="quick_event_weather_city_title">המיקום הנוכחי</string>
+    <string name="quick_event_weather_city_summary">הצגת המיקום הנוכחי של מזג-האוויר</string>
+    <string name="quick_event_weather_text_title">התנאים הנוכחיים</string>
+    <string name="quick_event_weather_text_summary">הצגת הסיכום הנוכחי של תנאי מזג-האוויר</string>
+    <string name="intent_no_app_clock_found">לא נמצאו פעילויות יומן או שעון</string>
+    <!-- Freed memory on clear all tasks -->
+    <string name="freed_memory_text">פינית נפח אחסון של %1$s</string>
+    <string name="optimal_memory_text">המערכת שלך כעת במצב מיטבי</string>
+    <!-- Task lock -->
+    <string name="task_menu_item_unlock">ביטול נעילה</string>
+    <string name="task_menu_item_lock">נעילה</string>
+</resources>
