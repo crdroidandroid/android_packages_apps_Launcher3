@@ -40,6 +40,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.launcher3.BubbleTextView;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.allapps.search.SearchAdapterProvider;
 import com.android.launcher3.model.data.AppInfo;
@@ -217,7 +218,8 @@ public abstract class BaseAllAppsAdapter<T extends Context & ActivityContext> ex
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         switch (viewType) {
             case VIEW_TYPE_ICON:
-                int layout = mActivityContext.getDeviceProfile().inv.enableTwoLinesInAllApps
+                int layout = LauncherPrefs.ENABLE_TWOLINE_ALLAPPS_TOGGLE.get(
+                                mActivityContext.getApplicationContext())
                         ? R.layout.all_apps_icon_twoline : R.layout.all_apps_icon;
                 BubbleTextView icon = (BubbleTextView) mLayoutInflater.inflate(
                         layout, parent, false);
