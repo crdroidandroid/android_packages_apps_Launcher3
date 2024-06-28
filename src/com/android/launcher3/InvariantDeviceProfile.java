@@ -228,7 +228,6 @@ public class InvariantDeviceProfile {
     public int allAppsCellSpecsTwoPanelId = INVALID_RESOURCE_HANDLE;
 
     private String mLocale = "";
-    public boolean enableTwoLinesInAllApps = false;
 
     // If non-negative, the workspace row with which top of the all apps container is to be aligned
     // with.
@@ -300,9 +299,6 @@ public class InvariantDeviceProfile {
                     onConfigChanged();
                 }
                 Trace.endSection();
-            } else if (ENABLE_TWOLINE_ALLAPPS_TOGGLE.getSharedPrefKey().equals(key)
-                    && enableTwoLinesInAllApps != prefs.get(ENABLE_TWOLINE_ALLAPPS_TOGGLE)) {
-                onConfigChanged();
             } else if (WORKSPACE_ITEMS_LABEL_HIDDEN.getSharedPrefKey().equals(key)
                     && com.android.systemui.shared.Flags.workspaceItemsLabelHidden()) {
                 onConfigChanged();
@@ -311,7 +307,8 @@ public class InvariantDeviceProfile {
                     SHOW_DESKTOP_LABELS.getSharedPrefKey().equals(key) ||
                     SHOW_DRAWER_LABELS.getSharedPrefKey().equals(key) ||
                     ICON_SIZE.getSharedPrefKey().equals(key) ||
-                    FONT_SIZE.getSharedPrefKey().equals(key)) {
+                    FONT_SIZE.getSharedPrefKey().equals(key) ||
+                    ENABLE_TWOLINE_ALLAPPS_TOGGLE.getSharedPrefKey().equals(key)) {
                 onConfigChanged();
             }
         };
@@ -384,9 +381,6 @@ public class InvariantDeviceProfile {
     private void initGridForDisplayOption(
             LauncherDisplayInfo displayInfo, DisplayOption displayOption) {
         Context context = displayInfo.context;
-        enableTwoLinesInAllApps = Flags.enableTwolineToggle()
-                && Utilities.isEnglishLanguage(context)
-                && mPrefs.get(ENABLE_TWOLINE_ALLAPPS_TOGGLE);
         mLocale = context.getResources().getConfiguration().locale.toString();
 
         DisplayMetrics metrics = context.getResources().getDisplayMetrics();
@@ -739,6 +733,10 @@ public class InvariantDeviceProfile {
             out[i] = dimensions[i] * scale;
         }
         return out;
+    }
+
+    LauncherPrefs getLauncherPrefs() {
+        return mPrefs;
     }
 
     public DeviceProfile createDeviceProfileForSecondaryDisplay(Context displayContext) {

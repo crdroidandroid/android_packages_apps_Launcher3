@@ -41,4 +41,11 @@
         android:persistent="true"
         launcher:iconSpaceReserved="false" />
 
+    <SwitchPreferenceCompat
+        android:key="pref_enable_two_line_toggle"
+        android:title="@string/icon_two_lines_title"
+        android:defaultValue="false"
+        android:persistent="true"
+        launcher:iconSpaceReserved="false" />
+
 </androidx.preference.PreferenceScreen>
