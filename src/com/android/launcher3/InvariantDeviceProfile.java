@@ -246,7 +246,6 @@ public class InvariantDeviceProfile {
     public int allAppsCellSpecsTwoPanelId = INVALID_RESOURCE_HANDLE;
 
     private String mLocale = "";
-    public boolean enableTwoLinesInAllApps = false;
 
     // If non-negative, the workspace row with which top of the all apps container is to be aligned
     // with.
@@ -309,15 +308,13 @@ public class InvariantDeviceProfile {
                     onConfigChanged(context);
                 }
                 Trace.endSection();
-            } else if (ENABLE_TWOLINE_ALLAPPS_TOGGLE.getSharedPrefKey().equals(key)
-                    && enableTwoLinesInAllApps != prefs.get(ENABLE_TWOLINE_ALLAPPS_TOGGLE)) {
-                onConfigChanged(context);
             } else if (ALLAPPS_THEMED_ICONS.getSharedPrefKey().equals(key) ||
                     DRAWER_OPEN_KEYBOARD.getSharedPrefKey().equals(key) ||
                     SHOW_DESKTOP_LABELS.getSharedPrefKey().equals(key) ||
                     SHOW_DRAWER_LABELS.getSharedPrefKey().equals(key) ||
                     ICON_SIZE.getSharedPrefKey().equals(key) ||
-                    FONT_SIZE.getSharedPrefKey().equals(key)) {
+                    FONT_SIZE.getSharedPrefKey().equals(key) ||
+                    ENABLE_TWOLINE_ALLAPPS_TOGGLE.getSharedPrefKey().equals(key)) {
                 onConfigChanged(context);
             }
         };
@@ -382,9 +379,6 @@ public class InvariantDeviceProfile {
     }
 
     private void initGrid(Context context, Info displayInfo, DisplayOption displayOption) {
-        enableTwoLinesInAllApps = Flags.enableTwolineToggle()
-                && Utilities.isEnglishLanguage(context)
-                && mPrefs.get(ENABLE_TWOLINE_ALLAPPS_TOGGLE);
         mLocale = context.getResources().getConfiguration().locale.toString();
 
         DisplayMetrics metrics = context.getResources().getDisplayMetrics();
