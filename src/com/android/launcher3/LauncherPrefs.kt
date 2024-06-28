@@ -441,6 +441,8 @@ data class ConstantItem<T>(
 ) : Item() {
 
     fun get(c: Context): T = LauncherPrefs.get(c).get(this)
+
+    fun getKey(): String = sharedPrefKey
 }
 
 data class ContextualItem<T>(
@@ -460,6 +462,8 @@ data class ContextualItem<T>(
     }
 
     fun get(c: Context): T = LauncherPrefs.get(c).get(this)
+
+    fun getKey(): String = sharedPrefKey
 }
 
 enum class EncryptionType {
