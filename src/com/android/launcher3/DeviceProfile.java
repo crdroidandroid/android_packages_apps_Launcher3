@@ -1370,7 +1370,7 @@ public class DeviceProfile {
         if (isVerticalLayout && !mIsResponsiveGrid) {
             hideWorkspaceLabelsIfNotEnoughSpace();
         }
-        if (inv.enableTwoLinesInAllApps) {
+        if (LauncherPrefs.ENABLE_TWOLINE_ALLAPPS_TOGGLE.get(context)) {
             // Add extra textHeight to the existing allAppsCellHeight.
             allAppsCellHeightPx += Utilities.calculateTextHeight(allAppsIconTextSizePx);
         }
