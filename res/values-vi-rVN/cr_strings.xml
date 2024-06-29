@@ -83,8 +83,8 @@
     <string name="icon_size_title">Kích thước biểu tượng</string>
     <!-- Font size -->
     <string name="font_size_title">Kích thước phông chữ</string>
-    <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Số dòng tối đa cho tên ứng dụng</string>
+    <!-- App label -->
+    <string name="icon_two_lines_title">Dùng hai dòng cho tên ứng dụng</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Đóng</string>
     <string name="recents_app_killed">Ứng dụng đã được tắt</string>
@@ -354,10 +354,4 @@
     <string name="quick_event_weather_text_title">Tình trạng hiện tại</string>
     <string name="quick_event_weather_text_summary">Hiển thị tóm tắt tình trạng thời tiết hiện tại</string>
     <string name="intent_no_app_clock_found">Không thể tìm thấy lịch hoặc hoạt động đồng hồ</string>
-    <!-- Freed memory on clear all tasks -->
-    <string name="freed_memory_text">Đã giải phóng %1$s</string>
-    <string name="optimal_memory_text">Đã xóa ứng dụng ngầm và tối ưu</string>
-    <!-- Task lock -->
-    <string name="task_menu_item_unlock">Mở khóa</string>
-    <string name="task_menu_item_lock">Khóa</string>
 </resources>
