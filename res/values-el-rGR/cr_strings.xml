@@ -83,8 +83,8 @@
     <string name="icon_size_title">Μέγεθος εικονιδίου</string>
     <!-- Font size -->
     <string name="font_size_title">Μέγεθος γραμ/σειράς</string>
-    <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Μέγιστες γραμμές για την ετικέτα εφαρμογής</string>
+    <!-- App label -->
+    <string name="icon_two_lines_title">Χρήση δύο γραμμών για τις ετικέτες εφαρμογών</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Τερματισμός</string>
     <string name="recents_app_killed">Η εφαρμογή τερματίστηκε</string>
@@ -330,7 +330,7 @@
         <item>Τι έχεις στο μυαλό σου;</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Winner Winner ....?</item>
+        <item>Νικητής Νικητής ....;</item>
         <item>rm -rf \/</item>
         <item>Τα Pringles στην πραγματικότητα δεν είναι πατατάκια..</item>
         <item>Θυμήσου να ελέγχεις τα επίπεδα μπαταρίας της συσκευής!</item>
@@ -354,10 +354,4 @@
     <string name="quick_event_weather_text_title">Τρέχουσα κατάσταση</string>
     <string name="quick_event_weather_text_summary">Εμφάνιση σύνοψης της τρέχουσας καιρικής κατάστασης</string>
     <string name="intent_no_app_clock_found">Αδυναμία εύρεσης δραστηριότητας ημερολογίου ή ρολογιού</string>
-    <!-- Freed memory on clear all tasks -->
-    <string name="freed_memory_text">Απελευθερώθηκαν %s</string>
-    <string name="optimal_memory_text">Το σύστημά σας βρίσκεται τώρα σε βέλτιστη κατάσταση</string>
-    <!-- Task lock -->
-    <string name="task_menu_item_unlock">Ξεκλείδωμα</string>
-    <string name="task_menu_item_lock">Κλείδωμα</string>
 </resources>
