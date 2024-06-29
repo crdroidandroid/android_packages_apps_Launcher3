@@ -83,8 +83,8 @@
     <string name="icon_size_title">Tamanho dos ícones</string>
     <!-- Font size -->
     <string name="font_size_title">Tamanho da letra</string>
-    <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Máximo de linhas para o rótulo de aplicativo</string>
+    <!-- App label -->
+    <string name="icon_two_lines_title">Use two lines for app label</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Terminar</string>
     <string name="recents_app_killed">App terminada</string>
@@ -314,7 +314,7 @@
         <item>Lembre-se da linhagem do unicórnio</item>
         <item>Desfrute da duração Xtendida da bateria</item>
         <item>Começando do zero</item>
-        <item>We love you 3000</item>
+        <item>Nós te amamos 3000</item>
         <item>Delicioso mesmo sem Sushi</item>
         <item>Faça algo de bom hoje</item>
         <item>Esta é a melhor Pixel Experience, não é?</item>
@@ -354,10 +354,4 @@
     <string name="quick_event_weather_text_title">Condições atuais</string>
     <string name="quick_event_weather_text_summary">Mostrar as condições meteorológicas atuais</string>
     <string name="intent_no_app_clock_found">Não foi possível encontrar o calendário ou a atividade do relógio</string>
-    <!-- Freed memory on clear all tasks -->
-    <string name="freed_memory_text">Freed up %1$s</string>
-    <string name="optimal_memory_text">O seu sistema está agora em ótimas condições</string>
-    <!-- Task lock -->
-    <string name="task_menu_item_unlock">Desbloquear</string>
-    <string name="task_menu_item_lock">Bloquear</string>
 </resources>
