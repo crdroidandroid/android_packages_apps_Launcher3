@@ -83,8 +83,8 @@
     <string name="icon_size_title">Taille des icônes</string>
     <!-- Font size -->
     <string name="font_size_title">Taille de police</string>
-    <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Lignes max pour le libellé de l\'application</string>
+    <!-- App label -->
+    <string name="icon_two_lines_title">Use two lines for app label</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Terminer</string>
     <string name="recents_app_killed">Application terminée</string>
@@ -354,10 +354,4 @@
     <string name="quick_event_weather_text_title">Conditions météo</string>
     <string name="quick_event_weather_text_summary">Afficher le résumé des conditions météo actuelles</string>
     <string name="intent_no_app_clock_found">Impossible de trouver l\'activité du calendrier ou de l\'horloge</string>
-    <!-- Freed memory on clear all tasks -->
-    <string name="freed_memory_text">%1$s libérés </string>
-    <string name="optimal_memory_text">Votre système est maintenant en état optimal</string>
-    <!-- Task lock -->
-    <string name="task_menu_item_unlock">Déverrouiller</string>
-    <string name="task_menu_item_lock">Verrouiller</string>
 </resources>
