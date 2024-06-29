@@ -83,8 +83,8 @@
     <string name="icon_size_title">גודל הסמל</string>
     <!-- Font size -->
     <string name="font_size_title">גודל גופן</string>
-    <!-- App label - max lines -->
-    <string name="icon_max_lines_title">מקסימום שורות עבור תווית יישומים</string>
+    <!-- App label -->
+    <string name="icon_two_lines_title">פריסת תווית יישומים בשתי שורות</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">כפיית הפסקת היישום</string>
     <string name="recents_app_killed">היישום נסגר</string>
@@ -309,12 +309,12 @@
         <item>הפיצו אהבה, לא חורבן</item>
         <item>לא אנחנו הצתנו את הלהבה!</item>
         <item>הגיע הזמן לקצת מוזיקה טובה</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>ראש \u003C\u003C\u003C\u003C\u003C\u003C\u003C</item>
         <item>אתה צריך crDroid Premium כדי לראות את זה</item>
         <item>זכור מאין הגעת ולאן אתה הולך</item>
         <item>תיהנה מחיי סוללה ארוכים</item>
         <item>והתחלנו מכלום ושום דבר...</item>
-        <item>We love you 3000</item>
+        <item>אנחנו אוהבים אותך 3000</item>
         <item>ערב לחיך אפילו בלי סושי</item>
         <item>תעשו משהו נחמד היום</item>
         <item>זו חוויית הפיקסל הטובה ביותר, לא?</item>
@@ -354,10 +354,4 @@
     <string name="quick_event_weather_text_title">התנאים הנוכחיים</string>
     <string name="quick_event_weather_text_summary">הצגת הסיכום הנוכחי של תנאי מזג-האוויר</string>
     <string name="intent_no_app_clock_found">לא נמצאו פעילויות יומן או שעון</string>
-    <!-- Freed memory on clear all tasks -->
-    <string name="freed_memory_text">פינית נפח אחסון של %1$s</string>
-    <string name="optimal_memory_text">המערכת שלך כעת במצב מיטבי</string>
-    <!-- Task lock -->
-    <string name="task_menu_item_unlock">ביטול נעילה</string>
-    <string name="task_menu_item_lock">נעילה</string>
 </resources>
