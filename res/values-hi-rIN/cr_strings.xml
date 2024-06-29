@@ -72,7 +72,7 @@
     <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
     <string name="paused_apps_drop_target_label">Pause app</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value</string>
+    <string name="custom_seekbar_value">मूल्य: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">डिफ़ॉल्ट रूप से</string>
     <string name="custom_seekbar_default_value_to_set">पूर्व निर्धारित मान:<xliff:g id="v">%s</xliff:g>\n लंबा दबा कर चालू करे।</string>
     <string name="custom_seekbar_default_value_is_set">पूर्व निर्धारित मान पहले से सेट है।</string>
