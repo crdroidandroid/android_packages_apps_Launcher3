@@ -83,8 +83,8 @@
     <string name="icon_size_title">Памер значка</string>
     <!-- Font size -->
     <string name="font_size_title">Памер шрыфта</string>
-    <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Максімальная колькасць радкоў у назве значка праграм</string>
+    <!-- App label -->
+    <string name="icon_two_lines_title">Use two lines for app label</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Спыніць</string>
     <string name="recents_app_killed">Праграма завершана</string>
@@ -173,7 +173,7 @@ quick_event_rom_intro_welcome_ext
         <item>Best Rom Ever.</item>
         <item>Say hi to us on Telegram</item>
         <item>Tap here to begin</item>
-        <item>We love you 3000</item>
+        <item>Мы любім цябе 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Good morning.</string>
@@ -316,7 +316,7 @@ quick_event_rom_intro_welcome_ext
         <item>Памятайце Lineage і Unicorn</item>
         <item>Атрымлівайце асалоду ад тэрміну службы батарэі</item>
         <item>Пачынаючы з нуля</item>
-        <item>We love you 3000</item>
+        <item>Мы любім цябе 3000</item>
         <item>Смачна нават без Сушы</item>
         <item>Зрабі што-небудзь прыемнае сёння</item>
         <item>Гэта лепшы Pixel Experience, ці не так?</item>
@@ -356,10 +356,4 @@ quick_event_rom_intro_welcome_ext
     <string name="quick_event_weather_text_title">Current condition</string>
     <string name="quick_event_weather_text_summary">Display current weather condition summary</string>
     <string name="intent_no_app_clock_found">Unable to find calendar or clock activity</string>
-    <!-- Freed memory on clear all tasks -->
-    <string name="freed_memory_text">Freed up %1$s</string>
-    <string name="optimal_memory_text">Your system is now in optimal condition</string>
-    <!-- Task lock -->
-    <string name="task_menu_item_unlock">Unlock</string>
-    <string name="task_menu_item_lock">Lock</string>
 </resources>
