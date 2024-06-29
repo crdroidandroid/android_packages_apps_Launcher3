@@ -83,8 +83,8 @@
     <string name="icon_size_title">Розмір значків</string>
     <!-- Font size -->
     <string name="font_size_title">Розмір шрифту</string>
-    <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Максимум рядків для мітки додатку</string>
+    <!-- App label -->
+    <string name="icon_two_lines_title">Використовувати два рядки для мітки застосунків</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Зупинити</string>
     <string name="recents_app_killed">Програму закрито</string>
@@ -354,10 +354,4 @@
     <string name="quick_event_weather_text_title">Поточний стан</string>
     <string name="quick_event_weather_text_summary">Показувати поточний стан погоди</string>
     <string name="intent_no_app_clock_found">Не вдалося знайти календар або годинник активності</string>
-    <!-- Freed memory on clear all tasks -->
-    <string name="freed_memory_text">Звільнено з %1$s</string>
-    <string name="optimal_memory_text">Ваша система знаходиться в оптимальному стані</string>
-    <!-- Task lock -->
-    <string name="task_menu_item_unlock">Розблокувати</string>
-    <string name="task_menu_item_lock">Блокування</string>
 </resources>
