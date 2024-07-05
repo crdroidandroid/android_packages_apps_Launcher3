@@ -83,8 +83,8 @@
     <string name="icon_size_title">アイコンのサイズ</string>
     <!-- Font size -->
     <string name="font_size_title">フォントのサイズ</string>
-    <!-- App label - max lines -->
-    <string name="icon_max_lines_title">アプリラベルの最大行数</string>
+    <!-- App label -->
+    <string name="icon_two_lines_title">アプリのラベルを2行にする</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">強制停止</string>
     <string name="recents_app_killed">アプリを強制停止しました</string>
@@ -354,10 +354,4 @@
     <string name="quick_event_weather_text_title">現在の天気</string>
     <string name="quick_event_weather_text_summary">現在の天候の概要を表示します</string>
     <string name="intent_no_app_clock_found">カレンダーまたは時計のアクティビティが見つかりません</string>
-    <!-- Freed memory on clear all tasks -->
-    <string name="freed_memory_text">%sを解放しました</string>
-    <string name="optimal_memory_text">システムが最適な状態になっています</string>
-    <!-- Task lock -->
-    <string name="task_menu_item_unlock">ロック解除</string>
-    <string name="task_menu_item_lock">ロック</string>
 </resources>

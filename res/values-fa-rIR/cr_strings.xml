@@ -83,8 +83,8 @@
     <string name="icon_size_title">اندازه آیکون</string>
     <!-- Font size -->
     <string name="font_size_title">اندازه قلم</string>
-    <!-- App label - max lines -->
-    <string name="icon_max_lines_title">حداکثر خطوط برای برچسب برنامه</string>
+    <!-- App label -->
+    <string name="icon_two_lines_title">Use two lines for app label</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Kill</string>
     <string name="recents_app_killed">برنامه بسته شد</string>
@@ -166,11 +166,11 @@
     <string name="quick_event_rom_intro_welcome">به crDroid خوش آمدید!</string>
     <string name="quick_event_rom_intro_welcome_ext">زمان crDroid!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
+        <item>سپاس از شما برای انتخاب ما</item>
+        <item>ما را دوست داری؟ برای ما آبجو بفرست</item>
+        <item>بهترین رام همیشه.</item>
+        <item>در تلگرام به ما سلام کنید</item>
+        <item>برای شروع اینجا را ضربه بزنید</item>
         <item>We love you 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
@@ -360,10 +360,4 @@ Remember the Lineage of the Unicorn</item>
     <string name="quick_event_weather_text_title">Current condition</string>
     <string name="quick_event_weather_text_summary">Display current weather condition summary</string>
     <string name="intent_no_app_clock_found">Unable to find calendar or clock activity</string>
-    <!-- Freed memory on clear all tasks -->
-    <string name="freed_memory_text">Freed up %1$s</string>
-    <string name="optimal_memory_text">Your system is now in optimal condition</string>
-    <!-- Task lock -->
-    <string name="task_menu_item_unlock">Unlock</string>
-    <string name="task_menu_item_lock">Lock</string>
 </resources>

@@ -83,8 +83,8 @@
     <string name="icon_size_title">Simge boyutu</string>
     <!-- Font size -->
     <string name="font_size_title">Yazı tipi boyutu</string>
-    <!-- App label - max lines -->
-    <string name="icon_max_lines_title">Uygulama etiketi için maksimum satır</string>
+    <!-- App label -->
+    <string name="icon_two_lines_title">Uygulama etiketi için iki satır kullan</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Sonlandır</string>
     <string name="recents_app_killed">Uygulama sonlandırıldı</string>
@@ -354,10 +354,4 @@
     <string name="quick_event_weather_text_title">Geçerli durum</string>
     <string name="quick_event_weather_text_summary">Mevcut hava durumu özetini görüntüle</string>
     <string name="intent_no_app_clock_found">Takvim veya saat etkinliği bulunamıyor</string>
-    <!-- Freed memory on clear all tasks -->
-    <string name="freed_memory_text">%1$s temizlendi</string>
-    <string name="optimal_memory_text">Sisteminiz şu an en uygun durumda</string>
-    <!-- Task lock -->
-    <string name="task_menu_item_unlock">Kilidi aç</string>
-    <string name="task_menu_item_lock">Kilitle</string>
 </resources>
