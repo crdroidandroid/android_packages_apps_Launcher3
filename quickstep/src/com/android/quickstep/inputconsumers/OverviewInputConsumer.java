@@ -105,53 +105,10 @@ public class OverviewInputConsumer<S extends BaseState<S>, T extends StatefulAct
     }
 
     @Override
-    public void onHoverEvent(MotionEvent ev) {
-        mActivity.dispatchGenericMotionEvent(ev);
-    }
+    public void onHoverEvent(MotionEvent ev) {}
 
     @Override
-    public void onKeyEvent(KeyEvent ev) {
-        switch (ev.getKeyCode()) {
-            case KeyEvent.KEYCODE_VOLUME_DOWN:
-            case KeyEvent.KEYCODE_VOLUME_UP:
-            case KeyEvent.KEYCODE_VOLUME_MUTE:
-                MediaSessionManager mgr = mActivity.getSystemService(MediaSessionManager.class);
-                mgr.dispatchVolumeKeyEventAsSystemService(ev,
-                        AudioManager.USE_DEFAULT_STREAM_TYPE);
-                break;
-            case KeyEvent.KEYCODE_DPAD_LEFT:
-            case KeyEvent.KEYCODE_DPAD_RIGHT:
-                if (mHasSetTouchModeForFirstDPadEvent) {
-                    break;
-                }
-                View viewRoot = mActivity.getRootView();
-                if (viewRoot.isAttachedToWindow()) {
-                    setTouchModeChanged(viewRoot);
-                    break;
-                }
-                if (mIsWaitingForAttachToWindow) {
-                    break;
-                }
-                mIsWaitingForAttachToWindow = true;
-                viewRoot.addOnAttachStateChangeListener(new View.OnAttachStateChangeListener() {
-                    @Override
-                    public void onViewAttachedToWindow(View view) {
-                        view.removeOnAttachStateChangeListener(this);
-                        mIsWaitingForAttachToWindow = false;
-                        setTouchModeChanged(viewRoot);
-                    }
-
-                    @Override
-                    public void onViewDetachedFromWindow(View view) {
-                        // Do nothing
-                    }
-                });
-                break;
-            default:
-                break;
-        }
-        mActivity.dispatchKeyEvent(ev);
-    }
+    public void onKeyEvent(KeyEvent ev) {}
 
     private void setTouchModeChanged(@NonNull View viewRoot) {
         // When Overview is launched via meta+tab or swipe up from an app, the touch

@@ -26,7 +26,9 @@ public class RecentsTaskController extends TaskViewTouchController<RecentsActivi
 
     @Override
     protected boolean isRecentsInteractive() {
-        return mActivity.hasWindowFocus() || mActivity.getStateManager().getState().hasLiveTile();
+        boolean enableLiveTile = false;
+        return mActivity.hasWindowFocus() || (enableLiveTile
+                && mActivity.getStateManager().getState().hasLiveTile());
     }
 
     @Override

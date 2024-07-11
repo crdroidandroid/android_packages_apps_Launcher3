@@ -388,8 +388,6 @@ public class TaskView extends FrameLayout implements Reusable {
 
     protected final PointF mLastTouchDownPosition = new PointF();
 
-    private boolean mIsClickableAsLiveTile = true;
-
     @Nullable private final BorderAnimator mFocusBorderAnimator;
 
     @Nullable private final BorderAnimator mHoverBorderAnimator;
@@ -863,23 +861,6 @@ public class TaskView extends FrameLayout implements Reusable {
                     .startActivityFromRecents(mTask.key, opts.options)) {
                 ActiveGestureLog.INSTANCE.trackEvent(EXPECTING_TASK_APPEARED);
                 RecentsView recentsView = getRecentsView();
-                if (recentsView.getRunningTaskViewId() != -1) {
-                    recentsView.onTaskLaunchedInLiveTileMode();
-
-                    // Return a fresh callback in the live tile case, so that it's not accidentally
-                    // triggered by QuickstepTransitionManager.AppLaunchAnimationRunner.
-                    RunnableList callbackList = new RunnableList();
-                    recentsView.addSideTaskLaunchCallback(callbackList);
-                    return callbackList;
-                }
-                if (TaskAnimationManager.ENABLE_SHELL_TRANSITIONS) {
-                    // If the recents transition is running (ie. in live tile mode), then the start
-                    // of a new task will merge into the existing transition and it currently will
-                    // not be run independently, so we need to rely on the onTaskAppeared() call
-                    // for the new task to trigger the side launch callback to flush this runnable
-                    // list (which is usually flushed when the app launch animation finishes)
-                    recentsView.addSideTaskLaunchCallback(opts.onEndCallback);
-                }
                 return opts.onEndCallback;
             } else {
                 notifyTaskLaunchFailed(TAG);
@@ -969,73 +950,7 @@ public class TaskView extends FrameLayout implements Reusable {
     public RunnableList launchTasks() {
         RecentsView recentsView = getRecentsView();
         RemoteTargetHandle[] remoteTargetHandles = recentsView.mRemoteTargetHandles;
-        if (isRunningTask() && remoteTargetHandles != null) {
-            if (!mIsClickableAsLiveTile) {
-                Log.e(TAG, "TaskView is not clickable as a live tile; returning to home.");
-                return null;
-            }
-
-            mIsClickableAsLiveTile = false;
-            RemoteAnimationTargets targets;
-            if (remoteTargetHandles.length == 1) {
-                targets = remoteTargetHandles[0].getTransformParams().getTargetSet();
-            } else {
-                RemoteAnimationTarget[] apps = Arrays.stream(remoteTargetHandles)
-                        .flatMap(handle -> Stream.of(
-                                handle.getTransformParams().getTargetSet().apps))
-                        .toArray(RemoteAnimationTarget[]::new);
-                RemoteAnimationTarget[] wallpapers = Arrays.stream(remoteTargetHandles)
-                        .flatMap(handle -> Stream.of(
-                                handle.getTransformParams().getTargetSet().wallpapers))
-                        .toArray(RemoteAnimationTarget[]::new);
-                targets = new RemoteAnimationTargets(apps, wallpapers,
-                        remoteTargetHandles[0].getTransformParams().getTargetSet().nonApps,
-                        remoteTargetHandles[0].getTransformParams().getTargetSet().targetMode);
-            }
-            if (targets == null) {
-                // If the recents animation is cancelled somehow between the parent if block and
-                // here, try to launch the task as a non live tile task.
-                RunnableList runnableList = launchTaskAnimated();
-                if (runnableList == null) {
-                    Log.e(TAG, "Recents animation cancelled and cannot launch task as non-live tile"
-                            + "; returning to home");
-                }
-                mIsClickableAsLiveTile = true;
-                return runnableList;
-            }
-
-            RunnableList runnableList = new RunnableList();
-            AnimatorSet anim = new AnimatorSet();
-            TaskViewUtils.composeRecentsLaunchAnimator(
-                    anim, this, targets.apps,
-                    targets.wallpapers, targets.nonApps, true /* launcherClosing */,
-                    mActivity.getStateManager(), recentsView,
-                    recentsView.getDepthController());
-            anim.addListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animator) {
-                    if (mTask != null && mTask.key.displayId != getRootViewDisplayId()) {
-                        launchTaskAnimated();
-                    }
-                    mIsClickableAsLiveTile = true;
-                    runEndCallback();
-                }
-
-                @Override
-                public void onAnimationCancel(Animator animation) {
-                    runEndCallback();
-                }
-
-                private void runEndCallback() {
-                    runnableList.executeAllAndDestroy();
-                }
-            });
-            anim.start();
-            recentsView.onTaskLaunchedInLiveTileMode();
-            return runnableList;
-        } else {
-            return launchTaskAnimated();
-        }
+        return launchTaskAnimated();
     }
 
     /**

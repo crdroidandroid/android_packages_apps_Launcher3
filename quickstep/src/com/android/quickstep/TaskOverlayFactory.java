@@ -191,12 +191,7 @@ public class TaskOverlayFactory implements ResourceBasedOverride {
          * @param callback callback to run, after switching to screenshot
          */
         public void endLiveTileMode(@NonNull Runnable callback) {
-            RecentsView recentsView = mThumbnailView.getTaskView().getRecentsView();
-            // Task has already been dismissed
-            if (recentsView == null) return;
-            recentsView.switchToScreenshot(
-                    () -> recentsView.finishRecentsAnimation(true /* toRecents */,
-                            false /* shouldPip */, callback));
+            callback.run();
         }
 
         /**

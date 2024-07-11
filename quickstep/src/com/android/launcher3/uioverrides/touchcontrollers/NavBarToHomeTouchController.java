@@ -150,8 +150,6 @@ public class NavBarToHomeTouchController implements TouchController,
             AnimatorControllerWithResistance.createRecentsResistanceFromOverviewAnim(mLauncher,
                     builder);
 
-            builder.addOnFrameCallback(recentsView::redrawLiveTile);
-
             AbstractFloatingView.closeOpenContainer(mLauncher, AbstractFloatingView.TYPE_TASK_MENU);
         } else if (mStartState == ALL_APPS) {
             AllAppsTransitionController allAppsController = mLauncher.getAllAppsController();
@@ -191,9 +189,6 @@ public class NavBarToHomeTouchController implements TouchController,
         boolean success = interpolatedProgress >= SUCCESS_TRANSITION_PROGRESS
                 || (velocity < 0 && fling);
         if (success) {
-            RecentsView recentsView = mLauncher.getOverviewPanel();
-            recentsView.switchToScreenshot(null,
-                    () -> recentsView.finishRecentsAnimation(true /* toRecents */, null));
             if (mStartState.overviewUi) {
                 Runnable onReachedHome = () -> {
                     StateManager.StateListener<LauncherState> listener =

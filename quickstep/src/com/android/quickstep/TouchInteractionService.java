@@ -1184,15 +1184,7 @@ public class TouchInteractionService extends Service {
                 && !launcherResumedThroughShellTransition
                 && !previousGestureState.isRecentsAnimationRunning();
 
-        if (gestureState.getActivityInterface().isInLiveTileMode()) {
-            return createOverviewInputConsumer(
-                    previousGestureState,
-                    gestureState,
-                    event,
-                    forceOverviewInputConsumer,
-                    reasonString.append(SUBSTRING_PREFIX)
-                            .append("is in live tile mode, trying to use overview input consumer"));
-        } else if (runningTask == null) {
+        if (gestureState.getRunningTask() == null) {
             return getDefaultInputConsumer(reasonString.append(SUBSTRING_PREFIX)
                     .append("running task == null"));
         } else if (previousGestureAnimatedToLauncher
@@ -1277,7 +1269,7 @@ public class TouchInteractionService extends Service {
         boolean isPreviousGestureAnimatingToLauncher =
                 previousGestureState.isRunningAnimationToLauncher()
                         || mDeviceState.isPredictiveBackToHomeInProgress();
-        boolean isInLiveTileMode = gestureState.getActivityInterface().isInLiveTileMode();
+        boolean isInLiveTileMode = false;
         reasonString.append(SUBSTRING_PREFIX)
                 .append(hasWindowFocus
                         ? "activity has window focus"
