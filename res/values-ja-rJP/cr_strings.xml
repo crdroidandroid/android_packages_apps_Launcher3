@@ -94,7 +94,7 @@
     <string name="dock_theme_summary">検索バーにテーマアイコンを使用する</string>
     <string name="search_radius_title">角の丸み</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
+    <string name="hotseat_bg_title">ホットシートの背景</string>
     <string name="hotseat_bg_summary">アプリドックに半透明の背景を追加します</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">壁紙をスクロール</string>
@@ -116,26 +116,26 @@
     <string name="show_quickspace_summary">ホーム画面の上部に表示します</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">crDroid にようこそ！</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
+    <string name="quick_event_rom_intro_welcome_ext">crDroid 時間 ！</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
+        <item>当社をお選びいただきありがとうございます。</item>
+        <item>私たちを愛していますか？ビールを送る</item>
+        <item>史上最高のロム</item>
+        <item>で私たちに挨拶を送ってください</item>
+        <item>ここをタップして始める</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
-    <string name="quickspace_ext_two">It\'s</string>
+    <string name="quickspace_grt_morning">おはよう。</string>
+    <string name="quickspace_grt_evening">こんばんは。</string>
+    <string name="quickspace_grt_afternoon">こんにちは。</string>
+    <string name="quickspace_grt_night">おやすみなさい。</string>
+    <string name="quickspace_grt_general">ボンジュール</string>
+    <string name="quickspace_ext_one">本日は</string>
+    <string name="quickspace_ext_two">それは</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
+    <string name="qe_now_playing_unknown_artist">アーティスト不明</string>
     <string name="qe_now_playing_ext_one">再生中</string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_by">によって</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">再生中</string>
     <string name="quickspace_now_playing_summary">再生中の曲を表示します</string>
@@ -144,25 +144,25 @@
     <string name="quickspace_alternate_style_summary">モダンスタイルに切り替えます</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">ランダムメッセージ</string>
-    <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
+    <string name="quickspace_psa_summary">ランダムメッセージで仲間を盛り上げる</string>
     <string-array name="quickspace_psa_morning">
         <item>おはようございます!</item>
         <item>おはようございます、さぁ始めましょうか!</item>
         <item>なんて美しい日でしょう!</item>
         <item>良い一日を!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Mornings are a fresh canvas for your daily masterpiece.</item>
-        <item>Embrace the sunrise of opportunity each morning.</item>
-        <item>In the early light, find the power to illuminate your path.</item>
-        <item>Your day begins with endless possibilities.</item>
-        <item>Every sunrise is a reminder that you can start anew.</item>
-        <item>Awake with purpose, conquer the day ahead.</item>
-        <item>Your thoughts can be the foundation of great achievements.</item>
-        <item>The world awakens, and so does your potential.</item>
-        <item>The first chapter in your daily adventure.</item>
-        <item>Let your morning routine be the launchpad for success.</item>
-        <item>Sunrise or not, your potential is always on the rise.</item>
+        <item>5分間の仮眠はどうだろう？</item>
+        <item>このパンを食べよう。</item>
+        <item>朝は、毎日の傑作のための新鮮なキャンバスだ。</item>
+        <item>毎朝、チャンスの日の出を受け入れよう。</item>
+        <item>早い光の中で、私の道を照らす強さを見つけてください。</item>
+        <item>あなたの一日は無限の可能性から始まる。</item>
+        <item>日の出が昇るたびに、新しいスタートを切ることができることを思い出させてくれる。</item>
+        <item>目的を持って目覚め、前途ある一日を征服する。</item>
+        <item>あなたの思考は偉大な業績の基礎となり得る。</item>
+        <item>世界が目覚め、あなたの可能性も目覚める。</item>
+        <item>日々の冒険の第1章。</item>
+        <item>朝の習慣を成功への出発点にしよう。</item>
+        <item>日の出であろうとなかろうと、あなたの可能性は常に上昇中だ。</item>
         <item>It\s time for fresh ideas and bold actions.</item>
         <item>The early bird catches the worm, but you can catch your dreams.</item>
         <item>Find the courage to chase your aspirations.</item>
