@@ -417,6 +417,8 @@ public class Launcher extends StatefulActivity<LauncherState>
     // QuickSpace
     private QuickSpaceView mQuickSpace;
 
+    private ActivityContext mLauncher;
+
     public static Launcher getLauncher(Context context) {
         return fromContext(context);
     }
@@ -593,6 +595,8 @@ public class Launcher extends StatefulActivity<LauncherState>
             RuleController.getInstance(this).setRules(
                     RuleController.parseRules(this, R.xml.split_configuration));
         }
+
+        mLauncher = ActivityContext.lookupContext(mWorkspace.getContext());
     }
 
     protected ModelCallbacks createModelCallbacks() {
@@ -2829,7 +2833,9 @@ public class Launcher extends StatefulActivity<LauncherState>
      * @param progress Transition progress from 0 to 1; where 0 => home and 1 => all apps.
      */
     public void onAllAppsTransition(float progress) {
-        // No-Op
+        if (mLauncher != null) {
+            mLauncher.hideKeyboard();
+        }
     }
 
     /**
