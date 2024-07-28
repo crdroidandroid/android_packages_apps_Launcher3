@@ -398,10 +398,6 @@ public class AllAppsTransitionController
         setter.setFloat(getAppsViewPullbackAlpha(), MultiPropertyFactory.MULTI_PROPERTY_VALUE,
                 hasAllAppsContent ? 1 : 0, allAppsFade);
 
-        setter.setFloat(mLauncher.getAppsView(),
-                ActivityAllAppsContainerView.BOTTOM_SHEET_ALPHA, hasAllAppsContent ? 1 : 0,
-                config.getInterpolator(ANIM_ALL_APPS_BOTTOM_SHEET_FADE, INSTANT));
-
         boolean shouldProtectHeader = !config.hasAnimationFlag(StateAnimationConfig.SKIP_SCRIM)
                 && (ALL_APPS == state || mLauncher.getStateManager().getState() == ALL_APPS);
         mScrimView.setDrawingController(shouldProtectHeader ? mAppsView : null);
