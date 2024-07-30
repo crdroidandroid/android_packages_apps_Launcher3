@@ -198,10 +198,9 @@ public class ItemInstallQueue {
                         "Adding PendingInstallShortcutInfo with no attached info to queue.",
                         stackTrace);
             } else {
-                FileLog.d(LOG,
+                Log.d(LOG,
                         "Adding PendingInstallShortcutInfo to queue. Attached info: "
-                                + itemInfo.first,
-                        stackTrace);
+                                + itemInfo.first);
             }
 
             addToQueue(info);
