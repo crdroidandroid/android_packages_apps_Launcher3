@@ -26,5 +26,6 @@
         <permission name="android.permission.REGISTER_STATS_PULL_ATOM"/>
         <permission name="com.android.alarm.permission.SET_ALARM"/>
         <permission name="com.crdroid.permission.START_FREEFORM"/>
+        <permission name="android.permission.ACCESS_CONTEXTUAL_SEARCH"/>
     </privapp-permissions>
 </permissions>
