@@ -165,6 +165,14 @@ public class ImageActionUtils {
             Rect crop, String tag) {
         UI_HELPER_EXECUTOR.execute(() -> {
             Bitmap bitmap = bitmapSupplier.get();
+            startLensActivity(context, bitmap, crop, tag);
+        });
+    }
+    
+    @WorkerThread
+    public static void startLensActivity(Context context, Bitmap bitmap,
+            Rect crop, String tag) {
+        UI_HELPER_EXECUTOR.execute(() -> {
             if (bitmap == null) {
                 Log.e(tag, "No snapshot available, not starting lens.");
                 return;
