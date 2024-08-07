@@ -84,9 +84,9 @@
     <!-- Font size -->
     <string name="font_size_title">اندازه قلم</string>
     <!-- App label -->
-    <string name="icon_two_lines_title">Use two lines for app label</string>
+    <string name="icon_two_lines_title">استفاده از برچسب دو خطی برای نام برنامه</string>
     <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Kill</string>
+    <string name="recent_task_option_kill_app">توقف</string>
     <string name="recents_app_killed">برنامه بسته شد</string>
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">استفاده از نوار وظیفه</string>
@@ -149,9 +149,9 @@
     <string name="short_parallax_title">Allow short parallax</string>
     <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
     <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <string name="single_page_center_summary">تصویر زمینه در مرکز اگر شما فقط یک صفحه دارید</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar</string>
+    <string name="drawer_search_title">برنامه نوار جستجو</string>
     <string name="drawer_search_summary">Search bar on top of the app drawer</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">راه اندازی مجدد</string>
