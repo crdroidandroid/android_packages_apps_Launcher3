@@ -11,8 +11,6 @@ import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCH
 import static com.android.launcher3.LauncherSettings.Favorites.ITEM_TYPE_APPLICATION;
 import static com.android.launcher3.LauncherSettings.Favorites.ITEM_TYPE_TASK;
 
-import static android.app.ActivityOptions.MODE_BACKGROUND_ACTIVITY_START_ALLOWED;
-
 import android.app.Activity;
 import android.app.ActivityManagerNative;
 import android.app.ActivityOptions;
@@ -566,10 +564,7 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
             r.offsetTo(insets.getSystemWindowInsetLeft() + 50, insets.getSystemWindowInsetTop() + 50);
             activityOptions.setLaunchBounds(r);
             activityOptions.setSplashScreenStyle(SplashScreen.SPLASH_SCREEN_STYLE_ICON);
-            activityOptions.setTaskAlwaysOnTop(true);
-            activityOptions.setPendingIntentBackgroundActivityStartMode(
-                    MODE_BACKGROUND_ACTIVITY_START_ALLOWED);
-            activityOptions.setPendingIntentBackgroundActivityLaunchAllowedByPermission(true);
+            activityOptions.setTaskOverlay(true /* taskOverlay */, true /* canResume */);
             return activityOptions;
         }
     }
