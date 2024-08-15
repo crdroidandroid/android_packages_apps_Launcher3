@@ -364,7 +364,7 @@ public interface TaskShortcutFactory {
         private boolean isAvailable(BaseDraggingActivity activity, int displayId) {
             return Settings.Global.getInt(
                     activity.getContentResolver(),
-                    Settings.Global.DEVELOPMENT_ENABLE_FREEFORM_WINDOWS_SUPPORT, 0) != 0
+                    Settings.Global.DEVELOPMENT_ENABLE_FREEFORM_WINDOWS_SUPPORT, 1) != 0
                     && !isDesktopModeSupported();
         }
     };
