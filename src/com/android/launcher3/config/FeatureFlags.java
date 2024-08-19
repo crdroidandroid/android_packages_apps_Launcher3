@@ -179,7 +179,7 @@ public final class FeatureFlags {
 
     // TODO(Block 7): Clean up flags
     public static final BooleanFlag ENABLE_FORCED_MONO_ICON = getDebugFlag(270396209,
-            "ENABLE_FORCED_MONO_ICON", DISABLED,
+            "ENABLE_FORCED_MONO_ICON", ENABLED,
             "Enable the ability to generate monochromatic icons, if it is not provided by the app");
 
     // TODO(Block 8): Clean up flags
