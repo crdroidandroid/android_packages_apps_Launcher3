@@ -52,6 +52,9 @@
     <uses-permission android:name="android.permission.INJECT_EVENTS" />
     <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
 
+    <!-- Floating window -->
+    <uses-permission android:name="com.libremobileos.permission.START_FREEFORM" />
+
     <permission
         android:name="${applicationId}.permission.GRID_CONTROL"
         android:knownCerts="@array/grid_control_known_signers"
