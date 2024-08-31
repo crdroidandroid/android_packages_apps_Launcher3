@@ -354,4 +354,7 @@
     <string name="quick_event_weather_text_title">Τρέχουσα κατάσταση</string>
     <string name="quick_event_weather_text_summary">Εμφάνιση σύνοψης της τρέχουσας καιρικής κατάστασης</string>
     <string name="intent_no_app_clock_found">Αδυναμία εύρεσης δραστηριότητας ημερολογίου ή ρολογιού</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Scrollbar</string>
+    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
 </resources>
