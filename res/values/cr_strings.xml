@@ -129,6 +129,9 @@
     <!-- Background opacity -->
     <string name="background_opacity_title">Background opacity</string>
 
+    <!-- Stroke -->
+    <string name="stroke_width_title">Stroke</string>
+
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Kill</string>
     <string name="recents_app_killed">App killed</string>
