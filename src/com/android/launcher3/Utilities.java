@@ -197,6 +197,7 @@ public final class Utilities {
     public static final String KEY_SHOW_QUICKSPACE_WEATHER_TEXT = "pref_quickspace_weather_text";
     public static final String KEY_DRAWER_SCROLLBAR = "pref_drawer_scrollbar";
     public static final String KEY_HOTSEAT_QSB_OPACITY = "pref_hotseat_qsb_opacity";
+    public static final String KEY_HOTSEAT_QSB_STROKE_WIDTH = "pref_hotseat_qsb_stroke_width";
 
     /**
      * Returns true if theme is dark.
@@ -1096,5 +1097,10 @@ public final class Utilities {
     public static int getHotseatQsbOpacity(Context context) {
         SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
         return prefs.getInt(KEY_HOTSEAT_QSB_OPACITY, 100);
+    }
+
+    public static int getHotseatQsbStrokeWidth(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getInt(KEY_HOTSEAT_QSB_STROKE_WIDTH, 0);
     }
 }
