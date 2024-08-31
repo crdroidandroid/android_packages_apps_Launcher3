@@ -5,6 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.PaintDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -85,10 +88,24 @@ public class QsbLayout extends FrameLayout {
         if (Utilities.isThemedIconsEnabled(mContext))
             baseColor = Themes.getAttrColor(mContext, R.attr.qsbFillColorThemed);
         int color = Color.argb(alphaValue, Color.red(baseColor), Color.green(baseColor), Color.blue(baseColor));
-        PaintDrawable pd = new PaintDrawable(color);
-        pd.setCornerRadius(cornerRadius);
-        inner.setClipToOutline(cornerRadius > 0);
-        inner.setBackground(pd);
+        float strokeWidth = Utilities.getHotseatQsbStrokeWidth(mContext);
+
+        PaintDrawable backgroundDrawable = new PaintDrawable(color);
+        backgroundDrawable.setCornerRadius(cornerRadius);
+
+        if (strokeWidth != 0f) {
+            PaintDrawable strokeDrawable = new PaintDrawable(Themes.getColorAccent(mContext));
+            strokeDrawable.getPaint().setStyle(Paint.Style.STROKE);
+            strokeDrawable.getPaint().setStrokeWidth(strokeWidth);
+            strokeDrawable.setCornerRadius(cornerRadius);
+            LayerDrawable combinedDrawable = new LayerDrawable(new Drawable[]{backgroundDrawable, strokeDrawable});
+
+            inner.setClipToOutline(cornerRadius > 0);
+            inner.setBackground(combinedDrawable);
+        } else {
+            inner.setClipToOutline(cornerRadius > 0);
+            inner.setBackground(backgroundDrawable);
+        }
     }
 
     @Override
