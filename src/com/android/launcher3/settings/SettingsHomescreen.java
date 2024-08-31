@@ -126,6 +126,7 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
             case Utilities.KEY_SHOW_QUICKSPACE_PSONALITY:
             case Utilities.KEY_SHOW_QUICKSPACE_WEATHER_CITY:
             case Utilities.KEY_SHOW_QUICKSPACE_WEATHER_TEXT:
+            case Utilities.KEY_HOTSEAT_QSB_OPACITY:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:

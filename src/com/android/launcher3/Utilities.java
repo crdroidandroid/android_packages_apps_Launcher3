@@ -196,6 +196,7 @@ public final class Utilities {
     public static final String KEY_SHOW_QUICKSPACE_WEATHER_CITY = "pref_quickspace_weather_city";
     public static final String KEY_SHOW_QUICKSPACE_WEATHER_TEXT = "pref_quickspace_weather_text";
     public static final String KEY_DRAWER_SCROLLBAR = "pref_drawer_scrollbar";
+    public static final String KEY_HOTSEAT_QSB_OPACITY = "pref_hotseat_qsb_opacity";
 
     /**
      * Returns true if theme is dark.
@@ -1090,5 +1091,10 @@ public final class Utilities {
     public static boolean showScrollbar(Context context) {
         SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_DRAWER_SCROLLBAR, true);
+    }
+
+    public static int getHotseatQsbOpacity(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getInt(KEY_HOTSEAT_QSB_OPACITY, 100);
     }
 }
