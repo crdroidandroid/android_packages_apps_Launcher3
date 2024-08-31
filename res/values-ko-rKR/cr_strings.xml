@@ -354,4 +354,7 @@
     <string name="quick_event_weather_text_title">현재 상태</string>
     <string name="quick_event_weather_text_summary">현재 날씨 요약 표시</string>
     <string name="intent_no_app_clock_found">일정이나 알림을 찾을 수 없습니다</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Scrollbar</string>
+    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
 </resources>
