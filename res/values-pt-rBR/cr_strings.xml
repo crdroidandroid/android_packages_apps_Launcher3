@@ -354,4 +354,7 @@
     <string name="quick_event_weather_text_title">Condição atual</string>
     <string name="quick_event_weather_text_summary">Exibir o resumo atual da condição climática</string>
     <string name="intent_no_app_clock_found">Não foi possível encontrar o calendário ou a atividade do relógio</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Scrollbar</string>
+    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
 </resources>
