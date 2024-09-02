@@ -108,7 +108,7 @@
     <!-- Background opacity -->
     <string name="background_opacity_title">Прозрачность фона</string>
     <!-- Stroke -->
-    <string name="stroke_width_title">Stroke</string>
+    <string name="stroke_width_title">Окантовка</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Прокрутка обоев</string>
     <string name="allow_wallpaper_scrolling_summary">Прокрутка обоев для нескольких экранов</string>
@@ -358,5 +358,5 @@
     <string name="intent_no_app_clock_found">Невозможно найти календарь или часы</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Полоса прокрутки</string>
-    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
+    <string name="drawer_scrollbar_summary">Полоса прокрутки сбоку меню приложений</string>
 </resources>
