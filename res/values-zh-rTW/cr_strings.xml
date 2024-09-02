@@ -108,7 +108,7 @@
     <!-- Background opacity -->
     <string name="background_opacity_title">背景透明度</string>
     <!-- Stroke -->
-    <string name="stroke_width_title">Stroke</string>
+    <string name="stroke_width_title">邊框</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">桌布滑動</string>
     <string name="allow_wallpaper_scrolling_summary">在不同頁面間滑動時使桌布跟著移動</string>
@@ -357,6 +357,6 @@
     <string name="quick_event_weather_text_summary">顯示目前的天氣概況</string>
     <string name="intent_no_app_clock_found">找不到日曆或時鐘應用程式</string>
     <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">Scrollbar</string>
+    <string name="drawer_scrollbar_title">捲動條</string>
     <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
 </resources>
