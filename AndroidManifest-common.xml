@@ -52,6 +52,7 @@
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
     <uses-permission android:name="android.permission.DEVICE_POWER" />
     <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
+    <uses-permission android:name="android.permission.INJECT_EVENTS" />
 
     <!-- Floating window -->
     <uses-permission android:name="com.libremobileos.permission.START_FREEFORM" />
