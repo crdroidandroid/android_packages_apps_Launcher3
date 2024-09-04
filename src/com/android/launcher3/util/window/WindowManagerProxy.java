@@ -441,6 +441,14 @@ public class WindowManagerProxy implements ResourceBasedOverride, SafeCloseable 
     }
 
     /**
+     * Returns display ID of the display associated with the context, or display ID of DEFAULT_DISPLAY
+     * if the context isn't associated with a display.
+     */
+    public int getDisplayId(Context displayInfoContext) {
+        return getDisplay(displayInfoContext).getDisplayId();
+    }
+
+    /**
      * Returns the display associated with the context, or DEFAULT_DISPLAY if the context isn't
      * associated with a display.
      */
