@@ -360,6 +360,6 @@
     <string name="drawer_scrollbar_title">Scrollbalk</string>
     <string name="drawer_scrollbar_summary">Scrollbalk aan de zijkant van de app lade</string>
     <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Force themed icons</string>
-    <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
+    <string name="force_monochrome_icons_title">Forceer thema pictogrammen</string>
+    <string name="force_monochrome_icons_summary">Genereer monochromatische pictogrammen, als deze niet worden ondersteund door de app (vereist opnieuw omschakelen van thema pictogrammen)</string>
 </resources>
