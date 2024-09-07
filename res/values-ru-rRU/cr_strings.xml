@@ -99,7 +99,7 @@
     <string name="dock_music_search_summary">Поиск музыки при нажатии на микрофон</string>
     <string name="dock_search_title">Поиск Google</string>
     <string name="dock_search_summary">Показывать строку поиска снизу</string>
-    <string name="dock_theme_title">Значок из темы</string>
+    <string name="dock_theme_title">Тематические значки</string>
     <string name="dock_theme_summary">Для панели поиска использовать значки из темы</string>
     <string name="search_radius_title">Радиус закругления углов</string>
     <!-- Hotseat Background -->
@@ -360,6 +360,6 @@
     <string name="drawer_scrollbar_title">Полоса прокрутки</string>
     <string name="drawer_scrollbar_summary">Полоса прокрутки сбоку меню приложений</string>
     <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Force themed icons</string>
-    <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
+    <string name="force_monochrome_icons_title">Принудительно тематические значки</string>
+    <string name="force_monochrome_icons_summary">Создание монохромных значков, если они не поддерживаются приложением (требуется переключение тематических значков)</string>
 </resources>
