@@ -360,6 +360,6 @@
     <string name="drawer_scrollbar_title">Смуга прокрутки</string>
     <string name="drawer_scrollbar_summary">Смуга прокрутки у списку додатків</string>
     <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Force themed icons</string>
-    <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
+    <string name="force_monochrome_icons_title">Примусові тематичні іконки</string>
+    <string name="force_monochrome_icons_summary">Генерувати монохроматичні іконки, якщо вони не підтримуються програмою (потрібно повторно перемкнути тематичні іконки)</string>
 </resources>
