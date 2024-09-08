@@ -19,7 +19,6 @@ import android.annotation.NonNull;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
-import android.media.AudioManager;
 import android.media.MediaMetadata;
 import android.media.session.MediaController;
 import android.media.session.MediaSession;
@@ -59,7 +58,6 @@ public class QuickspaceController implements NotificationListener.NotificationsC
 
     private boolean mUseImperialUnit;
 
-    private AudioManager mAudioManager;
     private MediaController mController;
     private MediaMetadata mMediaMetadata;
     private String mLastTrackTitle = null;
@@ -72,13 +70,14 @@ public class QuickspaceController implements NotificationListener.NotificationsC
 
     private final MediaController.Callback mMediaCallback = new MediaController.Callback() {
         @Override
-        public void onPlaybackStateChanged(@NonNull PlaybackState state) {
+        public void onPlaybackStateChanged(PlaybackState state) {
+            super.onPlaybackStateChanged(state);
             updateMediaController();
         }
+
         @Override
         public void onMetadataChanged(MediaMetadata metadata) {
             super.onMetadataChanged(metadata);
-            mMediaMetadata = metadata;
             updateMediaController();
         }
     };
@@ -88,8 +87,7 @@ public class QuickspaceController implements NotificationListener.NotificationsC
         mHandler = new Handler();
         mEventsController = new QuickEventsController(context);
         mWeatherClient = new OmniJawsClient(context);
-        mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
-        updateMediaController();
+        registerMediaController();
     }
 
     private void addWeatherProvider() {
@@ -154,18 +152,6 @@ public class QuickspaceController implements NotificationListener.NotificationsC
         return null;
     }
 
-    public void updateMediaInfo() {
-        boolean isPlaying = isMediaControllerAvailable() 
-            && PlaybackState.STATE_PLAYING == getMediaControllerPlaybackState(mController);
-        String trackArtist = mMediaMetadata != null ? mMediaMetadata.getString(MediaMetadata.METADATA_KEY_ARTIST) : "";
-        String trackTitle = mMediaMetadata != null ? mMediaMetadata.getString(MediaMetadata.METADATA_KEY_TITLE) : "";
-        if (mEventsController != null && Utilities.isQuickspaceNowPlaying(mContext)) {
-            mEventsController.setMediaInfo(trackTitle, trackArtist, isPlaying);
-            mEventsController.updateQuickEvents();
-            notifyListeners();
-        }
-    }
-
     private int getMediaControllerPlaybackState(MediaController controller) {
         if (controller != null) {
             final PlaybackState playbackState = controller.getPlaybackState();
@@ -194,15 +180,14 @@ public class QuickspaceController implements NotificationListener.NotificationsC
     }
 
     public void onPause() {
-        if (mEventsController != null) mEventsController.onPause();
+        unregisterMediaController();
+        mEventsController.onPause();
     }
 
     public void onResume() {
-        if (mEventsController != null) {
-            updateMediaController();
-            mEventsController.onResume();
-            notifyListeners();
-        }
+        mEventsController.onResume();
+        updateMediaController();
+        notifyListeners();
     }
 
     @Override
@@ -243,7 +228,7 @@ public class QuickspaceController implements NotificationListener.NotificationsC
         });
     }
 
-    public void notifyListeners() {
+    private void notifyListeners() {
         mHandler.post(new Runnable() {
             @Override
             public void run() {
@@ -252,11 +237,6 @@ public class QuickspaceController implements NotificationListener.NotificationsC
                 }
             }
         });
-    }
-
-    private boolean isMediaControllerAvailable() {
-        final MediaController mediaController = getActiveLocalMediaController();
-        return mediaController != null && !TextUtils.isEmpty(mediaController.getPackageName());
     }
 
     private MediaController getActiveLocalMediaController() {
@@ -296,19 +276,37 @@ public class QuickspaceController implements NotificationListener.NotificationsC
         }
         return localController;
     }
-    
-    private void updateMediaController() {
+
+    private void registerMediaController() {
         MediaController localController = getActiveLocalMediaController();
-        if (localController != null && !sameSessions(mController, localController)) {
-            if (mController != null) {
-                mController.unregisterCallback(mMediaCallback);
-                mController = null;
-            }
+        if (localController != null && (mController == null || !sameSessions(mController, localController))) {
+            unregisterMediaController();
             mController = localController;
             mController.registerCallback(mMediaCallback);
         }
-        mMediaMetadata = isMediaControllerAvailable() ? mController.getMetadata() : null;
-        updateMediaInfo();
+    }
+
+    private void unregisterMediaController() {
+        if (mController != null) {
+            mController.unregisterCallback(mMediaCallback);
+            mController = null;
+        }
+    }
+
+    private void updateMediaController() {
+        if (!Utilities.isQuickspaceNowPlaying(mContext)) {
+            unregisterMediaController();
+            return;
+        }
+        registerMediaController();
+        if (mController != null) {
+            mMediaMetadata = mController.getMetadata();
+        }
+        boolean isPlaying = PlaybackState.STATE_PLAYING == getMediaControllerPlaybackState(mController);
+        String trackArtist = isPlaying && mMediaMetadata != null ? mMediaMetadata.getString(MediaMetadata.METADATA_KEY_ARTIST) : "";
+        String trackTitle = isPlaying && mMediaMetadata != null ? mMediaMetadata.getString(MediaMetadata.METADATA_KEY_TITLE) : "";
+        mEventsController.setMediaInfo(trackTitle, trackArtist, isPlaying);
+        mEventsController.updateQuickEvents();
     }
     
     private boolean sameSessions(MediaController a, MediaController b) {
