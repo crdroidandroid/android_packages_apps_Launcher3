@@ -107,6 +107,8 @@
     <string name="hotseat_bg_summary">Transparenten Hintergrund im Dock anzeigen</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Hintergrundtransparenz</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Strichstärke</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Hintergrundbild-Bewegung</string>
     <string name="allow_wallpaper_scrolling_summary">Hintergrundbild-Bewegung beim Seitenwechsel</string>
@@ -354,4 +356,10 @@
     <string name="quick_event_weather_text_title">Wetterlage in Worten</string>
     <string name="quick_event_weather_text_summary">Kurze schriftliche Übersicht der aktuellen Wetterlage anzeigen</string>
     <string name="intent_no_app_clock_found">Keine Kalender- oder Weckeraktivität gefunden</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Bildlaufleiste</string>
+    <string name="drawer_scrollbar_summary">Bildlaufleiste neben der App-Übersicht</string>
+    <!-- Force monochrome icons -->
+    <string name="force_monochrome_icons_title">Symboldesigns erzwingen</string>
+    <string name="force_monochrome_icons_summary">Einfarbige Symbole generieren, sofern von der App selbst nicht unterstützt (Symboldesigns müssen dabei deaktiviert und erneut aktiviert werden)</string>
 </resources>

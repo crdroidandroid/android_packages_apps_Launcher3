@@ -107,6 +107,8 @@
     <string name="hotseat_bg_summary">在底部的應用程式列顯示透明背景</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">背景透明度</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">邊框</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">桌布滑動</string>
     <string name="allow_wallpaper_scrolling_summary">在不同頁面間滑動時使桌布跟著移動</string>
@@ -354,4 +356,10 @@
     <string name="quick_event_weather_text_title">目前天氣狀況</string>
     <string name="quick_event_weather_text_summary">顯示目前的天氣概況</string>
     <string name="intent_no_app_clock_found">找不到日曆或時鐘應用程式</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">滑動條</string>
+    <string name="drawer_scrollbar_summary">應用程式選單側邊的滑動條</string>
+    <!-- Force monochrome icons -->
+    <string name="force_monochrome_icons_title">強制圖示套用主題色</string>
+    <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
 </resources>

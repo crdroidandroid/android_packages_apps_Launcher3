@@ -107,6 +107,8 @@
     <string name="hotseat_bg_summary">Thêm nền mờ vào thanh ứng dụng</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Độ mờ của nền</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Độ nét</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Cuộn hình nền</string>
     <string name="allow_wallpaper_scrolling_summary">Hiệu ứng cuộn hình nền cho nhiều màn hình</string>
@@ -354,4 +356,10 @@
     <string name="quick_event_weather_text_title">Tình trạng hiện tại</string>
     <string name="quick_event_weather_text_summary">Hiển thị tóm tắt tình trạng thời tiết hiện tại</string>
     <string name="intent_no_app_clock_found">Không thể tìm thấy lịch hoặc hoạt động đồng hồ</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Thanh cuộn</string>
+    <string name="drawer_scrollbar_summary">Thanh cuộn ở bên cạnh ngăn kéo ứng dụng</string>
+    <!-- Force monochrome icons -->
+    <string name="force_monochrome_icons_title">Buộc các biểu tượng theo chủ đề</string>
+    <string name="force_monochrome_icons_summary">Tạo các biểu tượng đơn sắc, nếu không được ứng dụng sẵn (yêu cầu bật lại chế độ biểu tượng theo chủ đề)</string>
 </resources>

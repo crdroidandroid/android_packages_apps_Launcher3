@@ -107,6 +107,8 @@
     <string name="hotseat_bg_summary">Voeg doorschijnende achtergrond toe aan het app dock</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Achtergrond transparantie</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Lijn</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Wallpaper scrollen</string>
     <string name="allow_wallpaper_scrolling_summary">Wallpaper scrolleffect voor meerdere schermen</string>
@@ -354,4 +356,10 @@
     <string name="quick_event_weather_text_title">Huidige omstandigheden</string>
     <string name="quick_event_weather_text_summary">Overzicht huidige weersomstandigheden weergeven</string>
     <string name="intent_no_app_clock_found">Kan agenda of klok activiteit niet vinden</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Scrollbalk</string>
+    <string name="drawer_scrollbar_summary">Scrollbalk aan de zijkant van de app lade</string>
+    <!-- Force monochrome icons -->
+    <string name="force_monochrome_icons_title">Forceer thema pictogrammen</string>
+    <string name="force_monochrome_icons_summary">Genereer monochromatische pictogrammen, als deze niet worden ondersteund door de app (vereist opnieuw omschakelen van thema pictogrammen)</string>
 </resources>

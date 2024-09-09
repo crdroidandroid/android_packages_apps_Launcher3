@@ -107,6 +107,8 @@
     <string name="hotseat_bg_summary">Áttetsző háttereket adhat az alkalmazásfiókhoz</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Háttérátlátszóság</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Körvonal</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Háttérkép-görgetés</string>
     <string name="allow_wallpaper_scrolling_summary">Háttérképgörgetési effekt több képernyőre</string>
@@ -354,4 +356,10 @@
     <string name="quick_event_weather_text_title">Jelenlegi időjárás</string>
     <string name="quick_event_weather_text_summary">Megjeleníti az épp aktuális hőfokot és adatokat</string>
     <string name="intent_no_app_clock_found">Nem található naptári vagy óratevékenység</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Görgetősáv</string>
+    <string name="drawer_scrollbar_summary">A keresősáv az Alkalmazásfiók oldalán</string>
+    <!-- Force monochrome icons -->
+    <string name="force_monochrome_icons_title">Kényszerített ikontémázás</string>
+    <string name="force_monochrome_icons_summary">Monokróm ikonok létrehozása, ha az alkalmazás nem készíti el (a tematikus ikonok újrakapcsolása szükséges)</string>
 </resources>

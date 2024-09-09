@@ -107,6 +107,8 @@
     <string name="hotseat_bg_summary">Añadir fondo translúcido al dock de aplicaciones</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Opacidad del fondo</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Trazo</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Desplazamiento de fondo de pantalla</string>
     <string name="allow_wallpaper_scrolling_summary">Efecto de desplazamiento de fondo de pantalla para múltiples pantallas</string>
@@ -354,4 +356,10 @@
     <string name="quick_event_weather_text_title">Condición actual</string>
     <string name="quick_event_weather_text_summary">Mostrar el resumen actual de la condición meteorológica</string>
     <string name="intent_no_app_clock_found">No se puede encontrar el calendario o la actividad del reloj</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Barra de desplazamiento</string>
+    <string name="drawer_scrollbar_summary">Barra de desplazamiento al lado del cajón de aplicaciones</string>
+    <!-- Force monochrome icons -->
+    <string name="force_monochrome_icons_title">Forzar iconos temáticos</string>
+    <string name="force_monochrome_icons_summary">Generar iconos monocromáticos, si no están soportados por la aplicación (requiere volver a cambiar los iconos temáticos)</string>
 </resources>

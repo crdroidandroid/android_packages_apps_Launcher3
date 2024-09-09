@@ -107,6 +107,8 @@
     <string name="hotseat_bg_summary">앱 서랍에 반투명 배경 추가</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">배경 불투명도</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Stroke</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">배경화면 스크롤</string>
     <string name="allow_wallpaper_scrolling_summary">여러개의 화면을 위한 배경화면 스크롤링 효과</string>
@@ -354,4 +356,10 @@
     <string name="quick_event_weather_text_title">현재 상태</string>
     <string name="quick_event_weather_text_summary">현재 날씨 요약 표시</string>
     <string name="intent_no_app_clock_found">일정이나 알림을 찾을 수 없습니다</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Scrollbar</string>
+    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
+    <!-- Force monochrome icons -->
+    <string name="force_monochrome_icons_title">Force themed icons</string>
+    <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
 </resources>

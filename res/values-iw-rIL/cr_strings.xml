@@ -107,6 +107,8 @@
     <string name="hotseat_bg_summary">הוספת רקע שקוף לסרגל היישומים</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">שקיפות הרקע</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Stroke</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">גלילת הטפט</string>
     <string name="allow_wallpaper_scrolling_summary">אפקט גלילה לטפט עבור מסכים מרובים</string>
@@ -354,4 +356,10 @@
     <string name="quick_event_weather_text_title">התנאים הנוכחיים</string>
     <string name="quick_event_weather_text_summary">הצגת הסיכום הנוכחי של תנאי מזג-האוויר</string>
     <string name="intent_no_app_clock_found">לא נמצאו פעילויות יומן או שעון</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">סרגל הגלילה</string>
+    <string name="drawer_scrollbar_summary">הצגת סרגל הגלילה לצד מגירת היישומים</string>
+    <!-- Force monochrome icons -->
+    <string name="force_monochrome_icons_title">שימוש כפוי בסמלי ערכת הנושא</string>
+    <string name="force_monochrome_icons_summary">יצירת סמלים בצבע יחיד, אם לא מוגדרים ביישום (נדרש להפעיל מחדש את האפשרות סמלי ערכת הנושא)</string>
 </resources>

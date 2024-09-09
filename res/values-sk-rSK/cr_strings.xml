@@ -107,6 +107,8 @@
     <string name="hotseat_bg_summary">Pridať priesvitné pozadie do doku aplikácie</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Priehľadnosť pozadia</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Stroke</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Posúvanie tapety</string>
     <string name="allow_wallpaper_scrolling_summary">Efekt posúvania tapety pre viacero obrazoviek</string>
@@ -354,4 +356,10 @@
     <string name="quick_event_weather_text_title">Aktuálne podmienky</string>
     <string name="quick_event_weather_text_summary">Zobraziť súhrn aktuálneho počasia</string>
     <string name="intent_no_app_clock_found">Aktivita kalendára alebo hodín sa nenašla</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Scrollbar</string>
+    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
+    <!-- Force monochrome icons -->
+    <string name="force_monochrome_icons_title">Force themed icons</string>
+    <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
 </resources>

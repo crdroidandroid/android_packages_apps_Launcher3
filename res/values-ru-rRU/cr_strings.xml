@@ -47,7 +47,7 @@
     <string name="desktop_show_labels">Показывать подписи значков</string>
     <string name="drawer_show_labels">Показывать подписи значков</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Проведите пальцем для доступа к приложению Google</string>
+    <string name="title_show_google_app">Смахивание вправо для доступа к Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_left">Когда открываете рабочий стол слева</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
@@ -72,7 +72,7 @@
     <string name="paused_apps_dialog_message">%1$s приостановлено из главного экрана</string>
     <string name="paused_apps_drop_target_label">Приостановить приложение</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Выключение экрана двойным нажатием</string>
+    <string name="pref_sleep_gesture_title">Выключение двойным нажатием</string>
     <string name="pref_sleep_gesture_summary">Дважды коснитесь пустого места экрана для его выключения</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
@@ -84,7 +84,7 @@
     <!-- Font size -->
     <string name="font_size_title">Размер шрифта</string>
     <!-- App label -->
-    <string name="icon_two_lines_title">Название приложений в две строки</string>
+    <string name="icon_two_lines_title">Название в две строки</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Завершить</string>
     <string name="recents_app_killed">Приложение закрыто</string>
@@ -99,7 +99,7 @@
     <string name="dock_music_search_summary">Поиск музыки при нажатии на микрофон</string>
     <string name="dock_search_title">Поиск Google</string>
     <string name="dock_search_summary">Показывать строку поиска снизу</string>
-    <string name="dock_theme_title">Значок из темы</string>
+    <string name="dock_theme_title">Тематические значки</string>
     <string name="dock_theme_summary">Для панели поиска использовать значки из темы</string>
     <string name="search_radius_title">Радиус закругления углов</string>
     <!-- Hotseat Background -->
@@ -107,6 +107,8 @@
     <string name="hotseat_bg_summary">Полупрозрачный фон нижней панели приложений</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Прозрачность фона</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Окантовка</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Прокрутка обоев</string>
     <string name="allow_wallpaper_scrolling_summary">Прокрутка обоев для нескольких экранов</string>
@@ -130,7 +132,7 @@
     <string name="recents_clear_all_title">Очистить всё</string>
     <string name="recents_lens_title">Объектив</string>
     <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Встряхнуть, для очистки всех задач</string>
+    <string name="recents_shake_clear_all_title">Встряхнуть, для очистки недавних</string>
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Тематические значки</string>
     <string name="pref_themed_icons_summary">Использовать тематические значки в меню приложений, такие же, как на рабочем столе</string>
@@ -354,4 +356,10 @@
     <string name="quick_event_weather_text_title">Текущее состояние</string>
     <string name="quick_event_weather_text_summary">Показывать информацию о текущих погодных условиях</string>
     <string name="intent_no_app_clock_found">Невозможно найти календарь или часы</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Полоса прокрутки</string>
+    <string name="drawer_scrollbar_summary">Полоса прокрутки сбоку меню приложений</string>
+    <!-- Force monochrome icons -->
+    <string name="force_monochrome_icons_title">Принудительно тематические значки</string>
+    <string name="force_monochrome_icons_summary">Создание монохромных значков, если они не поддерживаются приложением (требуется переключение тематических значков)</string>
 </resources>
