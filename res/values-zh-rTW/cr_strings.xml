@@ -361,5 +361,5 @@
     <string name="drawer_scrollbar_summary">應用程式選單側邊的滑動條</string>
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">強制圖示套用主題色</string>
-    <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
+    <string name="force_monochrome_icons_summary">若應用程式不支援單色圖示（需重新切換主題圖示），則產生單色圖示。</string>
 </resources>
