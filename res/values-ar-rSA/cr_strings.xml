@@ -341,7 +341,7 @@
         <item>يمكنك تعطيل الفضاء السريع عن طريق إعدادات المنزل.</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quick_event_ambient_weather_title">Weather update</string>
+    <string name="quick_event_ambient_weather_title">تحديث الطقس</string>
     <string name="quick_event_ambient_weather_summary">Display current weather update</string>
     <string name="quick_event_ambient_weather_enabled_info">يتطلب تفعيل خدمة الطقس</string>
     <string name="quick_event_weather_clouds">غائم</string>
@@ -357,8 +357,8 @@
     <string name="quick_event_weather_text_summary">Display current weather condition summary</string>
     <string name="intent_no_app_clock_found">تعذر العثور على التقويم أو نشاط الساعة</string>
     <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">Scrollbar</string>
-    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
+    <string name="drawer_scrollbar_title">شريط التمرير</string>
+    <string name="drawer_scrollbar_summary">شريط التمرير على جانب درج التطبيق</string>
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Force themed icons</string>
     <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>

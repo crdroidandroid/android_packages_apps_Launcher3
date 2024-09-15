@@ -40,8 +40,8 @@
     <string name="dev_options_summary">Bật một số tính năng ẩn và tự chịu rủi ro</string>
     <!-- Edit workspace -->
     <string name="settings_lock_layout_title">Khóa bố cục</string>
-    <string name="settings_lock_layout_summary_on">Không thể thêm vào hãy xoá hoặc đặt ở trang màn hình khác</string>
-    <string name="settings_lock_layout_summary_off">Có thể thêm vào và xoá hoặc đặt ở trang màn hình</string>
+    <string name="settings_lock_layout_summary_on">Không thể thêm vào, xóa và đặt ở trang màn hình chính</string>
+    <string name="settings_lock_layout_summary_off">Có thể thêm vào, xóa và đặt ở trang màn hình chính</string>
     <string name="settings_edit_widgets_error">Không thể thêm vào màn hình chính</string>
     <!-- Hide labels -->
     <string name="desktop_show_labels">Tên biểu tượng trên màn hình chính</string>
@@ -360,6 +360,6 @@
     <string name="drawer_scrollbar_title">Thanh cuộn</string>
     <string name="drawer_scrollbar_summary">Thanh cuộn ở bên cạnh ngăn kéo ứng dụng</string>
     <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Buộc các biểu tượng theo chủ đề</string>
-    <string name="force_monochrome_icons_summary">Tạo các biểu tượng đơn sắc, nếu không được ứng dụng sẵn (yêu cầu bật lại chế độ biểu tượng theo chủ đề)</string>
+    <string name="force_monochrome_icons_title">Biểu tượng theo chủ đề</string>
+    <string name="force_monochrome_icons_summary">Tạo biểu tượng đơn sắc nếu ứng dụng không hỗ trợ (yêu cầu chuyển đổi lại biểu tượng theo chủ đề)</string>
 </resources>
