@@ -84,7 +84,7 @@
     <!-- Font size -->
     <string name="font_size_title">Ukuran huruf</string>
     <!-- App label -->
-    <string name="icon_two_lines_title">Use two lines for app label</string>
+    <string name="icon_two_lines_title">Gunakan dua baris untuk label aplikasi</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Matikan</string>
     <string name="recents_app_killed">Aplikasi dimatikan</string>
@@ -108,7 +108,7 @@
     <!-- Background opacity -->
     <string name="background_opacity_title">Transparansi latar Belakang</string>
     <!-- Stroke -->
-    <string name="stroke_width_title">Stroke</string>
+    <string name="stroke_width_title">Garis</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Menggulir wallpaper</string>
     <string name="allow_wallpaper_scrolling_summary">Efek pengguliran wallpaper untuk beberapa tampilan</string>
@@ -214,7 +214,7 @@
         <item>Bab pertama dalam petualangan harian Anda.</item>
         <item>Biarkan rutinitas pagi Anda menjadi landasan menuju kesuksesan.</item>
         <item>Matahari terbit atau tidak, potensi Anda selalu meningkat.</item>
-        <item>It\'s time for fresh ideas and bold actions.</item>
+        <item>Waktunya untuk ide segar dan tindakan berani.</item>
         <item>Burung yang datang lebih awal akan menangkap cacing, tetapi Anda dapat menangkap impian Anda.</item>
         <item>Temukan keberanian untuk mengejar aspirasi Anda.</item>
         <item>Bangkit dan bersinar, karena kehebatan menanti.</item>
@@ -341,8 +341,8 @@
         <item>Kamu dapat menonaktifkan quickspace melalui setelan beranda.</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quick_event_ambient_weather_title">Weather update</string>
-    <string name="quick_event_ambient_weather_summary">Display current weather update</string>
+    <string name="quick_event_ambient_weather_title">Pembaruan info cuaca</string>
+    <string name="quick_event_ambient_weather_summary">Tampilkan cuaca saat ini menurut lokasi</string>
     <string name="quick_event_ambient_weather_enabled_info">Membutuhkan layanan cuaca untuk diaktifkan</string>
     <string name="quick_event_weather_clouds">Berawan</string>
     <string name="quick_event_weather_rain">Hujan</string>
@@ -352,14 +352,14 @@
     <string name="quick_event_weather_wind">Berangin</string>
     <string name="quick_event_weather_mist">Berkabut</string>
     <string name="quick_event_weather_city_title">Lokasi saat ini</string>
-    <string name="quick_event_weather_city_summary">Display current weather location</string>
-    <string name="quick_event_weather_text_title">Current condition</string>
-    <string name="quick_event_weather_text_summary">Display current weather condition summary</string>
+    <string name="quick_event_weather_city_summary">Tampilkan cuaca saat ini menurut lokasi</string>
+    <string name="quick_event_weather_text_title">Kondisi saat ini</string>
+    <string name="quick_event_weather_text_summary">Tampilkan kondisi cuaca dan suhu saat ini</string>
     <string name="intent_no_app_clock_found">Tidak dapat menemukan aktivitas kalender atau jam</string>
     <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">Scrollbar</string>
-    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
+    <string name="drawer_scrollbar_title">Bilah pengguliran</string>
+    <string name="drawer_scrollbar_summary">Bilah gulir di sisi laci aplikasi</string>
     <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Force themed icons</string>
-    <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
+    <string name="force_monochrome_icons_title">Paksa ikon bertema</string>
+    <string name="force_monochrome_icons_summary">Hasilkan ikon monokromatik, jika tidak didukung oleh aplikasi (memerlukan pengalihan ikon bertema)</string>
 </resources>
