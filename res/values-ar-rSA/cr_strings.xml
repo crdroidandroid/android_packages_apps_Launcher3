@@ -84,7 +84,7 @@
     <!-- Font size -->
     <string name="font_size_title">حجم الخط</string>
     <!-- App label -->
-    <string name="icon_two_lines_title">Use two lines for app label</string>
+    <string name="icon_two_lines_title">استخدام خطين لاسم التطبيق</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">إيقاف</string>
     <string name="recents_app_killed">تم إيقاف التطبيق</string>
@@ -108,7 +108,7 @@
     <!-- Background opacity -->
     <string name="background_opacity_title">تعتيم الخلفية</string>
     <!-- Stroke -->
-    <string name="stroke_width_title">Stroke</string>
+    <string name="stroke_width_title">سُمك</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">تمرير خلفية الشاشة</string>
     <string name="allow_wallpaper_scrolling_summary">تأثير تمرير خلفية الشاشة للشاشات المتعددة</string>
@@ -283,21 +283,21 @@
     </string-array>
     <string-array name="quickspace_psa_midnight">
         <item>الليالي هي هوامش الفرصة الهادئة.</item>
-        <item>In the stillness of the night, find your inner strength.</item>
-        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
-        <item>The world sleeps, but your potential is wide awake.</item>
-        <item>The night may be late, but your ambitions are timeless.</item>
-        <item>Stay curious, stay awake, and let nights guide you.</item>
-        <item>Find the courage to chase your dreams.</item>
-        <item>Great things never come from comfort zones.</item>
-        <item>You have the power to create your own destiny.</item>
-        <item>Happiness is a choice; choose it every day.</item>
-        <item>Life is what you make it, so make it count.</item>
-        <item>Stay focused, stay determined, stay unstoppable.</item>
-        <item>You are the author of your own story.</item>
-        <item>Strive for progress, not perfection.</item>
-        <item>Every day is a new beginning; make it a great one.</item>
-        <item>Inspire others by being your authentic self.</item>
+        <item>في سكون الليل، ابحث عن قوتك الداخلية.</item>
+        <item>احتضن الظلام، فهو يحمل مفاتيح أحلامك.</item>
+        <item>العالم ينام، ولكن إمكاناتك مستيقظة.</item>
+        <item>قد تكون الليلة متأخرة، ولكن طموحاتك تأتي في الوقت المناسب.</item>
+        <item>ابق فضوليًا، وابق مستيقظًا، ودع الليل يرشدك.</item>
+        <item>ابحث عن الشجاعة لمطاردة أحلامك.</item>
+        <item>الأشياء العظيمة لا تأتي أبداً من مناطق الراحة.</item>
+        <item>لديك القدرة على لتحديد مصيرك الخاص.</item>
+        <item>السعادة هي اختيار؛ اخترها كل يوم.</item>
+        <item>الحياة هي ما تصنعه، لذا اجعلها ذات أهمية.</item>
+        <item>حافظ على تركيزك، وحافظ على تصميمك، وحافظ على عدم توقفك.</item>
+        <item>أنت مؤلف قصتك الخاصة.</item>
+        <item>السعي من أجل التقدم، وليس الكمال.</item>
+        <item>في كل يوم بداية جديدة، اجعلها بداية عظيمة.</item>
+        <item>ألهم الآخرين من خلال كونك نفسك الحقيقية.</item>
         <item>Your attitude determines your direction.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
