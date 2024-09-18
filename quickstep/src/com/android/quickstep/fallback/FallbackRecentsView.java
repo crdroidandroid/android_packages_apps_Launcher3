@@ -19,7 +19,6 @@ import static android.app.ActivityTaskManager.INVALID_TASK_ID;
 
 import static com.android.quickstep.GestureState.GestureEndTarget.RECENTS;
 import static com.android.quickstep.fallback.RecentsState.DEFAULT;
-import static com.android.quickstep.fallback.RecentsState.HOME;
 import static com.android.quickstep.fallback.RecentsState.MODAL_TASK;
 import static com.android.quickstep.fallback.RecentsState.OVERVIEW_SPLIT_SELECT;
 
@@ -262,7 +261,7 @@ public class FallbackRecentsView extends RecentsView<RecentsActivity, RecentsSta
 
     @Override
     public void onStateTransitionComplete(RecentsState finalState) {
-        if (finalState == HOME) {
+        if (!finalState.isRecentsViewVisible()) {
             // Clean-up logic that occurs when recents is no longer in use/visible.
             reset();
         }

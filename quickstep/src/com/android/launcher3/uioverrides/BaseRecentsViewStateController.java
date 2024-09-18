@@ -86,7 +86,7 @@ public abstract class BaseRecentsViewStateController<T extends RecentsView>
         }
         setStateWithAnimationInternal(toState, config, builder);
         builder.addEndListener(success -> {
-            if (!success) {
+            if (!success && !toState.isRecentsViewVisible) {
                 mRecentsView.reset();
             }
         });
