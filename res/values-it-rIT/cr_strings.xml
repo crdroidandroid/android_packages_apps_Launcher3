@@ -360,6 +360,6 @@
     <string name="drawer_scrollbar_title">Barra di scorrimento</string>
     <string name="drawer_scrollbar_summary">Barra di scorrimento sul lato del cassetto delle applicazioni</string>
     <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Force themed icons</string>
-    <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
+    <string name="force_monochrome_icons_title">Forza icone a tema</string>
+    <string name="force_monochrome_icons_summary">Genera icone monocromatiche, se non supportate dall\'app (richiede di riattivare le icone a tema)</string>
 </resources>
