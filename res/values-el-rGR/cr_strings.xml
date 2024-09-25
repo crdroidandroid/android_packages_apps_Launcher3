@@ -108,7 +108,7 @@
     <!-- Background opacity -->
     <string name="background_opacity_title">Αδιαφάνεια φόντου</string>
     <!-- Stroke -->
-    <string name="stroke_width_title">Stroke</string>
+    <string name="stroke_width_title">Χτύπημα</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Κύλιση ταπετσαρίας</string>
     <string name="allow_wallpaper_scrolling_summary">Εφέ κύλισης ταπετσαρίας για πολλαπλές οθόνες</string>
@@ -357,9 +357,9 @@
     <string name="quick_event_weather_text_summary">Εμφάνιση σύνοψης της τρέχουσας καιρικής κατάστασης</string>
     <string name="intent_no_app_clock_found">Αδυναμία εύρεσης δραστηριότητας ημερολογίου ή ρολογιού</string>
     <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">Scrollbar</string>
-    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
+    <string name="drawer_scrollbar_title">Μπάρα κύλισης</string>
+    <string name="drawer_scrollbar_summary">Μπάρα κύλισης στο πλάι του συρταριού εφαρμογών</string>
     <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Force themed icons</string>
-    <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
+    <string name="force_monochrome_icons_title">Εξαναγκασμός θεματικών εικονιδίων</string>
+    <string name="force_monochrome_icons_summary">Δημιουργία μονοχρωματικών εικονιδίων, εάν δεν υποστηρίζεται από την εφαρμογή (απαιτεί επανεναλλαγή θεματικών εικονιδίων)</string>
 </resources>
