@@ -187,6 +187,7 @@ public class QuickspaceController implements NotificationListener.NotificationsC
     public void onResume() {
         mEventsController.onResume();
         updateMediaController();
+        notifyListeners();
     }
 
     @Override
@@ -306,7 +307,6 @@ public class QuickspaceController implements NotificationListener.NotificationsC
         String trackTitle = isPlaying && mMediaMetadata != null ? mMediaMetadata.getString(MediaMetadata.METADATA_KEY_TITLE) : "";
         mEventsController.setMediaInfo(trackTitle, trackArtist, isPlaying);
         mEventsController.updateQuickEvents();
-        notifyListeners();
     }
     
     private boolean sameSessions(MediaController a, MediaController b) {
