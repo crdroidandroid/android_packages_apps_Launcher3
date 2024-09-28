@@ -36,7 +36,7 @@
         <item name="preferenceFragmentCompatStyle">@style/HomeSettings.FragmentCompatStyle</item>
         <item name="preferenceScreenStyle">@style/HomeSettings.PreferenceScreenStyle</item>
         <item name="preferenceStyle">@style/HomeSettings.PreferenceStyle</item>
-        <item name="switchPreferenceStyle">@style/HomeSettings.SwitchPreferenceStyle</item>
+        <item name="switchPreferenceCompatStyle">@style/HomeSettings.SwitchPreferenceStyle</item>
         <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
     </style>
 
@@ -56,7 +56,7 @@
     </style>
 
     <style name="HomeSettings.SwitchPreferenceStyle"
-            parent="@style/Preference.SwitchPreference.Material">
+            parent="@style/Preference.SwitchPreferenceCompat.Material">
         <item name="iconSpaceReserved">@bool/home_settings_icon_space_reserved</item>
     </style>
 
