@@ -357,9 +357,9 @@
     <string name="quick_event_weather_text_summary">現在の天候の概要を表示します</string>
     <string name="intent_no_app_clock_found">カレンダーまたは時計のアクティビティが見つかりません</string>
     <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">Scrollbar</string>
-    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
+    <string name="drawer_scrollbar_title">スクロールバー</string>
+    <string name="drawer_scrollbar_summary">アプリドロワー横のスクロールバー</string>
     <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Force themed icons</string>
-    <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
+    <string name="force_monochrome_icons_title">テーマアイコンを強制する</string>
+    <string name="force_monochrome_icons_summary">アプリ側のサポートが無い場合、アイコンを生成します(テーマアイコンの再切り替えが必要です)</string>
 </resources>
