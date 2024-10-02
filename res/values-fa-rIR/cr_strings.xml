@@ -108,7 +108,7 @@
     <!-- Background opacity -->
     <string name="background_opacity_title">شفافیت پس‌زمینه</string>
     <!-- Stroke -->
-    <string name="stroke_width_title">Stroke</string>
+    <string name="stroke_width_title">حاشیه</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">چرخش کاغذ دیواری</string>
     <string name="allow_wallpaper_scrolling_summary">جلوه چرخش کاغذ دیواری برای چندین صفحه</string>
@@ -122,7 +122,7 @@
     <!-- Row Height -->
     <string name="row_height_title">ارتفاع ردیف</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s available | %2$s</string>
+    <string name="meminfo_text">%1$s در دسترس | %2$s</string>
     <string name="recents_meminfo_title">اطلاعات حافظه</string>
     <!-- Background blur -->
     <string name="background_blur_title">عمق تاری پس زمینه</string>
@@ -132,7 +132,7 @@
     <string name="recents_clear_all_title">پاک کردن همه موارد</string>
     <string name="recents_lens_title">لنز</string>
     <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Shake phone to clear all tasks</string>
+    <string name="recents_shake_clear_all_title">برای پاک کردن همه کارها، تلفن را تکان دهید</string>
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">آیکن های تم</string>
     <string name="pref_themed_icons_summary">نمادهای مضمون مورد استفاده در صفحه اصلی را دنبال کنید</string>
@@ -148,19 +148,19 @@
     <string name="icon_pack_add">نصب بیشتر</string>
     <string name="icon_pack_no_market">هیچ فروشگاه برنامه در دسترس نیست</string>
     <!-- Parallax -->
-    <string name="short_parallax_title">Allow short parallax</string>
-    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
-    <string name="single_page_center_title">Single page center</string>
+    <string name="short_parallax_title">منظر کوتاه را مجاز کنید</string>
+    <string name="short_parallax_summary">به جای برش دادن کاغذدیواری، جلوه اسکرول کامل تصویر زمینه را در تعداد صفحات کمتری فعال کنید</string>
+    <string name="single_page_center_title">تک صفحه مرکز</string>
     <string name="single_page_center_summary">تصویر زمینه در مرکز اگر شما فقط یک صفحه دارید</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">برنامه نوار جستجو</string>
-    <string name="drawer_search_summary">Search bar on top of the app drawer</string>
+    <string name="drawer_search_summary">نوار جستجو در بالای منو فهرست برنامه ها</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">راه اندازی مجدد</string>
-    <string name="pref_restart_summary">Restart the launcher manually to apply any pending settings</string>
-    <string name="restarting_launcher">Restarting launcher...</string>
-    <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
-    <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
+    <string name="pref_restart_summary">ریست کردن صفحه اصلی برای اعمال تنظیمات اعمال نشده</string>
+    <string name="restarting_launcher">راه اندازی مجدد لانچر...</string>
+    <string name="restarting_launcher_changes">راه‌اندازی مجدد لانچر برای اعمال تغییرات...</string>
+    <string name="updating_launcher_components">راه‌اندازی مجدد برای به‌روزرسانی مؤلفه‌های راه‌انداز...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">در یک دید</string>
     <string name="show_quickspace_summary">در بالای صفحه اصلی نمایش داده شود</string>
@@ -173,7 +173,7 @@
         <item>بهترین رام همیشه.</item>
         <item>در تلگرام به ما سلام کنید</item>
         <item>برای شروع اینجا را ضربه بزنید</item>
-        <item>We love you 3000</item>
+        <item>تو رو ۳۰۰۰تا دوست داریم</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">صبح بخیر.</string>
@@ -254,26 +254,26 @@
         <item>نگرش شما واقعیت شما را شکل می دهد.</item>
         <item>داستان شما هنوز در حال نوشتن است، حتی با غروب خورشید.</item>
         <item>زیبایی را در لحظات معمولی ثبت کنید.</item>
-        <item>It\'s time to reflect and reset.</item>
-        <item>Choose joy, no matter the time on the clock.</item>
-        <item>Opportunities don\'t clock out in the evening.</item>
-        <item>Be the reason someone smiles.</item>
-        <item>Your potential knows no bounds.</item>
-        <item>Moments of magic can happen at any hour.</item>
-        <item>Your life is what you make of it; make it extraordinary.</item>
-        <item>Stay curious, stay grateful.</item>
-        <item>Be the change you wish to see in the world.</item>
-        <item>Believe in yourself; you are capable of amazing things.</item>
-        <item>The only limit is the one you set for yourself.</item>
-        <item>Success begins with a single step.</item>
+        <item>زمان بازتاب و تنظیم مجدد است.</item>
+        <item>بدون توجه به زمان ساعت، شادی را انتخاب کنید.</item>
+        <item>فرصت ها در شب به دست نمی آیند.</item>
+        <item>دلیل لبخند کسی باش</item>
+        <item>پتانسیل شما حد و مرزی نمی شناسد.</item>
+        <item>معجزه می تواند در هر ساعت اتفاق بیفتد.</item>
+        <item>زندگی شما چیزی است که از آن می سازید. آن را فوق العاده کنید</item>
+        <item>کنجکاو بمان، شکرگزار بمان.</item>
+        <item>همان تغییری باش که دوست داری در دنیا ببینی.</item>
+        <item>به خودت ایمان داشته باش؛ شما قادر به کارهای شگفت انگیز هستید</item>
+        <item>تنها محدودیت، محدودیتی است که برای خود تعیین می کنید.</item>
+        <item>موفقیت با یک قدم شروع می شود.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Seize the night, for it holds its own mysteries.</item>
-        <item>In the quiet of the this evening, find serenity.</item>
-        <item>Life\'s greatest adventures can start in the darkness.</item>
-        <item>Your journey continues even after the sun has set.</item>
-        <item>Let the night be your canvas; paint it with dreams.</item>
-        <item>In the stillness of this evening, find your inner peace.</item>
+        <item>شب را غنیمت بشمار، زیرا اسرار خودش را دارد.</item>
+        <item>در خلوت این عصر، آرامش را پیدا کنید.</item>
+        <item>بزرگترین ماجراهای زندگی می توانند در تاریکی شروع شوند.</item>
+        <item>سفر شما حتی پس از غروب خورشید ادامه دارد.</item>
+        <item>بگذار شب بوم نقاشی تو باشد. آن را با رویاها نقاشی کنید</item>
+        <item>در سکون این عصر، آرامش درونی خود را بیاب.</item>
         <item>Stars shine brightest in the darkest hours.</item>
         <item>Dream big, even in the late hours of the day.</item>
         <item>Your life is a story waiting to be written.</item>
@@ -308,13 +308,13 @@
     <string-array name="quickspace_psa_random">
         <item>نادیده بگیر تا شادروان شوی</item>
         <item>به این زودی موقع فلش کردن یه به‌روزرسانی دیگه رسید؟</item>
-        <item>Make peace, not war</item>
+        <item>صلح کن نه جنگ</item>
         <item>هی، چه خبرا؟</item>
         <item>روی کارات تمرکز کن</item>
         <item>چقدر اسکرین‌شات می‌گیری؟</item>
         <item>با crDroid به خوبی‌ها سلام کن</item>
-        <item>Spread love, not havoc</item>
-        <item>We didn\'t start the fire!</item>
+        <item>عشق را گسترش دهید، نه خرابی</item>
+        <item>ما آتش را روشن نکردیم!</item>
         <item>وقت چندتا آهنگ خوبه</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
         <item>برای دیدن این قسمت، به نسخه کامل crDroid نیاز داری</item>
@@ -322,7 +322,7 @@
 Remember the Lineage of the Unicorn</item>
         <item>از طول عمر Xtended باتری لذت ببر</item>
         <item>از صفر شروع کن</item>
-        <item>We love you 3000</item>
+        <item>تو رو ۳۰۰۰تا دوست داریم</item>
         <item>حتی بدون سوشی هم خوشمزه است</item>
         <item>امروز یه کار خوب انجام بده</item>
         <item>این بهترین تجربه کاربری پیکسلیه، مگه نه؟</item>
@@ -337,7 +337,7 @@ Remember the Lineage of the Unicorn</item>
         <item>تو چیزی هستی که فلشش می‌کنی، سیب‌زمینی نباش</item>
         <item>چی تو ذهنته؟</item>
         <item>منتظر پاترونوس باش</item>
-        <item>وبا گرگ مشکی</item>
+        <item>درد زیادی دارم تحمل میکنم بهم کمک کنین</item>
         <item>تو بردی و تو بردی ....؟</item>
         <item>rm -rf \/</item>
         <item>پرینگل ها در واقع چیپس سیب زمینی نیستند..</item>
