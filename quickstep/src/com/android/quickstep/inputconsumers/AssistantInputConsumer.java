@@ -34,17 +34,23 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.PointF;
+import android.hardware.input.InputManager;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.view.Display;
 import android.view.GestureDetector;
 import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.HapticFeedbackConstants;
+import android.view.InputDevice;
+import android.view.KeyCharacterMap;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.ViewConfiguration;
 
 import com.android.app.animation.Interpolators;
 import com.android.launcher3.BaseDraggingActivity;
 import com.android.launcher3.R;
+import com.android.launcher3.util.window.WindowManagerProxy;
 import com.android.quickstep.BaseActivityInterface;
 import com.android.quickstep.GestureState;
 import com.android.quickstep.InputConsumer;
@@ -237,6 +243,9 @@ public class AssistantInputConsumer extends DelegateInputConsumer {
     }
 
     private void startAssistantInternal() {
+        sendEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_HOME, KeyEvent.FLAG_LONG_SWIPE);
+        sendEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_HOME, KeyEvent.FLAG_LONG_SWIPE);
+
         BaseDraggingActivity launcherActivity = mActivityInterface.getCreatedActivity();
         if (launcherActivity != null) {
             launcherActivity.getRootView().performHapticFeedback(
@@ -244,10 +253,6 @@ public class AssistantInputConsumer extends DelegateInputConsumer {
                 HapticFeedbackConstants.FLAG_IGNORE_VIEW_SETTING);
         }
 
-        Bundle args = new Bundle();
-        args.putInt(OPA_BUNDLE_TRIGGER, OPA_BUNDLE_TRIGGER_DIAG_SWIPE_GESTURE);
-        args.putInt(INVOCATION_TYPE_KEY, INVOCATION_TYPE_GESTURE);
-        SystemUiProxy.INSTANCE.get(mContext).startAssistant(args);
         mLaunchedAssistant = true;
     }
 
@@ -261,6 +266,19 @@ public class AssistantInputConsumer extends DelegateInputConsumer {
         // and counterclockwise from horizontal in the bottom left corner
         angle = angle > 90 ? 180 - angle : angle;
         return (angle > mAngleThreshold && angle < 90);
+    }
+
+    private boolean sendEvent(int action, int code, int flags) {
+        long when = SystemClock.uptimeMillis();
+        final KeyEvent ev = new KeyEvent(when, when, action, code, 0 /* repeat */,
+                0 /* metaState */, KeyCharacterMap.VIRTUAL_KEYBOARD, 0 /* scancode */,
+                flags | KeyEvent.FLAG_FROM_SYSTEM | KeyEvent.FLAG_VIRTUAL_HARD_KEY,
+                InputDevice.SOURCE_KEYBOARD);
+
+        int displayId = WindowManagerProxy.INSTANCE.get(mContext).getDisplayId(mContext);
+        ev.setDisplayId(displayId);
+        return InputManager.getInstance()
+                .injectInputEvent(ev, InputManager.INJECT_INPUT_EVENT_MODE_ASYNC);
     }
 
     private class AssistantGestureListener extends SimpleOnGestureListener {
