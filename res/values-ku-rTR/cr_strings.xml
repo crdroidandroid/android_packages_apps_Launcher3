@@ -65,7 +65,7 @@
     <string name="suggestion_pref_screen_title">Pêşniyarên</string>
     <string name="suggestion_pref_screen_desc">Ji bo Hemû Apps &amp; Pêşniyarên ekrana malê</string>
     <!-- Pause apps shortcut -->
-    <string name="pause">Pause</string>
+    <string name="pause">وەستان</string>
     <string name="pause_apps_dialog_title">Pause %1$s?</string>
     <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
     <string name="paused_apps_dialog_title">App paused</string>
@@ -86,8 +86,8 @@
     <!-- App label -->
     <string name="icon_two_lines_title">Use two lines for app label</string>
     <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">داخستن</string>
+    <string name="recents_app_killed">ئەپەکە داخرا</string>
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Tabloya peywirê bikar bînin</string>
     <string name="pref_allow_phone_taskbar_summary">Ji bo vekirina û guheztina sepanan li her deverê</string>
@@ -176,10 +176,10 @@
         <item>ئێمە 3000 جار خۆشمانەوێی</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
+    <string name="quickspace_grt_morning">بەیانی باش.</string>
     <string name="quickspace_grt_evening">Good evening.</string>
     <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
+    <string name="quickspace_grt_night">شەوشاد.</string>
     <string name="quickspace_grt_general">Good day.</string>
     <string name="quickspace_ext_one">Today is</string>
     <string name="quickspace_ext_two">It\'s</string>
