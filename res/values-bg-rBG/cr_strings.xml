@@ -65,7 +65,7 @@
     <string name="pref_sleep_gesture_title">Двукратно почукване за заспиване</string>
     <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
     <!-- Pause apps shortcut -->
-    <string name="pause">Pause</string>
+    <string name="pause">Пауза</string>
     <string name="pause_apps_dialog_title">Pause %1$s?</string>
     <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
     <string name="paused_apps_dialog_title">App paused</string>
@@ -118,17 +118,17 @@
     <string name="quick_event_rom_intro_welcome">Добре дошъл в crDroid!</string>
     <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
+        <item>Благодарим Ви, че ни избрахте</item>
+        <item>Обичате ли ни? Изпратете ни бира</item>
+        <item>Най-добрият ром.</item>
+        <item>Поздравете ни по Telegram</item>
+        <item>Докоснете тук, за да започнете</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
+    <string name="quickspace_grt_morning">Добро утро.</string>
     <string name="quickspace_grt_evening">Good evening.</string>
     <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
+    <string name="quickspace_grt_night">Лека нощ.</string>
     <string name="quickspace_grt_general">Good day.</string>
     <string name="quickspace_ext_one">Today is</string>
     <string name="quickspace_ext_two">It\'s</string>
@@ -265,7 +265,7 @@
         <item>Спомнете си Lineage на Unicorn</item>
         <item>Насладете се на Удължен живот на батерията</item>
         <item>Започнете от нулата</item>
-        <item>We love you 3000</item>
+        <item>Обичаме Ви, вече сме 3000</item>
         <item>Delicious even without Sushi</item>
         <item>Направете нещо хубаво днес</item>
         <item>Това е най-добрият Pixel, нали?</item>
@@ -293,9 +293,9 @@
     <string name="suggestion_pref_screen_title">Предложения</string>
     <string name="suggestion_pref_screen_desc">За всички приложения &amp; Предложения на началния екран</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quick_event_ambient_weather_title">Weather condition</string>
-    <string name="quick_event_ambient_weather_summary">Display current weather condition and temperature</string>
-    <string name="quick_event_ambient_weather_enabled_info">Requires weather service to be enabled</string>
+    <string name="quick_event_ambient_weather_title">天气状况</string>
+    <string name="quick_event_ambient_weather_summary">显示当前天气状况和温度</string>
+    <string name="quick_event_ambient_weather_enabled_info">需要启用天气服务</string>
     <string name="quick_event_weather_clouds">Cloudy</string>
     <string name="quick_event_weather_rain">Rainy</string>
     <string name="quick_event_weather_clear">Sunny</string>
@@ -311,8 +311,8 @@
     <string name="pref_allow_phone_taskbar_title">Използване на лентата на задачите</string>
     <string name="pref_allow_phone_taskbar_summary">За отваряне и превключване на приложенията навсякъде</string>
     <!-- Recents icons -->
-    <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Clear all</string>
+    <string name="recents_screenshot_title">Екранна снимка</string>
+    <string name="recents_clear_all_title">Изчистване на всичко</string>
     <string name="recents_lens_title">Lens</string>
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Тематични икони</string>
@@ -329,8 +329,8 @@
     <string name="icon_pack_add">Инсталиране на още</string>
     <string name="icon_pack_no_market">Няма наличен магазин за приложения</string>
     <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">Спри</string>
+    <string name="recents_app_killed">Приложението е убито</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s available | %2$s</string>
     <string name="recents_meminfo_title">Memory info</string>
@@ -338,7 +338,7 @@
     <string name="drawer_search_title">App search bar</string>
     <string name="drawer_search_summary">Search bar on top of the app drawer</string>
     <!-- Restart launcher -->
-    <string name="pref_restart_title">Restart</string>
+    <string name="pref_restart_title">Рестартиране</string>
     <string name="pref_restart_summary">Restart the launcher manually to apply any pending settings</string>
     <string name="restarting_launcher">Restarting launcher...</string>
     <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>

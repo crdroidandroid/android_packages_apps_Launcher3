@@ -24,14 +24,14 @@
     <string name="home_category_summary">கூகுள் நவ் பேனல் மற்றும் பல</string>
     <string name="icons_category_title">சின்னங்கள்</string>
     <string name="icons_category_summary">Set icon size and more</string>
-    <string name="app_drawer_category_title">App drawer</string>
-    <string name="app_drawer_category_summary">Customize your app drawer</string>
-    <string name="recents_category_title">Recents</string>
+    <string name="app_drawer_category_title">பயன்பாட்டு அலமாரி</string>
+    <string name="app_drawer_category_summary">உங்கள் பயன்பாடு தட்டு தனிப்பயனாக்கு</string>
+    <string name="recents_category_title">சமீபத்திய</string>
     <string name="recents_category_summary">Revamp the overview screen</string>
-    <string name="misc_category_title">Miscellaneous</string>
-    <string name="misc_category_summary">Other options</string>
-    <string name="general_category_title">General</string>
-    <string name="interface_category_title">Interface</string>
+    <string name="misc_category_title">இதர அமைப்பு</string>
+    <string name="misc_category_summary">மற்ற தேர்வுகள்</string>
+    <string name="general_category_title">பொது</string>
+    <string name="interface_category_title">இடைமுகம்</string>
     <string name="quickspace_category_title">Quickspace</string>
     <string name="search_bar_category_title">Search bar</string>
     <string name="actions_category_title">Quick actions</string>
@@ -56,16 +56,16 @@
     <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
     <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
     <string name="trust_apps_auth_open_app">Authenticate to open %1$s</string>
-    <string name="trust_apps_loading">Loading\u2026</string>
+    <string name="trust_apps_loading">ஏற்றுகிறது...</string>
     <string name="trust_apps_no_lock_error">Please set up a secure lock screen to restrict app access</string>
-    <string name="trust_apps_help">Help</string>
+    <string name="trust_apps_help">உதவி</string>
     <string name="trust_apps_info_hidden">Hidden apps and their widgets are hidden from the drawer</string>
     <string name="trust_apps_info_protected">Protected apps require authentication to be opened from the launcher</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
+    <string name="pref_sleep_gesture_title">உறங்குவதற்கு இருமுறை தட்டு</string>
     <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
     <!-- Pause apps shortcut -->
-    <string name="pause">Pause</string>
+    <string name="pause">இடைநிறுத்து</string>
     <string name="pause_apps_dialog_title">Pause %1$s?</string>
     <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
     <string name="paused_apps_dialog_title">App paused</string>
@@ -73,19 +73,19 @@
     <string name="paused_apps_drop_target_label">Pause app</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">by default</string>
+    <string name="custom_seekbar_default_value">இயல்புநிலை மூலம்</string>
     <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_default_value_is_set">இயல்புநிலை மதிப்பு அமைக்கப்பட்டுள்ளது</string>
     <!-- Icon size -->
     <string name="icon_size_title">Icon size</string>
     <!-- Font size -->
-    <string name="font_size_title">Font size</string>
+    <string name="font_size_title">எழுத்துரு அளவு</string>
     <!-- App label - max lines -->
     <string name="icon_max_lines_title">Max lines for app label</string>
     <!-- Hotseat searchbar -->
-    <string name="label_search">Search</string>
+    <string name="label_search">தேடு</string>
     <string name="label_lens">Google Lens</string>
-    <string name="label_voice_search">Voice search</string>
+    <string name="label_voice_search">குரல் தேடல்</string>
     <string name="dock_music_search_title">Music search</string>
     <string name="dock_music_search_summary">Start music search on pressing mic icon</string>
     <string name="dock_search_title">Google தேடல்</string>
@@ -103,7 +103,7 @@
     <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
     <string name="allow_wallpaper_zooming_summary">Zoom in or out the wallpaper when using drawer or recent apps</string>
     <!-- Homescreen Statusbar -->
-    <string name="show_statusbar_title">Status Bar</string>
+    <string name="show_statusbar_title">நிலைமை பட்டை</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">Top shadow</string>
     <!-- Row Height -->
@@ -115,14 +115,14 @@
     <string name="show_quickspace_title">முகப்புத் தகவல்</string>
     <string name="show_quickspace_summary">Show at the top of your home screen</string>
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">Welcome to crDroid!</string>
+    <string name="quick_event_rom_intro_welcome">Crdroid-க்கு வரவேற்கிறோம்!</string>
     <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
+        <item>எங்களை தேர்ந்தெடுத்ததற்கு நன்றி</item>
+        <item>எங்களை நேசிக்கிறீர்களா? எங்களுக்கு ஒரு பீர் அனுப்புங்கள்</item>
+        <item>சிறந்த ROM.</item>
+        <item>டெலிகிராம்-ல் எங்களுக்கு வணக்கம் சொல்லுங்கள்</item>
+        <item>தொடங்குவதற்கு இங்கே தட்டவும்</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Good morning.</string>
@@ -146,12 +146,12 @@
     <string name="quickspace_psa_title">Random messages</string>
     <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning, time to rock!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>What about a small 5 minutes nap?</item>
-        <item>Let\'s get this bread.</item>
+        <item>காலை வணக்கம்!</item>
+        <item>காலை வணக்கம், உற்சாகத்திற்கான நேரம்!</item>
+        <item>என்ன ஒரு அழகான நாள்!</item>
+        <item>ஒரு நல்ல நாள்!</item>
+        <item>ஒரு சிறிய 5 நிமிட தூக்கத்தைப் பற்றி என்ன?</item>
+        <item>இந்த இட்லியைப் பெறுவோம்.</item>
         <item>Mornings are a fresh canvas for your daily masterpiece.</item>
         <item>Embrace the sunrise of opportunity each morning.</item>
         <item>In the early light, find the power to illuminate your path.</item>
@@ -251,7 +251,7 @@
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>அறியாமையே பேரின்பம்</item>
-        <item>Is it time to flash another update already?</item>
+        <item>ஏற்கனவே மற்றொரு புதுப்பிப்பை ப்ளாஷ் செய்ய நேரம் வந்துவிட்டதா?</item>
         <item>Make peace, not war</item>
         <item>வணக்கம், என்ன நடக்கிறது?</item>
         <item>உங்கள் பணிகளில் கவனம் செலுத்துங்கள்</item>
@@ -265,7 +265,7 @@
         <item>யூனிகார்னின் பரம்பரையை நினைவில் கொள்க</item>
         <item>நீட்டிக்கப்பட்ட மின்கல ஆயுளை அனுபவிக்கவும்</item>
         <item>முதலில் இருந்து தொடங்குகிறது</item>
-        <item>We love you 3000</item>
+        <item>நாங்கள் உங்களை 3000 மடங்கு நேசிக்கிறோம்</item>
         <item>Delicious even without Sushi</item>
         <item>இன்று ஏதாவது நல்லது செய்யுங்கள்</item>
         <item>இதுதான் சிறந்த Pixel அனுபவம், இல்லையா?</item>
@@ -277,11 +277,11 @@
         <item>குளிர் இனிப்புகளை சுவைக்கவும்</item>
         <item>என்ன ஒரு அழகான அனுபவம், இல்லையா?</item>
         <item>பரிணாம வளர்ச்சி என்பது ஒரு கட்டுக்கதை, இல்லையா?</item>
-        <item>You are what you flash, don\'t be Potato</item>
+        <item>நீங்கள் ஃபிளாஷ் செய்வதுதான் நீங்கள், Potato-க இருக்க வேண்டாம்</item>
         <item>உங்கள் மனதில் என்ன இருக்கிறது?</item>
         <item>Expecto Patronum</item>
         <item>Wubba Lubba Dub Dub</item>
-        <item>Winner Winner ....?</item>
+        <item>வின்னர் வின்னர்....?</item>
         <item>rm -rf \/</item>
         <item>Pringles aren\'t actually potato chips..</item>
         <item>Remember to check device\'s battery level!</item>
@@ -306,31 +306,31 @@
     <string name="quick_event_weather_city_title">Current location</string>
     <string name="quick_event_weather_city_summary">Display current location</string>
     <!-- Background opacity -->
-    <string name="background_opacity_title">Background opacity</string>
+    <string name="background_opacity_title">பின்னணி ஒளிபுகாத்தன்மை</string>
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Use taskbar</string>
     <string name="pref_allow_phone_taskbar_summary">For opening and switching apps anywhere</string>
     <!-- Recents icons -->
-    <string name="recents_screenshot_title">Screenshot</string>
-    <string name="recents_clear_all_title">Clear all</string>
+    <string name="recents_screenshot_title">திரைப்பிடிப்பு</string>
+    <string name="recents_clear_all_title">அனைத்தையும் அழி</string>
     <string name="recents_lens_title">Lens</string>
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Themed icons</string>
     <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
     <!-- AppInfo -->
     <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">System</string>
+    <string name="app_info_source_system">சிஸ்டம்</string>
     <string name="app_info_last_update">Last update</string>
     <string name="app_info_version">Version</string>
     <string name="app_info_more">மேலும்</string>
     <!-- Icon pack -->
-    <string name="icon_pack_title">Icon pack</string>
-    <string name="icon_pack_default_label">Default</string>
+    <string name="icon_pack_title">படவுருத் தொகுப்பு</string>
+    <string name="icon_pack_default_label">இயல்புநிலை</string>
     <string name="icon_pack_add">Install more</string>
     <string name="icon_pack_no_market">There\'s no available app store</string>
     <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">கொல்</string>
+    <string name="recents_app_killed">பயன்பாடு கொல்லப்பட்டது</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Available | %2$s Total</string>
     <string name="recents_meminfo_title">Memory info</string>
@@ -338,7 +338,7 @@
     <string name="drawer_search_title">App search bar</string>
     <string name="drawer_search_summary">Search bar on top of the app drawer</string>
     <!-- Restart launcher -->
-    <string name="pref_restart_title">Restart</string>
+    <string name="pref_restart_title">மீண்டும் தொடங்கு</string>
     <string name="pref_restart_summary">Restart the launcher manually to apply any pending settings</string>
     <string name="restarting_launcher">Restarting launcher...</string>
     <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
