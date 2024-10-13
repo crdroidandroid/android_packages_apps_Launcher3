@@ -65,7 +65,7 @@
     <string name="pref_sleep_gesture_title">स्क्रीन बंद करने के लिए दो बार स्पर्श करें</string>
     <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
     <!-- Pause apps shortcut -->
-    <string name="pause">Pause</string>
+    <string name="pause">थोड़ा रुकें</string>
     <string name="pause_apps_dialog_title">Pause %1$s?</string>
     <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
     <string name="paused_apps_dialog_title">App paused</string>
@@ -118,14 +118,14 @@
     <string name="quick_event_rom_intro_welcome">crDroid में आपका स्वागत है</string>
     <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
     <string-array name="welcome_message_variants">
-        <item>Thank you for choosing us</item>
-        <item>Loving us? Send us a beer</item>
-        <item>Best Rom Ever.</item>
-        <item>Say hi to us on Telegram</item>
-        <item>Tap here to begin</item>
+        <item>हमें चुनने के लिए धन्यवाद</item>
+        <item>पसंद आया? डेवलपर को कुछ प्यार भेजें</item>
+        <item>आज तक का सबसे अच्छी रोम</item>
+        <item>टेलीग्राम पर हमसे संपर्क करें</item>
+        <item>शुरू करने के लिए यहां टैप करें</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
+    <string name="quickspace_grt_morning">सुप्रभात.</string>
     <string name="quickspace_grt_evening">Good evening.</string>
     <string name="quickspace_grt_afternoon">Good afternoon.</string>
     <string name="quickspace_grt_night">Good night.</string>
@@ -265,7 +265,7 @@
         <item>यूनिकॉर्न की वंशावली याद रखें</item>
         <item>विस्तारित बैटरी जीवन का आनंद लें</item>
         <item>ग्राउंड जीरो से शुरू</item>
-        <item>We love you 3000</item>
+        <item>हम आपसे प्यार करते हैं 3000</item>
         <item>Delicious even without Sushi</item>
         <item>आज कुछ अच्छा करो</item>
         <item>यह सबसे अच्छा पिक्सेल अनुभव है, है ना?</item>
@@ -329,8 +329,8 @@
     <string name="icon_pack_add">अधिक स्थापित करें</string>
     <string name="icon_pack_no_market">कोई उपलब्ध ऐप स्टोर नहीं है</string>
     <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">mar</string>
+    <string name="recents_app_killed">App को मार डाला</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s available | %2$s</string>
     <string name="recents_meminfo_title">मेमोरी जानकारी</string>
