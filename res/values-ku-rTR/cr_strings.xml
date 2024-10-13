@@ -65,7 +65,7 @@
     <string name="pref_sleep_gesture_title">دووانەکرتە بۆ کوژانەوە</string>
     <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
     <!-- Pause apps shortcut -->
-    <string name="pause">Pause</string>
+    <string name="pause">وەستان</string>
     <string name="pause_apps_dialog_title">Pause %1$s?</string>
     <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
     <string name="paused_apps_dialog_title">App paused</string>
@@ -125,10 +125,10 @@
         <item>گرتەبکە بۆ دەسپێک</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
+    <string name="quickspace_grt_morning">بەیانی باش.</string>
     <string name="quickspace_grt_evening">Good evening.</string>
     <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
+    <string name="quickspace_grt_night">شەوشاد.</string>
     <string name="quickspace_grt_general">Good day.</string>
     <string name="quickspace_ext_one">Today is</string>
     <string name="quickspace_ext_two">It\'s</string>
@@ -329,8 +329,8 @@
     <string name="icon_pack_add">Zêdetir saz bikin</string>
     <string name="icon_pack_no_market">Dikana sepanê ya berdest tune</string>
     <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Kill</string>
-    <string name="recents_app_killed">App killed</string>
+    <string name="recent_task_option_kill_app">داخستن</string>
+    <string name="recents_app_killed">ئەپەکە داخرا</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s available | %2$s</string>
     <string name="recents_meminfo_title">Agahdariya bîranînê</string>
