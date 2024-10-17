@@ -183,6 +183,10 @@
     <string name="drawer_search_title">App search bar</string>
     <string name="drawer_search_summary">Search bar on top of the app drawer</string>
 
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+
     <!-- AppInfo -->
     <string name="app_info_version_value" translatable="false">%1$s (%2$d)</string>
     <string name="app_info_source">Source</string>
