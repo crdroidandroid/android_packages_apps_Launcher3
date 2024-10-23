@@ -353,9 +353,18 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
 
     /** Invoke when the current search session is finished. */
     public void onClearSearchResult() {
+        final boolean wasIMEActive = mSearchUiManager.getEditText().hasFocus();
         getMainAdapterProvider().clearHighlightedItem();
         animateToSearchState(false);
         rebindAdapters();
+        if (!wasIMEActive || mAllAppsTransitionController.getProgress() != 0f)
+            return;
+        MAIN_EXECUTOR.getHandler().post(() -> {
+            // show the keyboard again. we just erased the last char.
+            // doesn't mean we want it gone
+            mSearchUiManager.getEditText().requestFocus();
+            mSearchUiManager.getEditText().showKeyboard();
+        });
     }
 
     /**

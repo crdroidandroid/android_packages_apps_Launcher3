@@ -62,6 +62,7 @@ public class AllAppsSearchBarController
         mLauncher = launcher;
 
         mInput = input;
+        mInput.setFocusableInTouchMode(true);
         mInput.addTextChangedListener(this);
         mInput.setOnEditorActionListener(this);
         mInput.setOnBackKeyListener(this);
