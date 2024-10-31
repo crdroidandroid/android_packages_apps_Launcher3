@@ -74,11 +74,11 @@
     <string name="paused_apps_dialog_title">Додаток призупинено</string>
     <string name="paused_apps_dialog_message">%1$s Був зупинений безпосередньо з лаунчера</string>
     <string name="paused_apps_drop_target_label">Призупинити додаток</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">Робочі програми вимкнено</string>
+    <string name="work_apps_pause_btn_text_custom">Вимкнути робочі додатки</string>
+    <string name="work_apps_enable_btn_text_custom">Увімкнути робочі додатки</string>
+    <string name="work_apps_paused_info_body_custom">Ваші робочі програми не можуть надсилати вам сповіщення, використовувати заряд акумулятора або отримувати доступ до вашого місцезнаходження</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Ваші робочі додатки не можуть отримувати телефонні дзвінки або текстові повідомлення, надсилати сповіщення, використовуйте акумулятор або доступ до місцезнаходження</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Перезапустити</string>
     <string name="pref_restart_summary">Перезапустіть лаунчер вручну для подальшого застосування налаштувань</string>
