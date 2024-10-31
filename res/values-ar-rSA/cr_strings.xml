@@ -52,6 +52,9 @@
     <string name="msg_minus_one_on_left">عند التمرير يساراً من الشاشة الرئيسية</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">عندما التمرير يميناً من الشاشة الرئيسية</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">أيقونات مع الثيم</string>
+    <string name="pref_themed_icons_summary">شبيهة بسمة الأيقونات المستخدمة على الشاشة الرئيسية</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">إخفاء التطبيقات وحمايتها</string>
     <string name="trust_apps_auth_manager">افتح لإدارة التطبيقات المخفية والمحمية</string>
@@ -71,6 +74,17 @@
     <string name="paused_apps_dialog_title">تم إيقاف التطبيق مؤقتًا</string>
     <string name="paused_apps_dialog_message">تم إيقاف %1$s بشكل مباشر من المشغل</string>
     <string name="paused_apps_drop_target_label">إيقاف مؤقت للتطبيق</string>
+    <string name="work_apps_paused_title_custom">Work apps are off</string>
+    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">إعادة التشغيل</string>
+    <string name="pref_restart_summary">إعادة التشغيل يدويًا لتطبيق أي تعديلات في الإعدادات</string>
+    <string name="restarting_launcher">إعادة تشغيل المشغل...</string>
+    <string name="restarting_launcher_changes">إعادة تشغيل المشغل لتطبيق التغييرات...</string>
+    <string name="updating_launcher_components">إعادة تشغيل المشغل لتحديث مكونات المشغل...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">انقر نقرًا مزدوجًا للنوم</string>
     <string name="pref_sleep_gesture_summary">اضغط مرّتين على مكانٍ فارغ لإطفاء الشاشة</string>
@@ -91,6 +105,8 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">استخدام شريط المهام</string>
     <string name="pref_allow_phone_taskbar_summary">لفتح التطبيقات وتبديلها في أي مكان</string>
+    <!-- Row Height -->
+    <string name="row_height_title">ارتفاع الصف</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">البحث</string>
     <string name="label_lens">عدسة جوجل</string>
@@ -119,8 +135,6 @@
     <string name="show_statusbar_title">شريط الحالة</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">الظل العلوي</string>
-    <!-- Row Height -->
-    <string name="row_height_title">ارتفاع الصف</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s متاحة / %2$s كإجمالي</string>
     <string name="recents_meminfo_title">معلومات الذاكرة</string>
@@ -131,11 +145,17 @@
     <string name="recents_screenshot_title">لقطة شاشة</string>
     <string name="recents_clear_all_title">إزالة الكل</string>
     <string name="recents_lens_title">العدسة</string>
-    <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">هز الهاتف لمسح جميع المهام</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">أيقونات مع الثيم</string>
-    <string name="pref_themed_icons_summary">شبيهة بسمة الأيقونات المستخدمة على الشاشة الرئيسية</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">السماح بالمبرالية القصيرة</string>
+    <string name="short_parallax_summary">تمكين تأثير التمرير الكامل للخلفية على عدد أصغر من الصفحات بدلاً من اقتطاع الخلفية</string>
+    <string name="single_page_center_title">مركز صفحة واحدة</string>
+    <string name="single_page_center_summary">وسِّط الخلفية إن كانت هناك صفحة واحدة فقط</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">شريط بحث البرامج</string>
+    <string name="drawer_search_summary">شريط البحث في أعلى قائمة التطبيقات</string>
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
     <string name="app_info_source">المصدر</string>
     <string name="app_info_source_system">النظام</string>
@@ -147,20 +167,6 @@
     <string name="icon_pack_default_label">الإفتراضي</string>
     <string name="icon_pack_add">تثبيت المزيد</string>
     <string name="icon_pack_no_market">لا يوجد متجر تطبيقات متاح</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">السماح بالمبرالية القصيرة</string>
-    <string name="short_parallax_summary">تمكين تأثير التمرير الكامل للخلفية على عدد أصغر من الصفحات بدلاً من اقتطاع الخلفية</string>
-    <string name="single_page_center_title">مركز صفحة واحدة</string>
-    <string name="single_page_center_summary">وسِّط الخلفية إن كانت هناك صفحة واحدة فقط</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">شريط بحث البرامج</string>
-    <string name="drawer_search_summary">شريط البحث في أعلى قائمة التطبيقات</string>
-    <!-- Restart launcher -->
-    <string name="pref_restart_title">إعادة التشغيل</string>
-    <string name="pref_restart_summary">إعادة التشغيل يدويًا لتطبيق أي تعديلات في الإعدادات</string>
-    <string name="restarting_launcher">إعادة تشغيل المشغل...</string>
-    <string name="restarting_launcher_changes">إعادة تشغيل المشغل لتطبيق التغييرات...</string>
-    <string name="updating_launcher_components">إعادة تشغيل المشغل لتحديث مكونات المشغل...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">النظرة السريعة</string>
     <string name="show_quickspace_summary">إظهار في الجزء العلوي من الشاشة الرئيسية</string>
