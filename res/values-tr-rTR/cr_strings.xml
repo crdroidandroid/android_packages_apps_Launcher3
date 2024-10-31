@@ -74,11 +74,11 @@
     <string name="paused_apps_dialog_title">Uygulama duraklatıldı</string>
     <string name="paused_apps_dialog_message">%1$s doğrudan başlatıcıdan duraklatıldı</string>
     <string name="paused_apps_drop_target_label">Uygulamayı duraklat</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">İş uygulamaları kapalı</string>
+    <string name="work_apps_pause_btn_text_custom">İş uygulamalarını kapat</string>
+    <string name="work_apps_enable_btn_text_custom">İş uygulamalarını aç</string>
+    <string name="work_apps_paused_info_body_custom">İş uygulamalarınız size bildirim gönderemez, pilinizi kullanamaz veya konumunuza erişemez</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">İş uygulamalarınız telefon çağrısı ve metin mesajı alamaz, size bildirim gönderemez, pilinizi kullanamaz, konumunuza erişemez</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Yeniden Başlat</string>
     <string name="pref_restart_summary">Ayarları Uygulamak İçin Yeniden Başlat</string>
@@ -154,8 +154,8 @@
     <string name="drawer_search_title">Uygulama arama çubuğu</string>
     <string name="drawer_search_summary">Uygulama sayfasının üstündeki arama çubuğu</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_title">Otomatik klavye</string>
+    <string name="pref_auto_keyboard_summary">Çekmece genişletilmişken aramaya başla</string>
     <!-- AppInfo -->
     <string name="app_info_source">Kaynak</string>
     <string name="app_info_source_system">Sistem</string>
