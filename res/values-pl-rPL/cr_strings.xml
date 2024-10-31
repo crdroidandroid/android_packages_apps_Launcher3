@@ -74,10 +74,10 @@
     <string name="paused_apps_dialog_title">Aplikacja wstrzymana</string>
     <string name="paused_apps_dialog_message">Aplikacja %1$s została wstrzymana z ekranu głównego</string>
     <string name="paused_apps_drop_target_label">Wstrzymaj aplikację</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">Aplikacje służbowe są wyłączone</string>
+    <string name="work_apps_pause_btn_text_custom">Wyłącz aplikacje służbowe</string>
+    <string name="work_apps_enable_btn_text_custom">Włącz aplikacje służbowe</string>
+    <string name="work_apps_paused_info_body_custom">Aplikacje służbowe nie mogą wysyłać powiadomień, używać baterii ani uzyskiwać dostępu do twojej lokalizacji</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Uruchom ponownie</string>
