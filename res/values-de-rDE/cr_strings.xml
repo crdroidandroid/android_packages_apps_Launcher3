@@ -74,11 +74,11 @@
     <string name="paused_apps_dialog_title">App pausiert</string>
     <string name="paused_apps_dialog_message">%1$s ist mithilfe des Launchers pausiert worden</string>
     <string name="paused_apps_drop_target_label">App pausieren</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">Geschäftliche Apps sind deaktiviert</string>
+    <string name="work_apps_pause_btn_text_custom">Geschäftliche Apps deaktivieren</string>
+    <string name="work_apps_enable_btn_text_custom">Geschäftliche Apps aktivieren</string>
+    <string name="work_apps_paused_info_body_custom">Geschäftliche Apps können dir keine Benachrichtigungen senden, deinen Akku nicht nutzen und nicht auf deinen Standort zugreifen</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Geschäftliche Apps können keine Anrufe und SMS empfangen, dir keine Benachrichtigungen senden, deinen Akku nicht nutzen und nicht auf deinen Standort zugreifen</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Neu starten</string>
     <string name="pref_restart_summary">Startet den Startbildschirm neu, um ausstehende Änderungen an den Einstellungen anzuwenden</string>
@@ -112,7 +112,7 @@
     <string name="label_lens">Google Lens</string>
     <string name="label_voice_search">Sprachsuche</string>
     <string name="dock_music_search_title">Musik erkennen</string>
-    <string name="dock_music_search_summary">Musik erkennen beim Drücken des Mikrofonsymbols starten</string>
+    <string name="dock_music_search_summary">Musikerkennung beim Drücken des Mikrofonsymbols starten</string>
     <string name="dock_search_title">Google-Suchleiste</string>
     <string name="dock_search_summary">Suchleiste im unteren Dock</string>
     <string name="dock_theme_title">Symboldesigns</string>
@@ -154,8 +154,8 @@
     <string name="drawer_search_title">App-Suchleiste</string>
     <string name="drawer_search_summary">Suchleiste oben in der App-Übersicht</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_title">Tastaturautomatik</string>
+    <string name="pref_auto_keyboard_summary">Suche direkt starten, sobald die App-Übersicht geöffnet ist</string>
     <!-- AppInfo -->
     <string name="app_info_source">Quelle</string>
     <string name="app_info_source_system">System</string>
