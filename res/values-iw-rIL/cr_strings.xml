@@ -52,6 +52,9 @@
     <string name="msg_minus_one_on_left">בעת החלקה שמאלה ממסך הבית</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">בעת החלקה ימינה ממסך הבית</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">סמלי ערכת הנושא</string>
+    <string name="pref_themed_icons_summary">התאמת סמלילים לערכת הנושא בשימוש במסך הבית</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">&amp; יישומים מוגנים מוסתרים</string>
     <string name="trust_apps_auth_manager">ביטול נעילה כדי לנהל את היישומים המוסתרים והמוגנים</string>
@@ -71,6 +74,17 @@
     <string name="paused_apps_dialog_title">היישום מושהה</string>
     <string name="paused_apps_dialog_message">%1$s הושהה ישירות מהמשגר</string>
     <string name="paused_apps_drop_target_label">השהיית היישום</string>
+    <string name="work_apps_paused_title_custom">Work apps are off</string>
+    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">הפעלה מחדש</string>
+    <string name="pref_restart_summary">הפעלה מחדש של משגר היישומים (לאונצ\'ר) להחלת הגדרות ששונו</string>
+    <string name="restarting_launcher">הפעלה מחדש של הלאונצ\'ר...</string>
+    <string name="restarting_launcher_changes">הפעלה מחדש של הלאונצ\'ר להחלת השינויים...</string>
+    <string name="updating_launcher_components">הפעלה מחדש של הלאונצ\'ר לעדכון רכיבי הלאונצ\'ר...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">הקשה כפולה לכיבוי המסך</string>
     <string name="pref_sleep_gesture_summary">הקשה כפולה על מקום ריק לכיבוי המסך</string>
@@ -91,6 +105,8 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">שימוש בסרגל המשימות</string>
     <string name="pref_allow_phone_taskbar_summary">לפתיחת יישומים ולמעבר ביניהם בכל מקום</string>
+    <!-- Row Height -->
+    <string name="row_height_title">גובה השורה</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">חיפוש</string>
     <string name="label_lens">Google Lens</string>
@@ -119,8 +135,6 @@
     <string name="show_statusbar_title">שורת מצב</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">צללית עילית</string>
-    <!-- Row Height -->
-    <string name="row_height_title">גובה השורה</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s זמין /%2$s בסך הכל</string>
     <string name="recents_meminfo_title">מידע אודות הזכרון</string>
@@ -131,11 +145,17 @@
     <string name="recents_screenshot_title">צילום המסך</string>
     <string name="recents_clear_all_title">ניקוי הכל</string>
     <string name="recents_lens_title">עדשה</string>
-    <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">נער את הטלפון כדי לנקות משימות</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">סמלי ערכת הנושא</string>
-    <string name="pref_themed_icons_summary">התאמת סמלילים לערכת הנושא בשימוש במסך הבית</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">התרת היסט (פרלקסה) קצר</string>
+    <string name="short_parallax_summary">הפעלת אפקט גלילה מלא לטפט על פני מספר קטן יותר של דפים במקום חיתוך הטפט</string>
+    <string name="single_page_center_title">מירכוז בדף יחיד</string>
+    <string name="single_page_center_summary">התמקדות הטפט במרכז בשימוש בדף יחיד </string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">סרגל חיפוש יישומים</string>
+    <string name="drawer_search_summary">הצגת סרגל חיפוש בראש מגירת היישומים</string>
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
     <string name="app_info_source">מקור</string>
     <string name="app_info_source_system">מערכת</string>
@@ -147,20 +167,6 @@
     <string name="icon_pack_default_label">ברירת המחדל</string>
     <string name="icon_pack_add">התקנת עוד</string>
     <string name="icon_pack_no_market">אין חנות אפליקציות זמינה</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">התרת היסט (פרלקסה) קצר</string>
-    <string name="short_parallax_summary">הפעלת אפקט גלילה מלא לטפט על פני מספר קטן יותר של דפים במקום חיתוך הטפט</string>
-    <string name="single_page_center_title">מירכוז בדף יחיד</string>
-    <string name="single_page_center_summary">התמקדות הטפט במרכז בשימוש בדף יחיד </string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">סרגל חיפוש יישומים</string>
-    <string name="drawer_search_summary">הצגת סרגל חיפוש בראש מגירת היישומים</string>
-    <!-- Restart launcher -->
-    <string name="pref_restart_title">הפעלה מחדש</string>
-    <string name="pref_restart_summary">הפעלה מחדש של משגר היישומים (לאונצ\'ר) להחלת הגדרות ששונו</string>
-    <string name="restarting_launcher">הפעלה מחדש של הלאונצ\'ר...</string>
-    <string name="restarting_launcher_changes">הפעלה מחדש של הלאונצ\'ר להחלת השינויים...</string>
-    <string name="updating_launcher_components">הפעלה מחדש של הלאונצ\'ר לעדכון רכיבי הלאונצ\'ר...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">בקצרה</string>
     <string name="show_quickspace_summary">הצגה בקצה העליון של מסך הבית שלך</string>
