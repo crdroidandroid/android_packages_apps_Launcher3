@@ -52,6 +52,9 @@
     <string name="msg_minus_one_on_left">Ana sayfadan sola kaydırdığınızda</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Ana sayfadan sağa kaydırdığınızda</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Temalı simgeler</string>
+    <string name="pref_themed_icons_summary">Ana ekranda kullanılan temalı simgeleri takip edin</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Gizli &amp; Korunan uygulamalar</string>
     <string name="trust_apps_auth_manager">Gizli ve korunan uygulamaları yönetmek için kilidi açın</string>
@@ -71,6 +74,17 @@
     <string name="paused_apps_dialog_title">Uygulama duraklatıldı</string>
     <string name="paused_apps_dialog_message">%1$s doğrudan başlatıcıdan duraklatıldı</string>
     <string name="paused_apps_drop_target_label">Uygulamayı duraklat</string>
+    <string name="work_apps_paused_title_custom">Work apps are off</string>
+    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Yeniden Başlat</string>
+    <string name="pref_restart_summary">Ayarları Uygulamak İçin Yeniden Başlat</string>
+    <string name="restarting_launcher">Ana ekran yeniden başlatılıyor...</string>
+    <string name="restarting_launcher_changes">Değişiklikleri uygulamak için yeniden başlatılıyor...</string>
+    <string name="updating_launcher_components">Başlatıcı bileşenlerini güncellemek için başlatıcı yeniden başlatılıyor...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Çift dokunuşla uyutma</string>
     <string name="pref_sleep_gesture_summary">Ekranı kapatmak için boş bir yere çift dokunun</string>
@@ -91,6 +105,8 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Görev çubuğunu kullan</string>
     <string name="pref_allow_phone_taskbar_summary">Uygulamaları herhangi bir yerde açmak ve değiştirmek için</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Satır yüksekliği</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Ara</string>
     <string name="label_lens">Google lens</string>
@@ -119,8 +135,6 @@
     <string name="show_statusbar_title">Durum çubuğu</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">Üst gölge</string>
-    <!-- Row Height -->
-    <string name="row_height_title">Satır yüksekliği</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Mevcut | %2$s Toplam</string>
     <string name="recents_meminfo_title">Bellek bilgisi</string>
@@ -131,11 +145,17 @@
     <string name="recents_screenshot_title">Ekran görüntüsü</string>
     <string name="recents_clear_all_title">Tümünü temizle</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Tüm görevleri silmek için telefonu sallayın</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Temalı simgeler</string>
-    <string name="pref_themed_icons_summary">Ana ekranda kullanılan temalı simgeleri takip edin</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Kısa paralaksa izin ver</string>
+    <string name="short_parallax_summary">Duvar kağıdını kırpmak yerine daha az sayıda sayfada tam duvar kağıdı kaydırma efektini etkinleştirin</string>
+    <string name="single_page_center_title">Tek sayfayı ortalayın</string>
+    <string name="single_page_center_summary">Yalnızca tek bir sayfa kullanılıyorsa duvar kağıdını ortalayın</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Uygulama arama çubuğu</string>
+    <string name="drawer_search_summary">Uygulama sayfasının üstündeki arama çubuğu</string>
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
     <string name="app_info_source">Kaynak</string>
     <string name="app_info_source_system">Sistem</string>
@@ -147,20 +167,6 @@
     <string name="icon_pack_default_label">Varsayılan</string>
     <string name="icon_pack_add">Daha fazla yükle</string>
     <string name="icon_pack_no_market">Kullanılabilir uygulama mağazası yok</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Kısa paralaksa izin ver</string>
-    <string name="short_parallax_summary">Duvar kağıdını kırpmak yerine daha az sayıda sayfada tam duvar kağıdı kaydırma efektini etkinleştirin</string>
-    <string name="single_page_center_title">Tek sayfayı ortalayın</string>
-    <string name="single_page_center_summary">Yalnızca tek bir sayfa kullanılıyorsa duvar kağıdını ortalayın</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Uygulama arama çubuğu</string>
-    <string name="drawer_search_summary">Uygulama sayfasının üstündeki arama çubuğu</string>
-    <!-- Restart launcher -->
-    <string name="pref_restart_title">Yeniden Başlat</string>
-    <string name="pref_restart_summary">Ayarları Uygulamak İçin Yeniden Başlat</string>
-    <string name="restarting_launcher">Ana ekran yeniden başlatılıyor...</string>
-    <string name="restarting_launcher_changes">Değişiklikleri uygulamak için yeniden başlatılıyor...</string>
-    <string name="updating_launcher_components">Başlatıcı bileşenlerini güncellemek için başlatıcı yeniden başlatılıyor...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Bir Bakışta</string>
     <string name="show_quickspace_summary">Ana ekranınızın üst kısmında göster</string>
