@@ -52,6 +52,9 @@
     <string name="msg_minus_one_on_left">Při gestu přejetím vlevo z\u00a0domovské obrazovky</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Při gestu přejetím vpravo z\u00a0domovské obrazovky</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Ikony motivů</string>
+    <string name="pref_themed_icons_summary">Následovat ikony motivů používaných na domovské obrazovce</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Skryté a\u00a0zabezpečené aplikace</string>
     <string name="trust_apps_auth_manager">Pro správu skrytých a\u00a0zabezpečených aplikací nejdříve odemkněte obrazovku</string>
@@ -71,6 +74,17 @@
     <string name="paused_apps_dialog_title">Aplikace pozastavena</string>
     <string name="paused_apps_dialog_message">Aplikace %1$s byla přímo pozastavena ze spouštěče</string>
     <string name="paused_apps_drop_target_label">Pozastavit aplikaci</string>
+    <string name="work_apps_paused_title_custom">Work apps are off</string>
+    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Restartovat</string>
+    <string name="pref_restart_summary">Chcete-li aplikovat všechna čekající nastavení, restartujte spouštěč ručně</string>
+    <string name="restarting_launcher">Restartování spouštěče…</string>
+    <string name="restarting_launcher_changes">Restartování spouštěče pro použití změn…</string>
+    <string name="updating_launcher_components">Restartování spouštěče pro aktualizaci komponent spouštěče…</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Uspat dvojím poklepáním</string>
     <string name="pref_sleep_gesture_summary">Dvojím poklepáním do prázdného prostoru uspat zařízení</string>
@@ -91,6 +105,8 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Použít panel úloh</string>
     <string name="pref_allow_phone_taskbar_summary">Pro otevírání a\u00a0přepínání aplikací kdekoliv</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Výška řádku</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Vyhledat</string>
     <string name="label_lens">Google Lens</string>
@@ -119,8 +135,6 @@
     <string name="show_statusbar_title">Stavový řádek</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">Horní stín</string>
-    <!-- Row Height -->
-    <string name="row_height_title">Výška řádku</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s k dispozici | %2$s</string>
     <string name="recents_meminfo_title">Informace o\u00a0paměti</string>
@@ -131,11 +145,17 @@
     <string name="recents_screenshot_title">Snímek obrazovky</string>
     <string name="recents_clear_all_title">Vymazat vše</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Vymazat všechny úlohy zatřepáním telefonem</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Ikony motivů</string>
-    <string name="pref_themed_icons_summary">Následovat ikony motivů používaných na domovské obrazovce</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Povolit krátkou paralaxu</string>
+    <string name="short_parallax_summary">Povolit efekt posouvání celé tapety na menším počtu stránek namísto oříznutí tapety</string>
+    <string name="single_page_center_title">Vycentrovat jedinou stránku</string>
+    <string name="single_page_center_summary">Vycentrovat tapetu pouze při použití jedné stránky</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Vyhledávací panel aplikací</string>
+    <string name="drawer_search_summary">Vyhledávací panel v horní části rolety aplikací</string>
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
     <string name="app_info_source">Zdroj</string>
     <string name="app_info_source_system">Systém</string>
@@ -147,20 +167,6 @@
     <string name="icon_pack_default_label">Výchozí</string>
     <string name="icon_pack_add">Instalovat další</string>
     <string name="icon_pack_no_market">Není k\u00a0dispozici žádný obchod s\u00a0aplikacemi</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Povolit krátkou paralaxu</string>
-    <string name="short_parallax_summary">Povolit efekt posouvání celé tapety na menším počtu stránek namísto oříznutí tapety</string>
-    <string name="single_page_center_title">Vycentrovat jedinou stránku</string>
-    <string name="single_page_center_summary">Vycentrovat tapetu pouze při použití jedné stránky</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Vyhledávací panel aplikací</string>
-    <string name="drawer_search_summary">Vyhledávací panel v horní části rolety aplikací</string>
-    <!-- Restart launcher -->
-    <string name="pref_restart_title">Restartovat</string>
-    <string name="pref_restart_summary">Chcete-li aplikovat všechna čekající nastavení, restartujte spouštěč ručně</string>
-    <string name="restarting_launcher">Restartování spouštěče…</string>
-    <string name="restarting_launcher_changes">Restartování spouštěče pro použití změn…</string>
-    <string name="updating_launcher_components">Restartování spouštěče pro aktualizaci komponent spouštěče…</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Přehled událostí</string>
     <string name="show_quickspace_summary">Zobrazit v horní části Domovské obrazovky</string>
