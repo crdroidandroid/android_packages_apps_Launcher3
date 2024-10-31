@@ -47,7 +47,7 @@
     <string name="desktop_show_labels">Tên biểu tượng trên màn hình chính</string>
     <string name="drawer_show_labels">Tên biểu tượng trong ngăn chứa ứng dụng</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
-    <string name="title_show_google_app">Vuốt để truy cập ứng dụng nguồn cấp dữ liệu</string>
+    <string name="title_show_google_app">Truy cập ứng dụng nguồn cấp dữ liệu</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_left">Khi vuốt trượt sang phải</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
@@ -56,8 +56,8 @@
     <string name="pref_themed_icons_title">Biểu tượng theo chủ đề</string>
     <string name="pref_themed_icons_summary">Sử dụng biểu tượng theo chủ đề trên màn hình chính</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Ẩn &amp; Bảo mật ứng dụng</string>
-    <string name="trust_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn và được bảo vệ</string>
+    <string name="trust_apps_manager_name">Ẩn hoặc bảo vệ ứng dụng</string>
+    <string name="trust_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn hoặc được bảo vệ</string>
     <string name="trust_apps_auth_open_app">Xác thực để mở %1$s</string>
     <string name="trust_apps_loading">Đang tải\u2026</string>
     <string name="trust_apps_no_lock_error">Hãy thiết lập màn hình khóa an toàn để hạn chế quyền truy cập ứng dụng</string>
@@ -74,11 +74,11 @@
     <string name="paused_apps_dialog_title">Ứng dụng bị tạm dừng</string>
     <string name="paused_apps_dialog_message">%1$s đã bị tạm dừng trực tiếp từ trình khởi chạy</string>
     <string name="paused_apps_drop_target_label">Tạm dừng ứng dụng</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">Ứng dụng công việc đã tắt</string>
+    <string name="work_apps_pause_btn_text_custom">Tắt các ứng dụng công việc</string>
+    <string name="work_apps_enable_btn_text_custom">Bật các ứng dụng công việc</string>
+    <string name="work_apps_paused_info_body_custom">Ứng dụng công việc không thể gửi thông báo và sử dụng pin hoặc truy cập thông tin vị trí</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Ứng dụng công việc không thể nhận cuộc gọi điện thoại hoặc tin nhắn văn bản, gửi thông báo, sử dụng pin hoặc truy cập vị trí</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Khởi động lại</string>
     <string name="pref_restart_summary">Khởi động lại trình khởi chạy để áp dụng các cài đặt đang chờ xử lý</string>
@@ -154,8 +154,8 @@
     <string name="drawer_search_title">Hiện thanh tìm kiếm</string>
     <string name="drawer_search_summary">Hiện thanh tìm kiếm ứng dụng</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_title">Bàn phím tự động</string>
+    <string name="pref_auto_keyboard_summary">Bắt đầu tìm kiếm khi ngăn kéo được mở rộng</string>
     <!-- AppInfo -->
     <string name="app_info_source">Nguồn cài đặt</string>
     <string name="app_info_source_system">Hệ thống</string>
