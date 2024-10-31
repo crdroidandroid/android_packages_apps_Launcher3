@@ -52,6 +52,9 @@
     <string name="msg_minus_one_on_left">Saat Anda menggeser ke kanan dari Layar Beranda</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Saat Anda menggeser ke kanan dari Layar Beranda</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Ikon bertema</string>
+    <string name="pref_themed_icons_summary">Ikuti ikon bertema yang digunakan di layar beranda</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Tersembunyi &amp; Aplikasi dilindungi</string>
     <string name="trust_apps_auth_manager">Buka kunci untuk mengelola aplikasi yang disembunyikan dan dilindungi</string>
@@ -71,6 +74,17 @@
     <string name="paused_apps_dialog_title">Aplikasi dijeda</string>
     <string name="paused_apps_dialog_message">%1$s langsung dijeda dari peluncur</string>
     <string name="paused_apps_drop_target_label">Jeda aplikasi</string>
+    <string name="work_apps_paused_title_custom">Work apps are off</string>
+    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Mulai ulang</string>
+    <string name="pref_restart_summary">Mulai ulang peluncur secara manual untuk menerapkan setelan yang tertunda</string>
+    <string name="restarting_launcher">Memulai ulang peluncur...</string>
+    <string name="restarting_launcher_changes">Memulai ulang peluncur untuk menerapkan perubahan...</string>
+    <string name="updating_launcher_components">Memulai ulang peluncur untuk memperbarui komponen peluncur...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Ketuk dua kali untuk tidur</string>
     <string name="pref_sleep_gesture_summary">Ketuk dua kali pada ruang kosong untuk mematikan layar</string>
@@ -91,6 +105,8 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Gunakan bilah tugas</string>
     <string name="pref_allow_phone_taskbar_summary">Untuk membuka dan beralih aplikasi di mana saja</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Tinggi baris</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Pencarian</string>
     <string name="label_lens">Google Lens</string>
@@ -119,8 +135,6 @@
     <string name="show_statusbar_title">Bilah Status</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">Bayangan atas</string>
-    <!-- Row Height -->
-    <string name="row_height_title">Tinggi baris</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Tersedia | %2$s Total</string>
     <string name="recents_meminfo_title">Info memori</string>
@@ -131,11 +145,17 @@
     <string name="recents_screenshot_title">Tangkapan layar</string>
     <string name="recents_clear_all_title">Bersihkan semua</string>
     <string name="recents_lens_title">Lensa</string>
-    <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Goyang ponsel untuk menghapus semua tugas</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Ikon bertema</string>
-    <string name="pref_themed_icons_summary">Ikuti ikon bertema yang digunakan di layar beranda</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Izinkan paralaks pendek</string>
+    <string name="short_parallax_summary">Aktifkan efek gulir wallpaper penuh pada sejumlah kecil halaman alih-alih memotong wallpaper</string>
+    <string name="single_page_center_title">Pusat satu halaman</string>
+    <string name="single_page_center_summary">Tengahkan wallpaper jika hanya menggunakan satu halaman</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Bilah pencarian aplikasi</string>
+    <string name="drawer_search_summary">Bilah pencarian di atas laci aplikasi</string>
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
     <string name="app_info_source">Sumber</string>
     <string name="app_info_source_system">Sistem</string>
@@ -147,20 +167,6 @@
     <string name="icon_pack_default_label">Bawaan</string>
     <string name="icon_pack_add">Instal lebih banyak</string>
     <string name="icon_pack_no_market">Tidak ada toko aplikasi yang tersedia</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Izinkan paralaks pendek</string>
-    <string name="short_parallax_summary">Aktifkan efek gulir wallpaper penuh pada sejumlah kecil halaman alih-alih memotong wallpaper</string>
-    <string name="single_page_center_title">Pusat satu halaman</string>
-    <string name="single_page_center_summary">Tengahkan wallpaper jika hanya menggunakan satu halaman</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Bilah pencarian aplikasi</string>
-    <string name="drawer_search_summary">Bilah pencarian di atas laci aplikasi</string>
-    <!-- Restart launcher -->
-    <string name="pref_restart_title">Mulai ulang</string>
-    <string name="pref_restart_summary">Mulai ulang peluncur secara manual untuk menerapkan setelan yang tertunda</string>
-    <string name="restarting_launcher">Memulai ulang peluncur...</string>
-    <string name="restarting_launcher_changes">Memulai ulang peluncur untuk menerapkan perubahan...</string>
-    <string name="updating_launcher_components">Memulai ulang peluncur untuk memperbarui komponen peluncur...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Sekilas</string>
     <string name="show_quickspace_summary">Tampilkan di bagian atas layar beranda Anda</string>
