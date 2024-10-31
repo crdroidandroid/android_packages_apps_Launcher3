@@ -52,6 +52,9 @@
     <string name="msg_minus_one_on_left">When you swipe left from main Home screen</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">When you swipe right from main Home screen</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Teemakuvakkeet</string>
+    <string name="pref_themed_icons_summary">Seuraa teemakuvakkeita, joita käytetään aloitusnäytöllä</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Piilotetut &amp; Suojatut sovellukset</string>
     <string name="trust_apps_auth_manager">Avaa hallitaksesi piilotettuja ja suojattuja sovelluksia</string>
@@ -71,6 +74,17 @@
     <string name="paused_apps_dialog_title">Sovellus pysäytetty</string>
     <string name="paused_apps_dialog_message">%1$s pysäytettiin suoraan käynnistimestä</string>
     <string name="paused_apps_drop_target_label">Pysäytä sovellus</string>
+    <string name="work_apps_paused_title_custom">Work apps are off</string>
+    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Käynnistä uudelleen</string>
+    <string name="pref_restart_summary">Käynnistä käynnistin uudelleen manuaalisesti ottaaksesi käyttöön kaikki odottavat asetukset</string>
+    <string name="restarting_launcher">Käynnistetään käynnistysohjelma uudelleen...</string>
+    <string name="restarting_launcher_changes">Käynnistetään käynnistysohjelma uudelleen, jotta muutokset otetaan käyttöön...</string>
+    <string name="updating_launcher_components">Käynnistetään käynnistysohjelma uudelleen käynnistimen komponenttien päivittämiseksi...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Tuplanäpäytä horrostilaan</string>
     <string name="pref_sleep_gesture_summary">Kaksoisnapauta tyhjää tilaa sammuttaaksesi näytön</string>
@@ -91,6 +105,8 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Käytä tehtäväpalkkia</string>
     <string name="pref_allow_phone_taskbar_summary">Sovellusten avaamiseen ja siirtymiseen missä tahansa</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Rivin korkeus</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Haku</string>
     <string name="label_lens">Google Lens</string>
@@ -119,8 +135,6 @@
     <string name="show_statusbar_title">Tilapalkki</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">Yläosan varjostus</string>
-    <!-- Row Height -->
-    <string name="row_height_title">Rivin korkeus</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Käytettävissä | %2$s Yhteensä</string>
     <string name="recents_meminfo_title">Muistin tiedot</string>
@@ -131,11 +145,17 @@
     <string name="recents_screenshot_title">Kuvakaappaus</string>
     <string name="recents_clear_all_title">Tyhjennä kaikki</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Ravista puhelinta poistaaksesi kaikki tehtävät</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Teemakuvakkeet</string>
-    <string name="pref_themed_icons_summary">Seuraa teemakuvakkeita, joita käytetään aloitusnäytöllä</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Salli lyhyt parallaksi</string>
+    <string name="short_parallax_summary">Ota käyttöön koko taustakuvan vierintätehoste pienimmillä sivumäärillä taustakuvan rajaamisen sijaan</string>
+    <string name="single_page_center_title">Yhden sivun keskitys</string>
+    <string name="single_page_center_summary">Keskitä taustakuva jos vain yksi sivu on käytössä</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Sovelluksen hakupalkki</string>
+    <string name="drawer_search_summary">Hakupalkki sovellusvalikon yläpuolella</string>
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
     <string name="app_info_source">Lähde</string>
     <string name="app_info_source_system">Järjestelmä</string>
@@ -147,20 +167,6 @@
     <string name="icon_pack_default_label">Oletus</string>
     <string name="icon_pack_add">Asenna lisää</string>
     <string name="icon_pack_no_market">Sovelluskauppaa ei ole käytettävissä</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Salli lyhyt parallaksi</string>
-    <string name="short_parallax_summary">Ota käyttöön koko taustakuvan vierintätehoste pienimmillä sivumäärillä taustakuvan rajaamisen sijaan</string>
-    <string name="single_page_center_title">Yhden sivun keskitys</string>
-    <string name="single_page_center_summary">Keskitä taustakuva jos vain yksi sivu on käytössä</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Sovelluksen hakupalkki</string>
-    <string name="drawer_search_summary">Hakupalkki sovellusvalikon yläpuolella</string>
-    <!-- Restart launcher -->
-    <string name="pref_restart_title">Käynnistä uudelleen</string>
-    <string name="pref_restart_summary">Käynnistä käynnistin uudelleen manuaalisesti ottaaksesi käyttöön kaikki odottavat asetukset</string>
-    <string name="restarting_launcher">Käynnistetään käynnistysohjelma uudelleen...</string>
-    <string name="restarting_launcher_changes">Käynnistetään käynnistysohjelma uudelleen, jotta muutokset otetaan käyttöön...</string>
-    <string name="updating_launcher_components">Käynnistetään käynnistysohjelma uudelleen käynnistimen komponenttien päivittämiseksi...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Pikakatselu</string>
     <string name="show_quickspace_summary">Näytä aloitusnäytön yläosassa</string>
