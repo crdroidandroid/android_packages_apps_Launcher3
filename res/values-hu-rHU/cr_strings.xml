@@ -52,6 +52,9 @@
     <string name="msg_minus_one_on_left">Amikor a fő Kezdőképernyőn balra csúsztat</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Amikor a fő Kezdőképernyőn jobbra csúsztat</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Témázott ikonok</string>
+    <string name="pref_themed_icons_summary">A kezdőképernyőn használt tematikus ikonokhoz igazodik</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Rejtett és védett alkalmazások</string>
     <string name="trust_apps_auth_manager">Feloldás a rejtett és védett alkalmazások kezeléséhez</string>
@@ -71,6 +74,17 @@
     <string name="paused_apps_dialog_title">Alkalmazás-szüneteltetés</string>
     <string name="paused_apps_dialog_message">%1$s közvetlen szüneteltetése a Launcherből</string>
     <string name="paused_apps_drop_target_label">Alkalmazás-szüneteltetés</string>
+    <string name="work_apps_paused_title_custom">Work apps are off</string>
+    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Újraindítás</string>
+    <string name="pref_restart_summary">Launcher-újraindítás a függőben lévő változások alkalmazásához</string>
+    <string name="restarting_launcher">A Launcher újraindítása...</string>
+    <string name="restarting_launcher_changes">A változások miatti újraindulás...</string>
+    <string name="updating_launcher_components">Launcher alkotóelem frissítése miatti újraindulás...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Alvómód duplakoppal</string>
     <string name="pref_sleep_gesture_summary">Képernyő kikapcsoláshoz duplakopp egy üres területen</string>
@@ -91,6 +105,8 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">a Feladatkezelő használata</string>
     <string name="pref_allow_phone_taskbar_summary">Alkalmazásinditáshoz és váltáshoz bárhol</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Sormagasság</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Keresés</string>
     <string name="label_lens">Google Lens</string>
@@ -119,8 +135,6 @@
     <string name="show_statusbar_title">Értesítési sáv</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">Felső árnyék</string>
-    <!-- Row Height -->
-    <string name="row_height_title">Sormagasság</string>
     <!-- Memory info -->
     <string name="meminfo_text">%2$s memóból %1$s érhető el</string>
     <string name="recents_meminfo_title">Memória-információ</string>
@@ -131,11 +145,17 @@
     <string name="recents_screenshot_title">Képernyőkép</string>
     <string name="recents_clear_all_title">Az összes törlése</string>
     <string name="recents_lens_title">Objektív</string>
-    <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Az összes feladat törléséhez rázza meg a telefont</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Témázott ikonok</string>
-    <string name="pref_themed_icons_summary">A kezdőképernyőn használt tematikus ikonokhoz igazodik</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Rövid paralaxis engedélyezése</string>
+    <string name="short_parallax_summary">Engedélyezze a teljes háttérképgörgetési hatását kisebb oldalszámon a háttérkép levágása helyett</string>
+    <string name="single_page_center_title">Centerezett egyoldalas</string>
+    <string name="single_page_center_summary">Helyezze középre a háttérképet, ha csak egyetlen oldalt használ</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Alkalmazásfiók-keresősáv</string>
+    <string name="drawer_search_summary">A keresősáv az Alkalmazásfiók tetején</string>
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
     <string name="app_info_source">Forrás</string>
     <string name="app_info_source_system">Rendszer</string>
@@ -147,20 +167,6 @@
     <string name="icon_pack_default_label">Alapértelmezett</string>
     <string name="icon_pack_add">Továbbiak telepítése</string>
     <string name="icon_pack_no_market">Nincs hely ahonnan letölthetne</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Rövid paralaxis engedélyezése</string>
-    <string name="short_parallax_summary">Engedélyezze a teljes háttérképgörgetési hatását kisebb oldalszámon a háttérkép levágása helyett</string>
-    <string name="single_page_center_title">Centerezett egyoldalas</string>
-    <string name="single_page_center_summary">Helyezze középre a háttérképet, ha csak egyetlen oldalt használ</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Alkalmazásfiók-keresősáv</string>
-    <string name="drawer_search_summary">A keresősáv az Alkalmazásfiók tetején</string>
-    <!-- Restart launcher -->
-    <string name="pref_restart_title">Újraindítás</string>
-    <string name="pref_restart_summary">Launcher-újraindítás a függőben lévő változások alkalmazásához</string>
-    <string name="restarting_launcher">A Launcher újraindítása...</string>
-    <string name="restarting_launcher_changes">A változások miatti újraindulás...</string>
-    <string name="updating_launcher_components">Launcher alkotóelem frissítése miatti újraindulás...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Belepillantás</string>
     <string name="show_quickspace_summary">Az Ön kezdőképernyőjének tetején jelenik meg</string>
