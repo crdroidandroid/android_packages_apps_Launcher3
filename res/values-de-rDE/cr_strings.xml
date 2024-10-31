@@ -52,6 +52,9 @@
     <string name="msg_minus_one_on_left">Wenn auf der ersten Seite nach links gewischt wird</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Wenn auf der ersten Seite nach rechts gewischt wird</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Symboldesigns</string>
+    <string name="pref_themed_icons_summary">Stil der Symboldesigns auf dem Startbildschirm folgen</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Versteckte &amp; geschützte Apps</string>
     <string name="trust_apps_auth_manager">Entsperren, um versteckte und geschützte Apps zu verwalten</string>
@@ -71,6 +74,17 @@
     <string name="paused_apps_dialog_title">App pausiert</string>
     <string name="paused_apps_dialog_message">%1$s ist mithilfe des Launchers pausiert worden</string>
     <string name="paused_apps_drop_target_label">App pausieren</string>
+    <string name="work_apps_paused_title_custom">Work apps are off</string>
+    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Neu starten</string>
+    <string name="pref_restart_summary">Startet den Startbildschirm neu, um ausstehende Änderungen an den Einstellungen anzuwenden</string>
+    <string name="restarting_launcher">Launcher wird neu gestartet …</string>
+    <string name="restarting_launcher_changes">Launcher wird neu gestartet, um Änderungen anzuwenden …</string>
+    <string name="updating_launcher_components">Launcher wird neu gestartet, um Launcher-Elemente zu aktualisieren …</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Doppeltippen zum Sperren</string>
     <string name="pref_sleep_gesture_summary">Zum Sperren auf einen leeren Bereich doppeltippen</string>
@@ -91,6 +105,8 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Taskleiste verwenden</string>
     <string name="pref_allow_phone_taskbar_summary">Zum jederzeitigen Öffnen von und Wechseln zwischen Apps</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Zeilenhöhe</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Suche</string>
     <string name="label_lens">Google Lens</string>
@@ -119,8 +135,6 @@
     <string name="show_statusbar_title">Statusleiste</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">Schatten oben</string>
-    <!-- Row Height -->
-    <string name="row_height_title">Zeilenhöhe</string>
     <!-- Memory info -->
     <string name="meminfo_text">Frei: %1$s | Gesamt: %2$s</string>
     <string name="recents_meminfo_title">RAM-Info</string>
@@ -131,11 +145,17 @@
     <string name="recents_screenshot_title">Screenshot</string>
     <string name="recents_clear_all_title">Alle Apps schließen</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Telefon schütteln zum Schließen aller Apps</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Symboldesigns</string>
-    <string name="pref_themed_icons_summary">Stil der Symboldesigns auf dem Startbildschirm folgen</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Kurzes Parallax Scrollen erlauben</string>
+    <string name="short_parallax_summary">Beschränkt den Scroll-Effekt auf eine kleinere Seitenanzahl, anstatt das Hintergrundbild zu beschneiden</string>
+    <string name="single_page_center_title">Bei nur einer Seite zentrieren</string>
+    <string name="single_page_center_summary">Zentriert das Hintergrundbild, wenn nur eine einzelne Seite verwendet wird</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">App-Suchleiste</string>
+    <string name="drawer_search_summary">Suchleiste oben in der App-Übersicht</string>
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
     <string name="app_info_source">Quelle</string>
     <string name="app_info_source_system">System</string>
@@ -147,20 +167,6 @@
     <string name="icon_pack_default_label">Standard</string>
     <string name="icon_pack_add">Weitere installieren</string>
     <string name="icon_pack_no_market">Es ist kein App-Store verfügbar</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Kurzes Parallax Scrollen erlauben</string>
-    <string name="short_parallax_summary">Beschränkt den Scroll-Effekt auf eine kleinere Seitenanzahl, anstatt das Hintergrundbild zu beschneiden</string>
-    <string name="single_page_center_title">Bei nur einer Seite zentrieren</string>
-    <string name="single_page_center_summary">Zentriert das Hintergrundbild, wenn nur eine einzelne Seite verwendet wird</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App-Suchleiste</string>
-    <string name="drawer_search_summary">Suchleiste oben in der App-Übersicht</string>
-    <!-- Restart launcher -->
-    <string name="pref_restart_title">Neu starten</string>
-    <string name="pref_restart_summary">Startet den Startbildschirm neu, um ausstehende Änderungen an den Einstellungen anzuwenden</string>
-    <string name="restarting_launcher">Launcher wird neu gestartet …</string>
-    <string name="restarting_launcher_changes">Launcher wird neu gestartet, um Änderungen anzuwenden …</string>
-    <string name="updating_launcher_components">Launcher wird neu gestartet, um Launcher-Elemente zu aktualisieren …</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Auf einen Blick</string>
     <string name="show_quickspace_summary">Oben auf dem Startbildschirm anzeigen</string>
