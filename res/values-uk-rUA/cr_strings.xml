@@ -52,6 +52,9 @@
     <string name="msg_minus_one_on_left">Під час гортання вліво від головного екрану</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Під час гортання вправо від головного екрану</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Іконки з темами</string>
+    <string name="pref_themed_icons_summary">Слідкувати за темами іконок, що використовуються на головному екрані</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Приховані та захищені додатки</string>
     <string name="trust_apps_auth_manager">Розблокуйте, щоб керувати прихованими та захищеними додатками</string>
@@ -71,6 +74,17 @@
     <string name="paused_apps_dialog_title">Додаток призупинено</string>
     <string name="paused_apps_dialog_message">%1$s Був зупинений безпосередньо з лаунчера</string>
     <string name="paused_apps_drop_target_label">Призупинити додаток</string>
+    <string name="work_apps_paused_title_custom">Work apps are off</string>
+    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Перезапустити</string>
+    <string name="pref_restart_summary">Перезапустіть лаунчер вручну для подальшого застосування налаштувань</string>
+    <string name="restarting_launcher">Перезавантаження оболонки...</string>
+    <string name="restarting_launcher_changes">Перезапуск оболонки для застосування змін...</string>
+    <string name="updating_launcher_components">Перезапуск лаунчера для оновлення компонентів...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Подвійне натискання для блокування екрану</string>
     <string name="pref_sleep_gesture_summary">Подвійне натискання на порожнє місце для вимкнення екрану</string>
@@ -91,6 +105,8 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Використовувати панель завдань</string>
     <string name="pref_allow_phone_taskbar_summary">Для відкриття та перемикання додатків в будь-якому місці</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Висота рядка</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Пошук</string>
     <string name="label_lens">Google Ленс</string>
@@ -119,8 +135,6 @@
     <string name="show_statusbar_title">Рядок стану</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">Верхня тінь</string>
-    <!-- Row Height -->
-    <string name="row_height_title">Висота рядка</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Доступно | %2$s Загалом</string>
     <string name="recents_meminfo_title">Інформація про пам\'ять</string>
@@ -131,11 +145,17 @@
     <string name="recents_screenshot_title">Знімок екрану</string>
     <string name="recents_clear_all_title">Очистити все</string>
     <string name="recents_lens_title">Лінза</string>
-    <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Струсніть телефон, щоб очистити всі завдання</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Іконки з темами</string>
-    <string name="pref_themed_icons_summary">Слідкувати за темами іконок, що використовуються на головному екрані</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Дозволити короткий паралакс</string>
+    <string name="short_parallax_summary">Увімкнути можливість повної прокрутки при гортанні на меншу кількість сторінок замість обрізання шпалер</string>
+    <string name="single_page_center_title">У центрі на одній сторінці</string>
+    <string name="single_page_center_summary">Центрувати шпалери, якщо тільки одна сторінка</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Панель пошуку додатків</string>
+    <string name="drawer_search_summary">Рядок пошуку зверху списку додатків</string>
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
     <string name="app_info_source">Джерело</string>
     <string name="app_info_source_system">Система</string>
@@ -147,20 +167,6 @@
     <string name="icon_pack_default_label">За замовчанням</string>
     <string name="icon_pack_add">Встановити ще</string>
     <string name="icon_pack_no_market">Немає доступного магазину додатків</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Дозволити короткий паралакс</string>
-    <string name="short_parallax_summary">Увімкнути можливість повної прокрутки при гортанні на меншу кількість сторінок замість обрізання шпалер</string>
-    <string name="single_page_center_title">У центрі на одній сторінці</string>
-    <string name="single_page_center_summary">Центрувати шпалери, якщо тільки одна сторінка</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Панель пошуку додатків</string>
-    <string name="drawer_search_summary">Рядок пошуку зверху списку додатків</string>
-    <!-- Restart launcher -->
-    <string name="pref_restart_title">Перезапустити</string>
-    <string name="pref_restart_summary">Перезапустіть лаунчер вручну для подальшого застосування налаштувань</string>
-    <string name="restarting_launcher">Перезавантаження оболонки...</string>
-    <string name="restarting_launcher_changes">Перезапуск оболонки для застосування змін...</string>
-    <string name="updating_launcher_components">Перезапуск лаунчера для оновлення компонентів...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Найголовніше</string>
     <string name="show_quickspace_summary">Показувати вгорі домашнього екрана</string>
