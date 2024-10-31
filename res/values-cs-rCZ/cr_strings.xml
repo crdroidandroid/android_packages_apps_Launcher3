@@ -24,8 +24,8 @@
     <string name="home_category_summary">Nastavení panelu Google\u00a0Now a\u00a0dalších funkcí</string>
     <string name="icons_category_title">Ikony</string>
     <string name="icons_category_summary">Nastavit velikost ikon a\u00a0další parametry</string>
-    <string name="app_drawer_category_title">Roleta aplikací</string>
-    <string name="app_drawer_category_summary">Přizpůsobte si svou roletu aplikací</string>
+    <string name="app_drawer_category_title">Seznam aplikací</string>
+    <string name="app_drawer_category_summary">Přizpůsobte si svůj seznam aplikací</string>
     <string name="recents_category_title">Nedávné aplikace</string>
     <string name="recents_category_summary">Změnit styl obrazovky nedávných aplikací</string>
     <string name="misc_category_title">Různé</string>
@@ -59,7 +59,7 @@
     <string name="trust_apps_loading">Načítání\u2026</string>
     <string name="trust_apps_no_lock_error">Pro omezení přístupu k\u00a0aplikaci prosím nastavte zabezpečenou obrazovku uzamčení</string>
     <string name="trust_apps_help">Nápověda</string>
-    <string name="trust_apps_info_hidden">Skryté aplikace, včetně jejich widgetů, jsou skryty z\u00a0rolety aplikací</string>
+    <string name="trust_apps_info_hidden">Skryté aplikace, včetně jejich widgetů, jsou skryty ze seznamu aplikací</string>
     <string name="trust_apps_info_protected">Zabezpečené aplikace vyžadují ověření, aby mohly být otevřeny ze spouštěče</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Návrhy</string>
@@ -114,7 +114,7 @@
     <string name="allow_wallpaper_scrolling_summary">Efekt posunu tapety pro více obrazovek</string>
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zooming">Přiblížení tapety</string>
-    <string name="allow_wallpaper_zooming_summary">Přiblížit nebo oddálit tapetu při použití rolety aplikací nebo nedávných aplikací</string>
+    <string name="allow_wallpaper_zooming_summary">Přiblížit nebo oddálit tapetu při použití seznamu aplikací nebo nedávných aplikací</string>
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Stavový řádek</string>
     <!-- Top shadow -->
@@ -126,7 +126,7 @@
     <string name="recents_meminfo_title">Informace o\u00a0paměti</string>
     <!-- Background blur -->
     <string name="background_blur_title">Hloubka rozostření pozadí</string>
-    <string name="background_blur_summary">Nastavit úroveň hloubky rozostření nedávných aplikací a\u00a0rolety aplikací</string>
+    <string name="background_blur_summary">Nastavit úroveň hloubky rozostření nedávných aplikací a\u00a0seznamu aplikací</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Snímek obrazovky</string>
     <string name="recents_clear_all_title">Vymazat vše</string>
@@ -154,7 +154,7 @@
     <string name="single_page_center_summary">Vycentrovat tapetu pouze při použití jedné stránky</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Vyhledávací panel aplikací</string>
-    <string name="drawer_search_summary">Vyhledávací panel v horní části rolety aplikací</string>
+    <string name="drawer_search_summary">Vyhledávací panel v horní části seznamu aplikací</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Restartovat</string>
     <string name="pref_restart_summary">Chcete-li aplikovat všechna čekající nastavení, restartujte spouštěč ručně</string>
