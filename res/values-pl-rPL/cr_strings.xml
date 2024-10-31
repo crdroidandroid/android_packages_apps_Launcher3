@@ -52,6 +52,9 @@
     <string name="msg_minus_one_on_left">Kiedy przesuniesz w lewo od ekranu głównego</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Kiedy przesuniesz w prawo od ekranu głównego</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Ikony tematyczne</string>
+    <string name="pref_themed_icons_summary">Dopasuj ikony dostosowane do motywu na ekranie głównym</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Ukryte i chronione aplikacje</string>
     <string name="trust_apps_auth_manager">Odblokuj, aby zarządzać ukrytymi i chronionymi aplikacjami</string>
@@ -71,6 +74,17 @@
     <string name="paused_apps_dialog_title">Aplikacja wstrzymana</string>
     <string name="paused_apps_dialog_message">Aplikacja %1$s została wstrzymana z ekranu głównego</string>
     <string name="paused_apps_drop_target_label">Wstrzymaj aplikację</string>
+    <string name="work_apps_paused_title_custom">Work apps are off</string>
+    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Uruchom ponownie</string>
+    <string name="pref_restart_summary">Uruchom ponownie launcher ręcznie, aby zastosować wszystkie oczekujące ustawienia</string>
+    <string name="restarting_launcher">Restartowanie launchera...</string>
+    <string name="restarting_launcher_changes">Ponowne uruchamianie launchera, aby zastosować zmiany...</string>
+    <string name="updating_launcher_components">Ponowne uruchamianie launchera, aby zaktualizować komponenty launchera...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Dotknij dwukrotnie, aby uśpić</string>
     <string name="pref_sleep_gesture_summary">Dotknij dwukrotnie w puste miejsce, aby wyłączyć ekran</string>
@@ -91,6 +105,8 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Użyj paska zadań</string>
     <string name="pref_allow_phone_taskbar_summary">Do otwierania i przełączania aplikacji gdziekolwiek</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Wysokość wiersza</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Szukaj</string>
     <string name="label_lens">Obiektyw Google</string>
@@ -119,8 +135,6 @@
     <string name="show_statusbar_title">Pasek stanu</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">Górny cień</string>
-    <!-- Row Height -->
-    <string name="row_height_title">Wysokość wiersza</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s dostępne | %2$s</string>
     <string name="recents_meminfo_title">Informacje o pamięci</string>
@@ -131,11 +145,17 @@
     <string name="recents_screenshot_title">Zrzut ekranu</string>
     <string name="recents_clear_all_title">Wyczyść wszystko</string>
     <string name="recents_lens_title">Obiektyw</string>
-    <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Potrząśnij telefonem, aby wyczyścić wszystkie zadania</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Ikony tematyczne</string>
-    <string name="pref_themed_icons_summary">Dopasuj ikony dostosowane do motywu na ekranie głównym</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Zezwalaj na krótki paralaks</string>
+    <string name="short_parallax_summary">Włącz efekt przewijania całej tapety na mniejszej liczbie stron zamiast przycinać tapetę</string>
+    <string name="single_page_center_title">Widok pojedynczej strony</string>
+    <string name="single_page_center_summary">Wyśrodkuj tapetę jeśli używasz tylko jednej strony</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Pasek wyszukiwania aplikacji</string>
+    <string name="drawer_search_summary">Pasek wyszukiwania u góry szuflady aplikacji</string>
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
     <string name="app_info_source">Źródło</string>
     <string name="app_info_source_system">System</string>
@@ -147,20 +167,6 @@
     <string name="icon_pack_default_label">Domyślny</string>
     <string name="icon_pack_add">Zainstaluj więcej</string>
     <string name="icon_pack_no_market">Brak dostępnego sklepu aplikacji</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Zezwalaj na krótki paralaks</string>
-    <string name="short_parallax_summary">Włącz efekt przewijania całej tapety na mniejszej liczbie stron zamiast przycinać tapetę</string>
-    <string name="single_page_center_title">Widok pojedynczej strony</string>
-    <string name="single_page_center_summary">Wyśrodkuj tapetę jeśli używasz tylko jednej strony</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Pasek wyszukiwania aplikacji</string>
-    <string name="drawer_search_summary">Pasek wyszukiwania u góry szuflady aplikacji</string>
-    <!-- Restart launcher -->
-    <string name="pref_restart_title">Uruchom ponownie</string>
-    <string name="pref_restart_summary">Uruchom ponownie launcher ręcznie, aby zastosować wszystkie oczekujące ustawienia</string>
-    <string name="restarting_launcher">Restartowanie launchera...</string>
-    <string name="restarting_launcher_changes">Ponowne uruchamianie launchera, aby zastosować zmiany...</string>
-    <string name="updating_launcher_components">Ponowne uruchamianie launchera, aby zaktualizować komponenty launchera...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">W skrócie</string>
     <string name="show_quickspace_summary">Pokaż w górnej części ekranu głównego</string>
