@@ -52,6 +52,9 @@
     <string name="msg_minus_one_on_left">當在主畫面向左滑動時</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">當在主畫面向右滑動時</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">搜尋列著色</string>
+    <string name="pref_themed_icons_summary">將應用程式抽屜中的圖示也套用主題色</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">隱藏和受保護的應用程式</string>
     <string name="trust_apps_auth_manager">解鎖以管理隱藏和受保護的應用程式</string>
@@ -71,6 +74,17 @@
     <string name="paused_apps_dialog_title">已暫停應用程式</string>
     <string name="paused_apps_dialog_message">%1$s 是在主畫面上被暫停的</string>
     <string name="paused_apps_drop_target_label">暫停應用程式</string>
+    <string name="work_apps_paused_title_custom">Work apps are off</string>
+    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">重新啟動</string>
+    <string name="pref_restart_summary">重新啟動主畫面來套用設定</string>
+    <string name="restarting_launcher">正在重新啟動桌面...</string>
+    <string name="restarting_launcher_changes">正在重新啟動桌面以套用變更...</string>
+    <string name="updating_launcher_components">正在重新啟動桌面以更新組件...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">輕觸兩下即可休眠</string>
     <string name="pref_sleep_gesture_summary">在空白處點兩下以關閉螢幕</string>
@@ -91,6 +105,8 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">使用工作列</string>
     <string name="pref_allow_phone_taskbar_summary">隨處都能開啟和切換應用程式</string>
+    <!-- Row Height -->
+    <string name="row_height_title">列高</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">搜尋</string>
     <string name="label_lens">智慧鏡頭</string>
@@ -119,8 +135,6 @@
     <string name="show_statusbar_title">狀態列</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">頂部陰影</string>
-    <!-- Row Height -->
-    <string name="row_height_title">列高</string>
     <!-- Memory info -->
     <string name="meminfo_text">可用 %1$s | 總共 %2$s</string>
     <string name="recents_meminfo_title">記憶體</string>
@@ -131,11 +145,17 @@
     <string name="recents_screenshot_title">螢幕截圖</string>
     <string name="recents_clear_all_title">全部清除</string>
     <string name="recents_lens_title">智慧鏡頭</string>
-    <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">晃動手機以關閉所有應用程式</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">搜尋列著色</string>
-    <string name="pref_themed_icons_summary">將應用程式抽屜中的圖示也套用主題色</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">桌布滾動</string>
+    <string name="short_parallax_summary">在主畫面頁數較少時使用桌布滾動，而非裁切部分桌布</string>
+    <string name="single_page_center_title">單頁桌布置中</string>
+    <string name="single_page_center_summary">主畫面頁數只有一頁時，使桌布置中</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">搜尋列</string>
+    <string name="drawer_search_summary">應用程式清單頂部的搜尋列</string>
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
     <string name="app_info_source">來源</string>
     <string name="app_info_source_system">系統</string>
@@ -147,20 +167,6 @@
     <string name="icon_pack_default_label">預設</string>
     <string name="icon_pack_add">安裝更多...</string>
     <string name="icon_pack_no_market">沒有可用的應用程式商店</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">桌布滾動</string>
-    <string name="short_parallax_summary">在主畫面頁數較少時使用桌布滾動，而非裁切部分桌布</string>
-    <string name="single_page_center_title">單頁桌布置中</string>
-    <string name="single_page_center_summary">主畫面頁數只有一頁時，使桌布置中</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">搜尋列</string>
-    <string name="drawer_search_summary">應用程式清單頂部的搜尋列</string>
-    <!-- Restart launcher -->
-    <string name="pref_restart_title">重新啟動</string>
-    <string name="pref_restart_summary">重新啟動主畫面來套用設定</string>
-    <string name="restarting_launcher">正在重新啟動桌面...</string>
-    <string name="restarting_launcher_changes">正在重新啟動桌面以套用變更...</string>
-    <string name="updating_launcher_components">正在重新啟動桌面以更新組件...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">快速查看</string>
     <string name="show_quickspace_summary">在主畫面頂端顯示</string>
