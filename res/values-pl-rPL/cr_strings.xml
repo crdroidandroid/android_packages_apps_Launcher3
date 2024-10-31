@@ -23,11 +23,11 @@
     <string name="home_category_title">Ekran główny</string>
     <string name="home_category_summary">Ustaw panel Google Now i inne</string>
     <string name="icons_category_title">Ikony</string>
-    <string name="icons_category_summary">Ustaw rozmiar ikon i inne</string>
+    <string name="icons_category_summary">Ustaw rozmiar ikon i więcej</string>
     <string name="app_drawer_category_title">Szuflada aplikacji</string>
     <string name="app_drawer_category_summary">Dostosuj szufladę aplikacji</string>
     <string name="recents_category_title">Ostatnio używane</string>
-    <string name="recents_category_summary">Odśwież ekran podglądu</string>
+    <string name="recents_category_summary">Dostosuj ekran ostatnich aplikacji</string>
     <string name="misc_category_title">Pozostałe</string>
     <string name="misc_category_summary">Inne opcje</string>
     <string name="general_category_title">Ogólne</string>
@@ -42,7 +42,7 @@
     <string name="settings_lock_layout_title">Blokada układu ekranu głównego</string>
     <string name="settings_lock_layout_summary_on">Ikony i widżety nie mogą być dodawane, usuwane ani przenoszone na ekranie głównym</string>
     <string name="settings_lock_layout_summary_off">Ikony i widżety mogą być dodawane, usuwane oraz przenoszone na ekranie głównym</string>
-    <string name="settings_edit_widgets_error">Nie można dodać widżetów do ekranu głównego</string>
+    <string name="settings_edit_widgets_error">Nie można dodawać widżetów do ekranu głównego</string>
     <!-- Hide labels -->
     <string name="desktop_show_labels">Etykiety ikon na pulpicie</string>
     <string name="drawer_show_labels">Etykiety ikon w szufladzie aplikacji</string>
@@ -78,11 +78,11 @@
     <string name="work_apps_pause_btn_text_custom">Wyłącz aplikacje służbowe</string>
     <string name="work_apps_enable_btn_text_custom">Włącz aplikacje służbowe</string>
     <string name="work_apps_paused_info_body_custom">Aplikacje służbowe nie mogą wysyłać powiadomień, używać baterii ani uzyskiwać dostępu do twojej lokalizacji</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Twoje aplikacje służbowe nie mogą odbierać połączeń telefonicznych ani wiadomości tekstowych, wysyłać powiadomień, używać baterii lub uzyskiwać dostępu do lokalizacji</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Uruchom ponownie</string>
     <string name="pref_restart_summary">Uruchom ponownie launcher ręcznie, aby zastosować wszystkie oczekujące ustawienia</string>
-    <string name="restarting_launcher">Restartowanie launchera...</string>
+    <string name="restarting_launcher">Ponowne uruchamianie launchera...</string>
     <string name="restarting_launcher_changes">Ponowne uruchamianie launchera, aby zastosować zmiany...</string>
     <string name="updating_launcher_components">Ponowne uruchamianie launchera, aby zaktualizować komponenty launchera...</string>
     <!-- DT2S -->
@@ -147,15 +147,15 @@
     <string name="recents_lens_title">Obiektyw</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Zezwalaj na krótki paralaks</string>
-    <string name="short_parallax_summary">Włącz efekt przewijania całej tapety na mniejszej liczbie stron zamiast przycinać tapetę</string>
+    <string name="short_parallax_summary">Włącz efekt przewijania całej tapety na mniejszej liczbie stron, zamiast przycinać tapetę</string>
     <string name="single_page_center_title">Widok pojedynczej strony</string>
-    <string name="single_page_center_summary">Wyśrodkuj tapetę jeśli używasz tylko jednej strony</string>
+    <string name="single_page_center_summary">Wyśrodkuj tapetę, jeśli używasz tylko jednej strony</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Pasek wyszukiwania aplikacji</string>
     <string name="drawer_search_summary">Pasek wyszukiwania u góry szuflady aplikacji</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_title">Automatyczna klawiatura</string>
+    <string name="pref_auto_keyboard_summary">Rozpocznij wyszukiwanie po rozwinięciu szuflady</string>
     <!-- AppInfo -->
     <string name="app_info_source">Źródło</string>
     <string name="app_info_source_system">System</string>
@@ -166,7 +166,7 @@
     <string name="icon_pack_title">Pakiet ikon</string>
     <string name="icon_pack_default_label">Domyślny</string>
     <string name="icon_pack_add">Zainstaluj więcej</string>
-    <string name="icon_pack_no_market">Brak dostępnego sklepu aplikacji</string>
+    <string name="icon_pack_no_market">Nie jest dostępny sklep z aplikacjami</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">W skrócie</string>
     <string name="show_quickspace_summary">Pokaż w górnej części ekranu głównego</string>
@@ -179,7 +179,7 @@
         <item>Najlepszy system wszechczasów.</item>
         <item>Przywitaj się z nami na Telegramie</item>
         <item>Dotknij tutaj, aby rozpocząć</item>
-        <item>Uwielbiamy Cię tysiąckrotnie</item>
+        <item>Uwielbiamy Cię!</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Dzień dobry.</string>
@@ -197,8 +197,8 @@
     <string name="quickspace_now_playing_title">Teraz odtwarzane</string>
     <string name="quickspace_now_playing_summary">Pokaż odtwarzany utwór</string>
     <!-- Quickspace alternative view -->
-    <string name="quickspace_alternate_style_title">Styl minimalistyczny</string>
-    <string name="quickspace_alternate_style_summary">Przełącz na styl nowoczesny</string>
+    <string name="quickspace_alternate_style_title">Styl rozszerzony</string>
+    <string name="quickspace_alternate_style_summary">Przełącz na styl rozszerzony</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Losowe wiadomości</string>
     <string name="quickspace_psa_summary">Ożyw swojego towarzysza losowymi wiadomościami</string>
@@ -314,7 +314,7 @@
         <item>Skoncentruj się na swoich zadaniach</item>
         <item>Ile zrzutów ekranu robisz?</item>
         <item>Spersonalizuj swój system z crDroid</item>
-        <item>Szerz miłość nie spustoszenie</item>
+        <item>Szerz miłość, nie spustoszenie</item>
         <item>Nie rozpoczęliśmy ognia!</item>
         <item>Czas na dobrą muzykę</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C GŁÓWNY</item>
@@ -322,7 +322,7 @@
         <item>Pamiętaj the Lineage of the Unicorn</item>
         <item>Ciesz się wydłużonym czasem baterii</item>
         <item>Zaczynamy od początku</item>
-        <item>Uwielbiamy Cię tysiąckrotnie</item>
+        <item>Uwielbiamy Cię!</item>
         <item>Pyszny nawet bez Sushi</item>
         <item>Zrób dziś coś miłego</item>
         <item>To najlepsze Pixel Experience, prawda?</item>
@@ -353,7 +353,7 @@
     <string name="quick_event_weather_clouds">Pochmurno</string>
     <string name="quick_event_weather_rain">Deszczowo</string>
     <string name="quick_event_weather_clear">Słonecznie</string>
-    <string name="quick_event_weather_storm">Burza</string>
+    <string name="quick_event_weather_storm">Burzowo</string>
     <string name="quick_event_weather_snow">Śnieżnie</string>
     <string name="quick_event_weather_wind">Wietrznie</string>
     <string name="quick_event_weather_mist">Mgliście</string>
