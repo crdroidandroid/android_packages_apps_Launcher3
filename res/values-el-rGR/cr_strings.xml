@@ -52,6 +52,9 @@
     <string name="msg_minus_one_on_left">Όταν σύρετε προς τα αριστερά από την κύρια αρχική οθόνη</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Όταν σύρετε προς τα δεξιά από την κύρια Αρχική οθόνη</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Θεματικά εικονίδια</string>
+    <string name="pref_themed_icons_summary">Ακολουθήστε τα θεματικά εικονίδια που χρησιμοποιούνται στην αρχική οθόνη</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Κρυφές &amp; Προστατευόμενες εφαρμογές</string>
     <string name="trust_apps_auth_manager">Ξεκλειδώστε για να διαχειριστείτε τις κρυφές και προστατευόμενες εφαρμογές</string>
@@ -71,6 +74,17 @@
     <string name="paused_apps_dialog_title">Η εφαρμογή τέθηκε σε παύση</string>
     <string name="paused_apps_dialog_message">%1$s τέθηκε απευθείας σε παύση από τον εκκινητή</string>
     <string name="paused_apps_drop_target_label">Παύση εφαρμογής</string>
+    <string name="work_apps_paused_title_custom">Work apps are off</string>
+    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Επανεκκίνηση</string>
+    <string name="pref_restart_summary">Επανεκκινήστε τον launcher χειροκίνητα για να εφαρμόσετε οποιεσδήποτε ρυθμίσεις σε εκκρεμότητα</string>
+    <string name="restarting_launcher">Επανεκκίνηση του launcher...</string>
+    <string name="restarting_launcher_changes">Επανεκκίνηση του launcher για την εφαρμογή αλλαγών...</string>
+    <string name="updating_launcher_components">Επανεκκίνηση του launcher για ενημέρωση των στοιχείων του launcher...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Διπλό πάτημα για ύπνο</string>
     <string name="pref_sleep_gesture_summary">Πατήστε δύο φορές σε κενό χώρο για απενεργοποίηση της οθόνης</string>
@@ -91,6 +105,8 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Χρήση γραμμής εργασιών</string>
     <string name="pref_allow_phone_taskbar_summary">Για άνοιγμα και εναλλαγή εφαρμογών οπουδήποτε</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Ύψος σειράς</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Αναζήτηση</string>
     <string name="label_lens">Google Lens</string>
@@ -119,8 +135,6 @@
     <string name="show_statusbar_title">Γραμμή Κατάστασης</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">Πάνω σκιά</string>
-    <!-- Row Height -->
-    <string name="row_height_title">Ύψος σειράς</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Διαθέσιμο | %2$s Σύνολο</string>
     <string name="recents_meminfo_title">Πληροφορίες μνήμης</string>
@@ -131,11 +145,17 @@
     <string name="recents_screenshot_title">Στιγμιότυπο οθόνης</string>
     <string name="recents_clear_all_title">Διαγραφή όλων</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Ανακινήστε το τηλέφωνο για να εκκαθαρίσετε όλες τις εργασίες</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Θεματικά εικονίδια</string>
-    <string name="pref_themed_icons_summary">Ακολουθήστε τα θεματικά εικονίδια που χρησιμοποιούνται στην αρχική οθόνη</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Να επιτρέπονται σύντομα parallax</string>
+    <string name="short_parallax_summary">Ενεργοποιήστε το εφέ κύλισης πλήρους ταπετσαρίας σε μικρότερο αριθμό σελίδων αντί να περικόψετε την ταπετσαρία</string>
+    <string name="single_page_center_title">Κέντρο μιας σελίδας</string>
+    <string name="single_page_center_summary">Κεντράρισμα ταπετσαρίας αν χρησιμοποιείτε μόνο μια σελίδα</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Γραμμή αναζήτησης εφαρμογών</string>
+    <string name="drawer_search_summary">Γραμμή αναζήτησης πάνω από το συρτάρι εφαρμογών</string>
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
     <string name="app_info_source">Πηγή</string>
     <string name="app_info_source_system">Σύστημα</string>
@@ -147,20 +167,6 @@
     <string name="icon_pack_default_label">Προεπιλογή</string>
     <string name="icon_pack_add">Εγκαταστήστε περισσότερα</string>
     <string name="icon_pack_no_market">Δεν υπάρχει κανένα διαθέσιμο κατάστημα εφαρμογών</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Να επιτρέπονται σύντομα parallax</string>
-    <string name="short_parallax_summary">Ενεργοποιήστε το εφέ κύλισης πλήρους ταπετσαρίας σε μικρότερο αριθμό σελίδων αντί να περικόψετε την ταπετσαρία</string>
-    <string name="single_page_center_title">Κέντρο μιας σελίδας</string>
-    <string name="single_page_center_summary">Κεντράρισμα ταπετσαρίας αν χρησιμοποιείτε μόνο μια σελίδα</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Γραμμή αναζήτησης εφαρμογών</string>
-    <string name="drawer_search_summary">Γραμμή αναζήτησης πάνω από το συρτάρι εφαρμογών</string>
-    <!-- Restart launcher -->
-    <string name="pref_restart_title">Επανεκκίνηση</string>
-    <string name="pref_restart_summary">Επανεκκινήστε τον launcher χειροκίνητα για να εφαρμόσετε οποιεσδήποτε ρυθμίσεις σε εκκρεμότητα</string>
-    <string name="restarting_launcher">Επανεκκίνηση του launcher...</string>
-    <string name="restarting_launcher_changes">Επανεκκίνηση του launcher για την εφαρμογή αλλαγών...</string>
-    <string name="updating_launcher_components">Επανεκκίνηση του launcher για ενημέρωση των στοιχείων του launcher...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Με μια Ματιά</string>
     <string name="show_quickspace_summary">Εμφάνιση στο επάνω μέρος της αρχικής σας οθόνης</string>
