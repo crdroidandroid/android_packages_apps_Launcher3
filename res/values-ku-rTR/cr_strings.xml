@@ -52,6 +52,9 @@
     <string name="msg_minus_one_on_left">Gava ku hûn ji ekrana malê ya sereke rast bişopînin</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Gava ku hûn ji dîmendera malê ya sereke çepê bizivirînin</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Îkonên Mijara</string>
+    <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Veşartî &amp; Serlêdanên parastî</string>
     <string name="trust_apps_auth_manager">Ji bo birêvebirina sepanên veşartî û parastî vekin</string>
@@ -71,6 +74,17 @@
     <string name="paused_apps_dialog_title">App paused</string>
     <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
     <string name="paused_apps_drop_target_label">Pause app</string>
+    <string name="work_apps_paused_title_custom">Work apps are off</string>
+    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Restart</string>
+    <string name="pref_restart_summary">Restart the launcher manually to apply any pending settings</string>
+    <string name="restarting_launcher">Restarting launcher...</string>
+    <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
+    <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">دووانەکرتە بۆ کوژانەوە</string>
     <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
@@ -91,6 +105,8 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Tabloya peywirê bikar bînin</string>
     <string name="pref_allow_phone_taskbar_summary">Ji bo vekirina û guheztina sepanan li her deverê</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Bilindahiya rêzê</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Gerr</string>
     <string name="label_lens">Google Lens</string>
@@ -119,8 +135,6 @@
     <string name="show_statusbar_title">Bara Rewşê</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">Siya jorîn</string>
-    <!-- Row Height -->
-    <string name="row_height_title">Bilindahiya rêzê</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s available | %2$s</string>
     <string name="recents_meminfo_title">Agahdariya bîranînê</string>
@@ -131,11 +145,17 @@
     <string name="recents_screenshot_title">Screenshot</string>
     <string name="recents_clear_all_title">Hemî paqij bike</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Shake phone to clear all tasks</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Îkonên Mijara</string>
-    <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Allow short parallax</string>
+    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
+    <string name="single_page_center_title">Single page center</string>
+    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">App search bar</string>
+    <string name="drawer_search_summary">Search bar on top of the app drawer</string>
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
     <string name="app_info_source">Kanî</string>
     <string name="app_info_source_system">Sîstem</string>
@@ -147,20 +167,6 @@
     <string name="icon_pack_default_label">Destçûnî</string>
     <string name="icon_pack_add">Zêdetir saz bikin</string>
     <string name="icon_pack_no_market">Dikana sepanê ya berdest tune</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Allow short parallax</string>
-    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
-    <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar</string>
-    <string name="drawer_search_summary">Search bar on top of the app drawer</string>
-    <!-- Restart launcher -->
-    <string name="pref_restart_title">Restart</string>
-    <string name="pref_restart_summary">Restart the launcher manually to apply any pending settings</string>
-    <string name="restarting_launcher">Restarting launcher...</string>
-    <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
-    <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">At A Glance</string>
     <string name="show_quickspace_summary">Show at the top of your home screen</string>
