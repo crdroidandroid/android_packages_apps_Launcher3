@@ -52,6 +52,9 @@
     <string name="msg_minus_one_on_left">When you swipe left from main Home screen</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">When you swipe right from main Home screen</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">آیکن های تم</string>
+    <string name="pref_themed_icons_summary">نمادهای مضمون مورد استفاده در صفحه اصلی را دنبال کنید</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">برنامه‌های پنهان &amp; محافظت شده</string>
     <string name="trust_apps_auth_manager">برای مدیریت برنامه‌های پنهان و محافظت شده قفل را باز کنید</string>
@@ -71,6 +74,17 @@
     <string name="paused_apps_dialog_title">برنامه متوقف شده است</string>
     <string name="paused_apps_dialog_message">%1$s مستقیماً از راه‌انداز متوقف شد</string>
     <string name="paused_apps_drop_target_label">مکث برنامه</string>
+    <string name="work_apps_paused_title_custom">Work apps are off</string>
+    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">راه اندازی مجدد</string>
+    <string name="pref_restart_summary">ریست کردن صفحه اصلی برای اعمال تنظیمات اعمال نشده</string>
+    <string name="restarting_launcher">راه اندازی مجدد لانچر...</string>
+    <string name="restarting_launcher_changes">راه‌اندازی مجدد لانچر برای اعمال تغییرات...</string>
+    <string name="updating_launcher_components">راه‌اندازی مجدد برای به‌روزرسانی مؤلفه‌های راه‌انداز...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">برای حالت خواب دوبار ضربه بزنید</string>
     <string name="pref_sleep_gesture_summary">برای خاموش کردن صفحه نمایش روی فضای خالی صفحه دوبار ضربه بزنید</string>
@@ -91,6 +105,8 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">استفاده از نوار وظیفه</string>
     <string name="pref_allow_phone_taskbar_summary">برای باز کردن و جابجایی برنامه ها در هر کجا</string>
+    <!-- Row Height -->
+    <string name="row_height_title">ارتفاع ردیف</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">جستجو</string>
     <string name="label_lens">لنز Google</string>
@@ -119,8 +135,6 @@
     <string name="show_statusbar_title">نوار وضعیت</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">سایه بالا</string>
-    <!-- Row Height -->
-    <string name="row_height_title">ارتفاع ردیف</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s در دسترس | %2$s</string>
     <string name="recents_meminfo_title">اطلاعات حافظه</string>
@@ -131,11 +145,17 @@
     <string name="recents_screenshot_title">عکس گرفتن از صفحه</string>
     <string name="recents_clear_all_title">پاک کردن همه موارد</string>
     <string name="recents_lens_title">لنز</string>
-    <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">برای پاک کردن همه کارها، تلفن را تکان دهید</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">آیکن های تم</string>
-    <string name="pref_themed_icons_summary">نمادهای مضمون مورد استفاده در صفحه اصلی را دنبال کنید</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">منظر کوتاه را مجاز کنید</string>
+    <string name="short_parallax_summary">به جای برش دادن کاغذدیواری، جلوه اسکرول کامل تصویر زمینه را در تعداد صفحات کمتری فعال کنید</string>
+    <string name="single_page_center_title">تک صفحه مرکز</string>
+    <string name="single_page_center_summary">تصویر زمینه در مرکز اگر شما فقط یک صفحه دارید</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">برنامه نوار جستجو</string>
+    <string name="drawer_search_summary">نوار جستجو در بالای منو فهرست برنامه ها</string>
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
     <string name="app_info_source">منبع</string>
     <string name="app_info_source_system">سیستم</string>
@@ -147,20 +167,6 @@
     <string name="icon_pack_default_label">پیش‌فرض</string>
     <string name="icon_pack_add">نصب بیشتر</string>
     <string name="icon_pack_no_market">هیچ فروشگاه برنامه در دسترس نیست</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">منظر کوتاه را مجاز کنید</string>
-    <string name="short_parallax_summary">به جای برش دادن کاغذدیواری، جلوه اسکرول کامل تصویر زمینه را در تعداد صفحات کمتری فعال کنید</string>
-    <string name="single_page_center_title">تک صفحه مرکز</string>
-    <string name="single_page_center_summary">تصویر زمینه در مرکز اگر شما فقط یک صفحه دارید</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">برنامه نوار جستجو</string>
-    <string name="drawer_search_summary">نوار جستجو در بالای منو فهرست برنامه ها</string>
-    <!-- Restart launcher -->
-    <string name="pref_restart_title">راه اندازی مجدد</string>
-    <string name="pref_restart_summary">ریست کردن صفحه اصلی برای اعمال تنظیمات اعمال نشده</string>
-    <string name="restarting_launcher">راه اندازی مجدد لانچر...</string>
-    <string name="restarting_launcher_changes">راه‌اندازی مجدد لانچر برای اعمال تغییرات...</string>
-    <string name="updating_launcher_components">راه‌اندازی مجدد برای به‌روزرسانی مؤلفه‌های راه‌انداز...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">در یک دید</string>
     <string name="show_quickspace_summary">در بالای صفحه اصلی نمایش داده شود</string>
@@ -274,17 +280,17 @@
         <item>سفر شما حتی پس از غروب خورشید ادامه دارد.</item>
         <item>بگذار شب بوم نقاشی تو باشد. آن را با رویاها نقاشی کنید</item>
         <item>در سکون این عصر، آرامش درونی خود را بیاب.</item>
-        <item>Stars shine brightest in the darkest hours.</item>
-        <item>Dream big, even in the late hours of the day.</item>
-        <item>Your life is a story waiting to be written.</item>
-        <item>It\'s time for reflection and renewal.</item>
-        <item>Late night thoughts can lead to early morning revelations.</item>
-        <item>Find joy in the stillness of this evening.</item>
-        <item>The night sky is a vast canvas of dreams.</item>
-        <item>Your potential knows no bedtime; pursue your passions.</item>
-        <item>Stay hopeful, even in the darkest hours.</item>
-        <item>In the midst of chaos, find your inner calm.</item>
-        <item>Stay positive, work hard, make it happen.</item>
+        <item>ستارگان در تاریک ترین ساعات درخشان ترین می درخشند.</item>
+        <item>حتی در ساعات پایانی روز رویای بزرگ داشته باشید.</item>
+        <item>زندگی شما داستانی است که منتظر نوشته شدن است.</item>
+        <item>زمان تأمل و تجدید فرا رسیده است.</item>
+        <item>افکار آخر شب می توانند به افشاگری های صبح زود منجر شوند.</item>
+        <item>شادی را در سکون این غروب بیابید.</item>
+        <item>آسمان شب بوم وسیعی از رویاهاست.</item>
+        <item>پتانسیل شما زمان خواب را نمی شناسد. به دنبال علایق خود باشید</item>
+        <item>حتی در تاریک ترین ساعات امیدوار باشید.</item>
+        <item>در میان هرج و مرج، آرامش درونی خود را پیدا کنید.</item>
+        <item>مثبت بمانید، سخت کار کنید، آن را محقق کنید.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
         <item>Nights are the quiet whispers of opportunity.</item>
