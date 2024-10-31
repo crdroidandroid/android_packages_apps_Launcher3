@@ -52,6 +52,9 @@
     <string name="msg_minus_one_on_left">Când glisați stânga din ecranul principal de pornire</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Când glisați dreapta din ecranul principal de pornire</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Pictograme cu aspect</string>
+    <string name="pref_themed_icons_summary">Urmărește pictogramele tematice utilizate pe ecranul de pornire</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Aplicații ascunse &amp; protejate</string>
     <string name="trust_apps_auth_manager">Deblochează pentru a gestiona aplicațiile ascunse și protejate</string>
@@ -71,6 +74,17 @@
     <string name="paused_apps_dialog_title">Aplicație întreruptă</string>
     <string name="paused_apps_dialog_message">%1$s a fost întrerupt direct din lansator</string>
     <string name="paused_apps_drop_target_label">Întrerupeți aplicația</string>
+    <string name="work_apps_paused_title_custom">Work apps are off</string>
+    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Restart launcher -->
+    <string name="pref_restart_title">Repornire</string>
+    <string name="pref_restart_summary">Repornește lansatorul manual pentru a aplica orice setări în așteptare</string>
+    <string name="restarting_launcher">Se repornește lansatorul...</string>
+    <string name="restarting_launcher_changes">Se repornește lansatorul pentru a aplica modificările...</string>
+    <string name="updating_launcher_components">Se repornește lansatorul pentru a actualiza componentele lansatorului...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Dublă atingere pentru oprire ecran</string>
     <string name="pref_sleep_gesture_summary">Atingeți de două ori spațiul gol pentru oprirea ecranului</string>
@@ -91,6 +105,8 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Folosește bara de activități</string>
     <string name="pref_allow_phone_taskbar_summary">Pentru deschiderea și schimbarea aplicațiilor oriunde</string>
+    <!-- Row Height -->
+    <string name="row_height_title">Înălțimea rândului</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Căutare</string>
     <string name="label_lens">Google Lens</string>
@@ -119,8 +135,6 @@
     <string name="show_statusbar_title">Bara de stare</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">Umbra de sus</string>
-    <!-- Row Height -->
-    <string name="row_height_title">Înălțimea rândului</string>
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Disponibil | %2$s Total</string>
     <string name="recents_meminfo_title">Informații memorie</string>
@@ -131,11 +145,17 @@
     <string name="recents_screenshot_title">Captură ecran</string>
     <string name="recents_clear_all_title">Stergeti toate</string>
     <string name="recents_lens_title">Obiectiv</string>
-    <!-- Shake Clear Recents -->
-    <string name="recents_shake_clear_all_title">Scuturați telefonul pentru a șterge toate taskurile</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Pictograme cu aspect</string>
-    <string name="pref_themed_icons_summary">Urmărește pictogramele tematice utilizate pe ecranul de pornire</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Permite parallax scurt</string>
+    <string name="short_parallax_summary">Activează efectul complet de defilare a imaginii de fundal pe un număr mic de pagini în loc să fie decupată imaginea de fundal</string>
+    <string name="single_page_center_title">Centrare pagină unică</string>
+    <string name="single_page_center_summary">Se centrează imaginea de fundal dacă se utilizează doar o singură pagină</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Bara de căutare aplicaţii</string>
+    <string name="drawer_search_summary">Bara de căutare în partea de sus a sertarului de aplicații</string>
+    <!-- Auto keyboard -->
+    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
     <string name="app_info_source">Sursa</string>
     <string name="app_info_source_system">Sistem</string>
@@ -147,20 +167,6 @@
     <string name="icon_pack_default_label">Prestabilit</string>
     <string name="icon_pack_add">Instalează mai multe</string>
     <string name="icon_pack_no_market">Nu există niciun magazin de aplicații disponibil</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Permite parallax scurt</string>
-    <string name="short_parallax_summary">Activează efectul complet de defilare a imaginii de fundal pe un număr mic de pagini în loc să fie decupată imaginea de fundal</string>
-    <string name="single_page_center_title">Centrare pagină unică</string>
-    <string name="single_page_center_summary">Se centrează imaginea de fundal dacă se utilizează doar o singură pagină</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Bara de căutare aplicaţii</string>
-    <string name="drawer_search_summary">Bara de căutare în partea de sus a sertarului de aplicații</string>
-    <!-- Restart launcher -->
-    <string name="pref_restart_title">Repornire</string>
-    <string name="pref_restart_summary">Repornește lansatorul manual pentru a aplica orice setări în așteptare</string>
-    <string name="restarting_launcher">Se repornește lansatorul...</string>
-    <string name="restarting_launcher_changes">Se repornește lansatorul pentru a aplica modificările...</string>
-    <string name="updating_launcher_components">Se repornește lansatorul pentru a actualiza componentele lansatorului...</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Pe scurt</string>
     <string name="show_quickspace_summary">O copie a widgetului Google dintr-o privire</string>
