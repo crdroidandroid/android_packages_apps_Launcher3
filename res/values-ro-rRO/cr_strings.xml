@@ -74,11 +74,11 @@
     <string name="paused_apps_dialog_title">Aplicație întreruptă</string>
     <string name="paused_apps_dialog_message">%1$s a fost întrerupt direct din lansator</string>
     <string name="paused_apps_drop_target_label">Întrerupeți aplicația</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">Aplicațiile de serviciu sunt dezactivate</string>
+    <string name="work_apps_pause_btn_text_custom">Dezactivați aplicațiile de serviciu</string>
+    <string name="work_apps_enable_btn_text_custom">Activează aplicațiile pentru servici</string>
+    <string name="work_apps_paused_info_body_custom">Aplicațiile pentru lucru nu pot să vă trimită notificări, să folosească bateria sau să vă acceseze locația</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Aplicațiile dvs. de serviciu nu pot primi apeluri telefonice sau mesaje text, nu pot trimite notificări, nu pot utiliza bateria sau nu pot accesa locația dvs</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Repornire</string>
     <string name="pref_restart_summary">Repornește lansatorul manual pentru a aplica orice setări în așteptare</string>
@@ -154,8 +154,8 @@
     <string name="drawer_search_title">Bara de căutare aplicaţii</string>
     <string name="drawer_search_summary">Bara de căutare în partea de sus a sertarului de aplicații</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_title">Automat tastatura</string>
+    <string name="pref_auto_keyboard_summary">Începe căutarea când sertarul este extins</string>
     <!-- AppInfo -->
     <string name="app_info_source">Sursa</string>
     <string name="app_info_source_system">Sistem</string>
