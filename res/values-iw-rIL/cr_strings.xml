@@ -74,11 +74,11 @@
     <string name="paused_apps_dialog_title">היישום מושהה</string>
     <string name="paused_apps_dialog_message">%1$s הושהה ישירות מהמשגר</string>
     <string name="paused_apps_drop_target_label">השהיית היישום</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">ייישומים של העבודה מכובים</string>
+    <string name="work_apps_pause_btn_text_custom">כיבוי יישומים של העבודה</string>
+    <string name="work_apps_enable_btn_text_custom">הפעלת יישומים של העבודה</string>
+    <string name="work_apps_paused_info_body_custom">יישומי העבודה שלך לא יכולים להציג לך התראות, להשתמש בסוללה או לקבל גישה למיקומך</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">יישומי העבודה שלך לא יכולים לקבל שיחות טלפון או הודעות מלל, להציג לך התראות, להשתמש בסוללה או לקבל גישה למיקומך</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">הפעלה מחדש</string>
     <string name="pref_restart_summary">הפעלה מחדש של משגר היישומים (לאונצ\'ר) להחלת הגדרות ששונו</string>
@@ -124,7 +124,7 @@
     <!-- Background opacity -->
     <string name="background_opacity_title">שקיפות הרקע</string>
     <!-- Stroke -->
-    <string name="stroke_width_title">Stroke</string>
+    <string name="stroke_width_title">עובי הקו</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">גלילת הטפט</string>
     <string name="allow_wallpaper_scrolling_summary">אפקט גלילה לטפט עבור מסכים מרובים</string>
@@ -154,8 +154,8 @@
     <string name="drawer_search_title">סרגל חיפוש יישומים</string>
     <string name="drawer_search_summary">הצגת סרגל חיפוש בראש מגירת היישומים</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_title">לוח מקשים אוטומטי</string>
+    <string name="pref_auto_keyboard_summary">התחלת חיפוש כשמגירת היישומים פתוחה</string>
     <!-- AppInfo -->
     <string name="app_info_source">מקור</string>
     <string name="app_info_source_system">מערכת</string>
