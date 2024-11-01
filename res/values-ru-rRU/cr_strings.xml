@@ -86,7 +86,7 @@
     <string name="restarting_launcher_changes">Перезапуск главного экрана для применения изменений...</string>
     <string name="updating_launcher_components">Перезапуск главного экрана для обновления компонентов...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Выключение двойным нажатием</string>
+    <string name="pref_sleep_gesture_title">Выкл. двойным нажатием</string>
     <string name="pref_sleep_gesture_summary">Дважды коснитесь пустого места экрана для его выключения</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
@@ -115,7 +115,7 @@
     <string name="dock_music_search_summary">Поиск музыки при нажатии на микрофон</string>
     <string name="dock_search_title">Поиск Google</string>
     <string name="dock_search_summary">Показывать строку поиска снизу</string>
-    <string name="dock_theme_title">Тематические значки</string>
+    <string name="dock_theme_title">Значки из темы</string>
     <string name="dock_theme_summary">Для панели поиска использовать значки из темы</string>
     <string name="search_radius_title">Радиус закругления углов</string>
     <!-- Hotseat Background -->
@@ -127,10 +127,10 @@
     <string name="stroke_width_title">Окантовка</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Прокрутка обоев</string>
-    <string name="allow_wallpaper_scrolling_summary">Прокрутка обоев для нескольких экранов</string>
+    <string name="allow_wallpaper_scrolling_summary">Эффект прокрутки обоев для нескольких экранов</string>
     <!-- Wallpaper zooming -->
     <string name="allow_wallpaper_zooming">Масштабирование обоев</string>
-    <string name="allow_wallpaper_zooming_summary">Увеличение или уменьшение обоев в меню приложений и в списке недавних приложений</string>
+    <string name="allow_wallpaper_zooming_summary">Увеличение или уменьшение обоев в меню приложений или в списке недавних приложений</string>
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Строка состояния</string>
     <!-- Top shadow -->
@@ -147,7 +147,7 @@
     <string name="recents_lens_title">Объектив</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Разрешить короткое смещение</string>
-    <string name="short_parallax_summary">Включить полную прокрутку обоев, на малом количестве страниц, вместо обрезки обоев</string>
+    <string name="short_parallax_summary">Включить эффект полной прокрутки обоев на меньшем количестве страниц вместо обрезки обоев</string>
     <string name="single_page_center_title">Центр, если одна страница</string>
     <string name="single_page_center_summary">Центрировать обои, если используется только одна страница</string>
     <!-- App drawer searchbar -->
@@ -195,7 +195,7 @@
     <string name="qe_now_playing_by">Автор</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Сейчас играет</string>
-    <string name="quickspace_now_playing_summary">Показать песню, которая сейчас звучит</string>
+    <string name="quickspace_now_playing_summary">Показать песню, которая проигрывается</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">Расширенный стиль</string>
     <string name="quickspace_alternate_style_summary">Переключиться на расширенный стиль</string>
@@ -307,7 +307,7 @@
         <item>Ваше отношение определяет ваше направление</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Неведение - благо</item>
+        <item>Невежество — блаженство</item>
         <item>Не пора ли уже прошить ещё одно обновление?</item>
         <item>Цените мир</item>
         <item>О, привет, что случилось?</item>
@@ -366,6 +366,6 @@
     <string name="drawer_scrollbar_title">Полоса прокрутки</string>
     <string name="drawer_scrollbar_summary">Полоса прокрутки сбоку меню приложений</string>
     <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Принудительно тематические значки</string>
+    <string name="force_monochrome_icons_title">Принудительно значки из темы</string>
     <string name="force_monochrome_icons_summary">Создание монохромных значков, если они не поддерживаются приложением (требуется переключение тематических значков)</string>
 </resources>
