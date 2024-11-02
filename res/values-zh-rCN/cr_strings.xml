@@ -74,10 +74,10 @@
     <string name="paused_apps_dialog_title">应用暂停</string>
     <string name="paused_apps_dialog_message">%1$s 直接从启动器暂停</string>
     <string name="paused_apps_drop_target_label">暂停应用</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">工作应用已关闭</string>
+    <string name="work_apps_pause_btn_text_custom">关闭工作应用</string>
+    <string name="work_apps_enable_btn_text_custom">开启工作应用</string>
+    <string name="work_apps_paused_info_body_custom">工作应用无法发送通知、获取耗电和访问位置信息</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">重新启动</string>
