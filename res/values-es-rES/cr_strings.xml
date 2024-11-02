@@ -74,11 +74,11 @@
     <string name="paused_apps_dialog_title">Aplicación pausada</string>
     <string name="paused_apps_dialog_message">Pausada por %1$s directamente desde el lanzador</string>
     <string name="paused_apps_drop_target_label">Pausar aplicación</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">Las aplicaciones de trabajo están desactivadas</string>
+    <string name="work_apps_pause_btn_text_custom">Desactivar las aplicaciones de trabajo</string>
+    <string name="work_apps_enable_btn_text_custom">Activar aplicaciones de trabajo</string>
+    <string name="work_apps_paused_info_body_custom">Tus aplicaciones de trabajo no pueden enviar notificaciones, usar la batería ni acceder a la ubicación</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Tus aplicaciones de trabajo no pueden recibir llamadas telefónicas o mensajes de texto, enviar notificaciones, usar la batería o acceder a la ubicación</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Reiniciar</string>
     <string name="pref_restart_summary">Reinicia el lanzador manualmente para aplicar cualquier configuración pendiente</string>
@@ -154,8 +154,8 @@
     <string name="drawer_search_title">Barra de búsqueda</string>
     <string name="drawer_search_summary">Barra de búsqueda encima del cajón de aplicaciones</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_title">Teclado automático</string>
+    <string name="pref_auto_keyboard_summary">Comenzar la búsqueda cuando el cajón se expanda</string>
     <!-- AppInfo -->
     <string name="app_info_source">Fuente</string>
     <string name="app_info_source_system">Sistema</string>
