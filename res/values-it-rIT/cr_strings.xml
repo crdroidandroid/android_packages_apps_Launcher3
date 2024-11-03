@@ -74,11 +74,11 @@
     <string name="paused_apps_dialog_title">App in pausa</string>
     <string name="paused_apps_dialog_message">%1$s è stata messa in pausa dal launcher</string>
     <string name="paused_apps_drop_target_label">Pausa app</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">Le app di lavoro sono disattivate</string>
+    <string name="work_apps_pause_btn_text_custom">Disattiva app di lavoro</string>
+    <string name="work_apps_enable_btn_text_custom">Attiva app di lavoro</string>
+    <string name="work_apps_paused_info_body_custom">Le app di lavoro non possono inviarti notifiche, usare la batteria o accedere alla tua posizione</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Le tue app di lavoro non possono ricevere chiamate o messaggi di testo, inviarti notifiche, utilizzare la batteria o accedere alla tua posizione</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Riavvia</string>
     <string name="pref_restart_summary">Riavvia manualmente il launcher per applicare tutte le impostazioni in sospeso</string>
@@ -154,8 +154,8 @@
     <string name="drawer_search_title">Barra di ricerca delle applicazioni</string>
     <string name="drawer_search_summary">Barra di ricerca all\'inizio del cassetto delle applicazioni</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_title">Tastiera auto</string>
+    <string name="pref_auto_keyboard_summary">Inizia la ricerca quando il drawer viene espanso</string>
     <!-- AppInfo -->
     <string name="app_info_source">Fonte</string>
     <string name="app_info_source_system">Sistema</string>
