@@ -74,9 +74,9 @@
     <string name="paused_apps_dialog_title">تم إيقاف التطبيق مؤقتًا</string>
     <string name="paused_apps_dialog_message">تم إيقاف %1$s بشكل مباشر من المشغل</string>
     <string name="paused_apps_drop_target_label">إيقاف مؤقت للتطبيق</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_title_custom">تطبيقات العمل معطلة</string>
+    <string name="work_apps_pause_btn_text_custom">إيقاف تطبيقات العمل</string>
+    <string name="work_apps_enable_btn_text_custom">تفعيل تطبيقات العمل</string>
     <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
     <!-- Restart launcher -->
