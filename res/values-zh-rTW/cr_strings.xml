@@ -74,11 +74,11 @@
     <string name="paused_apps_dialog_title">已暫停應用程式</string>
     <string name="paused_apps_dialog_message">%1$s 是在主畫面上被暫停的</string>
     <string name="paused_apps_drop_target_label">暫停應用程式</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">工作模式中的應用程式皆已關閉</string>
+    <string name="work_apps_pause_btn_text_custom">關閉工作模式中的應用程式</string>
+    <string name="work_apps_enable_btn_text_custom">開啟工作模式中的應用程式</string>
+    <string name="work_apps_paused_info_body_custom">工作模式中的應用程式無法傳送通知、讀取電池電量也無法存取位置資訊</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">工作模式中的應用程式無法接收來電及簡訊、傳送通知、讀取電池電量也無法存取位置資訊</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">重新啟動</string>
     <string name="pref_restart_summary">重新啟動主畫面來套用設定</string>
@@ -154,8 +154,8 @@
     <string name="drawer_search_title">搜尋列</string>
     <string name="drawer_search_summary">應用程式清單頂部的搜尋列</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_title">自動開啟鍵盤</string>
+    <string name="pref_auto_keyboard_summary">展開應用程式列表時開始搜尋</string>
     <!-- AppInfo -->
     <string name="app_info_source">來源</string>
     <string name="app_info_source_system">系統</string>
