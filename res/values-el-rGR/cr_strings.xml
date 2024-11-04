@@ -74,11 +74,11 @@
     <string name="paused_apps_dialog_title">Η εφαρμογή τέθηκε σε παύση</string>
     <string name="paused_apps_dialog_message">%1$s τέθηκε απευθείας σε παύση από τον εκκινητή</string>
     <string name="paused_apps_drop_target_label">Παύση εφαρμογής</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">Οι εφαρμογές εργασίας είναι απενεργοποιημένες</string>
+    <string name="work_apps_pause_btn_text_custom">Απενεργοποίηση εφαρμογών εργασίας</string>
+    <string name="work_apps_enable_btn_text_custom">Ενεργοποίηση εφαρμογών εργασίας</string>
+    <string name="work_apps_paused_info_body_custom">Οι εφαρμογές εργασίας σας δεν μπορούν να σας στείλουν ειδοποιήσεις, να χρησιμοποιήσουν την μπαταρία σας ή να έχουν πρόσβαση στην τοποθεσία σας</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Οι εφαρμογές εργασίας σας δεν μπορούν να λαμβάνουν τηλεφωνικές κλήσεις ή μηνύματα κειμένου, να σας στέλνουν ειδοποιήσεις, να χρησιμοποιούν την μπαταρία σας ή να έχουν πρόσβαση στην τοποθεσία σας</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Επανεκκίνηση</string>
     <string name="pref_restart_summary">Επανεκκινήστε τον launcher χειροκίνητα για να εφαρμόσετε οποιεσδήποτε ρυθμίσεις σε εκκρεμότητα</string>
@@ -155,7 +155,7 @@
     <string name="drawer_search_summary">Γραμμή αναζήτησης πάνω από το συρτάρι εφαρμογών</string>
     <!-- Auto keyboard -->
     <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_summary">Εκκίνηση αναζήτησης όταν το συρτάρι επεκτείνεται</string>
     <!-- AppInfo -->
     <string name="app_info_source">Πηγή</string>
     <string name="app_info_source_system">Σύστημα</string>
