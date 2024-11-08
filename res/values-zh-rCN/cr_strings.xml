@@ -78,7 +78,7 @@
     <string name="work_apps_pause_btn_text_custom">关闭工作应用</string>
     <string name="work_apps_enable_btn_text_custom">开启工作应用</string>
     <string name="work_apps_paused_info_body_custom">工作应用无法发送通知、获取耗电和访问位置信息</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">您的工作应用无法接收电话或短信，向您发送通知，消耗电量或获取您的位置</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">重新启动</string>
     <string name="pref_restart_summary">手动重启启动器以应用未生效的设置</string>
@@ -154,8 +154,8 @@
     <string name="drawer_search_title">应用搜索栏</string>
     <string name="drawer_search_summary">抽屉顶部搜索栏</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_title">自动展开键盘</string>
+    <string name="pref_auto_keyboard_summary">当抽屉展开时开始搜索</string>
     <!-- AppInfo -->
     <string name="app_info_source">来源</string>
     <string name="app_info_source_system">系统</string>
