@@ -77,7 +77,7 @@
     <string name="work_apps_paused_title_custom">工作应用已关闭</string>
     <string name="work_apps_pause_btn_text_custom">关闭工作应用</string>
     <string name="work_apps_enable_btn_text_custom">开启工作应用</string>
-    <string name="work_apps_paused_info_body_custom">工作应用无法发送通知、获取耗电和访问位置信息</string>
+    <string name="work_apps_paused_info_body_custom">您的工作应用无法发送通知、获取耗电和访问位置信息</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">您的工作应用无法接收电话或短信，向您发送通知，消耗电量或获取您的位置</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">重新启动</string>
