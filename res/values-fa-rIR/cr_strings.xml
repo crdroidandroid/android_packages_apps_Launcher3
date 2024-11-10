@@ -74,11 +74,11 @@
     <string name="paused_apps_dialog_title">برنامه متوقف شده است</string>
     <string name="paused_apps_dialog_message">%1$s مستقیماً از راه‌انداز متوقف شد</string>
     <string name="paused_apps_drop_target_label">مکث برنامه</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">برنامه های کاری خاموش هستند</string>
+    <string name="work_apps_pause_btn_text_custom">خاموش کردن برنامه های کاری</string>
+    <string name="work_apps_enable_btn_text_custom">روشن کردن برنامه های کاری</string>
+    <string name="work_apps_paused_info_body_custom">برنامه های کاری شما نمی توانند برای شما اعلان ارسال کنند، از باتری شما استفاده کنند یا به مکان شما دسترسی داشته باشند</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">برنامه های کاری شما نمی توانند تماس های تلفنی یا پیام های متنی را دریافت کنند، برای شما اعلان ارسال کنند، از باتری شما استفاده کنند یا به مکان شما دسترسی داشته باشند</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">راه اندازی مجدد</string>
     <string name="pref_restart_summary">ریست کردن صفحه اصلی برای اعمال تنظیمات اعمال نشده</string>
@@ -154,8 +154,8 @@
     <string name="drawer_search_title">برنامه نوار جستجو</string>
     <string name="drawer_search_summary">نوار جستجو در بالای منو فهرست برنامه ها</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_title">صفحه کلید خودکار</string>
+    <string name="pref_auto_keyboard_summary">وقتی کشو باز شد، جستجو را شروع کنید</string>
     <!-- AppInfo -->
     <string name="app_info_source">منبع</string>
     <string name="app_info_source_system">سیستم</string>
@@ -224,7 +224,7 @@
         <item>فصل اول در ماجراجویی روزانه شما.</item>
         <item>بگذارید روال صبحگاهی شما سکوی پرتاب موفقیت باشد.</item>
         <item>طلوع خورشید یا نه، پتانسیل شما همیشه در حال افزایش است.</item>
-        <item>It\'s time for fresh ideas and bold actions.</item>
+        <item>زمان ایده های تازه و اقدامات جسورانه است.</item>
         <item>پرنده اولیه کرم را می گیرد، اما شما می توانید رویاهای خود را بگیرید.</item>
         <item>شجاعتِ دنبال کردنِ آرزوهای خود را پیدا کنید.</item>
         <item>برخیز و بدرخش، زیرا بزرگی در انتظار است.</item>
@@ -293,23 +293,23 @@
         <item>مثبت بمانید، سخت کار کنید، آن را محقق کنید.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Nights are the quiet whispers of opportunity.</item>
-        <item>In the stillness of the night, find your inner strength.</item>
-        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
-        <item>The world sleeps, but your potential is wide awake.</item>
-        <item>The night may be late, but your ambitions are timeless.</item>
-        <item>Stay curious, stay awake, and let nights guide you.</item>
-        <item>Find the courage to chase your dreams.</item>
-        <item>Great things never come from comfort zones.</item>
-        <item>You have the power to create your own destiny.</item>
-        <item>Happiness is a choice; choose it every day.</item>
-        <item>Life is what you make it, so make it count.</item>
-        <item>Stay focused, stay determined, stay unstoppable.</item>
-        <item>You are the author of your own story.</item>
-        <item>Strive for progress, not perfection.</item>
-        <item>Every day is a new beginning; make it a great one.</item>
-        <item>Inspire others by being your authentic self.</item>
-        <item>Your attitude determines your direction.</item>
+        <item>شب‌ها زمزمه‌های آرام فرصت‌ها هستند.</item>
+        <item>در سکون شب، نیروی درونی خود را بیاب.</item>
+        <item>تاریکی را در آغوش بگیرید، زیرا کلید رویاهای شما را در خود نگه می دارد.</item>
+        <item>دنیا خواب است، اما پتانسیل شما کاملاً بیدار است.</item>
+        <item>شب ممکن است دیر باشد، اما جاه طلبی های شما بی انتها است.</item>
+        <item>کنجکاو بمانید، بیدار بمانید و بگذارید شب ها شما را راهنمایی کنند.</item>
+        <item>شجاعت دنبال کردن رویاهایتان را پیدا کنید.</item>
+        <item>چیزهای بزرگ هرگز از مناطق راحت به دست نمی آیند.</item>
+        <item>شما این قدرت را دارید که سرنوشت خود را بسازید.</item>
+        <item>خوشبختی یک انتخاب است؛ هر روز آن را انتخاب کنید</item>
+        <item>زندگی همان چیزی است که شما آن را می سازید، پس آن را به حساب بیاورید.</item>
+        <item>متمرکز بمان، مصمم بمان، توقف ناپذیر بمان.</item>
+        <item>شما نویسنده داستان خودتان هستید.</item>
+        <item>برای پیشرفت تلاش کن نه کمال.</item>
+        <item>هر روز شروع جدیدی است؛ آن را عالی کنید</item>
+        <item>الهام بخش دیگران با خود واقعی خود باشید.</item>
+        <item>نگرش شما مسیر شما را تعیین می کند.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>نادیده بگیر تا شادروان شوی</item>
