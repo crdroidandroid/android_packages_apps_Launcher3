@@ -39,7 +39,7 @@
     <string name="dev_options_title">Opzioni sviluppatore</string>
     <string name="dev_options_summary">Abilita alcune funzioni nascoste a tuo rischio</string>
     <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Disposizione di blocco</string>
+    <string name="settings_lock_layout_title">Blocca disposizione</string>
     <string name="settings_lock_layout_summary_on">Non è possibile aggiungere, rimuovere e spostare icone e widget nella schermata home</string>
     <string name="settings_lock_layout_summary_off">È possibile aggiungere, rimuovere e spostare icone e widget nella schermata home</string>
     <string name="settings_edit_widgets_error">Non é possibile aggiungere widget alla schermata home</string>
@@ -148,7 +148,7 @@
     <!-- Parallax -->
     <string name="short_parallax_title">Consenti parallasse breve</string>
     <string name="short_parallax_summary">Abilita l\'effetto di scorrimento completo dello sfondo su un numero minore di pagine invece di ritagliare lo sfondo</string>
-    <string name="single_page_center_title">Centro singola pagina</string>
+    <string name="single_page_center_title">Centra singola pagina</string>
     <string name="single_page_center_summary">Centra lo sfondo se si utilizza solo una singola pagina</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Barra di ricerca delle applicazioni</string>
@@ -198,7 +198,7 @@
     <string name="quickspace_now_playing_summary">Mostra la canzone che stai riproducendo</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">Stile minimalista</string>
-    <string name="quickspace_alternate_style_summary">Passa allo stile moderno</string>
+    <string name="quickspace_alternate_style_summary">Passa allo stile esteso</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">Messaggi casuali</string>
     <string name="quickspace_psa_summary">Rendi il tuo compagno più vivace con messaggi casuali</string>
@@ -216,10 +216,10 @@
         <item>Ogni alba è un promemoria che puoi ricominciare di nuovo.</item>
         <item>Sveglia con scopo, conquista il giorno successivo.</item>
         <item>I vostri pensieri possono essere il fondamento di grandi realizzazioni.</item>
-        <item>Il mondo si risveglia, e così fa il vostro potenziale.</item>
+        <item>Il mondo si risveglia, e così fa il tuo potenziale.</item>
         <item>Il primo capitolo della tua avventura quotidiana.</item>
         <item>Lascia che la tua routine mattutina sia il trampolino di lancio per il successo.</item>
-        <item>Alba o no, il vostro potenziale è sempre in aumento.</item>
+        <item>Alba o no, il tuo potenziale è sempre in aumento.</item>
         <item>È tempo di idee fresche e azioni audaci.</item>
         <item>Chi dorme ha l\'oro in bocca, ma tu puoi catturare i tuoi sogni.</item>
         <item>Trova il coraggio di inseguire le tue aspirazioni.</item>
@@ -274,7 +274,7 @@
         <item>Le più grandi avventure della vita possono iniziare nell\'oscurità.</item>
         <item>Il tuo viaggio continua anche dopo che il sole è tramontato.</item>
         <item>Lascia che la notte sia la tua tela; dipingilo con i sogni.</item>
-        <item>Lascia che la notte sia la tua tela; dipingilo con i sogni.</item>
+        <item>Nel silenzio della notte, trova la tua forza interiore.</item>
         <item>Le stelle brillano più luminose nelle ore più buie.</item>
         <item>Sogna in grande, anche nelle ore tarde della giornata.</item>
         <item>La tua vita è una storia che aspetta di essere scritta.</item>
@@ -339,7 +339,7 @@
         <item>Aspetto il Protettore</item>
         <item>Wubba Lubba Dub Dub</item>
         <item>Vincitore Vincitore ....?</item>
-        <item>Prenditi cura di te, resta in salute</item>
+        <item>rm -rf \/</item>
         <item>Le Pringles non sono in realtà patatine..</item>
         <item>Ricordati di controllare il livello della batteria del dispositivo!</item>
         <item>Controlla le tue email/messaggi.</item>
