@@ -74,11 +74,11 @@
     <string name="paused_apps_dialog_title">Alkalmazás-szüneteltetés</string>
     <string name="paused_apps_dialog_message">%1$s közvetlen szüneteltetése a Launcherből</string>
     <string name="paused_apps_drop_target_label">Alkalmazás-szüneteltetés</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">A munkaalkalmazások ki vannak kapcsolva</string>
+    <string name="work_apps_pause_btn_text_custom">A munkaalkalmazások kikapcsolása</string>
+    <string name="work_apps_enable_btn_text_custom">A munkaalkalmazások bekapcsolása</string>
+    <string name="work_apps_paused_info_body_custom">A munkaalkalmazások nem küldhetnek értesítéseket, nem használhatják az akkumlátort, és nem férhetnek hozzá a helyadatokhoz.</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">A munkaalkalmazások nem fogadhatnak hívásokat és szöveges üzeneteket, nem küldhetnek önnek értesítéseket, nem használhatják az akkumulátort és nem férhetnek hozzá a helyadatokhoz</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Újraindítás</string>
     <string name="pref_restart_summary">Launcher-újraindítás a függőben lévő változások alkalmazásához</string>
@@ -154,8 +154,8 @@
     <string name="drawer_search_title">Alkalmazásfiók-keresősáv</string>
     <string name="drawer_search_summary">A keresősáv az Alkalmazásfiók tetején</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_title">Automatikus billentyűzet</string>
+    <string name="pref_auto_keyboard_summary">Kibontott állapotban kezdje el a keresést</string>
     <!-- AppInfo -->
     <string name="app_info_source">Forrás</string>
     <string name="app_info_source_system">Rendszer</string>
