@@ -64,6 +64,31 @@ public class QuickspaceController implements NotificationListener.NotificationsC
 
     private ExecutorService executorService = Executors.newSingleThreadExecutor();
 
+    private Runnable mOnDataUpdatedRunnable = new Runnable() {
+            @Override
+            public void run() {
+                for (OnDataListener list : mListeners) {
+                    list.onDataUpdated();
+                }
+            }
+        };
+
+    private Runnable mWeatherRunnable = new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    mWeatherClient.queryWeather();
+                    mWeatherInfo = mWeatherClient.getWeatherInfo();
+                    if (mWeatherInfo != null) {
+                        mConditionImage = mWeatherClient.getWeatherConditionImage(mWeatherInfo.conditionCode);
+                    }
+                    notifyListeners();
+                } catch(Exception e) {
+                    // Do nothing
+                }
+            }
+        };
+
     public interface OnDataListener {
         void onDataUpdated();
     }
@@ -87,7 +112,6 @@ public class QuickspaceController implements NotificationListener.NotificationsC
         mHandler = new Handler();
         mEventsController = new QuickEventsController(context);
         mWeatherClient = new OmniJawsClient(context);
-        registerMediaController();
     }
 
     private void addWeatherProvider() {
@@ -102,7 +126,7 @@ public class QuickspaceController implements NotificationListener.NotificationsC
         listener.onDataUpdated();
     }
 
-    public void removeListener(OnDataListener listener) {
+    private void removeListener(OnDataListener listener) {
         if (mWeatherClient != null) {
             mWeatherClient.removeObserver(this);
         }
@@ -180,14 +204,46 @@ public class QuickspaceController implements NotificationListener.NotificationsC
     }
 
     public void onPause() {
-        unregisterMediaController();
-        mEventsController.onPause();
+        cancelListeners();
     }
 
     public void onResume() {
+        maybeInitExecutor();
         mEventsController.onResume();
         updateMediaController();
         notifyListeners();
+    }
+
+    private void maybeInitExecutor() {
+        if (executorService == null || executorService.isShutdown()) {
+            executorService = Executors.newSingleThreadExecutor();
+        }
+    }
+
+    private void cancelListeners() {
+        if (mEventsController != null) {
+            mEventsController.onPause();
+        }
+        if (mController != null) {
+            mController.unregisterCallback(mMediaCallback);
+            mController = null;
+        }
+        for (OnDataListener listener : new ArrayList<>(mListeners)) {
+            removeListener(listener);
+        }
+        mHandler.removeCallbacksAndMessages(null);
+        if (executorService != null && !executorService.isShutdown()) {
+            executorService.shutdownNow();
+        }
+    }
+
+    public void onDestroy() {
+        cancelListeners();
+        mWeatherClient = null;
+        mWeatherInfo = null;
+        mConditionImage = null;
+        mMediaMetadata = null;
+        executorService = null;
     }
 
     @Override
@@ -211,32 +267,12 @@ public class QuickspaceController implements NotificationListener.NotificationsC
     }
 
     private void queryAndUpdateWeather() {
-        executorService.execute(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    mWeatherClient.queryWeather();
-                    mWeatherInfo = mWeatherClient.getWeatherInfo();
-                    if (mWeatherInfo != null) {
-                        mConditionImage = mWeatherClient.getWeatherConditionImage(mWeatherInfo.conditionCode);
-                    }
-                    notifyListeners();
-                } catch(Exception e) {
-                    // Do nothing
-                }
-            }
-        });
+        maybeInitExecutor();
+        executorService.execute(mWeatherRunnable);
     }
 
-    private void notifyListeners() {
-        mHandler.post(new Runnable() {
-            @Override
-            public void run() {
-                for (OnDataListener list : mListeners) {
-                    list.onDataUpdated();
-                }
-            }
-        });
+    public void notifyListeners() {
+        mHandler.post(mOnDataUpdatedRunnable);
     }
 
     private MediaController getActiveLocalMediaController() {
