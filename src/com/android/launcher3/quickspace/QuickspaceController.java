@@ -25,7 +25,6 @@ import android.media.session.MediaSession;
 import android.media.session.MediaSessionManager;
 import android.media.session.PlaybackState;
 import android.os.Handler;
-import android.service.notification.StatusBarNotification;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -33,8 +32,6 @@ import com.android.internal.util.crdroid.OmniJawsClient;
 
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
-import com.android.launcher3.notification.NotificationKeyData;
-import com.android.launcher3.notification.NotificationListener;
 import com.android.launcher3.util.PackageUserKey;
 
 import java.util.ArrayList;
@@ -42,7 +39,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
 import java.util.List;
 
-public class QuickspaceController implements NotificationListener.NotificationsChangedListener, OmniJawsClient.OmniJawsObserver {
+public class QuickspaceController implements OmniJawsClient.OmniJawsObserver {
 
     public final ArrayList<OnDataListener> mListeners = new ArrayList();
     private static final String SETTING_WEATHER_LOCKSCREEN_UNIT = "weather_lockscreen_unit";
@@ -186,23 +183,6 @@ public class QuickspaceController implements NotificationListener.NotificationsC
         return PlaybackState.STATE_NONE;
     }
 
-    @Override
-    public void onNotificationPosted(PackageUserKey postedPackageUserKey,
-                                     NotificationKeyData notificationKey) {
-        updateMediaController();
-    }
-
-    @Override
-    public void onNotificationRemoved(PackageUserKey removedPackageUserKey,
-                                      NotificationKeyData notificationKey) {
-        updateMediaController();
-    }
-
-    @Override
-    public void onNotificationFullRefresh(List<StatusBarNotification> activeNotifications) {
-        updateMediaController();
-    }
-
     public void onPause() {
         cancelListeners();
     }
@@ -224,13 +204,10 @@ public class QuickspaceController implements NotificationListener.NotificationsC
         if (mEventsController != null) {
             mEventsController.onPause();
         }
-        if (mController != null) {
-            mController.unregisterCallback(mMediaCallback);
-            mController = null;
-        }
         for (OnDataListener listener : new ArrayList<>(mListeners)) {
             removeListener(listener);
         }
+        unregisterMediaController();
         mHandler.removeCallbacksAndMessages(null);
         if (executorService != null && !executorService.isShutdown()) {
             executorService.shutdownNow();
@@ -282,16 +259,10 @@ public class QuickspaceController implements NotificationListener.NotificationsC
         final List<String> remoteMediaSessionLists = new ArrayList<>();
         for (MediaController controller : mediaSessionManager.getActiveSessions(null)) {
             final MediaController.PlaybackInfo pi = controller.getPlaybackInfo();
-            if (pi == null) {
-                continue;
-            }
+            if (pi == null) continue;
             final PlaybackState playbackState = controller.getPlaybackState();
-            if (playbackState == null) {
-                continue;
-            }
-            if (playbackState.getState() != PlaybackState.STATE_PLAYING) {
-                continue;
-            }
+            if (playbackState == null) continue;
+            if (playbackState.getState() != PlaybackState.STATE_PLAYING) continue;
             if (pi.getPlaybackType() == MediaController.PlaybackInfo.PLAYBACK_TYPE_REMOTE) {
                 if (localController != null
                         && TextUtils.equals(
@@ -343,15 +314,12 @@ public class QuickspaceController implements NotificationListener.NotificationsC
         String trackTitle = isPlaying && mMediaMetadata != null ? mMediaMetadata.getString(MediaMetadata.METADATA_KEY_TITLE) : "";
         mEventsController.setMediaInfo(trackTitle, trackArtist, isPlaying);
         mEventsController.updateQuickEvents();
+        notifyListeners();
     }
     
     private boolean sameSessions(MediaController a, MediaController b) {
-        if (a == b) {
-            return true;
-        }
-        if (a == null) {
-            return false;
-        }
+        if (a == b) return true;
+        if (a == null) return false;
         return a.controlsSameSession(b);
     }
 }
