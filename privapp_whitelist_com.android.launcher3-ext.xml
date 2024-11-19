@@ -24,5 +24,6 @@
         <permission name="android.permission.FORCE_STOP_PACKAGES"/>
         <permission name="com.libremobileos.permission.START_FREEFORM"/>
         <permission name="android.permission.QUERY_USERS"/>
+        <permission name="android.permission.REGISTER_STATS_PULL_ATOM"/>
     </privapp-permissions>
 </permissions>
