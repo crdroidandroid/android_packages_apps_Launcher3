@@ -298,7 +298,7 @@
         <item>السعي من أجل التقدم، وليس الكمال.</item>
         <item>في كل يوم بداية جديدة، اجعلها بداية عظيمة.</item>
         <item>ألهم الآخرين من خلال كونك نفسك الحقيقية.</item>
-        <item>Your attitude determines your direction.</item>
+        <item>موقفك يحدد اتجاهك.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>التجاهل نعمة</item>
@@ -334,9 +334,9 @@
         <item>Wubba Lubba Dub Dub</item>
         <item>الفائز ....؟</item>
         <item>rm -rf \/</item>
-        <item>Pringles aren\'t actually potato chips..</item>
-        <item>Remember to check device\'s battery level!</item>
-        <item>Check your email/messages.</item>
+        <item>برينجلز ليست بالفعل شرائح بطاطس حقيقية..</item>
+        <item>تذكر أن تتحقق من مستوى بطارية الجهاز!</item>
+        <item>تحقق من بريدك الإلكتروني/الرسائل.</item>
         <item>تحقق من قائمة العمل الخاصة بك إذا كان لديك واحدة.</item>
         <item>يمكنك تعطيل الفضاء السريع عن طريق إعدادات المنزل.</item>
     </string-array>
@@ -360,6 +360,6 @@
     <string name="drawer_scrollbar_title">شريط التمرير</string>
     <string name="drawer_scrollbar_summary">شريط التمرير على جانب درج التطبيق</string>
     <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Force themed icons</string>
-    <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
+    <string name="force_monochrome_icons_title">فرض أيقونات الثيم</string>
+    <string name="force_monochrome_icons_summary">إنشاء أيقونات أحادية الكروماتيك، إذا لم يتم دعمها من قبل التطبيق (يتطلب إعادة تبديل الأيقونات المظهرة)</string>
 </resources>
