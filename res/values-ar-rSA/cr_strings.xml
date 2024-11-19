@@ -77,8 +77,8 @@
     <string name="work_apps_paused_title_custom">تطبيقات العمل معطلة</string>
     <string name="work_apps_pause_btn_text_custom">إيقاف تطبيقات العمل</string>
     <string name="work_apps_enable_btn_text_custom">تفعيل تطبيقات العمل</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_info_body_custom">لا يمكن لتطبيقات العمل إرسال إشعارات إليك أو استخدام بطاريتك أو الوصول إلى موقعك الجغرافي.</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">تطبيقات العمل الخاصة بك لا يمكن أن تتلقى مكالمات هاتفية أو رسائل نصية، أو ترسل إشعارات إليك، أو استخدم البطارية، أو الوصول إلى موقعك</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">إعادة التشغيل</string>
     <string name="pref_restart_summary">إعادة التشغيل يدويًا لتطبيق أي تعديلات في الإعدادات</string>
@@ -154,8 +154,8 @@
     <string name="drawer_search_title">شريط بحث البرامج</string>
     <string name="drawer_search_summary">شريط البحث في أعلى قائمة التطبيقات</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_title">لوحة المفاتيح التلقائية</string>
+    <string name="pref_auto_keyboard_summary">ابدأ البحث عندما يكون الدرج مفتوحًا.</string>
     <!-- AppInfo -->
     <string name="app_info_source">المصدر</string>
     <string name="app_info_source_system">النظام</string>
@@ -304,7 +304,7 @@
         <item>السعي من أجل التقدم، وليس الكمال.</item>
         <item>في كل يوم بداية جديدة، اجعلها بداية عظيمة.</item>
         <item>ألهم الآخرين من خلال كونك نفسك الحقيقية.</item>
-        <item>Your attitude determines your direction.</item>
+        <item>موقفك يحدد اتجاهك</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>التجاهل نعمة</item>
@@ -340,9 +340,9 @@
         <item>Wubba Lubba Dub Dub</item>
         <item>الفائز ....؟</item>
         <item>rm -rf \/</item>
-        <item>Pringles aren\'t actually potato chips..</item>
-        <item>Remember to check device\'s battery level!</item>
-        <item>Check your email/messages.</item>
+        <item>برينجلز ليست بالفعل شرائح بطاطس حقيقية..</item>
+        <item>تذكر أن تتحقق من مستوى بطارية الجهاز!</item>
+        <item>تحقق بريدك الإلكتروني/رسائلك.</item>
         <item>تحقق من قائمة العمل الخاصة بك إذا كان لديك واحدة.</item>
         <item>يمكنك تعطيل الفضاء السريع عن طريق إعدادات المنزل.</item>
     </string-array>
@@ -366,6 +366,6 @@
     <string name="drawer_scrollbar_title">شريط التمرير</string>
     <string name="drawer_scrollbar_summary">شريط التمرير على جانب درج التطبيق</string>
     <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Force themed icons</string>
-    <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
+    <string name="force_monochrome_icons_title">فرض الأيقونات ذات الطابع المخصص</string>
+    <string name="force_monochrome_icons_summary">إنشاء أيقونات أحادية اللون، إذا لم تكن مدعومة من قبل التطبيق (يتطلب إعادة تبديل الأيقونات ذات الطابع المخصص)</string>
 </resources>
