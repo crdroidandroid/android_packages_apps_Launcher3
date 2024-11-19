@@ -39,12 +39,12 @@
     <string name="dev_options_title">Opcions de desenvolupament</string>
     <string name="dev_options_summary">Activa algunes característiques ocultes baix la teva responsabilitat</string>
     <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Lock layout</string>
+    <string name="settings_lock_layout_title">Bloqueja la disposició</string>
     <string name="settings_lock_layout_summary_on">Icons and widgets can\'t be added, removed and moved on the homescreen</string>
     <string name="settings_lock_layout_summary_off">Icons and widgets can be added, removed and moved on the homescreen</string>
     <string name="settings_edit_widgets_error">It\'s not possible to add widgets to the home screen</string>
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Icon labels on desktop</string>
+    <string name="desktop_show_labels">Etiquetes d\'icones a l\'escriptori</string>
     <string name="drawer_show_labels">Icon labels in drawer</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Fes lliscar el dit per accedir a l\'app de Google</string>
@@ -75,7 +75,7 @@
     <string name="paused_apps_dialog_message">S\'ha posat en pausa %1$s directament des del llançador</string>
     <string name="paused_apps_drop_target_label">Posa en pausa l\'aplicació</string>
     <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_pause_btn_text_custom">Desactiva les aplicacions de treball</string>
     <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
     <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
