@@ -27,5 +27,6 @@
         <permission name="com.android.alarm.permission.SET_ALARM"/>
         <permission name="com.libremobileos.permission.START_FREEFORM"/>
         <permission name="android.permission.QUERY_USERS"/>
+        <permission name="android.permission.REGISTER_STATS_PULL_ATOM"/>
     </privapp-permissions>
 </permissions>
