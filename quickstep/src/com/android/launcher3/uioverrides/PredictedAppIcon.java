@@ -418,7 +418,9 @@ public class PredictedAppIcon extends DoubleShadowBubbleTextView {
         mIconRingPaint.setColor(RING_SHADOW_COLOR);
         mIconRingPaint.setMaskFilter(mShadowFilter);
         int count = canvas.save();
-        canvas.scale(mRingScale, mRingScale, canvas.getWidth() / 2f, canvas.getHeight() / 2f);
+        if (Float.compare(1, mRingScale) != 0) {
+            canvas.scale(mRingScale, mRingScale, canvas.getWidth() / 2f, canvas.getHeight() / 2f);
+        }
         canvas.drawPath(mRingPath, mIconRingPaint);
         mIconRingPaint.setColor(mPlateColor);
         mIconRingPaint.setMaskFilter(null);
