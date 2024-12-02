@@ -368,4 +368,6 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">فرض الأيقونات ذات الطابع المخصص</string>
     <string name="force_monochrome_icons_summary">إنشاء أيقونات أحادية اللون، إذا لم تكن مدعومة من قبل التطبيق (يتطلب إعادة تبديل الأيقونات ذات الطابع المخصص)</string>
+    <!-- Floating window -->
+    <string name="floating_window">Floating</string>
 </resources>
