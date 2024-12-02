@@ -368,4 +368,6 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Wymuś ikony motywu</string>
     <string name="force_monochrome_icons_summary">Generuj ikony monochromatyczne, jeśli nie są obsługiwane przez aplikację (wymaga ponownego przełączania ikon tematycznych)</string>
+    <!-- Floating window -->
+    <string name="floating_window">Floating</string>
 </resources>
