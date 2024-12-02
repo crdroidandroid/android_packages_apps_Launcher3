@@ -368,4 +368,6 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">強制圖示套用主題色</string>
     <string name="force_monochrome_icons_summary">若應用程式不支援單色圖示（需重新切換主題圖示），則產生單色圖示。</string>
+    <!-- Floating window -->
+    <string name="floating_window">Floating</string>
 </resources>
