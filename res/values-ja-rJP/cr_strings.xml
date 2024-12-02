@@ -368,4 +368,6 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">テーマアイコンを強制する</string>
     <string name="force_monochrome_icons_summary">アプリ側のサポートが無い場合、アイコンを生成します(テーマアイコンの再切り替えが必要です)</string>
+    <!-- Floating window -->
+    <string name="floating_window">Floating</string>
 </resources>
