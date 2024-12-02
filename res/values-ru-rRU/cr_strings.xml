@@ -368,4 +368,6 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Принудительно значки из темы</string>
     <string name="force_monochrome_icons_summary">Создание монохромных значков, если они не поддерживаются приложением (требуется переключение тематических значков)</string>
+    <!-- Floating window -->
+    <string name="floating_window">Floating</string>
 </resources>
