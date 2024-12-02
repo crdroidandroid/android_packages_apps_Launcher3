@@ -74,11 +74,11 @@
     <string name="paused_apps_dialog_title">アプリを一時停止しました</string>
     <string name="paused_apps_dialog_message">%1$s を一時停止しました</string>
     <string name="paused_apps_drop_target_label">アプリを一時停止</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">仕事用アプリはオフです</string>
+    <string name="work_apps_pause_btn_text_custom">仕事用アプリをオフにする</string>
+    <string name="work_apps_enable_btn_text_custom">仕事用アプリをオンにする</string>
+    <string name="work_apps_paused_info_body_custom">仕事用アプリからの通知、バッテリーの使用、位置情報へのアクセスはできません。</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">仕事用アプリでは、電話やテキストメッセージの受信、通知の送信、バッテリーの使用、位置情報へのアクセスはできません。</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">再起動</string>
     <string name="pref_restart_summary">設定を適用するにはランチャーを再起動してください</string>
@@ -155,7 +155,7 @@
     <string name="drawer_search_summary">アプリドロワー上部の検索バーを表示します</string>
     <!-- Auto keyboard -->
     <string name="pref_auto_keyboard_title">オートキーボード</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_summary">ドロワーを展開したときに検索を開始します</string>
     <!-- AppInfo -->
     <string name="app_info_source">ソース</string>
     <string name="app_info_source_system">システム</string>
