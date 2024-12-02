@@ -368,4 +368,6 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">强制主题化图标</string>
     <string name="force_monochrome_icons_summary">在应用程序不支持的情况下生成单色图标（需要重新启用主题化图标）</string>
+    <!-- Floating window -->
+    <string name="floating_window">Floating</string>
 </resources>
