@@ -368,4 +368,6 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Symboldesigns erzwingen</string>
     <string name="force_monochrome_icons_summary">Einfarbige Symbole generieren, sofern von der App selbst nicht unterstützt (Symboldesigns müssen dabei deaktiviert und erneut aktiviert werden)</string>
+    <!-- Floating window -->
+    <string name="floating_window">Floating</string>
 </resources>
