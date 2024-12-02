@@ -368,4 +368,6 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Vynutit ikony motivů</string>
     <string name="force_monochrome_icons_summary">Generovat monochromatické ikony, pokud nejsou podporovány aplikací (vyžaduje opětovné přepnutí ikon motivů)</string>
+    <!-- Floating window -->
+    <string name="floating_window">Floating</string>
 </resources>
