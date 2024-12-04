@@ -529,6 +529,39 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
         }
     }
 
+    public static final Factory<ActivityContext> FLOATING = (activity, itemInfo, originalView) -> 
+        new Floating(activity, itemInfo, originalView);
+
+    public static class Floating<T extends ActivityContext> extends SystemShortcut<T> { 
+        private final String mPackageName;
+        private final ComponentName mComponentName;
+        private final int mUserId;
+        
+        public Floating(T target, ItemInfo itemInfo, View originalView) {
+            super(R.drawable.ic_caption_desktop_button_foreground, R.string.recent_task_option_freeform, target, itemInfo, originalView);
+            mPackageName = itemInfo.getTargetComponent().getPackageName();
+            mComponentName = itemInfo.getTargetComponent();
+            mUserId = originalView.getContext().getUserId();
+        }
+
+        @Override
+        public void onClick(View view) {
+            if (mPackageName != null) {
+                startLmoFreeform(view.getContext());
+                AbstractFloatingView.closeAllOpenViews(((ActivityContext) mTarget));
+            }
+        }
+
+        private void startLmoFreeform(Context context) {
+            final Intent intent = new Intent("com.libremobileos.freeform.START_FREEFORM")
+                    .setPackage("com.libremobileos.freeform")
+                    .putExtra("packageName", mPackageName)
+                    .putExtra("activityName", mComponentName.getClassName())
+                    .putExtra("userId", mUserId);
+            context.sendBroadcast(intent);
+        }
+    }
+
     public static final Factory<ActivityContext> KILL_APP = (activity, itemInfo, originalView) -> {
         String packageName = itemInfo.getTargetComponent().getPackageName();
         return packageName == null ? null : new KillApp(activity, itemInfo, originalView);
