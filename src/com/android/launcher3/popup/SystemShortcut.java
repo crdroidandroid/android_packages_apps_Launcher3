@@ -1,7 +1,5 @@
 package com.android.launcher3.popup;
 
-import static android.content.pm.SuspendDialogInfo.BUTTON_ACTION_UNSUSPEND;
-
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_DISMISS_PREDICTION_UNDO;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_PRIVATE_SPACE_INSTALL_SYSTEM_SHORTCUT_TAP;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_PRIVATE_SPACE_UNINSTALL_SYSTEM_SHORTCUT_TAP;
@@ -11,16 +9,13 @@ import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCH
 import static com.android.launcher3.widget.picker.model.data.WidgetPickerDataUtils.findAllWidgetsForPackageUser;
 
 import android.app.AlertDialog;
-import android.app.AppGlobals;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.ShortcutInfo;
-import android.content.pm.SuspendDialogInfo;
 import android.graphics.Rect;
-import android.os.RemoteException;
 import android.os.Process;
 import android.os.UserHandle;
 import android.util.Log;
@@ -56,6 +51,7 @@ import com.android.launcher3.widget.WidgetsBottomSheet;
 import com.android.launcher3.widget.picker.model.data.WidgetPickerData;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Represents a system shortcut for a given app. The shortcut should have a label and icon, and an
@@ -367,21 +363,8 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
                     .setPositiveButton(R.string.pause, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            try {
-                                AppGlobals.getPackageManager().setPackagesSuspendedAsUser(
-                                        new String[]{packageToSuspend},
-                                        true, null, null,
-                                        new SuspendDialogInfo.Builder()
-                                                .setIcon(R.drawable.ic_hourglass_top)
-                                                .setTitle(R.string.paused_apps_dialog_title)
-                                                .setMessage(R.string.paused_apps_dialog_message)
-                                                .setNeutralButtonAction(BUTTON_ACTION_UNSUSPEND)
-                                                .build(), 0, context.getOpPackageName(),
-                                        context.getUserId(),
-                                        packageUser.getIdentifier());
-                            } catch (RemoteException e) {
-                                Log.e(TAG, "Failed to pause app", e);
-                            }
+                            final PackageManagerHelper pmHelper = new PackageManagerHelper(context);
+                            pmHelper.suspendPackages(List.of(packageToSuspend), packageUser);
                         }
                     })
                     .show();

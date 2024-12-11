@@ -20,17 +20,21 @@ import static android.view.WindowManager.PROPERTY_SUPPORTS_MULTI_INSTANCE_SYSTEM
 
 import static com.android.launcher3.model.data.ItemInfoWithIcon.FLAG_INSTALL_SESSION_ACTIVE;
 
+import android.app.AppGlobals;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.IPackageManager;
 import android.content.pm.LauncherActivityInfo;
 import android.content.pm.LauncherApps;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.SuspendDialogInfo;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Process;
+import android.os.RemoteException;
 import android.os.UserHandle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -86,6 +90,23 @@ public class PackageManagerHelper {
         mLauncherApps = Objects.requireNonNull(context.getSystemService(LauncherApps.class));
         mLegacyMultiInstanceSupportedApps = mContext.getResources().getStringArray(
                     R.array.config_appsSupportMultiInstancesSplit);
+    }
+
+    /**
+     * Returns whether the target app is suspended by us for a given user as per
+     * {@link android.app.admin.DevicePolicyManager#isPackageSuspended}.
+     */
+    public boolean isAppSuspendedByUs(@NonNull final String packageName,
+            @NonNull final UserHandle user) {
+        final IPackageManager ipm = AppGlobals.getPackageManager();
+        final int userId = user.getIdentifier();
+        try {
+            return mContext.getPackageName().equals(ipm.getSuspendingPackage(packageName, userId));
+        } catch (Exception e) {
+            Log.e(TAG, "Could not determine if " + user + " package " + packageName
+                    + " was suspended by us!", e);
+        }
+        return false;
     }
 
     /**
@@ -233,5 +254,36 @@ public class PackageManagerHelper {
             @NonNull ItemInfo app2) {
         return app1.getTargetPackage().equals(app2.getTargetPackage())
                 && app1.user.equals(app2.user);
+    }
+
+    /** Suspends a list of packages in the target user. */
+    public void suspendPackages(
+            final @NonNull List<String> packages,
+            final @NonNull UserHandle targetUser) {
+        Objects.requireNonNull(packages, "packages must not be null");
+        Objects.requireNonNull(targetUser, "targetUser must not be null");
+        try {
+            AppGlobals.getPackageManager().setPackagesSuspendedAsUser(
+                    /* packageNames */ packages.toArray(new String[0]),
+                    /* suspended */ true,
+                    /* appExtras */ null,
+                    /* launcherExtras */ null,
+                    buildSuspendDialog(),
+                    /* flags */ 0,
+                    /* suspendingPackage */ mContext.getOpPackageName(),
+                    /* suspendingUserId */ mContext.getUserId(),
+                    targetUser.getIdentifier());
+        } catch (RemoteException e) {
+            Log.e(TAG, "Failed to suspend " + targetUser + " packages: " + packages, e);
+        }
+    }
+
+    private static SuspendDialogInfo buildSuspendDialog() {
+        return new SuspendDialogInfo.Builder()
+                .setIcon(R.drawable.ic_hourglass_top)
+                .setTitle(R.string.paused_apps_dialog_title)
+                .setMessage(R.string.paused_apps_dialog_message)
+                .setNeutralButtonAction(SuspendDialogInfo.BUTTON_ACTION_UNSUSPEND)
+                .build();
     }
 }
