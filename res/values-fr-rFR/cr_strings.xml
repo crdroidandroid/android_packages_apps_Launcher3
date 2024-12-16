@@ -74,11 +74,11 @@
     <string name="paused_apps_dialog_title">Application en pause</string>
     <string name="paused_apps_dialog_message">%1$s a été mis en pause directement depuis le lanceur</string>
     <string name="paused_apps_drop_target_label">Mettre en pause l\'application</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">Les applications professionnelles sont désactivées</string>
+    <string name="work_apps_pause_btn_text_custom">Désactiver les applications professionnelles</string>
+    <string name="work_apps_enable_btn_text_custom">Activer les applications professionnelles</string>
+    <string name="work_apps_paused_info_body_custom">Vos applis professionnelles ne peuvent pas vous envoyer de notifications, utiliser votre batterie ni accéder à votre position</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Vos applications professionnelles ne peuvent pas recevoir des appels téléphoniques ou des sms, vous envoyer des notifications, utiliser votre batterie ou accéder à votre position</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Redémarrer</string>
     <string name="pref_restart_summary">Redémarrez le lanceur manuellement pour appliquer tous les paramètres en attente</string>
@@ -154,8 +154,8 @@
     <string name="drawer_search_title">Barre de recherche de l\'application</string>
     <string name="drawer_search_summary">Barre de recherche en haut du tiroir d\'applications</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_title">Clavier automatique</string>
+    <string name="pref_auto_keyboard_summary">Démarrer la recherche lorsque le tiroir est déployé</string>
     <!-- AppInfo -->
     <string name="app_info_source">Source</string>
     <string name="app_info_source_system">Système</string>
@@ -368,4 +368,6 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Forcé les icônes a correspondre au thème</string>
     <string name="force_monochrome_icons_summary">Générer des icônes monochromatiques, si elles ne sont pas prises en charge par l\'application (nécessite de rechanger les icônes thématiques)</string>
+    <!-- Floating window -->
+    <string name="floating_window">Flottant</string>
 </resources>
