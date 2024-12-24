@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="FolderStyleDefault" parent="">
+        <item name="folderBorderSpace">16dp</item>
+        <item name="folderCellHeight">94dp</item>
+        <item name="folderCellWidth">80dp</item>
+        <item name="folderFooterHeight">56dp</item>
+        <item name="folderTopPadding">24dp</item>
+    </style>
+</resources>
