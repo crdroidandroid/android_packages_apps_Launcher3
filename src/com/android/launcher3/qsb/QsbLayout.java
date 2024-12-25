@@ -151,14 +151,11 @@ public class QsbLayout extends FrameLayout {
         try {
             lensIcon.setOnClickListener(view -> {
                 Intent lensIntent = new Intent();
-                Bundle bundle = new Bundle();
-                bundle.putString("caller_package", Utilities.GSA_PACKAGE);
-                bundle.putLong("start_activity_time_nanos", SystemClock.elapsedRealtimeNanos());
-                lensIntent.setComponent(new ComponentName(Utilities.GSA_PACKAGE, Utilities.LENS_ACTIVITY))
+                lensIntent.setAction(Intent.ACTION_VIEW)
+                        .setComponent(new ComponentName(Utilities.GSA_PACKAGE, Utilities.LENS_ACTIVITY))
                         .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                        .setPackage(Utilities.GSA_PACKAGE)
                         .setData(Uri.parse(Utilities.LENS_URI))
-                        .putExtra("lens_activity_params", bundle);
+                        .putExtra("LensHomescreenShortcut", true);
                 mContext.startActivity(lensIntent);
             });
         } catch (Exception e) {
