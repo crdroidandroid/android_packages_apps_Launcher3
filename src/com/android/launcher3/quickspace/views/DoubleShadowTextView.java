@@ -15,16 +15,19 @@
  */
 package com.android.launcher3.quickspace.views;
 
+import static com.android.launcher3.icons.GraphicsUtils.setColorAlphaBound;
+
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import com.android.launcher3.views.DoubleShadowBubbleTextView;
+import com.android.launcher3.views.ShadowInfo;
 
 public class DoubleShadowTextView extends TextView {
 
-    private final DoubleShadowBubbleTextView.ShadowInfo mShadowInfo;
+    private final ShadowInfo mShadowInfo;
 
     public DoubleShadowTextView(Context context) {
         this(context, null);
@@ -34,20 +37,53 @@ public class DoubleShadowTextView extends TextView {
         this(context, attrs, 0);
     }
 
-    public DoubleShadowTextView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        mShadowInfo = new DoubleShadowBubbleTextView.ShadowInfo(context, attrs, defStyleAttr);
-        setShadowLayer(Math.max(mShadowInfo.keyShadowBlur + mShadowInfo.keyShadowOffsetX, mShadowInfo.ambientShadowBlur), 0f, 0f, mShadowInfo.keyShadowColor);
+    public DoubleShadowTextView(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+        mShadowInfo = ShadowInfo.Companion.fromContext(context, attrs, defStyle);
+        setShadowLayer(
+                Math.max(mShadowInfo.getKeyShadowBlur() +
+                mShadowInfo.getKeyShadowOffsetX(),
+                mShadowInfo.getAmbientShadowBlur()), 0f, 0f,
+                mShadowInfo.getKeyShadowColor());
     }
 
-    protected void onDraw(Canvas canvas) {
-        if (mShadowInfo.skipDoubleShadow(this)) {
+    private boolean skipDoubleShadow() {
+        int textAlpha = Color.alpha(getCurrentTextColor());
+        int keyShadowAlpha = Color.alpha(mShadowInfo.getKeyShadowColor());
+        int ambientShadowAlpha = Color.alpha(mShadowInfo.getAmbientShadowColor());
+        if (textAlpha == 0 || (keyShadowAlpha == 0 && ambientShadowAlpha == 0)) {
+            getPaint().clearShadowLayer();
+            return true;
+        } else if (ambientShadowAlpha > 0 && keyShadowAlpha == 0) {
+            getPaint().setShadowLayer(mShadowInfo.getAmbientShadowBlur(), 0, 0,
+                    getTextShadowColor(mShadowInfo.getAmbientShadowColor(), textAlpha));
+            return true;
+        } else if (keyShadowAlpha > 0 && ambientShadowAlpha == 0) {
+            getPaint().setShadowLayer(
+                    mShadowInfo.getKeyShadowBlur(),
+                    mShadowInfo.getKeyShadowOffsetX(),
+                    mShadowInfo.getKeyShadowOffsetY(),
+                    getTextShadowColor(mShadowInfo.getKeyShadowColor(), textAlpha));
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public void onDraw(Canvas canvas) {
+        // If text is transparent or shadow alpha is 0, don't draw any shadow
+        if (skipDoubleShadow()) {
             super.onDraw(canvas);
             return;
         }
-        getPaint().setShadowLayer(mShadowInfo.ambientShadowBlur, 0.0f, 0.0f, mShadowInfo.ambientShadowColor);
+        getPaint().setShadowLayer(mShadowInfo.getKeyShadowBlur(), 0, mShadowInfo.getKeyShadowOffsetX(), mShadowInfo.getKeyShadowColor());
         super.onDraw(canvas);
-        getPaint().setShadowLayer(mShadowInfo.keyShadowBlur, 0.0f, mShadowInfo.keyShadowOffsetX, mShadowInfo.keyShadowColor);
-        super.onDraw(canvas);
+    }
+
+    // Multiplies the alpha of shadowColor by textAlpha.
+    private static int getTextShadowColor(int shadowColor, int textAlpha) {
+        return setColorAlphaBound(shadowColor,
+                Math.round(Color.alpha(shadowColor) * textAlpha / 255f));
     }
 }
