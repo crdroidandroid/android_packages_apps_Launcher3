@@ -225,6 +225,7 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
             }
             mTarget.getStatsLogManager().logger().withItemInfo(mItemInfo)
                     .log(LAUNCHER_SYSTEM_SHORTCUT_APP_INFO_TAP);
+            dismissTaskMenuView();
         }
 
         public static class SplitAccessibilityInfo {
