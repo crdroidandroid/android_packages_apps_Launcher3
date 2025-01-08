@@ -26,9 +26,14 @@ import androidx.annotation.VisibleForTesting
 import com.android.launcher3.dagger.ApplicationContext
 import com.android.launcher3.dagger.LauncherAppComponent
 import com.android.launcher3.dagger.LauncherAppSingleton
+import com.android.launcher3.data.wallpaper.service.WallpaperService
 import com.android.launcher3.util.Executors.MAIN_EXECUTOR
 import com.android.launcher3.util.Executors.UI_HELPER_EXECUTOR
 import javax.inject.Inject
+
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 /**
  * This class caches the system's wallpaper color hints for use by other classes as a performance
@@ -62,6 +67,14 @@ constructor(@ApplicationContext private val context: Context, tracker: DaggerSin
                 wallpaperManager.removeOnColorsChangedListener(onColorsChangedListener)
             }
         }
+        CoroutineScope(Dispatchers.IO).launch {
+            val service = WallpaperService.INSTANCE.get(context)
+            val wallpapers = runCatching { service.getTopWallpapers() }
+                    .getOrDefault(emptyList())
+            if (wallpapers.isEmpty()) {
+                service.saveWallpaper(wallpaperManager)
+            }
+        }
     }
 
     @MainThread
@@ -71,6 +84,9 @@ constructor(@ApplicationContext private val context: Context, tracker: DaggerSin
             if (newHints != hints) {
                 hints = newHints
                 onColorHintsChangedListeners.forEach { it.onColorHintsChanged(newHints) }
+            }
+            CoroutineScope(Dispatchers.IO).launch {
+                WallpaperService.INSTANCE.get(context).saveWallpaper(wallpaperManager)
             }
         }
     }

@@ -148,6 +148,7 @@ import com.android.launcher3.anim.PendingAnimation;
 import com.android.launcher3.apppairs.AppPairIcon;
 import com.android.launcher3.appprediction.PredictionRowView;
 import com.android.launcher3.config.FeatureFlags;
+import com.android.launcher3.data.AppDatabase;
 import com.android.launcher3.desktop.DesktopRecentsTransitionController;
 import com.android.launcher3.hybridhotseat.HotseatPredictionController;
 import com.android.launcher3.logging.InstanceId;
@@ -894,6 +895,8 @@ public class QuickstepLauncher extends Launcher implements RecentsViewContainer,
         View.setTracedRequestLayoutClassClass(TRACE_RELAYOUT_CLASS);
         OverviewComponentObserver.INSTANCE.get(this)
                 .addOverviewChangeListener(mOverviewChangeListener);
+
+        AppDatabase.INSTANCE.get(this).checkpointSync();
     }
 
     @Override

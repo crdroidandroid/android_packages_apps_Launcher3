@@ -60,3 +60,7 @@
 -keep class com.android.launcher3.icons.** {
   *;
 }
+
+-keep class com.android.launcher3.data.** {
+  *;
+}

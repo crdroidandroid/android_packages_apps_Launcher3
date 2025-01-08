@@ -484,6 +484,8 @@ android_app {
 
     static_libs: [
         "Launcher3ResLib",
+        "androidx.room_room-runtime",
+        "androidx.room_room-ktx",
     ],
     srcs: [
         ":launcher-src",
@@ -500,7 +502,10 @@ android_app {
     sdk_version: "current",
     min_sdk_version: min_launcher3_sdk_version,
     target_sdk_version: "current",
-    plugins: ["dagger2-compiler"],
+    plugins: [
+        "androidx.room_room-compiler-plugin",
+        "dagger2-compiler",
+    ],
     certificate: "platform",
     privileged: true,
     system_ext_specific: true,
@@ -584,6 +589,7 @@ android_library {
     static_libs: [
         "QuickstepResLib",
         "androidx.room_room-runtime",
+        "androidx.room_room-ktx",
     ],
     plugins: [
         "androidx.room_room-compiler-plugin",
@@ -626,10 +632,15 @@ android_library {
     static_libs: [
         "SystemUI-statsd",
         "QuickstepResLib",
+        "androidx.room_room-runtime",
+        "androidx.room_room-ktx",
     ],
     manifest: "quickstep/AndroidManifest.xml",
     platform_apis: true,
-    plugins: ["dagger2-compiler"],
+    plugins: [
+        "androidx.room_room-compiler-plugin",
+        "dagger2-compiler",
+    ],
     min_sdk_version: "current",
     // TODO(b/319712088): re-enable use_resource_processor
     use_resource_processor: false,
