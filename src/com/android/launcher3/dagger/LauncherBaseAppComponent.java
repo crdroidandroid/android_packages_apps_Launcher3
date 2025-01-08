@@ -28,6 +28,7 @@ import com.android.launcher3.MainProcessInitializer;
 import com.android.launcher3.RemoveAnimationSettingsTracker;
 import com.android.launcher3.backuprestore.LauncherRestoreEventLogger;
 import com.android.launcher3.compose.core.widgetpicker.WidgetPickerComposeWrapper;
+import com.android.launcher3.data.wallpaper.service.WallpaperService;
 import com.android.launcher3.dragndrop.SystemDragController;
 import com.android.launcher3.folder.FolderNameSuggestionLoader;
 import com.android.launcher3.graphics.GridCustomizationsProxy;
@@ -148,6 +149,8 @@ public interface LauncherBaseAppComponent {
 
     /** Tracker for any app icon changes */
     IconChangeTracker getIconChangeTracker();
+
+    WallpaperService getWallpaperService();
 
     /** Builder for LauncherBaseAppComponent. */
     interface Builder {
