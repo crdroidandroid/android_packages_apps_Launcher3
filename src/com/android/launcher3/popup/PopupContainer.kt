@@ -17,6 +17,7 @@
 package com.android.launcher3.popup
 
 import android.animation.AnimatorSet
+import android.app.WallpaperManager
 import android.content.Context
 import android.graphics.PointF
 import android.graphics.Rect
@@ -36,6 +37,7 @@ import com.android.launcher3.LauncherPrefs
 import com.android.launcher3.LauncherSettings.Favorites.ITEM_TYPE_CUSTOM_VIEW
 import com.android.launcher3.R
 import com.android.launcher3.accessibility.LauncherAccessibilityDelegate
+import com.android.launcher3.data.wallpaper.service.WallpaperService
 import com.android.launcher3.dragndrop.DragController
 import com.android.launcher3.dragndrop.DragOptions
 import com.android.launcher3.folder.Folder
@@ -122,7 +124,12 @@ open class PopupContainer<T : ActivityContext>(
         activityContext: ActivityContext,
         itemView: View,
     ) {
+        val wallpapers = WallpaperService.INSTANCE.get(context).getTopWallpapersBlocking()
+        val showCarousel = !wallpapers.isEmpty()
         if (Flags.expandableLongPressMenu()) {
+            if (showCarousel) {
+                inflateAndAdd<ViewGroup>(R.layout.wallpaper_options_popup, this)
+            }
             showComposePopup(
                 systemShortcuts =
                     systemShortcuts.map { popupData ->
@@ -138,6 +145,9 @@ open class PopupContainer<T : ActivityContext>(
             )
         } else {
             systemShortcutContainer = inflateAndAdd(R.layout.system_shortcut_rows_container, this)
+            if (showCarousel && systemShortcuts.size > 2) {
+                inflateAndAdd<ViewGroup>(R.layout.wallpaper_options_popup, systemShortcutContainer)
+            }
             systemShortcuts.forEach { systemShortcut ->
                 val view: DeepShortcutView =
                     inflateAndAdd(R.layout.system_shortcut, systemShortcutContainer)

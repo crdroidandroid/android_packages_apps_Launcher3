@@ -31,6 +31,7 @@ import com.android.launcher3.RemoveAnimationSettingsTracker;
 import com.android.launcher3.appfunctions.workspace.WorkspaceAppFunctions;
 import com.android.launcher3.automation.AutomationRepository;
 import com.android.launcher3.backuprestore.LauncherRestoreEventLogger;
+import com.android.launcher3.data.wallpaper.service.WallpaperService;
 import com.android.launcher3.display.DisplayController;
 import com.android.launcher3.folder.FolderNameSuggestionLoader;
 import com.android.launcher3.graphics.GlowMaskCache;
@@ -192,6 +193,8 @@ public interface LauncherBaseAppComponent {
 
     /** Caches BitmapShaders for glow effects */
     GlowMaskCache getGlowMaskCache();
+
+    WallpaperService getWallpaperService();
 
     /** Builder for LauncherBaseAppComponent. */
     interface Builder {
