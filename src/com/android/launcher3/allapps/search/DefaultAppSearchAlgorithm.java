@@ -19,6 +19,7 @@ import static com.android.launcher3.allapps.BaseAllAppsAdapter.VIEW_TYPE_EMPTY_S
 
 import android.content.Context;
 import android.os.Handler;
+import android.os.UserManager;
 
 import androidx.annotation.AnyThread;
 
@@ -65,7 +66,8 @@ public class DefaultAppSearchAlgorithm implements SearchAlgorithm<AdapterItem> {
     @Override
     public void doSearch(String query, SearchCallback<AdapterItem> callback) {
         mAppState.getModel().enqueueModelUpdateTask((taskController, dataModel, apps) ->  {
-            ArrayList<AdapterItem> result = getTitleMatchResult(apps.data, query);
+            ArrayList<AdapterItem> result = getTitleMatchResult(mAppState.getContext(), apps.data,
+                    query);
             if (mAddNoResultsMessage && result.isEmpty()) {
                 result.add(getEmptyMessageAdapterItem(query));
             }
@@ -86,7 +88,8 @@ public class DefaultAppSearchAlgorithm implements SearchAlgorithm<AdapterItem> {
      * Filters {@link AppInfo}s matching specified query
      */
     @AnyThread
-    public static ArrayList<AdapterItem> getTitleMatchResult(List<AppInfo> apps, String query) {
+    public static ArrayList<AdapterItem> getTitleMatchResult(Context context, List<AppInfo> apps,
+            String query) {
         // Do an intersection of the words in the query and each title, and filter out all the
         // apps that don't match all of the words in the query.
         final String queryTextLower = query.toLowerCase();
@@ -96,8 +99,12 @@ public class DefaultAppSearchAlgorithm implements SearchAlgorithm<AdapterItem> {
 
         int resultCount = 0;
         int total = apps.size();
+        UserManager userManager = UserManager.get(context);
         for (int i = 0; i < total && resultCount < MAX_RESULTS_COUNT; i++) {
             AppInfo info = apps.get(i);
+            if (userManager.isQuietModeEnabled(info.user)) {
+                continue;
+            }
             if (StringMatcherUtility.matches(queryTextLower, info.title.toString(), matcher)) {
                 result.add(AdapterItem.asApp(info));
                 resultCount++;
