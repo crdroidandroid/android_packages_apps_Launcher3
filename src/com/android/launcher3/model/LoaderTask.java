@@ -651,9 +651,12 @@ public class LoaderTask implements Runnable {
             // Query for the set of apps
             final List<LauncherActivityInfo> apps = mLauncherApps.getActivityList(null, user);
             // Fail if we don't have any apps
-            // TODO: Fix this. Only fail for the current user.
             if (apps == null || apps.isEmpty()) {
-                return allActivityList;
+                if (Process.myUserHandle().equals(user)) {
+                    return allActivityList;
+                } else {
+                    continue;
+                }
             }
             boolean quietMode = cachedUserInfo.isQuietModeEnabled();
 
