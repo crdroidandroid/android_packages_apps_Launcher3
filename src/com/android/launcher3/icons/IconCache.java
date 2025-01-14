@@ -596,6 +596,12 @@ public class IconCache extends BaseIconCache {
         return getEntryFromDBLocked(cacheKey, new CacheEntry(), false);
     }
 
+    // replacement for old removed clear() in BaseIconCache
+    public synchronized void clearDb() {
+        clearMemoryCache();
+        mIconDb.clear();
+    }
+
     /**
      * Interface for receiving itemInfo with high-res icon.
      */

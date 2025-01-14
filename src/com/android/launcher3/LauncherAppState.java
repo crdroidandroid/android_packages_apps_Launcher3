@@ -27,6 +27,8 @@ import static com.android.launcher3.LauncherPrefs.ICON_STATE;
 import static com.android.launcher3.LauncherPrefs.THEMED_ICONS;
 import static com.android.launcher3.model.DeviceGridState.KEY_DB_FILE;
 import static com.android.launcher3.model.LoaderTask.SMARTSPACE_ON_HOME_SCREEN;
+import static com.android.launcher3.util.DisplayController.CHANGE_OVERLAYS;
+import static com.android.launcher3.util.DisplayController.CHANGE_UI_MODE;
 import static com.android.launcher3.util.Executors.MODEL_EXECUTOR;
 import static com.android.launcher3.util.Executors.UI_HELPER_EXECUTOR;
 import static com.android.launcher3.util.SettingsCache.NOTIFICATION_BADGING_URI;
@@ -60,6 +62,9 @@ import com.android.launcher3.notification.NotificationListener;
 import com.android.launcher3.pm.InstallSessionHelper;
 import com.android.launcher3.pm.InstallSessionTracker;
 import com.android.launcher3.pm.UserCache;
+import com.android.launcher3.util.DisplayController;
+import com.android.launcher3.util.DisplayController.DisplayInfoChangeListener;
+import com.android.launcher3.util.DisplayController.Info;
 import com.android.launcher3.util.LockedUserState;
 import com.android.launcher3.util.MainThreadInitializedObject;
 import com.android.launcher3.util.PackageManagerHelper;
@@ -214,6 +219,20 @@ public class LauncherAppState implements SafeCloseable {
                 PackageManagerHelper.INSTANCE.get(context), iconCacheFileName != null);
         mOnTerminateCallback.add(mIconCache::close);
         mOnTerminateCallback.add(mModel::destroy);
+
+        DisplayInfoChangeListener displayListener = new DisplayInfoChangeListener() {
+            @Override
+            public void onDisplayInfoChanged(Context context, Info info, int flags) {
+                if ((flags & CHANGE_UI_MODE) != 0 || (flags & CHANGE_OVERLAYS) != 0) {
+                    Log.d(Launcher.TAG, "onDisplayInfoChanged " + flags);
+                    MODEL_EXECUTOR.execute(() -> mIconCache.clearDb());
+                    mModel.forceReload();
+                }
+            }
+        };
+        DisplayController.INSTANCE.get(mContext).addChangeListener(displayListener);
+        mOnTerminateCallback.add(
+                () -> DisplayController.INSTANCE.get(mContext).removeChangeListener(displayListener));
     }
 
     private void onNotificationSettingsChanged(boolean areNotificationDotsEnabled) {
