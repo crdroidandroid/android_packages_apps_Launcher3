@@ -80,12 +80,12 @@ public class SysUiScrim implements View.OnAttachStateChangeListener,
 
     private final RectF mTopMaskRect = new RectF();
     private final Paint mTopMaskPaint = new Paint(FILTER_BITMAP_FLAG | DITHER_FLAG);
-    private final Bitmap mTopMaskBitmap;
+    private Bitmap mTopMaskBitmap;
     private final int mTopMaskHeight;
 
     private final RectF mBottomMaskRect = new RectF();
     private final Paint mBottomMaskPaint = new Paint(FILTER_BITMAP_FLAG | DITHER_FLAG);
-    private final Bitmap mBottomMaskBitmap;
+    private Bitmap mBottomMaskBitmap;
     private final int mBottomMaskHeight;
 
     private final View mRoot;
@@ -106,14 +106,7 @@ public class SysUiScrim implements View.OnAttachStateChangeListener,
         mBottomMaskHeight = ResourceUtils.pxFromDp(BOTTOM_MASK_HEIGHT_DP, dm);
         SharedPreferences prefs = LauncherPrefs.getPrefs(view.getContext());
         mHideSysUiScrim = !prefs.getBoolean(KEY_SHOW_TOP_SHADOW, true);
-
-        mTopMaskBitmap = mHideSysUiScrim ? null : createDitheredAlphaMask(mTopMaskHeight,
-                new int[]{0x3DFFFFFF, 0x0AFFFFFF, 0x00FFFFFF},
-                new float[]{0f, 0.7f, 1f});
-        mTopMaskPaint.setColor(0xFF222222);
-        mBottomMaskBitmap = mHideSysUiScrim ? null : createDitheredAlphaMask(mBottomMaskHeight,
-                new int[]{0x00FFFFFF, 0x2FFFFFFF},
-                new float[]{0f, 1f});
+        createMaskBitmaps();
 
         if (!mHideSysUiScrim) {
             view.addOnAttachStateChangeListener(this);
@@ -191,8 +184,19 @@ public class SysUiScrim implements View.OnAttachStateChangeListener,
     public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
         if (key.equals(KEY_SHOW_TOP_SHADOW)) {
             mHideSysUiScrim = !prefs.getBoolean(KEY_SHOW_TOP_SHADOW, true);
+            createMaskBitmaps();
             mRoot.invalidate();
         }
+    }
+
+    private void createMaskBitmaps() {
+        mTopMaskBitmap = mHideSysUiScrim ? null : createDitheredAlphaMask(mTopMaskHeight,
+                new int[]{0x3DFFFFFF, 0x0AFFFFFF, 0x00FFFFFF},
+                new float[]{0f, 0.7f, 1f});
+        mTopMaskPaint.setColor(0xFF222222);
+        mBottomMaskBitmap = mHideSysUiScrim ? null : createDitheredAlphaMask(mBottomMaskHeight,
+                new int[]{0x00FFFFFF, 0x2FFFFFFF},
+                new float[]{0f, 1f});
     }
 
     /**
