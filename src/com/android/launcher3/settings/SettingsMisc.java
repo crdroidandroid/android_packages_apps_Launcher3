@@ -134,7 +134,13 @@ public class SettingsMisc extends CollapsingToolbarBaseActivity
         mContext = getApplicationContext();
         mContextualSearchDefValue = mContext.getResources().getBoolean(
                 com.android.internal.R.bool.config_searchAllEntrypointsEnabledDefault);
-        LauncherPrefs.getPrefs(getApplicationContext()).registerOnSharedPreferenceChangeListener(this);
+        LauncherPrefs.getPrefs(this).registerOnSharedPreferenceChangeListener(this);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        LauncherPrefs.getPrefs(this).unregisterOnSharedPreferenceChangeListener(this);
     }
 
     @Override
