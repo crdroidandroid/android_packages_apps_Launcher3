@@ -74,10 +74,10 @@
     <string name="paused_apps_dialog_title">App pausado</string>
     <string name="paused_apps_dialog_message">%1$s foi pausado diretamente do launcher</string>
     <string name="paused_apps_drop_target_label">Pausar app</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
+    <string name="work_apps_paused_title_custom">Aplicativos de trabalho desativados</string>
+    <string name="work_apps_pause_btn_text_custom">Desativar apps de trabalho</string>
     <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_info_body_custom">Apps de trabalho não podem te enviar notificações, usar sua bateria ou acessar sua localização</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Reiniciar</string>
@@ -369,6 +369,6 @@
     <string name="force_monochrome_icons_title"></string>
     <string name="force_monochrome_icons_summary">Gere ícones monocromáticos, se não for compatível com o aplicativo (requer alternar novamente os ícones temáticos)</string>
     <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Circle to Search</string>
+    <string name="pref_allow_cts_title">Circule para Pesquisar</string>
     <string name="pref_allow_cts_summary">Touch and hold the Home button or the navigation handle to search using the content on your screen.</string>
 </resources>
