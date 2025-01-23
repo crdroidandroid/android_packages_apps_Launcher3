@@ -74,11 +74,11 @@
     <string name="paused_apps_dialog_title">Aplikasi dijeda</string>
     <string name="paused_apps_dialog_message">%1$s langsung dijeda dari peluncur</string>
     <string name="paused_apps_drop_target_label">Jeda aplikasi</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">Aplikasi kerja tidak aktif</string>
+    <string name="work_apps_pause_btn_text_custom">Nonaktifkan aplikasi kerja</string>
+    <string name="work_apps_enable_btn_text_custom">Aktifkan aplikasi kerja</string>
+    <string name="work_apps_paused_info_body_custom">Aplikasi kerja tidak akan dapat mengirim notifikasi, menggunakan baterai, atau mengakses lokasi</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Aplikasi kerja tidak akan dapat menerima panggilan telepon atau pesan teks, mengirim notifikasi, menggunakan baterai, atau mengakses lokasi</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Mulai ulang</string>
     <string name="pref_restart_summary">Mulai ulang peluncur secara manual untuk menerapkan setelan yang tertunda</string>
@@ -154,7 +154,7 @@
     <string name="drawer_search_title">Bilah pencarian aplikasi</string>
     <string name="drawer_search_summary">Bilah pencarian di atas laci aplikasi</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
+    <string name="pref_auto_keyboard_title">Keyboard otomatis</string>
     <string name="pref_auto_keyboard_summary">Mulai mencari ketika laci diperluas</string>
     <!-- AppInfo -->
     <string name="app_info_source">Sumber</string>
@@ -369,6 +369,6 @@
     <string name="force_monochrome_icons_title">Paksa ikon bertema</string>
     <string name="force_monochrome_icons_summary">Hasilkan ikon monokromatik, jika tidak didukung oleh aplikasi (memerlukan pengalihan ikon bertema)</string>
     <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Circle to Search</string>
-    <string name="pref_allow_cts_summary">Touch and hold the Home button or the navigation handle to search using the content on your screen.</string>
+    <string name="pref_allow_cts_title">Lingkari untuk Mencari</string>
+    <string name="pref_allow_cts_summary">Sentuh dan tahan tombol Home atau bilah navigasi untuk mencari berdasarkan konten pada layar.</string>
 </resources>

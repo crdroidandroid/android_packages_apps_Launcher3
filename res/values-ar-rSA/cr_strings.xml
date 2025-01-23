@@ -369,6 +369,6 @@
     <string name="force_monochrome_icons_title">فرض الأيقونات ذات الطابع المخصص</string>
     <string name="force_monochrome_icons_summary">إنشاء أيقونات أحادية اللون، إذا لم تكن مدعومة من قبل التطبيق (يتطلب إعادة تبديل الأيقونات ذات الطابع المخصص)</string>
     <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Circle to Search</string>
-    <string name="pref_allow_cts_summary">Touch and hold the Home button or the navigation handle to search using the content on your screen.</string>
+    <string name="pref_allow_cts_title"></string>
+    <string name="pref_allow_cts_summary">.</string>
 </resources>
