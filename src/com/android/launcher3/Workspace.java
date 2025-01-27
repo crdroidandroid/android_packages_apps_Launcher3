@@ -1749,7 +1749,7 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
         }
 
         final DragView dv;
-        if (contentView instanceof View) {
+        if (contentView != null) {
             dv = mDragController.startDrag(
                     contentView,
                     draggableView,

@@ -1135,7 +1135,7 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
 
 
     public void applyDotState(ItemInfo itemInfo, boolean animate) {
-        if (mIcon instanceof FastBitmapDrawable) {
+        if (mIcon != null) {
             boolean wasDotted = mDotInfo != null;
             mDotInfo = mActivity.getDotInfoForItem(itemInfo);
             boolean isDotted = mDotInfo != null;
