@@ -114,4 +114,8 @@
     <string name="meow_shape_title">Meow</string>
     <string name="samsung_style_shape_title">Samsung Style</string>
     <string name="stretched_shape_title">Stretched</string>
+
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
 </resources>

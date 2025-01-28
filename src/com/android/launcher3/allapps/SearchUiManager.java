@@ -37,6 +37,11 @@ public interface SearchUiManager {
     void resetSearch();
 
     /**
+     * Notifies the search manager to focus search field and open keyboard.
+     */
+    void focusSearchField();
+
+    /**
      * Returns whether or not the search query is empty.
      */
     boolean isSearchQueryEmpty();
