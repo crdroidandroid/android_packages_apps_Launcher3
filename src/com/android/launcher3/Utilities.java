@@ -1125,8 +1125,7 @@ public final class Utilities {
    }
 
     public static int getRecentsOpacity(Context context) {
-        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
-        return prefs.getInt(KEY_RECENTS_OPACITY, 40);
+        return 100;
     }
 
     public static int getAllAppsOpacity(Context context) {
