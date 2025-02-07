@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">Frei: %1$s | Gesamt: %2$s</string>
     <string name="recents_meminfo_title">RAM-Info</string>
+    <string name="recents_meminfo_zram_title">ZRAM info</string>
     <!-- Background blur -->
     <string name="background_blur_title">Tiefenschärfegrad des Hintergrunds</string>
     <string name="background_blur_summary">Tiefenschärfegrad in App-Übersicht und -Verlauf anpassen</string>
