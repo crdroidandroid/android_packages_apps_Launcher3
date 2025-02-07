@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s dostępne | %2$s</string>
     <string name="recents_meminfo_title">Informacje o pamięci</string>
+    <string name="recents_meminfo_zram_title">ZRAM info</string>
     <!-- Background blur -->
     <string name="background_blur_title">Głębia rozmycia tła</string>
     <string name="background_blur_summary">Ustawienie poziomu głębi rozmycia dla przypomnień i szuflady aplikacji</string>
