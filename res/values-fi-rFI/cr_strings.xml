@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Käytettävissä | %2$s Yhteensä</string>
     <string name="recents_meminfo_title">Muistin tiedot</string>
+    <string name="recents_meminfo_zram_title">ZRAM info</string>
     <!-- Background blur -->
     <string name="background_blur_title">Taustan sumennuksen syvyys</string>
     <string name="background_blur_summary">Aseta sumennuksen syvyys viimeaikaisille ja sovellusvalikolle</string>
