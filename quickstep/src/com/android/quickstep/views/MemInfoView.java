@@ -203,6 +203,9 @@ public class MemInfoView extends TextView implements Insettable {
     private long getZramSize() {
         long zramSize = 0;
 
+        if (!Utilities.isShowMeminfoZram(getContext()))
+            return zramSize;
+
         try (BufferedReader reader = new BufferedReader(new FileReader("/sys/block/zram0/disksize"))) {
             zramSize = Long.parseLong(reader.readLine().trim());
         } catch (IOException | NumberFormatException e) {
