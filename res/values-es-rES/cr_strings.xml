@@ -369,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Forzar iconos temáticos</string>
     <string name="force_monochrome_icons_summary">Generar iconos monocromáticos, si no están soportados por la aplicación (requiere volver a cambiar los iconos temáticos)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Círculo para buscar</string>
-    <string name="pref_allow_cts_summary">Toque y mantenga pulsado el botón Inicio o el control de navegación para buscar usando el contenido de su pantalla.</string>
 </resources>
