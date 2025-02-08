@@ -48,13 +48,6 @@
         android:min="0"
         settings:units="px"
         android:defaultValue="23" />
-        
-    <SwitchPreferenceCompat
-        android:key="pref_allow_cts"
-        android:title="@string/pref_allow_cts_title"
-        android:summary="@string/pref_allow_cts_summary"
-        android:defaultValue="@*android:bool/config_searchAllEntrypointsEnabledDefault"
-        launcher:iconSpaceReserved="false" />
 
     <androidx.preference.PreferenceScreen
         android:persistent="false"
