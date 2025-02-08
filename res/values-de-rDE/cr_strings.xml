@@ -369,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Symboldesigns erzwingen</string>
     <string name="force_monochrome_icons_summary">Einfarbige Symbole generieren, sofern von der App selbst nicht unterstützt (Symboldesigns müssen dabei deaktiviert und erneut aktiviert werden)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Circle to Search</string>
-    <string name="pref_allow_cts_summary">Home-Taste oder Navigationsziehpunkt gedrückt halten, um eine Suche mit dem aktuellen Bildschirminhalt zu starten.</string>
 </resources>
