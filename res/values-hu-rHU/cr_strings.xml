@@ -369,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Kényszerített ikontémázás</string>
     <string name="force_monochrome_icons_summary">Monokróm ikonok létrehozása, ha az alkalmazás nem készíti el (a tematikus ikonok újrakapcsolása szükséges)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Gombbal keresés</string>
-    <string name="pref_allow_cts_summary">Érintse meg és tartsa lenyomva a Kezdőlap gombját vagy a navigációs gombot, ha a képernyőn megjelenő tartalom alapján szeretne keresni.</string>
 </resources>
