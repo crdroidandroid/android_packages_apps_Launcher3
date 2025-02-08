@@ -46,8 +46,6 @@ import com.android.systemui.shared.system.ActivityManagerWrapper;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import com.android.internal.util.android.VibrationUtils;
-
 /**
  * Class for extending nav handle long press behavior
  */
@@ -66,7 +64,6 @@ public class NavHandleLongPressHandler {
     }
 
     private final String TAG = "NavHandleLongPressHandler";
-    private boolean DEBUG = false;
 
     private ThumbnailData mThumbnailData;
     private TopTaskTracker mTopTaskTracker;
@@ -77,7 +74,7 @@ public class NavHandleLongPressHandler {
     public NavHandleLongPressHandler(Context context, TopTaskTracker topTaskTracker) {
         mContext = context;
         mTopTaskTracker = topTaskTracker;
-	mAssistUtils = new AssistUtils(mContext);
+        mAssistUtils = new AssistUtils(mContext);
     }
 
     /**
@@ -92,19 +89,18 @@ public class NavHandleLongPressHandler {
      * @param navHandle to handle this long press
      */
     public @Nullable Runnable getLongPressRunnable(NavHandle navHandle) {
-	    if (!Utilities.isGSAEnabled(mContext) ||
-            !Utilities.isLongPressToSearchEnabled(mContext)) {
+        if (!Utilities.isGSAEnabled(mContext) ||
+                !Utilities.isLongPressToSearchEnabled(mContext)) {
             return null;
         }
-
-        VibrationUtils.triggerVibration(mContext, 2);
-        navHandle.animateNavBarLongPress(true, true, 200L);
 
         // CTS
         if (mAssistUtils.canDoContextualSearch()) {
             return new Runnable() {
                 @Override
                 public final void run() {
+                    VibratorWrapper.INSTANCE.get(mContext).vibrate(EFFECT_TICK);
+                    navHandle.animateNavBarLongPress(true, true, 200L);
                     mHandler.postDelayed(() -> {
                         if (mAssistUtils.invokeContextualSearch(
                                 ContextualSearchManager.ENTRYPOINT_LONG_PRESS_NAV_HANDLE)) {
@@ -116,12 +112,17 @@ public class NavHandleLongPressHandler {
         }
 
         // Lens
-        updateThumbnail();
-        if (mThumbnailData != null && mThumbnailData.getThumbnail() != null) {
-            if (DEBUG) Log.d(TAG, "getLongPressRunnable: Google lens should start now");
-            ImageActionUtils.startLensActivity(mContext, mThumbnailData.getThumbnail(), null, TAG);
-        } else {
-            if (DEBUG) Log.d(TAG, "getLongPressRunnable: thumbnail is null");
+        if (updateThumbnail()) {
+            return new Runnable() {
+                @Override
+                public final void run() {
+                    if (mThumbnailData != null && mThumbnailData.getThumbnail() != null) {
+                        VibratorWrapper.INSTANCE.get(mContext).vibrate(EFFECT_TICK);
+                        navHandle.animateNavBarLongPress(true, true, 200L);
+                        ImageActionUtils.startLensActivity(mContext, mThumbnailData.getThumbnail(), null, TAG);
+                    }
+                }
+            };
         }
         return null;
     }
@@ -131,14 +132,9 @@ public class NavHandleLongPressHandler {
      *
      * @param navHandle to handle the animation for this touch
      */
-    public void onTouchStarted(NavHandle navHandle) {
-        updateThumbnail();
-    }
+    public void onTouchStarted(NavHandle navHandle) {}
 
-    private void updateThumbnail() {
-	if (!Utilities.isGSAEnabled(mContext)) {
-            return;
-        }
+    private boolean updateThumbnail() {
         String runningPackage = mTopTaskTracker.getCachedTopTask(
                 /* filterOnlyVisibleRecents */ true).getPackageName();
         ActivityManager activityManager = (ActivityManager) mContext.getSystemService(Context.ACTIVITY_SERVICE);
@@ -148,11 +144,11 @@ public class NavHandleLongPressHandler {
                 if (task.topActivity.getPackageName().equals(runningPackage)) {
                     int taskId = task.id;
                     mThumbnailData = ActivityManagerWrapper.getInstance().takeTaskThumbnail(taskId);
-                    break;
+                    return true;
                 }
             }
         }
-        if (DEBUG) Log.d(TAG, "updateThumbnail running, runningPackage: " + runningPackage);
+        return false;
     }
 
     /**
