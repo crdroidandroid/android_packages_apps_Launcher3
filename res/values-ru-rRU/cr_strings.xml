@@ -138,7 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">Доступно: %1$s | Всего: %2$s</string>
     <string name="recents_meminfo_title">Информация о памяти</string>
-    <string name="recents_meminfo_zram_title">ZRAM info</string>
+    <string name="recents_meminfo_zram_title">Информация о ZRAM</string>
     <!-- Background blur -->
     <string name="background_blur_title">Размытие фона</string>
     <string name="background_blur_summary">Установка глубины размытия для недавних и меню приложений</string>
