@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s در دسترس | %2$s</string>
     <string name="recents_meminfo_title">اطلاعات حافظه</string>
+    <string name="recents_meminfo_zram_title">ZRAM info</string>
     <!-- Background blur -->
     <string name="background_blur_title">عمق تاری پس زمینه</string>
     <string name="background_blur_summary">سطح عمق تاری را برای موارد اخیر و کشوی برنامه تنظیم کنید</string>
@@ -374,7 +375,4 @@ Remember the Lineage of the Unicorn</item>
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">نمادهای با مضمون اجباری</string>
     <string name="force_monochrome_icons_summary">در صورت عدم پشتیبانی برنامه، نمادهای تک رنگ ایجاد کنید (نیاز به تغییر مجدد نمادهای مضمون دارد)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">کشیدن دایره برای جستجو</string>
-    <string name="pref_allow_cts_summary">دکمه صفحه اصلی یا دستگیره پیمایش را لمس و نگه دارید تا با استفاده از آن محتوای روی صفحه خود را جستجو کنید.</string>
 </resources>

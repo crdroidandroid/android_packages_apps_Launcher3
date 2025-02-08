@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Disponible | %2$s Total</string>
     <string name="recents_meminfo_title">Information sur la RAM</string>
+    <string name="recents_meminfo_zram_title">ZRAM info</string>
     <!-- Background blur -->
     <string name="background_blur_title">Niveau de flou</string>
     <string name="background_blur_summary">Définir le niveau de flou pour le tiroir et récent</string>
@@ -368,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Forcé les icônes a correspondre au thème</string>
     <string name="force_monochrome_icons_summary">Générer des icônes monochromatiques, si elles ne sont pas prises en charge par l\'application (nécessite de rechanger les icônes thématiques)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Circle to Search</string>
-    <string name="pref_allow_cts_summary">Touch and hold the Home button or the navigation handle to search using the content on your screen.</string>
 </resources>

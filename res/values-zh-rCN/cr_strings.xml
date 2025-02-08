@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s 可用 | %2$s 总计</string>
     <string name="recents_meminfo_title">内存信息</string>
+    <string name="recents_meminfo_zram_title">内存信息</string>
     <!-- Background blur -->
     <string name="background_blur_title">背景模糊深度</string>
     <string name="background_blur_summary">为最近任务和应用抽屉设置模糊深度级别</string>
@@ -368,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">强制主题化图标</string>
     <string name="force_monochrome_icons_summary">在应用程序不支持的情况下生成单色图标（需要重新启用主题化图标）</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">长按搜索</string>
-    <string name="pref_allow_cts_summary">触摸并按住主屏幕按钮或导航来搜索您屏幕上的内容。</string>
 </resources>

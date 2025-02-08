@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Доступно | %2$s Загалом</string>
     <string name="recents_meminfo_title">Інформація про пам\'ять</string>
+    <string name="recents_meminfo_zram_title">Інформація ZRAM</string>
     <!-- Background blur -->
     <string name="background_blur_title">Глибина розмиття фону</string>
     <string name="background_blur_summary">Встановити глибину розмиття для нещодавніх та меню додатків</string>
@@ -368,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Примусові тематичні іконки</string>
     <string name="force_monochrome_icons_summary">Генерувати монохроматичні іконки, якщо вони не підтримуються програмою (потрібно повторно перемкнути тематичні іконки)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Коло для пошуку</string>
-    <string name="pref_allow_cts_summary">Натисніть і утримуйте кнопку \"Додому\" або \"Навігаційний клієнт\", щоб шукати за допомогою вмісту на екрані.</string>
 </resources>

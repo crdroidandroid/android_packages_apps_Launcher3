@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Mevcut | %2$s Toplam</string>
     <string name="recents_meminfo_title">Bellek bilgisi</string>
+    <string name="recents_meminfo_zram_title">ZRAM bilgisi</string>
     <!-- Background blur -->
     <string name="background_blur_title">Arka plan bulanıklık derinliği</string>
     <string name="background_blur_summary">Son uygulamalar ve uygulama çekmecesi için bulanıklık derinliği seviyesini ayarlayın</string>
@@ -368,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Temalı simgelere zorla</string>
     <string name="force_monochrome_icons_summary">Uygulama desteklemiyorsa tek renkli simgeleri oluştur (temalı simgeleri tekrar açmak gerekir)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Daire çizerek Ara</string>
-    <string name="pref_allow_cts_summary">Ekranınızdaki içeriği kullanarak arama yapmak için Ana Ekran düğmesine veya gezinme koluna dokunup basılı tutun.</string>
 </resources>

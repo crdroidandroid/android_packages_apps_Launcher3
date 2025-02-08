@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s beschikbaar | %2$s</string>
     <string name="recents_meminfo_title">Geheugen informatie</string>
+    <string name="recents_meminfo_zram_title">ZRAM info</string>
     <!-- Background blur -->
     <string name="background_blur_title">Achtergrond vervagen diepte</string>
     <string name="background_blur_summary">Stel vervaging diepte in voor recente apps en app drawer</string>
@@ -368,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Forceer thema pictogrammen</string>
     <string name="force_monochrome_icons_summary">Genereer monochromatische pictogrammen, als deze niet worden ondersteund door de app (vereist opnieuw omschakelen van thema pictogrammen)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Cirkel om te zoeken</string>
-    <string name="pref_allow_cts_summary">Raak de Home-knop of de navigatiehendel aan om te zoeken met behulp van de inhoud op uw scherm.</string>
 </resources>

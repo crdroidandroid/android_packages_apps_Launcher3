@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">可用 %1$s | 總共 %2$s</string>
     <string name="recents_meminfo_title">記憶體</string>
+    <string name="recents_meminfo_zram_title">ZRAM info</string>
     <!-- Background blur -->
     <string name="background_blur_title">背景模糊度</string>
     <string name="background_blur_summary">設定最近應用程式和應用程式抽屜的背景模糊度</string>
@@ -368,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">強制圖示套用主題色</string>
     <string name="force_monochrome_icons_summary">若應用程式不支援單色圖示（需重新切換主題圖示），則產生單色圖示。</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">畫圈搜尋</string>
-    <string name="pref_allow_cts_summary">按住主畫面按鈕或導覽列，就能搜尋畫面上的內容。</string>
 </resources>

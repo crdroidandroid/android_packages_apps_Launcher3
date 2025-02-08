@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s k dispozici | %2$s</string>
     <string name="recents_meminfo_title">Informace o\u00a0paměti</string>
+    <string name="recents_meminfo_zram_title">Informace o ZRAM</string>
     <!-- Background blur -->
     <string name="background_blur_title">Hloubka rozostření pozadí</string>
     <string name="background_blur_summary">Nastavit úroveň hloubky rozostření nedávných aplikací a\u00a0seznamu aplikací</string>
@@ -368,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Vynutit ikony motivů</string>
     <string name="force_monochrome_icons_summary">Generovat monochromatické ikony, pokud nejsou podporovány aplikací (vyžaduje opětovné přepnutí ikon motivů)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Zakroužkuj a hledej</string>
-    <string name="pref_allow_cts_summary">Dotkněte se a přidržte tlačítko Domů nebo navigační proužek, abyste začali vyhledávat pomocí obsahu na vaší obrazovce.</string>
 </resources>

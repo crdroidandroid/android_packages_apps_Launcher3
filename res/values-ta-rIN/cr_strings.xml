@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Available | %2$s Total</string>
     <string name="recents_meminfo_title">Memory info</string>
+    <string name="recents_meminfo_zram_title">ZRAM info</string>
     <!-- Background blur -->
     <string name="background_blur_title">Background blur depth</string>
     <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
@@ -368,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Force themed icons</string>
     <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Circle to Search</string>
-    <string name="pref_allow_cts_summary">Touch and hold the Home button or the navigation handle to search using the content on your screen.</string>
 </resources>

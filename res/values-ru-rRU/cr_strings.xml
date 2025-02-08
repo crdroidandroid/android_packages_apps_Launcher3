@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">Доступно: %1$s | Всего: %2$s</string>
     <string name="recents_meminfo_title">Информация о памяти</string>
+    <string name="recents_meminfo_zram_title">Информация о ZRAM</string>
     <!-- Background blur -->
     <string name="background_blur_title">Размытие фона</string>
     <string name="background_blur_summary">Установка глубины размытия для недавних и меню приложений</string>
@@ -368,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Принудительно значки из темы</string>
     <string name="force_monochrome_icons_summary">Создание монохромных значков, если они не поддерживаются приложением (требуется переключение тематических значков)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Круг для поиска</string>
-    <string name="pref_allow_cts_summary">Нажмите и удерживайте кнопку «Домой» или «навигация», чтобы выполнить поиск по содержимому экрана.</string>
 </resources>

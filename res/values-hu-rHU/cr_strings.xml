@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%2$s memóból %1$s érhető el</string>
     <string name="recents_meminfo_title">Memória-információ</string>
+    <string name="recents_meminfo_zram_title">ZRAM-információ</string>
     <!-- Background blur -->
     <string name="background_blur_title">A háttér-elmosás mélysége</string>
     <string name="background_blur_summary">Az előzmények és az alkalmazásfiók elmosási.értéke állítható itt</string>
@@ -368,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Kényszerített ikontémázás</string>
     <string name="force_monochrome_icons_summary">Monokróm ikonok létrehozása, ha az alkalmazás nem készíti el (a tematikus ikonok újrakapcsolása szükséges)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Gombbal keresés</string>
-    <string name="pref_allow_cts_summary">Érintse meg és tartsa lenyomva a Kezdőlap gombját vagy a navigációs gombot, ha a képernyőn megjelenő tartalom alapján szeretne keresni.</string>
 </resources>

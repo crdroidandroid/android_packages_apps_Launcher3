@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">Frei: %1$s | Gesamt: %2$s</string>
     <string name="recents_meminfo_title">RAM-Info</string>
+    <string name="recents_meminfo_zram_title">ZRAM-Info</string>
     <!-- Background blur -->
     <string name="background_blur_title">Tiefenschärfegrad des Hintergrunds</string>
     <string name="background_blur_summary">Tiefenschärfegrad in App-Übersicht und -Verlauf anpassen</string>
@@ -368,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Symboldesigns erzwingen</string>
     <string name="force_monochrome_icons_summary">Einfarbige Symbole generieren, sofern von der App selbst nicht unterstützt (Symboldesigns müssen dabei deaktiviert und erneut aktiviert werden)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Circle to Search</string>
-    <string name="pref_allow_cts_summary">Home-Taste oder Navigationsziehpunkt gedrückt halten, um eine Suche mit dem aktuellen Bildschirminhalt zu starten.</string>
 </resources>

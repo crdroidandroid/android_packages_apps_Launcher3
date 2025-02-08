@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Disponibles | %2$s Total</string>
     <string name="recents_meminfo_title">Información de memoria</string>
+    <string name="recents_meminfo_zram_title">ZRAM info</string>
     <!-- Background blur -->
     <string name="background_blur_title">Desenfoque de fondo</string>
     <string name="background_blur_summary">Establecer nivel de profundidad de desenfoque para recientes y cajón de aplicaciones</string>
@@ -368,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Forzar iconos temáticos</string>
     <string name="force_monochrome_icons_summary">Generar iconos monocromáticos, si no están soportados por la aplicación (requiere volver a cambiar los iconos temáticos)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Círculo para buscar</string>
-    <string name="pref_allow_cts_summary">Toque y mantenga pulsado el botón Inicio o el control de navegación para buscar usando el contenido de su pantalla.</string>
 </resources>

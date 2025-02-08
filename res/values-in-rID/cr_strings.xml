@@ -75,7 +75,7 @@
     <string name="paused_apps_dialog_message">%1$s langsung dijeda dari peluncur</string>
     <string name="paused_apps_drop_target_label">Jeda aplikasi</string>
     <string name="work_apps_paused_title_custom">Aplikasi kerja tidak aktif</string>
-    <string name="work_apps_pause_btn_text_custom">Nonaktifkan aplikasi kerja</string>
+    <string name="work_apps_pause_btn_text_custom">Tunda Aplikasi Kerja</string>
     <string name="work_apps_enable_btn_text_custom">Aktifkan aplikasi kerja</string>
     <string name="work_apps_paused_info_body_custom">Aplikasi kerja tidak akan dapat mengirim notifikasi, menggunakan baterai, atau mengakses lokasi</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Aplikasi kerja tidak akan dapat menerima panggilan telepon atau pesan teks, mengirim notifikasi, menggunakan baterai, atau mengakses lokasi</string>
@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Tersedia | %2$s Total</string>
     <string name="recents_meminfo_title">Info memori</string>
+    <string name="recents_meminfo_zram_title">ZRAM info</string>
     <!-- Background blur -->
     <string name="background_blur_title">Kedalaman blur latar belakang</string>
     <string name="background_blur_summary">Setel tingkat kedalaman blur untuk baru-baru ini dan laci aplikasi</string>
@@ -154,7 +155,7 @@
     <string name="drawer_search_title">Bilah pencarian aplikasi</string>
     <string name="drawer_search_summary">Bilah pencarian di atas laci aplikasi</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Keyboard otomatis</string>
+    <string name="pref_auto_keyboard_title">Papan ketik otomatis</string>
     <string name="pref_auto_keyboard_summary">Mulai mencari ketika laci diperluas</string>
     <!-- AppInfo -->
     <string name="app_info_source">Sumber</string>
@@ -368,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">Paksa ikon bertema</string>
     <string name="force_monochrome_icons_summary">Hasilkan ikon monokromatik, jika tidak didukung oleh aplikasi (memerlukan pengalihan ikon bertema)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">Lingkari untuk Mencari</string>
-    <string name="pref_allow_cts_summary">Sentuh dan tahan tombol Home atau bilah navigasi untuk mencari berdasarkan konten pada layar.</string>
 </resources>

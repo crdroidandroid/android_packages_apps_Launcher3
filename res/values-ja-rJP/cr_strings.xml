@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Available | %2$s Total</string>
     <string name="recents_meminfo_title">メモリ情報</string>
+    <string name="recents_meminfo_zram_title">ZRAM info</string>
     <!-- Background blur -->
     <string name="background_blur_title">背景のぼかし度合い</string>
     <string name="background_blur_summary">アプリ履歴とアプリドロワーのぼかし度合いを設定する</string>
@@ -368,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">テーマアイコンを強制する</string>
     <string name="force_monochrome_icons_summary">アプリ側のサポートが無い場合、アイコンを生成します(テーマアイコンの再切り替えが必要です)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">かこって検索</string>
-    <string name="pref_allow_cts_summary">ホームボタンまたはナビゲーションハンドルを長押しして、画面上のコンテンツを検索します。</string>
 </resources>

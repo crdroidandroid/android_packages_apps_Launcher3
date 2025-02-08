@@ -138,6 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s זמין /%2$s בסך הכל</string>
     <string name="recents_meminfo_title">מידע אודות הזכרון</string>
+    <string name="recents_meminfo_zram_title">מידע אודות ZRAM</string>
     <!-- Background blur -->
     <string name="background_blur_title">עומק טשטוש הרקע</string>
     <string name="background_blur_summary">הגדרת עומק הטשטוש למגירת היישומים וליישומים האחרונים</string>
@@ -368,7 +369,4 @@
     <!-- Force monochrome icons -->
     <string name="force_monochrome_icons_title">שימוש כפוי בסמלי ערכת הנושא</string>
     <string name="force_monochrome_icons_summary">יצירת סמלים בצבע יחיד, אם לא מוגדרים ביישום (נדרש להפעיל מחדש את האפשרות סמלי ערכת הנושא)</string>
-    <!-- Circle to Search -->
-    <string name="pref_allow_cts_title">להקיף לחיפוש</string>
-    <string name="pref_allow_cts_summary">יש לגעת ולהחזיק על מקש הבית או הניווט לחיפוש באמצעות התוכן המוצג על המסך שלך.</string>
 </resources>
