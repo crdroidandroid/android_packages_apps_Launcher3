@@ -269,7 +269,7 @@ public class NavbarButtonsViewController implements TaskbarControllers.LoggableT
                 mContext.isPhoneMode(), mContext.isGestureNav());
         ViewGroup.LayoutParams navButtonsViewLayoutParams = mNavButtonsView.getLayoutParams();
         navButtonsViewLayoutParams.width = p.x;
-        if (!mContext.isUserSetupComplete()) {
+        if (!mContext.isUserSetupComplete() && !isThreeButtonNav) {
             // Setup mode in phone mode uses gesture nav.
             navButtonsViewLayoutParams.height = setupSize;
         } else {
