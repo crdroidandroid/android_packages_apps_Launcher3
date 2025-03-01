@@ -21,9 +21,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageInfo;
 import android.content.pm.ResolveInfo;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -134,25 +132,12 @@ public final class IconPackSettingsFragment extends RadioSettingsFragment {
         // Add default
         final String defaultLabel = context.getString(R.string.icon_pack_default_label);
         availablePacks.add(new IconPackInfo(IconDatabase.VALUE_DEFAULT, defaultLabel));
-        // Add user-installed packs that do not have themed icons
+        // Add user-installed packs
         for (final ResolveInfo r : eligiblePacks) {
-            if (!hasThemedIconResourceMap(pm, r.activityInfo.packageName)) {
-                availablePacks.add(new IconPackInfo(
-                        r.activityInfo.packageName, (String) r.loadLabel(pm)));
-            }
+            availablePacks.add(new IconPackInfo(
+                    r.activityInfo.packageName, (String) r.loadLabel(pm)));
         }
         return availablePacks;
-    }
-
-    private boolean hasThemedIconResourceMap(PackageManager pm, String packageName) {
-        try {
-            PackageInfo packageInfo = pm.getPackageInfo(packageName, PackageManager.GET_META_DATA);
-            Resources res = pm.getResourcesForApplication(packageInfo.applicationInfo);
-            int resID = res.getIdentifier("grayscale_icon_map", "xml", packageName);
-            return resID != 0;
-        } catch (PackageManager.NameNotFoundException | Resources.NotFoundException e) {
-            return false;
-        }
     }
 
     private SelectorWithWidgetPreference buildPreference(Context context, String pkgName,
