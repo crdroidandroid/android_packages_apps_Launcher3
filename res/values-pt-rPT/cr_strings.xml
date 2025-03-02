@@ -283,29 +283,29 @@
         <item>Os pensamentos noturnos podem levar a revelações matinais.</item>
         <item>Encontre alegria na quietude desta noite.</item>
         <item>O céu noturno é uma vasta tela de sonhos.</item>
-        <item>Your potential knows no bedtime; pursue your passions.</item>
-        <item>Stay hopeful, even in the darkest hours.</item>
-        <item>In the midst of chaos, find your inner calm.</item>
-        <item>Stay positive, work hard, make it happen.</item>
+        <item>O seu potencial não conhece hora de dormir; persiga as suas paixões.</item>
+        <item>Mantenha a esperança, mesmo nas horas mais sombrias.</item>
+        <item>No meio do caos, encontre a sua calma interior.</item>
+        <item>Mantenha-se positivo, trabalhe arduamente e faça acontecer.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Nights are the quiet whispers of opportunity.</item>
-        <item>In the stillness of the night, find your inner strength.</item>
-        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
-        <item>The world sleeps, but your potential is wide awake.</item>
-        <item>The night may be late, but your ambitions are timeless.</item>
-        <item>Stay curious, stay awake, and let nights guide you.</item>
-        <item>Find the courage to chase your dreams.</item>
-        <item>Great things never come from comfort zones.</item>
-        <item>You have the power to create your own destiny.</item>
-        <item>Happiness is a choice; choose it every day.</item>
-        <item>Life is what you make it, so make it count.</item>
-        <item>Stay focused, stay determined, stay unstoppable.</item>
-        <item>You are the author of your own story.</item>
-        <item>Strive for progress, not perfection.</item>
-        <item>Every day is a new beginning; make it a great one.</item>
-        <item>Inspire others by being your authentic self.</item>
-        <item>Your attitude determines your direction.</item>
+        <item>As noites são os sussurros silenciosos da oportunidade.</item>
+        <item>Na quietude da noite, encontre a sua força interior.</item>
+        <item>Abrace a escuridão, pois ela contém as chaves dos seus sonhos.</item>
+        <item>O mundo dorme, mas o seu potencial está bem desperto.</item>
+        <item>A noite pode ser tardia, mas as suas ambições são intemporais.</item>
+        <item>Mantenha-se curioso, desperto e deixe que as noites o guie.</item>
+        <item>Encontre a coragem para perseguir os seus sonhos.</item>
+        <item>As grandes coisas nunca vêm de zonas de conforto.</item>
+        <item>Consegue criar o seu próprio destino.</item>
+        <item>A felicidade é uma escolha; escolha-a todos os dias.</item>
+        <item>A vida é o que fazemos dela, por isso, faça-a valer a pena.</item>
+        <item>Mantenha-se concentrado, determinado, imparável.</item>
+        <item>É o autor da sua própria história.</item>
+        <item>Esforce-se para progredir, não pela perfeição.</item>
+        <item>Cada dia é um novo começo; faça dele um grande começo.</item>
+        <item>Inspire os outros sendo autêntico.</item>
+        <item>A sua atitude determina o seu rumo.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>A ignorância é uma benção</item>
@@ -341,11 +341,11 @@
         <item>Wubba Lubba Dub Dub</item>
         <item>Vencedor Vencedor ....?</item>
         <item>rm -rf \/</item>
-        <item>Pringles aren\'t actually potato chips..</item>
-        <item>Remember to check device\'s battery level!</item>
-        <item>Check your email/messages.</item>
-        <item>Check your to-do list if you have one.</item>
-        <item>You can disable quickspace via home settings.</item>
+        <item>As Pringles não são batatas fritas..</item>
+        <item>Não se esqueça de verificar o nível da bateria do dispositivo!</item>
+        <item>Verifique o seu correio eletrónico/mensagens.</item>
+        <item>Verifique a sua lista de tarefas, se a tiver.</item>
+        <item>Pode desativar o espaço rápido através das definições da página inicial.</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Weather -->
     <string name="quick_event_ambient_weather_title">Atualização meteorológica</string>
@@ -364,9 +364,9 @@
     <string name="quick_event_weather_text_summary">Mostrar as condições meteorológicas atuais</string>
     <string name="intent_no_app_clock_found">Não foi possível encontrar o calendário ou a atividade do relógio</string>
     <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">Scrollbar</string>
-    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
+    <string name="drawer_scrollbar_title">Barra de deslocamento</string>
+    <string name="drawer_scrollbar_summary">Barra de deslocamento na parte lateral da gaveta de aplicações</string>
     <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Force themed icons</string>
-    <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
+    <string name="force_monochrome_icons_title">Forçar ícones temáticos</string>
+    <string name="force_monochrome_icons_summary">Gerar ícones monocromáticos, se não for suportado pela aplicação (requer realternância de ícones temáticos)</string>
 </resources>
