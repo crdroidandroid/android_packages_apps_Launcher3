@@ -240,6 +240,29 @@
     </grid-option>
 
     <grid-option
+        launcher:name="5_by_8"
+        launcher:numRows="8"
+        launcher:numColumns="5"
+        launcher:numFolderRows="6"
+        launcher:numFolderColumns="4"
+        launcher:numHotseatIcons="5"
+        launcher:dbFile="launcher_5_by_8.db"
+        launcher:defaultLayoutId="@xml/default_workspace_5x8"
+        launcher:deviceCategory="phone|multi_display" >
+
+        <display-option
+            launcher:name="Large Phone"
+            launcher:minWidthDps="406"
+            launcher:minHeightDps="694"
+            launcher:iconImageSize="56"
+            launcher:iconTextSize="13.0"
+            launcher:allAppsBorderSpace="16"
+            launcher:allAppsCellHeight="104"
+            launcher:canBeDefault="true" />
+
+    </grid-option>
+
+    <grid-option
         launcher:name="5_by_10"
         launcher:numRows="10"
         launcher:numColumns="5"
