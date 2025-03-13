@@ -283,6 +283,13 @@ constructor(
             systemUiProxy?.onKeyEvent(keycode, displayId)
         }
 
+    fun onLongPressKeyEvent(keycode: Int, displayId: Int) =
+        executeWithErrorLog({
+            "Failed call onLongPressKeyEvent ${KeyEvent.keyCodeToString(keycode)}"
+        }) {
+            systemUiProxy?.onLongPressKeyEvent(keycode, displayId)
+        }
+
     fun onImeSwitcherPressed() =
         executeWithErrorLog({ "Failed call onImeSwitcherPressed" }) {
             systemUiProxy?.onImeSwitcherPressed()
