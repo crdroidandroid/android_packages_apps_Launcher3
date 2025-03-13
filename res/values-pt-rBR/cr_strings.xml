@@ -75,10 +75,10 @@
     <string name="paused_apps_dialog_message">%1$s foi pausado diretamente do launcher</string>
     <string name="paused_apps_drop_target_label">Pausar app</string>
     <string name="work_apps_paused_title_custom">Apps de trabalho desativados</string>
-    <string name="work_apps_pause_btn_text_custom">Desativar apps de trabalho</string>
-    <string name="work_apps_enable_btn_text_custom">Ativar apps de trabalho</string>
+    <string name="work_apps_pause_btn_text_custom">Desativar aplicativos de trabalho</string>
+    <string name="work_apps_enable_btn_text_custom">Ativar aplicativos de trabalho</string>
     <string name="work_apps_paused_info_body_custom">Apps de trabalho não podem te enviar notificações, usar sua bateria ou acessar sua localização</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Seus apps de trabalho não podem receber chamadas telefônicas ou mensagens de texto, enviar-lhe notificações, usar sua bateria ou acessar sua localização</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Seus aplicativos de trabalho não podem receber chamadas telefônicas ou mensagens de texto, enviar-lhe notificações, usar sua bateria ou acessar sua localização</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Reiniciar</string>
     <string name="pref_restart_summary">Reiniciar manualmente o launcher para aplicar qualquer configuração pendente</string>
