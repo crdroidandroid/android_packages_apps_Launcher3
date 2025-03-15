@@ -111,6 +111,8 @@ import com.android.wm.shell.shared.desktopmode.DesktopState;
 
 import kotlin.Unit;
 
+import lineageos.providers.LineageSettings;
+
 import kotlinx.coroutines.CoroutineDispatcher;
 
 import java.io.PrintWriter;
@@ -137,6 +139,9 @@ public class TaskbarManagerImpl {
 
     private static final Uri NAV_BAR_KIDS_MODE = Settings.Secure.getUriFor(
             Settings.Secure.NAV_BAR_KIDS_MODE);
+
+    public static final Uri ENABLE_TASKBAR_URI = LineageSettings.System.getUriFor(
+            LineageSettings.System.ENABLE_TASKBAR);
 
     private final Context mBaseContext;
     private final int mPrimaryDisplayId;
@@ -345,6 +350,11 @@ public class TaskbarManagerImpl {
                 v -> onSettingChanged(v, TaskbarActivityContext::isInKidsMode));
         cleanupTasks.addCloseable(getTaskbarUiThread(), navBarKidsModeSafeCloseable);
 
+        var enableTaskbarSafeCloseable = settingsCache.getListenableRef(ENABLE_TASKBAR_URI).forEach(
+                getTaskbarUiThread(),
+                v -> onTaskbarChanged(v, TaskbarActivityContext::isTaskbarEnabled));
+        cleanupTasks.addCloseable(getTaskbarUiThread(), enableTaskbarSafeCloseable);
+
         SimpleBroadcastReceiver shutdownReceiver = new SimpleBroadcastReceiver(
                 mBaseContext,
                 UI_HELPER_EXECUTOR,
@@ -478,6 +488,18 @@ public class TaskbarManagerImpl {
             if (activity != null && oldValue.apply(activity) != newValue) {
                 resource.debugMsg("onSettingChanged");
                 recreateTaskbarForDisplay(resource, 0, "onSettingChanged");
+            }
+        });
+        return Unit.INSTANCE;
+    }
+
+    private Unit onTaskbarChanged(boolean newValue,
+            ToBooleanFunction<TaskbarActivityContext> oldValue) {
+        mResources.forEach(resource -> {
+            var activity = resource.getTaskbar();
+            if (activity != null && oldValue.apply(activity) != newValue) {
+                resource.debugMsg("Taskbar changed! Restarting process!");
+                System.exit(0);
             }
         });
         return Unit.INSTANCE;

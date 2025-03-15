@@ -211,6 +211,8 @@ import com.android.wm.shell.shared.desktopmode.DesktopModeTransitionSource;
 import com.android.wm.shell.shared.desktopmode.DesktopState;
 import com.android.wm.shell.shared.desktopmode.DesktopTaskToFrontReason;
 
+import lineageos.providers.LineageSettings;
+
 import java.io.PrintWriter;
 import java.util.Collections;
 import java.util.List;
@@ -233,6 +235,8 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
 
     private static final Uri URI_USER_SETUP_COMPLETE = Secure.getUriFor(Secure.USER_SETUP_COMPLETE);
     private static final Uri URI_NAV_BAR_KIDS_MODE = Secure.getUriFor(Secure.NAV_BAR_KIDS_MODE);
+    private static final Uri URI_ENABLE_TASKBAR = LineageSettings.System.getUriFor(
+            LineageSettings.System.ENABLE_TASKBAR);
 
     private static final String TAG = "TaskbarActivityContext";
 
@@ -289,6 +293,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
     private final boolean mIsSafeModeEnabled;
     private final boolean mIsUserSetupComplete;
     private final boolean mIsNavBarKidsMode;
+    private final boolean mIsTaskbarEnabled;
 
     private boolean mIsDestroyed = false;
 
@@ -352,6 +357,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
         SettingsCache settingsCache = SettingsCache.INSTANCE.get(this);
         mIsUserSetupComplete = settingsCache.getValue(URI_USER_SETUP_COMPLETE);
         mIsNavBarKidsMode = settingsCache.getValue(URI_NAV_BAR_KIDS_MODE);
+        mIsTaskbarEnabled = settingsCache.getValue(URI_ENABLE_TASKBAR);
         mBubbleFeatureConfig =
                 new BubbleFeatureConfigImpl(mWindowContext, getDesktopState(mWindowContext));
 
@@ -684,6 +690,10 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
      * single window for taskbar and navbar.
      */
     public boolean isPhoneMode() {
+        if (mDeviceProfile.getDeviceProperties().getTaskbarConfiguration().isTaskbarPresent() &&
+                !isTaskbarEnabled()) {
+            return true;
+        }
         return isDeviceProfileForPhoneMode(mDeviceProfile);
     }
 
@@ -2458,6 +2468,10 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
 
     public boolean isInKidsMode() {
         return mIsNavBarKidsMode;
+    }
+
+    public boolean isTaskbarEnabled() {
+        return mIsTaskbarEnabled;
     }
 
     /**
