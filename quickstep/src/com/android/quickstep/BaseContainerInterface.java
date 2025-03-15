@@ -212,7 +212,9 @@ public abstract class BaseContainerInterface<STATE_TYPE extends BaseState<STATE_
         TaskbarUIController taskbarUIController = getTaskbarController();
         if (taskbarUIController != null) {
             taskbarUIController.setSystemGestureInProgress(false);
-            return taskbarUIController.getRootView();
+            // When view height is 0, we don't have to wait for anything.
+            View view = taskbarUIController.getRootView();
+            return view.getHeight() > 0 ? view : null;
         }
         return null;
     }
