@@ -102,6 +102,8 @@ import com.android.systemui.shared.system.TaskStackChangeListeners;
 import com.android.systemui.unfold.UnfoldTransitionProgressProvider;
 import com.android.systemui.unfold.util.ScopedUnfoldTransitionProgressProvider;
 
+import lineageos.providers.LineageSettings;
+
 import java.io.PrintWriter;
 import java.util.Set;
 import java.util.StringJoiner;
@@ -141,6 +143,9 @@ public class TaskbarManager implements DisplayDecorationListener {
 
     public static final Uri NAV_BAR_INVERSE = Settings.Secure.getUriFor(
             "sysui_nav_bar_inverse");
+
+    public static final Uri ENABLE_TASKBAR = LineageSettings.System.getUriFor(
+            LineageSettings.System.ENABLE_TASKBAR);
 
     private final Context mBaseContext;
     private final int mPrimaryDisplayId;
@@ -247,6 +252,8 @@ public class TaskbarManager implements DisplayDecorationListener {
         debugPrimaryTaskbar("Settings changed! Recreating Taskbar!");
         recreateTaskbars();
     };
+
+    private final SettingsCache.OnChangeListener mOnTaskBarChangeListener = c -> System.exit(0);
 
     private PerceptibleTaskListener mTaskStackListener;
 
@@ -462,6 +469,8 @@ public class TaskbarManager implements DisplayDecorationListener {
                 .register(NAV_BAR_KIDS_MODE, mOnSettingsChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
                 .register(NAV_BAR_INVERSE, mOnSettingsChangeListener);
+        SettingsCache.INSTANCE.get(mPrimaryWindowContext)
+                .register(ENABLE_TASKBAR, mOnTaskBarChangeListener);
         SystemDecorationChangeObserver.getINSTANCE().get(mPrimaryWindowContext)
                 .registerDisplayDecorationListener(this);
         mShutdownReceiver =
@@ -1117,6 +1126,8 @@ public class TaskbarManager implements DisplayDecorationListener {
                 .unregister(NAV_BAR_KIDS_MODE, mOnSettingsChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
                 .unregister(NAV_BAR_INVERSE, mOnSettingsChangeListener);
+        SettingsCache.INSTANCE.get(mPrimaryWindowContext)
+                .unregister(ENABLE_TASKBAR, mOnTaskBarChangeListener);
         SystemDecorationChangeObserver.getINSTANCE().get(mPrimaryWindowContext)
                 .unregisterDisplayDecorationListener(this);
         debugPrimaryTaskbar("destroy: unregistering component callbacks");
