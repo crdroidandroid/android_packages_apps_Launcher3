@@ -113,6 +113,8 @@ import com.android.systemui.shared.system.TaskStackChangeListeners;
 import com.android.systemui.unfold.UnfoldTransitionProgressProvider;
 import com.android.systemui.unfold.util.ScopedUnfoldTransitionProgressProvider;
 
+import lineageos.providers.LineageSettings;
+
 import kotlinx.coroutines.CoroutineDispatcher;
 
 import java.io.PrintWriter;
@@ -161,6 +163,9 @@ public class TaskbarManagerImpl implements DisplayDecorationListener {
 
     public static final Uri NAV_BAR_INVERSE = Settings.Secure.getUriFor(
             "sysui_nav_bar_inverse");
+
+    public static final Uri ENABLE_TASKBAR = LineageSettings.System.getUriFor(
+            LineageSettings.System.ENABLE_TASKBAR);
 
     private static final LooperExecutor TASKBAR_UI_THREAD =
             new LooperExecutor("TASKBAR_UI_THREAD", THREAD_PRIORITY_FOREGROUND);
@@ -281,6 +286,8 @@ public class TaskbarManagerImpl implements DisplayDecorationListener {
         debugPrimaryTaskbar("Settings changed! Recreating Taskbar!");
         recreateTaskbars();
     };
+
+    private final SettingsCache.OnChangeListener mOnTaskBarChangeListener = c -> System.exit(0);
 
     private PerceptibleTaskListener mTaskStackListener;
 
@@ -489,6 +496,8 @@ public class TaskbarManagerImpl implements DisplayDecorationListener {
                 .register(NAV_BAR_KIDS_MODE, mOnSettingsChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
                 .register(NAV_BAR_INVERSE, mOnSettingsChangeListener);
+        SettingsCache.INSTANCE.get(mPrimaryWindowContext)
+                .register(ENABLE_TASKBAR, mOnTaskBarChangeListener);
         if (DesktopExperienceFlags.ENABLE_SYS_DECORS_CALLBACKS_VIA_WM.isTrue()
                 && DesktopExperienceFlags.ENABLE_DISPLAY_CONTENT_MODE_MANAGEMENT.isTrue()) {
             displaysWithDecorationsRepositoryCompat
@@ -1184,6 +1193,8 @@ public class TaskbarManagerImpl implements DisplayDecorationListener {
                 .unregister(NAV_BAR_KIDS_MODE, mOnSettingsChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
                 .unregister(NAV_BAR_INVERSE, mOnSettingsChangeListener);
+        SettingsCache.INSTANCE.get(mPrimaryWindowContext)
+                .unregister(ENABLE_TASKBAR, mOnTaskBarChangeListener);
         if (DesktopExperienceFlags.ENABLE_SYS_DECORS_CALLBACKS_VIA_WM.isTrue()
                 && DesktopExperienceFlags.ENABLE_DISPLAY_CONTENT_MODE_MANAGEMENT.isTrue()) {
             mDisplaysWithDecorationsRepositoryCompat.unregisterDisplayDecorationListener(this);
