@@ -42,6 +42,7 @@ import static com.android.launcher3.config.FeatureFlags.enableTaskbarPinning;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_FOLDER_OPEN;
 import static com.android.launcher3.taskbar.TaskbarAutohideSuspendController.FLAG_AUTOHIDE_SUSPEND_DRAGGING;
 import static com.android.launcher3.taskbar.TaskbarAutohideSuspendController.FLAG_AUTOHIDE_SUSPEND_FULLSCREEN;
+import static com.android.launcher3.taskbar.TaskbarManager.ENABLE_TASKBAR;
 import static com.android.launcher3.taskbar.TaskbarStashController.SHOULD_BUBBLES_FOLLOW_DEFAULT_VALUE;
 import static com.android.launcher3.testing.shared.ResourceUtils.getBoolByName;
 import static com.android.launcher3.util.Executors.UI_HELPER_EXECUTOR;
@@ -576,6 +577,10 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
      * single window for taskbar and navbar.
      */
     public boolean isPhoneMode() {
+        if (mDeviceProfile.isTaskbarPresent &&
+                !SettingsCache.INSTANCE.get(this).getValue(ENABLE_TASKBAR, 1)) {
+            return true;
+        }
         return ENABLE_TASKBAR_NAVBAR_UNIFICATION
                 && mDeviceProfile.isPhone
                 && !mDeviceProfile.isTaskbarPresent;
@@ -739,7 +744,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
             WindowManager.LayoutParams lp =
                     createDefaultWindowLayoutParams(windowType,
                             TaskbarActivityContext.WINDOW_TITLE);
-            if (isPhoneButtonNavMode()) {
+            if (isPhoneButtonNavMode() && !mDeviceProfile.isTaskbarPresent) {
                 populatePhoneButtonNavModeWindowLayoutParams(rot, lp);
             }
             windowLayoutParams.paramsForRotation[rot] = lp;
