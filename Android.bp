@@ -402,6 +402,7 @@ android_library {
         "com_android_systemui_shared_flags_lib",
         "libGoogleFeed",
         "SettingsLib",
+        "org.lineageos.platform",
     ],
     manifest: "AndroidManifest-common.xml",
     sdk_version: "current",
