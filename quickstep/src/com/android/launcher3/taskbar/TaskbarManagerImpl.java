@@ -121,6 +121,8 @@ import com.android.systemui.shared.system.QuickStepContract.SystemUiStateFlags;
 import com.android.systemui.unfold.UnfoldTransitionProgressProvider;
 import com.android.systemui.unfold.util.ScopedUnfoldTransitionProgressProvider;
 
+import lineageos.providers.LineageSettings;
+
 import kotlinx.coroutines.CoroutineDispatcher;
 
 import java.io.PrintWriter;
@@ -165,6 +167,9 @@ public class TaskbarManagerImpl implements DisplayDecorationListener {
 
     private static final Uri NAV_BAR_KIDS_MODE = Settings.Secure.getUriFor(
             Settings.Secure.NAV_BAR_KIDS_MODE);
+
+    public static final Uri ENABLE_TASKBAR_URI = LineageSettings.System.getUriFor(
+            LineageSettings.System.ENABLE_TASKBAR);
 
     public static final LooperExecutor TASKBAR_UI_THREAD =
             new LooperExecutor("TASKBAR_UI_THREAD", THREAD_PRIORITY_FOREGROUND);
@@ -322,6 +327,8 @@ public class TaskbarManagerImpl implements DisplayDecorationListener {
         recreateTaskbars();
     };
 
+    private final SettingsCache.OnChangeListener mOnTaskBarChangeListener = c -> System.exit(0);
+
     private final DesktopVisibilityController.TaskbarDesktopModeListener
             mTaskbarDesktopModeListener =
             new DesktopVisibilityController.TaskbarDesktopModeListener() {
@@ -464,6 +471,8 @@ public class TaskbarManagerImpl implements DisplayDecorationListener {
                 .register(USER_SETUP_COMPLETE_URI, mOnSettingsChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
                 .register(NAV_BAR_KIDS_MODE, mOnSettingsChangeListener);
+        SettingsCache.INSTANCE.get(mPrimaryWindowContext)
+                .register(ENABLE_TASKBAR_URI, mOnTaskBarChangeListener);
         if (DesktopExperienceFlags.ENABLE_SYS_DECORS_CALLBACKS_VIA_WM.isTrue()
                 && DesktopExperienceFlags.ENABLE_DISPLAY_CONTENT_MODE_MANAGEMENT.isTrue()) {
             displaysWithDecorationsRepositoryCompat
@@ -1195,6 +1204,8 @@ public class TaskbarManagerImpl implements DisplayDecorationListener {
                 .unregister(USER_SETUP_COMPLETE_URI, mOnSettingsChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
                 .unregister(NAV_BAR_KIDS_MODE, mOnSettingsChangeListener);
+        SettingsCache.INSTANCE.get(mPrimaryWindowContext)
+                .unregister(ENABLE_TASKBAR_URI, mOnTaskBarChangeListener);
         if (DesktopExperienceFlags.ENABLE_SYS_DECORS_CALLBACKS_VIA_WM.isTrue()
                 && DesktopExperienceFlags.ENABLE_DISPLAY_CONTENT_MODE_MANAGEMENT.isTrue()) {
             mDisplaysWithDecorationsRepositoryCompat.unregisterDisplayDecorationListener(this);
