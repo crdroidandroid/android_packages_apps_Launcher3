@@ -74,11 +74,11 @@
     <string name="paused_apps_dialog_title">App pausado</string>
     <string name="paused_apps_dialog_message">%1$s foi pausado diretamente do launcher</string>
     <string name="paused_apps_drop_target_label">Pausar app</string>
-    <string name="work_apps_paused_title_custom">Aplicativos de trabalho desativados</string>
-    <string name="work_apps_pause_btn_text_custom">Desativar apps de trabalho</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
+    <string name="work_apps_paused_title_custom">Apps de trabalho desativados</string>
+    <string name="work_apps_pause_btn_text_custom">Desativar aplicativos de trabalho</string>
+    <string name="work_apps_enable_btn_text_custom">Ativar aplicativos de trabalho</string>
     <string name="work_apps_paused_info_body_custom">Apps de trabalho não podem te enviar notificações, usar sua bateria ou acessar sua localização</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Seus aplicativos de trabalho não podem receber chamadas telefônicas ou mensagens de texto, enviar-lhe notificações, usar sua bateria ou acessar sua localização</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Reiniciar</string>
     <string name="pref_restart_summary">Reiniciar manualmente o launcher para aplicar qualquer configuração pendente</string>
@@ -138,7 +138,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Disponível - %2$s Total</string>
     <string name="recents_meminfo_title">Informações da memória</string>
-    <string name="recents_meminfo_zram_title">ZRAM info</string>
+    <string name="recents_meminfo_zram_title">Informação do ZRAM</string>
     <!-- Background blur -->
     <string name="background_blur_title">Desfoque de fundo</string>
     <string name="background_blur_summary">Definir a intensidade do desfoque para os aplicativos recentes e gaveta de aplicativos</string>
