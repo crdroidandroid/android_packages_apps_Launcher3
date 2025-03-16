@@ -156,6 +156,9 @@ public class TaskbarManager implements DisplayDecorationListener {
     public static final Uri FORCE_SHOW_NAVBAR = LineageSettings.System.getUriFor(
             LineageSettings.System.FORCE_SHOW_NAVBAR);
 
+    public static final Uri GESTURE_NAVBAR_LENGTH_MODE = Settings.System.getUriFor(
+            Settings.System.GESTURE_NAVBAR_LENGTH_MODE);
+
     private final Context mBaseContext;
     private final int mPrimaryDisplayId;
     private final TaskbarNavButtonCallbacks mNavCallbacks;
@@ -484,6 +487,8 @@ public class TaskbarManager implements DisplayDecorationListener {
                 .register(NAVIGATION_BAR_HINT, mOnTaskBarChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
                 .register(FORCE_SHOW_NAVBAR, mOnTaskBarChangeListener);
+        SettingsCache.INSTANCE.get(mPrimaryWindowContext)
+                .register(GESTURE_NAVBAR_LENGTH_MODE, mOnTaskBarChangeListener);
         SystemDecorationChangeObserver.getINSTANCE().get(mPrimaryWindowContext)
                 .registerDisplayDecorationListener(this);
         mShutdownReceiver =
@@ -1145,6 +1150,8 @@ public class TaskbarManager implements DisplayDecorationListener {
                 .unregister(NAVIGATION_BAR_HINT, mOnTaskBarChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
                 .unregister(FORCE_SHOW_NAVBAR, mOnTaskBarChangeListener);
+        SettingsCache.INSTANCE.get(mPrimaryWindowContext)
+                .unregister(GESTURE_NAVBAR_LENGTH_MODE, mOnTaskBarChangeListener);
         SystemDecorationChangeObserver.getINSTANCE().get(mPrimaryWindowContext)
                 .unregisterDisplayDecorationListener(this);
         debugPrimaryTaskbar("destroy: unregistering component callbacks");
