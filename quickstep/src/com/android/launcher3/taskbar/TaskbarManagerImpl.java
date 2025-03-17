@@ -156,6 +156,9 @@ public class TaskbarManagerImpl {
     public static final Uri GESTURE_NAVBAR_LENGTH_MODE_URI = Settings.System.getUriFor(
             Settings.System.GESTURE_NAVBAR_LENGTH_MODE);
 
+    public static final Uri GESTURE_NAVBAR_HEIGHT_MODE_URI = Settings.System.getUriFor(
+            Settings.System.GESTURE_NAVBAR_HEIGHT_MODE);
+
     private final Context mBaseContext;
     private final int mPrimaryDisplayId;
     private final TaskbarNavButtonCallbacks mNavCallbacks;
@@ -390,6 +393,12 @@ public class TaskbarManagerImpl {
                         getTaskbarUiThread(),
                         v -> onTaskbarIntChanged(v, TaskbarActivityContext::getNavbarLengthMode));
         cleanupTasks.addCloseable(getTaskbarUiThread(), navbarLengthSafeCloseable);
+
+        var navbarHeightSafeCloseable =
+                settingsCache.getIntListenableRef(GESTURE_NAVBAR_HEIGHT_MODE_URI, 3).forEach(
+                        getTaskbarUiThread(),
+                        v -> onTaskbarIntChanged(v, TaskbarActivityContext::getNavbarHeightMode));
+        cleanupTasks.addCloseable(getTaskbarUiThread(), navbarHeightSafeCloseable);
 
         SimpleBroadcastReceiver shutdownReceiver = new SimpleBroadcastReceiver(
                 mBaseContext,
