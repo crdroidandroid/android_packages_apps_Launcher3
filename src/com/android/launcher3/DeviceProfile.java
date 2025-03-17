@@ -32,7 +32,6 @@ import static com.android.launcher3.testing.shared.ResourceUtils.roundPxValueFro
 import static com.android.launcher3.util.OverviewReleaseFlags.enableGridOnlyOverview;
 import static com.android.wm.shell.Flags.enableBubbleBar;
 import static com.android.wm.shell.Flags.enableBubbleBarOnPhones;
-import static com.android.wm.shell.Flags.enableTinyTaskbar;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -356,7 +355,9 @@ public class DeviceProfile {
         mIsScalableGrid = inv.isScalable && !isVerticalBarLayout() && !isMultiWindowMode;
         // Determine device posture.
         mInfo = info;
-        boolean taskbarOrBubbleBarOnPhones = enableTinyTaskbar()
+        boolean enableTaskbar = SettingsCache.INSTANCE.get(context).getValue(
+                        ENABLE_TASKBAR, mDeviceProperties.isTablet() ? 1 : 0);
+        boolean taskbarOrBubbleBarOnPhones = enableTaskbar
                 || (enableBubbleBar() && enableBubbleBarOnPhones());
         isTaskbarPresent = (mDeviceProperties.isTablet() || (taskbarOrBubbleBarOnPhones && isGestureMode))
                 && wmProxy.isTaskbarDrawnInProcess();
@@ -1701,7 +1702,7 @@ public class DeviceProfile {
      */
     public Rect getHotseatLayoutPadding(Context context) {
         boolean isTaskbarPresent = this.isTaskbarPresent &&
-                SettingsCache.INSTANCE.get(context).getValue(ENABLE_TASKBAR, 1);
+                SettingsCache.INSTANCE.get(context).getValue(ENABLE_TASKBAR, mDeviceProperties.isTablet() ? 1 : 0);
         Rect hotseatBarPadding = new Rect();
         if (isVerticalBarLayout()) {
             // The hotseat icons will be placed in the middle of the hotseat cells.
