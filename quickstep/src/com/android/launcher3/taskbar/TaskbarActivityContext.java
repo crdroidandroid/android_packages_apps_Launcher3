@@ -45,7 +45,6 @@ import static com.android.launcher3.util.Executors.UI_HELPER_EXECUTOR;
 import static com.android.quickstep.util.AnimUtils.completeRunnableListCallback;
 import static com.android.systemui.shared.system.QuickStepContract.SYSUI_STATE_NOTIFICATION_PANEL_VISIBLE;
 import static com.android.systemui.shared.system.QuickStepContract.SYSUI_STATE_VOICE_INTERACTION_WINDOW_SHOWING;
-import static com.android.wm.shell.Flags.enableTinyTaskbar;
 
 import static java.lang.invoke.MethodHandles.Lookup.PROTECTED;
 
@@ -474,7 +473,8 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
      */
     public boolean isPhoneMode() {
         if (mDeviceProfile.isTaskbarPresent &&
-                !SettingsCache.INSTANCE.get(this).getValue(ENABLE_TASKBAR, 1)) {
+                !SettingsCache.INSTANCE.get(this).getValue(ENABLE_TASKBAR,
+                mDeviceProfile.isTablet ? 1 : 0)) {
             return true;
         }
         return ENABLE_TASKBAR_NAVBAR_UNIFICATION
@@ -498,7 +498,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
 
     /** Returns {@code true} iff a tiny version of taskbar is shown on phone. */
     public boolean isTinyTaskbar() {
-        return enableTinyTaskbar() && mDeviceProfile.isPhone && mDeviceProfile.isTaskbarPresent;
+        return mDeviceProfile.isPhone && mDeviceProfile.isTaskbarPresent;
     }
 
     /**
