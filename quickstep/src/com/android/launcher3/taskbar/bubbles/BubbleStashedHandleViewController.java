@@ -19,6 +19,7 @@ import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
 
 import static com.android.launcher3.Flags.refactorTaskbarUiState;
+import static com.android.launcher3.taskbar.TaskbarManagerImpl.GESTURE_NAVBAR_HEIGHT_MODE_URI;
 import static com.android.launcher3.taskbar.TaskbarManagerImpl.GESTURE_NAVBAR_LENGTH_MODE_URI;
 
 import android.animation.Animator;
@@ -101,8 +102,26 @@ public class BubbleStashedHandleViewController {
 
         DeviceProfile deviceProfile = mActivity.getDeviceProfile();
         Resources resources = mActivity.getResources();
-        mStashedHandleHeight = resources.getDimensionPixelSize(
-                R.dimen.bubblebar_stashed_handle_height);
+
+        int handleHeightMode = SettingsCache.INSTANCE.get(mActivity)
+            .getIntValue(GESTURE_NAVBAR_HEIGHT_MODE_URI, 3);
+        if (handleHeightMode == 0) {
+            mStashedHandleHeight =
+                resources.getDimensionPixelSize(R.dimen.taskbar_stashed_handle_height_smallest);
+        } else if (handleHeightMode == 1) {
+            mStashedHandleHeight =
+                resources.getDimensionPixelSize(R.dimen.taskbar_stashed_handle_height_smaller);
+        } else if (handleHeightMode == 2) {
+            mStashedHandleHeight =
+                resources.getDimensionPixelSize(R.dimen.taskbar_stashed_handle_height_small);
+        } else if (handleHeightMode == 4) {
+            mStashedHandleHeight =
+                resources.getDimensionPixelSize(R.dimen.taskbar_stashed_handle_height_tall);
+        } else {
+            mStashedHandleHeight =
+                resources.getDimensionPixelSize(R.dimen.bubblebar_stashed_handle_height);
+        }
+
         int handleWidthMode = SettingsCache.INSTANCE.get(mActivity)
             .getIntValue(GESTURE_NAVBAR_LENGTH_MODE_URI, 1);
         if (handleWidthMode == 0) {
