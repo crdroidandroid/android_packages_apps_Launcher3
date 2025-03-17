@@ -52,7 +52,6 @@ import static com.android.systemui.shared.system.QuickStepContract.SYSUI_STATE_N
 import static com.android.systemui.shared.system.QuickStepContract.SYSUI_STATE_VOICE_INTERACTION_WINDOW_SHOWING;
 import static com.android.wm.shell.Flags.enableBubbleBar;
 import static com.android.wm.shell.Flags.enableBubbleBarOnPhones;
-import static com.android.wm.shell.Flags.enableTinyTaskbar;
 import static com.android.wm.shell.Flags.fixSwipeUpNotificationShadeWithBubbleBar;
 
 import static java.lang.invoke.MethodHandles.Lookup.PROTECTED;
@@ -712,7 +711,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
      * single window for taskbar and navbar.
      */
     public boolean isPhoneMode() {
-        if (mDeviceProfile.getDeviceProperties().getTaskbarConfiguration().isTaskbarPresent() &&
+        if (!mDeviceProfile.getDeviceProperties().isPhone() &&
                 !isTaskbarEnabled()) {
             return true;
         }
@@ -750,7 +749,8 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
 
     /** Returns {@code true} iff a tiny version of taskbar is shown on phone. */
     public boolean isTinyTaskbar() {
-        return enableTinyTaskbar()
+        return mIsTaskbarEnabled
+                && mDeviceProfile.getDeviceProperties().getDeviceConfiguration().isGestureMode()
                 && mDeviceProfile.getDeviceProperties().isPhone()
                 && mDeviceProfile.getDeviceProperties().getTaskbarConfiguration()
                 .isTaskbarPresent();
@@ -1641,14 +1641,12 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
     public int getDefaultTaskbarWindowSize() {
         Resources resources = getResources();
 
-        if (isGestureNav() && !mIsNavbarHintEnabled) {
-            return 0;
-        }
-
         if (isPhoneMode()) {
             return isThreeButtonNav() ?
                     resources.getDimensionPixelSize(R.dimen.taskbar_phone_size) :
-                    resources.getDimensionPixelSize(R.dimen.taskbar_stashed_size);
+                    SettingsCache.INSTANCE.get(this).getValue(URI_NAVIGATION_BAR_HINT) ?
+                    resources.getDimensionPixelSize(R.dimen.taskbar_stashed_size) :
+                    0;
         }
 
         int bubbleBarTop = mControllers.bubbleControllers.map(bubbleControllers ->

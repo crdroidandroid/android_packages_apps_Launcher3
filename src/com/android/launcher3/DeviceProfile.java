@@ -136,6 +136,7 @@ public class DeviceProfile {
 
     // Taskbar
     private TaskbarProfile mTaskbarProfile;
+    private static boolean mEnableTaskbar;
 
     private float allAppsCellHeightMultiplier;
     private boolean allAppsIconText;
@@ -246,6 +247,8 @@ public class DeviceProfile {
         allAppsCellHeightMultiplier =
                     (float) inv.getLauncherPrefs().get(LauncherPrefs.ROW_HEIGHT) / 100F;
         allAppsIconText = inv.getLauncherPrefs().get(LauncherPrefs.SHOW_DRAWER_LABELS);
+
+        mEnableTaskbar = SettingsCache.INSTANCE.get(context).getValue(ENABLE_TASKBAR_URI);
 
         mTaskbarProfile = TaskbarProfile.Factory.createTaskbarProfile(
                 res,
@@ -829,8 +832,9 @@ public class DeviceProfile {
      * Returns the padding for hotseat view
      */
     public Rect getHotseatLayoutPadding(Context context) {
+        mEnableTaskbar = SettingsCache.INSTANCE.get(context).getValue(ENABLE_TASKBAR_URI);
         boolean isTaskbarPresent = mDeviceProperties.getTaskbarConfiguration().isTaskbarPresent() &&
-                SettingsCache.INSTANCE.get(context).getValue(ENABLE_TASKBAR_URI);
+                mEnableTaskbar;
         Rect hotseatBarPadding = new Rect();
         if (isVerticalBarLayout()) {
             // The hotseat icons will be placed in the middle of the hotseat cells.
@@ -1759,7 +1763,8 @@ public class DeviceProfile {
                                     mIsGestureMode,
                                     mIsWorkspaceItemsLabelHidden
                             ),
-                            mWMProxy.isTaskbarDrawnInProcess()
+                            mWMProxy.isTaskbarDrawnInProcess(),
+                            mEnableTaskbar
                     ),
                     mViewScaleProvider,
                     mOverrideProvider,

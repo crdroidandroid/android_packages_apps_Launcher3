@@ -61,6 +61,7 @@ data class DeviceProperties(
             windowBounds: WindowBounds,
             deviceConfiguration: DeviceConfiguration,
             isTaskbarDrawnInProcess: Boolean,
+            isTaskbarEnabled: Boolean
         ): DeviceProperties {
             val isLargeScreen = info.isLargeScreen(windowBounds)
             val windowX = windowBounds.bounds.left
@@ -71,7 +72,7 @@ data class DeviceProperties(
             val availableWidthPx = windowBounds.availableSize.x
             val availableHeightPx = windowBounds.availableSize.y
             val taskbarOrBubbleBarOnPhones =
-                Flags.enableTinyTaskbar() ||
+                isTaskbarEnabled ||
                     (Flags.enableBubbleBar() && Flags.enableBubbleBarOnPhones())
             return DeviceProperties(
                 windowX = windowX,
