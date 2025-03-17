@@ -35,7 +35,6 @@ import static com.android.launcher3.testing.shared.ResourceUtils.pxFromDp;
 import static com.android.launcher3.testing.shared.ResourceUtils.roundPxValueFromFloat;
 import static com.android.wm.shell.Flags.enableBubbleBar;
 import static com.android.wm.shell.Flags.enableBubbleBarInPersistentTaskBar;
-import static com.android.wm.shell.Flags.enableTinyTaskbar;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -423,7 +422,9 @@ public class DeviceProfile {
         isTablet = info.isTablet(windowBounds);
         isPhone = !isTablet;
         isTwoPanels = isTablet && isMultiDisplay;
-        isTaskbarPresent = (isTablet || (enableTinyTaskbar() && isGestureMode))
+        boolean enableTaskbar = SettingsCache.INSTANCE.get(context).getValue(ENABLE_TASKBAR,
+                        isTablet ? 1 : 0);
+        isTaskbarPresent = (isTablet || (enableTaskbar && isGestureMode))
                 && WindowManagerProxy.INSTANCE.get(context).isTaskbarDrawnInProcess();
 
         // Some more constants.
@@ -1924,7 +1925,7 @@ public class DeviceProfile {
      */
     public Rect getHotseatLayoutPadding(Context context) {
         boolean isTaskbarPresent = this.isTaskbarPresent &&
-                SettingsCache.INSTANCE.get(context).getValue(ENABLE_TASKBAR, 1);
+                SettingsCache.INSTANCE.get(context).getValue(ENABLE_TASKBAR, isTablet ? 1 : 0);
         Rect hotseatBarPadding = new Rect();
         if (isVerticalBarLayout()) {
             // The hotseat icons will be placed in the middle of the hotseat cells.
