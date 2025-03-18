@@ -18,7 +18,7 @@
     <!-- Application name -->
     <!-- Folder titles -->
     <!-- General -->
-    <string name="settings_title">Home settings</string>
+    <string name="settings_title">होम पेज की सेटिंग</string>
     <!-- Categories -->
     <string name="home_category_title">होम स्क्रीन</string>
     <string name="home_category_summary">गूगल नाउ पैनल तथा अन्य सेट करें</string>
@@ -32,17 +32,17 @@
     <string name="misc_category_summary">अन्य विकल्प</string>
     <string name="general_category_title">आम</string>
     <string name="interface_category_title">इंटरफेस</string>
-    <string name="quickspace_category_title">Quickspace</string>
+    <string name="quickspace_category_title">त्वरित स्थान</string>
     <string name="search_bar_category_title">खोज पट्टी</string>
     <string name="actions_category_title">त्वरित क्रियाएं</string>
     <!-- Developer options -->
     <string name="dev_options_title">विकासक के विकल्प</string>
     <string name="dev_options_summary">अपने स्वयं के जोखिम पर कुछ छिपी हुई विशेषताएं सक्षम करें</string>
     <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Lock layout</string>
-    <string name="settings_lock_layout_summary_on">Icons and widgets can\'t be added, removed and moved on the homescreen</string>
-    <string name="settings_lock_layout_summary_off">Icons and widgets can be added, removed and moved on the homescreen</string>
-    <string name="settings_edit_widgets_error">It\'s not possible to add widgets to the home screen</string>
+    <string name="settings_lock_layout_title">लॉक लेआउट</string>
+    <string name="settings_lock_layout_summary_on">आइकंस और विजेट्स को होमस्क्रीन पर जोड़ा, हटाया और हिलाया नहीं जा सकता है</string>
+    <string name="settings_lock_layout_summary_off">आइकंस और विजेट्स को होमस्क्रीन पर जोड़ा, हटाया और हिलाया जा सकता है</string>
+    <string name="settings_edit_widgets_error">होमस्क्रीन पर विजेट्स जोड़ना संभव नहीं है</string>
     <!-- Hide labels -->
     <string name="desktop_show_labels">होम स्क्रीन पर चिह्न लेबल दिखाएं</string>
     <string name="drawer_show_labels">ड्रॉअर में चिह्न लेबल दिखाएं</string>
@@ -54,7 +54,7 @@
     <string name="msg_minus_one_on_right">When you swipe right from main Home screen</string>
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">थीम वाले आइकन</string>
-    <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
+    <string name="pref_themed_icons_summary">होम स्क्रीन पर उपयोग किए गए थीम पर आधारित आइकनों का अनुसरण करें</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">छिपा हुआ &amp; संरक्षित ऐप्स</string>
     <string name="trust_apps_auth_manager">छिपे हुए और संरक्षित ऐप्स को प्रबंधित करने के लिए अनलॉक करें</string>
@@ -69,10 +69,10 @@
     <string name="suggestion_pref_screen_desc">सभी ऐप्स के लिए &amp; होम स्क्रीन सुझाव</string>
     <!-- Pause apps shortcut -->
     <string name="pause">थोड़ा रुकें</string>
-    <string name="pause_apps_dialog_title">Pause %1$s?</string>
-    <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
-    <string name="paused_apps_dialog_title">App paused</string>
-    <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
+    <string name="pause_apps_dialog_title">विराम %1$s?</string>
+    <string name="pause_apps_dialog_message">%1$s के लिए सूचनाएं रोक दी जाएंगी</string>
+    <string name="paused_apps_dialog_title">ऐप रोका गया</string>
+    <string name="paused_apps_dialog_message">%1$s को लॉन्चर से सीधे रोक दिया गया</string>
     <string name="paused_apps_drop_target_label">Pause app</string>
     <string name="work_apps_paused_title_custom">Work apps are off</string>
     <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
