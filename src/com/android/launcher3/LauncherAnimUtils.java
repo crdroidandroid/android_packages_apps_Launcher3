@@ -89,16 +89,19 @@ public class LauncherAnimUtils {
 
         @Override
         public void setValue(View view, float scale) {
+            // A bad scale wedges the system trying to apply it, so fall back to 1. Held in a
+            // local because the value is captured by the cross-thread post below.
+            final float safeScale = Float.isNaN(scale) || Float.isInfinite(scale) ? 1.0f : scale;
             try {
                 if (view.getHandler() != null
                         && view.getHandler().getLooper() != android.os.Looper.myLooper()) {
                     view.post(() -> {
-                        view.setScaleX(scale);
-                        view.setScaleY(scale);
+                        view.setScaleX(safeScale);
+                        view.setScaleY(safeScale);
                     });
                 } else {
-                    view.setScaleX(scale);
-                    view.setScaleY(scale);
+                    view.setScaleX(safeScale);
+                    view.setScaleY(safeScale);
                 }
             } catch (RuntimeException e) {
                 // Check if the class name matches the hidden Android exception
