@@ -16,12 +16,14 @@
 package com.android.launcher3.allapps.search;
 
 import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.android.launcher3.BubbleTextView;
+import com.android.launcher3.R;
 import com.android.launcher3.allapps.AllAppsGridAdapter;
 import com.android.launcher3.model.data.ItemInfo;
 import com.android.launcher3.views.ActivityContext;
@@ -31,6 +33,8 @@ import com.android.launcher3.views.ActivityContext;
  */
 public class DefaultSearchAdapterProvider extends SearchAdapterProvider<ActivityContext> {
     private View mHighlightedView;
+
+    private String defaultSearchPackage;
 
     public DefaultSearchAdapterProvider(ActivityContext launcher) {
         super(launcher);
@@ -65,11 +69,45 @@ public class DefaultSearchAdapterProvider extends SearchAdapterProvider<Activity
         return false;
     }
 
+    private String getDefaultSearchPackage(Context context) {
+        if (defaultSearchPackage == null) {
+            try {
+                String packageName = null;
+
+                SearchManager searchManager =
+                        context.getSystemService(SearchManager.class);
+
+                if (searchManager != null && searchManager.getGlobalSearchActivity() != null) {
+                    packageName =
+                            searchManager.getGlobalSearchActivity().getPackageName();
+                }
+
+                if (packageName == null || packageName.isEmpty()) {
+                    packageName = context.getResources()
+                            .getString(R.string.fallback_search_package_name);
+                }
+
+                defaultSearchPackage =
+                        packageName.isEmpty() ? null : packageName;
+
+            } catch (IllegalStateException e) {
+                String fallback = context.getResources()
+                        .getString(R.string.fallback_search_package_name);
+
+                defaultSearchPackage =
+                        fallback.isEmpty() ? null : fallback;
+            }
+        }
+
+        return defaultSearchPackage;
+    }
+
     @Override
     public boolean performGoogleSearch(View view, String query) {
-        if (view instanceof View) {
+        String pkgName = getDefaultSearchPackage(view.getContext());
+        if (pkgName != null && view instanceof View) {
             Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
-            intent.setPackage("com.google.android.googlequicksearchbox");
+            intent.setPackage(pkgName);
             intent.putExtra(SearchManager.QUERY, query);
             return mLauncher.startActivitySafely(view, intent, null) != null;
         }
