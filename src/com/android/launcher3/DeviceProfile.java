@@ -510,9 +510,7 @@ public class DeviceProfile {
         bottomSheetCloseDuration = res.getInteger(R.integer.config_bottomSheetCloseDuration);
         if (shouldShowAllAppsOnSheet()) {
             bottomSheetWorkspaceScale = workspaceContentScale;
-            if (Flags.allAppsBlur()) {
-                bottomSheetDepth = 2f;
-            } else if (isMultiDisplay) {
+            if (isMultiDisplay) {
                 // TODO(b/259893832): Revert to use maxWallpaperScale to calculate bottomSheetDepth
                 // when screen recorder bug is fixed.
                 if (enableScalingRevealHomeAnimation()) {

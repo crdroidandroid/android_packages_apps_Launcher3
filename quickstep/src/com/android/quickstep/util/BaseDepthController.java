@@ -19,6 +19,8 @@ import static com.android.launcher3.Flags.enableOverviewBackgroundWallpaperBlur;
 import static com.android.launcher3.Flags.enableScalingRevealHomeAnimation;
 
 import android.app.WallpaperManager;
+import android.graphics.RenderEffect;
+import android.graphics.Shader;
 import android.os.IBinder;
 import android.util.FloatProperty;
 import android.util.Log;
@@ -29,8 +31,10 @@ import androidx.annotation.Nullable;
 
 import com.android.launcher3.Flags;
 import com.android.launcher3.Launcher;
+import com.android.launcher3.LauncherState;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
+import com.android.launcher3.statemanager.StateManager;
 import com.android.launcher3.util.MultiPropertyFactory;
 import com.android.launcher3.util.MultiPropertyFactory.MultiProperty;
 import com.android.systemui.shared.system.BlurUtils;
@@ -96,7 +100,6 @@ public class BaseDepthController {
 
     /**
      * Last blur value, in pixels, that was applied.
-     * For debugging purposes.
      */
     protected int mCurrentBlur;
     /**
@@ -212,6 +215,23 @@ public class BaseDepthController {
                 rootSurfaceControl.applyTransactionOnDraw(transaction);
             }
         }
+
+        blurWorkspaceDepthTargets();
+    }
+
+    private void blurWorkspaceDepthTargets() {
+        if (!Flags.allAppsBlur()) {
+            return;
+        }
+        StateManager<LauncherState, Launcher> stateManager = mLauncher.getStateManager();
+        // Only blur workspace if the current and target state want it blurred.
+        boolean shouldBlurWorkspace = stateManager.getCurrentStableState().shouldBlurWorkspace()
+                && stateManager.getState().shouldBlurWorkspace();
+        // If blur is not desired, apply 0 blur to force reset.
+        int blurRadius = shouldBlurWorkspace ? mCurrentBlur : 0;
+        RenderEffect blurEffect =
+                RenderEffect.createBlurEffect(blurRadius, blurRadius, Shader.TileMode.DECAL);
+        mLauncher.getDepthBlurTargets().forEach(target -> target.setRenderEffect(blurEffect));
     }
 
     private void setDepth(float depth) {

@@ -171,8 +171,7 @@ public class AllAppsState extends LauncherState {
     }
 
     private static boolean isWorkspaceVisible(DeviceProfile deviceProfile) {
-        // Currently we hide the workspace with the all apps blur flag for simplicity.
-        return deviceProfile.isTablet && !Flags.allAppsBlur();
+        return deviceProfile.isTablet || (Flags.allAppsSheetForHandheld() && Flags.allAppsBlur());
     }
 
     @Override

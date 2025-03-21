@@ -74,6 +74,11 @@ public class SpringLoadedState extends LauncherState {
     }
 
     @Override
+    public boolean shouldBlurWorkspace() {
+        return false;
+    }
+
+    @Override
     public ScaleAndTranslation getHotseatScaleAndTranslation(Launcher launcher) {
         return new ScaleAndTranslation(1, 0, 0);
     }

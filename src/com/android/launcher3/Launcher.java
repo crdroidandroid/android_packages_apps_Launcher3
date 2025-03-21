@@ -357,6 +357,8 @@ public class Launcher extends StatefulActivity<LauncherState>
     @Thunk
     ActivityAllAppsContainerView<Launcher> mAppsView;
     AllAppsTransitionController mAllAppsController;
+    // Views that should be blurred when All Apps is open or depth is otherwise applied.
+    private List<View> mDepthBlurTargets;
 
     // Scrim view for the all apps and overview state.
     @Thunk
@@ -1413,6 +1415,8 @@ public class Launcher extends StatefulActivity<LauncherState>
         mWorkspace.getPageIndicator().setShouldAutoHide(true);
         mWorkspace.getPageIndicator().setPaintColor(Themes.getAttrBoolean(
                 this, R.attr.isWorkspaceDarkText) ? Color.BLACK : Color.WHITE);
+
+        mDepthBlurTargets = List.of(mWorkspace, mHotseat);
     }
 
     /**
@@ -2794,6 +2798,12 @@ public class Launcher extends StatefulActivity<LauncherState>
      */
     public void onAllAppsTransition(float progress) {
         // No-Op
+    }
+
+    /** @return list of View targets to be blurred based on changes to depth. */
+    @NonNull
+    public List<View> getDepthBlurTargets() {
+        return mDepthBlurTargets == null ? Collections.emptyList() : mDepthBlurTargets;
     }
 
     /**
