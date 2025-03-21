@@ -23,6 +23,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
+import android.graphics.drawable.Drawable;
 import android.text.TextUtils.TruncateAt;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -156,11 +157,11 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     }
 
     private void setEventSubIcon() {
-        int icon = mController.getEventController().getActionIcon();
-        if (icon > 0) {
+        Drawable icon = mController.getEventController().getActionIcon();
+        if (icon != null) {
             mEventSubIcon.setVisibility(View.VISIBLE);
-            mEventSubIcon.setImageTintList(mColorStateList);
-            mEventSubIcon.setImageResource(mController.getEventController().getActionIcon());
+            mEventSubIcon.setImageTintList(mController.getEventController().isNowPlaying() ? null : mColorStateList);
+            mEventSubIcon.setImageDrawable(icon);
             mEventSubIcon.setOnClickListener(mController.getEventController().getAction());
         } else {
             mEventSubIcon.setVisibility(View.GONE);
