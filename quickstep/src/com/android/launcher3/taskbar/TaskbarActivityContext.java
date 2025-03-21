@@ -1323,14 +1323,12 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
     public int getDefaultTaskbarWindowSize() {
         Resources resources = getResources();
 
-        if (isGestureNav() && !SettingsCache.INSTANCE.get(this).getValue(NAVIGATION_BAR_HINT, 1)) {
-            return 0;
-        }
-
         if (isPhoneMode()) {
             return isThreeButtonNav() ?
                     resources.getDimensionPixelSize(R.dimen.taskbar_phone_size) :
-                    resources.getDimensionPixelSize(R.dimen.taskbar_stashed_size);
+                    SettingsCache.INSTANCE.get(this).getValue(NAVIGATION_BAR_HINT, 1) ?
+                    resources.getDimensionPixelSize(R.dimen.taskbar_stashed_size) :
+                    0;
         }
 
         int bubbleBarTop = mControllers.bubbleControllers.map(bubbleControllers ->
