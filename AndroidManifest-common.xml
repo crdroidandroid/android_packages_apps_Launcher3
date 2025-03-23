@@ -53,6 +53,7 @@
     <uses-permission android:name="android.permission.DEVICE_POWER" />
     <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
     <uses-permission android:name="android.permission.INJECT_EVENTS" />
+    <uses-permission android:name="android.permission.ACCESS_CONTEXTUAL_SEARCH"/>
 
     <!-- Floating window -->
     <uses-permission android:name="com.libremobileos.permission.START_FREEFORM" />
