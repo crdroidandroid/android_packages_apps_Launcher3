@@ -102,9 +102,6 @@
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Matikan</string>
     <string name="recents_app_killed">Aplikasi dimatikan</string>
-    <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar_title">Gunakan bilah tugas</string>
-    <string name="pref_allow_phone_taskbar_summary">Untuk membuka dan beralih aplikasi di mana saja</string>
     <!-- Row Height -->
     <string name="row_height_title">Tinggi baris</string>
     <!-- Hotseat searchbar -->
@@ -139,9 +136,6 @@
     <string name="meminfo_text">%1$s Tersedia | %2$s Total</string>
     <string name="recents_meminfo_title">Info memori</string>
     <string name="recents_meminfo_zram_title">ZRAM info</string>
-    <!-- Background blur -->
-    <string name="background_blur_title">Kedalaman blur latar belakang</string>
-    <string name="background_blur_summary">Setel tingkat kedalaman blur untuk baru-baru ini dan laci aplikasi</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Tangkapan layar</string>
     <string name="recents_clear_all_title">Bersihkan semua</string>
@@ -168,6 +162,9 @@
     <string name="icon_pack_default_label">Bawaan</string>
     <string name="icon_pack_add">Instal lebih banyak</string>
     <string name="icon_pack_no_market">Tidak ada toko aplikasi yang tersedia</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Bilah pengguliran</string>
+    <string name="drawer_scrollbar_summary">Bilah gulir di sisi laci aplikasi</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Sekilas</string>
     <string name="show_quickspace_summary">Tampilkan di bagian atas layar beranda Anda</string>
@@ -363,10 +360,4 @@
     <string name="quick_event_weather_text_title">Kondisi saat ini</string>
     <string name="quick_event_weather_text_summary">Tampilkan kondisi cuaca dan suhu saat ini</string>
     <string name="intent_no_app_clock_found">Tidak dapat menemukan aktivitas kalender atau jam</string>
-    <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">Bilah pengguliran</string>
-    <string name="drawer_scrollbar_summary">Bilah gulir di sisi laci aplikasi</string>
-    <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Paksa ikon bertema</string>
-    <string name="force_monochrome_icons_summary">Hasilkan ikon monokromatik, jika tidak didukung oleh aplikasi (memerlukan pengalihan ikon bertema)</string>
 </resources>
