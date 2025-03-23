@@ -102,9 +102,6 @@
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Τερματισμός</string>
     <string name="recents_app_killed">Η εφαρμογή τερματίστηκε</string>
-    <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar_title">Χρήση γραμμής εργασιών</string>
-    <string name="pref_allow_phone_taskbar_summary">Για άνοιγμα και εναλλαγή εφαρμογών οπουδήποτε</string>
     <!-- Row Height -->
     <string name="row_height_title">Ύψος σειράς</string>
     <!-- Hotseat searchbar -->
@@ -139,9 +136,6 @@
     <string name="meminfo_text">%1$s Διαθέσιμο | %2$s Σύνολο</string>
     <string name="recents_meminfo_title">Πληροφορίες μνήμης</string>
     <string name="recents_meminfo_zram_title">Πληροφορίες ZRAM</string>
-    <!-- Background blur -->
-    <string name="background_blur_title">Βάθμος θολώματος φόντου</string>
-    <string name="background_blur_summary">Ορισμός επιπέδου βάθους θαμπώματος για πρόσφατα και συρτάρι εφαρμογών</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Στιγμιότυπο οθόνης</string>
     <string name="recents_clear_all_title">Διαγραφή όλων</string>
@@ -168,6 +162,9 @@
     <string name="icon_pack_default_label">Προεπιλογή</string>
     <string name="icon_pack_add">Εγκαταστήστε περισσότερα</string>
     <string name="icon_pack_no_market">Δεν υπάρχει κανένα διαθέσιμο κατάστημα εφαρμογών</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Μπάρα κύλισης</string>
+    <string name="drawer_scrollbar_summary">Μπάρα κύλισης στο πλάι του συρταριού εφαρμογών</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Με μια Ματιά</string>
     <string name="show_quickspace_summary">Εμφάνιση στο επάνω μέρος της αρχικής σας οθόνης</string>
@@ -363,10 +360,4 @@
     <string name="quick_event_weather_text_title">Τρέχουσα κατάσταση</string>
     <string name="quick_event_weather_text_summary">Εμφάνιση σύνοψης της τρέχουσας καιρικής κατάστασης</string>
     <string name="intent_no_app_clock_found">Αδυναμία εύρεσης δραστηριότητας ημερολογίου ή ρολογιού</string>
-    <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">Μπάρα κύλισης</string>
-    <string name="drawer_scrollbar_summary">Μπάρα κύλισης στο πλάι του συρταριού εφαρμογών</string>
-    <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Εξαναγκασμός θεματικών εικονιδίων</string>
-    <string name="force_monochrome_icons_summary">Δημιουργία μονοχρωματικών εικονιδίων, εάν δεν υποστηρίζεται από την εφαρμογή (απαιτεί επανεναλλαγή θεματικών εικονιδίων)</string>
 </resources>
