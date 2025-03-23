@@ -102,9 +102,6 @@
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Leállítás</string>
     <string name="recents_app_killed">Az alkalmazás leállt</string>
-    <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar_title">a Feladatkezelő használata</string>
-    <string name="pref_allow_phone_taskbar_summary">Alkalmazásinditáshoz és váltáshoz bárhol</string>
     <!-- Row Height -->
     <string name="row_height_title">Sormagasság</string>
     <!-- Hotseat searchbar -->
@@ -139,9 +136,6 @@
     <string name="meminfo_text">%2$s memóból %1$s érhető el</string>
     <string name="recents_meminfo_title">Memória-információ</string>
     <string name="recents_meminfo_zram_title">ZRAM-információ</string>
-    <!-- Background blur -->
-    <string name="background_blur_title">A háttér-elmosás mélysége</string>
-    <string name="background_blur_summary">Az előzmények és az alkalmazásfiók elmosási.értéke állítható itt</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Képernyőkép</string>
     <string name="recents_clear_all_title">Az összes törlése</string>
@@ -168,6 +162,9 @@
     <string name="icon_pack_default_label">Alapértelmezett</string>
     <string name="icon_pack_add">Továbbiak telepítése</string>
     <string name="icon_pack_no_market">Nincs hely ahonnan letölthetne</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Görgetősáv</string>
+    <string name="drawer_scrollbar_summary">A keresősáv az Alkalmazásfiók oldalán</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Belepillantás</string>
     <string name="show_quickspace_summary">Az Ön kezdőképernyőjének tetején jelenik meg</string>
@@ -363,10 +360,4 @@
     <string name="quick_event_weather_text_title">Jelenlegi időjárás</string>
     <string name="quick_event_weather_text_summary">Megjeleníti az épp aktuális hőfokot és adatokat</string>
     <string name="intent_no_app_clock_found">Nem található naptári vagy óratevékenység</string>
-    <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">Görgetősáv</string>
-    <string name="drawer_scrollbar_summary">A keresősáv az Alkalmazásfiók oldalán</string>
-    <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Kényszerített ikontémázás</string>
-    <string name="force_monochrome_icons_summary">Monokróm ikonok létrehozása, ha az alkalmazás nem készíti el (a tematikus ikonok újrakapcsolása szükséges)</string>
 </resources>
