@@ -50,6 +50,7 @@ import android.content.res.Configuration;
 import android.hardware.display.DisplayManager;
 import android.net.Uri;
 import android.os.Handler;
+import android.os.RemoteException;
 import android.os.Trace;
 import android.provider.Settings;
 import android.util.ArraySet;
@@ -57,8 +58,10 @@ import android.util.Log;
 import android.util.SparseArray;
 import android.util.SparseBooleanArray;
 import android.view.Display;
+import android.view.IWindowManager;
 import android.view.MotionEvent;
 import android.view.WindowManager;
+import android.view.WindowManagerGlobal;
 import android.widget.FrameLayout;
 import android.window.DesktopExperienceFlags;
 
@@ -1179,7 +1182,19 @@ public class TaskbarManager implements DisplayDecorationListener {
         }
     }
 
+    boolean hasNavigationBar() {
+        try {
+            IWindowManager windowManager = WindowManagerGlobal.getWindowManagerService();
+            return windowManager.hasNavigationBar(Display.DEFAULT_DISPLAY);
+        } catch (RemoteException e) {
+            return true;
+        }
+    }
+
     private void addTaskbarRootViewToWindow(int displayId) {
+        if (!hasNavigationBar()) {
+            return;
+        }
         debugTaskbarManager("addTaskbarRootViewToWindow:", displayId);
         TaskbarActivityContext taskbar = getTaskbarForDisplay(displayId);
         if (!enableTaskbarNoRecreate() || taskbar == null) {
