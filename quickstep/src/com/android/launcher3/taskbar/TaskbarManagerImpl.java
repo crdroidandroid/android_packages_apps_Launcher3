@@ -150,6 +150,9 @@ public class TaskbarManagerImpl {
     public static final Uri NAVBAR_LAYOUT_MODE_URI = Settings.Secure.getUriFor(
             Settings.Secure.NAVBAR_LAYOUT_MODE);
 
+    public static final Uri FORCE_SHOW_NAVBAR_URI = LineageSettings.System.getUriFor(
+            LineageSettings.System.FORCE_SHOW_NAVBAR);
+
     private final Context mBaseContext;
     private final int mPrimaryDisplayId;
     private final TaskbarNavButtonCallbacks mNavCallbacks;
@@ -372,6 +375,12 @@ public class TaskbarManagerImpl {
                         getTaskbarUiThread(),
                         v -> onTaskbarIntChanged(v, TaskbarActivityContext::getNavbarLayoutMode));
         cleanupTasks.addCloseable(getTaskbarUiThread(), navbarLayoutModeSafeCloseable);
+
+        var forceNavbarSafeCloseable =
+                settingsCache.getListenableRef(FORCE_SHOW_NAVBAR_URI).forEach(
+                        getTaskbarUiThread(),
+                        v -> onTaskbarChanged(v, TaskbarActivityContext::isNavbarEnabled));
+        cleanupTasks.addCloseable(getTaskbarUiThread(), forceNavbarSafeCloseable);
 
         SimpleBroadcastReceiver shutdownReceiver = new SimpleBroadcastReceiver(
                 mBaseContext,
