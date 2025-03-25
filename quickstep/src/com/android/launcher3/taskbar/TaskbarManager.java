@@ -133,6 +133,9 @@ public class TaskbarManager {
     public static final Uri GESTURE_NAVBAR_HEIGHT_MODE = Settings.System.getUriFor(
             Settings.System.GESTURE_NAVBAR_HEIGHT_MODE);
 
+    public static final Uri FORCE_SHOW_NAVBAR = LineageSettings.System.getUriFor(
+            LineageSettings.System.FORCE_SHOW_NAVBAR);
+
     private final Context mWindowContext;
     private final @Nullable Context mNavigationBarPanelContext;
     private WindowManager mWindowManager;
@@ -280,6 +283,8 @@ public class TaskbarManager {
                 .register(GESTURE_NAVBAR_LENGTH_MODE, mOnTaskBarChangeListener);
         SettingsCache.INSTANCE.get(mWindowContext)
                 .register(GESTURE_NAVBAR_HEIGHT_MODE, mOnTaskBarChangeListener);
+        SettingsCache.INSTANCE.get(mWindowContext)
+                .register(FORCE_SHOW_NAVBAR, mOnTaskBarChangeListener);
         Log.d(TASKBAR_NOT_DESTROYED_TAG, "registering component callbacks from constructor.");
         mWindowContext.registerComponentCallbacks(mDefaultComponentCallbacks);
         mShutdownReceiver.register(mWindowContext, Intent.ACTION_SHUTDOWN);
@@ -762,6 +767,8 @@ public class TaskbarManager {
                 .unregister(GESTURE_NAVBAR_LENGTH_MODE, mOnTaskBarChangeListener);
         SettingsCache.INSTANCE.get(mWindowContext)
                 .unregister(GESTURE_NAVBAR_HEIGHT_MODE, mOnTaskBarChangeListener);
+        SettingsCache.INSTANCE.get(mWindowContext)
+                .unregister(FORCE_SHOW_NAVBAR, mOnTaskBarChangeListener);
         Log.d(TASKBAR_NOT_DESTROYED_TAG, "unregistering component callbacks from destroy().");
         mWindowContext.unregisterComponentCallbacks(mDefaultComponentCallbacks);
         mShutdownReceiver.unregisterReceiverSafely(mWindowContext);
