@@ -739,7 +739,9 @@ public class FolderIcon extends FrameLayout implements FolderListener, FloatingI
 
     @Override
     public void onTitleChanged(CharSequence title) {
-        mFolderName.setText(title);
+        if (mFolderName.shouldShowLabel()) {
+            mFolderName.setText(title);
+        }
         setContentDescription(getAccessiblityTitle(title));
     }
 
