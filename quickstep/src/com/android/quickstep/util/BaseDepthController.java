@@ -194,7 +194,6 @@ public class BaseDepthController {
             SurfaceControl blurSurface =
                     enableOverviewBackgroundWallpaperBlur() && mBlurSurface != null ? mBlurSurface
                             : mBaseSurface;
-
             transaction.setBackgroundBlurRadius(blurSurface, mCurrentBlur)
                     .setOpaque(blurSurface, isSurfaceOpaque);
 
@@ -256,10 +255,38 @@ public class BaseDepthController {
      */
     public void setBaseSurfaceOverride(@Nullable SurfaceControl baseSurfaceOverride) {
         this.mBaseSurfaceOverride = baseSurfaceOverride;
-        SurfaceControl.Transaction transaction = createTransaction();
         Log.d(TAG, "setBaseSurfaceOverride: applying blur behind leash " + baseSurfaceOverride);
-        updateBlurSurfaceOrder(transaction);
+        SurfaceControl.Transaction transaction = createTransaction();
+        setupBlurSurface(transaction);
         applyDepthAndBlur(transaction);
+    }
+
+    private void setupBlurSurface(SurfaceControl.Transaction transaction) {
+        if (mBaseSurface != null && mBaseSurfaceOverride != null) {
+            transaction.setBackgroundBlurRadius(mBaseSurface, 0)
+                    .setOpaque(mBaseSurface, false);
+            if (mBlurSurface == null) {
+                mBlurSurface = new SurfaceControl.Builder()
+                        .setName("Overview Blur")
+                        .setHidden(false)
+                        .build();
+                Log.d(TAG,
+                        "setupBlurSurface: creating Overview Blur surface " + mBlurSurface);
+            }
+
+            transaction.reparent(mBlurSurface, mBaseSurface);
+            Log.d(TAG,
+                    "setupBlurSurface: reparenting " + mBlurSurface + " to " + mBaseSurface);
+
+            transaction.setRelativeLayer(mBlurSurface, mBaseSurfaceOverride, -1);
+            Log.d(TAG, "setupBlurSurface: relayering to leash " + mBaseSurfaceOverride);
+        } else {
+            if (mBlurSurface != null) {
+                Log.d(TAG, "setupBlurSurface: removing blur surface " + mBlurSurface);
+                transaction.remove(mBlurSurface);
+                mBlurSurface = null;
+            }
+        }
     }
 
     /**
@@ -270,54 +297,11 @@ public class BaseDepthController {
             mBaseSurface = baseSurface;
             Log.d(TAG, "setSurface:\n\tmWaitingOnSurfaceValidity: " + mWaitingOnSurfaceValidity
                     + "\n\tmBaseSurface: " + mBaseSurface);
+            SurfaceControl.Transaction transaction = createTransaction();
             if (enableOverviewBackgroundWallpaperBlur()) {
-                SurfaceControl.Transaction transaction = createTransaction();
-                if (mBaseSurface != null) {
-                    if (mBlurSurface == null) {
-                        mBlurSurface = new SurfaceControl.Builder()
-                                .setName("Overview Blur")
-                                .setHidden(false)
-                                .build();
-                        Log.d(TAG,
-                                "setBaseSurface: creating Overview Blur surface " + mBlurSurface);
-                    }
-                    updateBlurSurfaceParent(transaction);
-                    updateBlurSurfaceOrder(transaction);
-                    applyDepthAndBlur(transaction);
-                } else {
-                    if (mBlurSurface != null) {
-                        Log.d(TAG, "setBaseSurface: removing base surface " + mBlurSurface);
-                        transaction.remove(mBlurSurface);
-                        mBlurSurface = null;
-                    }
-                }
-            } else {
-                applyDepthAndBlur();
+                setupBlurSurface(transaction);
             }
-        }
-    }
-
-    private void updateBlurSurfaceOrder(SurfaceControl.Transaction transaction) {
-        SurfaceControl baseSurface = null;
-        if (mBaseSurfaceOverride != null && mBaseSurfaceOverride.isValid()) {
-            Log.d(TAG, "updateBlurSurfaceOrder: relayering to leash " + mBaseSurfaceOverride);
-            baseSurface = mBaseSurfaceOverride;
-        } else if (mBaseSurface != null && mBaseSurface.isValid()) {
-            Log.d(TAG, "updateBlurSurfaceOrder: relayering to base " + mBaseSurface);
-            baseSurface = mBaseSurface;
-        }
-        if (baseSurface != null && mBlurSurface != null) {
-            // Set mBlurSurface to be 1 layer behind mBaseSurface or mBaseSurfaceOverride.
-            transaction.setRelativeLayer(mBlurSurface, baseSurface, -1);
-        }
-    }
-
-    private void updateBlurSurfaceParent(SurfaceControl.Transaction transaction) {
-        if (mBlurSurface != null) {
-            // Reparent to launcher for full screen blur.
-            Log.d(TAG,
-                    "updateBlurSurfaceParent: reparenting " + mBlurSurface + " to " + mBaseSurface);
-            transaction.reparent(mBlurSurface, mBaseSurface);
+            applyDepthAndBlur(transaction);
         }
     }
 
