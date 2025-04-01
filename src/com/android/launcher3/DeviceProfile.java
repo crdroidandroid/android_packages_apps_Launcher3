@@ -577,8 +577,8 @@ public class DeviceProfile {
         }
 
         allAppsBorderSpacePx = new Point(
-                pxFromDp(inv.allAppsBorderSpaces[mTypeIndex].x, mMetrics),
-                pxFromDp(inv.allAppsBorderSpaces[mTypeIndex].y, mMetrics));
+                pxFromDp(inv.allAppsBorderSpaces[mTypeIndex].x, mMetrics) * (isTablet ? 2 : 1),
+                pxFromDp(inv.allAppsBorderSpaces[mTypeIndex].y, mMetrics) * (isTablet ? 2 : 1));
         setupAllAppsStyle(context);
 
         workspacePageIndicatorHeight = res.getDimensionPixelSize(
@@ -1437,8 +1437,8 @@ public class DeviceProfile {
      */
     private void updateAllAppsIconSize(float scale, Resources res) {
         allAppsBorderSpacePx = new Point(
-                pxFromDp(inv.allAppsBorderSpaces[mTypeIndex].x, mMetrics, scale),
-                pxFromDp(inv.allAppsBorderSpaces[mTypeIndex].y, mMetrics, scale));
+                pxFromDp(inv.allAppsBorderSpaces[mTypeIndex].x, mMetrics, scale) * (isTablet ? 2 : 1),
+                pxFromDp(inv.allAppsBorderSpaces[mTypeIndex].y, mMetrics, scale) * (isTablet ? 2 : 1));
         // AllApps cells don't have real space between cells,
         // so we add the border space to the cell height
         int baseCellHeight = pxFromDp(inv.allAppsCellSize[mTypeIndex].y, mMetrics)
@@ -1487,8 +1487,8 @@ public class DeviceProfile {
         allAppsIconDrawablePaddingPx = getNormalizedIconDrawablePadding(allAppsIconSizePx,
                 mResponsiveAllAppsCellSpec.getIconDrawablePadding());
         allAppsBorderSpacePx = new Point(
-                mResponsiveAllAppsWidthSpec.getGutterPx(),
-                mResponsiveAllAppsHeightSpec.getGutterPx()
+                mResponsiveAllAppsWidthSpec.getGutterPx() * (isTablet ? 2 : 1),
+                mResponsiveAllAppsHeightSpec.getGutterPx() * (isTablet ? 2 : 1)
         );
         allAppsCellHeightPx = mResponsiveAllAppsHeightSpec.getCellSizePx();
         allAppsCellWidthPx = mResponsiveAllAppsWidthSpec.getCellSizePx();
