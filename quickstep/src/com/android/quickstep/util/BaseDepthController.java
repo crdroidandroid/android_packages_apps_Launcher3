@@ -146,10 +146,11 @@ public class BaseDepthController {
     protected void onInvalidSurface() { }
 
     protected void applyDepthAndBlur() {
-        applyDepthAndBlur(createTransaction());
+        applyDepthAndBlur(createTransaction(), /* applyImmediately */ false);
     }
 
-    protected void applyDepthAndBlur(SurfaceControl.Transaction transaction) {
+    protected void applyDepthAndBlur(SurfaceControl.Transaction transaction,
+            boolean applyImmediately) {
         try (transaction) {
             float depth = mDepth;
             IBinder windowToken = mLauncher.getRootView().getWindowToken();
@@ -208,10 +209,14 @@ public class BaseDepthController {
                 mInEarlyWakeUp = false;
             }
 
-            AttachedSurfaceControl rootSurfaceControl =
-                    mLauncher.getRootView().getRootSurfaceControl();
-            if (rootSurfaceControl != null) {
-                rootSurfaceControl.applyTransactionOnDraw(transaction);
+            if (applyImmediately) {
+                transaction.apply();
+            } else {
+                AttachedSurfaceControl rootSurfaceControl =
+                        mLauncher.getRootView().getRootSurfaceControl();
+                if (rootSurfaceControl != null) {
+                    rootSurfaceControl.applyTransactionOnDraw(transaction);
+                }
             }
         }
 
@@ -254,11 +259,12 @@ public class BaseDepthController {
      * </p>
      */
     public void setBaseSurfaceOverride(@Nullable SurfaceControl baseSurfaceOverride) {
+        boolean applyImmediately = mBaseSurfaceOverride != null && baseSurfaceOverride == null;
         this.mBaseSurfaceOverride = baseSurfaceOverride;
         Log.d(TAG, "setBaseSurfaceOverride: applying blur behind leash " + baseSurfaceOverride);
         SurfaceControl.Transaction transaction = createTransaction();
         setupBlurSurface(transaction);
-        applyDepthAndBlur(transaction);
+        applyDepthAndBlur(transaction, applyImmediately);
     }
 
     private void setupBlurSurface(SurfaceControl.Transaction transaction) {
@@ -277,7 +283,6 @@ public class BaseDepthController {
             transaction.reparent(mBlurSurface, mBaseSurface);
             Log.d(TAG,
                     "setupBlurSurface: reparenting " + mBlurSurface + " to " + mBaseSurface);
-
             transaction.setRelativeLayer(mBlurSurface, mBaseSurfaceOverride, -1);
             Log.d(TAG, "setupBlurSurface: relayering to leash " + mBaseSurfaceOverride);
         } else {
@@ -301,7 +306,7 @@ public class BaseDepthController {
             if (enableOverviewBackgroundWallpaperBlur()) {
                 setupBlurSurface(transaction);
             }
-            applyDepthAndBlur(transaction);
+            applyDepthAndBlur(transaction, /* applyImmediately */ false);
         }
     }
 
