@@ -38,7 +38,9 @@ import com.android.launcher3.util.MediaSessionManagerHelper;
 import com.android.launcher3.util.MSMHProxy;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class QuickspaceController implements OmniJawsClient.OmniJawsObserver, MediaSessionManagerHelper.MediaMetadataListener {
 
@@ -48,6 +50,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver, Me
     private static final String TAG = "Launcher3:QuickspaceController";
 
     private final Context mContext;
+    private final Map<String, Integer> mConditionMap;
     private QuickEventsController mEventsController;
     private OmniJawsClient mWeatherClient;
     private OmniJawsClient.WeatherInfo mWeatherInfo;
@@ -84,6 +87,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver, Me
 
     public QuickspaceController(Context context) {
         mContext = context;
+        mConditionMap = initializeConditionMap();
         mEventsController = new QuickEventsController(context);
         mWeatherClient = new OmniJawsClient(context);
     }
@@ -125,19 +129,52 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver, Me
     }
 
     public String getWeatherTemp() {
+        if (mWeatherInfo == null) return null;
+
         boolean shouldShowCity = Utilities.QuickSpaceShowCity(mContext);
         boolean showWeatherText = Utilities.QuickSpaceShowWeatherText(mContext);
-        if (mWeatherInfo != null) {
-            String weatherTemp = (shouldShowCity ? mWeatherInfo.city : "") + " " + mWeatherInfo.temp +
-                    mWeatherInfo.tempUnits + 
-                    (showWeatherText ? " · " + capitalizeWords(mWeatherInfo.condition) : "");
-            return weatherTemp;
+
+        StringBuilder weatherTemp = new StringBuilder();
+        if (shouldShowCity) {
+            weatherTemp.append(mWeatherInfo.city).append(" ");
         }
-        return null;
+        weatherTemp.append(mWeatherInfo.temp)
+                   .append(mWeatherInfo.tempUnits);
+
+        if (showWeatherText) {
+            weatherTemp.append(" • ").append(getConditionText(mWeatherInfo.condition));
+        }
+        
+        return weatherTemp.toString();
+    }
+
+    private String getConditionText(String input) {
+        if (input == null || input.isEmpty()) return "";
+
+        String lowerCaseInput = input.toLowerCase();
+        for (Map.Entry<String, Integer> entry : mConditionMap.entrySet()) {
+            if (lowerCaseInput.contains(entry.getKey())) {
+                return mContext.getResources().getString(entry.getValue());
+            }
+        }
+        return capitalizeWords(input);
+    }
+
+    private Map<String, Integer> initializeConditionMap() {
+        Map<String, Integer> map = new HashMap<>();
+        map.put("clouds", R.string.quick_event_weather_clouds);
+        map.put("rain", R.string.quick_event_weather_rain);
+        map.put("clear", R.string.quick_event_weather_clear);
+        map.put("storm", R.string.quick_event_weather_storm);
+        map.put("snow", R.string.quick_event_weather_snow);
+        map.put("wind", R.string.quick_event_weather_wind);
+        map.put("mist", R.string.quick_event_weather_mist);
+        return map;
     }
 
     private String capitalizeWords(String input) {
         if (input == null || input.isEmpty()) return input;
+
         String[] words = input.split("\\s+");
         StringBuilder capitalized = new StringBuilder();
         for (String word : words) {
