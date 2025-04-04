@@ -40,6 +40,7 @@ import com.android.launcher3.util.MSMHProxy;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class QuickspaceController implements OmniJawsClient.OmniJawsObserver, MediaSessionManagerHelper.MediaMetadataListener {
@@ -151,13 +152,18 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver, Me
     private String getConditionText(String input) {
         if (input == null || input.isEmpty()) return "";
 
+        Locale locale = mContext.getResources().getConfiguration().getLocales().get(0);
+        boolean isEnglish = locale.getLanguage().toLowerCase(Locale.ROOT).startsWith("en");
         String lowerCaseInput = input.toLowerCase();
-        for (Map.Entry<String, Integer> entry : mConditionMap.entrySet()) {
-            if (lowerCaseInput.contains(entry.getKey())) {
-                return mContext.getResources().getString(entry.getValue());
+
+        if (!isEnglish) {
+            for (Map.Entry<String, Integer> entry : mConditionMap.entrySet()) {
+                if (lowerCaseInput.contains(entry.getKey())) {
+                    return mContext.getResources().getString(entry.getValue());
+                }
             }
         }
-        return capitalizeWords(input);
+        return capitalizeWords(lowerCaseInput);
     }
 
     private Map<String, Integer> initializeConditionMap() {
