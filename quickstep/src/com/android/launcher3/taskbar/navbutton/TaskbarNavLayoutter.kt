@@ -29,6 +29,8 @@ import android.widget.LinearLayout
 import android.widget.Space
 import com.android.launcher3.R
 import com.android.launcher3.taskbar.TaskbarActivityContext
+import com.android.launcher3.taskbar.TaskbarManagerImpl.NAVBAR_LAYOUT_MODE_URI
+import com.android.launcher3.util.SettingsCache
 import com.android.launcher3.util.Themes
 
 /** Layoutter for rendering task bar in large screen, both in 3-button and gesture nav mode. */
@@ -92,8 +94,15 @@ class TaskbarNavLayoutter(
         context: TaskbarActivityContext,
         isA11yButtonPersistent: Boolean,
     ) {
+        val layoutMode = SettingsCache.INSTANCE.get(homeButton!!.context).getIntValue(NAVBAR_LAYOUT_MODE_URI)
+
         val navMarginEnd = calculateNavMarginEnd(context, isA11yButtonPersistent)
 
+        val endFactor = when (layoutMode) {
+            2 -> 0.4f  // left
+            3 -> 1.6f  // right
+            else -> 1f // normal & compact
+        }
         val navButtonParams =
             FrameLayout.LayoutParams(
                     FrameLayout.LayoutParams.WRAP_CONTENT,
@@ -101,7 +110,7 @@ class TaskbarNavLayoutter(
                 )
                 .apply {
                     gravity = Gravity.END or Gravity.CENTER_VERTICAL
-                    marginEnd = navMarginEnd
+                    marginEnd = (endFactor * navMarginEnd.toFloat()).toInt()
                 }
 
         // Ensure order of buttons is correct
@@ -133,8 +142,10 @@ class TaskbarNavLayoutter(
     }
 
     private fun distributeNavButtonSpacing() {
+        val layoutMode = SettingsCache.INSTANCE.get(homeButton!!.context).getIntValue(NAVBAR_LAYOUT_MODE_URI)
         val spaceInBetween =
             resources.getDimensionPixelSize(R.dimen.taskbar_nav_button_space_inbetween)
+        val spaceInBetweenDiv = if (layoutMode == 0) 1 else 4
         val lastIndex = navButtonContainer.childCount - 1
 
         for (i in 0..lastIndex) {
@@ -152,8 +163,8 @@ class TaskbarNavLayoutter(
                     params.marginEnd = 0
                 }
                 else -> {
-                    params.marginStart = spaceInBetween
-                    params.marginEnd = spaceInBetween
+                    params.marginStart = spaceInBetween / spaceInBetweenDiv
+                    params.marginEnd = spaceInBetween / spaceInBetweenDiv
                 }
             }
         }

@@ -239,6 +239,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
             LineageSettings.System.ENABLE_TASKBAR);
     private static final Uri URI_NAVIGATION_BAR_HINT = LineageSettings.System.getUriFor(
             LineageSettings.System.NAVIGATION_BAR_HINT);
+    private static final Uri URI_NAVBAR_LAYOUT_MODE = Secure.getUriFor(Secure.NAVBAR_LAYOUT_MODE);
 
     private static final String TAG = "TaskbarActivityContext";
 
@@ -297,6 +298,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
     private final boolean mIsNavBarKidsMode;
     private final boolean mIsTaskbarEnabled;
     private final boolean mIsNavbarHintEnabled;
+    private final int mNavbarLayoutMode;
 
     private boolean mIsDestroyed = false;
 
@@ -362,6 +364,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
         mIsNavBarKidsMode = settingsCache.getValue(URI_NAV_BAR_KIDS_MODE);
         mIsTaskbarEnabled = settingsCache.getValue(URI_ENABLE_TASKBAR);
         mIsNavbarHintEnabled = settingsCache.getValue(URI_NAVIGATION_BAR_HINT);
+        mNavbarLayoutMode = settingsCache.getIntValue(URI_NAVBAR_LAYOUT_MODE);
         mBubbleFeatureConfig =
                 new BubbleFeatureConfigImpl(mWindowContext, getDesktopState(mWindowContext));
 
@@ -2484,6 +2487,10 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
 
     public boolean isNavbarHintEnabled() {
         return mIsNavbarHintEnabled;
+    }
+
+    public int getNavbarLayoutMode() {
+        return mNavbarLayoutMode;
     }
 
     /**

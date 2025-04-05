@@ -117,6 +117,7 @@ import kotlinx.coroutines.CoroutineDispatcher;
 
 import java.io.PrintWriter;
 import java.lang.ref.WeakReference;
+import java.util.function.ToIntFunction;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -145,6 +146,9 @@ public class TaskbarManagerImpl {
 
     public static final Uri NAVIGATION_BAR_HINT_URI = LineageSettings.System.getUriFor(
             LineageSettings.System.NAVIGATION_BAR_HINT);
+
+    public static final Uri NAVBAR_LAYOUT_MODE_URI = Settings.Secure.getUriFor(
+            Settings.Secure.NAVBAR_LAYOUT_MODE);
 
     private final Context mBaseContext;
     private final int mPrimaryDisplayId;
@@ -363,6 +367,12 @@ public class TaskbarManagerImpl {
                         v -> onTaskbarChanged(v, TaskbarActivityContext::isNavbarHintEnabled));
         cleanupTasks.addCloseable(getTaskbarUiThread(), enableNavbarHintSafeCloseable);
 
+        var navbarLayoutModeSafeCloseable =
+                settingsCache.getIntListenableRef(NAVBAR_LAYOUT_MODE_URI).forEach(
+                        getTaskbarUiThread(),
+                        v -> onTaskbarIntChanged(v, TaskbarActivityContext::getNavbarLayoutMode));
+        cleanupTasks.addCloseable(getTaskbarUiThread(), navbarLayoutModeSafeCloseable);
+
         SimpleBroadcastReceiver shutdownReceiver = new SimpleBroadcastReceiver(
                 mBaseContext,
                 UI_HELPER_EXECUTOR,
@@ -507,6 +517,18 @@ public class TaskbarManagerImpl {
             var activity = resource.getTaskbar();
             if (activity != null && oldValue.apply(activity) != newValue) {
                 resource.debugMsg("Taskbar changed! Restarting process!");
+                System.exit(0);
+            }
+        });
+        return Unit.INSTANCE;
+    }
+
+    private Unit onTaskbarIntChanged(int newValue,
+            ToIntFunction<TaskbarActivityContext> oldValue) {
+        mResources.forEach(resource -> {
+            var activity = resource.getTaskbar();
+            if (activity != null && oldValue.applyAsInt(activity) != newValue) {
+                resource.debugMsg("Taskbar int setting changed! Restarting process!");
                 System.exit(0);
             }
         });
