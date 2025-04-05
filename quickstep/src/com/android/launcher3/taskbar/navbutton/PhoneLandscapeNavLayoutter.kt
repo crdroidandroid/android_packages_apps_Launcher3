@@ -27,6 +27,7 @@ import android.widget.Space
 import com.android.launcher3.R
 import com.android.launcher3.taskbar.TaskbarActivityContext
 import com.android.launcher3.taskbar.TaskbarManager.NAV_BAR_INVERSE
+import com.android.launcher3.taskbar.TaskbarManager.NAV_BAR_LAYOUT
 import com.android.launcher3.util.SettingsCache
 
 open class PhoneLandscapeNavLayoutter(
@@ -49,6 +50,7 @@ open class PhoneLandscapeNavLayoutter(
     ) {
 
     override fun layoutButtons(context: TaskbarActivityContext, isA11yButtonPersistent: Boolean) {
+        val layoutMode = SettingsCache.INSTANCE.get(homeButton!!.context).getIntValue(NAV_BAR_LAYOUT, 0)
         val totalHeight = context.deviceProfile.heightPx
         val homeButtonHeight =
             resources.getDimensionPixelSize(R.dimen.taskbar_phone_home_button_size)
@@ -62,13 +64,17 @@ open class PhoneLandscapeNavLayoutter(
         val sideButtonHeight = contextualButtonHeight * 2
         val navButtonContainerHeight = contentWidth - contextualButtonHeight * 2
 
+        val bottomFactor = when (layoutMode) {
+            2 -> 0.4f  // left
+            3 -> 1.6f  // right
+            else -> 1f // normal & compact
+        }
+        val marginBase = contextualButtonHeight + contentPadding + roundedCornerContentMargin
         val navContainerParams =
             FrameLayout.LayoutParams(MATCH_PARENT, navButtonContainerHeight.toInt())
         navContainerParams.apply {
-            topMargin =
-                (contextualButtonHeight + contentPadding + roundedCornerContentMargin).toInt()
-            bottomMargin =
-                (contextualButtonHeight + contentPadding + roundedCornerContentMargin).toInt()
+            topMargin = marginBase.toInt()
+            bottomMargin = (bottomFactor * marginBase.toFloat()).toInt()
             marginEnd = 0
             marginStart = 0
         }
@@ -85,6 +91,7 @@ open class PhoneLandscapeNavLayoutter(
         // Add the spaces in between the nav buttons
         val spaceInBetween =
             (navButtonContainerHeight - homeButtonHeight - sideButtonHeight * 2) / 2.0f
+        val spaceInBetweenDiv = if (layoutMode == 0) 1 else 4
         for (i in 0 until navButtonContainer.childCount) {
             val navButton = navButtonContainer.getChildAt(i)
             val buttonLayoutParams = navButton.layoutParams as LinearLayout.LayoutParams
@@ -102,8 +109,8 @@ open class PhoneLandscapeNavLayoutter(
                 }
                 else -> {
                     // other buttons
-                    buttonLayoutParams.topMargin = margin
-                    buttonLayoutParams.bottomMargin = margin
+                    buttonLayoutParams.topMargin = (margin / spaceInBetweenDiv).toInt()
+                    buttonLayoutParams.bottomMargin = (margin / spaceInBetweenDiv).toInt()
                     buttonLayoutParams.height = homeButtonHeight
                 }
             }
