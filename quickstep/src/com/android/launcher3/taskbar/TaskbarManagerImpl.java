@@ -167,6 +167,9 @@ public class TaskbarManagerImpl implements DisplayDecorationListener {
     public static final Uri NAV_BAR_INVERSE = Settings.Secure.getUriFor(
             Settings.Secure.NAVBAR_INVERSE_LAYOUT);
 
+    public static final Uri NAV_BAR_LAYOUT = Settings.Secure.getUriFor(
+            Settings.Secure.NAVBAR_LAYOUT_MODE);
+
     public static final Uri ENABLE_TASKBAR = LineageSettings.System.getUriFor(
             LineageSettings.System.ENABLE_TASKBAR);
 
@@ -511,6 +514,8 @@ public class TaskbarManagerImpl implements DisplayDecorationListener {
                 .register(NAV_BAR_KIDS_MODE, mOnSettingsChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
                 .register(NAV_BAR_INVERSE, mOnSettingsChangeListener);
+        SettingsCache.INSTANCE.get(mPrimaryWindowContext)
+                .register(NAV_BAR_LAYOUT, mOnTaskBarChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
                 .register(ENABLE_TASKBAR, mOnTaskBarChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
@@ -1216,6 +1221,8 @@ public class TaskbarManagerImpl implements DisplayDecorationListener {
                 .unregister(NAV_BAR_KIDS_MODE, mOnSettingsChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
                 .unregister(NAV_BAR_INVERSE, mOnSettingsChangeListener);
+        SettingsCache.INSTANCE.get(mPrimaryWindowContext)
+                .unregister(NAV_BAR_LAYOUT, mOnTaskBarChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
                 .unregister(ENABLE_TASKBAR, mOnTaskBarChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
