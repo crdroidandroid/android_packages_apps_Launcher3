@@ -102,9 +102,6 @@
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Terminar</string>
     <string name="recents_app_killed">App terminada</string>
-    <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar_title">Usar a barra de tarefas</string>
-    <string name="pref_allow_phone_taskbar_summary">Para abrir e alternar apps em qualquer lugar</string>
     <!-- Row Height -->
     <string name="row_height_title">Altura da linha</string>
     <!-- Hotseat searchbar -->
@@ -139,9 +136,6 @@
     <string name="meminfo_text">%1$s Disponível | %2$s Total</string>
     <string name="recents_meminfo_title">Informações da memória</string>
     <string name="recents_meminfo_zram_title">Informação do ZRAM</string>
-    <!-- Background blur -->
-    <string name="background_blur_title">Desfoque de fundo</string>
-    <string name="background_blur_summary">Definir o nível de desfoque para a gaveta de apps e ecrã de recentes</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Capturar ecrã</string>
     <string name="recents_clear_all_title">Limpar tudo</string>
@@ -168,6 +162,9 @@
     <string name="icon_pack_default_label">Padrão</string>
     <string name="icon_pack_add">Instalar mais</string>
     <string name="icon_pack_no_market">Não há uma loja de apps disponível</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Barra de deslocamento</string>
+    <string name="drawer_scrollbar_summary">Barra de deslocamento na parte lateral da gaveta de aplicações</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Resumo</string>
     <string name="show_quickspace_summary">Mostrado no topo do ecrã inicial</string>
@@ -363,10 +360,4 @@
     <string name="quick_event_weather_text_title">Condições atuais</string>
     <string name="quick_event_weather_text_summary">Mostrar as condições meteorológicas atuais</string>
     <string name="intent_no_app_clock_found">Não foi possível encontrar o calendário ou a atividade do relógio</string>
-    <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">Barra de deslocamento</string>
-    <string name="drawer_scrollbar_summary">Barra de deslocamento na parte lateral da gaveta de aplicações</string>
-    <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Forçar ícones temáticos</string>
-    <string name="force_monochrome_icons_summary">Gerar ícones monocromáticos, se não for suportado pela aplicação (requer realternância de ícones temáticos)</string>
 </resources>
