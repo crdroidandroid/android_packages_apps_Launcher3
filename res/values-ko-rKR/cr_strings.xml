@@ -102,9 +102,6 @@
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">작업 지우기</string>
     <string name="recents_app_killed">앱 종료됨</string>
-    <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar_title">네비바 사용</string>
-    <string name="pref_allow_phone_taskbar_summary">어디에서나 앱을 열고 바꿀 수 있도록</string>
     <!-- Row Height -->
     <string name="row_height_title">행 높이</string>
     <!-- Hotseat searchbar -->
@@ -139,9 +136,6 @@
     <string name="meminfo_text">%1$s Available | %2$s Total</string>
     <string name="recents_meminfo_title">메모리 정보</string>
     <string name="recents_meminfo_zram_title">ZRAM info</string>
-    <!-- Background blur -->
-    <string name="background_blur_title">배경 흐림</string>
-    <string name="background_blur_summary">최근 앱과 앱 서랍에서 블러 깊이 레벨 설정</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">스크린샷</string>
     <string name="recents_clear_all_title">모두 지우기</string>
@@ -168,6 +162,9 @@
     <string name="icon_pack_default_label">기본값</string>
     <string name="icon_pack_add">추가로 설치</string>
     <string name="icon_pack_no_market">사용할 수 있는 앱 스토어가 없습니다</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Scrollbar</string>
+    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">한 눈에 보기</string>
     <string name="show_quickspace_summary">홈 화면 상단에 표시</string>
@@ -312,7 +309,7 @@
         <item>다른 ROM을 플래시해야합니까?</item>
         <item>전쟁보다 평화</item>
         <item>오, 무슨 일이에요?</item>
-        <item>당신에 작업에 집중하세요</item>
+        <item>Welcome to real Matrix!</item>
         <item>얼마나 많은 스크린샷을 찍으셨나요?</item>
         <item>Open goodness with crDroid</item>
         <item>Spread love, not havoc</item>
@@ -332,7 +329,7 @@
         <item>Derps를 위한 축제는 없습니다 - 오직 완벽함!</item>
         <item>빌드 봇의 최고의 선택 중 하나</item>
         <item>편집증에 대한 정신</item>
-        <item>차가운 디저트를 먹어보세요</item>
+        <item>Rising in peace</item>
         <item>정말 멋진 경험이지 않나요?</item>
         <item>진화는 신화입니다.</item>
         <item>당신이 깜박이는 것입니다, 감자가되지 마십시오?</item>
@@ -363,10 +360,4 @@
     <string name="quick_event_weather_text_title">현재 상태</string>
     <string name="quick_event_weather_text_summary">현재 날씨 요약 표시</string>
     <string name="intent_no_app_clock_found">일정이나 알림을 찾을 수 없습니다</string>
-    <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">Scrollbar</string>
-    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
-    <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Force themed icons</string>
-    <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
 </resources>

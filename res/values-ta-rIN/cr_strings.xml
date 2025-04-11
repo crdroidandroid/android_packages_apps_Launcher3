@@ -102,9 +102,6 @@
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">கொல்</string>
     <string name="recents_app_killed">பயன்பாடு கொல்லப்பட்டது</string>
-    <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar_title">Use taskbar</string>
-    <string name="pref_allow_phone_taskbar_summary">For opening and switching apps anywhere</string>
     <!-- Row Height -->
     <string name="row_height_title">Row height</string>
     <!-- Hotseat searchbar -->
@@ -139,9 +136,6 @@
     <string name="meminfo_text">%1$s Available | %2$s Total</string>
     <string name="recents_meminfo_title">Memory info</string>
     <string name="recents_meminfo_zram_title">ZRAM info</string>
-    <!-- Background blur -->
-    <string name="background_blur_title">Background blur depth</string>
-    <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">திரைப்பிடிப்பு</string>
     <string name="recents_clear_all_title">அனைத்தையும் அழி</string>
@@ -168,6 +162,9 @@
     <string name="icon_pack_default_label">இயல்புநிலை</string>
     <string name="icon_pack_add">Install more</string>
     <string name="icon_pack_no_market">There\'s no available app store</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Scrollbar</string>
+    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">முகப்புத் தகவல்</string>
     <string name="show_quickspace_summary">Show at the top of your home screen</string>
@@ -312,7 +309,7 @@
         <item>ஏற்கனவே மற்றொரு புதுப்பிப்பை ப்ளாஷ் செய்ய நேரம் வந்துவிட்டதா?</item>
         <item>Make peace, not war</item>
         <item>வணக்கம், என்ன நடக்கிறது?</item>
-        <item>உங்கள் பணிகளில் கவனம் செலுத்துங்கள்</item>
+        <item>Welcome to real Matrix!</item>
         <item>எத்தனை திரைப்பதிவுகளை எடுக்கிறீர்கள்?</item>
         <item>CrDroid உடன் நன்மைகளை அனுபவிங்கள்</item>
         <item>Spread love, not havoc</item>
@@ -332,7 +329,7 @@
         <item>முட்டாள்தனத்திற்கு கொண்டாட்டம் அல்ல - முழுமை மட்டுமே!</item>
         <item>தரவியக்கியின் சிறந்த தேர்வுகளில் ஒன்று</item>
         <item>உங்கள் பிரம்மைக்கு நல்லறிவு</item>
-        <item>குளிர் இனிப்புகளை சுவைக்கவும்</item>
+        <item>Rising in peace</item>
         <item>என்ன ஒரு அழகான அனுபவம், இல்லையா?</item>
         <item>பரிணாம வளர்ச்சி என்பது ஒரு கட்டுக்கதை, இல்லையா?</item>
         <item>நீங்கள் ஃபிளாஷ் செய்வதுதான் நீங்கள், Potato-க இருக்க வேண்டாம்</item>
@@ -363,10 +360,4 @@
     <string name="quick_event_weather_text_title">Current condition</string>
     <string name="quick_event_weather_text_summary">Display current weather condition summary</string>
     <string name="intent_no_app_clock_found">Unable to find calendar or clock activity</string>
-    <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">Scrollbar</string>
-    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
-    <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">Force themed icons</string>
-    <string name="force_monochrome_icons_summary">Generate monochromatic icons, if not supported by the app (requires re-toggling of themed icons)</string>
 </resources>

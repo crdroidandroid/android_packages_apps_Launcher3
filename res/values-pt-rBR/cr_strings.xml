@@ -102,9 +102,6 @@
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Fechar aplicativo</string>
     <string name="recents_app_killed">Aplicativo encerrado</string>
-    <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar_title">Usar barra de tarefas</string>
-    <string name="pref_allow_phone_taskbar_summary">Para abrir e alternar apps em qualquer lugar</string>
     <!-- Row Height -->
     <string name="row_height_title">Altura da linha</string>
     <!-- Hotseat searchbar -->
@@ -139,9 +136,6 @@
     <string name="meminfo_text">%1$s Disponível - %2$s Total</string>
     <string name="recents_meminfo_title">Informações da memória</string>
     <string name="recents_meminfo_zram_title">Informação do ZRAM</string>
-    <!-- Background blur -->
-    <string name="background_blur_title">Desfoque de fundo</string>
-    <string name="background_blur_summary">Definir a intensidade do desfoque para os aplicativos recentes e gaveta de aplicativos</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Capturar tela</string>
     <string name="recents_clear_all_title">Limpar tudo</string>
@@ -168,6 +162,9 @@
     <string name="icon_pack_default_label">Padrão</string>
     <string name="icon_pack_add">Instalar mais</string>
     <string name="icon_pack_no_market">Não há uma loja de aplicativos disponível</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">Barra de rolagem</string>
+    <string name="drawer_scrollbar_summary">Barra de rolagem na lateral da gaveta de aplicativos</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Resumo</string>
     <string name="show_quickspace_summary">Mostrar no topo da tela inicial</string>
@@ -312,7 +309,7 @@
         <item>É hora de flashear outra atualização novamente?</item>
         <item>Faça a paz, não a guerra</item>
         <item>Ei, e aí?</item>
-        <item>Foco nas suas tarefas</item>
+        <item>Welcome to real Matrix!</item>
         <item>Quantas capturas de tela você tira?</item>
         <item>Torne-se um deus com a crDroid</item>
         <item>Espalhe amor, não ódio</item>
@@ -332,7 +329,7 @@
         <item>Sem festival de Derps, somente perfeição!</item>
         <item>Uma das melhores escolhas do buildbot</item>
         <item>Sanidade para sua paranóia</item>
-        <item>Experimente sobremesas geladas</item>
+        <item>Rising in peace</item>
         <item>Que experiência adorável, não é?</item>
         <item>A evolução é um mito, certo?</item>
         <item>Você é o que você pisca, não seja Batata</item>
@@ -363,10 +360,4 @@
     <string name="quick_event_weather_text_title">Condição atual</string>
     <string name="quick_event_weather_text_summary">Exibir o resumo atual da condição climática</string>
     <string name="intent_no_app_clock_found">Não foi possível encontrar o calendário ou a atividade do relógio</string>
-    <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">Barra de rolagem</string>
-    <string name="drawer_scrollbar_summary">Barra de rolagem na lateral da gaveta de aplicativos</string>
-    <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title"></string>
-    <string name="force_monochrome_icons_summary">Gere ícones monocromáticos, se não for compatível com o aplicativo (requer alternar novamente os ícones temáticos)</string>
 </resources>

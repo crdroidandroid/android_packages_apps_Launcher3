@@ -102,9 +102,6 @@
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">强制停止</string>
     <string name="recents_app_killed">已停止应用程序</string>
-    <!-- Taskbar -->
-    <string name="pref_allow_phone_taskbar_title">使用任务栏</string>
-    <string name="pref_allow_phone_taskbar_summary">随时随地打开和切换应用程序</string>
     <!-- Row Height -->
     <string name="row_height_title">行高</string>
     <!-- Hotseat searchbar -->
@@ -139,9 +136,6 @@
     <string name="meminfo_text">%1$s 可用 | %2$s 总计</string>
     <string name="recents_meminfo_title">内存信息</string>
     <string name="recents_meminfo_zram_title">内存信息</string>
-    <!-- Background blur -->
-    <string name="background_blur_title">背景模糊深度</string>
-    <string name="background_blur_summary">为最近任务和应用抽屉设置模糊深度级别</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">屏幕截图</string>
     <string name="recents_clear_all_title">清除所有</string>
@@ -168,6 +162,9 @@
     <string name="icon_pack_default_label">默认</string>
     <string name="icon_pack_add">安装更多</string>
     <string name="icon_pack_no_market">没有可用的应用商店</string>
+    <!-- App drawer scrollbar -->
+    <string name="drawer_scrollbar_title">滚动条</string>
+    <string name="drawer_scrollbar_summary">应用抽屉侧边滚动条</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">速览</string>
     <string name="show_quickspace_summary">在主屏幕的顶部显示</string>
@@ -312,7 +309,7 @@
         <item>是时候更新新系统了吗？</item>
         <item>缔造和平，而非战争</item>
         <item>哦，嘿，怎么了？</item>
-        <item>别忘了要做的事</item>
+        <item>欢迎来到真正的矩阵！</item>
         <item>你截了几张图？</item>
         <item>和 crDroid 一起迎接美好</item>
         <item>用爱传递正能量</item>
@@ -332,7 +329,7 @@
         <item>没有给白痴庆祝的节日——只有完美！</item>
         <item>Buildbot 的最佳选择之一</item>
         <item>为您的偏执增添理智</item>
-        <item>来点冰凉的甜点？</item>
+        <item>在和平中崛起</item>
         <item>多么美妙的经历，不是吗？</item>
         <item>进化论就像神话，对吗？</item>
         <item>走自己的路，让别人说去吧</item>
@@ -363,10 +360,4 @@
     <string name="quick_event_weather_text_title">当前天气状况</string>
     <string name="quick_event_weather_text_summary">显示当前天气状况摘要</string>
     <string name="intent_no_app_clock_found">找不到日历或时钟活动</string>
-    <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">滚动条</string>
-    <string name="drawer_scrollbar_summary">应用抽屉侧边滚动条</string>
-    <!-- Force monochrome icons -->
-    <string name="force_monochrome_icons_title">强制主题化图标</string>
-    <string name="force_monochrome_icons_summary">在应用程序不支持的情况下生成单色图标（需要重新启用主题化图标）</string>
 </resources>
