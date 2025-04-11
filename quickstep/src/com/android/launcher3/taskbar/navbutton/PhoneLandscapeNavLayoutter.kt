@@ -50,7 +50,9 @@ open class PhoneLandscapeNavLayoutter(
     ) {
 
     override fun layoutButtons(context: TaskbarActivityContext, isA11yButtonPersistent: Boolean) {
-        val layoutMode = SettingsCache.INSTANCE.get(homeButton!!.context).getIntValue(NAV_BAR_LAYOUT, 0)
+        val layoutMode = homeButton?.context?.let {
+            SettingsCache.INSTANCE.get(it).getIntValue(NAV_BAR_LAYOUT, 0)
+        } ?: 0
         val totalHeight = context.deviceProfile.heightPx
         val homeButtonHeight =
             resources.getDimensionPixelSize(R.dimen.taskbar_phone_home_button_size)
@@ -120,6 +122,9 @@ open class PhoneLandscapeNavLayoutter(
     }
 
     open fun addThreeButtons() {
+        if (homeButton == null || backButton == null || recentsButton == null) {
+            return
+        }
         // Swap recents and back button
         if (SettingsCache.INSTANCE.get(homeButton!!.context).getValue(NAV_BAR_INVERSE, 0)) {
             navButtonContainer.addView(backButton)

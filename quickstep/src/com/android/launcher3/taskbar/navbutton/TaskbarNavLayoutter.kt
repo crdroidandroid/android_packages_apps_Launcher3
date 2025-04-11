@@ -51,7 +51,9 @@ class TaskbarNavLayoutter(
     ) {
 
     override fun layoutButtons(context: TaskbarActivityContext, isA11yButtonPersistent: Boolean) {
-        val layoutMode = SettingsCache.INSTANCE.get(homeButton!!.context).getIntValue(NAV_BAR_LAYOUT, 0)
+        val layoutMode = homeButton?.context?.let {
+            SettingsCache.INSTANCE.get(it).getIntValue(NAV_BAR_LAYOUT, 0)
+        } ?: 0
 
         // Add spacing after the end of the last nav button
         var navMarginEnd =
