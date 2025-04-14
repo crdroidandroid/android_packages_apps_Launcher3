@@ -24,6 +24,7 @@ import static com.android.launcher3.Flags.enableRefactorTaskThumbnail;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_SYSTEM_SHORTCUT_FREE_FORM_TAP;
 import static com.android.launcher3.util.SplitConfigurationOptions.STAGE_POSITION_BOTTOM_OR_RIGHT;
 
+import android.app.ActivityManager;
 import android.app.ActivityManagerNative;
 import android.app.ActivityOptions;
 import android.app.IActivityManager;
@@ -435,9 +436,13 @@ public interface TaskShortcutFactory {
             if (!task.isDockable) {
                 return null;
             }
+            if (ActivityManager.isHighEndGfx()) {
+                return null;
+            }
             if (!isAvailable(container)) {
                 return null;
             }
+            
 
             return Collections.singletonList(new FreeformSystemShortcut(
                     R.drawable.ic_caption_desktop_button_foreground,
@@ -461,6 +466,10 @@ public interface TaskShortcutFactory {
             if (!task.isDockable) {
                 return null;
             }
+            if (!ActivityManager.isHighEndGfx()) {
+                return null;
+            }
+
 
             return Collections.singletonList(new FloatingSystemShortcut(container, taskContainer));
         }
