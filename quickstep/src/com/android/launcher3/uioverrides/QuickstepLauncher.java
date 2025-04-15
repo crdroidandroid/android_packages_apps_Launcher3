@@ -48,6 +48,7 @@ import static com.android.launcher3.popup.SystemShortcut.APP_INFO;
 import static com.android.launcher3.popup.SystemShortcut.BUBBLE_SHORTCUT;
 import static com.android.launcher3.popup.SystemShortcut.DONT_SUGGEST_APP;
 import static com.android.launcher3.popup.SystemShortcut.FLOATING;
+import static com.android.launcher3.popup.SystemShortcut.FREE_FORM;
 import static com.android.launcher3.popup.SystemShortcut.INSTALL;
 import static com.android.launcher3.popup.SystemShortcut.KILL_APP;
 import static com.android.launcher3.popup.SystemShortcut.PAUSE_APPS;
@@ -75,6 +76,7 @@ import static com.android.wm.shell.shared.split.SplitScreenConstants.SNAP_TO_2_5
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
+import android.app.ActivityManager;
 import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
@@ -493,7 +495,11 @@ public class QuickstepLauncher extends Launcher implements RecentsViewContainer,
         shortcuts.addAll(getSplitShortcuts());
         shortcuts.add(UNINSTALL);
         shortcuts.add(PAUSE_APPS);
-        shortcuts.add(FLOATING);
+        if (!ActivityManager.isHighEndGfx()) {
+            shortcuts.add(FREE_FORM);
+        } else {
+            shortcuts.add(FLOATING);
+        }
         shortcuts.add(WIDGETS);
         shortcuts.add(KILL_APP);
         shortcuts.add(INSTALL);
