@@ -60,6 +60,8 @@ import com.android.launcher3.views.Snackbar;
 import com.android.launcher3.widget.WidgetsBottomSheet;
 import com.android.launcher3.widget.picker.model.data.WidgetPickerData;
 
+import com.android.quickstep.views.RecentsViewContainer;
+
 import java.net.URISyntaxException;
 import java.util.Arrays;
 
@@ -202,25 +204,23 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
 
         @Override
         public void onClick(View view) {
-            InfoBottomSheet cbs;
+            dismissTaskMenuView();
             Rect sourceBounds = Utilities.getViewBounds(view);
-            ActivityOptionsWrapper options = mTarget.getActivityLaunchOptions(view, mItemInfo);
-            // Dismiss the taskMenu when the app launch animation is complete
-            options.onEndCallback.add(this::dismissTaskMenuView);
+
             try {
-                cbs = (InfoBottomSheet) mTarget.getLayoutInflater().inflate(
+                InfoBottomSheet cbs = (InfoBottomSheet) mTarget.getLayoutInflater().inflate(
                         R.layout.app_info_bottom_sheet,
                         mTarget.getDragLayer(),
                         false);
                 cbs.configureBottomSheet(sourceBounds, view.getContext());
                 cbs.populateAndShow(mItemInfo);
             } catch (InflateException e) {
+                ActivityOptionsWrapper options = mTarget.getActivityLaunchOptions(view, mItemInfo);
                 PackageManagerHelper.startDetailsActivityForInfo(view.getContext(), mItemInfo,
                         sourceBounds, options.toBundle());
             }
             mTarget.getStatsLogManager().logger().withItemInfo(mItemInfo)
                     .log(LAUNCHER_SYSTEM_SHORTCUT_APP_INFO_TAP);
-            dismissTaskMenuView();
         }
 
         public static class SplitAccessibilityInfo {
@@ -234,6 +234,33 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
                 this.taskTitle = taskTitle;
                 this.nodeId = nodeId;
             }
+        }
+    }
+
+    public static class AppInfo2<T extends ActivityContext> extends AppInfo<T> {
+
+        @Nullable
+        private SplitAccessibilityInfo mSplitA11yInfo;
+
+        public AppInfo2(T target, ItemInfo itemInfo, @NonNull View originalView) {
+            super(target, itemInfo, originalView);
+        }
+
+        public AppInfo2(T target, ItemInfo itemInfo, View originalView,
+                SplitAccessibilityInfo accessibilityInfo) {
+            super(target, itemInfo, originalView, accessibilityInfo);
+        }
+
+        @Override
+        public void onClick(View view) {
+            dismissTaskMenuView();
+            Rect sourceBounds = Utilities.getViewBounds(view);
+
+            ActivityOptionsWrapper options = mTarget.getActivityLaunchOptions(view, mItemInfo);
+            PackageManagerHelper.startDetailsActivityForInfo(view.getContext(), mItemInfo,
+                    sourceBounds, options.toBundle());
+            mTarget.getStatsLogManager().logger().withItemInfo(mItemInfo)
+                    .log(LAUNCHER_SYSTEM_SHORTCUT_APP_INFO_TAP);
         }
     }
 
