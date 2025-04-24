@@ -54,7 +54,7 @@ import com.android.launcher3.R;
 import com.android.launcher3.logging.StatsLogManager.LauncherEvent;
 import com.android.launcher3.model.WellbeingModel;
 import com.android.launcher3.popup.SystemShortcut;
-import com.android.launcher3.popup.SystemShortcut.AppInfo;
+import com.android.launcher3.popup.SystemShortcut.AppInfo2;
 import com.android.launcher3.util.InstantAppResolver;
 import com.android.launcher3.util.PackageManagerHelper;
 import com.android.launcher3.util.SplitConfigurationOptions;
@@ -122,12 +122,12 @@ public interface TaskShortcutFactory {
                     ? R.id.action_app_info_bottom_right
                     : R.id.action_app_info_top_left;
 
-            AppInfo.SplitAccessibilityInfo accessibilityInfo =
-                    new AppInfo.SplitAccessibilityInfo(taskView.containsMultipleTasks(),
+            AppInfo2.SplitAccessibilityInfo accessibilityInfo =
+                    new AppInfo2.SplitAccessibilityInfo(taskView.containsMultipleTasks(),
                             TaskUtils.getTitle(taskView.getContext(), taskContainer.getTask()),
                             actionId
                     );
-            return Collections.singletonList(new AppInfo(container, taskContainer.getItemInfo(),
+            return Collections.singletonList(new AppInfo2(container, taskContainer.getItemInfo(),
                     taskView, accessibilityInfo));
         }
 
