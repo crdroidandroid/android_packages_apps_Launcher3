@@ -25,6 +25,7 @@ import android.content.res.Resources;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.view.HapticFeedbackConstants;
+import android.view.MotionEvent;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -35,6 +36,7 @@ import com.android.launcher3.DragSource;
 import com.android.launcher3.DropTarget;
 import com.android.launcher3.Launcher;
 import com.android.launcher3.R;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.accessibility.DragViewStateAnnouncer;
 import com.android.launcher3.model.data.ItemInfo;
 import com.android.launcher3.widget.util.WidgetDragScaleUtils;
@@ -217,5 +219,14 @@ public class LauncherDragController extends DragController<Launcher> {
         mActivity.getDragLayer().mapCoordInSelfToDescendant(mActivity.getWorkspace(),
                 dropCoordinates);
         return mActivity.getWorkspace();
+    }
+
+    @Override
+    public boolean onControllerInterceptTouchEvent(MotionEvent ev) {
+        if (!Utilities.isWorkspaceEditAllowed(mActivity.getDragLayer().getContext())) {
+            cancelDrag();
+            return false;
+        }
+        return super.onControllerInterceptTouchEvent(ev);
     }
 }
