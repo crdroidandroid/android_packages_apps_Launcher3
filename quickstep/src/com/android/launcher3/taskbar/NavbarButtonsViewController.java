@@ -999,6 +999,12 @@ public class NavbarButtonsViewController implements TaskbarControllers.LoggableT
         ImageView buttonView = (ImageView) mContext.getLayoutInflater()
                 .inflate(layoutId, parent, false);
         buttonView.setId(id);
+        if (mContext.isPhoneButtonNavMode()) {
+            ViewGroup.LayoutParams navButtonParams =
+                    (ViewGroup.LayoutParams) buttonView.getLayoutParams();
+            navButtonParams.width = MATCH_PARENT;
+            navButtonParams.height = MATCH_PARENT;
+        }
         parent.addView(buttonView);
         mAllButtons.add(buttonView);
         return buttonView;
