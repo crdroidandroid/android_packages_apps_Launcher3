@@ -213,9 +213,9 @@ class SystemUiProxy @Inject constructor(@ApplicationContext private val context:
             systemUiProxy?.injectLongPress(keyCode)
         }
 
-    fun injectDoublePress(keyCode: Int) =
-        executeWithErrorLog({ "Failed call injectDoublePress" }) {
-            systemUiProxy?.injectDoublePress(keyCode)
+    fun injectPress(keyCode: Int) =
+        executeWithErrorLog({ "Failed call injectPress" }) {
+            systemUiProxy?.injectPress(keyCode)
         }
 
     fun onImeSwitcherPressed() =

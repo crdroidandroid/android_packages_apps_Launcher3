@@ -77,13 +77,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemProperties;
 import android.util.Property;
-import android.view.GestureDetector;
-import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.Gravity;
 import android.view.HapticFeedbackConstants;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
-import android.view.SoundEffectConstants;
 import android.view.View;
 import android.view.View.OnAttachStateChangeListener;
 import android.view.ViewGroup;
@@ -898,21 +895,6 @@ public class NavbarButtonsViewController implements TaskbarControllers.LoggableT
             // Set this View clickable, so that NearestTouchFrame.java forwards closeby touches to
             // this View
             buttonView.setClickable(true);
-        } else if (buttonType == BUTTON_HOME) {
-            GestureDetector gestureDetector = new GestureDetector(mContext,
-                    new ButtonGestureListener(
-                            () -> {
-                                buttonView.playSoundEffect(SoundEffectConstants.CLICK);
-                                navButtonController.onButtonClick(buttonType, buttonView);
-                            },
-                            () -> {
-                                buttonView.playSoundEffect(SoundEffectConstants.CLICK);
-                                navButtonController.onButtonDoubleClick(buttonType, buttonView);
-                            }
-                    ));
-            buttonView.setOnTouchListener((v, event) -> gestureDetector.onTouchEvent(event));
-            buttonView.setOnLongClickListener(view ->
-                    navButtonController.onButtonLongClick(buttonType, view));
         } else {
             buttonView.setOnClickListener(view ->
                     navButtonController.onButtonClick(buttonType, view));
@@ -1517,28 +1499,6 @@ public class NavbarButtonsViewController implements TaskbarControllers.LoggableT
             if (mAnimator.isRunning()) {
                 mAnimator.end();
             }
-        }
-    }
-
-    private class ButtonGestureListener extends GestureDetector.SimpleOnGestureListener {
-        private final Runnable mOnClick;
-        private final Runnable mOnDoubleClick;
-
-        public ButtonGestureListener(Runnable onClick, Runnable onDoubleClick) {
-            mOnClick = onClick;
-            mOnDoubleClick = onDoubleClick;
-        }
-
-        @Override
-        public boolean onSingleTapUp(MotionEvent e) {
-            mOnClick.run();
-            return false;
-        }
-
-        @Override
-        public boolean onDoubleTap(MotionEvent e) {
-            mOnDoubleClick.run();
-            return false;
         }
     }
 }
