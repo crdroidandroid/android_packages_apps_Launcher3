@@ -599,7 +599,7 @@ public class LauncherBackAnimationController {
             // Scrim hasn't been attached yet. Let's attach it.
             addScrimLayer();
         }
-        mScrimAlphaAnimator = new ValueAnimator().ofFloat(1, 0);
+        mScrimAlphaAnimator = ValueAnimator.ofFloat(1, 0);
         mScrimAlphaAnimator.addUpdateListener(animation -> {
             float value = (Float) animation.getAnimatedValue();
             if (mScrimLayer != null && mScrimLayer.isValid()) {
@@ -615,7 +615,7 @@ public class LauncherBackAnimationController {
             }
         });
         mScrimAlphaAnimator.setDuration(SCRIM_FADE_DURATION).start();
-        backAnim.start();
+        backAnim.start(mLauncher.getStateManager());
     }
 
     private void loadResources() {
