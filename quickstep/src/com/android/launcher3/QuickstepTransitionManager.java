@@ -1757,12 +1757,6 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
                             true /* animateOverviewScrim */, launcherView).getAnimators());
                 }
 
-                if (!areAllTargetsTranslucent(appTargets)) {
-                    anim.play(ObjectAnimator.ofFloat(mLauncher.getDepthController().stateDepth,
-                            MULTI_PROPERTY_VALUE,
-                            BACKGROUND_APP.getDepth(mLauncher), NORMAL.getDepth(mLauncher)));
-                }
-
                 // We play StaggeredWorkspaceAnim as a part of the closing window animation.
                 playWorkspaceReveal = false;
             }

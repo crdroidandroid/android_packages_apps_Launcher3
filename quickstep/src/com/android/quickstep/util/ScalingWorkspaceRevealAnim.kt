@@ -152,10 +152,12 @@ class ScalingWorkspaceRevealAnim(
         }
 
         val transitionConfig = StateAnimationConfig()
+        transitionConfig.duration = SCALE_DURATION_MS
 
         // Match the Wallpaper animation to the rest of the content.
         val depthController = (launcher as? QuickstepLauncher)?.depthController
         transitionConfig.setInterpolator(StateAnimationConfig.ANIM_DEPTH, SCALE_INTERPOLATOR)
+        depthController?.stateDepth?.value = LauncherState.BACKGROUND_APP.getDepth(launcher)
         depthController?.setStateWithAnimation(LauncherState.NORMAL, transitionConfig, animation)
 
         // Make sure that the contrast scrim animates correctly if needed.
