@@ -28,5 +28,6 @@
         <permission name="com.android.alarm.permission.SET_ALARM"/>
         <permission name="android.permission.REGISTER_STATS_PULL_ATOM"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
+        <permission name="android.permission.QUERY_USERS"/>
     </privapp-permissions>
 </permissions>
