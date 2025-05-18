@@ -121,6 +121,7 @@ import androidx.annotation.Nullable;
 import androidx.core.graphics.ColorUtils;
 
 import com.android.app.animation.Animations;
+import com.android.app.animation.Interpolators;
 import com.android.internal.jank.Cuj;
 import com.android.launcher3.DeviceProfile.OnDeviceProfileChangeListener;
 import com.android.launcher3.LauncherAnimationRunner.RemoteAnimationFactory;
@@ -233,7 +234,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
     private static final int MAX_NUM_TASKS = 5;
 
     // Cross-fade duration between App Widget and App
-    private static final int WIDGET_CROSSFADE_DURATION_MILLIS = 125;
+    private static final int WIDGET_CROSSFADE_DURATION_MILLIS = 666;
 
     protected final QuickstepLauncher mLauncher;
     protected final DragLayer mDragLayer;
@@ -1493,15 +1494,20 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
             FloatingIconView finalFloatingIconView = floatingIconView;
 
             // We want the window alpha to be 0 once this threshold is met, so that the
-            // FolderIconView can be seen morphing into the icon shape.
+            // FloatingIconView can be seen morphing into the icon shape.
             final float windowAlphaThreshold = 1f - SHAPE_PROGRESS_DURATION;
 
             RectFSpringAnim.OnUpdateListener runner = new SpringAnimRunner(targets, targetRect,
                     closingWindowStartRect, closingWindowOriginalRect, startWindowCornerRadius) {
                 @Override
                 public void onUpdate(RectF currentRectF, float progress) {
-                    finalFloatingIconView.update(1f, currentRectF, progress, windowAlphaThreshold,
-                            getCornerRadius(progress), false);
+                    // We want the icon alpha to be 1 once this threshold is met, so that it can be
+                    // seen morphing into the icon shape. But before the threshold, we want to limit
+                    // the alpha to reduce the blur effect behind the window.
+                    float iconAlpha =
+                            Interpolators.clampToProgress(progress, 0f, windowAlphaThreshold);
+                    finalFloatingIconView.update(iconAlpha, currentRectF, progress,
+                            windowAlphaThreshold, getCornerRadius(progress), false);
 
                     super.onUpdate(currentRectF, progress);
                 }

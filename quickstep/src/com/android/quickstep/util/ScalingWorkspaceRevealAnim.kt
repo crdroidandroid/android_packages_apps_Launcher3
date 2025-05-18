@@ -19,15 +19,19 @@ package com.android.quickstep.util
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.AnimatorSet
+import android.animation.ValueAnimator
 import android.graphics.Matrix
 import android.graphics.Path
+import android.graphics.PointF
 import android.graphics.RectF
 import android.util.Log
+import android.view.SurfaceControl
 import android.view.View
 import android.view.animation.PathInterpolator
 import androidx.core.graphics.transform
 import com.android.app.animation.Animations
 import com.android.app.animation.Interpolators
+import com.android.app.animation.Interpolators.EMPHASIZED
 import com.android.app.animation.Interpolators.LINEAR
 import com.android.launcher3.Flags
 import com.android.launcher3.LauncherAnimUtils.HOTSEAT_SCALE_PROPERTY_FACTORY
@@ -42,7 +46,10 @@ import com.android.launcher3.states.StateAnimationConfig.SKIP_DEPTH_CONTROLLER
 import com.android.launcher3.states.StateAnimationConfig.SKIP_OVERVIEW
 import com.android.launcher3.states.StateAnimationConfig.SKIP_SCRIM
 import com.android.launcher3.uioverrides.QuickstepLauncher
+import com.android.launcher3.R
+import com.android.launcher3.Utilities
 import com.android.quickstep.views.RecentsView
+import com.android.launcher3.Flags
 
 const val TAG = "ScalingWorkspaceRevealAnim"
 
@@ -77,9 +84,13 @@ class ScalingWorkspaceRevealAnim(
                     cubicTo(0.235f, 0.6855f, 0.235f, 1f, 1f, 1f)
                 }
             )
+
+        val BLUR_INTERPOLATOR = Interpolators.clampToProgress(EMPHASIZED, 0f, 0.666f)
     }
 
     private val animation = PendingAnimation(SCALE_DURATION_MS)
+    private var blurLayer: SurfaceControl? = null
+    private var transaction: SurfaceControl.Transaction? = null
 
     init {
         // Make sure the starting state is right for the animation.
@@ -97,6 +108,7 @@ class ScalingWorkspaceRevealAnim(
             LauncherState.BACKGROUND_APP,
             setupConfig,
         )
+        addBlurLayer()
 
         val workspace = launcher.workspace
         val hotseat = launcher.hotseat
@@ -154,14 +166,30 @@ class ScalingWorkspaceRevealAnim(
         val transitionConfig = StateAnimationConfig()
         transitionConfig.duration = SCALE_DURATION_MS
 
-        // Match the Wallpaper animation to the rest of the content.
+        // Match the Wallpaper depth to the rest of the content.
         val depthController = (launcher as? QuickstepLauncher)?.depthController
         transitionConfig.setInterpolator(StateAnimationConfig.ANIM_DEPTH, SCALE_INTERPOLATOR)
+        depthController?.pauseBlursOnWindows(true)  // Blurring is handled by the scrim layer.
         depthController?.stateDepth?.value = LauncherState.BACKGROUND_APP.getDepth(launcher)
         depthController?.setStateWithAnimation(LauncherState.NORMAL, transitionConfig, animation)
 
-        // Make sure that the contrast scrim animates correctly if needed.
-        transitionConfig.setInterpolator(StateAnimationConfig.ANIM_SCRIM_FADE, SCALE_INTERPOLATOR)
+        // Add a blur animation to the scrim layer.
+        var maxBlurRadius = launcher.resources.getDimensionPixelSize(
+            if (Flags.allAppsBlur() || Flags.enableOverviewBackgroundWallpaperBlur()) {
+                R.dimen.max_depth_blur_radius_enhanced
+            } else {
+                R.integer.max_depth_blur_radius
+            }
+        )
+        val blurAnimator = ValueAnimator.ofFloat(1f, 0f)
+        blurAnimator.setInterpolator(BLUR_INTERPOLATOR)
+        blurAnimator.addUpdateListener {
+            applyBlur(maxBlurRadius * blurAnimator.animatedValue as Float)
+        }
+        animation.add(blurAnimator)
+
+        // Make sure that the contrast scrim animates correctly (alongside the blur) if needed.
+        transitionConfig.setInterpolator(StateAnimationConfig.ANIM_SCRIM_FADE, BLUR_INTERPOLATOR)
         launcher.workspace.stateTransitionAnimation.setScrim(
             animation,
             LauncherState.NORMAL,
@@ -235,6 +263,8 @@ class ScalingWorkspaceRevealAnim(
                         Animations.setOngoingAnimation(workspace, animation = null)
                         Animations.setOngoingAnimation(hotseat, animation = null)
                     }
+                    removeBlurLayer()
+                    depthController?.pauseBlursOnWindows(false)
 
                     Log.d(TAG, "alpha of workspace at the end of animation: ${workspace.alpha}")
                 }
@@ -256,5 +286,46 @@ class ScalingWorkspaceRevealAnim(
             Animations.setOngoingAnimation(launcher.hotseat, animators)
         }
         animators.start()
+    }
+
+    private fun addBlurLayer() {
+        val parent = launcher.dragLayer.viewRootImpl?.surfaceControl ?: return
+        if (!parent.isValid) {
+            Log.e(TAG, "Parent surface is not ready at the moment. Can't apply blur.")
+            return
+        }
+        val blurLayer =
+            SurfaceControl.Builder()
+                .setName("Home to launcher blur layer")
+                .setCallsite("ScalingWorkspaceRevealAnim")
+                .setParent(parent)
+                .setOpaque(false)
+                .setHidden(false)
+                .build()
+        transaction =
+            SurfaceControl.Transaction().apply {
+                setAlpha(blurLayer, 0f)
+                show(blurLayer)
+            }
+        this.blurLayer = blurLayer
+    }
+
+    private fun removeBlurLayer() {
+        blurLayer?.let {
+            if (it.isValid) {
+                transaction?.remove(it)?.apply()
+            }
+        }
+        blurLayer = null
+        transaction?.close()
+        transaction = null
+    }
+
+    private fun applyBlur(blurRadius: Float) {
+        blurLayer?.let {
+            if (it.isValid) {
+                transaction?.setBackgroundBlurRadius(it, blurRadius.toInt())?.apply()
+            }
+        }
     }
 }
