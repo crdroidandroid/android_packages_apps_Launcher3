@@ -37,6 +37,7 @@ import static com.android.launcher3.desktop.DesktopStateProvider.getDesktopState
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_FOLDER_OPEN;
 import static com.android.launcher3.taskbar.TaskbarAutohideSuspendController.FLAG_AUTOHIDE_SUSPEND_DRAGGING;
 import static com.android.launcher3.taskbar.TaskbarAutohideSuspendController.FLAG_AUTOHIDE_SUSPEND_FULLSCREEN;
+import static com.android.launcher3.taskbar.TaskbarManagerImpl.NAVBAR_IME_SPACE_URI;
 import static com.android.launcher3.taskbar.TaskbarStashController.FLAG_IN_SECONDARY_LAUNCHER_ON_CD;
 import static com.android.launcher3.taskbar.TaskbarStashController.FLAG_STASHED_IN_APP_AUTO;
 import static com.android.launcher3.taskbar.TaskbarStashController.SHOULD_BUBBLES_FOLLOW_DEFAULT_VALUE;
@@ -290,6 +291,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
 
     private NavigationMode mNavMode;
     private boolean mImeDrawsImeNavBar;
+    private final boolean mImeDrawsImeNavBarEnabled;
 
     /**
      * Static return value of {@link #isImeDocked}, used for testing only. A {@code null} value will
@@ -376,6 +378,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
         mIsNavbarEnabled = settingsCache.getValue(URI_FORCE_SHOW_NAVBAR);
         mNavbarLengthMode = settingsCache.getIntValue(URI_NAVBAR_LENGTH_MODE, 1);
         mNavbarHeightMode = settingsCache.getIntValue(URI_NAVBAR_HEIGHT_MODE, 3);
+        mImeDrawsImeNavBarEnabled = settingsCache.getValue(NAVBAR_IME_SPACE_URI);
         mBubbleFeatureConfig =
                 new BubbleFeatureConfigImpl(mWindowContext, getDesktopState(mWindowContext));
 
@@ -387,7 +390,8 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
                 mDeviceProfile.inv.numColumns);
 
         mImeDrawsImeNavBar = getBoolByName(IME_DRAWS_IME_NAV_BAR_RES_NAME, getResources(), false)
-                && isPrimaryDisplay();
+                && isPrimaryDisplay()
+                && mImeDrawsImeNavBarEnabled;
         mIsSafeModeEnabled = TraceHelper.allowIpcs("isSafeMode",
                 () -> getPackageManager().isSafeMode());
 
@@ -640,15 +644,15 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
     /**
      * Init of taskbar activity context.
      * @param duration If duration is greater than 0, it will be used to create an animation
- *                     for the taskbar create/recreate process.
+     * for the taskbar create/recreate process.
      */
     public void init(@NonNull TaskbarSharedState sharedState, boolean userUnlocked, int duration) {
         mImeDrawsImeNavBar = getBoolByName(IME_DRAWS_IME_NAV_BAR_RES_NAME, getResources(), false)
-                && isPrimaryDisplay();
+                && isPrimaryDisplay()
+                && mImeDrawsImeNavBarEnabled;
         mLastRequestedNonFullscreenSize = getDefaultTaskbarWindowSize();
         mWindowLayoutParams = createAllWindowParams();
         mLastUpdatedLayoutParams = new WindowManager.LayoutParams();
-
 
         AnimatorSet recreateAnim = null;
         if (duration > 0) {
@@ -997,6 +1001,10 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
 
     public boolean imeDrawsImeNavBar() {
         return mImeDrawsImeNavBar;
+    }
+
+    public boolean imeDrawsImeNavBarEnabled() {
+        return mImeDrawsImeNavBarEnabled;
     }
 
     public int getCornerRadius() {
