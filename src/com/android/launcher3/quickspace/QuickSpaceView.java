@@ -89,8 +89,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         if (mEventTitle == null || (altUI && mGreetingsExt == null)) {
             prepareLayout(altUI);
         }
-        mWeatherAvailable = mController.isWeatherAvailable() && 
-                mController.getEventController().isDeviceIntroCompleted();
+        mWeatherAvailable = mController.isWeatherAvailable();
         loadDoubleLine(altUI);
     }
 

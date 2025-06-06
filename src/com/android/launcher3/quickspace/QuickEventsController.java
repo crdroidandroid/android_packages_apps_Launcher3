@@ -25,7 +25,6 @@ import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.media.MediaMetadata;
 import android.media.session.MediaController;
@@ -56,7 +55,6 @@ import com.android.launcher3.util.MSMHProxy;
 
 public class QuickEventsController {
 
-    private static final String SETTING_DEVICE_INTRO_COMPLETED = "device_introduction_completed";
     private final Context mContext;
     private final Resources mResources;
 
@@ -69,10 +67,6 @@ public class QuickEventsController {
 
     private boolean mIsQuickEvent = false;
     private boolean mRegistered = false;
-
-    // Device Intro
-    private boolean mIsFirstTimeDone = false;
-    private SharedPreferences mPreferences;
 
     // PSA + Personality
     private String[] mPSAStr;
@@ -96,8 +90,6 @@ public class QuickEventsController {
     }
 
     public void initQuickEvents() {
-        mPreferences = mContext.getSharedPreferences(LauncherFiles.SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
-        mIsFirstTimeDone = mPreferences.getBoolean(SETTING_DEVICE_INTRO_COMPLETED, false);
         registerPSAListener();
         updateQuickEvents();
     }
@@ -120,46 +112,9 @@ public class QuickEventsController {
 
     public void updateQuickEvents() {
         if (!mRegistered) return;
-        if (mIsFirstTimeDone) {
-            nowPlayingEvent();
-            initNowPlayingEvent();
-            psonalityEvent();
-        } else {
-            deviceIntroEvent();
-        }
-    }
-
-    private void deviceIntroEvent() {
-        mIsQuickEvent = true;
-
-        if (Utilities.useAlternativeQuickspaceUI(mContext)) {
-            mEventTitle = mResources.getString(R.string.quick_event_rom_intro_welcome_ext);
-        } else {
-            mEventTitle = mResources.getString(R.string.quick_event_rom_intro_welcome);
-        }
-        mPSAStr = mResources.getStringArray(R.array.welcome_message_variants);
-        mEventTitleSub = mPSAStr[getLuckyNumber(0, mPSAStr.length - 1)];
-        mEventSubIcon = ContextCompat.getDrawable(mContext, R.drawable.ic_quickspace_crdroid);
-        mGreetings = mResources.getString(R.string.quickspace_grt_general);
-        mClockExt = mResources.getString(R.string.quickspace_ext_two);
-
-        mEventTitleSubAction = new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mContext.getSharedPreferences(LauncherFiles.SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE)
-                        .edit()
-                        .putBoolean(SETTING_DEVICE_INTRO_COMPLETED, true)
-                        .commit();
-                Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.addCategory(Intent.CATEGORY_HOME);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
-                try {
-                    Launcher.getLauncher(mContext).startActivitySafely(view, intent, null);
-                } catch (ActivityNotFoundException ex) {
-                }
-                mIsQuickEvent = false;
-            }
-        };
+        nowPlayingEvent();
+        initNowPlayingEvent();
+        psonalityEvent();
     }
 
     private void nowPlayingEvent() {
@@ -294,10 +249,6 @@ public class QuickEventsController {
 
     public boolean isQuickEvent() {
         return mIsQuickEvent;
-    }
-
-    public boolean isDeviceIntroCompleted() {
-        return mIsFirstTimeDone;
     }
 
     public String getTitle() {
