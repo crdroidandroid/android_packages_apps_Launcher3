@@ -1199,9 +1199,9 @@ public class NavbarButtonsViewController implements TaskbarControllers.LoggableT
 
     public void onDestroy() {
         mPropertyHolders.clear();
-        mControllers.rotationButtonController.unregisterListeners();
         if (mFloatingRotationButton != null) {
             mFloatingRotationButton.hide();
+            mFloatingRotationButton = null;
         }
 
         moveNavButtonsBackToTaskbarWindow();
