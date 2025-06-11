@@ -34,6 +34,7 @@ import com.android.app.animation.Interpolators.LINEAR
 import com.android.app.animation.Interpolators.OVERSHOOT_0_75
 import com.android.app.animation.Interpolators.OVERSHOOT_1_2
 import com.android.app.animation.Interpolators.clampToProgress
+import com.android.launcher3.LauncherAppState
 import com.android.launcher3.LauncherState.ALL_APPS
 import com.android.launcher3.LauncherState.HINT_STATE
 import com.android.launcher3.LauncherState.HINT_STATE_TWO_BUTTON
@@ -195,6 +196,9 @@ CONTAINER : StatefulContainer<STATE_TYPE> {
         val isPinnedTaskbar = TaskbarFeatureEvaluator.INSTANCE.get(container).isPinned
         val isThreeButton =
             (DisplayController.getNavigationMode(container) == NavigationMode.THREE_BUTTONS)
+        if (toState == NORMAL) {
+            LauncherAppState.INSTANCE.executeIfCreated(LauncherAppState::checkIfRestartNeeded)
+        }
         if ((fromState == OVERVIEW || fromState == OVERVIEW_SPLIT_SELECT) && toState == NORMAL) {
             applyOverviewToHomeAnimConfig(
                 fromState,
