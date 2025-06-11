@@ -96,6 +96,9 @@ public class QuickstepAtomicAnimationFactory extends
             StateAnimationConfig config) {
         RecentsView overview = mContainer.getOverviewPanel();
         boolean isPinnedTaskbar = DisplayController.isPinnedTaskbar(mContainer);
+        if (toState == NORMAL) {
+            com.android.launcher3.LauncherAppState.INSTANCE.executeIfCreated(app -> app.checkIfRestartNeeded());
+        }
         if ((fromState == OVERVIEW || fromState == OVERVIEW_SPLIT_SELECT) && toState == NORMAL) {
             overview.switchToScreenshot(() ->
                     overview.finishRecentsAnimation(true /* toRecents */, null));
