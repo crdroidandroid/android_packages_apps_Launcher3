@@ -168,17 +168,6 @@
     <!-- QuickSpace -->
     <string name="show_quickspace_title">De un vistazo</string>
     <string name="show_quickspace_summary">Mostrar en la parte superior de la pantalla de inicio</string>
-    <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">¡Bienvenido a crDroid!</string>
-    <string name="quick_event_rom_intro_welcome_ext">¡Es hora de crDroid!</string>
-    <string-array name="welcome_message_variants">
-        <item>Gracias por elegirnos</item>
-        <item>¿Nos amas? Envíanos una cerveza</item>
-        <item>La mejor Rom del mundo.</item>
-        <item>Salúdanos en Telegram</item>
-        <item>Toca aquí para comenzar</item>
-        <item>Te queremos 3000</item>
-    </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Buenos días.</string>
     <string name="quickspace_grt_evening">Buenas noches.</string>
@@ -343,6 +332,10 @@
         <item>Revisa tu correo electrónico/mensajes.</item>
         <item>Comprueba tu lista de tareas, si es que tienes una.</item>
         <item>Puedes desactivar el espacio rápido en la configuración de inicio.</item>
+        <item>¿Nos amas? Envíanos una cerveza</item>
+        <item>La mejor ROM del mundo.</item>
+        <item>Dinos \"hola\" en Telegram</item>
+        <item>Te queremos 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Weather -->
     <string name="quick_event_ambient_weather_title">Actualización del tiempo</string>
