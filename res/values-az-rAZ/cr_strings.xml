@@ -168,17 +168,6 @@
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Bir baxışda</string>
     <string name="show_quickspace_summary">Show at the top of your home screen</string>
-    <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">crDroid\'ə xoş gəlmisiniz!</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
-    <string-array name="welcome_message_variants">
-        <item>Bizi seçdiyin üçün sənə təşəkkür edirik</item>
-        <item>Bizi sevdin? Bizə bir pivə göndər</item>
-        <item>Ən Yaxşı Rom.</item>
-        <item>Bizə Telegram\'da salam de</item>
-        <item>Başlamaq üçün buraya toxunun</item>
-        <item>Səni 3000 dəfə sevirik</item>
-    </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Sabahınız xeyir.</string>
     <string name="quickspace_grt_evening">Good evening.</string>
@@ -343,6 +332,10 @@
         <item>Check your email/messages.</item>
         <item>Check your to-do list if you have one.</item>
         <item>You can disable quickspace via home settings.</item>
+        <item>Bizi sevdin? Bizə bir pivə göndər</item>
+        <item>Ən Yaxşı Rom.</item>
+        <item>Bizə Telegram\'da salam de</item>
+        <item>Səni 3000 dəfə sevirik</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Weather -->
     <string name="quick_event_ambient_weather_title">Weather update</string>
