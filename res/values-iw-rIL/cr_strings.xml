@@ -168,17 +168,6 @@
     <!-- QuickSpace -->
     <string name="show_quickspace_title">בקצרה</string>
     <string name="show_quickspace_summary">הצגה בקצה העליון של מסך הבית שלך</string>
-    <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">ברוכים הבאים לcrDroid!</string>
-    <string name="quick_event_rom_intro_welcome_ext">בדיוק הזמן ל-crDroid!</string>
-    <string-array name="welcome_message_variants">
-        <item>תודה לך על בחירתך בנו</item>
-        <item>אהבת אותנו? אפשר לשלוח לנו כוס בירה</item>
-        <item>ה-ROM הטוב ביותר מאז ומעולם.</item>
-        <item>אפשר לאמר לנו היי בטלגרם</item>
-        <item>לחיצה כאן כדי להתחיל</item>
-        <item>אנחנו אוהבים אותך 3000</item>
-    </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">בוקר טוב.</string>
     <string name="quickspace_grt_evening">ערב טוב.</string>
@@ -343,6 +332,10 @@
         <item>בידקו את הדוא\"ל/ההודעות שלכם.</item>
         <item>בידקו את רשימת המשימות שלכם אם יש לכם כזו.</item>
         <item>ניתן להשבית את quickspace באמצעות הגדרות הבית.</item>
+        <item>אהבת אותנו? אפשר לשלוח לנו כוס בירה</item>
+        <item>ה-ROM הטוב ביותר מאז ומעולם.</item>
+        <item>אפשר לאמר לנו היי בטלגרם</item>
+        <item>אנחנו אוהבים אותך 3000</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Weather -->
     <string name="quick_event_ambient_weather_title">עדכון מזג האוויר</string>
