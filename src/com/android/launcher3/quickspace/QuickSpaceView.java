@@ -15,9 +15,6 @@
  */
 package com.android.launcher3.quickspace;
 
-import android.animation.LayoutTransition;
-import android.animation.ValueAnimator;
-import android.animation.ValueAnimator.AnimatorUpdateListener;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
@@ -43,7 +40,7 @@ import com.android.launcher3.quickspace.QuickspaceController.OnDataListener;
 import com.android.launcher3.quickspace.receivers.QuickSpaceActionReceiver;
 import com.android.launcher3.quickspace.views.DateTextView;
 
-public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListener, OnDataListener {
+public class QuickSpaceView extends FrameLayout implements OnDataListener {
 
     private static final String TAG = "Launcher3:QuickSpaceView";
     private static final boolean DEBUG = false;
@@ -219,11 +216,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
             mQuickspaceContent.setAlpha(0.0f);
             mQuickspaceContent.animate().setDuration(200).alpha(1.0f);
         }
-    }
-
-    @Override
-    public void onAnimationUpdate(ValueAnimator valueAnimator) {
-        invalidate();
     }
 
     @Override
