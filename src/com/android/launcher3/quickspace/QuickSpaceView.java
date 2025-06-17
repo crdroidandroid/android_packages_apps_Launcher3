@@ -114,15 +114,11 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
         }
         if (mIsQuickEvent && (Utilities.isQuickspacePersonalityEnabled(getContext()) ||
                         mController.getEventController().isNowPlaying())) {
-            mEventTitle.setEllipsize(TruncateAt.MARQUEE);
-            mEventTitle.setMarqueeRepeatLimit(3);
-            mEventTitle.setSelected(true);
+            maybeSetMarquee(mEventTitle);
             mEventTitle.setOnClickListener(mController.getEventController().getAction());
             mEventTitleSub.setVisibility(View.VISIBLE);
             mEventTitleSub.setText(mController.getEventController().getActionTitle());
-            mEventTitleSub.setEllipsize(TruncateAt.MARQUEE);
-            mEventTitleSub.setMarqueeRepeatLimit(3);
-            mEventTitleSub.setSelected(true);
+            maybeSetMarquee(mEventTitleSub);
             mEventTitleSub.setOnClickListener(mController.getEventController().getAction());
             if (useAlternativeQuickspaceUI) {
                 if (mController.getEventController().isNowPlaying()) {
@@ -150,6 +146,20 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
             }
         }
         bindWeather(mWeatherContentSub, mWeatherTempSub, mWeatherIconSub);
+    }
+
+    private void maybeSetMarquee(TextView tv) {
+        tv.setSelected(false);
+        tv.setEllipsize(TruncateAt.END);
+        final float textWidth = tv.getPaint().measureText(tv.getText().toString());
+        tv.post(() -> {
+            android.text.Layout layout = tv.getLayout();
+            if (layout != null && layout.getEllipsizedWidth() < textWidth) {
+                tv.setEllipsize(TruncateAt.MARQUEE);
+                tv.setMarqueeRepeatLimit(1);
+                tv.setSelected(true);
+            }
+        });
     }
 
     private void setEventSubIcon() {
