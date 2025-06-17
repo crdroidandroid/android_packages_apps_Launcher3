@@ -233,8 +233,8 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
 
     private static final int MAX_NUM_TASKS = 5;
 
-    // Cross-fade duration between App Widget and App
-    private static final int WIDGET_CROSSFADE_DURATION_MILLIS = 666;
+    // Cross-fade duration between App Widget and App when launching from widget.
+    private static final int WIDGET_CROSSFADE_DURATION_MILLIS = 125;
 
     protected final QuickstepLauncher mLauncher;
     protected final DragLayer mDragLayer;
