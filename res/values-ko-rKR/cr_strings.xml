@@ -168,17 +168,6 @@
     <!-- QuickSpace -->
     <string name="show_quickspace_title">한 눈에 보기</string>
     <string name="show_quickspace_summary">홈 화면 상단에 표시</string>
-    <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome">crDroid에 오신 것을 환영합니다!</string>
-    <string name="quick_event_rom_intro_welcome_ext">crDroid time!</string>
-    <string-array name="welcome_message_variants">
-        <item>우리를 선택해 주셔서 감사합니다</item>
-        <item>후원하기</item>
-        <item>최고의 롬.</item>
-        <item>Telegram에서 만나요!</item>
-        <item>시작하려면 여기를 누르십시오</item>
-        <item>3000만큼 사랑해요.</item>
-    </string-array>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">좋은 아침이에요!</string>
     <string name="quickspace_grt_evening">안녕하세요!</string>
@@ -343,6 +332,10 @@
         <item>이메일/메시지를 확인하세요</item>
         <item>Check your to-do list if you have one.</item>
         <item>홈 설정에서 퀵스페이스를 해제할 수 있습니다.</item>
+        <item>후원하기</item>
+        <item>최고의 롬.</item>
+        <item>Telegram에서 만나요!</item>
+        <item>3000만큼 사랑해요.</item>
     </string-array>
     <!-- QuickSpace: QuickEvent: Weather -->
     <string name="quick_event_ambient_weather_title">날씨 업데이트</string>
