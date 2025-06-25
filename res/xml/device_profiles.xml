@@ -100,6 +100,8 @@
         <display-option
             launcher:allAppsBorderSpace="16"
             launcher:allAppsCellHeight="104"
+            launcher:startAlignTaskbar="true"
+            launcher:startAlignTaskbarLandscape="true"
             launcher:borderSpace="16"
             launcher:horizontalMargin="21.5"
             launcher:iconImageSize="66"
@@ -132,6 +134,8 @@
         <display-option
             launcher:allAppsBorderSpace="16"
             launcher:allAppsCellHeight="104"
+            launcher:startAlignTaskbar="true"
+            launcher:startAlignTaskbarLandscape="true"
             launcher:borderSpace="16"
             launcher:canBeDefault="true"
             launcher:horizontalMargin="22"
@@ -166,6 +170,8 @@
         <display-option
             launcher:allAppsBorderSpace="16"
             launcher:allAppsCellHeight="104"
+            launcher:startAlignTaskbar="true"
+            launcher:startAlignTaskbarLandscape="true"
             launcher:borderSpace="16"
             launcher:canBeDefault="true"
             launcher:horizontalMargin="22"
@@ -198,6 +204,8 @@
         <display-option
             launcher:allAppsBorderSpace="16.0"
             launcher:allAppsCellHeight="104.0"
+            launcher:startAlignTaskbar="true"
+            launcher:startAlignTaskbarLandscape="true"
             launcher:borderSpace="16.0"
             launcher:canBeDefault="true"
             launcher:horizontalMargin="22.0"
@@ -229,6 +237,8 @@
         <display-option
             launcher:allAppsBorderSpace="16.0"
             launcher:allAppsCellHeight="104.0"
+            launcher:startAlignTaskbar="true"
+            launcher:startAlignTaskbarLandscape="true"
             launcher:borderSpace="16.0"
             launcher:canBeDefault="true"
             launcher:horizontalMargin="22.0"
@@ -259,6 +269,8 @@
         <display-option
             launcher:allAppsBorderSpace="16.0"
             launcher:allAppsCellHeight="104.0"
+            launcher:startAlignTaskbar="true"
+            launcher:startAlignTaskbarLandscape="true"
             launcher:borderSpace="16.0"
             launcher:canBeDefault="true"
             launcher:horizontalMargin="22.0"
@@ -481,6 +493,8 @@
         <display-option
             launcher:allAppsBorderSpace="16.0"
             launcher:allAppsCellHeight="104.0"
+            launcher:startAlignTaskbar="true"
+            launcher:startAlignTaskbarLandscape="true"
             launcher:borderSpace="16.0"
             launcher:canBeDefault="true"
             launcher:horizontalMargin="22.0"
