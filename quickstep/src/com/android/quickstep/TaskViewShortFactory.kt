@@ -16,7 +16,12 @@
 
 package com.android.quickstep
 
+import android.app.ActivityManagerNative
+import android.app.IActivityManager
+import android.os.RemoteException
+import android.os.UserHandle
 import android.view.View
+import android.widget.Toast
 import com.android.launcher3.R
 import com.android.launcher3.logging.StatsLogManager.LauncherEvent
 import com.android.launcher3.popup.SystemShortcut
@@ -59,6 +64,23 @@ interface TaskViewShortFactory {
             val recentsView = taskView.recentsView ?: return
             dismissTaskMenuView()
             recentsView.dismissTaskView(taskView, true, true)
+            val pkg = taskView.itemInfo.targetComponent?.packageName
+            if (!pkg.isNullOrEmpty()) {
+                try {
+                    val iam: IActivityManager = ActivityManagerNative.getDefault()
+                    iam.forceStopPackage(pkg, UserHandle.USER_CURRENT)
+
+                    Toast.makeText(
+                        mTarget.asContext(),
+                        R.string.recents_app_killed,
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } catch (e: RemoteException) {
+                    // Ignore
+                } catch (t: Throwable) {
+                    // Ignore
+                }
+            }
             mTarget.statsLogManager
                 .logger()
                 .withItemInfo(taskView.itemInfo)
@@ -88,7 +110,7 @@ interface TaskViewShortFactory {
                     return listOf<SystemShortcut<ActivityContext>>(
                         RemoveTaskSystemShortcut(
                             R.drawable.ic_remove_task_option,
-                            R.string.recent_task_option_remove_task,
+                            R.string.recent_task_option_kill_app,
                             container,
                             taskView,
                         )
