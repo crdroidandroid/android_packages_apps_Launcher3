@@ -532,7 +532,7 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
         private final String mPackageName;
 
         public KillApp(ActivityContext target, ItemInfo itemInfo, View originalView) {
-            super(R.drawable.ic_kill_app, R.string.recent_task_option_kill_app,
+            super(R.drawable.ic_remove_task_option, R.string.recent_task_option_kill_app,
                     target, itemInfo, originalView);
             mPackageName = itemInfo.getTargetComponent().getPackageName();
         }
@@ -543,7 +543,8 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
                 IActivityManager iam = ActivityManagerNative.getDefault();
                 try {
                     iam.forceStopPackage(mPackageName, UserHandle.USER_CURRENT);
-                    Toast appKilled = Toast.makeText(view.getContext(), R.string.recents_app_killed, Toast.LENGTH_SHORT);
+                    Toast appKilled = Toast.makeText(view.getContext(), R.string.recents_app_killed,
+                        Toast.LENGTH_SHORT);
                     appKilled.show();
                     AbstractFloatingView.closeAllOpenViews(mTarget);
                 } catch (RemoteException e) { }

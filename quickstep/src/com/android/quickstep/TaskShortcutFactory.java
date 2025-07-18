@@ -311,13 +311,26 @@ public interface TaskShortcutFactory {
 
         @Override
         public void onClick(View view) {
+            String packageName = mTaskContainer.getItemInfo()
+                    .getTargetComponent().getPackageName();
             TaskView taskView = mTaskContainer.getTaskView();
-            RecentsView<?, ?> recentsView = taskView.getRecentsView();
-            if (recentsView != null) {
-                dismissTaskMenuView();
-                recentsView.dismissTaskView(taskView, true, true);
-                mTarget.getStatsLogManager().logger().withItemInfo(mTaskContainer.getItemInfo())
-                        .log(LAUNCHER_SYSTEM_SHORTCUT_CLOSE_APP_TAP);
+            if (taskView != null) {
+                RecentsView<?, ?> recentsView = taskView.getRecentsView();
+                if (recentsView != null) {
+                    dismissTaskMenuView();
+                    recentsView.dismissTaskView(taskView, true, true);
+                    mTarget.getStatsLogManager().logger().withItemInfo(mTaskContainer.getItemInfo())
+                            .log(LAUNCHER_SYSTEM_SHORTCUT_CLOSE_APP_TAP);
+                }
+            }
+            if (packageName != null) {
+                IActivityManager iam = ActivityManagerNative.getDefault();
+                try {
+                    iam.forceStopPackage(packageName, UserHandle.USER_CURRENT);
+                    Toast appKilled = Toast.makeText(mTarget.asContext(), R.string.recents_app_killed,
+                        Toast.LENGTH_SHORT);
+                    appKilled.show();
+                } catch (RemoteException e) { }
             }
         }
     }
@@ -570,7 +583,7 @@ public interface TaskShortcutFactory {
                 TaskContainer taskContainer) {
             return Collections.singletonList(new RemoveTaskSystemShortcut(
                     R.drawable.ic_remove_task_option,
-                    R.string.recent_task_option_remove_task, container, taskContainer));
+                    R.string.recent_task_option_kill_app, container, taskContainer));
         }
 
         @Override
@@ -583,48 +596,4 @@ public interface TaskShortcutFactory {
             return true;
         }
     };
-
-    TaskShortcutFactory KILL_APP = new TaskShortcutFactory() {
-        @Override
-        public List<SystemShortcut> getShortcuts(RecentsViewContainer container,
-                TaskContainer taskContainer) {
-                    String packageName = taskContainer.getItemInfo().getTargetComponent().getPackageName();
-                    return Collections.singletonList(new KillSystemShortcut(container, taskContainer, packageName));
-        }
-    };
-
-    class KillSystemShortcut extends SystemShortcut {
-        private static final String TAG = "KillSystemShortcut";
-        private final TaskContainer mTaskContainer;
-        private final RecentsViewContainer mContainer;
-        private final String mPackageName;
-
-        public KillSystemShortcut(RecentsViewContainer container,
-                TaskContainer taskContainer, String packageName) {
-            super(R.drawable.ic_kill_app, R.string.recent_task_option_kill_app,
-                    container, taskContainer.getItemInfo(), taskContainer.getTaskView());
-            mTaskContainer = taskContainer;
-            mContainer = container;
-            mPackageName = packageName;
-        }
-
-        @Override
-        public void onClick(View view) {
-            if (mPackageName != null) {
-                IActivityManager iam = ActivityManagerNative.getDefault();
-                Task task = mTaskContainer.getTask();
-                if (task != null) {
-                    try {
-                        iam.forceStopPackage(mPackageName, UserHandle.USER_CURRENT);
-                        Toast appKilled = Toast.makeText(mContainer.asContext(), R.string.recents_app_killed,
-                            Toast.LENGTH_SHORT);
-                        appKilled.show();
-                        ((RecentsView)mContainer.getOverviewPanel())
-                              .dismissTaskView(mTaskContainer.getTaskView(), true /* animate */, true /* removeTask */);
-                    } catch (RemoteException e) { }
-                }
-            }
-            dismissTaskMenuView();
-        }
-    }
 }
