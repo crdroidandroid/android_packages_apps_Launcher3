@@ -18,7 +18,7 @@
     <!-- Application name -->
     <!-- Folder titles -->
     <!-- General -->
-    <string name="settings_title">Home settings</string>
+    <string name="settings_title">Настройки за началния екран</string>
     <!-- Categories -->
     <string name="home_category_title">Начален екран</string>
     <string name="home_category_summary">Приложи Google now панела и още</string>
@@ -39,10 +39,10 @@
     <string name="dev_options_title">Опции за разработчици</string>
     <string name="dev_options_summary">Активирайте някои скрити функции на собствен риск</string>
     <!-- Edit workspace -->
-    <string name="settings_lock_layout_title">Lock layout</string>
-    <string name="settings_lock_layout_summary_on">Icons and widgets can\'t be added, removed and moved on the homescreen</string>
-    <string name="settings_lock_layout_summary_off">Icons and widgets can be added, removed and moved on the homescreen</string>
-    <string name="settings_edit_widgets_error">It\'s not possible to add widgets to the home screen</string>
+    <string name="settings_lock_layout_title">Оформление на заключването</string>
+    <string name="settings_lock_layout_summary_on">Икони и джаджи не могат да бъдат добавяни, премахвани и местени на началния екран</string>
+    <string name="settings_lock_layout_summary_off">Икони и джаджи могат да бъдат добавяни, премахвани и местени на началния екран</string>
+    <string name="settings_edit_widgets_error">Невъзможно е да се добавят джаджи към началния екран</string>
     <!-- Hide labels -->
     <string name="desktop_show_labels">Етикети на иконите на началния екран</string>
     <string name="drawer_show_labels">Етикети на иконите в менюто с приложения</string>
@@ -54,7 +54,7 @@
     <string name="msg_minus_one_on_right">When you swipe right from main Home screen</string>
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Тематични икони</string>
-    <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
+    <string name="pref_themed_icons_summary">Следвай тематичните икони използвани на началния екран</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Скрити &amp; Защитени приложения</string>
     <string name="trust_apps_auth_manager">Отключете за да управлявате скритите и защитените приложения</string>
@@ -69,25 +69,25 @@
     <string name="suggestion_pref_screen_desc">За всички приложения &amp; Предложения на началния екран</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Пауза</string>
-    <string name="pause_apps_dialog_title">Pause %1$s?</string>
-    <string name="pause_apps_dialog_message">Notifications for %1$s will be paused</string>
-    <string name="paused_apps_dialog_title">App paused</string>
-    <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
+    <string name="pause_apps_dialog_title">Временно спиране на %1$s?</string>
+    <string name="pause_apps_dialog_message">Известията за %1$s ще бъдат временно спрени</string>
+    <string name="paused_apps_dialog_title">Приложението е временно спряно</string>
+    <string name="paused_apps_dialog_message">Приложението %1$s беше временно спряно от стартера</string>
     <string name="paused_apps_drop_target_label">Pause app</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">Работните приложения са изключени</string>
+    <string name="work_apps_pause_btn_text_custom">Изключи работните приложения</string>
+    <string name="work_apps_enable_btn_text_custom">Включване на работните приложения</string>
+    <string name="work_apps_paused_info_body_custom">Работните ти приложения не могат да ти изпращат известия, да използват батерията ти или да имат достъп до местоположението ти</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Работните ти приложения не могат да получават обаждания или съобщения, да ти изпращат известия, да използват батерията ти или да имат достъп до местоположението ти</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Рестартиране</string>
-    <string name="pref_restart_summary">Restart the launcher manually to apply any pending settings</string>
-    <string name="restarting_launcher">Restarting launcher...</string>
-    <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
-    <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
+    <string name="pref_restart_summary">Рестартирай launcher-а ръчно, за да приложиш всички чакащи настройки</string>
+    <string name="restarting_launcher">Рестартиране на launcher-а...</string>
+    <string name="restarting_launcher_changes">Рестартиране на launcher-a за прилагане на промените...</string>
+    <string name="updating_launcher_components">Рестартиране на launcher-а за обновение на зомпоненти...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Двукратно почукване за заспиване</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
+    <string name="pref_sleep_gesture_summary">Докоснете двата пъти на празно място за да изключите екрана</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">по подразбиране</string>
@@ -98,7 +98,7 @@
     <!-- Font size -->
     <string name="font_size_title">Размер на шрифта</string>
     <!-- App label -->
-    <string name="icon_two_lines_title">Use two lines for app label</string>
+    <string name="icon_two_lines_title">Използване на 2 редове за етикета на приложенията</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Спри</string>
     <string name="recents_app_killed">Приложението е убито</string>
@@ -108,34 +108,34 @@
     <string name="label_search">Търсене</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_voice_search">Гласово търсене</string>
-    <string name="dock_music_search_title">Music search</string>
-    <string name="dock_music_search_summary">Start music search on pressing mic icon</string>
+    <string name="dock_music_search_title">Търсене на музика</string>
+    <string name="dock_music_search_summary">Започни търсене на музика при натискане на иконата на микрофона</string>
     <string name="dock_search_title">Google лента за търсене</string>
     <string name="dock_search_summary">Покажи лентата за търсене на долната част на екрана</string>
     <string name="dock_theme_title">Тематични икони</string>
     <string name="dock_theme_summary">Използване на тематични икони за лентата за търсене</string>
     <string name="search_radius_title">Радиус на ъгъл</string>
     <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Add translucent background to the app dock</string>
+    <string name="hotseat_bg_title">Фон на лентата с любими приложения</string>
+    <string name="hotseat_bg_summary">Добавяне на прозрачен фон към лентата с любими приложения</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Прозрачност на фона</string>
     <!-- Stroke -->
     <string name="stroke_width_title">Stroke</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Превъртане на тапета</string>
-    <string name="allow_wallpaper_scrolling_summary">Wallpaper scrolling effect for multiple screens</string>
+    <string name="allow_wallpaper_scrolling_summary">Ефект на превъртане на тапета за няколко екрана</string>
     <!-- Wallpaper zooming -->
-    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
-    <string name="allow_wallpaper_zooming_summary">Zoom in or out the wallpaper when using drawer or recent apps</string>
+    <string name="allow_wallpaper_zooming">Увеличаване на тапет</string>
+    <string name="allow_wallpaper_zooming_summary">Увеличаване или намаляване на изображението по време на използване на менюто с приложения или скорошни приложения</string>
     <!-- Homescreen Statusbar -->
     <string name="show_statusbar_title">Лента на състоянието</string>
     <!-- Top shadow -->
     <string name="show_top_shadow">Горна сянка</string>
     <!-- Memory info -->
-    <string name="meminfo_text">%1$s available | %2$s</string>
-    <string name="recents_meminfo_title">Memory info</string>
-    <string name="recents_meminfo_zram_title">ZRAM info</string>
+    <string name="meminfo_text">%1$s налични | %2$s</string>
+    <string name="recents_meminfo_title">Информация за паметта</string>
+    <string name="recents_meminfo_zram_title">Информация за ZRAM</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Екранна снимка</string>
     <string name="recents_clear_all_title">Изчистване на всичко</string>
