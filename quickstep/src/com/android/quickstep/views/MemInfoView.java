@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2022 Project Kaleidoscope
  *               2023-2024 the risingOS Android Project
- *               2024 crDroid Android Project
+ *               2024-2025 crDroid Android Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -118,7 +118,6 @@ public class MemInfoView extends TextView implements Insettable {
 
         mMemInfoText = context.getResources().getString(R.string.meminfo_text);
         setListener(context);
-        setTextColor(0xFFFFFFFF);
     }
 
     @Override
