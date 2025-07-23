@@ -31,4 +31,10 @@
     <dimen name="quickspace_subtitle_size">16sp</dimen>
     <dimen name="quickspace_alternate_title_size">18sp</dimen>
     <dimen name="quickspace_alternate_subtitle_size">16sp</dimen>
+
+    <!-- Material Expressive -->
+    <dimen name="dashboard_tile_image_size">40dp</dimen>
+    <dimen name="dashboard_tile_foreground_image_size">24dp</dimen>
+    <dimen name="dashboard_tile_foreground_image_inset">8dp</dimen>
+    <dimen name="preference_icon_foreground_image_inset">12dp</dimen>
 </resources>
