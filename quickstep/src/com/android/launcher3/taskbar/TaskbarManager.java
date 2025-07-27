@@ -63,6 +63,7 @@ import android.view.MotionEvent;
 import android.view.WindowManager;
 import android.view.WindowManagerGlobal;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 import android.window.DesktopExperienceFlags;
 
 import androidx.annotation.NonNull;
@@ -73,6 +74,8 @@ import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.InvariantDeviceProfile;
 import com.android.launcher3.Launcher;
 import com.android.launcher3.LauncherAppState;
+import com.android.launcher3.R;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.anim.AnimatorListeners;
 import com.android.launcher3.anim.AnimatorPlaybackController;
 import com.android.launcher3.statehandlers.DesktopVisibilityController;
@@ -274,7 +277,7 @@ public class TaskbarManager implements DisplayDecorationListener {
         recreateTaskbars();
     };
 
-    private final SettingsCache.OnChangeListener mOnTaskBarChangeListener = c -> System.exit(0);
+    private final SettingsCache.OnChangeListener mOnTaskBarChangeListener;
 
     private PerceptibleTaskListener mTaskStackListener;
 
@@ -472,6 +475,11 @@ public class TaskbarManager implements DisplayDecorationListener {
         mAllAppsActionManager = allAppsActionManager;
         mNavCallbacks = navCallbacks;
         mRecentsDisplayModel = recentsDisplayModel;
+
+        mOnTaskBarChangeListener = c -> {
+            Toast.makeText(mBaseContext, R.string.restarting_launcher_changes, Toast.LENGTH_SHORT).show();
+            Utilities.restart();
+        };
 
         // Set up primary display.
         debugPrimaryTaskbar("TaskbarManager constructor");
