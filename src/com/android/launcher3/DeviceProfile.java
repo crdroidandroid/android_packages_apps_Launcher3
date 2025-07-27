@@ -106,6 +106,7 @@ public class DeviceProfile {
     public final boolean isTwoPanels;
     public boolean isPredictiveBackSwipe;
     public final boolean isQsbInline;
+    public final boolean isQsbVisible;
 
     // Device properties in current orientation
     public final boolean isLandscape;
@@ -335,6 +336,7 @@ public class DeviceProfile {
         isTwoPanels = false;
         isPredictiveBackSwipe = false;
         isQsbInline = false;
+        isQsbVisible = true;
         isLandscape = false;
         isMultiWindowMode = false;
         isGestureMode = false;
@@ -622,16 +624,13 @@ public class DeviceProfile {
 
         workspaceCellPaddingXPx = res.getDimensionPixelSize(R.dimen.dynamic_grid_cell_padding_x);
 
-        hotseatQsbHeight = res.getDimensionPixelSize(R.dimen.qsb_widget_height);
-        hotseatQsbShadowHeight = res.getDimensionPixelSize(R.dimen.qsb_shadow_height);
-        hotseatQsbVisualHeight = hotseatQsbHeight - 2 * hotseatQsbShadowHeight;
+        isQsbVisible = Utilities.showQSB(context);
+        hotseatQsbHeight = isQsbVisible ? res.getDimensionPixelSize(R.dimen.qsb_widget_height) : 0;
+        hotseatQsbShadowHeight = isQsbVisible ? res.getDimensionPixelSize(R.dimen.qsb_shadow_height) : 0;
+        hotseatQsbVisualHeight = isQsbVisible ? hotseatQsbHeight - 2 * hotseatQsbShadowHeight : 0;
 
         // Whether QSB might be inline in appropriate orientation (e.g. landscape).
-        boolean canQsbInline = (isTwoPanels ? inv.inlineQsb[INDEX_TWO_PANEL_PORTRAIT]
-                || inv.inlineQsb[INDEX_TWO_PANEL_LANDSCAPE]
-                : inv.inlineQsb[INDEX_DEFAULT] || inv.inlineQsb[INDEX_LANDSCAPE])
-                && hotseatQsbHeight > 0;
-        isQsbInline = isQsbInline(inv);
+        isQsbInline = isQsbVisible && isQsbInline(inv);
 
         areNavButtonsInline = isTaskbarPresent && !isGestureMode;
         numShownHotseatIcons =
