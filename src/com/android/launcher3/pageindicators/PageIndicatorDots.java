@@ -186,8 +186,8 @@ public class PageIndicatorDots extends View implements Insettable, PageIndicator
                 : DOT_GAP_FACTOR * mDotRadius;
         setOutlineProvider(new MyOutlineProver());
         mIsRtl = Utilities.isRtl(getResources());
-        mArrowRight = (VectorDrawable) getResources().getDrawable(R.drawable.ic_chevron_end);
-        mArrowLeft = (VectorDrawable) getResources().getDrawable(R.drawable.ic_chevron_start);
+        mArrowRight = (VectorDrawable) context.getResources().getDrawable(R.drawable.ic_chevron_end, context.getTheme());
+        mArrowLeft = (VectorDrawable) context.getResources().getDrawable(R.drawable.ic_chevron_start, context.getTheme());
     }
 
     @Override
