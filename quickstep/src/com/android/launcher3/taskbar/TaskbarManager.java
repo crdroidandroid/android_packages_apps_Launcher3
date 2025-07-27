@@ -171,6 +171,10 @@ public class TaskbarManager implements DisplayDecorationListener {
     public static final Uri NAVBAR_IME_SPACE = Settings.Secure.getUriFor(
             Settings.Secure.NAVBAR_IME_SPACE);
 
+    private static final long RECREATE_DEBOUNCE_DELAY_MS = 300;
+    private final Handler mHandler = new Handler();
+    private boolean mRecreateScheduled = false;
+
     private final Context mBaseContext;
     private final int mPrimaryDisplayId;
     private final TaskbarNavButtonCallbacks mNavCallbacks;
@@ -779,7 +783,17 @@ public class TaskbarManager implements DisplayDecorationListener {
      * In other case (folding/unfolding) we don't need to remove and add window.
      */
     @VisibleForTesting
-    public synchronized void recreateTaskbars() {
+    public void recreateTaskbars() {
+        if (!mRecreateScheduled) {
+            mRecreateScheduled = true;
+            mHandler.postDelayed(() -> {
+                recreateTaskbarsSync();
+                mRecreateScheduled = false;
+            }, RECREATE_DEBOUNCE_DELAY_MS);
+        }
+    }
+
+    private synchronized void recreateTaskbarsSync() {
         debugPrimaryTaskbar("recreateTaskbars");
         // Handles initial creation case.
         if (mTaskbars.size() == 0) {
