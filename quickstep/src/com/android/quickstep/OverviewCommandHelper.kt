@@ -112,7 +112,12 @@ constructor(
         displayId: Int = DEFAULT_DISPLAY,
         isLastOfBatch: Boolean = true,
     ): CommandInfo? {
-        if (commandQueue.size >= MAX_QUEUE_SIZE) {
+        if (commandQueue.isNotEmpty() &&
+            (SystemClock.elapsedRealtime() - commandQueue.first.createTime) > COMMAND_IS_STALE_TIME
+        ) {
+            // if one command has not finished as expected, the entire queue is likely bad
+            clearPendingCommands()
+        } else if (commandQueue.size >= MAX_QUEUE_SIZE) {
             Log.d(TAG, "command not added: $type - queue is full ($commandQueue).")
             return null
         }
@@ -686,5 +691,6 @@ constructor(
          */
         private const val MAX_QUEUE_SIZE = 3
         private const val QUEUE_WAIT_DURATION_IN_MS = 5000L
+        private const val COMMAND_IS_STALE_TIME = 750L
     }
 }
