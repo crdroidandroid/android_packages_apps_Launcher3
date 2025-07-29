@@ -67,6 +67,9 @@
 -keep class androidx.lifecycle.LifecycleRegistry {
   *;
 }
+-keep class com.android.launcher3.icons.** {
+  *;
+}
 
 # Keep all classes annotated with @AppFunctionSerializable and their members.
 # These classes are serialized and their structure must be preserved.
