@@ -88,7 +88,6 @@ public class QuickEventsController {
     }
 
     public void initQuickEvents() {
-        registerPSAListener();
         updateQuickEvents();
     }
 
