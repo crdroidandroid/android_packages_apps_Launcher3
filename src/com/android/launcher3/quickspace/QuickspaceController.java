@@ -223,9 +223,6 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
     }
 
     private void cancelListeners() {
-        if (mEventsController != null) {
-            mEventsController.onPause();
-        }
         for (OnDataListener listener : new ArrayList<>(mListeners)) {
             removeListener(listener);
         }
