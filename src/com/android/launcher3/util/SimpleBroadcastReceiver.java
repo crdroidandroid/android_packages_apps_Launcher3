@@ -16,6 +16,7 @@
 package com.android.launcher3.util;
 
 import android.content.BroadcastReceiver;
+import android.content.BroadcastReceiver.PendingResult;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -54,7 +55,14 @@ public class SimpleBroadcastReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        mIntentConsumer.accept(intent);
+        final PendingResult result = goAsync();
+        mHandler.post(() -> {
+            try {
+                mIntentConsumer.accept(intent);
+            } finally {
+                result.finish();
+            }
+        });
     }
 
     /** Calls {@link #register(Runnable, String...)} with null completionCallback. */
