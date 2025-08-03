@@ -26,6 +26,8 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -110,22 +112,30 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
                 mGreetingsExtClock.setVisibility(View.GONE);
             }
         }
-        if (mIsQuickEvent && (LauncherPrefs.SHOW_QUICKSPACE_PSONALITY.get(getContext()) ||
-                        mController.getEventController().isNowPlaying())) {
+        boolean shouldShowPsa = mIsQuickEvent && (LauncherPrefs.SHOW_QUICKSPACE_PSONALITY.get(getContext()) ||
+                        mController.getEventController().isNowPlaying());
+        if (shouldShowPsa) {
             maybeSetMarquee(mEventTitle);
             mEventTitle.setOnClickListener(mController.getEventController().getAction());
-            mEventTitleSub.setVisibility(View.VISIBLE);
             mEventTitleSub.setText(mController.getEventController().getActionTitle());
             maybeSetMarquee(mEventTitleSub);
             mEventTitleSub.setOnClickListener(mController.getEventController().getAction());
+
+            if (mEventTitleSub.getVisibility() != View.VISIBLE) {
+                animateIn(mEventTitleSub);
+            }
+
             if (useAlternativeQuickspaceUI) {
                 if (mController.getEventController().isNowPlaying()) {
                     mEventSubIcon.setVisibility(View.GONE);
                     mEventTitleSubColored.setVisibility(View.VISIBLE);
                     mNowPlayingIcon.setVisibility(View.VISIBLE);
+                    animateOut(mEventSubIcon);
+                    animateIn(mEventTitleSubColored);
+                    animateIn(mNowPlayingIcon);
                     mNowPlayingIcon.setOnClickListener(mController.getEventController().getAction());
-                    mEventTitleSubColored.setText(getContext().getString(R.string.qe_now_playing_by));
-                    mEventTitleSubColored.setOnClickListener(mController.getEventController().getAction());
+                    animateOut(mEventTitleSubColored);
+                    animateOut(mNowPlayingIcon);
                 } else {
                     setEventSubIcon();
                     mEventTitleSubColored.setText("");
@@ -136,8 +146,8 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
                 setEventSubIcon();
             }
         } else {
-            mEventTitleSub.setVisibility(View.GONE);
-            mEventSubIcon.setVisibility(View.GONE);
+            animateOut(mEventTitleSubColored);
+            animateOut(mNowPlayingIcon);
             if (useAlternativeQuickspaceUI) {
                 mEventTitleSubColored.setVisibility(View.GONE);
                 mNowPlayingIcon.setVisibility(View.GONE);
@@ -163,12 +173,14 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
     private void setEventSubIcon() {
         Drawable icon = mController.getEventController().getActionIcon();
         if (icon != null) {
-            mEventSubIcon.setVisibility(View.VISIBLE);
+            if (mEventSubIcon.getVisibility() != View.VISIBLE) {
+                animateIn(mEventSubIcon);
+            }
             mEventSubIcon.setImageTintList(mController.getEventController().isNowPlaying() ? null : mColorStateList);
             mEventSubIcon.setImageDrawable(icon);
             mEventSubIcon.setOnClickListener(mController.getEventController().getAction());
         } else {
-            mEventSubIcon.setVisibility(View.GONE);
+            animateOut(mEventSubIcon);
         }
     }
 
@@ -224,6 +236,34 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
             mQuickspaceContent.setAlpha(0.0f);
             mQuickspaceContent.animate().setDuration(200).alpha(1.0f);
         }
+    }
+
+    private void animateIn(View view) {
+        if (view.getVisibility() == View.VISIBLE && view.getAlpha() == 1f) {
+            return; // Already visible
+        }
+        view.setVisibility(View.VISIBLE);
+        view.setAlpha(0f);
+        view.setTranslationY(view.getHeight() / 2f);
+        view.animate()
+            .alpha(1f)
+            .translationY(0f)
+            .setDuration(400)
+            .setInterpolator(new DecelerateInterpolator())
+            .start();
+    }
+
+    private void animateOut(View view) {
+        if (view.getVisibility() != View.VISIBLE) {
+            return; // Already hidden
+        }
+        view.animate()
+            .alpha(0f)
+            .translationY(view.getHeight() / 2f)
+            .setDuration(400)
+            .setInterpolator(new AccelerateInterpolator())
+            .withEndAction(() -> view.setVisibility(View.GONE))
+            .start();
     }
 
     @Override
