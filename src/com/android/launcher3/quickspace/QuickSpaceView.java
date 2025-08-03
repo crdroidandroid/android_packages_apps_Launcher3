@@ -80,7 +80,6 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
     @Override
     public void onDataUpdated() {
         boolean altUI = LauncherPrefs.SHOW_QUICKSPACE_ALT.get(getContext());
-        mController.getEventController().initQuickEvents();
         mIsQuickEvent = mController.isQuickEvent();
         if (mEventTitle == null || (altUI && mGreetingsExt == null)) {
             prepareLayout(altUI);
