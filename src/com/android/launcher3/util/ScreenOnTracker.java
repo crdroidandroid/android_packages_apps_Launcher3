@@ -23,6 +23,8 @@ import static com.android.launcher3.util.Executors.UI_HELPER_EXECUTOR;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
+import android.os.Looper;
 
 import androidx.annotation.VisibleForTesting;
 
@@ -42,6 +44,8 @@ public class ScreenOnTracker implements SafeCloseable {
 
     public static final DaggerSingletonObject<ScreenOnTracker> INSTANCE =
             new DaggerSingletonObject<>(LauncherBaseAppComponent::getScreenOnTracker);
+
+    private static final Handler MAIN_HANDLER = new Handler(Looper.getMainLooper());
 
     private final SimpleBroadcastReceiver mReceiver;
     private final CopyOnWriteArrayList<ScreenOnListener> mListeners = new CopyOnWriteArrayList<>();
@@ -88,7 +92,9 @@ public class ScreenOnTracker implements SafeCloseable {
     }
 
     private void dispatchScreenOnChanged() {
-        mListeners.forEach(l -> l.onScreenOnChanged(mIsScreenOn));
+        for (ScreenOnListener listener : mListeners) {
+            MAIN_HANDLER.post(() -> listener.onScreenOnChanged(mIsScreenOn));
+        }
     }
 
     /** Returns if the screen is on or not */
