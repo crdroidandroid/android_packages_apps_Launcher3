@@ -63,19 +63,21 @@ public class AlphaUpdateListener extends AnimatorListenerAdapter
      * @param hiddenVisibility {@link View#GONE} or {@link View#INVISIBLE}
      */
     public static void updateVisibility(View view, int hiddenVisibility) {
-        if (view.getAlpha() < ALPHA_CUTOFF_THRESHOLD && view.getVisibility() != hiddenVisibility) {
-            view.setVisibility(hiddenVisibility);
-        } else if (view.getAlpha() > ALPHA_CUTOFF_THRESHOLD
-                && view.getVisibility() != View.VISIBLE) {
-            if (view instanceof ViewGroup) {
-                ViewGroup viewGroup = ((ViewGroup) view);
-                int oldFocusability = viewGroup.getDescendantFocusability();
-                viewGroup.setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
-                viewGroup.setVisibility(View.VISIBLE);
-                viewGroup.setDescendantFocusability(oldFocusability);
-            } else {
-                view.setVisibility(View.VISIBLE);
+        view.post(() -> {
+            if (view.getAlpha() < ALPHA_CUTOFF_THRESHOLD && view.getVisibility() != hiddenVisibility) {
+                view.setVisibility(hiddenVisibility);
+            } else if (view.getAlpha() > ALPHA_CUTOFF_THRESHOLD
+                    && view.getVisibility() != View.VISIBLE) {
+                if (view instanceof ViewGroup) {
+                    ViewGroup viewGroup = ((ViewGroup) view);
+                    int oldFocusability = viewGroup.getDescendantFocusability();
+                    viewGroup.setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
+                    viewGroup.setVisibility(View.VISIBLE);
+                    viewGroup.setDescendantFocusability(oldFocusability);
+                } else {
+                    view.setVisibility(View.VISIBLE);
+                }
             }
-        }
+        });
     }
 }
