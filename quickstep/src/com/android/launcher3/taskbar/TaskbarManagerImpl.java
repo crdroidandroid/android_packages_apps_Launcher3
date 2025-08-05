@@ -36,6 +36,8 @@ import static com.android.launcher3.util.DisplayController.CHANGE_DESKTOP_MODE;
 import static com.android.launcher3.util.DisplayController.CHANGE_NAVIGATION_MODE;
 import static com.android.launcher3.util.DisplayController.CHANGE_SHOW_LOCKED_TASKBAR;
 import static com.android.launcher3.util.DisplayController.CHANGE_TASKBAR_PINNING;
+import static com.android.launcher3.util.Executors.MAIN_EXECUTOR;
+import static com.android.launcher3.util.Executors.THREAD_POOL_EXECUTOR;
 import static com.android.launcher3.util.Executors.UI_HELPER_EXECUTOR;
 import static com.android.launcher3.util.FlagDebugUtils.formatFlagChange;
 import static com.android.quickstep.util.SystemActionConstants.ACTION_SHOW_TASKBAR;
@@ -125,7 +127,9 @@ import kotlinx.coroutines.CoroutineDispatcher;
 
 import java.io.PrintWriter;
 import java.lang.ref.WeakReference;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -836,12 +840,29 @@ public class TaskbarManagerImpl implements DisplayDecorationListener {
      * we fully want to destroy existing taskbars and create all desired new ones.
      * In other case (folding/unfolding) we don't need to remove and add window.
      */
-    public synchronized void recreateTaskbars() {
-        for (int i = 0; i < mWindowContexts.size(); i++) {
-            int displayId = mWindowContexts.keyAt(i);
-            debugTaskbarManager("recreateTaskbars", displayId);
-            recreateTaskbarForDisplay(displayId, 0);
-        }
+    public void recreateTaskbars() {
+        THREAD_POOL_EXECUTOR.execute(() -> {
+            List<Integer> displayIds;
+            synchronized (mWindowContexts) {
+                displayIds = new ArrayList<>();
+                for (int i = 0; i < mWindowContexts.size(); i++) {
+                    displayIds.add(mWindowContexts.keyAt(i));
+                }
+            }
+            for (int displayId : displayIds) {
+                recreateTaskbarForDisplayAsync(displayId);
+            }
+        });
+    }
+
+    private void recreateTaskbarForDisplayAsync(int displayId) {
+        DeviceProfile dp = getDeviceProfile(displayId);
+        boolean displayExists = getDisplay(displayId) != null;
+        MAIN_EXECUTOR.post(() -> {
+            if (dp != null && displayExists) {
+                recreateTaskbarForDisplay(displayId, 0);
+            }
+        });
     }
 
     /**
