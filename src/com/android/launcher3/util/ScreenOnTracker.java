@@ -19,6 +19,8 @@ import static android.content.Intent.ACTION_SCREEN_OFF;
 import static android.content.Intent.ACTION_SCREEN_ON;
 import static android.content.Intent.ACTION_USER_PRESENT;
 
+import static com.android.launcher3.util.Executors.MAIN_EXECUTOR;
+import static com.android.launcher3.util.Executors.THREAD_POOL_EXECUTOR;
 import static com.android.launcher3.util.Executors.UI_HELPER_EXECUTOR;
 
 import android.content.Context;
@@ -78,17 +80,33 @@ public class ScreenOnTracker implements SafeCloseable {
         String action = intent.getAction();
         if (ACTION_SCREEN_ON.equals(action)) {
             mIsScreenOn = true;
-            dispatchScreenOnChanged();
+            THREAD_POOL_EXECUTOR.execute(() -> {
+                dispatchScreenOnChanged();
+            });
         } else if (ACTION_SCREEN_OFF.equals(action)) {
             mIsScreenOn = false;
-            dispatchScreenOnChanged();
+            THREAD_POOL_EXECUTOR.execute(() -> {
+                dispatchScreenOnChanged();
+            });
         } else if (ACTION_USER_PRESENT.equals(action)) {
-            mListeners.forEach(ScreenOnListener::onUserPresent);
+            THREAD_POOL_EXECUTOR.execute(() -> {
+                dispatchUserPresent();
+            });
         }
     }
 
     private void dispatchScreenOnChanged() {
-        mListeners.forEach(l -> l.onScreenOnChanged(mIsScreenOn));
+        for (ScreenOnListener listener : mListeners) {
+            MAIN_EXECUTOR.execute(() -> {
+                listener.onScreenOnChanged(mIsScreenOn);
+            });
+        }
+    }
+
+    private void dispatchUserPresent() {
+        for (ScreenOnListener listener : mListeners) {
+            MAIN_EXECUTOR.execute(listener::onUserPresent);
+        }
     }
 
     /** Returns if the screen is on or not */
