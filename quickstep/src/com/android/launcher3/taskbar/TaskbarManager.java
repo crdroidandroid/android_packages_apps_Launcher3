@@ -34,6 +34,8 @@ import static com.android.launcher3.util.DisplayController.CHANGE_DESKTOP_MODE;
 import static com.android.launcher3.util.DisplayController.CHANGE_NAVIGATION_MODE;
 import static com.android.launcher3.util.DisplayController.CHANGE_SHOW_LOCKED_TASKBAR;
 import static com.android.launcher3.util.DisplayController.CHANGE_TASKBAR_PINNING;
+import static com.android.launcher3.util.Executors.MAIN_EXECUTOR;
+import static com.android.launcher3.util.Executors.THREAD_POOL_EXECUTOR;
 import static com.android.launcher3.util.Executors.UI_HELPER_EXECUTOR;
 import static com.android.launcher3.util.FlagDebugUtils.formatFlagChange;
 import static com.android.quickstep.util.SystemActionConstants.ACTION_SHOW_TASKBAR;
@@ -111,6 +113,8 @@ import com.android.systemui.unfold.util.ScopedUnfoldTransitionProgressProvider;
 import lineageos.providers.LineageSettings;
 
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.StringJoiner;
 
@@ -779,20 +783,33 @@ public class TaskbarManager implements DisplayDecorationListener {
      * In other case (folding/unfolding) we don't need to remove and add window.
      */
     @VisibleForTesting
-    public synchronized void recreateTaskbars() {
-        debugPrimaryTaskbar("recreateTaskbars");
-        // Handles initial creation case.
-        if (mTaskbars.size() == 0) {
-            debugTaskbarManager("recreateTaskbars: create primary taskbar", getDefaultDisplayId());
-            recreateTaskbarForDisplay(getDefaultDisplayId(), 0);
-            return;
-        }
+    public void recreateTaskbars() {
+        THREAD_POOL_EXECUTOR.execute(() -> {
+            List<Integer> displayIds;
+            synchronized (mTaskbars) {
+                displayIds = new ArrayList<>();
+                for (int i = 0; i < mTaskbars.size(); i++) {
+                    displayIds.add(mTaskbars.keyAt(i));
+                }
+            }
+            if (displayIds.isEmpty()) {
+                recreateTaskbarForDisplayAsync(getDefaultDisplayId());
+            } else {
+                for (int displayId : displayIds) {
+                    recreateTaskbarForDisplayAsync(displayId);
+                }
+            }
+        });
+    }
 
-        for (int i = 0; i < mTaskbars.size(); i++) {
-            int displayId = mTaskbars.keyAt(i);
-            debugTaskbarManager("recreateTaskbars: create external taskbar", displayId);
-            recreateTaskbarForDisplay(displayId, 0);
-        }
+    private void recreateTaskbarForDisplayAsync(int displayId) {
+        DeviceProfile dp = getDeviceProfile(displayId);
+        boolean displayExists = getDisplay(displayId) != null;
+        MAIN_EXECUTOR.post(() -> {
+            if (dp != null && displayExists) {
+                recreateTaskbarForDisplay(displayId, 0);
+            }
+        });
     }
 
     /**
