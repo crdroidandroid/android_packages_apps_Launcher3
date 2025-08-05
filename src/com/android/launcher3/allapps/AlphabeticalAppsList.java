@@ -256,7 +256,13 @@ public class AlphabeticalAppsList<T extends Context & ActivityContext> implement
             }
         }
         appSteam = appSteam.sorted(mAppNameComparator);
-        privateAppStream = privateAppStream.sorted(mAppNameComparator);
+        privateAppStream = privateAppStream.collect(Collectors.groupingBy(
+                info -> info.sectionName,
+                () -> new TreeMap<>(new LabelComparator()),
+                Collectors.toCollection(ArrayList::new)))
+                .values()
+                .stream()
+                .flatMap(list -> list.stream().sorted(mAppNameComparator));
 
         // As a special case for some languages (currently only Simplified Chinese), we may need to
         // coalesce sections
@@ -269,7 +275,7 @@ public class AlphabeticalAppsList<T extends Context & ActivityContext> implement
                     Collectors.toCollection(ArrayList::new)))
                     .values()
                     .stream()
-                    .flatMap(ArrayList::stream);
+                    .flatMap(list -> list.stream().sorted(mAppNameComparator));
         }
 
         appSteam.forEachOrdered(mApps::add);
