@@ -105,10 +105,15 @@ internal constructor(
         }
 
         // Get thumbnail from system
-        var thumbnailData =
-            ActivityManagerWrapper.getInstance().getTaskThumbnail(task.key.id, lowResolution)
-        if (thumbnailData.thumbnail == null) {
-            thumbnailData = ActivityManagerWrapper.getInstance().takeTaskThumbnail(task.key.id)
+        val thumbnailData: ThumbnailData = try {
+            var thumb =
+                ActivityManagerWrapper.getInstance().getTaskThumbnail(task.key.id, lowResolution)
+            if (thumb.thumbnail == null) {
+                thumb = ActivityManagerWrapper.getInstance().takeTaskThumbnail(task.key.id)
+            }
+            thumb
+        } catch (e: Exception) {
+            return null
         }
 
         // Avoid an async timing issue that a low res entry replaces an existing high
@@ -126,6 +131,7 @@ internal constructor(
         cache.put(task.key, thumbnailData)
         return thumbnailData
     }
+
 
     /**
      * Asynchronously fetches the thumbnail for the given `task`.
