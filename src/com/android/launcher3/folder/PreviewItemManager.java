@@ -25,6 +25,7 @@ import static com.android.launcher3.folder.FolderIcon.DROP_IN_ANIMATION_DURATION
 import static com.android.launcher3.graphics.PreloadIconDrawable.newPendingIcon;
 import static com.android.launcher3.icons.BitmapInfo.FLAG_THEMED;
 import static com.android.launcher3.model.data.ItemInfoWithIcon.FLAG_SHOW_DOWNLOAD_PROGRESS_MASK;
+import static com.android.launcher3.util.Executors.MAIN_EXECUTOR;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -81,7 +82,6 @@ public class PreviewItemManager {
 
     private final Context mContext;
     private final FolderIcon mIcon;
-    private final DrawableFactory mDrawableFactory;
     @VisibleForTesting
     public final int mIconSize;
 
@@ -116,7 +116,6 @@ public class PreviewItemManager {
     public PreviewItemManager(FolderIcon icon) {
         mContext = icon.getContext();
         mIcon = icon;
-        mDrawableFactory = DrawableFactory.INSTANCE.get(mContext);
         mIconSize = ActivityContext.lookupContext(
                 mContext).getDeviceProfile().folderChildIconSizePx;
         mClipThreshold = Utilities.dpToPx(1f);
@@ -448,7 +447,17 @@ public class PreviewItemManager {
     public void setDrawable(PreviewItemDrawingParams p, ItemInfo item) {
         if (item instanceof WorkspaceItemInfo wii) {
             if (isActivePendingIcon(wii)) {
-                p.drawable = mDrawableFactory.newPendingIcon(mContext, wii);
+                MAIN_EXECUTOR.getHandler().post(() -> {
+                    DrawableFactory drawableFactory = DrawableFactory.INSTANCE.get(mContext);
+                    Drawable drawable = drawableFactory.newPendingIcon(mContext, wii);
+                    if (drawable != null) {
+                        drawable.setBounds(0, 0, mIconSize, mIconSize);
+                        drawable.setCallback(mIcon);
+                        p.drawable = drawable;
+                        p.item = item;
+                    }
+                });
+                return;
             } else {
                 p.drawable = wii.newIcon(mContext, FLAG_THEMED);
             }
