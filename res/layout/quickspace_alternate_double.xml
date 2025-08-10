@@ -27,7 +27,7 @@
         android:layout_gravity="start|center_vertical"
         android:gravity="start|center_vertical"
         android:paddingStart="16dp"
-        android:paddingTop="8dp">
+        android:paddingTop="6dp">
 
         <com.android.launcher3.quickspace.views.DoubleShadowTextView
             android:id="@+id/extended_greetings"
@@ -102,7 +102,7 @@
         android:layout_gravity="start|center_vertical"
         android:gravity="start|center_vertical"
         android:paddingStart="16dp"
-        android:paddingTop="8dp">
+        android:paddingTop="6dp">
 
         <com.android.launcher3.quickspace.views.DoubleShadowTextView
             android:id="@+id/extended_greetings_clock"
@@ -111,7 +111,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
             android:textColor="?workspaceAccentColor"
-            android:textSize="@dimen/quickspace_alternate_title_size"
+            android:textSize="@dimen/quickspace_alternate_subtitle_size"
             android:paddingEnd="6dp"
             android:visibility="gone"
             launcher:ambientShadowBlur="3dp"
@@ -131,7 +131,7 @@
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:textColor="?workspaceTextColor"
-            android:textSize="@dimen/quickspace_alternate_title_size"
+            android:textSize="@dimen/quickspace_alternate_subtitle_size"
             launcher:ambientShadowBlur="3dp"
             launcher:ambientShadowColor="?workspaceAmbientShadowColor"
             launcher:keyShadowBlur="2dp"
@@ -148,7 +148,7 @@
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
         android:paddingStart="16dp"
-        android:paddingTop="8dp">
+        android:paddingTop="6dp">
 
         <ImageView
             android:id="@+id/quick_event_icon_sub"
