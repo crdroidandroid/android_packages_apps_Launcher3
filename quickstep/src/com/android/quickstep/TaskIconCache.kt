@@ -17,6 +17,8 @@ package com.android.quickstep
 
 import android.app.ActivityManager
 import android.content.Context
+import android.content.SharedPreferences
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.content.pm.ActivityInfo
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
@@ -25,8 +27,10 @@ import android.os.UserHandle
 import android.util.SparseArray
 import androidx.annotation.WorkerThread
 import com.android.launcher3.Flags.enableRefactorTaskThumbnail
+import com.android.launcher3.LauncherPrefs
 import com.android.launcher3.R
 import com.android.launcher3.Utilities
+import com.android.launcher3.customization.IconDatabase.KEY_ICON_PACK
 import com.android.launcher3.icons.BaseIconFactory
 import com.android.launcher3.icons.BaseIconFactory.IconOptions
 import com.android.launcher3.icons.BitmapInfo
@@ -58,7 +62,7 @@ class TaskIconCache(
     private val bgExecutor: Executor,
     private val iconProvider: IconProvider,
     displayController: DisplayController,
-) : TaskIconDataSource, DisplayInfoChangeListener {
+) : TaskIconDataSource, DisplayInfoChangeListener, OnSharedPreferenceChangeListener {
     private val iconCache =
         TaskKeyLruCache<TaskCacheEntry>(
             context.resources.getInteger(R.integer.recentsIconCacheSize)
@@ -80,10 +84,17 @@ class TaskIconCache(
         // TODO (b/397205964): this will need to be updated when we support caches for different
         //  displays.
         displayController.addChangeListener(this)
+        LauncherPrefs.getPrefs(context).registerOnSharedPreferenceChangeListener(this)
     }
 
     override fun onDisplayInfoChanged(context: Context, info: DisplayController.Info, flags: Int) {
         if ((flags and DisplayController.CHANGE_DENSITY) != 0) {
+            clearCache()
+        }
+    }
+
+    override fun onSharedPreferenceChanged(prefs: SharedPreferences, key: String?) {
+        if (key == KEY_ICON_PACK) {
             clearCache()
         }
     }
