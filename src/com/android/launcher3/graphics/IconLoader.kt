@@ -124,13 +124,21 @@ constructor(
         if (mainIcon == null) {
             return null
         }
-        var result: AdaptiveIconDrawable =
+
+        var result: AdaptiveIconDrawable? =
             if (mainIcon is AdaptiveIconDrawable) {
                 mainIcon
             } else {
+                val noWrapHintSet = (mainIcon.changingConfigurations and CONFIG_HINT_NO_WRAP) != 0
+
                 // Wrap the main icon in AID
-                LauncherIcons.obtain(context).use { li -> li.wrapToAdaptiveIcon(mainIcon) }
+                if (!noWrapHintSet) LauncherIcons.obtain(context).use { li -> li.wrapToAdaptiveIcon(mainIcon) }
+                else null
             }
+
+        if (result == null) {
+            return null
+        }
 
         // Inject theme icon drawable
         if (Utilities.ATLEAST_T && useTheme) {
@@ -156,4 +164,8 @@ constructor(
     }
 
     class Result(@JvmField val icon: AdaptiveIconDrawable, @JvmField val badge: Drawable)
+
+    companion object {
+        const val CONFIG_HINT_NO_WRAP: Int = 0x1000000
+    }
 }
