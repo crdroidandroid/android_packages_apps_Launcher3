@@ -53,6 +53,7 @@ import android.widget.RemoteViews;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Launcher;
@@ -310,7 +311,7 @@ public class PendingAppWidgetHostView extends LauncherAppWidgetHostView
             mSettingIconDrawable = null;
         } else if (isReadyForClickSetup()) {
             mCenterDrawable = info.newIcon(getContext());
-            mSettingIconDrawable = getResources().getDrawable(R.drawable.ic_setting).mutate();
+            mSettingIconDrawable = ContextCompat.getDrawable(getContext(), R.drawable.ic_setting).mutate();
             updateSettingColor(info.bitmap.color);
 
             mDragFlags |= FLAG_DRAW_SETTINGS | FLAG_DRAW_LABEL;
