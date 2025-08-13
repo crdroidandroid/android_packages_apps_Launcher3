@@ -17,6 +17,8 @@ package com.android.quickstep
 
 import android.app.ActivityManager
 import android.content.Context
+import android.content.SharedPreferences
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
 import android.os.Process
@@ -24,9 +26,11 @@ import android.os.UserHandle
 import androidx.annotation.AnyThread
 import androidx.annotation.WorkerThread
 import androidx.core.graphics.drawable.toDrawable
+import com.android.launcher3.LauncherPrefs
 import com.android.launcher3.R
 import com.android.launcher3.Utilities
 import com.android.launcher3.concurrent.annotations.Ui
+import com.android.launcher3.customization.IconDatabase.KEY_ICON_PACK
 import com.android.launcher3.dagger.ApplicationContext
 import com.android.launcher3.display.DisplayController
 import com.android.launcher3.display.LauncherDisplayInfo
@@ -65,7 +69,7 @@ constructor(
     private val launcherIconCache: PostUnlockObject<IconCache>,
     @Ui private val uiExecutor: Executor,
     daggerSingletonTracker: DaggerSingletonTracker,
-) : TaskIconDataSource {
+) : TaskIconDataSource, OnSharedPreferenceChangeListener {
     // This bg executor executes thread-unsafe tasks like getBitmapInfoCacheEntry(), getCacheEntry()
     // and createIconFactory(), thus it must be single threaded.
     private val singleThreadedBgExecutor = TASK_IMAGE_CACHE_EXECUTOR
@@ -95,6 +99,7 @@ constructor(
             Runnable { themeManager.removeChangeListener(themeChangeListener) }
         }
         daggerSingletonTracker.addCloseable(themeManagerWrapper)
+        LauncherPrefs.getPrefs(context).registerOnSharedPreferenceChangeListener(this)
     }
 
     private fun onDisplayInfoChanged(flags: Int) {
@@ -291,6 +296,12 @@ constructor(
     @WorkerThread
     private fun resetFactory() {
         bitmapInfoCache.evictAll()
+    }
+
+    override fun onSharedPreferenceChanged(prefs: SharedPreferences, key: String?) {
+        if (key == KEY_ICON_PACK) {
+            clearCache()
+        }
     }
 
     data class TaskCacheEntry(
