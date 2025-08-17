@@ -26,6 +26,8 @@ import android.content.res.Resources;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
+import android.icu.text.DateFormat;
+import android.icu.text.DisplayContext;
 import android.media.MediaMetadata;
 import android.media.session.MediaController;
 import android.media.session.MediaSession;
@@ -50,9 +52,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
-import com.android.launcher3.util.MediaSessionManagerHelper;
 import com.android.launcher3.util.MSMHProxy;
 
 public class QuickEventsController {
@@ -68,18 +70,11 @@ public class QuickEventsController {
     private Drawable mEventSubIcon = null;
 
     private boolean mIsQuickEvent = false;
-    private boolean mRegistered = false;
-    
+
     private final Map<Integer, String[]> mCachedPSAMap = new HashMap<>();
 
     // PSA + Personality
     private String[] mPSAStr;
-    private BroadcastReceiver mPSAListener = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            psonalityEvent();
-        }
-    };
 
     // NowPlaying
     private boolean mEventNowPlaying = false;
@@ -90,34 +85,19 @@ public class QuickEventsController {
     public QuickEventsController(Context context) {
         mContext = context;
         mResources = context.getResources();
-        initQuickEvents();
     }
 
     public void initQuickEvents() {
-        registerPSAListener();
         updateQuickEvents();
     }
 
-    private void registerPSAListener() {
-        if (mRegistered) return;
-        mRegistered = true;
-        IntentFilter psonalityIntent = new IntentFilter();
-        psonalityIntent.addAction(Intent.ACTION_TIME_TICK);
-        psonalityIntent.addAction(Intent.ACTION_TIME_CHANGED);
-        psonalityIntent.addAction(Intent.ACTION_TIMEZONE_CHANGED);
-        mContext.registerReceiver(mPSAListener, psonalityIntent, Context.RECEIVER_NOT_EXPORTED);
-    }
-
-    private void unregisterPSAListener() {
-        if (!mRegistered) return;
-        mRegistered = false;
-        mContext.unregisterReceiver(mPSAListener);
-    }
-
     public void updateQuickEvents() {
-        if (!mRegistered) return;
         nowPlayingEvent();
         initNowPlayingEvent();
+        psonalityEvent();
+    }
+
+    public void updatePsonality() {
         psonalityEvent();
     }
 
@@ -150,10 +130,23 @@ public class QuickEventsController {
         mEventTitleSubAction = view -> MSMHProxy.INSTANCE(mContext).launchMediaApp();
     }
 
+    private static String formatDateTime(Context context) {
+        String styleText;
+        DateFormat dateFormat;
+        if (Utilities.useAlternativeQuickspaceUI(context)) {
+            styleText = context.getString(R.string.quickspace_date_format_minimalistic);
+        } else {
+            styleText = context.getString(R.string.quickspace_date_format);
+        }
+        dateFormat = DateFormat.getInstanceForSkeleton(styleText, Locale.getDefault());
+        dateFormat.setContext(DisplayContext.CAPITALIZATION_FOR_STANDALONE);
+        return dateFormat.format(System.currentTimeMillis());
+    }
+
     private void psonalityEvent() {
         if (mEventNowPlaying) return;
 
-	    mEventTitle = Utilities.formatDateTime(mContext);
+	    mEventTitle = formatDateTime(mContext);
         mEventTitleSubAction = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -224,7 +217,7 @@ public class QuickEventsController {
         }
 
         mEventSubIcon = null;
-        
+
         mPSAStr = getPSAStr(hourOfDay);
 
         if (mPSAStr != null) {
@@ -297,14 +290,6 @@ public class QuickEventsController {
         return mPlayingActive;
     }
 
-    public void onPause() {
-        unregisterPSAListener();
-    }
-
-    public void onResume() {
-        registerPSAListener();
-    }
-    
     private String[] getCachedArray(int resId) {
         if (!mCachedPSAMap.containsKey(resId)) {
             mCachedPSAMap.put(resId, mResources.getStringArray(resId));

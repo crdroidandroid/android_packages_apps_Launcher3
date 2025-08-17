@@ -21,6 +21,7 @@ import android.annotation.NonNull;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
+import android.os.Handler;
 import android.media.MediaMetadata;
 import android.media.session.MediaController;
 import android.media.session.MediaSession;
@@ -38,47 +39,55 @@ import com.android.launcher3.util.MediaSessionManagerHelper;
 import com.android.launcher3.util.MSMHProxy;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-public class QuickspaceController implements OmniJawsClient.OmniJawsObserver, MediaSessionManagerHelper.MediaMetadataListener {
+public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
+        MediaSessionManagerHelper.MediaMetadataListener {
 
-    public final ArrayList<OnDataListener> mListeners = new ArrayList();
-    private static final String SETTING_WEATHER_LOCKSCREEN_UNIT = "weather_lockscreen_unit";
-    private static final boolean DEBUG = false;
     private static final String TAG = "Launcher3:QuickspaceController";
 
+    private final List<OnDataListener> mListeners =
+        Collections.synchronizedList(new ArrayList<>());
     private final Context mContext;
     private final Map<String, Integer> mConditionMap;
     private QuickEventsController mEventsController;
     private OmniJawsClient mWeatherClient;
     private OmniJawsClient.WeatherInfo mWeatherInfo;
     private Drawable mConditionImage;
+    private boolean mOmniRegistered = false;
 
-    private Runnable mOnDataUpdatedRunnable = new Runnable() {
-            @Override
-            public void run() {
-                for (OnDataListener list : mListeners) {
-                    list.onDataUpdated();
-                }
+    private static final long PSA_UPDATE_DELAY_MS = 3 * 60 * 1000;
+
+    private final Handler mHandler = MAIN_EXECUTOR.getHandler();
+    private final Runnable mPsaRunnable;
+
+    private final Runnable mOnDataUpdatedRunnable = new Runnable() {
+        @Override
+        public void run() {
+            for (OnDataListener l : new ArrayList<>(mListeners)) {
+                l.onDataUpdated();
             }
-        };
+        }
+    };
 
     private Runnable mWeatherRunnable = new Runnable() {
             @Override
             public void run() {
                 try {
+                    if (mWeatherClient == null) return;
                     mWeatherClient.queryWeather();
                     mWeatherInfo = mWeatherClient.getWeatherInfo();
                     if (mWeatherInfo != null) {
                         mConditionImage = mWeatherClient.getWeatherConditionImage(mWeatherInfo.conditionCode);
                     }
-                    notifyListeners();
                 } catch(Exception e) {
                     // Do nothing
                 }
+                notifyListeners();
             }
         };
 
@@ -90,27 +99,62 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver, Me
         mContext = context;
         mConditionMap = initializeConditionMap();
         mEventsController = new QuickEventsController(context);
-        mWeatherClient = new OmniJawsClient(context);
+
+        mPsaRunnable = new Runnable() {
+            @Override
+            public void run() {
+                if (mEventsController != null) {
+                    mEventsController.updatePsonality();
+                    notifyListeners();
+                }
+                mHandler.postDelayed(this, PSA_UPDATE_DELAY_MS);
+            }
+        };
     }
 
     private void addWeatherProvider() {
         if (!Utilities.isQuickspaceWeather(mContext)) return;
-        mWeatherClient.addObserver(this);
+        if (mWeatherClient == null) mWeatherClient = new OmniJawsClient(mContext);
+        if (!mOmniRegistered) {
+            mWeatherClient.addObserver(this);
+            mOmniRegistered = true;
+        }
         queryAndUpdateWeather();
     }
 
     public void addListener(OnDataListener listener) {
-        mListeners.add(listener);
-        addWeatherProvider();
-        MSMHProxy.INSTANCE(mContext).addMediaMetadataListener(this);
+        if (listener == null) return;
+        boolean wasEmpty = mListeners.isEmpty();
+        if (!mListeners.contains(listener)) {
+            mListeners.add(listener);
+        }
+        if (wasEmpty) {
+            addWeatherProvider();
+            registerMediaController();
+            mEventsController.initQuickEvents();
+            mHandler.post(mPsaRunnable);
+        }
         listener.onDataUpdated();
     }
 
-    private void removeListener(OnDataListener listener) {
-        if (mWeatherClient != null) {
+    private void removeOmniIfRegistered() {
+        if (mOmniRegistered && mWeatherClient != null) {
             mWeatherClient.removeObserver(this);
+            mOmniRegistered = false;
         }
+        mWeatherClient = null;
+        mWeatherInfo = null;
+        mConditionImage = null;
+    }
+
+    public void removeListener(OnDataListener listener) {
+        if (listener == null) return;
         mListeners.remove(listener);
+        if (mListeners.isEmpty()) {
+            removeOmniIfRegistered();
+            unregisterMediaController();
+            mHandler.removeCallbacks(mPsaRunnable);
+        }
     }
 
     public boolean isQuickEvent() {
@@ -145,7 +189,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver, Me
         if (showWeatherText) {
             weatherTemp.append(" • ").append(getConditionText(mWeatherInfo.condition));
         }
-        
+
         return weatherTemp.toString();
     }
 
@@ -194,30 +238,19 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver, Me
     }
 
     public void onPause() {
-        cancelListeners();
+        unregisterMediaController();
     }
 
     public void onResume() {
-        mEventsController.onResume();
+        registerMediaController();
         updateMediaController();
         notifyListeners();
     }
 
-    private void cancelListeners() {
-        if (mEventsController != null) {
-            mEventsController.onPause();
-        }
+    public void onDestroy() {
         for (OnDataListener listener : new ArrayList<>(mListeners)) {
             removeListener(listener);
         }
-        unregisterMediaController();
-    }
-
-    public void onDestroy() {
-        cancelListeners();
-        mWeatherClient = null;
-        mWeatherInfo = null;
-        mConditionImage = null;
     }
 
     @Override
@@ -241,23 +274,24 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver, Me
     }
 
     private void queryAndUpdateWeather() {
-        MAIN_EXECUTOR.execute(mWeatherRunnable);
+        mHandler.post(mWeatherRunnable);
     }
 
     public void notifyListeners() {
-        MAIN_EXECUTOR
-            .getHandler()
-            .post(mOnDataUpdatedRunnable);
+        mHandler.post(mOnDataUpdatedRunnable);
+    }
+
+    private void registerMediaController() {
+        MSMHProxy.INSTANCE(mContext).addMediaMetadataListener(this);
     }
 
     private void unregisterMediaController() {
         MSMHProxy.INSTANCE(mContext).removeMediaMetadataListener(this);
     }
 
-    private void updateMediaController() {
+    private boolean updateMediaController() {
         if (!Utilities.isQuickspaceNowPlaying(mContext)) {
-            unregisterMediaController();
-            return;
+            return false;
         }
         MediaMetadata mediaMetadata = MSMHProxy.INSTANCE(mContext).getCurrentMediaMetadata();
         boolean isPlaying = MSMHProxy.INSTANCE(mContext).isMediaPlaying();
@@ -265,16 +299,16 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver, Me
         String trackTitle = isPlaying && mediaMetadata != null ? mediaMetadata.getString(MediaMetadata.METADATA_KEY_TITLE) : "";
         mEventsController.setMediaInfo(trackTitle, trackArtist, isPlaying);
         mEventsController.updateQuickEvents();
-        notifyListeners();
+        return true;
     }
-    
+
     @Override
     public void onMediaMetadataChanged() {
-        updateMediaController();
+        if (updateMediaController()) notifyListeners();
     }
 
     @Override
     public void onPlaybackStateChanged() {
-        updateMediaController();
+        if (updateMediaController()) notifyListeners();
     }
 }

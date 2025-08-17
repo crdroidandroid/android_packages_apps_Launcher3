@@ -29,20 +29,18 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.android.launcher3.Launcher;
-import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.R;
-import com.android.launcher3.Utilities;
 
 public class QuickSpaceActionReceiver {
 
-    private static Context mContext;
+    private final Context mContext;
     private final LauncherApps mLauncherApps;
 
     public OnClickListener mCalendarClickListener;
     public OnClickListener mWeatherClickListener;
 
     public QuickSpaceActionReceiver(Context context) {
-        mContext = context;
+        this.mContext = context;
         mLauncherApps = context.getSystemService(LauncherApps.class);
 
         mCalendarClickListener = new OnClickListener() {
