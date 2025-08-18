@@ -47,14 +47,4 @@ object SeraphixCompanion {
     }
 
     fun ViewGroup.allChildren() = ArrayList<View>().also { allChildren(it) }
-
-    val ImageView.bitmap: Bitmap? get() = (drawable as BitmapDrawable?)?.bitmap
-
-    val TextView.string: String get() = text.toString()
-
-    inline fun <reified T> View.takeByName(name: String): T? = try {
-        takeIf { id != -1 && resources.getResourceEntryName(id) == name } as T?
-    } catch (e: Resources.NotFoundException) {
-        null
-    }
 }
