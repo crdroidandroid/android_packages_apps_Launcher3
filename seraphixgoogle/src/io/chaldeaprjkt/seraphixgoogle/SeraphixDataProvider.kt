@@ -62,9 +62,9 @@ class SeraphixDataProvider(
 
         if (isWidgetBound) {
             onBounded?.onBound(widgetId)
+            widgetHost.startListening()
             widgetHostView = widgetHost.createView(context, widgetId, providerInfo)
                     as EphemeralWidgetHostViewGoogle
-            widgetHost.startListening()
         }
     }
 
