@@ -23,6 +23,7 @@ import android.os.SystemClock
 import android.os.Trace
 import android.util.Log
 import android.view.Display.DEFAULT_DISPLAY
+import android.view.KeyEvent
 import android.view.View
 import android.window.TransitionInfo
 import androidx.annotation.BinderThread
@@ -79,6 +80,7 @@ constructor(
     private val recentsDisplayModel: RecentsDisplayModel,
     private val focusState: FocusState,
     private val taskbarManager: TaskbarManager,
+    private val systemUiProxy: SystemUiProxy,
 ) {
     private val coroutineScope = CoroutineScope(SupervisorJob() + dispatcherProvider.background)
 
@@ -390,11 +392,7 @@ constructor(
 
             HOME -> {
                 ActiveGestureProtoLogProxy.logExecuteHomeCommand()
-                // Although IActivityTaskManager$Stub$Proxy.startActivity is a slow binder call,
-                // we should still call it on main thread because launcher is waiting for
-                // ActivityTaskManager to resume it. Also calling startActivity() on bg thread
-                // could potentially delay resuming launcher. See b/348668521 for more details.
-                touchInteractionService.startActivity(overviewComponentObserver.homeIntent)
+                systemUiProxy.onKeyEvent(KeyEvent.KEYCODE_HOME, command.displayId)
                 return true
             }
 
