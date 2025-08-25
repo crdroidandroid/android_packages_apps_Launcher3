@@ -49,6 +49,7 @@ import static com.android.launcher3.BaseActivity.INVISIBLE_ALL;
 import static com.android.launcher3.BaseActivity.INVISIBLE_BY_APP_TRANSITIONS;
 import static com.android.launcher3.BaseActivity.INVISIBLE_BY_PENDING_FLAGS;
 import static com.android.launcher3.BaseActivity.PENDING_INVISIBLE_BY_WALLPAPER_ANIMATION;
+import static com.android.launcher3.Flags.appLaunchBlur;
 import static com.android.launcher3.Flags.refactorTaskbarUiState;
 import static com.android.launcher3.Flags.syncAppLaunchWithTaskbarStash;
 import static com.android.launcher3.LauncherAnimUtils.SCALE_PROPERTY;
@@ -242,6 +243,9 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
     // Cross-fade duration between App Widget and App when launching from widget.
     private static final int WIDGET_CROSSFADE_DURATION_MILLIS = 180;
 
+    private static final float MAX_SCRIM_ALPHA_DARK = 0.8f;
+    private static final float MAX_SCRIM_ALPHA_LIGHT = 0.2f;
+
     protected final QuickstepLauncher mLauncher;
     protected final DragLayer mDragLayer;
 
@@ -250,6 +254,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
     private final float mClosingWindowTransY;
     private final float mClosingFreeformWindowTransY;
     private final float mMaxShadowRadius;
+    private final int mMaxBlurRadius;
 
     private final StartingWindowListener mStartingWindowListener =
             new StartingWindowListener(this);
@@ -326,6 +331,9 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
         mOpeningInterpolator = new PathInterpolator(0.2f, 0f, 0f, 1f);
         mCoordinateTransfer = new RemoteAnimationCoordinateTransfer(mLauncher);
         mLatencyTracker = LatencyTracker.getInstance(launcher);
+
+        mMaxBlurRadius = launcher.getResources().getDimensionPixelSize(
+                R.dimen.max_depth_blur_radius_enhanced);
     }
 
     @Override
@@ -837,6 +845,9 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
         RectF tmpRectF = new RectF();
         Point tmpPos = new Point();
 
+        final SurfaceControl scrimLayer = addScrimLayer(surfaceApplier, openingTargets);
+        final float scrimAlpha = getScrimAlpha();
+
         AnimatorSet animatorSet = new AnimatorSet();
         ValueAnimator appAnimator = ValueAnimator.ofFloat(0, 1);
         appAnimator.setDuration(APP_LAUNCH_DURATION);
@@ -862,6 +873,9 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
                 TaskbarInteractor taskbarInteractor = mLauncher.getTaskbarInteractor();
                 if (taskbarInteractor != null) {
                     taskbarInteractor.showEduOnAppLaunch();
+                }
+                if (appLaunchBlur()) {
+                    resetScrim(surfaceApplier, scrimLayer);
                 }
                 openingTargets.release();
             }
@@ -1072,6 +1086,13 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
                         navBuilder.setAlpha(mNavFadeOut.value);
                     }
                 }
+
+                if (appLaunchBlur() && scrimLayer != null && scrimLayer.isValid()) {
+                    SurfaceProperties builder = transaction.forSurface(scrimLayer);
+                    builder.setAlpha(percent * scrimAlpha);
+                    builder.setBackgroundBlurRadius((int) (percent * mMaxBlurRadius));
+                }
+
                 surfaceApplier.scheduleApply(transaction);
             }
         };
@@ -1130,6 +1151,8 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
         openingTargets.addReleaseCheck(surfaceApplier);
 
         RemoteAnimationTarget navBarTarget = openingTargets.getNavBarRemoteAnimationTarget();
+        final SurfaceControl scrimLayer = addScrimLayer(surfaceApplier, openingTargets);
+        final float scrimAlpha = getScrimAlpha();
 
         AnimatorSet animatorSet = new AnimatorSet();
         ValueAnimator appAnimator = ValueAnimator.ofFloat(0, 1);
@@ -1139,6 +1162,9 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
         appAnimator.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
+                if (appLaunchBlur()) {
+                    resetScrim(surfaceApplier, scrimLayer);
+                }
                 openingTargets.release();
             }
         });
@@ -1219,6 +1245,13 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
                         navBuilder.setAlpha(mNavFadeOut.value);
                     }
                 }
+
+                if (appLaunchBlur() && scrimLayer != null && scrimLayer.isValid()) {
+                    SurfaceProperties builder = transaction.forSurface(scrimLayer);
+                    builder.setAlpha(percent * scrimAlpha);
+                    builder.setBackgroundBlurRadius((int) (percent * mMaxBlurRadius));
+                }
+
                 surfaceApplier.scheduleApply(transaction);
             }
         });
@@ -1231,6 +1264,59 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
             animatorSet.playTogether(appAnimator, getBackgroundAnimator());
         }
         return animatorSet;
+    }
+
+    private SurfaceControl addScrimLayer(SurfaceTransactionApplier applier,
+            RemoteAnimationTargets targets) {
+        if (!appLaunchBlur()) {
+            return null;
+        }
+
+        RemoteAnimationTarget launcherTarget = null;
+        for (final RemoteAnimationTarget target : targets.apps) {
+            if (MODE_CLOSING == target.mode) {
+                launcherTarget = target;
+                break;
+            }
+        }
+
+        SurfaceControl parent = launcherTarget != null ? launcherTarget.leash : null;
+        if (parent == null || !parent.isValid()) {
+            // Parent surface is not ready at the moment. Retry later.
+            return null;
+        }
+        SurfaceControl scrimLayer = new SurfaceControl.Builder()
+                .setName("App launch background scrim")
+                .setCallsite("AppLaunchAnimationRunner")
+                .setEffectLayer()
+                .setOpaque(false)
+                .setHidden(true)
+                .build();
+        final float[] colorComponents = new float[] { 0f, 0f, 0f };
+
+        SurfaceTransaction transaction = new SurfaceTransaction();
+        SurfaceProperties builder = transaction.forSurface(scrimLayer);
+        builder
+                .setColor(colorComponents)
+                .setAlpha(0)
+                .reparent(launcherTarget.leash)
+                .setShow()
+                // Ensure the scrim layer occludes wallpaper
+                .setLayer(1000);
+        applier.scheduleApply(transaction);
+        return scrimLayer;
+    }
+
+    private float getScrimAlpha() {
+        return Utilities.isDarkTheme(mLauncher) ? MAX_SCRIM_ALPHA_DARK : MAX_SCRIM_ALPHA_LIGHT;
+    }
+
+    private void resetScrim(SurfaceTransactionApplier applier, SurfaceControl scrimLayer) {
+        if (scrimLayer != null && scrimLayer.isValid()) {
+            SurfaceTransaction surfaceTransaction = new SurfaceTransaction();
+            surfaceTransaction.getTransaction().remove(scrimLayer);
+            applier.scheduleApply(surfaceTransaction);
+        }
     }
 
     /** Returns animator that controls depth/blur of the background during app/widget opening. */

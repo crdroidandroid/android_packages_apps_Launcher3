@@ -650,3 +650,10 @@ flag {
   description: "Enables mouse based workflows for interacting with launcher"
   bug: "388897603"
 }
+
+flag {
+  name: "app_launch_blur"
+  namespace: "launcher"
+  description: "Enable background blur at app launch"
+  bug: "379905951"
+}

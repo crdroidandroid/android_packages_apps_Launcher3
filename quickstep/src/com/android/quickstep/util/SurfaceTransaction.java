@@ -63,6 +63,15 @@ public class SurfaceTransaction {
         }
 
         /**
+         * @param color The color value to apply to the surface.
+         * @return this Builder
+         */
+        public SurfaceProperties setColor(float[] color) {
+            mTransaction.setColor(mSurface, color);
+            return this;
+        }
+
+        /**
          * @param opaque Whether the surface is opaque.
          * @return this Builder
          */
