@@ -76,7 +76,10 @@ import com.android.launcher3.util.InstantAppResolver;
 import com.android.launcher3.util.PackageUserKey;
 import com.android.launcher3.widget.WidgetSections;
 import com.android.launcher3.widget.WidgetSections.WidgetSection;
+import com.android.launcher3.util.Executors;
+import com.android.launcher3.util.TaskSchedule;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -510,6 +513,7 @@ public class IconCache extends BaseIconCache {
         }
 
         Trace.beginSection("loadIconSubsectionWithFallback");
+        ArrayList<TaskSchedule.SafelyRunnable> tasksList = new ArrayList<>();
         // Fallback title and icon loading
         for (ComponentName cn : duplicateIconRequestsMap.keySet()) {
             IconRequestInfo<T> iconRequestInfo = duplicateIconRequestsMap.get(cn).get(0);
@@ -534,30 +538,35 @@ public class IconCache extends BaseIconCache {
                     entry.bitmap = icon;
                 }
                 entry.contentDescription = itemInfo.contentDescription;
-
-                if (loadFallbackIcon) {
-                    loadFallbackIcon(
-                            lai,
-                            entry,
-                            LauncherActivityCachingLogic.INSTANCE,
-                            DEFAULT_LOOKUP_FLAG.withUsePackageIcon(false),
-                            /* usePackageTitle= */ loadFallbackTitle,
-                            cn,
-                            sectionKey.first);
-                }
-                if (loadFallbackTitle && TextUtils.isEmpty(entry.title) && lai != null) {
-                    loadFallbackTitle(
-                            lai,
-                            entry,
-                            LauncherActivityCachingLogic.INSTANCE,
-                            sectionKey.first);
-                }
-
-                for (IconRequestInfo<T> iconRequest : duplicateIconRequestsMap.get(cn)) {
-                    applyCacheEntry(entry, iconRequest.itemInfo);
-                }
+                TaskSchedule.SafelyRunnable runnable = new TaskSchedule.SafelyRunnable() {
+                    @Override
+                    public void onTaskRun() {
+                        if(loadFallbackIcon){
+                            loadFallbackIcon(
+                                    lai,
+                                    entry,
+                                    LauncherActivityCachingLogic.INSTANCE,
+                                    DEFAULT_LOOKUP_FLAG.withUsePackageIcon(false),
+                                    /* usePackageTitle= */ loadFallbackTitle,
+                                    cn,
+                                    sectionKey.first);
+                        }
+                        if(loadFallbackTitle &&TextUtils.isEmpty(entry.title)&&lai !=null){
+                            loadFallbackTitle(
+                                    lai,
+                                    entry,
+                                    LauncherActivityCachingLogic.INSTANCE,
+                                    sectionKey.first);
+                        }
+                        for(IconRequestInfo<T> iconRequest :duplicateIconRequestsMap.get(cn)){
+                            applyCacheEntry(entry, iconRequest.itemInfo);
+                        }
+                    }
+                };
+                tasksList.add(runnable);
             }
         }
+        TaskSchedule.runTasks(tasksList, Executors.THREAD_POOL_EXECUTOR, Math.max(Runtime.getRuntime().availableProcessors() / 2, 2), 2000);
         Trace.endSection();
     }
 
