@@ -6705,8 +6705,8 @@ public abstract class RecentsView<
     }
 
     private void doScrollScale() {
-        if (showAsGrid() || mContainer.getDeviceProfile().isTablet)
-            return;
+        if (showAsGrid() || mContainer.getDeviceProfile().isTablet) return;
+        if (!isPageScrollsInitialized()) return;
 
         //nick@lmo-20231004 if rotating launcher is enabled, rotation works differently
         // There are many edge cases (going from landscape app to recents, rotating in recents etc)
@@ -6751,6 +6751,8 @@ public abstract class RecentsView<
     }
 
     public float getScrollScale(RemoteTargetHandle rth) {
+        if (showAsGrid() || mContainer.getDeviceProfile().isTablet) return 1f;
+        if (!isPageScrollsInitialized()) return 1f;
         int childCount = Math.min(mPageScrolls.length, getChildCount());
         for (int i = 0; i < childCount; i++) {
             View child = getChildAt(i);
