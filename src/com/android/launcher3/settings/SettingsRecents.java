@@ -28,7 +28,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 import androidx.annotation.Nullable;
-import androidx.core.view.WindowCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -45,6 +44,7 @@ import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.R;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
 /**
  * Settings activity for Launcher.
@@ -66,8 +66,6 @@ public class SettingsRecents extends CollapsingToolbarBaseActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
-
-        WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
 
         Intent intent = getIntent();
 
@@ -138,7 +136,7 @@ public class SettingsRecents extends CollapsingToolbarBaseActivity
     /**
      * This fragment shows the launcher preferences.
      */
-    public static class RecentsSettingsFragment extends PreferenceFragmentCompat {
+    public static class RecentsSettingsFragment extends SettingsBasePreferenceFragment {
 
         private boolean mRestartOnResume = false;
 
