@@ -2170,6 +2170,7 @@ public abstract class RecentsView<
         float alpha = mapToRange(fullscreenProgress, 0, 0.1f, 1f, 0f, LINEAR);
         mActionsView.getFullscreenAlpha().updateValue(alpha);
         mMemInfoView.setAlpha(MemInfoView.ALPHA_FS_PROGRESS, alpha);
+        mMemInfoView.setVisibility(alpha > 0f ? View.VISIBLE : View.GONE);
     }
 
     private void updateTaskStackListenerState() {

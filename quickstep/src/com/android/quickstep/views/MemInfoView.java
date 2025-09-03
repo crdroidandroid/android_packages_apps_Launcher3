@@ -224,7 +224,7 @@ public class MemInfoView extends TextView implements Insettable {
             Intent intent = new Intent(Intent.ACTION_MAIN);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             intent.setClassName("com.android.settings", "com.android.settings.Settings$DevRunningServicesActivity");
-            context.startActivity(intent);
+            view.getContext().startActivity(intent);
         });
     }
 
@@ -259,7 +259,7 @@ public class MemInfoView extends TextView implements Insettable {
     private void stopMemoryMonitoring() {
         synchronized (this) {
             if (mHandler != null) {
-                mHandler.removeCallbacksAndMessages(null);
+                mHandler.removeCallbacksAndMessages(mWorker);
                 mHandler = null;
             }
         }
