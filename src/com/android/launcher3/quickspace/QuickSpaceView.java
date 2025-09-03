@@ -72,7 +72,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
 
     public QuickSpaceView(Context context, AttributeSet set) {
         super(context, set);
-        mController = new QuickspaceController(context);
+        mController = new QuickspaceController(context.getApplicationContext());
         mColorStateList = ColorStateList.valueOf(Themes.getAttrColor(getContext(), R.attr.workspaceTextColor));
         mQuickspaceBackgroundRes = R.drawable.bg_quickspace;
         setClipChildren(false);
@@ -157,6 +157,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
         tv.setEllipsize(TruncateAt.END);
         final float textWidth = tv.getPaint().measureText(tv.getText().toString());
         tv.post(() -> {
+            if (!tv.isAttachedToWindow()) return;
             android.text.Layout layout = tv.getLayout();
             if (layout != null && layout.getEllipsizedWidth() < textWidth) {
                 tv.setEllipsize(TruncateAt.MARQUEE);
@@ -201,7 +202,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
 
     private QuickSpaceActionReceiver getActionReceiver() {
         if (mActionReceiver == null) {
-            mActionReceiver = new QuickSpaceActionReceiver(getContext());
+            mActionReceiver = new QuickSpaceActionReceiver(getContext().getApplicationContext());
         }
         return mActionReceiver;
     }
@@ -222,10 +223,22 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
         }
     }
 
+    private void clearOldViewState() {
+        View[] vs = new View[]{ mEventTitle, mEventTitleSub, mEventTitleSubColored,
+                mNowPlayingIcon, mEventSubIcon, mWeatherContentSub, mWeatherIconSub, mWeatherTempSub };
+        for (View v : vs) if (v != null) {
+            v.animate().cancel();
+            v.setOnClickListener(null);
+        }
+    }
+
     private void prepareLayout(boolean alt) {
         mIsAlternateStyle = alt;
         int insertIndex = (mQuickspaceContent != null) ? indexOfChild(mQuickspaceContent) : -1;
-        if (mQuickspaceContent != null) removeView(mQuickspaceContent);
+        if (mQuickspaceContent != null) {
+            clearOldViewState();
+            removeView(mQuickspaceContent);
+        }
         addView(LayoutInflater.from(getContext()).inflate(
                 alt ? R.layout.quickspace_alternate_double : R.layout.quickspace_doubleline,
                 this, false),
@@ -281,6 +294,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
 
     @Override
     public void onDetachedFromWindow() {
+        clearOldViewState();
         super.onDetachedFromWindow();
         if (mController != null) {
             mController.removeListener(this);
