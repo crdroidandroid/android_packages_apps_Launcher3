@@ -203,10 +203,9 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
         @Override
         public void onClick(View view) {
             InfoBottomSheet cbs;
-            Rect sourceBounds = Utilities.getViewBounds(view);
+            dismissTaskMenuView();
             ActivityOptionsWrapper options = mTarget.getActivityLaunchOptions(view, mItemInfo);
-            // Dismiss the taskMenu when the app launch animation is complete
-            options.onEndCallback.add(this::dismissTaskMenuView);
+            Rect sourceBounds = Utilities.getViewBounds(view);
             try {
                 cbs = (InfoBottomSheet) mTarget.getLayoutInflater().inflate(
                         R.layout.app_info_bottom_sheet,
@@ -220,7 +219,6 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
             }
             mTarget.getStatsLogManager().logger().withItemInfo(mItemInfo)
                     .log(LAUNCHER_SYSTEM_SHORTCUT_APP_INFO_TAP);
-            dismissTaskMenuView();
         }
 
         public static class SplitAccessibilityInfo {
