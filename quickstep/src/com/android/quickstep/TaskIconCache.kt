@@ -63,13 +63,13 @@ class TaskIconCache
 @Inject
 constructor(
     @ApplicationContext private val context: Context,
-    displayController: DisplayController,
+    private val displayController: DisplayController,
     private val dispatcherProvider: DispatcherProvider,
     themeManagerWrapper: PostUnlockObject<ThemeManager>,
     private val launcherIconCache: PostUnlockObject<IconCache>,
     @Ui private val uiExecutor: Executor,
     daggerSingletonTracker: DaggerSingletonTracker,
-) : TaskIconDataSource, OnSharedPreferenceChangeListener {
+) : TaskIconDataSource, OnSharedPreferenceChangeListener, AutoCloseable {
     // This bg executor executes thread-unsafe tasks like getBitmapInfoCacheEntry(), getCacheEntry()
     // and createIconFactory(), thus it must be single threaded.
     private val singleThreadedBgExecutor = TASK_IMAGE_CACHE_EXECUTOR
@@ -100,6 +100,11 @@ constructor(
         }
         daggerSingletonTracker.addCloseable(themeManagerWrapper)
         LauncherPrefs.getPrefs(context).registerOnSharedPreferenceChangeListener(this)
+    }
+
+    override fun close() {
+        LauncherPrefs.getPrefs(context).unregisterOnSharedPreferenceChangeListener(this)
+        clearCache()
     }
 
     private fun onDisplayInfoChanged(flags: Int) {
