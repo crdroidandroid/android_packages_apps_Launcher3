@@ -61,8 +61,10 @@ class TaskIconCache(
     private val context: Context,
     private val bgExecutor: Executor,
     private val iconProvider: IconProvider,
-    displayController: DisplayController,
-) : TaskIconDataSource, DisplayInfoChangeListener, OnSharedPreferenceChangeListener {
+    private val displayController: DisplayController,
+) : TaskIconDataSource, DisplayController.DisplayInfoChangeListener,
+    SharedPreferences.OnSharedPreferenceChangeListener, AutoCloseable {
+
     private val iconCache =
         TaskKeyLruCache<TaskCacheEntry>(
             context.resources.getInteger(R.integer.recentsIconCacheSize)
@@ -85,6 +87,12 @@ class TaskIconCache(
         //  displays.
         displayController.addChangeListener(this)
         LauncherPrefs.getPrefs(context).registerOnSharedPreferenceChangeListener(this)
+    }
+
+    override fun close() {
+        displayController.removeChangeListener(this)
+        LauncherPrefs.getPrefs(context).unregisterOnSharedPreferenceChangeListener(this)
+        bgExecutor.execute { resetFactory() }
     }
 
     override fun onDisplayInfoChanged(context: Context, info: DisplayController.Info, flags: Int) {
@@ -264,14 +272,16 @@ class TaskIconCache(
     @WorkerThread
     private fun getDefaultIcon(userId: Int): Drawable {
         synchronized(defaultIcons) {
-            val defaultIconBase =
-                defaultIconBase ?: iconFactory.use { it.makeDefaultIcon(iconProvider) }
+            if (defaultIconBase == null) {
+                defaultIconBase = iconFactory.use { it.makeDefaultIcon(iconProvider) }
+            }
+            val base = defaultIconBase!!
             val index: Int = defaultIcons.indexOfKey(userId)
             return if (index >= 0) {
                 defaultIcons.valueAt(index).newIcon(context)
             } else {
                 val info =
-                    defaultIconBase.withFlags(
+                    base.withFlags(
                         UserCache.INSTANCE.get(context)
                             .getUserInfo(UserHandle.of(userId))
                             .applyBitmapInfoFlags(FlagOp.NO_OP)
@@ -306,6 +316,10 @@ class TaskIconCache(
     private fun resetFactory() {
         _iconFactory = null
         iconCache.evictAll()
+        synchronized(defaultIcons) {
+            defaultIcons.clear()
+            defaultIconBase = null
+        }
     }
 
     data class TaskCacheEntry(
