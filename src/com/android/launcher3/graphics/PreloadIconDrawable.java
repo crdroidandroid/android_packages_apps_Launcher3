@@ -267,6 +267,7 @@ public class PreloadIconDrawable extends FastBitmapDrawable {
             float finalProgress, boolean isFinish, Runnable onFinishCallback) {
         if (mCurrentAnim != null) {
             mCurrentAnim.cancel();
+            mCurrentAnim.removeAllListeners();
             mCurrentAnim = null;
         }
 
