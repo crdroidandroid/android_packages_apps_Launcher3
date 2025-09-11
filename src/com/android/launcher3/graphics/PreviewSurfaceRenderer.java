@@ -172,6 +172,10 @@ public class PreviewSurfaceRenderer {
     }
 
     private void destroy() {
+        if (mViewRoot != null) {
+            mViewRoot.removeAllViews();
+            mViewRoot = null;
+        }
         mDestroyed = true;
     }
 
