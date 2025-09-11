@@ -15,35 +15,15 @@
  */
 package com.android.launcher3.quickspace;
 
-import android.app.PendingIntent;
-import android.content.ActivityNotFoundException;
-import android.content.ComponentName;
 import android.content.Context;
-import android.content.BroadcastReceiver;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.res.Resources;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
 import android.icu.text.DateFormat;
 import android.icu.text.DisplayContext;
-import android.media.MediaMetadata;
-import android.media.session.MediaController;
-import android.media.session.MediaSession;
-import android.media.session.MediaSessionManager;
-import android.net.Uri;
-import android.provider.AlarmClock;
-import android.provider.Settings;
-import android.text.TextUtils;
-import android.widget.Toast;
-import android.view.View;
 import android.view.View.OnClickListener;
 
 import androidx.core.content.ContextCompat;
 
-import com.android.launcher3.Launcher;
-import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 
@@ -51,10 +31,10 @@ import java.util.Calendar;
 import java.util.concurrent.ThreadLocalRandom;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import com.android.launcher3.quickspace.receivers.QuickSpaceActionReceiver;
 import com.android.launcher3.util.MSMHProxy;
 
 public class QuickEventsController {
@@ -147,35 +127,7 @@ public class QuickEventsController {
         if (mEventNowPlaying) return;
 
 	    mEventTitle = formatDateTime(mContext);
-        mEventTitleSubAction = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent calendarIntent = new Intent(Intent.ACTION_MAIN);
-                calendarIntent.addCategory(Intent.CATEGORY_APP_CALENDAR);
-
-                Intent clockIntent = new Intent(AlarmClock.ACTION_SHOW_ALARMS);
-
-                PackageManager packageManager = mContext.getPackageManager();
-                List<ResolveInfo> calendarApps = packageManager.queryIntentActivities(calendarIntent, PackageManager.MATCH_DEFAULT_ONLY);
-                List<ResolveInfo> clockApps = packageManager.queryIntentActivities(clockIntent, PackageManager.MATCH_DEFAULT_ONLY);
-
-                if (!calendarApps.isEmpty()) {
-                    calendarIntent.setPackage(calendarApps.get(0).activityInfo.packageName);
-                    try {
-                        mContext.startActivity(calendarIntent);
-                    } catch (ActivityNotFoundException e) {
-                    }
-                } else if (!clockApps.isEmpty()) {
-                    clockIntent.setPackage(clockApps.get(0).activityInfo.packageName);
-                    try {
-                        mContext.startActivity(clockIntent);
-                    } catch (ActivityNotFoundException e) {
-                    }
-                } else {
-                    Toast.makeText(mContext, R.string.intent_no_app_clock_found, Toast.LENGTH_SHORT).show();
-                }
-            }
-        };
+        mEventTitleSubAction = QuickSpaceActionReceiver.getCalendarAction();
 
         int hourOfDay = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
 
@@ -204,6 +156,8 @@ public class QuickEventsController {
             return;
         }
 
+        mEventSubIcon = null;
+
         int luckNumber = getLuckyNumber(13);
         if (luckNumber < 7) {
             mIsQuickEvent = false;
@@ -215,8 +169,6 @@ public class QuickEventsController {
             mIsQuickEvent = true;
             return;
         }
-
-        mEventSubIcon = null;
 
         mPSAStr = getPSAStr(hourOfDay);
 

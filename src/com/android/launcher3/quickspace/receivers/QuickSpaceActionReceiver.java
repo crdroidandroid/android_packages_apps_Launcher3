@@ -18,7 +18,6 @@ package com.android.launcher3.quickspace.receivers;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.ContentUris;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.LauncherApps;
 import android.net.Uri;
@@ -30,65 +29,60 @@ import android.view.View.OnClickListener;
 
 import com.android.launcher3.Launcher;
 import com.android.launcher3.R;
+import com.android.launcher3.Utilities;
 
 public class QuickSpaceActionReceiver {
 
-    private final Context mContext;
-    private final LauncherApps mLauncherApps;
+    private static final OnClickListener calendarClick = v -> openGoogleCalendar(v);
+    private static final OnClickListener weatherClick  = v -> openGoogleWeather(v);
 
-    public OnClickListener mCalendarClickListener;
-    public OnClickListener mWeatherClickListener;
-
-    public QuickSpaceActionReceiver(Context context) {
-        this.mContext = context;
-        mLauncherApps = context.getSystemService(LauncherApps.class);
-
-        mCalendarClickListener = new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openGoogleCalendar(view);
-            }
-        };
-
-        mWeatherClickListener = new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openGoogleWeather(view);
-            }
-        };
+    private static Launcher launcherFrom(View v) {
+        return Launcher.getLauncher(v.getContext());
     }
 
-    private void openGoogleCalendar(View view) {
-        final Uri content_URI = CalendarContract.CONTENT_URI;
-        final Uri.Builder appendPath = content_URI.buildUpon().appendPath("time");
-        ContentUris.appendId(appendPath, System.currentTimeMillis());
-        final Intent addFlags = new Intent(Intent.ACTION_VIEW)
-                .setData(appendPath.build())
-                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+    private static void openGoogleCalendar(View view) {
+        Uri.Builder b = CalendarContract.CONTENT_URI.buildUpon().appendPath("time");
+        ContentUris.appendId(b, System.currentTimeMillis());
+        Uri uri = b.build();
+        Intent i = new Intent(Intent.ACTION_VIEW)
+            .setData(uri)
+            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
         try {
-            Launcher.getLauncher(mContext).startActivitySafely(view, addFlags, null);
+            launcherFrom(view).startActivitySafely(view, i, null);
         } catch (ActivityNotFoundException ex) {
-            mLauncherApps.startAppDetailsActivity(new ComponentName("com.google.android.googlequicksearchbox", ""), Process.myUserHandle(), null, null);
-        }
+            if (!Utilities.isGSAEnabled(view.getContext())) return;
+            LauncherApps la = view.getContext()
+                .getSystemService(LauncherApps.class);
+            if (la != null) {
+                la.startAppDetailsActivity(
+                    new ComponentName("com.google.android.googlequicksearchbox", ""),
+                    Process.myUserHandle(), null, null);
+            }
+        } catch (SecurityException ignored) { }
     }
 
-    private void openGoogleWeather(View view) {
-        Intent intent = new Intent("android.intent.action.VIEW");
-        intent.setData(Uri.parse("dynact://velour/weather/ProxyActivity"));
-        intent.setComponent(new ComponentName("com.google.android.googlequicksearchbox", "com.google.android.apps.gsa.velour.DynamicActivityTrampoline"));
+    private static void openGoogleWeather(View view) {
+        if (!Utilities.isGSAEnabled(view.getContext())) return;
+        Intent i = new Intent(Intent.ACTION_VIEW)
+            .setData(Uri.parse("dynact://velour/weather/ProxyActivity"))
+            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED)
+            .setComponent(new ComponentName(
+                "com.google.android.googlequicksearchbox",
+                "com.google.android.apps.gsa.velour.DynamicActivityTrampoline"));
         try {
-            Launcher.getLauncher(mContext).startActivitySafely(view, intent, null);
+            launcherFrom(view).startActivitySafely(view, i, null);
         } catch (ActivityNotFoundException ex) {
-            mLauncherApps.startAppDetailsActivity(new ComponentName("com.google.android.googlequicksearchbox",
-                    "com.google.android.apps.gsa.velour.DynamicActivityTrampoline"), Process.myUserHandle(), null, null);
-        }
+            LauncherApps la = view.getContext()
+                .getSystemService(LauncherApps.class);
+            if (la != null) {
+                la.startAppDetailsActivity(
+                    new ComponentName("com.google.android.googlequicksearchbox",
+                        "com.google.android.apps.gsa.velour.DynamicActivityTrampoline"),
+                    Process.myUserHandle(), null, null);
+            }
+        } catch (SecurityException ignored) { }
     }
 
-    public OnClickListener getCalendarAction() {
-        return mCalendarClickListener;
-    }
-
-    public OnClickListener getWeatherAction() {
-        return mWeatherClickListener;
-    }
+    public static OnClickListener getCalendarAction() { return calendarClick; }
+    public static OnClickListener getWeatherAction()  { return weatherClick; }
 }
