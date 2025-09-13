@@ -36,33 +36,42 @@ class SeraphixDataProvider(
     private val smartspaceProviderComponent = ComponentName(QSB_PACKAGE, SMARTSPACE_PROVIDER)
     private var widgetId = hostWidgetId
     private var isWidgetBound = false
+    private var isListening = false
 
     fun setOnDataUpdated(listener: DataProviderListener? = null): SeraphixDataProvider {
         widgetHost.setOnDataUpdated(listener)
         return this
     }
 
+    fun pauseListening() {
+        if (isListening) {
+            widgetHost.stopListening()
+            isListening = false
+        }
+    }
+
+    fun resumeListening() {
+        if (isWidgetBound && !isListening) {
+            widgetHost.startListening()
+            isListening = true
+        }
+    }
+
     fun bind(onBounded: DataProviderBinder? = null) {
         if (isWidgetBound) return
-        if (!context.isPackageEnabled(QSB_PACKAGE)) {
-            Log.i(TAG, "No $QSB_PACKAGE installed/enabled")
-            return
-        }
+        if (!context.isPackageEnabled(QSB_PACKAGE)) return
 
         val wInfo = widgetManager.getAppWidgetInfo(widgetId)
         isWidgetBound = wInfo != null && providerInfo?.provider == wInfo.provider
         if (!isWidgetBound) {
-            if (widgetId > -1) {
-                widgetHost.deleteHost()
-            }
+            if (widgetId > -1) widgetHost.deleteHost()
             widgetId = widgetHost.allocateAppWidgetId()
-            isWidgetBound =
-                widgetManager.bindAppWidgetIdIfAllowed(widgetId, smartspaceProviderComponent)
+            isWidgetBound = widgetManager.bindAppWidgetIdIfAllowed(widgetId, smartspaceProviderComponent)
         }
 
         if (isWidgetBound) {
             onBounded?.onBound(widgetId)
-            widgetHost.startListening()
+            resumeListening()
             widgetHostView = widgetHost.createView(context, widgetId, providerInfo)
                     as EphemeralWidgetHostViewGoogle
         }
@@ -70,8 +79,11 @@ class SeraphixDataProvider(
 
     fun unbind() {
         if (!isWidgetBound) return
-        widgetHost.stopListening()
+        pauseListening()
         widgetHost.deleteHost()
+        if (::widgetHostView.isInitialized) {
+            widgetHostView.setOnUpdateAppWidget(null)
+        }
         isWidgetBound = false
     }
 
