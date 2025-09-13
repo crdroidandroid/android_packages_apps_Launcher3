@@ -74,6 +74,8 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
     private SeraphixDataProvider mSeraphix;
     private String mSeraphixText;
     private Icon mSeraphixIcon;
+    private String mLastText;
+    private int mLastBmpHash;
 
     private final Runnable mOnDataUpdatedRunnable = new Runnable() {
             @Override
@@ -223,6 +225,11 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
     };
 
     private void updateWeatherData(String text, Bitmap image) {
+        int hash = (image == null) ? 0 : (image.getWidth()*31 + image.getHeight()*17);
+        if (TextUtils.equals(text, mSeraphixText) && hash == mLastBmpHash) {
+            return;
+        }
+        mLastBmpHash = hash;
         mSeraphixText = text;
         mSeraphixIcon = image == null ? null : Icon.createWithBitmap(image);
         notifyListeners();
@@ -367,12 +374,18 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
         mHandler.removeCallbacks(mPsaRunnable);
         mHandler.removeCallbacks(mWeatherRunnable);
         mHandler.removeCallbacks(mOnDataUpdatedRunnable);
+        if (mProvider == WeatherProvider.SERAPHIX && mSeraphix != null) {
+            mSeraphix.pauseListening();
+        }
     }
 
     public void onResume() {
         registerMediaController();
         updateMediaController();
         decideWeatherProvider();
+        if (mProvider == WeatherProvider.SERAPHIX && mSeraphix != null) {
+            mSeraphix.resumeListening();
+        }
         mHandler.post(mPsaRunnable);
         notifyListeners();
     }
