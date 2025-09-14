@@ -1584,6 +1584,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
             mMoveDisplayTransition = null;
         }
         if (mBackAnimationController != null) {
+            mBackAnimationController.cleanupForDestroy();
             mBackAnimationController.unregisterBackCallbacks();
             mBackAnimationController.unregisterComponentCallbacks();
             mBackAnimationController = null;
