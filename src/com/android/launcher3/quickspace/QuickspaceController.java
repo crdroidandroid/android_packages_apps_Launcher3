@@ -63,6 +63,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
     private OmniJawsClient.WeatherInfo mWeatherInfo;
     private Drawable mConditionImage;
     private boolean mOmniRegistered = false;
+    private boolean mMediaRegistered = false;
 
     private static final long PSA_UPDATE_DELAY_MS = 3 * 60 * 1000;
 
@@ -225,7 +226,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
     };
 
     private void updateWeatherData(String text, Bitmap image) {
-        int hash = (image == null) ? 0 : (image.getWidth()*31 + image.getHeight()*17);
+        int hash = (image == null) ? 0 : image.getGenerationId();
         if (TextUtils.equals(text, mSeraphixText) && hash == mLastBmpHash) {
             return;
         }
@@ -245,7 +246,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
             decideWeatherProvider();
             registerMediaController();
             mEventsController.initQuickEvents();
-            mHandler.post(mPsaRunnable);
+            updatePSAevent();
         }
         listener.onDataUpdated();
     }
@@ -386,7 +387,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
         if (mProvider == WeatherProvider.SERAPHIX && mSeraphix != null) {
             mSeraphix.resumeListening();
         }
-        mHandler.post(mPsaRunnable);
+        updatePSAevent();
         notifyListeners();
     }
 
@@ -420,20 +421,31 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
         queryAndUpdateWeather();
     }
 
+    private void updatePSAevent() {
+        mHandler.removeCallbacks(mPsaRunnable);
+        mHandler.post(mPsaRunnable);
+    }
+
     private void queryAndUpdateWeather() {
+        mHandler.removeCallbacks(mWeatherRunnable);
         mHandler.post(mWeatherRunnable);
     }
 
     public void notifyListeners() {
+        mHandler.removeCallbacks(mOnDataUpdatedRunnable);
         mHandler.post(mOnDataUpdatedRunnable);
     }
 
     private void registerMediaController() {
+        if (mMediaRegistered) return;
         MSMHProxy.INSTANCE(mContext).addMediaMetadataListener(this);
+        mMediaRegistered = true;
     }
 
     private void unregisterMediaController() {
+        if (!mMediaRegistered) return;
         MSMHProxy.INSTANCE(mContext).removeMediaMetadataListener(this);
+        mMediaRegistered = false;
     }
 
     private boolean updateMediaController() {
