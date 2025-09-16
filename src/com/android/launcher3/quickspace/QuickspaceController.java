@@ -59,6 +59,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
     private OmniJawsClient.WeatherInfo mWeatherInfo;
     private Drawable mConditionImage;
     private boolean mOmniRegistered = false;
+    private boolean mMediaRegistered = false;
 
     private static final long PSA_UPDATE_DELAY_MS = 3 * 60 * 1000;
 
@@ -131,7 +132,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
             addWeatherProvider();
             registerMediaController();
             mEventsController.initQuickEvents();
-            mHandler.post(mPsaRunnable);
+            updatePSAevent();
         }
         listener.onDataUpdated();
     }
@@ -248,7 +249,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
     public void onResume() {
         registerMediaController();
         updateMediaController();
-        mHandler.post(mPsaRunnable);
+        updatePSAevent();
         notifyListeners();
     }
 
@@ -282,20 +283,31 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
         queryAndUpdateWeather();
     }
 
+    private void updatePSAevent() {
+        mHandler.removeCallbacks(mPsaRunnable);
+        mHandler.post(mPsaRunnable);
+    }
+
     private void queryAndUpdateWeather() {
+        mHandler.removeCallbacks(mWeatherRunnable);
         mHandler.post(mWeatherRunnable);
     }
 
     public void notifyListeners() {
+        mHandler.removeCallbacks(mOnDataUpdatedRunnable);
         mHandler.post(mOnDataUpdatedRunnable);
     }
 
     private void registerMediaController() {
+        if (mMediaRegistered) return;
         MSMHProxy.INSTANCE(mContext).addMediaMetadataListener(this);
+        mMediaRegistered = true;
     }
 
     private void unregisterMediaController() {
+        if (!mMediaRegistered) return;
         MSMHProxy.INSTANCE(mContext).removeMediaMetadataListener(this);
+        mMediaRegistered = false;
     }
 
     private boolean updateMediaController() {
