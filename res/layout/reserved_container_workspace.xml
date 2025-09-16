@@ -23,13 +23,5 @@
         android:layout_height="0dp"
         android:animateLayoutChanges="true">
 
-        <com.android.launcher3.BubbleTextView
-            android:layout_gravity="center"
-            android:id="@+id/dummyBubbleTextView"
-            android:visibility="invisible"
-            android:layout_width="0dp"
-            android:layout_height="36dp"
-            android:contentDescription="" />
-
     <include layout="@layout/quickspace_doubleline" />
 </com.android.launcher3.quickspace.QuickSpaceView>
