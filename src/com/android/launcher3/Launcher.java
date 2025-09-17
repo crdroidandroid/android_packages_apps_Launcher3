@@ -1342,6 +1342,9 @@ public class Launcher extends StatefulActivity<LauncherState>
 
         // QuickSpace
         mQuickSpace = findViewById(R.id.reserved_container_workspace);
+        if (!LauncherPrefs.SHOW_QUICKSPACE.get(this) && mQuickSpace != null) {
+            mQuickSpace.setVisibility(View.GONE);
+        }
 
         // Setup the drag controller (drop targets have to be added in reverse order in priority)
         mDropTargetBar.setup(mDragController);
