@@ -43,8 +43,8 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
     private static final String TAG = "Launcher3:QuickSpaceView";
     private static final boolean DEBUG = false;
 
-    public final ColorStateList mColorStateList;
-    public final int mQuickspaceBackgroundRes;
+    public ColorStateList mColorStateList;
+    public int mQuickspaceBackgroundRes;
 
     public ViewGroup mQuickspaceContent;
     public ImageView mEventSubIcon;
@@ -69,6 +69,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
 
     public QuickSpaceView(Context context, AttributeSet set) {
         super(context, set);
+        if (!LauncherPrefs.SHOW_QUICKSPACE.get(context)) return;
         mController = new QuickspaceController(context);
         mColorStateList = ColorStateList.valueOf(Themes.getAttrColor(getContext(), R.attr.workspaceTextColor));
         mQuickspaceBackgroundRes = R.drawable.bg_quickspace;
@@ -77,6 +78,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
 
     @Override
     public void onDataUpdated() {
+        if (mController == null) return;
         boolean altUI = LauncherPrefs.SHOW_QUICKSPACE_ALT.get(getContext());
         if (mEventTitle == null || mIsAlternateStyle != altUI) {
             prepareLayout(altUI);
@@ -87,7 +89,6 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
     }
 
     private final void loadDoubleLine(boolean useAlternativeQuickspaceUI) {
-        setBackgroundResource(mQuickspaceBackgroundRes);
         mEventTitle.setText(mController.getEventController().getTitle());
         if (useAlternativeQuickspaceUI) {
             String greetingsExt = mController.getEventController().getGreetings();
@@ -260,6 +261,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
 
         loadViews();
         getQuickSpaceView();
+        setBackgroundResource(mQuickspaceBackgroundRes);
     }
 
     private void getQuickSpaceView() {
@@ -312,35 +314,37 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
 
     @Override
     public void onDetachedFromWindow() {
+        if (mController == null) return;
         clearOldViewState();
+        setBackground(null);
         super.onDetachedFromWindow();
-        if (mController != null) {
-            mController.onPause();
-            mController.removeListener(this);
-            mListenerRegistered = false;
-        }
+        mController.onPause();
+        mController.removeListener(this);
+        mListenerRegistered = false;
     }
 
     @Override
     public void onFinishInflate() {
         super.onFinishInflate();
+        if (mController == null) return;
         loadViews();
         mFinishedInflate = true;
-        if (mController != null && isAttachedToWindow() && !mListenerRegistered) {
+        if (isAttachedToWindow() && !mListenerRegistered) {
             mController.addListener(this);
             mListenerRegistered = true;
         }
     }
 
     public void onPause() {
-        mController.onPause();
+        if (mController != null) mController.onPause();
     }
 
     public void onResume() {
-        if (mListenerRegistered) mController.onResume();
+        if (mController != null && mListenerRegistered) mController.onResume();
     }
 
     public void onDestroy() {
+        if (mController == null) return;
         mController.onDestroy();
         mController = null;
         mQuickspaceContent = null;
