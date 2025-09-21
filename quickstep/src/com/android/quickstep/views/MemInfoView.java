@@ -188,10 +188,10 @@ public class MemInfoView extends TextView implements Insettable {
     }
 
     private long getZramSize() {
-        long zramSize = 0;
-
         if (!Utilities.isShowMeminfoZram(getContext()))
-            return zramSize;
+            return 0;
+
+        long zramSize = 0;
 
         try (BufferedReader reader = new BufferedReader(new FileReader("/sys/block/zram0/disksize"))) {
             zramSize = Long.parseLong(reader.readLine().trim());
@@ -249,19 +249,16 @@ public class MemInfoView extends TextView implements Insettable {
     }
 
     private void startMemoryMonitoring() {
-        stopMemoryMonitoring();
         if (mHandler == null) {
             mHandler = new Handler(BACKGROUND_THREAD.getLooper());
+            mHandler.post(mWorker);
         }
-        mHandler.post(mWorker);
     }
 
     private void stopMemoryMonitoring() {
-        synchronized (this) {
-            if (mHandler != null) {
-                mHandler.removeCallbacksAndMessages(mWorker);
-                mHandler = null;
-            }
+        if (mHandler != null) {
+            mHandler.removeCallbacks(mWorker);
+            mHandler = null;
         }
     }
 
@@ -297,7 +294,8 @@ public class MemInfoView extends TextView implements Insettable {
             ThreadUtils.postOnMainThread(() -> view.setText(text));
 
             if (view.mHandler != null) {
-                view.mHandler.postDelayed(this, 1000);
+                view.mHandler.removeCallbacks(this);
+                view.mHandler.postDelayed(this, 3000);
             }
         }
     }
