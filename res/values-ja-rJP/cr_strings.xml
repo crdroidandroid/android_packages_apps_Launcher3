@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016-2023 crDroid Android Project
+     Copyright (C) 2016-2025 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -55,18 +55,6 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">テーマアイコン</string>
     <string name="pref_themed_icons_summary">ホーム画面で使われているテーマのアイコンを使用します</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">非表示 &amp; 保護アプリ</string>
-    <string name="trust_apps_auth_manager">ロック解除して非表示と保護されたアプリを管理する</string>
-    <string name="trust_apps_auth_open_app">認証して %1$s を開く</string>
-    <string name="trust_apps_loading">\u2026 を読み込み中...</string>
-    <string name="trust_apps_no_lock_error">アプリのアクセス制限をするには画面ロックの設定をしてください</string>
-    <string name="trust_apps_help">ヘルプ</string>
-    <string name="trust_apps_info_hidden">非表示アプリとそのウィジェットはドロワー内で非表示になります</string>
-    <string name="trust_apps_info_protected">保護されているアプリを開くには認証が必要です</string>
-    <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">提案</string>
-    <string name="suggestion_pref_screen_desc">全てのアプリとホーム画面の候補</string>
     <!-- Pause apps shortcut -->
     <string name="pause">一時停止</string>
     <string name="pause_apps_dialog_title">%1$s を一時停止しますか？</string>
@@ -79,6 +67,18 @@
     <string name="work_apps_enable_btn_text_custom">仕事用アプリをオンにする</string>
     <string name="work_apps_paused_info_body_custom">仕事用アプリからの通知、バッテリーの使用、位置情報へのアクセスはできません。</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">仕事用アプリでは、電話やテキストメッセージの受信、通知の送信、バッテリーの使用、位置情報へのアクセスはできません。</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">非表示 &amp; 保護アプリ</string>
+    <string name="trust_apps_auth_manager">ロック解除して非表示と保護されたアプリを管理する</string>
+    <string name="trust_apps_auth_open_app">認証して %1$s を開く</string>
+    <string name="trust_apps_loading">\u2026 を読み込み中...</string>
+    <string name="trust_apps_no_lock_error">アプリのアクセス制限をするには画面ロックの設定をしてください</string>
+    <string name="trust_apps_help">ヘルプ</string>
+    <string name="trust_apps_info_hidden">非表示アプリとそのウィジェットはドロワー内で非表示になります</string>
+    <string name="trust_apps_info_protected">保護されているアプリを開くには認証が必要です</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">提案</string>
+    <string name="suggestion_pref_screen_desc">全てのアプリとホーム画面の候補</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">再起動</string>
     <string name="pref_restart_summary">設定を適用するにはランチャーを再起動してください</string>
@@ -88,11 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">ダブルタップでスリープ</string>
     <string name="pref_sleep_gesture_summary">ホーム画面の空きスペースをダブルタップして画面を消灯します</string>
-    <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">値: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">デフォルト</string>
-    <string name="custom_seekbar_default_value_to_set">デフォルト値: <xliff:g id="v">%s</xliff:g>\n長押しで設定</string>
-    <string name="custom_seekbar_default_value_is_set">デフォルトの値が設定されています</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Icon size -->
     <string name="icon_size_title">アイコンのサイズ</string>
     <!-- Font size -->
@@ -104,6 +101,13 @@
     <string name="recents_app_killed">アプリを強制停止しました</string>
     <!-- Row Height -->
     <string name="row_height_title">行の高さ</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">ホットシートの背景</string>
+    <string name="hotseat_bg_summary">アプリドックに半透明の背景を追加する</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">背景の透明度</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">ストローク</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">検索</string>
     <string name="label_lens">Google レンズ</string>
@@ -115,13 +119,9 @@
     <string name="dock_theme_title">テーマアイコン</string>
     <string name="dock_theme_summary">検索バーにテーマアイコンを使用する</string>
     <string name="search_radius_title">角の丸み</string>
-    <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">ホットシートの背景</string>
-    <string name="hotseat_bg_summary">アプリドックに半透明の背景を追加する</string>
-    <!-- Background opacity -->
-    <string name="background_opacity_title">背景の透明度</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">ストローク</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">アプリ検索バー</string>
+    <string name="drawer_search_summary">アプリドロワー上部の検索バーを表示します</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">壁紙をスクロール</string>
     <string name="allow_wallpaper_scrolling_summary">複数ページでの壁紙のスクロール効果</string>
@@ -140,18 +140,8 @@
     <string name="recents_screenshot_title">スクリーンショット</string>
     <string name="recents_clear_all_title">すべてクリア</string>
     <string name="recents_lens_title">レンズ</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">短い視差を許可</string>
-    <string name="short_parallax_summary">壁紙をトリミングする代わりにページ数の少ない場合は壁紙全体のスクロール効果を有効にする</string>
-    <string name="single_page_center_title">単一ページを中央にする</string>
-    <string name="single_page_center_summary">ホーム画面が単一ページの場合は壁紙を中央に表示します</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">アプリ検索バー</string>
-    <string name="drawer_search_summary">アプリドロワー上部の検索バーを表示します</string>
-    <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">オートキーボード</string>
-    <string name="pref_auto_keyboard_summary">ドロワーを展開したときに検索を開始します</string>
     <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
     <string name="app_info_source">ソース</string>
     <string name="app_info_source_system">システム</string>
     <string name="app_info_last_update">最終更新</string>
@@ -162,9 +152,20 @@
     <string name="icon_pack_default_label">デフォルト</string>
     <string name="icon_pack_add">その他をインストール</string>
     <string name="icon_pack_no_market">利用可能なアプリストアがありません</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">短い視差を許可</string>
+    <string name="short_parallax_summary">壁紙をトリミングする代わりにページ数の少ない場合は壁紙全体のスクロール効果を有効にする</string>
+    <string name="single_page_center_title">単一ページを中央にする</string>
+    <string name="single_page_center_summary">ホーム画面が単一ページの場合は壁紙を中央に表示します</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">スクロールバー</string>
     <string name="drawer_scrollbar_summary">アプリドロワー横のスクロールバー</string>
+    <!-- Dark Status Bar -->
+    <string name="perf_dark_status_bar_title">暗いステータスバー</string>
+    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">At A Glance</string>
     <string name="show_quickspace_summary">ホーム画面の上部に表示します</string>
@@ -337,7 +338,12 @@
         <item>Telegramでお待ちしています</item>
         <item>We love you 3000</item>
     </string-array>
+    <string name="intent_no_app_clock_found">カレンダーまたは時計のアクティビティが見つかりません</string>
     <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quickspace_weather_provider_title">Weather provider</string>
+    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">天気予報</string>
     <string name="quick_event_ambient_weather_summary">現在の天気の最新情報を表示します</string>
     <string name="quick_event_ambient_weather_enabled_info">天気サービスを有効にする必要があります</string>
@@ -352,5 +358,4 @@
     <string name="quick_event_weather_city_summary">現在地の天気を表示します</string>
     <string name="quick_event_weather_text_title">現在の天気</string>
     <string name="quick_event_weather_text_summary">現在の天候の概要を表示します</string>
-    <string name="intent_no_app_clock_found">カレンダーまたは時計のアクティビティが見つかりません</string>
 </resources>

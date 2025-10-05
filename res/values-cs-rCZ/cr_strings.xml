@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016-2023 crDroid Android Project
+     Copyright (C) 2016-2025 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -55,18 +55,6 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Ikony motivů</string>
     <string name="pref_themed_icons_summary">Následovat ikony motivů používaných na domovské obrazovce</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Skryté a\u00a0zabezpečené aplikace</string>
-    <string name="trust_apps_auth_manager">Pro správu skrytých a\u00a0zabezpečených aplikací nejdříve odemkněte obrazovku</string>
-    <string name="trust_apps_auth_open_app">Proveďte ověření pro spuštění aplikace %1$s</string>
-    <string name="trust_apps_loading">Načítání\u2026</string>
-    <string name="trust_apps_no_lock_error">Pro omezení přístupu k\u00a0aplikaci prosím nastavte zabezpečenou obrazovku uzamčení</string>
-    <string name="trust_apps_help">Nápověda</string>
-    <string name="trust_apps_info_hidden">Skryté aplikace, včetně jejich widgetů, jsou skryty ze seznamu aplikací</string>
-    <string name="trust_apps_info_protected">Zabezpečené aplikace vyžadují ověření, aby mohly být otevřeny ze spouštěče</string>
-    <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Návrhy</string>
-    <string name="suggestion_pref_screen_desc">Pro všechny aplikace a\u00a0návrhy na domácí obrazovce</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Pozastavit</string>
     <string name="pause_apps_dialog_title">Pozastavit %1$s?</string>
@@ -79,6 +67,18 @@
     <string name="work_apps_enable_btn_text_custom">Zapnout pracovní aplikace</string>
     <string name="work_apps_paused_info_body_custom">Pracovní aplikace vám nemohou odesílat oznámení, využívat baterii nebo přistupovat k vaší poloze</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Pracovní aplikace vám nemohou odesílat oznámení, přijímat telefonní hovory nebo textové zprávy, využívat baterii nebo přistupovat k vaší poloze</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Skryté a\u00a0zabezpečené aplikace</string>
+    <string name="trust_apps_auth_manager">Pro správu skrytých a\u00a0zabezpečených aplikací nejdříve odemkněte obrazovku</string>
+    <string name="trust_apps_auth_open_app">Proveďte ověření pro spuštění aplikace %1$s</string>
+    <string name="trust_apps_loading">Načítání\u2026</string>
+    <string name="trust_apps_no_lock_error">Pro omezení přístupu k\u00a0aplikaci prosím nastavte zabezpečenou obrazovku uzamčení</string>
+    <string name="trust_apps_help">Nápověda</string>
+    <string name="trust_apps_info_hidden">Skryté aplikace, včetně jejich widgetů, jsou skryty ze seznamu aplikací</string>
+    <string name="trust_apps_info_protected">Zabezpečené aplikace vyžadují ověření, aby mohly být otevřeny ze spouštěče</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Návrhy</string>
+    <string name="suggestion_pref_screen_desc">Pro všechny aplikace a\u00a0návrhy na domácí obrazovce</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Restartovat</string>
     <string name="pref_restart_summary">Chcete-li aplikovat všechna čekající nastavení, restartujte spouštěč ručně</string>
@@ -88,11 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Uspat dvojím poklepáním</string>
     <string name="pref_sleep_gesture_summary">Dvojím poklepáním do prázdného prostoru uspat zařízení</string>
-    <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Hodnota: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">výchozí hodnota</string>
-    <string name="custom_seekbar_default_value_to_set">Výchozí hodnota: <xliff:g id="v">%s</xliff:g>\nDlouhým klepnutím ji nastavíte</string>
-    <string name="custom_seekbar_default_value_is_set">Výchozí hodnota je nastavena</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Icon size -->
     <string name="icon_size_title">Velikost ikon</string>
     <!-- Font size -->
@@ -104,6 +101,13 @@
     <string name="recents_app_killed">Aplikace ukončena</string>
     <!-- Row Height -->
     <string name="row_height_title">Výška řádku</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Pozadí Hotseat</string>
+    <string name="hotseat_bg_summary">Přidat průsvitné pozadí do doku aplikace</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Neprůhlednost pozadí</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Tah</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Vyhledat</string>
     <string name="label_lens">Google Lens</string>
@@ -115,13 +119,9 @@
     <string name="dock_theme_title">Ikony motivů</string>
     <string name="dock_theme_summary">Použít ikony motivů pro vyhledávací panel</string>
     <string name="search_radius_title">Poloměr rohu</string>
-    <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Pozadí Hotseat</string>
-    <string name="hotseat_bg_summary">Přidat průsvitné pozadí do doku aplikace</string>
-    <!-- Background opacity -->
-    <string name="background_opacity_title">Neprůhlednost pozadí</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Tah</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Vyhledávací panel aplikací</string>
+    <string name="drawer_search_summary">Vyhledávací panel v horní části seznamu aplikací</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Posuv tapety</string>
     <string name="allow_wallpaper_scrolling_summary">Efekt posunu tapety pro více obrazovek</string>
@@ -140,18 +140,8 @@
     <string name="recents_screenshot_title">Snímek obrazovky</string>
     <string name="recents_clear_all_title">Vymazat vše</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Povolit krátkou paralaxu</string>
-    <string name="short_parallax_summary">Povolit efekt posouvání celé tapety na menším počtu stránek namísto oříznutí tapety</string>
-    <string name="single_page_center_title">Vycentrovat jedinou stránku</string>
-    <string name="single_page_center_summary">Vycentrovat tapetu pouze při použití jedné stránky</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Vyhledávací panel aplikací</string>
-    <string name="drawer_search_summary">Vyhledávací panel v horní části seznamu aplikací</string>
-    <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Automatická klávesnice</string>
-    <string name="pref_auto_keyboard_summary">Zahájit vyhledávání, když je seznam aplikací rozšířen</string>
     <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
     <string name="app_info_source">Zdroj</string>
     <string name="app_info_source_system">Systém</string>
     <string name="app_info_last_update">Poslední aktualizace</string>
@@ -162,9 +152,20 @@
     <string name="icon_pack_default_label">Výchozí</string>
     <string name="icon_pack_add">Instalovat další</string>
     <string name="icon_pack_no_market">Není k\u00a0dispozici žádný obchod s\u00a0aplikacemi</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Povolit krátkou paralaxu</string>
+    <string name="short_parallax_summary">Povolit efekt posouvání celé tapety na menším počtu stránek namísto oříznutí tapety</string>
+    <string name="single_page_center_title">Vycentrovat jedinou stránku</string>
+    <string name="single_page_center_summary">Vycentrovat tapetu pouze při použití jedné stránky</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Posuvník</string>
     <string name="drawer_scrollbar_summary">Posuvník po straně seznamu aplikací</string>
+    <!-- Dark Status Bar -->
+    <string name="perf_dark_status_bar_title">Tmavý stavový řádek</string>
+    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Přehled událostí</string>
     <string name="show_quickspace_summary">Zobrazit v horní části Domovské obrazovky</string>
@@ -337,7 +338,12 @@
         <item>Pozdravte nás na Telegramu</item>
         <item>Milujeme tě 3000</item>
     </string-array>
+    <string name="intent_no_app_clock_found">Nelze najít aktivitu kalendáře nebo hodin</string>
     <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quickspace_weather_provider_title">Weather provider</string>
+    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">Aktualizace počasí</string>
     <string name="quick_event_ambient_weather_summary">Zobrazit aktuální aktualizaci počasí</string>
     <string name="quick_event_ambient_weather_enabled_info">Vyžaduje povolení služby počasí</string>
@@ -352,5 +358,4 @@
     <string name="quick_event_weather_city_summary">Zobrazit aktuální polohu počasí</string>
     <string name="quick_event_weather_text_title">Aktuální stav</string>
     <string name="quick_event_weather_text_summary">Zobrazit souhrn aktuálních podmínek počasí</string>
-    <string name="intent_no_app_clock_found">Nelze najít aktivitu kalendáře nebo hodin</string>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016-2023 crDroid Android Project
+     Copyright (C) 2016-2025 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -55,18 +55,6 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">آیکن های تم</string>
     <string name="pref_themed_icons_summary">نمادهای مضمون مورد استفاده در صفحه اصلی را دنبال کنید</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">برنامه‌های پنهان &amp; محافظت شده</string>
-    <string name="trust_apps_auth_manager">برای مدیریت برنامه‌های پنهان و محافظت شده قفل را باز کنید</string>
-    <string name="trust_apps_auth_open_app">احراز هویت برای باز کردن %1$s</string>
-    <string name="trust_apps_loading">در حال بارگزاری\u2026</string>
-    <string name="trust_apps_no_lock_error">لطفا یک قفل برای کنترل برنامه‌های پنهان و محافظت شده، تنظیم کنید</string>
-    <string name="trust_apps_help">کمک</string>
-    <string name="trust_apps_info_hidden">برنامه‌های مخفی و ویجت‌هایشان از فهرست برنامه ها پنهان هستند</string>
-    <string name="trust_apps_info_protected">برای باز کردن برنامه‌های محافظت شده از صفحه اصلی نیاز به احراز هویت می‌باشد</string>
-    <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">پیشنهادها</string>
-    <string name="suggestion_pref_screen_desc">پیشنهاد‌ها در صفحه خانه &amp; برای همه برنامه‌ها</string>
     <!-- Pause apps shortcut -->
     <string name="pause">توقف</string>
     <string name="pause_apps_dialog_title">%1$s مکث شود?</string>
@@ -79,6 +67,18 @@
     <string name="work_apps_enable_btn_text_custom">روشن کردن برنامه های کاری</string>
     <string name="work_apps_paused_info_body_custom">برنامه های کاری شما نمی توانند برای شما اعلان ارسال کنند، از باتری شما استفاده کنند یا به مکان شما دسترسی داشته باشند</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">برنامه های کاری شما نمی توانند تماس های تلفنی یا پیام های متنی را دریافت کنند، برای شما اعلان ارسال کنند، از باتری شما استفاده کنند یا به مکان شما دسترسی داشته باشند</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">برنامه‌های پنهان &amp; محافظت شده</string>
+    <string name="trust_apps_auth_manager">برای مدیریت برنامه‌های پنهان و محافظت شده قفل را باز کنید</string>
+    <string name="trust_apps_auth_open_app">احراز هویت برای باز کردن %1$s</string>
+    <string name="trust_apps_loading">در حال بارگزاری\u2026</string>
+    <string name="trust_apps_no_lock_error">لطفا یک قفل برای کنترل برنامه‌های پنهان و محافظت شده، تنظیم کنید</string>
+    <string name="trust_apps_help">کمک</string>
+    <string name="trust_apps_info_hidden">برنامه‌های مخفی و ویجت‌هایشان از فهرست برنامه ها پنهان هستند</string>
+    <string name="trust_apps_info_protected">برای باز کردن برنامه‌های محافظت شده از صفحه اصلی نیاز به احراز هویت می‌باشد</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">پیشنهادها</string>
+    <string name="suggestion_pref_screen_desc">پیشنهاد‌ها در صفحه خانه &amp; برای همه برنامه‌ها</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">راه اندازی مجدد</string>
     <string name="pref_restart_summary">ریست کردن صفحه اصلی برای اعمال تنظیمات اعمال نشده</string>
@@ -88,11 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">برای حالت خواب دوبار ضربه بزنید</string>
     <string name="pref_sleep_gesture_summary">برای خاموش کردن صفحه نمایش روی فضای خالی صفحه دوبار ضربه بزنید</string>
-    <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">ارزش: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">بطور پیش‌فرض</string>
-    <string name="custom_seekbar_default_value_to_set">ارزش پیش‌فرض: <xliff:g id="v">%s</xliff:g>\n برای تنظیم نگه دارید</string>
-    <string name="custom_seekbar_default_value_is_set">مقدار پیش‌فرض تعیین شده است</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Icon size -->
     <string name="icon_size_title">اندازه آیکون</string>
     <!-- Font size -->
@@ -104,6 +101,13 @@
     <string name="recents_app_killed">برنامه بسته شد</string>
     <!-- Row Height -->
     <string name="row_height_title">ارتفاع ردیف</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">پس زمینه صندلی داغ</string>
+    <string name="hotseat_bg_summary">پس زمینه شفاف را به داک برنامه اضافه کنید</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">شفافیت پس‌زمینه</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">حاشیه</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">جستجو</string>
     <string name="label_lens">لنز Google</string>
@@ -115,13 +119,9 @@
     <string name="dock_theme_title">آیکن های تم</string>
     <string name="dock_theme_summary">استفاده کردن از آیکن های تم برای پنل جستجو</string>
     <string name="search_radius_title">شعاع گوشه</string>
-    <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">پس زمینه صندلی داغ</string>
-    <string name="hotseat_bg_summary">پس زمینه شفاف را به داک برنامه اضافه کنید</string>
-    <!-- Background opacity -->
-    <string name="background_opacity_title">شفافیت پس‌زمینه</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">حاشیه</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">برنامه نوار جستجو</string>
+    <string name="drawer_search_summary">نوار جستجو در بالای منو فهرست برنامه ها</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">چرخش کاغذ دیواری</string>
     <string name="allow_wallpaper_scrolling_summary">جلوه چرخش کاغذ دیواری برای چندین صفحه</string>
@@ -140,18 +140,8 @@
     <string name="recents_screenshot_title">عکس گرفتن از صفحه</string>
     <string name="recents_clear_all_title">پاک کردن همه موارد</string>
     <string name="recents_lens_title">لنز</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">منظر کوتاه را مجاز کنید</string>
-    <string name="short_parallax_summary">به جای برش دادن کاغذدیواری، جلوه اسکرول کامل تصویر زمینه را در تعداد صفحات کمتری فعال کنید</string>
-    <string name="single_page_center_title">تک صفحه مرکز</string>
-    <string name="single_page_center_summary">تصویر زمینه در مرکز اگر شما فقط یک صفحه دارید</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">برنامه نوار جستجو</string>
-    <string name="drawer_search_summary">نوار جستجو در بالای منو فهرست برنامه ها</string>
-    <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">صفحه کلید خودکار</string>
-    <string name="pref_auto_keyboard_summary">وقتی کشو باز شد، جستجو را شروع کنید</string>
     <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
     <string name="app_info_source">منبع</string>
     <string name="app_info_source_system">سیستم</string>
     <string name="app_info_last_update">آخرین بروزرسانی</string>
@@ -162,9 +152,20 @@
     <string name="icon_pack_default_label">پیش‌فرض</string>
     <string name="icon_pack_add">نصب بیشتر</string>
     <string name="icon_pack_no_market">هیچ فروشگاه برنامه در دسترس نیست</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">منظر کوتاه را مجاز کنید</string>
+    <string name="short_parallax_summary">به جای برش دادن کاغذدیواری، جلوه اسکرول کامل تصویر زمینه را در تعداد صفحات کمتری فعال کنید</string>
+    <string name="single_page_center_title">تک صفحه مرکز</string>
+    <string name="single_page_center_summary">تصویر زمینه در مرکز اگر شما فقط یک صفحه دارید</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">نوار پیمایش</string>
     <string name="drawer_scrollbar_summary">نوار پیمایش در کنار کشوی برنامه</string>
+    <!-- Dark Status Bar -->
+    <string name="perf_dark_status_bar_title">نوار وضعیت تاریک</string>
+    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">در یک دید</string>
     <string name="show_quickspace_summary">در بالای صفحه اصلی نمایش داده شود</string>
@@ -343,7 +344,12 @@ Remember the Lineage of the Unicorn</item>
         <item>در تلگرام به ما سلام کنید</item>
         <item>تو رو ۳۰۰۰تا دوست داریم</item>
     </string-array>
+    <string name="intent_no_app_clock_found">فعالیت تقویم یا ساعت یافت نشد</string>
     <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quickspace_weather_provider_title">Weather provider</string>
+    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">به روز رسانی آب و هوا</string>
     <string name="quick_event_ambient_weather_summary">نمایش به روز رسانی آب و هوای فعلی</string>
     <string name="quick_event_ambient_weather_enabled_info">نیازمند روشن بودن سرویس آب و هوا می باشد</string>
@@ -358,5 +364,4 @@ Remember the Lineage of the Unicorn</item>
     <string name="quick_event_weather_city_summary">نمایش مکان آب و هوای جاری</string>
     <string name="quick_event_weather_text_title">وضعیت فعلی</string>
     <string name="quick_event_weather_text_summary">نمایش خلاصه وضعیت آب و هوای فعلی</string>
-    <string name="intent_no_app_clock_found">فعالیت تقویم یا ساعت یافت نشد</string>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016-2023 crDroid Android Project
+     Copyright (C) 2016-2025 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -55,18 +55,6 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">테마형 아이콘</string>
     <string name="pref_themed_icons_summary">홈화면에 사용된 테마화 아이콘 따라하기</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">숨겨지거나 보호된 앱</string>
-    <string name="trust_apps_auth_manager">숨겨지거나 보호된 앱을 관리하려면 잠금을 해제하세요.</string>
-    <string name="trust_apps_auth_open_app">인증하여 %1$s 열기</string>
-    <string name="trust_apps_loading">로드 중\u2026</string>
-    <string name="trust_apps_no_lock_error">앱 접근을 제한하려면 잠금 화면 보안을 설정하세요</string>
-    <string name="trust_apps_help">도움말</string>
-    <string name="trust_apps_info_hidden">숨겨진 앱과 해당 앱의 위젯은 앱 서랍에서 숨겨집니다.</string>
-    <string name="trust_apps_info_protected">실행기에서 보호된 앱을 실행하기 위해 인증이 필요합니다.</string>
-    <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">제안</string>
-    <string name="suggestion_pref_screen_desc">모든 앱 &amp; 홈 화면 제안</string>
     <!-- Pause apps shortcut -->
     <string name="pause">일시중지</string>
     <string name="pause_apps_dialog_title">%1$s간 일시정지할까요?</string>
@@ -79,6 +67,18 @@
     <string name="work_apps_enable_btn_text_custom">워크 앱 켜기</string>
     <string name="work_apps_paused_info_body_custom">워크앱이 알림을 보내거나 배터리, 위치 정보에 접근할 수 없습니다</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">워크앱이 통화, 문자 메시지, 알림, 배터리, 또는 위치 정보를 받아볼 수 없습니다</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">숨겨지거나 보호된 앱</string>
+    <string name="trust_apps_auth_manager">숨겨지거나 보호된 앱을 관리하려면 잠금을 해제하세요.</string>
+    <string name="trust_apps_auth_open_app">인증하여 %1$s 열기</string>
+    <string name="trust_apps_loading">로드 중\u2026</string>
+    <string name="trust_apps_no_lock_error">앱 접근을 제한하려면 잠금 화면 보안을 설정하세요</string>
+    <string name="trust_apps_help">도움말</string>
+    <string name="trust_apps_info_hidden">숨겨진 앱과 해당 앱의 위젯은 앱 서랍에서 숨겨집니다.</string>
+    <string name="trust_apps_info_protected">실행기에서 보호된 앱을 실행하기 위해 인증이 필요합니다.</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">제안</string>
+    <string name="suggestion_pref_screen_desc">모든 앱 &amp; 홈 화면 제안</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">재시작</string>
     <string name="pref_restart_summary">변경한 설정을 적용하려면 런처를 재실행하세요</string>
@@ -88,11 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">두 번 탭하여 화면 끄기</string>
     <string name="pref_sleep_gesture_summary">빈 공간을 두 번 탭하여 화면 끄기</string>
-    <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">값: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">기본값</string>
-    <string name="custom_seekbar_default_value_to_set">기본값: <xliff:g id="v">%s</xliff:g>\n길게 눌러서 설정</string>
-    <string name="custom_seekbar_default_value_is_set">기본값으로 설정됨</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Icon size -->
     <string name="icon_size_title">아이콘 크기</string>
     <!-- Font size -->
@@ -104,6 +101,13 @@
     <string name="recents_app_killed">앱 종료됨</string>
     <!-- Row Height -->
     <string name="row_height_title">행 높이</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">독 영역 배경</string>
+    <string name="hotseat_bg_summary">앱 서랍에 반투명 배경 추가</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">배경 불투명도</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">스트로크</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">검색</string>
     <string name="label_lens">구글 렌즈</string>
@@ -115,13 +119,9 @@
     <string name="dock_theme_title">테마형 아이콘</string>
     <string name="dock_theme_summary">테마형 아이콘을 검색 바에 사용</string>
     <string name="search_radius_title">모서리 각도</string>
-    <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">독 영역 배경</string>
-    <string name="hotseat_bg_summary">앱 서랍에 반투명 배경 추가</string>
-    <!-- Background opacity -->
-    <string name="background_opacity_title">배경 불투명도</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">스트로크</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">앱 검색창</string>
+    <string name="drawer_search_summary">앱서랍 상단에 검색창</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">배경화면 스크롤</string>
     <string name="allow_wallpaper_scrolling_summary">여러개의 화면을 위한 배경화면 스크롤링 효과</string>
@@ -140,18 +140,8 @@
     <string name="recents_screenshot_title">스크린샷</string>
     <string name="recents_clear_all_title">모두 지우기</string>
     <string name="recents_lens_title">렌즈</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">짧은 패럴랙스 허용</string>
-    <string name="short_parallax_summary">적은 수의 페이지일 때 배경을 자르기보다 전체 배경을 스크롤하기</string>
-    <string name="single_page_center_title">단일 페이지 중앙</string>
-    <string name="single_page_center_summary">단일 페이지만 사용할 때 배경을 가운데 정렬하기</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">앱 검색창</string>
-    <string name="drawer_search_summary">앱서랍 상단에 검색창</string>
-    <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">자동 키보드</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
     <string name="app_info_source">출처</string>
     <string name="app_info_source_system">시스템</string>
     <string name="app_info_last_update">마지막 업데이트</string>
@@ -162,9 +152,20 @@
     <string name="icon_pack_default_label">기본값</string>
     <string name="icon_pack_add">추가로 설치</string>
     <string name="icon_pack_no_market">사용할 수 있는 앱 스토어가 없습니다</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">짧은 패럴랙스 허용</string>
+    <string name="short_parallax_summary">적은 수의 페이지일 때 배경을 자르기보다 전체 배경을 스크롤하기</string>
+    <string name="single_page_center_title">단일 페이지 중앙</string>
+    <string name="single_page_center_summary">단일 페이지만 사용할 때 배경을 가운데 정렬하기</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">스크롤바</string>
     <string name="drawer_scrollbar_summary">앱 서랍 옆에 스크롤 바</string>
+    <!-- Dark Status Bar -->
+    <string name="perf_dark_status_bar_title">Dark status bar</string>
+    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">한 눈에 보기</string>
     <string name="show_quickspace_summary">홈 화면 상단에 표시</string>
@@ -337,7 +338,12 @@
         <item>Telegram에서 만나요!</item>
         <item>3000만큼 사랑해요.</item>
     </string-array>
+    <string name="intent_no_app_clock_found">일정이나 알림을 찾을 수 없습니다</string>
     <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quickspace_weather_provider_title">Weather provider</string>
+    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">날씨 업데이트</string>
     <string name="quick_event_ambient_weather_summary">현재 위치의 날씨 표시</string>
     <string name="quick_event_ambient_weather_enabled_info">날씨 정보 서비스 활성화가 필요합니다</string>
@@ -352,5 +358,4 @@
     <string name="quick_event_weather_city_summary">현재 위치의 날씨 표시</string>
     <string name="quick_event_weather_text_title">현재 상태</string>
     <string name="quick_event_weather_text_summary">현재 날씨 요약 표시</string>
-    <string name="intent_no_app_clock_found">일정이나 알림을 찾을 수 없습니다</string>
 </resources>

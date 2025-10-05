@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016-2023 crDroid Android Project
+     Copyright (C) 2016-2025 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -55,18 +55,6 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Biểu tượng theo chủ đề</string>
     <string name="pref_themed_icons_summary">Sử dụng biểu tượng theo chủ đề trên màn hình chính</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Ẩn hoặc bảo vệ ứng dụng</string>
-    <string name="trust_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn hoặc được bảo vệ</string>
-    <string name="trust_apps_auth_open_app">Xác thực để mở %1$s</string>
-    <string name="trust_apps_loading">Đang tải\u2026</string>
-    <string name="trust_apps_no_lock_error">Hãy thiết lập màn hình khóa an toàn để hạn chế quyền truy cập ứng dụng</string>
-    <string name="trust_apps_help">Trợ giúp</string>
-    <string name="trust_apps_info_hidden">Ứng dụng cùng với tiện ích sẽ bị ẩn khỏi ngăn chứa ứng dụng</string>
-    <string name="trust_apps_info_protected">Các ứng dụng được bảo vệ yêu cầu xác thực được mở từ trình khởi chạy</string>
-    <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Đề xuất</string>
-    <string name="suggestion_pref_screen_desc">Đối với tất cả ứng dụng &amp; Đề xuất ở màn hình chính</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Tạm dừng</string>
     <string name="pause_apps_dialog_title">Tạm dừng %1$s?</string>
@@ -79,6 +67,18 @@
     <string name="work_apps_enable_btn_text_custom">Bật các ứng dụng công việc</string>
     <string name="work_apps_paused_info_body_custom">Ứng dụng công việc không thể gửi thông báo và sử dụng pin hoặc truy cập thông tin vị trí</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Ứng dụng công việc không thể nhận cuộc gọi điện thoại hoặc tin nhắn văn bản, gửi thông báo, sử dụng pin hoặc truy cập vị trí</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Ẩn hoặc bảo vệ ứng dụng</string>
+    <string name="trust_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn hoặc được bảo vệ</string>
+    <string name="trust_apps_auth_open_app">Xác thực để mở %1$s</string>
+    <string name="trust_apps_loading">Đang tải\u2026</string>
+    <string name="trust_apps_no_lock_error">Hãy thiết lập màn hình khóa an toàn để hạn chế quyền truy cập ứng dụng</string>
+    <string name="trust_apps_help">Trợ giúp</string>
+    <string name="trust_apps_info_hidden">Ứng dụng cùng với tiện ích sẽ bị ẩn khỏi ngăn chứa ứng dụng</string>
+    <string name="trust_apps_info_protected">Các ứng dụng được bảo vệ yêu cầu xác thực được mở từ trình khởi chạy</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Đề xuất</string>
+    <string name="suggestion_pref_screen_desc">Đối với tất cả ứng dụng &amp; Đề xuất ở màn hình chính</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Khởi động lại</string>
     <string name="pref_restart_summary">Khởi động lại trình khởi chạy để áp dụng các cài đặt đang chờ xử lý</string>
@@ -88,11 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Chạm hai lần để tắt màn hình</string>
     <string name="pref_sleep_gesture_summary">Nhấn liên tiếp hai lần vào khoảng trống để tắt màn hình</string>
-    <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Giá trị: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">theo mặc định</string>
-    <string name="custom_seekbar_default_value_to_set">Giá trị mặc định: <xliff:g id="v">%s</xliff:g>\nNhấn giữ để thiết lập</string>
-    <string name="custom_seekbar_default_value_is_set">Giá trị mặc định được thiết lập</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Icon size -->
     <string name="icon_size_title">Kích thước biểu tượng</string>
     <!-- Font size -->
@@ -104,6 +101,13 @@
     <string name="recents_app_killed">Ứng dụng đã được tắt</string>
     <!-- Row Height -->
     <string name="row_height_title">Chiều cao hàng</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Nền thanh công cụ</string>
+    <string name="hotseat_bg_summary">Thêm nền mờ vào thanh ứng dụng</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Độ mờ của nền</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Độ nét</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Tìm kiếm</string>
     <string name="label_lens">Ống kính google</string>
@@ -115,13 +119,9 @@
     <string name="dock_theme_title">Biểu tượng theo chủ đề</string>
     <string name="dock_theme_summary">Dùng biểu tượng theo chủ đề cho thanh tìm kiếm</string>
     <string name="search_radius_title">Bán kính góc</string>
-    <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Nền thanh công cụ</string>
-    <string name="hotseat_bg_summary">Thêm nền mờ vào thanh ứng dụng</string>
-    <!-- Background opacity -->
-    <string name="background_opacity_title">Độ mờ của nền</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Độ nét</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Hiện thanh tìm kiếm</string>
+    <string name="drawer_search_summary">Hiện thanh tìm kiếm ứng dụng</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Cuộn hình nền</string>
     <string name="allow_wallpaper_scrolling_summary">Hiệu ứng cuộn hình nền cho nhiều màn hình</string>
@@ -140,18 +140,8 @@
     <string name="recents_screenshot_title">Chụp ảnh màn hình</string>
     <string name="recents_clear_all_title">Xoá tất cả</string>
     <string name="recents_lens_title">Ống kính</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Cho phép thị sai ngắn</string>
-    <string name="short_parallax_summary">Dùng hiệu ứng để cuộn trên các trang khác thay vì cắt hình nền</string>
-    <string name="single_page_center_title">Hình nền vị trí trung tâm</string>
-    <string name="single_page_center_summary">Hình nền ở vị trí trung tâm khi dùng một trang</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Hiện thanh tìm kiếm</string>
-    <string name="drawer_search_summary">Hiện thanh tìm kiếm ứng dụng</string>
-    <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Bàn phím tự động</string>
-    <string name="pref_auto_keyboard_summary">Bắt đầu tìm kiếm khi ngăn kéo được mở rộng</string>
     <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
     <string name="app_info_source">Nguồn cài đặt</string>
     <string name="app_info_source_system">Hệ thống</string>
     <string name="app_info_last_update">Cập nhật mới nhất</string>
@@ -162,9 +152,20 @@
     <string name="icon_pack_default_label">Mặc định</string>
     <string name="icon_pack_add">Cài đặt thêm</string>
     <string name="icon_pack_no_market">Không có ứng dụng nào khả dụng trong cửa hàng</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Cho phép thị sai ngắn</string>
+    <string name="short_parallax_summary">Dùng hiệu ứng để cuộn trên các trang khác thay vì cắt hình nền</string>
+    <string name="single_page_center_title">Hình nền vị trí trung tâm</string>
+    <string name="single_page_center_summary">Hình nền ở vị trí trung tâm khi dùng một trang</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Thanh cuộn</string>
     <string name="drawer_scrollbar_summary">Thanh cuộn ở bên cạnh ngăn kéo ứng dụng</string>
+    <!-- Dark Status Bar -->
+    <string name="perf_dark_status_bar_title">Thanh trạng thái tối</string>
+    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Xem nhanh</string>
     <string name="show_quickspace_summary">Hiển thị trên đầu màn hình chính</string>
@@ -338,7 +339,12 @@ Gửi cho chúng tôi một cốc bia</item>
         <item>Trò chuyện cùng nhau trên ứng dụng điện tín</item>
         <item>Chúng tôi yêu bạn 3000</item>
     </string-array>
+    <string name="intent_no_app_clock_found">Không thể tìm thấy lịch hoặc hoạt động đồng hồ</string>
     <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quickspace_weather_provider_title">Weather provider</string>
+    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">Cập nhật thời tiết</string>
     <string name="quick_event_ambient_weather_summary">Hiển thị cập nhật thời tiết hiện tại</string>
     <string name="quick_event_ambient_weather_enabled_info">Yêu cầu bật dịch vụ thời tiết</string>
@@ -353,5 +359,4 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="quick_event_weather_city_summary">Hiển thị vị trí thời tiết hiện tại</string>
     <string name="quick_event_weather_text_title">Tình trạng hiện tại</string>
     <string name="quick_event_weather_text_summary">Hiển thị tóm tắt tình trạng thời tiết hiện tại</string>
-    <string name="intent_no_app_clock_found">Không thể tìm thấy lịch hoặc hoạt động đồng hồ</string>
 </resources>

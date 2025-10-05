@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016-2023 crDroid Android Project
+     Copyright (C) 2016-2025 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -55,18 +55,6 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">搜尋列著色</string>
     <string name="pref_themed_icons_summary">將應用程式抽屜中的圖示也套用主題色</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">隱藏和受保護的應用程式</string>
-    <string name="trust_apps_auth_manager">解鎖以管理隱藏和受保護的應用程式</string>
-    <string name="trust_apps_auth_open_app">進行身份驗證以開啟 %1$s</string>
-    <string name="trust_apps_loading">載入中\u2026</string>
-    <string name="trust_apps_no_lock_error">請設置安全的鎖定方式來限制應用程式的存取權限</string>
-    <string name="trust_apps_help">說明</string>
-    <string name="trust_apps_info_hidden">隱藏應用程式及其小工具</string>
-    <string name="trust_apps_info_protected">需要身份驗證才能使用受保護的應用程式</string>
-    <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">建議</string>
-    <string name="suggestion_pref_screen_desc">在應用程式清單和主畫面上顯示建議</string>
     <!-- Pause apps shortcut -->
     <string name="pause">暫停應用程式</string>
     <string name="pause_apps_dialog_title">暫停 %1$s？</string>
@@ -79,6 +67,18 @@
     <string name="work_apps_enable_btn_text_custom">開啟工作模式中的應用程式</string>
     <string name="work_apps_paused_info_body_custom">工作模式中的應用程式無法傳送通知、讀取電池電量也無法存取位置資訊</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">工作模式中的應用程式無法接收來電及簡訊、傳送通知、讀取電池電量也無法存取位置資訊</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">隱藏和受保護的應用程式</string>
+    <string name="trust_apps_auth_manager">解鎖以管理隱藏和受保護的應用程式</string>
+    <string name="trust_apps_auth_open_app">進行身份驗證以開啟 %1$s</string>
+    <string name="trust_apps_loading">載入中\u2026</string>
+    <string name="trust_apps_no_lock_error">請設置安全的鎖定方式來限制應用程式的存取權限</string>
+    <string name="trust_apps_help">說明</string>
+    <string name="trust_apps_info_hidden">隱藏應用程式及其小工具</string>
+    <string name="trust_apps_info_protected">需要身份驗證才能使用受保護的應用程式</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">建議</string>
+    <string name="suggestion_pref_screen_desc">在應用程式清單和主畫面上顯示建議</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">重新啟動</string>
     <string name="pref_restart_summary">重新啟動主畫面來套用設定</string>
@@ -88,11 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">輕觸兩下即可休眠</string>
     <string name="pref_sleep_gesture_summary">在空白處點兩下以關閉螢幕</string>
-    <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">值：<xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">預設</string>
-    <string name="custom_seekbar_default_value_to_set">預設值：<xliff:g id="v">%s</xliff:g>\n長按以設定</string>
-    <string name="custom_seekbar_default_value_is_set">已設定為預設值</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Icon size -->
     <string name="icon_size_title">圖示大小</string>
     <!-- Font size -->
@@ -104,6 +101,13 @@
     <string name="recents_app_killed">已強制停止應用程式</string>
     <!-- Row Height -->
     <string name="row_height_title">列高</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">底欄背景</string>
+    <string name="hotseat_bg_summary">在底部的應用程式列顯示透明背景</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">背景透明度</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">邊框</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">搜尋</string>
     <string name="label_lens">智慧鏡頭</string>
@@ -115,13 +119,9 @@
     <string name="dock_theme_title">搜尋列著色</string>
     <string name="dock_theme_summary">將主題色套用於搜尋列</string>
     <string name="search_radius_title">圓角大小</string>
-    <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">底欄背景</string>
-    <string name="hotseat_bg_summary">在底部的應用程式列顯示透明背景</string>
-    <!-- Background opacity -->
-    <string name="background_opacity_title">背景透明度</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">邊框</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">搜尋列</string>
+    <string name="drawer_search_summary">應用程式清單頂部的搜尋列</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">桌布滑動</string>
     <string name="allow_wallpaper_scrolling_summary">在不同頁面間滑動時使桌布跟著移動</string>
@@ -140,18 +140,8 @@
     <string name="recents_screenshot_title">螢幕截圖</string>
     <string name="recents_clear_all_title">全部清除</string>
     <string name="recents_lens_title">智慧鏡頭</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">桌布滾動</string>
-    <string name="short_parallax_summary">在主畫面頁數較少時使用桌布滾動，而非裁切部分桌布</string>
-    <string name="single_page_center_title">單頁桌布置中</string>
-    <string name="single_page_center_summary">主畫面頁數只有一頁時，使桌布置中</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">搜尋列</string>
-    <string name="drawer_search_summary">應用程式清單頂部的搜尋列</string>
-    <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">自動開啟鍵盤</string>
-    <string name="pref_auto_keyboard_summary">展開應用程式列表時開啟搜尋功能</string>
     <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
     <string name="app_info_source">來源</string>
     <string name="app_info_source_system">系統</string>
     <string name="app_info_last_update">上次更新</string>
@@ -162,9 +152,20 @@
     <string name="icon_pack_default_label">預設</string>
     <string name="icon_pack_add">安裝更多...</string>
     <string name="icon_pack_no_market">沒有可用的應用程式商店</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">桌布滾動</string>
+    <string name="short_parallax_summary">在主畫面頁數較少時使用桌布滾動，而非裁切部分桌布</string>
+    <string name="single_page_center_title">單頁桌布置中</string>
+    <string name="single_page_center_summary">主畫面頁數只有一頁時，使桌布置中</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">滑動條</string>
     <string name="drawer_scrollbar_summary">應用程式選單側邊的滑動條</string>
+    <!-- Dark Status Bar -->
+    <string name="perf_dark_status_bar_title">深色狀態列</string>
+    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">快速查看</string>
     <string name="show_quickspace_summary">在主畫面頂端顯示</string>
@@ -337,7 +338,12 @@
         <item>到 Telegram 群組跟我們打個招呼吧</item>
         <item>我們愛你 3000 次</item>
     </string-array>
+    <string name="intent_no_app_clock_found">找不到日曆或時鐘應用程式</string>
     <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quickspace_weather_provider_title">Weather provider</string>
+    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">天氣更新</string>
     <string name="quick_event_ambient_weather_summary">顯示目前的天氣更新</string>
     <string name="quick_event_ambient_weather_enabled_info">需要啟用天氣服務</string>
@@ -352,5 +358,4 @@
     <string name="quick_event_weather_city_summary">顯示目前所在地的天氣</string>
     <string name="quick_event_weather_text_title">目前天氣狀況</string>
     <string name="quick_event_weather_text_summary">顯示目前的天氣概況</string>
-    <string name="intent_no_app_clock_found">找不到日曆或時鐘應用程式</string>
 </resources>

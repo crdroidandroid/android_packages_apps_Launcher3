@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016-2023 crDroid Android Project
+     Copyright (C) 2016-2025 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -55,18 +55,6 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Témázott ikonok</string>
     <string name="pref_themed_icons_summary">A kezdőképernyőn használt tematikus ikonokhoz igazodik</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Rejtett és védett alkalmazások</string>
-    <string name="trust_apps_auth_manager">Feloldás a rejtett és védett alkalmazások kezeléséhez</string>
-    <string name="trust_apps_auth_open_app">Hitelesítés a következő megnyitásához: %1$s</string>
-    <string name="trust_apps_loading">Betöltés\u2026</string>
-    <string name="trust_apps_no_lock_error">Kérjük, állítson be biztonságos (védett) képernyőzárat az alkalmazás-hozzáférések korlátozására</string>
-    <string name="trust_apps_help">Súgó</string>
-    <string name="trust_apps_info_hidden">A rejtett alkalmazások és kisalkalmazásaik az alkalmazásfiókban sem láthatóak</string>
-    <string name="trust_apps_info_protected">Egy védett alkalmazás launcherből való megnyitása hitelesítést igényel</string>
-    <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Javaslatok</string>
-    <string name="suggestion_pref_screen_desc">Javaslatok a Kezdőképernyőhöz és minden alkalmazáshoz</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Szüneteltetés</string>
     <string name="pause_apps_dialog_title">Szünetelteti ezt: %1$s?</string>
@@ -79,6 +67,18 @@
     <string name="work_apps_enable_btn_text_custom">A munkaalkalmazások bekapcsolása</string>
     <string name="work_apps_paused_info_body_custom">A munkaalkalmazások nem küldhetnek értesítéseket, nem használhatják az akkumlátort, és nem férhetnek hozzá a helyadatokhoz.</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">A munkaalkalmazások nem fogadhatnak hívásokat és szöveges üzeneteket, nem küldhetnek önnek értesítéseket, nem használhatják az akkumulátort és nem férhetnek hozzá a helyadatokhoz</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Rejtett és védett alkalmazások</string>
+    <string name="trust_apps_auth_manager">Feloldás a rejtett és védett alkalmazások kezeléséhez</string>
+    <string name="trust_apps_auth_open_app">Hitelesítés a következő megnyitásához: %1$s</string>
+    <string name="trust_apps_loading">Betöltés\u2026</string>
+    <string name="trust_apps_no_lock_error">Kérjük, állítson be biztonságos (védett) képernyőzárat az alkalmazás-hozzáférések korlátozására</string>
+    <string name="trust_apps_help">Súgó</string>
+    <string name="trust_apps_info_hidden">A rejtett alkalmazások és kisalkalmazásaik az alkalmazásfiókban sem láthatóak</string>
+    <string name="trust_apps_info_protected">Egy védett alkalmazás launcherből való megnyitása hitelesítést igényel</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Javaslatok</string>
+    <string name="suggestion_pref_screen_desc">Javaslatok a Kezdőképernyőhöz és minden alkalmazáshoz</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Újraindítás</string>
     <string name="pref_restart_summary">Launcher-újraindítás a függőben lévő változások alkalmazásához</string>
@@ -88,11 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Alvómód duplakoppal</string>
     <string name="pref_sleep_gesture_summary">Képernyő kikapcsoláshoz duplakopp egy üres területen</string>
-    <!-- Custom seekbar -->
-    <string name="custom_seekbar_value"><xliff:g id="v">%s</xliff:g> értékű</string>
-    <string name="custom_seekbar_default_value">alapértelmezés szerint</string>
-    <string name="custom_seekbar_default_value_to_set">Alapértelmezetten <xliff:g id="v">%s</xliff:g> értékű\nNyomja hosszan a beállításhoz</string>
-    <string name="custom_seekbar_default_value_is_set">Az alapértelmezett érték beállítva</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Icon size -->
     <string name="icon_size_title">Ikonméret</string>
     <!-- Font size -->
@@ -104,6 +101,13 @@
     <string name="recents_app_killed">Az alkalmazás leállt</string>
     <!-- Row Height -->
     <string name="row_height_title">Sormagasság</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Hotseat háttér</string>
+    <string name="hotseat_bg_summary">Áttetsző háttereket adhat az alkalmazásfiókhoz</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Háttérátlátszóság</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Körvonal</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Keresés</string>
     <string name="label_lens">Google Lens</string>
@@ -115,13 +119,9 @@
     <string name="dock_theme_title">Témázott ikonok</string>
     <string name="dock_theme_summary">A keresősávban témázott ikonok használhatók</string>
     <string name="search_radius_title">Saroklekerekítés</string>
-    <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat háttér</string>
-    <string name="hotseat_bg_summary">Áttetsző háttereket adhat az alkalmazásfiókhoz</string>
-    <!-- Background opacity -->
-    <string name="background_opacity_title">Háttérátlátszóság</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Körvonal</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Alkalmazásfiók-keresősáv</string>
+    <string name="drawer_search_summary">A keresősáv az Alkalmazásfiók tetején</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Háttérkép-görgetés</string>
     <string name="allow_wallpaper_scrolling_summary">Háttérképgörgetési effekt több képernyőre</string>
@@ -140,18 +140,8 @@
     <string name="recents_screenshot_title">Képernyőkép</string>
     <string name="recents_clear_all_title">Az összes törlése</string>
     <string name="recents_lens_title">Objektív</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Rövid paralaxis engedélyezése</string>
-    <string name="short_parallax_summary">Engedélyezze a teljes háttérképgörgetési hatását kisebb oldalszámon a háttérkép levágása helyett</string>
-    <string name="single_page_center_title">Centerezett egyoldalas</string>
-    <string name="single_page_center_summary">Helyezze középre a háttérképet, ha csak egyetlen oldalt használ</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Alkalmazásfiók-keresősáv</string>
-    <string name="drawer_search_summary">A keresősáv az Alkalmazásfiók tetején</string>
-    <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Automatikus billentyűzet</string>
-    <string name="pref_auto_keyboard_summary">Kibontott állapotban kezdje el a keresést</string>
     <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
     <string name="app_info_source">Forrás</string>
     <string name="app_info_source_system">Rendszer</string>
     <string name="app_info_last_update">Utoljára frissítve</string>
@@ -162,9 +152,20 @@
     <string name="icon_pack_default_label">Alapértelmezett</string>
     <string name="icon_pack_add">Továbbiak telepítése</string>
     <string name="icon_pack_no_market">Nincs hely ahonnan letölthetne</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Rövid paralaxis engedélyezése</string>
+    <string name="short_parallax_summary">Engedélyezze a teljes háttérképgörgetési hatását kisebb oldalszámon a háttérkép levágása helyett</string>
+    <string name="single_page_center_title">Centerezett egyoldalas</string>
+    <string name="single_page_center_summary">Helyezze középre a háttérképet, ha csak egyetlen oldalt használ</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Görgetősáv</string>
     <string name="drawer_scrollbar_summary">A keresősáv az Alkalmazásfiók oldalán</string>
+    <!-- Dark Status Bar -->
+    <string name="perf_dark_status_bar_title">Sötét állapotsor</string>
+    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Belepillantás</string>
     <string name="show_quickspace_summary">Az Ön kezdőképernyőjének tetején jelenik meg</string>
@@ -337,7 +338,12 @@
         <item>Köszönjön ránk a Telegramon</item>
         <item>Ne telefonozzon! Szerelmeskedjen!</item>
     </string-array>
+    <string name="intent_no_app_clock_found">Nem található naptári vagy óratevékenység</string>
     <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quickspace_weather_provider_title">Weather provider</string>
+    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">Az \'Időjárás\" frissítése</string>
     <string name="quick_event_ambient_weather_summary">A jelenlegi tartózkodási hely adatait frissíti</string>
     <string name="quick_event_ambient_weather_enabled_info">Az időjárás-szolgáltatás engedélyezése szükséges</string>
@@ -352,5 +358,4 @@
     <string name="quick_event_weather_city_summary">A jelenlegi tartózkodási hely adatait jeleníti meg</string>
     <string name="quick_event_weather_text_title">Jelenlegi időjárás</string>
     <string name="quick_event_weather_text_summary">Megjeleníti az épp aktuális hőfokot és adatokat</string>
-    <string name="intent_no_app_clock_found">Nem található naptári vagy óratevékenység</string>
 </resources>

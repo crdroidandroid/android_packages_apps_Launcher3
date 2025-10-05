@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016-2023 crDroid Android Project
+     Copyright (C) 2016-2025 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -55,18 +55,6 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Значок из темы</string>
     <string name="pref_themed_icons_summary">Использовать значки из темы в меню приложений, такие же, как на рабочем столе</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Скрыть и защитить приложения</string>
-    <string name="trust_apps_auth_manager">Разблокируйте, чтобы управлять скрытыми и защищёнными приложениями</string>
-    <string name="trust_apps_auth_open_app">Авторизуйтесь, чтобы открыть %1$s</string>
-    <string name="trust_apps_loading">Загрузка\u2026</string>
-    <string name="trust_apps_no_lock_error">Пожалуйста, настройте блокировку экрана, чтобы ограничить доступ к приложениям</string>
-    <string name="trust_apps_help">Помощь</string>
-    <string name="trust_apps_info_hidden">Не показывать скрытые приложения и их виджеты в меню приложений</string>
-    <string name="trust_apps_info_protected">Для запуска защищённых приложений требуется авторизация</string>
-    <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Рекомендации</string>
-    <string name="suggestion_pref_screen_desc">Рекомендации в меню приложений и на рабочем столе</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Пауза</string>
     <string name="pause_apps_dialog_title">Приостановить %1$s?</string>
@@ -79,6 +67,18 @@
     <string name="work_apps_enable_btn_text_custom">Включить рабочие приложения</string>
     <string name="work_apps_paused_info_body_custom">Рабочие приложения не могут отправлять уведомления, расходовать заряд батареи и получать доступ к данным о вашем местоположении.</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Ваши рабочие приложения не могут принимать телефонные звонки или текстовые сообщения, отправлять уведомления, использовать аккумулятор или получать доступ к вашему местоположению</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Скрыть и защитить приложения</string>
+    <string name="trust_apps_auth_manager">Разблокируйте, чтобы управлять скрытыми и защищёнными приложениями</string>
+    <string name="trust_apps_auth_open_app">Авторизуйтесь, чтобы открыть %1$s</string>
+    <string name="trust_apps_loading">Загрузка\u2026</string>
+    <string name="trust_apps_no_lock_error">Пожалуйста, настройте блокировку экрана, чтобы ограничить доступ к приложениям</string>
+    <string name="trust_apps_help">Помощь</string>
+    <string name="trust_apps_info_hidden">Не показывать скрытые приложения и их виджеты в меню приложений</string>
+    <string name="trust_apps_info_protected">Для запуска защищённых приложений требуется авторизация</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Рекомендации</string>
+    <string name="suggestion_pref_screen_desc">Рекомендации в меню приложений и на рабочем столе</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Перезапустить</string>
     <string name="pref_restart_summary">Перезапустить главный экран вручную, чтобы применить все ожидающие настройки</string>
@@ -88,11 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Выкл. двойным нажатием</string>
     <string name="pref_sleep_gesture_summary">Дважды коснитесь пустого места экрана для его выключения</string>
-    <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">по умолчанию</string>
-    <string name="custom_seekbar_default_value_to_set">Значение по умолчанию: <xliff:g id="v">%s</xliff:g>\nУдерживайте для установки</string>
-    <string name="custom_seekbar_default_value_is_set">Установлено значение по умолчанию</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Icon size -->
     <string name="icon_size_title">Размер значка</string>
     <!-- Font size -->
@@ -104,6 +101,13 @@
     <string name="recents_app_killed">Приложение закрыто</string>
     <!-- Row Height -->
     <string name="row_height_title">Высота строки</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Фон нижней панели</string>
+    <string name="hotseat_bg_summary">Полупрозрачный фон нижней панели приложений</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Прозрачность фона</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Окантовка</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Поиск</string>
     <string name="label_lens">Google Объектив</string>
@@ -115,13 +119,9 @@
     <string name="dock_theme_title">Значки из темы</string>
     <string name="dock_theme_summary">Для панели поиска использовать значки из темы</string>
     <string name="search_radius_title">Радиус закругления углов</string>
-    <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Фон нижней панели</string>
-    <string name="hotseat_bg_summary">Полупрозрачный фон нижней панели приложений</string>
-    <!-- Background opacity -->
-    <string name="background_opacity_title">Прозрачность фона</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Окантовка</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Строка поиска</string>
+    <string name="drawer_search_summary">Строка поиска в верхней части меню приложений</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Прокрутка обоев</string>
     <string name="allow_wallpaper_scrolling_summary">Эффект прокрутки обоев для нескольких экранов</string>
@@ -140,18 +140,8 @@
     <string name="recents_screenshot_title">Снимок экрана</string>
     <string name="recents_clear_all_title">Очистить всё</string>
     <string name="recents_lens_title">Объектив</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Разрешить короткое смещение</string>
-    <string name="short_parallax_summary">Включить эффект полной прокрутки обоев на меньшем количестве страниц вместо обрезки обоев</string>
-    <string name="single_page_center_title">Центр, если одна страница</string>
-    <string name="single_page_center_summary">Центрировать обои, если используется только одна страница</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Строка поиска</string>
-    <string name="drawer_search_summary">Строка поиска в верхней части меню приложений</string>
-    <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Автоматическая клавиатура</string>
-    <string name="pref_auto_keyboard_summary">Начинать поиск, когда открыто меню приложений</string>
     <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
     <string name="app_info_source">Источник</string>
     <string name="app_info_source_system">Системное</string>
     <string name="app_info_last_update">Последнее обновление</string>
@@ -162,9 +152,20 @@
     <string name="icon_pack_default_label">По умолчанию</string>
     <string name="icon_pack_add">Установить ещё</string>
     <string name="icon_pack_no_market">Нет доступного магазина приложений</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Разрешить короткое смещение</string>
+    <string name="short_parallax_summary">Включить эффект полной прокрутки обоев на меньшем количестве страниц вместо обрезки обоев</string>
+    <string name="single_page_center_title">Центр, если одна страница</string>
+    <string name="single_page_center_summary">Центрировать обои, если используется только одна страница</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Полоса прокрутки</string>
     <string name="drawer_scrollbar_summary">Полоса прокрутки сбоку меню приложений</string>
+    <!-- Dark Status Bar -->
+    <string name="perf_dark_status_bar_title">Тёмная строка состояния</string>
+    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Самое главное</string>
     <string name="show_quickspace_summary">Показывать в верхней части рабочего стола</string>
@@ -337,7 +338,12 @@
         <item>Поздоровайтесь с нами в Telegram</item>
         <item>Мы любим вас, нас уже больше 3000</item>
     </string-array>
+    <string name="intent_no_app_clock_found">Невозможно найти календарь или часы</string>
     <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quickspace_weather_provider_title">Weather provider</string>
+    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">Обновление погоды</string>
     <string name="quick_event_ambient_weather_summary">Показывать текущее обновление погоды</string>
     <string name="quick_event_ambient_weather_enabled_info">Требуется, чтобы служба погоды была запущена</string>
@@ -352,5 +358,4 @@
     <string name="quick_event_weather_city_summary">Показывать текущее местоположение</string>
     <string name="quick_event_weather_text_title">Текущее состояние</string>
     <string name="quick_event_weather_text_summary">Показывать информацию о текущих погодных условиях</string>
-    <string name="intent_no_app_clock_found">Невозможно найти календарь или часы</string>
 </resources>

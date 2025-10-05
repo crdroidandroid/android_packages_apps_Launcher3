@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016-2023 crDroid Android Project
+     Copyright (C) 2016-2025 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -55,18 +55,6 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Teemakuvakkeet</string>
     <string name="pref_themed_icons_summary">Seuraa teemakuvakkeita, joita käytetään aloitusnäytöllä</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Piilotetut &amp; Suojatut sovellukset</string>
-    <string name="trust_apps_auth_manager">Avaa hallitaksesi piilotettuja ja suojattuja sovelluksia</string>
-    <string name="trust_apps_auth_open_app">Tunnistaudu avataksesi %1$s</string>
-    <string name="trust_apps_loading">Ladataan\u2026</string>
-    <string name="trust_apps_no_lock_error">Aseta turvallinen näytön lukitus rajataksesi pääsyä sovelluksiin</string>
-    <string name="trust_apps_help">Ohje</string>
-    <string name="trust_apps_info_hidden">Piilotetut sovellukset ja niiden widgetit piilotetaan sovellusvalikosta</string>
-    <string name="trust_apps_info_protected">Suojatut sovellukset tarvitsevat tunnistautumisen, jotta ne voidaan avata</string>
-    <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Ehdotukset</string>
-    <string name="suggestion_pref_screen_desc">Kaikille sovelluksille &amp; aloitusnäytön ehdotuksille</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Pysäytä</string>
     <string name="pause_apps_dialog_title">Pysäytetäänkö %1$s?</string>
@@ -79,6 +67,18 @@
     <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
     <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Piilotetut &amp; Suojatut sovellukset</string>
+    <string name="trust_apps_auth_manager">Avaa hallitaksesi piilotettuja ja suojattuja sovelluksia</string>
+    <string name="trust_apps_auth_open_app">Tunnistaudu avataksesi %1$s</string>
+    <string name="trust_apps_loading">Ladataan\u2026</string>
+    <string name="trust_apps_no_lock_error">Aseta turvallinen näytön lukitus rajataksesi pääsyä sovelluksiin</string>
+    <string name="trust_apps_help">Ohje</string>
+    <string name="trust_apps_info_hidden">Piilotetut sovellukset ja niiden widgetit piilotetaan sovellusvalikosta</string>
+    <string name="trust_apps_info_protected">Suojatut sovellukset tarvitsevat tunnistautumisen, jotta ne voidaan avata</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Ehdotukset</string>
+    <string name="suggestion_pref_screen_desc">Kaikille sovelluksille &amp; aloitusnäytön ehdotuksille</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Käynnistä uudelleen</string>
     <string name="pref_restart_summary">Käynnistä käynnistin uudelleen manuaalisesti ottaaksesi käyttöön kaikki odottavat asetukset</string>
@@ -88,11 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Tuplanäpäytä horrostilaan</string>
     <string name="pref_sleep_gesture_summary">Kaksoisnapauta tyhjää tilaa sammuttaaksesi näytön</string>
-    <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Arvo: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">oletuksena</string>
-    <string name="custom_seekbar_default_value_to_set">Oletusarvo: <xliff:g id="v">%s</xliff:g>\nAseta napauttamalla pitkään</string>
-    <string name="custom_seekbar_default_value_is_set">Oletusarvo asetettu</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Icon size -->
     <string name="icon_size_title">Kuvakkeen koko</string>
     <!-- Font size -->
@@ -104,6 +101,13 @@
     <string name="recents_app_killed">Sovellus tapettu</string>
     <!-- Row Height -->
     <string name="row_height_title">Rivin korkeus</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Sovellustelakan tausta</string>
+    <string name="hotseat_bg_summary">Lisää läpikuultava tausta sovellustelakkaan</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Taustan läpinäkyvyys</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Stroke</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Haku</string>
     <string name="label_lens">Google Lens</string>
@@ -115,13 +119,9 @@
     <string name="dock_theme_title">Teemakuvakkeet</string>
     <string name="dock_theme_summary">Käytä teemakuvakkeita hakupalkille</string>
     <string name="search_radius_title">Kulman säde</string>
-    <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Sovellustelakan tausta</string>
-    <string name="hotseat_bg_summary">Lisää läpikuultava tausta sovellustelakkaan</string>
-    <!-- Background opacity -->
-    <string name="background_opacity_title">Taustan läpinäkyvyys</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Stroke</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Sovelluksen hakupalkki</string>
+    <string name="drawer_search_summary">Hakupalkki sovellusvalikon yläpuolella</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Taustakuvan vieritys</string>
     <string name="allow_wallpaper_scrolling_summary">Taustakuvan vierintäefekti usealle näytölle</string>
@@ -140,18 +140,8 @@
     <string name="recents_screenshot_title">Kuvakaappaus</string>
     <string name="recents_clear_all_title">Tyhjennä kaikki</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Salli lyhyt parallaksi</string>
-    <string name="short_parallax_summary">Ota käyttöön koko taustakuvan vierintätehoste pienimmillä sivumäärillä taustakuvan rajaamisen sijaan</string>
-    <string name="single_page_center_title">Yhden sivun keskitys</string>
-    <string name="single_page_center_summary">Keskitä taustakuva jos vain yksi sivu on käytössä</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Sovelluksen hakupalkki</string>
-    <string name="drawer_search_summary">Hakupalkki sovellusvalikon yläpuolella</string>
-    <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
     <string name="app_info_source">Lähde</string>
     <string name="app_info_source_system">Järjestelmä</string>
     <string name="app_info_last_update">Päivitetty viimeksi</string>
@@ -162,9 +152,20 @@
     <string name="icon_pack_default_label">Oletus</string>
     <string name="icon_pack_add">Asenna lisää</string>
     <string name="icon_pack_no_market">Sovelluskauppaa ei ole käytettävissä</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Salli lyhyt parallaksi</string>
+    <string name="short_parallax_summary">Ota käyttöön koko taustakuvan vierintätehoste pienimmillä sivumäärillä taustakuvan rajaamisen sijaan</string>
+    <string name="single_page_center_title">Yhden sivun keskitys</string>
+    <string name="single_page_center_summary">Keskitä taustakuva jos vain yksi sivu on käytössä</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Scrollbar</string>
     <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
+    <!-- Dark Status Bar -->
+    <string name="perf_dark_status_bar_title">Dark status bar</string>
+    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Pikakatselu</string>
     <string name="show_quickspace_summary">Näytä aloitusnäytön yläosassa</string>
@@ -337,7 +338,12 @@
         <item>Tule moikkaamaan meitä Telegramissa</item>
         <item>Rakastamme sinua 3000</item>
     </string-array>
+    <string name="intent_no_app_clock_found">Kalenterin tai kellon toimintaa ei löydy</string>
     <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quickspace_weather_provider_title">Weather provider</string>
+    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">Sääpäivitys</string>
     <string name="quick_event_ambient_weather_summary">Näytä nykyisen sijainnin sää</string>
     <string name="quick_event_ambient_weather_enabled_info">Vaatii sääpalvelun käyttöönottamisen</string>
@@ -352,5 +358,4 @@
     <string name="quick_event_weather_city_summary">Näytä nykyisen sijainnin sää</string>
     <string name="quick_event_weather_text_title">Nykytila</string>
     <string name="quick_event_weather_text_summary">Näytä yhteenveto nykyisistä sääolosuhteista</string>
-    <string name="intent_no_app_clock_found">Kalenterin tai kellon toimintaa ei löydy</string>
 </resources>
