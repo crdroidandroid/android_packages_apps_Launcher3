@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016-2023 crDroid Android Project
+     Copyright (C) 2016-2025 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -55,18 +55,6 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Тематични икони</string>
     <string name="pref_themed_icons_summary">Следвай тематичните икони използвани на началния екран</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Скрити &amp; Защитени приложения</string>
-    <string name="trust_apps_auth_manager">Отключете за да управлявате скритите и защитените приложения</string>
-    <string name="trust_apps_auth_open_app">Идентифицирайте се за да отворите %1$s</string>
-    <string name="trust_apps_loading">Зарежда се\u2026</string>
-    <string name="trust_apps_no_lock_error">Моля, задайте сигурно заключване на екрана за да ограничи достъпа до дадено приложение</string>
-    <string name="trust_apps_help">Помощ</string>
-    <string name="trust_apps_info_hidden">Скритите приложения и техните приспособления са скрити от менюто с приложения</string>
-    <string name="trust_apps_info_protected">Защитените приложения изискват удостоверяване за да бъдат отворени от стартовия панел</string>
-    <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Предложения</string>
-    <string name="suggestion_pref_screen_desc">За всички приложения &amp; Предложения на началния екран</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Пауза</string>
     <string name="pause_apps_dialog_title">Временно спиране на %1$s?</string>
@@ -79,6 +67,18 @@
     <string name="work_apps_enable_btn_text_custom">Включване на работните приложения</string>
     <string name="work_apps_paused_info_body_custom">Работните ти приложения не могат да ти изпращат известия, да използват батерията ти или да имат достъп до местоположението ти</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Работните ти приложения не могат да получават обаждания или съобщения, да ти изпращат известия, да използват батерията ти или да имат достъп до местоположението ти</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Скрити &amp; Защитени приложения</string>
+    <string name="trust_apps_auth_manager">Отключете за да управлявате скритите и защитените приложения</string>
+    <string name="trust_apps_auth_open_app">Идентифицирайте се за да отворите %1$s</string>
+    <string name="trust_apps_loading">Зарежда се\u2026</string>
+    <string name="trust_apps_no_lock_error">Моля, задайте сигурно заключване на екрана за да ограничи достъпа до дадено приложение</string>
+    <string name="trust_apps_help">Помощ</string>
+    <string name="trust_apps_info_hidden">Скритите приложения и техните приспособления са скрити от менюто с приложения</string>
+    <string name="trust_apps_info_protected">Защитените приложения изискват удостоверяване за да бъдат отворени от стартовия панел</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Предложения</string>
+    <string name="suggestion_pref_screen_desc">За всички приложения &amp; Предложения на началния екран</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Рестартиране</string>
     <string name="pref_restart_summary">Рестартирай launcher-а ръчно, за да приложиш всички чакащи настройки</string>
@@ -88,11 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Двукратно почукване за заспиване</string>
     <string name="pref_sleep_gesture_summary">Докоснете двата пъти на празно място за да изключите екрана</string>
-    <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">по подразбиране</string>
-    <string name="custom_seekbar_default_value_to_set">Стойност по подразбиране: <xliff:g id="v">%s</xliff:g>\nПродължително натискане за задаване</string>
-    <string name="custom_seekbar_default_value_is_set">По подразбиране стойността е зададена</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Icon size -->
     <string name="icon_size_title">Размер на иконата</string>
     <!-- Font size -->
@@ -104,6 +101,13 @@
     <string name="recents_app_killed">Приложението е убито</string>
     <!-- Row Height -->
     <string name="row_height_title">Височина на реда</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Фон на лентата с любими приложения</string>
+    <string name="hotseat_bg_summary">Добавяне на прозрачен фон към лентата с любими приложения</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Прозрачност на фона</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Stroke</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Търсене</string>
     <string name="label_lens">Google Lens</string>
@@ -115,13 +119,9 @@
     <string name="dock_theme_title">Тематични икони</string>
     <string name="dock_theme_summary">Използване на тематични икони за лентата за търсене</string>
     <string name="search_radius_title">Радиус на ъгъл</string>
-    <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Фон на лентата с любими приложения</string>
-    <string name="hotseat_bg_summary">Добавяне на прозрачен фон към лентата с любими приложения</string>
-    <!-- Background opacity -->
-    <string name="background_opacity_title">Прозрачност на фона</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Stroke</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">App search bar</string>
+    <string name="drawer_search_summary">Search bar on top of the app drawer</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Превъртане на тапета</string>
     <string name="allow_wallpaper_scrolling_summary">Ефект на превъртане на тапета за няколко екрана</string>
@@ -140,18 +140,8 @@
     <string name="recents_screenshot_title">Екранна снимка</string>
     <string name="recents_clear_all_title">Изчистване на всичко</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Allow short parallax</string>
-    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
-    <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar</string>
-    <string name="drawer_search_summary">Search bar on top of the app drawer</string>
-    <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
     <string name="app_info_source">Източник</string>
     <string name="app_info_source_system">Система</string>
     <string name="app_info_last_update">Последно обновяване</string>
@@ -162,9 +152,20 @@
     <string name="icon_pack_default_label">По подразбиране</string>
     <string name="icon_pack_add">Инсталиране на още</string>
     <string name="icon_pack_no_market">Няма наличен магазин за приложения</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Allow short parallax</string>
+    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
+    <string name="single_page_center_title">Single page center</string>
+    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Scrollbar</string>
     <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
+    <!-- Dark Status Bar -->
+    <string name="perf_dark_status_bar_title">Dark status bar</string>
+    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Бърз поглед</string>
     <string name="show_quickspace_summary">Show at the top of your home screen</string>
@@ -337,7 +338,12 @@
         <item>Поздравете ни по Telegram</item>
         <item>Обичаме Ви, вече сме 3000</item>
     </string-array>
+    <string name="intent_no_app_clock_found">Unable to find calendar or clock activity</string>
     <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quickspace_weather_provider_title">Weather provider</string>
+    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">Weather update</string>
     <string name="quick_event_ambient_weather_summary">Display current weather update</string>
     <string name="quick_event_ambient_weather_enabled_info">需要启用天气服务</string>
@@ -352,5 +358,4 @@
     <string name="quick_event_weather_city_summary">显示当前位置的天气</string>
     <string name="quick_event_weather_text_title">Current condition</string>
     <string name="quick_event_weather_text_summary">Display current weather condition summary</string>
-    <string name="intent_no_app_clock_found">Unable to find calendar or clock activity</string>
 </resources>
