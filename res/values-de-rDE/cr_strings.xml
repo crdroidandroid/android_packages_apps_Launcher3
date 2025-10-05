@@ -88,8 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Doppeltippen zum Sperren</string>
     <string name="pref_sleep_gesture_summary">Zum Sperren auf einen leeren Bereich doppeltippen</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibration bei Doppeltippen zum Sperren</string>
+    <string name="pref_sleep_gesture_haptic_summary">Haptisches Feedback beim Doppeltippen zum Sperren</string>
     <!-- Icon size -->
     <string name="icon_size_title">Symbolgröße</string>
     <!-- Font size -->
@@ -141,7 +141,7 @@
     <string name="recents_clear_all_title">Alle Apps schließen</string>
     <string name="recents_lens_title">Lens</string>
     <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
+    <string name="app_info_title">App-Info</string>
     <string name="app_info_source">Quelle</string>
     <string name="app_info_source_system">System</string>
     <string name="app_info_last_update">Letzte Aktualisierung</string>
@@ -158,14 +158,14 @@
     <string name="single_page_center_title">Bei nur einer Seite zentrieren</string>
     <string name="single_page_center_summary">Zentriert das Hintergrundbild, wenn nur eine einzelne Seite verwendet wird</string>
     <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
+    <string name="drawer_open_keyboard_title">Wischen zum Starten der Suche</string>
+    <string name="drawer_open_keyboard_summary">Tastatur immer öffnen, sobald die App-Übersicht sichtbar ist</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Bildlaufleiste</string>
     <string name="drawer_scrollbar_summary">Bildlaufleiste neben der App-Übersicht</string>
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">Dunkle Statusleiste</string>
-    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
+    <string name="perf_dark_status_bar_summary">Auf Startbildschirm dunkle Statusleiste verwenden</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Auf einen Blick</string>
     <string name="show_quickspace_summary">Oben auf dem Startbildschirm anzeigen</string>
@@ -340,8 +340,8 @@
     </string-array>
     <string name="intent_no_app_clock_found">Keine Kalender- oder Weckeraktivität gefunden</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quickspace_weather_provider_title">Weather provider</string>
-    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_title">Wetteranbieter</string>
+    <string name="quickspace_weather_provider_entry_auto">Automatisch</string>
     <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
     <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">Wetterinfo</string>
