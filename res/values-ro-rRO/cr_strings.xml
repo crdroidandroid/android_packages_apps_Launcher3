@@ -88,8 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Dublă atingere pentru oprire ecran</string>
     <string name="pref_sleep_gesture_summary">Atingeți de două ori spațiul gol pentru oprirea ecranului</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrează la atingerea dublă pentru a dormi</string>
+    <string name="pref_sleep_gesture_haptic_summary">Oferă feedback haptic la gestul de două apăsări pentru a dormi</string>
     <!-- Icon size -->
     <string name="icon_size_title">Dimensiune pictogramă</string>
     <!-- Font size -->
@@ -141,7 +141,7 @@
     <string name="recents_clear_all_title">Stergeti toate</string>
     <string name="recents_lens_title">Obiectiv</string>
     <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
+    <string name="app_info_title">Informații aplicație</string>
     <string name="app_info_source">Sursa</string>
     <string name="app_info_source_system">Sistem</string>
     <string name="app_info_last_update">Ultima actualizare</string>
@@ -158,14 +158,14 @@
     <string name="single_page_center_title">Centrare pagină unică</string>
     <string name="single_page_center_summary">Se centrează imaginea de fundal dacă se utilizează doar o singură pagină</string>
     <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
+    <string name="drawer_open_keyboard_title">Glisați pentru a începe căutarea</string>
+    <string name="drawer_open_keyboard_summary">Deschide tastatura ori de câte ori sertarul de aplicații devine vizibil</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Bara de derulare</string>
     <string name="drawer_scrollbar_summary">Bara de căutare în partea de sus a sertarului de aplicații</string>
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">Bară de stare întunecată</string>
-    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
+    <string name="perf_dark_status_bar_summary">Utilizaţi întotdeauna bara de stare întunecată pe ecranul principal</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Pe scurt</string>
     <string name="show_quickspace_summary">O copie a widgetului Google dintr-o privire</string>
@@ -340,9 +340,9 @@
     </string-array>
     <string name="intent_no_app_clock_found">Nu s-a găsit activitatea calendar sau ceas</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quickspace_weather_provider_title">Weather provider</string>
-    <string name="quickspace_weather_provider_entry_auto">Auto</string>
-    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_title">Furnizor de vreme</string>
+    <string name="quickspace_weather_provider_entry_auto">Automat</string>
+    <string name="quickspace_weather_provider_entry_seraphix">Smartspace Google</string>
     <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">Actualizare meteo</string>
     <string name="quick_event_ambient_weather_summary">Afișează actualizarea meteo curentă</string>
