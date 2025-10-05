@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016-2023 crDroid Android Project
+     Copyright (C) 2016-2025 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -55,18 +55,6 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Ikony tematyczne</string>
     <string name="pref_themed_icons_summary">Dopasuj ikony dostosowane do motywu na ekranie głównym</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Ukryte i chronione aplikacje</string>
-    <string name="trust_apps_auth_manager">Odblokuj, aby zarządzać ukrytymi i chronionymi aplikacjami</string>
-    <string name="trust_apps_auth_open_app">Uwierzytelnij, aby otworzyć %1$s</string>
-    <string name="trust_apps_loading">Wczytywanie\u2026</string>
-    <string name="trust_apps_no_lock_error">Ustaw bezpieczny ekran blokady, aby ograniczyć dostęp do aplikacji</string>
-    <string name="trust_apps_help">Pomoc</string>
-    <string name="trust_apps_info_hidden">Ukryte aplikacje oraz ich widżety są ukryte również w szufladzie aplikacji</string>
-    <string name="trust_apps_info_protected">Chronione aplikacje wymagają uwierzytelnienia, aby je otworzyć z ekranu głównego</string>
-    <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Propozycje</string>
-    <string name="suggestion_pref_screen_desc">Propozycje dotyczące wszystkich aplikacji i ekranu głównego</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Wstrzymaj</string>
     <string name="pause_apps_dialog_title">Wstrzymać %1$s?</string>
@@ -79,6 +67,18 @@
     <string name="work_apps_enable_btn_text_custom">Włącz aplikacje służbowe</string>
     <string name="work_apps_paused_info_body_custom">Aplikacje służbowe nie mogą wysyłać powiadomień, używać baterii ani uzyskiwać dostępu do twojej lokalizacji</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Twoje aplikacje służbowe nie mogą odbierać połączeń telefonicznych ani wiadomości tekstowych, wysyłać powiadomień, używać baterii lub uzyskiwać dostępu do lokalizacji</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Ukryte i chronione aplikacje</string>
+    <string name="trust_apps_auth_manager">Odblokuj, aby zarządzać ukrytymi i chronionymi aplikacjami</string>
+    <string name="trust_apps_auth_open_app">Uwierzytelnij, aby otworzyć %1$s</string>
+    <string name="trust_apps_loading">Wczytywanie\u2026</string>
+    <string name="trust_apps_no_lock_error">Ustaw bezpieczny ekran blokady, aby ograniczyć dostęp do aplikacji</string>
+    <string name="trust_apps_help">Pomoc</string>
+    <string name="trust_apps_info_hidden">Ukryte aplikacje oraz ich widżety są ukryte również w szufladzie aplikacji</string>
+    <string name="trust_apps_info_protected">Chronione aplikacje wymagają uwierzytelnienia, aby je otworzyć z ekranu głównego</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Propozycje</string>
+    <string name="suggestion_pref_screen_desc">Propozycje dotyczące wszystkich aplikacji i ekranu głównego</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Uruchom ponownie</string>
     <string name="pref_restart_summary">Uruchom ponownie launcher ręcznie, aby zastosować wszystkie oczekujące ustawienia</string>
@@ -88,11 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Dotknij dwukrotnie, aby uśpić</string>
     <string name="pref_sleep_gesture_summary">Dotknij dwukrotnie w puste miejsce, aby wyłączyć ekran</string>
-    <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Wartość: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">domyślnie</string>
-    <string name="custom_seekbar_default_value_to_set">Wartość domyślna: <xliff:g id="v">%s</xliff:g>\nPrzytrzymaj dłużej, aby ustawić</string>
-    <string name="custom_seekbar_default_value_is_set">Wartość domyślna jest ustawiona</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Icon size -->
     <string name="icon_size_title">Rozmiar ikon</string>
     <!-- Font size -->
@@ -104,6 +101,13 @@
     <string name="recents_app_killed">Zatrzymane aplikacje</string>
     <!-- Row Height -->
     <string name="row_height_title">Wysokość wiersza</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Tło dolnego panelu</string>
+    <string name="hotseat_bg_summary">Dodaje przezroczyste tło dla panelu aplikacji</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Nieprzezroczystość tła</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Obramowanie</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Szukaj</string>
     <string name="label_lens">Obiektyw Google</string>
@@ -115,13 +119,9 @@
     <string name="dock_theme_title">Ikony tematyczne</string>
     <string name="dock_theme_summary">Użyj ikon tematycznych dla paska wyszukiwania</string>
     <string name="search_radius_title">Zaokrąglenie rogów</string>
-    <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Tło dolnego panelu</string>
-    <string name="hotseat_bg_summary">Dodaje przezroczyste tło dla panelu aplikacji</string>
-    <!-- Background opacity -->
-    <string name="background_opacity_title">Nieprzezroczystość tła</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Obramowanie</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Pasek wyszukiwania aplikacji</string>
+    <string name="drawer_search_summary">Pasek wyszukiwania u góry szuflady aplikacji</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Przewijane tapety</string>
     <string name="allow_wallpaper_scrolling_summary">Efekt przewijania tapety dla wielu ekranów</string>
@@ -140,18 +140,8 @@
     <string name="recents_screenshot_title">Zrzut ekranu</string>
     <string name="recents_clear_all_title">Wyczyść wszystko</string>
     <string name="recents_lens_title">Obiektyw</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Zezwalaj na krótki paralaks</string>
-    <string name="short_parallax_summary">Włącz efekt przewijania całej tapety na mniejszej liczbie stron, zamiast przycinać tapetę</string>
-    <string name="single_page_center_title">Widok pojedynczej strony</string>
-    <string name="single_page_center_summary">Wyśrodkuj tapetę, jeśli używasz tylko jednej strony</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Pasek wyszukiwania aplikacji</string>
-    <string name="drawer_search_summary">Pasek wyszukiwania u góry szuflady aplikacji</string>
-    <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Automatyczna klawiatura</string>
-    <string name="pref_auto_keyboard_summary">Rozpocznij wyszukiwanie po rozwinięciu szuflady</string>
     <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
     <string name="app_info_source">Źródło</string>
     <string name="app_info_source_system">System</string>
     <string name="app_info_last_update">Ostatnia aktualizacja</string>
@@ -162,9 +152,20 @@
     <string name="icon_pack_default_label">Domyślny</string>
     <string name="icon_pack_add">Zainstaluj więcej</string>
     <string name="icon_pack_no_market">Nie jest dostępny sklep z aplikacjami</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Zezwalaj na krótki paralaks</string>
+    <string name="short_parallax_summary">Włącz efekt przewijania całej tapety na mniejszej liczbie stron, zamiast przycinać tapetę</string>
+    <string name="single_page_center_title">Widok pojedynczej strony</string>
+    <string name="single_page_center_summary">Wyśrodkuj tapetę, jeśli używasz tylko jednej strony</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Pasek przewijania</string>
     <string name="drawer_scrollbar_summary">Pasek przewijania po boku szuflady aplikacji</string>
+    <!-- Dark Status Bar -->
+    <string name="perf_dark_status_bar_title">Ciemny pasek stanu</string>
+    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">W skrócie</string>
     <string name="show_quickspace_summary">Pokaż w górnej części ekranu głównego</string>
@@ -337,7 +338,12 @@
         <item>Przywitaj się z nami na Telegramie</item>
         <item>Uwielbiamy Cię!</item>
     </string-array>
+    <string name="intent_no_app_clock_found">Nie można odnaleźć kalendarza lub aktywności zegara</string>
     <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quickspace_weather_provider_title">Weather provider</string>
+    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">Aktualizacja pogodowa</string>
     <string name="quick_event_ambient_weather_summary">Pokaż aktualną informację pogodową według lokalizacji</string>
     <string name="quick_event_ambient_weather_enabled_info">Wymaga włączenia usługi pogodowej</string>
@@ -352,5 +358,4 @@
     <string name="quick_event_weather_city_summary">Wyświetl bieżącą lokalizację pogody</string>
     <string name="quick_event_weather_text_title">Aktualne warunki</string>
     <string name="quick_event_weather_text_summary">Wyświetl podsumowanie warunków pogodowych</string>
-    <string name="intent_no_app_clock_found">Nie można odnaleźć kalendarza lub aktywności zegara</string>
 </resources>
