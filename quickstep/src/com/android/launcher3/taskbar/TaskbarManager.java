@@ -1232,7 +1232,7 @@ public class TaskbarManager implements DisplayDecorationListener {
         // iterate through taskbars and do the dump for each
         for (int i = 0; i < mTaskbars.size(); i++) {
             int displayId = mTaskbars.keyAt(i);
-            TaskbarActivityContext taskbar = mTaskbars.get(i);
+            TaskbarActivityContext taskbar = mTaskbars.get(displayId);
             pw.println(prefix + "\tTaskbar at display " + displayId + ":");
             if (taskbar == null) {
                 pw.println(prefix + "\t\tTaskbarActivityContext: null");
