@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016-2023 crDroid Android Project
+     Copyright (C) 2016-2025 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -55,18 +55,6 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Ícones temáticos</string>
     <string name="pref_themed_icons_summary">Seguir ícones temáticos usados no ecrã inicial</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Apps ocultas e protegidas</string>
-    <string name="trust_apps_auth_manager">Desbloquear para gerir as apps ocultas e protegidas</string>
-    <string name="trust_apps_auth_open_app">Autenticar para abrir %1$s</string>
-    <string name="trust_apps_loading">A carregar\u2026</string>
-    <string name="trust_apps_no_lock_error">Configure um ecrã de bloqueio seguro para restringir o acesso às apps</string>
-    <string name="trust_apps_help">Ajuda</string>
-    <string name="trust_apps_info_hidden">As apps ocultas e seus widgets estão escondidos da gaveta de apps</string>
-    <string name="trust_apps_info_protected">As apps protegidas requerem autenticação para serem executadas</string>
-    <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Sugestões</string>
-    <string name="suggestion_pref_screen_desc">Para todas as apps e ecrã principal</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Pausar</string>
     <string name="pause_apps_dialog_title">Pausar %1$s?</string>
@@ -79,6 +67,18 @@
     <string name="work_apps_enable_btn_text_custom">Ativar aplicações de trabalho</string>
     <string name="work_apps_paused_info_body_custom">As apps de trabalho não podem enviar-lhe notificações, utilizar a bateria ou aceder à sua localização</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">As suas aplicações de trabalho não podem receber chamadas telefónicas ou mensagens de texto, enviar-lhe notificações, utilizar a sua bateria ou aceder à sua localização</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Apps ocultas e protegidas</string>
+    <string name="trust_apps_auth_manager">Desbloquear para gerir as apps ocultas e protegidas</string>
+    <string name="trust_apps_auth_open_app">Autenticar para abrir %1$s</string>
+    <string name="trust_apps_loading">A carregar\u2026</string>
+    <string name="trust_apps_no_lock_error">Configure um ecrã de bloqueio seguro para restringir o acesso às apps</string>
+    <string name="trust_apps_help">Ajuda</string>
+    <string name="trust_apps_info_hidden">As apps ocultas e seus widgets estão escondidos da gaveta de apps</string>
+    <string name="trust_apps_info_protected">As apps protegidas requerem autenticação para serem executadas</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Sugestões</string>
+    <string name="suggestion_pref_screen_desc">Para todas as apps e ecrã principal</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Reiniciar</string>
     <string name="pref_restart_summary">Reinicie o launcher manualmente para aplicar qualquer configuração pendente</string>
@@ -88,11 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Toque duplo para desligar ecrã</string>
     <string name="pref_sleep_gesture_summary">Toque duas vezes num espaço vazio para desligar o ecrã</string>
-    <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Valor: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">padrão</string>
-    <string name="custom_seekbar_default_value_to_set">Valor padrão: <xliff:g id="v">%s</xliff:g>\nToque longo para definir</string>
-    <string name="custom_seekbar_default_value_is_set">Valor padrão está definido</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Icon size -->
     <string name="icon_size_title">Tamanho dos ícones</string>
     <!-- Font size -->
@@ -104,6 +101,13 @@
     <string name="recents_app_killed">App terminada</string>
     <!-- Row Height -->
     <string name="row_height_title">Altura da linha</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Fundo da doca</string>
+    <string name="hotseat_bg_summary">Mostrar fundo translúcido na doca de apps</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Opacidade do fundo</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Avc</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Pesquisar</string>
     <string name="label_lens">Lentes do Google</string>
@@ -115,13 +119,9 @@
     <string name="dock_theme_title">Ícones temáticos</string>
     <string name="dock_theme_summary">Usar ícones temáticos para a barra de pesquisa</string>
     <string name="search_radius_title">Raio do canto</string>
-    <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Fundo da doca</string>
-    <string name="hotseat_bg_summary">Mostrar fundo translúcido na doca de apps</string>
-    <!-- Background opacity -->
-    <string name="background_opacity_title">Opacidade do fundo</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Avc</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Barra de pesquisa de apps</string>
+    <string name="drawer_search_summary">Barra de pesquisa no topo da gaveta de apps</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Rolar papel de parede</string>
     <string name="allow_wallpaper_scrolling_summary">Efeito de rolagem do papel de parede para vários ecrãs</string>
@@ -140,18 +140,8 @@
     <string name="recents_screenshot_title">Capturar ecrã</string>
     <string name="recents_clear_all_title">Limpar tudo</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Permitir parallax curto</string>
-    <string name="short_parallax_summary">Ativar o efeito de rolagem do papel de parede completo em números menores de páginas ao invés de cortar o papel de parede</string>
-    <string name="single_page_center_title">Vista de uma só página</string>
-    <string name="single_page_center_summary">Centralizar papel de parede se apenas usando uma única página</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Barra de pesquisa de apps</string>
-    <string name="drawer_search_summary">Barra de pesquisa no topo da gaveta de apps</string>
-    <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto teclado</string>
-    <string name="pref_auto_keyboard_summary">Iniciar a pesquisa quando a gaveta estiver expandida</string>
     <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
     <string name="app_info_source">Origem</string>
     <string name="app_info_source_system">Sistema</string>
     <string name="app_info_last_update">Última atualização</string>
@@ -162,9 +152,20 @@
     <string name="icon_pack_default_label">Padrão</string>
     <string name="icon_pack_add">Instalar mais</string>
     <string name="icon_pack_no_market">Não há uma loja de apps disponível</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Permitir parallax curto</string>
+    <string name="short_parallax_summary">Ativar o efeito de rolagem do papel de parede completo em números menores de páginas ao invés de cortar o papel de parede</string>
+    <string name="single_page_center_title">Vista de uma só página</string>
+    <string name="single_page_center_summary">Centralizar papel de parede se apenas usando uma única página</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Barra de deslocamento</string>
     <string name="drawer_scrollbar_summary">Barra de deslocamento na parte lateral da gaveta de aplicações</string>
+    <!-- Dark Status Bar -->
+    <string name="perf_dark_status_bar_title">Barra de estado escura</string>
+    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Resumo</string>
     <string name="show_quickspace_summary">Mostrado no topo do ecrã inicial</string>
@@ -337,7 +338,12 @@
         <item>Diga-nos olá no Telegram</item>
         <item>Nós te amamos 3000</item>
     </string-array>
+    <string name="intent_no_app_clock_found">Não foi possível encontrar o calendário ou a atividade do relógio</string>
     <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quickspace_weather_provider_title">Weather provider</string>
+    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">Atualização meteorológica</string>
     <string name="quick_event_ambient_weather_summary">Mostrar o estado do tempo atual</string>
     <string name="quick_event_ambient_weather_enabled_info">Requer que o serviço meteorológico esteja ativado</string>
@@ -352,5 +358,4 @@
     <string name="quick_event_weather_city_summary">Mostrar localização meteorológica atual</string>
     <string name="quick_event_weather_text_title">Condições atuais</string>
     <string name="quick_event_weather_text_summary">Mostrar as condições meteorológicas atuais</string>
-    <string name="intent_no_app_clock_found">Não foi possível encontrar o calendário ou a atividade do relógio</string>
 </resources>
