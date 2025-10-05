@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016-2023 crDroid Android Project
+     Copyright (C) 2016-2025 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -55,18 +55,6 @@
     <!-- All apps themed icons -->
     <string name="pref_themed_icons_title">Icones tematitzades</string>
     <string name="pref_themed_icons_summary">Segueix les icones temàtiques utilitzades a la pantalla d\'inici</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Aplicacions amagades i protegides</string>
-    <string name="trust_apps_auth_manager">Desbloqueja per gestionar les aplicacions amagades i protegides</string>
-    <string name="trust_apps_auth_open_app">Autentifica\'t per obrir %1$s</string>
-    <string name="trust_apps_loading">S\'està carregant\u2026</string>
-    <string name="trust_apps_no_lock_error">Si us plau, configura un bloqueig de pantalla segur per a restringir l\'accés a aplicacions</string>
-    <string name="trust_apps_help">Ajuda</string>
-    <string name="trust_apps_info_hidden">Les aplicacions amagades i els seus widgets estan amagades del calaix</string>
-    <string name="trust_apps_info_protected">Les aplicacions protegides requereixen autentificació per poder ser obertes des del llançador</string>
-    <!-- Suggestions -->
-    <string name="suggestion_pref_screen_title">Suggeriments</string>
-    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Posa en pausa</string>
     <string name="pause_apps_dialog_title">Posa en pausa %1$s?</string>
@@ -79,6 +67,18 @@
     <string name="work_apps_enable_btn_text_custom">Activa les aplicacions de treball</string>
     <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Aplicacions amagades i protegides</string>
+    <string name="trust_apps_auth_manager">Desbloqueja per gestionar les aplicacions amagades i protegides</string>
+    <string name="trust_apps_auth_open_app">Autentifica\'t per obrir %1$s</string>
+    <string name="trust_apps_loading">S\'està carregant\u2026</string>
+    <string name="trust_apps_no_lock_error">Si us plau, configura un bloqueig de pantalla segur per a restringir l\'accés a aplicacions</string>
+    <string name="trust_apps_help">Ajuda</string>
+    <string name="trust_apps_info_hidden">Les aplicacions amagades i els seus widgets estan amagades del calaix</string>
+    <string name="trust_apps_info_protected">Les aplicacions protegides requereixen autentificació per poder ser obertes des del llançador</string>
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Suggeriments</string>
+    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
     <!-- Restart launcher -->
     <string name="pref_restart_title">Reinicia</string>
     <string name="pref_restart_summary">Reinicia el llançador manualment per aplicar qualsevol canvi pendent</string>
@@ -88,11 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Toca dues vegades per a posar en repòs</string>
     <string name="pref_sleep_gesture_summary">Toqueu dues vegades a un espai buit per a apagar la pantalla</string>
-    <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Valor: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">per defecte</string>
-    <string name="custom_seekbar_default_value_to_set">Valor per defecte: <xliff:g id="v">%s</xliff:g>\nPulsació llarga per a definir</string>
-    <string name="custom_seekbar_default_value_is_set">Valor per defecte</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Icon size -->
     <string name="icon_size_title">Mida de les icones</string>
     <!-- Font size -->
@@ -104,6 +101,13 @@
     <string name="recents_app_killed">S\'ha aturat l\'aplicació</string>
     <!-- Row Height -->
     <string name="row_height_title">Alçada de fila</string>
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Hotseat background</string>
+    <string name="hotseat_bg_summary">Afegeix fons translúcid al dock d\'aplicacions</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Opacitat del fons</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Traça</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Cerca</string>
     <string name="label_lens">Google Lens</string>
@@ -115,13 +119,9 @@
     <string name="dock_theme_title">Icones tematitzades</string>
     <string name="dock_theme_summary">Utilitza icones tematitzades a la barra de cerca</string>
     <string name="search_radius_title">Radi de la cantonada</string>
-    <!-- Hotseat Background -->
-    <string name="hotseat_bg_title">Hotseat background</string>
-    <string name="hotseat_bg_summary">Afegeix fons translúcid al dock d\'aplicacions</string>
-    <!-- Background opacity -->
-    <string name="background_opacity_title">Opacitat del fons</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Traça</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_search_title">Barra de cerca d\'aplicacions</string>
+    <string name="drawer_search_summary">Mostra la barra de cerca damunt del calaix d\'aplicacions</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Desplaçament de fons de pantalla</string>
     <string name="allow_wallpaper_scrolling_summary">Wallpaper scrolling effect for multiple screens</string>
@@ -140,18 +140,8 @@
     <string name="recents_screenshot_title">Captura de pantalla</string>
     <string name="recents_clear_all_title">Esborra-ho tot</string>
     <string name="recents_lens_title">Lent</string>
-    <!-- Parallax -->
-    <string name="short_parallax_title">Allow short parallax</string>
-    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
-    <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
-    <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Barra de cerca d\'aplicacions</string>
-    <string name="drawer_search_summary">Mostra la barra de cerca damunt del calaix d\'aplicacions</string>
-    <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
     <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
     <string name="app_info_source">Origen</string>
     <string name="app_info_source_system">Sistema</string>
     <string name="app_info_last_update">Darrera actualització</string>
@@ -162,9 +152,20 @@
     <string name="icon_pack_default_label">Per defecte</string>
     <string name="icon_pack_add">Instal·la\'n més</string>
     <string name="icon_pack_no_market">No hi ha cap botiga d\'aplicacions disponible</string>
+    <!-- Parallax -->
+    <string name="short_parallax_title">Allow short parallax</string>
+    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
+    <string name="single_page_center_title">Single page center</string>
+    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Barra de desplaçament</string>
     <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
+    <!-- Dark Status Bar -->
+    <string name="perf_dark_status_bar_title">Dark status bar</string>
+    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">D\'una ullada</string>
     <string name="show_quickspace_summary">Show at the top of your home screen</string>
@@ -337,7 +338,12 @@
         <item>Saluda\'ns en Telegram</item>
         <item>T\'estimem 3000</item>
     </string-array>
+    <string name="intent_no_app_clock_found">No és possible trobar el calendari o l\'activitat del rellotge</string>
     <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quickspace_weather_provider_title">Weather provider</string>
+    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">Weather update</string>
     <string name="quick_event_ambient_weather_summary">Display current weather update</string>
     <string name="quick_event_ambient_weather_enabled_info">És necessari que el servei meteorològic estigui activat</string>
@@ -352,5 +358,4 @@
     <string name="quick_event_weather_city_summary">Mostra la ubicació del temps meteorològic actual</string>
     <string name="quick_event_weather_text_title">Condició actual</string>
     <string name="quick_event_weather_text_summary">Mostra l\'oratge actual</string>
-    <string name="intent_no_app_clock_found">No és possible trobar el calendari o l\'activitat del rellotge</string>
 </resources>
