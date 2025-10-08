@@ -266,6 +266,7 @@ public class PageIndicatorDots extends View implements Insettable, PageIndicator
             hideAfterDelay();
         } else if (!shouldAutoHide) {
             mDelayedPaginationFadeHandler.removeCallbacksAndMessages(null);
+            animatePaginationToAlpha(VISIBLE_ALPHA);
         }
     }
 
