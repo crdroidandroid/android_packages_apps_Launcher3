@@ -20,6 +20,7 @@ import static com.android.window.flags.Flags.FLAG_PREDICTIVE_BACK_THREE_BUTTON_N
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.eq;
@@ -111,7 +112,7 @@ public class TaskbarNavButtonControllerTest {
                 .thenReturn(mockTaskbarActivityContext);
         doReturn(mockStatsLogManager).when(mockTaskbarActivityContext).getStatsLogManager();
         mNavButtonController = new TaskbarNavButtonController(
-                mockService,
+                DISPLAY_ID,
                 mCallbacks,
                 mockSystemUiProxy,
                 mockHandler,
@@ -121,7 +122,7 @@ public class TaskbarNavButtonControllerTest {
     @Test
     public void testPressBack() {
         mNavButtonController.onButtonClick(BUTTON_BACK, mockView);
-        verify(mockSystemUiProxy, times(1)).onBackEvent(null);
+        verify(mockSystemUiProxy, times(1)).onBackEvent(null, DISPLAY_ID);
     }
 
     @Test
@@ -344,22 +345,28 @@ public class TaskbarNavButtonControllerTest {
     @RequiresFlagsEnabled(FLAG_PREDICTIVE_BACK_THREE_BUTTON_NAV)
     public void testPredictiveBackInvoked() {
         ArgumentCaptor<KeyEvent> keyEventCaptor = ArgumentCaptor.forClass(KeyEvent.class);
+        ArgumentCaptor<Integer> displayIdCaptor = ArgumentCaptor.forClass(Integer.class);
         mNavButtonController.sendBackKeyEvent(KeyEvent.ACTION_DOWN, false);
         mNavButtonController.sendBackKeyEvent(KeyEvent.ACTION_UP, false);
-        verify(mockSystemUiProxy, times(2)).onBackEvent(keyEventCaptor.capture());
+        verify(mockSystemUiProxy, times(2)).onBackEvent(keyEventCaptor.capture(),
+                displayIdCaptor.capture());
         verifyKeyEvent(keyEventCaptor.getAllValues().getFirst(), KeyEvent.ACTION_DOWN, false);
         verifyKeyEvent(keyEventCaptor.getAllValues().getLast(), KeyEvent.ACTION_UP, false);
+        assertTrue(displayIdCaptor.getAllValues().stream().allMatch(v -> v == DISPLAY_ID));
     }
 
     @Test
     @RequiresFlagsEnabled(FLAG_PREDICTIVE_BACK_THREE_BUTTON_NAV)
     public void testPredictiveBackCancelled() {
         ArgumentCaptor<KeyEvent> keyEventCaptor = ArgumentCaptor.forClass(KeyEvent.class);
+        ArgumentCaptor<Integer> displayIdCaptor = ArgumentCaptor.forClass(Integer.class);
         mNavButtonController.sendBackKeyEvent(KeyEvent.ACTION_DOWN, false);
         mNavButtonController.sendBackKeyEvent(KeyEvent.ACTION_UP, true);
-        verify(mockSystemUiProxy, times(2)).onBackEvent(keyEventCaptor.capture());
+        verify(mockSystemUiProxy, times(2)).onBackEvent(keyEventCaptor.capture(),
+                displayIdCaptor.capture());
         verifyKeyEvent(keyEventCaptor.getAllValues().getFirst(), KeyEvent.ACTION_DOWN, false);
         verifyKeyEvent(keyEventCaptor.getAllValues().getLast(), KeyEvent.ACTION_UP, true);
+        assertTrue(displayIdCaptor.getAllValues().stream().allMatch(v -> v == DISPLAY_ID));
     }
 
     @Test

@@ -1440,14 +1440,14 @@ public class TaskbarManager implements DisplayDecorationListener {
         if (isDefaultDisplay(displayId)
                 || !DesktopExperienceFlags.ENABLE_TASKBAR_CONNECTED_DISPLAYS.isTrue()) {
             mPrimaryNavButtonController = new TaskbarNavButtonController(
-                    mPrimaryWindowContext,
+                    displayId,
                     mNavCallbacks,
                     SystemUiProxy.INSTANCE.get(mBaseContext),
                     new Handler(),
                     new ContextualSearchInvoker(mBaseContext));
         } else {
             TaskbarNavButtonController navButtonController = new TaskbarNavButtonController(
-                    getWindowContext(displayId),
+                    displayId,
                     mNavCallbacks,
                     SystemUiProxy.INSTANCE.get(mBaseContext),
                     new Handler(),

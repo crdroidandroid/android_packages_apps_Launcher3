@@ -63,6 +63,7 @@ class OverviewCommandHelperTest {
     private val defaultDisplayResource: RecentsDisplayModel.RecentsDisplayResource = mock()
     private val secondaryDisplayResource: RecentsDisplayModel.RecentsDisplayResource = mock()
     private val executeCommandDisplayIds = mutableListOf<Int>()
+    private val systemUiProxy: SystemUiProxy = mock()
 
     private fun setupDefaultDisplay() {
         whenever(defaultDisplayResource.displayId).thenReturn(DEFAULT_DISPLAY)
@@ -93,6 +94,7 @@ class OverviewCommandHelperTest {
                     recentsDisplayModel = recentsDisplayModel,
                     focusState = mock(),
                     taskbarManager = mock(),
+                    systemUiProxy = systemUiProxy,
                 )
             )
 

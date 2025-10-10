@@ -689,9 +689,10 @@ public class TouchInteractionService extends Service {
         Log.d(TAG, "onUserUnlocked: userId=" + getUserId()
                 + " instance=" + System.identityHashCode(this));
         mOverviewComponentObserver = OverviewComponentObserver.INSTANCE.get(this);
+        SystemUiProxy systemUiProxy = SystemUiProxy.INSTANCE.get(this);
         mOverviewCommandHelper = new OverviewCommandHelper(this,
                 mOverviewComponentObserver, mRecentsDisplayModel,
-                SystemUiProxy.INSTANCE.get(this).getFocusState(), mTaskbarManager);
+                systemUiProxy.getFocusState(), mTaskbarManager, systemUiProxy);
         mUserUnlocked = true;
         mInputConsumer.registerInputConsumer();
         for (int displayId : mDeviceState.getDisplaysWithSysUIState()) {
