@@ -339,23 +339,24 @@ public class CustomSeekBarPreference extends SliderPreference {
         tv.setClickable(isEnabled());
         tv.setFocusable(isEnabled());
 
-        tv.setOnTouchListener((v, ev) -> {
-            if (!isEnabled()) return false;
+        final int tapSlop = dp(tv, 8);
 
-            if (ev.getAction() != android.view.MotionEvent.ACTION_UP) return false;
-            final boolean isRtl = androidx.core.view.ViewCompat.getLayoutDirection(tv)
-                    == androidx.core.view.ViewCompat.LAYOUT_DIRECTION_RTL;
+        tv.setOnTouchListener((v, ev) -> {
+            if (!isEnabled() || ev.getAction() != MotionEvent.ACTION_UP) return false;
+
+            final boolean isRtl = ViewCompat.getLayoutDirection(tv) == ViewCompat.LAYOUT_DIRECTION_RTL;
             final Drawable[] drs = tv.getCompoundDrawablesRelative();
-            final Drawable end = isRtl ? drs[0] : drs[2];
+            final Drawable end = drs[2];
             if (end == null) return false;
 
             final int iconW = end.getIntrinsicWidth();
             final int x = (int) ev.getX();
+
             if (!isRtl) {
-                int left = tv.getWidth() - tv.getPaddingRight() - iconW;
+                final int left = tv.getWidth() - ViewCompat.getPaddingEnd(tv) - iconW - tapSlop;
                 if (x >= left) { performReset(); return true; }
             } else {
-                int right = tv.getPaddingLeft() + iconW;
+                final int right = ViewCompat.getPaddingStart(tv) + iconW + tapSlop;
                 if (x <= right) { performReset(); return true; }
             }
             return false;
