@@ -158,14 +158,14 @@
     <string name="single_page_center_title">Tek sayfayı ortalayın</string>
     <string name="single_page_center_summary">Yalnızca tek bir sayfa kullanılıyorsa duvar kağıdını ortalayın</string>
     <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
+    <string name="drawer_open_keyboard_title">Aramaya başlamak için kaydır</string>
+    <string name="drawer_open_keyboard_summary">Uygulama çekmecesi göründüğünde klavye açılsın</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Kaydırma Çubuğu</string>
     <string name="drawer_scrollbar_summary">Uygulama sayfasının yanındaki kaldırma çubuğu</string>
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">Koyu durum çubuğu</string>
-    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
+    <string name="perf_dark_status_bar_summary">Her zaman ana ekranda koyu durum çubuğunu kullan</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Bir Bakışta</string>
     <string name="show_quickspace_summary">Ana ekranınızın üst kısmında göster</string>
@@ -340,8 +340,8 @@
     </string-array>
     <string name="intent_no_app_clock_found">Takvim veya saat etkinliği bulunamıyor</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quickspace_weather_provider_title">Weather provider</string>
-    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_title">Hava durumu sağlayıcısı</string>
+    <string name="quickspace_weather_provider_entry_auto">Otomatik</string>
     <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
     <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">Hava durumu güncellemesi</string>
@@ -358,4 +358,7 @@
     <string name="quick_event_weather_city_summary">Mevcut hava durumu konumunu göster</string>
     <string name="quick_event_weather_text_title">Geçerli durum</string>
     <string name="quick_event_weather_text_summary">Mevcut hava durumu özetini görüntüle</string>
+    <!-- Auto-hide page indicator dots -->
+    <string name="auto_hide_dots">Auto-hide page indicator</string>
+    <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
 </resources>
