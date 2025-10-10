@@ -364,4 +364,7 @@ Remember the Lineage of the Unicorn</item>
     <string name="quick_event_weather_city_summary">نمایش مکان آب و هوای جاری</string>
     <string name="quick_event_weather_text_title">وضعیت فعلی</string>
     <string name="quick_event_weather_text_summary">نمایش خلاصه وضعیت آب و هوای فعلی</string>
+    <!-- Auto-hide page indicator dots -->
+    <string name="auto_hide_dots">Auto-hide page indicator</string>
+    <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
 </resources>
