@@ -358,4 +358,7 @@
     <string name="quick_event_weather_city_summary">Afficher la position actuelle de la météo</string>
     <string name="quick_event_weather_text_title">Conditions météo</string>
     <string name="quick_event_weather_text_summary">Afficher le résumé des conditions météo actuelles</string>
+    <!-- Auto-hide page indicator dots -->
+    <string name="auto_hide_dots">Auto-hide page indicator</string>
+    <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
 </resources>
