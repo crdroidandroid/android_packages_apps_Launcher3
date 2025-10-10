@@ -358,4 +358,7 @@
     <string name="quick_event_weather_city_summary">現在地の天気を表示します</string>
     <string name="quick_event_weather_text_title">現在の天気</string>
     <string name="quick_event_weather_text_summary">現在の天候の概要を表示します</string>
+    <!-- Auto-hide page indicator dots -->
+    <string name="auto_hide_dots">Auto-hide page indicator</string>
+    <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
 </resources>
