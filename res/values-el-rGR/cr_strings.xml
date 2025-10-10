@@ -358,4 +358,7 @@
     <string name="quick_event_weather_city_summary">Εμφάνιση της τρέχουσας τοποθεσίας του καιρού</string>
     <string name="quick_event_weather_text_title">Τρέχουσα κατάσταση</string>
     <string name="quick_event_weather_text_summary">Εμφάνιση σύνοψης της τρέχουσας καιρικής κατάστασης</string>
+    <!-- Auto-hide page indicator dots -->
+    <string name="auto_hide_dots">Auto-hide page indicator</string>
+    <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
 </resources>
