@@ -361,4 +361,7 @@
     <!-- Auto-hide page indicator dots -->
     <string name="auto_hide_dots">Automaticky skrýt ukazatel stránky</string>
     <string name="auto_hide_dots_summary">Automaticky skrývat tečky ukazatele stránky</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Hloubka rozostření pozadí</string>
+    <string name="background_blur_summary">Nastavit úroveň hloubky rozostření nedávných aplikací a\u00a0seznamu aplikací</string>
 </resources>
