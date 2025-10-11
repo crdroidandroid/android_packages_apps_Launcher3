@@ -361,4 +361,7 @@
     <!-- Auto-hide page indicator dots -->
     <string name="auto_hide_dots">Auto-hide page indicator</string>
     <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Niveau de flou</string>
+    <string name="background_blur_summary">Définir le niveau de flou pour le tiroir et récent</string>
 </resources>
