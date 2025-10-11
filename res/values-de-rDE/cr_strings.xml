@@ -361,4 +361,7 @@
     <!-- Auto-hide page indicator dots -->
     <string name="auto_hide_dots">Seitenzahlpunkte automatisch ausblenden</string>
     <string name="auto_hide_dots_summary">Blendet die unten angezeigten Seitenpunkte automatisch aus</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Tiefenschärfegrad des Hintergrunds</string>
+    <string name="background_blur_summary">Tiefenschärfegrad in App-Übersicht und -Verlauf anpassen</string>
 </resources>
