@@ -546,6 +546,7 @@ public abstract class RecentsView<
     protected final RectF mTempRectF = new RectF();
     private final PointF mTempPointF = new PointF();
     private final Matrix mTempMatrix = new Matrix();
+    private final Matrix mAnimMatrix = new Matrix();
     private final float[] mTempFloat = new float[1];
     private final List<OnScrollChangedListener> mScrollListeners = new ArrayList<>();
 
@@ -1447,7 +1448,6 @@ public abstract class RecentsView<
             ValueAnimator appAnimator = ValueAnimator.ofFloat(0, 1);
             appAnimator.setDuration(RECENTS_LAUNCH_DURATION);
             appAnimator.setInterpolator(ACCELERATE_DECELERATE);
-            final Matrix matrix = new Matrix();
             appAnimator.addUpdateListener(valueAnimator -> {
                 float percent = valueAnimator.getAnimatedFraction();
                 SurfaceTransaction transaction = new SurfaceTransaction();
@@ -1458,11 +1458,12 @@ public abstract class RecentsView<
                             + app.screenSpaceBounds.left * percent;
                     float dy = mContainer.getDeviceProfile().heightPx * (1 - percent) / 2
                             + app.screenSpaceBounds.top * percent;
-                    matrix.setScale(percent, percent);
-                    matrix.postTranslate(dx, dy);
+                    mAnimMatrix.reset();
+                    mAnimMatrix.setScale(percent, percent);
+                    mAnimMatrix.postTranslate(dx, dy);
                     transaction.forSurface(app.leash)
                             .setAlpha(percent)
-                            .setMatrix(matrix);
+                            .setMatrix(mAnimMatrix);
                 }
                 surfaceApplier.scheduleApply(transaction);
             });
@@ -6135,6 +6136,7 @@ public abstract class RecentsView<
             final TransformParams params = remoteTargetHandle.getTransformParams();
             if (RecentsWindowFlags.Companion.getEnableOverviewInWindow()) {
                 params.setHomeBuilderProxy((builder, app, transformParams) -> {
+                    mTmpMatrix.reset();
                     mTmpMatrix.setScale(
                             1f, 1f, app.localBounds.exactCenterX(), app.localBounds.exactCenterY());
                     builder.setMatrix(mTmpMatrix).setAlpha(1f).setShow();
