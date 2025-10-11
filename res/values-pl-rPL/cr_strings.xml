@@ -361,4 +361,7 @@
     <!-- Auto-hide page indicator dots -->
     <string name="auto_hide_dots">Automatyczne ukrywanie wskaźnika strony</string>
     <string name="auto_hide_dots_summary">Automatycznie ukrywaj kropki wskaźnika strony</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Głębia rozmycia tła</string>
+    <string name="background_blur_summary">Ustawienie poziomu głębi rozmycia dla przypomnień i szuflady aplikacji</string>
 </resources>
