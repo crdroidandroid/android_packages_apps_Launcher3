@@ -361,4 +361,7 @@
     <!-- Auto-hide page indicator dots -->
     <string name="auto_hide_dots">Ascundere automată a indicatorului de pagină</string>
     <string name="auto_hide_dots_summary">Ascunde automat punctele indicatorului de pagină</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Adâncime blur de fundal</string>
+    <string name="background_blur_summary">Setaţi nivelul de adâncime încețoșare pentru aplicaţiile recente şi lista aplicaţiilor</string>
 </resources>
