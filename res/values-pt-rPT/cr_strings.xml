@@ -361,4 +361,7 @@
     <!-- Auto-hide page indicator dots -->
     <string name="auto_hide_dots">Auto-hide page indicator</string>
     <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Nível de desfoque do fundo</string>
+    <string name="background_blur_summary">Definir o nível de desfoque para a gaveta de apps e ecrã de recentes</string>
 </resources>
