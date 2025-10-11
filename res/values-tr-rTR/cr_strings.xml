@@ -361,4 +361,7 @@
     <!-- Auto-hide page indicator dots -->
     <string name="auto_hide_dots">Sayfa işaretini otomatik gizle</string>
     <string name="auto_hide_dots_summary">Sayfa işareti için kullanılan noktaları otomatikman gizle</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Arka plan bulanıklık derinliği</string>
+    <string name="background_blur_summary">Son uygulamalar ve uygulama çekmecesi için bulanıklık derinliği seviyesini ayarlayın</string>
 </resources>
