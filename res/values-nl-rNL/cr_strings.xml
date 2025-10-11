@@ -361,4 +361,7 @@
     <!-- Auto-hide page indicator dots -->
     <string name="auto_hide_dots">Pagina-indicator automatisch verbergen</string>
     <string name="auto_hide_dots_summary">Verberg automatisch de pagina indicator stippen</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Achtergrond vervagen diepte</string>
+    <string name="background_blur_summary">Stel vervaging diepte in voor recente apps en app drawer</string>
 </resources>
