@@ -88,8 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">برای حالت خواب دوبار ضربه بزنید</string>
     <string name="pref_sleep_gesture_summary">برای خاموش کردن صفحه نمایش روی فضای خالی صفحه دوبار ضربه بزنید</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_haptic_title">لرزش هنگام خوابیدن با دو‌بار ضربه</string>
+    <string name="pref_sleep_gesture_haptic_summary">ارائه بازخورد لمسی در حالت دو بار ضربه زدن برای خواب</string>
     <!-- Icon size -->
     <string name="icon_size_title">اندازه آیکون</string>
     <!-- Font size -->
@@ -141,7 +141,7 @@
     <string name="recents_clear_all_title">پاک کردن همه موارد</string>
     <string name="recents_lens_title">لنز</string>
     <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
+    <string name="app_info_title">اطلاعات برنامه</string>
     <string name="app_info_source">منبع</string>
     <string name="app_info_source_system">سیستم</string>
     <string name="app_info_last_update">آخرین بروزرسانی</string>
@@ -158,14 +158,14 @@
     <string name="single_page_center_title">تک صفحه مرکز</string>
     <string name="single_page_center_summary">تصویر زمینه در مرکز اگر شما فقط یک صفحه دارید</string>
     <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
+    <string name="drawer_open_keyboard_title">برای جستجو انگشت خود را بکشید</string>
+    <string name="drawer_open_keyboard_summary">هر زمان که کشوی برنامه نمایان شد، صفحه کلید را باز کنید</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">نوار پیمایش</string>
     <string name="drawer_scrollbar_summary">نوار پیمایش در کنار کشوی برنامه</string>
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">نوار وضعیت تاریک</string>
-    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
+    <string name="perf_dark_status_bar_summary">همیشه از نوار وضعیت تیره در صفحه اصلی استفاده کنید</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">در یک دید</string>
     <string name="show_quickspace_summary">در بالای صفحه اصلی نمایش داده شود</string>
@@ -346,9 +346,9 @@ Remember the Lineage of the Unicorn</item>
     </string-array>
     <string name="intent_no_app_clock_found">فعالیت تقویم یا ساعت یافت نشد</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quickspace_weather_provider_title">Weather provider</string>
-    <string name="quickspace_weather_provider_entry_auto">Auto</string>
-    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_title">ارائه‌دهنده وضعیت هوا</string>
+    <string name="quickspace_weather_provider_entry_auto">خودکار</string>
+    <string name="quickspace_weather_provider_entry_seraphix">فضای هوشمند گوگل</string>
     <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">به روز رسانی آب و هوا</string>
     <string name="quick_event_ambient_weather_summary">نمایش به روز رسانی آب و هوای فعلی</string>
@@ -365,8 +365,8 @@ Remember the Lineage of the Unicorn</item>
     <string name="quick_event_weather_text_title">وضعیت فعلی</string>
     <string name="quick_event_weather_text_summary">نمایش خلاصه وضعیت آب و هوای فعلی</string>
     <!-- Auto-hide page indicator dots -->
-    <string name="auto_hide_dots">Auto-hide page indicator</string>
-    <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
+    <string name="auto_hide_dots">نشانگر پنهان شدن خودکار صفحه</string>
+    <string name="auto_hide_dots_summary">نقاط نشانگر صفحه را به طور خودکار پنهان کنید</string>
     <!-- Background blur -->
     <string name="background_blur_title">عمق تاری پس زمینه</string>
     <string name="background_blur_summary">سطح عمق تاری را برای موارد اخیر و کشوی برنامه تنظیم کنید</string>
