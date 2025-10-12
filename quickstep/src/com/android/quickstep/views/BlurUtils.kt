@@ -16,12 +16,17 @@
 
 package com.android.quickstep.views
 
+import androidx.annotation.UiThread
+
 import com.android.launcher3.Flags.enableOverviewBackgroundWallpaperBlur
 import com.android.quickstep.RemoteTargetGluer.RemoteTargetHandle
 
 /** Applies blur either behind launcher surface or live tile app. */
 class BlurUtils(private val recentsView: RecentsView<*, *>) {
 
+    private var lastLeashSet: Any? = null
+
+    @UiThread
     fun setDrawLiveTileBelowRecents(drawBelowRecents: Boolean) {
         val liveTileRemoteTargetHandles =
             if (
@@ -37,27 +42,38 @@ class BlurUtils(private val recentsView: RecentsView<*, *>) {
      * Set surface in [remoteTargetHandles] to be above or below Recents layer, and update the base
      * layer to apply blur to in BaseDepthController.
      */
+    @UiThread
     fun setDrawBelowRecents(
         drawBelowRecents: Boolean,
         remoteTargetHandles: Array<RemoteTargetHandle>? = null,
     ) {
-        remoteTargetHandles?.forEach { it.taskViewSimulator.setDrawsBelowRecents(drawBelowRecents) }
-        if (enableOverviewBackgroundWallpaperBlur()) {
-            recentsView.depthController?.setBaseSurfaceOverride(
-                // Blurs behind launcher layer.
-                if (!drawBelowRecents || remoteTargetHandles == null) {
-                    null
-                } else {
-                    // Blurs behind live tile. blur will be applied behind window
-                    // which farthest from user in case of desktop and split apps.
-                    remoteTargetHandles
-                        .maxByOrNull { it.transformParams.targetSet.firstAppTarget.leash.layerId }
-                        ?.transformParams
-                        ?.targetSet
-                        ?.firstAppTarget
-                        ?.leash
-                }
-            )
+        if (!remoteTargetHandles.isNullOrEmpty()) {
+            for (h in remoteTargetHandles) {
+                h.taskViewSimulator.setDrawsBelowRecents(drawBelowRecents)
+            }
+        }
+
+        if (!enableOverviewBackgroundWallpaperBlur()) {
+            recentsView.depthController?.setBaseSurfaceOverride(null)
+            lastLeashSet = null
+            return
+        }
+
+        // Always clear when not drawing below Recents or when handles are absent.
+        val leashOrNull =
+            if (drawBelowRecents && !remoteTargetHandles.isNullOrEmpty()) {
+                // Pick a valid app leash if present; otherwise null
+                remoteTargetHandles
+                    .mapNotNull { it.transformParams.targetSet.firstAppTarget?.leash }
+                    .filter { it.isValid }
+                    .maxByOrNull { it.layerId }
+            } else {
+                null
+            }
+
+        if (leashOrNull !== lastLeashSet) {
+            recentsView.depthController?.setBaseSurfaceOverride(leashOrNull)
+            lastLeashSet = leashOrNull
         }
     }
 }
