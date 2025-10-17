@@ -358,4 +358,10 @@
     <string name="quick_event_weather_city_summary">현재 위치의 날씨 표시</string>
     <string name="quick_event_weather_text_title">현재 상태</string>
     <string name="quick_event_weather_text_summary">현재 날씨 요약 표시</string>
+    <!-- Auto-hide page indicator dots -->
+    <string name="auto_hide_dots">Auto-hide page indicator</string>
+    <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">배경 흐림</string>
+    <string name="background_blur_summary">최근 앱과 앱 서랍에서 블러 깊이 레벨 설정</string>
 </resources>

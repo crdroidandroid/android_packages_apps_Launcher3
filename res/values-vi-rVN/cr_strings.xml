@@ -359,4 +359,10 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="quick_event_weather_city_summary">Hiển thị vị trí thời tiết hiện tại</string>
     <string name="quick_event_weather_text_title">Tình trạng hiện tại</string>
     <string name="quick_event_weather_text_summary">Hiển thị tóm tắt tình trạng thời tiết hiện tại</string>
+    <!-- Auto-hide page indicator dots -->
+    <string name="auto_hide_dots">Auto-hide page indicator</string>
+    <string name="auto_hide_dots_summary">Tự động ẩn dấu chấm trình bày báo trang</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Độ sâu nền mờ</string>
+    <string name="background_blur_summary">Thiết lập độ mờ của hình nền cho ứng dụng gần đây và ngăn chứa ứng dụng</string>
 </resources>

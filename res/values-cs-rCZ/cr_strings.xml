@@ -141,7 +141,7 @@
     <string name="recents_clear_all_title">Vymazat vše</string>
     <string name="recents_lens_title">Lens</string>
     <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
+    <string name="app_info_title">Informace o aplikaci</string>
     <string name="app_info_source">Zdroj</string>
     <string name="app_info_source_system">Systém</string>
     <string name="app_info_last_update">Poslední aktualizace</string>
@@ -340,7 +340,7 @@
     </string-array>
     <string name="intent_no_app_clock_found">Nelze najít aktivitu kalendáře nebo hodin</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quickspace_weather_provider_title">Weather provider</string>
+    <string name="quickspace_weather_provider_title">Poskytovatel počasí</string>
     <string name="quickspace_weather_provider_entry_auto">Auto</string>
     <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
     <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
@@ -358,4 +358,10 @@
     <string name="quick_event_weather_city_summary">Zobrazit aktuální polohu počasí</string>
     <string name="quick_event_weather_text_title">Aktuální stav</string>
     <string name="quick_event_weather_text_summary">Zobrazit souhrn aktuálních podmínek počasí</string>
+    <!-- Auto-hide page indicator dots -->
+    <string name="auto_hide_dots">Automaticky skrýt ukazatel stránky</string>
+    <string name="auto_hide_dots_summary">Automaticky skrývat tečky ukazatele stránky</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Hloubka rozostření pozadí</string>
+    <string name="background_blur_summary">Nastavit úroveň hloubky rozostření nedávných aplikací a\u00a0seznamu aplikací</string>
 </resources>

@@ -358,4 +358,10 @@
     <string name="quick_event_weather_city_summary">عرض موقع الطقس الحالي</string>
     <string name="quick_event_weather_text_title">الوضع الحالي</string>
     <string name="quick_event_weather_text_summary">عرض ملخص حالة الطقس الحالية</string>
+    <!-- Auto-hide page indicator dots -->
+    <string name="auto_hide_dots">Auto-hide page indicator</string>
+    <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">مستوي ضبابية الخلفية</string>
+    <string name="background_blur_summary">تعيين مستوى الضباب للتطبيقات الحديثة ودرج التطبيقات</string>
 </resources>
