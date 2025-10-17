@@ -435,4 +435,8 @@
     <string name="samsung_style_shape_title">Samsung Style</string>
     <string name="scroll_shape_title">Scroll</string>
     <string name="stretched_shape_title">Stretched</string>
+
+    <!-- Dark app drawer text -->
+    <string name="all_apps_dark_text_title">Dark app labels</string>
+    <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
 </resources>
