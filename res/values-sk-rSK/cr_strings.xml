@@ -88,8 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Uspať dvojitým poklepaním</string>
     <string name="pref_sleep_gesture_summary">Dvojitým klepnutím na prázdne miesto vypnete obrazovku</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrovať pri uspaní dvojitým dotykom</string>
+    <string name="pref_sleep_gesture_haptic_summary">Poskytnúť hmatovú spätnú väzbu pri geste dvojitého klepnutia pre uspanie</string>
     <!-- Icon size -->
     <string name="icon_size_title">Veľkosť ikony</string>
     <!-- Font size -->
@@ -141,7 +141,7 @@
     <string name="recents_clear_all_title">Vymazať všetko</string>
     <string name="recents_lens_title">Objektív</string>
     <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
+    <string name="app_info_title">Informácie o aplikácii</string>
     <string name="app_info_source">Zdroj</string>
     <string name="app_info_source_system">Systém</string>
     <string name="app_info_last_update">Posledná aktualizácia</string>
@@ -158,14 +158,14 @@
     <string name="single_page_center_title">Vycentrovať jedinú stránku</string>
     <string name="single_page_center_summary">Vycentrovať pozadie len pri použití jednej stránky</string>
     <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
+    <string name="drawer_open_keyboard_title">Potiahnite prstom pre spustenie vyhľadávania</string>
+    <string name="drawer_open_keyboard_summary">Vždy otvárať klávesnicu, keď je zoznam aplikácií viditeľný</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Posuvník</string>
     <string name="drawer_scrollbar_summary">Posuvník na boku v zásuvke aplikácií</string>
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">Tmavý stavový riadok</string>
-    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
+    <string name="perf_dark_status_bar_summary">Vždy použiť tmavý stavový riadok na ploche</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Prehľad udalostí</string>
     <string name="show_quickspace_summary">Zobraziť v hornej časti domovskej obrazovky</string>
@@ -340,8 +340,8 @@
     </string-array>
     <string name="intent_no_app_clock_found">Aktivita kalendára alebo hodín sa nenašla</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quickspace_weather_provider_title">Weather provider</string>
-    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_title">Poskytovateľ počasia</string>
+    <string name="quickspace_weather_provider_entry_auto">Automaticky</string>
     <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
     <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">Aktualizácia počasia</string>
@@ -359,8 +359,8 @@
     <string name="quick_event_weather_text_title">Aktuálne podmienky</string>
     <string name="quick_event_weather_text_summary">Zobraziť súhrn aktuálneho počasia</string>
     <!-- Auto-hide page indicator dots -->
-    <string name="auto_hide_dots">Auto-hide page indicator</string>
-    <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
+    <string name="auto_hide_dots">Automaticky skryť indikátor stránky</string>
+    <string name="auto_hide_dots_summary">Automaticky skryť bodky indikátora stránky</string>
     <!-- Background blur -->
     <string name="background_blur_title">Sila rozmazania pozadia</string>
     <string name="background_blur_summary">Nastaviť úroveň hĺbky rozmazania pre nedávne aplikácie a ponuku aplikácií</string>
