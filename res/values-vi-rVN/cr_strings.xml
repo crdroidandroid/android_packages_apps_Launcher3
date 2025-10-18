@@ -88,7 +88,7 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Chạm hai lần để tắt màn hình</string>
     <string name="pref_sleep_gesture_summary">Nhấn liên tiếp hai lần vào khoảng trống để tắt màn hình</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_title">Rung khi nhấn đúp để ngủ</string>
     <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Icon size -->
     <string name="icon_size_title">Kích thước biểu tượng</string>
@@ -360,7 +360,7 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="quick_event_weather_text_title">Tình trạng hiện tại</string>
     <string name="quick_event_weather_text_summary">Hiển thị tóm tắt tình trạng thời tiết hiện tại</string>
     <!-- Auto-hide page indicator dots -->
-    <string name="auto_hide_dots">Auto-hide page indicator</string>
+    <string name="auto_hide_dots">Tự động ẩn chỉ báo trang</string>
     <string name="auto_hide_dots_summary">Tự động ẩn dấu chấm trình bày báo trang</string>
     <!-- Background blur -->
     <string name="background_blur_title">Độ sâu nền mờ</string>
