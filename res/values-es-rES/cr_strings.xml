@@ -88,8 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Doble toque para apagar pantalla</string>
     <string name="pref_sleep_gesture_summary">Doble toque en un espacio vacío para apagar la pantalla</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrar al tocar dos veces para suspender</string>
+    <string name="pref_sleep_gesture_haptic_summary">Proporciona retroalimentación háptica en el gesto de doble toque para suspender</string>
     <!-- Icon size -->
     <string name="icon_size_title">Tamaño del icono</string>
     <!-- Font size -->
@@ -141,7 +141,7 @@
     <string name="recents_clear_all_title">Borrar todo</string>
     <string name="recents_lens_title">Lens</string>
     <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
+    <string name="app_info_title">Información de la aplicación</string>
     <string name="app_info_source">Fuente</string>
     <string name="app_info_source_system">Sistema</string>
     <string name="app_info_last_update">Última actualización</string>
@@ -158,14 +158,14 @@
     <string name="single_page_center_title">Título de página única centrado</string>
     <string name="single_page_center_summary">Centrar fondo de pantalla si hay una sola página</string>
     <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
+    <string name="drawer_open_keyboard_title">Desliza para comenzar la búsqueda</string>
+    <string name="drawer_open_keyboard_summary">Abrir el teclado cada vez que el cajón de aplicaciones se vuelva visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Barra de desplazamiento</string>
     <string name="drawer_scrollbar_summary">Barra de desplazamiento al lado del cajón de aplicaciones</string>
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">Barra de estado oscura</string>
-    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
+    <string name="perf_dark_status_bar_summary">Usar siempre la barra de estado oscura en la pantalla de inicio</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">De un vistazo</string>
     <string name="show_quickspace_summary">Mostrar en la parte superior de la pantalla de inicio</string>
@@ -340,8 +340,8 @@
     </string-array>
     <string name="intent_no_app_clock_found">No se puede encontrar el calendario o la actividad del reloj</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quickspace_weather_provider_title">Weather provider</string>
-    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_title">Proveedor del clima</string>
+    <string name="quickspace_weather_provider_entry_auto">Automático</string>
     <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
     <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">Actualización del tiempo</string>
@@ -359,8 +359,8 @@
     <string name="quick_event_weather_text_title">Condición actual</string>
     <string name="quick_event_weather_text_summary">Mostrar el resumen actual de la condición meteorológica</string>
     <!-- Auto-hide page indicator dots -->
-    <string name="auto_hide_dots">Auto-hide page indicator</string>
-    <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
+    <string name="auto_hide_dots">Ocultar automáticamente el indicador de página</string>
+    <string name="auto_hide_dots_summary">Ocultar automáticamente los puntos del indicador de página</string>
     <!-- Background blur -->
     <string name="background_blur_title">Desenfoque de fondo</string>
     <string name="background_blur_summary">Establecer nivel de profundidad de desenfoque para recientes y cajón de aplicaciones</string>
