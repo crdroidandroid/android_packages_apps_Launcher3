@@ -78,7 +78,7 @@ public class VibratorWrapper {
             DaggerSingletonTracker tracker) {
 
         mVibrator = context.getSystemService(Vibrator.class);
-        mHasVibrator = mVibrator.hasVibrator();
+        mHasVibrator = mVibrator != null && mVibrator.hasVibrator();
         if (mHasVibrator) {
             MAIN_EXECUTOR.execute(
                     () -> settingsCache.register(HAPTIC_FEEDBACK_URI, mHapticChangeListener));
@@ -103,6 +103,10 @@ public class VibratorWrapper {
         if (mHasVibrator && mIsHapticFeedbackEnabled) {
             UI_HELPER_EXECUTOR.execute(() -> mVibrator.vibrate(vibrationEffect, VIBRATION_ATTRS));
         }
+    }
+
+    public boolean hasVibrator() {
+        return mHasVibrator;
     }
 
     /**
