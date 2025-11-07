@@ -34,6 +34,7 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceFragmentCompat.OnPreferenceStartFragmentCallback;
 import androidx.preference.PreferenceFragmentCompat.OnPreferenceStartScreenCallback;
@@ -50,6 +51,7 @@ import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.util.SettingsCache;
+import com.android.launcher3.util.VibratorWrapper;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.widget.SettingsBasePreferenceFragment;
@@ -189,6 +191,7 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
         private boolean mPreferenceHighlighted = false;
 
         private static final String KEY_MINUS_ONE = "pref_enable_minus_one";
+        private static final String KEY_GENERAL_CATEGORY = "general_category";
 
         private Preference mShowGoogleAppPref;
         private Preference mShowGoogleBarPref;
@@ -216,6 +219,12 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
             mShowGoogleBarPref = screen.findPreference(LauncherPrefs.DOCK_SEARCH.getSharedPrefKey());
 
             updateIsGoogleAppEnabled();
+
+            if (!VibratorWrapper.INSTANCE.get(getContext()).hasVibrator()) {
+                PreferenceCategory generalCategory = (PreferenceCategory) findPreference(KEY_GENERAL_CATEGORY);
+                Preference d2SHaptic = screen.findPreference(LauncherPrefs.SLEEP_GESTURE_HAPTIC.getSharedPrefKey());
+                generalCategory.removePreference(d2SHaptic);
+            }
 
             // If the target preference is not in the current preference screen, find the parent
             // preference screen that contains the target preference and set it as the preference
