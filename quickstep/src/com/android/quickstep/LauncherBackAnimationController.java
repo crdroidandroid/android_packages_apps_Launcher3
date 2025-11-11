@@ -96,8 +96,7 @@ public class LauncherBackAnimationController {
     private static final int SCRIM_FADE_DURATION = 233;
     private static final float MIN_WINDOW_SCALE =
             Flags.predictiveBackToHomePolish() ? 0.75f : 0.85f;
-    private static final float MAX_SCRIM_ALPHA_DARK = 0.8f;
-    private static final float MAX_SCRIM_ALPHA_LIGHT = 0.2f;
+    private static final float MAX_SCRIM_ALPHA = 0.8f;
     private static final int MAX_BLUR_RADIUS = 20;
     private static final int MIN_BLUR_RADIUS_PRE_COMMIT = 10;
 
@@ -115,6 +114,7 @@ public class LauncherBackAnimationController {
     private final Interpolator mProgressInterpolator = Interpolators.BACK_GESTURE;
     private final Interpolator mVerticalMoveInterpolator = new DecelerateInterpolator();
     private final PointF mInitialTouchPos = new PointF();
+    private final boolean predictiveBackToHomeBlur = false;
 
     private RemoteAnimationTarget mBackTarget;
     private RemoteAnimationTarget mLauncherTarget;
@@ -386,7 +386,7 @@ public class LauncherBackAnimationController {
                 && !mLauncher.isInState(LauncherState.ALL_APPS)) {
             Animations.cancelOngoingAnimation(mLauncher.getWorkspace());
             Animations.cancelOngoingAnimation(mLauncher.getHotseat());
-            if (Flags.predictiveBackToHomeBlur()) {
+            if (predictiveBackToHomeBlur) {
                 mLauncher.getDepthController().pauseBlursOnWindows(true);
             }
             mLauncher.getDepthController().stateDepth.setValue(
@@ -430,8 +430,7 @@ public class LauncherBackAnimationController {
                 .setHidden(false)
                 .build();
         final float[] colorComponents = new float[] { 0f, 0f, 0f };
-        mScrimAlpha = (isDarkTheme)
-                ? MAX_SCRIM_ALPHA_DARK : MAX_SCRIM_ALPHA_LIGHT;
+        mScrimAlpha = MAX_SCRIM_ALPHA;
         setBlur(MAX_BLUR_RADIUS);
         mTransaction
                 .setColor(mScrimLayer, colorComponents)
@@ -494,7 +493,7 @@ public class LauncherBackAnimationController {
     }
 
     private void setBlur(int blurRadius) {
-        if (Flags.predictiveBackToHomeBlur()) {
+        if (predictiveBackToHomeBlur) {
             mTransaction.setBackgroundBlurRadius(mScrimLayer, blurRadius);
         }
     }
@@ -606,7 +605,7 @@ public class LauncherBackAnimationController {
         if (mScrimLayer != null) {
             removeScrimLayer();
         }
-        if (Flags.predictiveBackToHomePolish() && Flags.predictiveBackToHomeBlur()
+        if (Flags.predictiveBackToHomePolish() && predictiveBackToHomeBlur
                 && !mLauncher.getWorkspace().isOverlayShown()
                 && !mLauncher.isInState(LauncherState.ALL_APPS)) {
             mLauncher.getDepthController().pauseBlursOnWindows(false);
