@@ -43,7 +43,7 @@ import java.util.concurrent.TimeUnit
  * but whose effect may not be visible immediately.
  */
 object FileLog {
-    const val ENABLED: Boolean = true
+    const val ENABLED: Boolean = false
     private const val FILE_NAME_PREFIX = "log-"
     private const val MAX_LOG_FILE_SIZE = (8 shl 20 /** 8 mb **/ ).toLong()
     public const val LOG_DAYS: Int = 4
