@@ -652,7 +652,7 @@ public class LauncherBackAnimationController {
             mMaxBlurRadius = mLauncher.getResources().getDimensionPixelSize(
                     R.dimen.max_depth_blur_radius_enhanced);
         } else {
-            mMaxBlurRadius = mLauncher.getResources().getInteger(R.integer.max_depth_blur_radius);
+            mMaxBlurRadius = mLauncher.getResources().getDimensionPixelSize(R.dimen.max_depth_blur_radius);
         }
     }
 

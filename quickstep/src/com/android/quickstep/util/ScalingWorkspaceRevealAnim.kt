@@ -49,7 +49,6 @@ import com.android.launcher3.uioverrides.QuickstepLauncher
 import com.android.launcher3.R
 import com.android.launcher3.Utilities
 import com.android.quickstep.views.RecentsView
-import com.android.launcher3.Flags
 
 const val TAG = "ScalingWorkspaceRevealAnim"
 
@@ -178,7 +177,7 @@ class ScalingWorkspaceRevealAnim(
             if (Flags.allAppsBlur() || Flags.enableOverviewBackgroundWallpaperBlur()) {
                 R.dimen.max_depth_blur_radius_enhanced
             } else {
-                R.integer.max_depth_blur_radius
+                R.dimen.max_depth_blur_radius
             }
         )
         val blurAnimator = ValueAnimator.ofFloat(1f, 0f)
