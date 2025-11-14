@@ -123,12 +123,12 @@ open class PhoneLandscapeNavLayoutter(
     }
 
     open fun addThreeButtons() {
-        if (homeButton == null || backButton == null || recentsButton == null) {
-            return
-        }
+        val inverseMode = homeButton?.context?.let {
+            SettingsCache.INSTANCE.get(it).getIntValue(NAV_BAR_INVERSE, 0)
+        } ?: 0
         // Swap recents and back button
         if (Utilities.isRtl(resources)) {
-            if (SettingsCache.INSTANCE.get(homeButton!!.context).getValue(NAV_BAR_INVERSE, 0)) {
+            if (inverseMode == 1) {
                 navButtonContainer.addView(backButton)
                 navButtonContainer.addView(homeButton)
                 navButtonContainer.addView(recentsButton)
@@ -138,7 +138,7 @@ open class PhoneLandscapeNavLayoutter(
                 navButtonContainer.addView(backButton)
             }
         } else {
-            if (SettingsCache.INSTANCE.get(homeButton!!.context).getValue(NAV_BAR_INVERSE, 0)) {
+            if (inverseMode == 1) {
                 navButtonContainer.addView(recentsButton)
                 navButtonContainer.addView(homeButton)
                 navButtonContainer.addView(backButton)
