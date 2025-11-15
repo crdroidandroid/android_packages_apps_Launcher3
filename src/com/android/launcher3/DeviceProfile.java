@@ -430,9 +430,8 @@ public class DeviceProfile {
         isTwoPanels = isTablet && isMultiDisplay;
         boolean enableTaskbar = SettingsCache.INSTANCE.get(context).getValue(
                         ENABLE_TASKBAR, isTablet ? 1 : 0);
-        boolean taskbarOrBubbleBarOnPhones = enableTaskbar
-                || (enableBubbleBar() && enableBubbleBarOnPhones());
-        isTaskbarPresent = (isTablet || (taskbarOrBubbleBarOnPhones && isGestureMode))
+        boolean taskbarOrBubbleBarOnPhones = enableBubbleBar() && enableBubbleBarOnPhones();
+        isTaskbarPresent = (enableTaskbar || (taskbarOrBubbleBarOnPhones && isGestureMode))
                 && wmProxy.isTaskbarDrawnInProcess();
 
         // Some more constants.

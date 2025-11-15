@@ -578,7 +578,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
      * single window for taskbar and navbar.
      */
     public boolean isPhoneMode() {
-        if (mDeviceProfile.isTaskbarPresent &&
+        if (!mDeviceProfile.isPhone &&
                 !SettingsCache.INSTANCE.get(this).getValue(ENABLE_TASKBAR,
                 mDeviceProfile.isTablet ? 1 : 0)) {
             return true;
