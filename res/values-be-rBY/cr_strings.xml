@@ -135,7 +135,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Даступна | %2$s Усяго</string>
     <string name="recents_meminfo_title">Інфармацыя аб памяці</string>
-    <string name="recents_meminfo_zram_title">ZRAM info</string>
+    <string name="recents_meminfo_zram_title">Інфармацыя аб ZRAM</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Здымак экрана</string>
     <string name="recents_clear_all_title">Ачысціць усё</string>
@@ -143,14 +143,14 @@
     <!-- Parallax -->
     <string name="short_parallax_title">Дазволіць кароткі паралакс</string>
     <string name="short_parallax_summary">Уключыце эфект поўнай пракруткі шпалер на меншай колькасці старонак замест абразання шпалер</string>
-    <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <string name="single_page_center_title">Па цэнтры адной старонкі</string>
+    <string name="single_page_center_summary">Размясціць шпалеры па цэнтры, калі выкарыстоўваецца толькі адна старонка</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Панэль пошуку праграмы</string>
     <string name="drawer_search_summary">Панэль пошуку ў верхняй частцы меню праграм</string>
     <!-- Auto keyboard -->
-    <string name="pref_auto_keyboard_title">Auto keyboard</string>
-    <string name="pref_auto_keyboard_summary">Start searching when the drawer is expanded</string>
+    <string name="pref_auto_keyboard_title">Аўтаматычная клавіятура</string>
+    <string name="pref_auto_keyboard_summary">Пачынаць пошук, калі адкрыта меню праграм</string>
     <!-- AppInfo -->
     <string name="app_info_source">Крыніца</string>
     <string name="app_info_source_system">Сістэма</string>
@@ -163,8 +163,8 @@
     <string name="icon_pack_add">Усталяваць яшчэ</string>
     <string name="icon_pack_no_market">Няма даступнай крамы праграм</string>
     <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">Scrollbar</string>
-    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
+    <string name="drawer_scrollbar_title">Паласа прагорткі</string>
+    <string name="drawer_scrollbar_summary">Паласа пракруткі збоку ад меню праграм</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">З Першага Погляду</string>
     <string name="show_quickspace_summary">Паказваць у верхняй частцы экрана</string>
