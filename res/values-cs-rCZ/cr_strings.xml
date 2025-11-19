@@ -89,7 +89,7 @@
     <string name="pref_sleep_gesture_title">Uspat dvojím poklepáním</string>
     <string name="pref_sleep_gesture_summary">Dvojím poklepáním do prázdného prostoru uspat zařízení</string>
     <string name="pref_sleep_gesture_haptic_title">Zavibrovat při dvojím poklepání pro přechod do režimu spánku</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_haptic_summary">Poskytuje hmatovou odezvu při použití gesta dvojím poklepání pro přechod do režimu spánku</string>
     <!-- Icon size -->
     <string name="icon_size_title">Velikost ikon</string>
     <!-- Font size -->
@@ -158,14 +158,14 @@
     <string name="single_page_center_title">Vycentrovat jedinou stránku</string>
     <string name="single_page_center_summary">Vycentrovat tapetu pouze při použití jedné stránky</string>
     <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
+    <string name="drawer_open_keyboard_title">Přejetím začít vyhledávat</string>
+    <string name="drawer_open_keyboard_summary">Otevřít klávesnici pokaždé, když je zobrazen seznam aplikací</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Posuvník</string>
     <string name="drawer_scrollbar_summary">Posuvník po straně seznamu aplikací</string>
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">Tmavý stavový řádek</string>
-    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
+    <string name="perf_dark_status_bar_summary">Na domovské obrazovce vždy používat tmavý stavový řádek</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Přehled událostí</string>
     <string name="show_quickspace_summary">Zobrazit v horní části Domovské obrazovky</string>
