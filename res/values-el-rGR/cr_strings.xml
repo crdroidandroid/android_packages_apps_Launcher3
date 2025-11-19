@@ -165,7 +165,7 @@
     <string name="drawer_scrollbar_summary">Μπάρα κύλισης στο πλάι του συρταριού εφαρμογών</string>
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">Σκοτεινή γραμμή κατάστασης</string>
-    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
+    <string name="perf_dark_status_bar_summary">Να χρησιμοποιείται πάντα η σκοτεινή γραμμή κατάστασης στην αρχική οθόνη</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Με μια Ματιά</string>
     <string name="show_quickspace_summary">Εμφάνιση στο επάνω μέρος της αρχικής σας οθόνης</string>
@@ -340,8 +340,8 @@
     </string-array>
     <string name="intent_no_app_clock_found">Αδυναμία εύρεσης δραστηριότητας ημερολογίου ή ρολογιού</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quickspace_weather_provider_title">Weather provider</string>
-    <string name="quickspace_weather_provider_entry_auto">Auto</string>
+    <string name="quickspace_weather_provider_title">Πάροχος Καιρού</string>
+    <string name="quickspace_weather_provider_entry_auto">Αυτόματα</string>
     <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
     <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">Ενημέρωση καιρού</string>
@@ -359,8 +359,8 @@
     <string name="quick_event_weather_text_title">Τρέχουσα κατάσταση</string>
     <string name="quick_event_weather_text_summary">Εμφάνιση σύνοψης της τρέχουσας καιρικής κατάστασης</string>
     <!-- Auto-hide page indicator dots -->
-    <string name="auto_hide_dots">Auto-hide page indicator</string>
-    <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
+    <string name="auto_hide_dots">Αυτόματη απόκρυψη ένδειξης σελίδας</string>
+    <string name="auto_hide_dots_summary">Απόκρυψη των σημείων ένδειξης σελίδας αυτόματα</string>
     <!-- Background blur -->
     <string name="background_blur_title">Βάθος θολώματος φόντου</string>
     <string name="background_blur_summary">Ορισμός επιπέδου βάθους θαμπώματος για πρόσφατα και συρτάρι εφαρμογών</string>
