@@ -327,19 +327,6 @@ public class AllAppsTransitionController
         builder.add(anim);
 
         setAlphas(toState, config, builder);
-        // This controls both haptics for tapping on QSB and going to all apps.
-        if (ALL_APPS.equals(toState) && mLauncher.isInState(NORMAL)) {
-            if (Flags.msdlFeedback()) {
-                if (config.isUserControlled()) {
-                    mMSDLPlayerWrapper.playToken(MSDLToken.SWIPE_THRESHOLD_INDICATOR);
-                } else {
-                    mMSDLPlayerWrapper.playToken(MSDLToken.TAP_HIGH_EMPHASIS);
-                }
-            } else {
-                mLauncher.getAppsView().performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY,
-                        HapticFeedbackConstants.FLAG_IGNORE_VIEW_SETTING);
-            }
-        }
     }
 
     public Animator createSpringAnimation(float... progressValues) {
