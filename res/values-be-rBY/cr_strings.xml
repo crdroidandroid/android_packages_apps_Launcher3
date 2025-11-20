@@ -62,11 +62,11 @@
     <string name="paused_apps_dialog_title">Праграма прыпынена</string>
     <string name="paused_apps_dialog_message">%1$s быў прыпынены непасрэдна з праграмы запуску</string>
     <string name="paused_apps_drop_target_label">Прыпыніць праграму</string>
-    <string name="work_apps_paused_title_custom">Work apps are off</string>
-    <string name="work_apps_pause_btn_text_custom">Turn off work apps</string>
-    <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
-    <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
-    <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_title_custom">Працоўныя праграмы адключаны</string>
+    <string name="work_apps_pause_btn_text_custom">Адключыць працоўныя праграмы</string>
+    <string name="work_apps_enable_btn_text_custom">Уключыць працоўныя праграмы</string>
+    <string name="work_apps_paused_info_body_custom">Вашы працоўныя праграмы не могуць адпраўляць вам апавяшчэнні, выкарыстоўваць зарад батарэі або атрымліваць доступ да вашага месцазнаходжання</string>
+    <string name="work_apps_paused_telephony_unavailable_body_custom">Вашы працоўныя праграмы не могуць прымаць тэлефонныя званкі або тэкставыя паведамленні, адпраўляць вам апавяшчэнні, выкарыстоўваць зарад батарэі або атрымліваць доступ да вашага месцазнаходжання</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Схаваныя і абароненыя праграмы</string>
     <string name="trust_apps_auth_manager">Разблакуйце для кіравання ўтоенымі і абароненымі праграмамі</string>
@@ -82,9 +82,9 @@
     <!-- Restart launcher -->
     <string name="pref_restart_title">Перазапуск</string>
     <string name="pref_restart_summary">Перазапусціць лаўнчар уручную, каб прымяніць усе налады</string>
-    <string name="restarting_launcher">Restarting launcher...</string>
-    <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
-    <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
+    <string name="restarting_launcher">Перазапуск праграмы запуску...</string>
+    <string name="restarting_launcher_changes">Перазапуск праграмы запуску для ўжыцця змяненняў...</string>
+    <string name="updating_launcher_components">Перазапуск праграмы запуску для абнаўлення яе кампанентаў...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Выключаць экран пры падвойным націску</string>
     <string name="pref_sleep_gesture_summary">Двойчы націсніце на пустое месца, каб выключыць экран</string>
@@ -95,7 +95,7 @@
     <!-- Font size -->
     <string name="font_size_title">Памер шрыфта</string>
     <!-- App label -->
-    <string name="icon_two_lines_title">Use two lines for app label</string>
+    <string name="icon_two_lines_title">Выкарыстоўваць два радкі для назвы праграмы</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Спыніць</string>
     <string name="recents_app_killed">Праграма завершана</string>
@@ -135,7 +135,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Даступна | %2$s Усяго</string>
     <string name="recents_meminfo_title">Інфармацыя аб памяці</string>
-    <string name="recents_meminfo_zram_title">ZRAM info</string>
+    <string name="recents_meminfo_zram_title">Інфармацыя аб ZRAM</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Здымак экрана</string>
     <string name="recents_clear_all_title">Ачысціць усё</string>
@@ -155,14 +155,14 @@
     <!-- Parallax -->
     <string name="short_parallax_title">Дазволіць кароткі паралакс</string>
     <string name="short_parallax_summary">Уключыце эфект поўнай пракруткі шпалер на меншай колькасці старонак замест абразання шпалер</string>
-    <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <string name="single_page_center_title">Па цэнтры адной старонкі</string>
+    <string name="single_page_center_summary">Размясціць шпалеры па цэнтры, калі выкарыстоўваецца толькі адна старонка</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Swipe to start search</string>
     <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">Scrollbar</string>
-    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
+    <string name="drawer_scrollbar_title">Паласа прагорткі</string>
+    <string name="drawer_scrollbar_summary">Паласа пракруткі збоку ад меню праграм</string>
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">Dark status bar</string>
     <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
