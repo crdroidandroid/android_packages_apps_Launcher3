@@ -34,7 +34,7 @@
         android:title="@string/icon_size_title"
         android:persistent="true"
         android:max="150"
-        android:min="50"
+        settings:min="50"
         settings:units="%"
         android:defaultValue="100" />
 
@@ -43,7 +43,7 @@
         android:title="@string/font_size_title"
         android:persistent="true"
         android:max="150"
-        android:min="50"
+        settings:min="50"
         settings:units="%"
         android:defaultValue="100" />
 

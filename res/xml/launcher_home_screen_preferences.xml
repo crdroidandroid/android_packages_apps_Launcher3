@@ -231,7 +231,7 @@
             android:title="@string/background_opacity_title"
             android:persistent="true"
             android:max="100"
-            android:min="0"
+            settings:min="0"
             settings:units="%"
             android:dependency="pref_dock_search"
             android:defaultValue="100" />
@@ -241,7 +241,7 @@
             android:title="@string/stroke_width_title"
             android:persistent="true"
             android:max="10"
-            android:min="0"
+            settings:min="0"
             settings:units="vw"
             android:dependency="pref_dock_search"
             android:defaultValue="0" />
@@ -265,7 +265,7 @@
             android:title="@string/search_radius_title"
             android:persistent="true"
             android:max="100"
-            android:min="0"
+            settings:min="0"
             settings:interval="5"
             settings:units="%"
             android:defaultValue="100" />
@@ -282,7 +282,7 @@
             android:title="@string/background_opacity_title"
             android:persistent="true"
             android:max="100"
-            android:min="0"
+            settings:min="0"
             settings:units="%"
             android:dependency="pref_show_hotseat_bg"
             android:defaultValue="40" />
