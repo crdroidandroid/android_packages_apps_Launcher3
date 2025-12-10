@@ -3707,21 +3707,33 @@ public abstract class RecentsView<
     private void addDismissedTaskAnimations(TaskView taskView, long duration,
             PendingAnimation anim) {
         // Use setFloat instead of setViewAlpha as we want to keep the view visible even when it's
-        // alpha is set to 0 so that it can be recycled in the view pool properly
+        // alpha is set to 0 so that it can be recycled in the view pool properly.
+        // Make the fade-out slightly smoother and a bit longer.
         anim.setFloat(taskView, VIEW_ALPHA, 0,
-                clampToProgress(isOnGridBottomRow(taskView) ? ACCELERATE : FINAL_FRAME, 0, 0.5f));
+                clampToProgress(
+                        isOnGridBottomRow(taskView) ? ACCELERATE : FINAL_FRAME,
+                        0f,
+                        0.6f)); // was 0.5f
+
         FloatProperty<TaskView> secondaryViewTranslate =
                 taskView.getSecondaryDismissTranslationProperty();
         int secondaryTaskDimension = getPagedOrientationHandler().getSecondaryDimension(taskView);
         int verticalFactor = getPagedOrientationHandler().getSecondaryTranslationDirectionFactor();
 
+        // Keep using dynamic resources (OEM can tune these), but we will reduce the travel distance
+        // and use a non-linear interpolator for a smoother feel.
         ResourceProvider rp = DynamicResource.provider(mContainer);
         SpringProperty sp = new SpringProperty(SpringProperty.FLAG_CAN_SPRING_ON_START)
                 .setDampingRatio(rp.getFloat(R.dimen.dismiss_task_trans_y_damping_ratio))
                 .setStiffness(rp.getFloat(R.dimen.dismiss_task_trans_y_stiffness));
 
-        anim.add(ObjectAnimator.ofFloat(taskView, secondaryViewTranslate,
-                verticalFactor * secondaryTaskDimension * 2).setDuration(duration), LINEAR, sp);
+        // Move the card ~1.5x instead of 2x its height off-screen to avoid a "teleport" feel.
+        float dismissDistance = verticalFactor * secondaryTaskDimension * 1.5f;
+
+        anim.add(ObjectAnimator.ofFloat(taskView, secondaryViewTranslate, dismissDistance)
+                        .setDuration(duration),
+                FAST_OUT_SLOW_IN,
+                sp);
 
         if (taskView.isRunningTask()) {
             anim.addOnFrameCallback(() -> {
