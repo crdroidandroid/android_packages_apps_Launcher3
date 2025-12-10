@@ -258,7 +258,8 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
         // TODO(b/244231596) For shared Taskbar window, update this value in applyDeviceProfile()
         //  instead so to get correct value when recreating the taskbar
         SettingsCache settingsCache = SettingsCache.INSTANCE.get(this);
-        mImeDrawsImeNavBar = settingsCache.getValue(NAV_BAR_IME, 1);
+        mImeDrawsImeNavBar =  getBoolByName(IME_DRAWS_IME_NAV_BAR_RES_NAME, getResources(), false)
+                && settingsCache.getValue(NAV_BAR_IME, 1);
         mIsUserSetupComplete = settingsCache.getValue(
                 Settings.Secure.getUriFor(Settings.Secure.USER_SETUP_COMPLETE), 0);
         mIsNavBarKidsMode = settingsCache.getValue(
