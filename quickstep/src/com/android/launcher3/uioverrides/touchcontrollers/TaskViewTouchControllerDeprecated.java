@@ -262,19 +262,28 @@ public class TaskViewTouchControllerDeprecated<
         long maxDuration = 2 * secondaryLayerDimension;
         int verticalFactor = orientationHandler.getTaskDragDisplacementFactor(mIsRtl);
         int secondaryTaskDimension = orientationHandler.getSecondaryDimension(mTaskBeingDragged);
-        // The interpolator controlling the most prominent visual movement. We use this to determine
-        // whether we passed SUCCESS_TRANSITION_PROGRESS.
+
         final Interpolator currentInterpolator;
         PendingAnimation pa;
+
         if (goingUp) {
+            // For drag-up, create a simple translation animation that ONLY affects the dragged task.
+            // No stack rearrangement, no scaling of other tasks.
             currentInterpolator = Interpolators.LINEAR;
             pa = new PendingAnimation(maxDuration);
-            mRecentsView.createTaskDismissAnimation(pa, mTaskBeingDragged,
-                    true /* animateTaskView */, true /* removeTask */, maxDuration,
-                    false /* dismissingForSplitSelection*/, null /* gridEndData */);
+
+            // Simple animation: just translate the task up by its full height and fade it out
+            pa.setFloat(mTaskBeingDragged,
+                    orientationHandler.getSecondaryViewTranslate(),
+                    -secondaryTaskDimension * verticalFactor,
+                    Interpolators.LINEAR);
+
+            // Fade out the dragged task
+            pa.setViewAlpha(mTaskBeingDragged, 0f, Interpolators.LINEAR);
 
             mEndDisplacement = -secondaryTaskDimension;
         } else {
+            // Drag-down uses the existing launch animation
             currentInterpolator = Interpolators.ZOOM_IN;
             pa = mRecentsView.createTaskLaunchAnimation(
                     mTaskBeingDragged, maxDuration, currentInterpolator);
@@ -283,6 +292,7 @@ public class TaskViewTouchControllerDeprecated<
             mTaskBeingDragged.getThumbnailBounds(mTempRect, /*relativeToDragLayer=*/true);
             mEndDisplacement = secondaryLayerDimension - mTempRect.bottom;
         }
+
         mEndDisplacement *= verticalFactor;
         mCurrentAnimation = pa.createPlaybackController();
 
@@ -370,6 +380,33 @@ public class TaskViewTouchControllerDeprecated<
         } else {
             goingToEnd = interpolatedProgress > SUCCESS_TRANSITION_PROGRESS;
         }
+
+        // If dismissing (going up and completing), replace simple animation with full dismiss
+        if (mCurrentAnimationIsGoingUp && goingToEnd) {
+            // Cancel the simple animation
+            if (mCurrentAnimation != null) {
+                mCurrentAnimation.getTarget().removeListener(this);
+                mCurrentAnimation.dispatchOnCancel();
+            }
+
+            // Create the full dismiss animation with stack rearrangement
+            BaseDragLayer dl = mContainer.getDragLayer();
+            final int secondaryLayerDimension = orientationHandler.getSecondaryDimension(dl);
+            long maxDuration = 2 * secondaryLayerDimension;
+
+            PendingAnimation pa = new PendingAnimation(maxDuration);
+            mRecentsView.createTaskDismissAnimation(pa, mTaskBeingDragged,
+                    true /* animateTaskView */, true /* removeTask */, maxDuration,
+                    false /* dismissingForSplitSelection*/, false /* isExpressiveDismiss */);
+
+            mCurrentAnimation = pa.createPlaybackController();
+            mCurrentAnimation.getTarget().setInterpolator(Interpolators.LINEAR);
+            mCurrentAnimation.getTarget().addListener(this);
+
+            // Start from current progress to make transition smooth
+            mCurrentAnimation.setPlayFraction(progress);
+        }
+
         long animationDuration = BaseSwipeDetector.calculateDuration(
                 velocity, goingToEnd ? (1 - progress) : progress);
         if (blockedFling && !goingToEnd) {
