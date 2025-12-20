@@ -23,6 +23,7 @@ import android.os.SystemClock
 import android.os.Trace
 import android.util.Log
 import android.view.Display.DEFAULT_DISPLAY
+import android.view.KeyEvent
 import android.view.View
 import android.window.TransitionInfo
 import androidx.annotation.BinderThread
@@ -83,6 +84,7 @@ constructor(
     private val taskbarManager: TaskbarManager,
     private val taskAnimationManagerRepository: PerDisplayRepository<TaskAnimationManager>,
     private val elapsedRealtime: () -> Long = SystemClock::elapsedRealtime,
+    private val systemUiProxy: SystemUiProxy,
 ) {
     private val coroutineScope =
         CoroutineScope(SupervisorJob() + dispatcherProvider.lightweightBackground)
@@ -403,6 +405,7 @@ constructor(
                     touchInteractionService.startActivity(
                         overviewComponentObserver.getHomeIntent(command.displayId)
                     )
+                    systemUiProxy.onKeyEvent(KeyEvent.KEYCODE_HOME, command.displayId)
                 }
                 return true
             }
