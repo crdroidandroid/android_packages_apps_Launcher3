@@ -118,6 +118,8 @@ class TaskContainer(
             digitalWellBeingToast?.bind(task, taskView, snapshotView, stagePosition)
             if (!enableRefactorTaskThumbnail()) {
                 thumbnailViewDeprecated.bind(task, overlay, taskView)
+            } else {
+                thumbnailView.bind(task)
             }
         }
 

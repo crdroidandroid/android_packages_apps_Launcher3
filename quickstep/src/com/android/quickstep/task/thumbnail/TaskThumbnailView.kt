@@ -28,6 +28,7 @@ import android.util.Log
 import android.view.View
 import android.view.ViewOutlineProvider
 import android.widget.FrameLayout
+import android.widget.ImageView
 import androidx.annotation.ColorInt
 import androidx.core.view.isInvisible
 import com.android.launcher3.Flags.enableRefactorTaskContentView
@@ -40,7 +41,9 @@ import com.android.quickstep.task.thumbnail.TaskThumbnailUiState.LiveTile
 import com.android.quickstep.task.thumbnail.TaskThumbnailUiState.Snapshot
 import com.android.quickstep.task.thumbnail.TaskThumbnailUiState.SnapshotSplash
 import com.android.quickstep.task.thumbnail.TaskThumbnailUiState.Uninitialized
+import com.android.quickstep.util.AxAppLockerHelper
 import com.android.quickstep.views.FixedSizeImageView
+import com.android.systemui.shared.recents.model.Task
 
 class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
     private val scrimView: View by lazy { findViewById(R.id.task_thumbnail_scrim) }
@@ -55,6 +58,10 @@ class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
     private var onSizeChanged: ((width: Int, height: Int) -> Unit)? = null
 
     private var uiState: TaskThumbnailUiState = Uninitialized
+
+    private var task: Task? = null
+    private var lastMatrix: Matrix? = null
+    private var overlaid = false
 
     /**
      * Sets the outline bounds of the view. Default to use view's bound as outline when set to null.
@@ -119,11 +126,76 @@ class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
         resetViews()
     }
 
+    fun bind(tsk: Task) {
+        task = tsk
+    }
+
+    private fun getOverlayIcon(): Int = when {
+        isTopAppLocked() -> R.drawable.nt_recent_app_locked_icon
+        else -> R.drawable.nt_recent_camera_locked_icon
+    }
+
+    private fun getOverlayColor(): Int {
+        return context.getColor(R.color.recent_app_locked_bg_color)
+    }
+
+    fun getIconColor(): Int {
+        return context.getColor(R.color.recent_app_locked_icon_color)
+    }
+
+    private fun isCameraSnapshot(): Boolean {
+        val packageName = task?.topComponent?.packageName ?: return false
+        return packageName.contains("camera", ignoreCase = true) ||
+                packageName.contains("aperture", ignoreCase = true)
+    }
+
+    private fun isTopAppLocked(): Boolean {
+        val packageName = task?.key?.packageName ?: return false
+        return AxAppLockerHelper.get().isAppLocked(packageName)
+    }
+
+    fun drawOverlayThumbnail() {
+        thumbnailView.setImageResource(getOverlayIcon())
+        thumbnailView.scaleType = ImageView.ScaleType.CENTER
+        thumbnailView.isInvisible = false
+        drawBackground(getOverlayColor())
+    }
+
+    fun canOverlay(): Boolean {
+        return isTopAppLocked() || isCameraSnapshot()
+    }
+
     fun setState(state: TaskThumbnailUiState, taskId: Int? = null) {
-        if (uiState == state) return
+        if (uiState == state) {
+            // Even if state matches, we might need to redraw if overlay conditions changed
+            // but normally bind() calls this if flags change.
+            // However, we should check if we are currently verifying overlay vs actual state
+            if (canOverlay()) {
+                // If we should overlay, ensure we are overlaying
+                // Proceed to redraw logic
+            } else {
+                return
+            }
+        }
+        
         logDebug("taskId: $taskId - uiState changed from: $uiState to: $state")
         uiState = state
         resetViews()
+
+        if (canOverlay()) {
+            drawOverlayThumbnail()
+            overlaid = true
+            return
+        } else {
+            if (overlaid) {
+                thumbnailView.scaleType = ImageView.ScaleType.MATRIX
+                if (state is SnapshotSplash && lastMatrix != null) {
+                    thumbnailView.imageMatrix = lastMatrix
+                }
+                overlaid = false
+            }
+        }
+
         when (state) {
             is Uninitialized -> {}
             is LiveTile -> drawLiveWindow()
@@ -236,6 +308,7 @@ class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
     fun setImageMatrix(matrix: Matrix) {
         if (uiState is SnapshotSplash) {
             thumbnailView.imageMatrix = matrix
+            lastMatrix = matrix
         }
     }
 
