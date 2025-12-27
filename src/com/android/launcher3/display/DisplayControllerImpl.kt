@@ -55,7 +55,9 @@ constructor(
 
     init {
         lifecycle.addCloseable(
-            overlayChangeHandler.addCallback { notifyConfigChange(Display.DEFAULT_DISPLAY) }
+            overlayChangeHandler.addCallback {
+                notifyConfigChange(Display.DEFAULT_DISPLAY, LauncherDisplayInfo.CHANGE_OVERLAYS)
+            }
         )
 
         // Initialize display listeners

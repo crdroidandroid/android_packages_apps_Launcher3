@@ -21,6 +21,7 @@ import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.util.DisplayMetrics
 import com.android.launcher3.Flags
+import com.android.launcher3.display.LauncherDisplayInfo.Companion.CHANGE_UI_MODE
 import com.android.launcher3.display.PortraitSize.Companion.from
 import com.android.launcher3.util.MutableDiffAwareRef
 import com.android.launcher3.util.WindowBounds
@@ -42,11 +43,15 @@ class DisplayInfoContainer(
         MutableDiffAwareRef(getNewInfo())
     val info = _info.asListenable()
 
+    private var lastUiMode: Int = windowContext.resources.configuration.uiMode
+
     init {
         windowContext.registerComponentCallbacks(this)
     }
 
     override fun onConfigurationChanged(config: Configuration) {
+        val uiModeChanged = lastUiMode != config.uiMode
+        lastUiMode = config.uiMode
         val info: LauncherDisplayInfo = _info.value
         if (
             config.densityDpi != info.densityDpi ||
@@ -55,13 +60,14 @@ class DisplayInfoContainer(
                 windowContext.display.rotation != info.rotation ||
                 (wmProxy.showDesktopTaskbarForFreeformDisplay(windowContext) !=
                     info.showDesktopTaskbarForFreeformDisplay) ||
-                config.isNightModeActive != info.isNightModeActive
+                config.isNightModeActive != info.isNightModeActive ||
+                uiModeChanged
         ) {
-            notifyConfigChange()
+            notifyConfigChange(if (uiModeChanged) CHANGE_UI_MODE else 0)
         }
     }
 
-    fun notifyConfigChange() {
+    fun notifyConfigChange(extraFlags: Int = 0) {
         val oldInfo = _info.value
         var newInfo = getNewInfo(oldInfo.perDisplayBounds)
 
@@ -73,7 +79,7 @@ class DisplayInfoContainer(
             // Bounds cache may not be valid anymore, recreate without cache
             newInfo = getNewInfo()
         }
-        val flags = oldInfo.diff(newInfo)
+        val flags = oldInfo.diff(newInfo) or extraFlags
         if (flags != 0) _info.dispatchValue(newInfo, flags)
     }
 

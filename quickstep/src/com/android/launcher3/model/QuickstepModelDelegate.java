@@ -23,8 +23,11 @@ import static com.android.launcher3.LauncherPrefs.nonRestorableItem;
 import static com.android.launcher3.LauncherSettings.Favorites.CONTAINER_ALL_APPS_PREDICTION;
 import static com.android.launcher3.LauncherSettings.Favorites.CONTAINER_HOTSEAT_PREDICTION;
 import static com.android.launcher3.LauncherSettings.Favorites.DESKTOP_ICON_FLAG;
+import static com.android.launcher3.display.LauncherDisplayInfo.CHANGE_OVERLAYS;
+import static com.android.launcher3.display.LauncherDisplayInfo.CHANGE_UI_MODE;
 import static com.android.launcher3.icons.cache.CacheLookupFlag.DEFAULT_LOOKUP_FLAG;
 import static com.android.launcher3.model.PredictionHelper.getBundleForHotseatPredictions;
+import static com.android.launcher3.util.Executors.MAIN_EXECUTOR;
 import static com.android.launcher3.util.Executors.MODEL_EXECUTOR;
 
 import android.app.StatsManager;
@@ -42,8 +45,11 @@ import androidx.annotation.WorkerThread;
 
 import com.android.launcher3.ConstantItem;
 import com.android.launcher3.InvariantDeviceProfile;
+import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.dagger.ApplicationContext;
+import com.android.launcher3.display.DisplayController;
+import com.android.launcher3.display.LauncherDisplayInfo;
 import com.android.launcher3.logger.LauncherAtom;
 import com.android.launcher3.logging.InstanceId;
 import com.android.launcher3.logging.InstanceIdSequence;
@@ -53,6 +59,8 @@ import com.android.launcher3.model.data.PredictedContainerInfo;
 import com.android.launcher3.model.data.WorkspaceData;
 import com.android.launcher3.pm.UserCache;
 import com.android.launcher3.util.IntSparseArrayMap;
+import com.android.launcher3.util.ListenableDiffAwareRef;
+import com.android.launcher3.util.SafeCloseable;
 import com.android.quickstep.logging.SettingsChangeLogger;
 import com.android.quickstep.logging.StatsLogCompatManager;
 import com.android.quickstep.util.ContextualSearchStateManager;
@@ -86,6 +94,7 @@ public class QuickstepModelDelegate extends ModelDelegate {
     private final StatsManager mStatsManager;
 
     protected boolean mActive = true;
+    private SafeCloseable mDisplayChangeCloseable;
 
     @Inject
     public QuickstepModelDelegate(@ApplicationContext Context context,
@@ -164,7 +173,26 @@ public class QuickstepModelDelegate extends ModelDelegate {
             prefs.put(LAST_SNAPSHOT_TIME_MILLIS, now);
         }
 
+        if (mDisplayChangeCloseable == null) {
+            ListenableDiffAwareRef<LauncherDisplayInfo, Integer> listenable =
+                    DisplayController.INSTANCE.get(mContext).getListenable();
+            if (listenable != null) {
+                mDisplayChangeCloseable = listenable.forEachChange(
+                        MAIN_EXECUTOR, this::onDisplayInfoChanged);
+            }
+        }
+
         registerSnapshotLoggingCallback();
+    }
+
+    private void onDisplayInfoChanged(LauncherDisplayInfo info, int flags) {
+        if ((flags & CHANGE_UI_MODE) != 0 || (flags & CHANGE_OVERLAYS) != 0) {
+            Log.d(TAG, "onDisplayInfoChanged " + flags);
+            MODEL_EXECUTOR.execute(() -> {
+                LauncherAppState.getInstance(mContext).getIconCache().clearDb();
+                mModel.reloadIfActive("dynamic-color-change");
+            });
+        }
     }
 
     protected void additionalSnapshotEvents(InstanceId snapshotInstanceId){}
@@ -249,6 +277,10 @@ public class QuickstepModelDelegate extends ModelDelegate {
             } catch (RuntimeException e) {
                 Log.e(TAG, "Failed to unregister snapshot logging callback with StatsManager", e);
             }
+        }
+        if (mDisplayChangeCloseable != null) {
+            mDisplayChangeCloseable.close();
+            mDisplayChangeCloseable = null;
         }
         destroyPredictors();
     }

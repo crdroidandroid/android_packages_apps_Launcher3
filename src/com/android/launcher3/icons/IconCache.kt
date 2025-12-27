@@ -603,6 +603,12 @@ constructor(
         info.bitmap = packageEntry.bitmap
     }
 
+    @Synchronized
+    fun clearDb() {
+        clearMemoryCache()
+        iconDb.clear()
+    }
+
     fun updateSessionCache(key: PackageUserKey, info: SessionInfo) =
         cachePackageInstallInfo(key.mPackageName, key.mUser, info.getAppIcon(), info.getAppLabel())
 

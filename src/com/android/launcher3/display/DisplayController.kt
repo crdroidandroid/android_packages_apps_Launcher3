@@ -44,7 +44,11 @@ interface DisplayController {
         getPerDisplayInfoById(displayId)?.info?.value
 
     @AnyThread
-    fun notifyConfigChange(displayId: Int) = getPerDisplayInfoById(displayId)?.notifyConfigChange()
+    fun notifyConfigChange(displayId: Int) = notifyConfigChange(displayId, 0)
+
+    @AnyThread
+    fun notifyConfigChange(displayId: Int, extraFlags: Int) =
+        getPerDisplayInfoById(displayId)?.notifyConfigChange(extraFlags)
 
     @AnyThread fun getPerDisplayInfoById(displayId: Int): DisplayInfoContainer?
 

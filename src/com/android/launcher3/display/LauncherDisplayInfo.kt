@@ -228,6 +228,8 @@ constructor(
         const val CHANGE_NAVIGATION_MODE: Int = 1 shl 4
         const val CHANGE_SHOW_DESKTOP_FIRST_TASKBAR: Int = 1 shl 5
         const val CHANGE_NIGHT_MODE: Int = 1 shl 6
+        const val CHANGE_OVERLAYS: Int = 1 shl 7
+        const val CHANGE_UI_MODE: Int = 1 shl 8
 
         const val CHANGE_ALL: Int =
             (CHANGE_ACTIVE_SCREEN or
@@ -236,7 +238,9 @@ constructor(
                 CHANGE_SUPPORTED_BOUNDS or
                 CHANGE_NAVIGATION_MODE or
                 CHANGE_SHOW_DESKTOP_FIRST_TASKBAR or
-                CHANGE_NIGHT_MODE)
+                CHANGE_NIGHT_MODE or
+                CHANGE_OVERLAYS or
+                CHANGE_UI_MODE)
 
         /**
          * Returns the given binary flags as a human-readable string.
@@ -258,6 +262,8 @@ constructor(
                         "CHANGE_SHOW_DESKTOP_FIRST_TASKBAR",
                     )
                     appendFlag(change, CHANGE_NIGHT_MODE, "CHANGE_NIGHT_MODE")
+                    appendFlag(change, CHANGE_OVERLAYS, "CHANGE_OVERLAYS")
+                    appendFlag(change, CHANGE_UI_MODE, "CHANGE_UI_MODE")
                 }
                 .toString()
     }
