@@ -27,6 +27,8 @@ import static com.android.launcher3.LauncherSettings.Favorites.DESKTOP_ICON_FLAG
 import static com.android.launcher3.icons.cache.CacheLookupFlag.DEFAULT_LOOKUP_FLAG;
 import static com.android.launcher3.model.PredictionHelper.getBundleForHotseatPredictions;
 import static com.android.launcher3.model.PredictionHelper.getBundleForWidgetPredictions;
+import static com.android.launcher3.util.DisplayController.CHANGE_OVERLAYS;
+import static com.android.launcher3.util.DisplayController.CHANGE_UI_MODE;
 import static com.android.launcher3.util.Executors.MODEL_EXECUTOR;
 
 import android.app.StatsManager;
@@ -55,8 +57,12 @@ import com.android.launcher3.model.data.CollectionInfo;
 import com.android.launcher3.model.data.ItemInfo;
 import com.android.launcher3.model.data.PredictedContainerInfo;
 import com.android.launcher3.model.data.WorkspaceData;
+import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.pm.UserCache;
 import com.android.launcher3.util.IntSparseArrayMap;
+import com.android.launcher3.util.DisplayController;
+import com.android.launcher3.util.DisplayController.DisplayInfoChangeListener;
+import com.android.launcher3.util.DisplayController.Info;
 import com.android.quickstep.logging.SettingsChangeLogger;
 import com.android.quickstep.logging.StatsLogCompatManager;
 import com.android.quickstep.util.ContextualSearchStateManager;
@@ -99,6 +105,7 @@ public class QuickstepModelDelegate extends ModelDelegate {
     private final StatsManager mStatsManager;
 
     protected boolean mActive = false;
+    private DisplayInfoChangeListener mDisplayInfoChangeListener;
 
     @Inject
     public QuickstepModelDelegate(@ApplicationContext Context context,
@@ -189,6 +196,19 @@ public class QuickstepModelDelegate extends ModelDelegate {
             prefs.put(LAST_SNAPSHOT_TIME_MILLIS, now);
         }
 
+        mDisplayInfoChangeListener = new DisplayInfoChangeListener() {
+            @Override
+            public void onDisplayInfoChanged(Context context, Info info, int flags) {
+                if ((flags & CHANGE_UI_MODE) != 0 || (flags & CHANGE_OVERLAYS) != 0) {
+                    Log.d(TAG, "onDisplayInfoChanged " + flags);
+                    MODEL_EXECUTOR.execute(() ->
+                        LauncherAppState.getInstance(mContext).getIconCache().clearDb());
+                    mModel.forceReload();
+                }
+            }
+        };
+        DisplayController.INSTANCE.get(mContext).addChangeListener(mDisplayInfoChangeListener);
+
         registerSnapshotLoggingCallback();
     }
 
@@ -276,6 +296,10 @@ public class QuickstepModelDelegate extends ModelDelegate {
             } catch (RuntimeException e) {
                 Log.e(TAG, "Failed to unregister snapshot logging callback with StatsManager", e);
             }
+        }
+        if (mDisplayInfoChangeListener != null) {
+            DisplayController.INSTANCE.get(mContext).removeChangeListener(mDisplayInfoChangeListener);
+            mDisplayInfoChangeListener = null;
         }
         destroyPredictors();
     }
