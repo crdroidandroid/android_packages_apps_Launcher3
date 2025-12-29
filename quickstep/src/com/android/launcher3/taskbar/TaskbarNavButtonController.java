@@ -161,7 +161,7 @@ public class TaskbarNavButtonController implements TaskbarControllers.LoggableTa
                 logEvent(LAUNCHER_TASKBAR_OVERVIEW_BUTTON_TAP);
                 mSystemUiProxy.updateContextualEduStats(/* isTrackpadGesture= */ false,
                         GestureType.OVERVIEW);
-                navigateToOverview();
+                mSystemUiProxy.onKeyEvent(KeyEvent.KEYCODE_APP_SWITCH, mDisplayId);
                 break;
             case BUTTON_IME_SWITCH:
                 logEvent(LAUNCHER_TASKBAR_IME_SWITCHER_BUTTON_TAP);
