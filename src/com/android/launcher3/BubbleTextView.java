@@ -305,9 +305,8 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
         } else {
             // widget_selection or shortcut_popup
             defaultIconSize = mDeviceProfile.iconSizePx;
-            mShouldShowLabel = SHOW_DESKTOP_LABELS.get(context);
+            mShouldShowLabel = true;
         }
-
 
         mIconSize = a.getDimensionPixelSize(R.styleable.BubbleTextView_iconSizeOverride,
                 defaultIconSize);
