@@ -89,7 +89,7 @@
     <string name="pref_sleep_gesture_title">Chạm hai lần để tắt màn hình</string>
     <string name="pref_sleep_gesture_summary">Nhấn liên tiếp hai lần vào khoảng trống để tắt màn hình</string>
     <string name="pref_sleep_gesture_haptic_title">Rung khi nhấn đúp để ngủ</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_haptic_summary">Rừng khi dùng cử chỉ nhấn đúp để tắt màn hình</string>
     <!-- Icon size -->
     <string name="icon_size_title">Kích thước biểu tượng</string>
     <!-- Font size -->
@@ -141,7 +141,7 @@
     <string name="recents_clear_all_title">Xoá tất cả</string>
     <string name="recents_lens_title">Ống kính</string>
     <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
+    <string name="app_info_title">Thông tin ứng dụng</string>
     <string name="app_info_source">Nguồn cài đặt</string>
     <string name="app_info_source_system">Hệ thống</string>
     <string name="app_info_last_update">Cập nhật mới nhất</string>
