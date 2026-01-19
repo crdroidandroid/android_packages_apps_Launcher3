@@ -32,7 +32,7 @@
     <string name="misc_category_summary">Други опции</string>
     <string name="general_category_title">Основни</string>
     <string name="interface_category_title">Интерфейс</string>
-    <string name="quickspace_category_title">Quickspace</string>
+    <string name="quickspace_category_title">Бързо пространство</string>
     <string name="search_bar_category_title">Лента за търсене</string>
     <string name="actions_category_title">Бързи действия</string>
     <!-- Developer options -->
@@ -61,7 +61,7 @@
     <string name="pause_apps_dialog_message">Известията за %1$s ще бъдат временно спрени</string>
     <string name="paused_apps_dialog_title">Приложението е временно спряно</string>
     <string name="paused_apps_dialog_message">Приложението %1$s беше временно спряно от стартера</string>
-    <string name="paused_apps_drop_target_label">Pause app</string>
+    <string name="paused_apps_drop_target_label">Спирай приложение</string>
     <string name="work_apps_paused_title_custom">Работните приложения са изключени</string>
     <string name="work_apps_pause_btn_text_custom">Изключи работните приложения</string>
     <string name="work_apps_enable_btn_text_custom">Включване на работните приложения</string>
@@ -107,7 +107,7 @@
     <!-- Background opacity -->
     <string name="background_opacity_title">Прозрачност на фона</string>
     <!-- Stroke -->
-    <string name="stroke_width_title">Stroke</string>
+    <string name="stroke_width_title">Щриха</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Търсене</string>
     <string name="label_lens">Google Lens</string>
@@ -120,8 +120,8 @@
     <string name="dock_theme_summary">Използване на тематични икони за лентата за търсене</string>
     <string name="search_radius_title">Радиус на ъгъл</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar</string>
-    <string name="drawer_search_summary">Search bar on top of the app drawer</string>
+    <string name="drawer_search_title">Лента за търсене на приложения</string>
+    <string name="drawer_search_summary">Лента за търсене в горната част на чекмеджето с приложения</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Превъртане на тапета</string>
     <string name="allow_wallpaper_scrolling_summary">Ефект на превъртане на тапета за няколко екрана</string>
@@ -153,43 +153,43 @@
     <string name="icon_pack_add">Инсталиране на още</string>
     <string name="icon_pack_no_market">Няма наличен магазин за приложения</string>
     <!-- Parallax -->
-    <string name="short_parallax_title">Allow short parallax</string>
-    <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
-    <string name="single_page_center_title">Single page center</string>
-    <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
+    <string name="short_parallax_title">Позволи къс паралакс</string>
+    <string name="short_parallax_summary">Активирайте ефекта на пълно превъртане на тапета върху по-малък брой страници, вместо да се изрязва</string>
+    <string name="single_page_center_title">Центрирана единствена страница</string>
+    <string name="single_page_center_summary">Центрирай тапета ако се използва само една страница</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Swipe to start search</string>
     <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
-    <string name="drawer_scrollbar_title">Scrollbar</string>
-    <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
+    <string name="drawer_scrollbar_title">Плъзгач</string>
+    <string name="drawer_scrollbar_summary">Плъзгача да е отстрани от чекмеджето</string>
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">Dark status bar</string>
     <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Бърз поглед</string>
-    <string name="show_quickspace_summary">Show at the top of your home screen</string>
+    <string name="show_quickspace_summary">Покажи в горната част на началния ви екран</string>
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Добро утро.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
+    <string name="quickspace_grt_evening">Добър вечер.</string>
+    <string name="quickspace_grt_afternoon">Добър ден.</string>
     <string name="quickspace_grt_night">Лека нощ.</string>
-    <string name="quickspace_grt_general">Good day.</string>
-    <string name="quickspace_ext_one">Today is</string>
-    <string name="quickspace_ext_two">It\'s</string>
+    <string name="quickspace_grt_general">Хубав ден.</string>
+    <string name="quickspace_ext_one">Днес е</string>
+    <string name="quickspace_ext_two">Това е</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <string name="qe_now_playing_unknown_artist">Unknown Artist</string>
-    <string name="qe_now_playing_ext_one">Now playing</string>
-    <string name="qe_now_playing_by">By</string>
+    <string name="qe_now_playing_unknown_artist">Неизвестен изпълнител</string>
+    <string name="qe_now_playing_ext_one">Текуща песен</string>
+    <string name="qe_now_playing_by">От</string>
     <!-- Quickspace Now Playing -->
-    <string name="quickspace_now_playing_title">Now playing</string>
-    <string name="quickspace_now_playing_summary">Show the song you\'re playing</string>
+    <string name="quickspace_now_playing_title">Текуща песен</string>
+    <string name="quickspace_now_playing_summary">Покажи песента, която изпълняваш</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">Minimalistic style</string>
     <string name="quickspace_alternate_style_summary">Switch to modern style</string>
     <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Random messages</string>
-    <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
+    <string name="quickspace_psa_title">Случайни изречения</string>
+    <string name="quickspace_psa_summary">Направете спътника си по-жив със случайни съобщения</string>
     <string-array name="quickspace_psa_morning">
         <item>Добро утро!</item>
         <item>Добро утро, време е за рок!</item>
@@ -197,8 +197,8 @@
         <item>Приятен ден!</item>
         <item>Какво ще кажете за малка 5-минутна дрямка?</item>
         <item>Нека вземем този хляб.</item>
-        <item>Mornings are a fresh canvas for your daily masterpiece.</item>
-        <item>Embrace the sunrise of opportunity each morning.</item>
+        <item>Сутрините са ново платно за вашия ежедневен шедьовър.</item>
+        <item>Прегръщайте изгрева на възможностите всяка сутрин.</item>
         <item>In the early light, find the power to illuminate your path.</item>
         <item>Your day begins with endless possibilities.</item>
         <item>Every sunrise is a reminder that you can start anew.</item>
