@@ -88,8 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Ketuk dua kali untuk tidur</string>
     <string name="pref_sleep_gesture_summary">Ketuk dua kali pada ruang kosong untuk mematikan layar</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_haptic_title">Getar dengan ketukan ganda untuk tidur</string>
+    <string name="pref_sleep_gesture_haptic_summary">Berikan umpan balik haptik pada gestur ketuk dua kali untuk mengaktifkan mode tidur</string>
     <!-- Icon size -->
     <string name="icon_size_title">Ukuran ikon</string>
     <!-- Font size -->
@@ -135,13 +135,13 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s Tersedia | %2$s Total</string>
     <string name="recents_meminfo_title">Info memori</string>
-    <string name="recents_meminfo_zram_title">ZRAM info</string>
+    <string name="recents_meminfo_zram_title">Info ZRAM</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">Tangkapan layar</string>
     <string name="recents_clear_all_title">Bersihkan semua</string>
     <string name="recents_lens_title">Lensa</string>
     <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
+    <string name="app_info_title">Info aplikasi</string>
     <string name="app_info_source">Sumber</string>
     <string name="app_info_source_system">Sistem</string>
     <string name="app_info_last_update">Update yang lalu</string>
@@ -158,14 +158,14 @@
     <string name="single_page_center_title">Pusat satu halaman</string>
     <string name="single_page_center_summary">Tengahkan wallpaper jika hanya menggunakan satu halaman</string>
     <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
+    <string name="drawer_open_keyboard_title">Geser untuk mulai mencari</string>
+    <string name="drawer_open_keyboard_summary">Buka keyboard setiap kali laci aplikasi terlihat</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Bilah pengguliran</string>
     <string name="drawer_scrollbar_summary">Bilah gulir di sisi laci aplikasi</string>
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">Bilah status gelap</string>
-    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
+    <string name="perf_dark_status_bar_summary">Selalu gunakan bilah status gelap di layar beranda</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Sekilas</string>
     <string name="show_quickspace_summary">Tampilkan di bagian atas layar beranda Anda</string>
@@ -299,7 +299,7 @@
         <item>Apakah ini waktu yang tepat untuk menginstal pembaruan?</item>
         <item>Berdamai, bukan perang</item>
         <item>Oh hai, apa kabar?</item>
-        <item>Welcome to real Matrix!</item>
+        <item>Selamat datang di Matrix yang sesungguhnya!</item>
         <item>Berapa banyak tangkapan layar yang kamu ambil?</item>
         <item>Kebaikan terbuka dengan crDroid</item>
         <item>Sebarkan cinta, bukan malapetaka</item>
@@ -319,7 +319,7 @@
         <item>Tidak ada festival untuk kebodohan - hanya kesempurnaan!</item>
         <item>Salah satu pilihan terbaik Buildbot</item>
         <item>Sanitas untuk Paranoia Anda</item>
-        <item>Rising in peace</item>
+        <item>Bangkit dalam damai</item>
         <item>Benar-benar pengalaman yang menyenangkan, bukan?</item>
         <item>Evolusi adalah mitos, bukan?</item>
         <item>Anda adalah apa yang Anda flash, jangan menjadi Kentang</item>
@@ -340,9 +340,9 @@
     </string-array>
     <string name="intent_no_app_clock_found">Tidak dapat menemukan aktivitas kalender atau jam</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quickspace_weather_provider_title">Weather provider</string>
-    <string name="quickspace_weather_provider_entry_auto">Auto</string>
-    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_title">Penyedia cuaca</string>
+    <string name="quickspace_weather_provider_entry_auto">Otomatis</string>
+    <string name="quickspace_weather_provider_entry_seraphix">Ruang pintar Google</string>
     <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">Pembaruan info cuaca</string>
     <string name="quick_event_ambient_weather_summary">Tampilkan cuaca saat ini menurut lokasi</string>
@@ -359,8 +359,8 @@
     <string name="quick_event_weather_text_title">Kondisi saat ini</string>
     <string name="quick_event_weather_text_summary">Tampilkan kondisi cuaca dan suhu saat ini</string>
     <!-- Auto-hide page indicator dots -->
-    <string name="auto_hide_dots">Auto-hide page indicator</string>
-    <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
+    <string name="auto_hide_dots">Indikator sembunyikan halaman secara otomatis</string>
+    <string name="auto_hide_dots_summary">Sembunyikan titik indikator halaman secara otomatis</string>
     <!-- Background blur -->
     <string name="background_blur_title">Kedalaman blur latar belakang</string>
     <string name="background_blur_summary">Setel tingkat kedalaman blur untuk baru-baru ini dan laci aplikasi</string>
