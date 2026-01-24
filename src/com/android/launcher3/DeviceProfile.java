@@ -197,6 +197,8 @@ public class DeviceProfile {
     // Meminfo in overview
     public int memInfoHeight;
 
+    private final Context context;
+
     /** Used only as an alternative to mocking when null values cannot be used. */
     @VisibleForTesting
     public DeviceProfile() {
@@ -234,6 +236,7 @@ public class DeviceProfile {
         hotseatProfile = new HotseatProfile(false, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
         mTaskbarProfile = new TaskbarProfile(0, 0, 0, 0, 0, false, false);
         mFolderProfile = new FolderProfile(0, 0, 0, 0, 0, new Point(), 0, 0, 0, 0, 0, 0, 0, 0);
+        context = null;
         inv = null;
         mDisplayOptionSpec = null;
         mInfo = null;
@@ -279,7 +282,7 @@ public class DeviceProfile {
                 isGestureMode
         );
 
-        Context context = getContext(info, isLandscapeOrientation()
+        context = getContext(info, isLandscapeOrientation()
                         ? Configuration.ORIENTATION_LANDSCAPE
                         : Configuration.ORIENTATION_PORTRAIT,
                 windowBounds);
@@ -586,6 +589,10 @@ public class DeviceProfile {
                 getWorkspaceIconProfile().getIconSizePx(), dotRendererCache);
         mDotRendererAllApps = createDotRenderer(
                 getAllAppsProfile().getIconSizePx(), dotRendererCache);
+    }
+
+    public Context getContext() {
+        return context;
     }
 
     private boolean isLandscapeOrientation()  {

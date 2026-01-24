@@ -47,7 +47,8 @@ public class OverviewModalTaskState extends OverviewState {
     @Override
     public int getVisibleElements(LauncherUiState launcherUiState) {
         int elements = OVERVIEW_ACTIONS;
-        if (LauncherPrefs.RECENTS_MEMINFO.get(launcher)) {
+        DeviceProfile dp = launcherUiState.getDeviceProfileRef().getValue();
+        if (LauncherPrefs.RECENTS_MEMINFO.get(dp.getContext())) {
             elements |= MEMINFO;
         }
         return elements;

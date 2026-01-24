@@ -130,13 +130,13 @@ public class OverviewState extends LauncherState {
         if (showFloatingSearch) {
             elements |= FLOATING_SEARCH_BAR;
         }
-        if (!LauncherPrefs.RECENTS_CLEAR_ALL.get(launcher)) {
+        if (!LauncherPrefs.RECENTS_CLEAR_ALL.get(dp.getContext())) {
             elements |= CLEAR_ALL_BUTTON;
         }
         if (launcherUiState.isSplitSelectActiveRef().getValue()) {
             elements &= ~CLEAR_ALL_BUTTON & ~ADD_DESK_BUTTON;
         }
-        if (LauncherPrefs.RECENTS_MEMINFO.get(launcher)) {
+        if (LauncherPrefs.RECENTS_MEMINFO.get(dp.getContext())) {
             elements |= MEMINFO;
         }
         return elements;
