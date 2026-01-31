@@ -1681,16 +1681,16 @@ public class InvariantDeviceProfile {
                     R.styleable.ProfileDisplayOption_hotseatBarBottomSpaceTwoPanelPortrait,
                     hotseatBarBottomSpace[INDEX_DEFAULT]);
 
-            hotseatQsbSpace[INDEX_DEFAULT] = a.getFloat(
+            hotseatQsbSpace[INDEX_DEFAULT] = !Utilities.showQSB(context) ? 0f : a.getFloat(
                     R.styleable.ProfileDisplayOption_hotseatQsbSpace,
                     res.getFloat(R.dimen.hotseat_qsb_space_default));
-            hotseatQsbSpace[INDEX_LANDSCAPE] = a.getFloat(
+            hotseatQsbSpace[INDEX_LANDSCAPE] = !Utilities.showQSB(context) ? 0f : a.getFloat(
                     R.styleable.ProfileDisplayOption_hotseatQsbSpaceLandscape,
                     hotseatQsbSpace[INDEX_DEFAULT]);
-            hotseatQsbSpace[INDEX_TWO_PANEL_LANDSCAPE] = a.getFloat(
+            hotseatQsbSpace[INDEX_TWO_PANEL_LANDSCAPE] = !Utilities.showQSB(context) ? 0f : a.getFloat(
                     R.styleable.ProfileDisplayOption_hotseatQsbSpaceTwoPanelLandscape,
                     hotseatQsbSpace[INDEX_DEFAULT]);
-            hotseatQsbSpace[INDEX_TWO_PANEL_PORTRAIT] = a.getFloat(
+            hotseatQsbSpace[INDEX_TWO_PANEL_PORTRAIT] = !Utilities.showQSB(context) ? 0f : a.getFloat(
                     R.styleable.ProfileDisplayOption_hotseatQsbSpaceTwoPanelPortrait,
                     hotseatQsbSpace[INDEX_DEFAULT]);
 
