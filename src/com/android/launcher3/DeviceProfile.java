@@ -368,17 +368,19 @@ public class DeviceProfile {
                             mDeviceProperties.getWidthPx())
                             : hotseatSpecsProvider.getCalculatedSpec(responsiveAspectRatio,
                                     DimensionType.HEIGHT, mDeviceProperties.getHeightPx());
-            hotseatQsbSpace = mResponsiveHotseatSpec.getHotseatQsbSpace();
+            hotseatQsbSpace = isQsbVisible ? mResponsiveHotseatSpec.getHotseatQsbSpace() : 0;
             hotseatBarBottomSpace =
-                    isVerticalBarLayout() ? 0 : mResponsiveHotseatSpec.getEdgePadding();
+                    isVerticalBarLayout() || (!isQsbVisible && !isTaskbarPresent) ?
+                    0 : mResponsiveHotseatSpec.getEdgePadding();
 
             ResponsiveCellSpecsProvider workspaceCellSpecs = ResponsiveCellSpecsProvider.create(
                     new ResourceHelper(context, displayOptionSpec.workspaceCellSpecsId));
             mResponsiveWorkspaceCellSpec = workspaceCellSpecs.getCalculatedSpec(
                     responsiveAspectRatio, mDeviceProperties.getHeightPx());
         } else {
-            hotseatQsbSpace = pxFromDp(inv.hotseatQsbSpace[mTypeIndex], mMetrics);
-            hotseatBarBottomSpace = pxFromDp(inv.hotseatBarBottomSpace[mTypeIndex], mMetrics);
+            hotseatQsbSpace = isQsbVisible ? pxFromDp(inv.hotseatQsbSpace[mTypeIndex], mMetrics) : 0;
+            hotseatBarBottomSpace = isQsbVisible || isTaskbarPresent ?
+                pxFromDp(inv.hotseatBarBottomSpace[mTypeIndex], mMetrics) : 0;
         }
 
         hotseatProfile = HotseatProfile.Factory.createHotseatProfile(
@@ -392,12 +394,13 @@ public class DeviceProfile {
                 // TODO(431261051) HotseatProfile is calculated before the WorkspaceProfile hence
                 //  this variable needs to be manually set here. A better way to handle this is
                 //  necessary.
-                res.getDimensionPixelSize(R.dimen.workspace_page_indicator_height)
+                res.getDimensionPixelSize(R.dimen.workspace_page_indicator_height),
+                isQsbVisible
         );
 
-        hotseatQsbHeight = isQsbVisible ? getHotseatProfile().getQsbHeight() : 0;
-        hotseatQsbShadowHeight = isQsbVisible ? getHotseatProfile().getQsbShadowHeight() : 0;
-        hotseatQsbVisualHeight = isQsbVisible ? getHotseatProfile().getQsbVisualHeight() : 0;
+        hotseatQsbHeight = getHotseatProfile().getQsbHeight();
+        hotseatQsbShadowHeight = getHotseatProfile().getQsbShadowHeight();
+        hotseatQsbVisualHeight = getHotseatProfile().getQsbVisualHeight();
 
         // Whether QSB might be inline in appropriate orientation (e.g. landscape).
         isQsbInline = isQsbVisible && isQsbInline(
