@@ -277,7 +277,7 @@ public class DragView extends FrameLayout {
             int h = mHeight;
             var fullDrawable = mActivity.getActivityComponent().getIconLoader().getFullDrawable(
                     info, w, h, themeManager.isIconThemeEnabled());
-            if (fullDrawable != null) {
+            if (fullDrawable != null && fullDrawable.icon != null) {
                 AdaptiveIconDrawable adaptiveIcon = fullDrawable.icon;
                 int blurMargin = (int) getContext().getResources()
                         .getDimension(R.dimen.blur_size_medium_outline) / 2;
