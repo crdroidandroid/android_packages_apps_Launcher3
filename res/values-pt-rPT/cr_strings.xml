@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">A reiniciar o launcher para aplicar as alterações...</string>
     <string name="updating_launcher_components">A reiniciar o launcher para atualizar os componentes do launcher...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Toque duplo para desligar ecrã</string>
-    <string name="pref_sleep_gesture_summary">Toque duas vezes num espaço vazio para desligar o ecrã</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- Icon size -->
     <string name="icon_size_title">Tamanho dos ícones</string>
     <!-- Font size -->
     <string name="font_size_title">Tamanho da letra</string>
     <!-- App label -->
     <string name="icon_two_lines_title">Utilizar duas linhas para a etiqueta da aplicação</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Terminar</string>
-    <string name="recents_app_killed">App terminada</string>
     <!-- Row Height -->
     <string name="row_height_title">Altura da linha</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">Opacidade do fundo</string>
     <!-- Stroke -->
     <string name="stroke_width_title">Avc</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Terminar</string>
+    <string name="recents_app_killed">App terminada</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Pesquisar</string>
     <string name="label_lens">Lentes do Google</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">Capturar ecrã</string>
     <string name="recents_clear_all_title">Limpar tudo</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
-    <string name="app_info_source">Origem</string>
-    <string name="app_info_source_system">Sistema</string>
-    <string name="app_info_last_update">Última atualização</string>
-    <string name="app_info_version">Versão</string>
-    <string name="app_info_more">Mais</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Pacote de ícones</string>
-    <string name="icon_pack_default_label">Padrão</string>
-    <string name="icon_pack_add">Instalar mais</string>
-    <string name="icon_pack_no_market">Não há uma loja de apps disponível</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Permitir parallax curto</string>
     <string name="short_parallax_summary">Ativar o efeito de rolagem do papel de parede completo em números menores de páginas ao invés de cortar o papel de parede</string>
     <string name="single_page_center_title">Vista de uma só página</string>
     <string name="single_page_center_summary">Centralizar papel de parede se apenas usando uma única página</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Barra de deslocamento</string>
     <string name="drawer_scrollbar_summary">Barra de deslocamento na parte lateral da gaveta de aplicações</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">Nível de desfoque do fundo</string>
     <string name="background_blur_summary">Definir o nível de desfoque para a gaveta de apps e ecrã de recentes</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
+    <string name="app_info_source">Origem</string>
+    <string name="app_info_source_system">Sistema</string>
+    <string name="app_info_last_update">Última atualização</string>
+    <string name="app_info_version">Versão</string>
+    <string name="app_info_more">Mais</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Pacote de ícones</string>
+    <string name="icon_pack_default_label">Padrão</string>
+    <string name="icon_pack_add">Instalar mais</string>
+    <string name="icon_pack_no_market">Não há uma loja de apps disponível</string>
 </resources>
