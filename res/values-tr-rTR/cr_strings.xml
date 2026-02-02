@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">Değişiklikleri uygulamak için yeniden başlatılıyor...</string>
     <string name="updating_launcher_components">Başlatıcı bileşenlerini güncellemek için başlatıcı yeniden başlatılıyor...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Çift dokunuşla uyutma</string>
-    <string name="pref_sleep_gesture_summary">Ekranı kapatmak için boş bir yere çift dokunun</string>
-    <string name="pref_sleep_gesture_haptic_title">Uyutmak için çift dokunuşta titret</string>
-    <string name="pref_sleep_gesture_haptic_summary">Çift dokunuşla uyuma jestinde titreşim geri bildirimi ver</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Aramaya başlamak için kaydır</string>
+    <string name="drawer_open_keyboard_summary">Uygulama çekmecesi göründüğünde klavye açılsın</string>
     <!-- Icon size -->
     <string name="icon_size_title">Simge boyutu</string>
     <!-- Font size -->
     <string name="font_size_title">Yazı tipi boyutu</string>
     <!-- App label -->
     <string name="icon_two_lines_title">Uygulama etiketi için iki satır kullan</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Sonlandır</string>
-    <string name="recents_app_killed">Uygulama sonlandırıldı</string>
     <!-- Row Height -->
     <string name="row_height_title">Satır yüksekliği</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">Arka plan şeffaflığı</string>
     <!-- Stroke -->
     <string name="stroke_width_title">Kenarlı</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Sonlandır</string>
+    <string name="recents_app_killed">Uygulama sonlandırıldı</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Ara</string>
     <string name="label_lens">Google lens</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">Ekran görüntüsü</string>
     <string name="recents_clear_all_title">Tümünü temizle</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Uygulama bilgisi</string>
-    <string name="app_info_source">Kaynak</string>
-    <string name="app_info_source_system">Sistem</string>
-    <string name="app_info_last_update">Son güncelleme</string>
-    <string name="app_info_version">Sürüm</string>
-    <string name="app_info_more">Daha fazla</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Simge paketi</string>
-    <string name="icon_pack_default_label">Varsayılan</string>
-    <string name="icon_pack_add">Daha fazla yükle</string>
-    <string name="icon_pack_no_market">Kullanılabilir uygulama mağazası yok</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Kısa paralaksa izin ver</string>
     <string name="short_parallax_summary">Duvar kağıdını kırpmak yerine daha az sayıda sayfada tam duvar kağıdı kaydırma efektini etkinleştirin</string>
     <string name="single_page_center_title">Tek sayfayı ortalayın</string>
     <string name="single_page_center_summary">Yalnızca tek bir sayfa kullanılıyorsa duvar kağıdını ortalayın</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Aramaya başlamak için kaydır</string>
-    <string name="drawer_open_keyboard_summary">Uygulama çekmecesi göründüğünde klavye açılsın</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Kaydırma Çubuğu</string>
     <string name="drawer_scrollbar_summary">Uygulama sayfasının yanındaki kaldırma çubuğu</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">Arka plan bulanıklık derinliği</string>
     <string name="background_blur_summary">Son uygulamalar ve uygulama çekmecesi için bulanıklık derinliği seviyesini ayarlayın</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">Uygulama bilgisi</string>
+    <string name="app_info_source">Kaynak</string>
+    <string name="app_info_source_system">Sistem</string>
+    <string name="app_info_last_update">Son güncelleme</string>
+    <string name="app_info_version">Sürüm</string>
+    <string name="app_info_more">Daha fazla</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Simge paketi</string>
+    <string name="icon_pack_default_label">Varsayılan</string>
+    <string name="icon_pack_add">Daha fazla yükle</string>
+    <string name="icon_pack_no_market">Kullanılabilir uygulama mağazası yok</string>
 </resources>
