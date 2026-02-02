@@ -36,7 +36,6 @@ import static com.android.launcher3.LauncherState.NORMAL;
 import static com.android.launcher3.LauncherState.SPRING_LOADED;
 import static com.android.launcher3.MotionEventsUtils.isTrackpadMotionEvent;
 import static com.android.launcher3.MotionEventsUtils.isTrackpadMultiFingerSwipe;
-import static com.android.launcher3.Utilities.qsbOnFirstScreen;
 import static com.android.launcher3.Utilities.shouldEnableMouseInteractionChanges;
 import static com.android.launcher3.anim.AnimatorListeners.forSuccessCallback;
 import static com.android.launcher3.config.FeatureFlags.FOLDABLE_SINGLE_PAGE;
@@ -651,7 +650,7 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
     public void bindAndInitFirstWorkspaceScreen() {
         // Add the first page
         CellLayout firstPage = insertNewWorkspaceScreen(Workspace.FIRST_SCREEN_ID, getChildCount());
-        if (!qsbOnFirstScreen()) {
+        if (!LauncherPrefs.SHOW_QUICKSPACE.get(getContext())) {
             mFirstPagePinnedItem = null;
             return;
         }
