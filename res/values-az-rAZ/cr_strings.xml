@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
     <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Yuxuya keçmək üçün iki dəfə toxun</string>
-    <string name="pref_sleep_gesture_summary">Double tap on empty space for screen off</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- Icon size -->
     <string name="icon_size_title">Nişan ölçüsü</string>
     <!-- Font size -->
     <string name="font_size_title">Yazı tipi ölçüsü</string>
     <!-- App label -->
     <string name="icon_two_lines_title">Use two lines for app label</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Bağla</string>
-    <string name="recents_app_killed">Tətbiq bağlandı</string>
     <!-- Row Height -->
     <string name="row_height_title">Row height</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">Arxa plan tutqunluğu</string>
     <!-- Stroke -->
     <string name="stroke_width_title">Stroke</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Bağla</string>
+    <string name="recents_app_killed">Tətbiq bağlandı</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Axtarış</string>
     <string name="label_lens">Google Lens</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">Ekran görüntüsü</string>
     <string name="recents_clear_all_title">Hamısını təmizlə</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
-    <string name="app_info_source">Mənbə</string>
-    <string name="app_info_source_system">Sistem</string>
-    <string name="app_info_last_update">Son yenilənmə</string>
-    <string name="app_info_version">Versiya</string>
-    <string name="app_info_more">Daha çox</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">İkon paketi</string>
-    <string name="icon_pack_default_label">Susmaya görə</string>
-    <string name="icon_pack_add">Install more</string>
-    <string name="icon_pack_no_market">There\'s no available app store</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Allow short parallax</string>
     <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
     <string name="single_page_center_title">Single page center</string>
     <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Scrollbar</string>
     <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">Background blur depth</string>
     <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
+    <string name="app_info_source">Mənbə</string>
+    <string name="app_info_source_system">Sistem</string>
+    <string name="app_info_last_update">Son yenilənmə</string>
+    <string name="app_info_version">Versiya</string>
+    <string name="app_info_more">Daha çox</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">İkon paketi</string>
+    <string name="icon_pack_default_label">Susmaya görə</string>
+    <string name="icon_pack_add">Install more</string>
+    <string name="icon_pack_no_market">There\'s no available app store</string>
 </resources>
