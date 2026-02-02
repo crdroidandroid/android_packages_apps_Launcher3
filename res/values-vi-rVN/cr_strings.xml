@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">Đang mở lại trình khởi chạy để áp dụng thay đổi...</string>
     <string name="updating_launcher_components">Đang mở lại trình khởi chạy để cập nhật các thành phần...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Chạm hai lần để tắt màn hình</string>
-    <string name="pref_sleep_gesture_summary">Nhấn liên tiếp hai lần vào khoảng trống để tắt màn hình</string>
-    <string name="pref_sleep_gesture_haptic_title">Rung khi nhấn đúp để ngủ</string>
-    <string name="pref_sleep_gesture_haptic_summary">Rừng khi dùng cử chỉ nhấn đúp để tắt màn hình</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Vuốt để bắt đầu tìm kiếm</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- Icon size -->
     <string name="icon_size_title">Kích thước biểu tượng</string>
     <!-- Font size -->
     <string name="font_size_title">Kích thước phông chữ</string>
     <!-- App label -->
     <string name="icon_two_lines_title">Dùng hai dòng cho tên ứng dụng</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Đóng</string>
-    <string name="recents_app_killed">Ứng dụng đã được tắt</string>
     <!-- Row Height -->
     <string name="row_height_title">Chiều cao hàng</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">Độ mờ của nền</string>
     <!-- Stroke -->
     <string name="stroke_width_title">Độ nét</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Đóng</string>
+    <string name="recents_app_killed">Ứng dụng đã được tắt</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Tìm kiếm</string>
     <string name="label_lens">Ống kính google</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">Chụp ảnh màn hình</string>
     <string name="recents_clear_all_title">Xoá tất cả</string>
     <string name="recents_lens_title">Ống kính</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Thông tin ứng dụng</string>
-    <string name="app_info_source">Nguồn cài đặt</string>
-    <string name="app_info_source_system">Hệ thống</string>
-    <string name="app_info_last_update">Cập nhật mới nhất</string>
-    <string name="app_info_version">Phiên bản</string>
-    <string name="app_info_more">Xem thêm chi tiết về ứng dụng</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Gói biểu tượng</string>
-    <string name="icon_pack_default_label">Mặc định</string>
-    <string name="icon_pack_add">Cài đặt thêm</string>
-    <string name="icon_pack_no_market">Không có ứng dụng nào khả dụng trong cửa hàng</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Cho phép thị sai ngắn</string>
     <string name="short_parallax_summary">Dùng hiệu ứng để cuộn trên các trang khác thay vì cắt hình nền</string>
     <string name="single_page_center_title">Hình nền vị trí trung tâm</string>
     <string name="single_page_center_summary">Hình nền ở vị trí trung tâm khi dùng một trang</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Vuốt để bắt đầu tìm kiếm</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Thanh cuộn</string>
     <string name="drawer_scrollbar_summary">Thanh cuộn ở bên cạnh ngăn kéo ứng dụng</string>
@@ -365,4 +353,16 @@ Gửi cho chúng tôi một cốc bia</item>
     <!-- Background blur -->
     <string name="background_blur_title">Độ sâu nền mờ</string>
     <string name="background_blur_summary">Thiết lập độ mờ của hình nền cho ứng dụng gần đây và ngăn chứa ứng dụng</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">Thông tin ứng dụng</string>
+    <string name="app_info_source">Nguồn cài đặt</string>
+    <string name="app_info_source_system">Hệ thống</string>
+    <string name="app_info_last_update">Cập nhật mới nhất</string>
+    <string name="app_info_version">Phiên bản</string>
+    <string name="app_info_more">Xem thêm chi tiết về ứng dụng</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Gói biểu tượng</string>
+    <string name="icon_pack_default_label">Mặc định</string>
+    <string name="icon_pack_add">Cài đặt thêm</string>
+    <string name="icon_pack_no_market">Không có ứng dụng nào khả dụng trong cửa hàng</string>
 </resources>
