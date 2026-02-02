@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">إعادة تشغيل المشغل لتطبيق التغييرات...</string>
     <string name="updating_launcher_components">إعادة تشغيل المشغل لتحديث مكونات المشغل...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">انقر نقرًا مزدوجًا للنوم</string>
-    <string name="pref_sleep_gesture_summary">اضغط مرّتين على مكانٍ فارغ لإطفاء الشاشة</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- Icon size -->
     <string name="icon_size_title">حجم الأيقونة</string>
     <!-- Font size -->
     <string name="font_size_title">حجم الخط</string>
     <!-- App label -->
     <string name="icon_two_lines_title">استخدام خطين لاسم التطبيق</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">إيقاف</string>
-    <string name="recents_app_killed">تم إيقاف التطبيق</string>
     <!-- Row Height -->
     <string name="row_height_title">ارتفاع الصف</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">تعتيم الخلفية</string>
     <!-- Stroke -->
     <string name="stroke_width_title">سُمك</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">إيقاف</string>
+    <string name="recents_app_killed">تم إيقاف التطبيق</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">البحث</string>
     <string name="label_lens">عدسة جوجل</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">لقطة شاشة</string>
     <string name="recents_clear_all_title">إزالة الكل</string>
     <string name="recents_lens_title">العدسة</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
-    <string name="app_info_source">المصدر</string>
-    <string name="app_info_source_system">النظام</string>
-    <string name="app_info_last_update">آخر تحديث</string>
-    <string name="app_info_version">الإصدار</string>
-    <string name="app_info_more">المزيد</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">حزمة الايقونات</string>
-    <string name="icon_pack_default_label">الإفتراضي</string>
-    <string name="icon_pack_add">تثبيت المزيد</string>
-    <string name="icon_pack_no_market">لا يوجد متجر تطبيقات متاح</string>
     <!-- Parallax -->
     <string name="short_parallax_title">السماح بالمبرالية القصيرة</string>
     <string name="short_parallax_summary">تمكين تأثير التمرير الكامل للخلفية على عدد أصغر من الصفحات بدلاً من اقتطاع الخلفية</string>
     <string name="single_page_center_title">مركز صفحة واحدة</string>
     <string name="single_page_center_summary">وسِّط الخلفية إن كانت هناك صفحة واحدة فقط</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">شريط التمرير</string>
     <string name="drawer_scrollbar_summary">شريط التمرير على جانب درج التطبيق</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">مستوي ضبابية الخلفية</string>
     <string name="background_blur_summary">تعيين مستوى الضباب للتطبيقات الحديثة ودرج التطبيقات</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
+    <string name="app_info_source">المصدر</string>
+    <string name="app_info_source_system">النظام</string>
+    <string name="app_info_last_update">آخر تحديث</string>
+    <string name="app_info_version">الإصدار</string>
+    <string name="app_info_more">المزيد</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">حزمة الايقونات</string>
+    <string name="icon_pack_default_label">الإفتراضي</string>
+    <string name="icon_pack_add">تثبيت المزيد</string>
+    <string name="icon_pack_no_market">لا يوجد متجر تطبيقات متاح</string>
 </resources>
