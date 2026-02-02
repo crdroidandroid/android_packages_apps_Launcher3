@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">Se repornește lansatorul pentru a aplica modificările...</string>
     <string name="updating_launcher_components">Se repornește lansatorul pentru a actualiza componentele lansatorului...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Dublă atingere pentru oprire ecran</string>
-    <string name="pref_sleep_gesture_summary">Atingeți de două ori spațiul gol pentru oprirea ecranului</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrează la atingerea dublă pentru a dormi</string>
-    <string name="pref_sleep_gesture_haptic_summary">Oferă feedback haptic la gestul de două apăsări pentru a dormi</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Glisați pentru a începe căutarea</string>
+    <string name="drawer_open_keyboard_summary">Deschide tastatura ori de câte ori sertarul de aplicații devine vizibil</string>
     <!-- Icon size -->
     <string name="icon_size_title">Dimensiune pictogramă</string>
     <!-- Font size -->
     <string name="font_size_title">Dimensiune font</string>
     <!-- App label -->
     <string name="icon_two_lines_title">Utilizați două linii pentru eticheta aplicației</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Termină</string>
-    <string name="recents_app_killed">Aplicaţie terminată</string>
     <!-- Row Height -->
     <string name="row_height_title">Înălțimea rândului</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">Opacitate fundal</string>
     <!-- Stroke -->
     <string name="stroke_width_title">Contur</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Termină</string>
+    <string name="recents_app_killed">Aplicaţie terminată</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Căutare</string>
     <string name="label_lens">Google Lens</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">Captură ecran</string>
     <string name="recents_clear_all_title">Stergeti toate</string>
     <string name="recents_lens_title">Obiectiv</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Informații aplicație</string>
-    <string name="app_info_source">Sursa</string>
-    <string name="app_info_source_system">Sistem</string>
-    <string name="app_info_last_update">Ultima actualizare</string>
-    <string name="app_info_version">Versiune</string>
-    <string name="app_info_more">Mai mult</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Pachet de pictograme</string>
-    <string name="icon_pack_default_label">Prestabilit</string>
-    <string name="icon_pack_add">Instalează mai multe</string>
-    <string name="icon_pack_no_market">Nu există niciun magazin de aplicații disponibil</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Permite parallax scurt</string>
     <string name="short_parallax_summary">Activează efectul complet de defilare a imaginii de fundal pe un număr mic de pagini în loc să fie decupată imaginea de fundal</string>
     <string name="single_page_center_title">Centrare pagină unică</string>
     <string name="single_page_center_summary">Se centrează imaginea de fundal dacă se utilizează doar o singură pagină</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Glisați pentru a începe căutarea</string>
-    <string name="drawer_open_keyboard_summary">Deschide tastatura ori de câte ori sertarul de aplicații devine vizibil</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Bara de derulare</string>
     <string name="drawer_scrollbar_summary">Bara de căutare în partea de sus a sertarului de aplicații</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">Adâncime blur de fundal</string>
     <string name="background_blur_summary">Setaţi nivelul de adâncime încețoșare pentru aplicaţiile recente şi lista aplicaţiilor</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">Informații aplicație</string>
+    <string name="app_info_source">Sursa</string>
+    <string name="app_info_source_system">Sistem</string>
+    <string name="app_info_last_update">Ultima actualizare</string>
+    <string name="app_info_version">Versiune</string>
+    <string name="app_info_more">Mai mult</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Pachet de pictograme</string>
+    <string name="icon_pack_default_label">Prestabilit</string>
+    <string name="icon_pack_add">Instalează mai multe</string>
+    <string name="icon_pack_no_market">Nu există niciun magazin de aplicații disponibil</string>
 </resources>
