@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">Рестартиране на launcher-a за прилагане на промените...</string>
     <string name="updating_launcher_components">Рестартиране на launcher-а за обновение на зомпоненти...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Двукратно почукване за заспиване</string>
-    <string name="pref_sleep_gesture_summary">Докоснете двата пъти на празно място за да изключите екрана</string>
-    <string name="pref_sleep_gesture_haptic_title">Вибрирай на двоен натиск за заспиване</string>
-    <string name="pref_sleep_gesture_haptic_summary">Проведи тактилна обратна връзка на жест за двоен натиск за заспиване</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Плъзни, за да започнеш търсене</string>
+    <string name="drawer_open_keyboard_summary">Показвай клавиатурата винаги когато списъкът с приложения е видим</string>
     <!-- Icon size -->
     <string name="icon_size_title">Размер на иконата</string>
     <!-- Font size -->
     <string name="font_size_title">Размер на шрифта</string>
     <!-- App label -->
     <string name="icon_two_lines_title">Използване на 2 редове за етикета на приложенията</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Спри</string>
-    <string name="recents_app_killed">Приложението е убито</string>
     <!-- Row Height -->
     <string name="row_height_title">Височина на реда</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">Прозрачност на фона</string>
     <!-- Stroke -->
     <string name="stroke_width_title">Щриха</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Спри</string>
+    <string name="recents_app_killed">Приложението е убито</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Търсене</string>
     <string name="label_lens">Google Lens</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">Екранна снимка</string>
     <string name="recents_clear_all_title">Изчистване на всичко</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Информация за приложението</string>
-    <string name="app_info_source">Източник</string>
-    <string name="app_info_source_system">Система</string>
-    <string name="app_info_last_update">Последно обновяване</string>
-    <string name="app_info_version">Версия</string>
-    <string name="app_info_more">Още</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Пакет икони</string>
-    <string name="icon_pack_default_label">По подразбиране</string>
-    <string name="icon_pack_add">Инсталиране на още</string>
-    <string name="icon_pack_no_market">Няма наличен магазин за приложения</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Позволи къс паралакс</string>
     <string name="short_parallax_summary">Активирайте ефекта на пълно превъртане на тапета върху по-малък брой страници, вместо да се изрязва</string>
     <string name="single_page_center_title">Центрирана единствена страница</string>
     <string name="single_page_center_summary">Центрирай тапета ако се използва само една страница</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Плъзни, за да започнеш търсене</string>
-    <string name="drawer_open_keyboard_summary">Показвай клавиатурата винаги когато списъкът с приложения е видим</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Плъзгач</string>
     <string name="drawer_scrollbar_summary">Плъзгача да е отстрани от чекмеджето</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">Замъгленост на тапета</string>
     <string name="background_blur_summary">Задаване на ниво на замъгляване за скорошни приложения и чекмедже с приложения</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">Информация за приложението</string>
+    <string name="app_info_source">Източник</string>
+    <string name="app_info_source_system">Система</string>
+    <string name="app_info_last_update">Последно обновяване</string>
+    <string name="app_info_version">Версия</string>
+    <string name="app_info_more">Още</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Пакет икони</string>
+    <string name="icon_pack_default_label">По подразбиране</string>
+    <string name="icon_pack_add">Инсталиране на още</string>
+    <string name="icon_pack_no_market">Няма наличен магазин за приложения</string>
 </resources>
