@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">راه‌اندازی مجدد لانچر برای اعمال تغییرات...</string>
     <string name="updating_launcher_components">راه‌اندازی مجدد برای به‌روزرسانی مؤلفه‌های راه‌انداز...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">برای حالت خواب دوبار ضربه بزنید</string>
-    <string name="pref_sleep_gesture_summary">برای خاموش کردن صفحه نمایش روی فضای خالی صفحه دوبار ضربه بزنید</string>
-    <string name="pref_sleep_gesture_haptic_title">لرزش هنگام خوابیدن با دو‌بار ضربه</string>
-    <string name="pref_sleep_gesture_haptic_summary">ارائه بازخورد لمسی در حالت دو بار ضربه زدن برای خواب</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">برای جستجو انگشت خود را بکشید</string>
+    <string name="drawer_open_keyboard_summary">هر زمان که کشوی برنامه نمایان شد، صفحه کلید را باز کنید</string>
     <!-- Icon size -->
     <string name="icon_size_title">اندازه آیکون</string>
     <!-- Font size -->
     <string name="font_size_title">اندازه قلم</string>
     <!-- App label -->
     <string name="icon_two_lines_title">استفاده از برچسب دو خطی برای نام برنامه</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">توقف</string>
-    <string name="recents_app_killed">برنامه بسته شد</string>
     <!-- Row Height -->
     <string name="row_height_title">ارتفاع ردیف</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">شفافیت پس‌زمینه</string>
     <!-- Stroke -->
     <string name="stroke_width_title">حاشیه</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">توقف</string>
+    <string name="recents_app_killed">برنامه بسته شد</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">جستجو</string>
     <string name="label_lens">لنز Google</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">عکس گرفتن از صفحه</string>
     <string name="recents_clear_all_title">پاک کردن همه موارد</string>
     <string name="recents_lens_title">لنز</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">اطلاعات برنامه</string>
-    <string name="app_info_source">منبع</string>
-    <string name="app_info_source_system">سیستم</string>
-    <string name="app_info_last_update">آخرین بروزرسانی</string>
-    <string name="app_info_version">نسخه</string>
-    <string name="app_info_more">بیشتر</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">آیکون پک</string>
-    <string name="icon_pack_default_label">پیش‌فرض</string>
-    <string name="icon_pack_add">نصب بیشتر</string>
-    <string name="icon_pack_no_market">هیچ فروشگاه برنامه در دسترس نیست</string>
     <!-- Parallax -->
     <string name="short_parallax_title">منظر کوتاه را مجاز کنید</string>
     <string name="short_parallax_summary">به جای برش دادن کاغذدیواری، جلوه اسکرول کامل تصویر زمینه را در تعداد صفحات کمتری فعال کنید</string>
     <string name="single_page_center_title">تک صفحه مرکز</string>
     <string name="single_page_center_summary">تصویر زمینه در مرکز اگر شما فقط یک صفحه دارید</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">برای جستجو انگشت خود را بکشید</string>
-    <string name="drawer_open_keyboard_summary">هر زمان که کشوی برنامه نمایان شد، صفحه کلید را باز کنید</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">نوار پیمایش</string>
     <string name="drawer_scrollbar_summary">نوار پیمایش در کنار کشوی برنامه</string>
@@ -370,4 +358,16 @@ Remember the Lineage of the Unicorn</item>
     <!-- Background blur -->
     <string name="background_blur_title">عمق تاری پس زمینه</string>
     <string name="background_blur_summary">سطح عمق تاری را برای موارد اخیر و کشوی برنامه تنظیم کنید</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">اطلاعات برنامه</string>
+    <string name="app_info_source">منبع</string>
+    <string name="app_info_source_system">سیستم</string>
+    <string name="app_info_last_update">آخرین بروزرسانی</string>
+    <string name="app_info_version">نسخه</string>
+    <string name="app_info_more">بیشتر</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">آیکون پک</string>
+    <string name="icon_pack_default_label">پیش‌فرض</string>
+    <string name="icon_pack_add">نصب بیشتر</string>
+    <string name="icon_pack_no_market">هیچ فروشگاه برنامه در دسترس نیست</string>
 </resources>
