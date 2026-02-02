@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">正在重新启动启动器以保存更改...</string>
     <string name="updating_launcher_components">正在重新启动启动器以更新其组件...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">双击睡眠</string>
-    <string name="pref_sleep_gesture_summary">双击空白处以关闭屏幕</string>
-    <string name="pref_sleep_gesture_haptic_title">双击关闭屏幕</string>
-    <string name="pref_sleep_gesture_haptic_summary">双击关闭屏幕时震动反馈</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">滑动搜索</string>
+    <string name="drawer_open_keyboard_summary">键盘在应用资源库时弹出</string>
     <!-- Icon size -->
     <string name="icon_size_title">图标大小</string>
     <!-- Font size -->
     <string name="font_size_title">字体大小</string>
     <!-- App label -->
     <string name="icon_two_lines_title">使用两行应用标签</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">强制停止</string>
-    <string name="recents_app_killed">已停止应用程序</string>
     <!-- Row Height -->
     <string name="row_height_title">行高</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">背景不透明度</string>
     <!-- Stroke -->
     <string name="stroke_width_title">轮廓型</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">强制停止</string>
+    <string name="recents_app_killed">已停止应用程序</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">搜索</string>
     <string name="label_lens">谷歌镜头</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">屏幕截图</string>
     <string name="recents_clear_all_title">清除所有</string>
     <string name="recents_lens_title">镜头</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">应用信息</string>
-    <string name="app_info_source">来源</string>
-    <string name="app_info_source_system">系统</string>
-    <string name="app_info_last_update">上一次更新：</string>
-    <string name="app_info_version">版本</string>
-    <string name="app_info_more">更多</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">图标包</string>
-    <string name="icon_pack_default_label">默认</string>
-    <string name="icon_pack_add">安装更多</string>
-    <string name="icon_pack_no_market">没有可用的应用商店</string>
     <!-- Parallax -->
     <string name="short_parallax_title">壁纸滚动</string>
     <string name="short_parallax_summary">对数量较少的页面启用完整的壁纸滚动效果，而不是裁剪壁纸</string>
     <string name="single_page_center_title">单页居中</string>
     <string name="single_page_center_summary">如果只使用一个页面则居中壁纸</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">滑动搜索</string>
-    <string name="drawer_open_keyboard_summary">键盘在应用资源库时弹出</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">滚动条</string>
     <string name="drawer_scrollbar_summary">应用抽屉侧边滚动条</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">背景模糊深度</string>
     <string name="background_blur_summary">为最近任务和应用抽屉设置模糊深度级别</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">应用信息</string>
+    <string name="app_info_source">来源</string>
+    <string name="app_info_source_system">系统</string>
+    <string name="app_info_last_update">上一次更新：</string>
+    <string name="app_info_version">版本</string>
+    <string name="app_info_more">更多</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">图标包</string>
+    <string name="icon_pack_default_label">默认</string>
+    <string name="icon_pack_add">安装更多</string>
+    <string name="icon_pack_no_market">没有可用的应用商店</string>
 </resources>
