@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">Riavvio del launcher per applicare le modifiche...</string>
     <string name="updating_launcher_components">Riavvio del launcher per aggiornare i componenti del launcher...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Doppio tocco per bloccare il telefono</string>
-    <string name="pref_sleep_gesture_summary">Tocca due volte sullo spazio vuoto per spegnere lo schermo</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibra al doppio tocco per sospendere</string>
-    <string name="pref_sleep_gesture_haptic_summary">Fornisci un feedback tattile al gesto doppio tocco per sospendere</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Scorri per iniziare la ricerca</string>
+    <string name="drawer_open_keyboard_summary">Apri la tastiera ogni volta che il drawer delle app diventa visibile</string>
     <!-- Icon size -->
     <string name="icon_size_title">Dimensione icone</string>
     <!-- Font size -->
     <string name="font_size_title">Dimensione font</string>
     <!-- App label -->
     <string name="icon_two_lines_title">Usa due righe per l\'etichetta dell\'app</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Termina</string>
-    <string name="recents_app_killed">Applicazione terminata</string>
     <!-- Row Height -->
     <string name="row_height_title">Altezza riga</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">Opacità dello sfondo</string>
     <!-- Stroke -->
     <string name="stroke_width_title">Tratto</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Termina</string>
+    <string name="recents_app_killed">Applicazione terminata</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Cerca</string>
     <string name="label_lens">Google Lens</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">Screenshot</string>
     <string name="recents_clear_all_title">Cancella tutto</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Info app</string>
-    <string name="app_info_source">Fonte</string>
-    <string name="app_info_source_system">Sistema</string>
-    <string name="app_info_last_update">Ultimo aggiornamento</string>
-    <string name="app_info_version">Versione</string>
-    <string name="app_info_more">Altro</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Pacchetto icone</string>
-    <string name="icon_pack_default_label">Predefinito</string>
-    <string name="icon_pack_add">Installa altri pacchetti</string>
-    <string name="icon_pack_no_market">Non ci sono app store disponibili</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Consenti parallasse breve</string>
     <string name="short_parallax_summary">Abilita l\'effetto di scorrimento completo dello sfondo su un numero minore di pagine invece di ritagliare lo sfondo</string>
     <string name="single_page_center_title">Centra singola pagina</string>
     <string name="single_page_center_summary">Centra lo sfondo se si utilizza solo una singola pagina</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Scorri per iniziare la ricerca</string>
-    <string name="drawer_open_keyboard_summary">Apri la tastiera ogni volta che il drawer delle app diventa visibile</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Barra di scorrimento</string>
     <string name="drawer_scrollbar_summary">Barra di scorrimento sul lato del cassetto delle applicazioni</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">Sfocatura sfondo</string>
     <string name="background_blur_summary">Imposta il livello di profondità della sfocatura per i recenti e il drawer delle app</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">Info app</string>
+    <string name="app_info_source">Fonte</string>
+    <string name="app_info_source_system">Sistema</string>
+    <string name="app_info_last_update">Ultimo aggiornamento</string>
+    <string name="app_info_version">Versione</string>
+    <string name="app_info_more">Altro</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Pacchetto icone</string>
+    <string name="icon_pack_default_label">Predefinito</string>
+    <string name="icon_pack_add">Installa altri pacchetti</string>
+    <string name="icon_pack_no_market">Non ci sono app store disponibili</string>
 </resources>
