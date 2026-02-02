@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">Launcher opnieuw opstarten om wijzigingen toe te passen...</string>
     <string name="updating_launcher_components">Launcher herstarten om de launcher componenten bij te werken...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Dubbeltikken voor slaapstand</string>
-    <string name="pref_sleep_gesture_summary">Dubbeltikken op lege ruimte om scherm uit te schakelen</string>
-    <string name="pref_sleep_gesture_haptic_title">Trillen bij dubbeltikken om te slapen</string>
-    <string name="pref_sleep_gesture_haptic_summary">Geef haptische feedback bij dubbeltikken voor slaapgebaar</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Veeg om zoeken te starten</string>
+    <string name="drawer_open_keyboard_summary">Open toetsenbord wanneer app drawer zichtbaar wordt</string>
     <!-- Icon size -->
     <string name="icon_size_title">Pictogram grootte</string>
     <!-- Font size -->
     <string name="font_size_title">Leterrtype grootte</string>
     <!-- App label -->
     <string name="icon_two_lines_title">Gebruik twee regels voor app label</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Sluit af</string>
-    <string name="recents_app_killed">App afgesloten</string>
     <!-- Row Height -->
     <string name="row_height_title">Rijhoogte</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">Achtergrond transparantie</string>
     <!-- Stroke -->
     <string name="stroke_width_title">Lijn</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Sluit af</string>
+    <string name="recents_app_killed">App afgesloten</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Zoeken</string>
     <string name="label_lens">Google Lens</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">Schermafbeelding</string>
     <string name="recents_clear_all_title">Alles wissen</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Application Info</string>
-    <string name="app_info_source">Bron</string>
-    <string name="app_info_source_system">Systeem</string>
-    <string name="app_info_last_update">Laatste update</string>
-    <string name="app_info_version">Versie</string>
-    <string name="app_info_more">Meer</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Pictogram pakket</string>
-    <string name="icon_pack_default_label">Standaard</string>
-    <string name="icon_pack_add">Meer installeren</string>
-    <string name="icon_pack_no_market">Er is geen beschikbare app store</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Korte parallax toestaan</string>
     <string name="short_parallax_summary">Schakel volledige achtergrond scroll effect in op kleinere aantallen pagina\'s in plaats van de achtergrond bij te snijden</string>
     <string name="single_page_center_title">Enkele pagina midden</string>
     <string name="single_page_center_summary">Achtergrond centreren bij gebruik van één pagina</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Veeg om zoeken te starten</string>
-    <string name="drawer_open_keyboard_summary">Open toetsenbord wanneer app drawer zichtbaar wordt</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Scrollbalk</string>
     <string name="drawer_scrollbar_summary">Scrollbalk aan de zijkant van de app lade</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">Achtergrond vervagen diepte</string>
     <string name="background_blur_summary">Stel vervaging diepte in voor recente apps en app drawer</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">Application Info</string>
+    <string name="app_info_source">Bron</string>
+    <string name="app_info_source_system">Systeem</string>
+    <string name="app_info_last_update">Laatste update</string>
+    <string name="app_info_version">Versie</string>
+    <string name="app_info_more">Meer</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Pictogram pakket</string>
+    <string name="icon_pack_default_label">Standaard</string>
+    <string name="icon_pack_add">Meer installeren</string>
+    <string name="icon_pack_no_market">Er is geen beschikbare app store</string>
 </resources>
