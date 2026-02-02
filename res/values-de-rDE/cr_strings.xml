@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">Launcher wird neu gestartet, um Änderungen anzuwenden …</string>
     <string name="updating_launcher_components">Launcher wird neu gestartet, um Launcher-Elemente zu aktualisieren …</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Doppeltippen zum Sperren</string>
-    <string name="pref_sleep_gesture_summary">Zum Sperren auf einen leeren Bereich doppeltippen</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibration bei Doppeltippen zum Sperren</string>
-    <string name="pref_sleep_gesture_haptic_summary">Haptisches Feedback beim Doppeltippen zum Sperren</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Wischen zum Starten der Suche</string>
+    <string name="drawer_open_keyboard_summary">Tastatur immer öffnen, sobald die App-Übersicht sichtbar ist</string>
     <!-- Icon size -->
     <string name="icon_size_title">Symbolgröße</string>
     <!-- Font size -->
     <string name="font_size_title">Schriftgröße</string>
     <!-- App label -->
     <string name="icon_two_lines_title">Zweizeilige App-Beschriftungen</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Beenden</string>
-    <string name="recents_app_killed">App beendet</string>
     <!-- Row Height -->
     <string name="row_height_title">Zeilenhöhe</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">Hintergrundtransparenz</string>
     <!-- Stroke -->
     <string name="stroke_width_title">Strichstärke</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Beenden</string>
+    <string name="recents_app_killed">App beendet</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Suche</string>
     <string name="label_lens">Google Lens</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">Screenshot</string>
     <string name="recents_clear_all_title">Alle Apps schließen</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">App-Info</string>
-    <string name="app_info_source">Quelle</string>
-    <string name="app_info_source_system">System</string>
-    <string name="app_info_last_update">Letzte Aktualisierung</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">Mehr</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Symbolpaket</string>
-    <string name="icon_pack_default_label">Standard</string>
-    <string name="icon_pack_add">Weitere installieren</string>
-    <string name="icon_pack_no_market">Es ist kein App-Store verfügbar</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Kurzes Parallax Scrollen erlauben</string>
     <string name="short_parallax_summary">Beschränkt den Scroll-Effekt auf eine kleinere Seitenanzahl, anstatt das Hintergrundbild zu beschneiden</string>
     <string name="single_page_center_title">Bei nur einer Seite zentrieren</string>
     <string name="single_page_center_summary">Zentriert das Hintergrundbild, wenn nur eine einzelne Seite verwendet wird</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Wischen zum Starten der Suche</string>
-    <string name="drawer_open_keyboard_summary">Tastatur immer öffnen, sobald die App-Übersicht sichtbar ist</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Bildlaufleiste</string>
     <string name="drawer_scrollbar_summary">Bildlaufleiste neben der App-Übersicht</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">Tiefenschärfegrad des Hintergrunds</string>
     <string name="background_blur_summary">Tiefenschärfegrad in App-Übersicht und -Verlauf anpassen</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">App-Info</string>
+    <string name="app_info_source">Quelle</string>
+    <string name="app_info_source_system">System</string>
+    <string name="app_info_last_update">Letzte Aktualisierung</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">Mehr</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Symbolpaket</string>
+    <string name="icon_pack_default_label">Standard</string>
+    <string name="icon_pack_add">Weitere installieren</string>
+    <string name="icon_pack_no_market">Es ist kein App-Store verfügbar</string>
 </resources>
