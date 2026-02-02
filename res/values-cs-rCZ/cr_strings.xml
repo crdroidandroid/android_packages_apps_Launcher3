@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">Restartování spouštěče pro použití změn…</string>
     <string name="updating_launcher_components">Restartování spouštěče pro aktualizaci komponent spouštěče…</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_title">Uspat dvojím poklepáním</string>
+    <string name="pref_sleep_gesture_summary">Dvojím poklepáním na prázdnou oblast domovské obrazovky vypnete obrazovku</string>
+    <string name="pref_sleep_gesture_haptic_title">Zavibrovat při uspání dvojím poklepáním</string>
+    <string name="pref_sleep_gesture_haptic_summary">Poskytuje hmatovou odezvu při použití gesta dvojím poklepání pro přechod do režimu spánku</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Přejetím začít vyhledávat</string>
     <string name="drawer_open_keyboard_summary">Otevřít klávesnici pokaždé, když je zobrazen seznam aplikací</string>
