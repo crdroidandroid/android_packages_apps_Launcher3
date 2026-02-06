@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">Reiniciando launcher para aplicar cambios...</string>
     <string name="updating_launcher_components">Reiniciando launcher para actualizar componentes del launcher...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Doble toque para apagar pantalla</string>
-    <string name="pref_sleep_gesture_summary">Doble toque en un espacio vacío para apagar la pantalla</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrar al tocar dos veces para suspender</string>
-    <string name="pref_sleep_gesture_haptic_summary">Proporciona retroalimentación háptica en el gesto de doble toque para suspender</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Desliza para comenzar la búsqueda</string>
+    <string name="drawer_open_keyboard_summary">Abrir el teclado cada vez que el cajón de aplicaciones se vuelva visible</string>
     <!-- Icon size -->
     <string name="icon_size_title">Tamaño del icono</string>
     <!-- Font size -->
     <string name="font_size_title">Tamaño de la fuente</string>
     <!-- App label -->
     <string name="icon_two_lines_title">Use dos líneas para la etiqueta de la aplicación</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Terminar proceso</string>
-    <string name="recents_app_killed">Aplicación finalizada</string>
     <!-- Row Height -->
     <string name="row_height_title">Altura de las filas</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">Opacidad del fondo</string>
     <!-- Stroke -->
     <string name="stroke_width_title">Trazo</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Terminar proceso</string>
+    <string name="recents_app_killed">Aplicación finalizada</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Buscar</string>
     <string name="label_lens">Google Lens</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">Captura de pantalla</string>
     <string name="recents_clear_all_title">Borrar todo</string>
     <string name="recents_lens_title">Lens</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Información de la aplicación</string>
-    <string name="app_info_source">Fuente</string>
-    <string name="app_info_source_system">Sistema</string>
-    <string name="app_info_last_update">Última actualización</string>
-    <string name="app_info_version">Versión</string>
-    <string name="app_info_more">Más</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Paquete de iconos</string>
-    <string name="icon_pack_default_label">Predeterminado</string>
-    <string name="icon_pack_add">Instalar más</string>
-    <string name="icon_pack_no_market">No hay una tienda de aplicaciones disponible</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Permitir paralax corto</string>
     <string name="short_parallax_summary">Activar efecto de desplazamiento del fondo de pantalla completo en un número menor de páginas en lugar de recortar el fondo de pantalla</string>
     <string name="single_page_center_title">Título de página única centrado</string>
     <string name="single_page_center_summary">Centrar fondo de pantalla si hay una sola página</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Desliza para comenzar la búsqueda</string>
-    <string name="drawer_open_keyboard_summary">Abrir el teclado cada vez que el cajón de aplicaciones se vuelva visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Barra de desplazamiento</string>
     <string name="drawer_scrollbar_summary">Barra de desplazamiento al lado del cajón de aplicaciones</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">Desenfoque de fondo</string>
     <string name="background_blur_summary">Establecer nivel de profundidad de desenfoque para recientes y cajón de aplicaciones</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">Información de la aplicación</string>
+    <string name="app_info_source">Fuente</string>
+    <string name="app_info_source_system">Sistema</string>
+    <string name="app_info_last_update">Última actualización</string>
+    <string name="app_info_version">Versión</string>
+    <string name="app_info_more">Más</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Paquete de iconos</string>
+    <string name="icon_pack_default_label">Predeterminado</string>
+    <string name="icon_pack_add">Instalar más</string>
+    <string name="icon_pack_no_market">No hay una tienda de aplicaciones disponible</string>
 </resources>

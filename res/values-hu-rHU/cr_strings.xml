@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">A változások miatti újraindulás...</string>
     <string name="updating_launcher_components">Launcher alkotóelem frissítése miatti újraindulás...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Alvómód duplakoppal</string>
-    <string name="pref_sleep_gesture_summary">Képernyő kikapcsoláshoz duplakopp egy üres területen</string>
-    <string name="pref_sleep_gesture_haptic_title">Dupla érintésre alvómód engedélyezése</string>
-    <string name="pref_sleep_gesture_haptic_summary">Rezgéses visszajelzést ad a dupla koppintásos alvás gesztusról</string>
+    <string name="pref_sleep_gesture_title">Dupla érintésre alvómód</string>
+    <string name="pref_sleep_gesture_summary">A képernyő kikapcsolásához koppintson duplán a kezdőképernyő egy üres területére</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibráló visszajelzés</string>
+    <string name="pref_sleep_gesture_haptic_summary">Rezgéses visszajelzést ad a dupla koppintásos képernyő-kikapcsoló gesztusról</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Csúsztatás a kereséshez</string>
+    <string name="drawer_open_keyboard_summary">Nyíljon meg a billentyűzet, amikor az alkalmazásfiók láthatóvá válik</string>
     <!-- Icon size -->
     <string name="icon_size_title">Ikonméret</string>
     <!-- Font size -->
     <string name="font_size_title">Betűméret</string>
     <!-- App label -->
     <string name="icon_two_lines_title">Kétsoros alkalmazásnevek</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Leállítás</string>
-    <string name="recents_app_killed">Az alkalmazás leállt</string>
     <!-- Row Height -->
     <string name="row_height_title">Sormagasság</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">Háttérátlátszóság</string>
     <!-- Stroke -->
     <string name="stroke_width_title">Körvonal</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Leállítás</string>
+    <string name="recents_app_killed">Az alkalmazás leállt</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Keresés</string>
     <string name="label_lens">Google Lens</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">Képernyőkép</string>
     <string name="recents_clear_all_title">Az összes törlése</string>
     <string name="recents_lens_title">Objektív</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Alkalmazás információ</string>
-    <string name="app_info_source">Forrás</string>
-    <string name="app_info_source_system">Rendszer</string>
-    <string name="app_info_last_update">Utoljára frissítve</string>
-    <string name="app_info_version">Verzió</string>
-    <string name="app_info_more">Továbbiak</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Ikoncsomag</string>
-    <string name="icon_pack_default_label">Alapértelmezett</string>
-    <string name="icon_pack_add">Továbbiak telepítése</string>
-    <string name="icon_pack_no_market">Nincs hely ahonnan letölthetne</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Rövid paralaxis engedélyezése</string>
     <string name="short_parallax_summary">Engedélyezze a teljes háttérképgörgetési hatását kisebb oldalszámon a háttérkép levágása helyett</string>
     <string name="single_page_center_title">Centerezett egyoldalas</string>
     <string name="single_page_center_summary">Helyezze középre a háttérképet, ha csak egyetlen oldalt használ</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Csúsztatás a kereséshez</string>
-    <string name="drawer_open_keyboard_summary">Nyíljon meg a billentyűzet, amikor az alkalmazásfiók láthatóvá válik</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Görgetősáv</string>
     <string name="drawer_scrollbar_summary">A keresősáv az Alkalmazásfiók oldalán</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">A háttér-elmosás mélysége</string>
     <string name="background_blur_summary">Az előzmények és az alkalmazásfiók elmosási értéke állítható itt</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">Alkalmazás információ</string>
+    <string name="app_info_source">Forrás</string>
+    <string name="app_info_source_system">Rendszer</string>
+    <string name="app_info_last_update">Utoljára frissítve</string>
+    <string name="app_info_version">Verzió</string>
+    <string name="app_info_more">Továbbiak</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Ikoncsomag</string>
+    <string name="icon_pack_default_label">Alapértelmezett</string>
+    <string name="icon_pack_add">Továbbiak telepítése</string>
+    <string name="icon_pack_no_market">Nincs hely ahonnan letölthetne</string>
 </resources>

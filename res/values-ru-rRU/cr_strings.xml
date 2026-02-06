@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">Перезапуск главного экрана для применения изменений...</string>
     <string name="updating_launcher_components">Перезапуск главного экрана для обновления компонентов...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Выкл. двойным нажатием</string>
-    <string name="pref_sleep_gesture_summary">Дважды коснитесь пустого места экрана для его выключения</string>
-    <string name="pref_sleep_gesture_haptic_title">Вибрировать при двойном нажатии для сна</string>
-    <string name="pref_sleep_gesture_haptic_summary">Вибрировать при выполнении жеста двойного нажатия для перехода в спящий режим</string>
+    <string name="pref_sleep_gesture_title">Касание для сна</string>
+    <string name="pref_sleep_gesture_summary">Дважды коснитесь пустой области главного экрана, чтобы погасить экран</string>
+    <string name="pref_sleep_gesture_haptic_title">Вибрация при касании для сна</string>
+    <string name="pref_sleep_gesture_haptic_summary">Вибрировать при использовании двойного касания для перехода в спящий режим</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Автоматическая клавиатура</string>
+    <string name="drawer_open_keyboard_summary">Показать клавиатуру, при открытии меню приложений</string>
     <!-- Icon size -->
     <string name="icon_size_title">Размер значка</string>
     <!-- Font size -->
     <string name="font_size_title">Размер шрифта</string>
     <!-- App label -->
     <string name="icon_two_lines_title">Название в две строки</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Завершить</string>
-    <string name="recents_app_killed">Приложение закрыто</string>
     <!-- Row Height -->
     <string name="row_height_title">Высота строки</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">Прозрачность фона</string>
     <!-- Stroke -->
     <string name="stroke_width_title">Окантовка</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Завершить</string>
+    <string name="recents_app_killed">Приложение закрыто</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Поиск</string>
     <string name="label_lens">Google Объектив</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">Снимок экрана</string>
     <string name="recents_clear_all_title">Очистить всё</string>
     <string name="recents_lens_title">Объектив</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">О приложении</string>
-    <string name="app_info_source">Источник</string>
-    <string name="app_info_source_system">Системное</string>
-    <string name="app_info_last_update">Последнее обновление</string>
-    <string name="app_info_version">Версия</string>
-    <string name="app_info_more">Дополнительно...</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Набор значков</string>
-    <string name="icon_pack_default_label">По умолчанию</string>
-    <string name="icon_pack_add">Установить ещё</string>
-    <string name="icon_pack_no_market">Нет доступного магазина приложений</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Разрешить короткое смещение</string>
     <string name="short_parallax_summary">Включить эффект полной прокрутки обоев на меньшем количестве страниц вместо обрезки обоев</string>
     <string name="single_page_center_title">Центр, если одна страница</string>
     <string name="single_page_center_summary">Центрировать обои, если используется только одна страница</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Автоматическая клавиатура</string>
-    <string name="drawer_open_keyboard_summary">Показать клавиатуру, при открытии меню приложений</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Полоса прокрутки</string>
     <string name="drawer_scrollbar_summary">Полоса прокрутки сбоку меню приложений</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">Глубина размытия фона</string>
     <string name="background_blur_summary">Установка глубины размытия фона для недавних и меню приложений</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">О приложении</string>
+    <string name="app_info_source">Источник</string>
+    <string name="app_info_source_system">Системное</string>
+    <string name="app_info_last_update">Последнее обновление</string>
+    <string name="app_info_version">Версия</string>
+    <string name="app_info_more">Дополнительно...</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Набор значков</string>
+    <string name="icon_pack_default_label">По умолчанию</string>
+    <string name="icon_pack_add">Установить ещё</string>
+    <string name="icon_pack_no_market">Нет доступного магазина приложений</string>
 </resources>

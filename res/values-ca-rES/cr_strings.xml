@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">Reiniciant el llançador per aplicar els canvis...</string>
     <string name="updating_launcher_components">Reiniciant el llançador per a actualitzar els seus components...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Toca dues vegades per a posar en repòs</string>
-    <string name="pref_sleep_gesture_summary">Toqueu dues vegades a un espai buit per a apagar la pantalla</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- Icon size -->
     <string name="icon_size_title">Mida de les icones</string>
     <!-- Font size -->
     <string name="font_size_title">Mida de la lletra</string>
     <!-- App label -->
     <string name="icon_two_lines_title">Utilitzar dues línies per als noms de les aplicacions</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Atura</string>
-    <string name="recents_app_killed">S\'ha aturat l\'aplicació</string>
     <!-- Row Height -->
     <string name="row_height_title">Alçada de fila</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">Opacitat del fons</string>
     <!-- Stroke -->
     <string name="stroke_width_title">Traça</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Atura</string>
+    <string name="recents_app_killed">S\'ha aturat l\'aplicació</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Cerca</string>
     <string name="label_lens">Google Lens</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">Captura de pantalla</string>
     <string name="recents_clear_all_title">Esborra-ho tot</string>
     <string name="recents_lens_title">Lent</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
-    <string name="app_info_source">Origen</string>
-    <string name="app_info_source_system">Sistema</string>
-    <string name="app_info_last_update">Darrera actualització</string>
-    <string name="app_info_version">Versió</string>
-    <string name="app_info_more">Més</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Paquet d\'icones</string>
-    <string name="icon_pack_default_label">Per defecte</string>
-    <string name="icon_pack_add">Instal·la\'n més</string>
-    <string name="icon_pack_no_market">No hi ha cap botiga d\'aplicacions disponible</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Allow short parallax</string>
     <string name="short_parallax_summary">Enable full wallpaper scroll effect on smaller numbers of pages instead of cropping the wallpaper</string>
     <string name="single_page_center_title">Single page center</string>
     <string name="single_page_center_summary">Center wallpaper if only using a single page</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Barra de desplaçament</string>
     <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">Desenfocament de fons</string>
     <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
+    <string name="app_info_source">Origen</string>
+    <string name="app_info_source_system">Sistema</string>
+    <string name="app_info_last_update">Darrera actualització</string>
+    <string name="app_info_version">Versió</string>
+    <string name="app_info_more">Més</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Paquet d\'icones</string>
+    <string name="icon_pack_default_label">Per defecte</string>
+    <string name="icon_pack_add">Instal·la\'n més</string>
+    <string name="icon_pack_no_market">No hi ha cap botiga d\'aplicacions disponible</string>
 </resources>

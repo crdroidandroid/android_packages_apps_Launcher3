@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">正在重新啟動桌面以套用變更...</string>
     <string name="updating_launcher_components">正在重新啟動桌面以更新組件...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">輕觸兩下即可休眠</string>
-    <string name="pref_sleep_gesture_summary">在空白處點兩下以關閉螢幕</string>
-    <string name="pref_sleep_gesture_haptic_title">鎖定螢幕雙擊兩下啟用</string>
-    <string name="pref_sleep_gesture_haptic_summary">提供雙擊鎖定螢幕時觸覺回饋</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">滑動即可開始搜尋</string>
+    <string name="drawer_open_keyboard_summary">當打開抽屜時打開鍵盤</string>
     <!-- Icon size -->
     <string name="icon_size_title">圖示大小</string>
     <!-- Font size -->
     <string name="font_size_title">字體大小</string>
     <!-- App label -->
     <string name="icon_two_lines_title">使用兩行來顯示應用程式名稱</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">強制停止</string>
-    <string name="recents_app_killed">已強制停止應用程式</string>
     <!-- Row Height -->
     <string name="row_height_title">列高</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">背景透明度</string>
     <!-- Stroke -->
     <string name="stroke_width_title">邊框</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">強制停止</string>
+    <string name="recents_app_killed">已強制停止應用程式</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">搜尋</string>
     <string name="label_lens">智慧鏡頭</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">螢幕截圖</string>
     <string name="recents_clear_all_title">全部清除</string>
     <string name="recents_lens_title">智慧鏡頭</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">應用程式資訊</string>
-    <string name="app_info_source">來源</string>
-    <string name="app_info_source_system">系統</string>
-    <string name="app_info_last_update">上次更新</string>
-    <string name="app_info_version">版本</string>
-    <string name="app_info_more">更多</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">圖示包</string>
-    <string name="icon_pack_default_label">預設</string>
-    <string name="icon_pack_add">安裝更多...</string>
-    <string name="icon_pack_no_market">沒有可用的應用程式商店</string>
     <!-- Parallax -->
     <string name="short_parallax_title">桌布滾動</string>
     <string name="short_parallax_summary">在主畫面頁數較少時使用桌布滾動，而非裁切部分桌布</string>
     <string name="single_page_center_title">單頁桌布置中</string>
     <string name="single_page_center_summary">主畫面頁數只有一頁時，使桌布置中</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">滑動即可開始搜尋</string>
-    <string name="drawer_open_keyboard_summary">當打開抽屜時打開鍵盤</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">滑動條</string>
     <string name="drawer_scrollbar_summary">應用程式選單側邊的滑動條</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">背景模糊度</string>
     <string name="background_blur_summary">設定最近應用程式和應用程式抽屜的背景模糊度</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">應用程式資訊</string>
+    <string name="app_info_source">來源</string>
+    <string name="app_info_source_system">系統</string>
+    <string name="app_info_last_update">上次更新</string>
+    <string name="app_info_version">版本</string>
+    <string name="app_info_more">更多</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">圖示包</string>
+    <string name="icon_pack_default_label">預設</string>
+    <string name="icon_pack_add">安裝更多...</string>
+    <string name="icon_pack_no_market">沒有可用的應用程式商店</string>
 </resources>

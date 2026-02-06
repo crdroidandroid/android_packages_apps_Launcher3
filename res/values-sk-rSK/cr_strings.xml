@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">Aplikujú sa zmeny, launcher sa reštartuje...</string>
     <string name="updating_launcher_components">Aktualizujú sa komponenty, launcher sa reštartuje...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Uspať dvojitým poklepaním</string>
-    <string name="pref_sleep_gesture_summary">Dvojitým klepnutím na prázdne miesto vypnete obrazovku</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrovať pri uspaní dvojitým dotykom</string>
-    <string name="pref_sleep_gesture_haptic_summary">Poskytnúť hmatovú spätnú väzbu pri geste dvojitého klepnutia pre uspanie</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Potiahnite prstom pre spustenie vyhľadávania</string>
+    <string name="drawer_open_keyboard_summary">Vždy otvárať klávesnicu, keď je zoznam aplikácií viditeľný</string>
     <!-- Icon size -->
     <string name="icon_size_title">Veľkosť ikony</string>
     <!-- Font size -->
     <string name="font_size_title">Veľkosť písma</string>
     <!-- App label -->
     <string name="icon_two_lines_title">Pre názov aplikácie použiť dva riadky</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Ukončiť</string>
-    <string name="recents_app_killed">Aplikácia bola ukončená</string>
     <!-- Row Height -->
     <string name="row_height_title">Výška riadku</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">Priehľadnosť pozadia</string>
     <!-- Stroke -->
     <string name="stroke_width_title">Zdvih</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Ukončiť</string>
+    <string name="recents_app_killed">Aplikácia bola ukončená</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Vyhľadať</string>
     <string name="label_lens">Dokumenty Google</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">Snímka obrazovky</string>
     <string name="recents_clear_all_title">Vymazať všetko</string>
     <string name="recents_lens_title">Objektív</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Informácie o aplikácii</string>
-    <string name="app_info_source">Zdroj</string>
-    <string name="app_info_source_system">Systém</string>
-    <string name="app_info_last_update">Posledná aktualizácia</string>
-    <string name="app_info_version">Verzia</string>
-    <string name="app_info_more">Viac</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Balíček ikon</string>
-    <string name="icon_pack_default_label">Predvolené</string>
-    <string name="icon_pack_add">Inštalovať ďalšie</string>
-    <string name="icon_pack_no_market"> Nie je dostupný žiadny obchod s aplikáciami</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Povoliť krátku paralaxu</string>
     <string name="short_parallax_summary">Namiesto odstrihnutia pozadia povoliť pri menšom počte stránok skrolovanie celého pozadia</string>
     <string name="single_page_center_title">Vycentrovať jedinú stránku</string>
     <string name="single_page_center_summary">Vycentrovať pozadie len pri použití jednej stránky</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Potiahnite prstom pre spustenie vyhľadávania</string>
-    <string name="drawer_open_keyboard_summary">Vždy otvárať klávesnicu, keď je zoznam aplikácií viditeľný</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Posuvník</string>
     <string name="drawer_scrollbar_summary">Posuvník na boku v zásuvke aplikácií</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">Sila rozmazania pozadia</string>
     <string name="background_blur_summary">Nastaviť úroveň hĺbky rozmazania pre nedávne aplikácie a ponuku aplikácií</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">Informácie o aplikácii</string>
+    <string name="app_info_source">Zdroj</string>
+    <string name="app_info_source_system">Systém</string>
+    <string name="app_info_last_update">Posledná aktualizácia</string>
+    <string name="app_info_version">Verzia</string>
+    <string name="app_info_more">Viac</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Balíček ikon</string>
+    <string name="icon_pack_default_label">Predvolené</string>
+    <string name="icon_pack_add">Inštalovať ďalšie</string>
+    <string name="icon_pack_no_market"> Nie je dostupný žiadny obchod s aplikáciami</string>
 </resources>

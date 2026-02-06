@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">Redémarrage du lanceur pour appliquer les modifications...</string>
     <string name="updating_launcher_components">Redémarrage du lanceur pour mettre à jour les composants...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Double-cliquez pour mettre en veille</string>
-    <string name="pref_sleep_gesture_summary">Double appui sur un espace vide pour éteindre l\'écran</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrer lors d\'un appui double pour éteindre l\'écran</string>
-    <string name="pref_sleep_gesture_haptic_summary">Fournir un retour haptique lors d\'un double appui pour éteindre l\'écran</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Glisser pour lancer la recherche</string>
+    <string name="drawer_open_keyboard_summary">Ouvrir le clavier chaque fois que le tiroir d\'applications devient visible</string>
     <!-- Icon size -->
     <string name="icon_size_title">Taille des icônes</string>
     <!-- Font size -->
     <string name="font_size_title">Taille de police</string>
     <!-- App label -->
     <string name="icon_two_lines_title">Utiliser deux lignes pour le label de l\'application</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">Terminer</string>
-    <string name="recents_app_killed">Application terminée</string>
     <!-- Row Height -->
     <string name="row_height_title">Hauteur de ligne</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">Opacité de l\'arrière-plan</string>
     <!-- Stroke -->
     <string name="stroke_width_title">Largeur</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Terminer</string>
+    <string name="recents_app_killed">Application terminée</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Rechercher</string>
     <string name="label_lens">Google Lens</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">Capture d\'écran</string>
     <string name="recents_clear_all_title">Tout effacer</string>
     <string name="recents_lens_title">Lentille d\'objectif </string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Informations de l\'application</string>
-    <string name="app_info_source">Source</string>
-    <string name="app_info_source_system">Système</string>
-    <string name="app_info_last_update">Dernière mise à jour</string>
-    <string name="app_info_version">Version</string>
-    <string name="app_info_more">Plus</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">Pack d\'icônes</string>
-    <string name="icon_pack_default_label">Par défaut</string>
-    <string name="icon_pack_add">Installer plus</string>
-    <string name="icon_pack_no_market">Il n\'y a aucun magasin d\'applications disponible</string>
     <!-- Parallax -->
     <string name="short_parallax_title">Autoriser la parallaxe courte</string>
     <string name="short_parallax_summary">Activer l\'effet de défilement complet du fond d\'écran sur un nombre réduit de pages au lieu de le recadrer</string>
     <string name="single_page_center_title">Centre de page unique</string>
     <string name="single_page_center_summary">Centrer le fond d\'écran si une seule page est utilisée</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Glisser pour lancer la recherche</string>
-    <string name="drawer_open_keyboard_summary">Ouvrir le clavier chaque fois que le tiroir d\'applications devient visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Barre de défilement</string>
     <string name="drawer_scrollbar_summary">Barre de défilement sur le côté du tiroir d\'applications</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">Niveau de flou</string>
     <string name="background_blur_summary">Définir le niveau de flou pour le tiroir et récent</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">Informations de l\'application</string>
+    <string name="app_info_source">Source</string>
+    <string name="app_info_source_system">Système</string>
+    <string name="app_info_last_update">Dernière mise à jour</string>
+    <string name="app_info_version">Version</string>
+    <string name="app_info_more">Plus</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Pack d\'icônes</string>
+    <string name="icon_pack_default_label">Par défaut</string>
+    <string name="icon_pack_add">Installer plus</string>
+    <string name="icon_pack_no_market">Il n\'y a aucun magasin d\'applications disponible</string>
 </resources>

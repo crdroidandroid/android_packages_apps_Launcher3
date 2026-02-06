@@ -86,19 +86,19 @@
     <string name="restarting_launcher_changes">변경 사항을 적용하기 위해 런처 재시작 중...</string>
     <string name="updating_launcher_components">런처 구성요소를 업데이트하기 위해 런처 재시작 중...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">두 번 탭하여 화면 끄기</string>
-    <string name="pref_sleep_gesture_summary">빈 공간을 두 번 탭하여 화면 끄기</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_title">Tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <!-- Open keyboard -->
+    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- Icon size -->
     <string name="icon_size_title">아이콘 크기</string>
     <!-- Font size -->
     <string name="font_size_title">글꼴 크기</string>
     <!-- App label -->
     <string name="icon_two_lines_title">앱 라벨에 두 줄 사용</string>
-    <!-- Kill App recents action shortcut -->
-    <string name="recent_task_option_kill_app">작업 지우기</string>
-    <string name="recents_app_killed">앱 종료됨</string>
     <!-- Row Height -->
     <string name="row_height_title">행 높이</string>
     <!-- Hotseat Background -->
@@ -108,6 +108,9 @@
     <string name="background_opacity_title">배경 불투명도</string>
     <!-- Stroke -->
     <string name="stroke_width_title">스트로크</string>
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">작업 지우기</string>
+    <string name="recents_app_killed">앱 종료됨</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">검색</string>
     <string name="label_lens">구글 렌즈</string>
@@ -140,26 +143,11 @@
     <string name="recents_screenshot_title">스크린샷</string>
     <string name="recents_clear_all_title">모두 지우기</string>
     <string name="recents_lens_title">렌즈</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
-    <string name="app_info_source">출처</string>
-    <string name="app_info_source_system">시스템</string>
-    <string name="app_info_last_update">마지막 업데이트</string>
-    <string name="app_info_version">버전</string>
-    <string name="app_info_more">더 보기</string>
-    <!-- Icon pack -->
-    <string name="icon_pack_title">아이콘 팩</string>
-    <string name="icon_pack_default_label">기본값</string>
-    <string name="icon_pack_add">추가로 설치</string>
-    <string name="icon_pack_no_market">사용할 수 있는 앱 스토어가 없습니다</string>
     <!-- Parallax -->
     <string name="short_parallax_title">짧은 패럴랙스 허용</string>
     <string name="short_parallax_summary">적은 수의 페이지일 때 배경을 자르기보다 전체 배경을 스크롤하기</string>
     <string name="single_page_center_title">단일 페이지 중앙</string>
     <string name="single_page_center_summary">단일 페이지만 사용할 때 배경을 가운데 정렬하기</string>
-    <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">스크롤바</string>
     <string name="drawer_scrollbar_summary">앱 서랍 옆에 스크롤 바</string>
@@ -364,4 +352,16 @@
     <!-- Background blur -->
     <string name="background_blur_title">배경 흐림</string>
     <string name="background_blur_summary">최근 앱과 앱 서랍에서 블러 깊이 레벨 설정</string>
+    <!-- AppInfo -->
+    <string name="app_info_title">Application info</string>
+    <string name="app_info_source">출처</string>
+    <string name="app_info_source_system">시스템</string>
+    <string name="app_info_last_update">마지막 업데이트</string>
+    <string name="app_info_version">버전</string>
+    <string name="app_info_more">더 보기</string>
+    <!-- Icon pack -->
+    <string name="icon_pack_title">아이콘 팩</string>
+    <string name="icon_pack_default_label">기본값</string>
+    <string name="icon_pack_add">추가로 설치</string>
+    <string name="icon_pack_no_market">사용할 수 있는 앱 스토어가 없습니다</string>
 </resources>
