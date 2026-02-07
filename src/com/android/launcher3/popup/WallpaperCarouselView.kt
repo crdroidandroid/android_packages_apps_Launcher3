@@ -19,6 +19,7 @@ import android.widget.ProgressBar
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import com.android.launcher3.DeviceProfile
+import com.android.launcher3.LauncherPrefs
 import com.android.launcher3.R
 import com.android.launcher3.data.wallpaper.Wallpaper
 import com.android.launcher3.data.wallpaper.service.WallpaperService
@@ -180,6 +181,11 @@ class WallpaperCarouselView @JvmOverloads constructor(
                     WallpaperManager.getInstance(context).setBitmap(
                         bmp, null, true, WallpaperManager.FLAG_SYSTEM
                     )
+                    if (LauncherPrefs.WALLPAPER_CAROUSEL_LOCKSCREEN.get(context)) {
+                        WallpaperManager.getInstance(context).setBitmap(
+                            bmp, null, true, WallpaperManager.FLAG_LOCK
+                        )
+                    }
                     WallpaperService.INSTANCE.get(context).updateWallpaperRank(wallpaper)
                     true
                 }.getOrDefault(false)

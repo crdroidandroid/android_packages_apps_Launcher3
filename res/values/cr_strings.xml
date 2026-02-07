@@ -407,4 +407,10 @@
     <string name="icon_pack_default_label">Default</string>
     <string name="icon_pack_add">Install more</string>
     <string name="icon_pack_no_market">There\'s no available app store</string>
+
+    <!-- Wallpaper carousel -->
+    <string name="wallpaper_carousel_title">Wallpaper carousel</string>
+    <string name="wallpaper_carousel_summary">Quickly switch wallpapers from the long-press menu</string>
+    <string name="wallpaper_carousel_lockscreen_title">Apply to lock screen</string>
+    <string name="wallpaper_carousel_lockscreen_summary">Set the same wallpaper on the lock screen</string>
 </resources>

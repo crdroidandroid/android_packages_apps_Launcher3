@@ -186,11 +186,16 @@ public class OptionsPopupView<T extends Context & ActivityContext> extends Arrow
         }
 
         final Context context = (Context) activityContext;
-        final List<com.android.launcher3.data.wallpaper.Wallpaper> wallpapers = 
-                WallpaperService.INSTANCE.get(context).getTopWallpapersBlocking();
-        final boolean isEmpty = wallpapers.isEmpty();
-        Log.d("OptionsPopupView", "Wallpapers in DB: " + wallpapers.size() + ", isEmpty: " + isEmpty);
-        var layout = isEmpty ? R.layout.longpress_options_menu : R.layout.wallpaper_options_popup;
+
+        var layout = R.layout.longpress_options_menu;
+        boolean isEmpty = true;
+        if (LauncherPrefs.WALLPAPER_CAROUSEL.get(context)) {
+            final List<com.android.launcher3.data.wallpaper.Wallpaper> wallpapers = 
+                    WallpaperService.INSTANCE.get(context).getTopWallpapersBlocking();
+            isEmpty = wallpapers.isEmpty();
+            Log.d("OptionsPopupView", "Wallpapers in DB: " + wallpapers.size() + ", isEmpty: " + isEmpty);
+            layout = isEmpty ? R.layout.longpress_options_menu : R.layout.wallpaper_options_popup;
+        }
 
         OptionsPopupView<T> popup = (OptionsPopupView<T>) activityContext.getLayoutInflater()
                 .inflate(layout, activityContext.getDragLayer(), false);
