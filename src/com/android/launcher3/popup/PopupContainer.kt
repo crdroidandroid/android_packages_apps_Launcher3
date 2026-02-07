@@ -125,7 +125,7 @@ open class PopupContainer<T : ActivityContext>(
         itemView: View,
     ) {
         val wallpapers = WallpaperService.INSTANCE.get(context).getTopWallpapersBlocking()
-        val showCarousel = !wallpapers.isEmpty()
+        val showCarousel = LauncherPrefs.WALLPAPER_CAROUSEL.get(context) && !wallpapers.isEmpty()
         if (Flags.expandableLongPressMenu()) {
             if (showCarousel) {
                 inflateAndAdd<ViewGroup>(R.layout.wallpaper_options_popup, this)
