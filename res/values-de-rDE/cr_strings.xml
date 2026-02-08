@@ -364,4 +364,9 @@
     <string name="icon_pack_default_label">Standard</string>
     <string name="icon_pack_add">Weitere installieren</string>
     <string name="icon_pack_no_market">Es ist kein App-Store verfügbar</string>
+    <!-- Wallpaper carousel -->
+    <string name="wallpaper_carousel_title">Hintergrund-Diashow</string>
+    <string name="wallpaper_carousel_summary">Hintergrundbilder vom Gedrückthaltemenü aus schnell wechseln</string>
+    <string name="wallpaper_carousel_lockscreen_title">Auf Sperrbildschirm anwenden</string>
+    <string name="wallpaper_carousel_lockscreen_summary">Dasselbe Hintergrundbild auf dem Sperrbildschirm festlegen</string>
 </resources>

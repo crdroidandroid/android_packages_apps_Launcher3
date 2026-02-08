@@ -364,4 +364,9 @@
     <string name="icon_pack_default_label">За замовчанням</string>
     <string name="icon_pack_add">Встановити ще</string>
     <string name="icon_pack_no_market">Немає доступного магазину додатків</string>
+    <!-- Wallpaper carousel -->
+    <string name="wallpaper_carousel_title">Карусель шпалер</string>
+    <string name="wallpaper_carousel_summary">Швидке перемикання шпалер з довгого натискання</string>
+    <string name="wallpaper_carousel_lockscreen_title">Застосувати до екрана блокування</string>
+    <string name="wallpaper_carousel_lockscreen_summary">Встановити однакові шпалери на екран блокування</string>
 </resources>

@@ -364,4 +364,9 @@
     <string name="icon_pack_default_label">Standaard</string>
     <string name="icon_pack_add">Meer installeren</string>
     <string name="icon_pack_no_market">Er is geen beschikbare app store</string>
+    <!-- Wallpaper carousel -->
+    <string name="wallpaper_carousel_title">Achtergrond carrousel</string>
+    <string name="wallpaper_carousel_summary">Wissel snel over van achtergronden vanuit het lang drukken menu</string>
+    <string name="wallpaper_carousel_lockscreen_title">Toepassen op vergrendelingsscherm</string>
+    <string name="wallpaper_carousel_lockscreen_summary">Stel dezelfde achtergrond in op het vergrendelingsscherm</string>
 </resources>

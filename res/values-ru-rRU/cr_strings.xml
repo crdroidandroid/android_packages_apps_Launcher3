@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">Перезапуск главного экрана для применения изменений...</string>
     <string name="updating_launcher_components">Перезапуск главного экрана для обновления компонентов...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Касание для сна</string>
-    <string name="pref_sleep_gesture_summary">Дважды коснитесь пустой области главного экрана, чтобы погасить экран</string>
-    <string name="pref_sleep_gesture_haptic_title">Вибрация при касании для сна</string>
-    <string name="pref_sleep_gesture_haptic_summary">Вибрировать при использовании двойного касания для перехода в спящий режим</string>
+    <string name="pref_sleep_gesture_title">Выключение касанием</string>
+    <string name="pref_sleep_gesture_summary">Дважды коснитесь пустой области главного экрана, чтобы выключить экран</string>
+    <string name="pref_sleep_gesture_haptic_title">Вибрация при выключении касанием</string>
+    <string name="pref_sleep_gesture_haptic_summary">Вибрировать при двойном касании для перехода в спящий режим</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Автоматическая клавиатура</string>
     <string name="drawer_open_keyboard_summary">Показать клавиатуру, при открытии меню приложений</string>
@@ -364,4 +364,9 @@
     <string name="icon_pack_default_label">По умолчанию</string>
     <string name="icon_pack_add">Установить ещё</string>
     <string name="icon_pack_no_market">Нет доступного магазина приложений</string>
+    <!-- Wallpaper carousel -->
+    <string name="wallpaper_carousel_title">Карусель обоев</string>
+    <string name="wallpaper_carousel_summary">Быстрое переключение обоев из меню настроек</string>
+    <string name="wallpaper_carousel_lockscreen_title">Применять к экрану блокировки</string>
+    <string name="wallpaper_carousel_lockscreen_summary">Устанавливать те же обои на экран блокировки</string>
 </resources>

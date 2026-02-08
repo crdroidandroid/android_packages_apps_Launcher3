@@ -364,4 +364,9 @@
     <string name="icon_pack_default_label">Výchozí</string>
     <string name="icon_pack_add">Instalovat další</string>
     <string name="icon_pack_no_market">Není k\u00a0dispozici žádný obchod s\u00a0aplikacemi</string>
+    <!-- Wallpaper carousel -->
+    <string name="wallpaper_carousel_title">Povolit Denní tapetu</string>
+    <string name="wallpaper_carousel_summary">Rychlé přepnutí tapet z menu dlouhého stisku</string>
+    <string name="wallpaper_carousel_lockscreen_title">Použít na zamykací obrazovku</string>
+    <string name="wallpaper_carousel_lockscreen_summary">Nastavit stejnou tapetu na zamykací obrazovce</string>
 </resources>
