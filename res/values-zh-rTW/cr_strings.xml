@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">正在重新啟動桌面以套用變更...</string>
     <string name="updating_launcher_components">正在重新啟動桌面以更新組件...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_title">雙擊休眠</string>
+    <string name="pref_sleep_gesture_summary">雙擊主螢幕空白區域即可關閉顯示屏</string>
+    <string name="pref_sleep_gesture_haptic_title">鎖定螢幕雙擊兩下休眠</string>
+    <string name="pref_sleep_gesture_haptic_summary">提供雙擊鎖定螢幕時觸覺回饋</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">滑動即可開始搜尋</string>
     <string name="drawer_open_keyboard_summary">當打開抽屜時打開鍵盤</string>
@@ -365,8 +365,8 @@
     <string name="icon_pack_add">安裝更多...</string>
     <string name="icon_pack_no_market">沒有可用的應用程式商店</string>
     <!-- Wallpaper carousel -->
-    <string name="wallpaper_carousel_title">Wallpaper carousel</string>
-    <string name="wallpaper_carousel_summary">Quickly switch wallpapers from the long-press menu</string>
-    <string name="wallpaper_carousel_lockscreen_title">Apply to lock screen</string>
-    <string name="wallpaper_carousel_lockscreen_summary">Set the same wallpaper on the lock screen</string>
+    <string name="wallpaper_carousel_title">桌布輪播</string>
+    <string name="wallpaper_carousel_summary">透過長按菜單快速切換桌布</string>
+    <string name="wallpaper_carousel_lockscreen_title">應用於鎖定螢幕</string>
+    <string name="wallpaper_carousel_lockscreen_summary">將相同的桌布設定為鎖定螢幕桌布</string>
 </resources>
