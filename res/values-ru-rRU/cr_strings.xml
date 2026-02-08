@@ -86,7 +86,7 @@
     <string name="restarting_launcher_changes">Перезапуск главного экрана для применения изменений...</string>
     <string name="updating_launcher_components">Перезапуск главного экрана для обновления компонентов...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Выкл. двойным нажатием</string>
+    <string name="pref_sleep_gesture_title">Выкл. двойным касанием</string>
     <string name="pref_sleep_gesture_summary">Дважды коснитесь пустого места экрана для его выключения</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
