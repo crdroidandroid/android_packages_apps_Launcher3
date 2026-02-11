@@ -87,9 +87,9 @@
     <string name="updating_launcher_components">Reiniciando launcher para actualizar componentes del launcher...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Doble toque para apagar la pantalla</string>
-    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_summary">Toca dos veces un área vacía de la pantalla de inicio para apagar la pantalla</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrar al tocar dos veces para suspender</string>
+    <string name="pref_sleep_gesture_haptic_summary">Proporciona retroalimentación háptica en el gesto de doble toque para suspender</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Desliza para comenzar la búsqueda</string>
     <string name="drawer_open_keyboard_summary">Abrir el teclado cada vez que el cajón de aplicaciones se vuelva visible</string>
@@ -365,8 +365,8 @@
     <string name="icon_pack_add">Instalar más</string>
     <string name="icon_pack_no_market">No hay una tienda de aplicaciones disponible</string>
     <!-- Wallpaper carousel -->
-    <string name="wallpaper_carousel_title">Wallpaper carousel</string>
-    <string name="wallpaper_carousel_summary">Quickly switch wallpapers from the long-press menu</string>
-    <string name="wallpaper_carousel_lockscreen_title">Apply to lock screen</string>
-    <string name="wallpaper_carousel_lockscreen_summary">Set the same wallpaper on the lock screen</string>
+    <string name="wallpaper_carousel_title">Carrusel de fondos de pantalla</string>
+    <string name="wallpaper_carousel_summary">Cambia rápidamente los fondos de pantalla desde el menú de pulsación prolongada</string>
+    <string name="wallpaper_carousel_lockscreen_title">Aplicar a la pantalla de bloqueo</string>
+    <string name="wallpaper_carousel_lockscreen_summary">Establecer el mismo fondo de pantalla en la pantalla de bloqueo</string>
 </resources>
