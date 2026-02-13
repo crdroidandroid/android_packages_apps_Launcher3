@@ -276,7 +276,7 @@ constructor(@ApplicationContext private val encryptedContext: Context) {
         @JvmField val DRAWER_SEARCH = backedUpItem("pref_drawer_search", true)
         @JvmField val FONT_SIZE = backedUpItem("pref_custom_font_size", 100)
         @JvmField val HOTSEAT_OPACITY = backedUpItem("pref_hotseat_opacity", 40)
-        @JvmField val HOTSEAT_QSB_OPACITY = backedUpItem("pref_hotseat_qsb_opacity", 100)
+        @JvmField val HOTSEAT_QSB_OPACITY = backedUpItem("pref_hotseat_qsb_opacity", 80)
         @JvmField val HOTSEAT_QSB_STROKE_WIDTH = backedUpItem("pref_hotseat_qsb_stroke_width", 0)
         @JvmField val ICON_SIZE = backedUpItem("pref_custom_icon_size", 100)
         @JvmField val RECENTS_CLEAR_ALL = backedUpItem("pref_recents_clear_all", true)
