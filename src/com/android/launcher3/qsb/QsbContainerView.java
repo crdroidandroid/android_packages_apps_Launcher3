@@ -33,6 +33,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,6 +61,8 @@ import com.android.launcher3.graphics.FragmentWithPreview;
  */
 public class QsbContainerView extends FrameLayout {
 
+    private static final String TAG = "QsbContainerView";
+
     public static final String SEARCH_ENGINE_SETTINGS_KEY = "selected_search_engine";
 
     /**
@@ -73,13 +76,17 @@ public class QsbContainerView extends FrameLayout {
         String providerPkg = Settings.Secure.getString(context.getContentResolver(),
                 SEARCH_ENGINE_SETTINGS_KEY);
         if (providerPkg == null) {
-            SearchManager searchManager = context.getSystemService(SearchManager.class);
-            ComponentName componentName = searchManager.getGlobalSearchActivity();
-            if (componentName != null) {
-                providerPkg = searchManager.getGlobalSearchActivity().getPackageName();
-            }
-            if (providerPkg == null && Utilities.isGSAEnabled(context)) {
-                providerPkg = Utilities.GSA_PACKAGE;
+            try {
+                SearchManager searchManager = context.getSystemService(SearchManager.class);
+                ComponentName componentName = searchManager.getGlobalSearchActivity();
+                if (componentName != null) {
+                    providerPkg = searchManager.getGlobalSearchActivity().getPackageName();
+                }
+                if (providerPkg == null && Utilities.isGSAEnabled(context)) {
+                    providerPkg = Utilities.GSA_PACKAGE;
+                }
+            } catch (Exception e) {
+                Log.e(TAG, "Search package name exception", e);
             }
         }
         return providerPkg;
