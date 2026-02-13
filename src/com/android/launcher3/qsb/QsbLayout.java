@@ -135,73 +135,90 @@ public class QsbLayout extends FrameLayout implements Reorderable {
     }
 
     private void setUpMainSearch() {
-        try {
-            setOnClickListener(view -> {
+        setOnClickListener(view -> {
+            try {
                 Intent intent = new Intent();
                 intent.setAction("android.search.action.GLOBAL_SEARCH");
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 intent.setPackage(QsbContainerView.getSearchWidgetPackageName(view.getContext()));
                 view.getContext().startActivity(intent);
-            });
-        } catch (Exception e) {
-            // Do nothing
-        }
+            } catch (Exception e) {
+                Log.e(TAG, "Main search launch failed", e);
+            }
+        });
     }
 
     private void setupGIcon() {
-        try {
-            gIcon.setImageResource(mIsThemed ? R.drawable.ic_super_g_themed : R.drawable.ic_super_g_color);
-            gIcon.setOnClickListener(view -> {
+        if (gIcon == null) return;
+
+        gIcon.setImageResource(mIsThemed
+                ? R.drawable.ic_super_g_themed
+                : R.drawable.ic_super_g_color);
+
+        gIcon.setOnClickListener(view -> {
+            try {
                 Intent intent = view.getContext().getPackageManager().getLaunchIntentForPackage(Utilities.GSA_PACKAGE);
                 if (intent != null) {
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     view.getContext().startActivity(intent);
                 }
-            });
-        } catch (Exception e) {
-            // Do nothing
-        }
+            } catch (Exception e) {
+                Log.e(TAG, "Google icon launch failed", e);
+            }
+        });
     }
 
     private void setupLensIcon() {
-        try {
-            lensIcon.setImageResource(mIsThemed ? R.drawable.ic_lens_themed : R.drawable.ic_lens_color);
-            lensIcon.setOnClickListener(view -> {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
+        if (lensIcon == null) return;
+
+        lensIcon.setImageResource(mIsThemed
+                ? R.drawable.ic_lens_themed
+                : R.drawable.ic_lens_color);
+
+        lensIcon.setOnClickListener(view -> {
+            try {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setComponent(new ComponentName(Utilities.GSA_PACKAGE, Utilities.LENS_ACTIVITY));
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 intent.setData(Uri.parse(Utilities.LENS_URI));
                 intent.putExtra("LensHomescreenShortcut", true);
                 view.getContext().startActivity(intent);
-            });
-        } catch (Exception e) {
-            lensIcon.setVisibility(View.GONE);
-        }
+            } catch (Exception e) {
+                lensIcon.setVisibility(View.GONE);
+                Log.e(TAG, "Lens icon launch failed", e);
+            }
+        });
     }
 
     private void setupMicIcon() {
-        try {
-            boolean isMusicSearch = Utilities.isMusicSearchEnabled(getContext());
-            if (isMusicSearch) {
-                micIcon.setImageResource(mIsThemed ? R.drawable.ic_music_themed : R.drawable.ic_music_color);
-            } else {
-                micIcon.setImageResource(mIsThemed ? R.drawable.ic_mic_themed : R.drawable.ic_mic_color);
-            }
-            micIcon.setOnClickListener(view -> {
+        if (micIcon == null) return;
+
+        if (Utilities.isMusicSearchEnabled(getContext())) {
+            micIcon.setImageResource(mIsThemed
+                    ? R.drawable.ic_music_themed
+                    : R.drawable.ic_music_color);
+        } else {
+            micIcon.setImageResource(mIsThemed
+                    ? R.drawable.ic_mic_themed
+                    : R.drawable.ic_mic_color);
+        }
+
+        micIcon.setOnClickListener(view -> {
+            try {
                 Intent intent = new Intent();
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                if (isMusicSearch) {
+                if (Utilities.isMusicSearchEnabled(view.getContext())) {
                     intent.setAction("com.google.android.googlequicksearchbox.MUSIC_SEARCH");
                     intent.setPackage(QsbContainerView.getSearchWidgetPackageName(view.getContext()));
                 } else {
                     intent.setAction("android.intent.action.VOICE_COMMAND");
                 }
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 view.getContext().startActivity(intent);
-            });
-        } catch (Exception e) {
-            micIcon.setVisibility(View.GONE);
-        }
+            } catch (Exception e) {
+                micIcon.setVisibility(View.GONE);
+                Log.e(TAG, "Mic icon launch failed", e);
+            }
+        });
     }
 
     private void setupGeminiIcon() {
