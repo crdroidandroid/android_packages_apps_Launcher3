@@ -413,7 +413,8 @@ public class DeviceProfile {
                     /*isVerticalBarLayout*/ isVerticalBarLayout(),
                     /*res*/ res,
                     /*displayOptionSpec*/ displayOptionSpec,
-                    /*allAppsTopPadding*/ allAppsTopPadding
+                    /*allAppsTopPadding*/ allAppsTopPadding,
+                    /*allAppsCellHeightMultiplier*/ allAppsCellHeightMultiplier
             );
         } else {
             mAllAppsProfile = AllAppsProfile.Factory.createAllAppsProfile(
@@ -426,7 +427,8 @@ public class DeviceProfile {
                     /*deviceProperties*/ mDeviceProperties,
                     /*context*/ context,
                     /* allAppsTopPadding */ allAppsTopPadding,
-                    /* displayOptionSpec */ displayOptionSpec
+                    /* displayOptionSpec */ displayOptionSpec,
+                    /*allAppsCellHeightMultiplier*/ allAppsCellHeightMultiplier
             );
         }
 
