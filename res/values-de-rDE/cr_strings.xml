@@ -115,6 +115,7 @@
     <string name="label_search">Suche</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_voice_search">Sprachsuche</string>
+    <string name="label_gemini_search">KI-Modus</string>
     <string name="dock_music_search_title">Musik erkennen</string>
     <string name="dock_music_search_summary">Musikerkennung beim Drücken des Mikrofonsymbols starten</string>
     <string name="dock_search_title">Google-Suchleiste</string>
@@ -365,7 +366,7 @@
     <string name="icon_pack_add">Weitere installieren</string>
     <string name="icon_pack_no_market">Es ist kein App-Store verfügbar</string>
     <!-- Wallpaper carousel -->
-    <string name="wallpaper_carousel_title">Hintergrund-Diashow</string>
+    <string name="wallpaper_carousel_title">Hintergrundbild-Wechselmenü</string>
     <string name="wallpaper_carousel_summary">Hintergrundbilder vom Gedrückthaltemenü aus schnell wechseln</string>
     <string name="wallpaper_carousel_lockscreen_title">Auf Sperrbildschirm anwenden</string>
     <string name="wallpaper_carousel_lockscreen_summary">Dasselbe Hintergrundbild auf dem Sperrbildschirm festlegen</string>
