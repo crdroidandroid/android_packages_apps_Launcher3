@@ -71,10 +71,12 @@ data class AllAppsProfile(
             scale: Float,
             iconSizePx: Int,
             iconDrawablePaddingOriginalPx: Int,
+            allAppsCellHeightMultiplier: Float,
         ): AllAppsProfile {
             val allAppsBorderSpacePx = calculateAllAppsBorderSpacePx(inv, metric, typeIndex, scale)
             var allAppsCellHeightPx =
-                (pxFromDp(inv.allAppsCellSize[typeIndex].y, metric) + allAppsBorderSpacePx.y)
+                ((pxFromDp(inv.allAppsCellSize[typeIndex].y, metric) + allAppsBorderSpacePx.y)
+                * allAppsCellHeightMultiplier).toInt()
             var allAppsIconSizePx = pxFromDp(inv.allAppsIconSize[typeIndex], metric)
             val allAppsIconTextSizePx =
                 pxFromSp(inv.allAppsIconTextSize[typeIndex], metric).toFloat()
@@ -133,6 +135,7 @@ data class AllAppsProfile(
             metric: DisplayMetrics,
             typeIndex: Int,
             scale: Float,
+            allAppsCellHeightMultiplier: Float,
         ): AllAppsProfile {
             val allAppsBorderSpacePx = calculateAllAppsBorderSpacePx(inv, metric, typeIndex, scale)
             val allAppsIconSizePx = max(1, pxFromDp(inv.allAppsIconSize[typeIndex], metric, scale))
@@ -143,8 +146,8 @@ data class AllAppsProfile(
                 // AllApps cells don't have real space between cells,
                 // so we add the border space to the cell height
                 cellHeightPx =
-                    (pxFromDp(inv.allAppsCellSize.get(typeIndex).y, metric) +
-                        allAppsBorderSpacePx.y),
+                    ((pxFromDp(inv.allAppsCellSize.get(typeIndex).y, metric) +
+                        allAppsBorderSpacePx.y) * allAppsCellHeightMultiplier).toInt(),
                 iconSizePx = allAppsIconSizePx,
                 // We need the double conversion to keep the original behaviour
                 iconTextSizePx =
@@ -163,6 +166,7 @@ data class AllAppsProfile(
             responsiveAllAppsHeightSpec: CalculatedResponsiveSpec,
             iconSizeSteps: IconSizeSteps,
             isVerticalBarLayout: Boolean,
+            allAppsCellHeightMultiplier: Float,
         ): AllAppsProfile {
             var allAppsIconSizePx = responsiveAllAppsCellSpec.iconSize
             var allAppsIconTextSizePx: Float = responsiveAllAppsCellSpec.iconTextSize.toFloat()
@@ -174,7 +178,8 @@ data class AllAppsProfile(
             var maxAllAppsTextLineCount = responsiveAllAppsCellSpec.iconTextMaxLineCount
             val allAppsBorderSpacePx =
                 Point(responsiveAllAppsWidthSpec.gutterPx, responsiveAllAppsHeightSpec.gutterPx)
-            var allAppsCellHeightPx = responsiveAllAppsHeightSpec.cellSizePx
+            var allAppsCellHeightPx = (responsiveAllAppsHeightSpec.cellSizePx
+                    * allAppsCellHeightMultiplier).toInt()
             var allAppsCellWidthPx = responsiveAllAppsWidthSpec.cellSizePx
 
             // Reduce the size of the app icon if it doesn't fit
@@ -247,6 +252,7 @@ data class AllAppsProfile(
             scale: Float,
             iconSizePx: Int,
             iconDrawablePaddingOriginalPx: Int,
+            allAppsCellHeightMultiplier: Float,
         ) =
             when {
                 isScalableGrid -> {
@@ -257,11 +263,12 @@ data class AllAppsProfile(
                         scale = scale,
                         iconSizePx = iconSizePx,
                         iconDrawablePaddingOriginalPx = iconDrawablePaddingOriginalPx,
+                        allAppsCellHeightMultiplier = allAppsCellHeightMultiplier,
                     )
                 }
 
                 else -> {
-                    createAllAppsProfileNonScalable(res, inv, metric, typeIndex, scale)
+                    createAllAppsProfileNonScalable(res, inv, metric, typeIndex, scale, allAppsCellHeightMultiplier)
                 }
             }
     }
