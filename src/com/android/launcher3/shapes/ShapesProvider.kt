@@ -30,11 +30,25 @@ object ShapesProvider {
         "M 35.209 6.878 C 36.326 5.895 36.884 5.404 37.397 5.006 C 44.82 -0.742 55.18 -0.742 62.603 5.006 C 63.116 5.404 63.674 5.895 64.791 6.878 C 65.164 7.207 65.351 7.371 65.539 7.529 C 68.167 9.734 71.303 11.248 74.663 11.932 C 74.902 11.981 75.147 12.025 75.637 12.113 C 77.1 12.375 77.831 12.506 78.461 12.66 C 87.573 14.893 94.032 23.011 94.176 32.412 C 94.186 33.062 94.151 33.805 94.08 35.293 C 94.057 35.791 94.045 36.04 94.039 36.285 C 93.958 39.72 94.732 43.121 96.293 46.18 C 96.404 46.399 96.522 46.618 96.759 47.056 C 97.467 48.366 97.821 49.021 98.093 49.611 C 102.032 58.143 99.727 68.266 92.484 74.24 C 91.983 74.653 91.381 75.089 90.177 75.961 C 89.774 76.254 89.572 76.4 89.377 76.548 C 86.647 78.626 84.477 81.353 83.063 84.483 C 82.962 84.707 82.865 84.936 82.671 85.395 C 82.091 86.766 81.8 87.451 81.51 88.033 C 77.31 96.44 67.977 100.945 58.801 98.994 C 58.166 98.859 57.451 98.659 56.019 98.259 C 55.54 98.125 55.3 98.058 55.063 97.998 C 51.74 97.154 48.26 97.154 44.937 97.998 C 44.699 98.058 44.46 98.125 43.981 98.259 C 42.549 98.659 41.834 98.859 41.199 98.994 C 32.023 100.945 22.69 96.44 18.49 88.033 C 18.2 87.451 17.909 86.766 17.329 85.395 C 17.135 84.936 17.038 84.707 16.937 84.483 C 15.523 81.353 13.353 78.626 10.623 76.548 C 10.428 76.4 10.226 76.254 9.823 75.961 C 8.619 75.089 8.017 74.653 7.516 74.24 C 0.273 68.266 -2.032 58.143 1.907 49.611 C 2.179 49.021 2.533 48.366 3.241 47.056 C 3.478 46.618 3.596 46.399 3.707 46.18 C 5.268 43.121 6.042 39.72 5.961 36.285 C 5.955 36.04 5.943 35.791 5.92 35.293 C 5.849 33.805 5.814 33.062 5.824 32.412 C 5.968 23.011 12.427 14.893 21.539 12.66 C 22.169 12.506 22.9 12.375 24.363 12.113 C 24.853 12.025 25.098 11.981 25.337 11.932 C 28.697 11.248 31.833 9.734 34.461 7.529 C 34.649 7.371 34.836 7.207 35.209 6.878 Z"
     private const val ARCH_PATH =
         "M50 0C77.614 0 100 22.386 100 50C100 85.471 100 86.476 99.9 87.321 99.116 93.916 93.916 99.116 87.321 99.9 86.476 100 85.471 100 83.46 100H16.54C14.529 100 13.524 100 12.679 99.9 6.084 99.116 .884 93.916 .1 87.321 0 86.476 0 85.471 0 83.46L0 50C0 22.386 22.386 0 50 0Z"
+    private const val PEBBLE_PATH = "M55,0 C25,0 0,25 0,50 0,78 28,100 55,100 85,100 100,85 100,58 100,30 86,0 55,0 Z"
+    private const val VESSEL_PATH = "M12.97,0 C8.41,0 4.14,2.55 2.21,6.68 -1.03,13.61 -0.71,21.78 3.16,28.46 4.89,31.46 4.89,35.2 3.16,38.2 -1.05,45.48 -1.05,54.52 3.16,61.8 4.89,64.8 4.89,68.54 3.16,71.54 -0.71,78.22 -1.03,86.39 2.21,93.32 4.14,97.45 8.41,100 12.97,100 21.38,100 78.62,100 87.03,100 91.59,100 95.85,97.45 97.79,93.32 101.02,86.39 100.71,78.22 96.84,71.54 95.1,68.54 95.1,64.8 96.84,61.8 101.05,54.52 101.05,45.48 96.84,38.2 95.1,35.2 95.1,31.46 96.84,28.46 100.71,21.78 101.02,13.61 97.79,6.68 95.85,2.55 91.59,0 87.03,0 78.62,0 21.38,0 12.97,0 Z"
+    private const val PURE_SQUARE_PATH = "M50,0L100,0 100,100 0,100 0,0z"
+    private const val SQUIRCLE_PATH = "M50,0 C10,0 0,10 0,50 0,90 10,100 50,100 90,100 100,90 100,50 100,10 90,0 50,0 Z"
+    private const val TAPERED_RECT_PATH = "M20,0 80,0 100,20 100,80 80,100 20,100 0,80 0,20 20,0 Z"
+    private const val TEARDROP_PATH = "M50,0 C77.6,0 100,22.4 100,50 L100,88 C100,94.6 94.6,100 88,100 L50,100 C22.4 100 0 77.6 0 50C0 22.4 22.4 0 50 0 Z"
+    private const val ROUNDED_RECT_PATH = "M50,0L88,0 C94.4,0 100,5.4 100 12 L100,88 C100,94.6 94.6 100 88 100 L12,100 C5.4,100 0,94.6 0,88 L0 12 C0 5.4 5.4 0 12 0 L50,0 Z"
     const val CIRCLE_KEY = "circle"
     const val SQUARE_KEY = "square"
     const val FOUR_SIDED_COOKIE_KEY = "four_sided_cookie"
     const val SEVEN_SIDED_COOKIE_KEY = "seven_sided_cookie"
     const val ARCH_KEY = "arch"
+    const val PEBBLE_KEY = "pebble"
+    const val VESSEL_KEY = "vessel"
+    const val PURE_SQUARE_KEY = "pure_square"
+    const val SQUIRCLE_KEY = "squircle"
+    const val TAPERED_RECT_KEY = "tapered_rect"
+    const val TEARDROP_KEY = "teardrop"
+    const val ROUNDED_RECT_KEY = "rounded_rect"
 
     val iconShapes: Array<IconShapeModel> =
         if (Flags.newCustomizationPickerUi() && LauncherFlags.enableLauncherIconShapes()) {
@@ -69,6 +83,55 @@ object ShapesProvider {
                     pathString = ARCH_PATH,
                     shapeRadius = 7.8f,
                     folderRadiusRatio = 1 / 4f,
+                ),
+                IconShapeModel(
+                    key = PEBBLE_KEY,
+                    titleId = R.string.pebble_shape_title,
+                    pathString = PEBBLE_PATH,
+                    folderRadiusRatio = 1f,
+                    shapeRadius = 26f,
+                ),
+                IconShapeModel(
+                    key = VESSEL_KEY,
+                    titleId = R.string.vessel_shape_title,
+                    pathString = VESSEL_PATH,
+                    folderRadiusRatio = 1 / 3f,
+                    shapeRadius = 13f,
+                ),
+                IconShapeModel(
+                    key = PURE_SQUARE_KEY,
+                    titleId = R.string.pure_square_shape_title,
+                    pathString = PURE_SQUARE_PATH,
+                    folderRadiusRatio = 0f,
+                    shapeRadius = 0f,
+                ),
+                IconShapeModel(
+                    key = SQUIRCLE_KEY,
+                    titleId = R.string.squircle_shape_title,
+                    pathString = SQUIRCLE_PATH,
+                    folderRadiusRatio = 1 / 3f,
+                    shapeRadius = 12f,
+                ),
+                IconShapeModel(
+                    key = TAPERED_RECT_KEY,
+                    titleId = R.string.tapered_rect_shape_title,
+                    pathString = TAPERED_RECT_PATH,
+                    folderRadiusRatio = 1 / 3f,
+                    shapeRadius = 10f,
+                ),
+                IconShapeModel(
+                    key = TEARDROP_KEY,
+                    titleId = R.string.teardrop_shape_title,
+                    pathString = TEARDROP_PATH,
+                    folderRadiusRatio = 1 / 2f,
+                    shapeRadius = 16f,
+                ),
+                IconShapeModel(
+                    key = ROUNDED_RECT_KEY,
+                    titleId = R.string.rounded_rect_shape_title,
+                    pathString = ROUNDED_RECT_PATH,
+                    folderRadiusRatio = 1 / 4f,
+                    shapeRadius = 8f,
                 ),
             )
         } else {
