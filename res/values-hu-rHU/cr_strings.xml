@@ -53,7 +53,7 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Amikor a fő Kezdőképernyőn jobbra csúsztat</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Use icon customizations in drawer</string>
+    <string name="pref_icon_customization_title">Ikon-testreszabások az Alkalmazásfiókban</string>
     <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Szüneteltetés</string>
