@@ -262,7 +262,7 @@ constructor(@ApplicationContext private val encryptedContext: Context) {
         @JvmField
         val ENABLE_TWOLINE_ALLAPPS_TOGGLE = backedUpItem("pref_enable_two_line_toggle", false)
         @JvmField val WORKSPACE_LOCK = backedUpItem("pref_workspace_lock", false)
-        @JvmField val ALLAPPS_THEMED_ICONS = backedUpItem("pref_allapps_themed_icons", false)
+        @JvmField val ALLAPPS_ICON_CUSTOMIZATION = backedUpItem("pref_allapps_icon_customization", true)
         @JvmField val ALLOW_WALLPAPER_ZOOMING = backedUpItem("pref_allow_wallpaper_zooming", true)
         @JvmField val APP_DRAWER_OPACITY = backedUpItem("pref_app_drawer_opacity", 60)
         @JvmField val AUTO_HIDE_DOTS = backedUpItem("pref_auto_hide_dots", true)
