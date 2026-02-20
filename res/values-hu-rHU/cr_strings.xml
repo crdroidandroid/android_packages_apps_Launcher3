@@ -54,7 +54,7 @@
     <string name="msg_minus_one_on_right">Amikor a fő Kezdőképernyőn jobbra csúsztat</string>
     <!-- All apps icon customizations -->
     <string name="pref_icon_customization_title">Ikon-testreszabások az Alkalmazásfiókban</string>
-    <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
+    <string name="pref_icon_customization_summary">Követi a kezdőképernyő ikon-testreszabását</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Szüneteltetés</string>
     <string name="pause_apps_dialog_title">Szünetelteti ezt: %1$s?</string>
@@ -371,22 +371,22 @@
     <string name="wallpaper_carousel_lockscreen_title">Alkalmazás a záróképernyőre</string>
     <string name="wallpaper_carousel_lockscreen_summary">Ugyanazt a háttérképet állítsa be a zárolási képernyőre</string>
     <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pebble</string>
-    <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Teardrop</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
-    <string name="cloudy_shape_title">Felhős</string>
-    <string name="cylindrical_shape_title">Cylindrical</string>
-    <string name="flower_shape_title">Flower</string>
-    <string name="heart_shape_title">Heart</string>
-    <string name="hexagon_shape_title">Hexagon</string>
-    <string name="ios_style_shape_title">iOS Style</string>
-    <string name="leaf_shape_title">Leaf</string>
-    <string name="meow_shape_title">Meow</string>
-    <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="scroll_shape_title">Scroll</string>
-    <string name="stretched_shape_title">Stretched</string>
+    <string name="pebble_shape_title">Kavics</string>
+    <string name="vessel_shape_title">Váza</string>
+    <string name="pure_square_shape_title">Tökéletes négyzet</string>
+    <string name="squircle_shape_title">Négyzetes kör</string>
+    <string name="tapered_rect_shape_title">Trapéz-szerű</string>
+    <string name="teardrop_shape_title">Könnycsepp</string>
+    <string name="rounded_rect_shape_title">Kerekített téglalap</string>
+    <string name="cloudy_shape_title">Felhő</string>
+    <string name="cylindrical_shape_title">Henger-szerű</string>
+    <string name="flower_shape_title">Virág</string>
+    <string name="heart_shape_title">Szív</string>
+    <string name="hexagon_shape_title">Hatszög</string>
+    <string name="ios_style_shape_title">iOS-stílus</string>
+    <string name="leaf_shape_title">Falevél</string>
+    <string name="meow_shape_title">Miau</string>
+    <string name="samsung_style_shape_title">Samsung-stílus</string>
+    <string name="scroll_shape_title">Papírtekercs</string>
+    <string name="stretched_shape_title">Nyújtott</string>
 </resources>
