@@ -53,8 +53,8 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Під час гортання вправо від головного екрану</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Use icon customizations in drawer</string>
-    <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
+    <string name="pref_icon_customization_title">Використовувати налаштування значків в меню</string>
+    <string name="pref_icon_customization_summary">Налаштування іконок, що використовуються на головному екрані</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Пауза</string>
     <string name="pause_apps_dialog_title">Призупинити %1$s?</string>
@@ -371,22 +371,22 @@
     <string name="wallpaper_carousel_lockscreen_title">Застосувати до екрана блокування</string>
     <string name="wallpaper_carousel_lockscreen_summary">Встановити однакові шпалери на екран блокування</string>
     <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pebble</string>
-    <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Teardrop</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="pebble_shape_title">Камінець</string>
+    <string name="vessel_shape_title">Глечик</string>
+    <string name="pure_square_shape_title">Чистий квадрат</string>
+    <string name="squircle_shape_title">Квадрат із заокругленими кутами</string>
+    <string name="tapered_rect_shape_title">Звужений прямокутник</string>
+    <string name="teardrop_shape_title">Крапля</string>
+    <string name="rounded_rect_shape_title">Округлений прямокутник</string>
     <string name="cloudy_shape_title">Хмарно</string>
-    <string name="cylindrical_shape_title">Cylindrical</string>
-    <string name="flower_shape_title">Flower</string>
-    <string name="heart_shape_title">Heart</string>
-    <string name="hexagon_shape_title">Hexagon</string>
-    <string name="ios_style_shape_title">iOS Style</string>
-    <string name="leaf_shape_title">Leaf</string>
-    <string name="meow_shape_title">Meow</string>
+    <string name="cylindrical_shape_title">Циліндричний</string>
+    <string name="flower_shape_title">Квітка</string>
+    <string name="heart_shape_title">Серце</string>
+    <string name="hexagon_shape_title">Шестикутник</string>
+    <string name="ios_style_shape_title">Стиль iOS</string>
+    <string name="leaf_shape_title">Листок</string>
+    <string name="meow_shape_title">Нявчати</string>
     <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="scroll_shape_title">Scroll</string>
-    <string name="stretched_shape_title">Stretched</string>
+    <string name="scroll_shape_title">Прокрутка</string>
+    <string name="stretched_shape_title">Розтягнутий</string>
 </resources>
