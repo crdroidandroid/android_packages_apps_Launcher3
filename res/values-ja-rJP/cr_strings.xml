@@ -52,9 +52,9 @@
     <string name="msg_minus_one_on_left">メインホーム画面から右にスワイプして表示</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">メインホーム画面から左にスワイプして表示</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">テーマアイコン</string>
-    <string name="pref_themed_icons_summary">ホーム画面で使われているテーマのアイコンを使用します</string>
+    <!-- All apps icon customizations -->
+    <string name="pref_icon_customization_title">Use icon customizations in drawer</string>
+    <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
     <!-- Pause apps shortcut -->
     <string name="pause">一時停止</string>
     <string name="pause_apps_dialog_title">%1$s を一時停止しますか？</string>
@@ -370,4 +370,23 @@
     <string name="wallpaper_carousel_summary">Quickly switch wallpapers from the long-press menu</string>
     <string name="wallpaper_carousel_lockscreen_title">Apply to lock screen</string>
     <string name="wallpaper_carousel_lockscreen_summary">Set the same wallpaper on the lock screen</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">Pebble</string>
+    <string name="vessel_shape_title">Vessel</string>
+    <string name="pure_square_shape_title">Pure square</string>
+    <string name="squircle_shape_title">Squircle</string>
+    <string name="tapered_rect_shape_title">Tapered rect</string>
+    <string name="teardrop_shape_title">Teardrop</string>
+    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="cloudy_shape_title">曇り</string>
+    <string name="cylindrical_shape_title">Cylindrical</string>
+    <string name="flower_shape_title">Flower</string>
+    <string name="heart_shape_title">Heart</string>
+    <string name="hexagon_shape_title">Hexagon</string>
+    <string name="ios_style_shape_title">iOS Style</string>
+    <string name="leaf_shape_title">Leaf</string>
+    <string name="meow_shape_title">Meow</string>
+    <string name="samsung_style_shape_title">Samsung Style</string>
+    <string name="scroll_shape_title">Scroll</string>
+    <string name="stretched_shape_title">Stretched</string>
 </resources>
