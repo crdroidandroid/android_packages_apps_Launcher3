@@ -24,7 +24,7 @@ import static com.android.launcher3.BubbleTextView.RunningAppState.MINIMIZED;
 import static com.android.launcher3.BubbleTextView.RunningAppState.RUNNING;
 import static com.android.launcher3.Flags.enableContrastTiles;
 import static com.android.launcher3.Flags.enableScalabilityForDesktopExperience;
-import static com.android.launcher3.LauncherPrefs.ALLAPPS_THEMED_ICONS;
+import static com.android.launcher3.LauncherPrefs.ALLAPPS_ICON_CUSTOMIZATION;
 import static com.android.launcher3.LauncherPrefs.SHOW_DESKTOP_LABELS;
 import static com.android.launcher3.LauncherPrefs.SHOW_DRAWER_LABELS;
 import static com.android.launcher3.graphics.PreloadIconDelegate.extractPreloadDelegate;
@@ -298,7 +298,7 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
                     mDeviceProfile.getAllAppsProfile().getIconDrawablePaddingPx());
             defaultIconSize = mDeviceProfile.getAllAppsProfile().getIconSizePx();
             mShouldShowLabel = SHOW_DRAWER_LABELS.get(context);
-            mThemeAllAppsIcons = ALLAPPS_THEMED_ICONS.get(context);
+            mThemeAllAppsIcons = ALLAPPS_ICON_CUSTOMIZATION.get(context);
         } else if (mDisplay == DISPLAY_FOLDER) {
             setTextSize(TypedValue.COMPLEX_UNIT_PX,
                     mDeviceProfile.getFolderProfile().getChildTextSizePx());
