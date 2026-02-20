@@ -285,7 +285,11 @@ constructor(@ApplicationContext private val encryptedContext: Context) {
         @JvmField
         val HOTSEAT_COUNT =
             backedUpItem(DeviceGridState.KEY_HOTSEAT_COUNT, -1, EncryptionType.ENCRYPTED)
-        @JvmField val ALLAPPS_THEMED_ICONS = backedUpItem("pref_allapps_themed_icons", false)
+        @JvmField val ALLAPPS_THEMED_ICONS = backedUpItem("pref_allapps_themed_icons", true)
+        @JvmField val ALLAPPS_ICON_CUSTOMIZATION =
+            backedUpItem("pref_allapps_icon_customization", Boolean::class.java) {
+                ALLAPPS_THEMED_ICONS.get(it)
+            }
         @JvmField val ALLOW_WALLPAPER_ZOOMING = backedUpItem("pref_allow_wallpaper_zooming", true)
         @JvmField val APP_DRAWER_OPACITY = backedUpItem("pref_app_drawer_opacity", 90)
         @JvmField val AUTO_HIDE_DOTS = backedUpItem("pref_auto_hide_dots", true)
