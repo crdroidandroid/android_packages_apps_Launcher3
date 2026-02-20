@@ -53,8 +53,8 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Kiedy przesuniesz w prawo od ekranu głównego</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Use icon customizations in drawer</string>
-    <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
+    <string name="pref_icon_customization_title">Używaj personalizacji ikon w szufladzie</string>
+    <string name="pref_icon_customization_summary">Używaj personalizacji ikon z ekranu głównego</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Wstrzymaj</string>
     <string name="pause_apps_dialog_title">Wstrzymać %1$s?</string>
@@ -371,13 +371,13 @@
     <string name="wallpaper_carousel_lockscreen_title">Zastosuj do ekranu blokady</string>
     <string name="wallpaper_carousel_lockscreen_summary">Ustaw tę samą tapetę na ekranie blokady</string>
     <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pebble</string>
-    <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Teardrop</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="pebble_shape_title">Kamyk</string>
+    <string name="vessel_shape_title">Statek</string>
+    <string name="pure_square_shape_title">Czysty kwadrat</string>
+    <string name="squircle_shape_title">Zaokrąglony kwadrat</string>
+    <string name="tapered_rect_shape_title">Zwężony prostokąt</string>
+    <string name="teardrop_shape_title">Łza</string>
+    <string name="rounded_rect_shape_title">Zaokrąglony kwadrat</string>
     <string name="cloudy_shape_title">Pochmurno</string>
     <string name="cylindrical_shape_title">Cylindrical</string>
     <string name="flower_shape_title">Flower</string>
