@@ -52,9 +52,9 @@
     <string name="msg_minus_one_on_left">Ana sayfadan sola kaydırdığınızda</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Ana sayfadan sağa kaydırdığınızda</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Temalı simgeler</string>
-    <string name="pref_themed_icons_summary">Ana ekranda kullanılan temalı simgeleri takip edin</string>
+    <!-- All apps icon customizations -->
+    <string name="pref_icon_customization_title">Use icon customizations in drawer</string>
+    <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Duraklat</string>
     <string name="pause_apps_dialog_title">%1$s duraklatılsın mı?</string>
@@ -115,7 +115,7 @@
     <string name="label_search">Ara</string>
     <string name="label_lens">Google lens</string>
     <string name="label_voice_search">Sesli arama</string>
-    <string name="label_gemini_search">AI mode</string>
+    <string name="label_gemini_search">Yapay Zeka mod\'u</string>
     <string name="dock_music_search_title">Müzik ara</string>
     <string name="dock_music_search_summary">Mikrofon simgesine basarak müzik aramayı başlatın</string>
     <string name="dock_search_title">Google arama çubuğu</string>
@@ -366,8 +366,27 @@
     <string name="icon_pack_add">Daha fazla yükle</string>
     <string name="icon_pack_no_market">Kullanılabilir uygulama mağazası yok</string>
     <!-- Wallpaper carousel -->
-    <string name="wallpaper_carousel_title">Duvar kâğıdı döngüsü</string>
-    <string name="wallpaper_carousel_summary">Uzun dokunuş menüsünden duvar kâğıtlarını hızlıca değiştir</string>
+    <string name="wallpaper_carousel_title">Duvar kağıdı döngüsü</string>
+    <string name="wallpaper_carousel_summary">Uzun dokunuş menüsünden duvar kağıtlarını hızlıca değiştir</string>
     <string name="wallpaper_carousel_lockscreen_title">Kilit ekranına uygula</string>
-    <string name="wallpaper_carousel_lockscreen_summary">Aynı duvar kâğıdını kilit ekranına uygula</string>
+    <string name="wallpaper_carousel_lockscreen_summary">Aynı duvar kağıdını kilit ekranına uygula</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">Pebble</string>
+    <string name="vessel_shape_title">Vessel</string>
+    <string name="pure_square_shape_title">Pure square</string>
+    <string name="squircle_shape_title">Squircle</string>
+    <string name="tapered_rect_shape_title">Tapered rect</string>
+    <string name="teardrop_shape_title">Teardrop</string>
+    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="cloudy_shape_title">Bulutlu</string>
+    <string name="cylindrical_shape_title">Cylindrical</string>
+    <string name="flower_shape_title">Flower</string>
+    <string name="heart_shape_title">Heart</string>
+    <string name="hexagon_shape_title">Hexagon</string>
+    <string name="ios_style_shape_title">iOS Style</string>
+    <string name="leaf_shape_title">Leaf</string>
+    <string name="meow_shape_title">Meow</string>
+    <string name="samsung_style_shape_title">Samsung Style</string>
+    <string name="scroll_shape_title">Scroll</string>
+    <string name="stretched_shape_title">Stretched</string>
 </resources>

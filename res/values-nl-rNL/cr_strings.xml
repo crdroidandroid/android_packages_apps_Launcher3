@@ -52,9 +52,9 @@
     <string name="msg_minus_one_on_left">Wanneer je naar links veegt vanuit het startscherm</string>
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Wanneer je naar rechts veegt vanuit het startscherm</string>
-    <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Thema pictogrammen</string>
-    <string name="pref_themed_icons_summary">Volg gethematiseerde pictogrammen gebruikt op startscherm</string>
+    <!-- All apps icon customizations -->
+    <string name="pref_icon_customization_title">Gebruik pictogram aanpassingen in app-overzicht</string>
+    <string name="pref_icon_customization_summary">Volg pictogram aanpassingen gebruikt op startscherm</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Pauseren</string>
     <string name="pause_apps_dialog_title">Pauzeer%1$s?</string>
@@ -370,4 +370,23 @@
     <string name="wallpaper_carousel_summary">Wissel snel over van achtergronden vanuit het lang drukken menu</string>
     <string name="wallpaper_carousel_lockscreen_title">Toepassen op vergrendelingsscherm</string>
     <string name="wallpaper_carousel_lockscreen_summary">Stel dezelfde achtergrond in op het vergrendelingsscherm</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">Kiezel</string>
+    <string name="vessel_shape_title">Schip</string>
+    <string name="pure_square_shape_title">Pure vierkant</string>
+    <string name="squircle_shape_title">Squircle</string>
+    <string name="tapered_rect_shape_title">Tapered rect</string>
+    <string name="teardrop_shape_title">Traan</string>
+    <string name="rounded_rect_shape_title">Afgeronde rect</string>
+    <string name="cloudy_shape_title">Bewolkt</string>
+    <string name="cylindrical_shape_title">Cilindervormig</string>
+    <string name="flower_shape_title">Bloem</string>
+    <string name="heart_shape_title">Hart</string>
+    <string name="hexagon_shape_title">Zeskant</string>
+    <string name="ios_style_shape_title">iOS stijl</string>
+    <string name="leaf_shape_title">Blad</string>
+    <string name="meow_shape_title">Miauw</string>
+    <string name="samsung_style_shape_title">Samsung Stijl</string>
+    <string name="scroll_shape_title">Scrollen</string>
+    <string name="stretched_shape_title">Uitgerekt</string>
 </resources>
