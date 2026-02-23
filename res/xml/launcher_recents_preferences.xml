@@ -20,6 +20,7 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.launcher3">
 
     <PreferenceCategory
+        android:key="recents_category_general"
         android:title="@string/general_category_title">
 
         <com.android.launcher3.settings.preferences.CustomSeekBarPreference
@@ -48,6 +49,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="recents_category_actions"
         android:title="@string/actions_category_title">
 
         <SwitchPreferenceCompat

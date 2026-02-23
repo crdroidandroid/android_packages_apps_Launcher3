@@ -49,6 +49,7 @@ import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
+import com.android.launcher3.util.DisplayController;
 import com.android.launcher3.util.SettingsCache;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
@@ -70,6 +71,8 @@ public class SettingsRecents extends CollapsingToolbarBaseActivity
 
     private static final int DELAY_HIGHLIGHT_DURATION_MILLIS = 600;
     public static final String SAVE_HIGHLIGHTED_KEY = "android:preference_highlighted";
+
+    private static final String RECENTS_CATEGORY_ACTION = "recents_category_actions";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -186,6 +189,12 @@ public class SettingsRecents extends CollapsingToolbarBaseActivity
             setPreferencesFromResource(R.xml.launcher_recents_preferences, rootKey);
 
             PreferenceScreen screen = getPreferenceScreen();
+            for (int i = screen.getPreferenceCount() - 1; i >= 0; i--) {
+                Preference preference = screen.getPreference(i);
+                if (!initPreference(preference)) {
+                    screen.removePreference(preference);
+                }
+            }
 
             // If the target preference is not in the current preference screen, find the parent
             // preference screen that contains the target preference and set it as the preference
@@ -264,6 +273,24 @@ public class SettingsRecents extends CollapsingToolbarBaseActivity
         public void onSaveInstanceState(Bundle outState) {
             super.onSaveInstanceState(outState);
             outState.putBoolean(SAVE_HIGHLIGHTED_KEY, mPreferenceHighlighted);
+        }
+
+        /**
+         * Initializes a preference. This is called for every preference. Returning false here
+         * will remove that preference from the list.
+         */
+        protected boolean initPreference(Preference preference) {
+            String key = preference.getKey();
+            if (key == null) {
+                return true;
+            }
+
+            DisplayController.Info info = DisplayController.INSTANCE.get(getContext()).getInfo();
+            if (key.equals(RECENTS_CATEGORY_ACTION)) {
+                return !info.isTablet(info.realBounds);
+            }
+
+            return true;
         }
 
         @Override
