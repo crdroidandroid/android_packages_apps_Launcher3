@@ -53,8 +53,8 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Cuando deslizas a la derecha desde la pantalla de Inicio</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Use icon customizations in drawer</string>
-    <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
+    <string name="pref_icon_customization_title">Usar personalizaciones de iconos en el cajón</string>
+    <string name="pref_icon_customization_summary">Seguir las personalizaciones de iconos usadas en la pantalla de inicio</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Pausa</string>
     <string name="pause_apps_dialog_title">¿Pausar %1$s?</string>
@@ -115,7 +115,7 @@
     <string name="label_search">Buscar</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_voice_search">Búsqueda por voz</string>
-    <string name="label_gemini_search">AI mode</string>
+    <string name="label_gemini_search">Modo IA</string>
     <string name="dock_music_search_title">Buscador de Música</string>
     <string name="dock_music_search_summary">Inicie la búsqueda de música al presionar el ícono del micrófono</string>
     <string name="dock_search_title">Barra de búsqueda de Google</string>
@@ -371,22 +371,22 @@
     <string name="wallpaper_carousel_lockscreen_title">Aplicar a la pantalla de bloqueo</string>
     <string name="wallpaper_carousel_lockscreen_summary">Establecer el mismo fondo de pantalla en la pantalla de bloqueo</string>
     <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pebble</string>
-    <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Teardrop</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="pebble_shape_title">Guijarro</string>
+    <string name="vessel_shape_title">Vasija</string>
+    <string name="pure_square_shape_title">Cuadrado puro</string>
+    <string name="squircle_shape_title">Cuadrado redondeado</string>
+    <string name="tapered_rect_shape_title">Rectángulo cónico</string>
+    <string name="teardrop_shape_title">Lágrima</string>
+    <string name="rounded_rect_shape_title">Rectángulo redondeado</string>
     <string name="cloudy_shape_title">Nublado</string>
-    <string name="cylindrical_shape_title">Cylindrical</string>
-    <string name="flower_shape_title">Flower</string>
-    <string name="heart_shape_title">Heart</string>
-    <string name="hexagon_shape_title">Hexagon</string>
-    <string name="ios_style_shape_title">iOS Style</string>
-    <string name="leaf_shape_title">Leaf</string>
-    <string name="meow_shape_title">Meow</string>
-    <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="scroll_shape_title">Scroll</string>
-    <string name="stretched_shape_title">Stretched</string>
+    <string name="cylindrical_shape_title">Cilíndrico</string>
+    <string name="flower_shape_title">Flor</string>
+    <string name="heart_shape_title">Corazón</string>
+    <string name="hexagon_shape_title">Hexágono</string>
+    <string name="ios_style_shape_title">Estilo iOS</string>
+    <string name="leaf_shape_title">Hoja</string>
+    <string name="meow_shape_title">Miau</string>
+    <string name="samsung_style_shape_title">Estilo Samsung</string>
+    <string name="scroll_shape_title">Desplazamiento</string>
+    <string name="stretched_shape_title">Estirado</string>
 </resources>

@@ -53,8 +53,8 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Când glisați dreapta din ecranul principal de pornire</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Use icon customizations in drawer</string>
-    <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
+    <string name="pref_icon_customization_title">Utilizați particularizările pictogramelor în sertar</string>
+    <string name="pref_icon_customization_summary">Urmărește personalizările pictogramelor folosite pe ecranul principal</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Pauză</string>
     <string name="pause_apps_dialog_title">Întrerupeți %1$s?</string>
@@ -115,7 +115,7 @@
     <string name="label_search">Căutare</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_voice_search">Căutare vocală</string>
-    <string name="label_gemini_search">AI mode</string>
+    <string name="label_gemini_search">Mod AI</string>
     <string name="dock_music_search_title">Căutare muzică</string>
     <string name="dock_music_search_summary">Pornește căutarea muzicii la apăsarea pictogramei microfonului</string>
     <string name="dock_search_title">Bară de căutare Google</string>
@@ -366,27 +366,27 @@
     <string name="icon_pack_add">Instalează mai multe</string>
     <string name="icon_pack_no_market">Nu există niciun magazin de aplicații disponibil</string>
     <!-- Wallpaper carousel -->
-    <string name="wallpaper_carousel_title">Wallpaper carousel</string>
-    <string name="wallpaper_carousel_summary">Quickly switch wallpapers from the long-press menu</string>
-    <string name="wallpaper_carousel_lockscreen_title">Apply to lock screen</string>
-    <string name="wallpaper_carousel_lockscreen_summary">Set the same wallpaper on the lock screen</string>
+    <string name="wallpaper_carousel_title">Carusel de imagini</string>
+    <string name="wallpaper_carousel_summary">Schimbă rapid fundalul din meniul de apăsare lungă</string>
+    <string name="wallpaper_carousel_lockscreen_title">Aplică pentru ecranul de blocare</string>
+    <string name="wallpaper_carousel_lockscreen_summary">Setează aceeași imagine de fundal pe ecranul de blocare</string>
     <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pebble</string>
-    <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Teardrop</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="pebble_shape_title">Pietricică</string>
+    <string name="vessel_shape_title">Navă</string>
+    <string name="pure_square_shape_title">Pătrat pur</string>
+    <string name="squircle_shape_title">Pătrat rotunjit</string>
+    <string name="tapered_rect_shape_title">Dreptunghi conic</string>
+    <string name="teardrop_shape_title">Lacrimă</string>
+    <string name="rounded_rect_shape_title">Dreptunghi rotund</string>
     <string name="cloudy_shape_title">Înnorat</string>
-    <string name="cylindrical_shape_title">Cylindrical</string>
-    <string name="flower_shape_title">Flower</string>
-    <string name="heart_shape_title">Heart</string>
+    <string name="cylindrical_shape_title">Cilindric</string>
+    <string name="flower_shape_title">Floare</string>
+    <string name="heart_shape_title">Inimă</string>
     <string name="hexagon_shape_title">Hexagon</string>
-    <string name="ios_style_shape_title">iOS Style</string>
-    <string name="leaf_shape_title">Leaf</string>
-    <string name="meow_shape_title">Meow</string>
-    <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="scroll_shape_title">Scroll</string>
-    <string name="stretched_shape_title">Stretched</string>
+    <string name="ios_style_shape_title">Stil iOS</string>
+    <string name="leaf_shape_title">Frunză</string>
+    <string name="meow_shape_title">Miau</string>
+    <string name="samsung_style_shape_title">Stil Samsung</string>
+    <string name="scroll_shape_title">Derulare</string>
+    <string name="stretched_shape_title">Întins</string>
 </resources>
