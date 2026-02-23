@@ -41,6 +41,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="recents_category_actions"
         android:title="@string/actions_category_title">
 
         <SwitchPreferenceCompat
