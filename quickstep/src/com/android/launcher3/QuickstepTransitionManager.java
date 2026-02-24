@@ -939,6 +939,9 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
                     NAV_FADE_IN_INTERPOLATOR, ANIMATION_DELAY_NAV_FADE_IN,
                     ANIMATION_NAV_FADE_IN_DURATION, APP_LAUNCH_DURATION));
 
+            FloatProp mBlurRadius = new FloatProp(0f, mMaxBlurRadius, DECELERATE_1_5);
+            FloatProp mBlurScrimAlpha = new FloatProp(0f, scrimAlpha, DECELERATE_1_5);
+
             @Override
             public void onUpdate(float percent, boolean initOnly) {
                 if (cropToInset && bottomInsetPos[0] != cachedNavbarInset[0]) {
@@ -1089,8 +1092,8 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
 
                 if (appLaunchBlur() && scrimLayer != null && scrimLayer.isValid()) {
                     SurfaceProperties builder = transaction.forSurface(scrimLayer);
-                    builder.setAlpha(percent * scrimAlpha);
-                    builder.setBackgroundBlurRadius((int) (percent * mMaxBlurRadius));
+                    builder.setAlpha(mBlurScrimAlpha.value);
+                    builder.setBackgroundBlurRadius((int) mBlurRadius.value);
                 }
 
                 surfaceApplier.scheduleApply(transaction);
