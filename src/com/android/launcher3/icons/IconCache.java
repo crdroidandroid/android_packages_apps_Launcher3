@@ -72,6 +72,7 @@ import com.android.launcher3.util.ApplicationInfoWrapper;
 import com.android.launcher3.util.CancellableTask;
 import com.android.launcher3.util.ComponentKey;
 import com.android.launcher3.util.DaggerSingletonTracker;
+import com.android.launcher3.util.FlagOp;
 import com.android.launcher3.util.InstantAppResolver;
 import com.android.launcher3.util.PackageUserKey;
 import com.android.launcher3.widget.WidgetSections;
@@ -610,7 +611,13 @@ public class IconCache extends BaseIconCache {
         if (bitmap == null) {
             return getDefaultIcon(user);
         }
-        return bitmap.withFlags(getUserFlagOpLocked(user));
+        FlagOp userFlagOp = getUserFlagOpLocked(user);
+        int currentFlags = bitmap.getFlags();
+        // Skip creating a new BitMap since identical
+        if (currentFlags == userFlagOp.apply(currentFlags)) {
+            return bitmap;
+        }
+        return bitmap.withFlags(userFlagOp);
     }
 
     protected void applyCacheEntry(@NonNull final CacheEntry entry,
