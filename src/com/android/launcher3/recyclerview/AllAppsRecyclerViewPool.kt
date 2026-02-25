@@ -190,8 +190,8 @@ constructor(
         private const val NULL_LAYOUT_MANAGER_ERROR_STRING =
             "activeRv's layoutManager should not be null"
 
-        private const val PREINFLATE_ICONS_ROW_COUNT = 4
-        private const val EXTRA_ICONS_COUNT = 2
+        private const val PREINFLATE_ICONS_ROW_COUNT = 8
+        private const val EXTRA_ICONS_COUNT = 4
 
         const val PRELOAD_ALL_APPS_DAGGER_KEY = "PRELOAD_ALL_APPS"
     }
