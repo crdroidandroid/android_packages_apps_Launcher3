@@ -1360,6 +1360,11 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
         return mIsIconVisible ? mIcon : new ColorDrawable(Color.TRANSPARENT);
     }
 
+    @Override
+    public boolean hasOverlappingRendering() {
+        return false;
+    }
+
     /** Sets the icon visual state to disabled or not. */
     public void setIconDisabled(boolean isDisabled) {
         if (mIcon != null) {
@@ -1377,7 +1382,9 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
         // same as before.
         mDisableRelayout = mIcon != null;
 
-        icon.setBounds(0, 0, mIconSize, mIconSize);
+        if (icon.getBounds().width() != mIconSize || icon.getBounds().height() != mIconSize) {
+            icon.setBounds(0, 0, mIconSize, mIconSize);
+        }
 
         updateIcon(icon);
 
@@ -1431,6 +1438,9 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
         CacheLookupFlag expectedFlag = DEFAULT_LOOKUP_FLAG.withThemeIcon(shouldUseTheme());
         if (getTag() instanceof ItemInfoWithIcon info && !mHighResUpdateInProgress
                 && info.getMatchingLookupFlag().isVisuallyLessThan(expectedFlag)) {
+                if (mIcon != null && mIcon.isThemed() && shouldUseTheme()) {
+                    return;
+                }
             if (mIconLoadRequest != null) {
                 mIconLoadRequest.cancel();
             }
