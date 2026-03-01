@@ -400,6 +400,13 @@
     other surface effects. The background color is handled in ActivityAllAppsContainerView. -->
     <style name="AllAppsBlurFallbackStyle" parent="AllAppsBlurStyle" />
 
+    <style name="FolderBlurStyle">
+        <item name="folderBackgroundColor">@androidprv:color/surface_effect_0</item>
+    </style>
+    <style name="FolderBlurFallbackStyle">
+        <item name="folderBackgroundColor">@color/materialColorSurfaceContainer</item>
+    </style>
+
     <style name="OverviewBlurStyle">
         <item name="overviewScrimColor">?attr/overviewScrimColorBlur</item>
         <item name="overviewActionsContainerStyle">@style/OverviewActionsContainerBlur</item>

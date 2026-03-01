@@ -32,6 +32,7 @@ import com.android.launcher3.graphics.ShapeDelegate.Companion.DEFAULT_PATH_SIZE
 import com.android.launcher3.graphics.ShapeDelegate.Companion.pickBestShape
 import com.android.launcher3.graphics.ShapeDelegate.GenericPathShape
 import com.android.launcher3.graphics.ShapeDelegate.RoundedSquare
+import com.android.launcher3.graphics.PathWrapper
 import com.android.launcher3.icons.RoundRectEstimator
 import com.android.launcher3.views.ClipPathView
 import com.google.common.truth.Truth.assertThat
@@ -159,9 +160,9 @@ class ShapeDelegateTest {
 
     class TestClipView : View(context), ClipPathView {
 
-        var currentClip: Path? = null
+        var currentClip: PathWrapper? = null
 
-        override fun setClipPath(clipPath: Path?) {
+        override fun setClipPath(clipPath: PathWrapper?) {
             currentClip = clipPath
         }
     }

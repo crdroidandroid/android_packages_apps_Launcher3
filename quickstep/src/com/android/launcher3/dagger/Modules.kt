@@ -20,6 +20,7 @@ import android.annotation.ElapsedRealtimeLong
 import android.content.Context
 import android.net.Uri
 import android.os.SystemClock
+import android.view.CrossWindowBlurListeners
 import com.android.internal.R
 import com.android.launcher3.Flags.enableSystemDrag
 import com.android.launcher3.backuprestore.LauncherRestoreEventLogger
@@ -37,6 +38,8 @@ import com.android.launcher3.icons.IconCache
 import com.android.launcher3.icons.LauncherIconProvider
 import com.android.launcher3.icons.LauncherIconProviderImpl
 import com.android.launcher3.logging.StatsLogManager.StatsLogManagerFactory
+import com.android.launcher3.folder.FolderBlurBackgroundHelper
+import com.android.launcher3.folder.QuickstepFolderBackgroundBlurHelper
 import com.android.launcher3.secondarydisplay.SecondaryDisplayDelegate
 import com.android.launcher3.secondarydisplay.SecondaryDisplayQuickstepDelegateImpl
 import com.android.launcher3.uioverrides.QuickstepWidgetHolder.QuickstepWidgetHolderFactory
@@ -45,7 +48,10 @@ import com.android.launcher3.uioverrides.plugins.PluginManagerWrapperImpl
 import com.android.launcher3.util.ApiWrapper
 import com.android.launcher3.util.DaggerSingletonTracker
 import com.android.launcher3.util.InstantAppResolver
+import com.android.launcher3.util.ListenableRef
+import com.android.launcher3.util.MutableListenableRef
 import com.android.launcher3.util.PluginManagerWrapper
+import com.android.launcher3.util.WindowBlurState.WINDOW_BLUR_STATE
 import com.android.launcher3.util.window.RefreshRateTracker
 import com.android.launcher3.util.window.WindowManagerProxy
 import com.android.launcher3.widget.LauncherWidgetHolder.WidgetHolderFactory
@@ -66,6 +72,7 @@ import dagger.Provides
 import dagger.multibindings.ElementsIntoSet
 import java.util.Optional
 import java.util.concurrent.ExecutorService
+import java.util.function.Consumer
 import javax.inject.Named
 
 private object Modules {}
@@ -81,6 +88,11 @@ abstract class ActivityContextModule {
     abstract fun bindSecondaryDisplayDelegate(
         impl: SecondaryDisplayQuickstepDelegateImpl
     ): SecondaryDisplayDelegate
+
+    @Binds
+    abstract fun bindFolderBackgroundBlurHelper(
+        quickstepFolderBackgroundBlurHelper: QuickstepFolderBackgroundBlurHelper
+    ): FolderBlurBackgroundHelper
 }
 
 @Module
@@ -149,6 +161,19 @@ object StaticObjectModule {
     @JvmStatic
     fun provideDesktopState(@ApplicationContext context: Context): DesktopState =
         DesktopState.getInstance(context)
+
+    @Provides
+    @JvmStatic
+    @LauncherAppSingleton
+    @Named(WINDOW_BLUR_STATE)
+    fun provideWindowBlurState(lifecycle: DaggerSingletonTracker): ListenableRef<Boolean> {
+        val blurListeners = CrossWindowBlurListeners.getInstance()
+        val value = MutableListenableRef(blurListeners.isCrossWindowBlurEnabled)
+        val callback = Consumer<Boolean> { value.dispatchValue(it) }
+        blurListeners.addListener(com.android.launcher3.util.Executors.MAIN_EXECUTOR, callback)
+        lifecycle.addCloseable { blurListeners.removeListener(callback) }
+        return value.asListenable()
+    }
 }
 
 @Module

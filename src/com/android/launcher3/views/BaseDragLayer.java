@@ -564,6 +564,7 @@ public abstract class BaseDragLayer<T extends Context & ActivityContext>
         }
     }
 
+    @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
         int count = getChildCount();

@@ -196,6 +196,14 @@ flag {
 }
 
 flag {
+  name: "blur_on_more_surfaces"
+  namespace: "launcher"
+  description: "Enable blur in more Launcher surfaces"
+  bug: "444141641"
+  is_fixed_read_only: true
+}
+
+flag {
     name: "blurred_home_animation"
     namespace: "launcher"
     description: "Launcher will be blurred when the user swipes to home."

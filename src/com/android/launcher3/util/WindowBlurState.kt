@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2025 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,16 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.launcher3.views;
 
-import android.view.View;
+package com.android.launcher3.util
 
-import com.android.launcher3.graphics.PathWrapper;
+import android.content.Context
+import com.android.launcher3.dagger.LauncherComponentProvider.appComponent
 
-/**
- * Alternative to using {@link View#getClipToOutline()} as it only works with derivatives of
- * rounded rect.
- */
-public interface ClipPathView {
-    void setClipPath(PathWrapper clipPath);
+/** Class to keep track of cross window blur enabled state */
+object WindowBlurState {
+
+    /** Name for dagger injection */
+    const val WINDOW_BLUR_STATE = "window_blur_state"
+
+    @JvmStatic
+    fun getInstance(ctx: Context): ListenableRef<Boolean> = ctx.appComponent.windowBlurState
 }
