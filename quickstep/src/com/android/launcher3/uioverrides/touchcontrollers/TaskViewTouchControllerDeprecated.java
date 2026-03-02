@@ -397,7 +397,7 @@ public class TaskViewTouchControllerDeprecated<
             PendingAnimation pa = new PendingAnimation(maxDuration);
             mRecentsView.createTaskDismissAnimation(pa, mTaskBeingDragged,
                     true /* animateTaskView */, true /* removeTask */, maxDuration,
-                    false /* dismissingForSplitSelection*/, false /* isExpressiveDismiss */);
+                    false /* dismissingForSplitSelection*/, null /* gridEndData */);
 
             mCurrentAnimation = pa.createPlaybackController();
             mCurrentAnimation.getTarget().setInterpolator(Interpolators.LINEAR);

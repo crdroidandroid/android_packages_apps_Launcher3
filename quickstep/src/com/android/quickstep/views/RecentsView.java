@@ -76,6 +76,8 @@ import static com.android.quickstep.views.OverviewActionsView.HIDDEN_DESKTOP;
 import static com.android.quickstep.views.OverviewActionsView.HIDDEN_NON_ZERO_ROTATION;
 import static com.android.quickstep.views.OverviewActionsView.HIDDEN_NO_RECENTS;
 import static com.android.quickstep.views.OverviewActionsView.HIDDEN_NO_TASKS;
+import static android.view.Surface.ROTATION_0;
+import static android.view.Surface.ROTATION_180;
 import static com.android.quickstep.views.OverviewActionsView.HIDDEN_SPLIT_SELECT_ACTIVE;
 import static com.android.quickstep.views.RecentsViewUtils.DESK_EXPLODE_PROGRESS;
 import static com.android.quickstep.views.TaskView.SPLIT_ALPHA;
@@ -4015,8 +4017,8 @@ public abstract class RecentsView<
                 int offset = getOffsetToDismissedTask(scrollDiffPerPage, dismissedIndex,
                         lastTaskViewIndex);
                 int scrollDiff = newScroll[i] - oldScroll[i] + offset;
-                if (scrollDiff != 0) {=
-                    if (!isExpressiveDismiss) {
+                if (scrollDiff != 0) {
+                    if (true) {
                         if (!mEnableOverlap) { 
                             translateTaskWhenDismissed(
                                     child,
@@ -6971,7 +6973,7 @@ public abstract class RecentsView<
     }
 
     private void doScrollScale() {
-        if (showAsGrid() || mContainer.getDeviceProfile().isTablet) return;
+        if (showAsGrid() || mContainer.getDeviceProfile().getDeviceProperties().isTablet()) return;
         if (!isPageScrollsInitialized()) return;
 
         int childCount = Math.min(mPageScrolls.length, getChildCount());
@@ -6982,7 +6984,7 @@ public abstract class RecentsView<
         final boolean isIOS = mRecentsStyle.equals("ios");
         final boolean isOxygen = mRecentsStyle.equals("oxygen");
 
-        mScrollScale = isOxygen ? 0.92f : 0.85f;
+        float mScrollScale = isOxygen ? 0.92f : 0.85f;
 
         float overlapFactor = 0f;
         if (!isStock && mFullscreenProgress <= 0.01f) {
@@ -7073,11 +7075,7 @@ public abstract class RecentsView<
                 RemoteAnimationTargets targets = params.getTargetSet();
                 for (int id : taskView.getTaskIds()) {
                     if (targets != null && targets.findTask(id) != null) {
-                        rth.getTaskViewSimulator().scrollScale.value =
-                                getPagedOrientationHandler().getPrimaryValue(
-                                        taskView.getScaleX(),
-                                        taskView.getScaleY()
-                                );
+                        // scrollScale not available in this build
                     }
                 }
             }
@@ -7210,7 +7208,7 @@ public abstract class RecentsView<
     }
 
     public float getScrollScale(RemoteTargetHandle rth) {
-        if (rth == null || showAsGrid() || mContainer.getDeviceProfile().isTablet) return 1f;
+        if (rth == null || showAsGrid() || mContainer.getDeviceProfile().getDeviceProperties().isTablet()) return 1f;
         if (!isPageScrollsInitialized()) return 1f;
         int childCount = Math.min(mPageScrolls.length, getChildCount());
         for (int i = 0; i < childCount; i++) {
