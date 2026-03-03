@@ -262,6 +262,7 @@ constructor(@ApplicationContext private val encryptedContext: Context) {
         @JvmField
         val ENABLE_TWOLINE_ALLAPPS_TOGGLE = backedUpItem("pref_enable_two_line_toggle", false)
         @JvmField val WORKSPACE_LOCK = backedUpItem("pref_workspace_lock", false)
+        @JvmField val ALL_APPS_SEARCH_PLACEMENT = backedUpItem("pref_allapps_search_placement", "top")
         @JvmField val ALLAPPS_ICON_CUSTOMIZATION = backedUpItem("pref_allapps_icon_customization", true)
         @JvmField val ALLOW_WALLPAPER_ZOOMING = backedUpItem("pref_allow_wallpaper_zooming", true)
         @JvmField val APP_DRAWER_OPACITY = backedUpItem("pref_app_drawer_opacity", 60)
@@ -273,7 +274,6 @@ constructor(@ApplicationContext private val encryptedContext: Context) {
         @JvmField val DOCK_THEME = backedUpItem("pref_dock_theme", false)
         @JvmField val DRAWER_OPEN_KEYBOARD = backedUpItem("pref_drawer_open_keyboard", false)
         @JvmField val DRAWER_SCROLLBAR = backedUpItem("pref_drawer_scrollbar", true)
-        @JvmField val DRAWER_SEARCH = backedUpItem("pref_drawer_search", true)
         @JvmField val FONT_SIZE = backedUpItem("pref_custom_font_size", 100)
         @JvmField val HOTSEAT_OPACITY = backedUpItem("pref_hotseat_opacity", 40)
         @JvmField val HOTSEAT_QSB_OPACITY = backedUpItem("pref_hotseat_qsb_opacity", 80)

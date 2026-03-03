@@ -33,4 +33,7 @@
 
     <!-- Wallpaper carousel -->
     <dimen name="wallpaper_carousel_height">120dp</dimen>
+
+    <!-- App drawer searchbar -->
+    <dimen name="all_apps_search_bar_bottom_padding_extra">16dp</dimen>
 </resources>
