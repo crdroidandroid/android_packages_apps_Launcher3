@@ -142,8 +142,10 @@
     <string name="search_radius_title">Corner radius</string>
 
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar</string>
-    <string name="drawer_search_summary">Search bar on top of the app drawer</string>
+    <string name="drawer_search_title">App search bar location</string>
+    <string name="drawer_search_location_hidden">Hidden</string>
+    <string name="drawer_search_location_top">Top</string>
+    <string name="drawer_search_location_bottom">Bottom</string>
 
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
