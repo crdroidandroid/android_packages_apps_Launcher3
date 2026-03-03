@@ -84,7 +84,7 @@ class TaskbarBackgroundRenderer(private val context: TaskbarActivityContext) {
         if (SettingsCache.INSTANCE.get(context).getValue(NAVIGATION_BAR_HINT_URI)) {
             context.resources.getDimensionPixelSize(R.dimen.taskbar_stashed_handle_height)
         } else {
-            0
+            1
         }
 
     init {
