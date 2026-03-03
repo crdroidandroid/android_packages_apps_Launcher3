@@ -129,6 +129,8 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     private static final long DEFAULT_SEARCH_TRANSITION_DURATION_MS = 0;
     // Render the header protection at all times to debug clipping issues.
     private static final boolean DEBUG_HEADER_PROTECTION = false;
+    private static final String SEARCH_PLACEMENT_HIDDEN = "hidden";
+    private static final String SEARCH_PLACEMENT_BOTTOM = "bottom";
     /** Context of an activity or window that is inflating this container. */
 
     protected final T mActivityContext;
@@ -177,6 +179,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     private boolean mShowFastScroller;
     private boolean mRebindAdaptersAfterSearchAnimation;
     private int mNavBarScrimHeight = 0;
+    private int mImeInsetBottom = 0;
     private SearchRecyclerView mSearchRecyclerView;
     protected SearchAdapterProvider<?> mMainAdapterProvider;
     private View mBottomSheetHandleArea;
@@ -189,6 +192,15 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     private int mBottomSheetBackgroundColorOverBlur;
     private int mTabsProtectionAlpha;
     @Nullable private AllAppsTransitionController mAllAppsTransitionController;
+
+    @Nullable private String mSearchPlacement;
+
+    private final View.OnLayoutChangeListener mSearchContainerLayoutListener =
+            (v, left, top, right, bottom, oldLeft, oldTop, oldRight, oldBottom) -> {
+                if ((bottom - top) != (oldBottom - oldTop)) {
+                    updateFastScrollerBottomMargin();
+                }
+            };
 
     public ActivityAllAppsContainerView(Context context) {
         this(context, null);
@@ -259,6 +271,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
      */
     protected void initContent() {
         mShowFastScroller = LauncherPrefs.DRAWER_SCROLLBAR.get(getContext());
+        mSearchPlacement = LauncherPrefs.ALL_APPS_SEARCH_PLACEMENT.get(getContext());
         mMainAdapterProvider = mSearchUiDelegate.createMainAdapterProvider();
 
         mAH.set(AdapterHolder.MAIN, new AdapterHolder(AdapterHolder.MAIN,
@@ -296,6 +309,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
             mSearchContainer.setFocusedByDefault(true);
         }
         mSearchUiManager = (SearchUiManager) mSearchContainer;
+        mSearchContainer.addOnLayoutChangeListener(mSearchContainerLayoutListener);
     }
 
     public List<AllAppsRow> getAdditionalHeaderRows() {
@@ -306,11 +320,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     protected void onFinishInflate() {
         super.onFinishInflate();
 
-        if (LauncherPrefs.DRAWER_SEARCH.get(getContext())) {
-            mSearchContainer.setVisibility(View.VISIBLE);
-        } else {
-            mSearchContainer.setVisibility(View.GONE);
-        }
+        mSearchContainer.setVisibility(isSearchBarHidden() ? View.GONE : View.VISIBLE);
 
         mAH.get(SEARCH).setup(mSearchRecyclerView,
                 /* Filter out A-Z apps */ itemInfo -> false);
@@ -670,14 +680,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
                 mActivityContext.getActivityComponent().getSharedAppsPool());
         setupHeader();
 
-        if (isSearchBarFloating()) {
-            // Keep the scroller above the search bar.
-            RelativeLayout.LayoutParams scrollerLayoutParams =
-                    (LayoutParams) mFastScroller.getLayoutParams();
-            scrollerLayoutParams.bottomMargin = mSearchContainer.getHeight()
-                    + getResources().getDimensionPixelSize(
-                            R.dimen.fastscroll_bottom_margin_floating_search);
-        }
+        updateFastScrollerBottomMargin();
 
         mAllAppsStore.registerIconContainer(mAH.get(AdapterHolder.MAIN).mRecyclerView);
         mAllAppsStore.registerIconContainer(mAH.get(AdapterHolder.WORK).mRecyclerView);
@@ -745,12 +748,24 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
 
         removeCustomRules(rvContainer);
         removeCustomRules(getSearchRecyclerView());
-        if (isSearchBarFloating()) {
+        if (isSearchBarHidden()) {
+            mSearchContainer.setVisibility(View.GONE);
             alignParentTop(rvContainer, showTabs);
             alignParentTop(getSearchRecyclerView(), /* tabs= */ false);
         } else {
-            layoutBelowSearchContainer(rvContainer, showTabs);
-            layoutBelowSearchContainer(getSearchRecyclerView(), /* tabs= */ false);
+            mSearchContainer.setVisibility(View.VISIBLE);
+            if (isSearchBarFloating()) {
+                alignParentTop(rvContainer, showTabs);
+                alignParentTop(getSearchRecyclerView(), /* tabs= */ false);
+            } else if (isSearchBarAtBottom()) {
+                layoutSearchContainerBottom();
+                layoutAboveSearchContainer(rvContainer, showTabs);
+                layoutAboveSearchContainer(getSearchRecyclerView(), /* tabs= */ false);
+            } else {
+                layoutSearchContainerTop();
+                layoutBelowSearchContainer(rvContainer, showTabs);
+                layoutBelowSearchContainer(getSearchRecyclerView(), /* tabs= */ false);
+            }
         }
 
         updateSearchResultsVisibility();
@@ -788,7 +803,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
         mAdditionalHeaderRows.forEach(row -> mHeader.onPluginConnected(row, mActivityContext));
 
         removeCustomRules(mHeader);
-        if (isSearchBarFloating()) {
+        if (isSearchBarFloating() || isSearchBarHidden() || isSearchBarAtBottom()) {
             alignParentTop(mHeader, false /* includeTabsMargin */);
         } else {
             layoutBelowSearchContainer(mHeader, false /* includeTabsMargin */);
@@ -922,6 +937,106 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
                 + dp.getAllAppsIconStartMargin(mActivityContext);
     }
 
+    private String getSearchPlacement() {
+        if (mSearchPlacement == null) {
+            mSearchPlacement = LauncherPrefs.ALL_APPS_SEARCH_PLACEMENT.get(getContext());
+        }
+        return mSearchPlacement;
+    }
+
+    protected boolean isSearchBarHidden() {
+        return SEARCH_PLACEMENT_HIDDEN.equals(getSearchPlacement());
+    }
+
+    protected boolean isSearchBarAtBottom() {
+        return !isSearchBarFloating() && !isSearchBarHidden()
+                && SEARCH_PLACEMENT_BOTTOM.equals(getSearchPlacement());
+    }
+
+    private int getSearchContainerBottomMargin() {
+        int bottomArea = Math.max(Math.max(mInsets.bottom, mNavBarScrimHeight), mImeInsetBottom);
+        return bottomArea + getResources().getDimensionPixelSize(
+                R.dimen.all_apps_search_bar_bottom_padding_extra);
+    }
+
+    private void updateFastScrollerBottomMargin() {
+        if (mSearchContainer == null) {
+            return;
+        }
+        int bottomMargin = 0;
+        if (isSearchBarFloating()) {
+            bottomMargin = mSearchContainer.getHeight() + getResources().getDimensionPixelSize(
+                    R.dimen.fastscroll_bottom_margin_floating_search);
+        } else if (isSearchBarAtBottom()) {
+            bottomMargin = mSearchContainer.getHeight() + getSearchContainerBottomMargin();
+        }
+        applyBottomMargin(mFastScroller, bottomMargin);
+        applyBottomMargin(mFastScrollLetterLayout, bottomMargin);
+    }
+
+    private static void applyBottomMargin(@Nullable View v, int bottomMargin) {
+        if (v == null || !(v.getLayoutParams() instanceof RelativeLayout.LayoutParams)) {
+            return;
+        }
+        RelativeLayout.LayoutParams lp = (LayoutParams) v.getLayoutParams();
+        if (lp.bottomMargin != bottomMargin) {
+            lp.bottomMargin = bottomMargin;
+            // Avoids a layout pass loop: only set when the value actually changed.
+            v.setLayoutParams(lp);
+        }
+    }
+
+    private void layoutSearchContainerBottom() {
+        if (mSearchContainer == null
+                || !(mSearchContainer.getLayoutParams() instanceof RelativeLayout.LayoutParams)) {
+            return;
+        }
+        RelativeLayout.LayoutParams layoutParams = (LayoutParams) mSearchContainer.getLayoutParams();
+        int bottomMargin = getSearchContainerBottomMargin();
+        if (layoutParams.getRules()[RelativeLayout.ALIGN_PARENT_BOTTOM] == RelativeLayout.TRUE
+                && layoutParams.bottomMargin == bottomMargin) {
+            return;
+        }
+        layoutParams.removeRule(RelativeLayout.ALIGN_PARENT_TOP);
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        layoutParams.bottomMargin = bottomMargin;
+        mSearchContainer.setLayoutParams(layoutParams);
+    }
+
+    private void layoutSearchContainerTop() {
+        if (mSearchContainer == null
+                || !(mSearchContainer.getLayoutParams() instanceof RelativeLayout.LayoutParams)) {
+            return;
+        }
+        RelativeLayout.LayoutParams layoutParams = (LayoutParams) mSearchContainer.getLayoutParams();
+        layoutParams.removeRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+        layoutParams.bottomMargin = 0;
+        mSearchContainer.setLayoutParams(layoutParams);
+    }
+
+    private void layoutAboveSearchContainer(View v, boolean includeTabsMargin) {
+        if (!(v.getLayoutParams() instanceof RelativeLayout.LayoutParams)) {
+            return;
+        }
+
+        RelativeLayout.LayoutParams layoutParams = (LayoutParams) v.getLayoutParams();
+        // Stretch between the top of the container and the search bar.
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+        layoutParams.addRule(RelativeLayout.ABOVE, R.id.search_container_all_apps);
+
+        int topMargin = 0;
+        if (includeTabsMargin) {
+            topMargin += getContext().getResources().getDimensionPixelSize(
+                    R.dimen.all_apps_header_pill_height)
+                    + getContext().getResources().getDimensionPixelSize(
+                            R.dimen.all_apps_tabs_margin_top);
+        }
+        layoutParams.topMargin = topMargin;
+        layoutParams.bottomMargin = getContext().getResources().getDimensionPixelSize(
+                R.dimen.all_apps_search_bar_bottom_adjustment);
+    }
+
     private void layoutBelowSearchContainer(View v, boolean includeTabsMargin) {
         if (!(v.getLayoutParams() instanceof RelativeLayout.LayoutParams)) {
             return;
@@ -964,6 +1079,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
         layoutParams.removeRule(RelativeLayout.ABOVE);
         layoutParams.removeRule(RelativeLayout.ALIGN_TOP);
         layoutParams.removeRule(RelativeLayout.ALIGN_PARENT_TOP);
+        layoutParams.removeRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
         layoutParams.removeRule(RelativeLayout.BELOW);
     }
 
@@ -1223,6 +1339,10 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
             setPadding(grid.getAllAppsProfile().getLeftRightMargin(), topPadding,
                     grid.getAllAppsProfile().getLeftRightMargin(), 0);
         }
+        if (isSearchBarAtBottom()) {
+            layoutSearchContainerBottom();
+            updateFastScrollerBottomMargin();
+        }
         InsettableFrameLayout.dispatchInsets(this, insets);
     }
 
@@ -1243,7 +1363,12 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     @Override
     public WindowInsets dispatchApplyWindowInsets(WindowInsets insets) {
         mNavBarScrimHeight = computeNavBarScrimHeight(insets);
+        mImeInsetBottom = insets.getInsets(WindowInsets.Type.ime()).bottom;
         applyAdapterSideAndBottomPaddings(mActivityContext.getDeviceProfile());
+        if (isSearchBarAtBottom()) {
+            layoutSearchContainerBottom();
+            updateFastScrollerBottomMargin();
+        }
         return super.dispatchApplyWindowInsets(insets);
     }
 
@@ -1282,7 +1407,8 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     }
 
     private void applyAdapterSideAndBottomPaddings(DeviceProfile grid) {
-        int bottomPadding = Math.max(mInsets.bottom, mNavBarScrimHeight);
+        int bottomPadding = isSearchBarAtBottom()
+                ? 0 : Math.max(mInsets.bottom, mNavBarScrimHeight);
         mAH.forEach(adapterHolder -> {
             adapterHolder.mPadding.bottom = bottomPadding;
             adapterHolder.mPadding.left = grid.getAllAppsProfile().getPadding().left;

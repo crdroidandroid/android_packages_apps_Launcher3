@@ -287,6 +287,7 @@ constructor(@ApplicationContext private val encryptedContext: Context) {
         @JvmField
         val HOTSEAT_COUNT =
             backedUpItem(DeviceGridState.KEY_HOTSEAT_COUNT, -1, EncryptionType.ENCRYPTED)
+        @JvmField val ALL_APPS_SEARCH_PLACEMENT = backedUpItem("pref_allapps_search_placement", "top")
         @JvmField val ALLAPPS_THEMED_ICONS = backedUpItem("pref_allapps_themed_icons", true)
         @JvmField val ALLAPPS_ICON_CUSTOMIZATION =
             backedUpItem("pref_allapps_icon_customization", Boolean::class.java) {
@@ -303,7 +304,6 @@ constructor(@ApplicationContext private val encryptedContext: Context) {
         @JvmField val DOCK_THEME = backedUpItem("pref_dock_theme", false)
         @JvmField val DRAWER_OPEN_KEYBOARD = backedUpItem("pref_drawer_open_keyboard", false)
         @JvmField val DRAWER_SCROLLBAR = backedUpItem("pref_drawer_scrollbar", true)
-        @JvmField val DRAWER_SEARCH = backedUpItem("pref_drawer_search", true)
         @JvmField val FONT_SIZE = backedUpItem("pref_custom_font_size", 100)
         @JvmField val HOTSEAT_OPACITY = backedUpItem("pref_hotseat_opacity", 40)
         @JvmField val HOTSEAT_QSB_OPACITY = backedUpItem("pref_hotseat_qsb_opacity", 70)

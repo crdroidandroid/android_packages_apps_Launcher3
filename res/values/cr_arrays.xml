@@ -27,4 +27,17 @@
         <item>seraphix</item>
         <item>omnijaws</item>
     </string-array>
+
+    <!-- App drawer searchbar -->
+    <string-array name="allapps_search_placement_entries">
+        <item>@string/drawer_search_location_hidden</item>
+        <item>@string/drawer_search_location_top</item>
+        <item>@string/drawer_search_location_bottom</item>
+    </string-array>
+
+    <string-array name="allapps_search_placement_values" translatable="false">
+        <item>hidden</item>
+        <item>top</item>
+        <item>bottom</item>
+    </string-array>
 </resources>
