@@ -580,7 +580,8 @@ public class InvariantDeviceProfile {
 
     private static boolean firstGridFilter(GridOption gridOption, int deviceType,
             boolean allowDisabledGrid, boolean isFixedLandscapeMode) {
-        return (gridOption.isEnabled(deviceType) || allowDisabledGrid);
+        return (gridOption.isEnabled(deviceType) || allowDisabledGrid)
+                && gridOption.filterByFlag(deviceType, isFixedLandscapeMode);
     }
 
     private static List<DisplayOption> getPredefinedDeviceProfiles(
@@ -811,6 +812,7 @@ public class InvariantDeviceProfile {
         return parseAllDefinedGridOptions(context, displayInfo)
                 .stream()
                 .filter(go -> go.isEnabled(deviceType))
+                .filter(go -> go.filterByFlag(deviceType, isFixedLandscape))
                 .collect(Collectors.toList());
     }
 
@@ -1348,9 +1350,9 @@ public class InvariantDeviceProfile {
         public boolean isEnabled(@DeviceType int deviceType) {
             switch (deviceType) {
                 case TYPE_PHONE:
-                    return true;
+                    return (deviceCategory & DEVICE_CATEGORY_PHONE) == DEVICE_CATEGORY_PHONE;
                 case TYPE_TABLET:
-                    return true;
+                    return (deviceCategory & DEVICE_CATEGORY_TABLET) == DEVICE_CATEGORY_TABLET;
                 case TYPE_MULTI_DISPLAY:
                     return (deviceCategory & DEVICE_CATEGORY_MULTI_DISPLAY)
                             == DEVICE_CATEGORY_MULTI_DISPLAY;
