@@ -287,8 +287,11 @@ public class DragLayer extends BaseDragLayer<Launcher> implements LauncherOverla
 
             // In most cases this additional scale factor should be a no-op (1). It mainly accounts
             // for alternate grids where the source and destination icon sizes are different
-            toScale *= ((1f * destRect.width())
-                    / (dragView.getMeasuredWidth() - dragView.getBlurSizeOutline()));
+            float scaleFactor = (1f * destRect.width())
+                    / (dragView.getMeasuredWidth() - dragView.getBlurSizeOutline());
+            if (!Float.isNaN(scaleFactor) && !Float.isInfinite(scaleFactor)) {
+                toScale *= scaleFactor;
+            }
 
             // This accounts for the offset of the DragView created by scaling it about its
             // center as it animates into place.
