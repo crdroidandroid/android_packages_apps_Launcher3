@@ -16,6 +16,7 @@
 package com.android.launcher3.taskbar;
 
 import static com.android.launcher3.LauncherAnimUtils.SCALE_PROPERTY;
+import static com.android.launcher3.taskbar.TaskbarManagerImpl.NAVIGATION_BAR_HINT_URI;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -23,6 +24,7 @@ import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.annotation.Nullable;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
@@ -32,6 +34,7 @@ import androidx.core.content.ContextCompat;
 
 import com.android.launcher3.LauncherAnimUtils;
 import com.android.launcher3.R;
+import com.android.launcher3.util.SettingsCache;
 
 /**
  * View to render a handle that changes color based on the background to ensure contrast. Used for
@@ -48,6 +51,7 @@ public class StashedHandleView extends View {
 
     private @Nullable ObjectAnimator mColorChangeAnim;
     private Boolean mIsRegionDark;
+    private Boolean mUseTransparentBackground;
 
     public StashedHandleView(Context context) {
         this(context, null);
@@ -69,6 +73,8 @@ public class StashedHandleView extends View {
                 R.color.taskbar_stashed_handle_light_color);
         mStashedHandleDarkColor = ContextCompat.getColor(context,
                 R.color.taskbar_stashed_handle_dark_color);
+        mUseTransparentBackground =
+                !SettingsCache.INSTANCE.get(context).getValue(NAVIGATION_BAR_HINT_URI);
     }
 
     /**
@@ -96,6 +102,10 @@ public class StashedHandleView extends View {
      * @param animate Whether to animate the change, or apply it immediately.
      */
     public void updateHandleColor(boolean isRegionDark, boolean animate) {
+        if (mUseTransparentBackground) {
+            setBackgroundColor(Color.TRANSPARENT);
+            return;
+        }
         if (mIsRegionDark != null && mIsRegionDark == isRegionDark) {
             return;
         }
