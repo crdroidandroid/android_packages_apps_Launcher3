@@ -46,6 +46,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
+import android.app.PendingIntent;
 import android.app.RemoteAction;
 import android.graphics.drawable.Icon;
 import android.os.SystemClock;
@@ -1448,17 +1449,25 @@ public class TaskbarStashController implements TaskbarControllers.LoggableTaskba
                 return;
             }
 
-            if (!mIsTaskbarSystemActionRegistered) {
-                RemoteAction taskbarRemoteAction = new RemoteAction(
-                        Icon.createWithResource(mActivity, R.drawable.ic_info_no_shadow),
-                        mActivity.getString(R.string.taskbar_a11y_title),
-                        mActivity.getString(R.string.taskbar_a11y_title),
-                        mTaskbarSharedState.taskbarSystemActionPendingIntent);
-
-                mAccessibilityManager.registerSystemAction(taskbarRemoteAction,
-                        SYSTEM_ACTION_ID_TASKBAR);
-                mIsTaskbarSystemActionRegistered = true;
+            if (mIsTaskbarSystemActionRegistered) {
+                return;
             }
+
+            PendingIntent action = mTaskbarSharedState.taskbarSystemActionPendingIntent;
+            if (action == null) {
+                Log.w(TAG, "Taskbar system action PendingIntent is null, skipping registration");
+                return;
+            }
+
+            RemoteAction taskbarRemoteAction = new RemoteAction(
+                    Icon.createWithResource(mActivity, R.drawable.ic_info_no_shadow),
+                    mActivity.getString(R.string.taskbar_a11y_title),
+                    mActivity.getString(R.string.taskbar_a11y_title),
+                    action
+            );
+
+            mAccessibilityManager.registerSystemAction(taskbarRemoteAction, SYSTEM_ACTION_ID_TASKBAR);
+            mIsTaskbarSystemActionRegistered = true;
         });
     }
 
