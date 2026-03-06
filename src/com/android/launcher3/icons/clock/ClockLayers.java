@@ -29,14 +29,27 @@ class ClockLayers {
     }
 
     public final void setDrawable(Drawable drawable) {
-        mDrawable = (AdaptiveIconDrawable) drawable;
-        mLayerDrawable = (LayerDrawable) mDrawable.getForeground();
+        if (drawable instanceof AdaptiveIconDrawable) {
+            mDrawable = (AdaptiveIconDrawable) drawable;
+            Drawable foreground = mDrawable.getForeground();
+            if (foreground instanceof LayerDrawable) {
+                mLayerDrawable = (LayerDrawable) foreground;
+            } else {
+                mLayerDrawable = null;
+            }
+        } else if (drawable instanceof LayerDrawable) {
+            mDrawable = null;
+            mLayerDrawable = (LayerDrawable) drawable;
+        } else {
+            mDrawable = null;
+            mLayerDrawable = null;
+        }
     }
 
     @Override
     public ClockLayers clone() {
         ClockLayers ret = null;
-        if (mDrawable == null) {
+        if (mDrawable == null && mLayerDrawable == null) {
             return null;
         }
         ClockLayers clone = new ClockLayers();
@@ -48,7 +61,11 @@ class ClockLayers {
         clone.mDefaultHour = mDefaultHour;
         clone.mDefaultMinute = mDefaultMinute;
         clone.mDefaultSecond = mDefaultSecond;
-        clone.setDrawable(mDrawable.getConstantState().newDrawable());
+        if (mDrawable != null) {
+            clone.setDrawable(mDrawable.getConstantState().newDrawable());
+        } else {
+            clone.setDrawable(mLayerDrawable.getConstantState().newDrawable());
+        }
         clone.bitmap = bitmap;
         if (clone.mLayerDrawable != null) {
             ret = clone;
