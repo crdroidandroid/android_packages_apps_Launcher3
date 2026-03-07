@@ -254,7 +254,7 @@ public class FloatingHeaderView extends LinearLayout implements
 
     /** Whether this header has been set up previously. */
     boolean isSetUp() {
-        return mMainRV != null;
+        return mMainRV != null || mSearchRV != null;
     }
 
     /** Set the active AllApps RV which will adjust the alpha of the header when scrolled. */
@@ -265,12 +265,26 @@ public class FloatingHeaderView extends LinearLayout implements
         mCurrentRV =
                 rvType == AdapterHolder.MAIN ? mMainRV
                 : rvType == AdapterHolder.WORK ? mWorkRV : mSearchRV;
-        mCurrentRV.addOnScrollListener(mOnScrollListener);
+        if (mCurrentRV != null) {
+            mCurrentRV.addOnScrollListener(mOnScrollListener);
+        }
         maybeSetTabVisibility(rvType == AdapterHolder.SEARCH ? GONE : VISIBLE);
 
         updateExpectedHeight();
     }
 
+    void updateMainRV(@Nullable AllAppsRecyclerView mainRV) {
+        boolean mainWasActive = mCurrentRV == mMainRV;
+        if (mainWasActive && mCurrentRV != null) {
+            mCurrentRV.removeOnScrollListener(mOnScrollListener);
+        }
+        mMainRV = mainRV;
+        if (mainWasActive && mMainRV != null) {
+            mCurrentRV = mMainRV;
+            mCurrentRV.addOnScrollListener(mOnScrollListener);
+            applyVerticalMove();
+        }
+    }
     /** Update tab visibility to the given state, only if tabs are active (work profile exists). */
     void maybeSetTabVisibility(int visibility) {
         mTabLayout.setVisibility(mTabsHidden ? GONE : visibility);
@@ -396,7 +410,9 @@ public class FloatingHeaderView extends LinearLayout implements
         }
         mHeaderCollapsed = false;
         mSnappedScrolledY = -mMaxTranslation;
-        mCurrentRV.scrollToTop();
+        if (mCurrentRV != null) {
+            mCurrentRV.scrollToTop();
+        }
     }
 
     public boolean isExpanded() {
@@ -436,6 +452,9 @@ public class FloatingHeaderView extends LinearLayout implements
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         calcOffset(mTempOffset);
+        if (mCurrentRV == null) {
+            return super.onInterceptTouchEvent(ev);
+        }
         ev.offsetLocation(mTempOffset.x, mTempOffset.y);
         mForwardToRecyclerView = mCurrentRV.onInterceptTouchEvent(ev);
         ev.offsetLocation(-mTempOffset.x, -mTempOffset.y);
@@ -459,6 +478,11 @@ public class FloatingHeaderView extends LinearLayout implements
     }
 
     private void calcOffset(Point p) {
+        if (mCurrentRV == null || mCurrentRV.getParent() == null) {
+            p.x = 0;
+            p.y = 0;
+            return;
+        }
         p.x = getLeft() - mCurrentRV.getLeft() - ((ViewGroup) mCurrentRV.getParent()).getLeft();
         p.y = getTop() - mCurrentRV.getTop() - ((ViewGroup) mCurrentRV.getParent()).getTop();
     }

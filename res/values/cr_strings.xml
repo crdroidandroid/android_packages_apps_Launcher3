@@ -439,4 +439,11 @@
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Dark app labels</string>
     <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
+
+    <!-- App drawer styles -->
+    <string name="drawer_style_title">App drawer style</string>
+    <string name="drawer_style_normal">Normal (bottom sheet)</string>
+    <string name="drawer_style_legacy">Legacy fullscreen</string>
+    <string name="drawer_style_list">List style</string>
+    <string name="drawer_style_oneui">OneUI style (paged)</string>
 </resources>

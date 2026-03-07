@@ -45,5 +45,12 @@
 
     </com.android.launcher3.allapps.FloatingHeaderView>
 
+    <com.android.launcher3.pageindicators.PageIndicatorDots
+        android:id="@+id/all_apps_page_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/workspace_page_indicator_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/all_apps_page_indicator_bottom_margin"
+        android:visibility="gone" />
     <include layout="@layout/all_apps_fast_scroller" />
 </merge>

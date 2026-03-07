@@ -108,10 +108,22 @@ public class AppsSearchContainerLayout extends ExtendedEditText
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         // Update the width to match the grid padding
+        if (mAppsView == null) {
+            super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+            return;
+        }
         DeviceProfile dp = mLauncher.getDeviceProfile();
         int myRequestedWidth = getSize(widthMeasureSpec);
-        int rowWidth = myRequestedWidth - mAppsView.getActiveRecyclerView().getPaddingLeft()
-                - mAppsView.getActiveRecyclerView().getPaddingRight();
+        View widthSource = mAppsView.getActiveRecyclerView();
+        if (widthSource == null) {
+            widthSource = mAppsView.getAppsRecyclerViewContainer();
+        }
+        if (widthSource == null) {
+            super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+            return;
+        }
+        int rowWidth = myRequestedWidth - widthSource.getPaddingLeft()
+                - widthSource.getPaddingRight();
 
         int cellWidth = DeviceProfile.calculateCellWidth(rowWidth,
                 dp.getWorkspaceIconProfile().getCellLayoutBorderSpacePx().x, dp.numShownHotseatIcons);

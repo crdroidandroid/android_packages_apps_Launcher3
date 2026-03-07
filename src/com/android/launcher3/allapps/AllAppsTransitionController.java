@@ -110,7 +110,9 @@ public class AllAppsTransitionController
                 @Override
                 public Float get(AllAppsTransitionController controller) {
                     if (controller.mShouldShowAllAppsOnSheet) {
-                        return controller.mAppsView.getActiveRecyclerView().getTranslationY();
+                        View activeRecyclerView = controller.mAppsView.getActiveRecyclerView();
+                        return activeRecyclerView == null ? ALL_APPS_PULL_BACK_TRANSLATION_DEFAULT
+                                : activeRecyclerView.getTranslationY();
                     } else {
                         return controller.getAppsViewPullbackTranslationY().getValue();
                     }
@@ -119,13 +121,19 @@ public class AllAppsTransitionController
                 @Override
                 public void setValue(AllAppsTransitionController controller, float translation) {
                     if (controller.mShouldShowAllAppsOnSheet) {
-                        controller.mAppsView.getActiveRecyclerView().setTranslationY(translation);
+                        View activeRecyclerView = controller.mAppsView.getActiveRecyclerView();
+                        if (activeRecyclerView != null) {
+                            activeRecyclerView.setTranslationY(translation);
+                        }
                         controller.getAppsViewPullbackTranslationY().setValue(
                                 ALL_APPS_PULL_BACK_TRANSLATION_DEFAULT);
                     } else {
                         controller.getAppsViewPullbackTranslationY().setValue(translation);
-                        controller.mAppsView.getActiveRecyclerView().setTranslationY(
-                                ALL_APPS_PULL_BACK_TRANSLATION_DEFAULT);
+                        View activeRecyclerView = controller.mAppsView.getActiveRecyclerView();
+                        if (activeRecyclerView != null) {
+                            activeRecyclerView.setTranslationY(
+                                    ALL_APPS_PULL_BACK_TRANSLATION_DEFAULT);
+                        }
                     }
                 }
             };
@@ -138,7 +146,9 @@ public class AllAppsTransitionController
                 @Override
                 public Float get(AllAppsTransitionController controller) {
                     if (controller.mShouldShowAllAppsOnSheet) {
-                        return controller.mAppsView.getActiveRecyclerView().getAlpha();
+                        View activeRecyclerView = controller.mAppsView.getActiveRecyclerView();
+                        return activeRecyclerView == null ? ALL_APPS_PULL_BACK_ALPHA_DEFAULT
+                                : activeRecyclerView.getAlpha();
                     } else {
                         return controller.getAppsViewPullbackAlpha().getValue();
                     }
@@ -147,13 +157,19 @@ public class AllAppsTransitionController
                 @Override
                 public void setValue(AllAppsTransitionController controller, float alpha) {
                     if (controller.mShouldShowAllAppsOnSheet) {
-                        controller.mAppsView.getActiveRecyclerView().setAlpha(alpha);
+                        View activeRecyclerView = controller.mAppsView.getActiveRecyclerView();
+                        if (activeRecyclerView != null) {
+                            activeRecyclerView.setAlpha(alpha);
+                        }
                         controller.getAppsViewPullbackAlpha().setValue(
                                 ALL_APPS_PULL_BACK_ALPHA_DEFAULT);
                     } else {
                         controller.getAppsViewPullbackAlpha().setValue(alpha);
-                        controller.mAppsView.getActiveRecyclerView().setAlpha(
-                                ALL_APPS_PULL_BACK_ALPHA_DEFAULT);
+                        View activeRecyclerView = controller.mAppsView.getActiveRecyclerView();
+                        if (activeRecyclerView != null) {
+                            activeRecyclerView.setAlpha(
+                                    ALL_APPS_PULL_BACK_ALPHA_DEFAULT);
+                        }
                     }
                 }
             };
@@ -197,7 +213,7 @@ public class AllAppsTransitionController
         DeviceProfile dp = mLauncher.getDeviceProfile();
         mProgress = 1f;
         mIsVerticalLayout = dp.isVerticalBarLayout();
-        mShouldShowAllAppsOnSheet = dp.shouldShowAllAppsOnSheet();
+        mShouldShowAllAppsOnSheet = dp.shouldShowAllAppsOnSheet(mLauncher);
         mNavScrimFlag = Themes.getAttrBoolean(l, R.attr.isMainColorDark)
                 ? FLAG_DARK_NAV : FLAG_LIGHT_NAV;
 
@@ -221,7 +237,7 @@ public class AllAppsTransitionController
             mLauncher.getWorkspace().getPageIndicator().setTranslationY(0);
         }
 
-        mShouldShowAllAppsOnSheet = dp.shouldShowAllAppsOnSheet();
+        mShouldShowAllAppsOnSheet = dp.shouldShowAllAppsOnSheet(mLauncher);
     }
 
     /**
