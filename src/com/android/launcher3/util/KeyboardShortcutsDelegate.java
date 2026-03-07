@@ -81,7 +81,7 @@ public class KeyboardShortcutsDelegate {
         if (event.hasModifiers(KeyEvent.META_CTRL_ON)) {
             switch (keyCode) {
                 case KeyEvent.KEYCODE_A:
-                    if (mLauncher.isInState(NORMAL)) {
+                    if (mLauncher.isInState(NORMAL) && mLauncher.canOpenAllApps()) {
                         mLauncher.getStateManager().goToState(ALL_APPS);
                         return true;
                     }

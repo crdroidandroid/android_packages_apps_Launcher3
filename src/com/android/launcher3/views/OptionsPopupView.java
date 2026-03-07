@@ -262,6 +262,9 @@ public class OptionsPopupView<T extends Context & ActivityContext> extends Arrow
     public static boolean enterAllApps(View view) {
         Launcher launcher = Launcher.getLauncher(view.getContext());
         launcher.getStatsLogManager().keyboardStateManager().setLaunchedFromA11y(true);
+        if (!launcher.canOpenAllApps()) {
+            return false;
+        }
         launcher.getStateManager().goToState(ALL_APPS);
         return true;
     }

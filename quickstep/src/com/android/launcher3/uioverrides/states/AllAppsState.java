@@ -124,7 +124,7 @@ public class AllAppsState extends LauncherState {
 
     @Override
     public ScaleAndTranslation getHotseatScaleAndTranslation(Launcher launcher) {
-        if (launcher.getDeviceProfile().shouldShowAllAppsOnSheet()) {
+        if (launcher.getDeviceProfile().shouldShowAllAppsOnSheet(launcher)) {
             return getWorkspaceScaleAndTranslation(launcher);
         } else {
             ScaleAndTranslation overviewScaleAndTranslation = LauncherState.OVERVIEW
@@ -139,7 +139,7 @@ public class AllAppsState extends LauncherState {
     @Override
     protected <DEVICE_PROFILE_CONTEXT extends Context & ActivityContext>
             float getDepthUnchecked(DEVICE_PROFILE_CONTEXT context) {
-        if (context.getDeviceProfile().shouldShowAllAppsOnSheet()) {
+        if (context.getDeviceProfile().shouldShowAllAppsOnSheet(context)) {
             return context.getDeviceProfile().getBottomSheetProfile().getBottomSheetDepth();
         } else {
             // The scrim fades in at approximately 50% of the swipe gesture.
@@ -207,7 +207,7 @@ public class AllAppsState extends LauncherState {
     public ScrimColors getWorkspaceScrimColor(Launcher launcher) {
         int backgroundColor;
         int scrimColor;
-        if (!launcher.getDeviceProfile().shouldShowAllAppsOnSheet()) {
+        if (!launcher.getDeviceProfile().shouldShowAllAppsOnSheet(launcher)) {
             // Always use an opaque scrim if there's no sheet.
             backgroundColor = launcher.getResources().getColor(R.color.materialColorSurfaceDim);
         } else if (!Flags.allAppsBlur()) {

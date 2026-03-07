@@ -133,6 +133,10 @@ public abstract class FastScrollRecyclerView extends RecyclerView  {
      * @param ev MotionEvent in {@param eventSource}
      */
     public boolean shouldContainerScroll(MotionEvent ev, View eventSource) {
+        if (mScrollbar == null || eventSource == null || mScrollbar.getParent() == null
+                || eventSource.getWindowId() == null || mScrollbar.getWindowId() == null) {
+            return computeVerticalScrollOffset() == 0;
+        }
         float[] point = new float[2];
         point[0] = ev.getX();
         point[1] = ev.getY();

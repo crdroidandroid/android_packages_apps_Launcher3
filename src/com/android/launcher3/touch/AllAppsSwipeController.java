@@ -43,6 +43,7 @@ import com.android.launcher3.AbstractFloatingView;
 import com.android.launcher3.Flags;
 import com.android.launcher3.Launcher;
 import com.android.launcher3.LauncherState;
+import com.android.launcher3.allapps.AppDrawerStyle;
 import com.android.launcher3.states.StateAnimationConfig;
 
 /**
@@ -145,6 +146,9 @@ public class AllAppsSwipeController extends AbstractStateChangeTouchController {
 
     @Override
     protected boolean canInterceptTouch(MotionEvent ev) {
+        if (AppDrawerStyle.isIos(AppDrawerStyle.get(mLauncher))) {
+            return false;
+        }
         if (mCurrentAnimation != null) {
             // If we are already animating from a previous state, we can intercept.
             return true;
@@ -165,7 +169,7 @@ public class AllAppsSwipeController extends AbstractStateChangeTouchController {
     @Override
     protected LauncherState getTargetState(LauncherState fromState, boolean isDragTowardPositive) {
         if (fromState == NORMAL && shouldOpenAllApps(isDragTowardPositive)) {
-            return ALL_APPS;
+            return mLauncher.canOpenAllApps() ? ALL_APPS : NORMAL;
         } else if (fromState == ALL_APPS && !isDragTowardPositive) {
             return NORMAL;
         }
@@ -203,7 +207,7 @@ public class AllAppsSwipeController extends AbstractStateChangeTouchController {
      * Applies Animation config values for transition from all apps to home.
      */
     public static void applyAllAppsToNormalConfig(Launcher launcher, StateAnimationConfig config) {
-        if (launcher.getDeviceProfile().shouldShowAllAppsOnSheet()) {
+        if (launcher.getDeviceProfile().shouldShowAllAppsOnSheet(launcher)) {
             config.setInterpolator(ANIM_SCRIM_FADE,
                     Interpolators.reverse(ALL_APPS_SCRIM_RESPONDER));
             config.setInterpolator(ANIM_ALL_APPS_FADE, FINAL_FRAME);
@@ -255,7 +259,7 @@ public class AllAppsSwipeController extends AbstractStateChangeTouchController {
      */
     public static void applyNormalToAllAppsAnimConfig(
             Launcher launcher, StateAnimationConfig config) {
-        if (launcher.getDeviceProfile().shouldShowAllAppsOnSheet()) {
+        if (launcher.getDeviceProfile().shouldShowAllAppsOnSheet(launcher)) {
             config.setInterpolator(ANIM_ALL_APPS_FADE, INSTANT);
             config.setInterpolator(ANIM_SCRIM_FADE, ALL_APPS_SCRIM_RESPONDER);
             if (!config.isUserControlled()) {

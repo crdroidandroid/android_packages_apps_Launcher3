@@ -31,6 +31,7 @@ import androidx.annotation.Nullable;
 
 import com.android.launcher3.LauncherModel.ModelUpdateTask;
 import com.android.launcher3.LauncherSettings;
+import com.android.launcher3.allapps.AppDrawerStyle;
 import com.android.launcher3.icons.IconCache;
 import com.android.launcher3.logging.FileLog;
 import com.android.launcher3.model.AllAppsList;
@@ -102,7 +103,8 @@ public class AddWorkspaceItemsTask implements ModelUpdateTask {
                     }
 
                     // b/139663018 Short-circuit this logic if the icon is a system app
-                    if (new ApplicationInfoWrapper(context,
+                    if (!AppDrawerStyle.isIos(AppDrawerStyle.get(context))
+                            && new ApplicationInfoWrapper(context,
                             Objects.requireNonNull(item.getIntent())).isSystem()) {
                         continue;
                     }
