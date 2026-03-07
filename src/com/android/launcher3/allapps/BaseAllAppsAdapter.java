@@ -355,18 +355,45 @@ public abstract class BaseAllAppsAdapter
     }
 
     private BubbleTextView getIconOnCreateSetup(ViewGroup parent) {
-        int layout = LauncherPrefs.ENABLE_TWOLINE_ALLAPPS_TOGGLE.get(
-                mActivityContext.asContext())
-                ? R.layout.all_apps_icon_twoline : R.layout.all_apps_icon;
+        String drawerStyle = AppDrawerStyle.NORMAL;
+        if (this instanceof AllAppsGridAdapter) {
+            drawerStyle = ((AllAppsGridAdapter) this).getDrawerStyle();
+        } else {
+            drawerStyle = AppDrawerStyle.get(mActivityContext.asContext());
+        }
+        if (this instanceof AllAppsGridAdapter) {
+            drawerStyle = ((AllAppsGridAdapter) this).getDrawerStyle();
+        }
+        int layout;
+        if (AppDrawerStyle.isHorizontalList(drawerStyle)) {
+            layout = R.layout.all_apps_icon_horizontal_list;
+        } else {
+            layout = LauncherPrefs.ENABLE_TWOLINE_ALLAPPS_TOGGLE.get(
+                    mActivityContext.asContext())
+                    ? R.layout.all_apps_icon_twoline : R.layout.all_apps_icon;
+        }
         BubbleTextView icon = (BubbleTextView) mLayoutInflater.inflate(
                 layout, parent, false);
         icon.setLongPressTimeoutFactor(1f);
         icon.setOnFocusChangeListener(mIconFocusListener);
         icon.setOnClickListener(mOnIconClickListener);
         icon.setOnLongClickListener(mOnIconLongClickListener);
-        // Ensure the all apps icon height matches the workspace icons in portrait mode.
-        icon.getLayoutParams().height =
-                mActivityContext.getDeviceProfile().getAllAppsProfile().getCellHeightPx();
+
+        ViewGroup.LayoutParams lp = icon.getLayoutParams();
+        if (AppDrawerStyle.isHorizontalList(drawerStyle)) {
+            lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
+            lp.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+            try {
+                java.lang.reflect.Field f = com.android.launcher3.BubbleTextView.class.getDeclaredField("mLayoutHorizontal");
+                f.setAccessible(true);
+                f.setBoolean(icon, true);
+            } catch (Exception e) {}
+        } else if (AppDrawerStyle.isVerticalPaged(drawerStyle)) {
+            lp.width = mActivityContext.getDeviceProfile().getAllAppsProfile().getCellWidthPx();
+            lp.height = mActivityContext.getDeviceProfile().getAllAppsProfile().getCellHeightPx();
+        } else {
+            lp.height = mActivityContext.getDeviceProfile().getAllAppsProfile().getCellHeightPx();
+        }
         return icon;
     }
 

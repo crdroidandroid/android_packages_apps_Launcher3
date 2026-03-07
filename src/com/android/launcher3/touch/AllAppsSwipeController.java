@@ -203,7 +203,7 @@ public class AllAppsSwipeController extends AbstractStateChangeTouchController {
      * Applies Animation config values for transition from all apps to home.
      */
     public static void applyAllAppsToNormalConfig(Launcher launcher, StateAnimationConfig config) {
-        if (launcher.getDeviceProfile().shouldShowAllAppsOnSheet()) {
+        if (launcher.getDeviceProfile().shouldShowAllAppsOnSheet(launcher)) {
             config.setInterpolator(ANIM_SCRIM_FADE,
                     Interpolators.reverse(ALL_APPS_SCRIM_RESPONDER));
             config.setInterpolator(ANIM_ALL_APPS_FADE, FINAL_FRAME);
@@ -255,7 +255,7 @@ public class AllAppsSwipeController extends AbstractStateChangeTouchController {
      */
     public static void applyNormalToAllAppsAnimConfig(
             Launcher launcher, StateAnimationConfig config) {
-        if (launcher.getDeviceProfile().shouldShowAllAppsOnSheet()) {
+        if (launcher.getDeviceProfile().shouldShowAllAppsOnSheet(launcher)) {
             config.setInterpolator(ANIM_ALL_APPS_FADE, INSTANT);
             config.setInterpolator(ANIM_SCRIM_FADE, ALL_APPS_SCRIM_RESPONDER);
             if (!config.isUserControlled()) {

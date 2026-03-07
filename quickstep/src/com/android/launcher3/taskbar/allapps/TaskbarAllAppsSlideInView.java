@@ -276,7 +276,7 @@ public class TaskbarAllAppsSlideInView extends AbstractSlideInView<TaskbarOverla
     @Override
     protected int getScrimColor(Context context) {
         int scrimColor;
-        if (!mActivityContext.getDeviceProfile().shouldShowAllAppsOnSheet()) {
+        if (!mActivityContext.getDeviceProfile().shouldShowAllAppsOnSheet(mActivityContext)) {
             // Always use an opaque scrim if there's no sheet.
             scrimColor = context.getResources().getColor(R.color.materialColorSurfaceDim);
         } else if (!Flags.allAppsBlur()) {
