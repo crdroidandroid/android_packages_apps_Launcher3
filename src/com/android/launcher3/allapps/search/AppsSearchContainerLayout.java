@@ -108,10 +108,23 @@ public class AppsSearchContainerLayout extends ExtendedEditText
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         // Update the width to match the grid padding
+        if (mAppsView == null) {
+            super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+            return;
+        }
+        // The active recycler view can be null while the paged drawer is rebuilding its pages.
+        View widthSource = mAppsView.getActiveRecyclerView();
+        if (widthSource == null) {
+            widthSource = mAppsView.getAppsRecyclerViewContainer();
+        }
+        if (widthSource == null) {
+            super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+            return;
+        }
         DeviceProfile dp = mLauncher.getDeviceProfile();
         int myRequestedWidth = getSize(widthMeasureSpec);
-        int rowWidth = myRequestedWidth - mAppsView.getActiveRecyclerView().getPaddingLeft()
-                - mAppsView.getActiveRecyclerView().getPaddingRight();
+        int rowWidth = myRequestedWidth - widthSource.getPaddingLeft()
+                - widthSource.getPaddingRight();
 
         int cellWidth = DeviceProfile.calculateCellWidth(rowWidth,
                 dp.getWorkspaceProfile().getCellLayoutBorderSpacePx().x,
@@ -243,6 +256,9 @@ public class AppsSearchContainerLayout extends ExtendedEditText
 
     @Override
     public void setInsets(Rect insets) {
+        if (mAppsView == null) {
+            return;
+        }
         MarginLayoutParams mlp = (MarginLayoutParams) getLayoutParams();
         if (mAppsView.getSearchUiDelegate().isSearchBarFloating()
                 || mLauncher.getDeviceProfile().getDeviceProperties().isLargeScreen()) {

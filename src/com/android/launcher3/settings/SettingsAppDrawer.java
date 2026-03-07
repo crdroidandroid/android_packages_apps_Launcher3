@@ -46,6 +46,7 @@ import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
+import com.android.launcher3.allapps.AppDrawerStyle;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.widget.SettingsBasePreferenceFragment;
@@ -109,7 +110,8 @@ public class SettingsAppDrawer extends CollapsingToolbarBaseActivity
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (LauncherPrefs.ALL_APPS_SEARCH_PLACEMENT.getSharedPrefKey().equals(key) ||
                 LauncherPrefs.DRAWER_SCROLLBAR.getSharedPrefKey().equals(key) ||
-                LauncherPrefs.ALL_APPS_DARK_TEXT.getSharedPrefKey().equals(key)) {
+                LauncherPrefs.ALL_APPS_DARK_TEXT.getSharedPrefKey().equals(key) ||
+                LauncherPrefs.APP_DRAWER_STYLE.getSharedPrefKey().equals(key)) {
             LauncherAppState.INSTANCE.executeIfCreated(app -> app.setNeedsRestart());
         }
     }
@@ -162,6 +164,8 @@ public class SettingsAppDrawer extends CollapsingToolbarBaseActivity
 
         private static final String KEY_SEARCH_PLACEMENT = "pref_allapps_search_placement";
         private static final String KEY_OPEN_KEYBOARD = "pref_drawer_open_keyboard";
+        private static final String KEY_APP_DRAWER_STYLE = "pref_app_drawer_style";
+        private static final String KEY_DRAWER_SCROLLBAR = "pref_drawer_scrollbar";
         private static final String SEARCH_PLACEMENT_HIDDEN = "hidden";
 
         private boolean mRestartOnResume = false;
@@ -172,6 +176,8 @@ public class SettingsAppDrawer extends CollapsingToolbarBaseActivity
 
         @Nullable private ListPreference mSearchPlacementPref;
         @Nullable private Preference mOpenKeyboardPref;
+        @Nullable private ListPreference mDrawerStylePref;
+        @Nullable private Preference mScrollbarPref;
 
         @Override
         public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -195,6 +201,23 @@ public class SettingsAppDrawer extends CollapsingToolbarBaseActivity
         public void onSharedPreferenceChanged(SharedPreferences prefs, @Nullable String key) {
             if (KEY_SEARCH_PLACEMENT.equals(key)) {
                 updateOpenKeyboardEnabled();
+            } else if (KEY_APP_DRAWER_STYLE.equals(key)) {
+                updateDrawerStyleState();
+            }
+        }
+
+        private void updateDrawerStyleState() {
+            if (mDrawerStylePref == null) {
+                return;
+            }
+            // A SummaryProvider (e.g. app:useSimpleSummaryProvider) forbids setSummary().
+            if (mDrawerStylePref.getSummaryProvider() == null) {
+                mDrawerStylePref.setSummary(mDrawerStylePref.getEntry());
+            }
+            if (mScrollbarPref != null) {
+                // The paged drawer has no vertical scrolling, hence no fast scroller.
+                mScrollbarPref.setEnabled(
+                        !AppDrawerStyle.isVerticalPaged(mDrawerStylePref.getValue()));
             }
         }
 
@@ -222,7 +245,10 @@ public class SettingsAppDrawer extends CollapsingToolbarBaseActivity
 
             mSearchPlacementPref = screen.findPreference(KEY_SEARCH_PLACEMENT);
             mOpenKeyboardPref = screen.findPreference(KEY_OPEN_KEYBOARD);
+            mDrawerStylePref = screen.findPreference(KEY_APP_DRAWER_STYLE);
+            mScrollbarPref = screen.findPreference(KEY_DRAWER_SCROLLBAR);
             updateOpenKeyboardEnabled();
+            updateDrawerStyleState();
 
             // If the target preference is not in the current preference screen, find the parent
             // preference screen that contains the target preference and set it as the preference

@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
 
+import androidx.annotation.NonNull;
 import androidx.core.view.accessibility.AccessibilityEventCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.core.view.accessibility.AccessibilityRecordCompat;
@@ -44,6 +45,10 @@ public class AllAppsGridAdapter extends BaseAllAppsAdapter {
     private final AppsGridLayoutManager mGridLayoutMgr;
     private final CopyOnWriteArrayList<OnLayoutCompletedListener> mOnLayoutCompletedListeners =
             new CopyOnWriteArrayList<>();
+    // Drawer style applied to this adapter. Set by the container; search adapters stay NORMAL.
+    private String mDrawerStyle = AppDrawerStyle.NORMAL;
+    // Column count requested by the device profile, before style adjustments.
+    private int mRequestedAppsPerRow;
 
     /**
      * Listener for {@link RecyclerView.LayoutManager#onLayoutCompleted(RecyclerView.State)}
@@ -76,6 +81,24 @@ public class AllAppsGridAdapter extends BaseAllAppsAdapter {
         mGridLayoutMgr.setSpanSizeLookup(new GridSpanSizer());
         setAppsPerRow(
                 activityContext.getDeviceProfile().getAllAppsProfile().getNumShownAllAppsColumns());
+    }
+
+    /**
+     * Sets the drawer style used by this adapter and re-applies the column count.
+     */
+    public void setDrawerStyle(@NonNull String drawerStyle) {
+        if (drawerStyle.equals(mDrawerStyle)) {
+            return;
+        }
+        mDrawerStyle = drawerStyle;
+        if (mRequestedAppsPerRow > 0) {
+            setAppsPerRow(mRequestedAppsPerRow);
+        }
+    }
+
+    @Override
+    protected String getDrawerStyle() {
+        return mDrawerStyle;
     }
 
     /**
@@ -184,7 +207,9 @@ public class AllAppsGridAdapter extends BaseAllAppsAdapter {
 
     @Override
     public void setAppsPerRow(int appsPerRow) {
-        mAppsPerRow = appsPerRow;
+        mRequestedAppsPerRow = appsPerRow;
+        // The list style shows a single, full-width app per row.
+        mAppsPerRow = AppDrawerStyle.isHorizontalList(mDrawerStyle) ? 1 : appsPerRow;
         int totalSpans = mAppsPerRow;
         for (int itemPerRow : mAdapterProvider.getSupportedItemsPerRowArray()) {
             if (totalSpans % itemPerRow != 0) {

@@ -26,6 +26,7 @@ import static com.android.launcher3.allapps.UserProfileManager.STATE_DISABLED;
 import static com.android.launcher3.allapps.UserProfileManager.STATE_ENABLED;
 
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -288,6 +289,10 @@ public abstract class BaseAllAppsAdapter
                 BubbleTextView icon = (BubbleTextView) holder.itemView;
                 icon.reset();
                 icon.setTextColor(mTextColor);
+                if (AppDrawerStyle.isHorizontalList(getDrawerStyle())) {
+                    // Guard against views that were inflated for the grid (e.g. recycled).
+                    applyHorizontalListLayout(icon);
+                }
                 icon.applyFromApplicationInfo(adapterItem.itemInfo);
                 icon.setOnFocusChangeListener(mIconFocusListener);
                 icon.configureMinimalPopup(
@@ -369,10 +374,22 @@ public abstract class BaseAllAppsAdapter
         }
     }
 
+    /**
+     * Returns the {@link AppDrawerStyle} used to inflate app icons. Defaults to the stock grid.
+     */
+    protected String getDrawerStyle() {
+        return AppDrawerStyle.NORMAL;
+    }
+
     private BubbleTextView getIconOnCreateSetup(ViewGroup parent) {
-        int layout = LauncherPrefs.ENABLE_TWOLINE_ALLAPPS_TOGGLE.get(
-                mActivityContext.asContext())
-                ? R.layout.all_apps_icon_twoline : R.layout.all_apps_icon;
+        final boolean horizontalList = AppDrawerStyle.isHorizontalList(getDrawerStyle());
+        final int layout;
+        if (horizontalList) {
+            layout = R.layout.all_apps_icon_horizontal_list;
+        } else {
+            layout = LauncherPrefs.ENABLE_TWOLINE_ALLAPPS_TOGGLE.get(mActivityContext.asContext())
+                    ? R.layout.all_apps_icon_twoline : R.layout.all_apps_icon;
+        }
         BubbleTextView icon = (BubbleTextView) mLayoutInflater.inflate(
                 layout, parent, false);
         icon.setLongPressTimeoutFactor(1f);
@@ -380,10 +397,27 @@ public abstract class BaseAllAppsAdapter
         icon.setOnClickListener(mOnIconClickListener);
         icon.setOnLongClickListener(mOnIconLongClickListener);
         icon.setCustomActionsListener(mIconCustomActionsListener);
-        // Ensure the all apps icon height matches the workspace icons in portrait mode.
-        icon.getLayoutParams().height =
-                mActivityContext.getDeviceProfile().getAllAppsProfile().getCellHeightPx();
+        if (horizontalList) {
+            applyHorizontalListLayout(icon);
+        } else {
+            // Ensure the all apps icon height matches the workspace icons in portrait mode.
+            icon.getLayoutParams().height =
+                    mActivityContext.getDeviceProfile().getAllAppsProfile().getCellHeightPx();
+        }
         return icon;
+    }
+
+    /** Icon on the start side with the label right after it, spanning the full row. */
+    private static void applyHorizontalListLayout(BubbleTextView icon) {
+        icon.setLayoutHorizontal(true);
+        icon.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
+        ViewGroup.LayoutParams lp = icon.getLayoutParams();
+        if (lp != null && (lp.width != ViewGroup.LayoutParams.MATCH_PARENT
+                || lp.height != ViewGroup.LayoutParams.WRAP_CONTENT)) {
+            lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
+            lp.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+            icon.setLayoutParams(lp);
+        }
     }
 
     @Override

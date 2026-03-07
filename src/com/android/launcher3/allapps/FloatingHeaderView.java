@@ -254,7 +254,7 @@ public class FloatingHeaderView extends LinearLayout implements
 
     /** Whether this header has been set up previously. */
     boolean isSetUp() {
-        return mMainRV != null;
+        return mMainRV != null || mSearchRV != null;
     }
 
     /** Set the active AllApps RV which will adjust the alpha of the header when scrolled. */
@@ -265,10 +265,35 @@ public class FloatingHeaderView extends LinearLayout implements
         mCurrentRV =
                 rvType == AdapterHolder.MAIN ? mMainRV
                 : rvType == AdapterHolder.WORK ? mWorkRV : mSearchRV;
-        mCurrentRV.addOnScrollListener(mOnScrollListener);
+        if (mCurrentRV != null) {
+            mCurrentRV.addOnScrollListener(mOnScrollListener);
+        }
         maybeSetTabVisibility(rvType == AdapterHolder.SEARCH ? GONE : VISIBLE);
 
         updateExpectedHeight();
+    }
+
+    /**
+     * Swaps the main recycler view without a full {@link #setup}. Used by the paged drawer style,
+     * where the "main" recycler view changes whenever the active page changes.
+     */
+    void updateMainRV(@Nullable AllAppsRecyclerView mainRV) {
+        if (mMainRV == mainRV) {
+            return;
+        }
+        // mCurrentRV may legitimately be null here if pages weren't built yet at setup time.
+        boolean mainWasActive = mCurrentRV == mMainRV;
+        if (mainWasActive && mCurrentRV != null) {
+            mCurrentRV.removeOnScrollListener(mOnScrollListener);
+        }
+        mMainRV = mainRV;
+        if (mainWasActive) {
+            mCurrentRV = mMainRV;
+            if (mCurrentRV != null) {
+                mCurrentRV.addOnScrollListener(mOnScrollListener);
+            }
+            applyVerticalMove();
+        }
     }
 
     /** Update tab visibility to the given state, only if tabs are active (work profile exists). */
@@ -396,7 +421,9 @@ public class FloatingHeaderView extends LinearLayout implements
         }
         mHeaderCollapsed = false;
         mSnappedScrolledY = -mMaxTranslation;
-        mCurrentRV.scrollToTop();
+        if (mCurrentRV != null) {
+            mCurrentRV.scrollToTop();
+        }
     }
 
     public boolean isExpanded() {
@@ -435,6 +462,10 @@ public class FloatingHeaderView extends LinearLayout implements
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
+        if (mCurrentRV == null || mCurrentRV.getParent() == null) {
+            mForwardToRecyclerView = false;
+            return super.onInterceptTouchEvent(ev);
+        }
         calcOffset(mTempOffset);
         ev.offsetLocation(mTempOffset.x, mTempOffset.y);
         mForwardToRecyclerView = mCurrentRV.onInterceptTouchEvent(ev);
@@ -444,7 +475,7 @@ public class FloatingHeaderView extends LinearLayout implements
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (mForwardToRecyclerView) {
+        if (mForwardToRecyclerView && mCurrentRV != null && mCurrentRV.getParent() != null) {
             // take this view's and parent view's (view pager) location into account
             calcOffset(mTempOffset);
             event.offsetLocation(mTempOffset.x, mTempOffset.y);
@@ -459,6 +490,10 @@ public class FloatingHeaderView extends LinearLayout implements
     }
 
     private void calcOffset(Point p) {
+        if (mCurrentRV == null || mCurrentRV.getParent() == null) {
+            p.set(0, 0);
+            return;
+        }
         p.x = getLeft() - mCurrentRV.getLeft() - ((ViewGroup) mCurrentRV.getParent()).getLeft();
         p.y = getTop() - mCurrentRV.getTop() - ((ViewGroup) mCurrentRV.getParent()).getTop();
     }
