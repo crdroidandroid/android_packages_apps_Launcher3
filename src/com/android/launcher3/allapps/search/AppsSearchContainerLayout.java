@@ -33,8 +33,11 @@ import android.text.SpannableStringBuilder;
 import android.text.method.TextKeyListener;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup.MarginLayoutParams;
+import android.widget.PopupMenu;
+import android.view.MenuItem;
 
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.ExtendedEditText;
@@ -151,12 +154,17 @@ public class AppsSearchContainerLayout extends ExtendedEditText
         int shift = expectedLeft - left;
         setTranslationX(shift);
 
+        Drawable optionsIcon = getContext().getDrawable(R.drawable.ic_more_vert_dots);
+        if (optionsIcon != null) {
+            optionsIcon.setTint(Themes.getAttrColor(getContext(), android.R.attr.textColorPrimary));
+        }
+
         if (Utilities.showQSB(getContext()) && !LauncherPrefs.DOCK_THEME.get(getContext())) {
-            setCompoundDrawablesRelativeWithIntrinsicBounds(gIcon, null, null, null);
+            setCompoundDrawablesRelativeWithIntrinsicBounds(gIcon, null, optionsIcon, null);
         } else if (Utilities.showQSB(getContext()) && LauncherPrefs.DOCK_THEME.get(getContext())) {
-            setCompoundDrawablesRelativeWithIntrinsicBounds(gIconThemed, null, null, null);
+            setCompoundDrawablesRelativeWithIntrinsicBounds(gIconThemed, null, optionsIcon, null);
         } else {
-            setCompoundDrawablesRelativeWithIntrinsicBounds(sIcon, null, null, null);
+            setCompoundDrawablesRelativeWithIntrinsicBounds(sIcon, null, optionsIcon, null);
         }
 
         offsetTopAndBottom(mContentOverlap);
@@ -170,10 +178,16 @@ public class AppsSearchContainerLayout extends ExtendedEditText
         int color = Themes.getAttrColor(context, R.attr.qsbFillColor);
         if (LauncherPrefs.DOCK_THEME.get(context))
             color = Themes.getAttrColor(context, R.attr.qsbFillColorThemed);
+
+        color = androidx.core.graphics.ColorUtils.setAlphaComponent(color, 80);
+
         PaintDrawable pd = new PaintDrawable(color);
         pd.setCornerRadius(cornerRadius);
         setClipToOutline(cornerRadius > 0);
         setBackground(pd);
+
+        setTextColor(Themes.getAttrColor(getContext(), android.R.attr.textColorPrimary));
+        setHintTextColor(Themes.getAttrColor(getContext(), android.R.attr.textColorSecondary));
     }
 
     private float getCornerRadius(Context context) {
@@ -269,5 +283,60 @@ public class AppsSearchContainerLayout extends ExtendedEditText
                 mLauncher.startActivitySafely(mAppsView, privateSpaceSettingsIntent, null);
             }
         }
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if (event.getAction() == MotionEvent.ACTION_UP) {
+            Drawable endDrawable = getCompoundDrawablesRelative()[2]; // end drawable
+            if (endDrawable != null) {
+                boolean isRtl = getLayoutDirection() == LAYOUT_DIRECTION_RTL;
+                float x = event.getX();
+                boolean isOptionsClick = false;
+                if (!isRtl && x >= (getWidth() - getPaddingRight() - endDrawable.getIntrinsicWidth() - 30)) {
+                    isOptionsClick = true;
+                } else if (isRtl && x <= (getPaddingLeft() + endDrawable.getIntrinsicWidth() + 30)) {
+                    isOptionsClick = true;
+                }
+
+                if (isOptionsClick) {
+                    showSortingOptions();
+                    return true;
+                }
+            }
+        }
+        return super.onTouchEvent(event);
+    }
+
+    private void showSortingOptions() {
+        PopupMenu popup = new PopupMenu(getContext(), this, android.view.Gravity.END);
+        popup.getMenu().add(0, 0, 0, getContext().getString(R.string.app_drawer_sort_alphabetical));
+        popup.getMenu().add(0, 1, 1, getContext().getString(R.string.app_drawer_sort_install_date));
+        popup.getMenu().add(0, 2, 2, getContext().getString(R.string.app_drawer_sort_usage));
+        
+        popup.setOnMenuItemClickListener((MenuItem item) -> {
+            int sortMode = item.getItemId();
+            if (sortMode == 2) {
+                android.app.AppOpsManager appOps = (android.app.AppOpsManager) getContext().getSystemService(Context.APP_OPS_SERVICE);
+                int mode = appOps.checkOpNoThrow(android.app.AppOpsManager.OPSTR_GET_USAGE_STATS, android.os.Process.myUid(), getContext().getPackageName());
+                if (mode == android.app.AppOpsManager.MODE_DEFAULT) {
+                    mode = getContext().checkCallingOrSelfPermission(android.Manifest.permission.PACKAGE_USAGE_STATS) == android.content.pm.PackageManager.PERMISSION_GRANTED 
+                            ? android.app.AppOpsManager.MODE_ALLOWED 
+                            : android.app.AppOpsManager.MODE_IGNORED;
+                }
+                if (mode != android.app.AppOpsManager.MODE_ALLOWED) {
+                    Intent intent = new Intent(android.provider.Settings.ACTION_USAGE_ACCESS_SETTINGS);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    getContext().startActivity(intent);
+                    return true;
+                }
+            }
+            LauncherPrefs.get(getContext()).put(LauncherPrefs.APP_DRAWER_SORT_MODE, sortMode);
+            if (mAppsView != null) {
+                mAppsView.getAppsStore().notifyUpdate();
+            }
+            return true;
+        });
+        popup.show();
     }
 }
