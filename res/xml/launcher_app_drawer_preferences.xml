@@ -29,6 +29,16 @@
         android:persistent="true"
         launcher:iconSpaceReserved="false" />
 
+    <ListPreference
+        android:key="pref_app_drawer_sorting_mode"
+        android:title="@string/app_drawer_sort_mode_title"
+        android:summary="%s"
+        android:entries="@array/app_drawer_sort_mode_entries"
+        android:entryValues="@array/app_drawer_sort_mode_values"
+        android:defaultValue="alphabetical"
+        android:persistent="true"
+        launcher:iconSpaceReserved="false" />
+
     <com.android.launcher3.settings.preferences.CustomSeekBarPreference
         android:key="pref_app_drawer_opacity"
         android:title="@string/background_opacity_title"
