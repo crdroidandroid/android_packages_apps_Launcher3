@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.folder
+package com.android.launcher3.util
 
 import android.graphics.Canvas
 import android.graphics.Outline
@@ -25,12 +25,11 @@ import android.graphics.RenderNode
 import android.graphics.Shader
 import android.view.View
 import com.android.internal.graphics.drawable.BackgroundBlurDrawable
-import com.android.launcher3.Flags
+import com.android.launcher3.Flags.blurOnMoreSurfaces
 import com.android.launcher3.R
 import com.android.launcher3.dagger.ActivityContextSingleton
+import com.android.launcher3.folder.Folder
 import com.android.launcher3.graphics.PathWrapper
-import com.android.launcher3.util.ListenableRef
-import com.android.launcher3.util.Themes
 import com.android.launcher3.util.WindowBlurState.WINDOW_BLUR_STATE
 import com.android.launcher3.views.ActivityContext
 import javax.inject.Inject
@@ -38,57 +37,59 @@ import javax.inject.Named
 
 /**
  * Quickstep implementation of the helper class that creates and updates the blur drawable used
- * for folders.
+ * for folders and the homescreen popup.
  */
 @ActivityContextSingleton
-class QuickstepFolderBackgroundBlurHelper
+class QuickstepBackgroundBlurHelper
 @Inject
 constructor(
     private val activityContext: ActivityContext,
     @Named(WINDOW_BLUR_STATE) private val blurState: ListenableRef<Boolean>,
-) : FolderBlurBackgroundHelper() {
+) : BlurBackgroundHelper() {
 
-    private val blurRadius = activityContext.asContext().resources.getDimension(
+    private val folderBlurRadius = activityContext.asContext().resources.getDimension(
         R.dimen.folder_blur_radius
     )
+
     private val cornerRadius = Themes.getDialogCornerRadius(activityContext.asContext())
     private val workspaceBlurRenderNode = RenderNode("workspaceBlur")
     private val workspaceBlurRenderNodeOutline = Outline()
     private val bounds = Rect()
-    private val blurDrawable: BackgroundBlurDrawable? by lazy {
-        if (!isFolderBlurStyleEnabled()) null
+    private val folderBlurDrawable: BackgroundBlurDrawable? by lazy {
+        if (!isBlurEnabled()) null
         else
             activityContext.dragLayer.getViewRootImpl()
                 .createBackgroundBlurDrawable()?.apply {
-                    setBlurRadius(blurRadius.toInt())
+                    setBlurRadius(folderBlurRadius.toInt())
                     setVisible(false, false)
                 }
     }
 
-    override fun prepareToOpen(folder: Folder) {
-        if (!isFolderBlurStyleEnabled()) {
+    override fun prepareToOpenFolder(folder: Folder) {
+        if (!isBlurEnabled()) {
             return
         }
 
-        val folderIcon = folder.mFolderIcon
-        val folderNameVisibility: Int = folderIcon.mFolderName.visibility
+        val folderIcon = folder.folderIcon
+        val folderNameVisibility: Int = folderIcon.folderName.visibility
         val isIconVisible = folderIcon.iconVisible
 
         folderIcon.setTextVisible(false)
         folderIcon.setIconVisible(false)
 
         val dragLayer = activityContext.dragLayer
-        val canvas = workspaceBlurRenderNode.beginRecording(dragLayer.getWidth(), dragLayer.getHeight())
+        val canvas =
+            workspaceBlurRenderNode.beginRecording(dragLayer.getWidth(), dragLayer.getHeight())
         dragLayer.draw(canvas)
         workspaceBlurRenderNode.endRecording()
         workspaceBlurRenderNode.setPosition(0, 0, dragLayer.getWidth(), dragLayer.getHeight())
 
-        folderIcon.mFolderName.visibility = folderNameVisibility
+        folderIcon.folderName.visibility = folderNameVisibility
         folderIcon.setIconVisible(isIconVisible)
     }
 
-    override fun drawBlur(canvas: Canvas, pathWrapper: PathWrapper?, view: View) {
-        if (!isFolderBlurStyleEnabled()) {
+    override fun drawFolderBlur(canvas: Canvas, pathWrapper: PathWrapper?, view: View) {
+        if (!isBlurEnabled()) {
             return
         }
 
@@ -113,8 +114,8 @@ constructor(
 
         workspaceBlurRenderNode.setRenderEffect(
             RenderEffect.createBlurEffect(
-                blurRadius,
-                blurRadius,
+                folderBlurRadius,
+                folderBlurRadius,
                 Shader.TileMode.CLAMP
             )
         )
@@ -122,7 +123,7 @@ constructor(
     }
 
     private fun drawCrossWindowBlur(canvas: Canvas, pathWrapper: PathWrapper?, view: View) {
-        val d = blurDrawable ?: return
+        val d = folderBlurDrawable ?: return
 
         d.setVisible(true, false)
         if (pathWrapper != null) {
@@ -140,10 +141,10 @@ constructor(
         if (workspaceBlurRenderNode.hasDisplayList()) {
             workspaceBlurRenderNode.discardDisplayList()
         }
-        blurDrawable?.setVisible(false, false)
+        folderBlurDrawable?.setVisible(false, false)
     }
 
-    private fun isFolderBlurStyleEnabled(): Boolean {
-        return Flags.blurOnMoreSurfaces() && blurState.value
+    override fun isBlurEnabled(): Boolean {
+        return blurOnMoreSurfaces() && blurState.value
     }
 }

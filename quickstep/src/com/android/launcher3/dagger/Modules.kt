@@ -38,9 +38,9 @@ import com.android.launcher3.icons.IconCache
 import com.android.launcher3.icons.LauncherIconProvider
 import com.android.launcher3.icons.LauncherIconProviderImpl
 import com.android.launcher3.logging.StatsLogManager.StatsLogManagerFactory
-import com.android.launcher3.folder.FolderBlurBackgroundHelper
-import com.android.launcher3.folder.QuickstepFolderBackgroundBlurHelper
 import com.android.launcher3.secondarydisplay.SecondaryDisplayDelegate
+import com.android.launcher3.util.BlurBackgroundHelper
+import com.android.launcher3.util.QuickstepBackgroundBlurHelper
 import com.android.launcher3.secondarydisplay.SecondaryDisplayQuickstepDelegateImpl
 import com.android.launcher3.uioverrides.QuickstepWidgetHolder.QuickstepWidgetHolderFactory
 import com.android.launcher3.uioverrides.SystemApiWrapper
@@ -90,9 +90,9 @@ abstract class ActivityContextModule {
     ): SecondaryDisplayDelegate
 
     @Binds
-    abstract fun bindFolderBackgroundBlurHelper(
-        quickstepFolderBackgroundBlurHelper: QuickstepFolderBackgroundBlurHelper
-    ): FolderBlurBackgroundHelper
+    abstract fun bindBackgroundBlurHelper(
+        quickstepBackgroundBlurHelper: QuickstepBackgroundBlurHelper
+    ): BlurBackgroundHelper
 }
 
 @Module

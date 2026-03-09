@@ -149,6 +149,11 @@ public class OptionsPopupView<T extends Context & ActivityContext> extends Arrow
     @Override
     public void assignMarginsAndBackgrounds(ViewGroup viewGroup) {
         assignMarginsAndBackgrounds(viewGroup, mColors[0]);
+    }
+
+    @Override
+    protected void assignMarginsAndBackgrounds(ViewGroup viewGroup, int backgroundColor) {
+        super.assignMarginsAndBackgrounds(viewGroup, backgroundColor);
         // last shortcut doesn't need bottom margin
         final int count = viewGroup.getChildCount() - 1;
         for (int i = 0; i < count; i++) {
