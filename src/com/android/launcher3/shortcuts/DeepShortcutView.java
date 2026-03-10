@@ -17,6 +17,7 @@
 package com.android.launcher3.shortcuts;
 
 import static com.android.launcher3.AbstractFloatingView.TYPE_FOLDER;
+import static com.android.launcher3.Flags.blurOnMoreSurfaces;
 import static com.android.launcher3.model.data.ItemInfoWithIcon.FLAG_NOT_PINNABLE;
 
 import android.content.Context;
@@ -27,6 +28,7 @@ import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.RippleDrawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
@@ -104,19 +106,27 @@ public class DeepShortcutView extends FrameLayout implements BubbleTextHolder {
      * Updates the text background to match the shape of this background (when applicable).
      */
     private void tryUpdateTextBackground() {
-        if (!(getBackground() instanceof GradientDrawable) || mBubbleText == null) {
+        if (mBubbleText == null) {
             return;
         }
-        GradientDrawable background = (GradientDrawable) getBackground();
+        Drawable background = getBackground();
+        if (blurOnMoreSurfaces() && background instanceof LayerDrawable l) {
+            // When we use blur, we have a LayerDrawable of
+            // [BackgroundBlurDrawable, GradientDrawable] as the background.
+            background = l.getDrawable(1);
+        }
+        if (!(background instanceof GradientDrawable surfaceColor)) {
+            return;
+        }
 
         int color = Themes.getAttrColor(getContext(), android.R.attr.colorControlHighlight);
         GradientDrawable backgroundMask = new GradientDrawable();
         backgroundMask.setColor(color);
         backgroundMask.setShape(GradientDrawable.RECTANGLE);
-        if (background.getCornerRadii() != null) {
-            backgroundMask.setCornerRadii(background.getCornerRadii());
+        if (surfaceColor.getCornerRadii() != null) {
+            backgroundMask.setCornerRadii(surfaceColor.getCornerRadii());
         } else {
-            backgroundMask.setCornerRadius(background.getCornerRadius());
+            backgroundMask.setCornerRadius(surfaceColor.getCornerRadius());
         }
 
         RippleDrawable drawable = new RippleDrawable(ColorStateList.valueOf(color),
