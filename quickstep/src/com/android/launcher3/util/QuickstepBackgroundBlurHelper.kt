@@ -104,13 +104,20 @@ constructor(
         workspaceBlurRenderNode.translationX = -view.left.toFloat()
         workspaceBlurRenderNode.translationY = -view.top.toFloat()
 
-        if (path != null) {
+        if (path != null && !path.isEmpty) {
             workspaceBlurRenderNodeOutline.setPath(path)
             workspaceBlurRenderNodeOutline.mPath.offset(view.left.toFloat(), view.top.toFloat())
-
-            workspaceBlurRenderNode.setOutline(workspaceBlurRenderNodeOutline)
-            workspaceBlurRenderNode.setClipToOutline(true)
+        } else {
+            workspaceBlurRenderNodeOutline.setRoundRect(
+                view.left,
+                view.top,
+                view.right,
+                view.bottom,
+                cornerRadius,
+            )
         }
+        workspaceBlurRenderNode.setOutline(workspaceBlurRenderNodeOutline)
+        workspaceBlurRenderNode.setClipToOutline(true)
 
         workspaceBlurRenderNode.setRenderEffect(
             RenderEffect.createBlurEffect(
