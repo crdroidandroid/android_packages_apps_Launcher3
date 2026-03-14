@@ -30,14 +30,14 @@ import android.media.session.MediaSessionManager;
 import android.media.session.PlaybackState;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View.OnClickListener;
 
 import com.android.internal.util.crdroid.OmniJawsClient;
 
 import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
-import com.android.launcher3.util.PackageUserKey;
 import com.android.launcher3.util.MediaSessionManagerHelper;
-import com.android.launcher3.util.MSMHProxy;
+import com.android.launcher3.util.PackageUserKey;
 
 import io.chaldeaprjkt.seraphixgoogle.SeraphixDataProvider;
 import io.chaldeaprjkt.seraphixgoogle.DataProviderListener;
@@ -77,6 +77,8 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
     private Icon mSeraphixIcon;
     private String mLastText;
     private int mLastBmpHash;
+
+    private final MediaSessionManagerHelper mMediaSessionHelper;
 
     private final Runnable mOnDataUpdatedRunnable = new Runnable() {
             @Override
@@ -123,6 +125,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
         mContext = context;
         mConditionMap = initializeConditionMap();
         mEventsController = new QuickEventsController(context);
+        mMediaSessionHelper = MediaSessionManagerHelper.Companion.getInstance(context);
     }
 
     private void decideWeatherProvider() {
@@ -438,13 +441,13 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
 
     private void registerMediaController() {
         if (mMediaRegistered) return;
-        MSMHProxy.INSTANCE(mContext).addMediaMetadataListener(this);
+        mMediaSessionHelper.addMediaMetadataListener(this);
         mMediaRegistered = true;
     }
 
     private void unregisterMediaController() {
         if (!mMediaRegistered) return;
-        MSMHProxy.INSTANCE(mContext).removeMediaMetadataListener(this);
+        mMediaSessionHelper.removeMediaMetadataListener(this);
         mMediaRegistered = false;
     }
 
@@ -452,11 +455,17 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
         if (!LauncherPrefs.SHOW_QUICKSPACE_NOWPLAYING.get(mContext)) {
             return false;
         }
-        MediaMetadata mediaMetadata = MSMHProxy.INSTANCE(mContext).getCurrentMediaMetadata();
-        boolean isPlaying = MSMHProxy.INSTANCE(mContext).isMediaPlaying();
-        String trackArtist = isPlaying && mediaMetadata != null ? mediaMetadata.getString(MediaMetadata.METADATA_KEY_ARTIST) : "";
-        String trackTitle = isPlaying && mediaMetadata != null ? mediaMetadata.getString(MediaMetadata.METADATA_KEY_TITLE) : "";
-        mEventsController.setMediaInfo(trackTitle, trackArtist, isPlaying);
+        MediaMetadata mediaMetadata = mMediaSessionHelper.getCurrentMediaMetadata();
+        boolean isPlaying = mMediaSessionHelper.isMediaPlaying();
+        String trackArtist = isPlaying && mediaMetadata != null ?
+                mediaMetadata.getString(MediaMetadata.METADATA_KEY_ARTIST) : "";
+        String trackTitle = isPlaying && mediaMetadata != null ?
+                mediaMetadata.getString(MediaMetadata.METADATA_KEY_TITLE) : "";
+        Drawable mediaIcon = mMediaSessionHelper.getMediaAppIcon();
+        OnClickListener launchMediaApp =
+                view -> mMediaSessionHelper.launchMediaApp();
+        mEventsController.setMediaInfo(trackTitle, trackArtist, isPlaying,
+                mediaIcon, launchMediaApp);
         mEventsController.updateQuickEvents();
         return true;
     }
