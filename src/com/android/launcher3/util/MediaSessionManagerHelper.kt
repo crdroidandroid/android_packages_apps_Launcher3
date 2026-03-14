@@ -1,46 +1,46 @@
 /*
- * Copyright (C) 2023-2024 The risingOS Android Project
- * Copyright (C) 2025 The AxionAOSP Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-FileCopyrightText: The risingOS Android Project
+ * SPDX-FileCopyrightText: The AxionAOSP Project
+ * SPDX-FileCopyrightText: crDroid Android Project
+ * SPDX-License-Identifier: Apache-2.0
  */
+
 package com.android.launcher3.util
 
 import android.content.Context
-import android.content.res.Configuration
 import android.content.pm.PackageManager
-import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
 import android.media.MediaMetadata
 import android.media.session.MediaController
 import android.media.session.MediaSessionLegacyHelper
 import android.media.session.MediaSessionManager
 import android.media.session.PlaybackState
+import android.os.Handler
+import android.os.Looper
 import android.os.SystemClock
-import android.provider.Settings
-import android.text.TextUtils
+import android.util.Log
 import android.view.KeyEvent
-import android.view.View
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.cancel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.isActive
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
-import kotlinx.coroutines.*
-import kotlinx.coroutines.flow.*
-
-class MediaSessionManagerHelper private constructor(private val context: Context) {
+class MediaSessionManagerHelper private constructor(ctx: Context) {
 
     interface MediaMetadataListener {
         fun onMediaMetadataChanged() {}
         fun onPlaybackStateChanged() {}
     }
+
+    private val context: Context = ctx.applicationContext
 
     private val _mediaMetadata = MutableStateFlow<MediaMetadata?>(null)
     val mediaMetadata: StateFlow<MediaMetadata?> = _mediaMetadata
@@ -48,13 +48,24 @@ class MediaSessionManagerHelper private constructor(private val context: Context
     private val _playbackState = MutableStateFlow<PlaybackState?>(null)
     val playbackState: StateFlow<PlaybackState?> = _playbackState
 
-    private val scope = CoroutineScope(Dispatchers.Main)
+    private val job = SupervisorJob()
+    private val scope = CoroutineScope(job + Dispatchers.Main.immediate)
+
     private var collectJob: Job? = null
+    private var sessionsUpdateJob: Job? = null
+    private var metadataRefreshJob: Job? = null
+    private var heartbeatJob: Job? = null
 
     private var lastSavedPackageName: String? = null
-    private val mediaSessionManager: MediaSessionManager = context.getSystemService(MediaSessionManager::class.java)!!
+
+    private val mediaSessionManager: MediaSessionManager =
+        context.getSystemService(MediaSessionManager::class.java)!!
+
     private var activeController: MediaController? = null
-    private val listeners = mutableSetOf<MediaMetadataListener>()
+    private val listeners = LinkedHashSet<MediaMetadataListener>()
+
+    private val mainHandler = Handler(Looper.getMainLooper())
+    private var sessionsListening = false
 
     private val mediaControllerCallback = object : MediaController.Callback() {
         override fun onMetadataChanged(metadata: MediaMetadata?) {
@@ -64,45 +75,165 @@ class MediaSessionManagerHelper private constructor(private val context: Context
         override fun onPlaybackStateChanged(state: PlaybackState?) {
             _playbackState.value = state
         }
+
+        override fun onSessionDestroyed() {
+            Log.d(TAG, "Active session destroyed, forcing refresh")
+            refreshActiveSessions()
+        }
     }
 
-    private val tickerFlow = flow {
-        while (true) {
-            emit(Unit)
-            delay(1000)
-        }
-    }.flowOn(Dispatchers.Default)
+    private val sessionsChangedListener =
+        MediaSessionManager.OnActiveSessionsChangedListener { controllers ->
+            // Avoid doing any work if nobody is listening.
+            if (!sessionsListening || listeners.isEmpty()) return@OnActiveSessionsChangedListener
 
-    init {
-        lastSavedPackageName = Settings.System.getString(
-            context.contentResolver,
-            "media_session_last_package_name"
-        )
+            var safeControllers = controllers.orEmpty()
 
-        scope.launch {
-            tickerFlow
-                .map { fetchActiveController() }
-                .distinctUntilChanged { old, new -> sameSessions(old, new) }
-                .collect { controller ->
-                    activeController?.unregisterCallback(mediaControllerCallback)
-                    activeController = controller
-                    controller?.registerCallback(mediaControllerCallback)
-                    _mediaMetadata.value = controller?.metadata
-                    _playbackState.value = controller?.playbackState
-                    saveLastNonNullPackageName()
+            sessionsUpdateJob?.cancel()
+            sessionsUpdateJob = scope.launch {
+                if (safeControllers.isEmpty()) {
+                    safeControllers = try {
+                        mediaSessionManager.getActiveSessions(null)
+                    } catch (e: Exception) {
+                        Log.w(TAG, "Failed to get active sessions for re-evaluation", e)
+                        return@launch
+                    }
                 }
+                val picked = withContext(Dispatchers.IO) { pickBestController(safeControllers) }
+
+                if (sameSessions(activeController, picked)) return@launch
+
+                activeController?.unregisterCallback(mediaControllerCallback)
+                activeController = picked
+                picked?.registerCallback(mediaControllerCallback)
+
+                _mediaMetadata.value = picked?.metadata
+                _playbackState.value = picked?.playbackState
+                saveLastNonNullPackageName()
+            }
+        }
+
+    fun addMediaMetadataListener(listener: MediaMetadataListener) {
+        val wasEmpty = listeners.isEmpty()
+        listeners.add(listener)
+
+        if (wasEmpty) {
+            startTracking()
+        } else {
+            refreshActiveSessions()
+        }
+
+        // Push current state immediately.
+        listener.onMediaMetadataChanged()
+        listener.onPlaybackStateChanged()
+    }
+
+    fun removeMediaMetadataListener(listener: MediaMetadataListener) {
+        listeners.remove(listener)
+        if (listeners.isEmpty()) {
+            stopTracking()
         }
     }
 
-    private suspend fun fetchActiveController(): MediaController? = withContext(Dispatchers.IO) {
-        var localController: MediaController? = null
-        val remoteSessions = mutableSetOf<String>()
+    private fun startTracking() {
+        if (!sessionsListening) {
+            mediaSessionManager.addOnActiveSessionsChangedListener(
+                sessionsChangedListener,
+                null,
+                mainHandler
+            )
+            sessionsListening = true
 
-        mediaSessionManager.getActiveSessions(null)
-            .filter { controller ->
-                controller.playbackState?.state == PlaybackState.STATE_PLAYING &&
-                controller.playbackInfo != null
+            // Force an initial refresh.
+            sessionsChangedListener.onActiveSessionsChanged(
+                mediaSessionManager.getActiveSessions(null)
+            )
+        }
+
+        if (collectJob == null) {
+            collectJob = scope.launch {
+                launch {
+                    mediaMetadata.collect { notifyListeners { onMediaMetadataChanged() } }
+                }
+                launch {
+                    playbackState.collect { notifyListeners { onPlaybackStateChanged() } }
+                }
             }
+        }
+
+        startHeartbeat()
+    }
+
+    private fun stopTracking() {
+        heartbeatJob?.cancel()
+        heartbeatJob = null
+
+        collectJob?.cancel()
+        collectJob = null
+
+        sessionsUpdateJob?.cancel()
+        sessionsUpdateJob = null
+
+        metadataRefreshJob?.cancel()
+        metadataRefreshJob = null
+
+        if (sessionsListening) {
+            mediaSessionManager.removeOnActiveSessionsChangedListener(sessionsChangedListener)
+            sessionsListening = false
+        }
+
+        activeController?.unregisterCallback(mediaControllerCallback)
+        activeController = null
+
+        _mediaMetadata.value = null
+        _playbackState.value = null
+    }
+
+    private fun startHeartbeat() {
+        heartbeatJob?.cancel()
+        heartbeatJob = scope.launch {
+            while (isActive) {
+                delay(HEARTBEAT_INTERVAL_MS)
+                refreshActiveSessions()
+            }
+        }
+    }
+
+    fun refreshActiveSessions() {
+        if (listeners.isEmpty() || !sessionsListening) return
+        sessionsChangedListener.onActiveSessionsChanged(
+            mediaSessionManager.getActiveSessions(null)
+        )
+    }
+
+    private fun notifyListeners(action: MediaMetadataListener.() -> Unit) {
+        listeners.forEach { it.action() }
+    }
+
+    private fun isEligibleState(state: Int?): Boolean {
+        return when (state) {
+            null,
+            PlaybackState.STATE_NONE,
+            PlaybackState.STATE_STOPPED,
+            PlaybackState.STATE_ERROR -> false
+            else -> true
+        }
+    }
+
+    private fun pickBestController(controllers: List<MediaController>): MediaController? {
+        var localController: MediaController? = null
+        val remoteSessions = HashSet<String>()
+
+        controllers
+            .asSequence()
+            .filter { controller ->
+                isEligibleState(controller.playbackState?.state) && controller.playbackInfo != null
+            }
+            .sortedWith(
+                compareByDescending<MediaController> { it.playbackState?.state == PlaybackState.STATE_PLAYING }
+                    .thenByDescending { it.playbackState?.state == PlaybackState.STATE_BUFFERING }
+                    .thenByDescending { it.playbackState?.state == PlaybackState.STATE_PAUSED }
+            )
             .forEach { controller ->
                 when (controller.playbackInfo?.playbackType) {
                     MediaController.PlaybackInfo.PLAYBACK_TYPE_REMOTE -> {
@@ -118,91 +249,75 @@ class MediaSessionManagerHelper private constructor(private val context: Context
                     }
                 }
             }
-        localController
+
+        return localController
     }
 
-    fun addMediaMetadataListener(listener: MediaMetadataListener) {
-        listeners.add(listener)
-        if (listeners.size == 1) {
-            startCollecting()
+    fun refreshActiveControllerMetadata() {
+        metadataRefreshJob?.cancel()
+        metadataRefreshJob = scope.launch {
+            repeat(METADATA_REFRESH_RETRY_COUNT) { attempt ->
+                val freshMetadata = activeController?.metadata
+                if (freshMetadata != null && _mediaMetadata.value != freshMetadata) {
+                    _mediaMetadata.value = freshMetadata
+                    Log.d(TAG, "Metadata refreshed successfully on attempt ${attempt + 1}")
+                    return@launch
+                }
+                if (attempt < METADATA_REFRESH_RETRY_COUNT - 1) {
+                    delay(METADATA_REFRESH_RETRY_DELAY_MS)
+                }
+            }
+            Log.w(TAG, "Failed to refresh metadata after $METADATA_REFRESH_RETRY_COUNT attempts")
         }
-        listener.onMediaMetadataChanged()
-        listener.onPlaybackStateChanged()
-    }
-
-    fun removeMediaMetadataListener(listener: MediaMetadataListener) {
-        listeners.remove(listener)
-        if (listeners.isEmpty()) {
-            stopCollecting()
-        }
-    }
-
-    private fun startCollecting() {
-        collectJob = scope.launch {
-            launch { mediaMetadata.collect { notifyListeners { onMediaMetadataChanged() } } }
-            launch { playbackState.collect { notifyListeners { onPlaybackStateChanged() } } }
-        }
-    }
-
-    private fun stopCollecting() {
-        collectJob?.cancel()
-        collectJob = null
-    }
-
-    private fun notifyListeners(action: MediaMetadataListener.() -> Unit) {
-        listeners.forEach { it.action() }
     }
 
     fun seekTo(time: Long) {
         activeController?.transportControls?.seekTo(time)
     }
 
-    fun getTotalDuration() = mediaMetadata.value?.getLong(MediaMetadata.METADATA_KEY_DURATION) ?: 0L
+    fun getTotalDuration(): Long =
+        mediaMetadata.value?.getLong(MediaMetadata.METADATA_KEY_DURATION) ?: 0L
 
     private fun saveLastNonNullPackageName() {
         activeController?.packageName?.takeIf { it.isNotEmpty() }?.let { pkg ->
             if (pkg != lastSavedPackageName) {
-                Settings.System.putString(
-                    context.contentResolver,
-                    "media_session_last_package_name",
-                    pkg
-                )
                 lastSavedPackageName = pkg
             }
         }
     }
 
-    fun getMediaBitmap(): Bitmap? = mediaMetadata.value?.let {
-        it.getBitmap(MediaMetadata.METADATA_KEY_ALBUM_ART) ?: 
-        it.getBitmap(MediaMetadata.METADATA_KEY_ART) ?: 
-        it.getBitmap(MediaMetadata.METADATA_KEY_DISPLAY_ICON)
-    }
-
-    fun getCurrentMediaMetadata(): MediaMetadata? {
-        return mediaMetadata.value
-    }
+    fun getCurrentMediaMetadata(): MediaMetadata? = mediaMetadata.value
 
     fun getMediaAppIcon(): Drawable? {
         val packageName = activeController?.packageName ?: return null
         return try {
-            val pm = context.packageManager
-            pm.getApplicationIcon(packageName)
-        } catch (e: PackageManager.NameNotFoundException) {
+            context.packageManager.getApplicationIcon(packageName)
+        } catch (_: PackageManager.NameNotFoundException) {
             null
         }
     }
 
-    fun isMediaControllerAvailable() = activeController?.packageName?.isNotEmpty() ?: false
+    fun isMediaControllerAvailable(): Boolean =
+        activeController?.packageName?.isNotEmpty() ?: false
 
-    fun isMediaPlaying() = playbackState.value?.state == PlaybackState.STATE_PLAYING
-
-    fun getMediaControllerPlaybackState(): PlaybackState? {
-        return activeController?.playbackState ?: null
+    fun isMediaSessionActive(): Boolean {
+        val controller = activeController ?: return false
+        val st = controller.playbackState?.state
+        return st != null &&
+            st != PlaybackState.STATE_NONE &&
+            st != PlaybackState.STATE_STOPPED &&
+            st != PlaybackState.STATE_ERROR
     }
+
+    fun isMediaPaused(): Boolean = playbackState.value?.state == PlaybackState.STATE_PAUSED
+
+    fun isMediaPlaying(): Boolean = playbackState.value?.state == PlaybackState.STATE_PLAYING
+
+    fun getMediaControllerPlaybackState(): PlaybackState? = activeController?.playbackState
 
     private fun sameSessions(a: MediaController?, b: MediaController?): Boolean {
         if (a == b) return true
-        if (a == null) return false
+        if (a == null || b == null) return false
         return a.controlsSameSession(b)
     }
 
@@ -243,15 +358,20 @@ class MediaSessionManagerHelper private constructor(private val context: Context
     }
 
     fun launchMediaPlayerApp(packageName: String) {
-        if (packageName.isNotEmpty()) {
-            val launchIntent = context.packageManager.getLaunchIntentForPackage(packageName)
-            launchIntent?.let { intent ->
-                context.startActivity(intent)
-            }
-        }
+        if (packageName.isEmpty()) return
+        val launchIntent = context.packageManager.getLaunchIntentForPackage(packageName) ?: return
+        context.startActivity(launchIntent)
     }
 
     companion object {
+        private const val TAG = "MediaSessionManagerHelper"
+
+        private const val METADATA_REFRESH_RETRY_COUNT = 5
+        private const val METADATA_REFRESH_RETRY_DELAY_MS = 300L
+
+        /** Periodic re-evaluation interval to catch stale sessions. */
+        private const val HEARTBEAT_INTERVAL_MS = 30_000L
+
         @Volatile
         private var instance: MediaSessionManagerHelper? = null
 
