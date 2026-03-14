@@ -115,7 +115,7 @@
     <string name="label_search">Pencarian</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_voice_search">Pencarian suara</string>
-    <string name="label_gemini_search">AI mode</string>
+    <string name="label_gemini_search">Mode AI</string>
     <string name="dock_music_search_title">Pencarian musik</string>
     <string name="dock_music_search_summary">Mulai pencarian musik dengan menekan ikon mikrofon</string>
     <string name="dock_search_title">Bilah pencarian Google</string>
@@ -366,10 +366,10 @@
     <string name="icon_pack_add">Instal lebih banyak</string>
     <string name="icon_pack_no_market">Tidak ada toko aplikasi yang tersedia</string>
     <!-- Wallpaper carousel -->
-    <string name="wallpaper_carousel_title">Wallpaper carousel</string>
-    <string name="wallpaper_carousel_summary">Quickly switch wallpapers from the long-press menu</string>
-    <string name="wallpaper_carousel_lockscreen_title">Apply to lock screen</string>
-    <string name="wallpaper_carousel_lockscreen_summary">Set the same wallpaper on the lock screen</string>
+    <string name="wallpaper_carousel_title">Galeri wallpaper</string>
+    <string name="wallpaper_carousel_summary">Ganti wallpaper dengan cepat dari menu tekan lama</string>
+    <string name="wallpaper_carousel_lockscreen_title">Terapkan ke layar kunci</string>
+    <string name="wallpaper_carousel_lockscreen_summary">Atur wallpaper yang sama di layar kunci</string>
     <!-- Additional shape options in customization picker -->
     <string name="pebble_shape_title">Kerikil</string>
     <string name="vessel_shape_title">Kapal</string>
