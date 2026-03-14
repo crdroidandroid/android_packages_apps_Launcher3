@@ -35,7 +35,6 @@ import java.util.Locale;
 import java.util.Map;
 
 import com.android.launcher3.quickspace.receivers.QuickSpaceActionReceiver;
-import com.android.launcher3.util.MSMHProxy;
 
 public class QuickEventsController {
 
@@ -60,6 +59,8 @@ public class QuickEventsController {
     private boolean mEventNowPlaying = false;
     private String mNowPlayingTitle;
     private String mNowPlayingArtist;
+    private Drawable mMediaIcon;
+    private OnClickListener mLaunchMediaApp = null;
     private boolean mPlayingActive = false;
 
     public QuickEventsController(Context context) {
@@ -103,11 +104,10 @@ public class QuickEventsController {
         } else {
             mEventTitleSub = mNowPlayingArtist;
         }
-        mEventSubIcon = MSMHProxy.INSTANCE(mContext).getMediaAppIcon();
+        mEventSubIcon = mMediaIcon;
         mIsQuickEvent = true;
         mEventNowPlaying = true;
-
-        mEventTitleSubAction = view -> MSMHProxy.INSTANCE(mContext).launchMediaApp();
+        mEventTitleSubAction = mLaunchMediaApp;
     }
 
     private static String formatDateTime(Context context) {
@@ -232,10 +232,13 @@ public class QuickEventsController {
         return ThreadLocalRandom.current().nextInt(min, max + 1);
     }
 
-    public void setMediaInfo(String title, String artist, boolean activePlayback) {
+    public void setMediaInfo(String title, String artist, boolean activePlayback,
+            Drawable mediaIcon, OnClickListener launchMediaApp) {
         mNowPlayingTitle = title;
         mNowPlayingArtist = artist;
         mPlayingActive = activePlayback;
+        mMediaIcon = mediaIcon;
+        mLaunchMediaApp = launchMediaApp;
     }
 
     public boolean isNowPlaying() {
