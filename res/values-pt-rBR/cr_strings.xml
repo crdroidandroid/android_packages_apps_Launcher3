@@ -53,8 +53,8 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Ao deslizar para a direita na tela inicial</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Use icon customizations in drawer</string>
-    <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
+    <string name="pref_icon_customization_title">Use ícones customizados na gaveta</string>
+    <string name="pref_icon_customization_summary">Seguir customização usado na tela inicial</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Pausar</string>
     <string name="pause_apps_dialog_title">Pausar %1$s?</string>
@@ -86,12 +86,12 @@
     <string name="restarting_launcher_changes">Reiniciando o launcher para aplicar as alterações...</string>
     <string name="updating_launcher_components">Reiniciando o launcher para atualizar seus componentes...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_title">Toque para dormir</string>
+    <string name="pref_sleep_gesture_summary">Toque duplo numa área vazia da tela de início para desligar a tela</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrar no toque para dormir</string>
+    <string name="pref_sleep_gesture_haptic_summary">Vibrar quando der duplo toque no gesto para dormir</string>
     <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
+    <string name="drawer_open_keyboard_title">Deslize para iniciar busca</string>
     <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
     <!-- Icon size -->
     <string name="icon_size_title">Tamanho do ícone</string>
@@ -115,7 +115,7 @@
     <string name="label_search">Pesquisar</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_voice_search">Pesquisa por voz</string>
-    <string name="label_gemini_search">AI mode</string>
+    <string name="label_gemini_search">Modo IA</string>
     <string name="dock_music_search_title">Pesquisa de música</string>
     <string name="dock_music_search_summary">Pesquisar músicas ao pressionar o ícone do microfone</string>
     <string name="dock_search_title">Barra de pesquisa do Google</string>
@@ -354,7 +354,7 @@
     <string name="background_blur_title">Desfoque de fundo</string>
     <string name="background_blur_summary">Definir a intensidade do desfoque para os aplicativos recentes e gaveta de aplicativos</string>
     <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
+    <string name="app_info_title">Informação do aplicativo</string>
     <string name="app_info_source">Fonte</string>
     <string name="app_info_source_system">Sistema</string>
     <string name="app_info_last_update">Última atualização</string>
@@ -366,27 +366,27 @@
     <string name="icon_pack_add">Instalar mais</string>
     <string name="icon_pack_no_market">Não há uma loja de aplicativos disponível</string>
     <!-- Wallpaper carousel -->
-    <string name="wallpaper_carousel_title">Wallpaper carousel</string>
-    <string name="wallpaper_carousel_summary">Quickly switch wallpapers from the long-press menu</string>
-    <string name="wallpaper_carousel_lockscreen_title">Apply to lock screen</string>
-    <string name="wallpaper_carousel_lockscreen_summary">Set the same wallpaper on the lock screen</string>
+    <string name="wallpaper_carousel_title">Carrossel de papel de parede</string>
+    <string name="wallpaper_carousel_summary">Trocar rapidamente papel de parede por segurar o botão menu</string>
+    <string name="wallpaper_carousel_lockscreen_title">Aplicar a tela de bloqueio</string>
+    <string name="wallpaper_carousel_lockscreen_summary">Usar o mesmo papel de parede na tela de bloqueio</string>
     <!-- Additional shape options in customization picker -->
     <string name="pebble_shape_title">Pebble</string>
     <string name="vessel_shape_title">Vessel</string>
     <string name="pure_square_shape_title">Pure square</string>
     <string name="squircle_shape_title">Squircle</string>
     <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Teardrop</string>
+    <string name="teardrop_shape_title">Gota</string>
     <string name="rounded_rect_shape_title">Rounded rect</string>
     <string name="cloudy_shape_title">Nublado</string>
-    <string name="cylindrical_shape_title">Cylindrical</string>
-    <string name="flower_shape_title">Flower</string>
-    <string name="heart_shape_title">Heart</string>
-    <string name="hexagon_shape_title">Hexagon</string>
-    <string name="ios_style_shape_title">iOS Style</string>
-    <string name="leaf_shape_title">Leaf</string>
+    <string name="cylindrical_shape_title">Cilíndrico</string>
+    <string name="flower_shape_title">Flor</string>
+    <string name="heart_shape_title">Coração</string>
+    <string name="hexagon_shape_title">Hexágono</string>
+    <string name="ios_style_shape_title">Estilo iOS</string>
+    <string name="leaf_shape_title">Folha</string>
     <string name="meow_shape_title">Meow</string>
-    <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="scroll_shape_title">Scroll</string>
-    <string name="stretched_shape_title">Stretched</string>
+    <string name="samsung_style_shape_title">Estilo Samsung</string>
+    <string name="scroll_shape_title">Rolar</string>
+    <string name="stretched_shape_title">Esticado</string>
 </resources>
