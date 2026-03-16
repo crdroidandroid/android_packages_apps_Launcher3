@@ -39,6 +39,8 @@ import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.PopupMenu;
 import android.view.MenuItem;
 
+import androidx.core.graphics.ColorUtils;
+
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.ExtendedEditText;
 import com.android.launcher3.Insettable;
@@ -179,7 +181,8 @@ public class AppsSearchContainerLayout extends ExtendedEditText
         if (LauncherPrefs.DOCK_THEME.get(context))
             color = Themes.getAttrColor(context, R.attr.qsbFillColorThemed);
 
-        color = androidx.core.graphics.ColorUtils.setAlphaComponent(color, 80);
+        int alphaValue = (LauncherPrefs.HOTSEAT_QSB_OPACITY.get(context) * 255) / 100;
+        color = ColorUtils.setAlphaComponent(color, alphaValue);
 
         PaintDrawable pd = new PaintDrawable(color);
         pd.setCornerRadius(cornerRadius);
