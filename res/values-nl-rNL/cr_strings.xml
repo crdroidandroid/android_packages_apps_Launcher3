@@ -124,10 +124,10 @@
     <string name="dock_theme_summary">Gebruik thema pictogrammen voor zoekbalk</string>
     <string name="search_radius_title">Hoekradius</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar location</string>
-    <string name="drawer_search_location_hidden">Hidden</string>
-    <string name="drawer_search_location_top">Top</string>
-    <string name="drawer_search_location_bottom">Bottom</string>
+    <string name="drawer_search_title">App zoekbalk locatie</string>
+    <string name="drawer_search_location_hidden">Verborgen</string>
+    <string name="drawer_search_location_top">Bovenaan</string>
+    <string name="drawer_search_location_bottom">Onderaan</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Wallpaper scrollen</string>
     <string name="allow_wallpaper_scrolling_summary">Wallpaper scrolleffect voor meerdere schermen</string>
@@ -392,18 +392,18 @@
     <string name="scroll_shape_title">Scrollen</string>
     <string name="stretched_shape_title">Uitgerekt</string>
     <!-- Dark app drawer text -->
-    <string name="all_apps_dark_text_title">Dark app labels</string>
-    <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
+    <string name="all_apps_dark_text_title">Donkere app labels</string>
+    <string name="all_apps_dark_text_summary">Gebruik altijd donkere tekst voor app labels in het app-overzicht</string>
     <!-- App drawer styles -->
-    <string name="drawer_style_title">App drawer style</string>
-    <string name="drawer_style_normal">Normal (bottom sheet)</string>
-    <string name="drawer_style_legacy">Legacy fullscreen</string>
-    <string name="drawer_style_list">List style</string>
-    <string name="drawer_style_oneui">OneUI style (paged)</string>
-    <string name="drawer_style_ios">iOS style (homescreen only)</string>
-    <string name="auto_add_shortcuts_forced_ios_summary">Enabled automatically while iOS style is active</string>
+    <string name="drawer_style_title">App drawer stijl</string>
+    <string name="drawer_style_normal">Normaal (ondervel)</string>
+    <string name="drawer_style_legacy">Legacy volledig scherm</string>
+    <string name="drawer_style_list">Lijst stijl</string>
+    <string name="drawer_style_oneui">OneUI stijl (paged)</string>
+    <string name="drawer_style_ios">iOS stijl (alleen beginscherm)</string>
+    <string name="auto_add_shortcuts_forced_ios_summary">Automatisch ingeschakeld terwijl iOS stijl actief is</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
-    <string name="app_drawer_sort_install_date">Sort by install date</string>
-    <string name="app_drawer_sort_usage">Sort by usage</string>
+    <string name="app_drawer_sort_alphabetical">Alfabetisch sorteren</string>
+    <string name="app_drawer_sort_install_date">Sorteren op installatiedatum</string>
+    <string name="app_drawer_sort_usage">Sorteren op gebruik</string>
 </resources>
