@@ -124,10 +124,10 @@
     <string name="dock_theme_summary">Arama çubuğunda temalı simgeler kullan</string>
     <string name="search_radius_title">Köşe yarıçapı</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar location</string>
-    <string name="drawer_search_location_hidden">Hidden</string>
-    <string name="drawer_search_location_top">Top</string>
-    <string name="drawer_search_location_bottom">Bottom</string>
+    <string name="drawer_search_title">Uygulama arama çubuğu konumu</string>
+    <string name="drawer_search_location_hidden">Gizli</string>
+    <string name="drawer_search_location_top">Üstte</string>
+    <string name="drawer_search_location_bottom">Altta</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Duvar kağıdı kaydırma</string>
     <string name="allow_wallpaper_scrolling_summary">Birden çok ekran için duvar kağıdı kaydırma efekti</string>
@@ -392,16 +392,16 @@
     <string name="scroll_shape_title">Parşömen</string>
     <string name="stretched_shape_title">Esnetilmiş</string>
     <!-- Dark app drawer text -->
-    <string name="all_apps_dark_text_title">Dark app labels</string>
-    <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
+    <string name="all_apps_dark_text_title">Koyu uygulama etiketleri</string>
+    <string name="all_apps_dark_text_summary">Uygulama çekmecesindeki uygulama etiketleri için her zaman karanlık renkte metin kullan</string>
     <!-- App drawer styles -->
-    <string name="drawer_style_title">App drawer style</string>
-    <string name="drawer_style_normal">Normal (bottom sheet)</string>
-    <string name="drawer_style_legacy">Legacy fullscreen</string>
-    <string name="drawer_style_list">List style</string>
-    <string name="drawer_style_oneui">OneUI style (paged)</string>
-    <string name="drawer_style_ios">iOS style (homescreen only)</string>
-    <string name="auto_add_shortcuts_forced_ios_summary">Enabled automatically while iOS style is active</string>
+    <string name="drawer_style_title">Uygulama çekmecesi stili</string>
+    <string name="drawer_style_normal">Normal (alttan sayfa)</string>
+    <string name="drawer_style_legacy">Eski tam ekran</string>
+    <string name="drawer_style_list">Liste stili</string>
+    <string name="drawer_style_oneui">OneUI stili (sayfalandırılmış)</string>
+    <string name="drawer_style_ios">iOS stili (sadece ana ekran)</string>
+    <string name="auto_add_shortcuts_forced_ios_summary">iOS stili aktifken kendiliğinden kullanıma alınır</string>
     <!-- App drawer sorting -->
     <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
     <string name="app_drawer_sort_install_date">Sort by install date</string>
