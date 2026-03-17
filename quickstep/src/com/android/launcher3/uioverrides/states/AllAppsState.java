@@ -15,9 +15,12 @@
  */
 package com.android.launcher3.uioverrides.states;
 
+import static com.android.app.animation.Interpolators.DECELERATE_2;
 import static com.android.launcher3.Utilities.shouldReduceWorkspaceBlurUsage;
 import static com.android.launcher3.logging.StatsLogManager.LAUNCHER_STATE_ALLAPPS;
 
+import android.app.ActivityThread;
+import android.content.Context;
 import android.graphics.Color;
 
 import androidx.core.graphics.ColorUtils;
@@ -30,6 +33,7 @@ import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.LauncherState;
 import com.android.launcher3.LauncherUiState;
 import com.android.launcher3.R;
+import com.android.launcher3.allapps.AppDrawerStyle;
 import com.android.launcher3.util.Themes;
 import com.android.launcher3.views.ActivityContext;
 import com.android.launcher3.views.ScrimColors;
@@ -139,9 +143,42 @@ public class AllAppsState extends LauncherState {
     }
 
     @Override
+    public PageAlphaProvider getWorkspacePageAlphaProvider(Launcher launcher) {
+        PageAlphaProvider superPageAlphaProvider = super.getWorkspacePageAlphaProvider(launcher);
+        return new PageAlphaProvider(DECELERATE_2) {
+            @Override
+            public float getPageAlpha(int pageIndex) {
+                // Fullscreen drawer styles cover the whole screen, so hide the home screen
+                // instead of showing it (scaled) through a translucent drawer background.
+                return isWorkspaceVisible(launcher)
+                        ? superPageAlphaProvider.getPageAlpha(pageIndex)
+                        : 0;
+            }
+        };
+    }
+
+    @Override
     public int getVisibleElements(LauncherUiState launcherUiState) {
-        return Flags.allAppsSurface() ? HOTSEAT_ICONS
-                : ALL_APPS_CONTENT | FLOATING_SEARCH_BAR | HOTSEAT_ICONS;
+        if (Flags.allAppsSurface()) {
+            // All Apps is rendered in its own surface; drawer styles don't apply there.
+            return HOTSEAT_ICONS;
+        }
+        int elements = ALL_APPS_CONTENT | FLOATING_SEARCH_BAR;
+        if (isWorkspaceVisible(ActivityThread.currentApplication())) {
+            elements |= HOTSEAT_ICONS;
+        }
+        return elements;
+    }
+
+    /**
+     * Whether the home screen (workspace pages and hotseat) stays visible behind All Apps.
+     * It is hidden for fullscreen drawer styles (fullscreen and paged).
+     */
+    private static boolean isWorkspaceVisible(Context context) {
+        if (context == null || Flags.allAppsSurface()) {
+            return true;
+        }
+        return !AppDrawerStyle.isFullscreen(AppDrawerStyle.get(context));
     }
 
     @Override
