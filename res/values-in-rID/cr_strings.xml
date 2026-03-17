@@ -124,7 +124,7 @@
     <string name="dock_theme_summary">Gunakan ikon bertema untuk bilah pencarian</string>
     <string name="search_radius_title">Radius sudut</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar location</string>
+    <string name="drawer_search_title">Lokasi bilah pencarian aplikasi</string>
     <string name="drawer_search_location_hidden">Hidden</string>
     <string name="drawer_search_location_top">Top</string>
     <string name="drawer_search_location_bottom">Bottom</string>
@@ -400,8 +400,6 @@
     <string name="drawer_style_legacy">Legacy fullscreen</string>
     <string name="drawer_style_list">List style</string>
     <string name="drawer_style_oneui">OneUI style (paged)</string>
-    <string name="drawer_style_ios">iOS style (homescreen only)</string>
-    <string name="auto_add_shortcuts_forced_ios_summary">Enabled automatically while iOS style is active</string>
     <!-- App drawer sorting -->
     <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
     <string name="app_drawer_sort_install_date">Sort by install date</string>
