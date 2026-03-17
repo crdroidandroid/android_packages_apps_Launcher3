@@ -124,10 +124,10 @@
     <string name="dock_theme_summary">Для панели поиска использовать значки из темы</string>
     <string name="search_radius_title">Радиус закругления углов</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar location</string>
-    <string name="drawer_search_location_hidden">Hidden</string>
-    <string name="drawer_search_location_top">Top</string>
-    <string name="drawer_search_location_bottom">Bottom</string>
+    <string name="drawer_search_title">Положение строки поиска</string>
+    <string name="drawer_search_location_hidden">Скрыта</string>
+    <string name="drawer_search_location_top">Сверху</string>
+    <string name="drawer_search_location_bottom">Снизу</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Прокрутка обоев</string>
     <string name="allow_wallpaper_scrolling_summary">Эффект прокрутки обоев для нескольких экранов</string>
@@ -392,18 +392,18 @@
     <string name="scroll_shape_title">Прокрутка</string>
     <string name="stretched_shape_title">Растянутый</string>
     <!-- Dark app drawer text -->
-    <string name="all_apps_dark_text_title">Dark app labels</string>
-    <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
+    <string name="all_apps_dark_text_title">Тёмные названия приложений</string>
+    <string name="all_apps_dark_text_summary">Использовать тёмный текст для названия приложений</string>
     <!-- App drawer styles -->
-    <string name="drawer_style_title">App drawer style</string>
-    <string name="drawer_style_normal">Normal (bottom sheet)</string>
-    <string name="drawer_style_legacy">Legacy fullscreen</string>
-    <string name="drawer_style_list">List style</string>
-    <string name="drawer_style_oneui">OneUI style (paged)</string>
-    <string name="drawer_style_ios">iOS style (homescreen only)</string>
-    <string name="auto_add_shortcuts_forced_ios_summary">Enabled automatically while iOS style is active</string>
+    <string name="drawer_style_title">Стиль меню приложений</string>
+    <string name="drawer_style_normal">Нормальный (нижний лист)</string>
+    <string name="drawer_style_legacy">Устаревший полноэкранный</string>
+    <string name="drawer_style_list">В виде списка</string>
+    <string name="drawer_style_oneui">Стиль OneUI (страничный)</string>
+    <string name="drawer_style_ios">iOS стиль (только на рабочем столе)</string>
+    <string name="auto_add_shortcuts_forced_ios_summary">Включается автоматически, когда активирован стиль iOS</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
-    <string name="app_drawer_sort_install_date">Sort by install date</string>
-    <string name="app_drawer_sort_usage">Sort by usage</string>
+    <string name="app_drawer_sort_alphabetical">Сортировать по алфавиту</string>
+    <string name="app_drawer_sort_install_date">Сортировать по дате установки</string>
+    <string name="app_drawer_sort_usage">По частоте использования</string>
 </resources>
