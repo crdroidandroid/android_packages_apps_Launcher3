@@ -124,10 +124,10 @@
     <string name="dock_theme_summary">A keresősávban témázott ikonok használhatók</string>
     <string name="search_radius_title">Saroklekerekítés</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar location</string>
-    <string name="drawer_search_location_hidden">Hidden</string>
-    <string name="drawer_search_location_top">Top</string>
-    <string name="drawer_search_location_bottom">Bottom</string>
+    <string name="drawer_search_title">Az alkalmazás-keresősáv helyzete</string>
+    <string name="drawer_search_location_hidden">Rejtett</string>
+    <string name="drawer_search_location_top">Felül</string>
+    <string name="drawer_search_location_bottom">Alul</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Háttérkép-görgetés</string>
     <string name="allow_wallpaper_scrolling_summary">Háttérképgörgetési effekt több képernyőre</string>
@@ -392,18 +392,18 @@
     <string name="scroll_shape_title">Papírtekercs</string>
     <string name="stretched_shape_title">Nyújtott</string>
     <!-- Dark app drawer text -->
-    <string name="all_apps_dark_text_title">Dark app labels</string>
-    <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
+    <string name="all_apps_dark_text_title">Sötét alkalmazásnevek</string>
+    <string name="all_apps_dark_text_summary">Az alkalmazásfiókban mindig sötét betűkkel írja ki az alkalmazások neveit</string>
     <!-- App drawer styles -->
-    <string name="drawer_style_title">App drawer style</string>
-    <string name="drawer_style_normal">Normal (bottom sheet)</string>
-    <string name="drawer_style_legacy">Legacy fullscreen</string>
-    <string name="drawer_style_list">List style</string>
-    <string name="drawer_style_oneui">OneUI style (paged)</string>
-    <string name="drawer_style_ios">iOS style (homescreen only)</string>
-    <string name="auto_add_shortcuts_forced_ios_summary">Enabled automatically while iOS style is active</string>
+    <string name="drawer_style_title">Az alkalmazásfiók stílusa</string>
+    <string name="drawer_style_normal">Megszokott (alsó lap)</string>
+    <string name="drawer_style_legacy">Örökölt fullképernyős</string>
+    <string name="drawer_style_list">Lista stílusú</string>
+    <string name="drawer_style_oneui">OneUI stílusú (oldalas)</string>
+    <string name="drawer_style_ios">iOS stílusú (csak főképernyő)</string>
+    <string name="auto_add_shortcuts_forced_ios_summary">Automatikusan engedélyezett, amíg az iOS stílus aktív</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
-    <string name="app_drawer_sort_install_date">Sort by install date</string>
-    <string name="app_drawer_sort_usage">Sort by usage</string>
+    <string name="app_drawer_sort_alphabetical">A-B-C sorrend</string>
+    <string name="app_drawer_sort_install_date">Dátum szerinti sorrend</string>
+    <string name="app_drawer_sort_usage">Használat szerinti sorrend</string>
 </resources>
