@@ -20,6 +20,7 @@ import static com.android.launcher3.logging.StatsLogManager.LAUNCHER_STATE_ALLAP
 
 import android.content.Context;
 import android.graphics.Color;
+import android.app.ActivityThread;
 
 import androidx.core.graphics.ColorUtils;
 
@@ -32,6 +33,7 @@ import com.android.launcher3.LauncherState;
 import com.android.launcher3.LauncherUiState;
 import com.android.launcher3.R;
 import com.android.launcher3.util.Themes;
+import com.android.launcher3.allapps.AppDrawerStyle;
 import com.android.launcher3.views.ActivityContext;
 import com.android.launcher3.views.ScrimColors;
 import com.android.quickstep.util.BaseDepthController;
@@ -160,7 +162,7 @@ public class AllAppsState extends LauncherState {
         return new PageAlphaProvider(DECELERATE_2) {
             @Override
             public float getPageAlpha(int pageIndex) {
-                return isWorkspaceVisible(launcher.getDeviceProfile())
+                return isWorkspaceVisible(launcher, launcher.getDeviceProfile())
                         ? superPageAlphaProvider.getPageAlpha(pageIndex)
                         : 0;
             }
@@ -170,14 +172,19 @@ public class AllAppsState extends LauncherState {
     @Override
     public int getVisibleElements(LauncherUiState launcherUiState) {
         int elements = ALL_APPS_CONTENT | FLOATING_SEARCH_BAR;
-        if (isWorkspaceVisible(launcherUiState.getDeviceProfileRef().getValue())) {
+        Context context = ActivityThread.currentApplication();
+        if (isWorkspaceVisible(context, launcherUiState.getDeviceProfileRef().getValue())) {
             elements |= HOTSEAT_ICONS;
         }
         return elements;
     }
 
-    private static boolean isWorkspaceVisible(DeviceProfile deviceProfile) {
-        return deviceProfile.getDeviceProperties().isTablet() || (Flags.allAppsSheetForHandheld() && Flags.allAppsBlur());
+    private static boolean isWorkspaceVisible(Context context, DeviceProfile deviceProfile) {
+        if (context != null) {
+            String style = AppDrawerStyle.get(context);
+            return !AppDrawerStyle.isFullscreen(style) && !AppDrawerStyle.isVerticalPaged(style);
+        }
+        return deviceProfile.getDeviceProperties().isTablet();
     }
 
     @Override
