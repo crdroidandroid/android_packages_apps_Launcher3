@@ -53,8 +53,8 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Ana sayfadan sağa kaydırdığınızda</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Çekmecede ikon özelleştirmelerini kullan</string>
-    <string name="pref_icon_customization_summary">Ana ekranda kullanılan ikon özelleştirmelerini takip et</string>
+    <string name="pref_icon_customization_title">Çekmecede simge kişiselleştirmelerini kullan</string>
+    <string name="pref_icon_customization_summary">Ana ekranda kullanılan simge kişiselleştirmelerini takip et</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Duraklat</string>
     <string name="pause_apps_dialog_title">%1$s duraklatılsın mı?</string>
@@ -403,7 +403,7 @@
     <string name="drawer_style_ios">iOS stili (sadece ana ekran)</string>
     <string name="auto_add_shortcuts_forced_ios_summary">iOS stili aktifken kendiliğinden kullanıma alınır</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
-    <string name="app_drawer_sort_install_date">Sort by install date</string>
-    <string name="app_drawer_sort_usage">Sort by usage</string>
+    <string name="app_drawer_sort_alphabetical">Alfabe sırası</string>
+    <string name="app_drawer_sort_install_date">Kurulum tarihine göre sırala</string>
+    <string name="app_drawer_sort_usage">Kullanıma göre sırala</string>
 </resources>
