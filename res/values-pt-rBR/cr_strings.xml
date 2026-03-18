@@ -406,4 +406,8 @@
     <string name="color_picker_green">Verde</string>
     <string name="color_picker_blue">Azul</string>
     <string name="color_picker_hex">HEX</string>
+
+    <!-- Hide homescreen menu -->
+    <string name="pref_lock_homescreen_menu_title">Bloquear menu da tela inicial</string>
+    <string name="pref_lock_homescreen_menu_summary">Desativar o gesto de segurar para mostrar as opções da tela inicial</string>
 </resources>

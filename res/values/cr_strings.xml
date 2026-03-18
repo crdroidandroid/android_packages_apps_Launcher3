@@ -478,4 +478,8 @@
     <string name="color_picker_green">Green</string>
     <string name="color_picker_blue">Blue</string>
     <string name="color_picker_hex">HEX</string>
+
+    <!-- Hide homescreen menu -->
+    <string name="pref_lock_homescreen_menu_title">Lock home screen menu</string>
+    <string name="pref_lock_homescreen_menu_summary">Disable long-press gesture to show home screen options</string>
 </resources>

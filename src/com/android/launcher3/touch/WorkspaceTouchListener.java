@@ -212,6 +212,10 @@ public class WorkspaceTouchListener extends GestureDetector.SimpleOnGestureListe
 
     private void maybeShowMenu() {
         if (mLongPressState == STATE_REQUESTED) {
+            if (LauncherPrefs.LOCK_HOMESCREEN_MENU.get(mLauncher)) {
+                cancelLongPress();
+                return;
+            }
             TestLogging.recordEvent(TestProtocol.SEQUENCE_MAIN, "Workspace.longPress");
             if (canHandleLongPress()) {
                 mLongPressState = STATE_PENDING_PARENT_INFORM;

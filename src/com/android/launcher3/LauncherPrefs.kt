@@ -294,6 +294,7 @@ constructor(@ApplicationContext private val encryptedContext: Context) {
         @JvmField val ROW_HEIGHT = backedUpItem("pref_row_height", 100)
         @JvmField val SEARCH_RADIUS_SIZE = backedUpItem("pref_search_radius_size", 100)
         @JvmField val SERAPHIX_HOLDER_ID = backedUpItem("pref_seraphix_holder_id", -1)
+        @JvmField val LOCK_HOMESCREEN_MENU = backedUpItem("pref_lock_homescreen_menu", false)
         @JvmField val SHORT_PARALLAX = backedUpItem("pref_short_parallax", false)
         @JvmField val SHOW_DESKTOP_LABELS = backedUpItem("pref_desktop_show_labels", true)
         @JvmField val SHOW_DRAWER_LABELS = backedUpItem("pref_drawer_show_labels", true)
