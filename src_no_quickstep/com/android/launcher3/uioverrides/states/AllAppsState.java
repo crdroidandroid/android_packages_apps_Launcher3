@@ -108,10 +108,18 @@ public class AllAppsState extends LauncherState {
 
     @Override
     public ScrimColors getWorkspaceScrimColor(Launcher launcher) {
+        int color;
+        if (LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_ENABLED.get(launcher)) {
+            color = com.android.launcher3.Utilities.isDarkTheme(launcher)
+                    ? LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_DARK.get(launcher)
+                    : LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_LIGHT.get(launcher);
+        } else {
+            color = launcher.getDeviceProfile().getDeviceProperties().isTablet()
+                    ? launcher.getResources().getColor(R.color.widgets_picker_scrim)
+                    : Themes.getAttrColor(launcher, R.attr.allAppsScrimColor);
+        }
         int scrimColor = ColorUtils.setAlphaComponent(
-                launcher.getDeviceProfile().getDeviceProperties().isTablet()
-                ? launcher.getResources().getColor(R.color.widgets_picker_scrim)
-                : Themes.getAttrColor(launcher, R.attr.allAppsScrimColor),
+                color,
                 LauncherPrefs.APP_DRAWER_OPACITY.get(launcher) * 255 / 100);
         return new ScrimColors(
                 /* backgroundColor */ scrimColor,

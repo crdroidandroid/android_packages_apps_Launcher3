@@ -207,7 +207,11 @@ public class AllAppsState extends LauncherState {
     public ScrimColors getWorkspaceScrimColor(Launcher launcher) {
         int backgroundColor;
         int scrimColor;
-        if (!launcher.getDeviceProfile().shouldShowAllAppsOnSheet(launcher)) {
+        if (LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_ENABLED.get(launcher)) {
+            backgroundColor = com.android.launcher3.Utilities.isDarkTheme(launcher)
+                    ? LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_DARK.get(launcher)
+                    : LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_LIGHT.get(launcher);
+        } else if (!launcher.getDeviceProfile().shouldShowAllAppsOnSheet(launcher)) {
             // Always use an opaque scrim if there's no sheet.
             backgroundColor = launcher.getResources().getColor(R.color.materialColorSurfaceDim);
         } else if (!Flags.allAppsBlur()) {
