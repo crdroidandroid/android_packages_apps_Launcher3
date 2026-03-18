@@ -97,6 +97,12 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
         }
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        LauncherAppState.INSTANCE.executeIfCreated(app -> app.checkIfRestartNeeded());
+    }
+
     private boolean startPreference(String fragment, Bundle args, String key) {
         if (getSupportFragmentManager().isStateSaved()) {
             // Sometimes onClick can come after onPause because of being posted on the handler.

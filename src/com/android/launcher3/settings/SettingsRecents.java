@@ -110,6 +110,7 @@ public class SettingsRecents extends CollapsingToolbarBaseActivity
     public void onDestroy() {
         super.onDestroy();
         LauncherPrefs.getPrefs(this).unregisterOnSharedPreferenceChangeListener(this);
+        LauncherAppState.INSTANCE.executeIfCreated(app -> app.checkIfRestartNeeded());
     }
 
     @Override

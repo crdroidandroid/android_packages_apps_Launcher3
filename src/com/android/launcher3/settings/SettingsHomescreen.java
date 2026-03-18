@@ -109,6 +109,7 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
     public void onDestroy() {
         super.onDestroy();
         LauncherPrefs.getPrefs(this).unregisterOnSharedPreferenceChangeListener(this);
+        LauncherAppState.INSTANCE.executeIfCreated(app -> app.checkIfRestartNeeded());
     }
 
     @Override
@@ -133,7 +134,9 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
                 LauncherPrefs.SHOW_QUICKSPACE_WEATHER_CITY.getSharedPrefKey().equals(key) ||
                 LauncherPrefs.SHOW_QUICKSPACE_WEATHER_PROVIDER.getSharedPrefKey().equals(key) ||
                 LauncherPrefs.SHOW_QUICKSPACE_WEATHER_TEXT.getSharedPrefKey().equals(key) ||
-                LauncherPrefs.AUTO_HIDE_DOTS.getSharedPrefKey().equals(key)) {
+                LauncherPrefs.AUTO_HIDE_DOTS.getSharedPrefKey().equals(key) ||
+                LauncherPrefs.HIDE_HOME_SETTINGS.getSharedPrefKey().equals(key) ||
+                LauncherPrefs.HIDE_WIDGETS_OPTION.getSharedPrefKey().equals(key)) {
             LauncherAppState.INSTANCE.executeIfCreated(app -> app.setNeedsRestart());
         }
     }
