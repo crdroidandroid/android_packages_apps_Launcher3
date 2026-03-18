@@ -408,4 +408,21 @@
     <!-- Accessibility announcement for closing the nudge window. [CHAR_LIMIT=16] -->
     <string name="nudge_a11y_close">Close</string>
     <string name="nudge_a11y_image">Nudge image</string>
+
+    <string name="back_gesture_spoken_intro_subtitle">To go back to the last screen, swipe with 2 fingers from the left or right edge to the middle of the screen.</string>
+    <string name="default_device_name">device</string>
+    <string name="gesture_tutorial_action_button_label_cancel">Cancel</string>
+    <string name="gesture_tutorial_action_button_label_skip">Skip</string>
+    <string name="home_gesture_spoken_intro_subtitle">Swipe up with 2 fingers from the bottom of the screen. This gesture always takes you to the Home screen.</string>
+    <string name="overview_gesture_spoken_intro_subtitle">To switch between apps, swipe up with 2 fingers from the bottom of your screen, hold, then release.</string>
+    <string name="skip_tutorial_dialog_subtitle">You can find this later in the <xliff:g id="NAME">%1$s</xliff:g> app</string>
+    <string name="skip_tutorial_dialog_title">Skip navigation tutorial?</string>
+    <string name="task_view_closed">Task Closed</string>
+    <string name="taskbar_a11y_hidden_title">Taskbar hidden</string>
+    <string name="taskbar_a11y_hidden_with_bubbles_title">Taskbar &amp; bubbles hidden</string>
+    <string name="taskbar_a11y_shown_title">Taskbar shown</string>
+    <string name="taskbar_a11y_shown_with_bubbles_left_title">Taskbar &amp; bubbles left shown</string>
+    <string name="taskbar_a11y_shown_with_bubbles_right_title">Taskbar &amp; bubbles right shown</string>
+
+    <string name="hotseat_prediction_content_description">Predicted app: <xliff:g id="title" example="Chrome">%1$s</xliff:g></string>
 </resources>
