@@ -124,8 +124,10 @@
     <string name="dock_theme_summary">Выкарыстоўвайце тэматычныя значкі для радка пошуку</string>
     <string name="search_radius_title">Радыус вугла</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Панэль пошуку праграмы</string>
-    <string name="drawer_search_summary">Панэль пошуку ў верхняй частцы меню праграм</string>
+    <string name="drawer_search_title">App search bar location</string>
+    <string name="drawer_search_location_hidden">Hidden</string>
+    <string name="drawer_search_location_top">Top</string>
+    <string name="drawer_search_location_bottom">Bottom</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Пракрутка шпалер</string>
     <string name="allow_wallpaper_scrolling_summary">Эфект пракруткі шпалер для некалькіх экранаў</string>
@@ -389,4 +391,17 @@
     <string name="samsung_style_shape_title">Samsung Style</string>
     <string name="scroll_shape_title">Scroll</string>
     <string name="stretched_shape_title">Stretched</string>
+    <!-- Dark app drawer text -->
+    <string name="all_apps_dark_text_title">Dark app labels</string>
+    <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
+    <!-- App drawer styles -->
+    <string name="drawer_style_title">App drawer style</string>
+    <string name="drawer_style_normal">Normal (bottom sheet)</string>
+    <string name="drawer_style_legacy">Legacy fullscreen</string>
+    <string name="drawer_style_list">List style</string>
+    <string name="drawer_style_oneui">OneUI style (paged)</string>
+    <!-- App drawer sorting -->
+    <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
+    <string name="app_drawer_sort_install_date">Sort by install date</string>
+    <string name="app_drawer_sort_usage">Sort by usage</string>
 </resources>
