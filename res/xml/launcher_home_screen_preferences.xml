@@ -24,9 +24,17 @@
         android:title="@string/general_category_title">
 
         <SwitchPreferenceCompat
-            android:key="pref_lock_homescreen_menu"
-            android:title="@string/pref_lock_homescreen_menu_title"
-            android:summary="@string/pref_lock_homescreen_menu_summary"
+            android:key="pref_hide_home_settings"
+            android:title="@string/pref_hide_home_settings_title"
+            android:summary="@string/pref_hide_home_settings_summary"
+            android:defaultValue="false"
+            android:persistent="true"
+            launcher:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="pref_hide_widgets_option"
+            android:title="@string/pref_hide_widgets_option_title"
+            android:summary="@string/pref_hide_widgets_option_summary"
             android:defaultValue="false"
             android:persistent="true"
             launcher:iconSpaceReserved="false" />

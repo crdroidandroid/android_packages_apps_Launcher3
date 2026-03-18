@@ -224,12 +224,15 @@ public class OptionsPopupView<T extends Context & ActivityContext> extends Arrow
      */
     public static ArrayList<OptionItem> getOptions(Launcher launcher) {
         ArrayList<OptionItem> options = new ArrayList<>();
-        options.add(new OptionItem(launcher,
-                R.string.settings_title,
-                R.drawable.ic_setting,
-                LAUNCHER_SETTINGS_BUTTON_TAP_OR_LONGPRESS,
-                OptionsPopupView::startSettings));
-        if (WIDGETS_ENABLED && !LauncherPrefs.WORKSPACE_LOCK.get(launcher)) {
+        if (!LauncherPrefs.HIDE_HOME_SETTINGS.get(launcher)) {
+            options.add(new OptionItem(launcher,
+                    R.string.settings_title,
+                    R.drawable.ic_setting,
+                    LAUNCHER_SETTINGS_BUTTON_TAP_OR_LONGPRESS,
+                    OptionsPopupView::startSettings));
+        }
+        if (WIDGETS_ENABLED && !LauncherPrefs.WORKSPACE_LOCK.get(launcher)
+                && !LauncherPrefs.HIDE_WIDGETS_OPTION.get(launcher)) {
             options.add(new OptionItem(launcher,
                     R.string.widget_button_text,
                     R.drawable.ic_widget,

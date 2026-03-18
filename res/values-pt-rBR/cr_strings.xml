@@ -407,7 +407,9 @@
     <string name="color_picker_blue">Azul</string>
     <string name="color_picker_hex">HEX</string>
 
-    <!-- Hide homescreen menu -->
-    <string name="pref_lock_homescreen_menu_title">Bloquear menu da tela inicial</string>
-    <string name="pref_lock_homescreen_menu_summary">Desativar o gesto de segurar para mostrar as opções da tela inicial</string>
+    <!-- Hide homescreen menu options -->
+    <string name="pref_hide_home_settings_title">Ocultar Configurações da tela inicial</string>
+    <string name="pref_hide_home_settings_summary">Ocultar \'Configurações da tela inicial\' do menu ao segurar na tela inicial</string>
+    <string name="pref_hide_widgets_option_title">Ocultar Widgets</string>
+    <string name="pref_hide_widgets_option_summary">Ocultar \'Widgets\' do menu ao segurar na tela inicial</string>
 </resources>
