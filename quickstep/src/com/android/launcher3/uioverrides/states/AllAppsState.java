@@ -23,13 +23,10 @@ import android.app.ActivityThread;
 import android.content.Context;
 import android.graphics.Color;
 
-import androidx.core.graphics.ColorUtils;
-
 import com.android.internal.jank.Cuj;
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Flags;
 import com.android.launcher3.Launcher;
-import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.LauncherState;
 import com.android.launcher3.LauncherUiState;
 import com.android.launcher3.R;
@@ -210,9 +207,10 @@ public class AllAppsState extends LauncherState {
             // No scrim.
             return super.getWorkspaceScrimColor(launcher);
         }
-        int backgroundColor = ColorUtils.setAlphaComponent(
-                Themes.getAttrColor(launcher, R.attr.allAppsScrimColor),
-                LauncherPrefs.APP_DRAWER_OPACITY.get(launcher) * 255 / 100);
+        int backgroundColor = AppDrawerStyle.applyDrawerOpacity(launcher,
+                AppDrawerStyle.isCustomColorEnabled(launcher)
+                        ? AppDrawerStyle.getCustomBackgroundColor(launcher)
+                        : Themes.getAttrColor(launcher, R.attr.allAppsScrimColor));
         return new ScrimColors(backgroundColor, /* foregroundColor */ Color.TRANSPARENT);
     }
 }

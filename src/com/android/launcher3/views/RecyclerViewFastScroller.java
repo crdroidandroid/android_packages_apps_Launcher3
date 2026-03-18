@@ -50,6 +50,7 @@ import com.android.launcher3.FastScrollRecyclerView;
 import com.android.launcher3.Flags;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
+import com.android.launcher3.allapps.AppDrawerStyle;
 import com.android.launcher3.allapps.LetterListTextView;
 import com.android.launcher3.graphics.FastScrollThumbDrawable;
 import com.android.launcher3.util.Themes;
@@ -173,11 +174,13 @@ public class RecyclerViewFastScroller extends View {
 
         mFastScrollerLocation = FastScrollerLocation.UNKNOWN_SCROLLER;
         mTrackPaint = new Paint();
-        mTrackPaint.setColor(Themes.getAttrColor(context, android.R.attr.textColorPrimary));
+        mTrackPaint.setColor(AppDrawerStyle.isCustomColorEnabled(context)
+                ? AppDrawerStyle.getContentColor(context)
+                : Themes.getAttrColor(context, android.R.attr.textColorPrimary));
         mTrackPaint.setAlpha(MAX_TRACK_ALPHA);
 
         mThumbColor = Themes.getColorAccent(context);
-        mThumbLetterScrollerColor = context.getColor(R.color.materialColorSurfaceBright);
+        mThumbLetterScrollerColor = AppDrawerStyle.getSearchBackgroundColor(context);
         mThumbPaint = new Paint();
         mThumbPaint.setAntiAlias(true);
         mThumbPaint.setColor(mThumbColor);

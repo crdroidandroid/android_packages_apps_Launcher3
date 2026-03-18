@@ -200,6 +200,9 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     private int mHeaderColor;
     private int mBottomSheetBackgroundColorBlurFallback;
     private int mBottomSheetBackgroundColorOverBlur;
+    /** Custom drawer color with opacity applied; used when {@link #mUseCustomBackgroundColor}. */
+    private boolean mUseCustomBackgroundColor;
+    private int mCustomBackgroundColor = Color.TRANSPARENT;
     private int mTabsProtectionAlpha;
     @Nullable private AllAppsTransitionController mAllAppsTransitionController;
 
@@ -229,7 +232,10 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
 
         mHeaderThreshold = getResources().getDimensionPixelSize(
                 R.dimen.dynamic_grid_cell_border_spacing);
-        mHeaderProtectionColor = Themes.getAttrColor(context, R.attr.allappsHeaderProtectionColor);
+        // With a custom drawer color, protect the header with that color instead of the theme's.
+        mHeaderProtectionColor = AppDrawerStyle.isCustomColorEnabled(context)
+                ? AppDrawerStyle.getCustomBackgroundColor(context)
+                : Themes.getAttrColor(context, R.attr.allappsHeaderProtectionColor);
 
         mWorkManager = new WorkProfileManager(
                 this,
@@ -358,6 +364,10 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
         mBottomSheetBackgroundColorBlurFallback = getContext().getColor(
                 Utilities.isDarkTheme(getContext()) ? android.R.color.system_accent2_800
                         : android.R.color.system_accent2_200);
+        mUseCustomBackgroundColor = AppDrawerStyle.isCustomColorEnabled(getContext());
+        mCustomBackgroundColor = mUseCustomBackgroundColor
+                ? AppDrawerStyle.getCustomBackgroundColorWithOpacity(getContext())
+                : Color.TRANSPARENT;
 
         mSearchUiManager.initializeSearch(this);
         if (useModelRepositoryBinding()) {
@@ -959,6 +969,9 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     }
 
     int getBackgroundColor() {
+        if (mUseCustomBackgroundColor) {
+            return mCustomBackgroundColor;
+        }
         return isBackgroundBlurEnabled()
                 ? mBottomSheetBackgroundColorOverBlur
                 : mBottomSheetBackgroundColorBlurFallback;

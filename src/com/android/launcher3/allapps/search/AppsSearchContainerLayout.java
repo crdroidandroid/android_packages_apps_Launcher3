@@ -23,8 +23,9 @@ import static com.android.launcher3.Utilities.prefixTextWithIcon;
 import static com.android.launcher3.icons.IconNormalizer.ICON_VISIBLE_AREA_FACTOR;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.PaintDrawable;
@@ -36,6 +37,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup.MarginLayoutParams;
 
+import androidx.core.graphics.ColorUtils;
+
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.ExtendedEditText;
 import com.android.launcher3.Insettable;
@@ -43,6 +46,7 @@ import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.allapps.ActivityAllAppsContainerView;
+import com.android.launcher3.allapps.AppDrawerStyle;
 import com.android.launcher3.allapps.AllAppsStore;
 import com.android.launcher3.allapps.BaseAllAppsAdapter.AdapterItem;
 import com.android.launcher3.allapps.PrivateProfileManager;
@@ -153,13 +157,23 @@ public class AppsSearchContainerLayout extends ExtendedEditText
         int shift = expectedLeft - left;
         setTranslationX(shift);
 
-        if (Utilities.showQSB(getContext()) && !LauncherPrefs.DOCK_THEME.get(getContext())) {
-            setCompoundDrawablesRelativeWithIntrinsicBounds(gIcon, null, null, null);
-        } else if (Utilities.showQSB(getContext()) && LauncherPrefs.DOCK_THEME.get(getContext())) {
-            setCompoundDrawablesRelativeWithIntrinsicBounds(gIconThemed, null, null, null);
+        final boolean showQsb = Utilities.showQSB(getContext());
+        final boolean dockTheme = LauncherPrefs.DOCK_THEME.get(getContext());
+        Drawable startIcon;
+        if (showQsb && !dockTheme) {
+            startIcon = gIcon;
+        } else if (showQsb) {
+            startIcon = gIconThemed;
         } else {
-            setCompoundDrawablesRelativeWithIntrinsicBounds(sIcon, null, null, null);
+            startIcon = sIcon;
         }
+        // Tint monochrome icons to match custom drawer colors; never tint the colored G logo.
+        if (startIcon != null && (!showQsb || dockTheme)
+                && AppDrawerStyle.isCustomColorEnabled(getContext())) {
+            startIcon = startIcon.mutate();
+            startIcon.setTintList(ColorStateList.valueOf(getSearchContentColor()));
+        }
+        setCompoundDrawablesRelativeWithIntrinsicBounds(startIcon, null, null, null);
 
         offsetTopAndBottom(mContentOverlap);
 
@@ -169,13 +183,24 @@ public class AppsSearchContainerLayout extends ExtendedEditText
     private void setUpBackground() {
         Context context = getContext();
         float cornerRadius = getCornerRadius(context);
-        int color = Themes.getAttrColor(context, R.attr.qsbFillColor);
-        if (LauncherPrefs.DOCK_THEME.get(context))
-            color = Themes.getAttrColor(context, R.attr.qsbFillColorThemed);
+        int color = Themes.getAttrColor(context, LauncherPrefs.DOCK_THEME.get(context)
+                ? R.attr.qsbFillColorThemed : R.attr.qsbFillColor);
+        // Follows a custom drawer color; otherwise keeps the stock (or themed) fill.
+        color = AppDrawerStyle.getSearchBackgroundColor(context, color);
         PaintDrawable pd = new PaintDrawable(color);
         pd.setCornerRadius(cornerRadius);
         setClipToOutline(cornerRadius > 0);
         setBackground(pd);
+        if (AppDrawerStyle.isCustomColorEnabled(context)) {
+            int contentColor = getSearchContentColor();
+            setTextColor(contentColor);
+            setHintTextColor(ColorUtils.setAlphaComponent(contentColor,
+                    AppDrawerStyle.HINT_ALPHA));
+        }
+    }
+
+    private int getSearchContentColor() {
+        return AppDrawerStyle.getSearchContentColor(getContext(), getCurrentTextColor());
     }
 
     private float getCornerRadius(Context context) {
