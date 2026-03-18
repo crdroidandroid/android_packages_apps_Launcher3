@@ -969,20 +969,34 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     }
 
     private int getScrimColor() {
+        int color;
+        if (LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_ENABLED.get(mContext)) {
+            color = Utilities.isDarkTheme(mContext)
+                    ? LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_DARK.get(mContext)
+                    : LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_LIGHT.get(mContext);
+        } else {
+            color = Themes.getAttrColor(mContext, R.attr.allAppsScrimColor);
+        }
         return ColorUtils.setAlphaComponent(
-                Themes.getAttrColor(mContext, R.attr.allAppsScrimColor),
+                color,
                 LauncherPrefs.APP_DRAWER_OPACITY.get(mContext) * 255 / 100);
     }
 
     int getBottomSheetBackgroundColor() {
         int bgColor;
-        if (!Flags.allAppsBlur()) {
-            bgColor = mBottomSheetBackgroundColorLegacy;
-        } else if (!mActivityContext.isAllAppsBackgroundBlurEnabled()) {
-            // Don't apply any alpha if the blur is disabled.
-            bgColor = mBottomSheetBackgroundColorBlurFallback;
+        if (LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_ENABLED.get(mContext)) {
+            bgColor = Utilities.isDarkTheme(mContext)
+                    ? LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_DARK.get(mContext)
+                    : LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_LIGHT.get(mContext);
         } else {
-            bgColor = mBottomSheetBackgroundColorOverBlur;
+            if (!Flags.allAppsBlur()) {
+                bgColor = mBottomSheetBackgroundColorLegacy;
+            } else if (!mActivityContext.isAllAppsBackgroundBlurEnabled()) {
+                // Don't apply any alpha if the blur is disabled.
+                bgColor = mBottomSheetBackgroundColorBlurFallback;
+            } else {
+                bgColor = mBottomSheetBackgroundColorOverBlur;
+            }
         }
         return ColorUtils.setAlphaComponent(
                 bgColor, LauncherPrefs.APP_DRAWER_OPACITY.get(mContext) * 255 / 100);
