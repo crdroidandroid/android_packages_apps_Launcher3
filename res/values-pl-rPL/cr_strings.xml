@@ -124,8 +124,10 @@
     <string name="dock_theme_summary">Użyj ikon tematycznych dla paska wyszukiwania</string>
     <string name="search_radius_title">Zaokrąglenie rogów</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Pasek wyszukiwania aplikacji</string>
-    <string name="drawer_search_summary">Pasek wyszukiwania u góry szuflady aplikacji</string>
+    <string name="drawer_search_title">Lokalizacja paska wyszukiwania aplikacji</string>
+    <string name="drawer_search_location_hidden">Ukryty</string>
+    <string name="drawer_search_location_top">U góry</string>
+    <string name="drawer_search_location_bottom">Na dole</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Przewijane tapety</string>
     <string name="allow_wallpaper_scrolling_summary">Efekt przewijania tapety dla wielu ekranów</string>
@@ -389,4 +391,17 @@
     <string name="samsung_style_shape_title">Samsung</string>
     <string name="scroll_shape_title">Zwój</string>
     <string name="stretched_shape_title">Rozciągnięty</string>
+    <!-- Dark app drawer text -->
+    <string name="all_apps_dark_text_title">Ciemne etykiety aplikacji</string>
+    <string name="all_apps_dark_text_summary">W szufladzie aplikacji zawsze używaj ciemnego tekstu dla etykiet aplikacji</string>
+    <!-- App drawer styles -->
+    <string name="drawer_style_title">Styl szuflady aplikacji</string>
+    <string name="drawer_style_normal">Normalny (dolny arkusz)</string>
+    <string name="drawer_style_legacy">Klasyczny tryb pełnoekranowy</string>
+    <string name="drawer_style_list">Styl listy</string>
+    <string name="drawer_style_oneui">Styl OneUI (stronicowy)</string>
+    <!-- App drawer sorting -->
+    <string name="app_drawer_sort_alphabetical">Sortuj alfabetycznie</string>
+    <string name="app_drawer_sort_install_date">Sortuj według daty instalacji</string>
+    <string name="app_drawer_sort_usage">Sortuj według użycia</string>
 </resources>

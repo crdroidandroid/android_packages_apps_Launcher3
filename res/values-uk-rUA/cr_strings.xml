@@ -124,8 +124,10 @@
     <string name="dock_theme_summary">Використовувати тематичні іконки для панелі пошуку</string>
     <string name="search_radius_title">Радіус округлення</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Панель пошуку додатків</string>
-    <string name="drawer_search_summary">Рядок пошуку зверху списку додатків</string>
+    <string name="drawer_search_title">Позиція панелі пошуку додатків</string>
+    <string name="drawer_search_location_hidden">Прихований</string>
+    <string name="drawer_search_location_top">Зверху</string>
+    <string name="drawer_search_location_bottom">Знизу</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Прокручування шпалер</string>
     <string name="allow_wallpaper_scrolling_summary">Ефект прокрутки шпалер для декількох екранів</string>
@@ -389,4 +391,17 @@
     <string name="samsung_style_shape_title">Samsung Style</string>
     <string name="scroll_shape_title">Прокрутка</string>
     <string name="stretched_shape_title">Розтягнутий</string>
+    <!-- Dark app drawer text -->
+    <string name="all_apps_dark_text_title">Темні мітки додатків</string>
+    <string name="all_apps_dark_text_summary">Завжди використовувати темний текст для підписів додатків у меню додатків</string>
+    <!-- App drawer styles -->
+    <string name="drawer_style_title">Стиль меню програм</string>
+    <string name="drawer_style_normal">Звичайний (нижній простил)</string>
+    <string name="drawer_style_legacy">Застарілий повноекранний режим</string>
+    <string name="drawer_style_list">Стиль списку</string>
+    <string name="drawer_style_oneui">Стиль OneUI (сторінково)</string>
+    <!-- App drawer sorting -->
+    <string name="app_drawer_sort_alphabetical">Сортувати за алфавітом</string>
+    <string name="app_drawer_sort_install_date">Сортувати за датою встановлення</string>
+    <string name="app_drawer_sort_usage">Сортувати за використанням</string>
 </resources>

@@ -53,8 +53,8 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">When you swipe right from main Home screen</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Use icon customizations in drawer</string>
-    <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
+    <string name="pref_icon_customization_title">Използвай персонализирани икони в чекмеджето</string>
+    <string name="pref_icon_customization_summary">Следва персонализирани икони от началният екран</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Пауза</string>
     <string name="pause_apps_dialog_title">Временно спиране на %1$s?</string>
@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">Рестартиране на launcher-a за прилагане на промените...</string>
     <string name="updating_launcher_components">Рестартиране на launcher-а за обновение на зомпоненти...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_title">Натисни да заспи</string>
+    <string name="pref_sleep_gesture_summary">Направи двоен натиск при празно място на екрана, за да се изключи екранът</string>
+    <string name="pref_sleep_gesture_haptic_title">Вибрирай на двоен натиск за заспиване</string>
+    <string name="pref_sleep_gesture_haptic_summary">Проведи тактилна обратна връзка на жест за двоен натиск за заспиване</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Плъзни, за да започнеш търсене</string>
     <string name="drawer_open_keyboard_summary">Показвай клавиатурата винаги когато списъкът с приложения е видим</string>
@@ -115,7 +115,7 @@
     <string name="label_search">Търсене</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_voice_search">Гласово търсене</string>
-    <string name="label_gemini_search">AI mode</string>
+    <string name="label_gemini_search">Режим на ИИ</string>
     <string name="dock_music_search_title">Търсене на музика</string>
     <string name="dock_music_search_summary">Започни търсене на музика при натискане на иконата на микрофона</string>
     <string name="dock_search_title">Google лента за търсене</string>
@@ -124,8 +124,10 @@
     <string name="dock_theme_summary">Използване на тематични икони за лентата за търсене</string>
     <string name="search_radius_title">Радиус на ъгъл</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Лента за търсене на приложения</string>
-    <string name="drawer_search_summary">Лента за търсене в горната част на чекмеджето с приложения</string>
+    <string name="drawer_search_title">App search bar location</string>
+    <string name="drawer_search_location_hidden">Hidden</string>
+    <string name="drawer_search_location_top">Top</string>
+    <string name="drawer_search_location_bottom">Bottom</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Превъртане на тапета</string>
     <string name="allow_wallpaper_scrolling_summary">Ефект на превъртане на тапета за няколко екрана</string>
@@ -366,27 +368,40 @@
     <string name="icon_pack_add">Инсталиране на още</string>
     <string name="icon_pack_no_market">Няма наличен магазин за приложения</string>
     <!-- Wallpaper carousel -->
-    <string name="wallpaper_carousel_title">Wallpaper carousel</string>
-    <string name="wallpaper_carousel_summary">Quickly switch wallpapers from the long-press menu</string>
-    <string name="wallpaper_carousel_lockscreen_title">Apply to lock screen</string>
-    <string name="wallpaper_carousel_lockscreen_summary">Set the same wallpaper on the lock screen</string>
+    <string name="wallpaper_carousel_title">Въртележка на тапети</string>
+    <string name="wallpaper_carousel_summary">Бързо смени тапети от менюто за дълго задържане</string>
+    <string name="wallpaper_carousel_lockscreen_title">Приложи на закл. екран</string>
+    <string name="wallpaper_carousel_lockscreen_summary">Приложи същия тапет на закл. екран</string>
     <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pebble</string>
-    <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Teardrop</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="pebble_shape_title">Камъче</string>
+    <string name="vessel_shape_title">Съд</string>
+    <string name="pure_square_shape_title">Остър квадрат</string>
+    <string name="squircle_shape_title">Комбинация от кръг и квадрат</string>
+    <string name="tapered_rect_shape_title">Скосен правоъгълник</string>
+    <string name="teardrop_shape_title">Сълза</string>
+    <string name="rounded_rect_shape_title">Закръглен правоъгълник</string>
     <string name="cloudy_shape_title">Облачно</string>
-    <string name="cylindrical_shape_title">Cylindrical</string>
-    <string name="flower_shape_title">Flower</string>
-    <string name="heart_shape_title">Heart</string>
-    <string name="hexagon_shape_title">Hexagon</string>
-    <string name="ios_style_shape_title">iOS Style</string>
-    <string name="leaf_shape_title">Leaf</string>
-    <string name="meow_shape_title">Meow</string>
-    <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="scroll_shape_title">Scroll</string>
-    <string name="stretched_shape_title">Stretched</string>
+    <string name="cylindrical_shape_title">Цилиндрично</string>
+    <string name="flower_shape_title">Цвете</string>
+    <string name="heart_shape_title">Сърце</string>
+    <string name="hexagon_shape_title">Шестоъгълник</string>
+    <string name="ios_style_shape_title">Стил на iOS</string>
+    <string name="leaf_shape_title">Листо</string>
+    <string name="meow_shape_title">Мяу</string>
+    <string name="samsung_style_shape_title">Стил на Samsung</string>
+    <string name="scroll_shape_title">Карта</string>
+    <string name="stretched_shape_title">Разтегнато</string>
+    <!-- Dark app drawer text -->
+    <string name="all_apps_dark_text_title">Dark app labels</string>
+    <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
+    <!-- App drawer styles -->
+    <string name="drawer_style_title">App drawer style</string>
+    <string name="drawer_style_normal">Normal (bottom sheet)</string>
+    <string name="drawer_style_legacy">Legacy fullscreen</string>
+    <string name="drawer_style_list">List style</string>
+    <string name="drawer_style_oneui">OneUI style (paged)</string>
+    <!-- App drawer sorting -->
+    <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
+    <string name="app_drawer_sort_install_date">Sort by install date</string>
+    <string name="app_drawer_sort_usage">Sort by usage</string>
 </resources>

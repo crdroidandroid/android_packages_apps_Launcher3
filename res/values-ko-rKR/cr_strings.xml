@@ -124,8 +124,10 @@
     <string name="dock_theme_summary">테마형 아이콘을 검색 바에 사용</string>
     <string name="search_radius_title">모서리 각도</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">앱 검색창</string>
-    <string name="drawer_search_summary">앱서랍 상단에 검색창</string>
+    <string name="drawer_search_title">App search bar location</string>
+    <string name="drawer_search_location_hidden">Hidden</string>
+    <string name="drawer_search_location_top">Top</string>
+    <string name="drawer_search_location_bottom">Bottom</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">배경화면 스크롤</string>
     <string name="allow_wallpaper_scrolling_summary">여러개의 화면을 위한 배경화면 스크롤링 효과</string>
@@ -389,4 +391,17 @@
     <string name="samsung_style_shape_title">Samsung Style</string>
     <string name="scroll_shape_title">Scroll</string>
     <string name="stretched_shape_title">Stretched</string>
+    <!-- Dark app drawer text -->
+    <string name="all_apps_dark_text_title">Dark app labels</string>
+    <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
+    <!-- App drawer styles -->
+    <string name="drawer_style_title">App drawer style</string>
+    <string name="drawer_style_normal">Normal (bottom sheet)</string>
+    <string name="drawer_style_legacy">Legacy fullscreen</string>
+    <string name="drawer_style_list">List style</string>
+    <string name="drawer_style_oneui">OneUI style (paged)</string>
+    <!-- App drawer sorting -->
+    <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
+    <string name="app_drawer_sort_install_date">Sort by install date</string>
+    <string name="app_drawer_sort_usage">Sort by usage</string>
 </resources>

@@ -124,8 +124,10 @@
     <string name="dock_theme_summary">为搜索栏使用主题图标</string>
     <string name="search_radius_title">圆角半径</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">应用搜索栏</string>
-    <string name="drawer_search_summary">抽屉顶部搜索栏</string>
+    <string name="drawer_search_title">应用搜索栏位置</string>
+    <string name="drawer_search_location_hidden">隐藏</string>
+    <string name="drawer_search_location_top">顶部</string>
+    <string name="drawer_search_location_bottom">底部</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">壁纸滚动</string>
     <string name="allow_wallpaper_scrolling_summary">壁纸随屏幕滚动</string>
@@ -389,4 +391,17 @@
     <string name="samsung_style_shape_title">Samsung 样式</string>
     <string name="scroll_shape_title">卷轴</string>
     <string name="stretched_shape_title">拉伸</string>
+    <!-- Dark app drawer text -->
+    <string name="all_apps_dark_text_title">暗色应用标签</string>
+    <string name="all_apps_dark_text_summary">应用抽屉里的应用标签总是使用暗色文本</string>
+    <!-- App drawer styles -->
+    <string name="drawer_style_title">应用抽屉样式</string>
+    <string name="drawer_style_normal">正常(底部)</string>
+    <string name="drawer_style_legacy">传统全屏</string>
+    <string name="drawer_style_list">列表样式</string>
+    <string name="drawer_style_oneui">OneUI 样式(页面)</string>
+    <!-- App drawer sorting -->
+    <string name="app_drawer_sort_alphabetical">按字母顺序排序</string>
+    <string name="app_drawer_sort_install_date">按安装日期排序</string>
+    <string name="app_drawer_sort_usage">按使用情况排序</string>
 </resources>
