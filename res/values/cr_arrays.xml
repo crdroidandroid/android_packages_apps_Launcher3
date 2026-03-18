@@ -55,4 +55,13 @@
         <item>horizontal_list</item>
         <item>vertical</item>
     </string-array>
+
+    <string-array name="welcome_message_variants">
+        <item>Thank you for choosing us</item>
+        <item>Loving us? Send us a beer</item>
+        <item>Best Rom Ever.</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Tap here to begin</item>
+        <item>We love you 3000</item>
+    </string-array>
 </resources>
