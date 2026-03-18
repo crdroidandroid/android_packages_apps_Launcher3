@@ -124,8 +124,10 @@
     <string name="dock_theme_summary">Symboldesigns in der Suchleiste verwenden</string>
     <string name="search_radius_title">Eckenradius</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App-Suchleiste</string>
-    <string name="drawer_search_summary">Suchleiste oben in der App-Übersicht</string>
+    <string name="drawer_search_title">Position der App-Suchleiste</string>
+    <string name="drawer_search_location_hidden">Ausgeblendet</string>
+    <string name="drawer_search_location_top">Oben</string>
+    <string name="drawer_search_location_bottom">Unten</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Hintergrundbild-Bewegung</string>
     <string name="allow_wallpaper_scrolling_summary">Hintergrundbild-Bewegung beim Seitenwechsel</string>
@@ -389,4 +391,17 @@
     <string name="samsung_style_shape_title">Samsung-Stil</string>
     <string name="scroll_shape_title">Schriftrolle</string>
     <string name="stretched_shape_title">Gedehnt</string>
+    <!-- Dark app drawer text -->
+    <string name="all_apps_dark_text_title">Dunkle App-Beschriftungen</string>
+    <string name="all_apps_dark_text_summary">Immer dunklen Text für App-Namen in App-Übersicht verwenden</string>
+    <!-- App drawer styles -->
+    <string name="drawer_style_title">Stil der App-Übersicht</string>
+    <string name="drawer_style_normal">Normal (Seiten unten)</string>
+    <string name="drawer_style_legacy">Vollbild (alt)</string>
+    <string name="drawer_style_list">Listenstil</string>
+    <string name="drawer_style_oneui">OneUI-Stil (Seiten)</string>
+    <!-- App drawer sorting -->
+    <string name="app_drawer_sort_alphabetical">Alphabetisch sortieren</string>
+    <string name="app_drawer_sort_install_date">Nach Installationsdatum sortieren</string>
+    <string name="app_drawer_sort_usage">Nach Nutzung sortieren</string>
 </resources>

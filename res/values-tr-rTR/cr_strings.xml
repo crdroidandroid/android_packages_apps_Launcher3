@@ -53,8 +53,8 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Ana sayfadan sağa kaydırdığınızda</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Use icon customizations in drawer</string>
-    <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
+    <string name="pref_icon_customization_title">Çekmecede simge kişiselleştirmelerini kullan</string>
+    <string name="pref_icon_customization_summary">Ana ekranda kullanılan simge kişiselleştirmelerini takip et</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Duraklat</string>
     <string name="pause_apps_dialog_title">%1$s duraklatılsın mı?</string>
@@ -115,7 +115,7 @@
     <string name="label_search">Ara</string>
     <string name="label_lens">Google lens</string>
     <string name="label_voice_search">Sesli arama</string>
-    <string name="label_gemini_search">Yapay Zeka mod\'u</string>
+    <string name="label_gemini_search">AI modu</string>
     <string name="dock_music_search_title">Müzik ara</string>
     <string name="dock_music_search_summary">Mikrofon simgesine basarak müzik aramayı başlatın</string>
     <string name="dock_search_title">Google arama çubuğu</string>
@@ -124,8 +124,10 @@
     <string name="dock_theme_summary">Arama çubuğunda temalı simgeler kullan</string>
     <string name="search_radius_title">Köşe yarıçapı</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Uygulama arama çubuğu</string>
-    <string name="drawer_search_summary">Uygulama sayfasının üstündeki arama çubuğu</string>
+    <string name="drawer_search_title">Uygulama arama çubuğu konumu</string>
+    <string name="drawer_search_location_hidden">Gizli</string>
+    <string name="drawer_search_location_top">Üstte</string>
+    <string name="drawer_search_location_bottom">Altta</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Duvar kağıdı kaydırma</string>
     <string name="allow_wallpaper_scrolling_summary">Birden çok ekran için duvar kağıdı kaydırma efekti</string>
@@ -371,22 +373,35 @@
     <string name="wallpaper_carousel_lockscreen_title">Kilit ekranına uygula</string>
     <string name="wallpaper_carousel_lockscreen_summary">Aynı duvar kağıdını kilit ekranına uygula</string>
     <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pebble</string>
-    <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Teardrop</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="pebble_shape_title">Çakıl</string>
+    <string name="vessel_shape_title">Gemi</string>
+    <string name="pure_square_shape_title">Düz kare</string>
+    <string name="squircle_shape_title">Karemsi</string>
+    <string name="tapered_rect_shape_title">Konik dikdörtgen</string>
+    <string name="teardrop_shape_title">Damla</string>
+    <string name="rounded_rect_shape_title">Yuvarlak dikdörtgen</string>
     <string name="cloudy_shape_title">Bulutlu</string>
-    <string name="cylindrical_shape_title">Cylindrical</string>
-    <string name="flower_shape_title">Flower</string>
-    <string name="heart_shape_title">Heart</string>
-    <string name="hexagon_shape_title">Hexagon</string>
-    <string name="ios_style_shape_title">iOS Style</string>
-    <string name="leaf_shape_title">Leaf</string>
-    <string name="meow_shape_title">Meow</string>
-    <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="scroll_shape_title">Scroll</string>
-    <string name="stretched_shape_title">Stretched</string>
+    <string name="cylindrical_shape_title">Silindirik</string>
+    <string name="flower_shape_title">Çiçek</string>
+    <string name="heart_shape_title">Kalp</string>
+    <string name="hexagon_shape_title">Altıgen</string>
+    <string name="ios_style_shape_title">iOS tarzı</string>
+    <string name="leaf_shape_title">Yaprak</string>
+    <string name="meow_shape_title">Miyav</string>
+    <string name="samsung_style_shape_title">Samsung tarzı</string>
+    <string name="scroll_shape_title">Parşömen</string>
+    <string name="stretched_shape_title">Esnetilmiş</string>
+    <!-- Dark app drawer text -->
+    <string name="all_apps_dark_text_title">Koyu uygulama etiketleri</string>
+    <string name="all_apps_dark_text_summary">Uygulama çekmecesindeki uygulama etiketleri için her zaman karanlık renkte metin kullan</string>
+    <!-- App drawer styles -->
+    <string name="drawer_style_title">Uygulama çekmecesi stili</string>
+    <string name="drawer_style_normal">Normal (alttan sayfa)</string>
+    <string name="drawer_style_legacy">Eski tam ekran</string>
+    <string name="drawer_style_list">Liste stili</string>
+    <string name="drawer_style_oneui">OneUI stili (sayfalandırılmış)</string>
+    <!-- App drawer sorting -->
+    <string name="app_drawer_sort_alphabetical">Alfabe sırası</string>
+    <string name="app_drawer_sort_install_date">Kurulum tarihine göre sırala</string>
+    <string name="app_drawer_sort_usage">Kullanıma göre sırala</string>
 </resources>

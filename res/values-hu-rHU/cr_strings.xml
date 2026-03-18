@@ -124,8 +124,10 @@
     <string name="dock_theme_summary">A keresősávban témázott ikonok használhatók</string>
     <string name="search_radius_title">Saroklekerekítés</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Alkalmazásfiók-keresősáv</string>
-    <string name="drawer_search_summary">A keresősáv az Alkalmazásfiók tetején</string>
+    <string name="drawer_search_title">Az alkalmazás-keresősáv helyzete</string>
+    <string name="drawer_search_location_hidden">Rejtett</string>
+    <string name="drawer_search_location_top">Felül</string>
+    <string name="drawer_search_location_bottom">Alul</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Háttérkép-görgetés</string>
     <string name="allow_wallpaper_scrolling_summary">Háttérképgörgetési effekt több képernyőre</string>
@@ -389,4 +391,17 @@
     <string name="samsung_style_shape_title">Samsung-stílus</string>
     <string name="scroll_shape_title">Papírtekercs</string>
     <string name="stretched_shape_title">Nyújtott</string>
+    <!-- Dark app drawer text -->
+    <string name="all_apps_dark_text_title">Sötét alkalmazásnevek</string>
+    <string name="all_apps_dark_text_summary">Az alkalmazásfiókban mindig sötét betűkkel írja ki az alkalmazások neveit</string>
+    <!-- App drawer styles -->
+    <string name="drawer_style_title">Az alkalmazásfiók stílusa</string>
+    <string name="drawer_style_normal">Megszokott (alsó lap)</string>
+    <string name="drawer_style_legacy">Örökölt fullképernyős</string>
+    <string name="drawer_style_list">Lista stílusú</string>
+    <string name="drawer_style_oneui">OneUI stílusú (oldalas)</string>
+    <!-- App drawer sorting -->
+    <string name="app_drawer_sort_alphabetical">A-B-C sorrend</string>
+    <string name="app_drawer_sort_install_date">Dátum szerinti sorrend</string>
+    <string name="app_drawer_sort_usage">Használat szerinti sorrend</string>
 </resources>

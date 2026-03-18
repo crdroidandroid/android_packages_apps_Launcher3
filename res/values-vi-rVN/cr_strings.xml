@@ -124,8 +124,10 @@
     <string name="dock_theme_summary">Dùng biểu tượng theo chủ đề cho thanh tìm kiếm</string>
     <string name="search_radius_title">Bán kính góc</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Hiện thanh tìm kiếm</string>
-    <string name="drawer_search_summary">Hiện thanh tìm kiếm ứng dụng</string>
+    <string name="drawer_search_title">Vị trí thanh tìm kiếm ứng dụng</string>
+    <string name="drawer_search_location_hidden">Ẩn</string>
+    <string name="drawer_search_location_top">Trên cùng</string>
+    <string name="drawer_search_location_bottom">Dưới cùng</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Cuộn hình nền</string>
     <string name="allow_wallpaper_scrolling_summary">Hiệu ứng cuộn hình nền cho nhiều màn hình</string>
@@ -390,4 +392,17 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="samsung_style_shape_title">Samsung Style</string>
     <string name="scroll_shape_title">Scroll</string>
     <string name="stretched_shape_title">Stretched</string>
+    <!-- Dark app drawer text -->
+    <string name="all_apps_dark_text_title">Nhãn ứng dụng tối</string>
+    <string name="all_apps_dark_text_summary">Luôn dùng chữ tối cho nhãn ứng dụng trong khay ứng dụng</string>
+    <!-- App drawer styles -->
+    <string name="drawer_style_title">Kiểu khay ứng dụng</string>
+    <string name="drawer_style_normal">Bình thường</string>
+    <string name="drawer_style_legacy">Toàn màn hình kiểu cũ</string>
+    <string name="drawer_style_list">Kiểu danh sách</string>
+    <string name="drawer_style_oneui">Giao diện kiểu OneUI (phân trang)</string>
+    <!-- App drawer sorting -->
+    <string name="app_drawer_sort_alphabetical">Sắp xếp theo chữ cái</string>
+    <string name="app_drawer_sort_install_date">Sắp xếp theo ngày cài đặt</string>
+    <string name="app_drawer_sort_usage">Sắp xếp theo mức sử dụng</string>
 </resources>
