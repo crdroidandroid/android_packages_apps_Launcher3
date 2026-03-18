@@ -72,8 +72,8 @@ public class ColorPreference extends Preference {
     }
 
     private void showColorPickerDialog() {
-        Context context = getContext();
-        context.setTheme(com.android.settingslib.collapsingtoolbar.R.style.Theme_Material3_DynamicColors_DayNight);
+        Context context = new android.view.ContextThemeWrapper(getContext(),
+                R.style.Theme_Material3_DynamicColors_DayNight);
         View root = LayoutInflater.from(context).inflate(R.layout.color_picker_dialog, null);
 
         final View preview = root.findViewById(R.id.color_picker_preview);
