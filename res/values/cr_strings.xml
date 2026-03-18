@@ -478,4 +478,10 @@
     <string name="color_picker_green">Green</string>
     <string name="color_picker_blue">Blue</string>
     <string name="color_picker_hex">HEX</string>
+
+    <!-- Hide homescreen menu options -->
+    <string name="pref_hide_home_settings_title">Hide Home settings</string>
+    <string name="pref_hide_home_settings_summary">Hide \'Home settings\' from the home screen long-press menu</string>
+    <string name="pref_hide_widgets_option_title">Hide Widgets</string>
+    <string name="pref_hide_widgets_option_summary">Hide \'Widgets\' from the home screen long-press menu</string>
 </resources>

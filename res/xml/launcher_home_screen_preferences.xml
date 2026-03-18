@@ -24,6 +24,22 @@
         android:title="@string/general_category_title">
 
         <SwitchPreferenceCompat
+            android:key="pref_hide_home_settings"
+            android:title="@string/pref_hide_home_settings_title"
+            android:summary="@string/pref_hide_home_settings_summary"
+            android:defaultValue="false"
+            android:persistent="true"
+            launcher:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="pref_hide_widgets_option"
+            android:title="@string/pref_hide_widgets_option_title"
+            android:summary="@string/pref_hide_widgets_option_summary"
+            android:defaultValue="false"
+            android:persistent="true"
+            launcher:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
             android:defaultValue="false"
             android:key="pref_workspace_lock"
             android:persistent="true"
