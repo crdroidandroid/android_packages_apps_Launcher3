@@ -124,8 +124,10 @@
     <string name="dock_theme_summary">Folosește pictograme tematice pentru bara de căutare</string>
     <string name="search_radius_title">Raza de colț</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">Bara de căutare aplicaţii</string>
-    <string name="drawer_search_summary">Bara de căutare în partea de sus a sertarului de aplicații</string>
+    <string name="drawer_search_title">Locație bară de căutare aplicații</string>
+    <string name="drawer_search_location_hidden">Ascuns</string>
+    <string name="drawer_search_location_top">Sus</string>
+    <string name="drawer_search_location_bottom">Jos</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Derulare fundal</string>
     <string name="allow_wallpaper_scrolling_summary">Efect de derulare fundal pentru mai multe ecrane</string>
@@ -389,4 +391,17 @@
     <string name="samsung_style_shape_title">Stil Samsung</string>
     <string name="scroll_shape_title">Derulare</string>
     <string name="stretched_shape_title">Întins</string>
+    <!-- Dark app drawer text -->
+    <string name="all_apps_dark_text_title">Etichete întunecate pentru aplicații</string>
+    <string name="all_apps_dark_text_summary">Utilizați întotdeauna textul întunecat pentru etichetele aplicațiilor în sertarul de aplicații</string>
+    <!-- App drawer styles -->
+    <string name="drawer_style_title">Stil aplicație sertar</string>
+    <string name="drawer_style_normal">Normal (foi de bază)</string>
+    <string name="drawer_style_legacy">Ecran complet vechi</string>
+    <string name="drawer_style_list">Stil listă</string>
+    <string name="drawer_style_oneui">Stilul OneUI (pagină)</string>
+    <!-- App drawer sorting -->
+    <string name="app_drawer_sort_alphabetical">Sortează alfabetic</string>
+    <string name="app_drawer_sort_install_date">Sortează după data instalării</string>
+    <string name="app_drawer_sort_usage">Sortare după utilizare</string>
 </resources>
