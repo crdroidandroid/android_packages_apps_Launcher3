@@ -405,18 +405,18 @@
     <string name="app_drawer_sort_install_date">Nach Installationsdatum sortieren</string>
     <string name="app_drawer_sort_usage">Nach Nutzung sortieren</string>
     <!-- App drawer color -->
-    <string name="pref_app_drawer_custom_color_title">Custom background color</string>
-    <string name="pref_app_drawer_custom_color_summary">Use a custom color for the app drawer background</string>
-    <string name="pref_app_drawer_custom_color_light_title">Light mode color</string>
-    <string name="pref_app_drawer_custom_color_dark_title">Dark mode color</string>
+    <string name="pref_app_drawer_custom_color_title">Benutzerdefinierte Hintergrundfarbe</string>
+    <string name="pref_app_drawer_custom_color_summary">Benutzerdefinierte Farbe für Hintergrund der App-Übersicht verwenden</string>
+    <string name="pref_app_drawer_custom_color_light_title">Farbe bei hellem Design</string>
+    <string name="pref_app_drawer_custom_color_dark_title">Farbe bei dunklem Design</string>
     <!-- Color Picker -->
     <string name="color_picker_hsb">HSB</string>
     <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Hue</string>
-    <string name="color_picker_saturation">Saturation</string>
-    <string name="color_picker_brightness">Brightness</string>
-    <string name="color_picker_red">Red</string>
-    <string name="color_picker_green">Green</string>
-    <string name="color_picker_blue">Blue</string>
+    <string name="color_picker_hue">Farbton</string>
+    <string name="color_picker_saturation">Sättigung</string>
+    <string name="color_picker_brightness">Helligkeit</string>
+    <string name="color_picker_red">Rot</string>
+    <string name="color_picker_green">Grün</string>
+    <string name="color_picker_blue">Blau</string>
     <string name="color_picker_hex">HEX</string>
 </resources>
