@@ -404,13 +404,11 @@
     <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
     <string name="app_drawer_sort_install_date">Sort by install date</string>
     <string name="app_drawer_sort_usage">Sort by usage</string>
-
     <!-- App drawer color -->
     <string name="pref_app_drawer_custom_color_title">Cor de fundo personalizada</string>
     <string name="pref_app_drawer_custom_color_summary">Usar uma cor personalizada para o fundo da gaveta de aplicativos</string>
     <string name="pref_app_drawer_custom_color_light_title">Cor no modo claro</string>
     <string name="pref_app_drawer_custom_color_dark_title">Cor no modo escuro</string>
-
     <!-- Color Picker -->
     <string name="color_picker_hsb">HSB</string>
     <string name="color_picker_rgb">RGB</string>
