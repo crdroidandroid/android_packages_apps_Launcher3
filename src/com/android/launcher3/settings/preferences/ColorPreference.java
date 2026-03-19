@@ -73,16 +73,24 @@ public class ColorPreference extends Preference {
 
     private void showColorPickerDialog() {
         Context context = getContext();
+        Context dialogContext = context;
+
         int themeId = context.getResources().getIdentifier(
                 "Theme.Material3.DynamicColors.DayNight", "style", context.getPackageName());
         if (themeId == 0) {
             themeId = context.getResources().getIdentifier(
                     "Theme.MaterialComponents.DayNight", "style", context.getPackageName());
         }
-        if (themeId != 0) {
-            context = new android.view.ContextThemeWrapper(context, themeId);
+        if (themeId == 0) {
+            themeId = context.getResources().getIdentifier(
+                    "Theme.AppCompat.DayNight", "style", context.getPackageName());
         }
-        View root = LayoutInflater.from(context).inflate(R.layout.color_picker_dialog, null);
+
+        if (themeId != 0) {
+            dialogContext = new android.view.ContextThemeWrapper(context, themeId);
+        }
+
+        View root = LayoutInflater.from(dialogContext).inflate(R.layout.color_picker_dialog, null);
 
         final View preview = root.findViewById(R.id.color_picker_preview);
         final TabLayout tabs = root.findViewById(R.id.color_picker_tabs);
@@ -192,7 +200,7 @@ public class ColorPreference extends Preference {
 
         updateUI.run();
 
-        new AlertDialog.Builder(context)
+        new AlertDialog.Builder(dialogContext)
             .setTitle(getTitle())
             .setView(root)
             .setPositiveButton(android.R.string.ok, (dialog, which) -> {
