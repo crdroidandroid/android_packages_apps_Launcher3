@@ -108,13 +108,13 @@ public class ColorPreference extends Preference {
         final EditText editHex = root.findViewById(R.id.edit_hex);
 
         final int[] currentColor = {mColor};
+        final float[] hsv = new float[3];
+        Color.colorToHSV(mColor, hsv);
 
         Runnable updateUI = () -> {
             updatePreview(preview, currentColor[0]);
             editHex.setText(String.format("#%08X", currentColor[0]));
 
-            float[] hsv = new float[3];
-            Color.colorToHSV(currentColor[0], hsv);
             sliderHue.setValue(hsv[0]);
             sliderSaturation.setValue(hsv[1] * 100);
             sliderBrightness.setValue(hsv[2] * 100);
@@ -143,8 +143,12 @@ public class ColorPreference extends Preference {
 
         Slider.OnChangeListener hsbListener = (slider, value, fromUser) -> {
             if (fromUser) {
-                float[] hsv = {sliderHue.getValue(), sliderSaturation.getValue() / 100f, sliderBrightness.getValue() / 100f};
-                currentColor[0] = Color.HSVToColor(hsv);
+                hsv[0] = sliderHue.getValue();
+                hsv[1] = sliderSaturation.getValue() / 100f;
+                hsv[2] = sliderBrightness.getValue() / 100f;
+                int alpha = Color.alpha(currentColor[0]);
+                currentColor[0] = Color.HSVToColor(alpha, hsv);
+
                 updatePreview(preview, currentColor[0]);
                 editHex.setText(String.format("#%08X", currentColor[0]));
                 sliderRed.setValue(Color.red(currentColor[0]));
@@ -158,10 +162,14 @@ public class ColorPreference extends Preference {
 
         Slider.OnChangeListener rgbListener = (slider, value, fromUser) -> {
             if (fromUser) {
-                currentColor[0] = Color.rgb((int)sliderRed.getValue(), (int)sliderGreen.getValue(), (int)sliderBlue.getValue());
+                int r = (int) sliderRed.getValue();
+                int g = (int) sliderGreen.getValue();
+                int b = (int) sliderBlue.getValue();
+                int alpha = Color.alpha(currentColor[0]);
+                currentColor[0] = Color.argb(alpha, r, g, b);
+
                 updatePreview(preview, currentColor[0]);
                 editHex.setText(String.format("#%08X", currentColor[0]));
-                float[] hsv = new float[3];
                 Color.colorToHSV(currentColor[0], hsv);
                 sliderHue.setValue(hsv[0]);
                 sliderSaturation.setValue(hsv[1] * 100);
@@ -183,7 +191,6 @@ public class ColorPreference extends Preference {
                         currentColor[0] = color;
                         updatePreview(preview, currentColor[0]);
                         // update sliders without triggering infinite loop
-                        float[] hsv = new float[3];
                         Color.colorToHSV(currentColor[0], hsv);
                         sliderHue.setValue(hsv[0]);
                         sliderSaturation.setValue(hsv[1] * 100);
