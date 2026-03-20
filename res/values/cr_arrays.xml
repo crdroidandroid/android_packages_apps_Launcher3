@@ -55,4 +55,17 @@
         <item>horizontal_list</item>
         <item>vertical</item>
     </string-array>
+
+    <!-- App drawer sorting -->
+    <string-array name="app_drawer_sort_mode_entries">
+        <item>@string/app_drawer_sort_alphabetical</item>
+        <item>@string/app_drawer_sort_install_date</item>
+        <item>@string/app_drawer_sort_usage</item>
+    </string-array>
+
+    <string-array name="app_drawer_sort_mode_values" translatable="false">
+        <item>alphabetical</item>
+        <item>install_date</item>
+        <item>usage</item>
+    </string-array>
 </resources>
