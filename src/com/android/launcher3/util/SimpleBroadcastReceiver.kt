@@ -35,6 +35,8 @@ constructor(
     private val intentConsumer: Consumer<Intent>,
 ) : BroadcastReceiver(), SafeCloseable {
 
+    private var closed = false
+
     override fun onReceive(context: Context, intent: Intent) {
         intentConsumer.accept(intent)
     }
@@ -56,6 +58,7 @@ constructor(
         completionCallback: Runnable? = null,
     ) = apply {
         executor.execute {
+            if (closed) return@execute
             context.registerReceiver(this, filter, permission, callbackExecutor.handler, flags)
 
             if (completionCallback != null) {
@@ -67,6 +70,7 @@ constructor(
     /** Unregister broadcast receiver */
     override fun close() {
         executor.execute {
+            closed = true
             try {
                 context.unregisterReceiver(this)
             } catch (e: IllegalArgumentException) {
