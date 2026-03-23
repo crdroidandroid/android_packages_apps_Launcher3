@@ -86,7 +86,7 @@
     <string name="restarting_launcher_changes">Đang mở lại trình khởi chạy để áp dụng thay đổi...</string>
     <string name="updating_launcher_components">Đang mở lại trình khởi chạy để cập nhật các thành phần...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Chạm để tắt</string>
+    <string name="pref_sleep_gesture_title">Chạm để tắt màn hình</string>
     <string name="pref_sleep_gesture_summary">Nhấn đúp vào một vùng trống trên màn hình chính để tắt màn hình</string>
     <string name="pref_sleep_gesture_haptic_title">Rung khi chạm để tắt</string>
     <string name="pref_sleep_gesture_haptic_summary">Cung cấp phản hồi xúc giác khi chạm hai lần để kích hoạt cử chỉ tắt</string>
@@ -397,7 +397,7 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="all_apps_dark_text_summary">Luôn dùng chữ tối cho nhãn ứng dụng trong khay ứng dụng</string>
     <!-- App drawer styles -->
     <string name="drawer_style_title">Kiểu khay ứng dụng</string>
-    <string name="drawer_style_normal">Bình thường (đáy tấm)</string>
+    <string name="drawer_style_normal">Bình thường (đáy sheet)</string>
     <string name="drawer_style_legacy">Toàn màn hình kiểu cũ</string>
     <string name="drawer_style_list">Kiểu danh sách</string>
     <string name="drawer_style_oneui">Giao diện kiểu OneUI (phân trang)</string>
