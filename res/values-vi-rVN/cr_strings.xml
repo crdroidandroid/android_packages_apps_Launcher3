@@ -92,7 +92,7 @@
     <string name="pref_sleep_gesture_haptic_summary">Cung cấp phản hồi xúc giác khi chạm hai lần để kích hoạt cử chỉ tắt</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Vuốt để bắt đầu tìm kiếm</string>
-    <string name="drawer_open_keyboard_summary">Mở bàn phím bất cứ khi nào ngăn kéo ứng dụng hiển thị</string>
+    <string name="drawer_open_keyboard_summary">Hiện bàn phím khi màn hình ứng dụng mở ra</string>
     <!-- Icon size -->
     <string name="icon_size_title">Kích thước biểu tượng</string>
     <!-- Font size -->
@@ -386,7 +386,7 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="flower_shape_title">Hoa</string>
     <string name="heart_shape_title">Trái tim</string>
     <string name="hexagon_shape_title">Lục giác</string>
-    <string name="ios_style_shape_title">Kiểu iOS</string>
+    <string name="ios_style_shape_title">iOS</string>
     <string name="leaf_shape_title">Lá</string>
     <string name="meow_shape_title">Meo</string>
     <string name="samsung_style_shape_title">Kiểu Samsung</string>
