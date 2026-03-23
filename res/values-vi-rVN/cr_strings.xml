@@ -53,8 +53,8 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Khi vuốt trượt sang trái</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Use icon customizations in drawer</string>
-    <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
+    <string name="pref_icon_customization_title">Sử dụng biểu tượng tùy chỉnh trong ngăn kéo</string>
+    <string name="pref_icon_customization_summary">Biểu tượng được tùy chỉnh giống trên màn hình chính</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Tạm dừng</string>
     <string name="pause_apps_dialog_title">Tạm dừng %1$s?</string>
@@ -374,30 +374,30 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="wallpaper_carousel_lockscreen_title">Áp dụng cho màn hình khóa</string>
     <string name="wallpaper_carousel_lockscreen_summary">Đặt cùng một hình nền cho màn hình khóa</string>
     <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pebble</string>
+    <string name="pebble_shape_title">Đá cuội</string>
     <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Teardrop</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="pure_square_shape_title">Vuông vắn</string>
+    <string name="squircle_shape_title">Vuông cạnh bo tròn</string>
+    <string name="tapered_rect_shape_title">Chữ nhật</string>
+    <string name="teardrop_shape_title">Giọt nước</string>
+    <string name="rounded_rect_shape_title">Bát giác chữ nhật</string>
     <string name="cloudy_shape_title">Trời nhiều mây</string>
-    <string name="cylindrical_shape_title">Cylindrical</string>
-    <string name="flower_shape_title">Flower</string>
-    <string name="heart_shape_title">Heart</string>
-    <string name="hexagon_shape_title">Hexagon</string>
-    <string name="ios_style_shape_title">iOS Style</string>
-    <string name="leaf_shape_title">Leaf</string>
-    <string name="meow_shape_title">Meow</string>
-    <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="scroll_shape_title">Scroll</string>
-    <string name="stretched_shape_title">Stretched</string>
+    <string name="cylindrical_shape_title">Trụ</string>
+    <string name="flower_shape_title">Hoa</string>
+    <string name="heart_shape_title">Trái tim</string>
+    <string name="hexagon_shape_title">Lục giác</string>
+    <string name="ios_style_shape_title">Kiểu iOS</string>
+    <string name="leaf_shape_title">Lá</string>
+    <string name="meow_shape_title">Meo</string>
+    <string name="samsung_style_shape_title">Kiểu Samsung</string>
+    <string name="scroll_shape_title">Cuộn</string>
+    <string name="stretched_shape_title">Giãn</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Nhãn ứng dụng tối</string>
     <string name="all_apps_dark_text_summary">Luôn dùng chữ tối cho nhãn ứng dụng trong khay ứng dụng</string>
     <!-- App drawer styles -->
     <string name="drawer_style_title">Kiểu khay ứng dụng</string>
-    <string name="drawer_style_normal">Bình thường</string>
+    <string name="drawer_style_normal">Bình thường (đáy tấm)</string>
     <string name="drawer_style_legacy">Toàn màn hình kiểu cũ</string>
     <string name="drawer_style_list">Kiểu danh sách</string>
     <string name="drawer_style_oneui">Giao diện kiểu OneUI (phân trang)</string>
@@ -406,18 +406,18 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="app_drawer_sort_install_date">Sắp xếp theo ngày cài đặt</string>
     <string name="app_drawer_sort_usage">Sắp xếp theo mức sử dụng</string>
     <!-- App drawer color -->
-    <string name="pref_app_drawer_custom_color_title">Custom background color</string>
-    <string name="pref_app_drawer_custom_color_summary">Use a custom color for the app drawer background</string>
-    <string name="pref_app_drawer_custom_color_light_title">Light mode color</string>
-    <string name="pref_app_drawer_custom_color_dark_title">Dark mode color</string>
+    <string name="pref_app_drawer_custom_color_title">Màu nền tùy chỉnh</string>
+    <string name="pref_app_drawer_custom_color_summary">Sử dụng màu tùy chỉnh cho nền ngăn kéo ứng dụng</string>
+    <string name="pref_app_drawer_custom_color_light_title">Chế độ màu sáng</string>
+    <string name="pref_app_drawer_custom_color_dark_title">Chế độ màu tối</string>
     <!-- Color Picker -->
     <string name="color_picker_hsb">HSB</string>
     <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Hue</string>
-    <string name="color_picker_saturation">Saturation</string>
-    <string name="color_picker_brightness">Brightness</string>
-    <string name="color_picker_red">Red</string>
-    <string name="color_picker_green">Green</string>
-    <string name="color_picker_blue">Blue</string>
+    <string name="color_picker_hue">Màu sắc</string>
+    <string name="color_picker_saturation">Sắc độ</string>
+    <string name="color_picker_brightness">Độ sáng</string>
+    <string name="color_picker_red">Đỏ</string>
+    <string name="color_picker_green">Xanh lá</string>
+    <string name="color_picker_blue">Xanh biển</string>
     <string name="color_picker_hex">HEX</string>
 </resources>
