@@ -419,6 +419,14 @@ class SystemUiProxy @Inject constructor(
         }
     }
 
+    @MainThread
+    fun onSleepEvent(event: MotionEvent) {
+        Preconditions.assertUIThread()
+        executeWithErrorLog({ "Failed call onSleepEvent with arg: $event" }) {
+            systemUiProxy?.onSleepEvent(event)
+        }
+    }
+
     fun onStatusBarTrackpadEvent(event: MotionEvent) =
         executeWithErrorLog({ "Failed call onStatusBarTrackpadEvent with arg: $event" }) {
             systemUiProxy?.onStatusBarTrackpadEvent(event)

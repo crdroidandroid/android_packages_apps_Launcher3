@@ -31,7 +31,6 @@ import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCH
 import android.content.Context;
 import android.graphics.PointF;
 import android.graphics.Rect;
-import android.os.PowerManager;
 import android.view.GestureDetector;
 import android.view.HapticFeedbackConstants;
 import android.view.InputDevice;
@@ -78,8 +77,6 @@ public class WorkspaceTouchListener extends GestureDetector.SimpleOnGestureListe
 
     private int mLongPressState = STATE_CANCELLED;
 
-    private final PowerManager mPowerManager;
-
     private final GestureDetector mGestureDetector;
 
     public WorkspaceTouchListener(Launcher launcher, Workspace<?> workspace) {
@@ -88,7 +85,6 @@ public class WorkspaceTouchListener extends GestureDetector.SimpleOnGestureListe
         // Use twice the touch slop as we are looking for long press which is more
         // likely to cause movement.
         mTouchSlop = 2 * ViewConfiguration.get(launcher).getScaledTouchSlop();
-        mPowerManager = workspace.getContext().getSystemService(PowerManager.class);
         mGestureDetector = new GestureDetector(workspace.getContext(), this);
     }
 
@@ -236,7 +232,7 @@ public class WorkspaceTouchListener extends GestureDetector.SimpleOnGestureListe
         if (LauncherPrefs.SLEEP_GESTURE.get(context)) {
             if (LauncherPrefs.SLEEP_GESTURE_HAPTIC.get(context))
                 VibratorWrapper.INSTANCE.get(context).vibrate(VibratorWrapper.EFFECT_CLICK);
-            mPowerManager.goToSleep(event.getEventTime());
+            mLauncher.onSleepEvent(event);
             return true;
         }
         return false;

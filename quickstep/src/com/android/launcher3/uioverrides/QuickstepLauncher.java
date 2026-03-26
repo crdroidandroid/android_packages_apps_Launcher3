@@ -107,6 +107,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.HapticFeedbackConstants;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AnalogClock;
 import android.widget.TextClock;
@@ -1373,6 +1374,12 @@ public class QuickstepLauncher extends Launcher implements RecentsViewContainer,
         super.dismissSplitSelection(splitDismissEvent);
         mSplitSelectStateController.getSplitAnimationController()
                 .playPlaceholderDismissAnim(this, splitDismissEvent);
+    }
+
+    @Override
+    public void onSleepEvent(MotionEvent ev) {
+        super.onSleepEvent(ev);
+        SystemUiProxy.INSTANCE.get(this).onSleepEvent(ev);
     }
 
     @Override
