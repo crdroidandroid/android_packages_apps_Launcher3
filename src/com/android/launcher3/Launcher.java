@@ -2701,6 +2701,11 @@ public class Launcher extends StatefulActivity<LauncherState>
         // Overridden
     }
 
+    /** To be overrideden by subclasses */
+    public void onSleepEvent(MotionEvent ev) {
+        // Overridden
+    }
+
     public void closeOpenViews() {
         closeOpenViews(true);
     }
