@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">Перезапуск главного экрана для применения изменений...</string>
     <string name="updating_launcher_components">Перезапуск главного экрана для обновления компонентов...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Выключение касанием</string>
-    <string name="pref_sleep_gesture_summary">Дважды коснитесь пустой области главного экрана, чтобы выключить экран</string>
-    <string name="pref_sleep_gesture_haptic_title">Вибрация при выключении касанием</string>
-    <string name="pref_sleep_gesture_haptic_summary">Вибрировать при двойном касании для перехода в спящий режим</string>
+    <string name="pref_sleep_gesture_title">Выкл. двойным касанием</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">Вибрировать при двойном нажатии для сна</string>
+    <string name="pref_sleep_gesture_haptic_summary">Вибрировать при выполнении жеста двойного нажатия для перехода в спящий режим</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Автоматическая клавиатура</string>
     <string name="drawer_open_keyboard_summary">Показать клавиатуру, при открытии меню приложений</string>
