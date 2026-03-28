@@ -87,7 +87,7 @@
     <string name="updating_launcher_components">Başlatıcı bileşenlerini güncellemek için başlatıcı yeniden başlatılıyor...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Çift dokunuşla uyutma</string>
-    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_summary">Ekranı kapatmak için ana ekrandaki boş bir alana çift dokunun</string>
     <string name="pref_sleep_gesture_haptic_title">Uyutmak için çift dokunuşta titret</string>
     <string name="pref_sleep_gesture_haptic_summary">Çift dokunuşla uyuma jestinde titreşim geri bildirimi ver</string>
     <!-- Open keyboard -->
@@ -401,6 +401,7 @@
     <string name="drawer_style_list">Liste stili</string>
     <string name="drawer_style_oneui">OneUI stili (sayfalandırılmış)</string>
     <!-- App drawer sorting -->
+    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
     <string name="app_drawer_sort_alphabetical">Alfabe sırası</string>
     <string name="app_drawer_sort_install_date">Kurulum tarihine göre sırala</string>
     <string name="app_drawer_sort_usage">Kullanıma göre sırala</string>
