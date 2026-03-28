@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">Aplikujú sa zmeny, launcher sa reštartuje...</string>
     <string name="updating_launcher_components">Aktualizujú sa komponenty, launcher sa reštartuje...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_title">Uspať dvojitým poklepaním</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrovať pri uspaní dvojitým dotykom</string>
+    <string name="pref_sleep_gesture_haptic_summary">Poskytnúť hmatovú spätnú väzbu pri geste dvojitého klepnutia pre uspanie</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Potiahnite prstom pre spustenie vyhľadávania</string>
     <string name="drawer_open_keyboard_summary">Vždy otvárať klávesnicu, keď je zoznam aplikácií viditeľný</string>
