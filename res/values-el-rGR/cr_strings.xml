@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">Επανεκκίνηση του launcher για την εφαρμογή αλλαγών...</string>
     <string name="updating_launcher_components">Επανεκκίνηση του launcher για ενημέρωση των στοιχείων του launcher...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_title">Διπλό πάτημα για ύπνο</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">Δόνηση στο διπλό πάτημα για αναστολή</string>
+    <string name="pref_sleep_gesture_haptic_summary">Παροχή απτικής ανάδρασης στο διπλό πάτημα για χειρονομία \"ύπνου\"</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Σύρετε για έναρξη αναζήτησης</string>
     <string name="drawer_open_keyboard_summary">Άνοιγμα πληκτρολογίου κάθε φορά που το συρτάρι εφαρμογών γίνεται ορατό</string>
