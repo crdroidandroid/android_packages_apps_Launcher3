@@ -87,7 +87,7 @@
     <string name="updating_launcher_components">Restartování spouštěče pro aktualizaci komponent spouštěče…</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Uspat dvojím poklepáním</string>
-    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_summary">Dvojím poklepáním na prázdné místo na domovské obrazovce vypnout displej</string>
     <string name="pref_sleep_gesture_haptic_title">Zavibrovat při dvojím poklepání pro přechod do režimu spánku</string>
     <string name="pref_sleep_gesture_haptic_summary">Poskytuje hmatovou odezvu při použití gesta dvojím poklepání pro přechod do režimu spánku</string>
     <!-- Open keyboard -->
@@ -373,24 +373,24 @@
     <string name="wallpaper_carousel_lockscreen_title">Použít na zamykací obrazovku</string>
     <string name="wallpaper_carousel_lockscreen_summary">Nastavit stejnou tapetu na zamykací obrazovce</string>
     <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pebble</string>
+    <string name="pebble_shape_title">Oblázek</string>
     <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Teardrop</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="pure_square_shape_title">Čtverec</string>
+    <string name="squircle_shape_title">Superelipsa</string>
+    <string name="tapered_rect_shape_title">Zúžený obdélník</string>
+    <string name="teardrop_shape_title">Slza</string>
+    <string name="rounded_rect_shape_title">Zaoblený čtverec</string>
     <string name="cloudy_shape_title">Oblačno</string>
-    <string name="cylindrical_shape_title">Cylindrical</string>
-    <string name="flower_shape_title">Flower</string>
-    <string name="heart_shape_title">Heart</string>
-    <string name="hexagon_shape_title">Hexagon</string>
-    <string name="ios_style_shape_title">iOS Style</string>
-    <string name="leaf_shape_title">Leaf</string>
-    <string name="meow_shape_title">Meow</string>
-    <string name="samsung_style_shape_title">Samsung Style</string>
+    <string name="cylindrical_shape_title">Válcový</string>
+    <string name="flower_shape_title">Květina</string>
+    <string name="heart_shape_title">Srdce</string>
+    <string name="hexagon_shape_title">Šestiúhelník</string>
+    <string name="ios_style_shape_title">Ve stylu iOS</string>
+    <string name="leaf_shape_title">List</string>
+    <string name="meow_shape_title">Mňau</string>
+    <string name="samsung_style_shape_title">Ve stylu Samsungu</string>
     <string name="scroll_shape_title">Scroll</string>
-    <string name="stretched_shape_title">Stretched</string>
+    <string name="stretched_shape_title">Natažený</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Tmavé popisky aplikací</string>
     <string name="all_apps_dark_text_summary">Vždy používat v seznamu aplikací tmavý text pro popisky aplikací</string>
