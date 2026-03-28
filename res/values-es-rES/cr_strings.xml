@@ -86,8 +86,8 @@
     <string name="restarting_launcher_changes">Reiniciando launcher para aplicar cambios...</string>
     <string name="updating_launcher_components">Reiniciando launcher para actualizar componentes del launcher...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Doble toque para apagar la pantalla</string>
-    <string name="pref_sleep_gesture_summary">Toca dos veces un área vacía de la pantalla de inicio para apagar la pantalla</string>
+    <string name="pref_sleep_gesture_title">Doble toque para apagar pantalla</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
     <string name="pref_sleep_gesture_haptic_title">Vibrar al tocar dos veces para suspender</string>
     <string name="pref_sleep_gesture_haptic_summary">Proporciona retroalimentación háptica en el gesto de doble toque para suspender</string>
     <!-- Open keyboard -->
