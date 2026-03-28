@@ -7,6 +7,7 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.PaintDrawable;
 import android.net.Uri;
@@ -32,11 +33,13 @@ public class QsbLayout extends FrameLayout implements Reorderable {
     private ImageView lensIcon;
     private ImageView geminiIcon;
     private FrameLayout inner;
+    private FrameLayout outer;
 
     private final MultiTranslateDelegate mTranslateDelegate = new MultiTranslateDelegate(this);
     private float mScaleForReorderBounce = 1f;
 
     private boolean mIsThemed;
+    private boolean mIsPixelStyle;
 
     public QsbLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -54,6 +57,9 @@ public class QsbLayout extends FrameLayout implements Reorderable {
         lensIcon = findViewById(R.id.lens_icon);
         geminiIcon = findViewById(R.id.gemini_icon);
         inner = findViewById(R.id.inner);
+        outer = findViewById(R.id.outer);
+
+        mIsPixelStyle = outer != null;
 
         setUpMainSearch();
         setUpBackground();
@@ -77,8 +83,10 @@ public class QsbLayout extends FrameLayout implements Reorderable {
         lensIcon.setBackground(pd);
         gIcon.setClipToOutline(cornerRadius > 0);
         gIcon.setBackground(pd);
-        geminiIcon.setClipToOutline(cornerRadius > 0);
-        geminiIcon.setBackground(pd);
+        if (!mIsPixelStyle) {
+            geminiIcon.setClipToOutline(cornerRadius > 0);
+            geminiIcon.setBackground(pd);
+        }
     }
 
     private void setUpBackground() {
@@ -93,7 +101,12 @@ public class QsbLayout extends FrameLayout implements Reorderable {
         PaintDrawable backgroundDrawable = new PaintDrawable(color);
         backgroundDrawable.setCornerRadius(cornerRadius);
 
-        if (strokeWidth != 0f) {
+        if (mIsPixelStyle) {
+            setUpOuterBackground(alphaValue, strokeWidth);
+            setUpGeminiCircleBackground(cornerRadius, color);
+        }
+
+        if (strokeWidth != 0f && !mIsPixelStyle) {
             PaintDrawable strokeDrawable = new PaintDrawable(Themes.getColorAccent(getContext()));
             strokeDrawable.getPaint().setStyle(Paint.Style.STROKE);
             strokeDrawable.getPaint().setStrokeWidth(strokeWidth);
@@ -106,6 +119,43 @@ public class QsbLayout extends FrameLayout implements Reorderable {
             inner.setClipToOutline(cornerRadius > 0);
             inner.setBackground(backgroundDrawable);
         }
+    }
+
+    private void setUpOuterBackground(int alphaValue, float strokeWidth) {
+        if (outer == null) return;
+
+        float cornerRadius = getOuterCornerRadius();
+        int baseColor = Themes.getAttrColor(getContext(), R.attr.qsbOuterColorThemed);
+        int outerColor = Color.argb((int)(alphaValue * 0.8),
+            Color.red(baseColor), Color.green(baseColor), Color.blue(baseColor));
+
+        PaintDrawable outerFill = new PaintDrawable(outerColor);
+        outerFill.setCornerRadius(cornerRadius);
+
+        if (strokeWidth != 0f) {
+            PaintDrawable outerStroke = new PaintDrawable(Themes.getColorAccent(getContext()));
+            outerStroke.getPaint().setStyle(Paint.Style.STROKE);
+            outerStroke.getPaint().setStrokeWidth(strokeWidth);
+            outerStroke.setCornerRadius(cornerRadius);
+
+            LayerDrawable outerCombined = new LayerDrawable(new Drawable[]{outerFill, outerStroke});
+            outer.setClipToOutline(cornerRadius > 0);
+            outer.setBackground(outerCombined);
+        } else {
+            outer.setClipToOutline(cornerRadius > 0);
+            outer.setBackground(outerFill);
+        }
+    }
+
+    private void setUpGeminiCircleBackground(float cornerRadius, int innerColor) {
+        if (geminiIcon == null) return;
+
+        GradientDrawable background = new GradientDrawable();
+        background.setShape(GradientDrawable.RECTANGLE);
+        background.setCornerRadius(cornerRadius);
+        background.setColor(innerColor);
+        geminiIcon.setBackground(background);
+        geminiIcon.setClipToOutline(cornerRadius > 0);
     }
 
     @Override
@@ -132,6 +182,7 @@ public class QsbLayout extends FrameLayout implements Reorderable {
         if (micIcon != null) micIcon.setOnClickListener(null);
         if (geminiIcon != null) geminiIcon.setOnClickListener(null);
         if (inner != null) inner.setBackground(null);
+        if (outer != null) outer.setBackground(null);
     }
 
     private void setUpMainSearch() {
@@ -255,6 +306,12 @@ public class QsbLayout extends FrameLayout implements Reorderable {
         float qsbWidgetPadding = res.getDimension(R.dimen.qsb_widget_vertical_padding);
         float innerHeight = qsbWidgetHeight - 2 * qsbWidgetPadding;
         return (innerHeight / 2) * ((float)LauncherPrefs.SEARCH_RADIUS_SIZE.get(getContext()) / 100f);
+    }
+
+    private float getOuterCornerRadius() {
+        Resources res = getContext().getResources();
+        float qsbWidgetHeight = res.getDimension(R.dimen.qsb_widget_height);
+        return (qsbWidgetHeight / 2) * ((float)LauncherPrefs.SEARCH_RADIUS_SIZE.get(getContext()) / 100f);
     }
 
     @Override

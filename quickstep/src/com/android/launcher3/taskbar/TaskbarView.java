@@ -52,6 +52,7 @@ import com.android.launcher3.BubbleTextView;
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Flags;
 import com.android.launcher3.Insettable;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.apppairs.AppPairIcon;
@@ -255,7 +256,10 @@ public class TaskbarView extends FrameLayout implements FolderIcon.FolderIconPar
 
         // TODO: Disable touch events on QSB otherwise it can crash.
         if (Utilities.showQSB(context)) {
-            mQsb = LayoutInflater.from(context).inflate(R.layout.search_container_hotseat, this, false);
+            int layoutRes = LauncherPrefs.DOCK_SEARCH_PIXEL_STYLE.get(context)
+                    ? R.layout.search_container_hotseat_pixel
+                    : R.layout.search_container_hotseat;
+            mQsb = LayoutInflater.from(context).inflate(layoutRes, this, false);
         } else {
             mQsb = LayoutInflater.from(context).inflate(R.layout.empty_view, this, false);
         }
