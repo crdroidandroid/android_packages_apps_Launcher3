@@ -86,9 +86,9 @@
     <string name="restarting_launcher_changes">Launcher opnieuw opstarten om wijzigingen toe te passen...</string>
     <string name="updating_launcher_components">Launcher herstarten om de launcher componenten bij te werken...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Tikken om te slapen</string>
-    <string name="pref_sleep_gesture_summary">Dubbeltikken op een leeg gebied op het beginscherm om het scherm uit te schakelen</string>
-    <string name="pref_sleep_gesture_haptic_title">Trillen bij aanraken om te slapen</string>
+    <string name="pref_sleep_gesture_title">Dubbeltikken voor slaapstand</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">Trillen bij dubbeltikken om te slapen</string>
     <string name="pref_sleep_gesture_haptic_summary">Geef haptische feedback bij dubbeltikken voor slaapgebaar</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Veeg om zoeken te starten</string>
