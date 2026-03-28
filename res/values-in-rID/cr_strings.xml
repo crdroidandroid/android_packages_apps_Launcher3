@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">Memulai ulang peluncur untuk menerapkan perubahan...</string>
     <string name="updating_launcher_components">Memulai ulang peluncur untuk memperbarui komponen peluncur...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Ketuk untuk tidur</string>
-    <string name="pref_sleep_gesture_summary">Ketuk dua kali area kosong di layar beranda untuk mematikan layar</string>
-    <string name="pref_sleep_gesture_haptic_title">Bergetar saat ketuk untuk tidur</string>
-    <string name="pref_sleep_gesture_haptic_summary">Berikan umpan balik haptik pada gestur ketuk dua kali untuk mode tidur</string>
+    <string name="pref_sleep_gesture_title">Ketuk dua kali untuk tidur</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">Getar dengan ketukan ganda untuk tidur</string>
+    <string name="pref_sleep_gesture_haptic_summary">Berikan umpan balik haptik pada gestur ketuk dua kali untuk mengaktifkan mode tidur</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Geser untuk mulai mencari</string>
     <string name="drawer_open_keyboard_summary">Buka keyboard setiap kali laci aplikasi terlihat</string>
