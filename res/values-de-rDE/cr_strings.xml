@@ -86,9 +86,9 @@
     <string name="restarting_launcher_changes">Launcher wird neu gestartet, um Änderungen anzuwenden …</string>
     <string name="updating_launcher_components">Launcher wird neu gestartet, um Launcher-Elemente zu aktualisieren …</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Tippen zum Bildschirmsperren</string>
-    <string name="pref_sleep_gesture_summary">Mit Doppeltipp auf freien Startbildschirmbereich Bildschirm ausschalten</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibration bei Tippen zum Sperren</string>
+    <string name="pref_sleep_gesture_title">Doppeltippen zum Sperren</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibration bei Doppeltippen zum Sperren</string>
     <string name="pref_sleep_gesture_haptic_summary">Haptisches Feedback beim Doppeltippen zum Sperren</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Wischen zum Starten der Suche</string>
