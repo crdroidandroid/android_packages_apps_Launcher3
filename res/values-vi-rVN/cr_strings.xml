@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">Đang mở lại trình khởi chạy để áp dụng thay đổi...</string>
     <string name="updating_launcher_components">Đang mở lại trình khởi chạy để cập nhật các thành phần...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Chạm để tắt màn hình</string>
-    <string name="pref_sleep_gesture_summary">Nhấn đúp vào một vùng trống trên màn hình chính để tắt màn hình</string>
-    <string name="pref_sleep_gesture_haptic_title">Rung khi chạm để tắt</string>
-    <string name="pref_sleep_gesture_haptic_summary">Cung cấp phản hồi xúc giác khi chạm hai lần để kích hoạt cử chỉ tắt</string>
+    <string name="pref_sleep_gesture_title">Chạm hai lần để tắt màn hình</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">Rung khi nhấn đúp để ngủ</string>
+    <string name="pref_sleep_gesture_haptic_summary">Rừng khi dùng cử chỉ nhấn đúp để tắt màn hình</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Vuốt để bắt đầu tìm kiếm</string>
     <string name="drawer_open_keyboard_summary">Hiện bàn phím khi màn hình ứng dụng mở ra</string>
