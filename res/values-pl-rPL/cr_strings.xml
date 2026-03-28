@@ -86,9 +86,9 @@
     <string name="restarting_launcher_changes">Ponowne uruchamianie launchera, aby zastosować zmiany...</string>
     <string name="updating_launcher_components">Ponowne uruchamianie launchera, aby zaktualizować komponenty launchera...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Dotknij, aby uśpić</string>
-    <string name="pref_sleep_gesture_summary">Dwukrotnie dotknij pustego obszaru na ekranie głównym, aby wyłączyć ekran</string>
-    <string name="pref_sleep_gesture_haptic_title">Wibruj przy usypianiu poprzez dotknięcie</string>
+    <string name="pref_sleep_gesture_title">Dotknij dwukrotnie, aby uśpić</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">Wibruj po dwukrotnym dotknięciu przy usypianiu</string>
     <string name="pref_sleep_gesture_haptic_summary">Używaj reakcji dotykowej na gest podwójnego dotknięcia w celu przełączenia urządzenia w tryb uśpienia</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Przesuń, aby rozpocząć wyszukiwanie</string>
