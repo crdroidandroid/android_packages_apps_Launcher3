@@ -277,6 +277,7 @@ constructor(@ApplicationContext private val encryptedContext: Context) {
         @JvmField val DARK_STATUS_BAR = backedUpItem("pref_dark_status_bar", false)
         @JvmField val DOCK_MUSIC_SEARCH = backedUpItem("pref_dock_music_search", false)
         @JvmField val DOCK_SEARCH = backedUpItem("pref_dock_search", true)
+        @JvmField val DOCK_SEARCH_PIXEL_STYLE = backedUpItem("pref_dock_search_pixel_style", true)
         @JvmField val DOCK_THEME = backedUpItem("pref_dock_theme", false)
         @JvmField val DRAWER_OPEN_KEYBOARD = backedUpItem("pref_drawer_open_keyboard", false)
         @JvmField val DRAWER_SCROLLBAR = backedUpItem("pref_drawer_scrollbar", true)
