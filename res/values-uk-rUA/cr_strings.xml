@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">Перезапуск оболонки для застосування змін...</string>
     <string name="updating_launcher_components">Перезапуск лаунчера для оновлення компонентів...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Торкніться для сну</string>
-    <string name="pref_sleep_gesture_summary">Двічі торкніться порожньої області на головному екрані, щоб вимкнути дисплей</string>
-    <string name="pref_sleep_gesture_haptic_title">Вібрувати при дотику для сну</string>
-    <string name="pref_sleep_gesture_haptic_summary">Забезпечувати тактильний зворотний зв\'язок при жесті подвійного дотику для перемикання в режим сну</string>
+    <string name="pref_sleep_gesture_title">Подвійне натискання для блокування екрану</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">Вібрувати при подвійному дотику для сну</string>
+    <string name="pref_sleep_gesture_haptic_summary">Використовувати тактильний зворотній зв\'язок при подвійному натисканні щоб засинати</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Свайпніть, щоб почати пошук</string>
     <string name="drawer_open_keyboard_summary">Відкривати клавіатуру щоразу при появі меню додатків</string>
