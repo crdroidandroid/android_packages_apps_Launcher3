@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">Se repornește lansatorul pentru a aplica modificările...</string>
     <string name="updating_launcher_components">Se repornește lansatorul pentru a actualiza componentele lansatorului...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Apăsare dublă pentru a opri ecranul</string>
-    <string name="pref_sleep_gesture_summary">Atingeți de două ori o zonă goală în ecranul de pornire pentru a opri ecranul</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrează la atingere pentru somn</string>
-    <string name="pref_sleep_gesture_haptic_summary">Furnizați feedback haptic la gestul de dublă atingere pentru somn</string>
+    <string name="pref_sleep_gesture_title">Dublă atingere pentru oprire ecran</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrează la atingerea dublă pentru a dormi</string>
+    <string name="pref_sleep_gesture_haptic_summary">Oferă feedback haptic la gestul de două apăsări pentru a dormi</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Glisați pentru a începe căutarea</string>
     <string name="drawer_open_keyboard_summary">Deschide tastatura ori de câte ori sertarul de aplicații devine vizibil</string>
