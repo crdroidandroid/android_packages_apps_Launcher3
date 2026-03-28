@@ -87,7 +87,7 @@
     <string name="updating_launcher_components">Перезапуск главного экрана для обновления компонентов...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Выкл. двойным касанием</string>
-    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_summary">Дважды коснитесь пустой области главного экрана, чтобы выключить его</string>
     <string name="pref_sleep_gesture_haptic_title">Вибрировать при двойном нажатии для сна</string>
     <string name="pref_sleep_gesture_haptic_summary">Вибрировать при выполнении жеста двойного нажатия для перехода в спящий режим</string>
     <!-- Open keyboard -->
@@ -401,6 +401,7 @@
     <string name="drawer_style_list">В виде списка</string>
     <string name="drawer_style_oneui">Стиль OneUI (страничный)</string>
     <!-- App drawer sorting -->
+    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
     <string name="app_drawer_sort_alphabetical">Сортировать по алфавиту</string>
     <string name="app_drawer_sort_install_date">Сортировать по дате установки</string>
     <string name="app_drawer_sort_usage">По частоте использования</string>
