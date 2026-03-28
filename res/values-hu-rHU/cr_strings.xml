@@ -87,8 +87,8 @@
     <string name="updating_launcher_components">Launcher alkotóelem frissítése miatti újraindulás...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Alvómód duplakoppal</string>
-    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
-    <string name="pref_sleep_gesture_haptic_title">Dupla érintésre alvómód engedélyezése</string>
+    <string name="pref_sleep_gesture_summary">A képernyő kikapcsolásához koppintson duplán a kezdőképernyő egy üres területére</string>
+    <string name="pref_sleep_gesture_haptic_title">Az \'Alvómód duplakoppal\' rezgő visszajelzése</string>
     <string name="pref_sleep_gesture_haptic_summary">Rezgéses visszajelzést ad a dupla koppintásos alvás gesztusról</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Csúsztatás a kereséshez</string>
@@ -401,6 +401,7 @@
     <string name="drawer_style_list">Lista stílusú</string>
     <string name="drawer_style_oneui">OneUI stílusú (oldalas)</string>
     <!-- App drawer sorting -->
+    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
     <string name="app_drawer_sort_alphabetical">A-B-C sorrend</string>
     <string name="app_drawer_sort_install_date">Dátum szerinti sorrend</string>
     <string name="app_drawer_sort_usage">Használat szerinti sorrend</string>
