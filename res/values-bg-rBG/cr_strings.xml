@@ -86,8 +86,8 @@
     <string name="restarting_launcher_changes">Рестартиране на launcher-a за прилагане на промените...</string>
     <string name="updating_launcher_components">Рестартиране на launcher-а за обновение на зомпоненти...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Натисни да заспи</string>
-    <string name="pref_sleep_gesture_summary">Направи двоен натиск при празно място на екрана, за да се изключи екранът</string>
+    <string name="pref_sleep_gesture_title">Двукратно почукване за заспиване</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
     <string name="pref_sleep_gesture_haptic_title">Вибрирай на двоен натиск за заспиване</string>
     <string name="pref_sleep_gesture_haptic_summary">Проведи тактилна обратна връзка на жест за двоен натиск за заспиване</string>
     <!-- Open keyboard -->
