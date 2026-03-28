@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">Reiniciando o launcher para aplicar as alterações...</string>
     <string name="updating_launcher_components">Reiniciando o launcher para atualizar seus componentes...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Toque para dormir</string>
-    <string name="pref_sleep_gesture_summary">Toque duplo numa área vazia da tela de início para desligar a tela</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrar no toque para dormir</string>
-    <string name="pref_sleep_gesture_haptic_summary">Vibrar quando der duplo toque no gesto para dormir</string>
+    <string name="pref_sleep_gesture_title">Duplo toque para deligar a tela</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Deslize para iniciar busca</string>
     <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
