@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">Redémarrage du lanceur pour appliquer les modifications...</string>
     <string name="updating_launcher_components">Redémarrage du lanceur pour mettre à jour les composants...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_title">Double-cliquez pour mettre en veille</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrer lors d\'un appui double pour éteindre l\'écran</string>
+    <string name="pref_sleep_gesture_haptic_summary">Fournir un retour haptique lors d\'un double appui pour éteindre l\'écran</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Glisser pour lancer la recherche</string>
     <string name="drawer_open_keyboard_summary">Ouvrir le clavier chaque fois que le tiroir d\'applications devient visible</string>
