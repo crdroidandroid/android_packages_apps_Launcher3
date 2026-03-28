@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">Перазапуск праграмы запуску для ўжыцця змяненняў...</string>
     <string name="updating_launcher_components">Перазапуск праграмы запуску для абнаўлення яе кампанентаў...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_title">Выключаць экран пры падвойным націску</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Swipe to start search</string>
     <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
