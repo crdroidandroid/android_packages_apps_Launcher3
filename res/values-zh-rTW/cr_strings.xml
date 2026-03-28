@@ -86,9 +86,9 @@
     <string name="restarting_launcher_changes">正在重新啟動桌面以套用變更...</string>
     <string name="updating_launcher_components">正在重新啟動桌面以更新組件...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">雙擊休眠</string>
-    <string name="pref_sleep_gesture_summary">雙擊主螢幕空白區域即可關閉顯示屏</string>
-    <string name="pref_sleep_gesture_haptic_title">鎖定螢幕雙擊兩下休眠</string>
+    <string name="pref_sleep_gesture_title">輕觸兩下即可休眠</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">鎖定螢幕雙擊兩下啟用</string>
     <string name="pref_sleep_gesture_haptic_summary">提供雙擊鎖定螢幕時觸覺回饋</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">滑動即可開始搜尋</string>
