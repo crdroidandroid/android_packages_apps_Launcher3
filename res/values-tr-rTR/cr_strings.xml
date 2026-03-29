@@ -368,10 +368,10 @@
     <string name="icon_pack_add">Daha fazla yükle</string>
     <string name="icon_pack_no_market">Kullanılabilir uygulama mağazası yok</string>
     <!-- Wallpaper carousel -->
-    <string name="wallpaper_carousel_title">Duvar kağıdı döngüsü</string>
-    <string name="wallpaper_carousel_summary">Uzun dokunuş menüsünden duvar kağıtlarını hızlıca değiştir</string>
+    <string name="wallpaper_carousel_title">Duvar kâğıdı döngüsü</string>
+    <string name="wallpaper_carousel_summary">Uzun dokunuş menüsünden duvar kâğıtlarını hızlıca değiştir</string>
     <string name="wallpaper_carousel_lockscreen_title">Kilit ekranına uygula</string>
-    <string name="wallpaper_carousel_lockscreen_summary">Aynı duvar kağıdını kilit ekranına uygula</string>
+    <string name="wallpaper_carousel_lockscreen_summary">Aynı duvar kâğıdını kilit ekranına uygula</string>
     <!-- Additional shape options in customization picker -->
     <string name="pebble_shape_title">Çakıl</string>
     <string name="vessel_shape_title">Gemi</string>
@@ -421,6 +421,6 @@
     <string name="color_picker_blue">Mavi</string>
     <string name="color_picker_hex">HEX</string>
     <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
-    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
+    <string name="dock_search_pixel_style_title">Pixel tarzı arama çubuğu</string>
+    <string name="dock_search_pixel_style_summary">Katmanlı arka plana sahip yenilenmiş arama çubuğu</string>
 </resources>
