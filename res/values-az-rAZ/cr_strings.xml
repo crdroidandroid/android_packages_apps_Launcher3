@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
     <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Tap to sleep</string>
-    <string name="pref_sleep_gesture_summary">Double-tap an empty area in the home screen to turn off the display</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double-tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_title">Yuxuya keçmək üçün iki dəfə toxun</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
+    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Swipe to start search</string>
     <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
@@ -401,7 +401,26 @@
     <string name="drawer_style_list">List style</string>
     <string name="drawer_style_oneui">OneUI style (paged)</string>
     <!-- App drawer sorting -->
+    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
     <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
     <string name="app_drawer_sort_install_date">Sort by install date</string>
     <string name="app_drawer_sort_usage">Sort by usage</string>
+    <!-- App drawer color -->
+    <string name="pref_app_drawer_custom_color_title">Custom background color</string>
+    <string name="pref_app_drawer_custom_color_summary">Use a custom color for the app drawer background</string>
+    <string name="pref_app_drawer_custom_color_light_title">Light mode color</string>
+    <string name="pref_app_drawer_custom_color_dark_title">Dark mode color</string>
+    <!-- Color Picker -->
+    <string name="color_picker_hsb">HSB</string>
+    <string name="color_picker_rgb">RGB</string>
+    <string name="color_picker_hue">Hue</string>
+    <string name="color_picker_saturation">Saturation</string>
+    <string name="color_picker_brightness">Brightness</string>
+    <string name="color_picker_red">Red</string>
+    <string name="color_picker_green">Green</string>
+    <string name="color_picker_blue">Blue</string>
+    <string name="color_picker_hex">HEX</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
+    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
 </resources>

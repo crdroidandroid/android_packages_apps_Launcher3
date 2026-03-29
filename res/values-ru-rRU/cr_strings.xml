@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">Перезапуск главного экрана для применения изменений...</string>
     <string name="updating_launcher_components">Перезапуск главного экрана для обновления компонентов...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Выключение касанием</string>
-    <string name="pref_sleep_gesture_summary">Дважды коснитесь пустой области главного экрана, чтобы выключить экран</string>
-    <string name="pref_sleep_gesture_haptic_title">Вибрация при выключении касанием</string>
-    <string name="pref_sleep_gesture_haptic_summary">Вибрировать при двойном касании для перехода в спящий режим</string>
+    <string name="pref_sleep_gesture_title">Выкл. двойным касанием</string>
+    <string name="pref_sleep_gesture_summary">Дважды коснитесь пустой области главного экрана, чтобы выключить его</string>
+    <string name="pref_sleep_gesture_haptic_title">Вибрировать при двойном нажатии для сна</string>
+    <string name="pref_sleep_gesture_haptic_summary">Вибрировать при выполнении жеста двойного нажатия для перехода в спящий режим</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Автоматическая клавиатура</string>
     <string name="drawer_open_keyboard_summary">Показать клавиатуру, при открытии меню приложений</string>
@@ -401,7 +401,26 @@
     <string name="drawer_style_list">В виде списка</string>
     <string name="drawer_style_oneui">Стиль OneUI (страничный)</string>
     <!-- App drawer sorting -->
+    <string name="app_drawer_sort_mode_title">Сортировка меню приложений</string>
     <string name="app_drawer_sort_alphabetical">Сортировать по алфавиту</string>
     <string name="app_drawer_sort_install_date">Сортировать по дате установки</string>
     <string name="app_drawer_sort_usage">По частоте использования</string>
+    <!-- App drawer color -->
+    <string name="pref_app_drawer_custom_color_title">Свой цвет фона</string>
+    <string name="pref_app_drawer_custom_color_summary">Использовать свой цвет фона для меню приложений</string>
+    <string name="pref_app_drawer_custom_color_light_title">Цвет светлого режима</string>
+    <string name="pref_app_drawer_custom_color_dark_title">Цвет тёмного режима</string>
+    <!-- Color Picker -->
+    <string name="color_picker_hsb">HSB</string>
+    <string name="color_picker_rgb">RGB</string>
+    <string name="color_picker_hue">Оттенок</string>
+    <string name="color_picker_saturation">Насыщенность</string>
+    <string name="color_picker_brightness">Яркость</string>
+    <string name="color_picker_red">Красный</string>
+    <string name="color_picker_green">Зелёный</string>
+    <string name="color_picker_blue">Синий</string>
+    <string name="color_picker_hex">HEX</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Панель поиска Pixel</string>
+    <string name="dock_search_pixel_style_summary">Обновлённая панель поиска с многослойным фоном</string>
 </resources>

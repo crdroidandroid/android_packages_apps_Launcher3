@@ -87,8 +87,8 @@
     <string name="updating_launcher_components">Restartování spouštěče pro aktualizaci komponent spouštěče…</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Uspat dvojím poklepáním</string>
-    <string name="pref_sleep_gesture_summary">Dvojím poklepáním na prázdnou oblast domovské obrazovky vypnete obrazovku</string>
-    <string name="pref_sleep_gesture_haptic_title">Zavibrovat při uspání dvojím poklepáním</string>
+    <string name="pref_sleep_gesture_summary">Dvojím poklepáním na prázdné místo na domovské obrazovce vypnout displej</string>
+    <string name="pref_sleep_gesture_haptic_title">Zavibrovat při dvojím poklepání pro přechod do režimu spánku</string>
     <string name="pref_sleep_gesture_haptic_summary">Poskytuje hmatovou odezvu při použití gesta dvojím poklepání pro přechod do režimu spánku</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Přejetím začít vyhledávat</string>
@@ -373,24 +373,24 @@
     <string name="wallpaper_carousel_lockscreen_title">Použít na zamykací obrazovku</string>
     <string name="wallpaper_carousel_lockscreen_summary">Nastavit stejnou tapetu na zamykací obrazovce</string>
     <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pebble</string>
+    <string name="pebble_shape_title">Oblázek</string>
     <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Teardrop</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="pure_square_shape_title">Čtverec</string>
+    <string name="squircle_shape_title">Superelipsa</string>
+    <string name="tapered_rect_shape_title">Zúžený obdélník</string>
+    <string name="teardrop_shape_title">Slza</string>
+    <string name="rounded_rect_shape_title">Zaoblený čtverec</string>
     <string name="cloudy_shape_title">Oblačno</string>
-    <string name="cylindrical_shape_title">Cylindrical</string>
-    <string name="flower_shape_title">Flower</string>
-    <string name="heart_shape_title">Heart</string>
-    <string name="hexagon_shape_title">Hexagon</string>
-    <string name="ios_style_shape_title">iOS Style</string>
-    <string name="leaf_shape_title">Leaf</string>
-    <string name="meow_shape_title">Meow</string>
-    <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="scroll_shape_title">Scroll</string>
-    <string name="stretched_shape_title">Stretched</string>
+    <string name="cylindrical_shape_title">Válcový</string>
+    <string name="flower_shape_title">Květina</string>
+    <string name="heart_shape_title">Srdce</string>
+    <string name="hexagon_shape_title">Šestiúhelník</string>
+    <string name="ios_style_shape_title">Ve stylu iOS</string>
+    <string name="leaf_shape_title">List</string>
+    <string name="meow_shape_title">Mňau</string>
+    <string name="samsung_style_shape_title">Ve stylu Samsungu</string>
+    <string name="scroll_shape_title">Svitek</string>
+    <string name="stretched_shape_title">Natažený</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Tmavé popisky aplikací</string>
     <string name="all_apps_dark_text_summary">Vždy používat v seznamu aplikací tmavý text pro popisky aplikací</string>
@@ -401,7 +401,26 @@
     <string name="drawer_style_list">Styl seznamu</string>
     <string name="drawer_style_oneui">Styl OneUI (stránkový)</string>
     <!-- App drawer sorting -->
+    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
     <string name="app_drawer_sort_alphabetical">Seřadit podle abecedy</string>
     <string name="app_drawer_sort_install_date">Seřadit podle data instalace</string>
     <string name="app_drawer_sort_usage">Seřadit podle využití</string>
+    <!-- App drawer color -->
+    <string name="pref_app_drawer_custom_color_title">Vlastní barva pozadí</string>
+    <string name="pref_app_drawer_custom_color_summary">Use a custom color for the app drawer background</string>
+    <string name="pref_app_drawer_custom_color_light_title">Light mode color</string>
+    <string name="pref_app_drawer_custom_color_dark_title">Dark mode color</string>
+    <!-- Color Picker -->
+    <string name="color_picker_hsb">HSB</string>
+    <string name="color_picker_rgb">RGB</string>
+    <string name="color_picker_hue">Odstín</string>
+    <string name="color_picker_saturation">Sytost</string>
+    <string name="color_picker_brightness">Jas</string>
+    <string name="color_picker_red">Červená</string>
+    <string name="color_picker_green">Zelená</string>
+    <string name="color_picker_blue">Modrá</string>
+    <string name="color_picker_hex">HEX</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Vyhledávací panel ve stylu Pixelů</string>
+    <string name="dock_search_pixel_style_summary">Přepracovaný vyhledávací panel s vrstveným pozadím</string>
 </resources>

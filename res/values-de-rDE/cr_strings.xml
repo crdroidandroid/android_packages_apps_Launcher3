@@ -86,9 +86,9 @@
     <string name="restarting_launcher_changes">Launcher wird neu gestartet, um Änderungen anzuwenden …</string>
     <string name="updating_launcher_components">Launcher wird neu gestartet, um Launcher-Elemente zu aktualisieren …</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Tippen zum Bildschirmsperren</string>
+    <string name="pref_sleep_gesture_title">Doppeltippen zum Sperren</string>
     <string name="pref_sleep_gesture_summary">Mit Doppeltipp auf freien Startbildschirmbereich Bildschirm ausschalten</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibration bei Tippen zum Sperren</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibration bei Doppeltippen zum Sperren</string>
     <string name="pref_sleep_gesture_haptic_summary">Haptisches Feedback beim Doppeltippen zum Sperren</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Wischen zum Starten der Suche</string>
@@ -401,7 +401,26 @@
     <string name="drawer_style_list">Listenstil</string>
     <string name="drawer_style_oneui">OneUI-Stil (Seiten)</string>
     <!-- App drawer sorting -->
+    <string name="app_drawer_sort_mode_title">Sortierung in der App-Übersicht</string>
     <string name="app_drawer_sort_alphabetical">Alphabetisch sortieren</string>
     <string name="app_drawer_sort_install_date">Nach Installationsdatum sortieren</string>
     <string name="app_drawer_sort_usage">Nach Nutzung sortieren</string>
+    <!-- App drawer color -->
+    <string name="pref_app_drawer_custom_color_title">Benutzerdefinierte Hintergrundfarbe</string>
+    <string name="pref_app_drawer_custom_color_summary">Benutzerdefinierte Farbe für Hintergrund der App-Übersicht verwenden</string>
+    <string name="pref_app_drawer_custom_color_light_title">Farbe bei hellem Design</string>
+    <string name="pref_app_drawer_custom_color_dark_title">Farbe bei dunklem Design</string>
+    <!-- Color Picker -->
+    <string name="color_picker_hsb">HSB</string>
+    <string name="color_picker_rgb">RGB</string>
+    <string name="color_picker_hue">Farbton</string>
+    <string name="color_picker_saturation">Sättigung</string>
+    <string name="color_picker_brightness">Helligkeit</string>
+    <string name="color_picker_red">Rot</string>
+    <string name="color_picker_green">Grün</string>
+    <string name="color_picker_blue">Blau</string>
+    <string name="color_picker_hex">HEX</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Suchleiste im Pixel-Stil</string>
+    <string name="dock_search_pixel_style_summary">Überarbeitete Suchleiste mit mehrschichtigem Hintergrund</string>
 </resources>

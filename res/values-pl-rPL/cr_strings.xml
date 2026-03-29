@@ -86,9 +86,9 @@
     <string name="restarting_launcher_changes">Ponowne uruchamianie launchera, aby zastosować zmiany...</string>
     <string name="updating_launcher_components">Ponowne uruchamianie launchera, aby zaktualizować komponenty launchera...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Dotknij, aby uśpić</string>
-    <string name="pref_sleep_gesture_summary">Dwukrotnie dotknij pustego obszaru na ekranie głównym, aby wyłączyć ekran</string>
-    <string name="pref_sleep_gesture_haptic_title">Wibruj przy usypianiu poprzez dotknięcie</string>
+    <string name="pref_sleep_gesture_title">Dotknij dwukrotnie, aby uśpić</string>
+    <string name="pref_sleep_gesture_summary">Dwukrotnie dotknij pustego miejsca na ekranie głównym, aby wyłączyć ekran</string>
+    <string name="pref_sleep_gesture_haptic_title">Wibruj po dwukrotnym dotknięciu przy usypianiu</string>
     <string name="pref_sleep_gesture_haptic_summary">Używaj reakcji dotykowej na gest podwójnego dotknięcia w celu przełączenia urządzenia w tryb uśpienia</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Przesuń, aby rozpocząć wyszukiwanie</string>
@@ -401,7 +401,26 @@
     <string name="drawer_style_list">Styl listy</string>
     <string name="drawer_style_oneui">Styl OneUI (stronicowy)</string>
     <!-- App drawer sorting -->
+    <string name="app_drawer_sort_mode_title">Sortowanie szuflady aplikacji</string>
     <string name="app_drawer_sort_alphabetical">Sortuj alfabetycznie</string>
     <string name="app_drawer_sort_install_date">Sortuj według daty instalacji</string>
     <string name="app_drawer_sort_usage">Sortuj według użycia</string>
+    <!-- App drawer color -->
+    <string name="pref_app_drawer_custom_color_title">Własny kolor tła</string>
+    <string name="pref_app_drawer_custom_color_summary">Używaj własnego koloru dla tła szuflady aplikacji</string>
+    <string name="pref_app_drawer_custom_color_light_title">Kolor trybu jasnego</string>
+    <string name="pref_app_drawer_custom_color_dark_title">Kolor trybu ciemnego</string>
+    <!-- Color Picker -->
+    <string name="color_picker_hsb">HSB</string>
+    <string name="color_picker_rgb">RGB</string>
+    <string name="color_picker_hue">Odcień</string>
+    <string name="color_picker_saturation">Nasycenie</string>
+    <string name="color_picker_brightness">Jasność</string>
+    <string name="color_picker_red">Czerwony</string>
+    <string name="color_picker_green">Zielony</string>
+    <string name="color_picker_blue">Niebieski</string>
+    <string name="color_picker_hex">HEX</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Pasek wyszukiwania w stylu Pixel</string>
+    <string name="dock_search_pixel_style_summary">Ulepszony pasek wyszukiwania z warstwowym tłem</string>
 </resources>

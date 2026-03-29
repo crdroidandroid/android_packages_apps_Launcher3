@@ -86,9 +86,9 @@
     <string name="restarting_launcher_changes">Değişiklikleri uygulamak için yeniden başlatılıyor...</string>
     <string name="updating_launcher_components">Başlatıcı bileşenlerini güncellemek için başlatıcı yeniden başlatılıyor...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Uyutmak için dokun</string>
+    <string name="pref_sleep_gesture_title">Çift dokunuşla uyutma</string>
     <string name="pref_sleep_gesture_summary">Ekranı kapatmak için ana ekrandaki boş bir alana çift dokunun</string>
-    <string name="pref_sleep_gesture_haptic_title">Uyutmak için dokunuşta titret</string>
+    <string name="pref_sleep_gesture_haptic_title">Uyutmak için çift dokunuşta titret</string>
     <string name="pref_sleep_gesture_haptic_summary">Çift dokunuşla uyuma jestinde titreşim geri bildirimi ver</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Aramaya başlamak için kaydır</string>
@@ -368,10 +368,10 @@
     <string name="icon_pack_add">Daha fazla yükle</string>
     <string name="icon_pack_no_market">Kullanılabilir uygulama mağazası yok</string>
     <!-- Wallpaper carousel -->
-    <string name="wallpaper_carousel_title">Duvar kağıdı döngüsü</string>
-    <string name="wallpaper_carousel_summary">Uzun dokunuş menüsünden duvar kağıtlarını hızlıca değiştir</string>
+    <string name="wallpaper_carousel_title">Duvar kâğıdı döngüsü</string>
+    <string name="wallpaper_carousel_summary">Uzun dokunuş menüsünden duvar kâğıtlarını hızlıca değiştir</string>
     <string name="wallpaper_carousel_lockscreen_title">Kilit ekranına uygula</string>
-    <string name="wallpaper_carousel_lockscreen_summary">Aynı duvar kağıdını kilit ekranına uygula</string>
+    <string name="wallpaper_carousel_lockscreen_summary">Aynı duvar kâğıdını kilit ekranına uygula</string>
     <!-- Additional shape options in customization picker -->
     <string name="pebble_shape_title">Çakıl</string>
     <string name="vessel_shape_title">Gemi</string>
@@ -401,7 +401,26 @@
     <string name="drawer_style_list">Liste stili</string>
     <string name="drawer_style_oneui">OneUI stili (sayfalandırılmış)</string>
     <!-- App drawer sorting -->
+    <string name="app_drawer_sort_mode_title">Uygulama çekmecesi sıralaması</string>
     <string name="app_drawer_sort_alphabetical">Alfabe sırası</string>
     <string name="app_drawer_sort_install_date">Kurulum tarihine göre sırala</string>
     <string name="app_drawer_sort_usage">Kullanıma göre sırala</string>
+    <!-- App drawer color -->
+    <string name="pref_app_drawer_custom_color_title">Özel arka plan rengi</string>
+    <string name="pref_app_drawer_custom_color_summary">Uygulama çekmecesinin arka planında özel bir renk kullan</string>
+    <string name="pref_app_drawer_custom_color_light_title">Aydınlık mod rengi</string>
+    <string name="pref_app_drawer_custom_color_dark_title">Karanlık mod rengi</string>
+    <!-- Color Picker -->
+    <string name="color_picker_hsb">HSB</string>
+    <string name="color_picker_rgb">RGB</string>
+    <string name="color_picker_hue">Ton</string>
+    <string name="color_picker_saturation">Doygunluk</string>
+    <string name="color_picker_brightness">Parlaklık</string>
+    <string name="color_picker_red">Kırmızı</string>
+    <string name="color_picker_green">Yeşil</string>
+    <string name="color_picker_blue">Mavi</string>
+    <string name="color_picker_hex">HEX</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Pixel tarzı arama çubuğu</string>
+    <string name="dock_search_pixel_style_summary">Katmanlı arka plana sahip yenilenmiş arama çubuğu</string>
 </resources>

@@ -86,10 +86,10 @@
     <string name="restarting_launcher_changes">正在重新启动启动器以保存更改...</string>
     <string name="updating_launcher_components">正在重新启动启动器以更新其组件...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">双击锁屏</string>
-    <string name="pref_sleep_gesture_summary">双击主屏幕上的空区域锁屏</string>
-    <string name="pref_sleep_gesture_haptic_title">双击锁屏</string>
-    <string name="pref_sleep_gesture_haptic_summary">双击锁屏时提供震动反馈</string>
+    <string name="pref_sleep_gesture_title">双击睡眠</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">双击关闭屏幕</string>
+    <string name="pref_sleep_gesture_haptic_summary">双击关闭屏幕时震动反馈</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">滑动搜索</string>
     <string name="drawer_open_keyboard_summary">键盘在应用资源库时弹出</string>
@@ -401,7 +401,26 @@
     <string name="drawer_style_list">列表样式</string>
     <string name="drawer_style_oneui">OneUI 样式(页面)</string>
     <!-- App drawer sorting -->
+    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
     <string name="app_drawer_sort_alphabetical">按字母顺序排序</string>
     <string name="app_drawer_sort_install_date">按安装日期排序</string>
     <string name="app_drawer_sort_usage">按使用情况排序</string>
+    <!-- App drawer color -->
+    <string name="pref_app_drawer_custom_color_title">自定义背景颜色</string>
+    <string name="pref_app_drawer_custom_color_summary">为应用抽屉背景使用自定义颜色</string>
+    <string name="pref_app_drawer_custom_color_light_title">亮色模式颜色</string>
+    <string name="pref_app_drawer_custom_color_dark_title">暗色模式颜色</string>
+    <!-- Color Picker -->
+    <string name="color_picker_hsb">HSB</string>
+    <string name="color_picker_rgb">RGB</string>
+    <string name="color_picker_hue">色相</string>
+    <string name="color_picker_saturation">饱和度</string>
+    <string name="color_picker_brightness">明度</string>
+    <string name="color_picker_red">红色</string>
+    <string name="color_picker_green">绿色</string>
+    <string name="color_picker_blue">蓝色</string>
+    <string name="color_picker_hex">HEX</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
+    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
 </resources>

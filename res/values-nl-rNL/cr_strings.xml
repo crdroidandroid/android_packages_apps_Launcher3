@@ -86,9 +86,9 @@
     <string name="restarting_launcher_changes">Launcher opnieuw opstarten om wijzigingen toe te passen...</string>
     <string name="updating_launcher_components">Launcher herstarten om de launcher componenten bij te werken...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Tikken om te slapen</string>
-    <string name="pref_sleep_gesture_summary">Dubbeltikken op een leeg gebied op het beginscherm om het scherm uit te schakelen</string>
-    <string name="pref_sleep_gesture_haptic_title">Trillen bij aanraken om te slapen</string>
+    <string name="pref_sleep_gesture_title">Dubbeltikken voor slaapstand</string>
+    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_haptic_title">Trillen bij dubbeltikken om te slapen</string>
     <string name="pref_sleep_gesture_haptic_summary">Geef haptische feedback bij dubbeltikken voor slaapgebaar</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Veeg om zoeken te starten</string>
@@ -401,7 +401,26 @@
     <string name="drawer_style_list">Lijst stijl</string>
     <string name="drawer_style_oneui">OneUI stijl (paged)</string>
     <!-- App drawer sorting -->
+    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
     <string name="app_drawer_sort_alphabetical">Alfabetisch sorteren</string>
     <string name="app_drawer_sort_install_date">Sorteren op installatiedatum</string>
     <string name="app_drawer_sort_usage">Sorteren op gebruik</string>
+    <!-- App drawer color -->
+    <string name="pref_app_drawer_custom_color_title">Aangepaste achtergrondkleur</string>
+    <string name="pref_app_drawer_custom_color_summary">Gebruik een aangepaste kleur voor de achtergrond van de app drawer</string>
+    <string name="pref_app_drawer_custom_color_light_title">Lichte modus kleur</string>
+    <string name="pref_app_drawer_custom_color_dark_title">Donkere modus kleur</string>
+    <!-- Color Picker -->
+    <string name="color_picker_hsb">HSB</string>
+    <string name="color_picker_rgb">RGB</string>
+    <string name="color_picker_hue">Tint</string>
+    <string name="color_picker_saturation">Verzadiging</string>
+    <string name="color_picker_brightness">Helderheid</string>
+    <string name="color_picker_red">Rood</string>
+    <string name="color_picker_green">Groen</string>
+    <string name="color_picker_blue">Blauw</string>
+    <string name="color_picker_hex">HEX</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
+    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
 </resources>
