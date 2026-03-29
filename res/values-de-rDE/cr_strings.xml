@@ -87,7 +87,7 @@
     <string name="updating_launcher_components">Launcher wird neu gestartet, um Launcher-Elemente zu aktualisieren …</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Doppeltippen zum Sperren</string>
-    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_summary">Mit Doppeltipp auf freien Startbildschirmbereich Bildschirm ausschalten</string>
     <string name="pref_sleep_gesture_haptic_title">Vibration bei Doppeltippen zum Sperren</string>
     <string name="pref_sleep_gesture_haptic_summary">Haptisches Feedback beim Doppeltippen zum Sperren</string>
     <!-- Open keyboard -->
@@ -401,7 +401,7 @@
     <string name="drawer_style_list">Listenstil</string>
     <string name="drawer_style_oneui">OneUI-Stil (Seiten)</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
+    <string name="app_drawer_sort_mode_title">Sortierung in der App-Übersicht</string>
     <string name="app_drawer_sort_alphabetical">Alphabetisch sortieren</string>
     <string name="app_drawer_sort_install_date">Nach Installationsdatum sortieren</string>
     <string name="app_drawer_sort_usage">Nach Nutzung sortieren</string>
@@ -421,6 +421,6 @@
     <string name="color_picker_blue">Blau</string>
     <string name="color_picker_hex">HEX</string>
     <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
-    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
+    <string name="dock_search_pixel_style_title">Suchleiste im Pixel-Stil</string>
+    <string name="dock_search_pixel_style_summary">Überarbeitete Suchleiste mit mehrschichtigem Hintergrund</string>
 </resources>
