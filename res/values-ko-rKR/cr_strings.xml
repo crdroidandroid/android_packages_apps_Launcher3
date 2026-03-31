@@ -53,7 +53,7 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">메인 홈 화면에서 오른쪽으로 스와이프할 때</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">앱서랍에서 사용자 지정 아이콘 사용</string>
+    <string name="pref_icon_customization_title">앱 서랍에서 사용자 지정 아이콘 사용</string>
     <string name="pref_icon_customization_summary">홈 화면의 아이콘 설정 따름</string>
     <!-- Pause apps shortcut -->
     <string name="pause">일시중지</string>
