@@ -807,6 +807,14 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
                 alignParentTop(getSearchRecyclerView(), /* tabs= */ false);
             } else if ("bottom".equals(searchPlacement)) {
                 layoutAboveSearchContainer(rvContainer, showTabs);
+                // Vertical-paged (Samsung) style: the grid is static, so the outer
+                // bottom-margin gap that layoutAboveSearchContainer adds just creates
+                // empty space beneath the last row.  Zero it out so the paged view
+                // uses all available height up to the search bar.
+                if (AppDrawerStyle.isVerticalPaged(mAppDrawerStyle)
+                        && rvContainer.getLayoutParams() instanceof RelativeLayout.LayoutParams) {
+                    ((RelativeLayout.LayoutParams) rvContainer.getLayoutParams()).bottomMargin = 0;
+                }
                 layoutAboveSearchContainer(getSearchRecyclerView(), /* tabs= */ false);
                 layoutSearchContainerBottom();
             } else {
@@ -1157,6 +1165,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
         layoutParams.removeRule(RelativeLayout.ALIGN_TOP);
         layoutParams.removeRule(RelativeLayout.ALIGN_PARENT_TOP);
         layoutParams.removeRule(RelativeLayout.BELOW);
+        layoutParams.removeRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
     }
 
     protected BaseAllAppsAdapter createAdapter(AlphabeticalAppsList appsList, int adapterType) {
@@ -1459,10 +1468,14 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
             if ("bottom".equals(searchPlacement) && !isSearchBarFloating()) {
                 int extraMargin = getResources().getDimensionPixelSize(R.dimen.all_apps_search_bar_bottom_padding_extra);
                 int bottomPaddingArea = Math.max(insets.bottom, mNavBarScrimHeight);
+                if (getRootWindowInsets() != null) {
+                    bottomPaddingArea = Math.max(bottomPaddingArea,
+                            getRootWindowInsets().getInsets(WindowInsets.Type.ime()).bottom);
+                }
                 if (bottomPaddingArea == 0) {
                     bottomPaddingArea = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 32, getResources().getDisplayMetrics());
                 }
-                searchLp.bottomMargin = bottomPaddingArea + extraMargin + (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24, getResources().getDisplayMetrics());
+                searchLp.bottomMargin = bottomPaddingArea + extraMargin;
             } else {
                 searchLp.bottomMargin = 0;
             }
@@ -1489,6 +1502,26 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     public WindowInsets dispatchApplyWindowInsets(WindowInsets insets) {
         mNavBarScrimHeight = computeNavBarScrimHeight(insets);
         applyAdapterSideAndBottomPaddings(mActivityContext.getDeviceProfile());
+
+        if (mSearchContainer != null && mSearchContainer.getLayoutParams() instanceof MarginLayoutParams) {
+            MarginLayoutParams searchLp = (MarginLayoutParams) mSearchContainer.getLayoutParams();
+            String searchPlacement = LauncherPrefs.ALL_APPS_SEARCH_PLACEMENT.get(getContext());
+            if ("bottom".equals(searchPlacement) && !isSearchBarFloating()) {
+                int extraMargin = getResources().getDimensionPixelSize(R.dimen.all_apps_search_bar_bottom_padding_extra);
+                int bottomPaddingArea = Math.max(insets.getInsets(WindowInsets.Type.systemBars()).bottom, mNavBarScrimHeight);
+                bottomPaddingArea = Math.max(bottomPaddingArea, insets.getInsets(WindowInsets.Type.ime()).bottom);
+
+                if (bottomPaddingArea == 0) {
+                    bottomPaddingArea = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 32, getResources().getDisplayMetrics());
+                }
+                int targetBottomMargin = bottomPaddingArea + extraMargin;
+                if (searchLp.bottomMargin != targetBottomMargin) {
+                    searchLp.bottomMargin = targetBottomMargin;
+                    mSearchContainer.setLayoutParams(searchLp);
+                }
+            }
+        }
+
         return super.dispatchApplyWindowInsets(insets);
     }
 
@@ -1506,8 +1539,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
 
     @Override
     protected boolean drawChild(Canvas canvas, View child, long drawingTime) {
-        if (AppDrawerStyle.isFullscreen(mAppDrawerStyle)
-                && child == getAppsRecyclerViewContainer()
+        if (child == getAppsRecyclerViewContainer()
                 && mSearchContainer != null
                 && mSearchContainer.getVisibility() == VISIBLE) {
 
@@ -1551,6 +1583,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
 
     private void applyAdapterSideAndBottomPaddings(DeviceProfile grid) {
         int bottomPadding = AppDrawerStyle.isVerticalPaged(mAppDrawerStyle) ? 0 : Math.max(mInsets.bottom, mNavBarScrimHeight);
+        
         mAH.forEach(adapterHolder -> {
             adapterHolder.mPadding.bottom = bottomPadding;
             adapterHolder.mPadding.left = grid.allAppsPadding.left;
@@ -1843,6 +1876,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
 
         final float horizontalScaleOffset = (1 - scale) * panel.getWidth() / 2;
         final float verticalScaleOffset = (1 - scale) * (panel.getHeight() - getHeight() / 2);
+        final float headerBottomOffset = (getVisibleContainerView().getHeight() * (1 - scale) / 2);
         // Left and right insets can be applied to this container, as well as the panel.
         float left = getLeft() + panel.getLeft();
         float right = left + panel.getWidth();
@@ -1886,9 +1920,9 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
         // If header is not visible or only differs from the background with alpha, don't draw it.
         int headerWithoutAlpha = ColorUtils.setAlphaComponent(mHeaderPaint.getColor(), 0);
         int backgroundWithoutAlpha = ColorUtils.setAlphaComponent(getBackgroundColor(), 0);
-        if (headerWithoutAlpha == backgroundWithoutAlpha || mHeaderPaint.getColor() == 0) {
-            return;
-        }
+        boolean drawHeader = !(headerWithoutAlpha == backgroundWithoutAlpha || mHeaderPaint.getColor() == 0);
+        
+        if (drawHeader) {
 
         if (hasBottomSheet) {
             mHeaderPaint.setAlpha((int) (mHeaderPaint.getAlpha() * bottomSheetBackgroundAlpha));
@@ -1899,7 +1933,6 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
                 getHeaderBottom() + getVisibleContainerView().getPaddingTop();
         final float headerHeightNoScale = headerBottomNoScale - topNoScale;
         final float headerBottomWithScaleOnTablet = topWithScale + headerHeightNoScale * scale;
-        final float headerBottomOffset = (getVisibleContainerView().getHeight() * (1 - scale) / 2);
         final float headerBottomWithScaleOnPhone = headerBottomNoScale * scale + headerBottomOffset;
         final FloatingHeaderView headerView = getFloatingHeaderView();
         if (hasBottomSheet) {
@@ -1949,6 +1982,38 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
                     right,
                     tabBottomWithScale,
                     mHeaderPaint);
+            }
+        }
+
+        String searchPlacement = LauncherPrefs.ALL_APPS_SEARCH_PLACEMENT.get(getContext());
+        boolean searchBottom = "bottom".equals(searchPlacement) && !isSearchBarFloating();
+        if (searchBottom && mSearchContainer != null && mSearchContainer.getVisibility() == VISIBLE) {
+            mHeaderPaint.setColor(mHeaderColor);
+            mHeaderPaint.setAlpha((int) (getAlpha() * Color.alpha(mHeaderColor)));
+            if (DEBUG_HEADER_PROTECTION) {
+                mHeaderPaint.setColor(Color.GREEN);
+                mHeaderPaint.setAlpha(255);
+            }
+            // Only draw if drawing the header is also allowed (i.e. we scrolled enough that the
+            // protection color differs from the static background).
+            if (drawHeader && mHeaderPaint.getAlpha() > 0) {
+                if (hasBottomSheet) {
+                    mHeaderPaint.setAlpha(
+                            (int) (mHeaderPaint.getAlpha() * bottomSheetBackgroundAlpha));
+                }
+
+                float footerTopNoScale = mSearchContainer.getTop() + mSearchContainer.getTranslationY();
+                float footerTopWithScaleOnTablet = topWithScale + (footerTopNoScale - topNoScale) * scale;
+                float footerTopWithScaleOnPhone = footerTopNoScale * scale + headerBottomOffset;
+
+                float footerTop = hasBottomSheet ? footerTopWithScaleOnTablet : footerTopWithScaleOnPhone;
+                float bottomEdge = hasBottomSheet ? bottomWithOffset : canvas.getHeight();
+
+                float currentLeft = hasBottomSheet ? leftWithScale : 0;
+                float currentRight = hasBottomSheet ? rightWithScale : canvas.getWidth();
+
+                canvas.drawRect(currentLeft, footerTop, currentRight, bottomEdge, mHeaderPaint);
+            }
         }
     }
 
@@ -2072,6 +2137,13 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
                 }
                 if (isSearchBarFloating()) {
                     bottomOffset += mSearchContainer.getHeight();
+                } else {
+                    String searchPlacement =
+                            LauncherPrefs.ALL_APPS_SEARCH_PLACEMENT.get(getContext());
+                    if ("bottom".equals(searchPlacement) && mSearchContainer != null
+                            && !AppDrawerStyle.isVerticalPaged(mAppDrawerStyle)) {
+                        bottomOffset += mSearchContainer.getHeight();
+                    }
                 }
                 mRecyclerView.setPadding(mPadding.left, mPadding.top, mPadding.right,
                         mPadding.bottom + bottomOffset);
