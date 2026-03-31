@@ -368,59 +368,59 @@
     <string name="icon_pack_add">추가로 설치</string>
     <string name="icon_pack_no_market">사용할 수 있는 앱 스토어가 없습니다</string>
     <!-- Wallpaper carousel -->
-    <string name="wallpaper_carousel_title">Wallpaper carousel</string>
+    <string name="wallpaper_carousel_title">슬라이드형 배경화면</string>
     <string name="wallpaper_carousel_summary">메뉴 길게 눌러서 배경화면 빠르게 전환</string>
     <string name="wallpaper_carousel_lockscreen_title">잠금화면에 적용</string>
     <string name="wallpaper_carousel_lockscreen_summary">잠금 화면에 동일한 배경화면 설정</string>
     <!-- Additional shape options in customization picker -->
     <string name="pebble_shape_title">조약돌</string>
-    <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
+    <string name="vessel_shape_title">항아리</string>
+    <string name="pure_square_shape_title">정사각형</string>
     <string name="squircle_shape_title">모서리가 둥근 정사각형</string>
     <string name="tapered_rect_shape_title">사다리꼴 사각형</string>
     <string name="teardrop_shape_title">물방울</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="rounded_rect_shape_title">모서리가 둥근 직사각형</string>
     <string name="cloudy_shape_title">흐림</string>
     <string name="cylindrical_shape_title">원통형</string>
     <string name="flower_shape_title">꽃</string>
     <string name="heart_shape_title">하트</string>
     <string name="hexagon_shape_title">육각형</string>
-    <string name="ios_style_shape_title">iOS Style</string>
-    <string name="leaf_shape_title">Leaf</string>
-    <string name="meow_shape_title">Meow</string>
-    <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="scroll_shape_title">Scroll</string>
-    <string name="stretched_shape_title">Stretched</string>
+    <string name="ios_style_shape_title">iOS 스타일</string>
+    <string name="leaf_shape_title">잎사귀</string>
+    <string name="meow_shape_title">야옹</string>
+    <string name="samsung_style_shape_title">삼성 스타일</string>
+    <string name="scroll_shape_title">스크롤</string>
+    <string name="stretched_shape_title">늘인 모양</string>
     <!-- Dark app drawer text -->
-    <string name="all_apps_dark_text_title">Dark app labels</string>
-    <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
+    <string name="all_apps_dark_text_title">어두운 앱 라벨</string>
+    <string name="all_apps_dark_text_summary">앱 서랍의 앱 라벨에 항상 어두운 색 글씨 사용</string>
     <!-- App drawer styles -->
-    <string name="drawer_style_title">App drawer style</string>
-    <string name="drawer_style_normal">Normal (bottom sheet)</string>
-    <string name="drawer_style_legacy">Legacy fullscreen</string>
-    <string name="drawer_style_list">List style</string>
-    <string name="drawer_style_oneui">OneUI style (paged)</string>
+    <string name="drawer_style_title">앱 서랍 스타일</string>
+    <string name="drawer_style_normal">일반 (하단 시트)</string>
+    <string name="drawer_style_legacy">레거시 전체 화면</string>
+    <string name="drawer_style_list">목록 스타일</string>
+    <string name="drawer_style_oneui">OneUI 스타일(페이지)</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
-    <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
-    <string name="app_drawer_sort_install_date">Sort by install date</string>
-    <string name="app_drawer_sort_usage">Sort by usage</string>
+    <string name="app_drawer_sort_mode_title">앱 서랍 정렬</string>
+    <string name="app_drawer_sort_alphabetical">알파벳순으로 정렬</string>
+    <string name="app_drawer_sort_install_date">설치 날짜순으로 정렬</string>
+    <string name="app_drawer_sort_usage">사용량 순으로 정렬</string>
     <!-- App drawer color -->
-    <string name="pref_app_drawer_custom_color_title">Custom background color</string>
-    <string name="pref_app_drawer_custom_color_summary">Use a custom color for the app drawer background</string>
-    <string name="pref_app_drawer_custom_color_light_title">Light mode color</string>
-    <string name="pref_app_drawer_custom_color_dark_title">Dark mode color</string>
+    <string name="pref_app_drawer_custom_color_title">배경 색 사용자 지정</string>
+    <string name="pref_app_drawer_custom_color_summary">앱 서랍 배경에 사용자 지정 색상 사용</string>
+    <string name="pref_app_drawer_custom_color_light_title">밝은 모드 색</string>
+    <string name="pref_app_drawer_custom_color_dark_title">어두운 모드 색</string>
     <!-- Color Picker -->
     <string name="color_picker_hsb">HSB</string>
     <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Hue</string>
-    <string name="color_picker_saturation">Saturation</string>
-    <string name="color_picker_brightness">Brightness</string>
-    <string name="color_picker_red">Red</string>
-    <string name="color_picker_green">Green</string>
-    <string name="color_picker_blue">Blue</string>
+    <string name="color_picker_hue">색조</string>
+    <string name="color_picker_saturation">채도</string>
+    <string name="color_picker_brightness">명도</string>
+    <string name="color_picker_red">빨간색</string>
+    <string name="color_picker_green">초록색</string>
+    <string name="color_picker_blue">파란색</string>
     <string name="color_picker_hex">HEX</string>
     <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
+    <string name="dock_search_pixel_style_title">Pixel 스타일 검색 바</string>
     <string name="dock_search_pixel_style_summary">레이어드 배경으로 새롭게 디자인된 검색창</string>
 </resources>
