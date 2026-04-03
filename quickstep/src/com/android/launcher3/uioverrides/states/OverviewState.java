@@ -134,7 +134,8 @@ public class OverviewState extends LauncherState {
         if (showFloatingSearch) {
             elements |= FLOATING_SEARCH_BAR;
         }
-        if (!dp.getLauncherPrefs().get(LauncherPrefs.RECENTS_CLEAR_ALL)) {
+        if (dp.getDeviceProperties().isLargeScreen() ||
+                !dp.getLauncherPrefs().get(LauncherPrefs.RECENTS_CLEAR_ALL)) {
             elements |= CLEAR_ALL_BUTTON;
         }
         if (launcherUiState.getSplitScreenUiState().isSplitSelectActive()) {
