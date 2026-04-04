@@ -264,7 +264,8 @@ public class AllAppsTransitionController
 
         boolean hasNavScrim = progress < NAV_BAR_COLOR_FORCE_UPDATE_THRESHOLD
                 && mLauncher.getAppsView().getNavBarScrimHeight() > 0;
-        boolean hasStatusScrim = progress < STATUS_BAR_COLOR_FORCE_UPDATE_THRESHOLD;
+        boolean hasStatusScrim = !mShouldShowAllAppsOnSheet
+                && progress < STATUS_BAR_COLOR_FORCE_UPDATE_THRESHOLD;
         mLauncher.getSystemUiController().updateUiState(UI_STATE_ALL_APPS,
                 ((hasNavScrim ? mNavScrimFlag : 0) | (hasStatusScrim ? mStatusScrimFlag : 0)));
     }
