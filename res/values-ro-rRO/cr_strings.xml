@@ -87,7 +87,7 @@
     <string name="updating_launcher_components">Se repornește lansatorul pentru a actualiza componentele lansatorului...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Dublă atingere pentru oprire ecran</string>
-    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_summary">Atingeți de două ori spațiul gol de pe ecranul de pornire pentru a opri ecranul</string>
     <string name="pref_sleep_gesture_haptic_title">Vibrează la atingerea dublă pentru a dormi</string>
     <string name="pref_sleep_gesture_haptic_summary">Oferă feedback haptic la gestul de două apăsări pentru a dormi</string>
     <!-- Open keyboard -->
@@ -401,26 +401,26 @@
     <string name="drawer_style_list">Stil listă</string>
     <string name="drawer_style_oneui">Stilul OneUI (pagină)</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
+    <string name="app_drawer_sort_mode_title">Sortare aplicaţie</string>
     <string name="app_drawer_sort_alphabetical">Sortează alfabetic</string>
     <string name="app_drawer_sort_install_date">Sortează după data instalării</string>
     <string name="app_drawer_sort_usage">Sortare după utilizare</string>
     <!-- App drawer color -->
-    <string name="pref_app_drawer_custom_color_title">Custom background color</string>
-    <string name="pref_app_drawer_custom_color_summary">Use a custom color for the app drawer background</string>
-    <string name="pref_app_drawer_custom_color_light_title">Light mode color</string>
-    <string name="pref_app_drawer_custom_color_dark_title">Dark mode color</string>
+    <string name="pref_app_drawer_custom_color_title">Culoare fundal personalizată</string>
+    <string name="pref_app_drawer_custom_color_summary">Utilizați o culoare personalizată pentru fundalul sertarului de aplicații</string>
+    <string name="pref_app_drawer_custom_color_light_title">Culoare mod lumină</string>
+    <string name="pref_app_drawer_custom_color_dark_title">Culoare modul întunecat</string>
     <!-- Color Picker -->
     <string name="color_picker_hsb">HSB</string>
     <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Hue</string>
-    <string name="color_picker_saturation">Saturation</string>
-    <string name="color_picker_brightness">Brightness</string>
-    <string name="color_picker_red">Red</string>
-    <string name="color_picker_green">Green</string>
-    <string name="color_picker_blue">Blue</string>
+    <string name="color_picker_hue">Nuanță</string>
+    <string name="color_picker_saturation">Saturație</string>
+    <string name="color_picker_brightness">Luminozitate</string>
+    <string name="color_picker_red">Roșu</string>
+    <string name="color_picker_green">Verde</string>
+    <string name="color_picker_blue">Albastru</string>
     <string name="color_picker_hex">HEX</string>
     <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
-    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
+    <string name="dock_search_pixel_style_title">Bară de căutare stiluri Pixel</string>
+    <string name="dock_search_pixel_style_summary">Bara de căutare redimensionată cu fundal strat</string>
 </resources>
