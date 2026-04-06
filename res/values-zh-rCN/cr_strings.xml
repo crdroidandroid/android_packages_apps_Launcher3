@@ -87,7 +87,7 @@
     <string name="updating_launcher_components">正在重新启动启动器以更新其组件...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">双击睡眠</string>
-    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_summary">双击主屏幕空白处即可关闭屏幕</string>
     <string name="pref_sleep_gesture_haptic_title">双击关闭屏幕</string>
     <string name="pref_sleep_gesture_haptic_summary">双击关闭屏幕时震动反馈</string>
     <!-- Open keyboard -->
@@ -401,7 +401,7 @@
     <string name="drawer_style_list">列表样式</string>
     <string name="drawer_style_oneui">OneUI 样式(页面)</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
+    <string name="app_drawer_sort_mode_title">应用抽屉排序</string>
     <string name="app_drawer_sort_alphabetical">按字母顺序排序</string>
     <string name="app_drawer_sort_install_date">按安装日期排序</string>
     <string name="app_drawer_sort_usage">按使用情况排序</string>
@@ -421,6 +421,6 @@
     <string name="color_picker_blue">蓝色</string>
     <string name="color_picker_hex">HEX</string>
     <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
-    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
+    <string name="dock_search_pixel_style_title">Pixel样式搜索栏</string>
+    <string name="dock_search_pixel_style_summary">焕新搜索栏，带分层背景</string>
 </resources>
