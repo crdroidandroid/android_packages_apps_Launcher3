@@ -88,8 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">두 번 탭하여 화면 끄기</string>
     <string name="pref_sleep_gesture_summary">홈 화면의 빈 공간을 두 번 두드려 화면 끄기</string>
-    <string name="pref_sleep_gesture_haptic_title">두 번 두드려 화면 끄기하면 진동</string>
-    <string name="pref_sleep_gesture_haptic_summary">두 번 두드려 화면 끄기 동작에 햅틱 피드백 제공</string>
+    <string name="pref_sleep_gesture_haptic_title">두 번 탭하여 화면 끄기하면 진동</string>
+    <string name="pref_sleep_gesture_haptic_summary">두 번 탭하여 화면 끄기 동작에 햅틱 피드백 제공</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">스와이프하여 검색 시작</string>
     <string name="drawer_open_keyboard_summary">앱 서랍이 열리면 키보드 표시</string>
