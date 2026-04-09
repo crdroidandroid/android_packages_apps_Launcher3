@@ -373,42 +373,42 @@
     <string name="wallpaper_carousel_lockscreen_title">應用於鎖定螢幕</string>
     <string name="wallpaper_carousel_lockscreen_summary">將相同的桌布設定為鎖定螢幕桌布</string>
     <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pebble</string>
-    <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Teardrop</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="pebble_shape_title">鵝卵石</string>
+    <string name="vessel_shape_title">飛船</string>
+    <string name="pure_square_shape_title">正方形</string>
+    <string name="squircle_shape_title">圓角方形</string>
+    <string name="tapered_rect_shape_title">錐形矩形</string>
+    <string name="teardrop_shape_title">淚珠形</string>
+    <string name="rounded_rect_shape_title">圓角矩形</string>
     <string name="cloudy_shape_title">多雲</string>
-    <string name="cylindrical_shape_title">Cylindrical</string>
-    <string name="flower_shape_title">Flower</string>
-    <string name="heart_shape_title">Heart</string>
-    <string name="hexagon_shape_title">Hexagon</string>
-    <string name="ios_style_shape_title">iOS Style</string>
-    <string name="leaf_shape_title">Leaf</string>
-    <string name="meow_shape_title">Meow</string>
-    <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="scroll_shape_title">Scroll</string>
-    <string name="stretched_shape_title">Stretched</string>
+    <string name="cylindrical_shape_title">圓柱形</string>
+    <string name="flower_shape_title">花</string>
+    <string name="heart_shape_title">心形</string>
+    <string name="hexagon_shape_title">六角形</string>
+    <string name="ios_style_shape_title">iOS 样式</string>
+    <string name="leaf_shape_title">葉片</string>
+    <string name="meow_shape_title">喵</string>
+    <string name="samsung_style_shape_title">Samsung 样式</string>
+    <string name="scroll_shape_title">滾動</string>
+    <string name="stretched_shape_title">拉伸</string>
     <!-- Dark app drawer text -->
-    <string name="all_apps_dark_text_title">Dark app labels</string>
-    <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
+    <string name="all_apps_dark_text_title">深色 App 標籤</string>
+    <string name="all_apps_dark_text_summary">在應用程式抽屜中，一律對 App 標籤使用深色文字</string>
     <!-- App drawer styles -->
-    <string name="drawer_style_title">App drawer style</string>
-    <string name="drawer_style_normal">Normal (bottom sheet)</string>
-    <string name="drawer_style_legacy">Legacy fullscreen</string>
-    <string name="drawer_style_list">List style</string>
-    <string name="drawer_style_oneui">OneUI style (paged)</string>
+    <string name="drawer_style_title">應用程式抽屜樣式</string>
+    <string name="drawer_style_normal">標準 (底部抽屜)</string>
+    <string name="drawer_style_legacy">傳統全螢幕</string>
+    <string name="drawer_style_list">列表樣式</string>
+    <string name="drawer_style_oneui">One Ui 樣式 (分頁)</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
-    <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
-    <string name="app_drawer_sort_install_date">Sort by install date</string>
-    <string name="app_drawer_sort_usage">Sort by usage</string>
+    <string name="app_drawer_sort_mode_title">應用程式抽屜排序</string>
+    <string name="app_drawer_sort_alphabetical">依字母順序排序</string>
+    <string name="app_drawer_sort_install_date">依安裝日期排序</string>
+    <string name="app_drawer_sort_usage">依最常使用排序</string>
     <!-- App drawer color -->
-    <string name="pref_app_drawer_custom_color_title">Custom background color</string>
-    <string name="pref_app_drawer_custom_color_summary">Use a custom color for the app drawer background</string>
-    <string name="pref_app_drawer_custom_color_light_title">Light mode color</string>
+    <string name="pref_app_drawer_custom_color_title">自訂背景顏色</string>
+    <string name="pref_app_drawer_custom_color_summary">自訂應用程式抽屜背景顏色</string>
+    <string name="pref_app_drawer_custom_color_light_title">淺色模式顏色</string>
     <string name="pref_app_drawer_custom_color_dark_title">Dark mode color</string>
     <!-- Color Picker -->
     <string name="color_picker_hsb">HSB</string>
