@@ -53,8 +53,8 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">當在主畫面向右滑動時</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Use icon customizations in drawer</string>
-    <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
+    <string name="pref_icon_customization_title">在抽屜中使用圖示自訂設定</string>
+    <string name="pref_icon_customization_summary">套用與主畫面相同的圖示自訂設定</string>
     <!-- Pause apps shortcut -->
     <string name="pause">暫停應用程式</string>
     <string name="pause_apps_dialog_title">暫停 %1$s？</string>
@@ -87,7 +87,7 @@
     <string name="updating_launcher_components">正在重新啟動桌面以更新組件...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">輕觸兩下即可休眠</string>
-    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_summary">在主畫面的空白處雙擊以關閉畫面</string>
     <string name="pref_sleep_gesture_haptic_title">鎖定螢幕雙擊兩下啟用</string>
     <string name="pref_sleep_gesture_haptic_summary">提供雙擊鎖定螢幕時觸覺回饋</string>
     <!-- Open keyboard -->
@@ -115,7 +115,7 @@
     <string name="label_search">搜尋</string>
     <string name="label_lens">智慧鏡頭</string>
     <string name="label_voice_search">語音搜尋</string>
-    <string name="label_gemini_search">AI mode</string>
+    <string name="label_gemini_search">AI 模式</string>
     <string name="dock_music_search_title">音樂搜尋</string>
     <string name="dock_music_search_summary">點選麥克風圖示，開始進行音樂搜尋</string>
     <string name="dock_search_title">Google 搜尋列</string>
@@ -124,10 +124,10 @@
     <string name="dock_theme_summary">將主題色套用於搜尋列</string>
     <string name="search_radius_title">圓角大小</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar location</string>
-    <string name="drawer_search_location_hidden">Hidden</string>
-    <string name="drawer_search_location_top">Top</string>
-    <string name="drawer_search_location_bottom">Bottom</string>
+    <string name="drawer_search_title">應用程式搜尋列位置</string>
+    <string name="drawer_search_location_hidden">隱藏</string>
+    <string name="drawer_search_location_top">頂部</string>
+    <string name="drawer_search_location_bottom">底部</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">桌布滑動</string>
     <string name="allow_wallpaper_scrolling_summary">在不同頁面間滑動時使桌布跟著移動</string>
@@ -409,18 +409,18 @@
     <string name="pref_app_drawer_custom_color_title">自訂背景顏色</string>
     <string name="pref_app_drawer_custom_color_summary">自訂應用程式抽屜背景顏色</string>
     <string name="pref_app_drawer_custom_color_light_title">淺色模式顏色</string>
-    <string name="pref_app_drawer_custom_color_dark_title">Dark mode color</string>
+    <string name="pref_app_drawer_custom_color_dark_title">深色模式顏色</string>
     <!-- Color Picker -->
     <string name="color_picker_hsb">HSB</string>
     <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Hue</string>
-    <string name="color_picker_saturation">Saturation</string>
-    <string name="color_picker_brightness">Brightness</string>
-    <string name="color_picker_red">Red</string>
-    <string name="color_picker_green">Green</string>
-    <string name="color_picker_blue">Blue</string>
+    <string name="color_picker_hue">色相</string>
+    <string name="color_picker_saturation">飽和度</string>
+    <string name="color_picker_brightness">亮度</string>
+    <string name="color_picker_red">紅色</string>
+    <string name="color_picker_green">綠色</string>
+    <string name="color_picker_blue">藍色</string>
     <string name="color_picker_hex">HEX</string>
     <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
-    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
+    <string name="dock_search_pixel_style_title">Pixel 風格搜尋列</string>
+    <string name="dock_search_pixel_style_summary">新版多層次背景搜尋列</string>
 </resources>
