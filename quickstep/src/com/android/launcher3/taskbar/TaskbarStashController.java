@@ -1321,6 +1321,7 @@ public class TaskbarStashController implements TaskbarControllers.LoggableTaskba
             mControllers.stashedHandleViewController.onIsStashedChanged(
                     isStashed && supportsVisualStashing());
             mControllers.taskbarInsetsController.onTaskbarOrBubblebarWindowHeightOrInsetsChanged();
+            mControllers.taskbarViewController.setTaskbarViewVisible(!isStashed);
         });
         updateIsTaskbarStashed(isStashed);
     }
