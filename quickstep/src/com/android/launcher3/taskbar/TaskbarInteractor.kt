@@ -222,11 +222,12 @@ class TaskbarInteractor(private val taskbarUIController: TaskbarUIController) {
             if (rootView.height == 0) {
                 // When view height is 0, we don't have to wait for anything.
                 false
+            } else {
+                getTaskbarUiThread().execute {
+                    ViewUtils.postFrameDrawn(rootView) { callbackExecutor.execute(callback) }
+                }
+                true
             }
-            getTaskbarUiThread().execute {
-                ViewUtils.postFrameDrawn(rootView) { callbackExecutor.execute(callback) }
-            }
-            true
         } else {
             false
         }
