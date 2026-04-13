@@ -88,8 +88,8 @@
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">두 번 탭하여 화면 끄기</string>
     <string name="pref_sleep_gesture_summary">홈 화면의 빈 공간을 두 번 두드려 화면 끄기</string>
-    <string name="pref_sleep_gesture_haptic_title">두 번 두드려 화면 끄기하면 진동</string>
-    <string name="pref_sleep_gesture_haptic_summary">두 번 두드려 화면 끄기 동작에 햅틱 피드백 제공</string>
+    <string name="pref_sleep_gesture_haptic_title">두 번 탭하여 화면 끄기하면 진동</string>
+    <string name="pref_sleep_gesture_haptic_summary">두 번 탭하여 화면 끄기 동작에 햅틱 피드백 제공</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">스와이프하여 검색 시작</string>
     <string name="drawer_open_keyboard_summary">앱 서랍이 열리면 키보드 표시</string>
@@ -222,7 +222,7 @@
         <item>당신의 인생은 당신이 만들어갑니다. 멋진 삶을 살아가세요</item>
         <item>꿈은 크게, 일은 열심히, 그리고 절대 포기하지 마세요.</item>
         <item>당신이 생각하는 것 보다 당신은 강합니다.</item>
-        <item>Every setback is a setup for a comeback.</item>
+        <item>모든 좌절은 더 큰 도약을 위한 준비 단계입니다.</item>
         <item>목적지만이 아니라, 과정도 즐기세요</item>
         <item>두려움이 아닌 목표를 쫒아가세요</item>
         <item>당신의 가능성은 무한합니다. 도전하세요.</item>
@@ -234,9 +234,9 @@
         <item>당신의 태도가 당신을 만듭니다.</item>
         <item>태양이 질 때도 당신의 이야기는 여전히 써지고 있습니다.</item>
         <item>일상속에서 아름다움을 간직하세요.</item>
-        <item>It\'s time to reflect and reset.</item>
+        <item>자신을 돌아보고 재정비할 시간입니다.</item>
         <item>시간이 언제라도 즐거움을 고르세요.</item>
-        <item>Opportunities don\'t clock out in the evening.</item>
+        <item>기회는 밤낮을 가리지 않습니다.</item>
         <item>다른 사람이 웃을 수 있는 이유가 되어주세요.</item>
         <item>당신의 가능성에는 한계가 없습니다.</item>
         <item>마법같은 순간은 언제라도 찾아옵니다.</item>
@@ -249,7 +249,7 @@
     </string-array>
     <string-array name="quickspace_psa_evening">
         <item>밤을 즐겨요. 밤은 신비로우니까요.</item>
-        <item>In the quiet of this evening, find serenity.</item>
+        <item>이 고요한 저녁 속에서 평온함을 찾으시길 바랍니다.</item>
         <item>인생의 위대한 여정은 어둠속에서 시작할 수도 있습니다.</item>
         <item>해가 지더라도 당신의 여정은 계속됩니다.</item>
         <item>밤이란 캔버스 위에 꿈을 그려요.</item>
@@ -257,7 +257,7 @@
         <item>별은 가장 어두울 때 가장 밝게 빛납니다.</item>
         <item>하루의 마지막일지라도 큰 꿈을 꾸세요.</item>
         <item>당신의 인생은 기록되길 기다리는 이야기입니다.</item>
-        <item>It\'s time for reflection and renewal.</item>
+        <item>성찰과 새로운 변화를 위한 시간입니다.</item>
         <item>늦은 밤의 고민이 이른 아침의 변화로 이어집니다.</item>
         <item>저녁의 고요속에서 즐거움을 찾으세요.</item>
         <item>밤하늘은 꿈을 위한 넓은 캔버스와 같아요.</item>
@@ -269,20 +269,20 @@
     <string-array name="quickspace_psa_midnight">
         <item>밤은 기회의 조용한 속삭임입니다.</item>
         <item>밤의 정적속에서 내면의 힘을 찾으세요.</item>
-        <item>Embrace the darkness, for it holds the keys to your dreams.</item>
+        <item>어둠을 받아들이세요. 그 안에 당신의 꿈을 여는 열쇠가 있습니다.</item>
         <item>세계는 잠들었지만, 당신의 가능성은 맑게 깨어있습니다.</item>
         <item>밤이 늦어도, 당신의 야망은 영향받지 않아요.</item>
-        <item>Stay curious, stay awake, and let nights guide you.</item>
+        <item>호기심을 유지하고 깨어 있으세요. 밤이 당신을 이끌어 줄 것입니다.</item>
         <item>당신의 꿈을 쫓을 용기를 내봐요.</item>
         <item>위대함은 편한데서 오지 않아요.</item>
         <item>당신은 당신의 운명을 스스로 결정할 힘이 있습니다.</item>
         <item>행복은 선택입니다. 매일 선택하세요.</item>
-        <item>Life is what you make it, so make it count.</item>
-        <item>Stay focused, stay determined, stay unstoppable.</item>
+        <item>인생은 스스로 만들어가는 것입니다. 순간순간을 가치 있게 만드세요.</item>
+        <item>집중력을 유지하고, 단호하게, 멈춤 없이 나아가세요.</item>
         <item>자신만의 이야기의 지은이는 자시자신입니다.</item>
         <item>완벽이 아니라 전진을 향해 가세요.</item>
-        <item>Every day is a new beginning; make it a great one.</item>
-        <item>Inspire others by being your authentic self.</item>
+        <item>매일은 새로운 시작입니다. 오늘을 최고의 날로 만드세요.</item>
+        <item>가장 나다운 모습으로 타인에게 영감을 전달하세요.</item>
         <item>당신의 태도가 당신의 방향을 결정합니다.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
@@ -293,7 +293,7 @@
         <item>진짜 매트릭스에 오신걸 환영합니다!</item>
         <item>얼마나 많은 스크린샷을 찍으셨나요?</item>
         <item>Open goodness with crDroid</item>
-        <item>Spread love, not havoc</item>
+        <item>사랑을 방해하지 않는 전파</item>
         <item>우리가 불낸게 아니야!</item>
         <item>좋은 음악을 들을 시간이에요.</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
@@ -316,13 +316,13 @@
         <item>당신이 깜박이는 것입니다, 감자가되지 마십시오?</item>
         <item>무슨 생각을 하고 계신가요?</item>
         <item>익스펙토 페트로눔</item>
-        <item>Wubba Lubba Dub Dub</item>
+        <item>워바러바덥덥</item>
         <item>이겼닭 ....?</item>
         <item>rm -rf \/</item>
         <item>사실 프링글스는 감자칩이 아니에요..</item>
         <item>배터리 충전상태를 확인하세요!</item>
         <item>이메일/메시지를 확인하세요</item>
-        <item>Check your to-do list if you have one.</item>
+        <item>할 일 목록이 있다면 한번 확인해 보세요.</item>
         <item>홈 설정에서 퀵스페이스를 해제할 수 있습니다.</item>
         <item>후원하기</item>
         <item>최고의 롬.</item>

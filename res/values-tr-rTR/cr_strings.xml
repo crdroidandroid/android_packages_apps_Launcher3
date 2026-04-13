@@ -53,8 +53,8 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Ana sayfadan sağa kaydırdığınızda</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Çekmecede simge kişiselleştirmelerini kullan</string>
-    <string name="pref_icon_customization_summary">Ana ekranda kullanılan simge kişiselleştirmelerini takip et</string>
+    <string name="pref_icon_customization_title">Çekmecede ikon özelleştirmelerini kullan</string>
+    <string name="pref_icon_customization_summary">Ana ekranda kullanılan ikon özelleştirmelerini takip et</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Duraklat</string>
     <string name="pause_apps_dialog_title">%1$s duraklatılsın mı?</string>
@@ -115,7 +115,7 @@
     <string name="label_search">Ara</string>
     <string name="label_lens">Google lens</string>
     <string name="label_voice_search">Sesli arama</string>
-    <string name="label_gemini_search">AI modu</string>
+    <string name="label_gemini_search">AI Modu</string>
     <string name="dock_music_search_title">Müzik ara</string>
     <string name="dock_music_search_summary">Mikrofon simgesine basarak müzik aramayı başlatın</string>
     <string name="dock_search_title">Google arama çubuğu</string>
@@ -368,10 +368,10 @@
     <string name="icon_pack_add">Daha fazla yükle</string>
     <string name="icon_pack_no_market">Kullanılabilir uygulama mağazası yok</string>
     <!-- Wallpaper carousel -->
-    <string name="wallpaper_carousel_title">Duvar kâğıdı döngüsü</string>
-    <string name="wallpaper_carousel_summary">Uzun dokunuş menüsünden duvar kâğıtlarını hızlıca değiştir</string>
+    <string name="wallpaper_carousel_title">Duvar kağıdı döngüsü</string>
+    <string name="wallpaper_carousel_summary">Uzun dokunuş menüsünden duvar kağıtlarını hızlıca değiştir</string>
     <string name="wallpaper_carousel_lockscreen_title">Kilit ekranına uygula</string>
-    <string name="wallpaper_carousel_lockscreen_summary">Aynı duvar kâğıdını kilit ekranına uygula</string>
+    <string name="wallpaper_carousel_lockscreen_summary">Aynı duvar kağıdını kilit ekranına uygula</string>
     <!-- Additional shape options in customization picker -->
     <string name="pebble_shape_title">Çakıl</string>
     <string name="vessel_shape_title">Gemi</string>
