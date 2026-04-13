@@ -87,7 +87,7 @@
     <string name="updating_launcher_components">Launcher herstarten om de launcher componenten bij te werken...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Dubbeltikken voor slaapstand</string>
-    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_summary">Dubbeltikken op een leeg gebied op het beginscherm om het scherm uit te schakelen</string>
     <string name="pref_sleep_gesture_haptic_title">Trillen bij dubbeltikken om te slapen</string>
     <string name="pref_sleep_gesture_haptic_summary">Geef haptische feedback bij dubbeltikken voor slaapgebaar</string>
     <!-- Open keyboard -->
@@ -401,7 +401,7 @@
     <string name="drawer_style_list">Lijst stijl</string>
     <string name="drawer_style_oneui">OneUI stijl (paged)</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
+    <string name="app_drawer_sort_mode_title">App lade sortering</string>
     <string name="app_drawer_sort_alphabetical">Alfabetisch sorteren</string>
     <string name="app_drawer_sort_install_date">Sorteren op installatiedatum</string>
     <string name="app_drawer_sort_usage">Sorteren op gebruik</string>
@@ -421,6 +421,6 @@
     <string name="color_picker_blue">Blauw</string>
     <string name="color_picker_hex">HEX</string>
     <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
-    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
+    <string name="dock_search_pixel_style_title">Pixel stijl zoekbalk</string>
+    <string name="dock_search_pixel_style_summary">Zoekbalk met gelaagde achtergrond</string>
 </resources>
