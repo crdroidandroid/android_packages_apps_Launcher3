@@ -1474,7 +1474,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
                     resources.getDimensionPixelSize(R.dimen.taskbar_phone_size) :
                     SettingsCache.INSTANCE.get(this).getValue(NAVIGATION_BAR_HINT_URI) ?
                     resources.getDimensionPixelSize(R.dimen.taskbar_stashed_size) :
-                    1;
+                    0;
         }
 
         int bubbleBarTop = mControllers.bubbleControllers.map(bubbleControllers ->

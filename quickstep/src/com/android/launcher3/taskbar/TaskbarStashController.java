@@ -336,12 +336,12 @@ public class TaskbarStashController implements TaskbarControllers.LoggableTaskba
                     R.dimen.taskbar_phone_size);
             mStashedHeight = SettingsCache.INSTANCE.get(mActivity).getValue(NAVIGATION_BAR_HINT_URI)
                     ? mActivity.getResources().getDimensionPixelSize(R.dimen.taskbar_stashed_size)
-                    : 1;
+                    : 0;
         } else {
             mUnstashedHeight = mActivity.getDeviceProfile().getTaskbarProfile().getHeight();
             mStashedHeight = SettingsCache.INSTANCE.get(mActivity).getValue(NAVIGATION_BAR_HINT_URI)
                     ? mActivity.getDeviceProfile().getTaskbarProfile().getStashedTaskbarHeight()
-                    : 1;
+                    : 0;
         }
 
         updateIsTaskbarStashed(mIsStashed);
