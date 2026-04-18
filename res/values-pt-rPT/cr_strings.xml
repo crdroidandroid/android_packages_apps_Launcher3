@@ -53,8 +53,8 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Ao deslizar para a direita no ecrã principal</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Use icon customizations in drawer</string>
-    <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
+    <string name="pref_icon_customization_title">Usar as personalizações dos ícones na gaveta</string>
+    <string name="pref_icon_customization_summary">Seguir as personalizações dos ícones usados no ecrã inicial</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Pausar</string>
     <string name="pause_apps_dialog_title">Pausar %1$s?</string>
@@ -87,12 +87,12 @@
     <string name="updating_launcher_components">A reiniciar o launcher para atualizar os componentes do launcher...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Toque duplo para desligar ecrã</string>
-    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_summary">Toque duas vezes numa área vazia do ecrã inicial para desligar o ecrã</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrar ao tocar duas vezes para dormir</string>
+    <string name="pref_sleep_gesture_haptic_summary">Prover resposta táctil ao fazer o gesto de tocar duas vezes para dormir</string>
     <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
+    <string name="drawer_open_keyboard_title">Deslize para começar busca</string>
+    <string name="drawer_open_keyboard_summary">Abrir teclado assim que a gaveta de aplicações ficar visível</string>
     <!-- Icon size -->
     <string name="icon_size_title">Tamanho dos ícones</string>
     <!-- Font size -->
@@ -115,7 +115,7 @@
     <string name="label_search">Pesquisar</string>
     <string name="label_lens">Lentes do Google</string>
     <string name="label_voice_search">Pesquisa por voz</string>
-    <string name="label_gemini_search">AI mode</string>
+    <string name="label_gemini_search">Modo IA</string>
     <string name="dock_music_search_title">Pesquisa de música</string>
     <string name="dock_music_search_summary">Iniciar pesquisa de música ao pressionar o ícone do microfone</string>
     <string name="dock_search_title">Barra de pesquisa do Google</string>
@@ -124,10 +124,10 @@
     <string name="dock_theme_summary">Usar ícones temáticos para a barra de pesquisa</string>
     <string name="search_radius_title">Raio do canto</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar location</string>
-    <string name="drawer_search_location_hidden">Hidden</string>
-    <string name="drawer_search_location_top">Top</string>
-    <string name="drawer_search_location_bottom">Bottom</string>
+    <string name="drawer_search_title">Localização da barra de pesquisa de aplicações</string>
+    <string name="drawer_search_location_hidden">Oculto</string>
+    <string name="drawer_search_location_top">Topo</string>
+    <string name="drawer_search_location_bottom">Fundo</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Rolar papel de parede</string>
     <string name="allow_wallpaper_scrolling_summary">Efeito de rolagem do papel de parede para vários ecrãs</string>
@@ -156,7 +156,7 @@
     <string name="drawer_scrollbar_summary">Barra de deslocamento na parte lateral da gaveta de aplicações</string>
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">Barra de estado escura</string>
-    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
+    <string name="perf_dark_status_bar_summary">Usar sempre a barra de status escura no ecrã inicial</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Resumo</string>
     <string name="show_quickspace_summary">Mostrado no topo do ecrã inicial</string>
@@ -331,7 +331,7 @@
     </string-array>
     <string name="intent_no_app_clock_found">Não foi possível encontrar o calendário ou a atividade do relógio</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quickspace_weather_provider_title">Weather provider</string>
+    <string name="quickspace_weather_provider_title">Provedor de meteorologia</string>
     <string name="quickspace_weather_provider_entry_auto">Auto</string>
     <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
     <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
@@ -350,13 +350,13 @@
     <string name="quick_event_weather_text_title">Condições atuais</string>
     <string name="quick_event_weather_text_summary">Mostrar as condições meteorológicas atuais</string>
     <!-- Auto-hide page indicator dots -->
-    <string name="auto_hide_dots">Auto-hide page indicator</string>
-    <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
+    <string name="auto_hide_dots">Ocultar automaticamente indicador de página</string>
+    <string name="auto_hide_dots_summary">Ocultar os pontos indicadores da página automaticamente</string>
     <!-- Background blur -->
     <string name="background_blur_title">Nível de desfoque do fundo</string>
     <string name="background_blur_summary">Definir o nível de desfoque para a gaveta de apps e ecrã de recentes</string>
     <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
+    <string name="app_info_title">Info. da Aplicação</string>
     <string name="app_info_source">Origem</string>
     <string name="app_info_source_system">Sistema</string>
     <string name="app_info_last_update">Última atualização</string>
@@ -368,59 +368,59 @@
     <string name="icon_pack_add">Instalar mais</string>
     <string name="icon_pack_no_market">Não há uma loja de apps disponível</string>
     <!-- Wallpaper carousel -->
-    <string name="wallpaper_carousel_title">Wallpaper carousel</string>
-    <string name="wallpaper_carousel_summary">Quickly switch wallpapers from the long-press menu</string>
-    <string name="wallpaper_carousel_lockscreen_title">Apply to lock screen</string>
-    <string name="wallpaper_carousel_lockscreen_summary">Set the same wallpaper on the lock screen</string>
+    <string name="wallpaper_carousel_title">Carrossel de papéis de parede</string>
+    <string name="wallpaper_carousel_summary">Troque rapidamente de papéis de parede através do menu de toque longo</string>
+    <string name="wallpaper_carousel_lockscreen_title">Aplicar ao ecrã de bloqueio</string>
+    <string name="wallpaper_carousel_lockscreen_summary">Aplicar o mesmo papel de parede ao ecrã de bloqueio</string>
     <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pebble</string>
-    <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Teardrop</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="pebble_shape_title">Seixo</string>
+    <string name="vessel_shape_title">Vaso</string>
+    <string name="pure_square_shape_title">Quadrado puro</string>
+    <string name="squircle_shape_title">Quadrículo</string>
+    <string name="tapered_rect_shape_title">Retângulo afunilado</string>
+    <string name="teardrop_shape_title">Lágrima</string>
+    <string name="rounded_rect_shape_title">Retângulo arredondado</string>
     <string name="cloudy_shape_title">Com nuvens</string>
-    <string name="cylindrical_shape_title">Cylindrical</string>
-    <string name="flower_shape_title">Flower</string>
-    <string name="heart_shape_title">Heart</string>
-    <string name="hexagon_shape_title">Hexagon</string>
-    <string name="ios_style_shape_title">iOS Style</string>
-    <string name="leaf_shape_title">Leaf</string>
+    <string name="cylindrical_shape_title">Cilíndrico</string>
+    <string name="flower_shape_title">Flor</string>
+    <string name="heart_shape_title">Coração</string>
+    <string name="hexagon_shape_title">Hexágono</string>
+    <string name="ios_style_shape_title">Estilo iOS</string>
+    <string name="leaf_shape_title">Folha</string>
     <string name="meow_shape_title">Meow</string>
-    <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="scroll_shape_title">Scroll</string>
-    <string name="stretched_shape_title">Stretched</string>
+    <string name="samsung_style_shape_title">Estilo Samsung</string>
+    <string name="scroll_shape_title">Rolar</string>
+    <string name="stretched_shape_title">Esticado</string>
     <!-- Dark app drawer text -->
-    <string name="all_apps_dark_text_title">Dark app labels</string>
-    <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
+    <string name="all_apps_dark_text_title">Rótulos de aplicação escuros</string>
+    <string name="all_apps_dark_text_summary">Usar sempre texto escuro para os rótulos das aplicações na gaveta de aplicações</string>
     <!-- App drawer styles -->
-    <string name="drawer_style_title">App drawer style</string>
-    <string name="drawer_style_normal">Normal (bottom sheet)</string>
-    <string name="drawer_style_legacy">Legacy fullscreen</string>
-    <string name="drawer_style_list">List style</string>
-    <string name="drawer_style_oneui">OneUI style (paged)</string>
+    <string name="drawer_style_title">Estilo da gaveta de aplicações</string>
+    <string name="drawer_style_normal">Normal (folha inferior)</string>
+    <string name="drawer_style_legacy">Tela cheia (antigo)</string>
+    <string name="drawer_style_list">Estilo de lista</string>
+    <string name="drawer_style_oneui">Estilo OneUI (paginado)</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
-    <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
-    <string name="app_drawer_sort_install_date">Sort by install date</string>
-    <string name="app_drawer_sort_usage">Sort by usage</string>
+    <string name="app_drawer_sort_mode_title">Ordenação da gaveta de aplicações</string>
+    <string name="app_drawer_sort_alphabetical">Ordenar alfabeticamente</string>
+    <string name="app_drawer_sort_install_date">Ordenar por data de instalação</string>
+    <string name="app_drawer_sort_usage">Ordenar por uso</string>
     <!-- App drawer color -->
-    <string name="pref_app_drawer_custom_color_title">Custom background color</string>
-    <string name="pref_app_drawer_custom_color_summary">Use a custom color for the app drawer background</string>
-    <string name="pref_app_drawer_custom_color_light_title">Light mode color</string>
-    <string name="pref_app_drawer_custom_color_dark_title">Dark mode color</string>
+    <string name="pref_app_drawer_custom_color_title">Cor de fundo personalizada</string>
+    <string name="pref_app_drawer_custom_color_summary">Utilizar uma cor personalizada para o fundo da gaveta de aplicações</string>
+    <string name="pref_app_drawer_custom_color_light_title">Cor do modo claro</string>
+    <string name="pref_app_drawer_custom_color_dark_title">Cor do modo escuro</string>
     <!-- Color Picker -->
     <string name="color_picker_hsb">HSB</string>
     <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Hue</string>
-    <string name="color_picker_saturation">Saturation</string>
-    <string name="color_picker_brightness">Brightness</string>
-    <string name="color_picker_red">Red</string>
-    <string name="color_picker_green">Green</string>
-    <string name="color_picker_blue">Blue</string>
+    <string name="color_picker_hue">Tonalidade</string>
+    <string name="color_picker_saturation">Saturação</string>
+    <string name="color_picker_brightness">Brilho</string>
+    <string name="color_picker_red">Vermelho</string>
+    <string name="color_picker_green">Verde</string>
+    <string name="color_picker_blue">Azul</string>
     <string name="color_picker_hex">HEX</string>
     <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
-    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
+    <string name="dock_search_pixel_style_title">Barra de procura ao estilo Pixel</string>
+    <string name="dock_search_pixel_style_summary">Barra de procura revista com fundo sobreposto</string>
 </resources>
