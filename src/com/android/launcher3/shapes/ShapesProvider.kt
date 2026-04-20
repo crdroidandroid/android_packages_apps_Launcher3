@@ -47,6 +47,8 @@ object ShapesProvider {
         "M50,20 C45,0 30,0 25,0 20,0 0,5 0,34 0,72 40,97 50,100 60,97 100,72 100,34 100,5 80,0 75,0 70,0 55,0 50,20 Z"
     private const val HEXAGON_PATH =
         "M12,0 88,0 100,50 88,100 12,100 0,50 12,0 Z"
+    private const val ROUNDED_HEXAGON_PATH =
+        "M4.8 33V67c0 5.8 3 11 8 13.7l29.4 17c4.9 2.7 11 2.7 15.9 0l29.4 -17c4.9 -2.7 8 -8 8 -13.7V33c0 -5.8 -3 -11 -8 -13.7l-29.4 -17c-4.9 -2.7 -11 -2.7 -15.9 0l-29.7 17C7.8 22.2 4.8 27.5 4.8 33z"
     private const val IOS_STYLE_PATH =
         "M24,0L76,0A24 24 0 0 1 100,24L100,76A24 24 0 0 1 76,100L24,100A24 24 0 0 1 0,76L0,24A24 24 0 0 1 24,0z"
     private const val LEAF_PATH =
@@ -74,6 +76,7 @@ object ShapesProvider {
     const val FLOWER_KEY = "flower"
     const val HEART_KEY = "heart"
     const val HEXAGON_KEY = "hexagon"
+    const val ROUNDED_HEXAGON_KEY = "rounded_hexagon"
     const val IOS_STYLE_KEY = "ios_style"
     const val LEAF_KEY = "leaf"
     const val MEOW_KEY = "meow"
@@ -187,6 +190,11 @@ object ShapesProvider {
                     key = HEXAGON_KEY,
                     titleId = R.string.hexagon_shape_title,
                     pathString = HEXAGON_PATH,
+                ),
+                IconShapeModel(
+                    key = ROUNDED_HEXAGON_KEY,
+                    titleId = R.string.rounded_hexagon_shape_title,
+                    pathString = ROUNDED_HEXAGON_PATH,
                 ),
                 IconShapeModel(
                     key = IOS_STYLE_KEY,
