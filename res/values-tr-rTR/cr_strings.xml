@@ -53,7 +53,7 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Ana sayfadan sağa kaydırdığınızda</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Çekmecede ikon özelleştirmelerini kullan</string>
+    <string name="pref_icon_customization_title">Çekmecede simge kişiselleştirmelerini kullan</string>
     <string name="pref_icon_customization_summary">Ana ekranda kullanılan ikon özelleştirmelerini takip et</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Duraklat</string>
@@ -385,7 +385,7 @@
     <string name="flower_shape_title">Çiçek</string>
     <string name="heart_shape_title">Kalp</string>
     <string name="hexagon_shape_title">Altıgen</string>
-    <string name="rounded_hexagon_shape_title">Rounded hexagon</string>
+    <string name="rounded_hexagon_shape_title">Yuvarlak altıgen</string>
     <string name="ios_style_shape_title">iOS tarzı</string>
     <string name="leaf_shape_title">Yaprak</string>
     <string name="meow_shape_title">Miyav</string>
