@@ -1081,12 +1081,7 @@ public final class Utilities {
      * Returns a partial, loggable stack trace.
      */
     public static String getTrimmedStackTrace(String callingMethodName) {
-        String stackTrace = Log.getStackTraceString(new Exception());
-        return Arrays.stream(stackTrace.split("\\n"))
-                .skip(2) // Removes the line "java.lang.Exception" and "getTrimmedStackTrace".
-                .filter(traceLine -> !traceLine.contains(callingMethodName))
-                .limit(3)
-                .collect(Collectors.joining("\n"));
+        return "";
     }
 
     /**
