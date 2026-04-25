@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">A munkaalkalmazások bekapcsolása</string>
     <string name="work_apps_paused_info_body_custom">A munkaalkalmazások nem küldhetnek értesítéseket, nem használhatják az akkumlátort, és nem férhetnek hozzá a helyadatokhoz.</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">A munkaalkalmazások nem fogadhatnak hívásokat és szöveges üzeneteket, nem küldhetnek önnek értesítéseket, nem használhatják az akkumulátort és nem férhetnek hozzá a helyadatokhoz</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Rejtett és védett alkalmazások</string>
-    <string name="trust_apps_auth_manager">Feloldás a rejtett és védett alkalmazások kezeléséhez</string>
-    <string name="trust_apps_auth_open_app">Hitelesítés a következő megnyitásához: %1$s</string>
-    <string name="trust_apps_loading">Betöltés\u2026</string>
-    <string name="trust_apps_no_lock_error">Kérjük, állítson be biztonságos (védett) képernyőzárat az alkalmazás-hozzáférések korlátozására</string>
-    <string name="trust_apps_help">Súgó</string>
-    <string name="trust_apps_info_hidden">A rejtett alkalmazások és kisalkalmazásaik az alkalmazásfiókban sem láthatóak</string>
-    <string name="trust_apps_info_protected">Egy védett alkalmazás launcherből való megnyitása hitelesítést igényel</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Javaslatok</string>
     <string name="suggestion_pref_screen_desc">Javaslatok a Kezdőképernyőhöz és minden alkalmazáshoz</string>
