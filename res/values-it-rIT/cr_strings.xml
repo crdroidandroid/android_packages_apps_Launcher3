@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">Attiva app di lavoro</string>
     <string name="work_apps_paused_info_body_custom">Le app di lavoro non possono inviarti notifiche, usare la batteria o accedere alla tua posizione</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Le tue app di lavoro non possono ricevere chiamate o messaggi di testo, inviarti notifiche, utilizzare la batteria o accedere alla tua posizione</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">App nascoste &amp; protette</string>
-    <string name="trust_apps_auth_manager">Sblocca per gestire le app nascoste e protette</string>
-    <string name="trust_apps_auth_open_app">Autenticati per aprire %1$s</string>
-    <string name="trust_apps_loading">Caricamento\u2026</string>
-    <string name="trust_apps_no_lock_error">Per favore imposta una schermata di blocco sicura per limitare l\'accesso alle app</string>
-    <string name="trust_apps_help">Aiuto</string>
-    <string name="trust_apps_info_hidden">Le app nascoste e i relativi widget sono nascosti dal drawer</string>
-    <string name="trust_apps_info_protected">Le applicazioni protette richiedono l\'autenticazione per essere aperte dal launcher</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Suggerimenti</string>
     <string name="suggestion_pref_screen_desc">Per tutte le app &amp; suggerimenti sulla schermata Home</string>
