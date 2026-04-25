@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">روشن کردن برنامه های کاری</string>
     <string name="work_apps_paused_info_body_custom">برنامه های کاری شما نمی توانند برای شما اعلان ارسال کنند، از باتری شما استفاده کنند یا به مکان شما دسترسی داشته باشند</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">برنامه های کاری شما نمی توانند تماس های تلفنی یا پیام های متنی را دریافت کنند، برای شما اعلان ارسال کنند، از باتری شما استفاده کنند یا به مکان شما دسترسی داشته باشند</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">برنامه‌های پنهان &amp; محافظت شده</string>
-    <string name="trust_apps_auth_manager">برای مدیریت برنامه‌های پنهان و محافظت شده قفل را باز کنید</string>
-    <string name="trust_apps_auth_open_app">احراز هویت برای باز کردن %1$s</string>
-    <string name="trust_apps_loading">در حال بارگزاری\u2026</string>
-    <string name="trust_apps_no_lock_error">لطفا یک قفل برای کنترل برنامه‌های پنهان و محافظت شده، تنظیم کنید</string>
-    <string name="trust_apps_help">کمک</string>
-    <string name="trust_apps_info_hidden">برنامه‌های مخفی و ویجت‌هایشان از فهرست برنامه ها پنهان هستند</string>
-    <string name="trust_apps_info_protected">برای باز کردن برنامه‌های محافظت شده از صفحه اصلی نیاز به احراز هویت می‌باشد</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">پیشنهادها</string>
     <string name="suggestion_pref_screen_desc">پیشنهاد‌ها در صفحه خانه &amp; برای همه برنامه‌ها</string>
