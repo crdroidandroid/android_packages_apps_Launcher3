@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">开启工作应用</string>
     <string name="work_apps_paused_info_body_custom">您的工作应用无法发送通知、获取耗电和访问位置信息</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">您的工作应用无法接收电话或短信，向您发送通知，消耗电量或获取您的位置</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">隐藏和保护应用</string>
-    <string name="trust_apps_auth_manager">解锁以管理隐藏和受保护的应用</string>
-    <string name="trust_apps_auth_open_app">验证以开启 %1$s</string>
-    <string name="trust_apps_loading">载入中\u2026</string>
-    <string name="trust_apps_no_lock_error">请设置一个安全锁定屏幕以限制应用访问</string>
-    <string name="trust_apps_help">帮助</string>
-    <string name="trust_apps_info_hidden">从抽屉中隐藏应用和其他小部件</string>
-    <string name="trust_apps_info_protected">需要经过认证才能从启动器打开受保护的应用</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">建议</string>
     <string name="suggestion_pref_screen_desc">适用于所有应用程序和主屏幕的建议</string>
