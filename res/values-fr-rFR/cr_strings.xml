@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">Activer les applications professionnelles</string>
     <string name="work_apps_paused_info_body_custom">Vos applis professionnelles ne peuvent pas vous envoyer de notifications, utiliser votre batterie ni accéder à votre position</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Vos applications professionnelles ne peuvent pas recevoir des appels téléphoniques ou des sms, vous envoyer des notifications, utiliser votre batterie ou accéder à votre position</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Applications cachées &amp; protégées</string>
-    <string name="trust_apps_auth_manager">Déverrouiller pour gérer les applications cachées et protégées</string>
-    <string name="trust_apps_auth_open_app">Authentification pour ouvrir %1$s</string>
-    <string name="trust_apps_loading">Chargement\u2026</string>
-    <string name="trust_apps_no_lock_error">Veuillez configurer un écran de verrouillage pour restreindre l\'accès aux applications</string>
-    <string name="trust_apps_help">Aide</string>
-    <string name="trust_apps_info_hidden">Les applications cachées et leurs widgets sont cachés du tiroir d\'applications</string>
-    <string name="trust_apps_info_protected">Les applications protégées nécessitent une authentification pour être ouvertes depuis le lanceur</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Suggestions</string>
     <string name="suggestion_pref_screen_desc">Pour toutes les applications &amp; ajout à l\'écran d\'accueil</string>
