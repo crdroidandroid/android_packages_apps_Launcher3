@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">Turn on work apps</string>
     <string name="work_apps_paused_info_body_custom">Your work apps cannot send you notifications, use your battery, or access your location</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Your work apps cannot receive phone calls or text messages, send you notifications, use your battery, or access your location</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">छिपा हुआ &amp; संरक्षित ऐप्स</string>
-    <string name="trust_apps_auth_manager">छिपे हुए और संरक्षित ऐप्स को प्रबंधित करने के लिए अनलॉक करें</string>
-    <string name="trust_apps_auth_open_app">खोलने केलिए प्रमाणित करे</string>
-    <string name="trust_apps_loading">लोड हो रहा है \u2026</string>
-    <string name="trust_apps_no_lock_error">एप्लिकेशन एक्सेस को प्रतिबंधित करने के लिए कृपया एक सुरक्षित लॉक स्क्रीन सेट करें</string>
-    <string name="trust_apps_help">सहायता</string>
-    <string name="trust_apps_info_hidden">छिपे हुए एप्लिकेशन और उनके विजेट दराज से छिपे हुए हैं</string>
-    <string name="trust_apps_info_protected">संरक्षित ऐप्स को लॉन्चर से खोले जाने के लिए प्रमाणीकरण की आवश्यकता होती है</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">सुझाव</string>
     <string name="suggestion_pref_screen_desc">सभी ऐप्स के लिए &amp; होम स्क्रीन सुझाव</string>
