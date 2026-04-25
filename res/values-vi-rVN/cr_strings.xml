@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">Bật các ứng dụng công việc</string>
     <string name="work_apps_paused_info_body_custom">Ứng dụng công việc không thể gửi thông báo và sử dụng pin hoặc truy cập thông tin vị trí</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Ứng dụng công việc không thể nhận cuộc gọi điện thoại hoặc tin nhắn văn bản, gửi thông báo, sử dụng pin hoặc truy cập vị trí</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Ẩn hoặc bảo vệ ứng dụng</string>
-    <string name="trust_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn hoặc được bảo vệ</string>
-    <string name="trust_apps_auth_open_app">Xác thực để mở %1$s</string>
-    <string name="trust_apps_loading">Đang tải\u2026</string>
-    <string name="trust_apps_no_lock_error">Hãy thiết lập màn hình khóa an toàn để hạn chế quyền truy cập ứng dụng</string>
-    <string name="trust_apps_help">Trợ giúp</string>
-    <string name="trust_apps_info_hidden">Ứng dụng cùng với tiện ích sẽ bị ẩn khỏi ngăn chứa ứng dụng</string>
-    <string name="trust_apps_info_protected">Các ứng dụng được bảo vệ yêu cầu xác thực được mở từ trình khởi chạy</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Đề xuất</string>
     <string name="suggestion_pref_screen_desc">Đối với tất cả ứng dụng &amp; Đề xuất ở màn hình chính</string>
