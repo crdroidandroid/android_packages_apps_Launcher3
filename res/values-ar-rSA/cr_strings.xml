@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">تفعيل تطبيقات العمل</string>
     <string name="work_apps_paused_info_body_custom">لا يمكن لتطبيقات العمل إرسال إشعارات إليك أو استخدام بطاريتك أو الوصول إلى موقعك الجغرافي.</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">تطبيقات العمل الخاصة بك لا يمكن أن تتلقى مكالمات هاتفية أو رسائل نصية، أو ترسل إشعارات إليك، أو استخدم البطارية، أو الوصول إلى موقعك</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">إخفاء التطبيقات وحمايتها</string>
-    <string name="trust_apps_auth_manager">افتح لإدارة التطبيقات المخفية والمحمية</string>
-    <string name="trust_apps_auth_open_app">يرجى مصادقة البصمة لفتح %1$s</string>
-    <string name="trust_apps_loading">جارٍ التحميل…\u2026</string>
-    <string name="trust_apps_no_lock_error">يرجى إعداد شاشة قفل الجهاز لتقييد الوصول إلى التطبيق</string>
-    <string name="trust_apps_help">مساعدة</string>
-    <string name="trust_apps_info_hidden">التطبيقات المخفية و الأدوات الخاصة بها ستكون مخفية أيضاً من واجهة التشغيل</string>
-    <string name="trust_apps_info_protected">التطبيقات المحمية تتطلب المصادقة لكي تُفتح</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">الإقتراحات</string>
     <string name="suggestion_pref_screen_desc">لجميع التطبيقات &amp; اقتراحات الشاشة الرئيسية</string>
