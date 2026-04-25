@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">Увімкнути робочі додатки</string>
     <string name="work_apps_paused_info_body_custom">Ваші робочі програми не можуть надсилати вам сповіщення, використовувати заряд акумулятора або отримувати доступ до вашого місцезнаходження</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Ваші робочі додатки не можуть отримувати телефонні дзвінки або текстові повідомлення, надсилати сповіщення, використовуйте акумулятор або доступ до місцезнаходження</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Приховані та захищені додатки</string>
-    <string name="trust_apps_auth_manager">Розблокуйте, щоб керувати прихованими та захищеними додатками</string>
-    <string name="trust_apps_auth_open_app">Автентифікуйтесь, щоб відкрити %1$s</string>
-    <string name="trust_apps_loading">Завантаження\u2026</string>
-    <string name="trust_apps_no_lock_error">Будь ласка, встановіть блокування екрану для обмеження доступу до додатків</string>
-    <string name="trust_apps_help">Допомога</string>
-    <string name="trust_apps_info_hidden">Приховані додатки і їх віджети приховані з меню</string>
-    <string name="trust_apps_info_protected">Для відкриття захищених додатків з лаунчера потрібна аутентифікація</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Пропозиції</string>
     <string name="suggestion_pref_screen_desc">Для підказок в меню всіх додатків та на домашньому екрані</string>
