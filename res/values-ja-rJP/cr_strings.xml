@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">仕事用アプリをオンにする</string>
     <string name="work_apps_paused_info_body_custom">仕事用アプリからの通知、バッテリーの使用、位置情報へのアクセスはできません。</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">仕事用アプリでは、電話やテキストメッセージの受信、通知の送信、バッテリーの使用、位置情報へのアクセスはできません。</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">非表示 &amp; 保護アプリ</string>
-    <string name="trust_apps_auth_manager">ロック解除して非表示と保護されたアプリを管理する</string>
-    <string name="trust_apps_auth_open_app">認証して %1$s を開く</string>
-    <string name="trust_apps_loading">\u2026 を読み込み中...</string>
-    <string name="trust_apps_no_lock_error">アプリのアクセス制限をするには画面ロックの設定をしてください</string>
-    <string name="trust_apps_help">ヘルプ</string>
-    <string name="trust_apps_info_hidden">非表示アプリとそのウィジェットはドロワー内で非表示になります</string>
-    <string name="trust_apps_info_protected">保護されているアプリを開くには認証が必要です</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">提案</string>
     <string name="suggestion_pref_screen_desc">全てのアプリとホーム画面の候補</string>
