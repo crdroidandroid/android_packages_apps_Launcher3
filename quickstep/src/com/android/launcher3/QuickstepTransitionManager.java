@@ -207,13 +207,13 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
      */
     public static final int STATUS_BAR_TRANSITION_PRE_DELAY = 96;
 
-    public static final long APP_LAUNCH_DURATION = 500;
+    public static final long APP_LAUNCH_DURATION = 450;
 
-    private static final long APP_LAUNCH_ALPHA_DURATION = 50;
-    private static final long APP_LAUNCH_ALPHA_START_DELAY = 25;
+    private static final long APP_LAUNCH_ALPHA_DURATION = 100;
+    private static final long APP_LAUNCH_ALPHA_START_DELAY = 28;
 
     public static final int ANIMATION_NAV_FADE_IN_DURATION = 266;
-    public static final int ANIMATION_NAV_FADE_OUT_DURATION = 133;
+    public static final int ANIMATION_NAV_FADE_OUT_DURATION = 160;
     public static final long ANIMATION_DELAY_NAV_FADE_IN =
             APP_LAUNCH_DURATION - ANIMATION_NAV_FADE_IN_DURATION;
     public static final Interpolator NAV_FADE_IN_INTERPOLATOR =
@@ -223,7 +223,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
 
     public static final int RECENTS_LAUNCH_DURATION = 336;
     private static final int LAUNCHER_RESUME_START_DELAY = 100;
-    private static final int CLOSING_TRANSITION_DURATION_MS = 250;
+    private static final int CLOSING_TRANSITION_DURATION_MS = 280;
     public static final int SPLIT_LAUNCH_DURATION = 370;
     public static final int SPLIT_DIVIDER_ANIM_DURATION = 100;
 
@@ -235,12 +235,12 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
     // is solved.
     private static final int TASKBAR_TO_HOME_DURATION_FAST = 300;
     private static final int TASKBAR_TO_HOME_DURATION_SLOW = 1000;
-    protected static final int CONTENT_SCALE_DURATION = 350;
+    protected static final int CONTENT_SCALE_DURATION = 300;
 
     private static final int MAX_NUM_TASKS = 5;
 
     // Cross-fade duration between App Widget and App when launching from widget.
-    private static final int WIDGET_CROSSFADE_DURATION_MILLIS = 125;
+    private static final int WIDGET_CROSSFADE_DURATION_MILLIS = 180;
 
     protected final QuickstepLauncher mLauncher;
     protected final DragLayer mDragLayer;
@@ -905,8 +905,9 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
                     clampToDuration(LINEAR, APP_LAUNCH_ALPHA_START_DELAY, APP_LAUNCH_ALPHA_DURATION,
                             APP_LAUNCH_DURATION));
 
+            final Interpolator cornerInterpolator = new PathInterpolator(0.2f, 0f, 0.2f, 1f);
             FloatProp mWindowRadius = new FloatProp(initialWindowRadius,
-                    getWindowCornerRadius(mLauncher), mOpeningInterpolator);
+                    getWindowCornerRadius(mLauncher), cornerInterpolator);
             FloatProp mShadowRadius = new FloatProp(0, finalShadowRadius,
                     mOpeningInterpolator);
 
@@ -920,7 +921,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
                     mOpeningInterpolator);
 
             FloatProp mNavFadeOut = new FloatProp(1f, 0f, clampToDuration(
-                    NAV_FADE_OUT_INTERPOLATOR, 0, ANIMATION_NAV_FADE_OUT_DURATION,
+                    NAV_FADE_OUT_INTERPOLATOR, 20, ANIMATION_NAV_FADE_OUT_DURATION,
                     APP_LAUNCH_DURATION));
             FloatProp mNavFadeIn = new FloatProp(0f, 1f, clampToDuration(
                     NAV_FADE_IN_INTERPOLATOR, ANIMATION_DELAY_NAV_FADE_IN,
@@ -1148,7 +1149,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
         appAnimator.addUpdateListener(new MultiValueUpdateListener() {
             float mAppWindowScale = 1;
             final FloatProp mWidgetForegroundAlpha = new FloatProp(1, 0, clampToDuration(
-                    LINEAR, 0, WIDGET_CROSSFADE_DURATION_MILLIS / 2, APP_LAUNCH_DURATION));
+                    DECELERATE_1_5, 0, WIDGET_CROSSFADE_DURATION_MILLIS / 2, APP_LAUNCH_DURATION));
 
             final FloatProp mWidgetFallbackBackgroundAlpha = new FloatProp(0, 1,
                     clampToDuration(LINEAR, 0, 75, APP_LAUNCH_DURATION));
@@ -1157,8 +1158,9 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
                     WIDGET_CROSSFADE_DURATION_MILLIS / 2 /* delay */,
                     WIDGET_CROSSFADE_DURATION_MILLIS / 2 /* duration */,
                     APP_LAUNCH_DURATION));
+            final Interpolator cornerInterpolator = new PathInterpolator(0.2f, 0f, 0.2f, 1f);
             final FloatProp mWindowRadius = new FloatProp(initialWindowRadius, finalWindowRadius,
-                    mOpeningInterpolator);
+                    cornerInterpolator);
             final FloatProp mCornerRadiusProgress = new FloatProp(0, 1, mOpeningInterpolator);
 
             // Window & widget background positioning bounds
@@ -1683,8 +1685,10 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
         float startShadowRadius = areAllTargetsTranslucent(appTargets) ? 0 : mMaxShadowRadius;
         closingAnimator.setDuration(duration);
         boolean isFreeform = isFreeformAnimation(appTargets);
-        float translateY = isFreeform ? mClosingFreeformWindowTransY : mClosingWindowTransY;
-        float endScale = isFreeform ? 0.95f : 1f;
+        float translateY = isFreeform
+            ? mClosingFreeformWindowTransY
+            : mClosingWindowTransY * 1.0f;
+        float endScale = isFreeform ? 0.95f : 0.97f;
         Interpolator alphaInterpolator = isFreeform
                 ? clampToDuration(LINEAR, 0, 100, duration)
                 : clampToDuration(LINEAR, 25, 125, duration);
@@ -2400,8 +2404,12 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
             }
         }
 
+        private static final Interpolator CORNER_LEAD_INTERPOLATOR =
+        new PathInterpolator(0.05f, 0f, 0.1f, 1f);
+
         public float getCornerRadius(float progress) {
-            return mStartRadius + progress * (mEndRadius - mStartRadius);
+            float curvedProgress = CORNER_LEAD_INTERPOLATOR.getInterpolation(progress);
+            return mStartRadius + curvedProgress * (mEndRadius - mStartRadius);
         }
 
         @Override
