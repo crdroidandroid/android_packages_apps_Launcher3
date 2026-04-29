@@ -414,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Barra de procura ao estilo Pixel</string>
     <string name="dock_search_pixel_style_summary">Barra de procura revista com fundo sobreposto</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Apps ocultas e protegidas</string>
+    <string name="trust_apps_auth_manager">Desbloquear para gerir as apps ocultas e protegidas</string>
+    <string name="trust_apps_auth_open_app">Autenticar para abrir %1$s</string>
+    <string name="trust_apps_loading">A carregar\u2026</string>
+    <string name="trust_apps_no_lock_error">Configure um ecrã de bloqueio seguro para restringir o acesso às apps</string>
+    <string name="trust_apps_help">Ajuda</string>
+    <string name="trust_apps_info_hidden">As apps ocultas e seus widgets estão escondidos da gaveta de apps</string>
+    <string name="trust_apps_info_protected">As apps protegidas requerem autenticação para serem executadas</string>
 </resources>
