@@ -414,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Pixel style search bar</string>
     <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Скрити &amp; Защитени приложения</string>
+    <string name="trust_apps_auth_manager">Отключете за да управлявате скритите и защитените приложения</string>
+    <string name="trust_apps_auth_open_app">Идентифицирайте се за да отворите %1$s</string>
+    <string name="trust_apps_loading">Зарежда се\u2026</string>
+    <string name="trust_apps_no_lock_error">Моля, задайте сигурно заключване на екрана за да ограничи достъпа до дадено приложение</string>
+    <string name="trust_apps_help">Помощ</string>
+    <string name="trust_apps_info_hidden">Скритите приложения и техните приспособления са скрити от менюто с приложения</string>
+    <string name="trust_apps_info_protected">Защитените приложения изискват удостоверяване за да бъдат отворени от стартовия панел</string>
 </resources>
