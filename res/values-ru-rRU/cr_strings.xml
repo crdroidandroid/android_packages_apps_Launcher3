@@ -414,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Панель поиска Pixel</string>
     <string name="dock_search_pixel_style_summary">Обновлённая панель поиска с многослойным фоном</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Скрыть и защитить приложения</string>
+    <string name="trust_apps_auth_manager">Разблокируйте, чтобы управлять скрытыми и защищёнными приложениями</string>
+    <string name="trust_apps_auth_open_app">Авторизуйтесь, чтобы открыть %1$s</string>
+    <string name="trust_apps_loading">Загрузка\u2026</string>
+    <string name="trust_apps_no_lock_error">Пожалуйста, настройте блокировку экрана, чтобы ограничить доступ к приложениям</string>
+    <string name="trust_apps_help">Помощь</string>
+    <string name="trust_apps_info_hidden">Не показывать скрытые приложения и их виджеты в меню приложений</string>
+    <string name="trust_apps_info_protected">Для запуска защищённых приложений требуется авторизация</string>
 </resources>
