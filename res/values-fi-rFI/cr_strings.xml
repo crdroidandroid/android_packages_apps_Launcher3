@@ -414,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Pixel style search bar</string>
     <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Piilotetut &amp; Suojatut sovellukset</string>
+    <string name="trust_apps_auth_manager">Avaa hallitaksesi piilotettuja ja suojattuja sovelluksia</string>
+    <string name="trust_apps_auth_open_app">Tunnistaudu avataksesi %1$s</string>
+    <string name="trust_apps_loading">Ladataan\u2026</string>
+    <string name="trust_apps_no_lock_error">Aseta turvallinen näytön lukitus rajataksesi pääsyä sovelluksiin</string>
+    <string name="trust_apps_help">Ohje</string>
+    <string name="trust_apps_info_hidden">Piilotetut sovellukset ja niiden widgetit piilotetaan sovellusvalikosta</string>
+    <string name="trust_apps_info_protected">Suojatut sovellukset tarvitsevat tunnistautumisen, jotta ne voidaan avata</string>
 </resources>
