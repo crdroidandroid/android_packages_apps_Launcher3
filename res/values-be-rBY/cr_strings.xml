@@ -414,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Pixel style search bar</string>
     <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Схаваныя і абароненыя праграмы</string>
+    <string name="trust_apps_auth_manager">Разблакуйце для кіравання ўтоенымі і абароненымі праграмамі</string>
+    <string name="trust_apps_auth_open_app">Аўтарызуйцеся, для адкрыцця %1$s</string>
+    <string name="trust_apps_loading">Загрузка\u2026</string>
+    <string name="trust_apps_no_lock_error">Калі ласка, усталюйце блакаванне экрана для абмежавання доступу да праграм</string>
+    <string name="trust_apps_help">Дапамога</string>
+    <string name="trust_apps_info_hidden">Схаваныя праграмы і іх віджэты схаваны з меню</string>
+    <string name="trust_apps_info_protected">Для адкрыцця абароненых праграм з лаунчэра патрабуецца аўтэнтыфікацыя</string>
 </resources>
