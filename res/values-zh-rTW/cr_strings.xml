@@ -414,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Pixel 風格搜尋列</string>
     <string name="dock_search_pixel_style_summary">新版多層次背景搜尋列</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">隱藏和受保護的應用程式</string>
+    <string name="trust_apps_auth_manager">解鎖以管理隱藏和受保護的應用程式</string>
+    <string name="trust_apps_auth_open_app">進行身份驗證以開啟 %1$s</string>
+    <string name="trust_apps_loading">載入中\u2026</string>
+    <string name="trust_apps_no_lock_error">請設置安全的鎖定方式來限制應用程式的存取權限</string>
+    <string name="trust_apps_help">說明</string>
+    <string name="trust_apps_info_hidden">隱藏應用程式及其小工具</string>
+    <string name="trust_apps_info_protected">需要身份驗證才能使用受保護的應用程式</string>
 </resources>
