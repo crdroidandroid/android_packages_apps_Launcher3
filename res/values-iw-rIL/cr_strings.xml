@@ -414,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Pixel style search bar</string>
     <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">&amp; יישומים מוגנים מוסתרים</string>
+    <string name="trust_apps_auth_manager">ביטול נעילה כדי לנהל את היישומים המוסתרים והמוגנים</string>
+    <string name="trust_apps_auth_open_app">אימות לפתיחת %1$s</string>
+    <string name="trust_apps_loading">טעינת \u2026</string>
+    <string name="trust_apps_no_lock_error">נדרש להגדיר מסך נעילה מאובטח להגבלת גישה ליישומים</string>
+    <string name="trust_apps_help">עזרה</string>
+    <string name="trust_apps_info_hidden">יישומים מוסתרים והווידג\'טים שלהם אינם מוצגים במגירת היישומים</string>
+    <string name="trust_apps_info_protected">יישומים מוגנים מחייבים אימות לפתיחה מהמשגר</string>
 </resources>
