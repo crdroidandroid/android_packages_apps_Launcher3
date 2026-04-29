@@ -414,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Vyhledávací panel ve stylu Pixelů</string>
     <string name="dock_search_pixel_style_summary">Přepracovaný vyhledávací panel s vrstveným pozadím</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Skryté a\u00a0zabezpečené aplikace</string>
+    <string name="trust_apps_auth_manager">Pro správu skrytých a\u00a0zabezpečených aplikací nejdříve odemkněte obrazovku</string>
+    <string name="trust_apps_auth_open_app">Proveďte ověření pro spuštění aplikace %1$s</string>
+    <string name="trust_apps_loading">Načítání\u2026</string>
+    <string name="trust_apps_no_lock_error">Pro omezení přístupu k\u00a0aplikaci prosím nastavte zabezpečenou obrazovku uzamčení</string>
+    <string name="trust_apps_help">Nápověda</string>
+    <string name="trust_apps_info_hidden">Skryté aplikace, včetně jejich widgetů, jsou skryty ze seznamu aplikací</string>
+    <string name="trust_apps_info_protected">Zabezpečené aplikace vyžadují ověření, aby mohly být otevřeny ze spouštěče</string>
 </resources>
