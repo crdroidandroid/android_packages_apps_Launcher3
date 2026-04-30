@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">Уключыць працоўныя праграмы</string>
     <string name="work_apps_paused_info_body_custom">Вашы працоўныя праграмы не могуць адпраўляць вам апавяшчэнні, выкарыстоўваць зарад батарэі або атрымліваць доступ да вашага месцазнаходжання</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Вашы працоўныя праграмы не могуць прымаць тэлефонныя званкі або тэкставыя паведамленні, адпраўляць вам апавяшчэнні, выкарыстоўваць зарад батарэі або атрымліваць доступ да вашага месцазнаходжання</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Схаваныя і абароненыя праграмы</string>
-    <string name="trust_apps_auth_manager">Разблакуйце для кіравання ўтоенымі і абароненымі праграмамі</string>
-    <string name="trust_apps_auth_open_app">Аўтарызуйцеся, для адкрыцця %1$s</string>
-    <string name="trust_apps_loading">Загрузка\u2026</string>
-    <string name="trust_apps_no_lock_error">Калі ласка, усталюйце блакаванне экрана для абмежавання доступу да праграм</string>
-    <string name="trust_apps_help">Дапамога</string>
-    <string name="trust_apps_info_hidden">Схаваныя праграмы і іх віджэты схаваны з меню</string>
-    <string name="trust_apps_info_protected">Для адкрыцця абароненых праграм з лаунчэра патрабуецца аўтэнтыфікацыя</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Прапановы</string>
     <string name="suggestion_pref_screen_desc">Для прапаноў ўсіх праграм і галоўнага экрана</string>
@@ -385,11 +376,11 @@
     <string name="flower_shape_title">Flower</string>
     <string name="heart_shape_title">Heart</string>
     <string name="hexagon_shape_title">Hexagon</string>
+    <string name="rounded_hexagon_shape_title">Rounded hexagon</string>
     <string name="ios_style_shape_title">iOS Style</string>
     <string name="leaf_shape_title">Leaf</string>
     <string name="meow_shape_title">Meow</string>
     <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="scroll_shape_title">Scroll</string>
     <string name="stretched_shape_title">Stretched</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Dark app labels</string>
@@ -423,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Pixel style search bar</string>
     <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Схаваныя і абароненыя праграмы</string>
+    <string name="trust_apps_auth_manager">Разблакуйце для кіравання ўтоенымі і абароненымі праграмамі</string>
+    <string name="trust_apps_auth_open_app">Аўтарызуйцеся, для адкрыцця %1$s</string>
+    <string name="trust_apps_loading">Загрузка\u2026</string>
+    <string name="trust_apps_no_lock_error">Калі ласка, усталюйце блакаванне экрана для абмежавання доступу да праграм</string>
+    <string name="trust_apps_help">Дапамога</string>
+    <string name="trust_apps_info_hidden">Схаваныя праграмы і іх віджэты схаваны з меню</string>
+    <string name="trust_apps_info_protected">Для адкрыцця абароненых праграм з лаунчэра патрабуецца аўтэнтыфікацыя</string>
 </resources>
