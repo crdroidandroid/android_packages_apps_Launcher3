@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">Werk-apps inschakelen</string>
     <string name="work_apps_paused_info_body_custom">Uw werk-apps kunnen u geen meldingen sturen, uw batterij gebruiken of toegang tot uw locatie</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Uw werk-apps kunnen geen telefoongesprekken of sms\'jes ontvangen, meldingen sturen, uw batterij gebruiken of toegang tot uw locatie</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Verborgen &amp; Beschermde apps</string>
-    <string name="trust_apps_auth_manager">Deblokkeer om de verborgen en beschermde apps te beheren</string>
-    <string name="trust_apps_auth_open_app">Authentificeer om %1$s te openen</string>
-    <string name="trust_apps_loading">Laadt\u2026</string>
-    <string name="trust_apps_no_lock_error">Stel een beveiligd vergrendelscherm in om de toegang van apps te beperken</string>
-    <string name="trust_apps_help">Hulp</string>
-    <string name="trust_apps_info_hidden">Verborgen apps en hun widgets zijn verborgen van de lade</string>
-    <string name="trust_apps_info_protected">Beschermde apps vereisen dat authenticatie wordt geopend vanaf de launcher</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Suggesties</string>
     <string name="suggestion_pref_screen_desc">Voor alle apps &amp; startscherm suggesties</string>
@@ -385,11 +376,11 @@
     <string name="flower_shape_title">Bloem</string>
     <string name="heart_shape_title">Hart</string>
     <string name="hexagon_shape_title">Zeskant</string>
+    <string name="rounded_hexagon_shape_title">Afgeronde zeshoek</string>
     <string name="ios_style_shape_title">iOS stijl</string>
     <string name="leaf_shape_title">Blad</string>
     <string name="meow_shape_title">Miauw</string>
     <string name="samsung_style_shape_title">Samsung Stijl</string>
-    <string name="scroll_shape_title">Scrollen</string>
     <string name="stretched_shape_title">Uitgerekt</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Donkere app labels</string>
@@ -423,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Pixel stijl zoekbalk</string>
     <string name="dock_search_pixel_style_summary">Zoekbalk met gelaagde achtergrond</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Verborgen &amp; Beschermde apps</string>
+    <string name="trust_apps_auth_manager">Deblokkeer om de verborgen en beschermde apps te beheren</string>
+    <string name="trust_apps_auth_open_app">Authentificeer om %1$s te openen</string>
+    <string name="trust_apps_loading">Laadt\u2026</string>
+    <string name="trust_apps_no_lock_error">Stel een beveiligd vergrendelscherm in om de toegang van apps te beperken</string>
+    <string name="trust_apps_help">Hulp</string>
+    <string name="trust_apps_info_hidden">Verborgen apps en hun widgets zijn verborgen van de lade</string>
+    <string name="trust_apps_info_protected">Beschermde apps vereisen dat authenticatie wordt geopend vanaf de launcher</string>
 </resources>
