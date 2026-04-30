@@ -54,7 +54,7 @@
     <string name="msg_minus_one_on_right">Ana sayfadan sağa kaydırdığınızda</string>
     <!-- All apps icon customizations -->
     <string name="pref_icon_customization_title">Çekmecede simge kişiselleştirmelerini kullan</string>
-    <string name="pref_icon_customization_summary">Ana ekranda kullanılan ikon özelleştirmelerini takip et</string>
+    <string name="pref_icon_customization_summary">Ana ekranda kullanılan simge kişiselleştirmelerini takip et</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Duraklat</string>
     <string name="pause_apps_dialog_title">%1$s duraklatılsın mı?</string>
@@ -106,7 +106,7 @@
     <string name="label_search">Ara</string>
     <string name="label_lens">Google lens</string>
     <string name="label_voice_search">Sesli arama</string>
-    <string name="label_gemini_search">AI Modu</string>
+    <string name="label_gemini_search">YZ modu</string>
     <string name="dock_music_search_title">Müzik ara</string>
     <string name="dock_music_search_summary">Mikrofon simgesine basarak müzik aramayı başlatın</string>
     <string name="dock_search_title">Google arama çubuğu</string>
@@ -415,7 +415,7 @@
     <string name="dock_search_pixel_style_title">Pixel tarzı arama çubuğu</string>
     <string name="dock_search_pixel_style_summary">Katmanlı arka plana sahip yenilenmiş arama çubuğu</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Gizli &amp; Korunan uygulamalar</string>
+    <string name="trust_apps_manager_name">Gizli ve Korunan Uygulamalar</string>
     <string name="trust_apps_auth_manager">Gizli ve korunan uygulamaları yönetmek için kilidi açın</string>
     <string name="trust_apps_auth_open_app">%1$s açmak için kimlik doğrula</string>
     <string name="trust_apps_loading">Yükleniyor\u2026</string>
