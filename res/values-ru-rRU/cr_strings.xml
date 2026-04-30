@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">Включить рабочие приложения</string>
     <string name="work_apps_paused_info_body_custom">Рабочие приложения не могут отправлять уведомления, расходовать заряд батареи и получать доступ к данным о вашем местоположении.</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Ваши рабочие приложения не могут принимать телефонные звонки или текстовые сообщения, отправлять уведомления, использовать аккумулятор или получать доступ к вашему местоположению</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Скрыть и защитить приложения</string>
-    <string name="trust_apps_auth_manager">Разблокируйте, чтобы управлять скрытыми и защищёнными приложениями</string>
-    <string name="trust_apps_auth_open_app">Авторизуйтесь, чтобы открыть %1$s</string>
-    <string name="trust_apps_loading">Загрузка\u2026</string>
-    <string name="trust_apps_no_lock_error">Пожалуйста, настройте блокировку экрана, чтобы ограничить доступ к приложениям</string>
-    <string name="trust_apps_help">Помощь</string>
-    <string name="trust_apps_info_hidden">Не показывать скрытые приложения и их виджеты в меню приложений</string>
-    <string name="trust_apps_info_protected">Для запуска защищённых приложений требуется авторизация</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Рекомендации</string>
     <string name="suggestion_pref_screen_desc">Рекомендации в меню приложений и на рабочем столе</string>
@@ -86,7 +77,7 @@
     <string name="restarting_launcher_changes">Перезапуск главного экрана для применения изменений...</string>
     <string name="updating_launcher_components">Перезапуск главного экрана для обновления компонентов...</string>
     <!-- DT2S -->
-    <string name="pref_sleep_gesture_title">Выключение экрана двойным нажатием</string>
+    <string name="pref_sleep_gesture_title">Выключение экрана двойным касанием</string>
     <string name="pref_sleep_gesture_summary">Дважды коснитесь пустой области главного экрана, чтобы выключить его</string>
     <string name="pref_sleep_gesture_haptic_title">Вибрировать при двойном нажатии для сна</string>
     <string name="pref_sleep_gesture_haptic_summary">Вибрировать при выполнении жеста двойного нажатия для перехода в спящий режим</string>
@@ -385,11 +376,11 @@
     <string name="flower_shape_title">Цветок</string>
     <string name="heart_shape_title">Сердце</string>
     <string name="hexagon_shape_title">Шестиугольник</string>
+    <string name="rounded_hexagon_shape_title">Скруглённый шестиугольник</string>
     <string name="ios_style_shape_title">iOS стиль</string>
     <string name="leaf_shape_title">Лист</string>
     <string name="meow_shape_title">Мяу</string>
     <string name="samsung_style_shape_title">Стиль Samsung</string>
-    <string name="scroll_shape_title">Прокрутка</string>
     <string name="stretched_shape_title">Растянутый</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Тёмные названия приложений</string>
@@ -423,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Панель поиска Pixel</string>
     <string name="dock_search_pixel_style_summary">Обновлённая панель поиска с многослойным фоном</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Скрыть и защитить приложения</string>
+    <string name="trust_apps_auth_manager">Разблокируйте, чтобы управлять скрытыми и защищёнными приложениями</string>
+    <string name="trust_apps_auth_open_app">Авторизуйтесь, чтобы открыть %1$s</string>
+    <string name="trust_apps_loading">Загрузка\u2026</string>
+    <string name="trust_apps_no_lock_error">Пожалуйста, настройте блокировку экрана, чтобы ограничить доступ к приложениям</string>
+    <string name="trust_apps_help">Помощь</string>
+    <string name="trust_apps_info_hidden">Не показывать скрытые приложения и их виджеты в меню приложений</string>
+    <string name="trust_apps_info_protected">Для запуска защищённых приложений требуется авторизация</string>
 </resources>

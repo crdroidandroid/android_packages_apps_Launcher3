@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">Activează aplicațiile pentru servici</string>
     <string name="work_apps_paused_info_body_custom">Aplicațiile pentru lucru nu pot să vă trimită notificări, să folosească bateria sau să vă acceseze locația</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Aplicațiile dvs. de serviciu nu pot primi apeluri telefonice sau mesaje text, nu pot trimite notificări, nu pot utiliza bateria sau nu pot accesa locația dvs</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Aplicații ascunse &amp; protejate</string>
-    <string name="trust_apps_auth_manager">Deblochează pentru a gestiona aplicațiile ascunse și protejate</string>
-    <string name="trust_apps_auth_open_app">Autentifică-te pentru a deschide %1$s</string>
-    <string name="trust_apps_loading">Încărcare\u2026</string>
-    <string name="trust_apps_no_lock_error">Vă rugăm să configurați un ecran de blocare securizat pentru a restricționa accesul aplicației</string>
-    <string name="trust_apps_help">Ajutor</string>
-    <string name="trust_apps_info_hidden">Aplicațiile ascunse și widget-urile lor sunt ascunse din sertar</string>
-    <string name="trust_apps_info_protected">Aplicațiile protejate necesită autentificare pentru a fi deschise din launcher</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Sugestii</string>
     <string name="suggestion_pref_screen_desc">Pentru toate aplicațiile &amp; sugestiile pentru ecranul de pornire</string>
@@ -385,11 +376,11 @@
     <string name="flower_shape_title">Floare</string>
     <string name="heart_shape_title">Inimă</string>
     <string name="hexagon_shape_title">Hexagon</string>
+    <string name="rounded_hexagon_shape_title">Rounded hexagon</string>
     <string name="ios_style_shape_title">Stil iOS</string>
     <string name="leaf_shape_title">Frunză</string>
     <string name="meow_shape_title">Miau</string>
     <string name="samsung_style_shape_title">Stil Samsung</string>
-    <string name="scroll_shape_title">Derulare</string>
     <string name="stretched_shape_title">Întins</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Etichete întunecate pentru aplicații</string>
@@ -423,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Bară de căutare stiluri Pixel</string>
     <string name="dock_search_pixel_style_summary">Bara de căutare redimensionată cu fundal strat</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Aplicații ascunse &amp; protejate</string>
+    <string name="trust_apps_auth_manager">Deblochează pentru a gestiona aplicațiile ascunse și protejate</string>
+    <string name="trust_apps_auth_open_app">Autentifică-te pentru a deschide %1$s</string>
+    <string name="trust_apps_loading">Încărcare\u2026</string>
+    <string name="trust_apps_no_lock_error">Vă rugăm să configurați un ecran de blocare securizat pentru a restricționa accesul aplicației</string>
+    <string name="trust_apps_help">Ajutor</string>
+    <string name="trust_apps_info_hidden">Aplicațiile ascunse și widget-urile lor sunt ascunse din sertar</string>
+    <string name="trust_apps_info_protected">Aplicațiile protejate necesită autentificare pentru a fi deschise din launcher</string>
 </resources>

@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">開啟工作模式中的應用程式</string>
     <string name="work_apps_paused_info_body_custom">工作模式中的應用程式無法傳送通知、讀取電池電量也無法存取位置資訊</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">工作模式中的應用程式無法接收來電及簡訊、傳送通知、讀取電池電量也無法存取位置資訊</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">隱藏和受保護的應用程式</string>
-    <string name="trust_apps_auth_manager">解鎖以管理隱藏和受保護的應用程式</string>
-    <string name="trust_apps_auth_open_app">進行身份驗證以開啟 %1$s</string>
-    <string name="trust_apps_loading">載入中\u2026</string>
-    <string name="trust_apps_no_lock_error">請設置安全的鎖定方式來限制應用程式的存取權限</string>
-    <string name="trust_apps_help">說明</string>
-    <string name="trust_apps_info_hidden">隱藏應用程式及其小工具</string>
-    <string name="trust_apps_info_protected">需要身份驗證才能使用受保護的應用程式</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">建議</string>
     <string name="suggestion_pref_screen_desc">在應用程式清單和主畫面上顯示建議</string>
@@ -385,11 +376,11 @@
     <string name="flower_shape_title">花</string>
     <string name="heart_shape_title">心形</string>
     <string name="hexagon_shape_title">六角形</string>
+    <string name="rounded_hexagon_shape_title">Rounded hexagon</string>
     <string name="ios_style_shape_title">iOS 样式</string>
     <string name="leaf_shape_title">葉片</string>
     <string name="meow_shape_title">喵</string>
     <string name="samsung_style_shape_title">Samsung 样式</string>
-    <string name="scroll_shape_title">滾動</string>
     <string name="stretched_shape_title">拉伸</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">深色 App 標籤</string>
@@ -423,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Pixel 風格搜尋列</string>
     <string name="dock_search_pixel_style_summary">新版多層次背景搜尋列</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">隱藏和受保護的應用程式</string>
+    <string name="trust_apps_auth_manager">解鎖以管理隱藏和受保護的應用程式</string>
+    <string name="trust_apps_auth_open_app">進行身份驗證以開啟 %1$s</string>
+    <string name="trust_apps_loading">載入中\u2026</string>
+    <string name="trust_apps_no_lock_error">請設置安全的鎖定方式來限制應用程式的存取權限</string>
+    <string name="trust_apps_help">說明</string>
+    <string name="trust_apps_info_hidden">隱藏應用程式及其小工具</string>
+    <string name="trust_apps_info_protected">需要身份驗證才能使用受保護的應用程式</string>
 </resources>

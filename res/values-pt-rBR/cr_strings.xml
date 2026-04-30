@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">Ativar aplicativos de trabalho</string>
     <string name="work_apps_paused_info_body_custom">Apps de trabalho não podem te enviar notificações, usar sua bateria ou acessar sua localização</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Seus aplicativos de trabalho não podem receber chamadas telefônicas ou mensagens de texto, enviar-lhe notificações, usar sua bateria ou acessar sua localização</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Aplicativos ocultos e protegidos</string>
-    <string name="trust_apps_auth_manager">Desbloquear para gerenciar os aplicativos ocultos e protegidos</string>
-    <string name="trust_apps_auth_open_app">Autenticar para abrir %1$s</string>
-    <string name="trust_apps_loading">Carregando…</string>
-    <string name="trust_apps_no_lock_error">Configure uma tela de bloqueio para restringir o acesso aos aplicativos</string>
-    <string name="trust_apps_help">Ajuda</string>
-    <string name="trust_apps_info_hidden">Aplicativos ocultos e seus widgets estão escondidos do menu de apps</string>
-    <string name="trust_apps_info_protected">Os aplicativos protegidos requerem autenticação para serem executados</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Sugestões</string>
     <string name="suggestion_pref_screen_desc">Sugestões de apps na tela inicial e gaveta de aplicativos</string>
@@ -385,11 +376,11 @@
     <string name="flower_shape_title">Flor</string>
     <string name="heart_shape_title">Coração</string>
     <string name="hexagon_shape_title">Hexágono</string>
+    <string name="rounded_hexagon_shape_title">Rounded hexagon</string>
     <string name="ios_style_shape_title">Estilo iOS</string>
     <string name="leaf_shape_title">Folha</string>
     <string name="meow_shape_title">Meow</string>
     <string name="samsung_style_shape_title">Estilo Samsung</string>
-    <string name="scroll_shape_title">Rolar</string>
     <string name="stretched_shape_title">Esticado</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Dark app labels</string>
@@ -423,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Pixel style search bar</string>
     <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Aplicativos ocultos e protegidos</string>
+    <string name="trust_apps_auth_manager">Desbloquear para gerenciar os aplicativos ocultos e protegidos</string>
+    <string name="trust_apps_auth_open_app">Autenticar para abrir %1$s</string>
+    <string name="trust_apps_loading">Carregando…</string>
+    <string name="trust_apps_no_lock_error">Configure uma tela de bloqueio para restringir o acesso aos aplicativos</string>
+    <string name="trust_apps_help">Ajuda</string>
+    <string name="trust_apps_info_hidden">Aplicativos ocultos e seus widgets estão escondidos do menu de apps</string>
+    <string name="trust_apps_info_protected">Os aplicativos protegidos requerem autenticação para serem executados</string>
 </resources>

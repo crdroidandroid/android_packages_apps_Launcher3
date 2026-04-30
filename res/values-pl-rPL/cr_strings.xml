@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">Włącz aplikacje służbowe</string>
     <string name="work_apps_paused_info_body_custom">Aplikacje służbowe nie mogą wysyłać powiadomień, używać baterii ani uzyskiwać dostępu do twojej lokalizacji</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Twoje aplikacje służbowe nie mogą odbierać połączeń telefonicznych ani wiadomości tekstowych, wysyłać powiadomień, używać baterii lub uzyskiwać dostępu do lokalizacji</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Ukryte i chronione aplikacje</string>
-    <string name="trust_apps_auth_manager">Odblokuj, aby zarządzać ukrytymi i chronionymi aplikacjami</string>
-    <string name="trust_apps_auth_open_app">Uwierzytelnij, aby otworzyć %1$s</string>
-    <string name="trust_apps_loading">Wczytywanie\u2026</string>
-    <string name="trust_apps_no_lock_error">Ustaw bezpieczny ekran blokady, aby ograniczyć dostęp do aplikacji</string>
-    <string name="trust_apps_help">Pomoc</string>
-    <string name="trust_apps_info_hidden">Ukryte aplikacje oraz ich widżety są ukryte również w szufladzie aplikacji</string>
-    <string name="trust_apps_info_protected">Chronione aplikacje wymagają uwierzytelnienia, aby je otworzyć z ekranu głównego</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Propozycje</string>
     <string name="suggestion_pref_screen_desc">Propozycje dotyczące wszystkich aplikacji i ekranu głównego</string>
@@ -110,7 +101,7 @@
     <string name="stroke_width_title">Obramowanie</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Zatrzymaj</string>
-    <string name="recents_app_killed">Zatrzymane aplikacje</string>
+    <string name="recents_app_killed">Zatrzymano aplikację</string>
     <!-- Hotseat searchbar -->
     <string name="label_search">Szukaj</string>
     <string name="label_lens">Obiektyw Google</string>
@@ -385,11 +376,11 @@
     <string name="flower_shape_title">Kwiat</string>
     <string name="heart_shape_title">Serce</string>
     <string name="hexagon_shape_title">Sześciokąt</string>
+    <string name="rounded_hexagon_shape_title">Zaokrąglony sześciokąt</string>
     <string name="ios_style_shape_title">Styl iOS</string>
     <string name="leaf_shape_title">Liść</string>
     <string name="meow_shape_title">Miau</string>
     <string name="samsung_style_shape_title">Samsung</string>
-    <string name="scroll_shape_title">Zwój</string>
     <string name="stretched_shape_title">Rozciągnięty</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Ciemne etykiety aplikacji</string>
@@ -423,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Pasek wyszukiwania w stylu Pixel</string>
     <string name="dock_search_pixel_style_summary">Ulepszony pasek wyszukiwania z warstwowym tłem</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Ukryte i chronione aplikacje</string>
+    <string name="trust_apps_auth_manager">Odblokuj, aby zarządzać ukrytymi i chronionymi aplikacjami</string>
+    <string name="trust_apps_auth_open_app">Uwierzytelnij, aby otworzyć %1$s</string>
+    <string name="trust_apps_loading">Wczytywanie\u2026</string>
+    <string name="trust_apps_no_lock_error">Ustaw bezpieczny ekran blokady, aby ograniczyć dostęp do aplikacji</string>
+    <string name="trust_apps_help">Pomoc</string>
+    <string name="trust_apps_info_hidden">Ukryte aplikacje oraz ich widżety są ukryte również w szufladzie aplikacji</string>
+    <string name="trust_apps_info_protected">Chronione aplikacje wymagają uwierzytelnienia, aby je otworzyć z ekranu głównego</string>
 </resources>

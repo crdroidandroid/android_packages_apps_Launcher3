@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">Geschäftliche Apps aktivieren</string>
     <string name="work_apps_paused_info_body_custom">Geschäftliche Apps können dir keine Benachrichtigungen senden, deinen Akku nicht nutzen und nicht auf deinen Standort zugreifen</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Geschäftliche Apps können keine Anrufe und SMS empfangen, dir keine Benachrichtigungen senden, deinen Akku nicht nutzen und nicht auf deinen Standort zugreifen</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Versteckte &amp; geschützte Apps</string>
-    <string name="trust_apps_auth_manager">Entsperren, um versteckte und geschützte Apps zu verwalten</string>
-    <string name="trust_apps_auth_open_app">Authentifizieren, um %1$s zu öffnen</string>
-    <string name="trust_apps_loading">Lädt \u2026</string>
-    <string name="trust_apps_no_lock_error">Bitte eine Bildschirmsperre einrichten, um den Zugriff auf Apps einzuschränken</string>
-    <string name="trust_apps_help">Hilfe</string>
-    <string name="trust_apps_info_hidden">Versteckte Apps und ihre Widgets werden in der App-Übersicht nicht angezeigt</string>
-    <string name="trust_apps_info_protected">Geschützte Apps erfordern eine Authentifizierung, um gestartet werden zu können</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">App-Vorschläge</string>
     <string name="suggestion_pref_screen_desc">In Liste aller Apps &amp; auf Startbildschirm</string>
@@ -385,11 +376,11 @@
     <string name="flower_shape_title">Blume</string>
     <string name="heart_shape_title">Herz</string>
     <string name="hexagon_shape_title">Sechseck</string>
+    <string name="rounded_hexagon_shape_title">Abgerundetes Sechseck</string>
     <string name="ios_style_shape_title">iOS-Stil</string>
     <string name="leaf_shape_title">Laubblatt</string>
     <string name="meow_shape_title">Miau</string>
     <string name="samsung_style_shape_title">Samsung-Stil</string>
-    <string name="scroll_shape_title">Schriftrolle</string>
     <string name="stretched_shape_title">Gedehnt</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Dunkle App-Beschriftungen</string>
@@ -423,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Suchleiste im Pixel-Stil</string>
     <string name="dock_search_pixel_style_summary">Überarbeitete Suchleiste mit mehrschichtigem Hintergrund</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Versteckte &amp; geschützte Apps</string>
+    <string name="trust_apps_auth_manager">Entsperren, um versteckte und geschützte Apps zu verwalten</string>
+    <string name="trust_apps_auth_open_app">Authentifizieren, um %1$s zu öffnen</string>
+    <string name="trust_apps_loading">Lädt \u2026</string>
+    <string name="trust_apps_no_lock_error">Bitte eine Bildschirmsperre einrichten, um den Zugriff auf Apps einzuschränken</string>
+    <string name="trust_apps_help">Hilfe</string>
+    <string name="trust_apps_info_hidden">Versteckte Apps und ihre Widgets werden in der App-Übersicht nicht angezeigt</string>
+    <string name="trust_apps_info_protected">Geschützte Apps erfordern eine Authentifizierung, um gestartet werden zu können</string>
 </resources>
