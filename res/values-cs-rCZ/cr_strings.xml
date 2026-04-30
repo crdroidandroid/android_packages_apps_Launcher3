@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">Zapnout pracovní aplikace</string>
     <string name="work_apps_paused_info_body_custom">Pracovní aplikace vám nemohou odesílat oznámení, využívat baterii nebo přistupovat k vaší poloze</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Pracovní aplikace vám nemohou odesílat oznámení, přijímat telefonní hovory nebo textové zprávy, využívat baterii nebo přistupovat k vaší poloze</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Skryté a\u00a0zabezpečené aplikace</string>
-    <string name="trust_apps_auth_manager">Pro správu skrytých a\u00a0zabezpečených aplikací nejdříve odemkněte obrazovku</string>
-    <string name="trust_apps_auth_open_app">Proveďte ověření pro spuštění aplikace %1$s</string>
-    <string name="trust_apps_loading">Načítání\u2026</string>
-    <string name="trust_apps_no_lock_error">Pro omezení přístupu k\u00a0aplikaci prosím nastavte zabezpečenou obrazovku uzamčení</string>
-    <string name="trust_apps_help">Nápověda</string>
-    <string name="trust_apps_info_hidden">Skryté aplikace, včetně jejich widgetů, jsou skryty ze seznamu aplikací</string>
-    <string name="trust_apps_info_protected">Zabezpečené aplikace vyžadují ověření, aby mohly být otevřeny ze spouštěče</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Návrhy</string>
     <string name="suggestion_pref_screen_desc">Pro všechny aplikace a\u00a0návrhy na domácí obrazovce</string>
@@ -385,11 +376,11 @@
     <string name="flower_shape_title">Květina</string>
     <string name="heart_shape_title">Srdce</string>
     <string name="hexagon_shape_title">Šestiúhelník</string>
+    <string name="rounded_hexagon_shape_title">Zaoblený šestiúhelník</string>
     <string name="ios_style_shape_title">Ve stylu iOS</string>
     <string name="leaf_shape_title">List</string>
     <string name="meow_shape_title">Mňau</string>
     <string name="samsung_style_shape_title">Ve stylu Samsungu</string>
-    <string name="scroll_shape_title">Svitek</string>
     <string name="stretched_shape_title">Natažený</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Tmavé popisky aplikací</string>
@@ -423,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Vyhledávací panel ve stylu Pixelů</string>
     <string name="dock_search_pixel_style_summary">Přepracovaný vyhledávací panel s vrstveným pozadím</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Skryté a\u00a0zabezpečené aplikace</string>
+    <string name="trust_apps_auth_manager">Pro správu skrytých a\u00a0zabezpečených aplikací nejdříve odemkněte obrazovku</string>
+    <string name="trust_apps_auth_open_app">Proveďte ověření pro spuštění aplikace %1$s</string>
+    <string name="trust_apps_loading">Načítání\u2026</string>
+    <string name="trust_apps_no_lock_error">Pro omezení přístupu k\u00a0aplikaci prosím nastavte zabezpečenou obrazovku uzamčení</string>
+    <string name="trust_apps_help">Nápověda</string>
+    <string name="trust_apps_info_hidden">Skryté aplikace, včetně jejich widgetů, jsou skryty ze seznamu aplikací</string>
+    <string name="trust_apps_info_protected">Zabezpečené aplikace vyžadují ověření, aby mohly být otevřeny ze spouštěče</string>
 </resources>
