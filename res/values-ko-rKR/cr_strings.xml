@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">워크 앱 켜기</string>
     <string name="work_apps_paused_info_body_custom">워크앱이 알림을 보내거나 배터리, 위치 정보에 접근할 수 없습니다</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">워크앱이 통화, 문자 메시지, 알림, 배터리, 또는 위치 정보를 받아볼 수 없습니다</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">숨겨지거나 보호된 앱</string>
-    <string name="trust_apps_auth_manager">숨겨지거나 보호된 앱을 관리하려면 잠금을 해제하세요.</string>
-    <string name="trust_apps_auth_open_app">인증하여 %1$s 열기</string>
-    <string name="trust_apps_loading">로드 중\u2026</string>
-    <string name="trust_apps_no_lock_error">앱 접근을 제한하려면 잠금 화면 보안을 설정하세요</string>
-    <string name="trust_apps_help">도움말</string>
-    <string name="trust_apps_info_hidden">숨겨진 앱과 해당 앱의 위젯은 앱 서랍에서 숨겨집니다.</string>
-    <string name="trust_apps_info_protected">실행기에서 보호된 앱을 실행하기 위해 인증이 필요합니다.</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">제안</string>
     <string name="suggestion_pref_screen_desc">모든 앱 &amp; 홈 화면 제안</string>
@@ -385,11 +376,11 @@
     <string name="flower_shape_title">꽃</string>
     <string name="heart_shape_title">하트</string>
     <string name="hexagon_shape_title">육각형</string>
+    <string name="rounded_hexagon_shape_title">모서리가 둥근 육각형</string>
     <string name="ios_style_shape_title">iOS 스타일</string>
     <string name="leaf_shape_title">잎사귀</string>
     <string name="meow_shape_title">야옹</string>
     <string name="samsung_style_shape_title">삼성 스타일</string>
-    <string name="scroll_shape_title">스크롤</string>
     <string name="stretched_shape_title">늘인 모양</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">어두운 앱 라벨</string>
@@ -423,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Pixel 스타일 검색 바</string>
     <string name="dock_search_pixel_style_summary">레이어드 배경으로 새롭게 디자인된 검색 바</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">숨겨지거나 보호된 앱</string>
+    <string name="trust_apps_auth_manager">숨겨지거나 보호된 앱을 관리하려면 잠금을 해제하세요.</string>
+    <string name="trust_apps_auth_open_app">인증하여 %1$s 열기</string>
+    <string name="trust_apps_loading">로드 중\u2026</string>
+    <string name="trust_apps_no_lock_error">앱 접근을 제한하려면 잠금 화면 보안을 설정하세요</string>
+    <string name="trust_apps_help">도움말</string>
+    <string name="trust_apps_info_hidden">숨겨진 앱과 해당 앱의 위젯은 앱 서랍에서 숨겨집니다.</string>
+    <string name="trust_apps_info_protected">실행기에서 보호된 앱을 실행하기 위해 인증이 필요합니다.</string>
 </resources>
