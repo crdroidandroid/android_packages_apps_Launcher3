@@ -67,15 +67,6 @@
     <string name="work_apps_enable_btn_text_custom">Zapnúť pracovné aplikácie</string>
     <string name="work_apps_paused_info_body_custom">Vaše pracovné aplikácie vám nemôžu posielať upozornenia, používať batériu ani pristupovať k vašej polohe</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Vaše pracovné aplikácie nemôžu prijímať telefonické hovory ani textové správy, odosielať vám upozornenia, používať batériu ani pristupovať k vašej polohe</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Skryté a chránené aplikácie</string>
-    <string name="trust_apps_auth_manager">Odomknite pre správu skrytých a chránených aplikácií</string>
-    <string name="trust_apps_auth_open_app">Pre otvorenie %1$s potvrďte svoju totožnosť</string>
-    <string name="trust_apps_loading">Načítavanie\u2026</string>
-    <string name="trust_apps_no_lock_error">Pre obmedzenie prístupu k aplikácii prosím nastavte zabezpečenú obrazovku uzamknutia</string>
-    <string name="trust_apps_help">Nápoveda</string>
-    <string name="trust_apps_info_hidden">Skryté aplikácie a ich widgety se nezobrazujú v zozname aplikácií</string>
-    <string name="trust_apps_info_protected">Chránené aplikácie vyžadujú pre otvorenie zo spúšťača overenie</string>
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Návrhy</string>
     <string name="suggestion_pref_screen_desc">Pre všetky aplikácie &amp; návrhy dna ploche</string>
@@ -385,11 +376,11 @@
     <string name="flower_shape_title">Flower</string>
     <string name="heart_shape_title">Heart</string>
     <string name="hexagon_shape_title">Hexagon</string>
+    <string name="rounded_hexagon_shape_title">Rounded hexagon</string>
     <string name="ios_style_shape_title">iOS Style</string>
     <string name="leaf_shape_title">Leaf</string>
     <string name="meow_shape_title">Meow</string>
     <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="scroll_shape_title">Scroll</string>
     <string name="stretched_shape_title">Stretched</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Dark app labels</string>
@@ -423,4 +414,13 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Pixel style search bar</string>
     <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
+    <!-- Trust apps -->
+    <string name="trust_apps_manager_name">Skryté a chránené aplikácie</string>
+    <string name="trust_apps_auth_manager">Odomknite pre správu skrytých a chránených aplikácií</string>
+    <string name="trust_apps_auth_open_app">Pre otvorenie %1$s potvrďte svoju totožnosť</string>
+    <string name="trust_apps_loading">Načítavanie\u2026</string>
+    <string name="trust_apps_no_lock_error">Pre obmedzenie prístupu k aplikácii prosím nastavte zabezpečenú obrazovku uzamknutia</string>
+    <string name="trust_apps_help">Nápoveda</string>
+    <string name="trust_apps_info_hidden">Skryté aplikácie a ich widgety se nezobrazujú v zozname aplikácií</string>
+    <string name="trust_apps_info_protected">Chránené aplikácie vyžadujú pre otvorenie zo spúšťača overenie</string>
 </resources>
