@@ -95,14 +95,14 @@ public class QsbLayout extends FrameLayout implements Reorderable {
         int baseColor = Themes.getAttrColor(getContext(), R.attr.qsbFillColor);
         if (LauncherPrefs.DOCK_THEME.get(getContext()))
             baseColor = Themes.getAttrColor(getContext(), R.attr.qsbFillColorThemed);
-        int color = Color.argb(alphaValue, Color.red(baseColor), Color.green(baseColor), Color.blue(baseColor));
+        int color = (baseColor & 0x00FFFFFF) | (alphaValue << 24);
         float strokeWidth = LauncherPrefs.HOTSEAT_QSB_STROKE_WIDTH.get(getContext());
 
         PaintDrawable backgroundDrawable = new PaintDrawable(color);
         backgroundDrawable.setCornerRadius(cornerRadius);
 
         if (mIsPixelStyle) {
-            setUpOuterBackground(alphaValue, strokeWidth);
+            setUpOuterBackground(strokeWidth);
             setUpGeminiCircleBackground(cornerRadius, color);
         }
 
@@ -121,13 +121,13 @@ public class QsbLayout extends FrameLayout implements Reorderable {
         }
     }
 
-    private void setUpOuterBackground(int alphaValue, float strokeWidth) {
+    private void setUpOuterBackground(float strokeWidth) {
         if (outer == null) return;
 
+        int alphaValue = (LauncherPrefs.HOTSEAT_QSB_OUTER_OPACITY.get(getContext()) * 255) / 100;
         float cornerRadius = getOuterCornerRadius();
         int baseColor = Themes.getAttrColor(getContext(), R.attr.qsbOuterColorThemed);
-        int outerColor = Color.argb((int)(alphaValue * 0.8),
-            Color.red(baseColor), Color.green(baseColor), Color.blue(baseColor));
+        int outerColor = (baseColor & 0x00FFFFFF) | (alphaValue << 24);
 
         PaintDrawable outerFill = new PaintDrawable(outerColor);
         outerFill.setCornerRadius(cornerRadius);

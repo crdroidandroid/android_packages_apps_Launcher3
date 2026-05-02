@@ -258,7 +258,17 @@
             android:min="0"
             settings:units="%"
             android:dependency="pref_dock_search"
-            android:defaultValue="80" />
+            android:defaultValue="70" />
+
+        <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+            android:key="pref_hotseat_qsb_outer_opacity"
+            android:title="@string/qsb_outer_opacity_title"
+            android:persistent="true"
+            android:max="100"
+            android:min="0"
+            settings:units="%"
+            android:dependency="pref_dock_search_pixel_style"
+            android:defaultValue="60" />
 
         <com.android.launcher3.settings.preferences.CustomSeekBarPreference
             android:key="pref_hotseat_qsb_stroke_width"
