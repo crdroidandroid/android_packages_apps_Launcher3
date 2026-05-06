@@ -184,7 +184,7 @@ public class TrustDatabaseHelper extends SQLiteOpenHelper {
     public int getTotalPackageHidden() {
         String query = String.format("SELECT * FROM %s WHERE %s = ?", TABLE_NAME, KEY_HIDDEN);
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.rawQuery(query, new String[]{ });
+        Cursor cursor = db.rawQuery(query, new String[]{ String.valueOf(1) });
         int result = 0;
         try {
             result = cursor.getCount();
