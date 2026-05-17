@@ -16,11 +16,6 @@
 -->
 <resources>
 
-    <declare-styleable name="TintDrawable">
-        <attr name="android:tint" />
-        <attr name="android:drawable" />
-    </declare-styleable>
-
     <!-- Base attributes available to CustomSeekBarPreference. -->
     <declare-styleable name="CustomSeekBarPreference">
         <attr name="defaultValueText" format="string" />
