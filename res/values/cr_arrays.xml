@@ -70,6 +70,7 @@
     </string-array>
 
     <string-array name="recents_styles_entries">
+        <item>@string/recents_style_default</item>
         <item>@string/recents_style_stock</item>
         <item>@string/recents_style_staple</item>
         <item>@string/recents_style_ios</item>
@@ -77,6 +78,7 @@
     </string-array>
 
     <string-array name="recents_styles_values" translatable="false">
+        <item>default</item>
         <item>stock</item>
         <item>staple</item>
         <item>ios</item>
