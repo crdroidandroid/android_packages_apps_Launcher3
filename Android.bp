@@ -460,6 +460,7 @@ android_library {
         "SettingsLib",
         "org.lineageos.platform",
         "chaldea.seraphixgoogle",
+        "commonutils",
     ],
     manifest: "AndroidManifest-common.xml",
     sdk_version: "current",
