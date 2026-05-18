@@ -23,6 +23,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnAttachStateChangeListener;
 import android.view.ViewTreeObserver.OnDrawListener;
+import android.view.animation.AnimationUtils;
 
 /*
  *  This is a helper class that listens to updates from the corresponding animation.
@@ -78,7 +79,7 @@ public class FirstFrameAnimatorHelper implements OnDrawListener, OnAttachStateCh
 
         @Override
         public void onAnimationUpdate(final ValueAnimator animation) {
-            final long currentTime = System.currentTimeMillis();
+            final long currentTime = AnimationUtils.currentAnimationTimeMillis();
             if (mStartTime == -1) {
                 mStartFrame = mGlobalFrameCount;
                 mStartTime = currentTime;

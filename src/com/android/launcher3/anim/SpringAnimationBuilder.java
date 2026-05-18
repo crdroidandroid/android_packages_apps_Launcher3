@@ -221,7 +221,7 @@ public class SpringAnimationBuilder {
     }
 
     private double exponentialComponent(double t) {
-        return Math.pow(Math.E, - beta * t / 2);
+        return Math.exp(- beta * t / 2);
     }
 
     private double cosSinX(double t) {
