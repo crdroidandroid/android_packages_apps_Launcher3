@@ -815,6 +815,9 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
             hasSplashScreen = false;
         }
 
+        final int windowIconSize = ResourceUtils.getDimenByName("starting_surface_icon_size",
+                mLauncher.getResources(), 108);
+
         AnimOpenProperties prop = new AnimOpenProperties(mLauncher.getResources(), mDeviceProfile,
                 windowTargetBounds, launcherIconBounds, v, dragLayerBounds[0], dragLayerBounds[1],
                 hasSplashScreen, floatingView.isDifferentFromAppIcon());
@@ -930,25 +933,19 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
                     windowTargetBounds.bottom = bottomLevel;
                     final int endHeight = bottomLevel - bounds.top;
 
-                    AnimOpenProperties prop = new AnimOpenProperties(mLauncher.getResources(),
-                            mDeviceProfile, windowTargetBounds, launcherIconBounds, v,
-                            dragLayerBounds[0], dragLayerBounds[1], hasSplashScreen,
-                            floatingView.isDifferentFromAppIcon());
-                    mCropRectCenterY = new FloatProp(prop.cropCenterYStart, prop.cropCenterYEnd,
-                            mOpeningInterpolator);
-                    mCropRectHeight = new FloatProp(prop.cropHeightStart, prop.cropHeightEnd,
-                            mOpeningInterpolator);
-                    mDy = new FloatProp(0, prop.dY, mOpeningInterpolator);
-                    mIconScaleToFitScreen = new FloatProp(prop.initialAppIconScale,
-                            prop.finalAppIconScale, mOpeningInterpolator);
+                    float smallestSize = Math.min(windowTargetBounds.height(),
+                            windowTargetBounds.width());
+                    float maxIconScale = Math.max(smallestSize / launcherIconBounds.width(),
+                            smallestSize / launcherIconBounds.height());
+                    float newDY = windowTargetBounds.centerY() - dragLayerBounds[1]
+                            - launcherIconBounds.centerY();
                     float interpolatedPercent = mOpeningInterpolator.getInterpolation(percent);
-                    mCropRectHeight.value = Utilities.mapRange(interpolatedPercent,
-                            prop.cropHeightStart, prop.cropHeightEnd);
-                    mCropRectCenterY.value = Utilities.mapRange(interpolatedPercent,
-                            prop.cropCenterYStart, prop.cropCenterYEnd);
-                    mDy.value = Utilities.mapRange(interpolatedPercent, 0, prop.dY);
-                    mIconScaleToFitScreen.value = Utilities.mapRange(interpolatedPercent,
-                            prop.initialAppIconScale, prop.finalAppIconScale);
+                    mCropRectCenterY.value = windowTargetBounds.centerY();
+                    mCropRectHeight.value = windowIconSize
+                            + interpolatedPercent * (windowTargetBounds.height() - windowIconSize);
+                    mDy.value = interpolatedPercent * newDY;
+                    mIconScaleToFitScreen.value = prop.initialAppIconScale
+                            + interpolatedPercent * (maxIconScale - prop.initialAppIconScale);
                 }
 
                 // Calculate the size of the scaled icon.
