@@ -25,6 +25,8 @@ import static com.android.launcher3.allapps.SectionDecorationInfo.ROUND_BOTTOM_R
 import static com.android.launcher3.allapps.SectionDecorationInfo.ROUND_NOTHING;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_PRIVATE_SPACE_PREINSTALLED_APPS_COUNT;
 import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCHER_PRIVATE_SPACE_USER_INSTALLED_APPS_COUNT;
+import static com.android.launcher3.util.Executors.DATA_HELPER_EXECUTOR;
+import static com.android.launcher3.util.Executors.MAIN_EXECUTOR;
 
 import android.content.Context;
 import android.text.Spannable;
@@ -363,8 +365,18 @@ public class AlphabeticalAppsList implements AllAppsStore.OnUpdateListener {
         }
 
         if (mAdapter != null) {
-            DiffUtil.calculateDiff(new MyDiffCallback(oldItems, mAdapterItems), false)
-                    .dispatchUpdatesTo(mAdapter);
+            final List<AdapterItem> oldItemsSnapshot = oldItems;
+            final List<AdapterItem> newItemsSnapshot = new ArrayList<>(mAdapterItems);
+            DATA_HELPER_EXECUTOR.execute(() -> {
+                DiffUtil.DiffResult diffResult =
+                        DiffUtil.calculateDiff(
+                                new MyDiffCallback(oldItemsSnapshot, newItemsSnapshot), false);
+                MAIN_EXECUTOR.execute(() -> {
+                    if (mAdapter != null) {
+                        diffResult.dispatchUpdatesTo(mAdapter);
+                    }
+                });
+            });
         }
     }
 
