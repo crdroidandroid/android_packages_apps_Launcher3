@@ -424,4 +424,11 @@
     <string name="trust_apps_help">Aide</string>
     <string name="trust_apps_info_hidden">Les applications cachées et leurs widgets sont cachés du tiroir d\'applications</string>
     <string name="trust_apps_info_protected">Les applications protégées nécessitent une authentification pour être ouvertes depuis le lanceur</string>
+    <!-- Recents style -->
+    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_default">Par défaut</string>
+    <string name="recents_style_stock">Scale effect</string>
+    <string name="recents_style_staple">Kami style</string>
+    <string name="recents_style_ios">iOS style</string>
+    <string name="recents_style_oxygen">OxygenOS style</string>
 </resources>
