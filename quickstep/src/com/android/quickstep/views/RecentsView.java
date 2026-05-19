@@ -568,6 +568,7 @@ public abstract class RecentsView<
     protected boolean mEnableDrawingLiveTile = false;
     protected final Rect mTempRect = new Rect();
     protected final RectF mTempRectF = new RectF();
+    private final Rect mTempTaskBoundsRect = new Rect();
     private final PointF mTempPointF = new PointF();
     private final Matrix mTempMatrix = new Matrix();
     private final Matrix mAnimMatrix = new Matrix();
@@ -1515,15 +1516,17 @@ public abstract class RecentsView<
             ValueAnimator appAnimator = ValueAnimator.ofFloat(0, 1);
             appAnimator.setDuration(RECENTS_LAUNCH_DURATION);
             appAnimator.setInterpolator(ACCELERATE_DECELERATE);
+            final SurfaceTransaction transaction = new SurfaceTransaction();
+            final int displayWidth = mContainer.getDeviceProfile().getDeviceProperties().getWidthPx();
+            final int displayHeight = mContainer.getDeviceProfile().getDeviceProperties().getHeightPx();
             appAnimator.addUpdateListener(valueAnimator -> {
                 float percent = valueAnimator.getAnimatedFraction();
-                SurfaceTransaction transaction = new SurfaceTransaction();
                 for (int i = apps.length - 1; i >= 0; --i) {
                     RemoteAnimationTarget app = apps[i];
 
-                    float dx = mContainer.getDeviceProfile().getDeviceProperties().getWidthPx() * (1 - percent) / 2
+                    float dx = displayWidth * (1 - percent) / 2
                             + app.screenSpaceBounds.left * percent;
-                    float dy = mContainer.getDeviceProfile().getDeviceProperties().getHeightPx() * (1 - percent) / 2
+                    float dy = displayHeight * (1 - percent) / 2
                             + app.screenSpaceBounds.top * percent;
                     mAnimMatrix.reset();
                     mAnimMatrix.setScale(percent, percent);
@@ -2559,17 +2562,20 @@ public abstract class RecentsView<
     }
 
     protected Rect getTaskBounds(TaskView taskView) {
+        getTaskBounds(taskView, mTempTaskBoundsRect);
+        return mTempTaskBoundsRect;
+    }
+
+    protected void getTaskBounds(TaskView taskView, Rect outRect) {
         int selectedPage = indexOfChild(taskView);
         int primaryScroll = getPagedOrientationHandler().getPrimaryScroll(this);
         int selectedPageScroll = getScrollForPage(selectedPage);
         boolean isTopRow = mTopRowIdSet.contains(taskView.getTaskViewId());
-        Rect outRect = new Rect(
-                taskView.isGridTask() ? mLastComputedGridTaskSize : mLastComputedTaskSize);
+        outRect.set(taskView.isGridTask() ? mLastComputedGridTaskSize : mLastComputedTaskSize);
         outRect.offset(
                 -(primaryScroll - (selectedPageScroll + getOffsetFromScrollPosition(selectedPage))),
                 (int) (showAsGrid() && enableGridOnlyOverview() && !isTopRow
                         ? mTopBottomRowHeightDiff : 0));
-        return outRect;
     }
 
     /** Gets the last computed task size */
@@ -5356,7 +5362,7 @@ public abstract class RecentsView<
         }
 
         // First, get the position of the task relative to the top row.
-        Rect taskPosition = getTaskBounds(taskView);
+        getTaskBounds(taskView, mTempTaskBoundsRect);
 
         boolean isSelectedTaskTopRow = mTopRowIdSet.contains(getSelectedTaskView().getTaskViewId());
         boolean isChildTopRow = mTopRowIdSet.contains(taskView.getTaskViewId());
@@ -5367,9 +5373,10 @@ public abstract class RecentsView<
         // Next, calculate the distance to move the task off screen at scale = 1.
         float distanceToOffscreen = 0;
         if (isTopShift) {
-            distanceToOffscreen = -taskPosition.bottom;
+            distanceToOffscreen = -mTempTaskBoundsRect.bottom;
         } else if (isBottomShift) {
-            distanceToOffscreen = mContainer.getDeviceProfile().getDeviceProperties().getHeightPx() - taskPosition.top;
+            distanceToOffscreen = mContainer.getDeviceProfile().getDeviceProperties().getHeightPx()
+                    - mTempTaskBoundsRect.top;
         }
         return distanceToOffscreen * offsetProgress;
     }
