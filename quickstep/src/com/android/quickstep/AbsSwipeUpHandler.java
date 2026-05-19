@@ -2719,9 +2719,11 @@ public abstract class AbsSwipeUpHandler<
     }
 
     private void onRecentsViewScroll() {
-        if (moveWindowWithRecentsScroll()) {
-            onCurrentShiftUpdated();
+        if (!moveWindowWithRecentsScroll()) return;
+        if (mRecentsView != null && mRecentsView.isOverlapStyleActive()) {
+            return;
         }
+        onCurrentShiftUpdated();
     }
 
     protected void startNewTask(@Nullable TaskView taskToLaunch, Consumer<Boolean> resultCallback) {
