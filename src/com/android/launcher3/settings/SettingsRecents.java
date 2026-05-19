@@ -73,6 +73,7 @@ public class SettingsRecents extends CollapsingToolbarBaseActivity
     public static final String SAVE_HIGHLIGHTED_KEY = "android:preference_highlighted";
 
     private static final String RECENTS_CATEGORY_ACTION = "recents_category_actions";
+    private static final String RECENTS_STYLE_PREF = "pref_recents_style";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -286,7 +287,7 @@ public class SettingsRecents extends CollapsingToolbarBaseActivity
             }
 
             DisplayController.Info info = DisplayController.INSTANCE.get(getContext()).getInfo();
-            if (key.equals(RECENTS_CATEGORY_ACTION)) {
+            if (key.equals(RECENTS_CATEGORY_ACTION) || key.equals(RECENTS_STYLE_PREF)) {
                 return !info.isTablet(info.realBounds);
             }
 
