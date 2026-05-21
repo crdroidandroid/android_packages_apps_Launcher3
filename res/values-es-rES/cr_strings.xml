@@ -425,10 +425,10 @@
     <string name="trust_apps_info_hidden">Las aplicaciones ocultas y sus widgets están ocultos del cajón</string>
     <string name="trust_apps_info_protected">Las aplicaciones protegidas requieren autenticación para abrirse desde el lanzador</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_title">Estilo de diseño de recientes</string>
     <string name="recents_style_default">Predeterminado</string>
-    <string name="recents_style_stock">Scale effect</string>
-    <string name="recents_style_staple">Kami style</string>
-    <string name="recents_style_ios">iOS style</string>
-    <string name="recents_style_oxygen">OxygenOS style</string>
+    <string name="recents_style_stock">Efecto de escala</string>
+    <string name="recents_style_staple">Estilo Kami</string>
+    <string name="recents_style_ios">Estilo iOS</string>
+    <string name="recents_style_oxygen">Estilo OxygenOS</string>
 </resources>
