@@ -425,10 +425,10 @@
     <string name="trust_apps_info_hidden">Ukryte aplikacje oraz ich widżety są ukryte również w szufladzie aplikacji</string>
     <string name="trust_apps_info_protected">Chronione aplikacje wymagają uwierzytelnienia, aby je otworzyć z ekranu głównego</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_title">Styl układu ostatnich aplikacji</string>
     <string name="recents_style_default">Domyślny</string>
-    <string name="recents_style_stock">Scale effect</string>
-    <string name="recents_style_staple">Kami style</string>
-    <string name="recents_style_ios">iOS style</string>
-    <string name="recents_style_oxygen">OxygenOS style</string>
+    <string name="recents_style_stock">Efekt skali</string>
+    <string name="recents_style_staple">Styl Kami</string>
+    <string name="recents_style_ios">Styl iOS</string>
+    <string name="recents_style_oxygen">Styl OxygenOS</string>
 </resources>
