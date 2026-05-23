@@ -424,4 +424,11 @@
     <string name="trust_apps_help">Ajuda</string>
     <string name="trust_apps_info_hidden">Les aplicacions amagades i els seus widgets estan amagades del calaix</string>
     <string name="trust_apps_info_protected">Les aplicacions protegides requereixen autentificació per poder ser obertes des del llançador</string>
+    <!-- Recents style -->
+    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_default">Per defecte</string>
+    <string name="recents_style_stock">Scale effect</string>
+    <string name="recents_style_staple">Kami style</string>
+    <string name="recents_style_ios">iOS style</string>
+    <string name="recents_style_oxygen">OxygenOS style</string>
 </resources>

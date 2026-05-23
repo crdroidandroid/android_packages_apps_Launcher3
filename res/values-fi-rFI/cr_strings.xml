@@ -424,4 +424,11 @@
     <string name="trust_apps_help">Ohje</string>
     <string name="trust_apps_info_hidden">Piilotetut sovellukset ja niiden widgetit piilotetaan sovellusvalikosta</string>
     <string name="trust_apps_info_protected">Suojatut sovellukset tarvitsevat tunnistautumisen, jotta ne voidaan avata</string>
+    <!-- Recents style -->
+    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_default">Oletus</string>
+    <string name="recents_style_stock">Scale effect</string>
+    <string name="recents_style_staple">Kami style</string>
+    <string name="recents_style_ios">iOS style</string>
+    <string name="recents_style_oxygen">OxygenOS style</string>
 </resources>

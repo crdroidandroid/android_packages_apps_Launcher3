@@ -424,4 +424,11 @@
     <string name="trust_apps_help">Ajutor</string>
     <string name="trust_apps_info_hidden">Aplicațiile ascunse și widget-urile lor sunt ascunse din sertar</string>
     <string name="trust_apps_info_protected">Aplicațiile protejate necesită autentificare pentru a fi deschise din launcher</string>
+    <!-- Recents style -->
+    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_default">Prestabilit</string>
+    <string name="recents_style_stock">Scale effect</string>
+    <string name="recents_style_staple">Kami style</string>
+    <string name="recents_style_ios">iOS style</string>
+    <string name="recents_style_oxygen">OxygenOS style</string>
 </resources>

@@ -424,4 +424,11 @@
     <string name="trust_apps_help">Súgó</string>
     <string name="trust_apps_info_hidden">A rejtett alkalmazások és kisalkalmazásaik az alkalmazásfiókban sem láthatóak</string>
     <string name="trust_apps_info_protected">Egy védett alkalmazás launcherből való megnyitása hitelesítést igényel</string>
+    <!-- Recents style -->
+    <string name="recents_style_title">Az Előzmények elrendezési stílusa</string>
+    <string name="recents_style_default">Alapértelmezett</string>
+    <string name="recents_style_stock">Skálázott</string>
+    <string name="recents_style_staple">Kami</string>
+    <string name="recents_style_ios">iOS</string>
+    <string name="recents_style_oxygen">OxigenOS</string>
 </resources>

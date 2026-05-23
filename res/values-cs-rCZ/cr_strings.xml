@@ -424,4 +424,11 @@
     <string name="trust_apps_help">Nápověda</string>
     <string name="trust_apps_info_hidden">Skryté aplikace, včetně jejich widgetů, jsou skryty ze seznamu aplikací</string>
     <string name="trust_apps_info_protected">Zabezpečené aplikace vyžadují ověření, aby mohly být otevřeny ze spouštěče</string>
+    <!-- Recents style -->
+    <string name="recents_style_title">Styl rozložení nedávných aplikací</string>
+    <string name="recents_style_default">Výchozí</string>
+    <string name="recents_style_stock">Efekt měřítka</string>
+    <string name="recents_style_staple">Styl Kami</string>
+    <string name="recents_style_ios">Styl iOS</string>
+    <string name="recents_style_oxygen">Styl OxygenOS</string>
 </resources>

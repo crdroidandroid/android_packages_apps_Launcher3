@@ -424,4 +424,11 @@
     <string name="trust_apps_help">Допомога</string>
     <string name="trust_apps_info_hidden">Приховані додатки і їх віджети приховані з меню</string>
     <string name="trust_apps_info_protected">Для відкриття захищених додатків з лаунчера потрібна аутентифікація</string>
+    <!-- Recents style -->
+    <string name="recents_style_title">Стиль макета нещодавніх</string>
+    <string name="recents_style_default">За замовчанням</string>
+    <string name="recents_style_stock">Ефект масштабу</string>
+    <string name="recents_style_staple">Стиль Kami</string>
+    <string name="recents_style_ios">Стиль iOS</string>
+    <string name="recents_style_oxygen">Стиль OxygenOS</string>
 </resources>

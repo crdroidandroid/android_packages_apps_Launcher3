@@ -424,4 +424,11 @@
     <string name="trust_apps_help">說明</string>
     <string name="trust_apps_info_hidden">隱藏應用程式及其小工具</string>
     <string name="trust_apps_info_protected">需要身份驗證才能使用受保護的應用程式</string>
+    <!-- Recents style -->
+    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_default">預設</string>
+    <string name="recents_style_stock">Scale effect</string>
+    <string name="recents_style_staple">Kami style</string>
+    <string name="recents_style_ios">iOS style</string>
+    <string name="recents_style_oxygen">OxygenOS style</string>
 </resources>

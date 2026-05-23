@@ -424,4 +424,11 @@
     <string name="trust_apps_help">सहायता</string>
     <string name="trust_apps_info_hidden">छिपे हुए एप्लिकेशन और उनके विजेट दराज से छिपे हुए हैं</string>
     <string name="trust_apps_info_protected">संरक्षित ऐप्स को लॉन्चर से खोले जाने के लिए प्रमाणीकरण की आवश्यकता होती है</string>
+    <!-- Recents style -->
+    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_default">डिफॉल्ट</string>
+    <string name="recents_style_stock">Scale effect</string>
+    <string name="recents_style_staple">Kami style</string>
+    <string name="recents_style_ios">iOS style</string>
+    <string name="recents_style_oxygen">OxygenOS style</string>
 </resources>

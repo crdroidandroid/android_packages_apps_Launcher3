@@ -424,4 +424,11 @@
     <string name="trust_apps_help">Помощь</string>
     <string name="trust_apps_info_hidden">Не показывать скрытые приложения и их виджеты в меню приложений</string>
     <string name="trust_apps_info_protected">Для запуска защищённых приложений требуется авторизация</string>
+    <!-- Recents style -->
+    <string name="recents_style_title">Стиль недавних приложений</string>
+    <string name="recents_style_default">По умолчанию</string>
+    <string name="recents_style_stock">Эффект масштабирования</string>
+    <string name="recents_style_staple">Ками стиль</string>
+    <string name="recents_style_ios">iOS стиль</string>
+    <string name="recents_style_oxygen">Стиль OxygenOS</string>
 </resources>
