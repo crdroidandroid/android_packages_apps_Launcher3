@@ -424,4 +424,11 @@
     <string name="trust_apps_help">Aiuto</string>
     <string name="trust_apps_info_hidden">Le app nascoste e i relativi widget sono nascosti dal drawer</string>
     <string name="trust_apps_info_protected">Le applicazioni protette richiedono l\'autenticazione per essere aperte dal launcher</string>
+    <!-- Recents style -->
+    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_default">Predefinito</string>
+    <string name="recents_style_stock">Scale effect</string>
+    <string name="recents_style_staple">Kami style</string>
+    <string name="recents_style_ios">iOS style</string>
+    <string name="recents_style_oxygen">OxygenOS style</string>
 </resources>

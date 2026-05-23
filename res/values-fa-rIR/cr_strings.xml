@@ -430,4 +430,11 @@ Remember the Lineage of the Unicorn</item>
     <string name="trust_apps_help">کمک</string>
     <string name="trust_apps_info_hidden">برنامه‌های مخفی و ویجت‌هایشان از فهرست برنامه ها پنهان هستند</string>
     <string name="trust_apps_info_protected">برای باز کردن برنامه‌های محافظت شده از صفحه اصلی نیاز به احراز هویت می‌باشد</string>
+    <!-- Recents style -->
+    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_default">پیش‌فرض</string>
+    <string name="recents_style_stock">Scale effect</string>
+    <string name="recents_style_staple">Kami style</string>
+    <string name="recents_style_ios">iOS style</string>
+    <string name="recents_style_oxygen">OxygenOS style</string>
 </resources>

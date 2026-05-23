@@ -424,4 +424,11 @@
     <string name="trust_apps_help">帮助</string>
     <string name="trust_apps_info_hidden">从抽屉中隐藏应用和其他小部件</string>
     <string name="trust_apps_info_protected">需要经过认证才能从启动器打开受保护的应用</string>
+    <!-- Recents style -->
+    <string name="recents_style_title">最近任务样式</string>
+    <string name="recents_style_default">默认</string>
+    <string name="recents_style_stock">缩放效果</string>
+    <string name="recents_style_staple">Kami 样式</string>
+    <string name="recents_style_ios">iOS 样式</string>
+    <string name="recents_style_oxygen">OxygenOS 样式</string>
 </resources>
