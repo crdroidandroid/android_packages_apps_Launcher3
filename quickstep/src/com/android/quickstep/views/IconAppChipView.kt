@@ -20,6 +20,7 @@ import android.animation.ObjectAnimator
 import android.animation.RectEvaluator
 import android.animation.ValueAnimator
 import android.content.Context
+import android.content.res.ColorStateList
 import android.graphics.Canvas
 import android.graphics.Outline
 import android.graphics.Rect
@@ -127,6 +128,8 @@ constructor(
 
     private val viewTranslationY: MultiPropertyFactory<View> =
         MultiPropertyFactory(this, VIEW_TRANSLATE_Y, INDEX_COUNT_TRANSLATION, SUM_AGGREGATOR)
+
+    private var isShowingLockIcon = false
 
     // Width showing only the app icon and arrow. Max width should not be set to less than
     // this.
@@ -461,14 +464,17 @@ constructor(
             val textTranslationXWithRtl = if (isRtl) -textTranslationX else textTranslationX
             val arrowTranslationWithRtl = if (isRtl) -arrowTranslationX else arrowTranslationX
 
-            animator!!.playTogether(
+            val expandAnimators = mutableListOf(
                 backgroundAnimator,
                 ObjectAnimator.ofFloat(iconView, SCALE_X, iconViewScaling),
                 ObjectAnimator.ofFloat(iconView, SCALE_Y, iconViewScaling),
                 ObjectAnimator.ofFloat(appTitle, TRANSLATION_X, textTranslationXWithRtl),
                 ObjectAnimator.ofFloat(iconArrowView, TRANSLATION_X, arrowTranslationWithRtl),
-                ObjectAnimator.ofFloat(iconArrowView, SCALE_Y, -1f),
             )
+            if (!isShowingLockIcon) {
+                expandAnimators.add(ObjectAnimator.ofFloat(iconArrowView, SCALE_Y, -1f))
+            }
+            animator!!.playTogether(*expandAnimators.toTypedArray())
             animator!!.duration = MENU_BACKGROUND_REVEAL_DURATION.toLong()
             status = AppChipStatus.Expanded
         } else {
@@ -493,14 +499,17 @@ constructor(
                 invalidateOutline()
             }
 
-            animator!!.playTogether(
+            val collapseAnimators = mutableListOf(
                 expandedTextClipAnim,
                 backgroundAnimator,
                 ObjectAnimator.ofFloat(iconView, SCALE_PROPERTY, 1f),
                 ObjectAnimator.ofFloat(appTitle, TRANSLATION_X, 0f),
                 ObjectAnimator.ofFloat(iconArrowView, TRANSLATION_X, 0f),
-                ObjectAnimator.ofFloat(iconArrowView, SCALE_Y, 1f),
             )
+            if (!isShowingLockIcon) {
+                collapseAnimators.add(ObjectAnimator.ofFloat(iconArrowView, SCALE_Y, 1f))
+            }
+            animator!!.playTogether(*collapseAnimators.toTypedArray())
             animator!!.duration = MENU_BACKGROUND_HIDE_DURATION.toLong()
             status = AppChipStatus.Collapsed
             sendToBack()
@@ -650,6 +659,21 @@ constructor(
     fun reset() {
         setText(null)
         drawable = null
+    }
+
+    fun setLockState(isLocked: Boolean) {
+        isShowingLockIcon = isLocked
+        if (isLocked) {
+            iconArrowView?.setImageResource(R.drawable.recents_locked)
+            iconArrowView?.imageTintList = ColorStateList.valueOf(
+                resources.getColor(R.color.recent_app_locked_icon_color, context.theme)
+            )
+            iconArrowView?.scaleY = 1f
+        } else {
+            iconArrowView?.setImageResource(R.drawable.ic_chevron_down)
+            iconArrowView?.imageTintList = null
+            iconArrowView?.scaleY = 1f
+        }
     }
 
     override fun asView(): View = this
