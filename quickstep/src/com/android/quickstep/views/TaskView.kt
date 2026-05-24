@@ -76,6 +76,7 @@ import com.android.launcher3.util.TransformingTouchDelegate
 import com.android.launcher3.util.ViewPool
 import com.android.launcher3.util.rects.set
 import com.android.quickstep.FullscreenDrawParams
+import com.android.quickstep.LockedTaskManager
 import com.android.quickstep.RemoteAnimationTargets
 import com.android.quickstep.RemoteTargetGluer.RemoteTargetHandle
 import com.android.quickstep.TaskOverlayFactory
@@ -319,6 +320,9 @@ constructor(
     var isEndQuickSwitchCuj = false
     var isBeingDraggedForDismissal = false
     var isBeingDismissed: Boolean = false
+
+    var isLocked: Boolean = false
+        private set
 
     private val systemGestureExclusionRectList = listOf(Rect()) // We only need 1 exclusion Rect
 
@@ -742,6 +746,7 @@ constructor(
     override fun onRecycle() {
         isBeingDraggedForDismissal = false
         isBeingDismissed = false
+        isLocked = false
         resetPersistentViewTransforms()
 
         groupTask = null
@@ -1100,7 +1105,36 @@ constructor(
                 }
             }
             setOrientationState(orientedState)
+            updateLockState()
         }
+
+    fun getLockablePackages(): List<String> {
+        if (type == TaskViewType.DESKTOP || !::taskContainers.isInitialized) return emptyList()
+        return taskContainers.mapNotNull { LockedTaskManager.getPackageName(it.task) }.distinct()
+    }
+
+    fun updateLockState() {
+        if (!::taskContainers.isInitialized) return
+        val manager = LockedTaskManager.getInstance(context)
+        var anyLocked = false
+        taskContainers.forEach { container ->
+            val locked =
+                type != TaskViewType.DESKTOP &&
+                    manager.isPackageLocked(LockedTaskManager.getPackageName(container.task))
+            container.iconView.setLockState(locked)
+            anyLocked = anyLocked || locked
+        }
+        isLocked = anyLocked
+    }
+
+    fun toggleLockState(): Boolean? {
+        val packages = getLockablePackages()
+        if (packages.isEmpty()) return null
+        val newState = !isLocked
+        LockedTaskManager.getInstance(context).setPackagesLocked(packages, newState)
+        updateLockState()
+        return newState
+    }
 
     private fun applyThumbnailSplashAlpha() {
         val alpha = getSplashAlphaProgress()

@@ -32,8 +32,6 @@ import android.graphics.Rect;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.RemoteException;
-import android.os.UserHandle;
-import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowInsets;
@@ -68,8 +66,6 @@ import com.android.systemui.shared.recents.view.RecentsTransition;
 import com.android.systemui.shared.system.ActivityManagerWrapper;
 import com.android.wm.shell.shared.desktopmode.DesktopModeStatus;
 
-import java.util.Arrays;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.Function;
@@ -419,10 +415,10 @@ public interface TaskShortcutFactory {
         @Override
         public List<SystemShortcut> getShortcuts(RecentsViewContainer container,
                 TaskContainer taskContainer) {
-            String packageName = taskContainer.getTask().getTopComponent().getPackageName();
-            Context context = taskContainer.getTaskView().getContext();
-            return Collections.singletonList(new LockAppSystemShortcut(
-                        context, container, taskContainer, packageName));
+            if (taskContainer.getTaskView().getLockablePackages().isEmpty()) {
+                return null;
+            }
+            return Collections.singletonList(new LockAppSystemShortcut(container, taskContainer));
         }
     };
 
@@ -563,51 +559,24 @@ public interface TaskShortcutFactory {
     };
 
     class LockAppSystemShortcut extends SystemShortcut<RecentsViewContainer> {
-        private static final String TAG = "LockAppSystemShortcut";
-        private final Task mTask;
-        private final String mPackageName;
-        List<String> mLockedTasks = new ArrayList<>();
-        private String mStartPkg, mEndPkg;
-        private Context mContext;
+        private final TaskView mTaskView;
 
-        public LockAppSystemShortcut(Context context, RecentsViewContainer target, TaskContainer taskContainer, String packageName) {
+        public LockAppSystemShortcut(RecentsViewContainer target, TaskContainer taskContainer) {
             super(R.drawable.recents_locked, R.string.action_lock,
                     target, taskContainer.getItemInfo(), taskContainer.getTaskView());
-            mTask = taskContainer.getTask();
-            mPackageName = packageName;
-            mContext = context;
-
-            String lockedTasks = Settings.System.getStringForUser(
-                    mContext.getContentResolver(),
-                    Settings.System.RECENTS_LOCKED_TASKS,
-                    UserHandle.USER_CURRENT);
-
-            if (mLockedTasks.size() == 0 && lockedTasks != null && !lockedTasks.isEmpty()) {
-                mLockedTasks = new ArrayList<String>(Arrays.asList(lockedTasks.split(",")));
-            }
+            mTaskView = taskContainer.getTaskView();
         }
 
         @Override
         public void onClick(View view) {
             dismissTaskMenuView();
-            if (mPackageName != null) {
-                if (mTask != null) {
-                    if (mLockedTasks.contains(mPackageName)) {
-                        mLockedTasks.remove(mPackageName);
-                        Toast unlockApp = Toast.makeText(mContext, R.string.unlock_app,
-                            Toast.LENGTH_SHORT);
-                        unlockApp.show();
-                    } else {
-                        mLockedTasks.add(mPackageName);
-                        Toast lockApp = Toast.makeText(mContext, R.string.lock_app,
-                            Toast.LENGTH_SHORT);
-                        lockApp.show();
-                    }
-                }
+            Boolean isNowLocked = mTaskView.toggleLockState();
+            if (isNowLocked == null) {
+                return;
             }
-           Settings.System.putStringForUser(mContext.getContentResolver(),
-           Settings.System.RECENTS_LOCKED_TASKS, String.join(",", mLockedTasks),
-                UserHandle.USER_CURRENT);
+            Context context = mTaskView.getContext();
+            Toast.makeText(context, isNowLocked ? R.string.lock_app : R.string.unlock_app,
+                    Toast.LENGTH_SHORT).show();
         }
     }
 }

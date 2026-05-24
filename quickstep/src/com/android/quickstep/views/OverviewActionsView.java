@@ -16,6 +16,7 @@
 
 package com.android.quickstep.views;
 
+import android.animation.ObjectAnimator;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -29,6 +30,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.IntDef;
 import androidx.annotation.Nullable;
@@ -127,7 +129,10 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
     private static final int INDEX_SCROLL_ALPHA = 5;
     private static final int INDEX_GROUPED_ALPHA = 6;
     private static final int INDEX_3P_LAUNCHER = 7;
-    private static final int NUM_ALPHAS = 8;
+    private static final int INDEX_LOCK_PILL_ALPHA = 8;
+    private static final int NUM_ALPHAS = 9;
+
+    private static final long LOCK_PILL_ANIM_DURATION = 150;
 
     public @interface SplitButtonHiddenFlags { }
     public static final int FLAG_SMALL_SCREEN_HIDE_SPLIT = 1 << 0;
@@ -179,6 +184,14 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
     private SharedPreferences mPrefs;
     private boolean mPrefsRegistered;
 
+    @Nullable
+    private View mLockPillContainer;
+    @Nullable
+    private TextView mLockPillText;
+    private boolean mLockPillShowing = false;
+    @Nullable
+    private ObjectAnimator mLockPillButtonsAnimator;
+
     public OverviewActionsView(Context context) {
         this(context, null);
     }
@@ -206,6 +219,7 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
 
     @Override
     protected void onDetachedFromWindow() {
+        resetLockPill();
         setCallbacks(null);
         clearChildClickListeners();
         if (mPrefsRegistered) {
@@ -250,7 +264,57 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
         }
         mSaveAppPairButton.setOnClickListener(this);
 
+        mLockPillContainer = findViewById(R.id.lock_pill_container);
+        mLockPillText = findViewById(R.id.lock_pill_text);
+
         updateVisibilities();
+    }
+
+    public void showLockPill(boolean isCurrentlyLocked) {
+        if (mLockPillContainer == null || mLockPillShowing) return;
+        mLockPillShowing = true;
+        if (mLockPillText != null) {
+            mLockPillText.setText(isCurrentlyLocked ? R.string.unlock_app : R.string.lock_app);
+        }
+        mLockPillContainer.animate().cancel();
+        mLockPillContainer.setAlpha(0f);
+        mLockPillContainer.setVisibility(VISIBLE);
+        mLockPillContainer.animate().alpha(1f).setDuration(LOCK_PILL_ANIM_DURATION).start();
+        animateLockPillButtonsAlpha(0f);
+    }
+
+    public void hideLockPill() {
+        if (mLockPillContainer == null || !mLockPillShowing) return;
+        mLockPillShowing = false;
+        View pill = mLockPillContainer;
+        pill.animate().cancel();
+        // withEndAction is not run when cancelled, so a quick re-show can't be hidden by it.
+        pill.animate().alpha(0f).setDuration(LOCK_PILL_ANIM_DURATION)
+                .withEndAction(() -> pill.setVisibility(GONE)).start();
+        animateLockPillButtonsAlpha(1f);
+    }
+
+    private void resetLockPill() {
+        mLockPillShowing = false;
+        if (mLockPillButtonsAnimator != null) {
+            mLockPillButtonsAnimator.cancel();
+            mLockPillButtonsAnimator = null;
+        }
+        mAlphaProperties[INDEX_LOCK_PILL_ALPHA].updateValue(1f);
+        if (mLockPillContainer != null) {
+            mLockPillContainer.animate().cancel();
+            mLockPillContainer.setVisibility(GONE);
+        }
+    }
+
+    private void animateLockPillButtonsAlpha(float target) {
+        if (mLockPillButtonsAnimator != null) {
+            mLockPillButtonsAnimator.cancel();
+        }
+        mLockPillButtonsAnimator = ObjectAnimator.ofFloat(
+                mAlphaProperties[INDEX_LOCK_PILL_ALPHA], AnimatedFloat.VALUE, target);
+        mLockPillButtonsAnimator.setDuration(LOCK_PILL_ANIM_DURATION);
+        mLockPillButtonsAnimator.start();
     }
 
     private void updateVisibilities() {
@@ -479,6 +543,9 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
     public void updateVerticalMargin(NavigationMode mode) {
         updateActionBarPosition(mActionButtons);
         updateActionBarPosition(mSaveAppPairButton);
+        if (mLockPillContainer != null) {
+            updateActionBarPosition(mLockPillContainer);
+        }
     }
 
     /** Positions actions buttons according to device settings and insets. */

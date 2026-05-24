@@ -74,4 +74,37 @@
         android:layout_gravity="bottom|center_horizontal"
         android:visibility="gone" />
 
+    <!-- Lock pill indicator shown during swipe-down-to-lock gesture -->
+    <LinearLayout
+        android:id="@+id/lock_pill_container"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/overview_actions_height"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@drawable/bg_overview_lock_pill"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/lock_pill_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/recents_locked"
+            android:tint="@color/materialColorOnPrimaryContainer" />
+
+        <TextView
+            android:id="@+id/lock_pill_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:accessibilityLiveRegion="polite"
+            android:text="@string/lock_app"
+            android:textColor="@color/materialColorOnPrimaryContainer"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
 </com.android.quickstep.views.OverviewActionsView>

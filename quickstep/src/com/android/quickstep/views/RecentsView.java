@@ -180,6 +180,7 @@ import com.android.launcher3.util.ViewPool;
 import com.android.quickstep.BaseContainerInterface;
 import com.android.quickstep.GestureState;
 import com.android.quickstep.HighResLoadingState;
+import com.android.quickstep.LockedTaskManager;
 import com.android.quickstep.OverviewCommandHelper;
 import com.android.quickstep.OverviewComponentObserver;
 import com.android.quickstep.RecentsAnimationController;
@@ -860,6 +861,8 @@ public abstract class RecentsView<
 
     protected final BlurUtils mBlurUtils = new BlurUtils(this);
 
+    private final Runnable mLockedTasksChangedListener = this::updateTaskViewsLockState;
+
     private final Runnable mPreloadRunnable = () -> {
         if (!mOverviewStateEnabled) {
             mHelper.startPreloading();
@@ -1116,6 +1119,8 @@ public abstract class RecentsView<
         runActionOnRemoteHandles(remoteTargetHandle -> remoteTargetHandle.getTransformParams()
                 .setSyncTransactionApplier(mSyncTransactionApplier));
         mRecentsModel.addThumbnailChangeListener(this);
+        LockedTaskManager.getInstance(getContext()).addChangeListener(mLockedTasksChangedListener);
+        updateTaskViewsLockState();
         mIPipAnimationListener.setActivityAndRecentsView(mContainer, this);
 
         // Late initializer for SystemUiProxy
@@ -1142,6 +1147,8 @@ public abstract class RecentsView<
                 .setSyncTransactionApplier(null));
         executeSideTaskLaunchCallback();
         mRecentsModel.removeThumbnailChangeListener(this);
+        LockedTaskManager.getInstance(getContext())
+                .removeChangeListener(mLockedTasksChangedListener);
         mSystemUiProxy.removeOnStateChangeListener(mPreloadRunnable);
         mIPipAnimationListener.setActivityAndRecentsView(null, null);
         mOrientationState.destroyListeners();
@@ -1833,7 +1840,7 @@ public abstract class RecentsView<
             mPageScrolls = null;
         }
         if (taskGroups == null || taskGroups.isEmpty()) {
-            removeAllTaskViews();
+            removeAllTaskViews(/* keepLocked= */ false);
             onTaskStackUpdated();
             // With all tasks removed, touch handling in PagedView is disabled and we need to reset
             // touch state or otherwise values will be obsolete.
@@ -2026,14 +2033,25 @@ public abstract class RecentsView<
     }
 
     protected void removeAllTaskViews() {
+        removeAllTaskViews(/* keepLocked= */ true);
+    }
+
+    protected void removeAllTaskViews(boolean keepLocked) {
         // This handles an edge case where applyLoadPlan happens during a gesture when the only
         // Task is one with excludeFromRecents, in which case we should not remove it.
         CollectionsKt
-                .filter(getTaskViews(), taskView -> !isGestureActive() || !taskView.isRunningTask())
+                .filter(getTaskViews(), taskView -> !(keepLocked && taskView.isLocked())
+                        && (!isGestureActive() || !taskView.isRunningTask()))
                 .forEach(this::removeView);
         if (!hasTaskViews()) {
             removeView(mAddDesktopButton);
             removeView(mClearAllButton);
+        }
+    }
+
+    public void updateTaskViewsLockState() {
+        for (TaskView taskView : getTaskViews()) {
+            taskView.updateLockState();
         }
     }
 

@@ -331,12 +331,20 @@ constructor(
         }
     }
 
-    /** Dismisses all */
+    /** Dismisses all tasks, except the ones locked in Recents. */
     fun dismissAllTasks() {
+        val taskViews = recentsView.mUtils.taskViews.toList()
+        val hasLockedTasks = taskViews.any { it.isLocked }
+        val unlockedTaskIds =
+            if (hasLockedTasks) {
+                taskViews.filterNot { it.isLocked }.flatMap { it.taskIds.asList() }
+            } else {
+                emptyList()
+            }
         val allDismissSprings =
-            recentsView.mUtils.taskViews
+            taskViews
                 .reversed()
-                .filter { taskView -> recentsView.isTaskViewVisible(taskView) }
+                .filter { taskView -> recentsView.isTaskViewVisible(taskView) && !taskView.isLocked }
                 .mapNotNull { createDismissedTaskViewSpringAnimation(it) }
         SpringSet(SpringAnimation(FloatValueHolder()).setSpring(SpringForce(1f)))
             .playTogether(allDismissSprings)
@@ -350,8 +358,19 @@ constructor(
 
                     // Remove all the task views now
                     finishRecentsAnimation(/* toHome */ true, /* shouldPip */ false) {
-                        uiHelperExecutor.execute { activityManagerWrapper.removeAllRecentTasks() }
+                        uiHelperExecutor.execute {
+                            if (hasLockedTasks) {
+                                unlockedTaskIds.forEach { activityManagerWrapper.removeTask(it) }
+                            } else {
+                                activityManagerWrapper.removeAllRecentTasks()
+                            }
+                        }
                         removeAllTaskViews()
+                        if (hasTaskViews()) {
+                            updateTaskSize()
+                            mUtils.updateChildTaskOrientations()
+                            updateScrollSynchronously()
+                        }
                         if (!mUtils.isInDesktopFirstMode()) {
                             startHome()
                         }

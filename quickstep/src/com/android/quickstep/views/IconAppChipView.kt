@@ -15,11 +15,13 @@
  */
 package com.android.quickstep.views
 
+import android.animation.Animator
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.RectEvaluator
 import android.animation.ValueAnimator
 import android.content.Context
+import android.content.res.ColorStateList
 import android.graphics.Canvas
 import android.graphics.Outline
 import android.graphics.Rect
@@ -137,6 +139,10 @@ constructor(
     private val viewTranslationY: MultiPropertyFactory<View> =
         MultiPropertyFactory(this, VIEW_TRANSLATE_Y, INDEX_COUNT_TRANSLATION, SUM_AGGREGATOR)
 
+    private var isShowingLockIcon = false
+    private var defaultArrowDrawable: Drawable? = null
+    private var defaultArrowTint: ColorStateList? = null
+
     // Width showing only the app icon and arrow. Max width should not be set to less than
     // this.
     private val minWidthAllowed = iconViewMarginStart + appIconSize + arrowSize + arrowMarginEnd
@@ -244,6 +250,8 @@ constructor(
         appTitle = findViewById(R.id.icon_title)
         iconArrowView = findViewById(R.id.icon_arrow)
         menuAnchorView = findViewById(R.id.icon_view_menu_anchor)
+        defaultArrowDrawable = iconArrowView?.drawable
+        defaultArrowTint = iconArrowView?.imageTintList
     }
 
     fun setText(text: CharSequence?) {
@@ -450,14 +458,18 @@ constructor(
             val textTranslationXWithRtl = if (isRtl) -textTranslationX else textTranslationX
             val arrowTranslationWithRtl = if (isRtl) -arrowTranslationX else arrowTranslationX
 
-            animator!!.playTogether(
-                backgroundAnimator,
-                ObjectAnimator.ofFloat(iconView, SCALE_X, iconViewScaling),
-                ObjectAnimator.ofFloat(iconView, SCALE_Y, iconViewScaling),
-                ObjectAnimator.ofFloat(appTitle, TRANSLATION_X, textTranslationXWithRtl),
-                ObjectAnimator.ofFloat(iconArrowView, TRANSLATION_X, arrowTranslationWithRtl),
-                ObjectAnimator.ofFloat(iconArrowView, SCALE_Y, -1f),
-            )
+            val expandAnimators =
+                mutableListOf<Animator>(
+                    backgroundAnimator,
+                    ObjectAnimator.ofFloat(iconView, SCALE_X, iconViewScaling),
+                    ObjectAnimator.ofFloat(iconView, SCALE_Y, iconViewScaling),
+                    ObjectAnimator.ofFloat(appTitle, TRANSLATION_X, textTranslationXWithRtl),
+                    ObjectAnimator.ofFloat(iconArrowView, TRANSLATION_X, arrowTranslationWithRtl),
+                )
+            if (!isShowingLockIcon) {
+                expandAnimators.add(ObjectAnimator.ofFloat(iconArrowView, SCALE_Y, -1f))
+            }
+            animator!!.playTogether(expandAnimators)
             status = AppChipStatus.Expanded
         } else {
             // Clip expanded text with reveal animation so it doesn't go beyond the edge of the menu
@@ -479,14 +491,18 @@ constructor(
                 )
             backgroundAnimator.addUpdateListener { invalidateOutline() }
 
-            animator!!.playTogether(
-                expandedTextClipAnim,
-                backgroundAnimator,
-                ObjectAnimator.ofFloat(iconView, getScaleProperty(), 1f),
-                ObjectAnimator.ofFloat(appTitle, TRANSLATION_X, 0f),
-                ObjectAnimator.ofFloat(iconArrowView, TRANSLATION_X, 0f),
-                ObjectAnimator.ofFloat(iconArrowView, SCALE_Y, 1f),
-            )
+            val collapseAnimators =
+                mutableListOf<Animator>(
+                    expandedTextClipAnim,
+                    backgroundAnimator,
+                    ObjectAnimator.ofFloat(iconView, getScaleProperty(), 1f),
+                    ObjectAnimator.ofFloat(appTitle, TRANSLATION_X, 0f),
+                    ObjectAnimator.ofFloat(iconArrowView, TRANSLATION_X, 0f),
+                )
+            if (!isShowingLockIcon) {
+                collapseAnimators.add(ObjectAnimator.ofFloat(iconArrowView, SCALE_Y, 1f))
+            }
+            animator!!.playTogether(collapseAnimators)
             status = AppChipStatus.Collapsed
             sendToBack()
         }
@@ -638,6 +654,29 @@ constructor(
     fun reset() {
         setText(null)
         setDrawable(null)
+        setLockState(false)
+    }
+
+    fun setLockState(isLocked: Boolean) {
+        if (isLocked == isShowingLockIcon) return
+        isShowingLockIcon = isLocked
+        val arrow = iconArrowView ?: return
+        if (isLocked) {
+            arrow.setImageResource(R.drawable.recents_locked)
+            arrow.imageTintList =
+                ColorStateList.valueOf(
+                    context.getColor(R.color.recent_app_locked_icon_color)
+                )
+            arrow.scaleY = 1f
+        } else {
+            if (defaultArrowDrawable != null) {
+                arrow.setImageDrawable(defaultArrowDrawable)
+            } else {
+                arrow.setImageResource(R.drawable.ic_chevron_down)
+            }
+            arrow.imageTintList = defaultArrowTint
+            arrow.scaleY = if (status == AppChipStatus.Expanded) -1f else 1f
+        }
     }
 
     enum class AppChipStatus {
