@@ -599,8 +599,6 @@ public interface TaskShortcutFactory {
         private static final String TAG = "LockAppSystemShortcut";
         private final Task mTask;
         private final String mPackageName;
-        List<String> mLockedTasks = new ArrayList<>();
-        private String mStartPkg, mEndPkg;
         private Context mContext;
 
         public LockAppSystemShortcut(Context context, RecentsViewContainer target, TaskContainer taskContainer, String packageName) {
@@ -609,37 +607,19 @@ public interface TaskShortcutFactory {
             mTask = taskContainer.getTask();
             mPackageName = packageName;
             mContext = context;
-
-            String lockedTasks = Settings.System.getStringForUser(
-                    mContext.getContentResolver(),
-                    Settings.System.RECENTS_LOCKED_TASKS,
-                    UserHandle.USER_CURRENT);
-
-            if (mLockedTasks.size() == 0 && lockedTasks != null && !lockedTasks.isEmpty()) {
-                mLockedTasks = new ArrayList<String>(Arrays.asList(lockedTasks.split(",")));
-            }
         }
 
         @Override
         public void onClick(View view) {
-            if (mPackageName != null) {
-                if (mTask != null) {
-                    if (mLockedTasks.contains(mPackageName)) {
-                        mLockedTasks.remove(mPackageName);
-                        Toast unlockApp = Toast.makeText(mContext, R.string.unlock_app,
-                            Toast.LENGTH_SHORT);
-                        unlockApp.show();
-                    } else {
-                        mLockedTasks.add(mPackageName);
-                        Toast lockApp = Toast.makeText(mContext, R.string.lock_app,
-                            Toast.LENGTH_SHORT);
-                        lockApp.show();
-                    }
-                }
+            if (mPackageName != null && mTask != null) {
+                LockedTaskManager ltm = LockedTaskManager.getInstance(mContext);
+                boolean wasLocked = ltm.isPackageLocked(mPackageName);
+                ltm.setPackageLocked(mPackageName, !wasLocked);
+                ((TaskView) mOriginalView).updateLockState(mPackageName);
+                Toast.makeText(mContext,
+                        wasLocked ? R.string.unlock_app : R.string.lock_app,
+                        Toast.LENGTH_SHORT).show();
             }
-           Settings.System.putStringForUser(mContext.getContentResolver(),
-           Settings.System.RECENTS_LOCKED_TASKS, String.join(",", mLockedTasks),
-                UserHandle.USER_CURRENT);
         }
     }
 }

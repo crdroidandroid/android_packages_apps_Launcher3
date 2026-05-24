@@ -27,7 +27,6 @@ import android.graphics.Rect;
 import android.os.VibrationEffect;
 import android.view.MotionEvent;
 import android.view.animation.Interpolator;
-
 import com.android.app.animation.Interpolators;
 import com.android.launcher3.AbstractFloatingView;
 import com.android.launcher3.LauncherAnimUtils;
@@ -42,6 +41,7 @@ import com.android.launcher3.util.FlingBlockCheck;
 import com.android.launcher3.util.TouchController;
 import com.android.launcher3.util.VibratorWrapper;
 import com.android.launcher3.views.BaseDragLayer;
+import com.android.quickstep.LockedTaskManager;
 import com.android.quickstep.orientation.RecentsPagedOrientationHandler;
 import com.android.quickstep.util.VibrationConstants;
 import com.android.quickstep.views.RecentsView;
@@ -285,14 +285,18 @@ public class TaskViewTouchControllerDeprecated<
 
             mEndDisplacement = -secondaryTaskDimension;
         } else {
-            // Drag-down uses the existing launch animation
-            currentInterpolator = Interpolators.ZOOM_IN;
-            pa = mRecentsView.createTaskLaunchAnimation(
-                    mTaskBeingDragged, maxDuration, currentInterpolator);
+            // Drag-down uses translation with secondaryDismissTranslationProperty for lock
+            currentInterpolator = Interpolators.LINEAR;
+            pa = new PendingAnimation(maxDuration);
 
-            // Since the thumbnail is what is filling the screen, based the end displacement on it.
-            mTaskBeingDragged.getThumbnailBounds(mTempRect, /*relativeToDragLayer=*/true);
-            mEndDisplacement = secondaryLayerDimension - mTempRect.bottom;
+            // Translate down by 40% of task height using the dismiss property (for neighbor settle)
+            float maxLockDisplacement = -secondaryTaskDimension * 0.4f * verticalFactor;
+            pa.setFloat(mTaskBeingDragged,
+                    mTaskBeingDragged.getSecondaryDismissTranslationProperty(),
+                    maxLockDisplacement,
+                    Interpolators.LINEAR);
+
+            mEndDisplacement = maxLockDisplacement;
         }
 
         mEndDisplacement *= verticalFactor;
@@ -320,6 +324,12 @@ public class TaskViewTouchControllerDeprecated<
 
         RecentsPagedOrientationHandler orientationHandler =
                 mRecentsView.getPagedOrientationHandler();
+        boolean isGoingDown = !orientationHandler.isGoingUp(startDisplacement, mIsRtl);
+        if (isGoingDown && mTaskBeingDragged != null && mTaskBeingDragged.isRunningTask()
+                && mRecentsView.getEnableDrawingLiveTile()) {
+            mRecentsView.setEnableDrawingLiveTile(false);
+        }
+
         if (mCurrentAnimation == null) {
             reInitAnimationController(orientationHandler.isGoingUp(startDisplacement, mIsRtl));
             mDisplacementShift = 0;
@@ -387,6 +397,32 @@ public class TaskViewTouchControllerDeprecated<
         // animation, so the controller plays continuously from `progress` to either 0
         // (cancel) or 1 (success) without any discontinuity.
 
+        if (!mCurrentAnimationIsGoingUp && goingToEnd) {
+            // Swipe-down complete: toggle lock state
+            String packageName = mTaskBeingDragged.getFirstTask() != null
+                    ? mTaskBeingDragged.getFirstTask().key.getPackageName() : null;
+            if (packageName != null) {
+                LockedTaskManager ltm = LockedTaskManager.getInstance(mContainer);
+                boolean wasLocked = mTaskBeingDragged.isLocked();
+                ltm.setPackageLocked(packageName, !wasLocked);
+                mTaskBeingDragged.updateLockState(packageName);
+            }
+            if (!mIsDismissHapticRunning) {
+                VibratorWrapper.INSTANCE.get(mContainer).vibrate(
+                        TASK_DISMISS_VIBRATION_PRIMITIVE,
+                        TASK_DISMISS_VIBRATION_PRIMITIVE_SCALE,
+                        TASK_DISMISS_VIBRATION_FALLBACK);
+                mIsDismissHapticRunning = true;
+            }
+            // Animate back to original position (the animation already handles the reverse)
+            long lockAnimDuration = BaseSwipeDetector.calculateDuration(velocity, progress);
+            mCurrentAnimation.setEndAction(this::clearState);
+            mCurrentAnimation.startWithVelocity(mContainer, false, Math.abs(velocity),
+                    mEndDisplacement, lockAnimDuration);
+            mDraggingEnabled = true;
+            return;
+        }
+
         long animationDuration = BaseSwipeDetector.calculateDuration(
                 velocity, goingToEnd ? (1 - progress) : progress);
         if (blockedFling && !goingToEnd) {
@@ -418,6 +454,15 @@ public class TaskViewTouchControllerDeprecated<
         // Restore Z if we modified it during drag.
         if (mTaskBeingDragged != null) {
             mTaskBeingDragged.setTranslationZ(mTaskDragStartTranslationZ);
+            // Restore live tile if it was suppressed
+            if (mTaskBeingDragged.isRunningTask()
+                    && !mRecentsView.getEnableDrawingLiveTile()) {
+                mRecentsView.setEnableDrawingLiveTile(true);
+                mRecentsView.runActionOnRemoteHandles(remoteTargetHandle ->
+                        remoteTargetHandle.getTaskViewSimulator()
+                                .taskSecondaryTranslation.updateValue(0f));
+                mRecentsView.redrawLiveTile();
+            }
         }
         mTaskDragStartTranslationZ = 0f;
 

@@ -35,6 +35,7 @@ import com.android.launcher3.util.DynamicResource
 import com.android.launcher3.util.MSDLPlayerWrapper
 import com.android.launcher3.util.OverviewReleaseFlags.enableGridOnlyOverview
 import com.android.launcher3.views.ActivityContext
+import com.android.quickstep.LockedTaskManager
 import com.android.quickstep.SystemUiProxy
 import com.android.quickstep.util.TaskGridNavHelper
 import com.android.quickstep.views.RecentsView.RECENTS_SCALE_PROPERTY
@@ -321,10 +322,16 @@ constructor(
 
     /** Dismisses all */
     fun dismissAllTasks() {
+        val lockedPkgMgr = LockedTaskManager.getInstance(recentsView.context)
         val allDismissSprings =
             recentsView.mUtils.taskViews
                 .reversed()
-                .filter { taskView -> recentsView.isTaskViewVisible(taskView) }
+                .filter { taskView ->
+                    recentsView.isTaskViewVisible(taskView) &&
+                        !lockedPkgMgr.isPackageLocked(
+                            taskView.firstTask?.key?.packageName ?: return@filter false
+                        )
+                }
                 .mapNotNull { createDismissedTaskViewSpringAnimation(it) }
         SpringSet(SpringAnimation(FloatValueHolder()).setSpring(SpringForce(1f)))
             .playTogether(allDismissSprings)

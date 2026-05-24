@@ -196,6 +196,7 @@ import com.android.launcher3.util.coroutines.ProductionDispatchers;
 import com.android.quickstep.BaseContainerInterface;
 import com.android.quickstep.GestureState;
 import com.android.quickstep.HighResLoadingState;
+import com.android.quickstep.LockedTaskManager;
 import com.android.quickstep.OverviewCommandHelper;
 import com.android.quickstep.OverviewComponentObserver;
 import com.android.quickstep.RecentsAnimationController;
@@ -2271,10 +2272,15 @@ public abstract class RecentsView<
     }
 
     protected void removeAllTaskViews() {
+        LockedTaskManager lockedMgr = LockedTaskManager.getInstance(getContext());
         // This handles an edge case where applyLoadPlan happens during a gesture when the only
         // Task is one with excludeFromRecents, in which case we should not remove it.
         CollectionsKt
-                .filter(getTaskViews(), taskView -> !isGestureActive() || !taskView.isRunningTask())
+                .filter(getTaskViews(),
+                        taskView -> {
+                            if (taskView.isLocked()) return false;
+                            return !isGestureActive() || !taskView.isRunningTask();
+                        })
                 .forEach(this::removeView);
         if (!hasTaskViews()) {
             removeView(mAddDesktopButton);
@@ -4609,8 +4615,14 @@ public abstract class RecentsView<
             throw new IllegalStateException("Another pending animation is still running");
         }
         PendingAnimation anim = new PendingAnimation(duration);
+        LockedTaskManager lockedMgr = LockedTaskManager.getInstance(getContext());
 
         for (TaskView taskView : getTaskViews()) {
+            String pkg = taskView.getFirstTask() != null
+                    ? taskView.getFirstTask().key.getPackageName() : null;
+            if (pkg != null && lockedMgr.isPackageLocked(pkg)) {
+                continue;
+            }
             addDismissedTaskAnimations(taskView, duration, anim);
         }
 
