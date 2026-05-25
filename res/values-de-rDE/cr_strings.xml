@@ -431,4 +431,8 @@
     <string name="recents_style_staple">Kami-Stil</string>
     <string name="recents_style_ios">iOS-Stil</string>
     <string name="recents_style_oxygen">OxygenOS-Stil</string>
+    <!-- Lock -->
+    <string name="action_lock">Lock/Unlock app</string>
+    <string name="unlock_app">Unlocked app in recents</string>
+    <string name="lock_app">Locked app in recents</string>
 </resources>
