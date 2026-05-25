@@ -432,7 +432,7 @@
     <string name="recents_style_ios">iOS стиль</string>
     <string name="recents_style_oxygen">Стиль OxygenOS</string>
     <!-- Lock -->
-    <string name="action_lock">Lock/Unlock app</string>
-    <string name="unlock_app">Unlocked app in recents</string>
-    <string name="lock_app">Locked app in recents</string>
+    <string name="action_lock">Блокировать/разблокировать</string>
+    <string name="unlock_app">Разблокировано в недавних</string>
+    <string name="lock_app">Заблокировано в недавних</string>
 </resources>
