@@ -267,19 +267,21 @@ public class TaskViewTouchControllerDeprecated<
         PendingAnimation pa;
 
         if (goingUp) {
-            // For drag-up, create a simple translation animation that ONLY affects the dragged task.
-            // No stack rearrangement, no scaling of other tasks.
+            // Build the full dismiss animation up front so the user's drag drives both
+            // the dismissed card AND the gap-fill translations on the remaining cards in
+            // lockstep via setPlayFraction(). This is the AOSP path; the previous
+            // "simple animation only on the dragged card during drag, swap to full
+            // animation on lift" approach (commit de4afeb88c) caused a discontinuity on
+            // lift because the dragged card's secondary translation and the other cards'
+            // dismiss translations jumped from their simple-animation values to the full
+            // animation's values at the swap point. Building the full animation from the
+            // start keeps the gesture continuous and reversible (cancel just plays the
+            // animation back to progress=0).
             currentInterpolator = Interpolators.LINEAR;
             pa = new PendingAnimation(maxDuration);
-
-            // Simple animation: just translate the task up by its full height and fade it out
-            pa.setFloat(mTaskBeingDragged,
-                    orientationHandler.getSecondaryViewTranslate(),
-                    -secondaryTaskDimension * verticalFactor,
-                    Interpolators.LINEAR);
-
-            // Fade out the dragged task
-            pa.setViewAlpha(mTaskBeingDragged, 0f, Interpolators.LINEAR);
+            mRecentsView.createTaskDismissAnimation(pa, mTaskBeingDragged,
+                    true /* animateTaskView */, true /* removeTask */, maxDuration,
+                    false /* dismissingForSplitSelection */, null /* gridEndData */);
 
             mEndDisplacement = -secondaryTaskDimension;
         } else {
@@ -381,31 +383,9 @@ public class TaskViewTouchControllerDeprecated<
             goingToEnd = interpolatedProgress > SUCCESS_TRANSITION_PROGRESS;
         }
 
-        // If dismissing (going up and completing), replace simple animation with full dismiss
-        if (mCurrentAnimationIsGoingUp && goingToEnd) {
-            // Cancel the simple animation
-            if (mCurrentAnimation != null) {
-                mCurrentAnimation.getTarget().removeListener(this);
-                mCurrentAnimation.dispatchOnCancel();
-            }
-
-            // Create the full dismiss animation with stack rearrangement
-            BaseDragLayer dl = mContainer.getDragLayer();
-            final int secondaryLayerDimension = orientationHandler.getSecondaryDimension(dl);
-            long maxDuration = 2 * secondaryLayerDimension;
-
-            PendingAnimation pa = new PendingAnimation(maxDuration);
-            mRecentsView.createTaskDismissAnimation(pa, mTaskBeingDragged,
-                    true /* animateTaskView */, true /* removeTask */, maxDuration,
-                    false /* dismissingForSplitSelection*/, null /* gridEndData */);
-
-            mCurrentAnimation = pa.createPlaybackController();
-            mCurrentAnimation.getTarget().setInterpolator(Interpolators.LINEAR);
-            mCurrentAnimation.getTarget().addListener(this);
-
-            // Start from current progress to make transition smooth
-            mCurrentAnimation.setPlayFraction(progress);
-        }
+        // No swap-on-lift: reInitAnimationController already built the full dismiss
+        // animation, so the controller plays continuously from `progress` to either 0
+        // (cancel) or 1 (success) without any discontinuity.
 
         long animationDuration = BaseSwipeDetector.calculateDuration(
                 velocity, goingToEnd ? (1 - progress) : progress);

@@ -415,6 +415,7 @@ constructor(
             field = value
             applyTranslationX()
         }
+    var baseTaskOffsetTranslationX = 0f
 
     private var taskOffsetTranslationY = 0f
         set(value) {
@@ -2121,6 +2122,7 @@ constructor(
         // fullscreenTranslation and accumulatedTranslation should not be reset, as
         // resetViewTransforms is called during QuickSwitch scrolling.
         taskOffsetTranslationX = 0f
+        baseTaskOffsetTranslationX = 0f
         taskResistanceTranslationX = 0f
         splitSelectTranslationX = 0f
         gridEndTranslationX = 0f

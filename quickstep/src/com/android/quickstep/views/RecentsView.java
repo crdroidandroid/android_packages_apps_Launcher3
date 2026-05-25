@@ -626,6 +626,7 @@ public abstract class RecentsView<
     private boolean mBorderEnabled = false;
     private boolean mShowAsGridLastOnLayout = false;
     private boolean mEnableOverlap = false;
+    public boolean isOverlapEnabled() { return mEnableOverlap; }
     protected final IntSet mTopRowIdSet = new IntSet();
     private int mClearAllShortTotalWidthTranslation = 0;
 
@@ -4018,16 +4019,14 @@ public abstract class RecentsView<
                         lastTaskViewIndex);
                 int scrollDiff = newScroll[i] - oldScroll[i] + offset;
                 if (scrollDiff != 0) {
-                    if (true) {
-                        if (!mEnableOverlap) { 
-                            translateTaskWhenDismissed(
-                                    child,
-                                    Math.abs(i - dismissedIndex),
-                                    scrollDiff,
-                                    anim,
-                                    splitTimings);
-                        }
-                    }
+                    int gapFillTranslation = getGapFillTranslationForDismiss(
+                            i, dismissedIndex, scrollDiffPerPage, scrollDiff, offset);
+                    translateTaskWhenDismissed(
+                            child,
+                            Math.abs(i - dismissedIndex),
+                            gapFillTranslation,
+                            anim,
+                            splitTimings);
                     if (child instanceof TaskView taskView) {
                         mTaskViewsDismissPrimaryTranslations.put(taskView, scrollDiffPerPage);
                     }
@@ -4165,9 +4164,12 @@ public abstract class RecentsView<
 
             @SuppressWarnings("WrongCall")
             private void onEnd(boolean success) {
-                // Reset task translations as they may have updated via animations in
-                // createTaskDismissAnimation
-                resetTaskVisuals();
+                // Overlap recents styles keep taskOffset translations through dismiss; resetting
+                // before removeViewInLayout clears them and causes a visible snap. Reset after
+                // layout catches up (below). Stock layout resets immediately as in AOSP.
+                if (!mEnableOverlap || !success) {
+                    resetTaskVisuals();
+                }
 
                 if (success) {
                     mAnyTaskHasBeenDismissed = true;
@@ -4267,6 +4269,10 @@ public abstract class RecentsView<
                     mTopRowIdSet.remove(dismissedTaskViewId);
 
                     if (taskCount == 1) {
+                        if (mEnableOverlap) {
+                            updateScrollSynchronously();
+                            resetTaskVisuals();
+                        }
                         if (!isSplitSelectionActive()) {
                             removeViewInLayout(mClearAllButton);
                             removeViewInLayout(mAddDesktopButton);
@@ -4289,6 +4295,10 @@ public abstract class RecentsView<
                         mUtils.updateChildTaskOrientations();
                         // Update scroll and snap to page.
                         updateScrollSynchronously();
+
+                        if (mEnableOverlap) {
+                            resetTaskVisuals();
+                        }
 
                         if (showAsGrid) {
                             // Rebalance tasks in the grid
@@ -4388,6 +4398,28 @@ public abstract class RecentsView<
      * - Current page is rightmost page (leftmost for RTL)
      * - Dragging an adjacent page on the left side (right side for RTL)
      */
+    /**
+     * Target for {@link TaskView#getPrimaryDismissTranslationProperty()} while a task is
+     * dismissed. Overlap styles (Kami/iOS/Oxygen) use page-slot spacing because page-scroll
+     * deltas from {@link #getPageScrolls} do not match the stack's visual overlap offsets.
+     */
+    private int getGapFillTranslationForDismiss(int childIndex, int dismissedIndex,
+            int scrollDiffPerPage, int scrollDiff, int dismissOffset) {
+        if (!mEnableOverlap) {
+            return scrollDiff;
+        }
+        int slotsFromDismissed = childIndex - dismissedIndex;
+        if (slotsFromDismissed <= 0) {
+            return 0;
+        }
+        int perSlot = mIsRtl ? scrollDiffPerPage : -scrollDiffPerPage;
+        int gapFillTranslation = perSlot * slotsFromDismissed;
+        if (slotsFromDismissed == 1) {
+            gapFillTranslation += dismissOffset - perSlot;
+        }
+        return gapFillTranslation;
+    }
+
     private int getOffsetToDismissedTask(int scrollDiffPerPage, int dismissedIndex,
             int lastTaskViewIndex) {
         // If `mCurrentPage` is beyond `lastTaskViewIndex`, use the last TaskView instead to
@@ -5150,6 +5182,7 @@ public abstract class RecentsView<
             float totalTranslationX = (skipTranslationOffset ? 0f : translation) + modalTranslation
                     + carouselHiddenOffsetSize;
             if (child instanceof TaskView taskView) {
+                taskView.setBaseTaskOffsetTranslationX(totalTranslationX);
                 taskView.getPrimaryTaskOffsetTranslationProperty().set(taskView, totalTranslationX);
             } else if (child instanceof ClearAllButton) {
                 getPagedOrientationHandler().getPrimaryViewTranslate().set(child,
@@ -6972,7 +7005,7 @@ public abstract class RecentsView<
         }
     }
 
-    private void doScrollScale() {
+    public void doScrollScale() {
         if (showAsGrid() || mContainer.getDeviceProfile().getDeviceProperties().isTablet()) return;
         if (!isPageScrollsInitialized()) return;
 
@@ -7024,7 +7057,7 @@ public abstract class RecentsView<
 
             float baseScale = mScrollScale;
             if (scrollDelta <= scaleArea) {
-                baseScale = Utilities.mapToRange(scrollDelta, 0, scaleArea, 1f, mScrollScale, LINEAR);
+                baseScale = Utilities.mapToRange(scrollDelta, 0, scaleArea, 1f, mScrollScale, EMPHASIZED);
             }
 
             boolean styleApplied = false;
@@ -7032,9 +7065,12 @@ public abstract class RecentsView<
             if (applyOverlap && child instanceof TaskView) {
                 TaskView tv = (TaskView) child;
                 
+                float dismissTrans = tv.getPrimaryDismissTranslationProperty().get(tv);
+                float gridEndTrans = TaskView.GRID_END_TRANSLATION_X.get(tv);
+                float totalDismissTrans = dismissTrans + gridEndTrans;
                 float childCenter = verticalScroll
-                        ? (child.getTop() + (child.getHeight() / 2f))
-                        : (child.getLeft() + (child.getWidth() / 2f));
+                        ? (child.getTop() + totalDismissTrans + (child.getHeight() / 2f))
+                        : (child.getLeft() + totalDismissTrans + (child.getWidth() / 2f));
                 float dist = childCenter - containerCenter;
                 float absDist = Math.abs(dist);
 
@@ -7087,7 +7123,7 @@ public abstract class RecentsView<
                               float childSize, float baseScale, float overlapFactor) {
         float stapleDistance = childSize * 0.60f;
 
-        float currentTrans = tv.getPrimaryTaskOffsetTranslationProperty().get(tv);
+        float currentTrans = tv.getBaseTaskOffsetTranslationX();
 
         if (absDist > stapleDistance) {
             float excess = absDist - stapleDistance;
@@ -7125,7 +7161,7 @@ public abstract class RecentsView<
 
     private void applyIOSStyle(TaskView tv, View child, float dist, float absDist, 
                              float childSize, float baseScale, float overlapFactor) {
-        float currentTrans = tv.getPrimaryTaskOffsetTranslationProperty().get(tv);
+        float currentTrans = tv.getBaseTaskOffsetTranslationX();
 
         if (dist < 0) {
             float stapleDistance = childSize * 0.1f;
@@ -7169,7 +7205,7 @@ public abstract class RecentsView<
     private void applyOxygenStyle(TaskView tv, View child, float dist, float absDist, 
                                 float childSize, float baseScale, float overlapFactor) {
         
-        float currentTrans = tv.getPrimaryTaskOffsetTranslationProperty().get(tv);
+        float currentTrans = tv.getBaseTaskOffsetTranslationX();
 
         if (dist < 0) {
             float stapleDistance = 0f;

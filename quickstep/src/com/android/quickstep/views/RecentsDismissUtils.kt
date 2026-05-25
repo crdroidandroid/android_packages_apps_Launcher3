@@ -49,6 +49,7 @@ import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import kotlin.math.abs
 import kotlin.math.max
+import kotlin.math.min
 import kotlin.math.roundToInt
 import kotlin.math.sign
 
@@ -163,16 +164,15 @@ constructor(
                     recentsView.showAsGrid() &&
                     dismissedTaskView != null &&
                     recentsView.currentPageTaskView is DesktopTaskView
-            // The spring set that will reflow the tasks to fill the gap left by the dismissed task.
+            val dismissedTaskGap = getDismissedTaskGapForReflow(dismissedTaskView, isSplitSelection)
             var (reflowSpringSet, tasksToReflow) =
                 createTaskGridReflowSpringSet(
                     dismissedTaskView,
-                    getDismissedTaskGapForReflow(dismissedTaskView, isSplitSelection),
+                    dismissedTaskGap,
                     gridEndData,
                     isSplitSelection,
                     reflowSplitFromDesktopTile,
                 )
-            // Animate remaining tasks when splitting a task while focused on a desktop task.
             if (reflowSplitFromDesktopTile && dismissedTaskView != null) {
                 val splitWithLargeTileReflowSpringSet =
                     createSplitWithCurrentPageFadeOutReflowSpringSet(
@@ -186,7 +186,6 @@ constructor(
                 }
             }
             if (springSet == null) {
-                // Only reflow, as there is no dismissed task to animate.
                 springSet = reflowSpringSet
             } else if (reflowSpringSet != null) {
                 springSet.playAfterThreshold(
@@ -494,26 +493,57 @@ constructor(
         // Grid end translation to run after all reflow animations have completed.
         val gridEndSpringSet =
             if (reflowSplitFromDesktopTile) null else createGridEndTranslationSpringSet(gridEndData)
-        val tasksWithOffsetsToReflow = getTasksToReflow(dismissedTaskView, towardsStart)
+        val tasksWithOffsetsToReflow =
+            if (recentsView.isOverlapEnabled && dismissedTaskView != null && !recentsView.showAsGrid()) {
+                getOverlapTasksToReflow(dismissedTaskView, dismissedTaskGap)
+            } else {
+                getTasksToReflow(dismissedTaskView, towardsStart)
+            }
         if (tasksWithOffsetsToReflow.isEmpty()) {
             return Pair(gridEndSpringSet, emptyList())
         } else {
+            val isOverlap = recentsView.isOverlapEnabled && !recentsView.showAsGrid()
             // Empty spring exists for conditional start, and to drive neighboring springs.
             val reflowSpringAnimationDriver =
                 SpringAnimation(FloatValueHolder())
                     .setSpring(
-                        createExpressiveGridReflowSpringForce(finalPosition = dismissedTaskGap)
+                        if (isOverlap) {
+                            createOverlapReflowSpringForce(finalPosition = dismissedTaskGap)
+                        } else {
+                            createExpressiveGridReflowSpringForce(finalPosition = dismissedTaskGap)
+                        }
                     )
+            
             recentsView.mTaskViewsDismissPrimaryTranslations.clear()
             // Separate spring end manager for reflow to coordinate start of grid end springs.
             val reflowSpringSet = SpringSet(reflowSpringAnimationDriver, dismissedTaskGap)
-            buildDismissReflowSpringAnimationChain(
-                tasksWithOffsetsToReflow,
-                dismissedTaskGap,
-                previousSpring = reflowSpringAnimationDriver,
-                reflowSpringSet,
-                isSplitSelection,
-            )
+            
+            if (isOverlap) {
+                reflowSpringAnimationDriver.addUpdateListener { _, value, _ ->
+                    tasksWithOffsetsToReflow.forEach { (tv, _) ->
+                        tv.primaryDismissTranslationProperty.set(tv, value)
+                        if (tv.isRunningTask && recentsView.enableDrawingLiveTile) {
+                            recentsView.runActionOnRemoteHandles { remoteTargetHandle ->
+                                remoteTargetHandle.taskViewSimulator.taskPrimaryTranslation.value = value
+                            }
+                            recentsView.redrawLiveTile()
+                        }
+                    }
+                    recentsView.doScrollScale()
+                }
+                tasksWithOffsetsToReflow.forEach { (tv, _) ->
+                    recentsView.mTaskViewsDismissPrimaryTranslations[tv] = dismissedTaskGap.toInt()
+                }
+            } else {
+                buildDismissReflowSpringAnimationChain(
+                    tasksWithOffsetsToReflow,
+                    dismissedTaskGap,
+                    previousSpring = reflowSpringAnimationDriver,
+                    reflowSpringSet,
+                    isSplitSelection,
+                )
+            }
+            
             val tasksToExclude = tasksWithOffsetsToReflow.map { (taskView, _) -> taskView }
             if (gridEndSpringSet != null) {
                 reflowSpringSet.playAfterThreshold(
@@ -545,6 +575,23 @@ constructor(
             val dismissedTaskGap =
                 if (dismissedTaskView == null) {
                     0f
+                } else if (isOverlapEnabled && !showAsGrid()) {
+                    val dismissedPos =
+                        pagedOrientationHandler.getPrimaryValue(
+                            dismissedTaskView.x,
+                            dismissedTaskView.y,
+                        )
+                    val activeTaskView = currentPageTaskView
+                    val activePos =
+                        activeTaskView?.let { taskView ->
+                            pagedOrientationHandler.getPrimaryValue(taskView.x, taskView.y)
+                        } ?: dismissedPos
+                    val reflowFromLeft =
+                        dismissedTaskView === activeTaskView || dismissedPos <= activePos
+                    
+                    val physicalSlotWidth = pagedOrientationHandler.getPrimarySize(dismissedTaskView) + pageSpacing
+                    val sign = if (reflowFromLeft) 1f else -1f
+                    physicalSlotWidth.toFloat() * sign * (if (isRtl) -1f else 1f)
                 } else {
                     // If current page beyond last TaskView's index, use last TaskView to calculate
                     // offset.
@@ -564,6 +611,49 @@ constructor(
             val slidingTranslation = getSlidingTranslation(isSplitSelection)
             return dismissedTaskGap + slidingTranslation
         }
+    }
+
+    private fun getOverlapTasksToReflow(
+        dismissedTaskView: TaskView,
+        dismissedTaskGap: Float,
+    ): List<Pair<TaskView, Int>> {
+        with(recentsView) {
+            val dismissedPos =
+                pagedOrientationHandler.getPrimaryValue(
+                    dismissedTaskView.x,
+                    dismissedTaskView.y,
+                )
+            val activeTaskView = currentPageTaskView
+            val activePos =
+                activeTaskView?.let { taskView ->
+                    pagedOrientationHandler.getPrimaryValue(taskView.x, taskView.y)
+                } ?: dismissedPos
+            val reflowFromLeft =
+                dismissedTaskView === activeTaskView || dismissedPos <= activePos
+            val tasks =
+                mUtils.taskViews
+                    .filterNot { it === dismissedTaskView || (it === activeTaskView && dismissedTaskView !== activeTaskView) }
+                    .map { taskView ->
+                        taskView to pagedOrientationHandler.getPrimaryValue(taskView.x, taskView.y)
+                    }
+                    .filter { (_, pos) ->
+                        if (reflowFromLeft) pos < dismissedPos else pos > dismissedPos
+                    }
+                    .sortedBy { (_, pos) -> abs(dismissedPos - pos) }
+                    .map { (taskView, _) -> taskView }
+            return tasks.mapIndexed { index, taskView -> taskView to index + 1 }
+        }
+    }
+
+    private fun createOverlapReflowSpringForce(finalPosition: Float = Float.MAX_VALUE): SpringForce {
+        val resourceProvider = DynamicResource.provider(recentsView.mContainer)
+        val damping =
+            resourceProvider.getFloat(R.dimen.expressive_dismiss_task_trans_x_damping_ratio)
+        val stiffness =
+            resourceProvider.getFloat(R.dimen.expressive_dismiss_task_trans_x_stiffness)
+        return SpringForce(finalPosition)
+            .setDampingRatio(min(1f, damping * 1.25f))
+            .setStiffness(stiffness * 0.35f)
     }
 
     private fun getTasksToReflow(
@@ -732,6 +822,11 @@ constructor(
         val gridEndSpring =
             SpringAnimation(FloatValueHolder())
                 .setSpring(createExpressiveGridReflowSpringForce(finalPosition = gridEndOffset))
+        if (recentsView.isOverlapEnabled) {
+            gridEndSpring.addUpdateListener { _, _, _ ->
+                recentsView.doScrollScale()
+            }
+        }
         val gridEndSpringSet = SpringSet(gridEndSpring, gridEndOffset)
         recentsView.mUtils.taskViews.forEach { taskView ->
             val taskViewGridEndSpringAnimation =
@@ -943,7 +1038,12 @@ constructor(
             // Page snapping and relayout to run after all animations have completed.
             val onFinishComplete = {
                 // Reset task translations as they may have updated via the dismiss animations.
-                resetTaskVisuals()
+                // Overlap recents styles keep taskOffset translations through dismiss; resetting
+                // before removeViewInLayout clears them and causes a visible snap. Reset after
+                // layout catches up (below). Stock layout resets immediately as in AOSP.
+                if (!recentsView.isOverlapEnabled()) {
+                    resetTaskVisuals()
+                }
 
                 // Denote if any task has been dismissed for grid rebalancing.
                 mAnyTaskHasBeenDismissed = true
@@ -1130,6 +1230,10 @@ constructor(
                 updateTaskSize()
                 mUtils.updateChildTaskOrientations()
                 updateScrollSynchronously()
+
+                if (recentsView.isOverlapEnabled()) {
+                    resetTaskVisuals()
+                }
 
                 val highestVisibleTaskView = getHighestVisibleTaskView()
                 if (showAsGrid() && highestVisibleTaskView != null) {
