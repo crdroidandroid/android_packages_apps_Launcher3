@@ -432,7 +432,7 @@
     <string name="recents_style_ios">iOS 样式</string>
     <string name="recents_style_oxygen">OxygenOS 样式</string>
     <!-- Lock -->
-    <string name="action_lock">Lock/Unlock app</string>
-    <string name="unlock_app">Unlocked app in recents</string>
-    <string name="lock_app">Locked app in recents</string>
+    <string name="action_lock">锁定/解锁应用</string>
+    <string name="unlock_app">已解锁应用</string>
+    <string name="lock_app">已锁定应用</string>
 </resources>
