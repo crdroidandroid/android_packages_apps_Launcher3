@@ -366,7 +366,7 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="wallpaper_carousel_lockscreen_summary">Đặt cùng một hình nền cho màn hình khóa</string>
     <!-- Additional shape options in customization picker -->
     <string name="pebble_shape_title">Đá cuội</string>
-    <string name="vessel_shape_title">Vessel</string>
+    <string name="vessel_shape_title">Hình bình</string>
     <string name="pure_square_shape_title">Vuông vắn</string>
     <string name="squircle_shape_title">Vuông cạnh bo tròn</string>
     <string name="tapered_rect_shape_title">Chữ nhật</string>
@@ -388,10 +388,10 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="all_apps_dark_text_summary">Luôn dùng chữ tối cho nhãn ứng dụng trong khay ứng dụng</string>
     <!-- App drawer styles -->
     <string name="drawer_style_title">Kiểu khay ứng dụng</string>
-    <string name="drawer_style_normal">Bình thường (đáy sheet)</string>
+    <string name="drawer_style_normal">Bình thường</string>
     <string name="drawer_style_legacy">Toàn màn hình kiểu cũ</string>
     <string name="drawer_style_list">Kiểu danh sách</string>
-    <string name="drawer_style_oneui">Giao diện kiểu OneUI (phân trang)</string>
+    <string name="drawer_style_oneui">Kiểu phân trang</string>
     <!-- App drawer sorting -->
     <string name="app_drawer_sort_mode_title">Sắp xếp ngăn kéo ứng dụng</string>
     <string name="app_drawer_sort_alphabetical">Sắp xếp theo chữ cái</string>
@@ -410,11 +410,11 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="color_picker_brightness">Độ sáng</string>
     <string name="color_picker_red">Đỏ</string>
     <string name="color_picker_green">Xanh lá</string>
-    <string name="color_picker_blue">Xanh biển</string>
+    <string name="color_picker_blue">Xanh dương</string>
     <string name="color_picker_hex">HEX</string>
     <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Thanh tìm kiếm kiểu Pixel</string>
-    <string name="dock_search_pixel_style_summary">Thanh tìm kiếm được thiết kế lại với nền nhiều lớp</string>
+    <string name="dock_search_pixel_style_title">Thanh tìm kiếm kiểu mới</string>
+    <string name="dock_search_pixel_style_summary">Thanh tìm kiếm được làm mới với hiệu ứng nền</string>
     <string name="qsb_outer_opacity_title">Độ mờ nền ngoài</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Ẩn hoặc bảo vệ ứng dụng</string>
