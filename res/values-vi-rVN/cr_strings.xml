@@ -426,14 +426,14 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="trust_apps_info_hidden">Ứng dụng cùng với tiện ích sẽ bị ẩn khỏi ngăn chứa ứng dụng</string>
     <string name="trust_apps_info_protected">Các ứng dụng được bảo vệ yêu cầu xác thực được mở từ trình khởi chạy</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_title">Kiểu bố cục ứng dụng gần đây</string>
     <string name="recents_style_default">Mặc định</string>
-    <string name="recents_style_stock">Scale effect</string>
-    <string name="recents_style_staple">Kami style</string>
-    <string name="recents_style_ios">iOS style</string>
-    <string name="recents_style_oxygen">OxygenOS style</string>
+    <string name="recents_style_stock">Hiệu ứng thu phóng</string>
+    <string name="recents_style_staple">Kiểu mới</string>
+    <string name="recents_style_ios">iOS</string>
+    <string name="recents_style_oxygen">Kiểu OxygenOS</string>
     <!-- Lock -->
-    <string name="action_lock">Lock/Unlock app</string>
-    <string name="unlock_app">Unlocked app in recents</string>
-    <string name="lock_app">Locked app in recents</string>
+    <string name="action_lock">Khóa/Mở khóa ứng dụng</string>
+    <string name="unlock_app">Ứng dụng đã mở khóa trong gần đây</string>
+    <string name="lock_app">Ứng dụng đã khóa trong gần đây</string>
 </resources>
