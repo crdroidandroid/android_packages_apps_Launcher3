@@ -4503,6 +4503,10 @@ public abstract class RecentsView<
                 + splitTimings.getGridSlideDurationOffset(), 0f, 1f)
                 : 1f;
 
+        if (view instanceof TaskView taskView && isStackRecentsStyleActive()) {
+            scrollDiffPerPage = Math.round(getStackDismissReflowTarget(taskView, scrollDiffPerPage));
+        }
+
         // Slide tiles in horizontally to fill dismissed area
         pendingAnimation.setFloat(
                 view,
@@ -5255,6 +5259,92 @@ public abstract class RecentsView<
 
     public boolean isOverlapStyleActive() {
         return mEnableOverlap && mEnableDrawingLiveTile;
+    }
+
+    public boolean isStackRecentsStyleActive() {
+        return mRecentsStyle.equals("staple")
+                || mRecentsStyle.equals("ios")
+                || mRecentsStyle.equals("oxygen");
+    }
+
+    public float getStackDismissReflowTarget(TaskView taskView, float reflowTarget) {
+        if (!isStackRecentsStyleActive()) {
+            return reflowTarget;
+        }
+
+        float overlapFactor = getStackStyleOverlapFactor();
+        if (overlapFactor <= 0f) {
+            return reflowTarget;
+        }
+
+        boolean touchInLandscape = mOrientationState.getTouchRotation() != ROTATION_0
+                && mOrientationState.getTouchRotation() != ROTATION_180;
+        boolean layoutInLandscape = mOrientationState.getRecentsActivityRotation() != ROTATION_0
+                && mOrientationState.getRecentsActivityRotation() != ROTATION_180;
+        boolean canRotateRecents = mOrientationState.isRecentsActivityRotationAllowed();
+        boolean verticalScroll = !canRotateRecents && touchInLandscape && !layoutInLandscape;
+
+        int curScroll = verticalScroll ? getScrollY() : getScrollX();
+        int containerCenter = curScroll + (verticalScroll ? (getHeight() / 2) : (getWidth() / 2));
+        float childCenter = verticalScroll
+                ? (taskView.getTop() + (taskView.getHeight() / 2f))
+                : (taskView.getLeft() + (taskView.getWidth() / 2f));
+        float childSize = verticalScroll ? taskView.getHeight() : taskView.getWidth();
+        if (childSize == 0f) {
+            return reflowTarget;
+        }
+
+        float currentDist = childCenter - containerCenter;
+        float currentStackOffset = getStackStyleTranslation(currentDist, childSize, overlapFactor);
+        float targetStackOffset = getStackStyleTranslation(
+                currentDist + reflowTarget, childSize, overlapFactor);
+        return reflowTarget + targetStackOffset - currentStackOffset;
+    }
+
+    private float getStackStyleOverlapFactor() {
+        if (!mEnableOverlap || mFullscreenProgress >= STACK_STYLE_FULLSCREEN_PROGRESS) {
+            return 0f;
+        }
+        float stackProgress = Utilities.boundToRange(
+                1f - (mFullscreenProgress / STACK_STYLE_FULLSCREEN_PROGRESS), 0f, 1f);
+        return FAST_OUT_SLOW_IN.getInterpolation(stackProgress);
+    }
+
+    private float getStackStyleTranslation(float dist, float childSize, float overlapFactor) {
+        float absDist = Math.abs(dist);
+        if (mRecentsStyle.equals("staple")) {
+            float stapleDistance = childSize * 0.60f;
+            if (absDist <= stapleDistance) {
+                return 0f;
+            }
+            float excess = absDist - stapleDistance;
+            float squish = Math.min(excess, (float) (Math.log10(1 + excess) * 12f));
+            float pullBack = absDist - (stapleDistance + squish);
+            float translation = (dist > 0) ? -pullBack : pullBack;
+            return translation * overlapFactor;
+        }
+
+        if (mRecentsStyle.equals("ios")) {
+            float stapleDistance = childSize * 0.1f;
+            if (dist >= 0 || absDist <= stapleDistance) {
+                return 0f;
+            }
+            float excess = absDist - stapleDistance;
+            float squish = Math.min(excess, (float) (Math.log10(1 + excess) * 45f));
+            float pullBack = absDist - (stapleDistance + squish);
+            return pullBack * overlapFactor;
+        }
+
+        if (mRecentsStyle.equals("oxygen")) {
+            if (dist >= 0 || absDist <= 0f) {
+                return 0f;
+            }
+            float squish = Math.min(absDist, (float) (Math.sqrt(absDist) * 7.5f));
+            float pullBack = absDist - squish;
+            return pullBack * overlapFactor;
+        }
+
+        return 0f;
     }
 
     /**
@@ -7063,12 +7153,7 @@ public abstract class RecentsView<
 
         float mScrollScale = isOxygen ? 0.92f : 0.85f;
 
-        float overlapFactor = 0f;
-        if (mEnableOverlap && mFullscreenProgress < STACK_STYLE_FULLSCREEN_PROGRESS) {
-            float stackProgress = Utilities.boundToRange(
-                    1f - (mFullscreenProgress / STACK_STYLE_FULLSCREEN_PROGRESS), 0f, 1f);
-            overlapFactor = FAST_OUT_SLOW_IN.getInterpolation(stackProgress);
-        }
+        float overlapFactor = getStackStyleOverlapFactor();
         final boolean applyOverlap = (overlapFactor > 0);
 
         //nick@lmo-20231004 if rotating launcher is enabled, rotation works differently
