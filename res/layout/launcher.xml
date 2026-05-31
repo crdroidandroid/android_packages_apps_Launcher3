@@ -58,7 +58,8 @@
             android:layout_height="@dimen/workspace_page_indicator_height"
             android:layout_gravity="bottom|center_horizontal"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            launcher:layout_ignoreInsets="true">
 
             <com.android.launcher3.pageindicators.PaginationArrow
                 android:id="@+id/left_indicator_arrow"
