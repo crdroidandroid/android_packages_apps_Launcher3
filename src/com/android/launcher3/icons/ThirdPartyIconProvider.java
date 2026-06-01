@@ -3,6 +3,7 @@ package com.android.launcher3.icons;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.ComponentInfo;
+import android.graphics.drawable.AdaptiveIconDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
 
@@ -48,7 +49,9 @@ public class ThirdPartyIconProvider extends LauncherIconProvider {
         if (icon == null) {
             return fallback.get();
         }
-        icon.setChangingConfigurations(icon.getChangingConfigurations() | CONFIG_HINT_NO_WRAP);
+        if (!(icon instanceof AdaptiveIconDrawable)) {
+            icon.setChangingConfigurations(icon.getChangingConfigurations() | CONFIG_HINT_NO_WRAP);
+        }
         return icon;
     }
 }
