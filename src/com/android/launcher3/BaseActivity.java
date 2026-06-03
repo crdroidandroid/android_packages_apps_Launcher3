@@ -76,7 +76,7 @@ public abstract class BaseActivity extends Activity implements ActivityContext,
 
     private static final String TAG = "BaseActivity";
     // TODO(b/406230491): Trun DEBUG back to false once done with investigation.
-    static final boolean DEBUG = true;
+    static final boolean DEBUG = false;
 
     public static final int INVISIBLE_BY_STATE_HANDLER = 1 << 0;
     public static final int INVISIBLE_BY_APP_TRANSITIONS = 1 << 1;
