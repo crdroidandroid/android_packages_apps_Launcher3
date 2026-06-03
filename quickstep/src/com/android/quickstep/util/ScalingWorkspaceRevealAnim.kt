@@ -195,8 +195,14 @@ class ScalingWorkspaceRevealAnim(
                 )
             val blurAnimator = ValueAnimator.ofFloat(1f, 0f)
             blurAnimator.setInterpolator(BLUR_INTERPOLATOR)
+            var lastBlurRadius = -1
             blurAnimator.addUpdateListener {
                 applyBlur(maxBlurRadius * blurAnimator.animatedValue as Float)
+                val blurRadius = (maxBlurRadius * blurAnimator.animatedValue as Float).toInt()
+                if (Math.abs(lastBlurRadius - blurRadius) >= 4) {
+                    applyBlur(blurRadius.toFloat())
+                    lastBlurRadius = blurRadius
+                }
             }
             animation.add(blurAnimator)
 
