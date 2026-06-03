@@ -41,8 +41,16 @@ public class StateManagerProtoLogProxy {
         return IS_STATE_MANAGER_PROTOLOG_ENABLED && isProtoLogInitialized();
     }
 
+    public static boolean isEnabled() {
+        return willProtoLog() || isLoggingToLogcat();
+    }
+
+    public static boolean isLoggingToLogcat() {
+        return IS_STATE_MANAGER_PROTOLOG_ENABLED && PROTO_LOG_GROUP.isLogToLogcat();
+    }
+
     private static void logToLogcatIfNeeded(String message, Object... args) {
-        if (!willProtoLog() || !PROTO_LOG_GROUP.isLogToLogcat()) {
+        if (!willProtoLog() && isLoggingToLogcat()) {
             Log.d(PROTO_LOG_GROUP.getTag(), String.format(message, args));
         }
     }
