@@ -207,10 +207,10 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
      */
     public static final int STATUS_BAR_TRANSITION_PRE_DELAY = 96;
 
-    public static final long APP_LAUNCH_DURATION = 450;
+    public static final long APP_LAUNCH_DURATION = 480;
 
-    private static final long APP_LAUNCH_ALPHA_DURATION = 100;
-    private static final long APP_LAUNCH_ALPHA_START_DELAY = 28;
+    private static final long APP_LAUNCH_ALPHA_DURATION = 125;
+    private static final long APP_LAUNCH_ALPHA_START_DELAY = 25;
 
     public static final int ANIMATION_NAV_FADE_IN_DURATION = 266;
     public static final int ANIMATION_NAV_FADE_OUT_DURATION = 160;
@@ -235,7 +235,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
     // is solved.
     private static final int TASKBAR_TO_HOME_DURATION_FAST = 300;
     private static final int TASKBAR_TO_HOME_DURATION_SLOW = 1000;
-    protected static final int CONTENT_SCALE_DURATION = 300;
+    protected static final int CONTENT_SCALE_DURATION = 350;
 
     private static final int MAX_NUM_TASKS = 5;
 
@@ -322,10 +322,8 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
             mSystemUiProxy.setStartingWindowListener(mStartingWindowListener);
         }
 
-        mOpeningXInterpolator = AnimationUtils.loadInterpolator(
-                launcher, R.interpolator.app_open_x);
-        mOpeningInterpolator = AnimationUtils.loadInterpolator(
-                launcher, R.interpolator.emphasized_interpolator);
+        mOpeningXInterpolator = new PathInterpolator(0.2f, 0f, 0f, 1f);
+        mOpeningInterpolator = new PathInterpolator(0.2f, 0f, 0f, 1f);
         mCoordinateTransfer = new RemoteAnimationCoordinateTransfer(mLauncher);
         mLatencyTracker = LatencyTracker.getInstance(launcher);
     }
@@ -2325,7 +2323,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
             final DeviceProfile profile = mLauncher.getDeviceProfile();
             final int rotation = profile.getDeviceProperties().getRotationHint();
             final int widthPx = profile.getDeviceProperties().getWidthPx();
-            final int heightPx = profile.getDeviceProperties().getWidthPx();
+            final int heightPx = profile.getDeviceProperties().getHeightPx();
 
             final int rotationDelta = toLauncher
                     ? android.util.RotationUtils.deltaRotation(taskRotation, rotation)
@@ -2361,6 +2359,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
         private final Rect mWindowStartBounds = new Rect();
         private final Rect mWindowOriginalBounds = new Rect();
 
+        private float mLastCornerRadius = -1f;
         private final Rect mTmpRect = new Rect();
         private final SurfaceTransaction mTransaction = new SurfaceTransaction();
 
@@ -2454,8 +2453,13 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
 
                     builder.setMatrix(mMatrix)
                             .setWindowCrop(mTmpRect)
-                            .setAlpha(getWindowAlpha(progress))
-                            .setCornerRadius(getCornerRadius(progress) / scale);
+                            .setAlpha(getWindowAlpha(progress));
+
+                    float cornerRadius = getCornerRadius(progress) / scale;
+                    if (Math.abs(mLastCornerRadius - cornerRadius) >= 4f || progress >= 1f) {
+                        builder.setCornerRadius(cornerRadius);
+                        mLastCornerRadius = cornerRadius;
+                    }
                 } else if (target.mode == MODE_OPENING) {
                     mMatrix.setTranslate(mTmpPos.x, mTmpPos.y);
                     builder.setMatrix(mMatrix)
