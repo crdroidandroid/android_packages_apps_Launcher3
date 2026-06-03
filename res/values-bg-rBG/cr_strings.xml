@@ -78,7 +78,7 @@
     <string name="updating_launcher_components">Рестартиране на launcher-а за обновение на зомпоненти...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Двукратно почукване за заспиване</string>
-    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_summary">Направи двоен натиск при празно място на екрана, за да се изключи екранът</string>
     <string name="pref_sleep_gesture_haptic_title">Вибрирай на двоен натиск за заспиване</string>
     <string name="pref_sleep_gesture_haptic_summary">Проведи тактилна обратна връзка на жест за двоен натиск за заспиване</string>
     <!-- Open keyboard -->
@@ -115,10 +115,10 @@
     <string name="dock_theme_summary">Използване на тематични икони за лентата за търсене</string>
     <string name="search_radius_title">Радиус на ъгъл</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar location</string>
-    <string name="drawer_search_location_hidden">Hidden</string>
-    <string name="drawer_search_location_top">Top</string>
-    <string name="drawer_search_location_bottom">Bottom</string>
+    <string name="drawer_search_title">Местоположение на търсачката</string>
+    <string name="drawer_search_location_hidden">Скрито</string>
+    <string name="drawer_search_location_top">Горе</string>
+    <string name="drawer_search_location_bottom">Отдолу</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Превъртане на тапета</string>
     <string name="allow_wallpaper_scrolling_summary">Ефект на превъртане на тапета за няколко екрана</string>
@@ -376,45 +376,45 @@
     <string name="flower_shape_title">Цвете</string>
     <string name="heart_shape_title">Сърце</string>
     <string name="hexagon_shape_title">Шестоъгълник</string>
-    <string name="rounded_hexagon_shape_title">Rounded hexagon</string>
+    <string name="rounded_hexagon_shape_title">Заоблен шестоъгълник</string>
     <string name="ios_style_shape_title">Стил на iOS</string>
     <string name="leaf_shape_title">Листо</string>
     <string name="meow_shape_title">Мяу</string>
     <string name="samsung_style_shape_title">Стил на Samsung</string>
     <string name="stretched_shape_title">Разтегнато</string>
     <!-- Dark app drawer text -->
-    <string name="all_apps_dark_text_title">Dark app labels</string>
-    <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
+    <string name="all_apps_dark_text_title">Тъмни етикети на приложения</string>
+    <string name="all_apps_dark_text_summary">Винаги използвай тъмен текст за етикети на приложения в шкафчето</string>
     <!-- App drawer styles -->
-    <string name="drawer_style_title">App drawer style</string>
-    <string name="drawer_style_normal">Normal (bottom sheet)</string>
-    <string name="drawer_style_legacy">Legacy fullscreen</string>
-    <string name="drawer_style_list">List style</string>
-    <string name="drawer_style_oneui">OneUI style (paged)</string>
+    <string name="drawer_style_title">Стил на шкафчето на приложения</string>
+    <string name="drawer_style_normal">Нормално (долен лист)</string>
+    <string name="drawer_style_legacy">Стар вид на пълния екран</string>
+    <string name="drawer_style_list">Стил на списъка</string>
+    <string name="drawer_style_oneui">Стил по OneUI (страници)</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
-    <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
-    <string name="app_drawer_sort_install_date">Sort by install date</string>
-    <string name="app_drawer_sort_usage">Sort by usage</string>
+    <string name="app_drawer_sort_mode_title">Подреждане на шкафчето с приложения</string>
+    <string name="app_drawer_sort_alphabetical">Подреди по азбучен ред</string>
+    <string name="app_drawer_sort_install_date">Подреди по време на инсталация</string>
+    <string name="app_drawer_sort_usage">Подреди по използване</string>
     <!-- App drawer color -->
-    <string name="pref_app_drawer_custom_color_title">Custom background color</string>
-    <string name="pref_app_drawer_custom_color_summary">Use a custom color for the app drawer background</string>
-    <string name="pref_app_drawer_custom_color_light_title">Light mode color</string>
-    <string name="pref_app_drawer_custom_color_dark_title">Dark mode color</string>
+    <string name="pref_app_drawer_custom_color_title">Персонализиран фонов цвят</string>
+    <string name="pref_app_drawer_custom_color_summary">Използвай собствен цвят за фона на шкафчето</string>
+    <string name="pref_app_drawer_custom_color_light_title">Цвят по светъл режим</string>
+    <string name="pref_app_drawer_custom_color_dark_title">Цвят по тъмен режим</string>
     <!-- Color Picker -->
     <string name="color_picker_hsb">HSB</string>
     <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Hue</string>
-    <string name="color_picker_saturation">Saturation</string>
-    <string name="color_picker_brightness">Brightness</string>
-    <string name="color_picker_red">Red</string>
-    <string name="color_picker_green">Green</string>
-    <string name="color_picker_blue">Blue</string>
-    <string name="color_picker_hex">HEX</string>
+    <string name="color_picker_hue">Нюанс</string>
+    <string name="color_picker_saturation">Наситеност на цвета</string>
+    <string name="color_picker_brightness">Яркост</string>
+    <string name="color_picker_red">Червено</string>
+    <string name="color_picker_green">Зелено</string>
+    <string name="color_picker_blue">Синьо</string>
+    <string name="color_picker_hex">HEX цвят</string>
     <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
-    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
-    <string name="qsb_outer_opacity_title">Outer layer opacity</string>
+    <string name="dock_search_pixel_style_title">Стил от Pixel на търсачка</string>
+    <string name="dock_search_pixel_style_summary">Пренаправена иконка за търсачка с фон на слой</string>
+    <string name="qsb_outer_opacity_title">Видимостта на външния слой</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Скрити &amp; Защитени приложения</string>
     <string name="trust_apps_auth_manager">Отключете за да управлявате скритите и защитените приложения</string>
@@ -425,10 +425,14 @@
     <string name="trust_apps_info_hidden">Скритите приложения и техните приспособления са скрити от менюто с приложения</string>
     <string name="trust_apps_info_protected">Защитените приложения изискват удостоверяване за да бъдат отворени от стартовия панел</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_title">Стил на скорошните</string>
     <string name="recents_style_default">По подразбиране</string>
-    <string name="recents_style_stock">Scale effect</string>
-    <string name="recents_style_staple">Kami style</string>
-    <string name="recents_style_ios">iOS style</string>
-    <string name="recents_style_oxygen">OxygenOS style</string>
+    <string name="recents_style_stock">Ефект на разширяване</string>
+    <string name="recents_style_staple">Kami стил</string>
+    <string name="recents_style_ios">стил по iOS</string>
+    <string name="recents_style_oxygen">Стил по OxygenOS</string>
+    <!-- Lock -->
+    <string name="action_lock">Заключи/Отключи приложение</string>
+    <string name="unlock_app">Отключено приложение в скорошните</string>
+    <string name="lock_app">Заключено приложение в скорошните</string>
 </resources>
