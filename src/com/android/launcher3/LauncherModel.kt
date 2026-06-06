@@ -15,6 +15,7 @@
  */
 package com.android.launcher3
 
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ShortcutInfo
@@ -43,6 +44,7 @@ import com.android.launcher3.model.ModelTaskController
 import com.android.launcher3.model.ModelWriter
 import com.android.launcher3.model.data.WorkspaceItemInfo
 import com.android.launcher3.model.tasks.CacheDataUpdatedTask
+import com.android.launcher3.model.tasks.CustomAppNameChangedTask
 import com.android.launcher3.model.tasks.UserAvailabilityChangedTask
 import com.android.launcher3.model.tasks.UserLockStateChangedTask
 import com.android.launcher3.pm.UserCache
@@ -395,6 +397,11 @@ constructor(
             dataModel.widgetsModel.onPackageIconsUpdated(updatedPackages, user)
             taskController.bindUpdatedWidgets(dataModel)
         }
+    }
+
+    /** Called when a user-defined app display name has changed. */
+    fun onCustomAppNameChanged(component: ComponentName, user: UserHandle) {
+        enqueueModelUpdateTask(CustomAppNameChangedTask(component, user))
     }
 
     fun enqueueModelUpdateTask(task: ModelUpdateTask) {
