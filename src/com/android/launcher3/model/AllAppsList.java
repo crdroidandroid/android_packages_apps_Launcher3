@@ -252,6 +252,20 @@ public class AllAppsList {
         }
     }
 
+    /**
+     * Reloads the display title for a single app after a custom rename. The custom name (or the
+     * original label, after a reset) is applied by {@link IconCache}.
+     */
+    public void updateCustomAppTitle(ComponentName component, UserHandle user) {
+        for (AppInfo info : data) {
+            if (info.user.equals(user) && component.equals(info.componentName)) {
+                mIconCache.updateTitleAndIcon(info);
+                info.sectionName = mIndex.computeSectionName(info.title);
+                mDataChanged = true;
+            }
+        }
+    }
+
     /** Add and remove icons for this package which has been updated. */
     public List<LauncherActivityInfo> updatePackage(
             Context context, String packageName, UserHandle user) {

@@ -33,7 +33,6 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.os.UserHandle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -42,6 +41,7 @@ import com.android.launcher3.AbstractFloatingView;
 import com.android.launcher3.AbstractFloatingViewHelper;
 import com.android.launcher3.DropTargetHandler;
 import com.android.launcher3.Flags;
+import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.LauncherModel;
 import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.LauncherSettings;
@@ -51,6 +51,7 @@ import com.android.launcher3.Utilities;
 import com.android.launcher3.accessibility.LauncherAccessibilityDelegate;
 import com.android.launcher3.allapps.PrivateProfileManager;
 import com.android.launcher3.dagger.LauncherComponentProvider;
+import com.android.launcher3.homescreenfiles.HomeScreenFilesRenameDialogViewModel;
 import com.android.launcher3.logging.StatsLogManager;
 import com.android.launcher3.model.data.ItemInfo;
 import com.android.launcher3.model.data.ItemInfoWithIcon;
@@ -61,10 +62,12 @@ import com.android.launcher3.util.ActivityOptionsWrapper;
 import com.android.launcher3.util.ApiWrapper;
 import com.android.launcher3.util.ApplicationInfoWrapper;
 import com.android.launcher3.util.ComponentKey;
+import com.android.launcher3.util.CustomAppNameStore;
 import com.android.launcher3.util.InstantAppResolver;
 import com.android.launcher3.util.PackageManagerHelper;
 import com.android.launcher3.util.PackageUserKey;
 import com.android.launcher3.views.ActivityContext;
+import com.android.launcher3.views.Dialog;
 import com.android.launcher3.views.Snackbar;
 import com.android.launcher3.widget.picker.model.data.WidgetPickerData;
 import com.android.wm.shell.shared.bubbles.logging.EntryPoint;
@@ -755,4 +758,30 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
                 // Don't show the shortcut for items without an icon or that don't support App Lock.
                 return null;
             };
+
+    public static final Factory<ActivityContext> RENAME_APP =
+            (activity, itemInfo, originalView) -> {
+                if (!CustomAppNameStore.supportsCustomName(itemInfo)) {
+                    return null;
+                }
+                return new RenameApp<>(activity, itemInfo, originalView);
+            };
+
+    public static class RenameApp<T extends ActivityContext> extends SystemShortcut<T> {
+        public RenameApp(T target, ItemInfo itemInfo, @NonNull View originalView) {
+            super(getDrawableId(), R.string.rename_app_label, target,
+                    itemInfo, originalView);
+        }
+
+        public static int getDrawableId() {
+            return R.drawable.ic_home_screen_files_context_menu_rename;
+        }
+
+        @Override
+        public void onClick(View view) {
+            dismissTaskMenuView();
+            new Dialog<>(mTarget,
+                    HomeScreenFilesRenameDialogViewModel.forApp(mTarget, mItemInfo)).show();
+        }
+    }
 }
