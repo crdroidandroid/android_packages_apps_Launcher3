@@ -500,4 +500,13 @@
 
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Scroll vibration</string>
+
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Rename</string>
+    <string name="rename_app_title">Enter app name</string>
+    <string name="app_renamed_successfully">App renamed</string>
+    <string name="rename_app_empty_error">App name cannot be empty</string>
+    <string name="rename_app_length_error">App name must be %1$d characters or less</string>
+    <string name="rename_app_reset">Reset</string>
+    <string name="rename_app_reset_message">Name reset to original</string>
 </resources>
