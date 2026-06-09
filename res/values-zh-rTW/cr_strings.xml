@@ -435,4 +435,6 @@
     <string name="action_lock">鎖定/解鎖應用程式</string>
     <string name="unlock_app">最近分頁中已解鎖的應用程式</string>
     <string name="lock_app">最近分頁中已鎖定的應用程式</string>
+    <!-- Recents style -->
+    <string name="recents_scroll_vibrate_title">Scroll vibration</string>
 </resources>
