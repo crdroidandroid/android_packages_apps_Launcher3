@@ -431,4 +431,10 @@
     <string name="recents_style_staple">Kami</string>
     <string name="recents_style_ios">iOS</string>
     <string name="recents_style_oxygen">OxigenOS</string>
+    <!-- Lock -->
+    <string name="action_lock">Alkalmazás zárolása/feloldása</string>
+    <string name="unlock_app">Feloldott alkalmazások az előzményekben</string>
+    <string name="lock_app">Zárolt alkalmazások az előzményekben</string>
+    <!-- Recents style -->
+    <string name="recents_scroll_vibrate_title">Scroll vibration</string>
 </resources>
