@@ -431,4 +431,10 @@
     <string name="recents_style_staple">Стиль Kami</string>
     <string name="recents_style_ios">Стиль iOS</string>
     <string name="recents_style_oxygen">Стиль OxygenOS</string>
+    <!-- Lock -->
+    <string name="action_lock">Блокування/розблокування програми</string>
+    <string name="unlock_app">Розблокований додаток у списку останніх</string>
+    <string name="lock_app">Заблокований додаток у списку останніх</string>
+    <!-- Recents style -->
+    <string name="recents_scroll_vibrate_title">Scroll vibration</string>
 </resources>
