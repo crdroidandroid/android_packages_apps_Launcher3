@@ -431,4 +431,10 @@
     <string name="recents_style_staple">Kami-Stil</string>
     <string name="recents_style_ios">iOS-Stil</string>
     <string name="recents_style_oxygen">OxygenOS-Stil</string>
+    <!-- Lock -->
+    <string name="action_lock">App sperren/entsperren</string>
+    <string name="unlock_app">Entsperrte App im Anwendungsverlauf</string>
+    <string name="lock_app">Gesperrte App im Anwendungsverlauf</string>
+    <!-- Recents style -->
+    <string name="recents_scroll_vibrate_title">Scroll vibration</string>
 </resources>
