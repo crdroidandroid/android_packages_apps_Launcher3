@@ -78,7 +78,7 @@
     <string name="updating_launcher_components">Memulai ulang peluncur untuk memperbarui komponen peluncur...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Ketuk dua kali untuk tidur</string>
-    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_summary">Ketuk dua kali layar kosong di beranda untuk mematikan layar</string>
     <string name="pref_sleep_gesture_haptic_title">Getar dengan ketukan ganda untuk tidur</string>
     <string name="pref_sleep_gesture_haptic_summary">Berikan umpan balik haptik pada gestur ketuk dua kali untuk mengaktifkan mode tidur</string>
     <!-- Open keyboard -->
@@ -116,9 +116,9 @@
     <string name="search_radius_title">Radius sudut</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Lokasi bilah pencarian aplikasi</string>
-    <string name="drawer_search_location_hidden">Hidden</string>
-    <string name="drawer_search_location_top">Top</string>
-    <string name="drawer_search_location_bottom">Bottom</string>
+    <string name="drawer_search_location_hidden">Tersembunyi</string>
+    <string name="drawer_search_location_top">Atas</string>
+    <string name="drawer_search_location_bottom">Bawah</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Menggulir wallpaper</string>
     <string name="allow_wallpaper_scrolling_summary">Efek pengguliran wallpaper untuk beberapa tampilan</string>
@@ -376,45 +376,45 @@
     <string name="flower_shape_title">Bunga</string>
     <string name="heart_shape_title">Hati</string>
     <string name="hexagon_shape_title">Segi enam</string>
-    <string name="rounded_hexagon_shape_title">Rounded hexagon</string>
+    <string name="rounded_hexagon_shape_title">Segi enam membulat</string>
     <string name="ios_style_shape_title">Gaya iOS</string>
     <string name="leaf_shape_title">Daun</string>
     <string name="meow_shape_title">Meong</string>
     <string name="samsung_style_shape_title">Gaya Samsung</string>
     <string name="stretched_shape_title">Diregangkan</string>
     <!-- Dark app drawer text -->
-    <string name="all_apps_dark_text_title">Dark app labels</string>
-    <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
+    <string name="all_apps_dark_text_title">Label aplikasi gelap</string>
+    <string name="all_apps_dark_text_summary">Selalu gunakan teks gelap untuk label aplikasi di laci aplikasi</string>
     <!-- App drawer styles -->
-    <string name="drawer_style_title">App drawer style</string>
-    <string name="drawer_style_normal">Normal (bottom sheet)</string>
-    <string name="drawer_style_legacy">Legacy fullscreen</string>
-    <string name="drawer_style_list">List style</string>
-    <string name="drawer_style_oneui">OneUI style (paged)</string>
+    <string name="drawer_style_title">Gaya laci aplikasi</string>
+    <string name="drawer_style_normal">Normal (lembaran bawah)</string>
+    <string name="drawer_style_legacy">Layar penuh</string>
+    <string name="drawer_style_list">Gaya daftar</string>
+    <string name="drawer_style_oneui">Gaya OneUI (berhalaman)</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
-    <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
-    <string name="app_drawer_sort_install_date">Sort by install date</string>
-    <string name="app_drawer_sort_usage">Sort by usage</string>
+    <string name="app_drawer_sort_mode_title">Pengurutan laci aplikasi</string>
+    <string name="app_drawer_sort_alphabetical">Urutkan berdasarkan abjad</string>
+    <string name="app_drawer_sort_install_date">Urutkan berdasarkan tanggal pemasangan</string>
+    <string name="app_drawer_sort_usage">Urutkan berdasarkan penggunaan</string>
     <!-- App drawer color -->
-    <string name="pref_app_drawer_custom_color_title">Custom background color</string>
-    <string name="pref_app_drawer_custom_color_summary">Use a custom color for the app drawer background</string>
-    <string name="pref_app_drawer_custom_color_light_title">Light mode color</string>
-    <string name="pref_app_drawer_custom_color_dark_title">Dark mode color</string>
+    <string name="pref_app_drawer_custom_color_title">Warna latar belakang kustom</string>
+    <string name="pref_app_drawer_custom_color_summary">Gunakan warna kustom untuk latar belakang laci aplikasi</string>
+    <string name="pref_app_drawer_custom_color_light_title">Warna mode terang</string>
+    <string name="pref_app_drawer_custom_color_dark_title">Warna mode gelap</string>
     <!-- Color Picker -->
     <string name="color_picker_hsb">HSB</string>
     <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Hue</string>
-    <string name="color_picker_saturation">Saturation</string>
-    <string name="color_picker_brightness">Brightness</string>
-    <string name="color_picker_red">Red</string>
-    <string name="color_picker_green">Green</string>
-    <string name="color_picker_blue">Blue</string>
+    <string name="color_picker_hue">Warna</string>
+    <string name="color_picker_saturation">Saturasi</string>
+    <string name="color_picker_brightness">Kecerahan</string>
+    <string name="color_picker_red">Merah</string>
+    <string name="color_picker_green">Hijau</string>
+    <string name="color_picker_blue">Biru</string>
     <string name="color_picker_hex">HEX</string>
     <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
-    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
-    <string name="qsb_outer_opacity_title">Outer layer opacity</string>
+    <string name="dock_search_pixel_style_title">Bilah pencarian bergaya Pixel</string>
+    <string name="dock_search_pixel_style_summary">Tampilan bilah pencarian yang diperbarui dengan latar belakang berlapis</string>
+    <string name="qsb_outer_opacity_title">Opasitas lapisan luar</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Tersembunyi &amp; Aplikasi dilindungi</string>
     <string name="trust_apps_auth_manager">Buka kunci untuk mengelola aplikasi yang disembunyikan dan dilindungi</string>
@@ -425,10 +425,16 @@
     <string name="trust_apps_info_hidden">Aplikasi tersembunyi beserta widgetnya akan disembunyikan dari laci aplikasi</string>
     <string name="trust_apps_info_protected">Aplikasi yang dilindungi memerlukan autentikasi untuk dibuka dari peluncur</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_title">Gaya tata letak Terkini</string>
     <string name="recents_style_default">Bawaan</string>
-    <string name="recents_style_stock">Scale effect</string>
-    <string name="recents_style_staple">Kami style</string>
-    <string name="recents_style_ios">iOS style</string>
-    <string name="recents_style_oxygen">OxygenOS style</string>
+    <string name="recents_style_stock">Efek skala</string>
+    <string name="recents_style_staple">Gaya pokok</string>
+    <string name="recents_style_ios">Gaya iOS</string>
+    <string name="recents_style_oxygen">Gaya OxygenOS</string>
+    <!-- Lock -->
+    <string name="action_lock">Kunci/Buka kunci aplikasi</string>
+    <string name="unlock_app">Aplikasi terbuka di daftar aplikasi terbaru</string>
+    <string name="lock_app">Aplikasi terkunci di daftar aplikasi terbaru</string>
+    <!-- Recents style -->
+    <string name="recents_scroll_vibrate_title">Getaran gulir</string>
 </resources>

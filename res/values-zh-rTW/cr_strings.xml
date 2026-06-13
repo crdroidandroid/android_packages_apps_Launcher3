@@ -376,7 +376,7 @@
     <string name="flower_shape_title">花</string>
     <string name="heart_shape_title">心形</string>
     <string name="hexagon_shape_title">六角形</string>
-    <string name="rounded_hexagon_shape_title">Rounded hexagon</string>
+    <string name="rounded_hexagon_shape_title">圓角六邊形</string>
     <string name="ios_style_shape_title">iOS 样式</string>
     <string name="leaf_shape_title">葉片</string>
     <string name="meow_shape_title">喵</string>
@@ -414,7 +414,7 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Pixel 風格搜尋列</string>
     <string name="dock_search_pixel_style_summary">新版多層次背景搜尋列</string>
-    <string name="qsb_outer_opacity_title">Outer layer opacity</string>
+    <string name="qsb_outer_opacity_title">外層不透明度</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">隱藏和受保護的應用程式</string>
     <string name="trust_apps_auth_manager">解鎖以管理隱藏和受保護的應用程式</string>
@@ -425,10 +425,16 @@
     <string name="trust_apps_info_hidden">隱藏應用程式及其小工具</string>
     <string name="trust_apps_info_protected">需要身份驗證才能使用受保護的應用程式</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_title">最近應用程式樣式</string>
     <string name="recents_style_default">預設</string>
-    <string name="recents_style_stock">Scale effect</string>
-    <string name="recents_style_staple">Kami style</string>
-    <string name="recents_style_ios">iOS style</string>
-    <string name="recents_style_oxygen">OxygenOS style</string>
+    <string name="recents_style_stock">縮放效果</string>
+    <string name="recents_style_staple">卡片堆疊樣式</string>
+    <string name="recents_style_ios">iOS 樣式</string>
+    <string name="recents_style_oxygen">OxygenOS 樣式</string>
+    <!-- Lock -->
+    <string name="action_lock">鎖定/解鎖應用程式</string>
+    <string name="unlock_app">最近分頁中已解鎖的應用程式</string>
+    <string name="lock_app">最近分頁中已鎖定的應用程式</string>
+    <!-- Recents style -->
+    <string name="recents_scroll_vibrate_title">Scroll vibration</string>
 </resources>

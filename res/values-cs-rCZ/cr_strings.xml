@@ -431,4 +431,10 @@
     <string name="recents_style_staple">Styl Kami</string>
     <string name="recents_style_ios">Styl iOS</string>
     <string name="recents_style_oxygen">Styl OxygenOS</string>
+    <!-- Lock -->
+    <string name="action_lock">Zamknout/odemknout aplikaci</string>
+    <string name="unlock_app">Odemknutá aplikace v nedávných aplikacích</string>
+    <string name="lock_app">Zamknutá aplikace v nedávných aplikacích</string>
+    <!-- Recents style -->
+    <string name="recents_scroll_vibrate_title">Vibrace při posouvání</string>
 </resources>
