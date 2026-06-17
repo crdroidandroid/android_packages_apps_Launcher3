@@ -208,7 +208,7 @@ public class BaseDepthController {
             ? depth
             : 0f;
 
-            if (Math.abs(mLastWallpaperZoom - zoom) >= 0.03f
+            if (Math.abs(mLastWallpaperZoom - zoom) >= 0.015f
                     || (zoom == 0f && mLastWallpaperZoom != 0f)
                     || (zoom == 1f && mLastWallpaperZoom != 1f)) {
 
@@ -248,7 +248,7 @@ public class BaseDepthController {
         int newBlur = mCrossWindowBlursEnabled && !hasOpaqueBg && !mPauseBlurs ? (int) (blurAmount
                 * mMaxBlurRadius) : 0;
         int delta = Math.abs(newBlur - previousBlur);
-        if (skipSimilarBlur && delta < Utilities.dpToPx(1) && newBlur != 0 && previousBlur != 0
+        if (skipSimilarBlur && delta < Utilities.dpToPx(2) && newBlur != 0 && previousBlur != 0
                 && blurAmount != 1f) {
             Log.d(TAG, "Skipping small blur delta. newBlur: " + newBlur + " previousBlur: "
                     + previousBlur + " delta: " + delta + " surface: " + blurSurface);
@@ -358,8 +358,8 @@ public class BaseDepthController {
             depthF = depth;
         } else {
             // Round out the depth to dedupe frequent, non-perceptable updates
-            int depthI = (int) (depth * 256);
-            depthF = depthI / 256f;
+            int depthI = (int) (depth * 128);
+            depthF = depthI / 128f;
         }
         if (Float.compare(mDepth, depthF) == 0) {
             return;
@@ -390,7 +390,7 @@ public class BaseDepthController {
     private @Nullable SurfaceTransaction setupBlurSurface() {
         SurfaceTransaction surfaceTransaction = null;
 
-        if (mBaseSurface != null && mBaseSurfaceOverride != null) {
+        if (mBaseSurface != null && mBaseSurface.isValid() && mBaseSurfaceOverride != null) {
             surfaceTransaction = new SurfaceTransaction();
             surfaceTransaction.forSurface(mBaseSurface).setBackgroundBlurRadius(0).setOpaque(false);
             if (mBlurSurface == null) {

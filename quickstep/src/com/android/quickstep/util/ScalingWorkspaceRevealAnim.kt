@@ -67,6 +67,7 @@ class ScalingWorkspaceRevealAnim(
     companion object {
         private const val FADE_DURATION_MS = 150L
         private const val SCALE_DURATION_MS = 800L
+        private const val HOTSEAT_FADE_DELAY_MS = 30L
         private const val MAX_ALPHA = 1f
         private const val MIN_ALPHA = 0f
         internal const val MAX_SIZE = 1f
@@ -161,10 +162,11 @@ class ScalingWorkspaceRevealAnim(
             // This is because hotseat visibility can also be changed based off of alpha in
             // WorkspaceRevealAnim which also calls setViewAlpha.
             // b/428257480 Ideally we should be settings MultiValueAlpha with 2 channels instead.
+            val hotseatDelay = HOTSEAT_FADE_DELAY_MS.toFloat() / SCALE_DURATION_MS
             animation.setViewAlpha(
                 hotseat,
                 MAX_ALPHA,
-                Interpolators.clampToProgress(LINEAR, 0f, fadeClamp),
+                Interpolators.clampToProgress(LINEAR, hotseatDelay, fadeClamp + hotseatDelay),
             )
         }
 
@@ -197,9 +199,9 @@ class ScalingWorkspaceRevealAnim(
             blurAnimator.setInterpolator(BLUR_INTERPOLATOR)
             var lastBlurRadius = -1
             blurAnimator.addUpdateListener {
-                applyBlur(maxBlurRadius * blurAnimator.animatedValue as Float)
                 val blurRadius = (maxBlurRadius * blurAnimator.animatedValue as Float).toInt()
-                if (Math.abs(lastBlurRadius - blurRadius) >= 4) {
+                // Always apply when reaching 0 to ensure final state is clean.
+                if (Math.abs(lastBlurRadius - blurRadius) >= 4 || blurRadius == 0) {
                     applyBlur(blurRadius.toFloat())
                     lastBlurRadius = blurRadius
                 }
@@ -261,6 +263,7 @@ class ScalingWorkspaceRevealAnim(
                 override fun onAnimationCancel(animation: Animator) {
                     super.onAnimationCancel(animation)
                     Log.d(TAG, "onAnimationCancel")
+                    applyBlur(0f)
                 }
 
                 override fun onAnimationPause(animation: Animator) {
