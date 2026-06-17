@@ -1308,6 +1308,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
                 // Ensure the scrim layer occludes wallpaper
                 .setLayer(1000);
         applier.scheduleApply(transaction);
+        notifyRendererOfUpcomingBlur();
         return scrimLayer;
     }
 
@@ -1361,7 +1362,21 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
                 .setShow()
                 .setLayer(1000);
         applier.scheduleApply(transaction);
+        notifyRendererOfUpcomingBlur();
         return scrimLayer;
+    }
+
+    private void notifyRendererOfUpcomingBlur() {
+        ViewRootImpl viewRootImpl = mDragLayer.getViewRootImpl();
+        if (viewRootImpl == null) {
+            return;
+        }
+        try {
+            viewRootImpl.notifyRendererForGpuLoadUp("applyBlur");
+            viewRootImpl.notifyRendererOfExpensiveFrame("applyBlur");
+        } catch (Exception e) {
+            Log.w(TAG, "Failed to notify renderer of upcoming blur frame", e);
+        }
     }
 
     private boolean isAppLaunchBlurEnabled() {
