@@ -509,4 +509,8 @@
     <string name="rename_app_length_error">App name must be %1$d characters or less</string>
     <string name="rename_app_reset">Reset</string>
     <string name="rename_app_reset_message">Name reset to original</string>
+
+    <!-- App launch blur -->
+    <string name="pref_app_launch_blur_title">App launch blur</string>
+    <string name="pref_app_launch_blur_summary">Show blur effect when launching apps</string>
 </resources>

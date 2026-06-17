@@ -110,6 +110,14 @@
             launcher:iconSpaceReserved="false" />
 
         <SwitchPreferenceCompat
+            android:key="pref_app_launch_blur"
+            android:title="@string/pref_app_launch_blur_title"
+            android:summary="@string/pref_app_launch_blur_summary"
+            android:defaultValue="false"
+            android:persistent="true"
+            launcher:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
             android:key="pref_wallpaper_carousel"
             android:title="@string/wallpaper_carousel_title"
             android:summary="@string/wallpaper_carousel_summary"
