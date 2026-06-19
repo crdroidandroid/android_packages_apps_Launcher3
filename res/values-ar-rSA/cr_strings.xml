@@ -53,8 +53,8 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">عندما التمرير يميناً من الشاشة الرئيسية</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Use icon customizations in drawer</string>
-    <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
+    <string name="pref_icon_customization_title">استخدام تخصيصات الأيقونات في قائمة التطبيقات</string>
+    <string name="pref_icon_customization_summary">اتبع تخصيصات الأيقونة المستخدمة على الشاشة الرئيسية</string>
     <!-- Pause apps shortcut -->
     <string name="pause">إيقاف مؤقت</string>
     <string name="pause_apps_dialog_title">إيقاف %1$s؟</string>
@@ -78,12 +78,12 @@
     <string name="updating_launcher_components">إعادة تشغيل المشغل لتحديث مكونات المشغل...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">انقر نقرًا مزدوجًا للنوم</string>
-    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_summary">انقر نقرًا مزدوجًا على مساحة فارغة على الشاشة الرئيسة لإيقاف تشغيل الشاشة</string>
+    <string name="pref_sleep_gesture_haptic_title">اهتزاز عند النقر مرتين للنوم</string>
+    <string name="pref_sleep_gesture_haptic_summary">تقديم ردود الفعل اللمسية عند النقر المزدوج لإيماءة السكون</string>
     <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
+    <string name="drawer_open_keyboard_title">اسحب لبدء البحث</string>
+    <string name="drawer_open_keyboard_summary">فتح لوحة المفاتيح كلما أصبح درج التطبيقات مرئيًا</string>
     <!-- Icon size -->
     <string name="icon_size_title">حجم الأيقونة</string>
     <!-- Font size -->
@@ -106,7 +106,7 @@
     <string name="label_search">البحث</string>
     <string name="label_lens">عدسة جوجل</string>
     <string name="label_voice_search">البحث الصوتي</string>
-    <string name="label_gemini_search">AI mode</string>
+    <string name="label_gemini_search">وضع الذكاء</string>
     <string name="dock_music_search_title">بحث المعازف</string>
     <string name="dock_music_search_summary">ابحث عن المعازف عند الضغط على أيقونة مسجل الصوت</string>
     <string name="dock_search_title">بحث جوجل</string>
@@ -115,10 +115,10 @@
     <string name="dock_theme_summary">استخدام الثيم الحالي لأيقونات شريط البحث</string>
     <string name="search_radius_title">حدود الزاوية</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar location</string>
-    <string name="drawer_search_location_hidden">Hidden</string>
-    <string name="drawer_search_location_top">Top</string>
-    <string name="drawer_search_location_bottom">Bottom</string>
+    <string name="drawer_search_title">موقع شريط البحث للتطبيق</string>
+    <string name="drawer_search_location_hidden">مخفي</string>
+    <string name="drawer_search_location_top">في الأعلى</string>
+    <string name="drawer_search_location_bottom">في الأسفل</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">تمرير خلفية الشاشة</string>
     <string name="allow_wallpaper_scrolling_summary">تأثير تمرير خلفية الشاشة للشاشات المتعددة</string>
@@ -147,7 +147,7 @@
     <string name="drawer_scrollbar_summary">شريط التمرير على جانب درج التطبيق</string>
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">شريط الحالة المُظلم</string>
-    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
+    <string name="perf_dark_status_bar_summary">استخدم الوضع المُظلم دائماً في شريط الحالة في الشاشة الرئيسة</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">النظرة السريعة</string>
     <string name="show_quickspace_summary">إظهار في الجزء العلوي من الشاشة الرئيسية</string>
@@ -322,9 +322,9 @@
     </string-array>
     <string name="intent_no_app_clock_found">تعذر العثور على التقويم أو نشاط الساعة</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quickspace_weather_provider_title">Weather provider</string>
-    <string name="quickspace_weather_provider_entry_auto">Auto</string>
-    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_title">مزود الطقس</string>
+    <string name="quickspace_weather_provider_entry_auto">تلقائي</string>
+    <string name="quickspace_weather_provider_entry_seraphix">فضاء جوجل الذكي</string>
     <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">تحديث الطقس</string>
     <string name="quick_event_ambient_weather_summary">عرض تحديث الطقس الحالي</string>
@@ -341,13 +341,13 @@
     <string name="quick_event_weather_text_title">الوضع الحالي</string>
     <string name="quick_event_weather_text_summary">عرض ملخص حالة الطقس الحالية</string>
     <!-- Auto-hide page indicator dots -->
-    <string name="auto_hide_dots">Auto-hide page indicator</string>
-    <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
+    <string name="auto_hide_dots">إخفاء تلقائي لمؤشر الصفحة</string>
+    <string name="auto_hide_dots_summary">إخفاء نقاط مؤشر الصفحة تلقائياً</string>
     <!-- Background blur -->
     <string name="background_blur_title">مستوي ضبابية الخلفية</string>
     <string name="background_blur_summary">تعيين مستوى الضباب للتطبيقات الحديثة ودرج التطبيقات</string>
     <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
+    <string name="app_info_title">معلومات التطبيق</string>
     <string name="app_info_source">المصدر</string>
     <string name="app_info_source_system">النظام</string>
     <string name="app_info_last_update">آخر تحديث</string>
@@ -359,62 +359,62 @@
     <string name="icon_pack_add">تثبيت المزيد</string>
     <string name="icon_pack_no_market">لا يوجد متجر تطبيقات متاح</string>
     <!-- Wallpaper carousel -->
-    <string name="wallpaper_carousel_title">Wallpaper carousel</string>
-    <string name="wallpaper_carousel_summary">Quickly switch wallpapers from the long-press menu</string>
-    <string name="wallpaper_carousel_lockscreen_title">Apply to lock screen</string>
-    <string name="wallpaper_carousel_lockscreen_summary">Set the same wallpaper on the lock screen</string>
+    <string name="wallpaper_carousel_title">خلفية كاروسيل</string>
+    <string name="wallpaper_carousel_summary">التبديل السريع للخلفيات من قائمة الضغط المطول</string>
+    <string name="wallpaper_carousel_lockscreen_title">تطبيق على شاشة القفل</string>
+    <string name="wallpaper_carousel_lockscreen_summary">تعيين نفس الخلفية على شاشة القفل</string>
     <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pebble</string>
-    <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Teardrop</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="pebble_shape_title">حصاة</string>
+    <string name="vessel_shape_title">وعاء</string>
+    <string name="pure_square_shape_title">مربع صافي</string>
+    <string name="squircle_shape_title">مربع دائري</string>
+    <string name="tapered_rect_shape_title">مستطيل مدبّب</string>
+    <string name="teardrop_shape_title">دمعة</string>
+    <string name="rounded_rect_shape_title">مستطيل ذو زوايا مستديرة</string>
     <string name="cloudy_shape_title">غائم</string>
-    <string name="cylindrical_shape_title">Cylindrical</string>
-    <string name="flower_shape_title">Flower</string>
-    <string name="heart_shape_title">Heart</string>
-    <string name="hexagon_shape_title">Hexagon</string>
-    <string name="rounded_hexagon_shape_title">Rounded hexagon</string>
-    <string name="ios_style_shape_title">iOS Style</string>
-    <string name="leaf_shape_title">Leaf</string>
-    <string name="meow_shape_title">Meow</string>
+    <string name="cylindrical_shape_title">أسطوانة</string>
+    <string name="flower_shape_title">زهرة</string>
+    <string name="heart_shape_title">قلب</string>
+    <string name="hexagon_shape_title">سداسي</string>
+    <string name="rounded_hexagon_shape_title">سداسي مدور</string>
+    <string name="ios_style_shape_title">نمط iOS</string>
+    <string name="leaf_shape_title">ورقة الشجر</string>
+    <string name="meow_shape_title">مواء</string>
     <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="stretched_shape_title">Stretched</string>
+    <string name="stretched_shape_title">ممتد</string>
     <!-- Dark app drawer text -->
-    <string name="all_apps_dark_text_title">Dark app labels</string>
-    <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
+    <string name="all_apps_dark_text_title">تسميات التطبيق المظلمة</string>
+    <string name="all_apps_dark_text_summary">استخدام النص الداكن دائما لتسميات التطبيق في درج التطبيق</string>
     <!-- App drawer styles -->
-    <string name="drawer_style_title">App drawer style</string>
-    <string name="drawer_style_normal">Normal (bottom sheet)</string>
-    <string name="drawer_style_legacy">Legacy fullscreen</string>
-    <string name="drawer_style_list">List style</string>
-    <string name="drawer_style_oneui">OneUI style (paged)</string>
+    <string name="drawer_style_title">نمط درج التطبيقات</string>
+    <string name="drawer_style_normal">عادي (ورقة أسفل)</string>
+    <string name="drawer_style_legacy">ملء الشاشة القديمة</string>
+    <string name="drawer_style_list">نمط القائمة</string>
+    <string name="drawer_style_oneui">نمط OneUI (الصفحة)</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
-    <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
-    <string name="app_drawer_sort_install_date">Sort by install date</string>
-    <string name="app_drawer_sort_usage">Sort by usage</string>
+    <string name="app_drawer_sort_mode_title">فرز درج التطبيقات</string>
+    <string name="app_drawer_sort_alphabetical">ترتيب أبجدي</string>
+    <string name="app_drawer_sort_install_date">الترتيب حسب تاريخ التثبيت</string>
+    <string name="app_drawer_sort_usage">ترتيب حسب الإستخدام</string>
     <!-- App drawer color -->
-    <string name="pref_app_drawer_custom_color_title">Custom background color</string>
-    <string name="pref_app_drawer_custom_color_summary">Use a custom color for the app drawer background</string>
-    <string name="pref_app_drawer_custom_color_light_title">Light mode color</string>
-    <string name="pref_app_drawer_custom_color_dark_title">Dark mode color</string>
+    <string name="pref_app_drawer_custom_color_title">لون الخلفية المخصصة</string>
+    <string name="pref_app_drawer_custom_color_summary">استخدام لون مخصص لخلفية درج التطبيق</string>
+    <string name="pref_app_drawer_custom_color_light_title">لون الوضع الفاتح</string>
+    <string name="pref_app_drawer_custom_color_dark_title">لون الوضع المظلم</string>
     <!-- Color Picker -->
     <string name="color_picker_hsb">HSB</string>
     <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Hue</string>
-    <string name="color_picker_saturation">Saturation</string>
-    <string name="color_picker_brightness">Brightness</string>
-    <string name="color_picker_red">Red</string>
-    <string name="color_picker_green">Green</string>
-    <string name="color_picker_blue">Blue</string>
+    <string name="color_picker_hue">التدرج اللوني</string>
+    <string name="color_picker_saturation">التشبع</string>
+    <string name="color_picker_brightness">السطوع</string>
+    <string name="color_picker_red">أحمر</string>
+    <string name="color_picker_green">اخضر</string>
+    <string name="color_picker_blue">أزرق</string>
     <string name="color_picker_hex">HEX</string>
     <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
-    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
-    <string name="qsb_outer_opacity_title">Outer layer opacity</string>
+    <string name="dock_search_pixel_style_title">شريط البحث بنمط بكسل</string>
+    <string name="dock_search_pixel_style_summary">ترتيب شريط البحث مع خلفية الطبقات</string>
+    <string name="qsb_outer_opacity_title">شفافية الطبقة الخارجية</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">إخفاء التطبيقات وحمايتها</string>
     <string name="trust_apps_auth_manager">افتح لإدارة التطبيقات المخفية والمحمية</string>
