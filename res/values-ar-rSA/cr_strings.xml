@@ -425,16 +425,16 @@
     <string name="trust_apps_info_hidden">التطبيقات المخفية و الأدوات الخاصة بها ستكون مخفية أيضاً من واجهة التشغيل</string>
     <string name="trust_apps_info_protected">التطبيقات المحمية تتطلب المصادقة لكي تُفتح</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_title">نمط تخطيط التطبيقات الحديثة</string>
     <string name="recents_style_default">الإفتراضي</string>
-    <string name="recents_style_stock">Scale effect</string>
-    <string name="recents_style_staple">Kami style</string>
-    <string name="recents_style_ios">iOS style</string>
-    <string name="recents_style_oxygen">OxygenOS style</string>
+    <string name="recents_style_stock">تأثير المقياس</string>
+    <string name="recents_style_staple">نمط الكامي</string>
+    <string name="recents_style_ios">نمط iOS</string>
+    <string name="recents_style_oxygen">نمط OxygenOS</string>
     <!-- Lock -->
-    <string name="action_lock">Lock/Unlock app</string>
-    <string name="unlock_app">Unlocked app in recents</string>
-    <string name="lock_app">Locked app in recents</string>
+    <string name="action_lock">قفل/فتح التطبيق</string>
+    <string name="unlock_app">التطبيق غير المقفل في التطبيقات الحديثة</string>
+    <string name="lock_app">التطبيق المقفل في التطبيقات الحديثة</string>
     <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">Scroll vibration</string>
+    <string name="recents_scroll_vibrate_title">الإهتزاز اثناء التمرير</string>
 </resources>
