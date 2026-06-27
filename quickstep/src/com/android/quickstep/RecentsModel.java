@@ -56,6 +56,7 @@ import com.android.launcher3.util.coroutines.DispatcherProvider;
 import com.android.quickstep.dagger.QuickstepBaseAppComponent;
 import com.android.quickstep.recents.data.RecentTasksDataSource;
 import com.android.quickstep.recents.data.TaskVisualsChangeNotifier;
+import com.android.quickstep.util.AxSandboxState;
 import com.android.quickstep.util.DesktopTask;
 import com.android.quickstep.util.GroupTask;
 import com.android.quickstep.util.TaskVisualsChangeListener;
@@ -124,13 +125,14 @@ public class RecentsModel implements RecentTasksDataSource, TaskStackChangeListe
             DaggerSingletonTracker tracker,
             DispatcherProvider dispatcherProvider,
             @Ui LooperExecutor uiExecutor,
-            IconChangeTracker iconChangeTracker
+            IconChangeTracker iconChangeTracker,
+            AxSandboxState sandboxState
             ) {
         // Lazily inject the ThemeManager and access themeManager once the device is
         // unlocked. See b/393248495 for details.
         this(context, IconProvider.INSTANCE.get(context), systemUiProxy, topTaskTracker,
                 displayController, lockedUserState, themeManagerLazy, tracker, dispatcherProvider,
-                uiExecutor, iconChangeTracker);
+                uiExecutor, iconChangeTracker, sandboxState);
     }
 
     @SuppressLint("VisibleForTests")
@@ -144,7 +146,8 @@ public class RecentsModel implements RecentTasksDataSource, TaskStackChangeListe
             DaggerSingletonTracker tracker,
             DispatcherProvider dispatcherProvider,
             @Ui LooperExecutor uiExecutor,
-            IconChangeTracker iconChangeTracker) {
+            IconChangeTracker iconChangeTracker,
+            AxSandboxState sandboxState) {
         this(context,
                 new RecentTasksList(
                         context,
@@ -152,6 +155,7 @@ public class RecentsModel implements RecentTasksDataSource, TaskStackChangeListe
                         context.getSystemService(KeyguardManager.class),
                         context.getSystemService(VirtualDeviceManager.class),
                         systemUiProxy,
+                        sandboxState,
                         topTaskTracker, tracker),
                 new TaskIconCache(context, RECENTS_MODEL_EXECUTOR, iconProvider, displayController,
                         dispatcherProvider),

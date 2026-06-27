@@ -19,7 +19,11 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ShortcutInfo
+import android.database.ContentObserver
+import android.os.Handler
+import android.os.Looper
 import android.os.UserHandle
+import android.provider.Settings
 import com.android.launcher3.celllayout.CellPosMapper
 import com.android.launcher3.dagger.ApplicationContext
 import com.android.launcher3.dagger.LauncherAppSingleton
@@ -121,6 +125,18 @@ constructor(
         lifecycle.addCloseable { destroy() }
         modelDelegate.init(this, mBgAllAppsList, mBgDataModel)
         lifecycle.addCloseable(dumpManager.register(this))
+        val sandboxObserver =
+            object : ContentObserver(Handler(Looper.getMainLooper())) {
+                override fun onChange(selfChange: Boolean) {
+                    forceReload()
+                }
+            }
+        context.contentResolver.registerContentObserver(
+            Settings.Secure.getUriFor(SANDBOX_CONFIG),
+            false,
+            sandboxObserver,
+        )
+        lifecycle.addCloseable { context.contentResolver.unregisterContentObserver(sandboxObserver) }
     }
 
     fun newModelCallbacks() = ModelLauncherCallbacks(this::enqueueModelUpdateTask)
@@ -457,5 +473,6 @@ constructor(
 
     companion object {
         const val TAG = "Launcher.Model"
+        private const val SANDBOX_CONFIG = "sandbox_config"
     }
 }

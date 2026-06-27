@@ -82,4 +82,6 @@
     <color name="materialColorSecondaryFixedDim">@color/system_secondary_fixed_dim</color>
     <color name="materialColorTertiaryFixed">@color/system_tertiary_fixed</color>
     <color name="materialColorTertiaryFixedDim">@color/system_tertiary_fixed_dim</color>
+    <color name="recent_app_locked_bg_color">@android:color/system_neutral1_900</color>
+    <color name="recent_app_locked_icon_color">@android:color/system_neutral2_200</color>
 </resources>

@@ -28,6 +28,7 @@ import android.util.Log
 import android.view.View
 import android.view.ViewOutlineProvider
 import android.widget.FrameLayout
+import android.widget.ImageView
 import androidx.annotation.ColorInt
 import androidx.core.view.isInvisible
 import com.android.launcher3.Flags.enableRefactorTaskContentView
@@ -41,6 +42,7 @@ import com.android.quickstep.task.thumbnail.TaskThumbnailUiState.Snapshot
 import com.android.quickstep.task.thumbnail.TaskThumbnailUiState.SnapshotSplash
 import com.android.quickstep.task.thumbnail.TaskThumbnailUiState.Uninitialized
 import com.android.quickstep.views.FixedSizeImageView
+import com.android.systemui.shared.recents.model.Task
 
 class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
     private val scrimView: View by lazy { findViewById(R.id.task_thumbnail_scrim) }
@@ -55,6 +57,9 @@ class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
     private var onSizeChanged: ((width: Int, height: Int) -> Unit)? = null
 
     private var uiState: TaskThumbnailUiState = Uninitialized
+    private var task: Task? = null
+    private var lastMatrix: Matrix? = null
+    private var overlaid = false
 
     /**
      * Sets the outline bounds of the view. Default to use view's bound as outline when set to null.
@@ -112,6 +117,9 @@ class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
 
     override fun onRecycle() {
         uiState = Uninitialized
+        task = null
+        lastMatrix = null
+        overlaid = false
         if (!enableRefactorTaskContentView()) {
             onSizeChanged = null
             outlineBounds = null
@@ -119,16 +127,31 @@ class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
         resetViews()
     }
 
+    fun bind(task: Task) {
+        this.task = task
+    }
+
     fun setState(state: TaskThumbnailUiState, taskId: Int? = null) {
-        if (uiState == state) return
+        val shouldOverlay = shouldDrawOverlay()
+        if (uiState == state && overlaid == shouldOverlay) return
         logDebug("taskId: $taskId - uiState changed from: $uiState to: $state")
         uiState = state
         resetViews()
+        if (shouldOverlay) {
+            drawOverlayThumbnail()
+            overlaid = true
+            return
+        }
+        thumbnailView.scaleType = ImageView.ScaleType.MATRIX
+        overlaid = false
         when (state) {
             is Uninitialized -> {}
             is LiveTile -> drawLiveWindow()
             is SnapshotSplash -> drawSnapshotSplash(state)
             is BackgroundOnly -> drawBackground(state.backgroundColor)
+        }
+        if (state is SnapshotSplash) {
+            lastMatrix?.let { thumbnailView.imageMatrix = it }
         }
     }
 
@@ -209,6 +232,28 @@ class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
         setBackgroundColor(Color.TRANSPARENT)
     }
 
+    private fun shouldDrawOverlay(): Boolean {
+        return task?.isLocked == true || isCameraSnapshot()
+    }
+
+    private fun isCameraSnapshot(): Boolean {
+        val packageName = task?.topComponent?.packageName ?: return false
+        return packageName.contains("camera", ignoreCase = true) ||
+                packageName.contains("aperture", ignoreCase = true)
+    }
+
+    private fun drawOverlayThumbnail() {
+        val icon = if (task?.isLocked == true) {
+            R.drawable.ic_recent_app_locked
+        } else {
+            R.drawable.ic_recent_camera_locked
+        }
+        thumbnailView.setImageResource(icon)
+        thumbnailView.scaleType = ImageView.ScaleType.CENTER
+        thumbnailView.isInvisible = false
+        drawBackground(context.getColor(R.color.recent_app_locked_bg_color))
+    }
+
     private fun drawBackground(@ColorInt background: Int) {
         setBackgroundColor(background)
     }
@@ -234,7 +279,8 @@ class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
     }
 
     fun setImageMatrix(matrix: Matrix) {
-        if (uiState is SnapshotSplash) {
+        lastMatrix = matrix
+        if (uiState is SnapshotSplash && !overlaid) {
             thumbnailView.imageMatrix = matrix
         }
     }
