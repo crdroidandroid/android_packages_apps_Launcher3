@@ -42,6 +42,7 @@ import com.android.launcher3.util.OverviewReleaseFlags.enableLaterIsLockedCheck
 import com.android.quickstep.RecentsModel.RecentTasksChangedListener
 import com.android.quickstep.SystemUiProxy.GetRecentTasksException
 import com.android.quickstep.recents.data.RecentTasksKeysDataSource
+import com.android.quickstep.util.AxSandboxState
 import com.android.quickstep.util.DesktopTask
 import com.android.quickstep.util.GroupTask
 import com.android.quickstep.util.SingleTask
@@ -76,6 +77,7 @@ constructor(
     private val automationRepository: AutomationRepository,
     @LightweightBackground(UI) private val lightweightBackgroundExecutor: Executor,
     private val desktopState: DesktopState,
+    private val sandboxState: AxSandboxState,
 ) : RecentTasksKeysDataSource {
 
     private val keyguardManager: KeyguardManager? = context.getSystemService()
@@ -88,6 +90,8 @@ constructor(
     private var resultsUi = INVALID_RESULT
 
     private var recentTasksChangedListener: RecentTasksChangedListener? = null
+
+    private val sandboxChangeListener = Runnable { onRecentTasksChanged() }
 
     // Track displays that belong to virtual devices. Tasks on such displays are treated as if
     // they are running on the default display.
@@ -143,6 +147,10 @@ constructor(
             }
 
         tracker.addCloseable(sysUiProxy.recentTasksListeners.register(recentTasksListener))
+
+        // App lock changes must invalidate the cached list so tasks pick up the new isLocked.
+        sandboxState.addChangeListener(sandboxChangeListener)
+        tracker.addCloseable { sandboxState.removeChangeListener(sandboxChangeListener) }
     }
 
     /** Fetches the task keys skipping any local cache. */
@@ -319,7 +327,7 @@ constructor(
                 val taskInfo2 =
                     if (enableShellTopTaskTracking()) rawTask.baseGroupedTask.taskInfo2!!
                     else rawTask.taskInfo2!!
-                task2 = createTask(taskInfo2, loadKeysOnly, tmpLockedUsers)
+                task2 = createTask(taskInfo2, keyOnly, tmpLockedUsers)
                 splitBounds =
                     if (enableShellTopTaskTracking()) rawTask.baseGroupedTask.splitBounds
                     else rawTask.splitBounds
@@ -363,8 +371,11 @@ constructor(
         if (isTaskAutomated(taskKey)) return null
 
         return if (keyOnly) Task(taskKey)
-        else Task.from(taskKey, taskInfo, /* isLocked= */ lockedUsers[taskKey.userId])
+        else Task.from(taskKey, taskInfo, /* isLocked= */ isTaskLocked(taskKey, lockedUsers))
     }
+
+    private fun isTaskLocked(taskKey: TaskKey, lockedUsers: SparseBooleanArray): Boolean =
+        lockedUsers[taskKey.userId] || sandboxState.hasAppLock(taskKey.packageName)
 
     private fun isTaskAutomated(taskKey: TaskKey): Boolean {
         if (!hideAutomatedTasksInOverview()) {
@@ -373,13 +384,20 @@ constructor(
         return automationRepository.isPackageAutomated(taskKey.userId, taskKey.packageName)
     }
 
-    private fun createTask(taskInfo: TaskInfo, minimizedTaskIds: Set<Int>): Task =
-        Task.from(createTaskKey(taskInfo), taskInfo, false).apply {
-            positionInParent = taskInfo.positionInParent
-            appBounds = taskInfo.configuration.windowConfiguration.appBounds
-            isVisible = taskInfo.isVisible
-            isMinimized = minimizedTaskIds.contains(taskInfo.taskId)
-        }
+    private fun createTask(taskInfo: TaskInfo, minimizedTaskIds: Set<Int>): Task {
+        val taskKey = createTaskKey(taskInfo)
+        return Task.from(
+                taskKey,
+                taskInfo,
+                /* isLocked= */ sandboxState.hasAppLock(taskKey.packageName),
+            )
+            .apply {
+                positionInParent = taskInfo.positionInParent
+                appBounds = taskInfo.configuration.windowConfiguration.appBounds
+                isVisible = taskInfo.isVisible
+                isMinimized = minimizedTaskIds.contains(taskInfo.taskId)
+            }
+    }
 
     private fun createTaskKey(taskInfo: TaskInfo): TaskKey {
         val displayId = getRecentsDisplayId(taskInfo.displayId)

@@ -17,17 +17,20 @@
 package com.android.quickstep.task.thumbnail
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.Matrix
 import android.graphics.Outline
 import android.graphics.Path
 import android.graphics.Rect
+import android.graphics.drawable.Drawable
 import android.graphics.drawable.ShapeDrawable
 import android.util.AttributeSet
 import android.util.Log
 import android.view.View
 import android.view.ViewOutlineProvider
 import android.widget.FrameLayout
+import android.widget.ImageView
 import androidx.annotation.ColorInt
 import androidx.core.view.isInvisible
 import com.android.launcher3.LauncherAnimUtils.VIEW_ALPHA
@@ -41,6 +44,7 @@ import com.android.quickstep.task.thumbnail.TaskThumbnailUiState.Snapshot
 import com.android.quickstep.task.thumbnail.TaskThumbnailUiState.SnapshotSplash
 import com.android.quickstep.task.thumbnail.TaskThumbnailUiState.Uninitialized
 import com.android.quickstep.views.FixedSizeImageView
+import com.android.systemui.shared.recents.model.Task
 
 class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
     private val scrimView: View by lazy { findViewById(R.id.task_thumbnail_scrim) }
@@ -56,6 +60,14 @@ class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
     private var onSizeChanged: ((width: Int, height: Int) -> Unit)? = null
 
     private var uiState: TaskThumbnailUiState = Uninitialized
+
+    private var task: Task? = null
+    private var privacyOverlay: PrivacyOverlay = PrivacyOverlay.None
+    private var lastMatrix: Matrix? = null
+
+    private var defaultAppLockDrawable: Drawable? = null
+    private var defaultAppLockTint: ColorStateList? = null
+    private var defaultAppLockScaleType: ImageView.ScaleType? = null
 
     /**
      * Sets the outline bounds of the view. Default to use view's bound as outline when set to null.
@@ -100,6 +112,13 @@ class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
         defStyleAttr: Int,
     ) : super(context, attrs, defStyleAttr)
 
+    override fun onFinishInflate() {
+        super.onFinishInflate()
+        defaultAppLockDrawable = appLockIcon.drawable
+        defaultAppLockTint = appLockIcon.imageTintList
+        defaultAppLockScaleType = appLockIcon.scaleType
+    }
+
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
         clipToOutline = true
@@ -126,21 +145,47 @@ class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
 
     override fun onRecycle() {
         uiState = Uninitialized
+        task = null
+        privacyOverlay = PrivacyOverlay.None
+        lastMatrix = null
         outlineBounds = null
         resetViews()
     }
 
+    fun bind(task: Task) {
+        this.task = task
+        val overlay = resolvePrivacyOverlay(uiState)
+        if (overlay != privacyOverlay) {
+            logDebug("taskId: ${task.key.id} - privacy overlay changed to: $overlay")
+            render(uiState, overlay)
+        }
+    }
+
     fun setState(state: TaskThumbnailUiState, taskId: Int? = null) {
-        if (uiState == state) return
-        logDebug("taskId: $taskId - uiState changed from: $uiState to: $state")
+        val overlay = resolvePrivacyOverlay(state)
+        if (uiState == state && privacyOverlay == overlay) return
+        logDebug("taskId: $taskId - uiState changed from: $uiState to: $state, overlay: $overlay")
         uiState = state
+        render(state, overlay)
+    }
+
+    private fun render(state: TaskThumbnailUiState, overlay: PrivacyOverlay) {
+        privacyOverlay = overlay
         resetViews()
+        if (overlay != PrivacyOverlay.None) {
+            drawPrivacyOverlay(overlay)
+            return
+        }
         when (state) {
             is Uninitialized -> {}
             is LiveTile -> drawLiveWindow()
             is SnapshotSplash -> drawSnapshotSplash(state)
             is BackgroundOnly -> drawBackground(state.backgroundColor)
             is AppLocked -> drawAppLocked(state.backgroundColor)
+        }
+        // Re-apply the last matrix in case it arrived while the overlay was shown.
+        if (state is SnapshotSplash) {
+            lastMatrix?.let { thumbnailView.imageMatrix = it }
         }
     }
 
@@ -179,9 +224,50 @@ class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
         splashIcon.alpha = 0f
         splashIcon.setImageDrawable(null)
         appLockIcon.isInvisible = true
+        restoreDefaultAppLockIcon()
         scrimView.alpha = 0f
         alpha = 1.0f
         setBackgroundColor(Color.TRANSPARENT)
+    }
+
+    private fun restoreDefaultAppLockIcon() {
+        if (appLockIcon.drawable !== defaultAppLockDrawable) {
+            appLockIcon.setImageDrawable(defaultAppLockDrawable)
+        }
+        appLockIcon.imageTintList = defaultAppLockTint
+        defaultAppLockScaleType?.let { appLockIcon.scaleType = it }
+    }
+
+    private fun resolvePrivacyOverlay(state: TaskThumbnailUiState): PrivacyOverlay {
+        if (state is Uninitialized) return PrivacyOverlay.None
+        val task = task ?: return PrivacyOverlay.None
+        return when {
+            task.isLocked -> PrivacyOverlay.AppLock
+            isCameraTask(task) -> PrivacyOverlay.Camera
+            else -> PrivacyOverlay.None
+        }
+    }
+
+    private fun isCameraTask(task: Task): Boolean {
+        val packageName = task.topComponent?.packageName ?: task.key.packageName ?: return false
+        return packageName.contains("camera", ignoreCase = true) ||
+            packageName.contains("aperture", ignoreCase = true)
+    }
+
+    /**
+     * Draws a privacy placeholder instead of the snapshot. Reuses the stock app lock icon view so
+     * the snapshot ImageView's scale type and matrix are never touched.
+     */
+    private fun drawPrivacyOverlay(overlay: PrivacyOverlay) {
+        drawBackground(context.getColor(R.color.recent_app_locked_bg_color))
+        appLockIcon.setImageResource(
+            if (overlay == PrivacyOverlay.AppLock) R.drawable.ic_recent_app_locked
+            else R.drawable.ic_recent_camera_locked
+        )
+        // The vectors carry their own themed fill colour.
+        appLockIcon.imageTintList = null
+        appLockIcon.scaleType = ImageView.ScaleType.CENTER
+        appLockIcon.isInvisible = false
     }
 
     private fun drawBackground(@ColorInt background: Int) {
@@ -214,13 +300,20 @@ class TaskThumbnailView : FrameLayout, ViewPool.Reusable {
     }
 
     fun setImageMatrix(matrix: Matrix) {
-        if (uiState is SnapshotSplash) {
+        lastMatrix = matrix
+        if (uiState is SnapshotSplash && privacyOverlay == PrivacyOverlay.None) {
             thumbnailView.imageMatrix = matrix
         }
     }
 
     private fun logDebug(message: String) {
         Log.d(TAG, "[TaskThumbnailView@${Integer.toHexString(hashCode())}] $message")
+    }
+
+    private enum class PrivacyOverlay {
+        None,
+        AppLock,
+        Camera,
     }
 
     private companion object {

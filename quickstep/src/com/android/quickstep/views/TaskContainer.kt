@@ -79,6 +79,7 @@ class TaskContainer(
     fun bind() =
         traceSection("TaskContainer.bind") {
             digitalWellBeingToast?.bind(task, taskView, snapshotView, stagePosition)
+            snapshotView.bind(task)
         }
 
     fun destroy() =

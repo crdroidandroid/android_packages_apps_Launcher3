@@ -24,4 +24,8 @@
 
     <!-- Dark app drawer text -->
     <color name="all_apps_label_color_dark_forced">#FF212121</color>
+
+    <!-- Recent app lock -->
+    <color name="recent_app_locked_bg_color">@android:color/system_neutral1_50</color>
+    <color name="recent_app_locked_icon_color">@android:color/system_neutral2_700</color>
 </resources>

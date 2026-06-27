@@ -51,7 +51,7 @@ constructor(
 
             val isLocked =
                 if (enableLaterIsLockedCheck())
-                    userLockedStateRepository.getIsUserLocked(task.key.userId)
+                    task.isLocked || userLockedStateRepository.getIsUserLocked(task.key.userId)
                 else task.isLocked
 
             TaskModel(
