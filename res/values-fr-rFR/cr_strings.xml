@@ -78,7 +78,7 @@
     <string name="updating_launcher_components">Redémarrage du lanceur pour mettre à jour les composants...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Double-cliquez pour mettre en veille</string>
-    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
+    <string name="pref_sleep_gesture_summary">Appuyez deux fois sur un espace libre de l\'écran d\'accueil pour éteindre l\'écran</string>
     <string name="pref_sleep_gesture_haptic_title">Vibrer lors d\'un appui double pour éteindre l\'écran</string>
     <string name="pref_sleep_gesture_haptic_summary">Fournir un retour haptique lors d\'un double appui pour éteindre l\'écran</string>
     <!-- Open keyboard -->
@@ -106,7 +106,7 @@
     <string name="label_search">Rechercher</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_voice_search">Recherche vocale</string>
-    <string name="label_gemini_search">AI mode</string>
+    <string name="label_gemini_search">Mode IA</string>
     <string name="dock_music_search_title">Recherche de musique</string>
     <string name="dock_music_search_summary">Démarrer la recherche de musique en appuyant sur l\'icône du micro</string>
     <string name="dock_search_title">Barre de recherche inférieure</string>

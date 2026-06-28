@@ -376,7 +376,7 @@
     <string name="flower_shape_title">Flor</string>
     <string name="heart_shape_title">Coração</string>
     <string name="hexagon_shape_title">Hexágono</string>
-    <string name="rounded_hexagon_shape_title">Rounded hexagon</string>
+    <string name="rounded_hexagon_shape_title">Hexágono Arredondado</string>
     <string name="ios_style_shape_title">Estilo iOS</string>
     <string name="leaf_shape_title">Folha</string>
     <string name="meow_shape_title">Meow</string>
@@ -414,7 +414,7 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Barra de procura ao estilo Pixel</string>
     <string name="dock_search_pixel_style_summary">Barra de procura revista com fundo sobreposto</string>
-    <string name="qsb_outer_opacity_title">Outer layer opacity</string>
+    <string name="qsb_outer_opacity_title">Opacidade da camada externa</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Apps ocultas e protegidas</string>
     <string name="trust_apps_auth_manager">Desbloquear para gerir as apps ocultas e protegidas</string>
@@ -425,16 +425,16 @@
     <string name="trust_apps_info_hidden">As apps ocultas e seus widgets estão escondidos da gaveta de apps</string>
     <string name="trust_apps_info_protected">As apps protegidas requerem autenticação para serem executadas</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_title">Estilo de layout dos recentes</string>
     <string name="recents_style_default">Padrão</string>
-    <string name="recents_style_stock">Scale effect</string>
-    <string name="recents_style_staple">Kami style</string>
-    <string name="recents_style_ios">iOS style</string>
-    <string name="recents_style_oxygen">OxygenOS style</string>
+    <string name="recents_style_stock">Efeito de escala</string>
+    <string name="recents_style_staple">Estilo Kami</string>
+    <string name="recents_style_ios">Estilo iOS</string>
+    <string name="recents_style_oxygen">Estilo OxigenOS</string>
     <!-- Lock -->
-    <string name="action_lock">Lock/Unlock app</string>
-    <string name="unlock_app">Unlocked app in recents</string>
-    <string name="lock_app">Locked app in recents</string>
+    <string name="action_lock">Bloquear/Desbloquear aplicação</string>
+    <string name="unlock_app">Aplicação desbloqueada em recentes</string>
+    <string name="lock_app">Aplicação bloqueada em recentes</string>
     <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">Scroll vibration</string>
+    <string name="recents_scroll_vibrate_title">Vibração ao rolar</string>
 </resources>
