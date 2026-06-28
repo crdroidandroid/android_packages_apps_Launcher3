@@ -325,9 +325,6 @@ public class SettingsMisc extends CollapsingToolbarBaseActivity
             DisplayController.Info info = DisplayController.INSTANCE.get(getContext()).getInfo();
             switch (preference.getKey()) {
                 case ALLOW_ROTATION_PREFERENCE_KEY:
-                    if (Flags.oneGridSpecs()) {
-                        return false;
-                    }
                     if (info.isTablet(info.realBounds)) {
                         // Launcher supports rotation by default. No need to show this setting.
                         return false;
