@@ -17,7 +17,6 @@
 package com.android.launcher3.shortcuts;
 
 import static com.android.launcher3.AbstractFloatingView.TYPE_FOLDER;
-import static com.android.launcher3.Flags.blurOnMoreSurfaces;
 import static com.android.launcher3.model.data.ItemInfoWithIcon.FLAG_NOT_PINNABLE;
 
 import android.content.Context;
@@ -110,7 +109,7 @@ public class DeepShortcutView extends FrameLayout implements BubbleTextHolder {
             return;
         }
         Drawable background = getBackground();
-        if (blurOnMoreSurfaces() && background instanceof LayerDrawable l) {
+        if (background instanceof LayerDrawable l && l.getNumberOfLayers() > 1) {
             // When we use blur, we have a LayerDrawable of
             // [BackgroundBlurDrawable, GradientDrawable] as the background.
             background = l.getDrawable(1);

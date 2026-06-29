@@ -23,7 +23,6 @@ import static android.view.accessibility.AccessibilityEvent.TYPE_VIEW_FOCUSED;
 
 import static com.android.app.animation.Interpolators.EMPHASIZED;
 import static com.android.internal.jank.Cuj.CUJ_LAUNCHER_LAUNCH_APP_PAIR_FROM_WORKSPACE;
-import static com.android.launcher3.Flags.blurOnMoreSurfaces;
 import static com.android.launcher3.Flags.enableExpressiveDismissTaskMotion;
 import static com.android.launcher3.Flags.enableOverviewBackgroundWallpaperBlur;
 import static com.android.launcher3.Flags.enableUnfoldStateAnimation;
@@ -376,10 +375,8 @@ public class QuickstepLauncher extends Launcher implements RecentsViewContainer,
             if (v != blurEnabled) mWallpaperThemeManager.recreateToUpdateTheme();
             return null;
         }));
-        if (blurOnMoreSurfaces()) {
-            getTheme().applyStyle(blurEnabled ? R.style.FolderBlurStyle
-                    : R.style.FolderBlurFallbackStyle, true);
-        }
+        getTheme().applyStyle(blurEnabled ? R.style.FolderBlurStyle
+                : R.style.FolderBlurFallbackStyle, true);
     }
 
     @Override

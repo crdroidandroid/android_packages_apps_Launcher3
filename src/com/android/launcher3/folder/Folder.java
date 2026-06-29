@@ -18,7 +18,6 @@ package com.android.launcher3.folder;
 
 import static android.text.TextUtils.isEmpty;
 
-import static com.android.launcher3.Flags.blurOnMoreSurfaces;
 import static com.android.launcher3.Flags.enableLauncherVisualRefresh;
 import static com.android.launcher3.LauncherAnimUtils.SPRING_LOADED_EXIT_DELAY;
 import static com.android.launcher3.LauncherState.EDIT_MODE;
@@ -740,9 +739,7 @@ public class Folder extends AbstractFloatingView implements ClipPathView, DragSo
         Folder openFolder = getOpen(mActivityContext);
         closeOpenFolder(openFolder);
 
-        if (blurOnMoreSurfaces()) {
-            mBlurBackgroundHelper.prepareToOpenFolder(this);
-        }
+        mBlurBackgroundHelper.prepareToOpenFolder(this);
 
         mContent.bindItems(items);
         mContent.setCanAnnouncePageDescriptionForFolder(true);
