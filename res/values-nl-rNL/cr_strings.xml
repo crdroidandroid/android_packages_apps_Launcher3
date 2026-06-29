@@ -437,4 +437,12 @@
     <string name="lock_app">Vergrendelde app in recente apps</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Scroll trillen</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Hernoemen</string>
+    <string name="rename_app_title">Voer app naam in</string>
+    <string name="app_renamed_successfully">App hernoemd</string>
+    <string name="rename_app_empty_error">App naam kan niet leeg zijn</string>
+    <string name="rename_app_length_error">App-naam moet %1$d tekens of minder zijn</string>
+    <string name="rename_app_reset">Reset</string>
+    <string name="rename_app_reset_message">Naam terugzetten naar origineel</string>
 </resources>
