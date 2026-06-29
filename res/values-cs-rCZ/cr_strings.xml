@@ -437,4 +437,12 @@
     <string name="lock_app">Zamknutá aplikace v nedávných aplikacích</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Vibrace při posouvání</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Přejmenovat</string>
+    <string name="rename_app_title">Zadejte název aplikace</string>
+    <string name="app_renamed_successfully">Aplikace přejmenována</string>
+    <string name="rename_app_empty_error">App name cannot be empty</string>
+    <string name="rename_app_length_error">App name must be %1$d characters or less</string>
+    <string name="rename_app_reset">Obnovit</string>
+    <string name="rename_app_reset_message">Název byl obnoven na původní</string>
 </resources>
