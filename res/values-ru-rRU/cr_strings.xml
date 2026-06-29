@@ -441,8 +441,8 @@
     <string name="rename_app_label">Переименовать</string>
     <string name="rename_app_title">Введите название приложения</string>
     <string name="app_renamed_successfully">Приложение переименовано</string>
-    <string name="rename_app_empty_error">Имя приложения не может быть пустым</string>
-    <string name="rename_app_length_error">App name must be %1$d characters or less</string>
+    <string name="rename_app_empty_error">Название приложения не может быть пустым</string>
+    <string name="rename_app_length_error">Название должно содержать не более %1$d символов</string>
     <string name="rename_app_reset">Сброс</string>
-    <string name="rename_app_reset_message">Name reset to original</string>
+    <string name="rename_app_reset_message">Название сброшено на оригинальное</string>
 </resources>
