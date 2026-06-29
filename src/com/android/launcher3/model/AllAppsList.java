@@ -45,6 +45,7 @@ import com.android.launcher3.model.repository.AppsListRepository;
 import com.android.launcher3.pm.PackageInstallInfo;
 import com.android.launcher3.pm.UserCache;
 import com.android.launcher3.util.ApiWrapper;
+import com.android.launcher3.util.CustomAppNameStore;
 import com.android.launcher3.util.FlagOp;
 import com.android.launcher3.util.PackageManagerHelper;
 
@@ -259,6 +260,24 @@ public class AllAppsList {
                 info.sectionName = mIndex.computeSectionName(info.title);
                 mDataChanged = true;
             }
+        }
+    }
+
+    /** Updates the display title for a single app after a custom rename. */
+    public void updateCustomAppTitle(Context context, IconCache iconCache,
+            ComponentName component, UserHandle user) {
+        for (AppInfo info : data) {
+            if (!info.user.equals(user) || !component.equals(info.componentName)) {
+                continue;
+            }
+            String customTitle = CustomAppNameStore.getCustomName(context, info);
+            if (customTitle != null) {
+                info.title = customTitle;
+            } else {
+                iconCache.updateTitleAndIcon(info);
+            }
+            info.sectionName = mIndex.computeSectionName(info.title);
+            mDataChanged = true;
         }
     }
 
