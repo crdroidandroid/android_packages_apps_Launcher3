@@ -437,4 +437,12 @@
     <string name="lock_app">Gesperrte App im Anwendungsverlauf</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Scroll-Vibration</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Umbenennen</string>
+    <string name="rename_app_title">App-Name eingeben</string>
+    <string name="app_renamed_successfully">App umbenannt</string>
+    <string name="rename_app_empty_error">App-Name darf nicht leer sein</string>
+    <string name="rename_app_length_error">App-Name darf maximal %1$d Zeichen haben</string>
+    <string name="rename_app_reset">Zurücksetzen</string>
+    <string name="rename_app_reset_message">Name auf Original zurückgesetzt</string>
 </resources>
