@@ -437,4 +437,12 @@
     <string name="lock_app">Zablokowana aplikacja w ostatnich aplikacjach</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Wibracje przewijania</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Zmień nazwę</string>
+    <string name="rename_app_title">Wprowadź nazwę aplikacji</string>
+    <string name="app_renamed_successfully">Zmieniono nazwę aplikacji</string>
+    <string name="rename_app_empty_error">Nazwa aplikacji nie może być pusta</string>
+    <string name="rename_app_length_error">Nazwa aplikacji musi mieć maksymalnie %1$d znaków</string>
+    <string name="rename_app_reset">Zresetuj</string>
+    <string name="rename_app_reset_message">Nazwa została przywrócona do domyślnej</string>
 </resources>
