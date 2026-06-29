@@ -437,4 +437,12 @@
     <string name="lock_app">已锁定应用</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">滚动触觉</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">重命名</string>
+    <string name="rename_app_title">输入应用名称</string>
+    <string name="app_renamed_successfully">应用名称已更改</string>
+    <string name="rename_app_empty_error">应用名称不能为空</string>
+    <string name="rename_app_length_error">应用名称最多可以包含 %1$d 个字符</string>
+    <string name="rename_app_reset">重置</string>
+    <string name="rename_app_reset_message">将应用名称恢复为默认</string>
 </resources>
