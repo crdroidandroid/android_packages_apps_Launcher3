@@ -437,4 +437,12 @@
     <string name="lock_app">Yakın geçmişte kilitlenen uygulama</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Kaydırma titreşimi</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Adını değiştir</string>
+    <string name="rename_app_title">Uygulama adı girin</string>
+    <string name="app_renamed_successfully">Uygulamanın adı değiştirildi</string>
+    <string name="rename_app_empty_error">Uygulama adı boş olamaz</string>
+    <string name="rename_app_length_error">Uygulama adı %1$d karakter veya daha kısa olmalıdır</string>
+    <string name="rename_app_reset">Sıfırla</string>
+    <string name="rename_app_reset_message">Uygulama adı sıfırlandı</string>
 </resources>
