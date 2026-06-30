@@ -442,7 +442,7 @@
     <string name="rename_app_title">Masukkan nama aplikasi</string>
     <string name="app_renamed_successfully">Aplikasi berganti nama</string>
     <string name="rename_app_empty_error">Nama aplikasi tidak boleh kosong</string>
-    <string name="rename_app_length_error">App name must be %1$d characters or less</string>
+    <string name="rename_app_length_error">Nama aplikasi harus terdiri dari %1$d karakter atau kurang</string>
     <string name="rename_app_reset">Atur ulang</string>
     <string name="rename_app_reset_message">Nama diatur ulang ke nama asli</string>
 </resources>
