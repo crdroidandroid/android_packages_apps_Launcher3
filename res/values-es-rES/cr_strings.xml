@@ -438,11 +438,11 @@
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Vibración de desplazamiento</string>
     <!-- Rename app shortcut -->
-    <string name="rename_app_label">Rename</string>
-    <string name="rename_app_title">Enter app name</string>
-    <string name="app_renamed_successfully">App renamed</string>
-    <string name="rename_app_empty_error">App name cannot be empty</string>
-    <string name="rename_app_length_error">App name must be %1$d characters or less</string>
-    <string name="rename_app_reset">Reset</string>
-    <string name="rename_app_reset_message">Name reset to original</string>
+    <string name="rename_app_label">Renombrar</string>
+    <string name="rename_app_title">Introduzca el nombre de la aplicación</string>
+    <string name="app_renamed_successfully">Aplicación renombrada</string>
+    <string name="rename_app_empty_error">El nombre de la aplicación no puede estar vacío</string>
+    <string name="rename_app_length_error">El nombre de la aplicación debe tener %1$d caracteres o menos</string>
+    <string name="rename_app_reset">Restablecer</string>
+    <string name="rename_app_reset_message">Nombre restablecido al original</string>
 </resources>
