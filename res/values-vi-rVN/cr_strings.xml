@@ -438,4 +438,12 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="lock_app">Ứng dụng đã khóa trong gần đây</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Rung khi cuộn</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Đổi tên</string>
+    <string name="rename_app_title">Nhập tên ứng dụng</string>
+    <string name="app_renamed_successfully">Đổi tên xong</string>
+    <string name="rename_app_empty_error">Không thể để trống</string>
+    <string name="rename_app_length_error">Tên ứng dụng phải là %1$d ký tự hoặc ít hơn</string>
+    <string name="rename_app_reset">Đặt lại</string>
+    <string name="rename_app_reset_message">Tên được đặt lại về tên gốc</string>
 </resources>
