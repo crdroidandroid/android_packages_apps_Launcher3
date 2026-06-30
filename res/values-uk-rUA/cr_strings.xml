@@ -437,4 +437,12 @@
     <string name="lock_app">Заблокований додаток у списку останніх</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Вібрація при прокручуванні</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Перейменувати</string>
+    <string name="rename_app_title">Введіть назву програми</string>
+    <string name="app_renamed_successfully">Програму перейменовано</string>
+    <string name="rename_app_empty_error">Назва додатку не може бути порожньою</string>
+    <string name="rename_app_length_error">Назва програми повинна бути менше символів %1$d</string>
+    <string name="rename_app_reset">Скинути</string>
+    <string name="rename_app_reset_message">Ім\'я скидається на оригінал</string>
 </resources>
