@@ -31,4 +31,8 @@
     <!-- App drawer searchbar -->
     <dimen name="all_apps_search_bar_bottom_padding_extra">16dp</dimen>
     <dimen name="all_apps_page_indicator_bottom_margin">32dp</dimen>
+
+    <!-- Custom icon -->
+    <dimen name="icon_picker_cell_size">56dp</dimen>
+    <dimen name="icon_picker_cell_padding">8dp</dimen>
 </resources>

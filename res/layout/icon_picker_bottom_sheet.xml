@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.launcher3.customization.IconPickerBottomSheet
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:theme="?attr/widgetsTheme">
+
+    <LinearLayout
+        android:id="@+id/icon_picker_content"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/icon_picker_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/icon_picker_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/icon_picker_search_hint"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:background="@drawable/bg_rounded_corner_bottom_sheet" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/icon_picker_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:padding="16dp" />
+    </LinearLayout>
+</com.android.launcher3.customization.IconPickerBottomSheet>

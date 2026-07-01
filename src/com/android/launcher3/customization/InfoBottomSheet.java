@@ -88,6 +88,7 @@ public class InfoBottomSheet extends WidgetsBottomSheet {
     public static class PrefsFragment extends PreferenceFragment
             implements Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener {
         private static final String KEY_ICON_PACK = "pref_app_info_icon_pack";
+        private static final String KEY_CUSTOM_ICON = "pref_app_info_custom_icon";
         private static final String KEY_SOURCE = "pref_app_info_source";
         private static final String KEY_LAST_UPDATE = "pref_app_info_last_update";
         private static final String KEY_VERSION = "pref_app_info_version";
@@ -148,6 +149,18 @@ public class InfoBottomSheet extends WidgetsBottomSheet {
             icons.setValue(IconDatabase.getByComponent(mContext, mKey));
             icons.setOnReloadListener(ctx -> new IconPackPrefSetter(ctx, mComponent));
             icons.setOnPreferenceChangeListener(this);
+
+            Preference customIcon = findPreference(KEY_CUSTOM_ICON);
+            if (customIcon != null) {
+                customIcon.setOnPreferenceClickListener(pref -> {
+                    IconPickerBottomSheet picker =
+                            (IconPickerBottomSheet) mLauncher.getLayoutInflater().inflate(
+                                    R.layout.icon_picker_bottom_sheet,
+                                    mLauncher.getDragLayer(), false);
+                    picker.show(mKey, () -> AppReloader.get(mContext).reload(mKey));
+                    return true;
+                });
+            }
 
             THREAD_POOL_EXECUTOR.execute(() -> {
                 MetadataExtractor extractor = new MetadataExtractor(mContext, mComponent);
