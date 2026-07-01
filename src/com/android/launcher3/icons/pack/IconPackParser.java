@@ -1,6 +1,7 @@
 package com.android.launcher3.icons.pack;
 
 import android.content.ComponentName;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
@@ -10,7 +11,11 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 class IconPackParser {
     private static final String TAG = "IconPackParser";
@@ -52,6 +57,73 @@ class IconPackParser {
         }
 
         return iconPack;
+    }
+
+    static List<IconPack.IconEntry> parseAllEntries(PackageManager pm, Resources res, String pkg)
+            throws IOException, XmlPullParserException {
+        LinkedHashSet<String> catalogNames = new LinkedHashSet<>();
+        collectDrawableNames(pm, res, pkg, "drawable", catalogNames);
+        if (!catalogNames.isEmpty()) {
+            return toEntries(res, pkg, catalogNames);
+        }
+        LinkedHashSet<String> appfilterNames = new LinkedHashSet<>();
+        collectLauncherIconNames(pm, res, pkg, appfilterNames);
+        return toEntries(res, pkg, appfilterNames);
+    }
+
+    private static List<IconPack.IconEntry> toEntries(
+            Resources res, String pkg, LinkedHashSet<String> names) {
+        List<IconPack.IconEntry> entries = new ArrayList<>(names.size());
+        for (String name : names) {
+            int id = res.getIdentifier(name, "drawable", pkg);
+            if (id != 0) {
+                entries.add(new IconPack.IconEntry(name, id));
+            }
+        }
+        return entries;
+    }
+
+    private static void collectLauncherIconNames(PackageManager pm, Resources res, String pkg,
+            LinkedHashSet<String> out) throws IOException, XmlPullParserException {
+        int resId = res.getIdentifier("appfilter", "xml", pkg);
+        if (resId == 0) return;
+
+        Set<String> launchable = new HashSet<>();
+        Intent launcherIntent = new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_LAUNCHER);
+        for (android.content.pm.ResolveInfo ri : pm.queryIntentActivities(launcherIntent, 0)) {
+            launchable.add(new ComponentName(ri.activityInfo.packageName, ri.activityInfo.name)
+                    .flattenToString());
+        }
+
+        XmlResourceParser parseXml = pm.getXml(pkg, resId, null);
+        while (parseXml.next() != XmlPullParser.END_DOCUMENT) {
+            if (parseXml.getEventType() != XmlPullParser.START_TAG
+                    || !"item".equals(parseXml.getName())) {
+                continue;
+            }
+            String drawable = parseXml.getAttributeValue(null, "drawable");
+            String component = parseXml.getAttributeValue(null, "component");
+            if (drawable == null || component == null) continue;
+            ComponentName cn = parseComponent(component);
+            if (cn == null || !launchable.contains(cn.flattenToString())) continue;
+            out.add(drawable);
+        }
+    }
+
+    private static void collectDrawableNames(PackageManager pm, Resources res, String pkg,
+            String xmlResName, LinkedHashSet<String> out) throws IOException, XmlPullParserException {
+        int resId = res.getIdentifier(xmlResName, "xml", pkg);
+        if (resId == 0) return;
+        XmlResourceParser parseXml = pm.getXml(pkg, resId, null);
+        while (parseXml.next() != XmlPullParser.END_DOCUMENT) {
+            if (parseXml.getEventType() == XmlPullParser.START_TAG
+                    && "item".equals(parseXml.getName())) {
+                String drawable = parseXml.getAttributeValue(null, "drawable");
+                if (drawable != null) {
+                    out.add(drawable);
+                }
+            }
+        }
     }
 
     private static void addItem(XmlResourceParser parseXml,

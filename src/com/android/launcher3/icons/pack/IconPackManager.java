@@ -21,6 +21,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -174,6 +175,19 @@ public class IconPackManager extends BroadcastReceiver {
             try {
                 IconPack pack = mProviders.get(packPackage);
                 IconPack.Data data = pack.getData(mContext.getPackageManager());
+                String explicitDrawable =
+                        IconDatabase.getExplicitDrawableForComponent(mContext, key);
+                if (explicitDrawable != null) {
+                    int drawableId = mContext.getPackageManager()
+                            .getResourcesForApplication(packPackage)
+                            .getIdentifier(explicitDrawable, "drawable", packPackage);
+                    if (drawableId != 0) {
+                        return new IconResolverExternal(mContext.getPackageManager(),
+                                pack.getAi(), drawableId,
+                                data.calendarPrefix.get(key.componentName),
+                                data.clockMetadata.get(drawableId));
+                    }
+                }
                 if (data.drawables.containsKey(key.componentName)) {
                     int drawableId = pack.getDrawableId(mContext.getPackageManager(), key.componentName);
                     if (drawableId != 0) {
@@ -193,5 +207,16 @@ public class IconPackManager extends BroadcastReceiver {
             IconDatabase.resetForComponent(mContext, key);
         }
         return null;
+    }
+
+    public List<IconPack.IconEntry> getAllIconEntries(String packPackage) {
+        IconPack pack = mProviders.get(packPackage);
+        if (pack == null) return java.util.Collections.emptyList();
+        try {
+            return pack.getAllIconEntries(mContext.getPackageManager());
+        } catch (PackageManager.NameNotFoundException | XmlPullParserException | IOException e) {
+            Log.e(TAG, "Failed to enumerate icons in pack " + packPackage, e);
+            return java.util.Collections.emptyList();
+        }
     }
 }

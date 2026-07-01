@@ -15,6 +15,7 @@ public class IconDatabase {
     private static final String PREF_FILE_NAME = BuildConfig.APPLICATION_ID + ".ICON_DATABASE";
     public static final String KEY_ICON_PACK = "pref_icon_pack";
     public static final String VALUE_DEFAULT = "";
+    private static final String DRAWABLE_SEPARATOR = "::";
 
     public static String getGlobal(Context context) {
         return LauncherPrefs.getPrefs(context).getString(KEY_ICON_PACK, VALUE_DEFAULT);
@@ -46,11 +47,27 @@ public class IconDatabase {
     }
 
     public static String getByComponent(Context context, ComponentKey key) {
-        return getIconPackPrefs(context).getString(key.toString(), getGlobal(context));
+        String raw = getIconPackPrefs(context).getString(key.toString(), getGlobal(context));
+        int idx = raw.indexOf(DRAWABLE_SEPARATOR);
+        return idx == -1 ? raw : raw.substring(0, idx);
     }
 
     public static void setForComponent(Context context, ComponentKey key, String value) {
         getIconPackPrefs(context).edit().putString(key.toString(), value).apply();
+    }
+    
+    public static void setExplicitIconForComponent(
+            Context context, ComponentKey key, String packPackage, String drawableName) {
+        getIconPackPrefs(context).edit()
+                .putString(key.toString(), packPackage + DRAWABLE_SEPARATOR + drawableName)
+                .apply();
+    }
+
+    public static String getExplicitDrawableForComponent(Context context, ComponentKey key) {
+        String raw = getIconPackPrefs(context).getString(key.toString(), null);
+        if (raw == null) return null;
+        int idx = raw.indexOf(DRAWABLE_SEPARATOR);
+        return idx == -1 ? null : raw.substring(idx + DRAWABLE_SEPARATOR.length());
     }
 
     public static void resetForComponent(Context context, ComponentKey key) {
