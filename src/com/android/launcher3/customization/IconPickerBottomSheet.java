@@ -24,6 +24,7 @@ import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.view.inputmethod.InputMethodManager;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -103,6 +104,12 @@ public class IconPickerBottomSheet extends AbstractSlideInView<BaseActivity> {
 
             @Override
             public void afterTextChanged(Editable s) {}
+        });
+        mRecyclerView.setOnTouchListener((v, event) -> {
+            if (event.getAction() == android.view.MotionEvent.ACTION_DOWN) {
+                hideKeyboard();
+            }
+            return false;
         });
         setContentBackgroundWithParent(
                 getContext().getDrawable(R.drawable.bg_rounded_corner_bottom_sheet), mContent);
@@ -186,6 +193,7 @@ public class IconPickerBottomSheet extends AbstractSlideInView<BaseActivity> {
     }
 
     private void onIconPicked(String packPackage, IconPack.IconEntry entry) {
+        hideKeyboard();
         IconDatabase.setExplicitIconForComponent(getContext(), mKey, packPackage, entry.drawableName);
         if (mCallback != null) {
             mCallback.onIconChosen();
@@ -193,8 +201,19 @@ public class IconPickerBottomSheet extends AbstractSlideInView<BaseActivity> {
         close(true);
     }
 
+    private void hideKeyboard() {
+        if (mSearchField == null) return;
+        InputMethodManager imm = (InputMethodManager)
+                getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (imm != null) {
+            imm.hideSoftInputFromWindow(mSearchField.getWindowToken(), 0);
+        }
+        mSearchField.clearFocus();
+    }
+
     @Override
     protected void handleClose(boolean animate) {
+        hideKeyboard();
         handleClose(animate, DEFAULT_CLOSE_DURATION);
     }
 
