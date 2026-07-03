@@ -416,17 +416,17 @@
     <string name="dock_search_pixel_style_summary">ترتيب شريط البحث مع خلفية الطبقات</string>
     <string name="qsb_outer_opacity_title">شفافية الطبقة الخارجية</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">إخفاء التطبيقات وحمايتها</string>
+    <string name="trust_apps_manager_name">إخفاء &amp; تطبيقات محمية</string>
     <string name="trust_apps_auth_manager">افتح لإدارة التطبيقات المخفية والمحمية</string>
     <string name="trust_apps_auth_open_app">يرجى مصادقة البصمة لفتح %1$s</string>
     <string name="trust_apps_loading">جارٍ التحميل…\u2026</string>
-    <string name="trust_apps_no_lock_error">يرجى إعداد شاشة قفل الجهاز لتقييد الوصول إلى التطبيق</string>
+    <string name="trust_apps_no_lock_error">يرجى إعداد فقل شاشة الجهاز لتقييد الوصول إلى التطبيق</string>
     <string name="trust_apps_help">مساعدة</string>
     <string name="trust_apps_info_hidden">التطبيقات المخفية و الأدوات الخاصة بها ستكون مخفية أيضاً من واجهة التشغيل</string>
     <string name="trust_apps_info_protected">التطبيقات المحمية تتطلب المصادقة لكي تُفتح</string>
     <!-- Recents style -->
     <string name="recents_style_title">نمط تخطيط التطبيقات الحديثة</string>
-    <string name="recents_style_default">الإفتراضي</string>
+    <string name="recents_style_default">افتراضي</string>
     <string name="recents_style_stock">تأثير المقياس</string>
     <string name="recents_style_staple">نمط الكامي</string>
     <string name="recents_style_ios">نمط iOS</string>
