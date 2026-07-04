@@ -316,10 +316,10 @@ class ScalingWorkspaceRevealAnim(
         // Make sure to cache the current animation, so it can be properly interrupted.
         // TODO(b/367591368): ideally these animations would be refactored to be controlled
         //  centrally so each instances doesn't need to care about this coordination.
-        Animations.setOngoingAnimation(launcher.workspace, animators)
-        Animations.setOngoingAnimation(launcher.hotseat, animators)
         launcher.stateManager.setCurrentAnimation(animators, LauncherState.NORMAL)
         animators.start()
+        Animations.setOngoingAnimation(launcher.workspace, animators)
+        Animations.setOngoingAnimation(launcher.hotseat, animators)
     }
 
     private fun addBlurLayer() {

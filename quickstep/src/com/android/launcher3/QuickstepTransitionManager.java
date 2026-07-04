@@ -1702,11 +1702,12 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
      */
     protected RectFSpringAnim getClosingWindowAnimators(AnimatorSet animation,
             RemoteAnimationTarget[] targets, View launcherView, PointF velocityPxPerS,
-            RectF closingWindowStartRectF, float startWindowCornerRadius) {
+            RectF closingWindowStartRectF, float startWindowCornerRadius,
+            boolean skipScrimBlur) {
         final SurfaceTransactionApplier scrimApplier =
                 new SurfaceTransactionApplier(mDragLayer);
         final SurfaceControl closingScrimLayer =
-                createClosingScrimLayer(scrimApplier, targets);
+                skipScrimBlur ? null : createClosingScrimLayer(scrimApplier, targets);
         FloatingIconView floatingIconView = null;
         FloatingWidgetView floatingWidget = null;
         RectF targetRect = new RectF();
@@ -2029,9 +2030,11 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
         if (mLauncher.isInState(OVERVIEW)) {
             playWorkspaceReveal = false;
         } else if (!playFallBackAnimation) {
+            boolean willPlayScalingRevealBlur =
+                    !mLauncher.isInState(LauncherState.ALL_APPS);
             rectFSpringAnim = getClosingWindowAnimators(
                     anim, appTargets, launcherView, new PointF(), startRect,
-                    startWindowCornerRadius);
+                    startWindowCornerRadius, /* skipScrimBlur= */ willPlayScalingRevealBlur);
             if (mLauncher.isInState(LauncherState.ALL_APPS)) {
                 // Skip scaling all apps, otherwise FloatingIconView will get wrong
                 // layout bounds.
