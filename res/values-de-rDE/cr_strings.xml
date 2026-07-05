@@ -445,4 +445,11 @@
     <string name="rename_app_length_error">App-Name darf maximal %1$d Zeichen haben</string>
     <string name="rename_app_reset">Zurücksetzen</string>
     <string name="rename_app_reset_message">Name auf Original zurückgesetzt</string>
+    <!-- App launch blur -->
+    <string name="pref_app_launch_blur_title">App launch blur</string>
+    <string name="pref_app_launch_blur_summary">Show blur effect when launching apps</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Custom icon</string>
+    <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
+    <string name="icon_picker_search_hint">Search icons</string>
 </resources>
