@@ -1582,7 +1582,10 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     }
 
     private void applyAdapterSideAndBottomPaddings(DeviceProfile grid) {
-        int bottomPadding = AppDrawerStyle.isVerticalPaged(mAppDrawerStyle) ? 0 : Math.max(mInsets.bottom, mNavBarScrimHeight);
+        String searchPlacement = LauncherPrefs.ALL_APPS_SEARCH_PLACEMENT.get(getContext());
+        boolean bottomPlacement = "bottom".equals(searchPlacement) && !isSearchBarFloating();
+        int bottomPadding = (AppDrawerStyle.isVerticalPaged(mAppDrawerStyle) || bottomPlacement)
+                ? 0 : Math.max(mInsets.bottom, mNavBarScrimHeight);
         
         mAH.forEach(adapterHolder -> {
             adapterHolder.mPadding.bottom = bottomPadding;
@@ -2137,13 +2140,6 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
                 }
                 if (isSearchBarFloating()) {
                     bottomOffset += mSearchContainer.getHeight();
-                } else {
-                    String searchPlacement =
-                            LauncherPrefs.ALL_APPS_SEARCH_PLACEMENT.get(getContext());
-                    if ("bottom".equals(searchPlacement) && mSearchContainer != null
-                            && !AppDrawerStyle.isVerticalPaged(mAppDrawerStyle)) {
-                        bottomOffset += mSearchContainer.getHeight();
-                    }
                 }
                 mRecyclerView.setPadding(mPadding.left, mPadding.top, mPadding.right,
                         mPadding.bottom + bottomOffset);
