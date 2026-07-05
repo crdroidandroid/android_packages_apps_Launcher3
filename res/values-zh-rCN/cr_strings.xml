@@ -446,10 +446,10 @@
     <string name="rename_app_reset">重置</string>
     <string name="rename_app_reset_message">将应用名称恢复为默认</string>
     <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">App launch blur</string>
-    <string name="pref_app_launch_blur_summary">Show blur effect when launching apps</string>
+    <string name="pref_app_launch_blur_title">应用启动模糊</string>
+    <string name="pref_app_launch_blur_summary">启动应用时显示模糊效果</string>
     <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Custom icon</string>
-    <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
-    <string name="icon_picker_search_hint">Search icons</string>
+    <string name="app_info_custom_icon_title">自定义图标</string>
+    <string name="app_info_custom_icon_summary">从任意图标包选取图标</string>
+    <string name="icon_picker_search_hint">搜索图标</string>
 </resources>
