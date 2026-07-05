@@ -446,10 +446,10 @@
     <string name="rename_app_reset">Reset</string>
     <string name="rename_app_reset_message">Naam terugzetten naar origineel</string>
     <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">App launch blur</string>
-    <string name="pref_app_launch_blur_summary">Show blur effect when launching apps</string>
+    <string name="pref_app_launch_blur_title">App start vervaging</string>
+    <string name="pref_app_launch_blur_summary">Laat vervaag effect zien bij het starten van apps</string>
     <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Custom icon</string>
-    <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
-    <string name="icon_picker_search_hint">Search icons</string>
+    <string name="app_info_custom_icon_title">Aangepast icoon</string>
+    <string name="app_info_custom_icon_summary">Kies een pictogram uit elk pictogrammenpakket</string>
+    <string name="icon_picker_search_hint">Zoek pictogrammen</string>
 </resources>
