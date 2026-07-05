@@ -445,4 +445,11 @@
     <string name="rename_app_length_error">应用名称最多可以包含 %1$d 个字符</string>
     <string name="rename_app_reset">重置</string>
     <string name="rename_app_reset_message">将应用名称恢复为默认</string>
+    <!-- App launch blur -->
+    <string name="pref_app_launch_blur_title">App launch blur</string>
+    <string name="pref_app_launch_blur_summary">Show blur effect when launching apps</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Custom icon</string>
+    <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
+    <string name="icon_picker_search_hint">Search icons</string>
 </resources>
