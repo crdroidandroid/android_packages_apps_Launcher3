@@ -446,4 +446,11 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="rename_app_length_error">Tên ứng dụng phải là %1$d ký tự hoặc ít hơn</string>
     <string name="rename_app_reset">Đặt lại</string>
     <string name="rename_app_reset_message">Tên được đặt lại về tên gốc</string>
+    <!-- App launch blur -->
+    <string name="pref_app_launch_blur_title">App launch blur</string>
+    <string name="pref_app_launch_blur_summary">Show blur effect when launching apps</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Custom icon</string>
+    <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
+    <string name="icon_picker_search_hint">Search icons</string>
 </resources>
