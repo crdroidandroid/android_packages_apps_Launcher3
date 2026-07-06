@@ -446,10 +446,10 @@
     <string name="rename_app_reset">Сброс</string>
     <string name="rename_app_reset_message">Название сброшено на оригинальное</string>
     <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">App launch blur</string>
-    <string name="pref_app_launch_blur_summary">Show blur effect when launching apps</string>
+    <string name="pref_app_launch_blur_title">Размытие при запуске</string>
+    <string name="pref_app_launch_blur_summary">Показывать эффект размытия при запуске приложений</string>
     <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Custom icon</string>
-    <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
-    <string name="icon_picker_search_hint">Search icons</string>
+    <string name="app_info_custom_icon_title">Свой значок</string>
+    <string name="app_info_custom_icon_summary">Выбор любого значка из любого набора значков</string>
+    <string name="icon_picker_search_hint">Поиск значков</string>
 </resources>
