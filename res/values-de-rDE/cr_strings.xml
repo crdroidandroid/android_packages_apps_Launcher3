@@ -446,8 +446,8 @@
     <string name="rename_app_reset">Zurücksetzen</string>
     <string name="rename_app_reset_message">Name auf Original zurückgesetzt</string>
     <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">App launch blur</string>
-    <string name="pref_app_launch_blur_summary">Show blur effect when launching apps</string>
+    <string name="pref_app_launch_blur_title">Unschärfe beim App-Start</string>
+    <string name="pref_app_launch_blur_summary">Unschärfe-Effekt beim Starten von Apps anzeigen</string>
     <!-- Custom icon -->
     <string name="app_info_custom_icon_title">Benutzerdefiniertes Symbol</string>
     <string name="app_info_custom_icon_summary">Ein beliebiges Symbol aus einem Symbolpaket auswählen</string>
