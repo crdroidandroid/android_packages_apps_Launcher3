@@ -201,7 +201,13 @@ public abstract class SystemShortcut<T extends ActivityContext> extends ItemInfo
         }
     }
 
-    public static final Factory<ActivityContext> APP_INFO = AppInfo::new;
+    public static final Factory<ActivityContext> APP_INFO =
+        (context, itemInfo, originalView) -> {
+            if (itemInfo.itemType == LauncherSettings.Favorites.ITEM_TYPE_FOLDER) {
+                return null;
+            }
+            return new AppInfo<>(context, itemInfo, originalView);
+        };
 
     public static class AppInfo<T extends ActivityContext> extends SystemShortcut<T> {
 
