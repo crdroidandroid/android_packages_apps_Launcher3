@@ -437,4 +437,19 @@
     <string name="lock_app">Yakın geçmişte kilitlenen uygulama</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Kaydırma titreşimi</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Adını değiştir</string>
+    <string name="rename_app_title">Uygulama adı girin</string>
+    <string name="app_renamed_successfully">Uygulamanın adı değiştirildi</string>
+    <string name="rename_app_empty_error">Uygulama adı boş olamaz</string>
+    <string name="rename_app_length_error">Uygulama adı %1$d karakter veya daha kısa olmalıdır</string>
+    <string name="rename_app_reset">Sıfırla</string>
+    <string name="rename_app_reset_message">Uygulama adı sıfırlandı</string>
+    <!-- App launch blur -->
+    <string name="pref_app_launch_blur_title">Uygulama başlatma bulanıklığı</string>
+    <string name="pref_app_launch_blur_summary">Uygulama başlatırken bulanıklık efekti göster</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Özel simge</string>
+    <string name="app_info_custom_icon_summary">Herhangi bir simge paketinden herhangi bir simge seç</string>
+    <string name="icon_picker_search_hint">Simge ara</string>
 </resources>
