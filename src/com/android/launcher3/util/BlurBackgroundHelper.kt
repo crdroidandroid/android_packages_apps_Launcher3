@@ -39,4 +39,10 @@ constructor() {
     open fun folderCloseComplete() {}
 
     open fun isBlurEnabled() = false
+
+    open fun isPopupBlurEnabled() = isBlurEnabled()
+
+    open fun applyPopupBlurBackground(view: View) {}
+
+    open fun getPopupBlurSurfaceColor(fallbackColor: Int) = fallbackColor
 }
