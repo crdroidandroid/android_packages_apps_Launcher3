@@ -78,7 +78,7 @@
     <string name="updating_launcher_components">Reiniciando launcher para actualizar componentes del launcher...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Doble toque para apagar pantalla</string>
-    <string name="pref_sleep_gesture_summary">Toca dos veces un espacio vacío en la pantalla de inicio para apagar la pantalla</string>
+    <string name="pref_sleep_gesture_summary">Doble toque en un espacio vacío de la pantalla de inicio para apagar pantalla</string>
     <string name="pref_sleep_gesture_haptic_title">Vibrar al tocar dos veces para suspender</string>
     <string name="pref_sleep_gesture_haptic_summary">Proporciona retroalimentación háptica en el gesto de doble toque para suspender</string>
     <!-- Open keyboard -->
@@ -364,7 +364,7 @@
     <string name="wallpaper_carousel_lockscreen_title">Aplicar a la pantalla de bloqueo</string>
     <string name="wallpaper_carousel_lockscreen_summary">Establecer el mismo fondo de pantalla en la pantalla de bloqueo</string>
     <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Guijarro</string>
+    <string name="pebble_shape_title">Piedrita</string>
     <string name="vessel_shape_title">Vasija</string>
     <string name="pure_square_shape_title">Cuadrado puro</string>
     <string name="squircle_shape_title">Cuadrado redondeado</string>
@@ -379,7 +379,7 @@
     <string name="rounded_hexagon_shape_title">Hexágono redondeado</string>
     <string name="ios_style_shape_title">Estilo iOS</string>
     <string name="leaf_shape_title">Hoja</string>
-    <string name="meow_shape_title">Miau</string>
+    <string name="meow_shape_title">Michi</string>
     <string name="samsung_style_shape_title">Estilo Samsung</string>
     <string name="stretched_shape_title">Estirado</string>
     <!-- Dark app drawer text -->
@@ -416,7 +416,7 @@
     <string name="dock_search_pixel_style_summary">Barra de búsqueda rediseñada con fondo en capas</string>
     <string name="qsb_outer_opacity_title">Opacidad de la capa exterior</string>
     <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Aplicaciones ocultas &amp; y protegidas</string>
+    <string name="trust_apps_manager_name">Aplicaciones ocultas y protegidas</string>
     <string name="trust_apps_auth_manager">Desbloquea para gestionar las aplicaciones ocultas y protegidas</string>
     <string name="trust_apps_auth_open_app">Autenticar para abrir %1$s</string>
     <string name="trust_apps_loading">Cargando\u2026</string>
@@ -437,4 +437,19 @@
     <string name="lock_app">Aplicación bloqueada en recientes</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Vibración de desplazamiento</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Renombrar</string>
+    <string name="rename_app_title">Introduzca el nombre de la aplicación</string>
+    <string name="app_renamed_successfully">Aplicación renombrada</string>
+    <string name="rename_app_empty_error">El nombre de la aplicación no puede estar vacío</string>
+    <string name="rename_app_length_error">El nombre de la aplicación debe tener %1$d caracteres o menos</string>
+    <string name="rename_app_reset">Restablecer</string>
+    <string name="rename_app_reset_message">Nombre restablecido al original</string>
+    <!-- App launch blur -->
+    <string name="pref_app_launch_blur_title">Desenfoque al iniciar aplicación</string>
+    <string name="pref_app_launch_blur_summary">Mostrar desenfoque al iniciar aplicaciones</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Icono personalizado</string>
+    <string name="app_info_custom_icon_summary">Elige cualquier icono de cualquier paquete de iconos</string>
+    <string name="icon_picker_search_hint">Buscar iconos</string>
 </resources>

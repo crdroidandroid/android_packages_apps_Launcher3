@@ -437,4 +437,19 @@
     <string name="lock_app">最近分頁中已鎖定的應用程式</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">捲動震動</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">重新命名</string>
+    <string name="rename_app_title">輸入應用程式名稱</string>
+    <string name="app_renamed_successfully">已重新命名應用程式</string>
+    <string name="rename_app_empty_error">應用程式名稱不能為空</string>
+    <string name="rename_app_length_error">應用程式名稱長度不能超過 %1$d 個字元</string>
+    <string name="rename_app_reset">重設</string>
+    <string name="rename_app_reset_message">名稱已重設為預設值</string>
+    <!-- App launch blur -->
+    <string name="pref_app_launch_blur_title">啟動應用程式模糊效果</string>
+    <string name="pref_app_launch_blur_summary">在啟動應用程式時顯示模糊特效</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">自訂圖示</string>
+    <string name="app_info_custom_icon_summary">從任何圖示包中選取任意圖示</string>
+    <string name="icon_picker_search_hint">搜尋圖示</string>
 </resources>
