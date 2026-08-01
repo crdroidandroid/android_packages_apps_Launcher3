@@ -354,10 +354,6 @@ public class AllAppsTransitionController
 
         boolean shouldProtectHeader = !config.hasAnimationFlag(StateAnimationConfig.SKIP_SCRIM)
                 && (ALL_APPS == state || mLauncher.getStateManager().getState() == ALL_APPS);
-        Log.d(TAG, "shouldProtectHeader: " + shouldProtectHeader
-                + " skipScrim: " + config.hasAnimationFlag(StateAnimationConfig.SKIP_SCRIM)
-                + " state: " + state
-                + " stateManager.getState(): " + mLauncher.getStateManager().getState());
         mScrimView.setDrawingController(shouldProtectHeader ? mAppsView : null);
     }
 
