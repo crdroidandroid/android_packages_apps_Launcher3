@@ -54,7 +54,7 @@
     <string name="msg_minus_one_on_right">メインホーム画面から左にスワイプして表示</string>
     <!-- All apps icon customizations -->
     <string name="pref_icon_customization_title">ドロワーでカスタマイズされたアイコンの使用</string>
-    <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
+    <string name="pref_icon_customization_summary">ホーム画面で使用されているアイコンをドロワーでも使用します</string>
     <!-- Pause apps shortcut -->
     <string name="pause">一時停止</string>
     <string name="pause_apps_dialog_title">%1$s を一時停止しますか？</string>
@@ -78,12 +78,12 @@
     <string name="updating_launcher_components">ランチャーを再起動してランチャーのコンポーネントを更新しています...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">ダブルタップでスリープ</string>
-    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_summary">ホーム画面の空いている部分をダブルタップしてスリープ</string>
+    <string name="pref_sleep_gesture_haptic_title">ダブルタップでスリープ時に振動</string>
+    <string name="pref_sleep_gesture_haptic_summary">ダブルタップしてスリープする際に触覚を再生します</string>
     <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Swipe to start search</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
+    <string name="drawer_open_keyboard_title">上にスワイプして検索を開始</string>
+    <string name="drawer_open_keyboard_summary">ドロワーを表示する際にキーボードを表示し素早く検索します</string>
     <!-- Icon size -->
     <string name="icon_size_title">アイコンのサイズ</string>
     <!-- Font size -->
@@ -106,7 +106,7 @@
     <string name="label_search">検索</string>
     <string name="label_lens">Google レンズ</string>
     <string name="label_voice_search">音声検索</string>
-    <string name="label_gemini_search">AI mode</string>
+    <string name="label_gemini_search">AIモード</string>
     <string name="dock_music_search_title">音楽の検索</string>
     <string name="dock_music_search_summary">マイクアイコンを押して音楽検索を開始します</string>
     <string name="dock_search_title">Google 検索バー</string>
@@ -115,10 +115,10 @@
     <string name="dock_theme_summary">検索バーにテーマアイコンを使用する</string>
     <string name="search_radius_title">角の丸み</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar location</string>
-    <string name="drawer_search_location_hidden">Hidden</string>
-    <string name="drawer_search_location_top">Top</string>
-    <string name="drawer_search_location_bottom">Bottom</string>
+    <string name="drawer_search_title">アプリ検索バーの位置</string>
+    <string name="drawer_search_location_hidden">検索バーを隠す</string>
+    <string name="drawer_search_location_top">上</string>
+    <string name="drawer_search_location_bottom">下</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">壁紙をスクロール</string>
     <string name="allow_wallpaper_scrolling_summary">複数ページでの壁紙のスクロール効果</string>
@@ -147,7 +147,7 @@
     <string name="drawer_scrollbar_summary">アプリドロワー横のスクロールバー</string>
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">暗いステータスバー</string>
-    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
+    <string name="perf_dark_status_bar_summary">ドロワーのアプリラベルに常に暗いテキストを使用する</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">At A Glance</string>
     <string name="show_quickspace_summary">ホーム画面の上部に表示します</string>
@@ -322,9 +322,9 @@
     </string-array>
     <string name="intent_no_app_clock_found">カレンダーまたは時計のアクティビティが見つかりません</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quickspace_weather_provider_title">Weather provider</string>
-    <string name="quickspace_weather_provider_entry_auto">Auto</string>
-    <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
+    <string name="quickspace_weather_provider_title">天気のプロバイダー</string>
+    <string name="quickspace_weather_provider_entry_auto">自動</string>
+    <string name="quickspace_weather_provider_entry_seraphix">Googleスマートスペース</string>
     <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
     <string name="quick_event_ambient_weather_title">天気予報</string>
     <string name="quick_event_ambient_weather_summary">現在の天気の最新情報を表示します</string>
@@ -341,13 +341,13 @@
     <string name="quick_event_weather_text_title">現在の天気</string>
     <string name="quick_event_weather_text_summary">現在の天候の概要を表示します</string>
     <!-- Auto-hide page indicator dots -->
-    <string name="auto_hide_dots">Auto-hide page indicator</string>
-    <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
+    <string name="auto_hide_dots">ページインジケーターの自動非表示</string>
+    <string name="auto_hide_dots_summary">ページインジケーターの点を自動的に隠す</string>
     <!-- Background blur -->
     <string name="background_blur_title">背景のぼかし度合い</string>
     <string name="background_blur_summary">アプリ履歴とアプリドロワーのぼかし度合いを設定する</string>
     <!-- AppInfo -->
-    <string name="app_info_title">Application info</string>
+    <string name="app_info_title">アプリ情報</string>
     <string name="app_info_source">ソース</string>
     <string name="app_info_source_system">システム</string>
     <string name="app_info_last_update">最終更新</string>
@@ -359,62 +359,62 @@
     <string name="icon_pack_add">その他をインストール</string>
     <string name="icon_pack_no_market">利用可能なアプリストアがありません</string>
     <!-- Wallpaper carousel -->
-    <string name="wallpaper_carousel_title">Wallpaper carousel</string>
-    <string name="wallpaper_carousel_summary">Quickly switch wallpapers from the long-press menu</string>
-    <string name="wallpaper_carousel_lockscreen_title">Apply to lock screen</string>
-    <string name="wallpaper_carousel_lockscreen_summary">Set the same wallpaper on the lock screen</string>
+    <string name="wallpaper_carousel_title">壁紙カルーセル</string>
+    <string name="wallpaper_carousel_summary">長押しのメニューから壁紙を素早く切り替える</string>
+    <string name="wallpaper_carousel_lockscreen_title">ロック画面にも適用</string>
+    <string name="wallpaper_carousel_lockscreen_summary">ロック画面にも同じ壁紙を適用します</string>
     <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pebble</string>
-    <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Teardrop</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="pebble_shape_title">小石</string>
+    <string name="vessel_shape_title">容器</string>
+    <string name="pure_square_shape_title">正方形</string>
+    <string name="squircle_shape_title">角丸四角形</string>
+    <string name="tapered_rect_shape_title">先が細い長方形</string>
+    <string name="teardrop_shape_title">涙</string>
+    <string name="rounded_rect_shape_title">角丸長方形</string>
     <string name="cloudy_shape_title">曇り</string>
-    <string name="cylindrical_shape_title">Cylindrical</string>
-    <string name="flower_shape_title">Flower</string>
-    <string name="heart_shape_title">Heart</string>
-    <string name="hexagon_shape_title">Hexagon</string>
-    <string name="rounded_hexagon_shape_title">Rounded hexagon</string>
-    <string name="ios_style_shape_title">iOS Style</string>
-    <string name="leaf_shape_title">Leaf</string>
-    <string name="meow_shape_title">Meow</string>
-    <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="stretched_shape_title">Stretched</string>
+    <string name="cylindrical_shape_title">円筒</string>
+    <string name="flower_shape_title">花</string>
+    <string name="heart_shape_title">ハート</string>
+    <string name="hexagon_shape_title">六角形</string>
+    <string name="rounded_hexagon_shape_title">角丸六角形</string>
+    <string name="ios_style_shape_title">iOS のスタイル</string>
+    <string name="leaf_shape_title">葉っぱ</string>
+    <string name="meow_shape_title">ニャー🐈</string>
+    <string name="samsung_style_shape_title">Samsungのスタイル</string>
+    <string name="stretched_shape_title">ストレッチ</string>
     <!-- Dark app drawer text -->
-    <string name="all_apps_dark_text_title">Dark app labels</string>
-    <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
+    <string name="all_apps_dark_text_title">暗いアプリラベル</string>
+    <string name="all_apps_dark_text_summary">アプリドロワーのアプリラベルには常に暗いテキストを使用します</string>
     <!-- App drawer styles -->
-    <string name="drawer_style_title">App drawer style</string>
-    <string name="drawer_style_normal">Normal (bottom sheet)</string>
-    <string name="drawer_style_legacy">Legacy fullscreen</string>
-    <string name="drawer_style_list">List style</string>
-    <string name="drawer_style_oneui">OneUI style (paged)</string>
+    <string name="drawer_style_title">アプリドロワーのスタイル</string>
+    <string name="drawer_style_normal">標準 (下部シート)</string>
+    <string name="drawer_style_legacy">従来の全画面</string>
+    <string name="drawer_style_list">リスト</string>
+    <string name="drawer_style_oneui">OneUIスタイル（ページに分ける）</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
-    <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
-    <string name="app_drawer_sort_install_date">Sort by install date</string>
-    <string name="app_drawer_sort_usage">Sort by usage</string>
+    <string name="app_drawer_sort_mode_title">アプリドロワーの並び替え</string>
+    <string name="app_drawer_sort_alphabetical">アルファベット順に並べ替え</string>
+    <string name="app_drawer_sort_install_date">インストール日付順</string>
+    <string name="app_drawer_sort_usage">使用頻度順</string>
     <!-- App drawer color -->
-    <string name="pref_app_drawer_custom_color_title">Custom background color</string>
-    <string name="pref_app_drawer_custom_color_summary">Use a custom color for the app drawer background</string>
-    <string name="pref_app_drawer_custom_color_light_title">Light mode color</string>
-    <string name="pref_app_drawer_custom_color_dark_title">Dark mode color</string>
+    <string name="pref_app_drawer_custom_color_title">カスタム背景色</string>
+    <string name="pref_app_drawer_custom_color_summary">アプリドロワーの背景にカスタム色を使用する</string>
+    <string name="pref_app_drawer_custom_color_light_title">ライトモードの色</string>
+    <string name="pref_app_drawer_custom_color_dark_title">ダークモードの色</string>
     <!-- Color Picker -->
     <string name="color_picker_hsb">HSB</string>
     <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Hue</string>
-    <string name="color_picker_saturation">Saturation</string>
-    <string name="color_picker_brightness">Brightness</string>
-    <string name="color_picker_red">Red</string>
-    <string name="color_picker_green">Green</string>
-    <string name="color_picker_blue">Blue</string>
+    <string name="color_picker_hue">色相</string>
+    <string name="color_picker_saturation">彩度</string>
+    <string name="color_picker_brightness">明るさ</string>
+    <string name="color_picker_red">赤</string>
+    <string name="color_picker_green">緑</string>
+    <string name="color_picker_blue">青</string>
     <string name="color_picker_hex">HEX</string>
     <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
-    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
-    <string name="qsb_outer_opacity_title">Outer layer opacity</string>
+    <string name="dock_search_pixel_style_title">Pixelスタイルの検索バー</string>
+    <string name="dock_search_pixel_style_summary">レイヤー背景付きの刷新された検索バーを使用</string>
+    <string name="qsb_outer_opacity_title">外側のレイヤーの透明度</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">非表示 &amp; 保護アプリ</string>
     <string name="trust_apps_auth_manager">ロック解除して非表示と保護されたアプリを管理する</string>
@@ -425,31 +425,31 @@
     <string name="trust_apps_info_hidden">非表示アプリとそのウィジェットはドロワー内で非表示になります</string>
     <string name="trust_apps_info_protected">保護されているアプリを開くには認証が必要です</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_title">レイアウトスタイル</string>
     <string name="recents_style_default">デフォルト</string>
-    <string name="recents_style_stock">Scale effect</string>
-    <string name="recents_style_staple">Kami style</string>
-    <string name="recents_style_ios">iOS style</string>
-    <string name="recents_style_oxygen">OxygenOS style</string>
+    <string name="recents_style_stock">スケール効果</string>
+    <string name="recents_style_staple">カードスタイル</string>
+    <string name="recents_style_ios">iOSスタイル</string>
+    <string name="recents_style_oxygen">OxygenOSスタイル</string>
     <!-- Lock -->
-    <string name="action_lock">Lock/Unlock app</string>
-    <string name="unlock_app">Unlocked app in recents</string>
-    <string name="lock_app">Locked app in recents</string>
+    <string name="action_lock">アプリをロック/ロック解除</string>
+    <string name="unlock_app">アプリ履歴でロック解除されたアプリ</string>
+    <string name="lock_app">アプリ履歴でロック解除されたアプリ</string>
     <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">Scroll vibration</string>
+    <string name="recents_scroll_vibrate_title">着信時に振動する</string>
     <!-- Rename app shortcut -->
-    <string name="rename_app_label">Rename</string>
-    <string name="rename_app_title">Enter app name</string>
-    <string name="app_renamed_successfully">App renamed</string>
-    <string name="rename_app_empty_error">App name cannot be empty</string>
-    <string name="rename_app_length_error">App name must be %1$d characters or less</string>
-    <string name="rename_app_reset">Reset</string>
-    <string name="rename_app_reset_message">Name reset to original</string>
+    <string name="rename_app_label">名前を変更</string>
+    <string name="rename_app_title">アプリ名を入力</string>
+    <string name="app_renamed_successfully">アプリの名前を変更しました</string>
+    <string name="rename_app_empty_error">アプリ名は空にできません</string>
+    <string name="rename_app_length_error">アプリ名は %1$d 文字以下でなければなりません</string>
+    <string name="rename_app_reset">リセット</string>
+    <string name="rename_app_reset_message">名前をリセットしました</string>
     <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">App launch blur</string>
-    <string name="pref_app_launch_blur_summary">Show blur effect when launching apps</string>
+    <string name="pref_app_launch_blur_title">アプリ起動時のぼかし</string>
+    <string name="pref_app_launch_blur_summary">アプリ起動時にぼかし効果を表示する</string>
     <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Custom icon</string>
-    <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
-    <string name="icon_picker_search_hint">Search icons</string>
+    <string name="app_info_custom_icon_title">カスタム アイコン</string>
+    <string name="app_info_custom_icon_summary">任意のアイコンパックからアイコンを選択</string>
+    <string name="icon_picker_search_hint">アイコンを検索</string>
 </resources>
