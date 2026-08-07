@@ -53,7 +53,7 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">メインホーム画面から左にスワイプして表示</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Use icon customizations in drawer</string>
+    <string name="pref_icon_customization_title">ドロワーでカスタマイズされたアイコンの使用</string>
     <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
     <!-- Pause apps shortcut -->
     <string name="pause">一時停止</string>
