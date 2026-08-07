@@ -437,4 +437,19 @@
     <string name="lock_app">Aplikasi terkunci di daftar aplikasi terbaru</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Getaran gulir</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Ubah nama</string>
+    <string name="rename_app_title">Masukkan nama aplikasi</string>
+    <string name="app_renamed_successfully">Aplikasi berganti nama</string>
+    <string name="rename_app_empty_error">Nama aplikasi tidak boleh kosong</string>
+    <string name="rename_app_length_error">Nama aplikasi harus terdiri dari %1$d karakter atau kurang</string>
+    <string name="rename_app_reset">Atur ulang</string>
+    <string name="rename_app_reset_message">Nama diatur ulang ke nama asli</string>
+    <!-- App launch blur -->
+    <string name="pref_app_launch_blur_title">Buram ketika membuka aplikasi</string>
+    <string name="pref_app_launch_blur_summary">Tampilkan efek buram ketika membuka aplikasi</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Sesuaikan ikon</string>
+    <string name="app_info_custom_icon_summary">Pilih simbol apa saja dari paket simbol mana saja</string>
+    <string name="icon_picker_search_hint">Cari simbol</string>
 </resources>

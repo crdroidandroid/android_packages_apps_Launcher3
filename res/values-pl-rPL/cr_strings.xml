@@ -437,4 +437,19 @@
     <string name="lock_app">Zablokowana aplikacja w ostatnich aplikacjach</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Wibracje przewijania</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Zmień nazwę</string>
+    <string name="rename_app_title">Wprowadź nazwę aplikacji</string>
+    <string name="app_renamed_successfully">Zmieniono nazwę aplikacji</string>
+    <string name="rename_app_empty_error">Nazwa aplikacji nie może być pusta</string>
+    <string name="rename_app_length_error">Nazwa aplikacji musi mieć maksymalnie %1$d znaków</string>
+    <string name="rename_app_reset">Zresetuj</string>
+    <string name="rename_app_reset_message">Nazwa została przywrócona do domyślnej</string>
+    <!-- App launch blur -->
+    <string name="pref_app_launch_blur_title">Rozmycie aplikacji</string>
+    <string name="pref_app_launch_blur_summary">Pokazuj efekt rozmycia podczas uruchamiania aplikacji</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Własna ikona</string>
+    <string name="app_info_custom_icon_summary">Wybierz dowolną ikonę z dowolnej paczki ikon</string>
+    <string name="icon_picker_search_hint">Szukaj ikon</string>
 </resources>

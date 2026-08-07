@@ -437,4 +437,19 @@
     <string name="lock_app">Zárolt alkalmazások az előzményekben</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Rezgés görgetéskor</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Átnevezés</string>
+    <string name="rename_app_title">Írja be az alkalmazás nevét</string>
+    <string name="app_renamed_successfully">Az alkalmazás átnevezve</string>
+    <string name="rename_app_empty_error">Ez a mező nem lehet üres</string>
+    <string name="rename_app_length_error">Az alkalmazás neve legfeljebb %1$d karakter lehet</string>
+    <string name="rename_app_reset">Visszaállítás</string>
+    <string name="rename_app_reset_message">Visszaállítva az eredetire</string>
+    <!-- App launch blur -->
+    <string name="pref_app_launch_blur_title">A megnyíló alkalmazás homályossága</string>
+    <string name="pref_app_launch_blur_summary">Elmosó effektus alkamazás megnyitásakor</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Egyéni ikon</string>
+    <string name="app_info_custom_icon_summary">Bármelyik ikoncsomagból kijelölhet egy ikont</string>
+    <string name="icon_picker_search_hint">Ikonok keresése</string>
 </resources>
