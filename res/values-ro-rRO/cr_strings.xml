@@ -376,7 +376,7 @@
     <string name="flower_shape_title">Floare</string>
     <string name="heart_shape_title">Inimă</string>
     <string name="hexagon_shape_title">Hexagon</string>
-    <string name="rounded_hexagon_shape_title">Rounded hexagon</string>
+    <string name="rounded_hexagon_shape_title">Hexagon rotunjit</string>
     <string name="ios_style_shape_title">Stil iOS</string>
     <string name="leaf_shape_title">Frunză</string>
     <string name="meow_shape_title">Miau</string>
@@ -414,7 +414,7 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Bară de căutare stiluri Pixel</string>
     <string name="dock_search_pixel_style_summary">Bara de căutare redimensionată cu fundal strat</string>
-    <string name="qsb_outer_opacity_title">Outer layer opacity</string>
+    <string name="qsb_outer_opacity_title">Opacitatea stratului exterior</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Aplicații ascunse &amp; protejate</string>
     <string name="trust_apps_auth_manager">Deblochează pentru a gestiona aplicațiile ascunse și protejate</string>
@@ -425,31 +425,31 @@
     <string name="trust_apps_info_hidden">Aplicațiile ascunse și widget-urile lor sunt ascunse din sertar</string>
     <string name="trust_apps_info_protected">Aplicațiile protejate necesită autentificare pentru a fi deschise din launcher</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_title">Stil aspect recente</string>
     <string name="recents_style_default">Prestabilit</string>
-    <string name="recents_style_stock">Scale effect</string>
-    <string name="recents_style_staple">Kami style</string>
-    <string name="recents_style_ios">iOS style</string>
-    <string name="recents_style_oxygen">OxygenOS style</string>
+    <string name="recents_style_stock">Efect scală</string>
+    <string name="recents_style_staple">Stil Kami</string>
+    <string name="recents_style_ios">Stil iOS</string>
+    <string name="recents_style_oxygen">Stil OxygenOS</string>
     <!-- Lock -->
-    <string name="action_lock">Lock/Unlock app</string>
-    <string name="unlock_app">Unlocked app in recents</string>
-    <string name="lock_app">Locked app in recents</string>
+    <string name="action_lock">Blochează/deblochează aplicația</string>
+    <string name="unlock_app">Deblocați aplicația în recente</string>
+    <string name="lock_app">Aplicație blocată în recente</string>
     <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">Scroll vibration</string>
+    <string name="recents_scroll_vibrate_title">Derulare vibrație</string>
     <!-- Rename app shortcut -->
-    <string name="rename_app_label">Rename</string>
-    <string name="rename_app_title">Enter app name</string>
-    <string name="app_renamed_successfully">App renamed</string>
-    <string name="rename_app_empty_error">App name cannot be empty</string>
-    <string name="rename_app_length_error">App name must be %1$d characters or less</string>
+    <string name="rename_app_label">Redenumire</string>
+    <string name="rename_app_title">Introduceți numele aplicației</string>
+    <string name="app_renamed_successfully">Aplicație redenumită</string>
+    <string name="rename_app_empty_error">Numele aplicației nu poate fi gol</string>
+    <string name="rename_app_length_error">Numele aplicației trebuie să aibă maxim %1$d caractere</string>
     <string name="rename_app_reset">Reset</string>
-    <string name="rename_app_reset_message">Name reset to original</string>
+    <string name="rename_app_reset_message">Resetare nume la originalul</string>
     <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">App launch blur</string>
-    <string name="pref_app_launch_blur_summary">Show blur effect when launching apps</string>
+    <string name="pref_app_launch_blur_title">Declanșare lansare aplicație</string>
+    <string name="pref_app_launch_blur_summary">Arată efectul de estompare la lansarea aplicațiilor</string>
     <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Custom icon</string>
-    <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
-    <string name="icon_picker_search_hint">Search icons</string>
+    <string name="app_info_custom_icon_title">Pictogramă personalizată</string>
+    <string name="app_info_custom_icon_summary">Alege orice pictogramă din orice pachet de pictograme</string>
+    <string name="icon_picker_search_hint">Caută pictograme</string>
 </resources>
