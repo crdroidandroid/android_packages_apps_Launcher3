@@ -88,11 +88,21 @@ constructor(
         folderIcon.setIconVisible(false)
 
         val dragLayer = activityContext.dragLayer
+
+        // Exclude other folders attached to the drag layer to protect against
+        // a possible RenderThread crash
+        val openFolders =
+            (0 until dragLayer.childCount)
+                .mapNotNull { dragLayer.getChildAt(it) as? Folder }
+        openFolders.forEach { it.visibility = View.INVISIBLE }
+
         val canvas =
             workspaceBlurRenderNode.beginRecording(dragLayer.getWidth(), dragLayer.getHeight())
         dragLayer.draw(canvas)
         workspaceBlurRenderNode.endRecording()
         workspaceBlurRenderNode.setPosition(0, 0, dragLayer.getWidth(), dragLayer.getHeight())
+
+        openFolders.forEach { it.visibility = View.VISIBLE; it.invalidate() }
 
         folderIcon.folderName.visibility = folderNameVisibility
         folderIcon.setIconVisible(isIconVisible)
