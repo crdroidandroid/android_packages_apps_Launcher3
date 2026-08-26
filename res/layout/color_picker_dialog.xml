@@ -17,6 +17,38 @@
             android:layout_gravity="center"
             android:layout_marginBottom="16dp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/color_picker_default"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/color_picker_default" />
+
+            <Button
+                android:id="@+id/color_picker_surface"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/color_picker_surface" />
+
+            <Button
+                android:id="@+id/color_picker_accent"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/color_picker_accent" />
+        </LinearLayout>
+
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/color_picker_tabs"
             android:layout_width="match_parent"

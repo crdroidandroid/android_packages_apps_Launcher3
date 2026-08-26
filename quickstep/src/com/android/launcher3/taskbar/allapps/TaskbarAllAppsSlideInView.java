@@ -49,6 +49,7 @@ import com.android.launcher3.Flags;
 import com.android.launcher3.Insettable;
 import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
+import com.android.launcher3.allapps.AppDrawerStyle;
 import com.android.launcher3.anim.AnimatorListeners;
 import com.android.launcher3.anim.PendingAnimation;
 import com.android.launcher3.taskbar.allapps.TaskbarAllAppsViewController.TaskbarAllAppsCallbacks;
@@ -278,7 +279,7 @@ public class TaskbarAllAppsSlideInView extends AbstractSlideInView<TaskbarOverla
         int scrimColor;
         if (!mActivityContext.getDeviceProfile().shouldShowAllAppsOnSheet(mActivityContext)) {
             // Always use an opaque scrim if there's no sheet.
-            scrimColor = context.getResources().getColor(R.color.materialColorSurfaceDim);
+            scrimColor = AppDrawerStyle.getThemedBackgroundColor(context);
         } else if (!Flags.allAppsBlur()) {
             // If there's a sheet but no blur, use the old scrim color.
             scrimColor = context.getResources().getColor(R.color.widgets_picker_scrim);

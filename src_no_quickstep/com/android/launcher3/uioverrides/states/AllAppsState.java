@@ -27,6 +27,7 @@ import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.LauncherState;
 import com.android.launcher3.LauncherUiState;
 import com.android.launcher3.R;
+import com.android.launcher3.allapps.AppDrawerStyle;
 import com.android.launcher3.util.Themes;
 import com.android.launcher3.views.ActivityContext;
 import com.android.launcher3.views.ScrimColors;
@@ -110,9 +111,7 @@ public class AllAppsState extends LauncherState {
     public ScrimColors getWorkspaceScrimColor(Launcher launcher) {
         int color;
         if (LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_ENABLED.get(launcher)) {
-            color = com.android.launcher3.Utilities.isDarkTheme(launcher)
-                    ? LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_DARK.get(launcher)
-                    : LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_LIGHT.get(launcher);
+            color = AppDrawerStyle.getBackgroundColor(launcher);
         } else {
             color = launcher.getDeviceProfile().getDeviceProperties().isTablet()
                     ? launcher.getResources().getColor(R.color.widgets_picker_scrim)

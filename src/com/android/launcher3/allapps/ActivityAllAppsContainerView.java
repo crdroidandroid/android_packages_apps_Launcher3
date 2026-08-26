@@ -191,7 +191,6 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     private float[] mBottomSheetCornerRadii;
     private ScrimView mScrimView;
     private int mHeaderColor;
-    private int mBottomSheetBackgroundColorBlurFallback;
     private int mBottomSheetBackgroundColorOverBlur;
     private int mBottomSheetBackgroundColorLegacy;
     private int mTabsProtectionAlpha;
@@ -342,12 +341,9 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
             int layerFg = getContext().getColor(R.color.blur_shade_panel_fg);
             int layerBg = getContext().getColor(R.color.blur_shade_panel_bg);
             mBottomSheetBackgroundColorOverBlur = ColorUtils.compositeColors(layerFg, layerBg);
-            mBottomSheetBackgroundColorBlurFallback = getContext().getColor(
-                    Utilities.isDarkTheme(getContext()) ? android.R.color.system_accent2_800
-                            : android.R.color.system_accent2_200);
         }
 
-        mBottomSheetBackgroundColorLegacy = getContext().getColor(R.color.materialColorSurfaceDim);
+        mBottomSheetBackgroundColorLegacy = AppDrawerStyle.getThemedBackgroundColor(getContext());
 
         updateBackgroundVisibility(mActivityContext.getDeviceProfile());
         mSearchUiManager.initializeSearch(this);
@@ -987,9 +983,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     private int getScrimColor() {
         int color;
         if (LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_ENABLED.get(mContext)) {
-            color = Utilities.isDarkTheme(mContext)
-                    ? LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_DARK.get(mContext)
-                    : LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_LIGHT.get(mContext);
+            color = AppDrawerStyle.getBackgroundColor(mContext);
         } else {
             color = AppDrawerStyle.getThemedBackgroundColor(mContext);
         }
@@ -1000,22 +994,26 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
 
     int getBottomSheetBackgroundColor() {
         int bgColor;
+        boolean preserveSurfaceAlpha = false;
         if (LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_ENABLED.get(mContext)) {
-            bgColor = Utilities.isDarkTheme(mContext)
-                    ? LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_DARK.get(mContext)
-                    : LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_LIGHT.get(mContext);
+            bgColor = AppDrawerStyle.getBackgroundColor(mContext);
         } else {
             if (!Flags.allAppsBlur()) {
                 bgColor = mBottomSheetBackgroundColorLegacy;
             } else if (!mActivityContext.isAllAppsBackgroundBlurEnabled()) {
                 // Don't apply any alpha if the blur is disabled.
-                bgColor = mBottomSheetBackgroundColorBlurFallback;
+                bgColor = AppDrawerStyle.getThemedBackgroundColor(mContext);
             } else {
                 bgColor = mBottomSheetBackgroundColorOverBlur;
+                preserveSurfaceAlpha = true;
             }
         }
+        int opacity = LauncherPrefs.APP_DRAWER_OPACITY.get(mContext);
+        int alpha = preserveSurfaceAlpha
+                ? Math.round(Color.alpha(bgColor) * opacity / 100f)
+                : opacity * 255 / 100;
         return ColorUtils.setAlphaComponent(
-                bgColor, LauncherPrefs.APP_DRAWER_OPACITY.get(mContext) * 255 / 100);
+                bgColor, alpha);
     }
 
     boolean isBackgroundBlurEnabled() {
