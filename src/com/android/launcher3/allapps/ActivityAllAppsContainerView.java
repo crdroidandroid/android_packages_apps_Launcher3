@@ -991,7 +991,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
                     ? LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_DARK.get(mContext)
                     : LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_LIGHT.get(mContext);
         } else {
-            color = Themes.getAttrColor(mContext, R.attr.allAppsScrimColor);
+            color = AppDrawerStyle.getThemedBackgroundColor(mContext);
         }
         return ColorUtils.setAlphaComponent(
                 color,

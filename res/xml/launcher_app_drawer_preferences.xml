@@ -46,7 +46,7 @@
         android:max="100"
         android:min="0"
         settings:units="%"
-        android:defaultValue="60" />
+        android:defaultValue="90" />
 
     <SwitchPreferenceCompat
         android:key="pref_app_drawer_custom_color_enabled"

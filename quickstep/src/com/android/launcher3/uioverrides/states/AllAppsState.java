@@ -32,7 +32,6 @@ import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.LauncherState;
 import com.android.launcher3.LauncherUiState;
 import com.android.launcher3.R;
-import com.android.launcher3.util.Themes;
 import com.android.launcher3.allapps.AppDrawerStyle;
 import com.android.launcher3.views.ActivityContext;
 import com.android.launcher3.views.ScrimColors;
@@ -219,13 +218,12 @@ public class AllAppsState extends LauncherState {
                     ? LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_DARK.get(launcher)
                     : LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_LIGHT.get(launcher);
         } else if (!launcher.getDeviceProfile().shouldShowAllAppsOnSheet(launcher)) {
-            // Always use an opaque scrim if there's no sheet.
-            backgroundColor = launcher.getResources().getColor(R.color.materialColorSurfaceDim);
+            backgroundColor = AppDrawerStyle.getThemedBackgroundColor(launcher);
         } else if (!Flags.allAppsBlur()) {
             // If there's a sheet but no blur, use the old scrim color.
             backgroundColor = launcher.getResources().getColor(R.color.widgets_picker_scrim);
         } else {
-            backgroundColor = Themes.getAttrColor(launcher, R.attr.allAppsScrimColor);
+            backgroundColor = AppDrawerStyle.getThemedBackgroundColor(launcher);
         }
         scrimColor = ColorUtils.setAlphaComponent(
                 backgroundColor, LauncherPrefs.APP_DRAWER_OPACITY.get(launcher) * 255 / 100);

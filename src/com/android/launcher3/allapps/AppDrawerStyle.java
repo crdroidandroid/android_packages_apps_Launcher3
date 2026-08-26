@@ -19,6 +19,8 @@ package com.android.launcher3.allapps;
 import android.content.Context;
 
 import com.android.launcher3.LauncherPrefs;
+import com.android.launcher3.R;
+import com.android.launcher3.util.Themes;
 
 public final class AppDrawerStyle {
 
@@ -59,5 +61,18 @@ public final class AppDrawerStyle {
 
     public static boolean isFullscreen(Context context) {
         return isFullscreen(get(context));
+    }
+
+    /**
+     * Returns the themed surface used behind all apps.
+     *
+     * <p>Fullscreen drawers are large containers, so use the low-emphasis Material surface
+     * instead of {@code surfaceDim}. The latter intentionally darkens the entire screen in light
+     * mode and becomes muddy after the user-selected transparency is applied over the wallpaper.
+     */
+    public static int getThemedBackgroundColor(Context context) {
+        return isFullscreen(context)
+                ? context.getColor(R.color.materialColorSurfaceContainerLow)
+                : Themes.getAttrColor(context, R.attr.allAppsScrimColor);
     }
 }
