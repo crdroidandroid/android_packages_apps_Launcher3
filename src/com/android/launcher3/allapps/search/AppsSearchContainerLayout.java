@@ -23,8 +23,9 @@ import static com.android.launcher3.Utilities.prefixTextWithIcon;
 import static com.android.launcher3.icons.IconNormalizer.ICON_VISIBLE_AREA_FACTOR;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.PaintDrawable;
@@ -36,6 +37,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup.MarginLayoutParams;
 
+import androidx.core.graphics.ColorUtils;
+
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.ExtendedEditText;
 import com.android.launcher3.Insettable;
@@ -43,13 +46,13 @@ import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.allapps.ActivityAllAppsContainerView;
+import com.android.launcher3.allapps.AppDrawerStyle;
 import com.android.launcher3.allapps.AllAppsStore;
 import com.android.launcher3.allapps.BaseAllAppsAdapter.AdapterItem;
 import com.android.launcher3.allapps.PrivateProfileManager;
 import com.android.launcher3.allapps.SearchUiManager;
 import com.android.launcher3.search.SearchCallback;
 import com.android.launcher3.util.ApiWrapper;
-import com.android.launcher3.util.Themes;
 import com.android.launcher3.views.ActivityContext;
 
 import java.util.ArrayList;
@@ -167,13 +170,21 @@ public class AppsSearchContainerLayout extends ExtendedEditText
     private void setUpBackground() {
         Context context = getContext();
         float cornerRadius = getCornerRadius(context);
-        int color = Themes.getAttrColor(context, R.attr.qsbFillColor);
-        if (LauncherPrefs.DOCK_THEME.get(context))
-            color = Themes.getAttrColor(context, R.attr.qsbFillColorThemed);
+        int color = AppDrawerStyle.getSearchBackgroundColor(context);
+        int contentColor = AppDrawerStyle.getSearchContentColor(context);
         PaintDrawable pd = new PaintDrawable(color);
         pd.setCornerRadius(cornerRadius);
         setClipToOutline(cornerRadius > 0);
         setBackground(pd);
+        setTextColor(contentColor);
+        setHintTextColor(ColorUtils.setAlphaComponent(contentColor, 179));
+        if (!Utilities.showQSB(context) || LauncherPrefs.DOCK_THEME.get(context)) {
+            for (Drawable drawable : getCompoundDrawablesRelative()) {
+                if (drawable != null) {
+                    drawable.setTintList(ColorStateList.valueOf(contentColor));
+                }
+            }
+        }
     }
 
     private float getCornerRadius(Context context) {

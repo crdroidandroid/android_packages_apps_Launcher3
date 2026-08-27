@@ -25,6 +25,7 @@ import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
@@ -32,12 +33,14 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
 import com.android.launcher3.R;
+import com.android.launcher3.util.Themes;
 import com.google.android.material.slider.Slider;
 import com.google.android.material.tabs.TabLayout;
 
 public class ColorPreference extends Preference {
 
     private int mColor = Color.WHITE;
+    private int mDefaultColor = Color.WHITE;
     private View mPreviewView;
 
     public ColorPreference(Context context, AttributeSet attrs) {
@@ -106,6 +109,9 @@ public class ColorPreference extends Preference {
         final Slider sliderBlue = root.findViewById(R.id.slider_blue);
 
         final EditText editHex = root.findViewById(R.id.edit_hex);
+        final Button defaultButton = root.findViewById(R.id.color_picker_default);
+        final Button surfaceButton = root.findViewById(R.id.color_picker_surface);
+        final Button accentButton = root.findViewById(R.id.color_picker_accent);
 
         final int[] currentColor = {mColor};
         final float[] hsv = new float[3];
@@ -123,6 +129,16 @@ public class ColorPreference extends Preference {
             sliderGreen.setValue(Color.green(currentColor[0]));
             sliderBlue.setValue(Color.blue(currentColor[0]));
         };
+
+        java.util.function.IntConsumer applyPreset = color -> {
+            currentColor[0] = Color.rgb(Color.red(color), Color.green(color), Color.blue(color));
+            Color.colorToHSV(currentColor[0], hsv);
+            updateUI.run();
+        };
+        defaultButton.setOnClickListener(view -> applyPreset.accept(mDefaultColor));
+        surfaceButton.setOnClickListener(view -> applyPreset.accept(
+                context.getColor(R.color.materialColorSurfaceContainerLow)));
+        accentButton.setOnClickListener(view -> applyPreset.accept(Themes.getColorAccent(context)));
 
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -211,7 +227,8 @@ public class ColorPreference extends Preference {
             .setTitle(getTitle())
             .setView(root)
             .setPositiveButton(android.R.string.ok, (dialog, which) -> {
-                mColor = currentColor[0];
+                mColor = Color.rgb(Color.red(currentColor[0]), Color.green(currentColor[0]),
+                        Color.blue(currentColor[0]));
                 persistInt(mColor);
                 updatePreview(mPreviewView, mColor);
             })
@@ -226,6 +243,7 @@ public class ColorPreference extends Preference {
 
     @Override
     protected void onSetInitialValue(Object defaultValue) {
-        mColor = getPersistedInt(defaultValue instanceof Integer ? (Integer) defaultValue : Color.WHITE);
+        mDefaultColor = defaultValue instanceof Integer ? (Integer) defaultValue : Color.WHITE;
+        mColor = getPersistedInt(mDefaultColor);
     }
 }
