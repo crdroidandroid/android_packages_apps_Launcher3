@@ -18,6 +18,8 @@
 
     <!-- Appseat -->
     <color name="appseat_color">@*android:color/system_neutral2_50</color>
+    <color name="appseat_color_light_wallpaper">@*android:color/system_neutral2_50</color>
+    <color name="appseat_color_dark_wallpaper">@*android:color/system_neutral2_900</color>
 
     <!-- Wallpaper carousel -->
     <color name="accent_primary_device_default">#ffd3e3fd</color>
