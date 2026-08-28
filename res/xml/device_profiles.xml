@@ -34,6 +34,7 @@
         <display-option
             launcher:allAppsBorderSpace="16"
             launcher:allAppsCellHeight="104"
+            launcher:allAppsCellWidth="80"
             launcher:allAppsIconSize="66"
             launcher:allAppsIconTextSize="14"
             launcher:borderSpace="16"
@@ -67,6 +68,7 @@
         <display-option
             launcher:allAppsBorderSpace="16"
             launcher:allAppsCellHeight="104"
+            launcher:allAppsCellWidth="80"
             launcher:allAppsIconSize="66"
             launcher:allAppsIconTextSize="14"
             launcher:borderSpace="16"
@@ -100,6 +102,8 @@
         <display-option
             launcher:allAppsBorderSpace="16"
             launcher:allAppsCellHeight="104"
+            launcher:allAppsCellWidth="80"
+            launcher:allAppsIconSize="60"
             launcher:startAlignTaskbar="true"
             launcher:startAlignTaskbarLandscape="true"
             launcher:borderSpace="16"
@@ -134,6 +138,8 @@
         <display-option
             launcher:allAppsBorderSpace="16"
             launcher:allAppsCellHeight="104"
+            launcher:allAppsCellWidth="80"
+            launcher:allAppsIconSize="60"
             launcher:startAlignTaskbar="true"
             launcher:startAlignTaskbarLandscape="true"
             launcher:borderSpace="16"
@@ -170,6 +176,8 @@
         <display-option
             launcher:allAppsBorderSpace="16"
             launcher:allAppsCellHeight="104"
+            launcher:allAppsCellWidth="80"
+            launcher:allAppsIconSize="60"
             launcher:startAlignTaskbar="true"
             launcher:startAlignTaskbarLandscape="true"
             launcher:borderSpace="16"
@@ -204,6 +212,8 @@
         <display-option
             launcher:allAppsBorderSpace="16.0"
             launcher:allAppsCellHeight="104.0"
+            launcher:allAppsCellWidth="80"
+            launcher:allAppsIconSize="60"
             launcher:startAlignTaskbar="true"
             launcher:startAlignTaskbarLandscape="true"
             launcher:borderSpace="16.0"
@@ -237,6 +247,8 @@
         <display-option
             launcher:allAppsBorderSpace="16.0"
             launcher:allAppsCellHeight="104.0"
+            launcher:allAppsCellWidth="80"
+            launcher:allAppsIconSize="60"
             launcher:startAlignTaskbar="true"
             launcher:startAlignTaskbarLandscape="true"
             launcher:borderSpace="16.0"
@@ -269,6 +281,8 @@
         <display-option
             launcher:allAppsBorderSpace="16.0"
             launcher:allAppsCellHeight="104.0"
+            launcher:allAppsCellWidth="80"
+            launcher:allAppsIconSize="60"
             launcher:startAlignTaskbar="true"
             launcher:startAlignTaskbarLandscape="true"
             launcher:borderSpace="16.0"
@@ -581,6 +595,8 @@
         <display-option
             launcher:allAppsBorderSpace="16.0"
             launcher:allAppsCellHeight="104.0"
+            launcher:allAppsCellWidth="80"
+            launcher:allAppsIconSize="60"
             launcher:startAlignTaskbar="true"
             launcher:startAlignTaskbarLandscape="true"
             launcher:borderSpace="16.0"
