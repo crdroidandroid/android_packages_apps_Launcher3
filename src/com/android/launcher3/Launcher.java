@@ -1327,7 +1327,10 @@ public class Launcher extends StatefulActivity<LauncherState>
                     ? R.color.appseat_color_light_wallpaper
                     : R.color.appseat_color_dark_wallpaper;
             hotseatBackground.setColor(getColor(hotseatColor));
-            hotseatBackground.setAlpha(LauncherPrefs.HOTSEAT_OPACITY.get(this) * 255 / 100);
+            int hotseatOpacity = Utilities.isDarkTheme(this)
+                    ? LauncherPrefs.HOTSEAT_OPACITY.get(this)
+                    : LauncherPrefs.HOTSEAT_OPACITY_LIGHT.get(this);
+            hotseatBackground.setAlpha(hotseatOpacity * 255 / 100);
             mHotseat.setBackground(hotseatBackground);
         }
 
