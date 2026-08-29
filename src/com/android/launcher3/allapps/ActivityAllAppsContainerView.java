@@ -191,8 +191,6 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     private float[] mBottomSheetCornerRadii;
     private ScrimView mScrimView;
     private int mHeaderColor;
-    private int mBottomSheetBackgroundColorOverBlur;
-    private int mBottomSheetBackgroundColorLegacy;
     private int mTabsProtectionAlpha;
     @Nullable private AllAppsTransitionController mAllAppsTransitionController;
 
@@ -336,14 +334,6 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
                 0,
                 0 // Bottom left
         };
-
-        if (Flags.allAppsBlur()) {
-            int layerFg = getContext().getColor(R.color.blur_shade_panel_fg);
-            int layerBg = getContext().getColor(R.color.blur_shade_panel_bg);
-            mBottomSheetBackgroundColorOverBlur = ColorUtils.compositeColors(layerFg, layerBg);
-        }
-
-        mBottomSheetBackgroundColorLegacy = AppDrawerStyle.getThemedBackgroundColor(getContext());
 
         updateBackgroundVisibility(mActivityContext.getDeviceProfile());
         mSearchUiManager.initializeSearch(this);
@@ -993,27 +983,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     }
 
     int getBottomSheetBackgroundColor() {
-        int bgColor;
-        boolean preserveSurfaceAlpha = false;
-        if (LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_ENABLED.get(mContext)) {
-            bgColor = AppDrawerStyle.getBackgroundColor(mContext);
-        } else {
-            if (!Flags.allAppsBlur()) {
-                bgColor = mBottomSheetBackgroundColorLegacy;
-            } else if (!mActivityContext.isAllAppsBackgroundBlurEnabled()) {
-                // Don't apply any alpha if the blur is disabled.
-                bgColor = AppDrawerStyle.getThemedBackgroundColor(mContext);
-            } else {
-                bgColor = mBottomSheetBackgroundColorOverBlur;
-                preserveSurfaceAlpha = true;
-            }
-        }
-        int opacity = LauncherPrefs.APP_DRAWER_OPACITY.get(mContext);
-        int alpha = preserveSurfaceAlpha
-                ? Math.round(Color.alpha(bgColor) * opacity / 100f)
-                : opacity * 255 / 100;
-        return ColorUtils.setAlphaComponent(
-                bgColor, alpha);
+        return getScrimColor();
     }
 
     boolean isBackgroundBlurEnabled() {

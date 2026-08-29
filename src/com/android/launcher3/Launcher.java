@@ -126,6 +126,7 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -1320,8 +1321,17 @@ public class Launcher extends StatefulActivity<LauncherState>
                 mWorkspace.getCurrentPage() - 1));
 
         if (LauncherPrefs.SHOW_HOTSEAT_BG.get(this)) {
-            mHotseat.setBackgroundResource(R.drawable.bkg_appseat);
-            mHotseat.getBackground().setAlpha(LauncherPrefs.HOTSEAT_OPACITY.get(this) * 255 / 100);
+            GradientDrawable hotseatBackground =
+                    (GradientDrawable) getDrawable(R.drawable.bkg_appseat).mutate();
+            int hotseatColor = Themes.getAttrBoolean(this, R.attr.isWorkspaceDarkText)
+                    ? R.color.appseat_color_light_wallpaper
+                    : R.color.appseat_color_dark_wallpaper;
+            hotseatBackground.setColor(getColor(hotseatColor));
+            int hotseatOpacity = Utilities.isDarkTheme(this)
+                    ? LauncherPrefs.HOTSEAT_OPACITY.get(this)
+                    : LauncherPrefs.HOTSEAT_OPACITY_LIGHT.get(this);
+            hotseatBackground.setAlpha(hotseatOpacity * 255 / 100);
+            mHotseat.setBackground(hotseatBackground);
         }
 
         // Setup the drag layer
