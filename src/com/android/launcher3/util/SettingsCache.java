@@ -127,6 +127,13 @@ public class SettingsCache extends ContentObserver {
     private final Map<Uri, MutableListenableRef<Boolean>> mListenerMap = new ConcurrentHashMap<>();
     private final Map<Uri, MutableListenableRef<Integer>> mIntListenerMap =
             new ConcurrentHashMap<>();
+    /**
+     * Optional caller-supplied default values, keyed by Uri. When present for a key this overrides
+     * the {@code SETTINGS_ENABLED_BY_DEFAULT} 0/1 fallback in {@link #computeNewValue(Uri)}, so the
+     * no-arg getters, {@link #onChange} and any listeners all resolve the same default. Populated by
+     * the default-taking overloads of {@link #getIntValue} / {@link #getIntListenableRef}.
+     */
+    private final Map<Uri, Integer> mUriDefaultValues = new ConcurrentHashMap<>();
     private final Set<Uri> mUrisEnabledByDefault;
     protected final ContentResolver mResolver;
     private final Executor mLightweightBackgroundExecutor;
@@ -181,12 +188,30 @@ public class SettingsCache extends ContentObserver {
 
     /**
      * Returns the raw integer value for this key from the cache. If not in cache, will call
-     * {@link #computeNewValue(Uri)} to fetch. Missing keys fall back to their default value
-     * (1 for keys in {@code SETTINGS_ENABLED_BY_DEFAULT}, otherwise 0).
+     * {@link #computeNewValue(Uri)} to fetch. Missing keys fall back to their default value: a
+     * caller default registered via {@link #getIntValue(Uri, int)} if any, otherwise 1 for keys in
+     * {@code SETTINGS_ENABLED_BY_DEFAULT}, otherwise 0.
      */
     @AnyThread
     public int getIntValue(Uri keySetting) {
         return mKeyCache.computeIfAbsent(keySetting, this::computeNewValue);
+    }
+
+    /**
+     * Variant of {@link #getIntValue(Uri)} that lets the caller supply the fallback value used when
+     * the key is missing from the provider (e.g. a setting whose unset default is 2). The supplied
+     * default is remembered for this Uri, so the no-arg getters, the change observer and any
+     * listeners resolve the same default.
+     *
+     * <p>Note: the cached value is computed once, on the first read of the key. If the key is absent
+     * from the provider and two call sites pass different defaults, the first read wins for the
+     * cached value; keep a single canonical default per key. (Once the key exists in the provider
+     * the default is irrelevant, since {@code getInt} returns the stored value.)
+     */
+    @AnyThread
+    public int getIntValue(Uri keySetting, int defaultValue) {
+        mUriDefaultValues.put(keySetting, defaultValue);
+        return getIntValue(keySetting);
     }
 
     private void registerUriAsync(Uri uri) {
@@ -217,9 +242,22 @@ public class SettingsCache extends ContentObserver {
         return mIntListenerMap.computeIfAbsent(uri, mIntListenerMapper);
     }
 
+    /**
+     * Variant of {@link #getIntListenableRef(Uri)} that seeds the fallback value used when the key
+     * is missing from the provider. See {@link #getIntValue(Uri, int)} for how the default is
+     * applied and cached.
+     */
+    @AnyThread
+    public ListenableRef<Integer> getIntListenableRef(Uri uri, int defaultValue) {
+        mUriDefaultValues.put(uri, defaultValue);
+        return getIntListenableRef(uri);
+    }
+
     private int computeNewValue(Uri keyUri) {
         String key = keyUri.getLastPathSegment();
-        int defaultValue = mUrisEnabledByDefault.contains(keyUri) ? 1 : 0;
+        Integer registeredDefault = mUriDefaultValues.get(keyUri);
+        int defaultValue = registeredDefault != null ? registeredDefault
+                : (mUrisEnabledByDefault.contains(keyUri) ? 1 : 0);
         String uriString = keyUri.toString();
         int newVal;
         if (uriString.startsWith(SYSTEM_URI_PREFIX)) {
