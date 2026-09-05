@@ -63,6 +63,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 
 import com.android.internal.util.ToBooleanFunction;
+import com.android.internal.util.crdroid.Utils;
 import com.android.launcher3.ActivityInteractor;
 import com.android.launcher3.AsyncAnimatorPlaybackController;
 import com.android.launcher3.DeviceProfile;
@@ -386,9 +387,10 @@ public class TaskbarManagerImpl {
         cleanupTasks.addCloseable(getTaskbarUiThread(), navbarLayoutModeSafeCloseable);
 
         var forceNavbarSafeCloseable =
-                settingsCache.getListenableRef(FORCE_SHOW_NAVBAR_URI).forEach(
+                settingsCache.getIntListenableRef(FORCE_SHOW_NAVBAR_URI,
+                        Utils.hasNavbarByDefault(mBaseContext) ? 1 : 0).forEach(
                         getTaskbarUiThread(),
-                        v -> onTaskbarChanged(v, TaskbarActivityContext::isNavbarEnabled));
+                        v -> onTaskbarIntChanged(v, TaskbarActivityContext::isNavbarEnabled));
         cleanupTasks.addCloseable(getTaskbarUiThread(), forceNavbarSafeCloseable);
 
         var navbarLengthSafeCloseable =

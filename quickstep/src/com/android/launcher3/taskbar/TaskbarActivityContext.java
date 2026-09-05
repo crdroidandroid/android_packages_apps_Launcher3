@@ -101,6 +101,7 @@ import androidx.annotation.UiThread;
 import androidx.annotation.VisibleForTesting;
 
 import com.android.internal.jank.Cuj;
+import com.android.internal.util.crdroid.Utils;
 import com.android.launcher3.AbstractFloatingView;
 import com.android.launcher3.BubbleTextView;
 import com.android.launcher3.BubbleTextView.RunningAppState;
@@ -305,7 +306,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
     private final boolean mIsTaskbarEnabled;
     private final boolean mIsNavbarHintEnabled;
     private final int mNavbarLayoutMode;
-    private final boolean mIsNavbarEnabled;
+    private final int mIsNavbarEnabled;
     private final int mNavbarLengthMode;
     private final int mNavbarHeightMode;
 
@@ -374,7 +375,8 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
         mIsTaskbarEnabled = settingsCache.getValue(URI_ENABLE_TASKBAR);
         mIsNavbarHintEnabled = settingsCache.getValue(URI_NAVIGATION_BAR_HINT);
         mNavbarLayoutMode = settingsCache.getIntValue(URI_NAVBAR_LAYOUT_MODE);
-        mIsNavbarEnabled = settingsCache.getValue(URI_FORCE_SHOW_NAVBAR);
+        mIsNavbarEnabled = settingsCache.getIntValue(URI_FORCE_SHOW_NAVBAR,
+                                Utils.hasNavbarByDefault(mWindowContext) ? 1 : 0);
         mNavbarLengthMode = settingsCache.getIntValue(URI_NAVBAR_LENGTH_MODE, 1);
         mNavbarHeightMode = settingsCache.getIntValue(URI_NAVBAR_HEIGHT_MODE, 3);
         mImeDrawsImeNavBarEnabled = settingsCache.getValue(NAVBAR_IME_SPACE_URI);
@@ -2506,7 +2508,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
         return mIsNavbarHintEnabled;
     }
 
-    public boolean isNavbarEnabled() {
+    public int isNavbarEnabled() {
         return mIsNavbarEnabled;
     }
 
