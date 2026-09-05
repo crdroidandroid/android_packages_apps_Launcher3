@@ -132,7 +132,7 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s 可用 | %2$s 总计</string>
     <string name="recents_meminfo_title">内存信息</string>
-    <string name="recents_meminfo_zram_title">内存信息</string>
+    <string name="recents_meminfo_zram_title">ZRAM 信息</string>
     <!-- Recents icons -->
     <string name="recents_screenshot_title">屏幕截图</string>
     <string name="recents_clear_all_title">清除所有</string>
@@ -411,6 +411,9 @@
     <string name="color_picker_green">绿色</string>
     <string name="color_picker_blue">蓝色</string>
     <string name="color_picker_hex">HEX</string>
+    <string name="color_picker_default">默认</string>
+    <string name="color_picker_surface">表面</string>
+    <string name="color_picker_accent">强调色</string>
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Pixel样式搜索栏</string>
     <string name="dock_search_pixel_style_summary">焕新搜索栏，带分层背景</string>
