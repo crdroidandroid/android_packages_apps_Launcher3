@@ -303,7 +303,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
     private final boolean mIsSafeModeEnabled;
     private final boolean mIsUserSetupComplete;
     private final boolean mIsNavBarKidsMode;
-    private final boolean mIsTaskbarEnabled;
+    private final int mIsTaskbarEnabled;
     private final boolean mIsNavbarHintEnabled;
     private final int mNavbarLayoutMode;
     private final int mIsNavbarEnabled;
@@ -372,7 +372,8 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
         SettingsCache settingsCache = SettingsCache.INSTANCE.get(this);
         mIsUserSetupComplete = settingsCache.getValue(URI_USER_SETUP_COMPLETE);
         mIsNavBarKidsMode = settingsCache.getValue(URI_NAV_BAR_KIDS_MODE);
-        mIsTaskbarEnabled = settingsCache.getValue(URI_ENABLE_TASKBAR);
+        mIsTaskbarEnabled = settingsCache.getIntValue(URI_ENABLE_TASKBAR,
+                                launcherDp.getDeviceProperties().isLargeScreen() ? 1 : 0);
         mIsNavbarHintEnabled = settingsCache.getValue(URI_NAVIGATION_BAR_HINT);
         mNavbarLayoutMode = settingsCache.getIntValue(URI_NAVBAR_LAYOUT_MODE);
         mIsNavbarEnabled = settingsCache.getIntValue(URI_FORCE_SHOW_NAVBAR,
@@ -714,7 +715,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
      */
     public boolean isPhoneMode() {
         if (!mDeviceProfile.getDeviceProperties().isPhone() &&
-                !isTaskbarEnabled()) {
+                mIsTaskbarEnabled == 0) {
             return true;
         }
         return isDeviceProfileForPhoneMode(mDeviceProfile);
@@ -751,7 +752,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
 
     /** Returns {@code true} iff a tiny version of taskbar is shown on phone. */
     public boolean isTinyTaskbar() {
-        return mIsTaskbarEnabled
+        return mIsTaskbarEnabled != 0
                 && mDeviceProfile.getDeviceProperties().getDeviceConfiguration().isGestureMode()
                 && mDeviceProfile.getDeviceProperties().isPhone()
                 && mDeviceProfile.getDeviceProperties().getTaskbarConfiguration()
@@ -2500,7 +2501,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
         return mIsNavBarKidsMode;
     }
 
-    public boolean isTaskbarEnabled() {
+    public int isTaskbarEnabled() {
         return mIsTaskbarEnabled;
     }
 

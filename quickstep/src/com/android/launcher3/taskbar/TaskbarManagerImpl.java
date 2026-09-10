@@ -370,9 +370,9 @@ public class TaskbarManagerImpl {
                 v -> onSettingChanged(v, TaskbarActivityContext::isInKidsMode));
         cleanupTasks.addCloseable(getTaskbarUiThread(), navBarKidsModeSafeCloseable);
 
-        var enableTaskbarSafeCloseable = settingsCache.getListenableRef(ENABLE_TASKBAR_URI).forEach(
+        var enableTaskbarSafeCloseable = settingsCache.getIntListenableRef(ENABLE_TASKBAR_URI).forEach(
                 getTaskbarUiThread(),
-                v -> onTaskbarChanged(v, TaskbarActivityContext::isTaskbarEnabled));
+                v -> onTaskbarIntChanged(v, TaskbarActivityContext::isTaskbarEnabled));
         cleanupTasks.addCloseable(getTaskbarUiThread(), enableTaskbarSafeCloseable);
 
         var enableNavbarHintSafeCloseable = settingsCache.getListenableRef(NAVIGATION_BAR_HINT_URI)
