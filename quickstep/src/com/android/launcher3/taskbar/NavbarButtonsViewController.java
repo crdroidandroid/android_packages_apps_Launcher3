@@ -896,20 +896,6 @@ public class NavbarButtonsViewController implements TaskbarControllers.LoggableT
         for (int i = 0; i < count; i++) {
             mPropertyHolders.get(i).setState(mState, mContext.isGestureNav());
         }
-
-        boolean isScreenPinningActive = (mState & FLAG_SCREEN_PINNING_ACTIVE) != 0;
-        if (mHomeButton != null) {
-            boolean isHomeLongClickable = (mControllers.getSharedState() == null
-                    || mControllers.getSharedState().assistantLongPressEnabled)
-                    && !isScreenPinningActive;
-            mHomeButton.setLongClickable(isHomeLongClickable);
-        }
-        if (mBackButton != null) {
-            mBackButton.setLongClickable(isScreenPinningActive);
-        }
-        if (mRecentsButton != null) {
-            mRecentsButton.setLongClickable(isScreenPinningActive);
-        }
     }
 
     private void updateNavButtonInAppDisplayProgressForSysui() {
