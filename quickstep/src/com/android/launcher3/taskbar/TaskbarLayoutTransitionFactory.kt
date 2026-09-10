@@ -88,10 +88,10 @@ class TaskbarLayoutTransitionFactory(private vararg val transitionListeners: Tra
             null,
             object : FloatProperty<View>("translateXPinning") {
                 override fun setValue(view: View, value: Float) {
-                    view.pinningTranslationX.value = value
+                    view.pinningTranslationX?.value = value
                 }
 
-                override fun get(view: View): Float = view.pinningTranslationX.value
+                override fun get(view: View): Float = view.pinningTranslationX?.value ?: 0f
             },
             0f,
             1f,
@@ -116,7 +116,10 @@ class TaskbarLayoutTransitionFactory(private vararg val transitionListeners: Tra
                 ) {
                 override fun get(view: View): FloatArray {
                     return if (view is TaskbarPinnedAppIconContainer) {
-                        view.children.map { it.pinningTranslationX.value }.toList().toFloatArray()
+                        view.children
+                            .map { it.pinningTranslationX?.value ?: 0f }
+                            .toList()
+                            .toFloatArray()
                     } else {
                         FloatArray(0)
                     }
@@ -246,11 +249,10 @@ class TaskbarLayoutTransitionFactory(private vararg val transitionListeners: Tra
                     TRANSITION_DEFAULT_DURATION,
             )
 
-        private val View.pinningTranslationX: MultiPropertyFactory<*>.MultiProperty
-            get() {
-                return (this as Reorderable)
-                    .translateDelegate
-                    .getTranslationX(INDEX_TASKBAR_PINNING_ANIM)
-            }
+        private val View.pinningTranslationX: MultiPropertyFactory<*>.MultiProperty?
+            get() =
+                (this as? Reorderable)
+                    ?.translateDelegate
+                    ?.getTranslationX(INDEX_TASKBAR_PINNING_ANIM)
     }
 }
