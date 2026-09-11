@@ -53,7 +53,7 @@
     <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
     <string name="msg_minus_one_on_right">Při gestu přejetím vpravo z\u00a0domovské obrazovky</string>
     <!-- All apps icon customizations -->
-    <string name="pref_icon_customization_title">Use icon customizations in drawer</string>
+    <string name="pref_icon_customization_title">Použít v seznamu aplikací přizpůsobení ikon</string>
     <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Pozastavit</string>
@@ -394,15 +394,15 @@
     <string name="drawer_style_list">Styl seznamu</string>
     <string name="drawer_style_oneui">Styl OneUI (stránkový)</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
+    <string name="app_drawer_sort_mode_title">Řazení v seznamu aplikací</string>
     <string name="app_drawer_sort_alphabetical">Seřadit podle abecedy</string>
     <string name="app_drawer_sort_install_date">Seřadit podle data instalace</string>
     <string name="app_drawer_sort_usage">Seřadit podle využití</string>
     <!-- App drawer color -->
     <string name="pref_app_drawer_custom_color_title">Vlastní barva pozadí</string>
-    <string name="pref_app_drawer_custom_color_summary">Use a custom color for the app drawer background</string>
-    <string name="pref_app_drawer_custom_color_light_title">Light mode color</string>
-    <string name="pref_app_drawer_custom_color_dark_title">Dark mode color</string>
+    <string name="pref_app_drawer_custom_color_summary">Použít vlastní barvu pro pozadí seznamu aplikací</string>
+    <string name="pref_app_drawer_custom_color_light_title">Barva při světlém režimu</string>
+    <string name="pref_app_drawer_custom_color_dark_title">Barva při tmavém režimu</string>
     <!-- Color Picker -->
     <string name="color_picker_hsb">HSB</string>
     <string name="color_picker_rgb">RGB</string>
@@ -419,7 +419,7 @@
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Vyhledávací panel ve stylu Pixelů</string>
     <string name="dock_search_pixel_style_summary">Přepracovaný vyhledávací panel s vrstveným pozadím</string>
-    <string name="qsb_outer_opacity_title">Outer layer opacity</string>
+    <string name="qsb_outer_opacity_title">Neprůhlednost vnější vrstvy</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Skryté a\u00a0zabezpečené aplikace</string>
     <string name="trust_apps_auth_manager">Pro správu skrytých a\u00a0zabezpečených aplikací nejdříve odemkněte obrazovku</string>
@@ -446,15 +446,15 @@
     <string name="rename_app_label">Přejmenovat</string>
     <string name="rename_app_title">Zadejte název aplikace</string>
     <string name="app_renamed_successfully">Aplikace přejmenována</string>
-    <string name="rename_app_empty_error">App name cannot be empty</string>
-    <string name="rename_app_length_error">App name must be %1$d characters or less</string>
+    <string name="rename_app_empty_error">Kolonka pro název aplikace nemůže být prázdná</string>
+    <string name="rename_app_length_error">Název aplikace musí obsahovat méně nebo rovno %1$d znaků</string>
     <string name="rename_app_reset">Obnovit</string>
     <string name="rename_app_reset_message">Název byl obnoven na původní</string>
     <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">App launch blur</string>
-    <string name="pref_app_launch_blur_summary">Show blur effect when launching apps</string>
+    <string name="pref_app_launch_blur_title">Rozostření při spouštění aplikace</string>
+    <string name="pref_app_launch_blur_summary">Při spouštění aplikací zobrazit efekt rozostření</string>
     <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Custom icon</string>
-    <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
-    <string name="icon_picker_search_hint">Search icons</string>
+    <string name="app_info_custom_icon_title">Vlastní ikona</string>
+    <string name="app_info_custom_icon_summary">Vyberte si libovolnou ikonu z libovolného balíčku ikon</string>
+    <string name="icon_picker_search_hint">Vyhledat ikony</string>
 </resources>
