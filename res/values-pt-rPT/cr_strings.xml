@@ -95,6 +95,8 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Fundo da doca</string>
     <string name="hotseat_bg_summary">Mostrar fundo translúcido na doca de apps</string>
+    <string name="hotseat_opacity_light_title">Background opacity in light theme</string>
+    <string name="hotseat_opacity_dark_title">Background opacity in dark theme</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Opacidade do fundo</string>
     <!-- Stroke -->
