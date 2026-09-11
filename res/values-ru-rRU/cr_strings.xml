@@ -95,6 +95,8 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Фон нижней панели</string>
     <string name="hotseat_bg_summary">Полупрозрачный фон нижней панели приложений</string>
+    <string name="hotseat_opacity_light_title">Прозрачность фона в светлой теме</string>
+    <string name="hotseat_opacity_dark_title">Прозрачность фона в тёмной теме</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Прозрачность фона</string>
     <!-- Stroke -->
