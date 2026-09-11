@@ -95,6 +95,8 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">底欄背景</string>
     <string name="hotseat_bg_summary">在底部的應用程式列顯示透明背景</string>
+    <string name="hotseat_opacity_light_title">Background opacity in light theme</string>
+    <string name="hotseat_opacity_dark_title">Background opacity in dark theme</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">背景透明度</string>
     <!-- Stroke -->
