@@ -54,7 +54,7 @@
     <string name="msg_minus_one_on_right">Při gestu přejetím vpravo z\u00a0domovské obrazovky</string>
     <!-- All apps icon customizations -->
     <string name="pref_icon_customization_title">Použít v seznamu aplikací přizpůsobení ikon</string>
-    <string name="pref_icon_customization_summary">Follow icon customizations used on home screen</string>
+    <string name="pref_icon_customization_summary">Použít přizpůsobení ikon z domovské obrazovky</string>
     <!-- Pause apps shortcut -->
     <string name="pause">Pozastavit</string>
     <string name="pause_apps_dialog_title">Pozastavit %1$s?</string>
@@ -95,8 +95,8 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Pozadí Hotseat</string>
     <string name="hotseat_bg_summary">Přidat průsvitné pozadí do doku aplikace</string>
-    <string name="hotseat_opacity_light_title">Background opacity in light theme</string>
-    <string name="hotseat_opacity_dark_title">Background opacity in dark theme</string>
+    <string name="hotseat_opacity_light_title">Neprůhlednost pozadí při použití světlého motivu</string>
+    <string name="hotseat_opacity_dark_title">Neprůhlednost pozadí při použití tmavého motivu</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Neprůhlednost pozadí</string>
     <!-- Stroke -->
@@ -367,7 +367,7 @@
     <string name="wallpaper_carousel_lockscreen_summary">Nastavit stejnou tapetu na zamykací obrazovce</string>
     <!-- Additional shape options in customization picker -->
     <string name="pebble_shape_title">Oblázek</string>
-    <string name="vessel_shape_title">Vessel</string>
+    <string name="vessel_shape_title">Nádoba</string>
     <string name="pure_square_shape_title">Čtverec</string>
     <string name="squircle_shape_title">Superelipsa</string>
     <string name="tapered_rect_shape_title">Zúžený obdélník</string>
@@ -401,8 +401,8 @@
     <!-- App drawer color -->
     <string name="pref_app_drawer_custom_color_title">Vlastní barva pozadí</string>
     <string name="pref_app_drawer_custom_color_summary">Použít vlastní barvu pro pozadí seznamu aplikací</string>
-    <string name="pref_app_drawer_custom_color_light_title">Barva při světlém režimu</string>
-    <string name="pref_app_drawer_custom_color_dark_title">Barva při tmavém režimu</string>
+    <string name="pref_app_drawer_custom_color_light_title">Barva při použití světlého motivu</string>
+    <string name="pref_app_drawer_custom_color_dark_title">Barva při použití tmavého motivu</string>
     <!-- Color Picker -->
     <string name="color_picker_hsb">HSB</string>
     <string name="color_picker_rgb">RGB</string>
@@ -447,7 +447,7 @@
     <string name="rename_app_title">Zadejte název aplikace</string>
     <string name="app_renamed_successfully">Aplikace přejmenována</string>
     <string name="rename_app_empty_error">Kolonka pro název aplikace nemůže být prázdná</string>
-    <string name="rename_app_length_error">Název aplikace musí obsahovat méně nebo rovno %1$d znaků</string>
+    <string name="rename_app_length_error">Název aplikace musí obsahovat maximálně %1$d znaků</string>
     <string name="rename_app_reset">Obnovit</string>
     <string name="rename_app_reset_message">Název byl obnoven na původní</string>
     <!-- App launch blur -->
