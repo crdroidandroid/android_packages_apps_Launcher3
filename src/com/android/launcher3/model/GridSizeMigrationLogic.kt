@@ -503,7 +503,12 @@ constructor(
         val itemsToPlace = WorkspaceItemsToPlace(sortedItemsToPlace, mutableListOf())
         val occupied = GridOccupancy(trgX, trgY)
         val trg = Point(trgX, trgY)
-        val next = Point(0, 0)
+        val next: Point =
+            if (screenId == 0 && LauncherPrefs.SHOW_QUICKSPACE.get(context)) {
+                Point(0, 1 /* smartspace */)
+            } else {
+                Point(0, 0)
+            }
         if (existedEntries != null) {
             for (entry in existedEntries) {
                 occupied.markCells(entry, true)
