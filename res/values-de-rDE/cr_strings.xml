@@ -95,6 +95,8 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hintergrund im Dock</string>
     <string name="hotseat_bg_summary">Transparenten Hintergrund im Dock anzeigen</string>
+    <string name="hotseat_opacity_light_title">Hintergrundtransparenz bei hellem Design</string>
+    <string name="hotseat_opacity_dark_title">Hintergrundtransparenz bei dunklem Design</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Hintergrundtransparenz</string>
     <!-- Stroke -->
@@ -411,6 +413,9 @@
     <string name="color_picker_green">Grün</string>
     <string name="color_picker_blue">Blau</string>
     <string name="color_picker_hex">HEX</string>
+    <string name="color_picker_default">Standard</string>
+    <string name="color_picker_surface">Fläche</string>
+    <string name="color_picker_accent">Akzent</string>
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Suchleiste im Pixel-Stil</string>
     <string name="dock_search_pixel_style_summary">Überarbeitete Suchleiste mit mehrschichtigem Hintergrund</string>
