@@ -375,7 +375,7 @@ constructor(
     }
 
     private fun isTaskLocked(taskKey: TaskKey, lockedUsers: SparseBooleanArray): Boolean =
-        lockedUsers[taskKey.userId] || sandboxState.hasAppLock(taskKey.packageName)
+        lockedUsers[taskKey.userId] || sandboxState.hasAppLock(taskKey.packageName, taskKey.userId)
 
     private fun isTaskAutomated(taskKey: TaskKey): Boolean {
         if (!hideAutomatedTasksInOverview()) {
@@ -389,7 +389,7 @@ constructor(
         return Task.from(
                 taskKey,
                 taskInfo,
-                /* isLocked= */ sandboxState.hasAppLock(taskKey.packageName),
+                /* isLocked= */ sandboxState.hasAppLock(taskKey.packageName, taskKey.userId),
             )
             .apply {
                 positionInParent = taskInfo.positionInParent

@@ -26,6 +26,7 @@ import com.android.launcher3.dagger.ApplicationContext
 import com.android.launcher3.dagger.LauncherAppSingleton
 import com.android.launcher3.util.DaggerSingletonTracker
 import com.android.launcher3.util.LooperExecutor
+import java.lang.Runnable
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.CopyOnWriteArrayList
 import javax.inject.Inject
@@ -88,14 +89,13 @@ constructor(
     }
 
     /** May be called from any thread; the first lookup per package is a binder call. */
-    fun hasAppLock(packageName: String?): Boolean {
+    fun hasAppLock(packageName: String?, userId: Int): Boolean {
         if (packageName.isNullOrBlank()) return false
-        lockCache[packageName]?.let {
-            return it
-        }
-        val hasLock = getHasAppLock(packageName)
-        lockCache.putIfAbsent(packageName, hasLock)
-        return lockCache[packageName] ?: hasLock
+        val cacheKey = "$packageName:$userId"
+        lockCache[cacheKey]?.let { return it }
+        val hasLock = getHasAppLock(packageName, userId)
+        lockCache[cacheKey] = hasLock
+        return hasLock
     }
 
     private fun registerLockListener() {
@@ -116,10 +116,10 @@ constructor(
         }
     }
 
-    private fun getHasAppLock(packageName: String): Boolean {
+    private fun getHasAppLock(packageName: String, userId: Int): Boolean {
         val manager = sandboxManager ?: return false
         return try {
-            manager.getAppLockState(packageName).hasAppLock()
+            manager.getAppLockState(packageName, userId).hasAppLock()
         } catch (e: RuntimeException) {
             Log.w(TAG, "getHasAppLock failed", e)
             false
