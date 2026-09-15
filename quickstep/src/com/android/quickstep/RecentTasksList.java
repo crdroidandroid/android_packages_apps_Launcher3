@@ -509,7 +509,7 @@ public class RecentTasksList {
     }
 
     private boolean isAppLocked(Task.TaskKey key, SparseBooleanArray users) {
-        return (mSandboxState != null && mSandboxState.hasAppLock(key.getPackageName()))
+        return (mSandboxState != null && mSandboxState.hasAppLock(key.getPackageName(), key.userId))
                 || (users != null && users.get(key.userId));
     }
 

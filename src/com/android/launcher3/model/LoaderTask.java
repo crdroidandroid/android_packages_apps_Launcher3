@@ -44,6 +44,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ShortcutInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Process;
 import android.os.Trace;
 import android.os.UserHandle;
 import android.util.Log;
@@ -620,7 +621,10 @@ public class LoaderTask implements Runnable {
             // Fail if we don't have any apps
             // TODO: Fix this. Only fail for the current user.
             if (apps == null || apps.isEmpty()) {
-                return allActivityList;
+                if (user.equals(Process.myUserHandle())) {
+                    return allActivityList;
+                }
+                continue;
             }
             boolean quietMode = cachedUserInfo.isQuietModeEnabled();
 

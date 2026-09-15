@@ -25,6 +25,7 @@ import com.android.launcher3.concurrent.annotations.Ui
 import com.android.launcher3.dagger.ApplicationContext
 import com.android.launcher3.dagger.LauncherAppSingleton
 import com.android.launcher3.util.DaggerSingletonTracker
+import java.lang.Runnable
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.CopyOnWriteArrayList
 import java.util.concurrent.Executor
@@ -45,7 +46,7 @@ constructor(
     private val lockStateListener = object : IAppLockStateListener.Stub() {
         override fun onAppLockStateChanged(packageName: String, locked: Boolean) {
             if (packageName.isBlank()) return
-            lockCache[packageName] = locked
+            lockCache.clear()
             dispatchChanged()
         }
     }
@@ -78,11 +79,12 @@ constructor(
         listeners.remove(listener)
     }
 
-    fun hasAppLock(packageName: String?): Boolean {
+    fun hasAppLock(packageName: String?, userId: Int): Boolean {
         if (packageName.isNullOrBlank()) return false
-        lockCache[packageName]?.let { return it }
-        val hasLock = getHasAppLock(packageName)
-        lockCache[packageName] = hasLock
+        val cacheKey = "$packageName:$userId"
+        lockCache[cacheKey]?.let { return it }
+        val hasLock = getHasAppLock(packageName, userId)
+        lockCache[cacheKey] = hasLock
         return hasLock
     }
 
@@ -104,13 +106,13 @@ constructor(
         }
     }
 
-    private fun getHasAppLock(packageName: String): Boolean {
+    private fun getHasAppLock(packageName: String, userId: Int): Boolean {
         val manager = sandboxManager ?: return false
-        return try {
-            manager.getAppLockState(packageName).hasAppLock()
+        try {
+            return manager.getAppLockState(packageName, userId).hasAppLock()
         } catch (e: RuntimeException) {
             Log.w(TAG, "getHasAppLock failed", e)
-            false
+            return false
         }
     }
 
