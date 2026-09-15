@@ -19,7 +19,6 @@ import android.widget.ProgressBar
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import com.android.launcher3.DeviceProfile
-import com.android.launcher3.LauncherPrefs
 import com.android.launcher3.R
 import com.android.launcher3.data.wallpaper.Wallpaper
 import com.android.launcher3.data.wallpaper.service.WallpaperService
@@ -175,6 +174,10 @@ class WallpaperCarouselView @JvmOverloads constructor(
 
         applyJob?.cancel()
         applyJob = scope.launch {
+            val success =
+                WallpaperService.INSTANCE.get(context)
+                    .applyWallpaper(wallpaper, WallpaperManager.getInstance(context))
+/*
             val success = withContext(Dispatchers.IO) {
                 runCatching {
                     val bmp = BitmapFactory.decodeFile(wallpaper.imagePath) ?: return@runCatching false
@@ -190,7 +193,7 @@ class WallpaperCarouselView @JvmOverloads constructor(
                     true
                 }.getOrDefault(false)
             }
-
+*/
             if (!isAttachedToWindow) return@launch
             currentCardView.removeView(spinner)
 
