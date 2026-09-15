@@ -19,7 +19,6 @@ import android.widget.ProgressBar
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import com.android.launcher3.DeviceProfile
-import com.android.launcher3.LauncherPrefs
 import com.android.launcher3.R
 import com.android.launcher3.data.wallpaper.Wallpaper
 import com.android.launcher3.data.wallpaper.service.WallpaperService
@@ -169,31 +168,16 @@ class WallpaperCarouselView @JvmOverloads constructor(
 
     private fun setWallpaper(wallpaper: Wallpaper, currentCardView: CardView) {
         val spinner = createLoadingSpinner()
-
         currentCardView.removeView(iconFrame)
         currentCardView.addView(spinner)
 
         applyJob?.cancel()
         applyJob = scope.launch {
-            val success = withContext(Dispatchers.IO) {
-                runCatching {
-                    val bmp = BitmapFactory.decodeFile(wallpaper.imagePath) ?: return@runCatching false
-                    WallpaperManager.getInstance(context).setBitmap(
-                        bmp, null, true, WallpaperManager.FLAG_SYSTEM
-                    )
-                    if (LauncherPrefs.WALLPAPER_CAROUSEL_LOCKSCREEN.get(context)) {
-                        WallpaperManager.getInstance(context).setBitmap(
-                            bmp, null, true, WallpaperManager.FLAG_LOCK
-                        )
-                    }
-                    WallpaperService.INSTANCE.get(context).updateWallpaperRank(wallpaper)
-                    true
-                }.getOrDefault(false)
-            }
+            val success = WallpaperService.INSTANCE.get(context)
+                .applyWallpaper(wallpaper, WallpaperManager.getInstance(context))
 
             if (!isAttachedToWindow) return@launch
             currentCardView.removeView(spinner)
-
             if (success) {
                 addIconFrameToCenter(currentCardView)
                 observeWallpapers()
@@ -208,7 +192,9 @@ class WallpaperCarouselView @JvmOverloads constructor(
         }
     }
 
-    private fun addIconFrameToCenter(cardView: CardView? = getChildAt(currentItemIndex) as CardView) {
+    private fun addIconFrameToCenter(
+        cardView: CardView? = getChildAt(currentItemIndex) as? CardView
+    ) {
         if (cardView == null) return
         (iconFrame.parent as? ViewGroup)?.removeView(iconFrame)
         cardView.addView(

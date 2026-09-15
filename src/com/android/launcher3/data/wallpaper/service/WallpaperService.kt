@@ -1,13 +1,17 @@
 package com.android.launcher3.data.wallpaper.service
 
 import android.app.WallpaperManager
+import android.app.WallpaperManager.FLAG_LOCK
+import android.app.WallpaperManager.FLAG_SYSTEM
 import android.content.Context
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory 
 import android.graphics.drawable.BitmapDrawable
 import android.util.Log
 
 import androidx.room.withTransaction
 
+import com.android.launcher3.LauncherPrefs
 import com.android.launcher3.dagger.ApplicationContext
 import com.android.launcher3.dagger.LauncherAppComponent
 import com.android.launcher3.dagger.LauncherAppSingleton
@@ -18,6 +22,7 @@ import com.android.launcher3.util.SafeCloseable
 
 import java.io.ByteArrayOutputStream
 import java.io.File
+import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.security.MessageDigest
 import javax.inject.Inject
@@ -38,14 +43,75 @@ class WallpaperService @Inject constructor(
     private val roomDb by lazy { AppDatabase.INSTANCE.get(context) }
     private val dao by lazy { roomDb.wallpaperDao() }
 
+    @Volatile
+    private var lastHandledWallpaperId: Int = -1 
+
     suspend fun saveWallpaper(wallpaperManager: WallpaperManager) {
+        if (wallpaperManager.wallpaperInfo != null) return
+
         runCatching {
-            val wallpaperDrawable = wallpaperManager.drawable as? BitmapDrawable
-            val currentBitmap = wallpaperDrawable?.bitmap ?: return
-            val byteArray = bitmapToByteArray(currentBitmap)
-            saveWallpaper(byteArray)
+            withContext(Dispatchers.IO) {
+                rankMutex.withLock {
+                    val wallpaperId = wallpaperManager.getWallpaperId(FLAG_SYSTEM)
+                    if (wallpaperId == lastHandledWallpaperId) return@withLock
+
+                    val bytes = readSystemWallpaperBytes(wallpaperManager) ?: return@withLock
+                    saveWallpaperLocked(bytes)
+                    lastHandledWallpaperId = wallpaperId
+                }
+            }
         }.onFailure {
-            Log.e("WallpaperChange", "Error detecting wallpaper change: ${it.message}", it)
+            Log.e("WallpaperService", "Error reading current wallpaper: ${it.message}", it)
+        }
+    }
+
+    private suspend fun saveWallpaperLocked(imageData: ByteArray) {
+        val timestamp = System.currentTimeMillis()
+        val checksum = calculateChecksum(imageData)
+
+        val existingWallpapers = dao.getTopWallpapers()
+        existingWallpapers.firstOrNull { it.checksum == checksum }?.let {
+            promoteToRank0(it.id, timestamp)
+            return
+        }
+
+        if (existingWallpapers.size >= 4) {
+            existingWallpapers.minByOrNull { it.timestamp }?.let {
+                dao.deleteWallpaper(it.id)
+                deleteWallpaperFile(it.imagePath)
+            }
+        }
+
+        if (dao.getTopWallpapers().any { it.rank == 0 }) {
+            dao.bumpAllRanks()
+        }
+
+        val imagePath = saveImageToAppStorage(imageData, checksum)
+        dao.insert(Wallpaper(imagePath = imagePath, rank = 0, timestamp = timestamp, checksum = checksum))
+    }
+
+    suspend fun applyWallpaper(
+        wallpaper: Wallpaper,
+        wallpaperManager: WallpaperManager,
+    ): Boolean = withContext(Dispatchers.IO) {
+        rankMutex.withLock {
+            runCatching {
+                val bmp = BitmapFactory.decodeFile(wallpaper.imagePath) ?: return@runCatching false
+                val newId = wallpaperManager.setBitmap(bmp, null, true, FLAG_SYSTEM)
+                if (newId == 0) return@runCatching false
+                if (LauncherPrefs.WALLPAPER_CAROUSEL_LOCKSCREEN.get(context)) {
+                    wallpaperManager.setBitmap(bmp, null, true, FLAG_LOCK)
+                }
+                promoteToRank0(wallpaper.id, System.currentTimeMillis())
+                lastHandledWallpaperId = newId
+                true
+            }.getOrDefault(false)
+        }
+    }
+
+    private fun readSystemWallpaperBytes(wm: WallpaperManager): ByteArray? {
+        return wm.getWallpaperFile(FLAG_SYSTEM)?.use { pfd ->
+            FileInputStream(pfd.fileDescriptor).use { it.readBytes() }
         }
     }
 
@@ -83,7 +149,7 @@ class WallpaperService @Inject constructor(
                 dao.bumpAllRanks()
             }
 
-            val imagePath = saveImageToAppStorage(imageData)
+            val imagePath = saveImageToAppStorage(imageData, checksum)
             dao.insert(
                 Wallpaper(
                     imagePath = imagePath,
@@ -106,13 +172,6 @@ class WallpaperService @Inject constructor(
         }
     }
 
-    suspend fun updateWallpaperRank(selectedWallpaper: Wallpaper) = withContext(Dispatchers.IO) {
-        rankMutex.withLock {
-            val now = System.currentTimeMillis()
-            promoteToRank0(selectedWallpaper.id, now)
-        }
-    }
-
     suspend fun getTopWallpapers(): List<Wallpaper> = withContext(Dispatchers.IO) {
         dao.getTopWallpapers()
     }
@@ -130,25 +189,18 @@ class WallpaperService @Inject constructor(
         }
     }
 
-    private fun saveImageToAppStorage(imageData: ByteArray): String {
-        val storageDir = File(context.filesDir, "wallpapers")
-        if (!storageDir.exists()) storageDir.mkdirs()
-
-        val imageHash = imageData.hashCode().toString()
-        val imageFile = File(storageDir, "wallpaper_$imageHash.jpg")
-
+    private fun saveImageToAppStorage(imageData: ByteArray, checksum: String): String {
+        val storageDir = File(context.filesDir, "wallpapers").apply { if (!exists()) mkdirs() }
+        val imageFile = File(storageDir, "wallpaper_$checksum.jpg")
         if (!imageFile.exists()) {
-            runCatching {
-                FileOutputStream(imageFile).use { it.write(imageData) }
-            }.onFailure {
-                Log.e("WallpaperService", "Error saving image: ${it.message}", it)
-            }
+            runCatching { FileOutputStream(imageFile).use { it.write(imageData) } }
+                .onFailure { Log.e("WallpaperService", "Error saving image: ${it.message}", it) }
         }
         return imageFile.absolutePath
     }
 
     override fun close() {
-        TODO("Not yet implemented")
+        // Backed by an app-scoped DB singleton; nothing to release.
     }
 
     private fun bitmapToByteArray(bitmap: Bitmap): ByteArray {

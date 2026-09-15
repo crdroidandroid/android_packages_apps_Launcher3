@@ -33,6 +33,8 @@ import javax.inject.Inject
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 
 /**
@@ -51,6 +53,8 @@ constructor(@ApplicationContext private val context: Context, tracker: DaggerSin
 
     private val onColorHintsChangedListeners = mutableListOf<OnColorHintListener>()
 
+    private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+
     init {
         hints = wallpaperManager.getWallpaperColors(FLAG_SYSTEM)?.colorHints ?: 0
         val onColorsChangedListener = OnColorsChangedListener { colors, which ->
@@ -63,14 +67,15 @@ constructor(@ApplicationContext private val context: Context, tracker: DaggerSin
             )
         }
         tracker.addCloseable {
+            scope.cancel()
             UI_HELPER_EXECUTOR.execute {
                 wallpaperManager.removeOnColorsChangedListener(onColorsChangedListener)
             }
         }
-        CoroutineScope(Dispatchers.IO).launch {
+        scope.launch {
             val service = WallpaperService.INSTANCE.get(context)
             val wallpapers = runCatching { service.getTopWallpapers() }
-                    .getOrDefault(emptyList())
+                .getOrDefault(emptyList())
             if (wallpapers.isEmpty()) {
                 service.saveWallpaper(wallpaperManager)
             }
@@ -85,7 +90,7 @@ constructor(@ApplicationContext private val context: Context, tracker: DaggerSin
                 hints = newHints
                 onColorHintsChangedListeners.forEach { it.onColorHintsChanged(newHints) }
             }
-            CoroutineScope(Dispatchers.IO).launch {
+            scope.launch {
                 WallpaperService.INSTANCE.get(context).saveWallpaper(wallpaperManager)
             }
         }
