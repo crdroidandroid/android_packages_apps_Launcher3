@@ -19,6 +19,7 @@ import static android.view.Display.DEFAULT_DISPLAY;
 
 import static com.android.launcher3.Utilities.dpToPx;
 import static com.android.launcher3.Utilities.dpiFromPx;
+import static com.android.launcher3.taskbar.TaskbarManagerImpl.ENABLE_TASKBAR_URI;
 import static com.android.launcher3.testing.shared.ResourceUtils.INVALID_RESOURCE_HANDLE;
 import static com.android.launcher3.testing.shared.ResourceUtils.NAVBAR_HEIGHT;
 import static com.android.launcher3.testing.shared.ResourceUtils.NAVBAR_HEIGHT_LANDSCAPE;
@@ -58,6 +59,7 @@ import com.android.launcher3.display.LauncherDisplayInfo;
 import com.android.launcher3.testing.shared.ResourceUtils;
 import com.android.launcher3.util.DaggerSingletonObject;
 import com.android.launcher3.util.NavigationMode;
+import com.android.launcher3.util.SettingsCache;
 import com.android.launcher3.util.WindowBounds;
 
 import java.util.ArrayList;
@@ -169,7 +171,7 @@ public class WindowManagerProxy {
         boolean isPortrait = config.screenHeightDp > config.screenWidthDp;
 
         int bottomNav = isLargeScreen
-                ? 0
+                ? isTaskbarEnabled(context) ? 0 : getDimenByName(systemRes, NAVBAR_HEIGHT)
                 : (isPortrait
                         ? getDimenByName(systemRes, NAVBAR_HEIGHT)
                         : (isGesture
@@ -325,15 +327,16 @@ public class WindowManagerProxy {
                 STATUS_BAR_HEIGHT_LANDSCAPE, STATUS_BAR_HEIGHT);
 
         int navBarHeightPortrait, navBarHeightLandscape, navbarWidthLandscape;
+        int tabletNavBarHeight = mTaskbarDrawnInProcess
+                ? (isTaskbarEnabled(context) ? 0 : getDimenByName(systemRes, NAVBAR_HEIGHT))
+                : context.getResources().getDimensionPixelSize(R.dimen.taskbar_size);
 
         navBarHeightPortrait = isTablet
-                ? (mTaskbarDrawnInProcess
-                        ? 0 : context.getResources().getDimensionPixelSize(R.dimen.taskbar_size))
+                ? tabletNavBarHeight
                 : getDimenByName(systemRes, NAVBAR_HEIGHT);
 
         navBarHeightLandscape = isTablet
-                ? (mTaskbarDrawnInProcess
-                        ? 0 : context.getResources().getDimensionPixelSize(R.dimen.taskbar_size))
+                ? tabletNavBarHeight
                 : (isTabletOrGesture
                         ? getDimenByName(systemRes, NAVBAR_HEIGHT_LANDSCAPE) : 0);
         navbarWidthLandscape = isTabletOrGesture
@@ -401,6 +404,10 @@ public class WindowManagerProxy {
     protected boolean isGestureNav(Context context) {
         return ResourceUtils.getIntegerByName("config_navBarInteractionMode",
                 context.getResources(), INVALID_RESOURCE_HANDLE) == 2;
+    }
+
+    protected boolean isTaskbarEnabled(Context context) {
+        return SettingsCache.INSTANCE.get(context).getValue(ENABLE_TASKBAR_URI);
     }
 
     /**
