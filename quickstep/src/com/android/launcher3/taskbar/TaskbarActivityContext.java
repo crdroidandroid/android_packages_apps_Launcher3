@@ -921,7 +921,8 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
             WindowManager.LayoutParams lp =
                     createDefaultWindowLayoutParams(windowType,
                             TaskbarActivityContext.WINDOW_TITLE);
-            if (isPhoneButtonNavMode()) {
+            if (isPhoneButtonNavMode()
+                    && mDeviceProfile.getDeviceProperties().getCanNavBarMove()) {
                 populatePhoneButtonNavModeWindowLayoutParams(rot, lp);
             }
             windowLayoutParams.paramsForRotation[rot] = lp;
@@ -1601,7 +1602,9 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
     public void setTaskbarWindowSize(int size) {
         // In landscape phone button nav mode, we should set the task bar width instead of height
         // because this is the only case in which the nav bar is not on the display bottom.
-        boolean landscapePhoneButtonNav = isPhoneButtonNavMode() && mDeviceProfile.getDeviceProperties().isLandscape();
+        boolean landscapePhoneButtonNav = isPhoneButtonNavMode()
+                && mDeviceProfile.getDeviceProperties().getCanNavBarMove()
+                && mDeviceProfile.getDeviceProperties().isLandscape();
         if ((landscapePhoneButtonNav ? mWindowLayoutParams.width : mWindowLayoutParams.height)
                 == size || mIsDestroyed) {
             return;

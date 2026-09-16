@@ -51,6 +51,13 @@ data class DeviceProperties(
     val taskbarConfiguration: TaskbarConfiguration,
 ) {
 
+    /**
+     * Whether the navigation bar is allowed to move to the side of the display in landscape. Large
+     * screens always keep it at the bottom, mirroring the framework's config_navBarCanMove.
+     */
+    val canNavBarMove: Boolean
+        get() = isPhone
+
     fun createWindowBounds() =
         WindowBounds(widthPx, heightPx, availableWidthPx, availableHeightPx, rotationHint)
 
