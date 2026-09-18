@@ -18,8 +18,11 @@ package com.android.launcher3.quickspace;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
+import android.text.Layout;
+import android.text.TextUtils;
 import android.text.TextUtils.TruncateAt;
 import android.util.AttributeSet;
+import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,6 +72,8 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
 
     private boolean mIsAlternateStyle = false;
     private boolean mSkipAnimations = false;
+
+    private final SparseArray<CharSequence> mMarqueeText = new SparseArray<>();
 
     public QuickspaceController mController;
 
@@ -160,25 +165,42 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
         bindWeather(mWeatherContentSub, mWeatherTempSub, mWeatherIconSub);
     }
 
-    private void maybeSetMarquee(TextView tv) {
+    private void maybeSetMarquee(final TextView tv) {
+        if (tv == null) return;
+        final CharSequence text = tv.getText();
+        final int id = tv.getId();
+        if (id != View.NO_ID && TextUtils.equals(mMarqueeText.get(id), text)) {
+            return;
+        }
+        if (id != View.NO_ID) {
+            mMarqueeText.put(id, text == null ? "" : text.toString());
+        }
         tv.setSelected(false);
         tv.setEllipsize(TruncateAt.END);
-        final float textWidth = tv.getPaint().measureText(tv.getText().toString());
-        tv.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+        final float textWidth = tv.getPaint().measureText(text == null ? "" : text.toString());
+        final ViewTreeObserver vto = tv.getViewTreeObserver();
+        vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
-                if (!tv.isAttachedToWindow()) { remove(); return; }
-                android.text.Layout layout = tv.getLayout();
-                if (layout != null && layout.getEllipsizedWidth() < textWidth) {
-                    tv.setEllipsize(TruncateAt.MARQUEE);
-                    tv.setMarqueeRepeatLimit(1);
-                    tv.setSelected(true);
-                }
                 remove();
+                if (!tv.isAttachedToWindow()) return;
+                Layout layout = tv.getLayout();
+                if (layout != null && layout.getEllipsizedWidth() < textWidth) {
+                    tv.post(() -> {
+                        if (!tv.isAttachedToWindow()) return;
+                        tv.setEllipsize(TruncateAt.MARQUEE);
+                        tv.setMarqueeRepeatLimit(1);
+                        tv.setSelected(true);
+                    });
+                }
             }
 
             private void remove() {
-                tv.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                if (vto.isAlive()) {
+                    vto.removeOnGlobalLayoutListener(this);
+                } else {
+                    tv.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                }
             }
         });
     }
@@ -239,6 +261,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
     }
 
     private void clearOldViewState() {
+        mMarqueeText.clear();
         View[] vs = new View[]{ mQuickspaceContent, mEventTitle, mEventTitleSub, mEventTitleSubColored,
                 mGreetingsExt, mGreetingsExtClock, mNowPlayingIcon, mEventSubIcon,
                 mWeatherContentSub, mWeatherIconSub, mWeatherTempSub };
@@ -407,6 +430,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
         if (mController == null) return;
         mController.onDestroy();
         mController = null;
+        mMarqueeText.clear();
         mQuickspaceContent = null;
         mEventSubIcon = null;
         mNowPlayingIcon = null;
