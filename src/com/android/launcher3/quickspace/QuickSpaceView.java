@@ -134,9 +134,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
             maybeSetMarquee(mEventTitleSub);
             mEventTitleSub.setOnClickListener(mController.getEventController().getAction());
 
-            if (mEventTitleSub.getVisibility() != View.VISIBLE) {
-                animateIn(mEventTitleSub);
-            }
+            animateIn(mEventTitleSub);
 
             if (useAlternativeQuickspaceUI) {
                 if (mController.getEventController().isNowPlaying()) {
@@ -208,29 +206,25 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
     private void setEventSubIcon() {
         Drawable icon = mController.getEventController().getActionIcon();
         if (icon != null) {
-            if (mEventSubIcon.getVisibility() != View.VISIBLE) {
-                animateIn(mEventSubIcon);
-            }
             mEventSubIcon.setImageTintList(mController.getEventController().isNowPlaying() ? null : mColorStateList);
             mEventSubIcon.setImageDrawable(icon);
             mEventSubIcon.setOnClickListener(mController.getEventController().getAction());
+            animateIn(mEventSubIcon);
         } else {
             animateOut(mEventSubIcon);
         }
     }
 
     private final void bindWeather(View container, TextView title, ImageView icon) {
+        if (container == null) return;
         if (!mWeatherAvailable || mController.getEventController().isNowPlaying()) {
-            container.setVisibility(View.GONE);
+            animateOut(container);
             return;
         }
         String weatherTemp = mController.getWeatherTemp();
         if (weatherTemp == null || weatherTemp.isEmpty()) {
-            container.setVisibility(View.GONE);
+            animateOut(container);
             return;
-        }
-        if (container.getVisibility() != View.VISIBLE) {
-            animateIn(container);
         }
         container.setOnClickListener(QuickSpaceActionReceiver.getWeatherAction());
         title.setText(weatherTemp);
@@ -239,6 +233,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
         icon.setImageDrawable(d);
         icon.setOnClickListener(QuickSpaceActionReceiver.getWeatherAction());
         icon.setVisibility(d != null ? View.VISIBLE : View.GONE);
+        animateIn(container);
     }
 
     private final void loadViews() {
