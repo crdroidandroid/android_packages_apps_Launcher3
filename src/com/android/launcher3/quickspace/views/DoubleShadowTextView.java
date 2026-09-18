@@ -40,10 +40,10 @@ public class DoubleShadowTextView extends TextView {
     public DoubleShadowTextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         mShadowInfo = ShadowInfo.Companion.fromContext(context, attrs, defStyle);
-        setShadowLayer(
-                Math.max(mShadowInfo.getKeyShadowBlur() +
-                mShadowInfo.getKeyShadowOffsetX(),
-                mShadowInfo.getAmbientShadowBlur()), 0f, 0f,
+        float keyExtent = mShadowInfo.getKeyShadowBlur()
+                + Math.max(Math.abs(mShadowInfo.getKeyShadowOffsetX()),
+                           Math.abs(mShadowInfo.getKeyShadowOffsetY()));
+        setShadowLayer(Math.max(keyExtent, mShadowInfo.getAmbientShadowBlur()), 0f, 0f,
                 mShadowInfo.getKeyShadowColor());
     }
 
@@ -77,8 +77,23 @@ public class DoubleShadowTextView extends TextView {
             super.onDraw(canvas);
             return;
         }
-        getPaint().setShadowLayer(mShadowInfo.getKeyShadowBlur(), 0, mShadowInfo.getKeyShadowOffsetX(), mShadowInfo.getKeyShadowColor());
+
+        int textAlpha = Color.alpha(getCurrentTextColor());
+
+        getPaint().setShadowLayer(mShadowInfo.getAmbientShadowBlur(), 0, 0,
+                getTextShadowColor(mShadowInfo.getAmbientShadowColor(), textAlpha));
         super.onDraw(canvas);
+
+        canvas.save();
+        canvas.clipRect(getScrollX(), getScrollY() + getExtendedPaddingTop(),
+                getScrollX() + getWidth(), getScrollY() + getHeight());
+        getPaint().setShadowLayer(
+                mShadowInfo.getKeyShadowBlur(),
+                mShadowInfo.getKeyShadowOffsetX(),
+                mShadowInfo.getKeyShadowOffsetY(),
+                getTextShadowColor(mShadowInfo.getKeyShadowColor(), textAlpha));
+        super.onDraw(canvas);
+        canvas.restore();
     }
 
     // Multiplies the alpha of shadowColor by textAlpha.
