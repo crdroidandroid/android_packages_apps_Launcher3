@@ -43,6 +43,10 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
     private static final String TAG = "Launcher3:QuickSpaceView";
     private static final boolean DEBUG = false;
 
+    private static final int ANIMATE_IN_DURATION = 300;
+    private static final int ANIMATE_OUT_DURATION = 400;
+    private static final int CONTENT_FADE_DURATION = 200;
+
     public ColorStateList mColorStateList;
     public int mQuickspaceBackgroundRes;
 
@@ -64,6 +68,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
     private boolean mListenerRegistered;
 
     private boolean mIsAlternateStyle = false;
+    private boolean mSkipAnimations = false;
 
     public QuickspaceController mController;
 
@@ -74,6 +79,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
         mColorStateList = ColorStateList.valueOf(Themes.getAttrColor(getContext(), R.attr.workspaceTextColor));
         mQuickspaceBackgroundRes = R.drawable.bg_quickspace;
         setClipChildren(false);
+        setClipToPadding(false);
     }
 
     @Override
@@ -86,6 +92,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
         mIsQuickEvent = mController.isQuickEvent();
         mWeatherAvailable = mController.isWeatherAvailable();
         loadDoubleLine(altUI);
+        mSkipAnimations = false;
     }
 
     private final void loadDoubleLine(boolean useAlternativeQuickspaceUI) {
@@ -225,10 +232,13 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
     }
 
     private void clearOldViewState() {
-        View[] vs = new View[]{ mEventTitle, mEventTitleSub, mEventTitleSubColored,
-                mNowPlayingIcon, mEventSubIcon, mWeatherContentSub, mWeatherIconSub, mWeatherTempSub };
+        View[] vs = new View[]{ mQuickspaceContent, mEventTitle, mEventTitleSub, mEventTitleSubColored,
+                mGreetingsExt, mGreetingsExtClock, mNowPlayingIcon, mEventSubIcon,
+                mWeatherContentSub, mWeatherIconSub, mWeatherTempSub };
         for (View v : vs) if (v != null) {
             v.animate().cancel();
+            v.setAlpha(1f);
+            v.setTranslationY(0f);
             v.setOnClickListener(null);
             if (v instanceof ImageView) {
                 ImageView iv = (ImageView) v;
@@ -249,6 +259,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
 
     private void prepareLayout(boolean alt) {
         mIsAlternateStyle = alt;
+        mSkipAnimations = true;
         int insertIndex = (mQuickspaceContent != null) ? indexOfChild(mQuickspaceContent) : -1;
         if (mQuickspaceContent != null) {
             clearOldViewState();
@@ -265,19 +276,41 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
     }
 
     private void getQuickSpaceView() {
-        if (mQuickspaceContent.getVisibility() != View.VISIBLE) {
-            mQuickspaceContent.setVisibility(View.VISIBLE);
-            mQuickspaceContent.setAlpha(0.0f);
-            mQuickspaceContent.animate().setDuration(200).alpha(1.0f);
+        final View content = mQuickspaceContent;
+        if (content == null) return;
+        content.animate().cancel();
+        if (content.getVisibility() == View.VISIBLE && content.getAlpha() == 1f) {
+            return;
         }
+        content.setVisibility(View.VISIBLE);
+        if (!isShown()) {
+            content.setAlpha(1f);
+            return;
+        }
+        content.setAlpha(0f);
+        content.animate()
+            .alpha(1f)
+            .setDuration(CONTENT_FADE_DURATION)
+            .withEndAction(() -> content.setAlpha(1f))
+            .start();
     }
 
     private static final Interpolator ANIMATE_IN = new DecelerateInterpolator();
     private static final Interpolator ANIMATE_OUT = new AccelerateInterpolator();
 
     private void animateIn(View view) {
-        if (view.getVisibility() == View.VISIBLE && view.getAlpha() == 1f) {
-            return; // Already visible
+        if (view == null) return;
+        view.animate().cancel();
+        if (view.getVisibility() == View.VISIBLE
+                && view.getAlpha() == 1f
+                && view.getTranslationY() == 0f) {
+            return; // Already fully settled
+        }
+        if (mSkipAnimations || view.getHeight() == 0 || !isShown()) {
+            view.setVisibility(View.VISIBLE);
+            view.setAlpha(1f);
+            view.setTranslationY(0f);
+            return;
         }
         view.setVisibility(View.VISIBLE);
         view.setAlpha(0f);
@@ -285,21 +318,39 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
         view.animate()
             .alpha(1f)
             .translationY(0f)
-            .setDuration(300)
+            .setDuration(ANIMATE_IN_DURATION)
             .setInterpolator(ANIMATE_IN)
+            .withEndAction(() -> {
+                view.setAlpha(1f);
+                view.setTranslationY(0f);
+            })
             .start();
     }
 
     private void animateOut(View view) {
+        if (view == null) return;
+        view.animate().cancel();
         if (view.getVisibility() != View.VISIBLE) {
-            return; // Already hidden
+            view.setAlpha(1f);
+            view.setTranslationY(0f);
+            return;
+        }
+        if (mSkipAnimations || view.getHeight() == 0 || !isShown()) {
+            view.setVisibility(View.GONE);
+            view.setAlpha(1f);
+            view.setTranslationY(0f);
+            return;
         }
         view.animate()
             .alpha(0f)
             .translationY(view.getHeight() / 2f)
-            .setDuration(400)
+            .setDuration(ANIMATE_OUT_DURATION)
             .setInterpolator(ANIMATE_OUT)
-            .withEndAction(() -> view.setVisibility(View.GONE))
+            .withEndAction(() -> {
+                view.setVisibility(View.GONE);
+                view.setAlpha(1f);
+                view.setTranslationY(0f);
+            })
             .start();
     }
 
@@ -308,6 +359,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
         super.onAttachedToWindow();
         if (mController != null && mFinishedInflate && !mListenerRegistered) {
             mListenerRegistered = true;
+            mSkipAnimations = true;
             mController.addListener(this);
         }
     }
@@ -330,6 +382,7 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
         loadViews();
         mFinishedInflate = true;
         if (isAttachedToWindow() && !mListenerRegistered) {
+            mSkipAnimations = true;
             mController.addListener(this);
             mListenerRegistered = true;
         }
