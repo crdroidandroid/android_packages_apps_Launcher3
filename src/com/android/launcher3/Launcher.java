@@ -1000,9 +1000,6 @@ public class Launcher extends StatefulActivity<LauncherState>
         } else {
             mOverlayManager.onActivityStopped();
         }
-        if (mQuickSpace != null) {
-            mQuickSpace.onPause();
-        }
         hideKeyboard();
         logStopAndResume(false /* isResume */);
         mAppWidgetHolder.setActivityStarted(false);
