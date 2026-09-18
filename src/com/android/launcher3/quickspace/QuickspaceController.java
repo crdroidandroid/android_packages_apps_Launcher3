@@ -16,7 +16,6 @@
 package com.android.launcher3.quickspace;
 
 import static com.android.launcher3.util.Executors.MAIN_EXECUTOR;
-import static com.android.launcher3.util.Executors.UI_HELPER_EXECUTOR;
 
 import android.annotation.NonNull;
 import android.content.Context;
@@ -61,16 +60,14 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
     private final Map<String, Integer> mConditionMap;
     private QuickEventsController mEventsController;
     private OmniJawsClient mWeatherClient;
-    private volatile OmniJawsClient.WeatherInfo mWeatherInfo;
-    private volatile Drawable mConditionImage;
-    private volatile boolean mOmniJawsEnabled;
+    private OmniJawsClient.WeatherInfo mWeatherInfo;
+    private Drawable mConditionImage;
     private boolean mOmniRegistered = false;
     private boolean mMediaRegistered = false;
 
     private static final long PSA_UPDATE_DELAY_MS = 3 * 60 * 1000;
 
     private final Handler mHandler = MAIN_EXECUTOR.getHandler();
-    private final Handler mBgHandler = UI_HELPER_EXECUTOR.getHandler();
 
     private enum WeatherProvider { OMNIJAWS, SERAPHIX }
     private WeatherProvider mProvider;
@@ -92,31 +89,19 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
             }
         };
 
-    private final Runnable mWeatherRunnable = new Runnable() {
+    private Runnable mWeatherRunnable = new Runnable() {
             @Override
             public void run() {
                 try {
-                    final OmniJawsClient client = mWeatherClient;
-                    if (client == null) return;
-                    final boolean enabled = client.isOmniJawsEnabled(mContext);
-                    mOmniJawsEnabled = enabled;
-                    if (!enabled) {
-                        mWeatherInfo = null;
-                        mConditionImage = null;
-                        notifyListeners();
-                        return;
-                    }
-                    client.queryWeather(mContext);
-                    final OmniJawsClient.WeatherInfo info = client.getWeatherInfo();
-                    mWeatherInfo = info;
-                    if (info != null) {
-                        mConditionImage = client.getWeatherConditionImage(mContext, info.conditionCode);
-                    } else {
-                        mConditionImage = null;
+                    if (mWeatherClient == null) return;
+                    mWeatherClient.queryWeather(mContext);
+                    mWeatherInfo = mWeatherClient.getWeatherInfo();
+                    if (mWeatherInfo != null) {
+                        mConditionImage = mWeatherClient.getWeatherConditionImage(mContext, mWeatherInfo.conditionCode);
                     }
                     notifyListeners();
-                } catch (Exception e) {
-                    Log.w(TAG, "weather update failed", e);
+                } catch(Exception e) {
+                    // Do nothing
                 }
             }
         };
@@ -274,11 +259,9 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
             mWeatherClient.removeObserver(mContext, this);
             mOmniRegistered = false;
         }
-        mBgHandler.removeCallbacks(mWeatherRunnable);
         mWeatherClient = null;
         mWeatherInfo = null;
         mConditionImage = null;
-        mOmniJawsEnabled = false;
     }
 
     public void removeListener(OnDataListener listener) {
@@ -292,7 +275,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
             }
             unregisterMediaController();
             mHandler.removeCallbacks(mPsaRunnable);
-            mBgHandler.removeCallbacks(mWeatherRunnable);
+            mHandler.removeCallbacks(mWeatherRunnable);
             mHandler.removeCallbacks(mOnDataUpdatedRunnable);
         }
     }
@@ -310,7 +293,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
         if (mProvider == WeatherProvider.SERAPHIX) {
             return !TextUtils.isEmpty(mSeraphixText) || mSeraphixIcon != null;
         } else {
-            return mWeatherClient != null && mOmniJawsEnabled;
+            return mWeatherClient != null && mWeatherClient.isOmniJawsEnabled(mContext);
         }
     }
 
@@ -326,21 +309,20 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
         if (mProvider == WeatherProvider.SERAPHIX) {
             return mSeraphixText;
         } else {
-            final OmniJawsClient.WeatherInfo info = mWeatherInfo;
-            if (info == null) return null;
+            if (mWeatherInfo == null) return null;
 
             boolean shouldShowCity = LauncherPrefs.SHOW_QUICKSPACE_WEATHER_CITY.get(mContext);
             boolean showWeatherText = LauncherPrefs.SHOW_QUICKSPACE_WEATHER_TEXT.get(mContext);
 
             StringBuilder weatherTemp = new StringBuilder();
             if (shouldShowCity) {
-                weatherTemp.append(info.city).append(" ");
+                weatherTemp.append(mWeatherInfo.city).append(" ");
             }
-            weatherTemp.append(info.temp)
-                       .append(info.tempUnits);
+            weatherTemp.append(mWeatherInfo.temp)
+                       .append(mWeatherInfo.tempUnits);
 
             if (showWeatherText) {
-                weatherTemp.append(" • ").append(getConditionText(info.condition));
+                weatherTemp.append(" • ").append(getConditionText(mWeatherInfo.condition));
             }
 
             return weatherTemp.toString();
@@ -394,7 +376,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
     public void onPause() {
         unregisterMediaController();
         mHandler.removeCallbacks(mPsaRunnable);
-        mBgHandler.removeCallbacks(mWeatherRunnable);
+        mHandler.removeCallbacks(mWeatherRunnable);
         mHandler.removeCallbacks(mOnDataUpdatedRunnable);
         if (mProvider == WeatherProvider.SERAPHIX && mSeraphix != null) {
             mSeraphix.pauseListening();
@@ -415,7 +397,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
     public void onDestroy() {
         unregisterMediaController();
         mHandler.removeCallbacks(mPsaRunnable);
-        mBgHandler.removeCallbacks(mWeatherRunnable);
+        mHandler.removeCallbacks(mWeatherRunnable);
         mHandler.removeCallbacks(mOnDataUpdatedRunnable);
         for (OnDataListener listener : new ArrayList<>(mListeners)) {
             removeListener(listener);
@@ -448,8 +430,8 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
     }
 
     private void queryAndUpdateWeather() {
-        mBgHandler.removeCallbacks(mWeatherRunnable);
-        mBgHandler.post(mWeatherRunnable);
+        mHandler.removeCallbacks(mWeatherRunnable);
+        mHandler.post(mWeatherRunnable);
     }
 
     public void notifyListeners() {
