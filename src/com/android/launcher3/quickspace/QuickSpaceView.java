@@ -99,21 +99,25 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
         mEventTitle.setText(mController.getEventController().getTitle());
         if (useAlternativeQuickspaceUI) {
             String greetingsExt = mController.getEventController().getGreetings();
-            if (greetingsExt != null && !greetingsExt.isEmpty()) {
-                mGreetingsExt.setVisibility(View.VISIBLE);
-                mGreetingsExt.setText(greetingsExt);
-                mGreetingsExt.setEllipsize(TruncateAt.END);
-                mGreetingsExt.setOnClickListener(mController.getEventController().getAction());
-            } else {
-                mGreetingsExt.setVisibility(View.GONE);
+            if (mGreetingsExt != null) {
+                if (greetingsExt != null && !greetingsExt.isEmpty()) {
+                    mGreetingsExt.setVisibility(View.VISIBLE);
+                    mGreetingsExt.setText(greetingsExt);
+                    mGreetingsExt.setEllipsize(TruncateAt.END);
+                    mGreetingsExt.setOnClickListener(mController.getEventController().getAction());
+                } else {
+                    mGreetingsExt.setVisibility(View.GONE);
+                }
             }
             String greetingsExtClock = mController.getEventController().getClockExt();
-            if (greetingsExtClock != null && !greetingsExtClock.isEmpty()) {
-                mGreetingsExtClock.setVisibility(View.VISIBLE);
-                mGreetingsExtClock.setText(greetingsExtClock);
-                mGreetingsExtClock.setOnClickListener(mController.getEventController().getAction());
-            } else {
-                mGreetingsExtClock.setVisibility(View.GONE);
+            if (mGreetingsExtClock != null) {
+                if (greetingsExtClock != null && !greetingsExtClock.isEmpty()) {
+                    mGreetingsExtClock.setVisibility(View.VISIBLE);
+                    mGreetingsExtClock.setText(greetingsExtClock);
+                    mGreetingsExtClock.setOnClickListener(mController.getEventController().getAction());
+                } else {
+                    mGreetingsExtClock.setVisibility(View.GONE);
+                }
             }
         }
         boolean shouldShowPsa = mIsQuickEvent && (LauncherPrefs.SHOW_QUICKSPACE_PSONALITY.get(getContext()) ||
@@ -228,6 +232,9 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
         if (LauncherPrefs.SHOW_QUICKSPACE_ALT.get(getContext())) {
             mGreetingsExtClock = (TextView) findViewById(R.id.extended_greetings_clock);
             mGreetingsExt = (TextView) findViewById(R.id.extended_greetings);
+        } else {
+            mGreetingsExtClock = null;
+            mGreetingsExt = null;
         }
     }
 
