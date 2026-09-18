@@ -940,9 +940,6 @@ public class Launcher extends StatefulActivity<LauncherState>
     @Override
     protected void onStop() {
         super.onStop();
-        if (mQuickSpace != null) {
-            mQuickSpace.onPause();
-        }
         hideKeyboard();
         logStopAndResume(false /* isResume */);
         mAppWidgetHolder.setActivityStarted(false);
