@@ -95,6 +95,8 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Nền thanh công cụ</string>
     <string name="hotseat_bg_summary">Thêm nền mờ vào thanh ứng dụng</string>
+    <string name="hotseat_opacity_light_title">Độ mờ nền trong chủ đề sáng</string>
+    <string name="hotseat_opacity_dark_title">Độ mờ nền trong chủ đề tối</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Độ mờ của nền</string>
     <!-- Stroke -->
@@ -412,6 +414,9 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="color_picker_green">Xanh lá</string>
     <string name="color_picker_blue">Xanh dương</string>
     <string name="color_picker_hex">HEX</string>
+    <string name="color_picker_default">Mặc định</string>
+    <string name="color_picker_surface">Bề mặt</string>
+    <string name="color_picker_accent">Màu nhấn</string>
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Thanh tìm kiếm kiểu mới</string>
     <string name="dock_search_pixel_style_summary">Thanh tìm kiếm được làm mới với hiệu ứng nền</string>
