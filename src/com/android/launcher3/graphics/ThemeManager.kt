@@ -116,7 +116,9 @@ constructor(
         val oldState = iconState
         if (newState == oldState) return
         val hasThemedChanged =
-            newState.themeCode != oldState.themeCode || newState.isCircle != oldState.isCircle
+            newState.themeCode != oldState.themeCode ||
+                newState.isCircle != oldState.isCircle ||
+                newState.accentColor != oldState.accentColor
         iconState = newState
         if (hasThemedChanged) {
             // trigger listeners only for theme change, not shape change
@@ -201,6 +203,7 @@ constructor(
             shapeRadius = shapeModel?.shapeRadius ?: DEFAULT_ICON_RADIUS,
             themeCode = themeCode,
             fileShape = fileShape,
+            accentColor = context.resources.getColor(android.R.color.system_accent1_600, context.theme),
         )
     }
 
@@ -215,6 +218,7 @@ constructor(
         val folderShape: ShapeDelegate,
         val shapeRadius: Float,
         val fileShape: ShapeDelegate,
+        val accentColor: Int,
     ) {
         val iconShapeInfo = IconShapeInfo.fromPath(iconShape.getPath(), DEFAULT_PATH_SIZE_INT)
     }
