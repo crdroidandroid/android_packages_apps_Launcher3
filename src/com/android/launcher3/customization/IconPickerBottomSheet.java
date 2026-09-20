@@ -19,6 +19,7 @@ import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.util.Pair;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -92,6 +93,12 @@ public class IconPickerBottomSheet extends AbstractSlideInView<BaseActivity> {
 
             @Override
             public void afterTextChanged(Editable s) {}
+        });
+        mRecyclerView.setOnTouchListener((v, event) -> {
+            if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                hideKeyboard();
+            }
+            return false;
         });
         setContentBackgroundWithParent(
                 getContext().getDrawable(R.drawable.bg_rounded_corner_bottom_sheet), mContent);
@@ -176,6 +183,7 @@ public class IconPickerBottomSheet extends AbstractSlideInView<BaseActivity> {
     }
 
     private void onIconPicked(String packPackage, IconPack.IconEntry entry) {
+        hideKeyboard();
         IconDatabase.setExplicitIconForComponent(
                 getContext(), mKey, packPackage, entry.drawableName);
         if (mCallback != null) {
@@ -184,8 +192,17 @@ public class IconPickerBottomSheet extends AbstractSlideInView<BaseActivity> {
         close(true);
     }
 
+    private void hideKeyboard() {
+        if (mSearchField == null) {
+            return;
+        }
+        mActivityContext.hideKeyboard();
+        mSearchField.clearFocus();
+    }
+
     @Override
     protected void handleClose(boolean animate) {
+        hideKeyboard();
         handleClose(animate, DEFAULT_CLOSE_DURATION);
     }
 
