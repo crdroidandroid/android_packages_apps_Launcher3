@@ -12,11 +12,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <View
+            android:id="@+id/bottom_sheet_handle"
+            android:layout_width="@dimen/bottom_sheet_handle_width"
+            android:layout_height="@dimen/bottom_sheet_handle_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/bottom_sheet_handle_margin"
+            android:layout_marginBottom="@dimen/bottom_sheet_handle_margin"
+            android:importantForAccessibility="no"
+            android:background="@drawable/bg_rounded_corner_bottom_sheet_handle" />
+
         <TextView
             android:id="@+id/icon_picker_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <EditText
