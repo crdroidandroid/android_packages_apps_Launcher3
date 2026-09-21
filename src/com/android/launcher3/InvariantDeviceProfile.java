@@ -677,27 +677,33 @@ public class InvariantDeviceProfile {
     private static DisplayOption invDistWeightedInterpolate(
             LauncherDisplayInfo displayInfo, List<DisplayOption> points,
             @DeviceType int deviceType) {
-        int minWidthPx = Integer.MAX_VALUE;
-        int minHeightPx = Integer.MAX_VALUE;
+        float minWidth = Float.MAX_VALUE;
+        float minHeight = Float.MAX_VALUE;
         for (WindowBounds bounds : displayInfo.supportedBounds) {
             boolean isLargeScreen = displayInfo.isLargeScreen(bounds);
             if (isLargeScreen && deviceType == TYPE_MULTI_DISPLAY) {
                 // For split displays, take half width per page
-                minWidthPx = Math.min(minWidthPx, bounds.availableSize.x / 2);
-                minHeightPx = Math.min(minHeightPx, bounds.availableSize.y);
+                minWidth = Math.min(minWidth,
+                        dpiFromPx(bounds.availableSize.x / 2, bounds.densityDpi));
+                minHeight = Math.min(minHeight,
+                        dpiFromPx(bounds.availableSize.y, bounds.densityDpi));
 
             } else if (!isLargeScreen && bounds.isLandscape()) {
                 // We will use transposed layout in this case
-                minWidthPx = Math.min(minWidthPx, bounds.availableSize.y);
-                minHeightPx = Math.min(minHeightPx, bounds.availableSize.x);
+                minWidth = Math.min(minWidth,
+                        dpiFromPx(bounds.availableSize.y, bounds.densityDpi));
+                minHeight = Math.min(minHeight,
+                        dpiFromPx(bounds.availableSize.x, bounds.densityDpi));
             } else {
-                minWidthPx = Math.min(minWidthPx, bounds.availableSize.x);
-                minHeightPx = Math.min(minHeightPx, bounds.availableSize.y);
+                minWidth = Math.min(minWidth,
+                        dpiFromPx(bounds.availableSize.x, bounds.densityDpi));
+                minHeight = Math.min(minHeight,
+                        dpiFromPx(bounds.availableSize.y, bounds.densityDpi));
             }
         }
 
-        float width = dpiFromPx(minWidthPx, displayInfo.getDensityDpi());
-        float height = dpiFromPx(minHeightPx, displayInfo.getDensityDpi());
+        float width = minWidth;
+        float height = minHeight;
 
         // Sort the profiles based on the closeness to the device size
         points.sort((a, b) ->

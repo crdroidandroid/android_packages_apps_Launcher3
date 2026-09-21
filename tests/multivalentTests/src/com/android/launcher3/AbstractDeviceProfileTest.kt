@@ -289,10 +289,14 @@ abstract class AbstractDeviceProfileTest {
             )
 
         return listOf(
-            WindowBounds(Rect(0, 0, naturalX, naturalY), rotation0Insets, Surface.ROTATION_0),
-            WindowBounds(Rect(0, 0, naturalY, naturalX), rotation90Insets, Surface.ROTATION_90),
-            WindowBounds(Rect(0, 0, naturalX, naturalY), rotation180Insets, Surface.ROTATION_180),
-            WindowBounds(Rect(0, 0, naturalY, naturalX), rotation270Insets, Surface.ROTATION_270),
+            WindowBounds(Rect(0, 0, naturalX, naturalY), rotation0Insets, Surface.ROTATION_0,
+                deviceSpec.densityDpi),
+            WindowBounds(Rect(0, 0, naturalY, naturalX), rotation90Insets, Surface.ROTATION_90,
+                deviceSpec.densityDpi),
+            WindowBounds(Rect(0, 0, naturalX, naturalY), rotation180Insets, Surface.ROTATION_180,
+                deviceSpec.densityDpi),
+            WindowBounds(Rect(0, 0, naturalY, naturalX), rotation270Insets, Surface.ROTATION_270,
+                deviceSpec.densityDpi),
         )
     }
 
@@ -305,10 +309,14 @@ abstract class AbstractDeviceProfileTest {
         val rotatedInsets = Rect(0, deviceSpec.statusBarRotatedPx, 0, 0)
 
         return listOf(
-            WindowBounds(Rect(0, 0, naturalX, naturalY), naturalInsets, Surface.ROTATION_0),
-            WindowBounds(Rect(0, 0, naturalY, naturalX), rotatedInsets, Surface.ROTATION_90),
-            WindowBounds(Rect(0, 0, naturalX, naturalY), naturalInsets, Surface.ROTATION_180),
-            WindowBounds(Rect(0, 0, naturalY, naturalX), rotatedInsets, Surface.ROTATION_270),
+            WindowBounds(Rect(0, 0, naturalX, naturalY), naturalInsets, Surface.ROTATION_0,
+                deviceSpec.densityDpi),
+            WindowBounds(Rect(0, 0, naturalY, naturalX), rotatedInsets, Surface.ROTATION_90,
+                deviceSpec.densityDpi),
+            WindowBounds(Rect(0, 0, naturalX, naturalY), naturalInsets, Surface.ROTATION_180,
+                deviceSpec.densityDpi),
+            WindowBounds(Rect(0, 0, naturalY, naturalX), rotatedInsets, Surface.ROTATION_270,
+                deviceSpec.densityDpi),
         )
     }
 

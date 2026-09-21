@@ -98,7 +98,7 @@ public class TestWindowManagerProxy extends WindowManagerProxy {
         displayInfoContext.getDisplay().getDisplayInfo(displayInfo);
         return new WindowBounds(
                 new Rect(0, 0, displayInfo.getNaturalWidth(), displayInfo.getNaturalHeight()),
-                /* insets = */ new Rect());
+                /* insets = */ new Rect(), displayInfo.logicalDensityDpi);
     }
 
     @Override

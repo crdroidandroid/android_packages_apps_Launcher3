@@ -40,18 +40,21 @@ public class CachedDisplayInfo {
     public final int rotation;
     @NonNull
     public final DisplayCutout cutout;
+    public final int densityDpi;
 
     public CachedDisplayInfo() {
-        this(new Point(0, 0), 0);
+        this(new Point(0, 0), 0, 0);
     }
 
-    public CachedDisplayInfo(Point size, int rotation) {
-        this(size, rotation, NO_CUTOUT);
+    public CachedDisplayInfo(Point size, int rotation, int densityDpi) {
+        this(size, rotation, densityDpi, NO_CUTOUT);
     }
 
-    public CachedDisplayInfo(Point size, int rotation, @Nullable DisplayCutout cutout) {
+    public CachedDisplayInfo(Point size, int rotation, int densityDpi,
+            @Nullable DisplayCutout cutout) {
         this.size = size;
         this.rotation = rotation;
+        this.densityDpi = densityDpi;
         this.cutout = cutout == null ? NO_CUTOUT : cutout;
     }
 
@@ -67,7 +70,7 @@ public class CachedDisplayInfo {
 
         DisplayCutout newCutout = windowManagerProxy.rotateCutout(
                 cutout, size.x, size.y, rotation, Surface.ROTATION_0);
-        return new CachedDisplayInfo(newSize, Surface.ROTATION_0, newCutout);
+        return new CachedDisplayInfo(newSize, Surface.ROTATION_0, densityDpi, newCutout);
     }
 
     @Override
@@ -76,6 +79,7 @@ public class CachedDisplayInfo {
                 + "size=" + size
                 + ", cutout=" + cutout
                 + ", rotation=" + rotation
+                + ", densityDpi=" + densityDpi
                 + '}';
     }
 
@@ -86,6 +90,7 @@ public class CachedDisplayInfo {
         CachedDisplayInfo that = (CachedDisplayInfo) o;
         return rotation == that.rotation
                 && Objects.equals(size, that.size)
+                && densityDpi == that.densityDpi
                 && cutout.getSafeInsetLeft() == that.cutout.getSafeInsetLeft()
                 && cutout.getSafeInsetTop() == that.cutout.getSafeInsetTop()
                 && cutout.getSafeInsetRight() == that.cutout.getSafeInsetRight()
@@ -94,7 +99,7 @@ public class CachedDisplayInfo {
 
     @Override
     public int hashCode() {
-        return Objects.hash(size, rotation,
+        return Objects.hash(size, rotation, densityDpi,
                 cutout.getSafeInsetLeft(), cutout.getSafeInsetTop(),
                 cutout.getSafeInsetRight(), cutout.getSafeInsetBottom());
     }

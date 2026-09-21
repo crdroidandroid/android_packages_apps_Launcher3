@@ -160,7 +160,8 @@ class OrientationTouchTransformer {
      * @see #enableMultipleRegions(boolean, LauncherDisplayInfo)
      */
     void createOrAddTouchRegion(LauncherDisplayInfo info, String reason) {
-        mCachedDisplayInfo = new CachedDisplayInfo(info.currentSize, info.rotation);
+        mCachedDisplayInfo = new CachedDisplayInfo(info.currentSize, info.rotation,
+                info.getDensityDpi());
 
         if (mQuickStepStartingRotation > QUICKSTEP_ROTATION_UNINITIALIZED
                 && mCachedDisplayInfo.rotation == mQuickStepStartingRotation) {
@@ -225,7 +226,8 @@ class OrientationTouchTransformer {
                     + " reason=" + reason);
         }
 
-        mCachedDisplayInfo = new CachedDisplayInfo(region.currentSize, region.rotation);
+        mCachedDisplayInfo = new CachedDisplayInfo(region.currentSize, region.rotation,
+                region.getDensityDpi());
         OrientationRectF regionToKeep = mSwipeTouchRegions.get(mCachedDisplayInfo);
         if (regionToKeep == null) {
             regionToKeep = createRegionForDisplay(region, reason);

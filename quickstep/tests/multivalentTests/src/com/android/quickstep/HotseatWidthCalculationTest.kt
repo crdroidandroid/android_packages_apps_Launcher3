@@ -16,6 +16,7 @@
 package com.android.quickstep
 
 import android.graphics.Rect
+import android.util.DisplayMetrics
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
 import com.android.launcher3.FakeInvariantDeviceProfileTest
@@ -35,7 +36,8 @@ class HotseatWidthCalculationTest : FakeInvariantDeviceProfileTest() {
     @Test
     fun distribute_border_space_when_space_is_enough_portrait() {
         initializeVarsForTablet(isGestureMode = false)
-        windowBounds = WindowBounds(Rect(0, 0, 1800, 2560), Rect(0, 104, 0, 0))
+        windowBounds = WindowBounds(Rect(0, 0, 1800, 2560), Rect(0, 104, 0, 0),
+            DisplayMetrics.DENSITY_DEFAULT)
         val dp = newDP()
         dp.updateIsTaskbarPresentInApps(true)
 
@@ -59,7 +61,8 @@ class HotseatWidthCalculationTest : FakeInvariantDeviceProfileTest() {
     @Test
     fun decrease_num_of_icons_when_not_enough_space_portrait() {
         initializeVarsForTablet(isGestureMode = false)
-        windowBounds = WindowBounds(Rect(0, 0, 1300, 2560), Rect(0, 104, 0, 0))
+        windowBounds = WindowBounds(Rect(0, 0, 1300, 2560), Rect(0, 104, 0, 0),
+            DisplayMetrics.DENSITY_DEFAULT)
         val dp = newDP()
         dp.updateIsTaskbarPresentInApps(true)
 
@@ -127,7 +130,8 @@ class HotseatWidthCalculationTest : FakeInvariantDeviceProfileTest() {
     @Test
     fun decrease_qsb_when_not_enough_space_landscape() {
         initializeVarsForTablet(isGestureMode = false, isLandscape = true)
-        windowBounds = WindowBounds(Rect(0, 0, 2460, 1600), Rect(0, 104, 0, 0))
+        windowBounds = WindowBounds(Rect(0, 0, 2460, 1600), Rect(0, 104, 0, 0),
+            DisplayMetrics.DENSITY_DEFAULT)
         val dp = newDP()
         dp.updateIsTaskbarPresentInApps(true)
 
@@ -151,7 +155,8 @@ class HotseatWidthCalculationTest : FakeInvariantDeviceProfileTest() {
     @Test
     fun decrease_num_of_icons_when_not_enough_space_landscape() {
         initializeVarsForTablet(isGestureMode = false, isLandscape = true)
-        windowBounds = WindowBounds(Rect(0, 0, 2260, 1600), Rect(0, 104, 0, 0))
+        windowBounds = WindowBounds(Rect(0, 0, 2260, 1600), Rect(0, 104, 0, 0),
+            DisplayMetrics.DENSITY_DEFAULT)
         val dp = newDP()
         dp.updateIsTaskbarPresentInApps(true)
 

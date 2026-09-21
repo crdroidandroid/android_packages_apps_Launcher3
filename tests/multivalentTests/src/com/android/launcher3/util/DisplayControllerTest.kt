@@ -85,10 +85,14 @@ class DisplayControllerTest {
     private val density = densityDpi / DisplayMetrics.DENSITY_DEFAULT.toFloat()
     private val bounds =
         arrayOf(
-            WindowBounds(Rect(0, 0, width, height), Rect(0, inset, 0, 0), Surface.ROTATION_0),
-            WindowBounds(Rect(0, 0, height, width), Rect(0, inset, 0, 0), Surface.ROTATION_90),
-            WindowBounds(Rect(0, 0, width, height), Rect(0, inset, 0, 0), Surface.ROTATION_180),
-            WindowBounds(Rect(0, 0, height, width), Rect(0, inset, 0, 0), Surface.ROTATION_270),
+            WindowBounds(Rect(0, 0, width, height), Rect(0, inset, 0, 0), Surface.ROTATION_0,
+                densityDpi),
+            WindowBounds(Rect(0, 0, height, width), Rect(0, inset, 0, 0), Surface.ROTATION_90,
+                densityDpi),
+            WindowBounds(Rect(0, 0, width, height), Rect(0, inset, 0, 0), Surface.ROTATION_180,
+                densityDpi),
+            WindowBounds(Rect(0, 0, height, width), Rect(0, inset, 0, 0), Surface.ROTATION_270,
+                densityDpi),
         )
     private lateinit var configuration: Configuration
 

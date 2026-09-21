@@ -176,10 +176,11 @@ public class TaskViewSimulatorTest {
         void verifyNoTransforms() {
             int rotation = mDisplaySize.x > mDisplaySize.y
                     ? Surface.ROTATION_90 : Surface.ROTATION_0;
-            CachedDisplayInfo cdi = new CachedDisplayInfo(mDisplaySize, rotation);
+            CachedDisplayInfo cdi = new CachedDisplayInfo(mDisplaySize, rotation, mDensityDpi);
             WindowBounds wm = new WindowBounds(
                     new Rect(0, 0, mDisplaySize.x, mDisplaySize.y),
-                    mDisplayInsets);
+                    mDisplayInsets,
+                    mDensityDpi);
             List<WindowBounds> allBounds = new ArrayList<>(4);
             for (int i = 0; i < 4; i++) {
                 Rect boundsR = new Rect(wm.bounds);
@@ -188,7 +189,7 @@ public class TaskViewSimulatorTest {
                 RotationUtils.rotateRect(insetsR, RotationUtils.deltaRotation(rotation, i));
                 RotationUtils.rotateRect(boundsR, RotationUtils.deltaRotation(rotation, i));
                 boundsR.set(0, 0, Math.abs(boundsR.width()), Math.abs(boundsR.height()));
-                allBounds.add(new WindowBounds(boundsR, insetsR));
+                allBounds.add(new WindowBounds(boundsR, insetsR, mDensityDpi));
             }
 
             WindowManagerProxy wmProxy = mock(WindowManagerProxy.class);

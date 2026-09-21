@@ -34,31 +34,34 @@ public class WindowBounds {
     public final Rect insets;
     public final Point availableSize;
     public final int rotationHint;
+    public final int densityDpi;
 
-    public WindowBounds(Rect bounds, Rect insets) {
-        this(bounds, insets, -1);
+    public WindowBounds(Rect bounds, Rect insets, int densityDpi) {
+        this(bounds, insets, -1, densityDpi);
     }
 
-    public WindowBounds(Rect bounds, Rect insets, int rotationHint) {
+    public WindowBounds(Rect bounds, Rect insets, int rotationHint, int densityDpi) {
         this.bounds = bounds;
         this.insets = insets;
         this.rotationHint = rotationHint;
         availableSize = new Point(bounds.width() - insets.left - insets.right,
                 bounds.height() - insets.top - insets.bottom);
+        this.densityDpi = densityDpi;
     }
 
     public WindowBounds(int width, int height, int availableWidth, int availableHeight,
-            int rotationHint) {
+            int rotationHint, int densityDpi) {
         this.bounds = new Rect(0, 0, width, height);
         this.availableSize = new Point(availableWidth, availableHeight);
         // We don't care about insets in this case
         this.insets = new Rect(0, 0, width - availableWidth, height - availableHeight);
         this.rotationHint = rotationHint;
+        this.densityDpi = densityDpi;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(bounds, insets);
+        return Objects.hash(bounds, insets, densityDpi);
     }
 
     @Override
@@ -78,6 +81,7 @@ public class WindowBounds {
                 + ", insets=" + insets
                 + ", availableSize=" + availableSize
                 + ", rotationHint=" + rotationHint
+                + ", densityDpi=" + densityDpi
                 + '}';
     }
 
@@ -95,6 +99,7 @@ public class WindowBounds {
     public static WindowBounds fromWindowMetrics(WindowMetrics wm) {
         Insets insets = wm.getWindowInsets().getInsets(Type.systemBars());
         return new WindowBounds(wm.getBounds(),
-                new Rect(insets.left, insets.top, insets.right, insets.bottom));
+                new Rect(insets.left, insets.top, insets.right, insets.bottom),
+                (int) (wm.getDensity() * 160));
     }
 }
