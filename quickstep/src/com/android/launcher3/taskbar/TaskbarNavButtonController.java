@@ -290,7 +290,7 @@ public class TaskbarNavButtonController implements TaskbarControllers.LoggableTa
      */
     public void onRecentsButtonLayoutChanged(Rect bounds) {
         mSystemUiProxy.notifyRecentsButtonPositionChanged(bounds);
-        if (cueBarAceMigration() && mControllers.cueBarController != null) {
+        if (cueBarAceMigration() && mControllers != null && mControllers.cueBarController != null) {
             mControllers.cueBarController.onRecentsButtonLayoutChanged(bounds);
         }
     }
