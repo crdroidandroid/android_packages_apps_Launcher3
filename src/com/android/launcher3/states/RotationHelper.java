@@ -33,6 +33,7 @@ import androidx.annotation.WorkerThread;
 
 import com.android.launcher3.BaseActivity;
 import com.android.launcher3.DeviceProfile;
+import com.android.launcher3.R;
 import com.android.launcher3.display.DisplayController;
 import com.android.launcher3.display.LauncherDisplayInfo;
 import com.android.launcher3.util.ContextTracker;
@@ -58,6 +59,7 @@ public class RotationHelper implements DeviceProfile.OnDeviceProfileChangeListen
 
     private boolean mIgnoreAutoRotateSettings;
     private boolean mForceAllowRotationForTesting;
+    private final boolean mForceAllowRotation;
 
     /**
      * Rotation request made by
@@ -85,6 +87,7 @@ public class RotationHelper implements DeviceProfile.OnDeviceProfileChangeListen
         mActivity = activity;
         mRequestOrientationHandler =
                 new Handler(UI_HELPER_EXECUTOR.getLooper(), this::setOrientationAsync);
+        mForceAllowRotation = activity.getResources().getBoolean(R.bool.config_allowRotation);
     }
 
     private void setIgnoreAutoRotateSettings(boolean ignoreAutoRotateSettings) {
@@ -100,12 +103,12 @@ public class RotationHelper implements DeviceProfile.OnDeviceProfileChangeListen
      * assuming that the delay is tolerable since it takes time to change to foreground.
      */
     private void onDisplayInfoChanged(LauncherDisplayInfo info) {
-        onIgnoreAutoRotateChanged(info.isLargeScreen(info.realBounds));
+        onIgnoreAutoRotateChanged(info.isLargeScreen(info.realBounds) || mForceAllowRotation);
     }
 
     @Override
     public void onDeviceProfileChanged(DeviceProfile dp) {
-        onIgnoreAutoRotateChanged(dp.getDeviceProperties().isLargeScreen());
+        onIgnoreAutoRotateChanged(dp.getDeviceProperties().isLargeScreen() || mForceAllowRotation);
     }
 
     private void onIgnoreAutoRotateChanged(boolean ignoreAutoRotateSettings) {
@@ -158,7 +161,7 @@ public class RotationHelper implements DeviceProfile.OnDeviceProfileChangeListen
         mInitialized = true;
         DisplayController displayController = DisplayController.INSTANCE.get(mActivity);
         LauncherDisplayInfo info = displayController.getInfo();
-        setIgnoreAutoRotateSettings(info.isLargeScreen(info.realBounds));
+        setIgnoreAutoRotateSettings(info.isLargeScreen(info.realBounds) || mForceAllowRotation);
         ListenableDiffAwareRef<LauncherDisplayInfo, Integer> listenable =
                 displayController.getListenable();
         if (listenable != null) {
