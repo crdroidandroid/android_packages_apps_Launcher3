@@ -93,7 +93,7 @@ public class RotationHelper implements DeviceProfile.OnDeviceProfileChangeListen
     private void setIgnoreAutoRotateSettings(boolean ignoreAutoRotateSettings) {
         if (mDestroyed) return;
         // On large devices we do not handle auto-rotate differently.
-        mIgnoreAutoRotateSettings = ignoreAutoRotateSettings;
+        mIgnoreAutoRotateSettings = ignoreAutoRotateSettings || mForceAllowRotation;
     }
 
     /**
@@ -103,12 +103,12 @@ public class RotationHelper implements DeviceProfile.OnDeviceProfileChangeListen
      * assuming that the delay is tolerable since it takes time to change to foreground.
      */
     private void onDisplayInfoChanged(LauncherDisplayInfo info) {
-        onIgnoreAutoRotateChanged(info.isLargeScreen(info.realBounds) || mForceAllowRotation);
+        onIgnoreAutoRotateChanged(info.isLargeScreen(info.realBounds));
     }
 
     @Override
     public void onDeviceProfileChanged(DeviceProfile dp) {
-        onIgnoreAutoRotateChanged(dp.getDeviceProperties().isLargeScreen() || mForceAllowRotation);
+        onIgnoreAutoRotateChanged(dp.getDeviceProperties().isLargeScreen());
     }
 
     private void onIgnoreAutoRotateChanged(boolean ignoreAutoRotateSettings) {
@@ -161,7 +161,7 @@ public class RotationHelper implements DeviceProfile.OnDeviceProfileChangeListen
         mInitialized = true;
         DisplayController displayController = DisplayController.INSTANCE.get(mActivity);
         LauncherDisplayInfo info = displayController.getInfo();
-        setIgnoreAutoRotateSettings(info.isLargeScreen(info.realBounds) || mForceAllowRotation);
+        setIgnoreAutoRotateSettings(info.isLargeScreen(info.realBounds));
         ListenableDiffAwareRef<LauncherDisplayInfo, Integer> listenable =
                 displayController.getListenable();
         if (listenable != null) {
