@@ -94,6 +94,12 @@ constructor(
 
     @JvmField val isNightModeActive: Boolean = config.isNightModeActive
 
+    /**
+     * Returns whether the display is landscape at ROTATION_0
+     */
+    val isDefaultLandscape: Boolean =
+        normalizedDisplayInfo.size.x > normalizedDisplayInfo.size.y
+
     // Used for testing
     init {
 

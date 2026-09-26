@@ -98,8 +98,9 @@ class NavButtonLayoutFactory {
                 }
                 isPhoneNavMode -> {
                     if (
-                        !deviceProfile.deviceProperties.isLandscape ||
-                            !deviceProfile.deviceProperties.canNavBarMove
+                        deviceProfile.deviceProperties.isLandscape ==
+                                deviceProfile.deviceProperties.isDefaultLandscape
+                        || !deviceProfile.deviceProperties.canNavBarMove
                     ) {
                         navButtonsView.setIsVertical(false)
                         PhonePortraitNavLayoutter(

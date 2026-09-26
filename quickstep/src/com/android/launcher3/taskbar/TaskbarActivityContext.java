@@ -1629,7 +1629,8 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
         // because this is the only case in which the nav bar is not on the display bottom.
         boolean landscapePhoneButtonNav = isPhoneButtonNavMode()
                 && mDeviceProfile.getDeviceProperties().getCanNavBarMove()
-                && mDeviceProfile.getDeviceProperties().isLandscape();
+                && (mDeviceProfile.getDeviceProperties().isLandscape() !=
+                        mDeviceProfile.getDeviceProperties().isDefaultLandscape());
         if ((landscapePhoneButtonNav ? mWindowLayoutParams.width : mWindowLayoutParams.height)
                 == size || mIsDestroyed) {
             return;

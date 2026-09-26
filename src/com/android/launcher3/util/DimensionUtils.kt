@@ -50,7 +50,8 @@ object DimensionUtils {
         }
 
         // Taskbar on phone, portrait, or on any device whose nav bar stays at the bottom
-        if (!deviceProfile.deviceProperties.isLandscape ||
+        if (deviceProfile.deviceProperties.isLandscape ==
+            deviceProfile.deviceProperties.isDefaultLandscape ||
             !deviceProfile.deviceProperties.canNavBarMove) {
             p.x = ViewGroup.LayoutParams.MATCH_PARENT
             p.y = res.getDimensionPixelSize(R.dimen.taskbar_phone_size)
