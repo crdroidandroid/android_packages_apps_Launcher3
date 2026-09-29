@@ -81,6 +81,7 @@ import android.provider.Settings.Secure;
 import android.provider.Settings.System;
 import android.util.Log;
 import android.util.Pair;
+import android.view.DisplayCutout;
 import android.view.Gravity;
 import android.view.Surface;
 import android.view.View;
@@ -412,6 +413,26 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
         BubbleBarView bubbleBarView = mDragLayer.findViewById(R.id.taskbar_bubbles);
         FrameLayout bubbleBarContainer = mDragLayer.findViewById(R.id.taskbar_bubbles_container);
         StashedHandleView bubbleHandleView = mDragLayer.findViewById(R.id.stashed_bubble_handle);
+
+        mDragLayer.setOnApplyWindowInsetsListener((v, insets) -> {
+            DisplayCutout cutout = insets.getDisplayCutout();
+            if (cutout == null || !isPhoneMode()) return insets;
+            v.setPadding(
+                    cutout.getSafeInsetLeft(), cutout.getSafeInsetTop(),
+                    cutout.getSafeInsetRight(), cutout.getSafeInsetBottom());
+            return insets;
+        });
+
+        mDragLayer.addOnAttachStateChangeListener(new View.OnAttachStateChangeListener() {
+            @Override
+            public void onViewAttachedToWindow(@NonNull View v) {
+                mDragLayer.removeOnAttachStateChangeListener(this);
+                mDragLayer.requestApplyInsets();
+            }
+
+            @Override
+            public void onViewDetachedFromWindow(@NonNull View v) {}
+        });
 
         mAccessibilityDelegate = new TaskbarShortcutMenuAccessibilityDelegate(this);
 
@@ -901,6 +922,10 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
         windowLayoutParams.layoutInDisplayCutoutMode = LAYOUT_IN_DISPLAY_CUTOUT_MODE_ALWAYS;
         windowLayoutParams.privateFlags =
                 WindowManager.LayoutParams.PRIVATE_FLAG_NO_MOVE_ANIMATION;
+        if (isPhoneMode()) {
+            windowLayoutParams.privateFlags |=
+                    WindowManager.LayoutParams.PRIVATE_FLAG_LAYOUT_SIZE_EXTENDED_BY_CUTOUT;
+        }
         windowLayoutParams.accessibilityTitle = getString(
                 isPhoneMode() ? R.string.taskbar_phone_a11y_title : R.string.taskbar_a11y_title);
 
