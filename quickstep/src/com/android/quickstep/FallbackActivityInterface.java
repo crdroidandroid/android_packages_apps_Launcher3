@@ -17,6 +17,8 @@ package com.android.quickstep;
 
 import static android.view.Display.DEFAULT_DISPLAY;
 
+import static com.android.app.animation.Interpolators.LINEAR;
+import static com.android.launcher3.util.MultiPropertyFactory.MULTI_PROPERTY_VALUE;
 import static com.android.launcher3.util.NavigationMode.NO_BUTTON;
 import static com.android.quickstep.fallback.RecentsState.BACKGROUND_APP;
 import static com.android.quickstep.fallback.RecentsState.DEFAULT;
@@ -33,8 +35,11 @@ import androidx.annotation.Nullable;
 
 import com.android.app.displaylib.PerDisplayRepository;
 import com.android.launcher3.DeviceProfile;
+import com.android.launcher3.LauncherAnimUtils;
+import com.android.launcher3.anim.PendingAnimation;
 import com.android.launcher3.dagger.LauncherAppSingleton;
 import com.android.launcher3.display.DisplayController;
+import com.android.launcher3.statehandlers.DepthController;
 import com.android.launcher3.statemanager.StateManager;
 import com.android.launcher3.taskbar.TaskbarInteractor;
 import com.android.launcher3.util.DaggerSingletonObject;
@@ -97,7 +102,22 @@ public final class FallbackActivityInterface extends
     public AnimationFactory prepareRecentsUI(
             boolean activityVisible, Consumer<AnimatorControllerWithResistance> callback) {
         notifyRecentsOfOrientation();
-        DefaultAnimationFactory factory = new DefaultAnimationFactory(callback);
+        DefaultAnimationFactory factory =
+                new DefaultAnimationFactory(callback) {
+                    @Override
+                    protected void createBackgroundToOverviewAnim(RecentsActivity container,
+                            PendingAnimation pa) {
+                        super.createBackgroundToOverviewAnim(container, pa);
+
+                        // Animate the blur and wallpaper zoom
+                        float fromDepthRatio = BACKGROUND_APP.getDepth(container);
+                        float toDepthRatio = DEFAULT.getDepth(container);
+                        pa.addFloat(container.getDepthController().stateDepth,
+                                new LauncherAnimUtils.ClampedProperty<>(
+                                        MULTI_PROPERTY_VALUE, fromDepthRatio, toDepthRatio),
+                                fromDepthRatio, toDepthRatio, LINEAR);
+                    }
+                };
         factory.initBackgroundStateUI();
         return factory;
     }
@@ -113,6 +133,16 @@ public final class FallbackActivityInterface extends
     @Override
     public RecentsActivity getCreatedContainer() {
         return RecentsActivity.ACTIVITY_TRACKER.getCreatedContext();
+    }
+
+    @Nullable
+    @Override
+    public DepthController<RecentsState, RecentsActivity> getDepthController() {
+        RecentsActivity activity = getCreatedContainer();
+        if (activity == null) {
+            return null;
+        }
+        return activity.getDepthController();
     }
 
     @Override

@@ -18,6 +18,7 @@ package com.android.quickstep.fallback
 
 import android.content.Context
 import android.util.AttributeSet
+import com.android.launcher3.statehandlers.DepthController
 import com.android.quickstep.RecentsActivity
 
 class FallbackActivityRecentsView
@@ -28,4 +29,7 @@ constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int = 0) :
     override fun initialiseInjectables() {
         mContainer.activityComponent.inject(this)
     }
+
+    override fun getDepthController(): DepthController<RecentsState, RecentsActivity> =
+        mContainer.depthController
 }
