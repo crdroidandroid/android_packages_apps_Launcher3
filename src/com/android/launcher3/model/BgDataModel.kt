@@ -228,7 +228,11 @@ constructor(
      * shortcuts and unpinning any extra shortcuts.
      */
     fun updateShortcutPinnedState(context: Context) {
-        for (user in UserCache.INSTANCE[context].userProfiles) {
+        val userCache = UserCache.INSTANCE[context]
+        for (user in userCache.userProfiles) {
+            if (userCache.isPrivate(user) && !userCache.isUserUnlocked(user)) {
+                continue
+            }
             updateShortcutPinnedState(context, user)
         }
     }
@@ -249,6 +253,10 @@ constructor(
     @Synchronized
     fun updateShortcutPinnedState(context: Context, user: UserHandle) {
         if (!BuildConfig.WIDGETS_ENABLED) {
+            return
+        }
+        val userCache = UserCache.INSTANCE[context]
+        if (userCache.isPrivate(user) && !userCache.isUserUnlocked(user)) {
             return
         }
 

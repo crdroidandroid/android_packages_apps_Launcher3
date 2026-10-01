@@ -174,6 +174,8 @@ constructor(
     /** Returns the user locked state */
     fun isUserUnlocked(user: UserHandle) = userManagerState.isUserUnlocked(user)
 
+    fun isPrivate(user: UserHandle): Boolean = getUserInfo(user).isPrivate
+
     /** @see UserManager.getUserForSerialNumber */
     fun getUserForSerialNumber(serialNumber: Long): UserHandle =
         userManagerState.getUser(serialNumber)
