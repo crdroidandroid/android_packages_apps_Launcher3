@@ -457,4 +457,16 @@
     <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
     <string name="app_drawer_sort_install_date">Sort by install date</string>
     <string name="app_drawer_sort_usage">Sort by usage</string>
+
+    <!-- Color Picker -->
+    <string name="color_picker_arrow_right" translatable="false">→</string>
+    <string name="color_picker_title">Select color</string>
+    <string name="color_picker_select">Select</string>
+    <string name="color_picker_reset">Reset to default</string>
+    <string name="color_picker_presets">Presets</string>
+    <string name="color_picker_hex_rgb">Hex (#RRGGBB)</string>
+    <string name="color_picker_hex_argb">Hex (#AARRGGBB)</string>
+    <string name="color_picker_hex_invalid">Enter a valid hex color</string>
+    <string name="color_picker_current_color">Current color</string>
+    <string name="color_picker_new_color">New color</string>
 </resources>

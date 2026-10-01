@@ -29,4 +29,7 @@
 
     <!-- App drawer styles -->
     <dimen name="all_apps_page_indicator_bottom_margin">32dp</dimen>
+
+    <!-- Oval preview size -->
+    <dimen name="oval_notification_size">26dp</dimen>
 </resources>

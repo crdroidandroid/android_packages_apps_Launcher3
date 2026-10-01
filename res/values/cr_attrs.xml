@@ -33,4 +33,13 @@
     <attr name="qsbIconTintQuaternary" format="color" />
     <attr name="qsbIconTintSecondary" format="color" />
     <attr name="qsbIconTintTertiary" format="color" />
+
+    <!-- ColorPicker -->
+    <declare-styleable name="ColorPickerPreference">
+        <attr name="alphaSlider" format="boolean" />
+        <attr name="showPreview" format="boolean" />
+        <attr name="showReset" format="boolean" />
+        <attr name="dividerAbove" format="boolean" />
+        <attr name="dividerBelow" format="boolean" />
+    </declare-styleable>
 </resources>
