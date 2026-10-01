@@ -369,6 +369,12 @@ public class WindowManagerProxy {
                 navBarHeight = navBarHeightPortrait;
                 navbarWidth = 0;
                 statusBarHeight = statusBarHeightPortrait;
+            } else if (!isTabletOrGesture
+                    && (i == Surface.ROTATION_0 || i == Surface.ROTATION_180)) {
+                // Naturally landscape phone displays keep the 3-button navigation bar at the bottom
+                navBarHeight = navBarHeightPortrait;
+                navbarWidth = 0;
+                statusBarHeight = statusBarHeightLandscape;
             } else {
                 navBarHeight = navBarHeightLandscape;
                 navbarWidth = navbarWidthLandscape;
@@ -485,6 +491,14 @@ public class WindowManagerProxy {
         } catch (UnsupportedOperationException e) {
             return DEFAULT_DISPLAY;
         }
+    }
+
+    /**
+     * Returns true if the display associated with the context is an external display, as opposed
+     * to the default display or a non-display context.
+     */
+    public boolean isExternalDisplay(Context displayInfoContext) {
+        return getDisplayId(displayInfoContext) != DEFAULT_DISPLAY;
     }
 
     /**

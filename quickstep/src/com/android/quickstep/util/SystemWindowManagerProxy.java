@@ -21,6 +21,7 @@ import static android.view.Display.DEFAULT_DISPLAY;
 import android.content.Context;
 import android.graphics.Rect;
 import android.util.ArrayMap;
+import android.view.Display;
 import android.view.DisplayCutout;
 import android.view.Surface;
 import android.view.WindowManager;
@@ -66,6 +67,13 @@ public class SystemWindowManagerProxy extends WindowManagerProxy {
         }
         return displayInfoContext.getResources().getConfiguration()
                 .windowConfiguration.getWindowingMode() == WINDOWING_MODE_FREEFORM;
+    }
+
+    @Override
+    public boolean isExternalDisplay(Context displayInfoContext) {
+        // Built-in secondary displays (e.g. on dual screen devices) behave like the default one
+        return super.isExternalDisplay(displayInfoContext)
+                && getDisplay(displayInfoContext).getType() != Display.TYPE_INTERNAL;
     }
 
     @Override

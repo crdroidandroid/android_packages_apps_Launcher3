@@ -51,6 +51,12 @@ public class SecondaryDisplayDelegate {
     void openAllAppsForDisplay(int displayId) {
     }
 
+    /**
+     * Called when a home intent is delivered to the secondary display launcher.
+     */
+    void onHomeIntent() {
+    }
+
     void onCreate() {
     }
 

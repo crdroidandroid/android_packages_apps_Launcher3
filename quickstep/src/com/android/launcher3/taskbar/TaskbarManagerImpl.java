@@ -488,7 +488,7 @@ public class TaskbarManagerImpl {
 
         var isExternalDisplay = isExternalDisplay(displayId);
 
-        if (isExternalDisplay) {
+        if (displayId != mPrimaryDisplayId) {
             var wm = mBaseContext.getSystemService(WindowManager.class);
             if (wm == null) {
                 debugTaskbarManager("initPerDisplayResource: WindowManager is null!", displayId);
@@ -749,6 +749,11 @@ public class TaskbarManagerImpl {
     /** Creates a {@link TaskbarUIController} to use with non default displays. */
     private TaskbarUIController createTaskbarUIControllerForNonDefaultDisplay(int displayId) {
         debugTaskbarManager("createTaskbarUIControllerForNonDefaultDisplay", displayId);
+        if (!mUserUnlocked) {
+            // The home activity can't be resolved before the user is unlocked, which taskbars get
+            // recreated for
+            return new TaskbarUIController();
+        }
         BaseContainerInterface<?, ?> containerInterface = OverviewComponentObserver.INSTANCE.get(
                 mBaseContext).getContainerInterface(displayId);
         if (containerInterface != null) {
@@ -766,7 +771,7 @@ public class TaskbarManagerImpl {
     private TaskbarUIController createTaskbarUIControllerForRecentsViewContainer(
             RecentsViewContainerInteractor interactor, int displayId) {
         debugTaskbarManager("createTaskbarUIControllerForRecentsViewContainer", displayId);
-        if (!isExternalDisplay(displayId)
+        if (displayId == mPrimaryDisplayId
                 && mActivityInteractor instanceof LauncherInteractor launcherInteractor) {
             // If 1P Launcher is default, always use LauncherTaskbarUIController, regardless of
             // whether the recents container is NexusLauncherActivity or RecentsWindowManager. This
@@ -883,7 +888,7 @@ public class TaskbarManagerImpl {
 
             // Non default displays should not use LauncherTaskbarUIController as they shouldn't
             // have access to the Launcher activity.
-            if (resource.isExternalDisplay()) {
+            if (displayId != mPrimaryDisplayId) {
                 setUiController(taskbar, createTaskbarUIControllerForNonDefaultDisplay(displayId));
             } else if (mRecentsViewContainerInteractor != null) {
                 setUiController(taskbar, createTaskbarUIControllerForRecentsViewContainer(
@@ -1241,8 +1246,14 @@ public class TaskbarManagerImpl {
     }
 
     private boolean isExternalDisplay(int displayId) {
-        return DesktopExperienceFlags.ENABLE_TASKBAR_CONNECTED_DISPLAYS.isTrue()
-                && (mPrimaryDisplayId != displayId);
+        if (!DesktopExperienceFlags.ENABLE_TASKBAR_CONNECTED_DISPLAYS.isTrue()
+                || mPrimaryDisplayId == displayId) {
+            return false;
+        }
+        // Built-in secondary displays (e.g. on dual screen devices) get the same taskbar as the
+        // primary display instead of the connected display one.
+        Display display = getDisplay(displayId);
+        return display == null || display.getType() != Display.TYPE_INTERNAL;
     }
 
     private int getFocusedDisplayId() {

@@ -17,6 +17,7 @@ package com.android.launcher3.secondarydisplay;
 
 import static androidx.lifecycle.Lifecycle.State.RESUMED;
 import static com.android.launcher3.util.OnboardingPrefs.ALL_APPS_VISITED_COUNT;
+import static com.android.quickstep.fallback.RecentsState.HIDDEN;
 import static com.android.window.flags.Flags.useInputReportedFocusForAccessibility;
 
 import android.annotation.NonNull;
@@ -36,6 +37,7 @@ import com.android.launcher3.appprediction.PredictionRowView;
 import com.android.launcher3.dagger.ActivityContextSingleton;
 import com.android.launcher3.model.data.PredictedContainerInfo;
 import com.android.launcher3.taskbar.TaskbarActivityContext;
+import com.android.launcher3.util.window.WindowManagerProxy;
 import com.android.launcher3.views.ActivityContext;
 import com.android.quickstep.BaseContainerInterface;
 import com.android.quickstep.OverviewComponentObserver;
@@ -138,7 +140,9 @@ public final class SecondaryDisplayQuickstepDelegateImpl extends SecondaryDispla
 
     @Override
     boolean enableTaskbarConnectedDisplays() {
-        return DesktopExperienceFlags.ENABLE_TASKBAR_CONNECTED_DISPLAYS.isTrue();
+        // Built-in secondary displays don't get the connected display taskbar
+        return DesktopExperienceFlags.ENABLE_TASKBAR_CONNECTED_DISPLAYS.isTrue()
+                && WindowManagerProxy.INSTANCE.get(mContext).isExternalDisplay(mContext);
     }
 
     @Override
@@ -149,6 +153,16 @@ public final class SecondaryDisplayQuickstepDelegateImpl extends SecondaryDispla
                 conn.getTaskbarManager().getTaskbarForDisplay(displayId);
         if (currentDisplayTaskbarContext != null) {
             currentDisplayTaskbarContext.openTaskbarAllApps();
+        }
+    }
+
+    @Override
+    void onHomeIntent() {
+        // When recents was opened on top of the secondary display launcher, going home doesn't
+        // trigger a transition that would hide it, so hide it here instead
+        RecentsWindowManager recentsWindowManager = getVisibleRecentsWindowManager();
+        if (recentsWindowManager != null) {
+            recentsWindowManager.getStateManager().goToState(HIDDEN, false /* animated */);
         }
     }
 

@@ -175,6 +175,8 @@ public class SecondaryDisplayLauncher extends BaseActivity implements BgDataMode
         super.onNewIntent(intent);
 
         if (Intent.ACTION_MAIN.equals(intent.getAction())) {
+            mSecondaryDisplayDelegate.onHomeIntent();
+
             // Hide keyboard.
             final View v = getWindow().peekDecorView();
             if (v != null && v.getWindowToken() != null) {
