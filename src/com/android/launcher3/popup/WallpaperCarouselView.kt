@@ -7,10 +7,8 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.util.AttributeSet
-import android.util.Log
 import android.view.Gravity
 import android.view.MotionEvent
-import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.ImageView
@@ -54,6 +52,7 @@ class WallpaperCarouselView @JvmOverloads constructor(
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
 
     private var applyJob: Job? = null
+    private var weightAnimator: ValueAnimator? = null
 
     init {
         orientation = HORIZONTAL
@@ -77,54 +76,48 @@ class WallpaperCarouselView @JvmOverloads constructor(
     }
 
     private fun displayWallpapers(wallpapers: List<Wallpaper>) {
+        weightAnimator?.cancel()
         removeAllViews()
 
         val appliedIndex = wallpapers.indexOfFirst { it.rank == 0 }.let { if (it >= 0) it else 0 }
         currentItemIndex = appliedIndex
 
-        val totalWidth = calculateTotalWidth()
-        val firstItemWidth = totalWidth * 0.4
-        val itemWidth = calculateItemWidth(totalWidth, wallpapers.size, firstItemWidth)
-        val margin = (totalWidth * 0.03).toInt()
+        val margin = (desiredWidth() * GAP_FRACTION).toInt()
 
         wallpapers.forEachIndexed { index, wallpaper ->
-            val cardView = createCardView(index, firstItemWidth, itemWidth, margin, wallpaper)
+            val cardView = createCardView(index, margin, wallpaper)
             addView(cardView)
             loadWallpaperImage(wallpaper, cardView, index == currentItemIndex)
         }
         loadingView.visibility = GONE
     }
 
-    private fun calculateTotalWidth(): Int {
-        return width.takeIf { it > 0 }
-            ?: (deviceProfile.deviceProperties.widthPx * if (deviceProfile.deviceProperties.isLandscape || deviceProfile.deviceProperties.isPhone) 0.5 else 0.8).toInt()
+    private fun desiredWidth(): Int {
+        val props = deviceProfile.deviceProperties
+        val fraction = if (props.isLandscape || props.isPhone) 0.5 else 0.8
+        return (props.widthPx * fraction).toInt()
     }
 
-    private fun calculateItemWidth(totalWidth: Int, itemCount: Int, firstItemWidth: Double): Double {
-        if (itemCount <= 1) return totalWidth.toDouble()
-        val remainingWidth = totalWidth - firstItemWidth
-        val marginBetweenItems = totalWidth * 0.03
-        return (remainingWidth - (marginBetweenItems * (itemCount - 1))) / (itemCount - 1)
-    }
+    private fun weightFor(index: Int, expandedIndex: Int): Float =
+        if (index == expandedIndex) EXPANDED_WEIGHT else COLLAPSED_WEIGHT
 
     @SuppressLint("ClickableViewAccessibility")
     private fun createCardView(
         index: Int,
-        firstItemWidth: Double,
-        itemWidth: Double,
         margin: Int,
         wallpaper: Wallpaper,
     ): CardView {
         return CardView(context).apply {
             radius = Themes.getDialogCornerRadius(context) / 2
             layoutParams = LayoutParams(
-                if (index == currentItemIndex) firstItemWidth.toInt() else itemWidth.toInt(),
+                0,
                 LayoutParams.MATCH_PARENT,
+                weightFor(index, currentItemIndex),
             ).apply { setMargins(if (index > 0) margin else 0, 0, 0, 0) }
 
             setOnTouchListener { _, ev ->
                 if (ev.actionMasked == MotionEvent.ACTION_DOWN) {
-                    animateWidthTransition(index, firstItemWidth, itemWidth)
+                    animateExpansion(index)
                 }
                 false
             }
@@ -211,7 +204,7 @@ class WallpaperCarouselView @JvmOverloads constructor(
         }
     }
 
-    private fun addIconFrameToCenter(cardView: CardView? = getChildAt(currentItemIndex) as CardView) {
+    private fun addIconFrameToCenter(cardView: CardView? = getChildAt(currentItemIndex) as? CardView) {
         if (cardView == null) return
         (iconFrame.parent as? ViewGroup)?.removeView(iconFrame)
         cardView.addView(
@@ -223,33 +216,45 @@ class WallpaperCarouselView @JvmOverloads constructor(
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        val width = resolveSize(desiredWidth(), widthMeasureSpec)
         super.onMeasure(
-            MeasureSpec.makeMeasureSpec(calculateTotalWidth(), MeasureSpec.EXACTLY),
+            MeasureSpec.makeMeasureSpec(width, MeasureSpec.EXACTLY),
             heightMeasureSpec,
         )
     }
 
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
+        weightAnimator?.cancel()
         scope.cancel()
         removeAllViews()
     }
 
-    private fun animateWidthTransition(newIndex: Int, firstItemWidth: Double, itemWidth: Double) {
-        for (i in 0 until childCount) {
-            (getChildAt(i) as? CardView)?.let { cardView ->
-                val targetWidth = if (i == newIndex) firstItemWidth.toInt() else itemWidth.toInt()
-                if (cardView.layoutParams.width != targetWidth) {
-                    ValueAnimator.ofInt(cardView.layoutParams.width, targetWidth).apply {
-                        duration = 300L
-                        addUpdateListener {
-                            cardView.layoutParams.width = it.animatedValue as Int
-                            cardView.requestLayout()
-                        }
-                        start()
-                    }
+    private fun animateExpansion(newIndex: Int) {
+        val cards = (0 until childCount).mapNotNull { getChildAt(it) as? CardView }
+        if (cards.isEmpty()) return
+
+        val from = cards.map { (it.layoutParams as LayoutParams).weight }
+        val to = cards.indices.map { weightFor(it, newIndex) }
+        if (from == to) return
+
+        weightAnimator?.cancel()
+        weightAnimator = ValueAnimator.ofFloat(0f, 1f).apply {
+            duration = 300L
+            addUpdateListener { animator ->
+                val f = animator.animatedFraction
+                cards.forEachIndexed { i, card ->
+                    (card.layoutParams as LayoutParams).weight = from[i] + (to[i] - from[i]) * f
                 }
+                requestLayout()
             }
+            start()
         }
+    }
+
+    private companion object {
+        const val GAP_FRACTION = 0.03
+        const val EXPANDED_WEIGHT = 2.5f
+        const val COLLAPSED_WEIGHT = 1f
     }
 }
