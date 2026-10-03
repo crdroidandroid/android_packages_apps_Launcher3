@@ -589,6 +589,7 @@ public interface TaskShortcutFactory {
 
         @Override
         public void onClick(View view) {
+            dismissTaskMenuView();
             if (mPackageName != null) {
                 if (mTask != null) {
                     if (mLockedTasks.contains(mPackageName)) {
