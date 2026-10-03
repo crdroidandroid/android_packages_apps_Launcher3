@@ -95,6 +95,8 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Фон віджета</string>
     <string name="hotseat_bg_summary">Додати напівпрозорий фон в панель додатка</string>
+    <string name="hotseat_opacity_light_title">Прозорість тла у світлій темі</string>
+    <string name="hotseat_opacity_dark_title">Прозорість тла у темній темі</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Прозорість фону</string>
     <!-- Stroke -->
@@ -411,6 +413,9 @@
     <string name="color_picker_green">Зелений</string>
     <string name="color_picker_blue">Синій</string>
     <string name="color_picker_hex">HEX</string>
+    <string name="color_picker_default">За замовчанням</string>
+    <string name="color_picker_surface">Поверхня</string>
+    <string name="color_picker_accent">Акцент</string>
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Панель пошуку в стилі Pixel</string>
     <string name="dock_search_pixel_style_summary">Оновлений рядок пошуку з багатошаровим фоном</string>

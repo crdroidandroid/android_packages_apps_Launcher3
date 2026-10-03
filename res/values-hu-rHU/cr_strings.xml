@@ -95,6 +95,8 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Hotseat háttér</string>
     <string name="hotseat_bg_summary">Áttetsző háttereket adhat az alkalmazásfiókhoz</string>
+    <string name="hotseat_opacity_light_title">A Háttér átlátszósága Világos témában</string>
+    <string name="hotseat_opacity_dark_title">A Háttér átlátszósága Sötét témában</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Háttérátlátszóság</string>
     <!-- Stroke -->
@@ -411,6 +413,9 @@
     <string name="color_picker_green">Zöld</string>
     <string name="color_picker_blue">Kék</string>
     <string name="color_picker_hex">HEX</string>
+    <string name="color_picker_default">Alapértelmezett</string>
+    <string name="color_picker_surface">Felület</string>
+    <string name="color_picker_accent">Kiemelés</string>
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Pixel stílusú keresősáv</string>
     <string name="dock_search_pixel_style_summary">Újraálmodott keresősáv réteges háttérrel</string>

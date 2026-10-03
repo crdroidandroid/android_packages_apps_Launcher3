@@ -95,6 +95,8 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Fundo da doca</string>
     <string name="hotseat_bg_summary">Mostrar fundo translúcido na doca de apps</string>
+    <string name="hotseat_opacity_light_title">Background opacity in light theme</string>
+    <string name="hotseat_opacity_dark_title">Background opacity in dark theme</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Opacidade do fundo</string>
     <!-- Stroke -->
@@ -411,6 +413,9 @@
     <string name="color_picker_green">Verde</string>
     <string name="color_picker_blue">Azul</string>
     <string name="color_picker_hex">HEX</string>
+    <string name="color_picker_default">Padrão</string>
+    <string name="color_picker_surface">Surface</string>
+    <string name="color_picker_accent">Accent</string>
     <!-- Pixel style search bar -->
     <string name="dock_search_pixel_style_title">Barra de procura ao estilo Pixel</string>
     <string name="dock_search_pixel_style_summary">Barra de procura revista com fundo sobreposto</string>
