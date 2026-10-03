@@ -16,9 +16,9 @@
 package io.chaldeaprjkt.seraphixgoogle
 
 import android.appwidget.AppWidgetManager
+import android.appwidget.AppWidgetProviderInfo
 import android.content.ComponentName
 import android.content.Context
-import android.util.Log
 import io.chaldeaprjkt.seraphixgoogle.SeraphixCompanion.isPackageEnabled
 
 class SeraphixDataProvider(
@@ -27,16 +27,15 @@ class SeraphixDataProvider(
     hostWidgetId: Int = -1
 ) {
     private val widgetManager by lazy { AppWidgetManager.getInstance(context) }
-    private val providerInfo by lazy {
-        widgetManager.installedProviders
-            .firstOrNull { it.provider == smartspaceProviderComponent }
-    }
     private val widgetHost by lazy { EphemeralWidgetHostGoogle(context, hostId) }
     private lateinit var widgetHostView: EphemeralWidgetHostViewGoogle
     private val smartspaceProviderComponent = ComponentName(QSB_PACKAGE, SMARTSPACE_PROVIDER)
     private var widgetId = hostWidgetId
     private var isWidgetBound = false
     private var isListening = false
+
+    private fun findProviderInfo(): AppWidgetProviderInfo? =
+        widgetManager.installedProviders.firstOrNull { it.provider == smartspaceProviderComponent }
 
     fun setOnDataUpdated(listener: DataProviderListener? = null): SeraphixDataProvider {
         widgetHost.setOnDataUpdated(listener)
@@ -57,24 +56,34 @@ class SeraphixDataProvider(
         }
     }
 
-    fun bind(onBounded: DataProviderBinder? = null) {
-        if (isWidgetBound) return
-        if (!context.isPackageEnabled(QSB_PACKAGE)) return
+    fun bind(onBounded: DataProviderBinder? = null): Boolean {
+        if (isWidgetBound) {
+            if (widgetId > -1 && widgetManager.getAppWidgetInfo(widgetId) != null) return true
+            pauseListening()
+            isWidgetBound = false
+        }
+        if (!context.isPackageEnabled(QSB_PACKAGE)) return false
+        val providerInfo = findProviderInfo() ?: return false
 
-        val wInfo = widgetManager.getAppWidgetInfo(widgetId)
-        isWidgetBound = wInfo != null && providerInfo?.provider == wInfo.provider
+        val existing = if (widgetId > -1) widgetManager.getAppWidgetInfo(widgetId) else null
+        isWidgetBound = existing != null && existing.provider == providerInfo.provider
         if (!isWidgetBound) {
             if (widgetId > -1) widgetHost.deleteHost()
             widgetId = widgetHost.allocateAppWidgetId()
             isWidgetBound = widgetManager.bindAppWidgetIdIfAllowed(widgetId, smartspaceProviderComponent)
+            if (!isWidgetBound) {
+                // Don't leak the allocated id when binding isn't permitted.
+                widgetHost.deleteAppWidgetId(widgetId)
+                widgetId = -1
+                return false
+            }
         }
 
-        if (isWidgetBound) {
-            onBounded?.onBound(widgetId)
-            resumeListening()
-            widgetHostView = widgetHost.createView(context, widgetId, providerInfo)
-                    as EphemeralWidgetHostViewGoogle
-        }
+        onBounded?.onBound(widgetId)
+        resumeListening()
+        widgetHostView = widgetHost.createView(context, widgetId, providerInfo)
+                as EphemeralWidgetHostViewGoogle
+        return true
     }
 
     fun unbind() {

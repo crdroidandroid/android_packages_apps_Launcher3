@@ -17,14 +17,8 @@ package io.chaldeaprjkt.seraphixgoogle
 
 import android.content.Context
 import android.content.pm.PackageManager
-import android.content.res.Resources
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-
 
 object SeraphixCompanion {
     fun Context.isPackageEnabled(packageName: String): Boolean {
@@ -47,4 +41,18 @@ object SeraphixCompanion {
     }
 
     fun ViewGroup.allChildren() = ArrayList<View>().also { allChildren(it) }
+
+    private fun ViewGroup.visibleLeaves(list: MutableList<View>) {
+        for (i in (0 until childCount)) {
+            val child = getChildAt(i)
+            if (child.visibility != View.VISIBLE) continue
+            if (child is ViewGroup) {
+                child.visibleLeaves(list)
+            } else {
+                list.add(child)
+            }
+        }
+    }
+
+    fun ViewGroup.visibleLeaves() = ArrayList<View>().also { visibleLeaves(it) }
 }
