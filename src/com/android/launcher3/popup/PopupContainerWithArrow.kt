@@ -19,7 +19,6 @@ import android.animation.LayoutTransition
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.PointF
-import android.graphics.Typeface
 import android.os.Handler
 import android.view.MotionEvent
 import android.view.View
@@ -38,7 +37,6 @@ import com.android.launcher3.dragndrop.DragController
 import com.android.launcher3.model.data.ItemInfo
 import com.android.launcher3.model.data.ItemInfoWithIcon
 import com.android.launcher3.popup.ui.PopupItem
-import com.android.launcher3.shortcuts.DeepShortcutTextView
 import com.android.launcher3.shortcuts.DeepShortcutView
 import com.android.launcher3.util.Executors
 import com.android.launcher3.util.ShortcutUtil
@@ -393,13 +391,6 @@ private constructor(
         if (view is DeepShortcutView) {
             // System shortcut takes entire row with icon and text
             val shortcutView = view
-            if (com.android.wm.shell.Flags.enableGsf()) {
-                shortcutView.bubbleText.typeface =
-                    Typeface.create(
-                        DeepShortcutTextView.GOOGLE_SANS_FLEX_LABEL_LARGE,
-                        Typeface.NORMAL,
-                    )
-            }
             info.setIconAndLabelFor(shortcutView.iconView, shortcutView.bubbleText)
         } else if (view is ImageView) {
             // System shortcut is just an icon
