@@ -38,6 +38,8 @@ import static com.android.launcher3.logging.StatsLogManager.LauncherEvent.LAUNCH
 import static com.android.launcher3.taskbar.TaskbarAutohideSuspendController.FLAG_AUTOHIDE_SUSPEND_DRAGGING;
 import static com.android.launcher3.taskbar.TaskbarAutohideSuspendController.FLAG_AUTOHIDE_SUSPEND_FULLSCREEN;
 import static com.android.launcher3.taskbar.TaskbarManagerImpl.NAVBAR_IME_SPACE_URI;
+import static com.android.launcher3.taskbar.TaskbarManagerImpl.TASKBAR_SETTING_UNSET;
+import static com.android.launcher3.taskbar.TaskbarManagerImpl.resolveTaskbarEnabled;
 import static com.android.launcher3.taskbar.TaskbarStashController.FLAG_IN_SECONDARY_LAUNCHER_ON_CD;
 import static com.android.launcher3.taskbar.TaskbarStashController.FLAG_STASHED_IN_APP_AUTO;
 import static com.android.launcher3.taskbar.TaskbarStashController.SHOULD_BUBBLES_FOLLOW_DEFAULT_VALUE;
@@ -373,8 +375,10 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
         SettingsCache settingsCache = SettingsCache.INSTANCE.get(this);
         mIsUserSetupComplete = settingsCache.getValue(URI_USER_SETUP_COMPLETE);
         mIsNavBarKidsMode = settingsCache.getValue(URI_NAV_BAR_KIDS_MODE);
-        mIsTaskbarEnabled = settingsCache.getIntValue(URI_ENABLE_TASKBAR,
-                                launcherDp.getDeviceProperties().isLargeScreen() ? 1 : 0);
+        int rawTaskbarSetting = settingsCache.getIntValue(URI_ENABLE_TASKBAR,
+                TASKBAR_SETTING_UNSET);
+        mIsTaskbarEnabled = resolveTaskbarEnabled(rawTaskbarSetting,
+                launcherDp.getDeviceProperties().isLargeScreen());
         mIsNavbarHintEnabled = settingsCache.getValue(URI_NAVIGATION_BAR_HINT);
         mNavbarLayoutMode = settingsCache.getIntValue(URI_NAVBAR_LAYOUT_MODE);
         mIsNavbarEnabled = settingsCache.getIntValue(URI_FORCE_SHOW_NAVBAR,
@@ -735,8 +739,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
      * single window for taskbar and navbar.
      */
     public boolean isPhoneMode() {
-        if (!mDeviceProfile.getDeviceProperties().isPhone() &&
-                mIsTaskbarEnabled == 0) {
+        if (mIsTaskbarEnabled == 0 && !isBubbleBarOnPhone()) {
             return true;
         }
         return isDeviceProfileForPhoneMode(mDeviceProfile);

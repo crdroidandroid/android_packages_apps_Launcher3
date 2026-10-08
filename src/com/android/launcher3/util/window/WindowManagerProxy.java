@@ -19,7 +19,7 @@ import static android.view.Display.DEFAULT_DISPLAY;
 
 import static com.android.launcher3.Utilities.dpToPx;
 import static com.android.launcher3.Utilities.dpiFromPx;
-import static com.android.launcher3.taskbar.TaskbarManagerImpl.ENABLE_TASKBAR_URI;
+import static com.android.launcher3.taskbar.TaskbarManagerImpl.isTaskbarEnabledBySetting;
 import static com.android.launcher3.testing.shared.ResourceUtils.INVALID_RESOURCE_HANDLE;
 import static com.android.launcher3.testing.shared.ResourceUtils.NAVBAR_HEIGHT;
 import static com.android.launcher3.testing.shared.ResourceUtils.NAVBAR_HEIGHT_LANDSCAPE;
@@ -59,7 +59,6 @@ import com.android.launcher3.display.LauncherDisplayInfo;
 import com.android.launcher3.testing.shared.ResourceUtils;
 import com.android.launcher3.util.DaggerSingletonObject;
 import com.android.launcher3.util.NavigationMode;
-import com.android.launcher3.util.SettingsCache;
 import com.android.launcher3.util.WindowBounds;
 
 import java.util.ArrayList;
@@ -340,9 +339,10 @@ public class WindowManagerProxy {
                 STATUS_BAR_HEIGHT_LANDSCAPE, STATUS_BAR_HEIGHT);
 
         int navBarHeightPortrait, navBarHeightLandscape, navbarWidthLandscape;
-        int tabletNavBarHeight = mTaskbarDrawnInProcess
-                ? (isTaskbarEnabled(context) ? 0 : getDimenByName(systemRes, NAVBAR_HEIGHT))
-                : context.getResources().getDimensionPixelSize(R.dimen.taskbar_size);
+        int tabletNavBarHeight = !isTablet ? 0
+                : mTaskbarDrawnInProcess
+                        ? (isTaskbarEnabled(context) ? 0 : getDimenByName(systemRes, NAVBAR_HEIGHT))
+                        : context.getResources().getDimensionPixelSize(R.dimen.taskbar_size);
 
         navBarHeightPortrait = isTablet
                 ? tabletNavBarHeight
@@ -426,7 +426,8 @@ public class WindowManagerProxy {
     }
 
     protected boolean isTaskbarEnabled(Context context) {
-        return SettingsCache.INSTANCE.get(context).getValue(ENABLE_TASKBAR_URI);
+        // Only called for large screens.
+        return isTaskbarEnabledBySetting(context, /* isLargeScreen= */ true);
     }
 
     /**

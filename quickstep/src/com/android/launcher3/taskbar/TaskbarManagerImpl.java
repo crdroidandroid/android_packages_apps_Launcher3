@@ -145,6 +145,24 @@ public class TaskbarManagerImpl {
     public static final Uri ENABLE_TASKBAR_URI = LineageSettings.System.getUriFor(
             LineageSettings.System.ENABLE_TASKBAR);
 
+    public static final int TASKBAR_SETTING_UNSET = -1;
+
+    public static int resolveTaskbarEnabled(int rawValue, boolean isLargeScreen) {
+        if (rawValue == TASKBAR_SETTING_UNSET) {
+            return isLargeScreen ? 1 : 0;
+        }
+        return rawValue != 0 ? 1 : 0;
+    }
+
+    public static int getTaskbarEnabledSetting(Context context) {
+        return SettingsCache.INSTANCE.get(context)
+                .getIntValue(ENABLE_TASKBAR_URI, TASKBAR_SETTING_UNSET);
+    }
+
+    public static boolean isTaskbarEnabledBySetting(Context context, boolean isLargeScreen) {
+        return resolveTaskbarEnabled(getTaskbarEnabledSetting(context), isLargeScreen) != 0;
+    }
+
     public static final Uri NAVIGATION_BAR_HINT_URI = LineageSettings.System.getUriFor(
             LineageSettings.System.NAVIGATION_BAR_HINT);
 
@@ -370,9 +388,9 @@ public class TaskbarManagerImpl {
                 v -> onSettingChanged(v, TaskbarActivityContext::isInKidsMode));
         cleanupTasks.addCloseable(getTaskbarUiThread(), navBarKidsModeSafeCloseable);
 
-        var enableTaskbarSafeCloseable = settingsCache.getIntListenableRef(ENABLE_TASKBAR_URI).forEach(
-                getTaskbarUiThread(),
-                v -> onTaskbarIntChanged(v, TaskbarActivityContext::isTaskbarEnabled));
+        var enableTaskbarSafeCloseable =
+                settingsCache.getIntListenableRef(ENABLE_TASKBAR_URI, TASKBAR_SETTING_UNSET)
+                        .forEach(getTaskbarUiThread(), this::onEnableTaskbarChanged);
         cleanupTasks.addCloseable(getTaskbarUiThread(), enableTaskbarSafeCloseable);
 
         var enableNavbarHintSafeCloseable = settingsCache.getListenableRef(NAVIGATION_BAR_HINT_URI)
@@ -567,6 +585,20 @@ public class TaskbarManagerImpl {
             var activity = resource.getTaskbar();
             if (activity != null && oldValue.applyAsInt(activity) != newValue) {
                 resource.debugMsg("Taskbar int setting changed! Restarting process!");
+                System.exit(0);
+            }
+        });
+        return Unit.INSTANCE;
+    }
+
+    private Unit onEnableTaskbarChanged(int newRawValue) {
+        mResources.forEach(resource -> {
+            var activity = resource.getTaskbar();
+            if (activity == null) return;
+            int newValue = resolveTaskbarEnabled(newRawValue,
+                    activity.getDeviceProfile().getDeviceProperties().isLargeScreen());
+            if (activity.isTaskbarEnabled() != newValue) {
+                resource.debugMsg("Taskbar enable setting changed! Restarting process!");
                 System.exit(0);
             }
         });

@@ -19,7 +19,7 @@ package com.android.launcher3;
 import static com.android.launcher3.InvariantDeviceProfile.createDisplayOptionSpec;
 import static com.android.launcher3.Utilities.dpiFromPx;
 import static com.android.launcher3.icons.IconNormalizer.ICON_VISIBLE_AREA_FACTOR;
-import static com.android.launcher3.taskbar.TaskbarManagerImpl.ENABLE_TASKBAR_URI;
+import static com.android.launcher3.taskbar.TaskbarManagerImpl.isTaskbarEnabledBySetting;
 import static com.android.launcher3.testing.shared.ResourceUtils.INVALID_RESOURCE_HANDLE;
 import static com.android.launcher3.testing.shared.ResourceUtils.pxFromDp;
 import static com.android.systemui.shared.Flags.enableRecentsInTaskbar;
@@ -69,7 +69,6 @@ import com.android.launcher3.responsive.ResponsiveSpec.DimensionType;
 import com.android.launcher3.responsive.ResponsiveSpecsProvider;
 import com.android.launcher3.util.IconSizeSteps;
 import com.android.launcher3.util.ResourceHelper;
-import com.android.launcher3.util.SettingsCache;
 import com.android.launcher3.util.WindowBounds;
 import com.android.launcher3.util.window.WindowManagerProxy;
 
@@ -136,7 +135,7 @@ public class DeviceProfile {
 
     // Taskbar
     private TaskbarProfile mTaskbarProfile;
-    private static boolean mEnableTaskbar;
+    private final boolean mEnableTaskbar;
 
     private float allAppsCellHeightMultiplier;
     private boolean allAppsIconText;
@@ -205,6 +204,7 @@ public class DeviceProfile {
         mAllAppsProfile = new AllAppsProfile(new Point(0, 0), 0, 0, 0f, 0, 0, 0, 0, 0, 0,
                 new Rect(), 0, 0);
         mSysuiProfile = new SysuiProfile(0, 0, false);
+        mEnableTaskbar = false;
     }
 
     DeviceProfile(
@@ -256,7 +256,7 @@ public class DeviceProfile {
                     (float) inv.getLauncherPrefs().get(LauncherPrefs.ROW_HEIGHT) / 100F;
         allAppsIconText = inv.getLauncherPrefs().get(LauncherPrefs.SHOW_DRAWER_LABELS);
 
-        mEnableTaskbar = SettingsCache.INSTANCE.get(context).getValue(ENABLE_TASKBAR_URI);
+        mEnableTaskbar = isTaskbarEnabledBySetting(context, mDeviceProperties.isLargeScreen());
 
         mTaskbarProfile = TaskbarProfile.Factory.createTaskbarProfile(
                 res,
@@ -847,7 +847,6 @@ public class DeviceProfile {
      * Returns the padding for hotseat view
      */
     public Rect getHotseatLayoutPadding(Context context) {
-        mEnableTaskbar = SettingsCache.INSTANCE.get(context).getValue(ENABLE_TASKBAR_URI);
         boolean isTaskbarPresent = mDeviceProperties.getTaskbarConfiguration().isTaskbarPresent() &&
                 mEnableTaskbar;
         Rect hotseatBarPadding = new Rect();
@@ -1773,6 +1772,8 @@ public class DeviceProfile {
                 mDisplayOptionSpec = createDefaultDisplayOptionSpec(mInfo, mWindowBounds,
                         mIsMultiDisplay, mInv);
             }
+            final boolean enableTaskbar = isTaskbarEnabledBySetting(
+                    mInfo.context, mInfo.isLargeScreen(mWindowBounds));
             return new DeviceProfile(
                     mInv,
                     mInfo,
@@ -1787,7 +1788,7 @@ public class DeviceProfile {
                                     mIsWorkspaceItemsLabelHidden
                             ),
                             mWMProxy.isTaskbarDrawnInProcess(),
-                            mEnableTaskbar
+                            enableTaskbar
                     ),
                     mViewScaleProvider,
                     mOverrideProvider,

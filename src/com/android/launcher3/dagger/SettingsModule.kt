@@ -17,7 +17,6 @@
 package com.android.launcher3.dagger
 
 import android.net.Uri
-import com.android.launcher3.taskbar.TaskbarManagerImpl.ENABLE_TASKBAR_URI
 import com.android.launcher3.taskbar.TaskbarManagerImpl.NAVBAR_IME_SPACE_URI
 import com.android.launcher3.taskbar.TaskbarManagerImpl.NAVIGATION_BAR_HINT_URI
 import com.android.launcher3.util.SettingsCache.NOTIFICATION_BADGING_URI
@@ -29,11 +28,6 @@ import javax.inject.Named
 
 @Module
 object SettingsModule {
-    @Provides
-    @IntoSet
-    @Named("SETTINGS_ENABLED_BY_DEFAULT")
-    fun provideEnableTaskbarDefaults(): Uri = ENABLE_TASKBAR_URI
-
     @Provides
     @IntoSet
     @Named("SETTINGS_ENABLED_BY_DEFAULT")
