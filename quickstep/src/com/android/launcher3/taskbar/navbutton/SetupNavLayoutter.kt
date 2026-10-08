@@ -95,12 +95,12 @@ class SetupNavLayoutter(
         mNearestTouchFrame.layoutParams = navButtonsOverallViewGroupLayoutParams
         navButtonContainer.layoutParams = navButtonsLayoutParams
 
+        endContextualContainer.removeAllViews()
+        startContextualContainer.removeAllViews()
+
         if (expressiveThemeEnabled && !context.isSimpleViewEnabled) {
             return
         }
-
-        endContextualContainer.removeAllViews()
-        startContextualContainer.removeAllViews()
 
         val contextualButtonWidth =
             resources.getDimensionPixelSize(R.dimen.taskbar_contextual_button_suw_width)
