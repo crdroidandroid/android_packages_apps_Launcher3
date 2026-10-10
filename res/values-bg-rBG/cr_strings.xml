@@ -62,9 +62,9 @@
     <string name="paused_apps_dialog_title">Приложението е временно спряно</string>
     <string name="paused_apps_dialog_message">Приложението %1$s беше временно спряно от стартера</string>
     <string name="paused_apps_drop_target_label">Спирай приложение</string>
-    <string name="work_apps_paused_title_custom">Работните приложения са изключени</string>
-    <string name="work_apps_pause_btn_text_custom">Изключи работните приложения</string>
-    <string name="work_apps_enable_btn_text_custom">Включване на работните приложения</string>
+    <string name="work_apps_paused_title_calyx">Работните приложения са изключени</string>
+    <string name="work_apps_pause_btn_text_calyx">Изключи работните приложения</string>
+    <string name="work_apps_enable_btn_text_calyx">Включване на работните приложения</string>
     <string name="work_apps_paused_info_body_custom">Работните ти приложения не могат да ти изпращат известия, да използват батерията ти или да имат достъп до местоположението ти</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Работните ти приложения не могат да получават обаждания или съобщения, да ти изпращат известия, да използват батерията ти или да имат достъп до местоположението ти</string>
     <!-- Suggestions -->
@@ -76,11 +76,30 @@
     <string name="restarting_launcher">Рестартиране на launcher-а...</string>
     <string name="restarting_launcher_changes">Рестартиране на launcher-a за прилагане на промените...</string>
     <string name="updating_launcher_components">Рестартиране на launcher-а за обновение на зомпоненти...</string>
-    <!-- DT2S -->
+    <!-- Sleep gesture -->
     <string name="pref_sleep_gesture_title">Двукратно почукване за заспиване</string>
     <string name="pref_sleep_gesture_summary">Направи двоен натиск при празно място на екрана, за да се изключи екранът</string>
     <string name="pref_sleep_gesture_haptic_title">Вибрирай на двоен натиск за заспиване</string>
     <string name="pref_sleep_gesture_haptic_summary">Проведи тактилна обратна връзка на жест за двоен натиск за заспиване</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">Камъче</string>
+    <string name="vessel_shape_title">Съд</string>
+    <string name="pure_square_shape_title">Остър квадрат</string>
+    <string name="squircle_shape_title">Комбинация от кръг и квадрат</string>
+    <string name="tapered_rect_shape_title">Скосен правоъгълник</string>
+    <string name="teardrop_shape_title">Сълза</string>
+    <string name="rounded_rect_shape_title">Закръглен правоъгълник</string>
+    <string name="cloudy_shape_title">Облачно</string>
+    <string name="cylindrical_shape_title">Цилиндрично</string>
+    <string name="flower_shape_title">Цвете</string>
+    <string name="heart_shape_title">Сърце</string>
+    <string name="hexagon_shape_title">Шестоъгълник</string>
+    <string name="rounded_hexagon_shape_title">Заоблен шестоъгълник</string>
+    <string name="ios_style_shape_title">Стил на iOS</string>
+    <string name="leaf_shape_title">Листо</string>
+    <string name="meow_shape_title">Мяу</string>
+    <string name="samsung_style_shape_title">Стил на Samsung</string>
+    <string name="stretched_shape_title">Разтегнато</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Плъзни, за да започнеш търсене</string>
     <string name="drawer_open_keyboard_summary">Показвай клавиатурата винаги когато списъкът с приложения е видим</string>
@@ -97,8 +116,6 @@
     <string name="hotseat_bg_summary">Добавяне на прозрачен фон към лентата с любими приложения</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Прозрачност на фона</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Щриха</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Спри</string>
     <string name="recents_app_killed">Приложението е убито</string>
@@ -114,6 +131,12 @@
     <string name="dock_theme_title">Тематични икони</string>
     <string name="dock_theme_summary">Използване на тематични икони за лентата за търсене</string>
     <string name="search_radius_title">Радиус на ъгъл</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Стил от Pixel на търсачка</string>
+    <string name="dock_search_pixel_style_summary">Пренаправена иконка за търсачка с фон на слой</string>
+    <string name="qsb_outer_opacity_title">Видимостта на външния слой</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Щриха</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Местоположение на търсачката</string>
     <string name="drawer_search_location_hidden">Скрито</string>
@@ -346,13 +369,6 @@
     <!-- Background blur -->
     <string name="background_blur_title">Замъгленост на тапета</string>
     <string name="background_blur_summary">Задаване на ниво на замъгляване за скорошни приложения и чекмедже с приложения</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Информация за приложението</string>
-    <string name="app_info_source">Източник</string>
-    <string name="app_info_source_system">Система</string>
-    <string name="app_info_last_update">Последно обновяване</string>
-    <string name="app_info_version">Версия</string>
-    <string name="app_info_more">Още</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Пакет икони</string>
     <string name="icon_pack_default_label">По подразбиране</string>
@@ -363,25 +379,13 @@
     <string name="wallpaper_carousel_summary">Бързо смени тапети от менюто за дълго задържане</string>
     <string name="wallpaper_carousel_lockscreen_title">Приложи на закл. екран</string>
     <string name="wallpaper_carousel_lockscreen_summary">Приложи същия тапет на закл. екран</string>
-    <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Камъче</string>
-    <string name="vessel_shape_title">Съд</string>
-    <string name="pure_square_shape_title">Остър квадрат</string>
-    <string name="squircle_shape_title">Комбинация от кръг и квадрат</string>
-    <string name="tapered_rect_shape_title">Скосен правоъгълник</string>
-    <string name="teardrop_shape_title">Сълза</string>
-    <string name="rounded_rect_shape_title">Закръглен правоъгълник</string>
-    <string name="cloudy_shape_title">Облачно</string>
-    <string name="cylindrical_shape_title">Цилиндрично</string>
-    <string name="flower_shape_title">Цвете</string>
-    <string name="heart_shape_title">Сърце</string>
-    <string name="hexagon_shape_title">Шестоъгълник</string>
-    <string name="rounded_hexagon_shape_title">Заоблен шестоъгълник</string>
-    <string name="ios_style_shape_title">Стил на iOS</string>
-    <string name="leaf_shape_title">Листо</string>
-    <string name="meow_shape_title">Мяу</string>
-    <string name="samsung_style_shape_title">Стил на Samsung</string>
-    <string name="stretched_shape_title">Разтегнато</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Rename</string>
+    <string name="rename_app_reset">Reset</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Custom icon</string>
+    <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
+    <string name="icon_picker_search_hint">Search icons</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Тъмни етикети на приложения</string>
     <string name="all_apps_dark_text_summary">Винаги използвай тъмен текст за етикети на приложения в шкафчето</string>
@@ -396,60 +400,25 @@
     <string name="app_drawer_sort_alphabetical">Подреди по азбучен ред</string>
     <string name="app_drawer_sort_install_date">Подреди по време на инсталация</string>
     <string name="app_drawer_sort_usage">Подреди по използване</string>
-    <!-- App drawer color -->
+    <!-- Color Picker -->
+    <string name="color_picker_title">Select color</string>
+    <string name="color_picker_select">Select</string>
+    <string name="color_picker_reset">Reset to default</string>
+    <string name="color_picker_presets">Presets</string>
+    <string name="color_picker_hex_rgb">Hex (#RRGGBB)</string>
+    <string name="color_picker_hex_argb">Hex (#AARRGGBB)</string>
+    <string name="color_picker_hex_invalid">Enter a valid hex color</string>
+    <string name="color_picker_current_color">Current color</string>
+    <string name="color_picker_new_color">New color</string>
+    <!-- App drawer background color -->
     <string name="pref_app_drawer_custom_color_title">Персонализиран фонов цвят</string>
     <string name="pref_app_drawer_custom_color_summary">Използвай собствен цвят за фона на шкафчето</string>
     <string name="pref_app_drawer_custom_color_light_title">Цвят по светъл режим</string>
     <string name="pref_app_drawer_custom_color_dark_title">Цвят по тъмен режим</string>
-    <!-- Color Picker -->
-    <string name="color_picker_hsb">HSB</string>
-    <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Нюанс</string>
-    <string name="color_picker_saturation">Наситеност на цвета</string>
-    <string name="color_picker_brightness">Яркост</string>
-    <string name="color_picker_red">Червено</string>
-    <string name="color_picker_green">Зелено</string>
-    <string name="color_picker_blue">Синьо</string>
-    <string name="color_picker_hex">HEX цвят</string>
-    <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Стил от Pixel на търсачка</string>
-    <string name="dock_search_pixel_style_summary">Пренаправена иконка за търсачка с фон на слой</string>
-    <string name="qsb_outer_opacity_title">Видимостта на външния слой</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Скрити &amp; Защитени приложения</string>
-    <string name="trust_apps_auth_manager">Отключете за да управлявате скритите и защитените приложения</string>
-    <string name="trust_apps_auth_open_app">Идентифицирайте се за да отворите %1$s</string>
-    <string name="trust_apps_loading">Зарежда се\u2026</string>
-    <string name="trust_apps_no_lock_error">Моля, задайте сигурно заключване на екрана за да ограничи достъпа до дадено приложение</string>
-    <string name="trust_apps_help">Помощ</string>
-    <string name="trust_apps_info_hidden">Скритите приложения и техните приспособления са скрити от менюто с приложения</string>
-    <string name="trust_apps_info_protected">Защитените приложения изискват удостоверяване за да бъдат отворени от стартовия панел</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Стил на скорошните</string>
-    <string name="recents_style_default">По подразбиране</string>
-    <string name="recents_style_stock">Ефект на разширяване</string>
-    <string name="recents_style_staple">Kami стил</string>
-    <string name="recents_style_ios">стил по iOS</string>
-    <string name="recents_style_oxygen">Стил по OxygenOS</string>
+    <string name="recents_scroll_vibrate_title">Scroll vibration</string>
     <!-- Lock -->
     <string name="action_lock">Заключи/Отключи приложение</string>
     <string name="unlock_app">Отключено приложение в скорошните</string>
     <string name="lock_app">Заключено приложение в скорошните</string>
-    <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">Scroll vibration</string>
-    <!-- Rename app shortcut -->
-    <string name="rename_app_label">Rename</string>
-    <string name="rename_app_title">Enter app name</string>
-    <string name="app_renamed_successfully">App renamed</string>
-    <string name="rename_app_empty_error">App name cannot be empty</string>
-    <string name="rename_app_length_error">App name must be %1$d characters or less</string>
-    <string name="rename_app_reset">Reset</string>
-    <string name="rename_app_reset_message">Name reset to original</string>
-    <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">App launch blur</string>
-    <string name="pref_app_launch_blur_summary">Show blur effect when launching apps</string>
-    <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Custom icon</string>
-    <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
-    <string name="icon_picker_search_hint">Search icons</string>
 </resources>

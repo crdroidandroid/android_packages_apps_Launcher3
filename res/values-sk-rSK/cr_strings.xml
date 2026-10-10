@@ -62,9 +62,9 @@
     <string name="paused_apps_dialog_title">Aplikácia je pozastavená</string>
     <string name="paused_apps_dialog_message">%1$s bola pozastavená priamo zo spúšťača</string>
     <string name="paused_apps_drop_target_label">Pozastaviť aplikáciu</string>
-    <string name="work_apps_paused_title_custom">Pracovné aplikácie sú vypnuté</string>
-    <string name="work_apps_pause_btn_text_custom">Vypnúť pracovné aplikácie</string>
-    <string name="work_apps_enable_btn_text_custom">Zapnúť pracovné aplikácie</string>
+    <string name="work_apps_paused_title_calyx">Pracovné aplikácie sú vypnuté</string>
+    <string name="work_apps_pause_btn_text_calyx">Vypnúť pracovné aplikácie</string>
+    <string name="work_apps_enable_btn_text_calyx">Zapnúť pracovné aplikácie</string>
     <string name="work_apps_paused_info_body_custom">Vaše pracovné aplikácie vám nemôžu posielať upozornenia, používať batériu ani pristupovať k vašej polohe</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Vaše pracovné aplikácie nemôžu prijímať telefonické hovory ani textové správy, odosielať vám upozornenia, používať batériu ani pristupovať k vašej polohe</string>
     <!-- Suggestions -->
@@ -76,11 +76,30 @@
     <string name="restarting_launcher">Launcher sa reštartuje...</string>
     <string name="restarting_launcher_changes">Aplikujú sa zmeny, launcher sa reštartuje...</string>
     <string name="updating_launcher_components">Aktualizujú sa komponenty, launcher sa reštartuje...</string>
-    <!-- DT2S -->
+    <!-- Sleep gesture -->
     <string name="pref_sleep_gesture_title">Uspať dvojitým poklepaním</string>
     <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
     <string name="pref_sleep_gesture_haptic_title">Vibrovať pri uspaní dvojitým dotykom</string>
     <string name="pref_sleep_gesture_haptic_summary">Poskytnúť hmatovú spätnú väzbu pri geste dvojitého klepnutia pre uspanie</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">Pebble</string>
+    <string name="vessel_shape_title">Vessel</string>
+    <string name="pure_square_shape_title">Pure square</string>
+    <string name="squircle_shape_title">Squircle</string>
+    <string name="tapered_rect_shape_title">Tapered rect</string>
+    <string name="teardrop_shape_title">Teardrop</string>
+    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="cloudy_shape_title">Zamračené</string>
+    <string name="cylindrical_shape_title">Cylindrical</string>
+    <string name="flower_shape_title">Flower</string>
+    <string name="heart_shape_title">Heart</string>
+    <string name="hexagon_shape_title">Hexagon</string>
+    <string name="rounded_hexagon_shape_title">Rounded hexagon</string>
+    <string name="ios_style_shape_title">iOS Style</string>
+    <string name="leaf_shape_title">Leaf</string>
+    <string name="meow_shape_title">Meow</string>
+    <string name="samsung_style_shape_title">Samsung Style</string>
+    <string name="stretched_shape_title">Stretched</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Potiahnite prstom pre spustenie vyhľadávania</string>
     <string name="drawer_open_keyboard_summary">Vždy otvárať klávesnicu, keď je zoznam aplikácií viditeľný</string>
@@ -97,8 +116,6 @@
     <string name="hotseat_bg_summary">Pridať priesvitné pozadie do doku aplikácie</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Priehľadnosť pozadia</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Zdvih</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Ukončiť</string>
     <string name="recents_app_killed">Aplikácia bola ukončená</string>
@@ -114,6 +131,12 @@
     <string name="dock_theme_title">Tematické ikony</string>
     <string name="dock_theme_summary">Použite tematické ikony pre vyhľadávací panel</string>
     <string name="search_radius_title">Zaoblenie rohu</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
+    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
+    <string name="qsb_outer_opacity_title">Outer layer opacity</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Zdvih</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">App search bar location</string>
     <string name="drawer_search_location_hidden">Hidden</string>
@@ -346,13 +369,6 @@
     <!-- Background blur -->
     <string name="background_blur_title">Sila rozmazania pozadia</string>
     <string name="background_blur_summary">Nastaviť úroveň hĺbky rozmazania pre nedávne aplikácie a ponuku aplikácií</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Informácie o aplikácii</string>
-    <string name="app_info_source">Zdroj</string>
-    <string name="app_info_source_system">Systém</string>
-    <string name="app_info_last_update">Posledná aktualizácia</string>
-    <string name="app_info_version">Verzia</string>
-    <string name="app_info_more">Viac</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Balíček ikon</string>
     <string name="icon_pack_default_label">Predvolené</string>
@@ -363,25 +379,13 @@
     <string name="wallpaper_carousel_summary">Quickly switch wallpapers from the long-press menu</string>
     <string name="wallpaper_carousel_lockscreen_title">Apply to lock screen</string>
     <string name="wallpaper_carousel_lockscreen_summary">Set the same wallpaper on the lock screen</string>
-    <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pebble</string>
-    <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Teardrop</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
-    <string name="cloudy_shape_title">Zamračené</string>
-    <string name="cylindrical_shape_title">Cylindrical</string>
-    <string name="flower_shape_title">Flower</string>
-    <string name="heart_shape_title">Heart</string>
-    <string name="hexagon_shape_title">Hexagon</string>
-    <string name="rounded_hexagon_shape_title">Rounded hexagon</string>
-    <string name="ios_style_shape_title">iOS Style</string>
-    <string name="leaf_shape_title">Leaf</string>
-    <string name="meow_shape_title">Meow</string>
-    <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="stretched_shape_title">Stretched</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Rename</string>
+    <string name="rename_app_reset">Reset</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Custom icon</string>
+    <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
+    <string name="icon_picker_search_hint">Search icons</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Dark app labels</string>
     <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
@@ -396,60 +400,25 @@
     <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
     <string name="app_drawer_sort_install_date">Sort by install date</string>
     <string name="app_drawer_sort_usage">Sort by usage</string>
-    <!-- App drawer color -->
+    <!-- Color Picker -->
+    <string name="color_picker_title">Select color</string>
+    <string name="color_picker_select">Select</string>
+    <string name="color_picker_reset">Reset to default</string>
+    <string name="color_picker_presets">Presets</string>
+    <string name="color_picker_hex_rgb">Hex (#RRGGBB)</string>
+    <string name="color_picker_hex_argb">Hex (#AARRGGBB)</string>
+    <string name="color_picker_hex_invalid">Enter a valid hex color</string>
+    <string name="color_picker_current_color">Current color</string>
+    <string name="color_picker_new_color">New color</string>
+    <!-- App drawer background color -->
     <string name="pref_app_drawer_custom_color_title">Custom background color</string>
     <string name="pref_app_drawer_custom_color_summary">Use a custom color for the app drawer background</string>
     <string name="pref_app_drawer_custom_color_light_title">Light mode color</string>
     <string name="pref_app_drawer_custom_color_dark_title">Dark mode color</string>
-    <!-- Color Picker -->
-    <string name="color_picker_hsb">HSB</string>
-    <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Hue</string>
-    <string name="color_picker_saturation">Saturation</string>
-    <string name="color_picker_brightness">Brightness</string>
-    <string name="color_picker_red">Red</string>
-    <string name="color_picker_green">Green</string>
-    <string name="color_picker_blue">Blue</string>
-    <string name="color_picker_hex">HEX</string>
-    <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
-    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
-    <string name="qsb_outer_opacity_title">Outer layer opacity</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Skryté a chránené aplikácie</string>
-    <string name="trust_apps_auth_manager">Odomknite pre správu skrytých a chránených aplikácií</string>
-    <string name="trust_apps_auth_open_app">Pre otvorenie %1$s potvrďte svoju totožnosť</string>
-    <string name="trust_apps_loading">Načítavanie\u2026</string>
-    <string name="trust_apps_no_lock_error">Pre obmedzenie prístupu k aplikácii prosím nastavte zabezpečenú obrazovku uzamknutia</string>
-    <string name="trust_apps_help">Nápoveda</string>
-    <string name="trust_apps_info_hidden">Skryté aplikácie a ich widgety se nezobrazujú v zozname aplikácií</string>
-    <string name="trust_apps_info_protected">Chránené aplikácie vyžadujú pre otvorenie zo spúšťača overenie</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Recents layout style</string>
-    <string name="recents_style_default">Predvolené</string>
-    <string name="recents_style_stock">Scale effect</string>
-    <string name="recents_style_staple">Kami style</string>
-    <string name="recents_style_ios">iOS style</string>
-    <string name="recents_style_oxygen">OxygenOS style</string>
+    <string name="recents_scroll_vibrate_title">Scroll vibration</string>
     <!-- Lock -->
     <string name="action_lock">Lock/Unlock app</string>
     <string name="unlock_app">Unlocked app in recents</string>
     <string name="lock_app">Locked app in recents</string>
-    <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">Scroll vibration</string>
-    <!-- Rename app shortcut -->
-    <string name="rename_app_label">Rename</string>
-    <string name="rename_app_title">Enter app name</string>
-    <string name="app_renamed_successfully">App renamed</string>
-    <string name="rename_app_empty_error">App name cannot be empty</string>
-    <string name="rename_app_length_error">App name must be %1$d characters or less</string>
-    <string name="rename_app_reset">Reset</string>
-    <string name="rename_app_reset_message">Name reset to original</string>
-    <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">App launch blur</string>
-    <string name="pref_app_launch_blur_summary">Show blur effect when launching apps</string>
-    <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Custom icon</string>
-    <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
-    <string name="icon_picker_search_hint">Search icons</string>
 </resources>
