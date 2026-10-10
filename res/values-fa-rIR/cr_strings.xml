@@ -62,9 +62,9 @@
     <string name="paused_apps_dialog_title">برنامه متوقف شده است</string>
     <string name="paused_apps_dialog_message">%1$s مستقیماً از راه‌انداز متوقف شد</string>
     <string name="paused_apps_drop_target_label">مکث برنامه</string>
-    <string name="work_apps_paused_title_custom">برنامه های کاری خاموش هستند</string>
-    <string name="work_apps_pause_btn_text_custom">خاموش کردن برنامه های کاری</string>
-    <string name="work_apps_enable_btn_text_custom">روشن کردن برنامه های کاری</string>
+    <string name="work_apps_paused_title_calyx">برنامه های کاری خاموش هستند</string>
+    <string name="work_apps_pause_btn_text_calyx">خاموش کردن برنامه های کاری</string>
+    <string name="work_apps_enable_btn_text_calyx">روشن کردن برنامه های کاری</string>
     <string name="work_apps_paused_info_body_custom">برنامه های کاری شما نمی توانند برای شما اعلان ارسال کنند، از باتری شما استفاده کنند یا به مکان شما دسترسی داشته باشند</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">برنامه های کاری شما نمی توانند تماس های تلفنی یا پیام های متنی را دریافت کنند، برای شما اعلان ارسال کنند، از باتری شما استفاده کنند یا به مکان شما دسترسی داشته باشند</string>
     <!-- Suggestions -->
@@ -76,11 +76,30 @@
     <string name="restarting_launcher">راه اندازی مجدد لانچر...</string>
     <string name="restarting_launcher_changes">راه‌اندازی مجدد لانچر برای اعمال تغییرات...</string>
     <string name="updating_launcher_components">راه‌اندازی مجدد برای به‌روزرسانی مؤلفه‌های راه‌انداز...</string>
-    <!-- DT2S -->
+    <!-- Sleep gesture -->
     <string name="pref_sleep_gesture_title">برای حالت خواب دوبار ضربه بزنید</string>
     <string name="pref_sleep_gesture_summary">دو بار ضربه روی فضای خالی صفحه اصلی برای خاموش کردن صفحه</string>
     <string name="pref_sleep_gesture_haptic_title">لرزش هنگام خوابیدن با دو‌بار ضربه</string>
     <string name="pref_sleep_gesture_haptic_summary">ارائه بازخورد لمسی در حالت دو بار ضربه زدن برای خواب</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">سنگی</string>
+    <string name="vessel_shape_title">کشتی</string>
+    <string name="pure_square_shape_title">مربع خالص</string>
+    <string name="squircle_shape_title">مربع گوشه‌گرد</string>
+    <string name="tapered_rect_shape_title">مستطیل مخروطی</string>
+    <string name="teardrop_shape_title">قطره اشک</string>
+    <string name="rounded_rect_shape_title">مستطیل گرد</string>
+    <string name="cloudy_shape_title">ابری</string>
+    <string name="cylindrical_shape_title">استوانه‌ای</string>
+    <string name="flower_shape_title">گل</string>
+    <string name="heart_shape_title">قلب</string>
+    <string name="hexagon_shape_title">شش‌ضلعی</string>
+    <string name="rounded_hexagon_shape_title">شش‌ضلعی گوشه‌گرد</string>
+    <string name="ios_style_shape_title">سبک ios</string>
+    <string name="leaf_shape_title">برگ</string>
+    <string name="meow_shape_title">میو</string>
+    <string name="samsung_style_shape_title">سبک سامسونگ</string>
+    <string name="stretched_shape_title">کشیده</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">برای جستجو انگشت خود را بکشید</string>
     <string name="drawer_open_keyboard_summary">هر زمان که کشوی برنامه نمایان شد، صفحه کلید را باز کنید</string>
@@ -97,8 +116,6 @@
     <string name="hotseat_bg_summary">پس زمینه شفاف را به داک برنامه اضافه کنید</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">شفافیت پس‌زمینه</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">حاشیه</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">توقف</string>
     <string name="recents_app_killed">برنامه بسته شد</string>
@@ -114,6 +131,12 @@
     <string name="dock_theme_title">آیکن های تم</string>
     <string name="dock_theme_summary">استفاده کردن از آیکن های تم برای پنل جستجو</string>
     <string name="search_radius_title">شعاع گوشه</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">نوار جستجوی سبک پیکسل</string>
+    <string name="dock_search_pixel_style_summary">نوار جستجوی بازطراحی‌شده با پس‌زمینه لایه‌ای</string>
+    <string name="qsb_outer_opacity_title">شفافیت لایه بیرونی</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">حاشیه</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">موقعیت نوار جستجوی برنامه</string>
     <string name="drawer_search_location_hidden">پنهان‌ساز</string>
@@ -352,13 +375,6 @@ Remember the Lineage of the Unicorn</item>
     <!-- Background blur -->
     <string name="background_blur_title">عمق تاری پس زمینه</string>
     <string name="background_blur_summary">سطح عمق تاری را برای موارد اخیر و کشوی برنامه تنظیم کنید</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">اطلاعات برنامه</string>
-    <string name="app_info_source">منبع</string>
-    <string name="app_info_source_system">سیستم</string>
-    <string name="app_info_last_update">آخرین بروزرسانی</string>
-    <string name="app_info_version">نسخه</string>
-    <string name="app_info_more">بیشتر</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">آیکون پک</string>
     <string name="icon_pack_default_label">پیش‌فرض</string>
@@ -369,25 +385,13 @@ Remember the Lineage of the Unicorn</item>
     <string name="wallpaper_carousel_summary">تغییر سریع تصویر زمینه از منوی فشار طولانی</string>
     <string name="wallpaper_carousel_lockscreen_title">اعمال روی صفحه قفل</string>
     <string name="wallpaper_carousel_lockscreen_summary">تنظیم تصویر زمینه یکسان روی صفحه قفل</string>
-    <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">سنگی</string>
-    <string name="vessel_shape_title">کشتی</string>
-    <string name="pure_square_shape_title">مربع خالص</string>
-    <string name="squircle_shape_title">مربع گوشه‌گرد</string>
-    <string name="tapered_rect_shape_title">مستطیل مخروطی</string>
-    <string name="teardrop_shape_title">قطره اشک</string>
-    <string name="rounded_rect_shape_title">مستطیل گرد</string>
-    <string name="cloudy_shape_title">ابری</string>
-    <string name="cylindrical_shape_title">استوانه‌ای</string>
-    <string name="flower_shape_title">گل</string>
-    <string name="heart_shape_title">قلب</string>
-    <string name="hexagon_shape_title">شش‌ضلعی</string>
-    <string name="rounded_hexagon_shape_title">شش‌ضلعی گوشه‌گرد</string>
-    <string name="ios_style_shape_title">سبک ios</string>
-    <string name="leaf_shape_title">برگ</string>
-    <string name="meow_shape_title">میو</string>
-    <string name="samsung_style_shape_title">سبک سامسونگ</string>
-    <string name="stretched_shape_title">کشیده</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">تغییرنام</string>
+    <string name="rename_app_reset">بازنشانی</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">آیکون سفارشی</string>
+    <string name="app_info_custom_icon_summary">انتخاب هر آیکونی از هر پکیج آیکونی</string>
+    <string name="icon_picker_search_hint">جستجوی آیکون‌ها</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">برچسب‌های برنامه تیره</string>
     <string name="all_apps_dark_text_summary">همیشه از متن تیره برای برچسب برنامه‌ها در کشوی برنامه استفاده کنید</string>
@@ -402,60 +406,25 @@ Remember the Lineage of the Unicorn</item>
     <string name="app_drawer_sort_alphabetical">مرتب‌سازی الفبایی</string>
     <string name="app_drawer_sort_install_date">مرتب‌سازی بر اساس تاریخ نصب</string>
     <string name="app_drawer_sort_usage">مرتب‌سازی بر اساس میزان استفاده</string>
-    <!-- App drawer color -->
+    <!-- Color Picker -->
+    <string name="color_picker_title">انتخاب رنگ</string>
+    <string name="color_picker_select">انتخاب</string>
+    <string name="color_picker_reset">بازنشانی به پیش‌فرض</string>
+    <string name="color_picker_presets">پیش‌تنظیم‌ها</string>
+    <string name="color_picker_hex_rgb">هگز (#RRGGBB)</string>
+    <string name="color_picker_hex_argb">هگز (#AARRGGBB)</string>
+    <string name="color_picker_hex_invalid">یک رنگ هگز معتبر وارد کنید</string>
+    <string name="color_picker_current_color">رنگ فعلی</string>
+    <string name="color_picker_new_color">رنگ جدید</string>
+    <!-- App drawer background color -->
     <string name="pref_app_drawer_custom_color_title">رنگ پس‌زمینه سفارشی</string>
     <string name="pref_app_drawer_custom_color_summary">استفاده از رنگ سفارشی برای پس‌زمینه کشوی برنامه</string>
     <string name="pref_app_drawer_custom_color_light_title">رنگ حالت روشن</string>
     <string name="pref_app_drawer_custom_color_dark_title">رنگ حالت تاریک</string>
-    <!-- Color Picker -->
-    <string name="color_picker_hsb">HSB</string>
-    <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Hue</string>
-    <string name="color_picker_saturation">اشباع</string>
-    <string name="color_picker_brightness">روشنایی</string>
-    <string name="color_picker_red">قرمز</string>
-    <string name="color_picker_green">سبز</string>
-    <string name="color_picker_blue">آبی</string>
-    <string name="color_picker_hex">کد رنگ</string>
-    <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">نوار جستجوی سبک پیکسل</string>
-    <string name="dock_search_pixel_style_summary">نوار جستجوی بازطراحی‌شده با پس‌زمینه لایه‌ای</string>
-    <string name="qsb_outer_opacity_title">شفافیت لایه بیرونی</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">برنامه‌های پنهان &amp; محافظت شده</string>
-    <string name="trust_apps_auth_manager">برای مدیریت برنامه‌های پنهان و محافظت شده قفل را باز کنید</string>
-    <string name="trust_apps_auth_open_app">احراز هویت برای باز کردن %1$s</string>
-    <string name="trust_apps_loading">در حال بارگزاری\u2026</string>
-    <string name="trust_apps_no_lock_error">لطفا یک قفل برای کنترل برنامه‌های پنهان و محافظت شده، تنظیم کنید</string>
-    <string name="trust_apps_help">کمک</string>
-    <string name="trust_apps_info_hidden">برنامه‌های مخفی و ویجت‌هایشان از فهرست برنامه ها پنهان هستند</string>
-    <string name="trust_apps_info_protected">برای باز کردن برنامه‌های محافظت شده از صفحه اصلی نیاز به احراز هویت می‌باشد</string>
     <!-- Recents style -->
-    <string name="recents_style_title">سبک چیدمان برنامه‌های اخیر</string>
-    <string name="recents_style_default">پیش‌فرض</string>
-    <string name="recents_style_stock">افکت مقیاس</string>
-    <string name="recents_style_staple">سبک Kami</string>
-    <string name="recents_style_ios">سبک ios</string>
-    <string name="recents_style_oxygen">سبک oxygenos </string>
+    <string name="recents_scroll_vibrate_title">لرزش هنگام اسکرول</string>
     <!-- Lock -->
     <string name="action_lock">قفل/باز کردن قفل برنامه</string>
     <string name="unlock_app">برنامه قفل‌ نشده در برنامه‌های اخیر</string>
     <string name="lock_app">برنامه قفل‌شده در برنامه‌های اخیر</string>
-    <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">لرزش هنگام اسکرول</string>
-    <!-- Rename app shortcut -->
-    <string name="rename_app_label">تغییرنام</string>
-    <string name="rename_app_title">نام برنامه را وارد کنید</string>
-    <string name="app_renamed_successfully">نام برنامه تغییر کرد</string>
-    <string name="rename_app_empty_error">نام برنامه نمی‌تواند خالی باشد</string>
-    <string name="rename_app_length_error">نام برنامه باید %1$d کاراکتر یا کمتر باشد</string>
-    <string name="rename_app_reset">بازنشانی</string>
-    <string name="rename_app_reset_message">نام به حالت اولیه بازنشانی شد</string>
-    <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">تاری راه‌اندازی برنامه</string>
-    <string name="pref_app_launch_blur_summary">نمایش افکت تاری هنگام اجرای برنامه‌ها</string>
-    <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">آیکون سفارشی</string>
-    <string name="app_info_custom_icon_summary">انتخاب هر آیکونی از هر پکیج آیکونی</string>
-    <string name="icon_picker_search_hint">جستجوی آیکون‌ها</string>
 </resources>
