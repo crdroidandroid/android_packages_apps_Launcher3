@@ -62,9 +62,9 @@
     <string name="paused_apps_dialog_title">Uygulama duraklatıldı</string>
     <string name="paused_apps_dialog_message">%1$s doğrudan başlatıcıdan duraklatıldı</string>
     <string name="paused_apps_drop_target_label">Uygulamayı duraklat</string>
-    <string name="work_apps_paused_title_custom">İş uygulamaları kapalı</string>
-    <string name="work_apps_pause_btn_text_custom">İş uygulamalarını kapat</string>
-    <string name="work_apps_enable_btn_text_custom">İş uygulamalarını aç</string>
+    <string name="work_apps_paused_title_calyx">İş uygulamaları kapalı</string>
+    <string name="work_apps_pause_btn_text_calyx">İş uygulamalarını kapat</string>
+    <string name="work_apps_enable_btn_text_calyx">İş uygulamalarını aç</string>
     <string name="work_apps_paused_info_body_custom">İş uygulamalarınız size bildirim gönderemez, pilinizi kullanamaz veya konumunuza erişemez</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">İş uygulamalarınız telefon çağrısı ve metin mesajı alamaz, size bildirim gönderemez, pilinizi kullanamaz, konumunuza erişemez</string>
     <!-- Suggestions -->
@@ -76,11 +76,30 @@
     <string name="restarting_launcher">Ana ekran yeniden başlatılıyor...</string>
     <string name="restarting_launcher_changes">Değişiklikleri uygulamak için yeniden başlatılıyor...</string>
     <string name="updating_launcher_components">Başlatıcı bileşenlerini güncellemek için başlatıcı yeniden başlatılıyor...</string>
-    <!-- DT2S -->
+    <!-- Sleep gesture -->
     <string name="pref_sleep_gesture_title">Çift dokunuşla uyutma</string>
     <string name="pref_sleep_gesture_summary">Ekranı kapatmak için ana ekrandaki boş bir alana çift dokunun</string>
     <string name="pref_sleep_gesture_haptic_title">Uyutmak için çift dokunuşta titret</string>
     <string name="pref_sleep_gesture_haptic_summary">Çift dokunuşla uyuma jestinde titreşim geri bildirimi ver</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">Çakıl</string>
+    <string name="vessel_shape_title">Gemi</string>
+    <string name="pure_square_shape_title">Düz kare</string>
+    <string name="squircle_shape_title">Karemsi</string>
+    <string name="tapered_rect_shape_title">Konik dikdörtgen</string>
+    <string name="teardrop_shape_title">Damla</string>
+    <string name="rounded_rect_shape_title">Yuvarlak dikdörtgen</string>
+    <string name="cloudy_shape_title">Bulutlu</string>
+    <string name="cylindrical_shape_title">Silindirik</string>
+    <string name="flower_shape_title">Çiçek</string>
+    <string name="heart_shape_title">Kalp</string>
+    <string name="hexagon_shape_title">Altıgen</string>
+    <string name="rounded_hexagon_shape_title">Yuvarlak altıgen</string>
+    <string name="ios_style_shape_title">iOS tarzı</string>
+    <string name="leaf_shape_title">Yaprak</string>
+    <string name="meow_shape_title">Miyav</string>
+    <string name="samsung_style_shape_title">Samsung tarzı</string>
+    <string name="stretched_shape_title">Esnetilmiş</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Aramaya başlamak için kaydır</string>
     <string name="drawer_open_keyboard_summary">Uygulama çekmecesi göründüğünde klavye açılsın</string>
@@ -97,8 +116,6 @@
     <string name="hotseat_bg_summary">Uygulama yuvasına yarı şeffaf bir arka plan ekleyin</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Arka plan şeffaflığı</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Kenarlı</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Sonlandır</string>
     <string name="recents_app_killed">Uygulama sonlandırıldı</string>
@@ -114,6 +131,12 @@
     <string name="dock_theme_title">Temalı simgeler</string>
     <string name="dock_theme_summary">Arama çubuğunda temalı simgeler kullan</string>
     <string name="search_radius_title">Köşe yarıçapı</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Pixel tarzı arama çubuğu</string>
+    <string name="dock_search_pixel_style_summary">Katmanlı arka plana sahip yenilenmiş arama çubuğu</string>
+    <string name="qsb_outer_opacity_title">Dış katman opaklığı</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Kenarlı</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Uygulama arama çubuğu konumu</string>
     <string name="drawer_search_location_hidden">Gizli</string>
@@ -346,13 +369,6 @@
     <!-- Background blur -->
     <string name="background_blur_title">Arka plan bulanıklık derinliği</string>
     <string name="background_blur_summary">Son uygulamalar ve uygulama çekmecesi için bulanıklık derinliği seviyesini ayarlayın</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Uygulama bilgisi</string>
-    <string name="app_info_source">Kaynak</string>
-    <string name="app_info_source_system">Sistem</string>
-    <string name="app_info_last_update">Son güncelleme</string>
-    <string name="app_info_version">Sürüm</string>
-    <string name="app_info_more">Daha fazla</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Simge paketi</string>
     <string name="icon_pack_default_label">Varsayılan</string>
@@ -363,25 +379,13 @@
     <string name="wallpaper_carousel_summary">Uzun dokunuş menüsünden duvar kağıtlarını hızlıca değiştir</string>
     <string name="wallpaper_carousel_lockscreen_title">Kilit ekranına uygula</string>
     <string name="wallpaper_carousel_lockscreen_summary">Aynı duvar kağıdını kilit ekranına uygula</string>
-    <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Çakıl</string>
-    <string name="vessel_shape_title">Gemi</string>
-    <string name="pure_square_shape_title">Düz kare</string>
-    <string name="squircle_shape_title">Karemsi</string>
-    <string name="tapered_rect_shape_title">Konik dikdörtgen</string>
-    <string name="teardrop_shape_title">Damla</string>
-    <string name="rounded_rect_shape_title">Yuvarlak dikdörtgen</string>
-    <string name="cloudy_shape_title">Bulutlu</string>
-    <string name="cylindrical_shape_title">Silindirik</string>
-    <string name="flower_shape_title">Çiçek</string>
-    <string name="heart_shape_title">Kalp</string>
-    <string name="hexagon_shape_title">Altıgen</string>
-    <string name="rounded_hexagon_shape_title">Yuvarlak altıgen</string>
-    <string name="ios_style_shape_title">iOS tarzı</string>
-    <string name="leaf_shape_title">Yaprak</string>
-    <string name="meow_shape_title">Miyav</string>
-    <string name="samsung_style_shape_title">Samsung tarzı</string>
-    <string name="stretched_shape_title">Esnetilmiş</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Adını değiştir</string>
+    <string name="rename_app_reset">Sıfırla</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Özel simge</string>
+    <string name="app_info_custom_icon_summary">Herhangi bir simge paketinden herhangi bir simge seç</string>
+    <string name="icon_picker_search_hint">Simge ara</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Koyu uygulama etiketleri</string>
     <string name="all_apps_dark_text_summary">Uygulama çekmecesindeki uygulama etiketleri için her zaman karanlık renkte metin kullan</string>
@@ -396,60 +400,25 @@
     <string name="app_drawer_sort_alphabetical">Alfabe sırası</string>
     <string name="app_drawer_sort_install_date">Kurulum tarihine göre sırala</string>
     <string name="app_drawer_sort_usage">Kullanıma göre sırala</string>
-    <!-- App drawer color -->
+    <!-- Color Picker -->
+    <string name="color_picker_title">Renk seç</string>
+    <string name="color_picker_select">Seç</string>
+    <string name="color_picker_reset">Varsayılana sıfırla</string>
+    <string name="color_picker_presets">Önayarlar</string>
+    <string name="color_picker_hex_rgb">Hex (#RRGGBB)</string>
+    <string name="color_picker_hex_argb">Hex (#AARRGGBB)</string>
+    <string name="color_picker_hex_invalid">Geçerli bir hex kodu girin</string>
+    <string name="color_picker_current_color">Şu anki renk</string>
+    <string name="color_picker_new_color">Yeni renk</string>
+    <!-- App drawer background color -->
     <string name="pref_app_drawer_custom_color_title">Özel arka plan rengi</string>
     <string name="pref_app_drawer_custom_color_summary">Uygulama çekmecesinin arka planında özel bir renk kullan</string>
     <string name="pref_app_drawer_custom_color_light_title">Aydınlık mod rengi</string>
     <string name="pref_app_drawer_custom_color_dark_title">Karanlık mod rengi</string>
-    <!-- Color Picker -->
-    <string name="color_picker_hsb">HSB</string>
-    <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Ton</string>
-    <string name="color_picker_saturation">Doygunluk</string>
-    <string name="color_picker_brightness">Parlaklık</string>
-    <string name="color_picker_red">Kırmızı</string>
-    <string name="color_picker_green">Yeşil</string>
-    <string name="color_picker_blue">Mavi</string>
-    <string name="color_picker_hex">HEX</string>
-    <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel tarzı arama çubuğu</string>
-    <string name="dock_search_pixel_style_summary">Katmanlı arka plana sahip yenilenmiş arama çubuğu</string>
-    <string name="qsb_outer_opacity_title">Dış katman opaklığı</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Gizli ve Korunan Uygulamalar</string>
-    <string name="trust_apps_auth_manager">Gizli ve korunan uygulamaları yönetmek için kilidi açın</string>
-    <string name="trust_apps_auth_open_app">%1$s açmak için kimlik doğrula</string>
-    <string name="trust_apps_loading">Yükleniyor\u2026</string>
-    <string name="trust_apps_no_lock_error">Uygulama erişimini kısıtlamak için lütfen güvenli bir kilit ekranı ayarlayın</string>
-    <string name="trust_apps_help">Yardım</string>
-    <string name="trust_apps_info_hidden">Gizli uygulamalar ve widget\'ları uygulama menüsünde gizlidir</string>
-    <string name="trust_apps_info_protected">Korunan uygulamaların başlatıcıdan açılması için kimlik doğrulama gerekir</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Son kullanılanlar düzeni stili</string>
-    <string name="recents_style_default">Varsayılan</string>
-    <string name="recents_style_stock">Ölçek etkisi</string>
-    <string name="recents_style_staple">Kami stili</string>
-    <string name="recents_style_ios">iOS stili</string>
-    <string name="recents_style_oxygen">OxygenOS stili</string>
+    <string name="recents_scroll_vibrate_title">Kaydırma titreşimi</string>
     <!-- Lock -->
     <string name="action_lock">Uygulama kilitle/kilidi aç</string>
     <string name="unlock_app">Yakın geçmişte kilidi açılan uygulama</string>
     <string name="lock_app">Yakın geçmişte kilitlenen uygulama</string>
-    <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">Kaydırma titreşimi</string>
-    <!-- Rename app shortcut -->
-    <string name="rename_app_label">Adını değiştir</string>
-    <string name="rename_app_title">Uygulama adı girin</string>
-    <string name="app_renamed_successfully">Uygulamanın adı değiştirildi</string>
-    <string name="rename_app_empty_error">Uygulama adı boş olamaz</string>
-    <string name="rename_app_length_error">Uygulama adı %1$d karakter veya daha kısa olmalıdır</string>
-    <string name="rename_app_reset">Sıfırla</string>
-    <string name="rename_app_reset_message">Uygulama adı sıfırlandı</string>
-    <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">Uygulama başlatma bulanıklığı</string>
-    <string name="pref_app_launch_blur_summary">Uygulama başlatırken bulanıklık efekti göster</string>
-    <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Özel simge</string>
-    <string name="app_info_custom_icon_summary">Herhangi bir simge paketinden herhangi bir simge seç</string>
-    <string name="icon_picker_search_hint">Simge ara</string>
 </resources>
