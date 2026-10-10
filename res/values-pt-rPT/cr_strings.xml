@@ -62,9 +62,9 @@
     <string name="paused_apps_dialog_title">App pausada</string>
     <string name="paused_apps_dialog_message">%1$s foi pausada diretamente a partir do launcher</string>
     <string name="paused_apps_drop_target_label">Pausar app</string>
-    <string name="work_apps_paused_title_custom">Aplicações de trabalho desativados</string>
-    <string name="work_apps_pause_btn_text_custom">Desligar aplicações de trabalho</string>
-    <string name="work_apps_enable_btn_text_custom">Ativar aplicações de trabalho</string>
+    <string name="work_apps_paused_title_calyx">Aplicações de trabalho desativados</string>
+    <string name="work_apps_pause_btn_text_calyx">Desligar aplicações de trabalho</string>
+    <string name="work_apps_enable_btn_text_calyx">Ativar aplicações de trabalho</string>
     <string name="work_apps_paused_info_body_custom">As apps de trabalho não podem enviar-lhe notificações, utilizar a bateria ou aceder à sua localização</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">As suas aplicações de trabalho não podem receber chamadas telefónicas ou mensagens de texto, enviar-lhe notificações, utilizar a sua bateria ou aceder à sua localização</string>
     <!-- Suggestions -->
@@ -76,11 +76,30 @@
     <string name="restarting_launcher">A reiniciar o launcher...</string>
     <string name="restarting_launcher_changes">A reiniciar o launcher para aplicar as alterações...</string>
     <string name="updating_launcher_components">A reiniciar o launcher para atualizar os componentes do launcher...</string>
-    <!-- DT2S -->
+    <!-- Sleep gesture -->
     <string name="pref_sleep_gesture_title">Toque duplo para desligar ecrã</string>
     <string name="pref_sleep_gesture_summary">Toque duas vezes numa área vazia do ecrã inicial para desligar o ecrã</string>
     <string name="pref_sleep_gesture_haptic_title">Vibrar ao tocar duas vezes para dormir</string>
     <string name="pref_sleep_gesture_haptic_summary">Prover resposta táctil ao fazer o gesto de tocar duas vezes para dormir</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">Seixo</string>
+    <string name="vessel_shape_title">Vaso</string>
+    <string name="pure_square_shape_title">Quadrado puro</string>
+    <string name="squircle_shape_title">Quadrículo</string>
+    <string name="tapered_rect_shape_title">Retângulo afunilado</string>
+    <string name="teardrop_shape_title">Lágrima</string>
+    <string name="rounded_rect_shape_title">Retângulo arredondado</string>
+    <string name="cloudy_shape_title">Com nuvens</string>
+    <string name="cylindrical_shape_title">Cilíndrico</string>
+    <string name="flower_shape_title">Flor</string>
+    <string name="heart_shape_title">Coração</string>
+    <string name="hexagon_shape_title">Hexágono</string>
+    <string name="rounded_hexagon_shape_title">Hexágono Arredondado</string>
+    <string name="ios_style_shape_title">Estilo iOS</string>
+    <string name="leaf_shape_title">Folha</string>
+    <string name="meow_shape_title">Meow</string>
+    <string name="samsung_style_shape_title">Estilo Samsung</string>
+    <string name="stretched_shape_title">Esticado</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Deslize para começar busca</string>
     <string name="drawer_open_keyboard_summary">Abrir teclado assim que a gaveta de aplicações ficar visível</string>
@@ -97,8 +116,6 @@
     <string name="hotseat_bg_summary">Mostrar fundo translúcido na doca de apps</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Opacidade do fundo</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Avc</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Terminar</string>
     <string name="recents_app_killed">App terminada</string>
@@ -114,6 +131,12 @@
     <string name="dock_theme_title">Ícones temáticos</string>
     <string name="dock_theme_summary">Usar ícones temáticos para a barra de pesquisa</string>
     <string name="search_radius_title">Raio do canto</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Barra de procura ao estilo Pixel</string>
+    <string name="dock_search_pixel_style_summary">Barra de procura revista com fundo sobreposto</string>
+    <string name="qsb_outer_opacity_title">Opacidade da camada externa</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Avc</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Localização da barra de pesquisa de aplicações</string>
     <string name="drawer_search_location_hidden">Oculto</string>
@@ -346,13 +369,6 @@
     <!-- Background blur -->
     <string name="background_blur_title">Nível de desfoque do fundo</string>
     <string name="background_blur_summary">Definir o nível de desfoque para a gaveta de apps e ecrã de recentes</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Info. da Aplicação</string>
-    <string name="app_info_source">Origem</string>
-    <string name="app_info_source_system">Sistema</string>
-    <string name="app_info_last_update">Última atualização</string>
-    <string name="app_info_version">Versão</string>
-    <string name="app_info_more">Mais</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Pacote de ícones</string>
     <string name="icon_pack_default_label">Padrão</string>
@@ -363,25 +379,13 @@
     <string name="wallpaper_carousel_summary">Troque rapidamente de papéis de parede através do menu de toque longo</string>
     <string name="wallpaper_carousel_lockscreen_title">Aplicar ao ecrã de bloqueio</string>
     <string name="wallpaper_carousel_lockscreen_summary">Aplicar o mesmo papel de parede ao ecrã de bloqueio</string>
-    <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Seixo</string>
-    <string name="vessel_shape_title">Vaso</string>
-    <string name="pure_square_shape_title">Quadrado puro</string>
-    <string name="squircle_shape_title">Quadrículo</string>
-    <string name="tapered_rect_shape_title">Retângulo afunilado</string>
-    <string name="teardrop_shape_title">Lágrima</string>
-    <string name="rounded_rect_shape_title">Retângulo arredondado</string>
-    <string name="cloudy_shape_title">Com nuvens</string>
-    <string name="cylindrical_shape_title">Cilíndrico</string>
-    <string name="flower_shape_title">Flor</string>
-    <string name="heart_shape_title">Coração</string>
-    <string name="hexagon_shape_title">Hexágono</string>
-    <string name="rounded_hexagon_shape_title">Hexágono Arredondado</string>
-    <string name="ios_style_shape_title">Estilo iOS</string>
-    <string name="leaf_shape_title">Folha</string>
-    <string name="meow_shape_title">Meow</string>
-    <string name="samsung_style_shape_title">Estilo Samsung</string>
-    <string name="stretched_shape_title">Esticado</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Rename</string>
+    <string name="rename_app_reset">Reset</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Custom icon</string>
+    <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
+    <string name="icon_picker_search_hint">Search icons</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Rótulos de aplicação escuros</string>
     <string name="all_apps_dark_text_summary">Usar sempre texto escuro para os rótulos das aplicações na gaveta de aplicações</string>
@@ -396,60 +400,25 @@
     <string name="app_drawer_sort_alphabetical">Ordenar alfabeticamente</string>
     <string name="app_drawer_sort_install_date">Ordenar por data de instalação</string>
     <string name="app_drawer_sort_usage">Ordenar por uso</string>
-    <!-- App drawer color -->
+    <!-- Color Picker -->
+    <string name="color_picker_title">Select color</string>
+    <string name="color_picker_select">Select</string>
+    <string name="color_picker_reset">Reset to default</string>
+    <string name="color_picker_presets">Presets</string>
+    <string name="color_picker_hex_rgb">Hex (#RRGGBB)</string>
+    <string name="color_picker_hex_argb">Hex (#AARRGGBB)</string>
+    <string name="color_picker_hex_invalid">Enter a valid hex color</string>
+    <string name="color_picker_current_color">Current color</string>
+    <string name="color_picker_new_color">New color</string>
+    <!-- App drawer background color -->
     <string name="pref_app_drawer_custom_color_title">Cor de fundo personalizada</string>
     <string name="pref_app_drawer_custom_color_summary">Utilizar uma cor personalizada para o fundo da gaveta de aplicações</string>
     <string name="pref_app_drawer_custom_color_light_title">Cor do modo claro</string>
     <string name="pref_app_drawer_custom_color_dark_title">Cor do modo escuro</string>
-    <!-- Color Picker -->
-    <string name="color_picker_hsb">HSB</string>
-    <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Tonalidade</string>
-    <string name="color_picker_saturation">Saturação</string>
-    <string name="color_picker_brightness">Brilho</string>
-    <string name="color_picker_red">Vermelho</string>
-    <string name="color_picker_green">Verde</string>
-    <string name="color_picker_blue">Azul</string>
-    <string name="color_picker_hex">HEX</string>
-    <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Barra de procura ao estilo Pixel</string>
-    <string name="dock_search_pixel_style_summary">Barra de procura revista com fundo sobreposto</string>
-    <string name="qsb_outer_opacity_title">Opacidade da camada externa</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Apps ocultas e protegidas</string>
-    <string name="trust_apps_auth_manager">Desbloquear para gerir as apps ocultas e protegidas</string>
-    <string name="trust_apps_auth_open_app">Autenticar para abrir %1$s</string>
-    <string name="trust_apps_loading">A carregar\u2026</string>
-    <string name="trust_apps_no_lock_error">Configure um ecrã de bloqueio seguro para restringir o acesso às apps</string>
-    <string name="trust_apps_help">Ajuda</string>
-    <string name="trust_apps_info_hidden">As apps ocultas e seus widgets estão escondidos da gaveta de apps</string>
-    <string name="trust_apps_info_protected">As apps protegidas requerem autenticação para serem executadas</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Estilo de layout dos recentes</string>
-    <string name="recents_style_default">Padrão</string>
-    <string name="recents_style_stock">Efeito de escala</string>
-    <string name="recents_style_staple">Estilo Kami</string>
-    <string name="recents_style_ios">Estilo iOS</string>
-    <string name="recents_style_oxygen">Estilo OxigenOS</string>
+    <string name="recents_scroll_vibrate_title">Vibração ao rolar</string>
     <!-- Lock -->
     <string name="action_lock">Bloquear/Desbloquear aplicação</string>
     <string name="unlock_app">Aplicação desbloqueada em recentes</string>
     <string name="lock_app">Aplicação bloqueada em recentes</string>
-    <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">Vibração ao rolar</string>
-    <!-- Rename app shortcut -->
-    <string name="rename_app_label">Rename</string>
-    <string name="rename_app_title">Enter app name</string>
-    <string name="app_renamed_successfully">App renamed</string>
-    <string name="rename_app_empty_error">App name cannot be empty</string>
-    <string name="rename_app_length_error">App name must be %1$d characters or less</string>
-    <string name="rename_app_reset">Reset</string>
-    <string name="rename_app_reset_message">Name reset to original</string>
-    <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">App launch blur</string>
-    <string name="pref_app_launch_blur_summary">Show blur effect when launching apps</string>
-    <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Custom icon</string>
-    <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
-    <string name="icon_picker_search_hint">Search icons</string>
 </resources>
