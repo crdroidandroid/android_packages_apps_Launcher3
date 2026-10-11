@@ -80,7 +80,7 @@
     <string name="pref_sleep_gesture_title">Двойное касание - сон</string>
     <string name="pref_sleep_gesture_summary">Дважды коснитесь пустой области главного экрана, чтобы выключить его</string>
     <string name="pref_sleep_gesture_haptic_title">Вибрировать при двойном нажатии для сна</string>
-    <string name="pref_sleep_gesture_haptic_summary">Вибрировать при выполнении жеста двойного нажатия для перехода в спящий режим</string>
+    <string name="pref_sleep_gesture_haptic_summary">Вибрировать при двойном касании для перехода в спящий режим</string>
     <!-- Additional shape options in customization picker -->
     <string name="pebble_shape_title">Галька</string>
     <string name="vessel_shape_title">Ёмкость</string>
@@ -101,8 +101,8 @@
     <string name="samsung_style_shape_title">Стиль Samsung</string>
     <string name="stretched_shape_title">Растянутый</string>
     <!-- Open keyboard -->
-    <string name="drawer_open_keyboard_title">Автоматическая клавиатура</string>
-    <string name="drawer_open_keyboard_summary">Показать клавиатуру, при открытии меню приложений</string>
+    <string name="drawer_open_keyboard_title">Смахивание для поиска</string>
+    <string name="drawer_open_keyboard_summary">Открывать клавиатуру, при открытии меню приложений</string>
     <!-- Icon size -->
     <string name="icon_size_title">Размер значка</string>
     <!-- Font size -->
@@ -310,7 +310,7 @@
         <item>Распространяйте любовь, а не хаос</item>
         <item>Не мы разожгли огонь!</item>
         <item>Время хорошей музыки</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C ГОЛОВА</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
         <item>Вам нужен crDroid Premium, чтобы видеть это</item>
         <item>Помни родословную Lineage</item>
         <item>Наслаждайтесь долгим сроком службы батареи</item>
