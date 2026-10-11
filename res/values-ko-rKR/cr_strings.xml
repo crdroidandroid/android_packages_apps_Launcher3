@@ -62,9 +62,9 @@
     <string name="paused_apps_dialog_title">앱 일시중지됨</string>
     <string name="paused_apps_dialog_message">런처에 의해 %1$s간 일시정지합니다</string>
     <string name="paused_apps_drop_target_label">앱 일시중지</string>
-    <string name="work_apps_paused_title_custom">워크 앱 꺼짐</string>
-    <string name="work_apps_pause_btn_text_custom">워크 앱 끄기</string>
-    <string name="work_apps_enable_btn_text_custom">워크 앱 켜기</string>
+    <string name="work_apps_paused_title_calyx">워크 앱 꺼짐</string>
+    <string name="work_apps_pause_btn_text_calyx">워크 앱 끄기</string>
+    <string name="work_apps_enable_btn_text_calyx">워크 앱 켜기</string>
     <string name="work_apps_paused_info_body_custom">워크앱이 알림을 보내거나 배터리, 위치 정보에 접근할 수 없습니다</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">워크앱이 통화, 문자 메시지, 알림, 배터리, 또는 위치 정보를 받아볼 수 없습니다</string>
     <!-- Suggestions -->
@@ -76,11 +76,30 @@
     <string name="restarting_launcher">런처 재시작 중...</string>
     <string name="restarting_launcher_changes">변경 사항을 적용하기 위해 런처 재시작 중...</string>
     <string name="updating_launcher_components">런처 구성요소를 업데이트하기 위해 런처 재시작 중...</string>
-    <!-- DT2S -->
+    <!-- Sleep gesture -->
     <string name="pref_sleep_gesture_title">두 번 탭하여 화면 끄기</string>
     <string name="pref_sleep_gesture_summary">홈 화면의 빈 공간을 두 번 두드려 화면 끄기</string>
     <string name="pref_sleep_gesture_haptic_title">두 번 탭하여 화면 끄기하면 진동</string>
     <string name="pref_sleep_gesture_haptic_summary">두 번 탭하여 화면 끄기 동작에 햅틱 피드백 제공</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">조약돌</string>
+    <string name="vessel_shape_title">항아리</string>
+    <string name="pure_square_shape_title">정사각형</string>
+    <string name="squircle_shape_title">모서리가 둥근 정사각형</string>
+    <string name="tapered_rect_shape_title">사다리꼴 사각형</string>
+    <string name="teardrop_shape_title">물방울</string>
+    <string name="rounded_rect_shape_title">모서리가 둥근 직사각형</string>
+    <string name="cloudy_shape_title">흐림</string>
+    <string name="cylindrical_shape_title">원통형</string>
+    <string name="flower_shape_title">꽃</string>
+    <string name="heart_shape_title">하트</string>
+    <string name="hexagon_shape_title">육각형</string>
+    <string name="rounded_hexagon_shape_title">모서리가 둥근 육각형</string>
+    <string name="ios_style_shape_title">iOS 스타일</string>
+    <string name="leaf_shape_title">잎사귀</string>
+    <string name="meow_shape_title">야옹</string>
+    <string name="samsung_style_shape_title">삼성 스타일</string>
+    <string name="stretched_shape_title">늘인 모양</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">스와이프하여 검색 시작</string>
     <string name="drawer_open_keyboard_summary">앱 서랍이 열리면 키보드 표시</string>
@@ -97,8 +116,6 @@
     <string name="hotseat_bg_summary">앱 서랍에 반투명 배경 추가</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">배경 불투명도</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">스트로크</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">작업 지우기</string>
     <string name="recents_app_killed">앱 종료됨</string>
@@ -114,6 +131,12 @@
     <string name="dock_theme_title">테마형 아이콘</string>
     <string name="dock_theme_summary">테마형 아이콘을 검색 바에 사용</string>
     <string name="search_radius_title">모서리 각도</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Pixel 스타일 검색 바</string>
+    <string name="dock_search_pixel_style_summary">레이어드 배경으로 새롭게 디자인된 검색 바</string>
+    <string name="qsb_outer_opacity_title">외부층 불투명도</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">스트로크</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">애플리케이션 검색창 위치</string>
     <string name="drawer_search_location_hidden">숨김</string>
@@ -346,13 +369,6 @@
     <!-- Background blur -->
     <string name="background_blur_title">배경 흐림</string>
     <string name="background_blur_summary">최근 앱과 앱 서랍에서 블러 깊이 레벨 설정</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">애플리케이션 정보</string>
-    <string name="app_info_source">출처</string>
-    <string name="app_info_source_system">시스템</string>
-    <string name="app_info_last_update">마지막 업데이트</string>
-    <string name="app_info_version">버전</string>
-    <string name="app_info_more">더 보기</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">아이콘 팩</string>
     <string name="icon_pack_default_label">기본값</string>
@@ -363,25 +379,13 @@
     <string name="wallpaper_carousel_summary">메뉴 길게 눌러서 배경화면 빠르게 전환</string>
     <string name="wallpaper_carousel_lockscreen_title">잠금화면에 적용</string>
     <string name="wallpaper_carousel_lockscreen_summary">잠금 화면에 동일한 배경화면 설정</string>
-    <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">조약돌</string>
-    <string name="vessel_shape_title">항아리</string>
-    <string name="pure_square_shape_title">정사각형</string>
-    <string name="squircle_shape_title">모서리가 둥근 정사각형</string>
-    <string name="tapered_rect_shape_title">사다리꼴 사각형</string>
-    <string name="teardrop_shape_title">물방울</string>
-    <string name="rounded_rect_shape_title">모서리가 둥근 직사각형</string>
-    <string name="cloudy_shape_title">흐림</string>
-    <string name="cylindrical_shape_title">원통형</string>
-    <string name="flower_shape_title">꽃</string>
-    <string name="heart_shape_title">하트</string>
-    <string name="hexagon_shape_title">육각형</string>
-    <string name="rounded_hexagon_shape_title">모서리가 둥근 육각형</string>
-    <string name="ios_style_shape_title">iOS 스타일</string>
-    <string name="leaf_shape_title">잎사귀</string>
-    <string name="meow_shape_title">야옹</string>
-    <string name="samsung_style_shape_title">삼성 스타일</string>
-    <string name="stretched_shape_title">늘인 모양</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">이름 변경</string>
+    <string name="rename_app_reset">초기화</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">커스텀 아이콘</string>
+    <string name="app_info_custom_icon_summary">원하는 아이콘 팩에서 자유롭게 아이콘 선택</string>
+    <string name="icon_picker_search_hint">아이콘 검색</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">어두운 앱 라벨</string>
     <string name="all_apps_dark_text_summary">앱 서랍의 앱 라벨에 항상 어두운 색 글씨 사용</string>
@@ -396,60 +400,25 @@
     <string name="app_drawer_sort_alphabetical">알파벳순으로 정렬</string>
     <string name="app_drawer_sort_install_date">설치 날짜순으로 정렬</string>
     <string name="app_drawer_sort_usage">사용량 순으로 정렬</string>
-    <!-- App drawer color -->
+    <!-- Color Picker -->
+    <string name="color_picker_title">Select color</string>
+    <string name="color_picker_select">Select</string>
+    <string name="color_picker_reset">Reset to default</string>
+    <string name="color_picker_presets">Presets</string>
+    <string name="color_picker_hex_rgb">Hex (#RRGGBB)</string>
+    <string name="color_picker_hex_argb">Hex (#AARRGGBB)</string>
+    <string name="color_picker_hex_invalid">Enter a valid hex color</string>
+    <string name="color_picker_current_color">Current color</string>
+    <string name="color_picker_new_color">New color</string>
+    <!-- App drawer background color -->
     <string name="pref_app_drawer_custom_color_title">배경 색 사용자 지정</string>
     <string name="pref_app_drawer_custom_color_summary">앱 서랍 배경에 사용자 지정 색상 사용</string>
     <string name="pref_app_drawer_custom_color_light_title">밝은 모드 색</string>
     <string name="pref_app_drawer_custom_color_dark_title">어두운 모드 색</string>
-    <!-- Color Picker -->
-    <string name="color_picker_hsb">HSB</string>
-    <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">색조</string>
-    <string name="color_picker_saturation">채도</string>
-    <string name="color_picker_brightness">명도</string>
-    <string name="color_picker_red">빨간색</string>
-    <string name="color_picker_green">초록색</string>
-    <string name="color_picker_blue">파란색</string>
-    <string name="color_picker_hex">HEX</string>
-    <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel 스타일 검색 바</string>
-    <string name="dock_search_pixel_style_summary">레이어드 배경으로 새롭게 디자인된 검색 바</string>
-    <string name="qsb_outer_opacity_title">외부층 불투명도</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">숨겨지거나 보호된 앱</string>
-    <string name="trust_apps_auth_manager">숨겨지거나 보호된 앱을 관리하려면 잠금을 해제하세요.</string>
-    <string name="trust_apps_auth_open_app">인증하여 %1$s 열기</string>
-    <string name="trust_apps_loading">로드 중\u2026</string>
-    <string name="trust_apps_no_lock_error">앱 접근을 제한하려면 잠금 화면 보안을 설정하세요</string>
-    <string name="trust_apps_help">도움말</string>
-    <string name="trust_apps_info_hidden">숨겨진 앱과 해당 앱의 위젯은 앱 서랍에서 숨겨집니다.</string>
-    <string name="trust_apps_info_protected">실행기에서 보호된 앱을 실행하기 위해 인증이 필요합니다.</string>
     <!-- Recents style -->
-    <string name="recents_style_title">최근 앱 레이아웃 스타일</string>
-    <string name="recents_style_default">기본값</string>
-    <string name="recents_style_stock">스케일 효과</string>
-    <string name="recents_style_staple">Kami 스타일</string>
-    <string name="recents_style_ios">iOS 스타일</string>
-    <string name="recents_style_oxygen">OxygenOS 스타일</string>
+    <string name="recents_scroll_vibrate_title">스크롤 진동</string>
     <!-- Lock -->
     <string name="action_lock">앱 잠금 / 잠금 해제</string>
     <string name="unlock_app">최근 앱 잠금 해제됨</string>
     <string name="lock_app">최근 앱 잠금됨</string>
-    <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">스크롤 진동</string>
-    <!-- Rename app shortcut -->
-    <string name="rename_app_label">이름 변경</string>
-    <string name="rename_app_title">앱 이름 입력</string>
-    <string name="app_renamed_successfully">앱 이름이 변경되었습니다</string>
-    <string name="rename_app_empty_error">앱 이름을 비워둘 수 없습니다</string>
-    <string name="rename_app_length_error">앱 이름은 %1$d자 이하이어야 합니다</string>
-    <string name="rename_app_reset">초기화</string>
-    <string name="rename_app_reset_message">원래 이름으로 초기화되었습니다</string>
-    <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">앱 실행 블러 효과</string>
-    <string name="pref_app_launch_blur_summary">앱을 실행할 때 블러 효과를 표시합니다</string>
-    <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">커스텀 아이콘</string>
-    <string name="app_info_custom_icon_summary">원하는 아이콘 팩에서 자유롭게 아이콘 선택</string>
-    <string name="icon_picker_search_hint">아이콘 검색</string>
 </resources>

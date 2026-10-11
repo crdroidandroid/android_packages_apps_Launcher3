@@ -62,9 +62,9 @@
     <string name="paused_apps_dialog_title">Ứng dụng bị tạm dừng</string>
     <string name="paused_apps_dialog_message">%1$s đã bị tạm dừng trực tiếp từ trình khởi chạy</string>
     <string name="paused_apps_drop_target_label">Tạm dừng ứng dụng</string>
-    <string name="work_apps_paused_title_custom">Ứng dụng công việc đã tắt</string>
-    <string name="work_apps_pause_btn_text_custom">Tắt các ứng dụng công việc</string>
-    <string name="work_apps_enable_btn_text_custom">Bật các ứng dụng công việc</string>
+    <string name="work_apps_paused_title_calyx">Ứng dụng công việc đã tắt</string>
+    <string name="work_apps_pause_btn_text_calyx">Tắt các ứng dụng công việc</string>
+    <string name="work_apps_enable_btn_text_calyx">Bật các ứng dụng công việc</string>
     <string name="work_apps_paused_info_body_custom">Ứng dụng công việc không thể gửi thông báo và sử dụng pin hoặc truy cập thông tin vị trí</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Ứng dụng công việc không thể nhận cuộc gọi điện thoại hoặc tin nhắn văn bản, gửi thông báo, sử dụng pin hoặc truy cập vị trí</string>
     <!-- Suggestions -->
@@ -76,11 +76,30 @@
     <string name="restarting_launcher">Đang mở lại trình khởi chạy...</string>
     <string name="restarting_launcher_changes">Đang mở lại trình khởi chạy để áp dụng thay đổi...</string>
     <string name="updating_launcher_components">Đang mở lại trình khởi chạy để cập nhật các thành phần...</string>
-    <!-- DT2S -->
+    <!-- Sleep gesture -->
     <string name="pref_sleep_gesture_title">Chạm hai lần để tắt màn hình</string>
     <string name="pref_sleep_gesture_summary">Nhấn đúp vào khoảng trống trên màn hình chính để tắt màn hình</string>
     <string name="pref_sleep_gesture_haptic_title">Rung khi nhấn đúp để ngủ</string>
     <string name="pref_sleep_gesture_haptic_summary">Rừng khi dùng cử chỉ nhấn đúp để tắt màn hình</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">Đá cuội</string>
+    <string name="vessel_shape_title">Hình bình</string>
+    <string name="pure_square_shape_title">Vuông vắn</string>
+    <string name="squircle_shape_title">Vuông cạnh bo tròn</string>
+    <string name="tapered_rect_shape_title">Chữ nhật</string>
+    <string name="teardrop_shape_title">Giọt nước</string>
+    <string name="rounded_rect_shape_title">Bát giác chữ nhật</string>
+    <string name="cloudy_shape_title">Trời nhiều mây</string>
+    <string name="cylindrical_shape_title">Trụ</string>
+    <string name="flower_shape_title">Hoa</string>
+    <string name="heart_shape_title">Trái tim</string>
+    <string name="hexagon_shape_title">Lục giác</string>
+    <string name="rounded_hexagon_shape_title">Lục giác bo tròn</string>
+    <string name="ios_style_shape_title">iOS</string>
+    <string name="leaf_shape_title">Lá</string>
+    <string name="meow_shape_title">Mèo</string>
+    <string name="samsung_style_shape_title">Kiểu đơn giản</string>
+    <string name="stretched_shape_title">Kéo giãn</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Vuốt để bắt đầu tìm kiếm</string>
     <string name="drawer_open_keyboard_summary">Hiện bàn phím khi màn hình ứng dụng mở ra</string>
@@ -97,8 +116,6 @@
     <string name="hotseat_bg_summary">Thêm nền mờ vào thanh ứng dụng</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Độ mờ của nền</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Độ nét</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Đóng</string>
     <string name="recents_app_killed">Ứng dụng đã được tắt</string>
@@ -114,6 +131,12 @@
     <string name="dock_theme_title">Biểu tượng theo chủ đề</string>
     <string name="dock_theme_summary">Dùng biểu tượng theo chủ đề cho thanh tìm kiếm</string>
     <string name="search_radius_title">Bán kính góc</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Thanh tìm kiếm kiểu mới</string>
+    <string name="dock_search_pixel_style_summary">Thanh tìm kiếm được làm mới với hiệu ứng nền</string>
+    <string name="qsb_outer_opacity_title">Độ mờ nền ngoài</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Độ nét</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Vị trí thanh tìm kiếm ứng dụng</string>
     <string name="drawer_search_location_hidden">Ẩn</string>
@@ -347,13 +370,6 @@ Gửi cho chúng tôi một cốc bia</item>
     <!-- Background blur -->
     <string name="background_blur_title">Độ sâu nền mờ</string>
     <string name="background_blur_summary">Thiết lập độ mờ của hình nền cho ứng dụng gần đây và ngăn chứa ứng dụng</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Thông tin ứng dụng</string>
-    <string name="app_info_source">Nguồn cài đặt</string>
-    <string name="app_info_source_system">Hệ thống</string>
-    <string name="app_info_last_update">Cập nhật mới nhất</string>
-    <string name="app_info_version">Phiên bản</string>
-    <string name="app_info_more">Xem thêm chi tiết về ứng dụng</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Gói biểu tượng</string>
     <string name="icon_pack_default_label">Mặc định</string>
@@ -364,25 +380,13 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="wallpaper_carousel_summary">Nhanh chóng chuyển đổi hình nền từ menu nhấn giữ lâu</string>
     <string name="wallpaper_carousel_lockscreen_title">Áp dụng cho màn hình khóa</string>
     <string name="wallpaper_carousel_lockscreen_summary">Đặt cùng một hình nền cho màn hình khóa</string>
-    <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Đá cuội</string>
-    <string name="vessel_shape_title">Hình bình</string>
-    <string name="pure_square_shape_title">Vuông vắn</string>
-    <string name="squircle_shape_title">Vuông cạnh bo tròn</string>
-    <string name="tapered_rect_shape_title">Chữ nhật</string>
-    <string name="teardrop_shape_title">Giọt nước</string>
-    <string name="rounded_rect_shape_title">Bát giác chữ nhật</string>
-    <string name="cloudy_shape_title">Trời nhiều mây</string>
-    <string name="cylindrical_shape_title">Trụ</string>
-    <string name="flower_shape_title">Hoa</string>
-    <string name="heart_shape_title">Trái tim</string>
-    <string name="hexagon_shape_title">Lục giác</string>
-    <string name="rounded_hexagon_shape_title">Lục giác bo tròn</string>
-    <string name="ios_style_shape_title">iOS</string>
-    <string name="leaf_shape_title">Lá</string>
-    <string name="meow_shape_title">Mèo</string>
-    <string name="samsung_style_shape_title">Kiểu đơn giản</string>
-    <string name="stretched_shape_title">Kéo giãn</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Đổi tên</string>
+    <string name="rename_app_reset">Đặt lại</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Tùy chỉnh biểu tượng</string>
+    <string name="app_info_custom_icon_summary">Chọn biểu tượng bất kỳ từ các gói biểu tượng nếu có sẵn</string>
+    <string name="icon_picker_search_hint">Tìm kiếm biểu tượng</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Nhãn ứng dụng tối</string>
     <string name="all_apps_dark_text_summary">Luôn dùng chữ tối cho nhãn ứng dụng trong khay ứng dụng</string>
@@ -397,60 +401,25 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="app_drawer_sort_alphabetical">Sắp xếp theo chữ cái</string>
     <string name="app_drawer_sort_install_date">Sắp xếp theo ngày cài đặt</string>
     <string name="app_drawer_sort_usage">Sắp xếp theo mức sử dụng</string>
-    <!-- App drawer color -->
+    <!-- Color Picker -->
+    <string name="color_picker_title">Select color</string>
+    <string name="color_picker_select">Select</string>
+    <string name="color_picker_reset">Reset to default</string>
+    <string name="color_picker_presets">Presets</string>
+    <string name="color_picker_hex_rgb">Hex (#RRGGBB)</string>
+    <string name="color_picker_hex_argb">Hex (#AARRGGBB)</string>
+    <string name="color_picker_hex_invalid">Enter a valid hex color</string>
+    <string name="color_picker_current_color">Current color</string>
+    <string name="color_picker_new_color">New color</string>
+    <!-- App drawer background color -->
     <string name="pref_app_drawer_custom_color_title">Màu nền tùy chỉnh</string>
     <string name="pref_app_drawer_custom_color_summary">Sử dụng màu tùy chỉnh cho nền ngăn kéo ứng dụng</string>
     <string name="pref_app_drawer_custom_color_light_title">Chế độ màu sáng</string>
     <string name="pref_app_drawer_custom_color_dark_title">Chế độ màu tối</string>
-    <!-- Color Picker -->
-    <string name="color_picker_hsb">HSB</string>
-    <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Màu sắc</string>
-    <string name="color_picker_saturation">Sắc độ</string>
-    <string name="color_picker_brightness">Độ sáng</string>
-    <string name="color_picker_red">Đỏ</string>
-    <string name="color_picker_green">Xanh lá</string>
-    <string name="color_picker_blue">Xanh dương</string>
-    <string name="color_picker_hex">HEX</string>
-    <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Thanh tìm kiếm kiểu mới</string>
-    <string name="dock_search_pixel_style_summary">Thanh tìm kiếm được làm mới với hiệu ứng nền</string>
-    <string name="qsb_outer_opacity_title">Độ mờ nền ngoài</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Ẩn hoặc bảo vệ ứng dụng</string>
-    <string name="trust_apps_auth_manager">Mở khóa để quản lý các ứng dụng ẩn hoặc được bảo vệ</string>
-    <string name="trust_apps_auth_open_app">Xác thực để mở %1$s</string>
-    <string name="trust_apps_loading">Đang tải\u2026</string>
-    <string name="trust_apps_no_lock_error">Hãy thiết lập màn hình khóa an toàn để hạn chế quyền truy cập ứng dụng</string>
-    <string name="trust_apps_help">Trợ giúp</string>
-    <string name="trust_apps_info_hidden">Ứng dụng cùng với tiện ích sẽ bị ẩn khỏi ngăn chứa ứng dụng</string>
-    <string name="trust_apps_info_protected">Các ứng dụng được bảo vệ yêu cầu xác thực được mở từ trình khởi chạy</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Kiểu bố cục ứng dụng gần đây</string>
-    <string name="recents_style_default">Mặc định</string>
-    <string name="recents_style_stock">Hiệu ứng thu phóng</string>
-    <string name="recents_style_staple">Kiểu mới</string>
-    <string name="recents_style_ios">iOS</string>
-    <string name="recents_style_oxygen">Kiểu OxygenOS</string>
+    <string name="recents_scroll_vibrate_title">Rung khi cuộn</string>
     <!-- Lock -->
     <string name="action_lock">Khóa/Mở khóa ứng dụng</string>
     <string name="unlock_app">Ứng dụng đã mở khóa trong gần đây</string>
     <string name="lock_app">Ứng dụng đã khóa trong gần đây</string>
-    <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">Rung khi cuộn</string>
-    <!-- Rename app shortcut -->
-    <string name="rename_app_label">Đổi tên</string>
-    <string name="rename_app_title">Nhập tên ứng dụng</string>
-    <string name="app_renamed_successfully">Đổi tên xong</string>
-    <string name="rename_app_empty_error">Không thể để trống</string>
-    <string name="rename_app_length_error">Tên ứng dụng phải là %1$d ký tự hoặc ít hơn</string>
-    <string name="rename_app_reset">Đặt lại</string>
-    <string name="rename_app_reset_message">Tên được đặt lại về tên gốc</string>
-    <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">Hiệu ứng mờ khi khởi chạy</string>
-    <string name="pref_app_launch_blur_summary">Hiển thị hiệu ứng làm mờ khi chạy ứng dụng</string>
-    <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Tùy chỉnh biểu tượng</string>
-    <string name="app_info_custom_icon_summary">Chọn biểu tượng bất kỳ từ các gói biểu tượng nếu có sẵn</string>
-    <string name="icon_picker_search_hint">Tìm kiếm biểu tượng</string>
 </resources>

@@ -62,9 +62,9 @@
     <string name="paused_apps_dialog_title">Додаток призупинено</string>
     <string name="paused_apps_dialog_message">%1$s Був зупинений безпосередньо з лаунчера</string>
     <string name="paused_apps_drop_target_label">Призупинити додаток</string>
-    <string name="work_apps_paused_title_custom">Робочі програми вимкнено</string>
-    <string name="work_apps_pause_btn_text_custom">Вимкнути робочі додатки</string>
-    <string name="work_apps_enable_btn_text_custom">Увімкнути робочі додатки</string>
+    <string name="work_apps_paused_title_calyx">Робочі програми вимкнено</string>
+    <string name="work_apps_pause_btn_text_calyx">Вимкнути робочі додатки</string>
+    <string name="work_apps_enable_btn_text_calyx">Увімкнути робочі додатки</string>
     <string name="work_apps_paused_info_body_custom">Ваші робочі програми не можуть надсилати вам сповіщення, використовувати заряд акумулятора або отримувати доступ до вашого місцезнаходження</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Ваші робочі додатки не можуть отримувати телефонні дзвінки або текстові повідомлення, надсилати сповіщення, використовуйте акумулятор або доступ до місцезнаходження</string>
     <!-- Suggestions -->
@@ -76,11 +76,30 @@
     <string name="restarting_launcher">Перезавантаження оболонки...</string>
     <string name="restarting_launcher_changes">Перезапуск оболонки для застосування змін...</string>
     <string name="updating_launcher_components">Перезапуск лаунчера для оновлення компонентів...</string>
-    <!-- DT2S -->
+    <!-- Sleep gesture -->
     <string name="pref_sleep_gesture_title">Подвійне натискання для блокування екрану</string>
     <string name="pref_sleep_gesture_summary">Двічі торкніться порожньої області на головному екрані, щоб вимкнути дисплей</string>
     <string name="pref_sleep_gesture_haptic_title">Вібрувати при подвійному дотику для сну</string>
     <string name="pref_sleep_gesture_haptic_summary">Використовувати тактильний зворотній зв\'язок при подвійному натисканні щоб засинати</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">Камінець</string>
+    <string name="vessel_shape_title">Глечик</string>
+    <string name="pure_square_shape_title">Чистий квадрат</string>
+    <string name="squircle_shape_title">Квадрат із заокругленими кутами</string>
+    <string name="tapered_rect_shape_title">Звужений прямокутник</string>
+    <string name="teardrop_shape_title">Крапля</string>
+    <string name="rounded_rect_shape_title">Округлений прямокутник</string>
+    <string name="cloudy_shape_title">Хмарно</string>
+    <string name="cylindrical_shape_title">Циліндричний</string>
+    <string name="flower_shape_title">Квітка</string>
+    <string name="heart_shape_title">Серце</string>
+    <string name="hexagon_shape_title">Шестикутник</string>
+    <string name="rounded_hexagon_shape_title">Закруглений шестикутник</string>
+    <string name="ios_style_shape_title">Стиль iOS</string>
+    <string name="leaf_shape_title">Листок</string>
+    <string name="meow_shape_title">Нявчати</string>
+    <string name="samsung_style_shape_title">Samsung Style</string>
+    <string name="stretched_shape_title">Розтягнутий</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Свайпніть, щоб почати пошук</string>
     <string name="drawer_open_keyboard_summary">Відкривати клавіатуру щоразу при появі меню додатків</string>
@@ -97,8 +116,6 @@
     <string name="hotseat_bg_summary">Додати напівпрозорий фон в панель додатка</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Прозорість фону</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Обведення</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Зупинити</string>
     <string name="recents_app_killed">Програму закрито</string>
@@ -114,6 +131,12 @@
     <string name="dock_theme_title">Іконки з темами</string>
     <string name="dock_theme_summary">Використовувати тематичні іконки для панелі пошуку</string>
     <string name="search_radius_title">Радіус округлення</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Панель пошуку в стилі Pixel</string>
+    <string name="dock_search_pixel_style_summary">Оновлений рядок пошуку з багатошаровим фоном</string>
+    <string name="qsb_outer_opacity_title">Непрозорість зовнішнього шару</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Обведення</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Позиція панелі пошуку додатків</string>
     <string name="drawer_search_location_hidden">Прихований</string>
@@ -346,13 +369,6 @@
     <!-- Background blur -->
     <string name="background_blur_title">Глибина розмиття фону</string>
     <string name="background_blur_summary">Встановити глибину розмиття для нещодавніх та меню додатків</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Інформація про застосунок</string>
-    <string name="app_info_source">Джерело</string>
-    <string name="app_info_source_system">Система</string>
-    <string name="app_info_last_update">Останнє оновлення</string>
-    <string name="app_info_version">Версія</string>
-    <string name="app_info_more">Більше</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Пакет іконок</string>
     <string name="icon_pack_default_label">За замовчанням</string>
@@ -363,25 +379,13 @@
     <string name="wallpaper_carousel_summary">Швидке перемикання шпалер з довгого натискання</string>
     <string name="wallpaper_carousel_lockscreen_title">Застосувати до екрана блокування</string>
     <string name="wallpaper_carousel_lockscreen_summary">Встановити однакові шпалери на екран блокування</string>
-    <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Камінець</string>
-    <string name="vessel_shape_title">Глечик</string>
-    <string name="pure_square_shape_title">Чистий квадрат</string>
-    <string name="squircle_shape_title">Квадрат із заокругленими кутами</string>
-    <string name="tapered_rect_shape_title">Звужений прямокутник</string>
-    <string name="teardrop_shape_title">Крапля</string>
-    <string name="rounded_rect_shape_title">Округлений прямокутник</string>
-    <string name="cloudy_shape_title">Хмарно</string>
-    <string name="cylindrical_shape_title">Циліндричний</string>
-    <string name="flower_shape_title">Квітка</string>
-    <string name="heart_shape_title">Серце</string>
-    <string name="hexagon_shape_title">Шестикутник</string>
-    <string name="rounded_hexagon_shape_title">Закруглений шестикутник</string>
-    <string name="ios_style_shape_title">Стиль iOS</string>
-    <string name="leaf_shape_title">Листок</string>
-    <string name="meow_shape_title">Нявчати</string>
-    <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="stretched_shape_title">Розтягнутий</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Перейменувати</string>
+    <string name="rename_app_reset">Скинути</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Користувацька піктограма</string>
+    <string name="app_info_custom_icon_summary">Вибрати будь-який значок з будь-якого пакету іконок</string>
+    <string name="icon_picker_search_hint">Пошук значків</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Темні мітки додатків</string>
     <string name="all_apps_dark_text_summary">Завжди використовувати темний текст для підписів додатків у меню додатків</string>
@@ -396,60 +400,25 @@
     <string name="app_drawer_sort_alphabetical">Сортувати за алфавітом</string>
     <string name="app_drawer_sort_install_date">Сортувати за датою встановлення</string>
     <string name="app_drawer_sort_usage">Сортувати за використанням</string>
-    <!-- App drawer color -->
+    <!-- Color Picker -->
+    <string name="color_picker_title">Вибір кольору</string>
+    <string name="color_picker_select">Обрати</string>
+    <string name="color_picker_reset">Відновити налаштування за умовчанням</string>
+    <string name="color_picker_presets">Шаблони</string>
+    <string name="color_picker_hex_rgb">Hex (#RRGGBB)</string>
+    <string name="color_picker_hex_argb">Hex (#AARRGGBB)</string>
+    <string name="color_picker_hex_invalid">Введіть допустимий шістнадцятковий колір</string>
+    <string name="color_picker_current_color">Поточний колір</string>
+    <string name="color_picker_new_color">Новий колір</string>
+    <!-- App drawer background color -->
     <string name="pref_app_drawer_custom_color_title">Власний колір тла</string>
     <string name="pref_app_drawer_custom_color_summary">Використовувати свій колір для тла меню програм</string>
     <string name="pref_app_drawer_custom_color_light_title">Колір світлого режиму</string>
     <string name="pref_app_drawer_custom_color_dark_title">Колір темного режиму</string>
-    <!-- Color Picker -->
-    <string name="color_picker_hsb">HSB</string>
-    <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Глибина кольору</string>
-    <string name="color_picker_saturation">Насиченість</string>
-    <string name="color_picker_brightness">Яскравість</string>
-    <string name="color_picker_red">Червона</string>
-    <string name="color_picker_green">Зелений</string>
-    <string name="color_picker_blue">Синій</string>
-    <string name="color_picker_hex">HEX</string>
-    <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Панель пошуку в стилі Pixel</string>
-    <string name="dock_search_pixel_style_summary">Оновлений рядок пошуку з багатошаровим фоном</string>
-    <string name="qsb_outer_opacity_title">Непрозорість зовнішнього шару</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Приховані та захищені додатки</string>
-    <string name="trust_apps_auth_manager">Розблокуйте, щоб керувати прихованими та захищеними додатками</string>
-    <string name="trust_apps_auth_open_app">Автентифікуйтесь, щоб відкрити %1$s</string>
-    <string name="trust_apps_loading">Завантаження\u2026</string>
-    <string name="trust_apps_no_lock_error">Будь ласка, встановіть блокування екрану для обмеження доступу до додатків</string>
-    <string name="trust_apps_help">Допомога</string>
-    <string name="trust_apps_info_hidden">Приховані додатки і їх віджети приховані з меню</string>
-    <string name="trust_apps_info_protected">Для відкриття захищених додатків з лаунчера потрібна аутентифікація</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Стиль макета нещодавніх</string>
-    <string name="recents_style_default">За замовчанням</string>
-    <string name="recents_style_stock">Ефект масштабу</string>
-    <string name="recents_style_staple">Стиль Kami</string>
-    <string name="recents_style_ios">Стиль iOS</string>
-    <string name="recents_style_oxygen">Стиль OxygenOS</string>
+    <string name="recents_scroll_vibrate_title">Вібрація при прокручуванні</string>
     <!-- Lock -->
     <string name="action_lock">Блокування/розблокування програми</string>
     <string name="unlock_app">Розблокований додаток у списку останніх</string>
     <string name="lock_app">Заблокований додаток у списку останніх</string>
-    <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">Вібрація при прокручуванні</string>
-    <!-- Rename app shortcut -->
-    <string name="rename_app_label">Перейменувати</string>
-    <string name="rename_app_title">Введіть назву програми</string>
-    <string name="app_renamed_successfully">Програму перейменовано</string>
-    <string name="rename_app_empty_error">Назва додатку не може бути порожньою</string>
-    <string name="rename_app_length_error">Назва програми повинна бути менше символів %1$d</string>
-    <string name="rename_app_reset">Скинути</string>
-    <string name="rename_app_reset_message">Ім\'я скидається на оригінал</string>
-    <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">Розмивання запуску програми</string>
-    <string name="pref_app_launch_blur_summary">Показувати ефект розмиття під час запуску програм</string>
-    <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Користувацька піктограма</string>
-    <string name="app_info_custom_icon_summary">Вибрати будь-який значок з будь-якого пакету іконок</string>
-    <string name="icon_picker_search_hint">Пошук значків</string>
 </resources>

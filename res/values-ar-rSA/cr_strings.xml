@@ -62,9 +62,9 @@
     <string name="paused_apps_dialog_title">تم إيقاف التطبيق مؤقتًا</string>
     <string name="paused_apps_dialog_message">تم إيقاف %1$s بشكل مباشر من المشغل</string>
     <string name="paused_apps_drop_target_label">إيقاف مؤقت للتطبيق</string>
-    <string name="work_apps_paused_title_custom">تطبيقات العمل معطلة</string>
-    <string name="work_apps_pause_btn_text_custom">إيقاف تطبيقات العمل</string>
-    <string name="work_apps_enable_btn_text_custom">تفعيل تطبيقات العمل</string>
+    <string name="work_apps_paused_title_calyx">تطبيقات العمل معطلة</string>
+    <string name="work_apps_pause_btn_text_calyx">إيقاف تطبيقات العمل</string>
+    <string name="work_apps_enable_btn_text_calyx">تفعيل تطبيقات العمل</string>
     <string name="work_apps_paused_info_body_custom">لا يمكن لتطبيقات العمل إرسال إشعارات إليك أو استخدام بطاريتك أو الوصول إلى موقعك الجغرافي.</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">تطبيقات العمل الخاصة بك لا يمكن أن تتلقى مكالمات هاتفية أو رسائل نصية، أو ترسل إشعارات إليك، أو استخدم البطارية، أو الوصول إلى موقعك</string>
     <!-- Suggestions -->
@@ -76,11 +76,30 @@
     <string name="restarting_launcher">إعادة تشغيل المشغل...</string>
     <string name="restarting_launcher_changes">إعادة تشغيل المشغل لتطبيق التغييرات...</string>
     <string name="updating_launcher_components">إعادة تشغيل المشغل لتحديث مكونات المشغل...</string>
-    <!-- DT2S -->
+    <!-- Sleep gesture -->
     <string name="pref_sleep_gesture_title">انقر نقرًا مزدوجًا للنوم</string>
     <string name="pref_sleep_gesture_summary">انقر نقرًا مزدوجًا على مساحة فارغة على الشاشة الرئيسة لإيقاف تشغيل الشاشة</string>
     <string name="pref_sleep_gesture_haptic_title">اهتزاز عند النقر مرتين للنوم</string>
     <string name="pref_sleep_gesture_haptic_summary">تقديم ردود الفعل اللمسية عند النقر المزدوج لإيماءة السكون</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">حصاة</string>
+    <string name="vessel_shape_title">وعاء</string>
+    <string name="pure_square_shape_title">مربع صافي</string>
+    <string name="squircle_shape_title">مربع دائري</string>
+    <string name="tapered_rect_shape_title">مستطيل مدبّب</string>
+    <string name="teardrop_shape_title">دمعة</string>
+    <string name="rounded_rect_shape_title">مستطيل ذو زوايا مستديرة</string>
+    <string name="cloudy_shape_title">غائم</string>
+    <string name="cylindrical_shape_title">أسطوانة</string>
+    <string name="flower_shape_title">زهرة</string>
+    <string name="heart_shape_title">قلب</string>
+    <string name="hexagon_shape_title">سداسي</string>
+    <string name="rounded_hexagon_shape_title">سداسي مدور</string>
+    <string name="ios_style_shape_title">نمط iOS</string>
+    <string name="leaf_shape_title">ورقة الشجر</string>
+    <string name="meow_shape_title">مواء</string>
+    <string name="samsung_style_shape_title">Samsung Style</string>
+    <string name="stretched_shape_title">ممتد</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">اسحب لبدء البحث</string>
     <string name="drawer_open_keyboard_summary">فتح لوحة المفاتيح كلما أصبح درج التطبيقات مرئيًا</string>
@@ -97,8 +116,6 @@
     <string name="hotseat_bg_summary">إضافة خلفية شفافة إلى قائمة التطبيقات</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">تعتيم الخلفية</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">سُمك</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">إيقاف</string>
     <string name="recents_app_killed">تم إيقاف التطبيق</string>
@@ -114,6 +131,12 @@
     <string name="dock_theme_title">أيقونات مع الثيم</string>
     <string name="dock_theme_summary">استخدام الثيم الحالي لأيقونات شريط البحث</string>
     <string name="search_radius_title">حدود الزاوية</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">شريط البحث بنمط بكسل</string>
+    <string name="dock_search_pixel_style_summary">ترتيب شريط البحث مع خلفية الطبقات</string>
+    <string name="qsb_outer_opacity_title">شفافية الطبقة الخارجية</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">سُمك</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">موقع شريط البحث للتطبيق</string>
     <string name="drawer_search_location_hidden">مخفي</string>
@@ -346,13 +369,6 @@
     <!-- Background blur -->
     <string name="background_blur_title">مستوي ضبابية الخلفية</string>
     <string name="background_blur_summary">تعيين مستوى الضباب للتطبيقات الحديثة ودرج التطبيقات</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">معلومات التطبيق</string>
-    <string name="app_info_source">المصدر</string>
-    <string name="app_info_source_system">النظام</string>
-    <string name="app_info_last_update">آخر تحديث</string>
-    <string name="app_info_version">الإصدار</string>
-    <string name="app_info_more">المزيد</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">حزمة الايقونات</string>
     <string name="icon_pack_default_label">الإفتراضي</string>
@@ -363,25 +379,13 @@
     <string name="wallpaper_carousel_summary">التبديل السريع للخلفيات من قائمة الضغط المطول</string>
     <string name="wallpaper_carousel_lockscreen_title">تطبيق على شاشة القفل</string>
     <string name="wallpaper_carousel_lockscreen_summary">تعيين نفس الخلفية على شاشة القفل</string>
-    <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">حصاة</string>
-    <string name="vessel_shape_title">وعاء</string>
-    <string name="pure_square_shape_title">مربع صافي</string>
-    <string name="squircle_shape_title">مربع دائري</string>
-    <string name="tapered_rect_shape_title">مستطيل مدبّب</string>
-    <string name="teardrop_shape_title">دمعة</string>
-    <string name="rounded_rect_shape_title">مستطيل ذو زوايا مستديرة</string>
-    <string name="cloudy_shape_title">غائم</string>
-    <string name="cylindrical_shape_title">أسطوانة</string>
-    <string name="flower_shape_title">زهرة</string>
-    <string name="heart_shape_title">قلب</string>
-    <string name="hexagon_shape_title">سداسي</string>
-    <string name="rounded_hexagon_shape_title">سداسي مدور</string>
-    <string name="ios_style_shape_title">نمط iOS</string>
-    <string name="leaf_shape_title">ورقة الشجر</string>
-    <string name="meow_shape_title">مواء</string>
-    <string name="samsung_style_shape_title">Samsung Style</string>
-    <string name="stretched_shape_title">ممتد</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Rename</string>
+    <string name="rename_app_reset">إعادة التعيين</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">أيقونة مخصصة</string>
+    <string name="app_info_custom_icon_summary">اختر أي أيقونة من أي حزمة أيقونات</string>
+    <string name="icon_picker_search_hint">البحث في الأيقونات</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">تسميات التطبيق المظلمة</string>
     <string name="all_apps_dark_text_summary">استخدام النص الداكن دائما لتسميات التطبيق في درج التطبيق</string>
@@ -396,60 +400,25 @@
     <string name="app_drawer_sort_alphabetical">ترتيب أبجدي</string>
     <string name="app_drawer_sort_install_date">الترتيب حسب تاريخ التثبيت</string>
     <string name="app_drawer_sort_usage">ترتيب حسب الإستخدام</string>
-    <!-- App drawer color -->
+    <!-- Color Picker -->
+    <string name="color_picker_title">اختيار اللّون</string>
+    <string name="color_picker_select">تحديد</string>
+    <string name="color_picker_reset">Reset to default</string>
+    <string name="color_picker_presets">Presets</string>
+    <string name="color_picker_hex_rgb">Hex (#RRGGBB)</string>
+    <string name="color_picker_hex_argb">Hex (#AARRGGBB)</string>
+    <string name="color_picker_hex_invalid">Enter a valid hex color</string>
+    <string name="color_picker_current_color">Current color</string>
+    <string name="color_picker_new_color">New color</string>
+    <!-- App drawer background color -->
     <string name="pref_app_drawer_custom_color_title">لون الخلفية المخصصة</string>
     <string name="pref_app_drawer_custom_color_summary">استخدام لون مخصص لخلفية درج التطبيق</string>
     <string name="pref_app_drawer_custom_color_light_title">لون الوضع الفاتح</string>
     <string name="pref_app_drawer_custom_color_dark_title">لون الوضع المظلم</string>
-    <!-- Color Picker -->
-    <string name="color_picker_hsb">HSB</string>
-    <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">التدرج اللوني</string>
-    <string name="color_picker_saturation">التشبع</string>
-    <string name="color_picker_brightness">السطوع</string>
-    <string name="color_picker_red">أحمر</string>
-    <string name="color_picker_green">اخضر</string>
-    <string name="color_picker_blue">أزرق</string>
-    <string name="color_picker_hex">HEX</string>
-    <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">شريط البحث بنمط بكسل</string>
-    <string name="dock_search_pixel_style_summary">ترتيب شريط البحث مع خلفية الطبقات</string>
-    <string name="qsb_outer_opacity_title">شفافية الطبقة الخارجية</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">إخفاء &amp; تطبيقات محمية</string>
-    <string name="trust_apps_auth_manager">افتح لإدارة التطبيقات المخفية والمحمية</string>
-    <string name="trust_apps_auth_open_app">يرجى مصادقة البصمة لفتح %1$s</string>
-    <string name="trust_apps_loading">جارٍ التحميل…\u2026</string>
-    <string name="trust_apps_no_lock_error">يرجى إعداد فقل شاشة الجهاز لتقييد الوصول إلى التطبيق</string>
-    <string name="trust_apps_help">مساعدة</string>
-    <string name="trust_apps_info_hidden">التطبيقات المخفية و الأدوات الخاصة بها ستكون مخفية أيضاً من واجهة التشغيل</string>
-    <string name="trust_apps_info_protected">التطبيقات المحمية تتطلب المصادقة لكي تُفتح</string>
     <!-- Recents style -->
-    <string name="recents_style_title">نمط تخطيط التطبيقات الحديثة</string>
-    <string name="recents_style_default">افتراضي</string>
-    <string name="recents_style_stock">تأثير المقياس</string>
-    <string name="recents_style_staple">نمط الكامي</string>
-    <string name="recents_style_ios">نمط iOS</string>
-    <string name="recents_style_oxygen">نمط OxygenOS</string>
+    <string name="recents_scroll_vibrate_title">الإهتزاز اثناء التمرير</string>
     <!-- Lock -->
     <string name="action_lock">قفل/فتح التطبيق</string>
     <string name="unlock_app">التطبيق غير المقفل في التطبيقات الحديثة</string>
     <string name="lock_app">التطبيق المقفل في التطبيقات الحديثة</string>
-    <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">الإهتزاز اثناء التمرير</string>
-    <!-- Rename app shortcut -->
-    <string name="rename_app_label">Rename</string>
-    <string name="rename_app_title">Enter app name</string>
-    <string name="app_renamed_successfully">App renamed</string>
-    <string name="rename_app_empty_error">App name cannot be empty</string>
-    <string name="rename_app_length_error">App name must be %1$d characters or less</string>
-    <string name="rename_app_reset">Reset</string>
-    <string name="rename_app_reset_message">Name reset to original</string>
-    <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">App launch blur</string>
-    <string name="pref_app_launch_blur_summary">Show blur effect when launching apps</string>
-    <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Custom icon</string>
-    <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
-    <string name="icon_picker_search_hint">Search icons</string>
 </resources>

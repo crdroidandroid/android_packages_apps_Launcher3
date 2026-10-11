@@ -62,9 +62,9 @@
     <string name="paused_apps_dialog_title">Alkalmazás-szüneteltetés</string>
     <string name="paused_apps_dialog_message">%1$s közvetlen szüneteltetése a Launcherből</string>
     <string name="paused_apps_drop_target_label">Alkalmazás-szüneteltetés</string>
-    <string name="work_apps_paused_title_custom">A munkaalkalmazások ki vannak kapcsolva</string>
-    <string name="work_apps_pause_btn_text_custom">A munkaalkalmazások kikapcsolása</string>
-    <string name="work_apps_enable_btn_text_custom">A munkaalkalmazások bekapcsolása</string>
+    <string name="work_apps_paused_title_calyx">A munkaalkalmazások ki vannak kapcsolva</string>
+    <string name="work_apps_pause_btn_text_calyx">A munkaalkalmazások kikapcsolása</string>
+    <string name="work_apps_enable_btn_text_calyx">A munkaalkalmazások bekapcsolása</string>
     <string name="work_apps_paused_info_body_custom">A munkaalkalmazások nem küldhetnek értesítéseket, nem használhatják az akkumlátort, és nem férhetnek hozzá a helyadatokhoz.</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">A munkaalkalmazások nem fogadhatnak hívásokat és szöveges üzeneteket, nem küldhetnek önnek értesítéseket, nem használhatják az akkumulátort és nem férhetnek hozzá a helyadatokhoz</string>
     <!-- Suggestions -->
@@ -76,11 +76,30 @@
     <string name="restarting_launcher">A Launcher újraindítása...</string>
     <string name="restarting_launcher_changes">A változások miatti újraindulás...</string>
     <string name="updating_launcher_components">Launcher alkotóelem frissítése miatti újraindulás...</string>
-    <!-- DT2S -->
+    <!-- Sleep gesture -->
     <string name="pref_sleep_gesture_title">Alvómód duplakoppal</string>
     <string name="pref_sleep_gesture_summary">A képernyő kikapcsolásához koppintson duplán a kezdőképernyő egy üres területére</string>
     <string name="pref_sleep_gesture_haptic_title">Az \'Alvómód duplakoppal\' rezgő visszajelzése</string>
     <string name="pref_sleep_gesture_haptic_summary">Rezgéses visszajelzést ad a dupla koppintásos alvás gesztusról</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">Kavics</string>
+    <string name="vessel_shape_title">Váza</string>
+    <string name="pure_square_shape_title">Tökéletes négyzet</string>
+    <string name="squircle_shape_title">Négyzetes kör</string>
+    <string name="tapered_rect_shape_title">Trapéz-szerű</string>
+    <string name="teardrop_shape_title">Könnycsepp</string>
+    <string name="rounded_rect_shape_title">Kerekített téglalap</string>
+    <string name="cloudy_shape_title">Felhő</string>
+    <string name="cylindrical_shape_title">Henger-szerű</string>
+    <string name="flower_shape_title">Virág</string>
+    <string name="heart_shape_title">Szív</string>
+    <string name="hexagon_shape_title">Hatszög</string>
+    <string name="rounded_hexagon_shape_title">Kerekített hatszög</string>
+    <string name="ios_style_shape_title">iOS-stílus</string>
+    <string name="leaf_shape_title">Falevél</string>
+    <string name="meow_shape_title">Miau</string>
+    <string name="samsung_style_shape_title">Samsung-stílus</string>
+    <string name="stretched_shape_title">Nyújtott</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Csúsztatás a kereséshez</string>
     <string name="drawer_open_keyboard_summary">Nyíljon meg a billentyűzet, amikor az alkalmazásfiók láthatóvá válik</string>
@@ -97,8 +116,6 @@
     <string name="hotseat_bg_summary">Áttetsző háttereket adhat az alkalmazásfiókhoz</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Háttérátlátszóság</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Körvonal</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Leállítás</string>
     <string name="recents_app_killed">Az alkalmazás leállt</string>
@@ -114,6 +131,12 @@
     <string name="dock_theme_title">Témázott ikonok</string>
     <string name="dock_theme_summary">A keresősávban témázott ikonok használhatók</string>
     <string name="search_radius_title">Saroklekerekítés</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Pixel stílusú keresősáv</string>
+    <string name="dock_search_pixel_style_summary">Újraálmodott keresősáv réteges háttérrel</string>
+    <string name="qsb_outer_opacity_title">A külső réteg átlátszósága</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Körvonal</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Az alkalmazás-keresősáv helyzete</string>
     <string name="drawer_search_location_hidden">Rejtett</string>
@@ -346,13 +369,6 @@
     <!-- Background blur -->
     <string name="background_blur_title">A háttér-elmosás mélysége</string>
     <string name="background_blur_summary">Az előzmények és az alkalmazásfiók elmosási értéke állítható itt</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Alkalmazás információ</string>
-    <string name="app_info_source">Forrás</string>
-    <string name="app_info_source_system">Rendszer</string>
-    <string name="app_info_last_update">Utoljára frissítve</string>
-    <string name="app_info_version">Verzió</string>
-    <string name="app_info_more">Továbbiak</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Ikoncsomag</string>
     <string name="icon_pack_default_label">Alapértelmezett</string>
@@ -363,25 +379,13 @@
     <string name="wallpaper_carousel_summary">Gyors háttérkép-váltás a hosszan nyomással elérhető menüből</string>
     <string name="wallpaper_carousel_lockscreen_title">Alkalmazás a záróképernyőre</string>
     <string name="wallpaper_carousel_lockscreen_summary">Ugyanazt a háttérképet állítsa be a zárolási képernyőre</string>
-    <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Kavics</string>
-    <string name="vessel_shape_title">Váza</string>
-    <string name="pure_square_shape_title">Tökéletes négyzet</string>
-    <string name="squircle_shape_title">Négyzetes kör</string>
-    <string name="tapered_rect_shape_title">Trapéz-szerű</string>
-    <string name="teardrop_shape_title">Könnycsepp</string>
-    <string name="rounded_rect_shape_title">Kerekített téglalap</string>
-    <string name="cloudy_shape_title">Felhő</string>
-    <string name="cylindrical_shape_title">Henger-szerű</string>
-    <string name="flower_shape_title">Virág</string>
-    <string name="heart_shape_title">Szív</string>
-    <string name="hexagon_shape_title">Hatszög</string>
-    <string name="rounded_hexagon_shape_title">Kerekített hatszög</string>
-    <string name="ios_style_shape_title">iOS-stílus</string>
-    <string name="leaf_shape_title">Falevél</string>
-    <string name="meow_shape_title">Miau</string>
-    <string name="samsung_style_shape_title">Samsung-stílus</string>
-    <string name="stretched_shape_title">Nyújtott</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Átnevezés</string>
+    <string name="rename_app_reset">Visszaállítás</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Egyéni ikon</string>
+    <string name="app_info_custom_icon_summary">Bármelyik ikoncsomagból kijelölhet egy ikont</string>
+    <string name="icon_picker_search_hint">Ikonok keresése</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Sötét alkalmazásnevek</string>
     <string name="all_apps_dark_text_summary">Az alkalmazásfiókban mindig sötét betűkkel írja ki az alkalmazások neveit</string>
@@ -396,60 +400,25 @@
     <string name="app_drawer_sort_alphabetical">A-B-C sorrend</string>
     <string name="app_drawer_sort_install_date">Dátum szerinti sorrend</string>
     <string name="app_drawer_sort_usage">Használat szerinti sorrend</string>
-    <!-- App drawer color -->
+    <!-- Color Picker -->
+    <string name="color_picker_title">Színválasztás</string>
+    <string name="color_picker_select">Kiválasztás</string>
+    <string name="color_picker_reset">Visszaállítás alaphelyzetbe</string>
+    <string name="color_picker_presets">Előre beállítottak</string>
+    <string name="color_picker_hex_rgb">Hexadecimális (#RRGGBB)</string>
+    <string name="color_picker_hex_argb">Hexadecimális (#AARRGGBB)</string>
+    <string name="color_picker_hex_invalid">Valós hexadecimális színt adjon meg</string>
+    <string name="color_picker_current_color">Jelenlegi szín</string>
+    <string name="color_picker_new_color">Új szín</string>
+    <!-- App drawer background color -->
     <string name="pref_app_drawer_custom_color_title">Egyéni háttérszín</string>
     <string name="pref_app_drawer_custom_color_summary">Egyéni szín használata az alkalmazásfiók hátteréhez</string>
     <string name="pref_app_drawer_custom_color_light_title">A \'Világos mód\' színe</string>
     <string name="pref_app_drawer_custom_color_dark_title">A \'Sötét mód\' színe</string>
-    <!-- Color Picker -->
-    <string name="color_picker_hsb">HSB</string>
-    <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Színárnyalat</string>
-    <string name="color_picker_saturation">Telítettség</string>
-    <string name="color_picker_brightness">Fényerő</string>
-    <string name="color_picker_red">Vörös</string>
-    <string name="color_picker_green">Zöld</string>
-    <string name="color_picker_blue">Kék</string>
-    <string name="color_picker_hex">HEX</string>
-    <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel stílusú keresősáv</string>
-    <string name="dock_search_pixel_style_summary">Újraálmodott keresősáv réteges háttérrel</string>
-    <string name="qsb_outer_opacity_title">A külső réteg átlátszósága</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Rejtett és védett alkalmazások</string>
-    <string name="trust_apps_auth_manager">Feloldás a rejtett és védett alkalmazások kezeléséhez</string>
-    <string name="trust_apps_auth_open_app">Hitelesítés a következő megnyitásához: %1$s</string>
-    <string name="trust_apps_loading">Betöltés\u2026</string>
-    <string name="trust_apps_no_lock_error">Kérjük, állítson be biztonságos (védett) képernyőzárat az alkalmazás-hozzáférések korlátozására</string>
-    <string name="trust_apps_help">Súgó</string>
-    <string name="trust_apps_info_hidden">A rejtett alkalmazások és kisalkalmazásaik az alkalmazásfiókban sem láthatóak</string>
-    <string name="trust_apps_info_protected">Egy védett alkalmazás launcherből való megnyitása hitelesítést igényel</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Az Előzmények elrendezési stílusa</string>
-    <string name="recents_style_default">Alapértelmezett</string>
-    <string name="recents_style_stock">Skálázott</string>
-    <string name="recents_style_staple">Kami</string>
-    <string name="recents_style_ios">iOS</string>
-    <string name="recents_style_oxygen">OxigenOS</string>
+    <string name="recents_scroll_vibrate_title">Rezgés görgetéskor</string>
     <!-- Lock -->
     <string name="action_lock">Alkalmazás zárolása/feloldása</string>
     <string name="unlock_app">Feloldott alkalmazások az előzményekben</string>
     <string name="lock_app">Zárolt alkalmazások az előzményekben</string>
-    <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">Rezgés görgetéskor</string>
-    <!-- Rename app shortcut -->
-    <string name="rename_app_label">Átnevezés</string>
-    <string name="rename_app_title">Írja be az alkalmazás nevét</string>
-    <string name="app_renamed_successfully">Az alkalmazás átnevezve</string>
-    <string name="rename_app_empty_error">Ez a mező nem lehet üres</string>
-    <string name="rename_app_length_error">Az alkalmazás neve legfeljebb %1$d karakter lehet</string>
-    <string name="rename_app_reset">Visszaállítás</string>
-    <string name="rename_app_reset_message">Visszaállítva az eredetire</string>
-    <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">A megnyíló alkalmazás homályossága</string>
-    <string name="pref_app_launch_blur_summary">Elmosó effektus alkamazás megnyitásakor</string>
-    <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Egyéni ikon</string>
-    <string name="app_info_custom_icon_summary">Bármelyik ikoncsomagból kijelölhet egy ikont</string>
-    <string name="icon_picker_search_hint">Ikonok keresése</string>
 </resources>

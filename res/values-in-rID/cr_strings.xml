@@ -62,9 +62,9 @@
     <string name="paused_apps_dialog_title">Aplikasi dijeda</string>
     <string name="paused_apps_dialog_message">%1$s langsung dijeda dari peluncur</string>
     <string name="paused_apps_drop_target_label">Jeda aplikasi</string>
-    <string name="work_apps_paused_title_custom">Aplikasi kerja tidak aktif</string>
-    <string name="work_apps_pause_btn_text_custom">Tunda Aplikasi Kerja</string>
-    <string name="work_apps_enable_btn_text_custom">Aktifkan aplikasi kerja</string>
+    <string name="work_apps_paused_title_calyx">Aplikasi kerja tidak aktif</string>
+    <string name="work_apps_pause_btn_text_calyx">Tunda Aplikasi Kerja</string>
+    <string name="work_apps_enable_btn_text_calyx">Aktifkan aplikasi kerja</string>
     <string name="work_apps_paused_info_body_custom">Aplikasi kerja tidak akan dapat mengirim notifikasi, menggunakan baterai, atau mengakses lokasi</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Aplikasi kerja tidak akan dapat menerima panggilan telepon atau pesan teks, mengirim notifikasi, menggunakan baterai, atau mengakses lokasi</string>
     <!-- Suggestions -->
@@ -76,11 +76,30 @@
     <string name="restarting_launcher">Memulai ulang peluncur...</string>
     <string name="restarting_launcher_changes">Memulai ulang peluncur untuk menerapkan perubahan...</string>
     <string name="updating_launcher_components">Memulai ulang peluncur untuk memperbarui komponen peluncur...</string>
-    <!-- DT2S -->
+    <!-- Sleep gesture -->
     <string name="pref_sleep_gesture_title">Ketuk dua kali untuk tidur</string>
     <string name="pref_sleep_gesture_summary">Ketuk dua kali layar kosong di beranda untuk mematikan layar</string>
     <string name="pref_sleep_gesture_haptic_title">Getar dengan ketukan ganda untuk tidur</string>
     <string name="pref_sleep_gesture_haptic_summary">Berikan umpan balik haptik pada gestur ketuk dua kali untuk mengaktifkan mode tidur</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">Kerikil</string>
+    <string name="vessel_shape_title">Kapal</string>
+    <string name="pure_square_shape_title">Persegi murni</string>
+    <string name="squircle_shape_title">Kotak melengkung</string>
+    <string name="tapered_rect_shape_title">Persegi panjang meruncing</string>
+    <string name="teardrop_shape_title">Tetesan Air</string>
+    <string name="rounded_rect_shape_title">Persegi panjang membulat</string>
+    <string name="cloudy_shape_title">Berawan</string>
+    <string name="cylindrical_shape_title">Berbentuk silinder</string>
+    <string name="flower_shape_title">Bunga</string>
+    <string name="heart_shape_title">Hati</string>
+    <string name="hexagon_shape_title">Segi enam</string>
+    <string name="rounded_hexagon_shape_title">Segi enam membulat</string>
+    <string name="ios_style_shape_title">Gaya iOS</string>
+    <string name="leaf_shape_title">Daun</string>
+    <string name="meow_shape_title">Meong</string>
+    <string name="samsung_style_shape_title">Gaya Samsung</string>
+    <string name="stretched_shape_title">Diregangkan</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Geser untuk mulai mencari</string>
     <string name="drawer_open_keyboard_summary">Buka keyboard setiap kali laci aplikasi terlihat</string>
@@ -97,8 +116,6 @@
     <string name="hotseat_bg_summary">Tambahkan latar belakang tembus pandang di dok aplikasi</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Transparansi latar Belakang</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Garis</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Matikan</string>
     <string name="recents_app_killed">Aplikasi dimatikan</string>
@@ -114,6 +131,12 @@
     <string name="dock_theme_title">Ikon bertema</string>
     <string name="dock_theme_summary">Gunakan ikon bertema untuk bilah pencarian</string>
     <string name="search_radius_title">Radius sudut</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Bilah pencarian bergaya Pixel</string>
+    <string name="dock_search_pixel_style_summary">Tampilan bilah pencarian yang diperbarui dengan latar belakang berlapis</string>
+    <string name="qsb_outer_opacity_title">Opasitas lapisan luar</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Garis</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Lokasi bilah pencarian aplikasi</string>
     <string name="drawer_search_location_hidden">Tersembunyi</string>
@@ -346,13 +369,6 @@
     <!-- Background blur -->
     <string name="background_blur_title">Kedalaman blur latar belakang</string>
     <string name="background_blur_summary">Setel tingkat kedalaman blur untuk baru-baru ini dan laci aplikasi</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Info aplikasi</string>
-    <string name="app_info_source">Sumber</string>
-    <string name="app_info_source_system">Sistem</string>
-    <string name="app_info_last_update">Update yang lalu</string>
-    <string name="app_info_version">Versi</string>
-    <string name="app_info_more">Lainnya</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Paket ikon</string>
     <string name="icon_pack_default_label">Bawaan</string>
@@ -363,25 +379,13 @@
     <string name="wallpaper_carousel_summary">Ganti wallpaper dengan cepat dari menu tekan lama</string>
     <string name="wallpaper_carousel_lockscreen_title">Terapkan ke layar kunci</string>
     <string name="wallpaper_carousel_lockscreen_summary">Atur wallpaper yang sama di layar kunci</string>
-    <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Kerikil</string>
-    <string name="vessel_shape_title">Kapal</string>
-    <string name="pure_square_shape_title">Persegi murni</string>
-    <string name="squircle_shape_title">Kotak melengkung</string>
-    <string name="tapered_rect_shape_title">Persegi panjang meruncing</string>
-    <string name="teardrop_shape_title">Tetesan Air</string>
-    <string name="rounded_rect_shape_title">Persegi panjang membulat</string>
-    <string name="cloudy_shape_title">Berawan</string>
-    <string name="cylindrical_shape_title">Berbentuk silinder</string>
-    <string name="flower_shape_title">Bunga</string>
-    <string name="heart_shape_title">Hati</string>
-    <string name="hexagon_shape_title">Segi enam</string>
-    <string name="rounded_hexagon_shape_title">Segi enam membulat</string>
-    <string name="ios_style_shape_title">Gaya iOS</string>
-    <string name="leaf_shape_title">Daun</string>
-    <string name="meow_shape_title">Meong</string>
-    <string name="samsung_style_shape_title">Gaya Samsung</string>
-    <string name="stretched_shape_title">Diregangkan</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Ubah nama</string>
+    <string name="rename_app_reset">Atur ulang</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Sesuaikan ikon</string>
+    <string name="app_info_custom_icon_summary">Pilih simbol apa saja dari paket simbol mana saja</string>
+    <string name="icon_picker_search_hint">Cari simbol</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Label aplikasi gelap</string>
     <string name="all_apps_dark_text_summary">Selalu gunakan teks gelap untuk label aplikasi di laci aplikasi</string>
@@ -396,60 +400,25 @@
     <string name="app_drawer_sort_alphabetical">Urutkan berdasarkan abjad</string>
     <string name="app_drawer_sort_install_date">Urutkan berdasarkan tanggal pemasangan</string>
     <string name="app_drawer_sort_usage">Urutkan berdasarkan penggunaan</string>
-    <!-- App drawer color -->
+    <!-- Color Picker -->
+    <string name="color_picker_title">Pilih Warna</string>
+    <string name="color_picker_select">Pilih</string>
+    <string name="color_picker_reset">Atur ulang ke bawaan</string>
+    <string name="color_picker_presets">Preset</string>
+    <string name="color_picker_hex_rgb">Hex (#RRGGBB)</string>
+    <string name="color_picker_hex_argb">Hex (#AARRGGBB)</string>
+    <string name="color_picker_hex_invalid">Masukkan Kode Warna Hex yang Valid</string>
+    <string name="color_picker_current_color">Warna sekarang</string>
+    <string name="color_picker_new_color">Warna Baru</string>
+    <!-- App drawer background color -->
     <string name="pref_app_drawer_custom_color_title">Warna latar belakang kustom</string>
     <string name="pref_app_drawer_custom_color_summary">Gunakan warna kustom untuk latar belakang laci aplikasi</string>
     <string name="pref_app_drawer_custom_color_light_title">Warna mode terang</string>
     <string name="pref_app_drawer_custom_color_dark_title">Warna mode gelap</string>
-    <!-- Color Picker -->
-    <string name="color_picker_hsb">HSB</string>
-    <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Warna</string>
-    <string name="color_picker_saturation">Saturasi</string>
-    <string name="color_picker_brightness">Kecerahan</string>
-    <string name="color_picker_red">Merah</string>
-    <string name="color_picker_green">Hijau</string>
-    <string name="color_picker_blue">Biru</string>
-    <string name="color_picker_hex">HEX</string>
-    <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Bilah pencarian bergaya Pixel</string>
-    <string name="dock_search_pixel_style_summary">Tampilan bilah pencarian yang diperbarui dengan latar belakang berlapis</string>
-    <string name="qsb_outer_opacity_title">Opasitas lapisan luar</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Tersembunyi &amp; Aplikasi dilindungi</string>
-    <string name="trust_apps_auth_manager">Buka kunci untuk mengelola aplikasi yang disembunyikan dan dilindungi</string>
-    <string name="trust_apps_auth_open_app">Autentikasi untuk membuka %1$s</string>
-    <string name="trust_apps_loading">Memuat\u2026</string>
-    <string name="trust_apps_no_lock_error">Silakan mengatur kunci layar untuk membatasi akses aplikasi</string>
-    <string name="trust_apps_help">Bantuan</string>
-    <string name="trust_apps_info_hidden">Aplikasi tersembunyi beserta widgetnya akan disembunyikan dari laci aplikasi</string>
-    <string name="trust_apps_info_protected">Aplikasi yang dilindungi memerlukan autentikasi untuk dibuka dari peluncur</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Gaya tata letak Terkini</string>
-    <string name="recents_style_default">Bawaan</string>
-    <string name="recents_style_stock">Efek skala</string>
-    <string name="recents_style_staple">Gaya pokok</string>
-    <string name="recents_style_ios">Gaya iOS</string>
-    <string name="recents_style_oxygen">Gaya OxygenOS</string>
+    <string name="recents_scroll_vibrate_title">Getaran gulir</string>
     <!-- Lock -->
     <string name="action_lock">Kunci/Buka kunci aplikasi</string>
     <string name="unlock_app">Aplikasi terbuka di daftar aplikasi terbaru</string>
     <string name="lock_app">Aplikasi terkunci di daftar aplikasi terbaru</string>
-    <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">Getaran gulir</string>
-    <!-- Rename app shortcut -->
-    <string name="rename_app_label">Ubah nama</string>
-    <string name="rename_app_title">Masukkan nama aplikasi</string>
-    <string name="app_renamed_successfully">Aplikasi berganti nama</string>
-    <string name="rename_app_empty_error">Nama aplikasi tidak boleh kosong</string>
-    <string name="rename_app_length_error">Nama aplikasi harus terdiri dari %1$d karakter atau kurang</string>
-    <string name="rename_app_reset">Atur ulang</string>
-    <string name="rename_app_reset_message">Nama diatur ulang ke nama asli</string>
-    <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">Buram ketika membuka aplikasi</string>
-    <string name="pref_app_launch_blur_summary">Tampilkan efek buram ketika membuka aplikasi</string>
-    <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Sesuaikan ikon</string>
-    <string name="app_info_custom_icon_summary">Pilih simbol apa saja dari paket simbol mana saja</string>
-    <string name="icon_picker_search_hint">Cari simbol</string>
 </resources>

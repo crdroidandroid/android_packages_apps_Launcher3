@@ -62,9 +62,9 @@
     <string name="paused_apps_dialog_title">Aplicație întreruptă</string>
     <string name="paused_apps_dialog_message">%1$s a fost întrerupt direct din lansator</string>
     <string name="paused_apps_drop_target_label">Întrerupeți aplicația</string>
-    <string name="work_apps_paused_title_custom">Aplicațiile de serviciu sunt dezactivate</string>
-    <string name="work_apps_pause_btn_text_custom">Dezactivați aplicațiile de serviciu</string>
-    <string name="work_apps_enable_btn_text_custom">Activează aplicațiile pentru servici</string>
+    <string name="work_apps_paused_title_calyx">Aplicațiile de serviciu sunt dezactivate</string>
+    <string name="work_apps_pause_btn_text_calyx">Dezactivați aplicațiile de serviciu</string>
+    <string name="work_apps_enable_btn_text_calyx">Activează aplicațiile pentru servici</string>
     <string name="work_apps_paused_info_body_custom">Aplicațiile pentru lucru nu pot să vă trimită notificări, să folosească bateria sau să vă acceseze locația</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Aplicațiile dvs. de serviciu nu pot primi apeluri telefonice sau mesaje text, nu pot trimite notificări, nu pot utiliza bateria sau nu pot accesa locația dvs</string>
     <!-- Suggestions -->
@@ -76,11 +76,30 @@
     <string name="restarting_launcher">Se repornește lansatorul...</string>
     <string name="restarting_launcher_changes">Se repornește lansatorul pentru a aplica modificările...</string>
     <string name="updating_launcher_components">Se repornește lansatorul pentru a actualiza componentele lansatorului...</string>
-    <!-- DT2S -->
+    <!-- Sleep gesture -->
     <string name="pref_sleep_gesture_title">Dublă atingere pentru oprire ecran</string>
     <string name="pref_sleep_gesture_summary">Atingeți de două ori spațiul gol de pe ecranul de pornire pentru a opri ecranul</string>
     <string name="pref_sleep_gesture_haptic_title">Vibrează la atingerea dublă pentru a dormi</string>
     <string name="pref_sleep_gesture_haptic_summary">Oferă feedback haptic la gestul de două apăsări pentru a dormi</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">Pietricică</string>
+    <string name="vessel_shape_title">Navă</string>
+    <string name="pure_square_shape_title">Pătrat pur</string>
+    <string name="squircle_shape_title">Pătrat rotunjit</string>
+    <string name="tapered_rect_shape_title">Dreptunghi conic</string>
+    <string name="teardrop_shape_title">Lacrimă</string>
+    <string name="rounded_rect_shape_title">Dreptunghi rotund</string>
+    <string name="cloudy_shape_title">Înnorat</string>
+    <string name="cylindrical_shape_title">Cilindric</string>
+    <string name="flower_shape_title">Floare</string>
+    <string name="heart_shape_title">Inimă</string>
+    <string name="hexagon_shape_title">Hexagon</string>
+    <string name="rounded_hexagon_shape_title">Hexagon rotunjit</string>
+    <string name="ios_style_shape_title">Stil iOS</string>
+    <string name="leaf_shape_title">Frunză</string>
+    <string name="meow_shape_title">Miau</string>
+    <string name="samsung_style_shape_title">Stil Samsung</string>
+    <string name="stretched_shape_title">Întins</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Glisați pentru a începe căutarea</string>
     <string name="drawer_open_keyboard_summary">Deschide tastatura ori de câte ori sertarul de aplicații devine vizibil</string>
@@ -97,8 +116,6 @@
     <string name="hotseat_bg_summary">Adaugă fundal translucid în andocare aplicații</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Opacitate fundal</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Contur</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Termină</string>
     <string name="recents_app_killed">Aplicaţie terminată</string>
@@ -114,6 +131,12 @@
     <string name="dock_theme_title">Pictograme cu aspect</string>
     <string name="dock_theme_summary">Folosește pictograme tematice pentru bara de căutare</string>
     <string name="search_radius_title">Raza de colț</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Bară de căutare stiluri Pixel</string>
+    <string name="dock_search_pixel_style_summary">Bara de căutare redimensionată cu fundal strat</string>
+    <string name="qsb_outer_opacity_title">Opacitatea stratului exterior</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Contur</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">Locație bară de căutare aplicații</string>
     <string name="drawer_search_location_hidden">Ascuns</string>
@@ -346,13 +369,6 @@
     <!-- Background blur -->
     <string name="background_blur_title">Adâncime blur de fundal</string>
     <string name="background_blur_summary">Setaţi nivelul de adâncime încețoșare pentru aplicaţiile recente şi lista aplicaţiilor</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Informații aplicație</string>
-    <string name="app_info_source">Sursa</string>
-    <string name="app_info_source_system">Sistem</string>
-    <string name="app_info_last_update">Ultima actualizare</string>
-    <string name="app_info_version">Versiune</string>
-    <string name="app_info_more">Mai mult</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Pachet de pictograme</string>
     <string name="icon_pack_default_label">Prestabilit</string>
@@ -363,25 +379,13 @@
     <string name="wallpaper_carousel_summary">Schimbă rapid fundalul din meniul de apăsare lungă</string>
     <string name="wallpaper_carousel_lockscreen_title">Aplică pentru ecranul de blocare</string>
     <string name="wallpaper_carousel_lockscreen_summary">Setează aceeași imagine de fundal pe ecranul de blocare</string>
-    <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pietricică</string>
-    <string name="vessel_shape_title">Navă</string>
-    <string name="pure_square_shape_title">Pătrat pur</string>
-    <string name="squircle_shape_title">Pătrat rotunjit</string>
-    <string name="tapered_rect_shape_title">Dreptunghi conic</string>
-    <string name="teardrop_shape_title">Lacrimă</string>
-    <string name="rounded_rect_shape_title">Dreptunghi rotund</string>
-    <string name="cloudy_shape_title">Înnorat</string>
-    <string name="cylindrical_shape_title">Cilindric</string>
-    <string name="flower_shape_title">Floare</string>
-    <string name="heart_shape_title">Inimă</string>
-    <string name="hexagon_shape_title">Hexagon</string>
-    <string name="rounded_hexagon_shape_title">Hexagon rotunjit</string>
-    <string name="ios_style_shape_title">Stil iOS</string>
-    <string name="leaf_shape_title">Frunză</string>
-    <string name="meow_shape_title">Miau</string>
-    <string name="samsung_style_shape_title">Stil Samsung</string>
-    <string name="stretched_shape_title">Întins</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Redenumire</string>
+    <string name="rename_app_reset">Reset</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Pictogramă personalizată</string>
+    <string name="app_info_custom_icon_summary">Alege orice pictogramă din orice pachet de pictograme</string>
+    <string name="icon_picker_search_hint">Caută pictograme</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Etichete întunecate pentru aplicații</string>
     <string name="all_apps_dark_text_summary">Utilizați întotdeauna textul întunecat pentru etichetele aplicațiilor în sertarul de aplicații</string>
@@ -396,60 +400,25 @@
     <string name="app_drawer_sort_alphabetical">Sortează alfabetic</string>
     <string name="app_drawer_sort_install_date">Sortează după data instalării</string>
     <string name="app_drawer_sort_usage">Sortare după utilizare</string>
-    <!-- App drawer color -->
+    <!-- Color Picker -->
+    <string name="color_picker_title">Select color</string>
+    <string name="color_picker_select">Select</string>
+    <string name="color_picker_reset">Reset to default</string>
+    <string name="color_picker_presets">Presets</string>
+    <string name="color_picker_hex_rgb">Hex (#RRGGBB)</string>
+    <string name="color_picker_hex_argb">Hex (#AARRGGBB)</string>
+    <string name="color_picker_hex_invalid">Enter a valid hex color</string>
+    <string name="color_picker_current_color">Current color</string>
+    <string name="color_picker_new_color">New color</string>
+    <!-- App drawer background color -->
     <string name="pref_app_drawer_custom_color_title">Culoare fundal personalizată</string>
     <string name="pref_app_drawer_custom_color_summary">Utilizați o culoare personalizată pentru fundalul sertarului de aplicații</string>
     <string name="pref_app_drawer_custom_color_light_title">Culoare mod lumină</string>
     <string name="pref_app_drawer_custom_color_dark_title">Culoare modul întunecat</string>
-    <!-- Color Picker -->
-    <string name="color_picker_hsb">HSB</string>
-    <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Nuanță</string>
-    <string name="color_picker_saturation">Saturație</string>
-    <string name="color_picker_brightness">Luminozitate</string>
-    <string name="color_picker_red">Roșu</string>
-    <string name="color_picker_green">Verde</string>
-    <string name="color_picker_blue">Albastru</string>
-    <string name="color_picker_hex">HEX</string>
-    <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Bară de căutare stiluri Pixel</string>
-    <string name="dock_search_pixel_style_summary">Bara de căutare redimensionată cu fundal strat</string>
-    <string name="qsb_outer_opacity_title">Opacitatea stratului exterior</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Aplicații ascunse &amp; protejate</string>
-    <string name="trust_apps_auth_manager">Deblochează pentru a gestiona aplicațiile ascunse și protejate</string>
-    <string name="trust_apps_auth_open_app">Autentifică-te pentru a deschide %1$s</string>
-    <string name="trust_apps_loading">Încărcare\u2026</string>
-    <string name="trust_apps_no_lock_error">Vă rugăm să configurați un ecran de blocare securizat pentru a restricționa accesul aplicației</string>
-    <string name="trust_apps_help">Ajutor</string>
-    <string name="trust_apps_info_hidden">Aplicațiile ascunse și widget-urile lor sunt ascunse din sertar</string>
-    <string name="trust_apps_info_protected">Aplicațiile protejate necesită autentificare pentru a fi deschise din launcher</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Stil aspect recente</string>
-    <string name="recents_style_default">Prestabilit</string>
-    <string name="recents_style_stock">Efect scală</string>
-    <string name="recents_style_staple">Stil Kami</string>
-    <string name="recents_style_ios">Stil iOS</string>
-    <string name="recents_style_oxygen">Stil OxygenOS</string>
+    <string name="recents_scroll_vibrate_title">Derulare vibrație</string>
     <!-- Lock -->
     <string name="action_lock">Blochează/deblochează aplicația</string>
     <string name="unlock_app">Deblocați aplicația în recente</string>
     <string name="lock_app">Aplicație blocată în recente</string>
-    <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">Derulare vibrație</string>
-    <!-- Rename app shortcut -->
-    <string name="rename_app_label">Redenumire</string>
-    <string name="rename_app_title">Introduceți numele aplicației</string>
-    <string name="app_renamed_successfully">Aplicație redenumită</string>
-    <string name="rename_app_empty_error">Numele aplicației nu poate fi gol</string>
-    <string name="rename_app_length_error">Numele aplicației trebuie să aibă maxim %1$d caractere</string>
-    <string name="rename_app_reset">Reset</string>
-    <string name="rename_app_reset_message">Resetare nume la originalul</string>
-    <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">Declanșare lansare aplicație</string>
-    <string name="pref_app_launch_blur_summary">Arată efectul de estompare la lansarea aplicațiilor</string>
-    <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Pictogramă personalizată</string>
-    <string name="app_info_custom_icon_summary">Alege orice pictogramă din orice pachet de pictograme</string>
-    <string name="icon_picker_search_hint">Caută pictograme</string>
 </resources>

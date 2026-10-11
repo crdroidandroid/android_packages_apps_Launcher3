@@ -62,9 +62,9 @@
     <string name="paused_apps_dialog_title">App gepauzeerd</string>
     <string name="paused_apps_dialog_message">%1$s is direct onderbroken van de launcher</string>
     <string name="paused_apps_drop_target_label">App pauzeren</string>
-    <string name="work_apps_paused_title_custom">Werkapps zijn uitgeschakeld</string>
-    <string name="work_apps_pause_btn_text_custom">Werkapps uitschakelen</string>
-    <string name="work_apps_enable_btn_text_custom">Werk-apps inschakelen</string>
+    <string name="work_apps_paused_title_calyx">Werkapps zijn uitgeschakeld</string>
+    <string name="work_apps_pause_btn_text_calyx">Werkapps uitschakelen</string>
+    <string name="work_apps_enable_btn_text_calyx">Werk-apps inschakelen</string>
     <string name="work_apps_paused_info_body_custom">Uw werk-apps kunnen u geen meldingen sturen, uw batterij gebruiken of toegang tot uw locatie</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">Uw werk-apps kunnen geen telefoongesprekken of sms\'jes ontvangen, meldingen sturen, uw batterij gebruiken of toegang tot uw locatie</string>
     <!-- Suggestions -->
@@ -76,11 +76,30 @@
     <string name="restarting_launcher">Launcher herstarten...</string>
     <string name="restarting_launcher_changes">Launcher opnieuw opstarten om wijzigingen toe te passen...</string>
     <string name="updating_launcher_components">Launcher herstarten om de launcher componenten bij te werken...</string>
-    <!-- DT2S -->
+    <!-- Sleep gesture -->
     <string name="pref_sleep_gesture_title">Dubbeltikken voor slaapstand</string>
     <string name="pref_sleep_gesture_summary">Dubbeltikken op een leeg gebied op het beginscherm om het scherm uit te schakelen</string>
     <string name="pref_sleep_gesture_haptic_title">Trillen bij dubbeltikken om te slapen</string>
     <string name="pref_sleep_gesture_haptic_summary">Geef haptische feedback bij dubbeltikken voor slaapgebaar</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">Kiezel</string>
+    <string name="vessel_shape_title">Schip</string>
+    <string name="pure_square_shape_title">Pure vierkant</string>
+    <string name="squircle_shape_title">Squircle</string>
+    <string name="tapered_rect_shape_title">Tapered rect</string>
+    <string name="teardrop_shape_title">Traan</string>
+    <string name="rounded_rect_shape_title">Afgeronde rect</string>
+    <string name="cloudy_shape_title">Bewolkt</string>
+    <string name="cylindrical_shape_title">Cilindervormig</string>
+    <string name="flower_shape_title">Bloem</string>
+    <string name="heart_shape_title">Hart</string>
+    <string name="hexagon_shape_title">Zeskant</string>
+    <string name="rounded_hexagon_shape_title">Afgeronde zeshoek</string>
+    <string name="ios_style_shape_title">iOS stijl</string>
+    <string name="leaf_shape_title">Blad</string>
+    <string name="meow_shape_title">Miauw</string>
+    <string name="samsung_style_shape_title">Samsung Stijl</string>
+    <string name="stretched_shape_title">Uitgerekt</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Veeg om zoeken te starten</string>
     <string name="drawer_open_keyboard_summary">Open toetsenbord wanneer app drawer zichtbaar wordt</string>
@@ -97,8 +116,6 @@
     <string name="hotseat_bg_summary">Voeg doorschijnende achtergrond toe aan het app dock</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Achtergrond transparantie</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">Lijn</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">Sluit af</string>
     <string name="recents_app_killed">App afgesloten</string>
@@ -114,6 +131,12 @@
     <string name="dock_theme_title">Thema pictogrammen</string>
     <string name="dock_theme_summary">Gebruik thema pictogrammen voor zoekbalk</string>
     <string name="search_radius_title">Hoekradius</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Pixel stijl zoekbalk</string>
+    <string name="dock_search_pixel_style_summary">Zoekbalk met gelaagde achtergrond</string>
+    <string name="qsb_outer_opacity_title">Transparantie buitenste laag</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">Lijn</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">App zoekbalk locatie</string>
     <string name="drawer_search_location_hidden">Verborgen</string>
@@ -346,13 +369,6 @@
     <!-- Background blur -->
     <string name="background_blur_title">Achtergrond vervagen diepte</string>
     <string name="background_blur_summary">Stel vervaging diepte in voor recente apps en app drawer</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">Application Info</string>
-    <string name="app_info_source">Bron</string>
-    <string name="app_info_source_system">Systeem</string>
-    <string name="app_info_last_update">Laatste update</string>
-    <string name="app_info_version">Versie</string>
-    <string name="app_info_more">Meer</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">Pictogram pakket</string>
     <string name="icon_pack_default_label">Standaard</string>
@@ -363,25 +379,13 @@
     <string name="wallpaper_carousel_summary">Wissel snel over van achtergronden vanuit het lang drukken menu</string>
     <string name="wallpaper_carousel_lockscreen_title">Toepassen op vergrendelingsscherm</string>
     <string name="wallpaper_carousel_lockscreen_summary">Stel dezelfde achtergrond in op het vergrendelingsscherm</string>
-    <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Kiezel</string>
-    <string name="vessel_shape_title">Schip</string>
-    <string name="pure_square_shape_title">Pure vierkant</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
-    <string name="teardrop_shape_title">Traan</string>
-    <string name="rounded_rect_shape_title">Afgeronde rect</string>
-    <string name="cloudy_shape_title">Bewolkt</string>
-    <string name="cylindrical_shape_title">Cilindervormig</string>
-    <string name="flower_shape_title">Bloem</string>
-    <string name="heart_shape_title">Hart</string>
-    <string name="hexagon_shape_title">Zeskant</string>
-    <string name="rounded_hexagon_shape_title">Afgeronde zeshoek</string>
-    <string name="ios_style_shape_title">iOS stijl</string>
-    <string name="leaf_shape_title">Blad</string>
-    <string name="meow_shape_title">Miauw</string>
-    <string name="samsung_style_shape_title">Samsung Stijl</string>
-    <string name="stretched_shape_title">Uitgerekt</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">Hernoemen</string>
+    <string name="rename_app_reset">Reset</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">Aangepast icoon</string>
+    <string name="app_info_custom_icon_summary">Kies een pictogram uit elk pictogrammenpakket</string>
+    <string name="icon_picker_search_hint">Zoek pictogrammen</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Donkere app labels</string>
     <string name="all_apps_dark_text_summary">Gebruik altijd donkere tekst voor app labels in het app-overzicht</string>
@@ -396,60 +400,25 @@
     <string name="app_drawer_sort_alphabetical">Alfabetisch sorteren</string>
     <string name="app_drawer_sort_install_date">Sorteren op installatiedatum</string>
     <string name="app_drawer_sort_usage">Sorteren op gebruik</string>
-    <!-- App drawer color -->
+    <!-- Color Picker -->
+    <string name="color_picker_title">Selecteer kleur</string>
+    <string name="color_picker_select">Selecteer</string>
+    <string name="color_picker_reset">Terugzetten naar standaard</string>
+    <string name="color_picker_presets">Voorkeursinstellingen</string>
+    <string name="color_picker_hex_rgb">Hex (#RRGGBB)</string>
+    <string name="color_picker_hex_argb">Hex (#RRGGBB)</string>
+    <string name="color_picker_hex_invalid">Voer een geldige hex kleur in</string>
+    <string name="color_picker_current_color">Huidige kleur</string>
+    <string name="color_picker_new_color">Nieuwe kleur</string>
+    <!-- App drawer background color -->
     <string name="pref_app_drawer_custom_color_title">Aangepaste achtergrondkleur</string>
     <string name="pref_app_drawer_custom_color_summary">Gebruik een aangepaste kleur voor de achtergrond van de app drawer</string>
     <string name="pref_app_drawer_custom_color_light_title">Lichte modus kleur</string>
     <string name="pref_app_drawer_custom_color_dark_title">Donkere modus kleur</string>
-    <!-- Color Picker -->
-    <string name="color_picker_hsb">HSB</string>
-    <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">Tint</string>
-    <string name="color_picker_saturation">Verzadiging</string>
-    <string name="color_picker_brightness">Helderheid</string>
-    <string name="color_picker_red">Rood</string>
-    <string name="color_picker_green">Groen</string>
-    <string name="color_picker_blue">Blauw</string>
-    <string name="color_picker_hex">HEX</string>
-    <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel stijl zoekbalk</string>
-    <string name="dock_search_pixel_style_summary">Zoekbalk met gelaagde achtergrond</string>
-    <string name="qsb_outer_opacity_title">Transparantie buitenste laag</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">Verborgen &amp; Beschermde apps</string>
-    <string name="trust_apps_auth_manager">Deblokkeer om de verborgen en beschermde apps te beheren</string>
-    <string name="trust_apps_auth_open_app">Authentificeer om %1$s te openen</string>
-    <string name="trust_apps_loading">Laadt\u2026</string>
-    <string name="trust_apps_no_lock_error">Stel een beveiligd vergrendelscherm in om de toegang van apps te beperken</string>
-    <string name="trust_apps_help">Hulp</string>
-    <string name="trust_apps_info_hidden">Verborgen apps en hun widgets zijn verborgen van de lade</string>
-    <string name="trust_apps_info_protected">Beschermde apps vereisen dat authenticatie wordt geopend vanaf de launcher</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Recente lay-out stijl</string>
-    <string name="recents_style_default">Standaard</string>
-    <string name="recents_style_stock">Schaal effect</string>
-    <string name="recents_style_staple">Kami stijl</string>
-    <string name="recents_style_ios">iOS stijl</string>
-    <string name="recents_style_oxygen">OxygenOS stijl</string>
+    <string name="recents_scroll_vibrate_title">Scroll trillen</string>
     <!-- Lock -->
     <string name="action_lock">App vergrendelen/ontgrendelen</string>
     <string name="unlock_app">Ontgrendelde app in recente apps</string>
     <string name="lock_app">Vergrendelde app in recente apps</string>
-    <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">Scroll trillen</string>
-    <!-- Rename app shortcut -->
-    <string name="rename_app_label">Hernoemen</string>
-    <string name="rename_app_title">Voer app naam in</string>
-    <string name="app_renamed_successfully">App hernoemd</string>
-    <string name="rename_app_empty_error">App naam kan niet leeg zijn</string>
-    <string name="rename_app_length_error">App-naam moet %1$d tekens of minder zijn</string>
-    <string name="rename_app_reset">Reset</string>
-    <string name="rename_app_reset_message">Naam terugzetten naar origineel</string>
-    <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">App start vervaging</string>
-    <string name="pref_app_launch_blur_summary">Laat vervaag effect zien bij het starten van apps</string>
-    <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Aangepast icoon</string>
-    <string name="app_info_custom_icon_summary">Kies een pictogram uit elk pictogrammenpakket</string>
-    <string name="icon_picker_search_hint">Zoek pictogrammen</string>
 </resources>

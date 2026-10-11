@@ -62,9 +62,9 @@
     <string name="paused_apps_dialog_title">应用暂停</string>
     <string name="paused_apps_dialog_message">%1$s 直接从启动器暂停</string>
     <string name="paused_apps_drop_target_label">暂停应用</string>
-    <string name="work_apps_paused_title_custom">工作应用已关闭</string>
-    <string name="work_apps_pause_btn_text_custom">关闭工作应用</string>
-    <string name="work_apps_enable_btn_text_custom">开启工作应用</string>
+    <string name="work_apps_paused_title_calyx">工作应用已关闭</string>
+    <string name="work_apps_pause_btn_text_calyx">关闭工作应用</string>
+    <string name="work_apps_enable_btn_text_calyx">开启工作应用</string>
     <string name="work_apps_paused_info_body_custom">您的工作应用无法发送通知、获取耗电和访问位置信息</string>
     <string name="work_apps_paused_telephony_unavailable_body_custom">您的工作应用无法接收电话或短信，向您发送通知，消耗电量或获取您的位置</string>
     <!-- Suggestions -->
@@ -76,11 +76,30 @@
     <string name="restarting_launcher">正在重新启动启动器...</string>
     <string name="restarting_launcher_changes">正在重新启动启动器以保存更改...</string>
     <string name="updating_launcher_components">正在重新启动启动器以更新其组件...</string>
-    <!-- DT2S -->
+    <!-- Sleep gesture -->
     <string name="pref_sleep_gesture_title">双击睡眠</string>
     <string name="pref_sleep_gesture_summary">双击主屏幕空白处即可关闭屏幕</string>
     <string name="pref_sleep_gesture_haptic_title">双击关闭屏幕</string>
     <string name="pref_sleep_gesture_haptic_summary">双击关闭屏幕时震动反馈</string>
+    <!-- Additional shape options in customization picker -->
+    <string name="pebble_shape_title">鹅卵石</string>
+    <string name="vessel_shape_title">船</string>
+    <string name="pure_square_shape_title">纯正方形</string>
+    <string name="squircle_shape_title">方圆形</string>
+    <string name="tapered_rect_shape_title">八边形</string>
+    <string name="teardrop_shape_title">泪滴形</string>
+    <string name="rounded_rect_shape_title">圆角矩形</string>
+    <string name="cloudy_shape_title">云彩</string>
+    <string name="cylindrical_shape_title">圆柱形</string>
+    <string name="flower_shape_title">花形</string>
+    <string name="heart_shape_title">心形</string>
+    <string name="hexagon_shape_title">六边形</string>
+    <string name="rounded_hexagon_shape_title">圆角六边形</string>
+    <string name="ios_style_shape_title">iOS 样式</string>
+    <string name="leaf_shape_title">叶形</string>
+    <string name="meow_shape_title">喵喵</string>
+    <string name="samsung_style_shape_title">Samsung 样式</string>
+    <string name="stretched_shape_title">拉伸</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">滑动搜索</string>
     <string name="drawer_open_keyboard_summary">键盘在应用资源库时弹出</string>
@@ -97,8 +116,6 @@
     <string name="hotseat_bg_summary">添加半透明背景到应用停靠栏</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">背景不透明度</string>
-    <!-- Stroke -->
-    <string name="stroke_width_title">轮廓型</string>
     <!-- Kill App recents action shortcut -->
     <string name="recent_task_option_kill_app">强制停止</string>
     <string name="recents_app_killed">已停止应用程序</string>
@@ -114,6 +131,12 @@
     <string name="dock_theme_title">主题图标</string>
     <string name="dock_theme_summary">为搜索栏使用主题图标</string>
     <string name="search_radius_title">圆角半径</string>
+    <!-- Pixel style search bar -->
+    <string name="dock_search_pixel_style_title">Pixel样式搜索栏</string>
+    <string name="dock_search_pixel_style_summary">焕新搜索栏，带分层背景</string>
+    <string name="qsb_outer_opacity_title">外层不透明度</string>
+    <!-- Stroke -->
+    <string name="stroke_width_title">轮廓型</string>
     <!-- App drawer searchbar -->
     <string name="drawer_search_title">应用搜索栏位置</string>
     <string name="drawer_search_location_hidden">隐藏</string>
@@ -346,13 +369,6 @@
     <!-- Background blur -->
     <string name="background_blur_title">背景模糊深度</string>
     <string name="background_blur_summary">为最近任务和应用抽屉设置模糊深度级别</string>
-    <!-- AppInfo -->
-    <string name="app_info_title">应用信息</string>
-    <string name="app_info_source">来源</string>
-    <string name="app_info_source_system">系统</string>
-    <string name="app_info_last_update">上一次更新：</string>
-    <string name="app_info_version">版本</string>
-    <string name="app_info_more">更多</string>
     <!-- Icon pack -->
     <string name="icon_pack_title">图标包</string>
     <string name="icon_pack_default_label">默认</string>
@@ -363,25 +379,13 @@
     <string name="wallpaper_carousel_summary">从长按菜单快速切换壁纸</string>
     <string name="wallpaper_carousel_lockscreen_title">应用到锁屏</string>
     <string name="wallpaper_carousel_lockscreen_summary">在锁屏界面设置相同的壁纸</string>
-    <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">鹅卵石</string>
-    <string name="vessel_shape_title">船</string>
-    <string name="pure_square_shape_title">纯正方形</string>
-    <string name="squircle_shape_title">方圆形</string>
-    <string name="tapered_rect_shape_title">八边形</string>
-    <string name="teardrop_shape_title">泪滴形</string>
-    <string name="rounded_rect_shape_title">圆角矩形</string>
-    <string name="cloudy_shape_title">云彩</string>
-    <string name="cylindrical_shape_title">圆柱形</string>
-    <string name="flower_shape_title">花形</string>
-    <string name="heart_shape_title">心形</string>
-    <string name="hexagon_shape_title">六边形</string>
-    <string name="rounded_hexagon_shape_title">圆角六边形</string>
-    <string name="ios_style_shape_title">iOS 样式</string>
-    <string name="leaf_shape_title">叶形</string>
-    <string name="meow_shape_title">喵喵</string>
-    <string name="samsung_style_shape_title">Samsung 样式</string>
-    <string name="stretched_shape_title">拉伸</string>
+    <!-- Rename app shortcut -->
+    <string name="rename_app_label">重命名</string>
+    <string name="rename_app_reset">重置</string>
+    <!-- Custom icon -->
+    <string name="app_info_custom_icon_title">自定义图标</string>
+    <string name="app_info_custom_icon_summary">从任意图标包选取图标</string>
+    <string name="icon_picker_search_hint">搜索图标</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">暗色应用标签</string>
     <string name="all_apps_dark_text_summary">应用抽屉里的应用标签总是使用暗色文本</string>
@@ -396,60 +400,25 @@
     <string name="app_drawer_sort_alphabetical">按字母顺序排序</string>
     <string name="app_drawer_sort_install_date">按安装日期排序</string>
     <string name="app_drawer_sort_usage">按使用情况排序</string>
-    <!-- App drawer color -->
+    <!-- Color Picker -->
+    <string name="color_picker_title">选择颜色</string>
+    <string name="color_picker_select">选择</string>
+    <string name="color_picker_reset">恢复默认</string>
+    <string name="color_picker_presets">预设</string>
+    <string name="color_picker_hex_rgb">十六进制 (#RRGGBB)</string>
+    <string name="color_picker_hex_argb">十六进制 (#AARRGGBB)</string>
+    <string name="color_picker_hex_invalid">请输入有效的十六进制颜色代码</string>
+    <string name="color_picker_current_color">当前颜色</string>
+    <string name="color_picker_new_color">新建颜色</string>
+    <!-- App drawer background color -->
     <string name="pref_app_drawer_custom_color_title">自定义背景颜色</string>
     <string name="pref_app_drawer_custom_color_summary">为应用抽屉背景使用自定义颜色</string>
     <string name="pref_app_drawer_custom_color_light_title">亮色模式颜色</string>
     <string name="pref_app_drawer_custom_color_dark_title">暗色模式颜色</string>
-    <!-- Color Picker -->
-    <string name="color_picker_hsb">HSB</string>
-    <string name="color_picker_rgb">RGB</string>
-    <string name="color_picker_hue">色相</string>
-    <string name="color_picker_saturation">饱和度</string>
-    <string name="color_picker_brightness">明度</string>
-    <string name="color_picker_red">红色</string>
-    <string name="color_picker_green">绿色</string>
-    <string name="color_picker_blue">蓝色</string>
-    <string name="color_picker_hex">HEX</string>
-    <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel样式搜索栏</string>
-    <string name="dock_search_pixel_style_summary">焕新搜索栏，带分层背景</string>
-    <string name="qsb_outer_opacity_title">外层不透明度</string>
-    <!-- Trust apps -->
-    <string name="trust_apps_manager_name">隐藏和保护应用</string>
-    <string name="trust_apps_auth_manager">解锁以管理隐藏和受保护的应用</string>
-    <string name="trust_apps_auth_open_app">验证以开启 %1$s</string>
-    <string name="trust_apps_loading">载入中\u2026</string>
-    <string name="trust_apps_no_lock_error">请设置一个安全锁定屏幕以限制应用访问</string>
-    <string name="trust_apps_help">帮助</string>
-    <string name="trust_apps_info_hidden">从抽屉中隐藏应用和其他小部件</string>
-    <string name="trust_apps_info_protected">需要经过认证才能从启动器打开受保护的应用</string>
     <!-- Recents style -->
-    <string name="recents_style_title">最近任务样式</string>
-    <string name="recents_style_default">默认</string>
-    <string name="recents_style_stock">缩放效果</string>
-    <string name="recents_style_staple">Kami 样式</string>
-    <string name="recents_style_ios">iOS 样式</string>
-    <string name="recents_style_oxygen">OxygenOS 样式</string>
+    <string name="recents_scroll_vibrate_title">滚动触觉</string>
     <!-- Lock -->
     <string name="action_lock">锁定/解锁应用</string>
     <string name="unlock_app">已解锁应用</string>
     <string name="lock_app">已锁定应用</string>
-    <!-- Recents style -->
-    <string name="recents_scroll_vibrate_title">滚动触觉</string>
-    <!-- Rename app shortcut -->
-    <string name="rename_app_label">重命名</string>
-    <string name="rename_app_title">输入应用名称</string>
-    <string name="app_renamed_successfully">应用名称已更改</string>
-    <string name="rename_app_empty_error">应用名称不能为空</string>
-    <string name="rename_app_length_error">应用名称最多可以包含 %1$d 个字符</string>
-    <string name="rename_app_reset">重置</string>
-    <string name="rename_app_reset_message">将应用名称恢复为默认</string>
-    <!-- App launch blur -->
-    <string name="pref_app_launch_blur_title">应用启动模糊</string>
-    <string name="pref_app_launch_blur_summary">启动应用时显示模糊效果</string>
-    <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">自定义图标</string>
-    <string name="app_info_custom_icon_summary">从任意图标包选取图标</string>
-    <string name="icon_picker_search_hint">搜索图标</string>
 </resources>
