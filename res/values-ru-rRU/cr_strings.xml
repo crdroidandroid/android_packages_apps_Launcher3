@@ -77,7 +77,7 @@
     <string name="restarting_launcher_changes">Перезапуск главного экрана для применения изменений...</string>
     <string name="updating_launcher_components">Перезапуск главного экрана для обновления компонентов...</string>
     <!-- Sleep gesture -->
-    <string name="pref_sleep_gesture_title">Выкл. двойным касанием</string>
+    <string name="pref_sleep_gesture_title">Двойное касание - сон</string>
     <string name="pref_sleep_gesture_summary">Дважды коснитесь пустой области главного экрана, чтобы выключить его</string>
     <string name="pref_sleep_gesture_haptic_title">Вибрировать при двойном нажатии для сна</string>
     <string name="pref_sleep_gesture_haptic_summary">Вибрировать при выполнении жеста двойного нажатия для перехода в спящий режим</string>
@@ -161,9 +161,9 @@
     <string name="recents_clear_all_title">Очистить всё</string>
     <string name="recents_lens_title">Объектив</string>
     <!-- Parallax -->
-    <string name="short_parallax_title">Разрешить короткое смещение</string>
+    <string name="short_parallax_title">Разрешить короткий параллакс</string>
     <string name="short_parallax_summary">Включить эффект полной прокрутки обоев на меньшем количестве страниц вместо обрезки обоев</string>
-    <string name="single_page_center_title">Центр, если одна страница</string>
+    <string name="single_page_center_title">Центр одной страницы</string>
     <string name="single_page_center_summary">Центрировать обои, если используется только одна страница</string>
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Полоса прокрутки</string>
