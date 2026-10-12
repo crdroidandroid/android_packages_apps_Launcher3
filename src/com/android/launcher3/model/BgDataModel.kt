@@ -230,7 +230,7 @@ constructor(
     fun updateShortcutPinnedState(context: Context) {
         val userCache = UserCache.INSTANCE[context]
         for (user in userCache.userProfiles) {
-            if (userCache.isPrivate(user) && !userCache.isUserUnlocked(user)) {
+            if (userCache.isLockedForShortcutQuery(user)) {
                 continue
             }
             updateShortcutPinnedState(context, user)
@@ -256,7 +256,7 @@ constructor(
             return
         }
         val userCache = UserCache.INSTANCE[context]
-        if (userCache.isPrivate(user) && !userCache.isUserUnlocked(user)) {
+        if (userCache.isLockedForShortcutQuery(user)) {
             return
         }
 

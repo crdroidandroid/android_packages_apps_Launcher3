@@ -98,7 +98,7 @@ public class ShortcutRequest {
             return QueryResult.DEFAULT;
         }
         UserCache userCache = UserCache.INSTANCE.get(mContext);
-        if (userCache.isPrivate(mUserHandle) && !userCache.isUserUnlocked(mUserHandle)) {
+        if (userCache.isLockedForShortcutQuery(mUserHandle)) {
             return QueryResult.DEFAULT;
         }
         mQuery.setQueryFlags(flags);
@@ -107,8 +107,9 @@ public class ShortcutRequest {
             return new QueryResult(mContext.getSystemService(LauncherApps.class)
                     .getShortcuts(mQuery, mUserHandle));
         } catch (SecurityException | IllegalStateException e) {
-            if (userCache.isPrivate(mUserHandle)) {
-                FileLog.d(TAG, "Failed to query shortcuts for private profile " + mUserHandle + ": " + e.getMessage());
+            if (userCache.isPrivate(mUserHandle) || userCache.isWork(mUserHandle)) {
+                FileLog.d(TAG, "Failed to query shortcuts for profile " + mUserHandle
+                        + ": " + e.getMessage());
             } else {
                 FileLog.e(TAG, "Failed to query for shortcuts", e);
             }

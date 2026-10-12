@@ -176,6 +176,12 @@ constructor(
 
     fun isPrivate(user: UserHandle): Boolean = getUserInfo(user).isPrivate
 
+    fun isWork(user: UserHandle): Boolean = getUserInfo(user).isWork
+
+    /** [android.content.pm.LauncherApps.getShortcuts] throws while these profiles are locked. */
+    fun isLockedForShortcutQuery(user: UserHandle): Boolean =
+        (isPrivate(user) || isWork(user)) && !isUserUnlocked(user)
+
     /** @see UserManager.getUserForSerialNumber */
     fun getUserForSerialNumber(serialNumber: Long): UserHandle =
         userManagerState.getUser(serialNumber)
