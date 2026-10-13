@@ -398,7 +398,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
 
         mImeDrawsImeNavBar = getBoolByName(IME_DRAWS_IME_NAV_BAR_RES_NAME, getResources(), false)
                 && isPrimaryDisplay()
-                && mImeDrawsImeNavBarEnabled;
+                && !mImeDrawsImeNavBarEnabled;
         mIsSafeModeEnabled = TraceHelper.allowIpcs("isSafeMode",
                 () -> getPackageManager().isSafeMode());
 
@@ -676,7 +676,7 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
     public void init(@NonNull TaskbarSharedState sharedState, boolean userUnlocked, int duration) {
         mImeDrawsImeNavBar = getBoolByName(IME_DRAWS_IME_NAV_BAR_RES_NAME, getResources(), false)
                 && isPrimaryDisplay()
-                && mImeDrawsImeNavBarEnabled;
+                && !mImeDrawsImeNavBarEnabled;
         mLastRequestedNonFullscreenSize = getDefaultTaskbarWindowSize();
         mWindowLayoutParams = createAllWindowParams();
         mLastUpdatedLayoutParams = new WindowManager.LayoutParams();
