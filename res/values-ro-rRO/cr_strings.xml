@@ -401,15 +401,15 @@
     <string name="app_drawer_sort_install_date">Sortează după data instalării</string>
     <string name="app_drawer_sort_usage">Sortare după utilizare</string>
     <!-- Color Picker -->
-    <string name="color_picker_title">Select color</string>
-    <string name="color_picker_select">Select</string>
-    <string name="color_picker_reset">Reset to default</string>
-    <string name="color_picker_presets">Presets</string>
+    <string name="color_picker_title">Selectare culoare</string>
+    <string name="color_picker_select">Selectați</string>
+    <string name="color_picker_reset">Resetare la valori implicite</string>
+    <string name="color_picker_presets">Presetări</string>
     <string name="color_picker_hex_rgb">Hex (#RRGGBB)</string>
     <string name="color_picker_hex_argb">Hex (#AARRGGBB)</string>
-    <string name="color_picker_hex_invalid">Enter a valid hex color</string>
-    <string name="color_picker_current_color">Current color</string>
-    <string name="color_picker_new_color">New color</string>
+    <string name="color_picker_hex_invalid">Introduceți o culoare hexazecimală validă</string>
+    <string name="color_picker_current_color">Culoare curentă</string>
+    <string name="color_picker_new_color">Culoare nouă</string>
     <!-- App drawer background color -->
     <string name="pref_app_drawer_custom_color_title">Culoare fundal personalizată</string>
     <string name="pref_app_drawer_custom_color_summary">Utilizați o culoare personalizată pentru fundalul sertarului de aplicații</string>
