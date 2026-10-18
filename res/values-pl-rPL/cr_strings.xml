@@ -123,9 +123,9 @@
     <string name="label_search">Szukaj</string>
     <string name="label_lens">Obiektyw Google</string>
     <string name="label_voice_search">Wyszukiwanie głosowe</string>
-    <string name="label_gemini_search">Tryb AI</string>
+    <string name="label_gemini_search">Tryb SI</string>
     <string name="dock_music_search_title">Wyszukiwanie muzyki</string>
-    <string name="dock_music_search_summary">Rozpocznij wyszukiwanie muzyki po dotknięciu ikony mikrofonu</string>
+    <string name="dock_music_search_summary">Rozpoczynaj wyszukiwanie muzyki po dotknięciu ikony mikrofonu</string>
     <string name="dock_search_title">Pasek wyszukiwania Google</string>
     <string name="dock_search_summary">Pasek wyszukiwania w dolnym panelu</string>
     <string name="dock_theme_title">Ikony tematyczne</string>
@@ -188,7 +188,7 @@
     <string name="qe_now_playing_by">Przez</string>
     <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">Teraz odtwarzane</string>
-    <string name="quickspace_now_playing_summary">Pokaż odtwarzany utwór</string>
+    <string name="quickspace_now_playing_summary">Pokazuj odtwarzany utwór</string>
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">Styl rozszerzony</string>
     <string name="quickspace_alternate_style_summary">Przełącz na styl rozszerzony</string>
@@ -266,10 +266,10 @@
         <item>W ciszy tego wieczoru odnajdź spokój.</item>
         <item>Największe przygody życiowe mogą zaczynać się w ciemności.</item>
         <item>Twoja podróż trwa nawet po zachodzie słońca.</item>
-        <item>Niech noc będzie twoim płótnem; pomaluj je marzeniami.</item>
+        <item>Niech noc będzie twoim płótnem. Pomaluj je marzeniami.</item>
         <item>W ciszy tego wieczoru odnajdź swój wewnętrzny spokój.</item>
         <item>Gwiazdy świecą najjaśniej w najciemniejszych godzinach.</item>
-        <item>Miej wielkie marzenia, nawet w późnych godzinach.</item>
+        <item>Miewaj wielkie marzenia, nawet w późnych godzinach.</item>
         <item>Twoje życie to historia, która czeka na napisanie.</item>
         <item>Nadszedł czas na refleksję i odnowę.</item>
         <item>Nocne przemyślenia mogą prowadzić do porannych objawień.</item>
@@ -302,7 +302,7 @@
     <string-array name="quickspace_psa_random">
         <item>Niewiedza jest błogosławieństwem</item>
         <item>Czy to czas na kolejną aktualizację?</item>
-        <item>Czyń miłość, nie wojnę</item>
+        <item>Czyń pokój, nie wojnę</item>
         <item>Hej, co słychać?</item>
         <item>Witaj w prawdziwym Matriksie!</item>
         <item>Ile zrzutów ekranu robisz?</item>
@@ -312,7 +312,7 @@
         <item>Czas na dobrą muzykę</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C GŁÓWNY</item>
         <item>Potrzebujesz crDroid Premium, aby to zobaczyć</item>
-        <item>Pamiętaj the Lineage of the Unicorn</item>
+        <item>Pamiętaj ród jednorożca</item>
         <item>Ciesz się wydłużonym czasem baterii</item>
         <item>Zaczynamy od początku</item>
         <item>Uwielbiamy Cię!</item>
@@ -341,7 +341,7 @@
         <item>Lubisz nas? Kup nam piwo</item>
         <item>Najlepszy ROM wszechczasów.</item>
         <item>Przywitaj się z nami na Telegramie</item>
-        <item>Uwielbiamy Cię!</item>
+        <item>Czy SI unicestwi ludzkość?</item>
     </string-array>
     <string name="intent_no_app_clock_found">Nie można odnaleźć kalendarza lub aktywności zegara</string>
     <!-- QuickSpace: QuickEvent: Weather -->
@@ -360,7 +360,7 @@
     <string name="quick_event_weather_wind">Wietrznie</string>
     <string name="quick_event_weather_mist">Mgliście</string>
     <string name="quick_event_weather_city_title">Obecna lokalizacja</string>
-    <string name="quick_event_weather_city_summary">Wyświetl bieżącą lokalizację pogody</string>
+    <string name="quick_event_weather_city_summary">Wyświetlaj bieżącą lokalizację pogody</string>
     <string name="quick_event_weather_text_title">Aktualne warunki</string>
     <string name="quick_event_weather_text_summary">Wyświetl podsumowanie warunków pogodowych</string>
     <!-- Auto-hide page indicator dots -->
