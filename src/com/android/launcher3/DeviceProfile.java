@@ -223,12 +223,14 @@ public class DeviceProfile {
         this.mDisplayOptionSpec = displayOptionSpec;
 
         // TODO(b/241386436): shouldn't change any launcher behaviour
-        mIsResponsiveGrid = inv.workspaceSpecsId != INVALID_RESOURCE_HANDLE
-                && inv.allAppsSpecsId != INVALID_RESOURCE_HANDLE
-                && inv.folderSpecsId != INVALID_RESOURCE_HANDLE
-                && inv.hotseatSpecsId != INVALID_RESOURCE_HANDLE
-                && inv.workspaceCellSpecsId != INVALID_RESOURCE_HANDLE
-                && inv.allAppsCellSpecsId != INVALID_RESOURCE_HANDLE;
+        // Use the display option spec rather than inv, as secondary displays may not share the
+        // main display's (e.g. fixed landscape) grid.
+        mIsResponsiveGrid = displayOptionSpec.workspaceSpecsId != INVALID_RESOURCE_HANDLE
+                && displayOptionSpec.allAppsSpecsId != INVALID_RESOURCE_HANDLE
+                && displayOptionSpec.folderSpecsId != INVALID_RESOURCE_HANDLE
+                && displayOptionSpec.hotseatSpecsId != INVALID_RESOURCE_HANDLE
+                && displayOptionSpec.workspaceCellSpecsId != INVALID_RESOURCE_HANDLE
+                && displayOptionSpec.allAppsCellSpecsId != INVALID_RESOURCE_HANDLE;
 
         mIsScalableGrid = inv.isScalable
                 && !isVerticalBarLayout()
