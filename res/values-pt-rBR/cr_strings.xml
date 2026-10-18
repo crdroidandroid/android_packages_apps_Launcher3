@@ -78,12 +78,12 @@
     <string name="updating_launcher_components">Reiniciando o launcher para atualizar seus componentes...</string>
     <!-- DT2S -->
     <string name="pref_sleep_gesture_title">Duplo toque para deligar a tela</string>
-    <string name="pref_sleep_gesture_summary">Double tap empty space on home screen to turn off the screen</string>
-    <string name="pref_sleep_gesture_haptic_title">Vibrate on double tap to sleep</string>
-    <string name="pref_sleep_gesture_haptic_summary">Provide haptic feedback on double tap to sleep gesture</string>
+    <string name="pref_sleep_gesture_summary">Toque duas vezes no espaço vazio da tela inicial para desligar a tela</string>
+    <string name="pref_sleep_gesture_haptic_title">Vibrar no toque para dormir</string>
+    <string name="pref_sleep_gesture_haptic_summary">Vibrar quando der duplo toque no gesto para dormir</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Deslize para iniciar busca</string>
-    <string name="drawer_open_keyboard_summary">Open keyboard whenever app drawer becomes visible</string>
+    <string name="drawer_open_keyboard_summary">Abrir o teclado sempre que a gaveta de ‘apps’ se tornar visível</string>
     <!-- Icon size -->
     <string name="icon_size_title">Tamanho do ícone</string>
     <!-- Font size -->
@@ -95,8 +95,8 @@
     <!-- Hotseat Background -->
     <string name="hotseat_bg_title">Fundo desfocado</string>
     <string name="hotseat_bg_summary">Desfocar o fundo do dock de aplicativos</string>
-    <string name="hotseat_opacity_light_title">Background opacity in light theme</string>
-    <string name="hotseat_opacity_dark_title">Background opacity in dark theme</string>
+    <string name="hotseat_opacity_light_title">Opacidade do fundo no tema claro</string>
+    <string name="hotseat_opacity_dark_title">Opacidade do fundo no tema escuro</string>
     <!-- Background opacity -->
     <string name="background_opacity_title">Opacidade do fundo</string>
     <!-- Stroke -->
@@ -117,10 +117,10 @@
     <string name="dock_theme_summary">Usar ícones temáticos para a barra de pesquisa</string>
     <string name="search_radius_title">Raio das bordas</string>
     <!-- App drawer searchbar -->
-    <string name="drawer_search_title">App search bar location</string>
-    <string name="drawer_search_location_hidden">Hidden</string>
-    <string name="drawer_search_location_top">Top</string>
-    <string name="drawer_search_location_bottom">Bottom</string>
+    <string name="drawer_search_title">Localização da barra de pesquisa</string>
+    <string name="drawer_search_location_hidden">Ocultado</string>
+    <string name="drawer_search_location_top">Topo</string>
+    <string name="drawer_search_location_bottom">Parte inferior</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Rolagem do papel de parede</string>
     <string name="allow_wallpaper_scrolling_summary">Rolar papel de parede ao alternar entre as telas</string>
@@ -149,7 +149,7 @@
     <string name="drawer_scrollbar_summary">Barra de rolagem na lateral da gaveta de aplicativos</string>
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">Barra de status escura</string>
-    <string name="perf_dark_status_bar_summary">Always use dark status bar on home screen</string>
+    <string name="perf_dark_status_bar_summary">Sempre usar barra de status escura na tela inicial</string>
     <!-- QuickSpace -->
     <string name="show_quickspace_title">Resumo</string>
     <string name="show_quickspace_summary">Mostrar no topo da tela inicial</string>
@@ -324,7 +324,7 @@
     </string-array>
     <string name="intent_no_app_clock_found">Não foi possível encontrar o calendário ou a atividade do relógio</string>
     <!-- QuickSpace: QuickEvent: Weather -->
-    <string name="quickspace_weather_provider_title">Weather provider</string>
+    <string name="quickspace_weather_provider_title">Provedor de tempo</string>
     <string name="quickspace_weather_provider_entry_auto">Auto</string>
     <string name="quickspace_weather_provider_entry_seraphix">Google Smartspace</string>
     <string name="quickspace_weather_provider_entry_omnijaws">OmniJaws</string>
@@ -343,8 +343,8 @@
     <string name="quick_event_weather_text_title">Condição atual</string>
     <string name="quick_event_weather_text_summary">Exibir o resumo atual da condição climática</string>
     <!-- Auto-hide page indicator dots -->
-    <string name="auto_hide_dots">Auto-hide page indicator</string>
-    <string name="auto_hide_dots_summary">Hide the page indicator dots automatically</string>
+    <string name="auto_hide_dots">Auto-ocultar indicador de página</string>
+    <string name="auto_hide_dots_summary">Ocultar os pontos de indicador de página automaticamente</string>
     <!-- Background blur -->
     <string name="background_blur_title">Desfoque de fundo</string>
     <string name="background_blur_summary">Definir a intensidade do desfoque para os aplicativos recentes e gaveta de aplicativos</string>
@@ -366,38 +366,38 @@
     <string name="wallpaper_carousel_lockscreen_title">Aplicar a tela de bloqueio</string>
     <string name="wallpaper_carousel_lockscreen_summary">Usar o mesmo papel de parede na tela de bloqueio</string>
     <!-- Additional shape options in customization picker -->
-    <string name="pebble_shape_title">Pebble</string>
-    <string name="vessel_shape_title">Vessel</string>
-    <string name="pure_square_shape_title">Pure square</string>
-    <string name="squircle_shape_title">Squircle</string>
-    <string name="tapered_rect_shape_title">Tapered rect</string>
+    <string name="pebble_shape_title">Pedra</string>
+    <string name="vessel_shape_title">Vaso</string>
+    <string name="pure_square_shape_title">Quadrado completo</string>
+    <string name="squircle_shape_title">Quadrado arredondado (Squircle)</string>
+    <string name="tapered_rect_shape_title">Retângulo cônico</string>
     <string name="teardrop_shape_title">Gota</string>
-    <string name="rounded_rect_shape_title">Rounded rect</string>
+    <string name="rounded_rect_shape_title">Retângulo arredondado</string>
     <string name="cloudy_shape_title">Nublado</string>
     <string name="cylindrical_shape_title">Cilíndrico</string>
     <string name="flower_shape_title">Flor</string>
     <string name="heart_shape_title">Coração</string>
     <string name="hexagon_shape_title">Hexágono</string>
-    <string name="rounded_hexagon_shape_title">Rounded hexagon</string>
+    <string name="rounded_hexagon_shape_title">Hexágono arredondado</string>
     <string name="ios_style_shape_title">Estilo iOS</string>
     <string name="leaf_shape_title">Folha</string>
-    <string name="meow_shape_title">Meow</string>
+    <string name="meow_shape_title">Gatinho</string>
     <string name="samsung_style_shape_title">Estilo Samsung</string>
     <string name="stretched_shape_title">Esticado</string>
     <!-- Dark app drawer text -->
-    <string name="all_apps_dark_text_title">Dark app labels</string>
-    <string name="all_apps_dark_text_summary">Always use dark text for app labels in the app drawer</string>
+    <string name="all_apps_dark_text_title">Rótulos longos dos aplicativos</string>
+    <string name="all_apps_dark_text_summary">Sempre usar texto escuro para rótulos de aplicativos na gaveta de aplicativos</string>
     <!-- App drawer styles -->
-    <string name="drawer_style_title">App drawer style</string>
-    <string name="drawer_style_normal">Normal (bottom sheet)</string>
-    <string name="drawer_style_legacy">Legacy fullscreen</string>
-    <string name="drawer_style_list">List style</string>
-    <string name="drawer_style_oneui">OneUI style (paged)</string>
+    <string name="drawer_style_title">Estilo da gaveta de aplicativos</string>
+    <string name="drawer_style_normal">Normal (folha de fundo)</string>
+    <string name="drawer_style_legacy">Tela cheia legada</string>
+    <string name="drawer_style_list">Estilo da lista</string>
+    <string name="drawer_style_oneui">Estilo de OneUI (página)</string>
     <!-- App drawer sorting -->
-    <string name="app_drawer_sort_mode_title">App drawer sorting</string>
-    <string name="app_drawer_sort_alphabetical">Sort alphabetically</string>
-    <string name="app_drawer_sort_install_date">Sort by install date</string>
-    <string name="app_drawer_sort_usage">Sort by usage</string>
+    <string name="app_drawer_sort_mode_title">Gaveta de aplicativos organizada</string>
+    <string name="app_drawer_sort_alphabetical">Classificar em ordem alfabética</string>
+    <string name="app_drawer_sort_install_date">Ordenar por data de instalação</string>
+    <string name="app_drawer_sort_usage">Ordenar por uso</string>
     <!-- App drawer color -->
     <string name="pref_app_drawer_custom_color_title">Cor de fundo personalizada</string>
     <string name="pref_app_drawer_custom_color_summary">Usar uma cor personalizada para o fundo da gaveta de aplicativos</string>
@@ -414,12 +414,12 @@
     <string name="color_picker_blue">Azul</string>
     <string name="color_picker_hex">HEX</string>
     <string name="color_picker_default">Padrão</string>
-    <string name="color_picker_surface">Surface</string>
-    <string name="color_picker_accent">Accent</string>
+    <string name="color_picker_surface">Superfície</string>
+    <string name="color_picker_accent">Cor de Destaque</string>
     <!-- Pixel style search bar -->
-    <string name="dock_search_pixel_style_title">Pixel style search bar</string>
-    <string name="dock_search_pixel_style_summary">Revamped search bar with layered background</string>
-    <string name="qsb_outer_opacity_title">Outer layer opacity</string>
+    <string name="dock_search_pixel_style_title">Barra de pesquisa estilo Pixel</string>
+    <string name="dock_search_pixel_style_summary">Barra de pesquisa renovada com fundo em camadas</string>
+    <string name="qsb_outer_opacity_title">Opacidade da camada externa</string>
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Aplicativos ocultos e protegidos</string>
     <string name="trust_apps_auth_manager">Desbloquear para gerenciar os aplicativos ocultos e protegidos</string>
@@ -430,16 +430,16 @@
     <string name="trust_apps_info_hidden">Aplicativos ocultos e seus widgets estão escondidos do menu de apps</string>
     <string name="trust_apps_info_protected">Os aplicativos protegidos requerem autenticação para serem executados</string>
     <!-- Recents style -->
-    <string name="recents_style_title">Recents layout style</string>
+    <string name="recents_style_title">Estilo de layout recentes</string>
     <string name="recents_style_default">Padrão</string>
-    <string name="recents_style_stock">Scale effect</string>
-    <string name="recents_style_staple">Kami style</string>
+    <string name="recents_style_stock">Efeito de escala</string>
+    <string name="recents_style_staple">Estilo cartão</string>
     <string name="recents_style_ios">iOS style</string>
-    <string name="recents_style_oxygen">OxygenOS style</string>
+    <string name="recents_style_oxygen">Estilo OxygenOS</string>
     <!-- Lock -->
-    <string name="action_lock">Lock/Unlock app</string>
-    <string name="unlock_app">Unlocked app in recents</string>
-    <string name="lock_app">Locked app in recents</string>
+    <string name="action_lock">Bloquear/Desbloquear app</string>
+    <string name="unlock_app">Aplicativo desbloqueado em recentes</string>
+    <string name="lock_app">Bloqueado app nos recentes</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Scroll vibration</string>
     <!-- Rename app shortcut -->
