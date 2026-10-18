@@ -277,6 +277,7 @@ public class InvariantDeviceProfile {
         mMainExecutor = mainExecutor;
 
         String gridName = prefs.get(GRID_NAME);
+        maybeDefaultToFixedLandscape(context, gridName);
         initGrid(gridName);
         mThemeManager.generateIconShape(iconBitmapSize);
 
@@ -325,6 +326,21 @@ public class InvariantDeviceProfile {
                 mMainExecutor, i -> onConfigChanged());
         localeReceiver.register(actionsFilter(Intent.ACTION_LOCALE_CHANGED));
         lifeCycle.addCloseable(localeReceiver);
+    }
+
+    /**
+     * Devices that are permanently in the phone landscape layout (e.g. gaming handhelds) have no
+     * room for workspace labels there. Let them default to fixed landscape mode via overlay.
+     */
+    private void maybeDefaultToFixedLandscape(Context context, String gridName) {
+        if (mPrefs.has(FIXED_LANDSCAPE_MODE)
+                || !context.getResources().getBoolean(R.bool.config_defaultFixedLandscape)) {
+            return;
+        }
+        if (gridName != null) {
+            mPrefs.put(NON_FIXED_LANDSCAPE_GRID_NAME, gridName);
+        }
+        mPrefs.put(FIXED_LANDSCAPE_MODE, true);
     }
 
     private void initGrid(String gridName) {

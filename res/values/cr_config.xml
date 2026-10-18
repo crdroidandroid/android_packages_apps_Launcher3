@@ -42,4 +42,7 @@
 
     <!-- Allow rotation by default -->
     <bool name="config_allowRotation">false</bool>
+
+    <!-- Use fixed landscape mode by default -->
+    <bool name="config_defaultFixedLandscape">false</bool>
 </resources>
