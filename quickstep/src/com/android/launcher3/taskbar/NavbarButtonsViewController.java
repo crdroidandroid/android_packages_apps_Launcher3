@@ -318,7 +318,7 @@ public class NavbarButtonsViewController implements TaskbarControllers.LoggableT
         mNavButtonsView.setLayoutParams(navButtonsViewLayoutParams);
 
         mIsImeRenderingNavButtons = mContext.imeDrawsImeNavBar();
-        if (!mIsImeRenderingNavButtons) {
+        if (!mIsImeRenderingNavButtons && !mContext.isPhoneGestureNavMode()) {
             // IME switcher
             mImeSwitcherButton = addButton(com.android.internal.R.drawable.ic_ime_switcher,
                     BUTTON_IME_SWITCH,
