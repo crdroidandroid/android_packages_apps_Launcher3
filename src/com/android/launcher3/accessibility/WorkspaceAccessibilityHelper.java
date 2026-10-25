@@ -51,6 +51,12 @@ public class WorkspaceAccessibilityHelper extends DragAndDropAccessibilityDelega
         int y = id / mCountX;
         LauncherAccessibilityDelegate.DragInfo dragInfo = mDelegate.getDragInfo();
 
+        // An accessibility drag can finish or be cancelled while this helper is still attached
+        // to the CellLayout. In that case there is no drag info and therefore no drop target.
+        if (dragInfo == null) {
+            return INVALID_POSITION;
+        }
+
         if (dragInfo.dragType == DragType.WIDGET && !mView.acceptsWidget()) {
             return INVALID_POSITION;
         }

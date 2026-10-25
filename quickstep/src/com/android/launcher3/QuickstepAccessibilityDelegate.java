@@ -62,7 +62,9 @@ public class QuickstepAccessibilityDelegate extends LauncherAccessibilityDelegat
             return;
         }
         AllAppsRecyclerView contentView = mLauncher.getAppsView().getActiveRecyclerView();
-        if (contentView instanceof SearchRecyclerView) {
+        // The accessibility focus event can arrive while the all apps view is being rebuilt,
+        // in which case getActiveRecyclerView() returns null and there is nothing to scroll.
+        if (contentView == null || contentView instanceof SearchRecyclerView) {
             return;
         }
         LinearLayoutManager layoutManager = (LinearLayoutManager) contentView.getLayoutManager();
