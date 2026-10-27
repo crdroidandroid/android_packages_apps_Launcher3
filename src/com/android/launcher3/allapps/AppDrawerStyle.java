@@ -45,8 +45,6 @@ public final class AppDrawerStyle {
     public static final String VERTICAL_PAGED = "vertical";
     public static final String FULLSCREEN = "fullscreen";
 
-    /** At or below this drawer opacity the wallpaper dominates, so labels follow the workspace. */
-    private static final int LOW_OPACITY_THRESHOLD = 30;
     /** Alpha used for hint text on top of the search surface (~70%). */
     public static final int HINT_ALPHA = 179;
 
@@ -108,11 +106,37 @@ public final class AppDrawerStyle {
         return ColorUtils.setAlphaComponent(color, 255);
     }
 
-    /** Applies the user-selected drawer opacity to {@code color}. */
+    /**
+     * Returns the stock (non-custom) drawer surface as an opaque color. This is the no-blur
+     * fallback surface and is also used as the reference surface for label contrast.
+     */
+    @ColorInt
+    public static int getStockBackgroundColor(Context context) {
+        return context.getColor(Utilities.isDarkTheme(context)
+                ? android.R.color.system_accent2_800
+                : android.R.color.system_accent2_200);
+    }
+
+    /** Returns the user-selected drawer opacity as a fraction in {@code [0, 1]}. */
+    public static float getDrawerOpacity(Context context) {
+        int opacity = LauncherPrefs.APP_DRAWER_OPACITY.get(context);
+        return Math.max(0, Math.min(100, opacity)) / 100f;
+    }
+
+    /**
+     * Applies the user-selected drawer opacity to {@code color}. The opacity scales the color's
+     * existing alpha, so already translucent surfaces (e.g. the stock blur panel) keep their
+     * relative translucency, and opaque colors map linearly from 0% to 100%.
+     */
     @ColorInt
     public static int applyDrawerOpacity(Context context, @ColorInt int color) {
-        return ColorUtils.setAlphaComponent(color,
-                LauncherPrefs.APP_DRAWER_OPACITY.get(context) * 255 / 100);
+        return applyOpacity(color, getDrawerOpacity(context));
+    }
+
+    /** Scales the alpha. */
+    @ColorInt
+    public static int applyOpacity(@ColorInt int color, float opacity) {
+        return ColorUtils.setAlphaComponent(color, Math.round(Color.alpha(color) * opacity));
     }
 
     /** Custom drawer background with the user-selected opacity applied. */
@@ -127,14 +151,26 @@ public final class AppDrawerStyle {
         if (LauncherPrefs.ALL_APPS_DARK_TEXT.get(context)) {
             return context.getColor(R.color.all_apps_label_color_dark_forced);
         }
-        if (!isCustomColorEnabled(context)) {
-            return Themes.getAttrColor(context, android.R.attr.textColorPrimary);
-        }
-        if (LauncherPrefs.APP_DRAWER_OPACITY.get(context) <= LOW_OPACITY_THRESHOLD) {
-            // Mostly wallpaper shows through; use the same text color as the home screen.
-            return Themes.getAttrColor(context, R.attr.workspaceTextColor);
-        }
-        return getContrastingContentColor(context, getCustomBackgroundColor(context));
+        final boolean custom = isCustomColorEnabled(context);
+        final int drawerBackground = custom
+                ? getCustomBackgroundColor(context)
+                : getStockBackgroundColor(context);
+        final int drawerText = custom
+                ? getContrastingContentColor(context, drawerBackground)
+                : Themes.getAttrColor(context, android.R.attr.textColorPrimary);
+        final int wallpaperText = Themes.getAttrColor(context, R.attr.workspaceTextColor);
+
+        // The workspace text color is chosen for the wallpaper, so it tells us whether the
+        // wallpaper is light or dark.
+        final int wallpaperEstimate = ColorUtils.setAlphaComponent(
+                ColorUtils.calculateLuminance(wallpaperText) >= 0.5 ? Color.BLACK : Color.WHITE,
+                255);
+        final int effectiveBackground = ColorUtils.compositeColors(
+                applyDrawerOpacity(context, drawerBackground), wallpaperEstimate);
+
+        return ColorUtils.calculateContrast(drawerText, effectiveBackground)
+                >= ColorUtils.calculateContrast(wallpaperText, effectiveBackground)
+                ? drawerText : wallpaperText;
     }
 
     /**

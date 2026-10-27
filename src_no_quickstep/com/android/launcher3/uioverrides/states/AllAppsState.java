@@ -106,14 +106,12 @@ public class AllAppsState extends LauncherState {
 
     @Override
     public ScrimColors getWorkspaceScrimColor(Launcher launcher) {
-        int backgroundColor;
-        if (AppDrawerStyle.isCustomColorEnabled(launcher)) {
-            backgroundColor = AppDrawerStyle.getCustomBackgroundColorWithOpacity(launcher);
-        } else {
-            backgroundColor = launcher.getDeviceProfile().getDeviceProperties().isLargeScreen()
-                    ? launcher.getResources().getColor(R.color.widgets_picker_scrim)
-                    : Themes.getAttrColor(launcher, R.attr.allAppsScrimColor);
-        }
+        int backgroundColor = AppDrawerStyle.applyDrawerOpacity(launcher,
+                AppDrawerStyle.isCustomColorEnabled(launcher)
+                        ? AppDrawerStyle.getCustomBackgroundColor(launcher)
+                        : launcher.getDeviceProfile().getDeviceProperties().isLargeScreen()
+                        ? launcher.getResources().getColor(R.color.widgets_picker_scrim)
+                        : Themes.getAttrColor(launcher, R.attr.allAppsScrimColor));
         return new ScrimColors(backgroundColor, /* foregroundColor */ Color.TRANSPARENT);
     }
 }

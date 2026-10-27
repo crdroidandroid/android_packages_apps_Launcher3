@@ -203,10 +203,6 @@ public class AllAppsState extends LauncherState {
 
     @Override
     public ScrimColors getWorkspaceScrimColor(Launcher launcher) {
-        if (Flags.allAppsSurface()) {
-            // No scrim.
-            return super.getWorkspaceScrimColor(launcher);
-        }
         int backgroundColor = AppDrawerStyle.applyDrawerOpacity(launcher,
                 AppDrawerStyle.isCustomColorEnabled(launcher)
                         ? AppDrawerStyle.getCustomBackgroundColor(launcher)

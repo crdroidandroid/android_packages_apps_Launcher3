@@ -233,9 +233,10 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
         mHeaderThreshold = getResources().getDimensionPixelSize(
                 R.dimen.dynamic_grid_cell_border_spacing);
         // With a custom drawer color, protect the header with that color instead of the theme's.
-        mHeaderProtectionColor = AppDrawerStyle.isCustomColorEnabled(context)
-                ? AppDrawerStyle.getCustomBackgroundColor(context)
-                : Themes.getAttrColor(context, R.attr.allappsHeaderProtectionColor);
+        mHeaderProtectionColor = AppDrawerStyle.applyDrawerOpacity(context,
+                AppDrawerStyle.isCustomColorEnabled(context)
+                        ? AppDrawerStyle.getCustomBackgroundColor(context)
+                        : Themes.getAttrColor(context, R.attr.allappsHeaderProtectionColor));
 
         mWorkManager = new WorkProfileManager(
                 this,
@@ -360,10 +361,10 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
 
         int layerFg = getContext().getColor(R.color.blur_shade_panel_fg);
         int layerBg = getContext().getColor(R.color.blur_shade_panel_bg);
-        mBottomSheetBackgroundColorOverBlur = ColorUtils.compositeColors(layerFg, layerBg);
-        mBottomSheetBackgroundColorBlurFallback = getContext().getColor(
-                Utilities.isDarkTheme(getContext()) ? android.R.color.system_accent2_800
-                        : android.R.color.system_accent2_200);
+        mBottomSheetBackgroundColorOverBlur = AppDrawerStyle.applyDrawerOpacity(getContext(),
+                ColorUtils.compositeColors(layerFg, layerBg));
+        mBottomSheetBackgroundColorBlurFallback = AppDrawerStyle.applyDrawerOpacity(getContext(),
+                AppDrawerStyle.getStockBackgroundColor(getContext()));
         mUseCustomBackgroundColor = AppDrawerStyle.isCustomColorEnabled(getContext());
         mCustomBackgroundColor = mUseCustomBackgroundColor
                 ? AppDrawerStyle.getCustomBackgroundColorWithOpacity(getContext())
@@ -962,10 +963,9 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     }
 
     protected int getHeaderColor(float blendRatio) {
-        float alpha = blendRatio * LauncherPrefs.APP_DRAWER_OPACITY.get(getContext()) / 100;
         return isBackgroundBlurEnabled()
-                ? ColorUtils.setAlphaComponent(mHeaderProtectionColor, (int) (alpha * 255))
-                : ColorUtils.blendARGB(getBackgroundColor(), mHeaderProtectionColor, alpha);
+                ? AppDrawerStyle.applyOpacity(mHeaderProtectionColor, blendRatio)
+                : ColorUtils.blendARGB(getBackgroundColor(), mHeaderProtectionColor, blendRatio);
     }
 
     int getBackgroundColor() {

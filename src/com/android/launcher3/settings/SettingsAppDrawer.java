@@ -115,7 +115,8 @@ public class SettingsAppDrawer extends CollapsingToolbarBaseActivity
                 LauncherPrefs.APP_DRAWER_SORT_MODE.getSharedPrefKey().equals(key) ||
                 LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_ENABLED.getSharedPrefKey().equals(key) ||
                 LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_LIGHT.getSharedPrefKey().equals(key) ||
-                LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_DARK.getSharedPrefKey().equals(key)) {
+                LauncherPrefs.APP_DRAWER_CUSTOM_COLOR_DARK.getSharedPrefKey().equals(key) ||
+                LauncherPrefs.APP_DRAWER_OPACITY.getSharedPrefKey().equals(key)) {
             LauncherAppState.INSTANCE.executeIfCreated(app -> app.setNeedsRestart());
         }
     }
