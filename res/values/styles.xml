@@ -665,6 +665,7 @@
 
     <style name="WidgetPickerActivityTheme" parent="@android:style/Theme.DeviceDefault.DayNight">
         <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
@@ -689,11 +690,13 @@
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
     </style>
 
     <style name="FolderCreatorTheme" parent="@android:style/Theme.DeviceDefault.DayNight">
         <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:colorBackgroundCacheHint">@null</item>

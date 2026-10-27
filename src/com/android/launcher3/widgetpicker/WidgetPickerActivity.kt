@@ -17,6 +17,7 @@
 package com.android.launcher3.widgetpicker
 
 import android.content.Intent
+import android.content.res.Resources
 import android.os.Build
 import android.os.Bundle
 import android.os.UserHandle
@@ -45,6 +46,13 @@ open class WidgetPickerActivity :
         ScreenOnTracker.ScreenOnListener { on: Boolean -> this.onScreenOnChange(on) }
 
     override fun getDragLayer(): SimpleDragLayer<WidgetPickerActivity>? = _dragLayer
+
+    protected open val activityThemeRes: Int
+        get() = R.style.WidgetPickerActivityTheme
+
+    override fun onApplyThemeResource(theme: Resources.Theme, resid: Int, first: Boolean) {
+        super.onApplyThemeResource(theme, if (first) activityThemeRes else resid, first)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
