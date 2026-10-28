@@ -4,7 +4,6 @@ import android.app.WallpaperManager
 import android.app.WallpaperManager.FLAG_LOCK
 import android.app.WallpaperManager.FLAG_SYSTEM
 import android.content.Context
-import android.content.SharedPreferences
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
@@ -13,6 +12,8 @@ import android.util.Log
 
 import androidx.room.withTransaction
 
+import com.android.launcher3.ConstantItem
+import com.android.launcher3.EncryptionType
 import com.android.launcher3.LauncherPrefs
 import com.android.launcher3.dagger.ApplicationContext
 import com.android.launcher3.dagger.LauncherAppComponent
@@ -24,7 +25,6 @@ import com.android.launcher3.util.SafeCloseable
 
 import java.io.ByteArrayOutputStream
 import java.io.File
-import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.security.MessageDigest
 import javax.inject.Inject
@@ -46,17 +46,15 @@ class WallpaperService @Inject constructor(
     private val roomDb by lazy { AppDatabase.INSTANCE.get(context) }
     private val dao by lazy { roomDb.wallpaperDao() }
 
-    private val prefs: SharedPreferences by lazy {
-        context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-    }
+    private val launcherPrefs: LauncherPrefs by lazy { LauncherPrefs.get(context) }
 
     /**
      * System wallpaper id that is already reflected in the carousel DB.
      */
     private var lastHandledWallpaperId: Int
-        get() = prefs.getInt(KEY_LAST_HANDLED_ID, NO_ID)
+        get() = launcherPrefs.get(LAST_HANDLED_WALLPAPER_ID)
         set(value) {
-            prefs.edit().putInt(KEY_LAST_HANDLED_ID, value).apply()
+            launcherPrefs.put(LAST_HANDLED_WALLPAPER_ID, value)
         }
 
     /**
@@ -241,10 +239,16 @@ class WallpaperService @Inject constructor(
 
     companion object {
         private const val TAG = "WallpaperService"
-        private const val PREFS_NAME = "wallpaper_carousel"
         private const val KEY_LAST_HANDLED_ID = "last_handled_system_wallpaper_id"
         private const val NO_ID = -1
         private const val MAX_WALLPAPERS = 4
+
+        private val LAST_HANDLED_WALLPAPER_ID: ConstantItem<Int> =
+            LauncherPrefs.nonRestorableItem(
+                KEY_LAST_HANDLED_ID,
+                NO_ID,
+                EncryptionType.DEVICE_PROTECTED,
+            )
 
         @JvmField
         val INSTANCE = DaggerSingletonObject(LauncherAppComponent::getWallpaperService)
