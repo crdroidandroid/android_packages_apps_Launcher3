@@ -141,6 +141,10 @@ public final class RecentsActivity extends StatefulActivity<RecentsState> implem
     private StateManager<RecentsState, RecentsActivity> mStateManager;
     private DepthController<RecentsState, RecentsActivity> mDepthController;
 
+    // Toggles the pane title between two texts that sound the same, see
+    // updateAccessibilityPaneTitle().
+    private boolean mAccessibilityPaneTitleToggle;
+
     // Strong refs to runners which are cleared when the activity is destroyed
     private RemoteAnimationFactory mActivityLaunchAnimationRunner;
 
@@ -442,6 +446,33 @@ public final class RecentsActivity extends StatefulActivity<RecentsState> implem
     protected void onResume() {
         super.onResume();
         AccessibilityManagerCompat.sendStateEventToTest(getBaseContext(), OVERVIEW_STATE_ORDINAL);
+        updateAccessibilityPaneTitle();
+    }
+
+    /**
+     * Announces the overview to accessibility services on every appearance.
+     *
+     * <p>The window of this activity is reused between visits and its title is set only once
+     * in {@link #onCreate}, so nothing tells a screen reader that the window came back. When
+     * the overview is opened from a regular app the previous window disappears and the focus
+     * inside it becomes invalid, which forces the reader into the overview. When it is opened
+     * from a third party home app that window stays alive behind the translucent overview, so
+     * the reader keeps its focus there and stays silent.
+     *
+     * <p>Changing the pane title reports a window state change, which is what makes the reader
+     * enter the window. The two texts differ by a zero width space, which is not spoken, so the
+     * announcement sounds the same on every appearance.
+     */
+    private void updateAccessibilityPaneTitle() {
+        if (mFallbackRecentsView == null) {
+            return;
+        }
+        mFallbackRecentsView.post(() -> {
+            CharSequence title = getString(R.string.accessibility_recent_apps);
+            mAccessibilityPaneTitleToggle = !mAccessibilityPaneTitleToggle;
+            mFallbackRecentsView.setAccessibilityPaneTitle(
+                    mAccessibilityPaneTitleToggle ? title + "\u200B" : title);
+        });
     }
 
     @Override
@@ -477,6 +508,10 @@ public final class RecentsActivity extends StatefulActivity<RecentsState> implem
         if (!hasFocus) {
             AccessibilityManagerCompat.sendTestProtocolEventToTest(
                     this, LAUNCHER_ACTIVITY_LOST_WINDOW_FOCUS_MESSAGE);
+        } else {
+            // Regaining the window focus is another way of entering the overview, for example
+            // when the overview stayed alive behind a launched app.
+            updateAccessibilityPaneTitle();
         }
     }
 

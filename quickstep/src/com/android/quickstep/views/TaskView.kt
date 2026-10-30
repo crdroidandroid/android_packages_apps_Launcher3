@@ -782,6 +782,21 @@ constructor(
 
     override fun onInitializeAccessibilityNodeInfo(info: AccessibilityNodeInfo) {
         super.onInitializeAccessibilityNodeInfo(info)
+
+        // The name of the task is only on the snapshot view, so a card whose app blocks
+        // screen capture has neither a thumbnail nor a description and reads as nothing.
+        // Fall back to the title of the task itself.
+        if (info.contentDescription.isNullOrEmpty()) {
+            val description =
+                taskContainers
+                    .mapNotNull { it.task.titleDescription ?: it.task.title }
+                    .distinct()
+                    .joinToString(", ")
+            if (description.isNotEmpty()) {
+                info.contentDescription = description
+            }
+        }
+
         with(info) {
             // Only make actions available if the app icon menu is visible to the user.
             // When modalness is >0, the user is in select mode and the icon menu is hidden.
