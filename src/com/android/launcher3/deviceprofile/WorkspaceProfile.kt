@@ -211,6 +211,19 @@ data class WorkspaceProfile(
 
         const val MIN_WIDGET_PADDING_DP: Float = 6f
 
+        /** Calculate minimum padding between widgets */
+        fun calculateWidgetPadding(cellLayoutBorderSpacePx: Point, metrics: DisplayMetrics): Rect {
+            val minSpacing: Float = ResourceUtils.pxFromDp(MIN_WIDGET_PADDING_DP, metrics).toFloat()
+            val widgetPadding = Rect()
+            if (cellLayoutBorderSpacePx.x < minSpacing || cellLayoutBorderSpacePx.y < minSpacing) {
+                widgetPadding.right = max(0f, minSpacing - cellLayoutBorderSpacePx.x).roundToInt()
+                widgetPadding.left = widgetPadding.right
+                widgetPadding.bottom = max(0f, minSpacing - cellLayoutBorderSpacePx.y).roundToInt()
+                widgetPadding.top = widgetPadding.bottom
+            }
+            return widgetPadding
+        }
+
         // TODO: the first time we use this, cellLayoutPadding and totalWorkspacePadding are zero
         // but it doesn't make sense to do that, and other variables depend on those values, we need
         // to
@@ -497,18 +510,7 @@ data class WorkspaceProfile(
                         ),
                 )
 
-            // Update widget padding:
-            val minSpacing: Float = ResourceUtils.pxFromDp(MIN_WIDGET_PADDING_DP, metrics).toFloat()
-            val widgetPadding = Rect()
-            if (cellLayoutBorderSpacePx.x < minSpacing || cellLayoutBorderSpacePx.y < minSpacing) {
-                widgetPadding.right = max(0f, minSpacing - cellLayoutBorderSpacePx.x).roundToInt()
-
-                widgetPadding.left = widgetPadding.right
-                widgetPadding.bottom = max(0f, minSpacing - cellLayoutBorderSpacePx.y).roundToInt()
-                widgetPadding.top = widgetPadding.bottom
-            } else {
-                widgetPadding.setEmpty()
-            }
+            val widgetPadding = calculateWidgetPadding(cellLayoutBorderSpacePx, metrics)
 
             return WorkspaceProfile(
                 // Workspace icons
