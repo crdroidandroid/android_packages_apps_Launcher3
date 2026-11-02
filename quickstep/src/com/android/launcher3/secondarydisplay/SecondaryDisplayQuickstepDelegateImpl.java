@@ -18,12 +18,14 @@ package com.android.launcher3.secondarydisplay;
 import static androidx.lifecycle.Lifecycle.State.RESUMED;
 import static com.android.launcher3.util.OnboardingPrefs.ALL_APPS_VISITED_COUNT;
 import static com.android.quickstep.fallback.RecentsState.HIDDEN;
+import static com.android.quickstep.util.ActiveGestureLog.INTENT_EXTRA_LOG_TRACE_ID;
 import static com.android.window.flags.Flags.useInputReportedFocusForAccessibility;
 
 import android.annotation.NonNull;
 import android.annotation.Nullable;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.Display;
 import android.view.KeyEvent;
@@ -157,7 +159,12 @@ public final class SecondaryDisplayQuickstepDelegateImpl extends SecondaryDispla
     }
 
     @Override
-    void onHomeIntent() {
+    void onHomeIntent(Intent intent) {
+        if (intent.hasExtra(INTENT_EXTRA_LOG_TRACE_ID)) {
+            // Recents transitions on this display launch the home intent to show the recents
+            // window on top of it, don't hide the recents window that was just shown
+            return;
+        }
         // When recents was opened on top of the secondary display launcher, going home doesn't
         // trigger a transition that would hide it, so hide it here instead
         RecentsWindowManager recentsWindowManager = getVisibleRecentsWindowManager();

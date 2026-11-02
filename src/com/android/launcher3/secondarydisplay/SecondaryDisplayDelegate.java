@@ -15,6 +15,7 @@
  */
 package com.android.launcher3.secondarydisplay;
 
+import android.content.Intent;
 import android.view.KeyEvent;
 
 import com.android.launcher3.dagger.ActivityContextSingleton;
@@ -54,7 +55,7 @@ public class SecondaryDisplayDelegate {
     /**
      * Called when a home intent is delivered to the secondary display launcher.
      */
-    void onHomeIntent() {
+    void onHomeIntent(Intent intent) {
     }
 
     void onCreate() {
