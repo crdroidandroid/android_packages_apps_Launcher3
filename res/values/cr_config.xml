@@ -48,4 +48,7 @@
 
     <!-- Whether to enable blur during app open/close transition animations -->
     <bool name="config_enableLauncherBlur">true</bool>
+
+    <!-- Use a full-screen AppDrawer for SecondaryDisplayLauncher -->
+    <bool name="config_secondaryLauncherOnlyAppDrawer">false</bool>
 </resources>

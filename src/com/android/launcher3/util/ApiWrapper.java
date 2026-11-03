@@ -30,6 +30,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Process;
 import android.os.UserHandle;
+import android.view.Display;
 import android.view.DragAndDropPermissions;
 import android.view.DragEvent;
 import android.view.SurfaceControlViewHost;
@@ -187,6 +188,11 @@ public class ApiWrapper {
     /** Returns permissions obtained from the specified drag event. */
     public @Nullable DragAndDropPermissions requestDragAndDropPermissions(DragEvent event) {
         return null;
+    }
+
+    /** Returns whether the display is a built-in one. */
+    public boolean isInternalDisplay(@Nullable Display display) {
+        return false;
     }
 
     private static class NoopDrawable extends ColorDrawable {

@@ -26,16 +26,21 @@ import android.app.WallpaperColors;
 import android.app.WallpaperManager;
 import android.app.WallpaperManager.OnColorsChangedListener;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Display;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewAnimationUtils;
 import android.view.Window;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.UiThread;
@@ -67,6 +72,7 @@ import com.android.launcher3.model.data.PredictedContainerInfo;
 import com.android.launcher3.model.data.WorkspaceData;
 import com.android.launcher3.popup.PopupContainerWithArrow;
 import com.android.launcher3.touch.ItemClickHandler.ItemClickProxy;
+import com.android.launcher3.util.ApiWrapper;
 import com.android.launcher3.util.PackageUserKey;
 import com.android.launcher3.util.Preconditions;
 import com.android.launcher3.util.Themes;
@@ -85,8 +91,12 @@ public class SecondaryDisplayLauncher extends BaseActivity implements BgDataMode
     private SecondaryDragController mDragController;
     private ActivityAllAppsContainerView<SecondaryDisplayLauncher> mAppsView;
     private View mAppsButton;
+    private View mWorkspaceGrid;
+    private View mBottomSheetHandle;
+    private View mBottomSheetHandleArea;
 
     private boolean mAppDrawerShown = false;
+    private boolean mOnlyAppDrawer = false;
 
     private StringCache mStringCache;
     private SecondaryDisplayDelegate mSecondaryDisplayDelegate;
@@ -109,6 +119,8 @@ public class SecondaryDisplayLauncher extends BaseActivity implements BgDataMode
         mModel = LauncherAppState.getInstance(this).getModel();
         mDragController = new SecondaryDragController(this);
         mSecondaryDisplayDelegate = getActivityComponent().getSecondaryDisplayDelegate();
+        mOnlyAppDrawer = getResources().getBoolean(R.bool.config_secondaryLauncherOnlyAppDrawer)
+                && ApiWrapper.INSTANCE.get(this).isInternalDisplay(getDisplay());
 
         mDeviceProfile = InvariantDeviceProfile.INSTANCE.get(this)
                 .createDeviceProfileForSecondaryDisplay(this);
@@ -121,6 +133,21 @@ public class SecondaryDisplayLauncher extends BaseActivity implements BgDataMode
         mDragLayer = findViewById(R.id.drag_layer);
         mAppsView = findViewById(R.id.apps_view);
         mAppsButton = findViewById(R.id.all_apps_button);
+        mWorkspaceGrid = findViewById(R.id.workspace_grid);
+        mBottomSheetHandle = mAppsView.findViewById(R.id.bottom_sheet_handle);
+        mBottomSheetHandleArea = mAppsView.findViewById(R.id.bottom_sheet_handle_area);
+
+        if (mOnlyAppDrawer) {
+            hideSystemBars();
+            mWorkspaceGrid.setVisibility(View.GONE);
+            mAppsButton.setVisibility(View.GONE);
+            ((FrameLayout.LayoutParams) mAppsView.getLayoutParams()).gravity = Gravity.CENTER;
+            mAppsView.setBackgroundColor(Color.TRANSPARENT);
+            mAppsView.setVisibility(View.VISIBLE);
+            mBottomSheetHandle.setVisibility(View.GONE);
+            mBottomSheetHandleArea.setVisibility(View.GONE);
+        }
+
         if (mSecondaryDisplayDelegate.enableTaskbarConnectedDisplays()) {
             mAppsButton.setVisibility(View.INVISIBLE);
         }
@@ -162,6 +189,16 @@ public class SecondaryDisplayLauncher extends BaseActivity implements BgDataMode
             WindowCompat.getInsetsController(window, window.getDecorView())
                     .setAppearanceLightStatusBars(setLightBars);
         }
+    }
+
+    private void hideSystemBars() {
+        WindowInsetsController controller = getWindow().getInsetsController();
+        if (controller == null) {
+            return;
+        }
+        controller.setSystemBarsBehavior(
+                WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+        controller.hide(WindowInsets.Type.systemBars());
     }
 
     @Override
@@ -229,6 +266,10 @@ public class SecondaryDisplayLauncher extends BaseActivity implements BgDataMode
 
     public boolean isAppDrawerShown() {
         return mAppDrawerShown;
+    }
+
+    public boolean isOnlyAppDrawer() {
+        return mOnlyAppDrawer;
     }
 
     @Override

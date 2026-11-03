@@ -31,6 +31,7 @@ import android.graphics.Rect
 import android.os.Bundle
 import android.os.IBinder
 import android.os.UserHandle
+import android.view.Display
 import android.view.DragAndDropPermissions
 import android.view.DragEvent
 import android.view.SurfaceControlViewHost
@@ -186,4 +187,7 @@ open class SystemApiWrapper @Inject constructor(@ApplicationContext context: Con
 
     override fun requestDragAndDropPermissions(event: DragEvent): DragAndDropPermissions? =
         DragAndDropPermissions.obtain(event)
+
+    override fun isInternalDisplay(display: Display?): Boolean =
+        display?.type == Display.TYPE_INTERNAL
 }
