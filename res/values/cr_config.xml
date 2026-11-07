@@ -45,4 +45,7 @@
 
     <!-- Use fixed landscape mode by default -->
     <bool name="config_defaultFixedLandscape">false</bool>
+
+    <!-- Whether to enable blur during app open/close transition animations -->
+    <bool name="config_enableLauncherBlur">true</bool>
 </resources>

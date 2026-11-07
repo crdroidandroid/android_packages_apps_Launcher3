@@ -253,6 +253,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
     private final float mClosingFreeformWindowTransY;
     private final float mMaxShadowRadius;
     private final int mMaxBlurRadius;
+    private final boolean mIsTransitionBlurEnabled;
     private final boolean mIsAppLaunchBlurEnabled;
 
     private final StartingWindowListener mStartingWindowListener = new StartingWindowListener();
@@ -318,6 +319,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
         mClosingFreeformWindowTransY =
                 res.getDimensionPixelSize(R.dimen.closing_freeform_window_trans_y);
         mMaxShadowRadius = res.getDimensionPixelSize(R.dimen.max_shadow_radius);
+        mIsTransitionBlurEnabled = res.getBoolean(R.bool.config_enableLauncherBlur);
 
         mLauncher.addOnDeviceProfileChangeListener(this);
         mSystemUiProxy = SystemUiProxy.INSTANCE.get(mLauncher);
@@ -368,7 +370,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
         mLatencyTracker = LatencyTracker.getInstance(launcher);
 
         mMaxBlurRadius = LauncherPrefs.BLUR_DEPTH.get(launcher);
-        mIsAppLaunchBlurEnabled = appLaunchBlur() && res.getBoolean(
+        mIsAppLaunchBlurEnabled = mIsTransitionBlurEnabled && appLaunchBlur() && res.getBoolean(
                 com.android.internal.R.bool.config_enableAppLaunchBlur);
     }
 
@@ -1382,7 +1384,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
 
     /** Returns animator that controls depth/blur of the background during app/widget opening. */
     private Animator getBackgroundAnimator() {
-        if (!Flags.allAppsSurface()) {
+        if (!mIsTransitionBlurEnabled || !Flags.allAppsSurface()) {
             // Don't animate/blur the background for this launch, regardless of the launcher state.
             // We have too many performance issues with the blur.
             return new AnimatorSet();
