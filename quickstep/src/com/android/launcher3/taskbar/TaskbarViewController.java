@@ -1127,7 +1127,12 @@ public class TaskbarViewController implements TaskbarControllers.LoggableTaskbar
         // or fade in while already in in-app state.
         Interpolator interpolator = mIsHotseatIconOnTopWhenAligned ? LINEAR : FINAL_FRAME;
 
-        int offsetY = taskbarDp.getTaskbarOffsetY();
+        // The icons are scaled up to the Launcher icon size below, so their landing spot has to
+        // come from the Launcher profile. The taskbar profile uses the smaller taskbar icon size
+        // and lands them below the hotseat, which snaps up when the hotseat takes over.
+        int offsetY = mControllers.taskbarStashController.isDeviceLocked()
+                ? taskbarDp.getTaskbarOffsetY()
+                : launcherDp.getTaskbarOffsetY();
         setter.setFloat(mTaskbarIconTranslationYForHome, VALUE, -offsetY, interpolator);
         setter.setFloat(mTaskbarNavButtonTranslationY, VALUE, -offsetY, interpolator);
         setter.setFloat(mTaskbarNavButtonTranslationYForInAppDisplay, VALUE, offsetY, interpolator);
