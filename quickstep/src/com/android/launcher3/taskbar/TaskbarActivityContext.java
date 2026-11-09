@@ -1818,7 +1818,14 @@ public class TaskbarActivityContext extends BaseTaskbarContext {
     /** Adds the given view to WindowManager with the provided LayoutParams (creates new window). */
     public void addWindowView(View view, WindowManager.LayoutParams windowLayoutParams) {
         if (!view.isAttachedToWindow()) {
-            mWindowManager.addView(view, windowLayoutParams);
+            // The window context backing mWindowManager only accepts its own window type, so
+            // add navigation bar panels through the context created for that type.
+            WindowManager windowManager = mWindowManager;
+            if (windowLayoutParams.type == TYPE_NAVIGATION_BAR_PANEL
+                    && mNavigationBarPanelContext != null) {
+                windowManager = mNavigationBarPanelContext.getSystemService(WindowManager.class);
+            }
+            windowManager.addView(view, windowLayoutParams);
         }
     }
 
