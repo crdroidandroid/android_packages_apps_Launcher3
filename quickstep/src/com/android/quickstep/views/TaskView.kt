@@ -782,20 +782,7 @@ constructor(
 
     override fun onInitializeAccessibilityNodeInfo(info: AccessibilityNodeInfo) {
         super.onInitializeAccessibilityNodeInfo(info)
-
-        // The name of the task is only on the snapshot view, so a card whose app blocks
-        // screen capture has neither a thumbnail nor a description and reads as nothing.
-        // Fall back to the title of the task itself.
-        if (info.contentDescription.isNullOrEmpty()) {
-            val description =
-                taskContainers
-                    .mapNotNull { it.task.titleDescription ?: it.task.title }
-                    .distinct()
-                    .joinToString(", ")
-            if (description.isNotEmpty()) {
-                info.contentDescription = description
-            }
-        }
+        fillMissingContentDescription(info)
 
         with(info) {
             // Only make actions available if the app icon menu is visible to the user.
@@ -836,6 +823,31 @@ constructor(
                         false,
                     )
             }
+        }
+    }
+
+    private fun fillMissingContentDescription(info: AccessibilityNodeInfo) {
+        if (!::taskContainers.isInitialized || !info.contentDescription.isNullOrEmpty()) return
+
+        val containers = if (isLayoutRtl) taskContainers.reversed() else taskContainers
+        val snapshotDescriptions =
+            containers.map {
+                it.snapshotView.contentDescription?.toString()?.takeIf(String::isNotBlank)
+            }
+        if (snapshotDescriptions.none { it == null }) return
+
+        val description =
+            containers
+                .zip(snapshotDescriptions)
+                .mapNotNull { (container, snapshotDescription) ->
+                    snapshotDescription
+                        ?: container.task.titleDescription?.takeIf(String::isNotBlank)
+                        ?: container.task.title?.takeIf(String::isNotBlank)
+                }
+                .distinct()
+                .joinToString(", ")
+        if (description.isNotEmpty()) {
+            info.contentDescription = description
         }
     }
 

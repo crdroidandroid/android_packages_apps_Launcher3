@@ -141,10 +141,6 @@ public final class RecentsActivity extends StatefulActivity<RecentsState> implem
     private StateManager<RecentsState, RecentsActivity> mStateManager;
     private DepthController<RecentsState, RecentsActivity> mDepthController;
 
-    // Toggles the pane title between two texts that sound the same, see
-    // updateAccessibilityPaneTitle().
-    private boolean mAccessibilityPaneTitleToggle;
-
     // Strong refs to runners which are cleared when the activity is destroyed
     private RemoteAnimationFactory mActivityLaunchAnimationRunner;
 
@@ -156,6 +152,10 @@ public final class RecentsActivity extends StatefulActivity<RecentsState> implem
     // Tracks whether the current state should have RecentsView visible.
     private boolean mIsInRecentsViewVisibleState = false;
 
+    // Toggles the pane title between two texts that sound the same, see
+    // announceOverviewIfNeeded().
+    private boolean mAccessibilityPaneTitleToggle;
+    private boolean mOverviewAnnounced;
 
     /**
      * Init drag layer and overview panel views.
@@ -430,6 +430,7 @@ public final class RecentsActivity extends StatefulActivity<RecentsState> implem
         // Workaround for b/78520668, explicitly trim memory once UI is hidden
         onTrimMemory(TRIM_MEMORY_UI_HIDDEN);
         mFallbackRecentsView.updateLocusId();
+        mOverviewAnnounced = false;
         AccessibilityManagerCompat.sendTestProtocolEventToTest(
                 this, LAUNCHER_ACTIVITY_STOPPED_MESSAGE);
     }
@@ -446,11 +447,11 @@ public final class RecentsActivity extends StatefulActivity<RecentsState> implem
     protected void onResume() {
         super.onResume();
         AccessibilityManagerCompat.sendStateEventToTest(getBaseContext(), OVERVIEW_STATE_ORDINAL);
-        updateAccessibilityPaneTitle();
+        announceOverviewIfNeeded();
     }
 
     /**
-     * Announces the overview to accessibility services on every appearance.
+     * Announces the overview to accessibility services once per appearance.
      *
      * <p>The window of this activity is reused between visits and its title is set only once
      * in {@link #onCreate}, so nothing tells a screen reader that the window came back. When
@@ -463,12 +464,19 @@ public final class RecentsActivity extends StatefulActivity<RecentsState> implem
      * enter the window. The two texts differ by a zero width space, which is not spoken, so the
      * announcement sounds the same on every appearance.
      */
-    private void updateAccessibilityPaneTitle() {
-        if (mFallbackRecentsView == null) {
+    private void announceOverviewIfNeeded() {
+        if (mOverviewAnnounced || mFallbackRecentsView == null || !hasWindowFocus()
+                || !isRecentsViewVisible()) {
             return;
         }
+        mOverviewAnnounced = true;
         mFallbackRecentsView.post(() -> {
-            CharSequence title = getString(R.string.accessibility_recent_apps);
+            if (isFinishing() || isDestroyed() || !hasWindowFocus()) {
+                // Left the overview before the update ran; let the next appearance announce.
+                mOverviewAnnounced = false;
+                return;
+            }
+            CharSequence title = getText(R.string.accessibility_recent_apps);
             mAccessibilityPaneTitleToggle = !mAccessibilityPaneTitleToggle;
             mFallbackRecentsView.setAccessibilityPaneTitle(
                     mAccessibilityPaneTitleToggle ? title + "\u200B" : title);
@@ -511,7 +519,7 @@ public final class RecentsActivity extends StatefulActivity<RecentsState> implem
         } else {
             // Regaining the window focus is another way of entering the overview, for example
             // when the overview stayed alive behind a launched app.
-            updateAccessibilityPaneTitle();
+            announceOverviewIfNeeded();
         }
     }
 
@@ -549,6 +557,12 @@ public final class RecentsActivity extends StatefulActivity<RecentsState> implem
             moveTaskToBack(/*nonRoot=*/true);
         }
         mIsInRecentsViewVisibleState = state.isRecentsViewVisible();
+
+        if (mIsInRecentsViewVisibleState) {
+            announceOverviewIfNeeded();
+        } else {
+            mOverviewAnnounced = false;
+        }
     }
 
     @Override
