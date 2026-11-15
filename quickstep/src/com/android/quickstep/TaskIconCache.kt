@@ -36,8 +36,10 @@ import com.android.launcher3.icons.BaseIconFactory.IconOptions
 import com.android.launcher3.icons.BitmapInfo
 import com.android.launcher3.icons.IconProvider
 import com.android.launcher3.icons.LauncherIcons
+import com.android.launcher3.icons.pack.IconPackManager
 import com.android.launcher3.pm.UserCache
 import com.android.launcher3.util.CancellableTask
+import com.android.launcher3.util.ComponentKey
 import com.android.launcher3.util.DisplayController
 import com.android.launcher3.util.DisplayController.DisplayInfoChangeListener
 import com.android.launcher3.util.Executors
@@ -345,8 +347,13 @@ class TaskIconCache(
         val desc = task.taskDescription
         val key = task.key
 
+        val iconPackOverridesComponent =
+            key.component != null &&
+                IconPackManager.get(context)
+                    .resolve(ComponentKey(key.component, UserHandle.of(key.userId))) != null
+
         // Load icon
-        val icon = getIcon(desc, key.userId)
+        val icon = if (iconPackOverridesComponent) null else getIcon(desc, key.userId)
         return if (icon != null) {
             getBitmapInfo(
                 icon.toDrawable(context.resources),
