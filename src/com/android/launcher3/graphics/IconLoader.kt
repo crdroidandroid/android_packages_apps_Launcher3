@@ -33,8 +33,8 @@ import com.android.launcher3.dragndrop.FolderAdaptiveIcon
 import com.android.launcher3.icons.BitmapInfo
 import com.android.launcher3.icons.CacheableShortcutInfo.Companion.getIcon
 import com.android.launcher3.icons.IconCache
-import com.android.launcher3.icons.LauncherIconProvider
 import com.android.launcher3.icons.LauncherIcons
+import com.android.launcher3.icons.ThirdPartyIconProvider
 import com.android.launcher3.icons.cache.CacheLookupFlag
 import com.android.launcher3.icons.cache.CachedObjectCachingLogic.loadFullResIcon
 import com.android.launcher3.model.data.ItemInfo
@@ -56,7 +56,7 @@ constructor(
     private val themeManager: ThemeManager,
     private val userCache: UserCache,
     private val idp: InvariantDeviceProfile,
-    private val iconProvider: LauncherIconProvider,
+    private val iconProvider: ThirdPartyIconProvider,
 ) {
 
     private val context: Context = activity.asContext()
