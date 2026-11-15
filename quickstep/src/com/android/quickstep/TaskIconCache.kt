@@ -39,8 +39,10 @@ import com.android.launcher3.icons.BaseIconFactory.IconOptions
 import com.android.launcher3.icons.BitmapInfo
 import com.android.launcher3.icons.IconCache
 import com.android.launcher3.icons.cache.AppInfoCachingLogic
+import com.android.launcher3.icons.pack.IconPackManager
 import com.android.launcher3.pm.UserCache
 import com.android.launcher3.util.CancellableTask
+import com.android.launcher3.util.ComponentKey
 import com.android.launcher3.util.DaggerSingletonTracker
 import com.android.launcher3.util.Executors.MAIN_EXECUTOR
 import com.android.launcher3.util.Executors.SimpleThreadFactory
@@ -263,10 +265,12 @@ constructor(
         val key = task.key
 
         val user = UserHandle.of(key.userId)
+        val userInfo = UserCache.INSTANCE.get(context).getUserInfo(user)
+        val iconPackOverridesComponent =
+            IconPackManager.get(context).resolve(ComponentKey(key.component, user)) != null
 
         // Load icon
-        val icon = getIcon(desc, key.userId)
-        val userInfo = UserCache.INSTANCE.get(context).getUserInfo(user)
+        val icon = if (iconPackOverridesComponent) null else getIcon(desc, key.userId)
 
         if (icon != null) {
             return ic.iconFactory.use {
