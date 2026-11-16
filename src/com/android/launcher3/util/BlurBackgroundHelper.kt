@@ -36,13 +36,17 @@ constructor() {
 
     open fun drawFolderBlur(canvas: Canvas, pathWrapper: PathWrapper?, view: View) {}
 
-    open fun folderCloseComplete() {}
+    open fun folderCloseComplete(folder: Folder) {}
 
     open fun isBlurEnabled() = false
 
     open fun isPopupBlurEnabled() = isBlurEnabled()
 
-    open fun applyPopupBlurBackground(view: View) {}
+    open fun applyPopupBlurBackground(view: View): Boolean = false
+
+    open fun setPopupBlurAlpha(view: View, alpha: Float) {}
+
+    open fun releasePopupBlurBackground(view: View) {}
 
     open fun getPopupBlurSurfaceColor(fallbackColor: Int) = fallbackColor
 }

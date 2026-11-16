@@ -127,6 +127,11 @@ public class BaseDepthControllerImpl<
 
     protected boolean mWaitingOnSurfaceValidity;
 
+    // Last wallpaper zoom sent to WindowManager, to avoid a binder call on every frame when the
+    // value doesn't change (e.g. wallpaper zooming disabled).
+    private IBinder mLastZoomWindowToken;
+    private float mLastWallpaperZoom = Float.NaN;
+
     private SurfaceControl mBlurSurface = null;
     /**
      * Info for early wakeup requests to SurfaceFlinger.
@@ -236,8 +241,11 @@ public class BaseDepthControllerImpl<
             wallpaperZoom = 1f;
         }
 
-        if (windowToken != null) {
+        if (windowToken != null && (windowToken != mLastZoomWindowToken
+                || Float.compare(wallpaperZoom, mLastWallpaperZoom) != 0)) {
             mWallpaperManager.setWallpaperZoomOut(windowToken, wallpaperZoom);
+            mLastZoomWindowToken = windowToken;
+            mLastWallpaperZoom = wallpaperZoom;
         }
 
         if (!BlurUtils.supportsBlursOnWindows()) {
@@ -272,8 +280,10 @@ public class BaseDepthControllerImpl<
             return;
         }
         mCurrentBlur = newBlur;
-        Log.v(TAG, "Applying blur: " + mCurrentBlur + " to " + blurSurface + " applyImmediately: "
-                + applyImmediately);
+        if (DEBUG) {
+            Log.v(TAG, "Applying blur: " + mCurrentBlur + " to " + blurSurface
+                    + " applyImmediately: " + applyImmediately);
+        }
 
         if (surfaceTransaction == null) {
             surfaceTransaction = new SurfaceTransaction();

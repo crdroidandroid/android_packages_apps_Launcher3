@@ -225,6 +225,12 @@ public class IconPickerBottomSheet extends AbstractSlideInView<BaseActivity> {
     }
 
     @Override
+    protected void onCloseComplete() {
+        mBlurBackgroundHelper.releasePopupBlurBackground(mContent);
+        super.onCloseComplete();
+    }
+
+    @Override
     protected boolean isOfType(@AbstractFloatingView.FloatingViewType int type) {
         return (type & AbstractFloatingView.TYPE_ICON_PICKER_BOTTOM_SHEET) != 0;
     }

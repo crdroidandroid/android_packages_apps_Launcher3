@@ -18,6 +18,7 @@ package com.android.launcher3.util
 
 import android.graphics.Canvas
 import android.graphics.Color
+import android.graphics.Matrix
 import android.graphics.Outline
 import android.graphics.Path
 import android.graphics.Rect
@@ -41,6 +42,8 @@ import com.android.launcher3.util.WindowBlurState.WINDOW_BLUR_STATE
 import com.android.launcher3.views.ActivityContext
 import javax.inject.Inject
 import javax.inject.Named
+import kotlin.math.ceil
+import kotlin.math.roundToInt
 
 /**
  * Quickstep implementation of the helper class that creates and updates the blur drawable used
@@ -62,23 +65,64 @@ constructor(
         context.resources.getDimensionPixelSize(R.dimen.popup_blur_radius)
 
     private val cornerRadius = Themes.getDialogCornerRadius(context)
-    private val workspaceBlurRenderNode = RenderNode("workspaceBlur")
+
+    private val workspaceBlurScale =
+        (folderBlurRadius / MIN_DOWNSCALED_BLUR_RADIUS).coerceIn(1f, MAX_WORKSPACE_BLUR_DOWNSCALE)
+
+    private val workspaceBlurRenderNode =
+        RenderNode("workspaceBlur").apply {
+            val radius = folderBlurRadius / workspaceBlurScale
+            setRenderEffect(RenderEffect.createBlurEffect(radius, radius, Shader.TileMode.CLAMP))
+            setPivotX(0f)
+            setPivotY(0f)
+            setScaleX(workspaceBlurScale)
+            setScaleY(workspaceBlurScale)
+            setClipToOutline(true)
+        }
     private val workspaceBlurRenderNodeOutline = Outline()
+    private val outlineMatrix = Matrix()
+    private val lastOutlineRect = Rect()
     private val bounds = Rect()
-    private val folderBlurDrawable: BackgroundBlurDrawable? by lazy {
-        if (!isBlurEnabled()) null
-        else
-            activityContext.dragLayer.getViewRootImpl()
-                .createBackgroundBlurDrawable()?.apply {
-                    setBlurRadius(folderBlurRadius.toInt())
-                    setVisible(false, false)
-                }
+    private val tmpRect = Rect()
+    private var folderBlurDrawable: BackgroundBlurDrawable? = null
+    private var blurOwnerFolder: Folder? = null
+
+    private val popupBlurSurfaceColor: Int by lazy {
+        val color =
+            try {
+                context.getColor(InternalR.color.customColorSurfaceEffect0)
+            } catch (_: Exception) {
+                context.getColor(R.color.materialColorSurfaceContainer)
+            }
+        if (Color.alpha(color) < 255) color
+        else ColorUtils.setAlphaComponent(color, (0.60f * 255).toInt())
+    }
+
+    private fun getOrCreateFolderBlurDrawable(): BackgroundBlurDrawable? {
+        folderBlurDrawable?.let {
+            return it
+        }
+        val viewRoot = activityContext.dragLayer.viewRootImpl ?: return null
+        return viewRoot.createBackgroundBlurDrawable()
+            ?.apply {
+                setBlurRadius(folderBlurRadius.toInt())
+                setVisible(false, false)
+            }
+            .also { folderBlurDrawable = it }
     }
 
     override fun prepareToOpenFolder(folder: Folder) {
         if (!isBlurEnabled()) {
             return
         }
+
+        val dragLayer = activityContext.dragLayer
+        val width = dragLayer.width
+        val height = dragLayer.height
+        if (width <= 0 || height <= 0) {
+            return
+        }
+        blurOwnerFolder = folder
 
         val folderIcon = folder.folderIcon
         val folderNameVisibility: Int = folderIcon.folderName.visibility
@@ -87,25 +131,31 @@ constructor(
         folderIcon.setTextVisible(false)
         folderIcon.setIconVisible(false)
 
-        val dragLayer = activityContext.dragLayer
-
         // Exclude other folders attached to the drag layer to protect against
         // a possible RenderThread crash
         val openFolders =
             (0 until dragLayer.childCount)
                 .mapNotNull { dragLayer.getChildAt(it) as? Folder }
+                .filter { it.visibility == View.VISIBLE }
         openFolders.forEach { it.visibility = View.INVISIBLE }
 
-        val canvas =
-            workspaceBlurRenderNode.beginRecording(dragLayer.getWidth(), dragLayer.getHeight())
-        dragLayer.draw(canvas)
-        workspaceBlurRenderNode.endRecording()
-        workspaceBlurRenderNode.setPosition(0, 0, dragLayer.getWidth(), dragLayer.getHeight())
-
-        openFolders.forEach { it.visibility = View.VISIBLE; it.invalidate() }
-
-        folderIcon.folderName.visibility = folderNameVisibility
-        folderIcon.setIconVisible(isIconVisible)
+        try {
+            val scaledWidth = ceil(width / workspaceBlurScale).toInt()
+            val scaledHeight = ceil(height / workspaceBlurScale).toInt()
+            val canvas = workspaceBlurRenderNode.beginRecording(scaledWidth, scaledHeight)
+            try {
+                canvas.scale(1f / workspaceBlurScale, 1f / workspaceBlurScale)
+                dragLayer.draw(canvas)
+            } finally {
+                workspaceBlurRenderNode.endRecording()
+            }
+            workspaceBlurRenderNode.setPosition(0, 0, scaledWidth, scaledHeight)
+            lastOutlineRect.setEmpty()
+        } finally {
+            openFolders.forEach { it.visibility = View.VISIBLE }
+            folderIcon.folderName.visibility = folderNameVisibility
+            folderIcon.setIconVisible(isIconVisible)
+        }
     }
 
     override fun drawFolderBlur(canvas: Canvas, pathWrapper: PathWrapper?, view: View) {
@@ -121,50 +171,59 @@ constructor(
         if (!workspaceBlurRenderNode.hasDisplayList()) {
             return
         }
-        workspaceBlurRenderNode.translationX = -view.left.toFloat()
-        workspaceBlurRenderNode.translationY = -view.top.toFloat()
+        workspaceBlurRenderNode.setTranslationX(-view.left.toFloat())
+        workspaceBlurRenderNode.setTranslationY(-view.top.toFloat())
 
+        val invScale = 1f / workspaceBlurScale
         if (path != null && !path.isEmpty) {
             workspaceBlurRenderNodeOutline.setPath(path)
-            workspaceBlurRenderNodeOutline.mPath.offset(view.left.toFloat(), view.top.toFloat())
-        } else {
+            outlineMatrix.setTranslate(view.left.toFloat(), view.top.toFloat())
+            outlineMatrix.postScale(invScale, invScale)
+            workspaceBlurRenderNodeOutline.mPath.transform(outlineMatrix)
+            workspaceBlurRenderNode.setOutline(workspaceBlurRenderNodeOutline)
+            lastOutlineRect.setEmpty()
+        } else if (
+            lastOutlineRect.left != view.left ||
+                lastOutlineRect.top != view.top ||
+                lastOutlineRect.right != view.right ||
+                lastOutlineRect.bottom != view.bottom
+        ) {
+            lastOutlineRect.set(view.left, view.top, view.right, view.bottom)
             workspaceBlurRenderNodeOutline.setRoundRect(
-                view.left,
-                view.top,
-                view.right,
-                view.bottom,
-                cornerRadius,
+                (view.left * invScale).roundToInt(),
+                (view.top * invScale).roundToInt(),
+                (view.right * invScale).roundToInt(),
+                (view.bottom * invScale).roundToInt(),
+                cornerRadius * invScale,
             )
+            workspaceBlurRenderNode.setOutline(workspaceBlurRenderNodeOutline)
         }
-        workspaceBlurRenderNode.setOutline(workspaceBlurRenderNodeOutline)
-        workspaceBlurRenderNode.setClipToOutline(true)
-
-        workspaceBlurRenderNode.setRenderEffect(
-            RenderEffect.createBlurEffect(
-                folderBlurRadius,
-                folderBlurRadius,
-                Shader.TileMode.CLAMP
-            )
-        )
         canvas.drawRenderNode(workspaceBlurRenderNode)
     }
 
     private fun drawCrossWindowBlur(canvas: Canvas, pathWrapper: PathWrapper?, view: View) {
-        val d = folderBlurDrawable ?: return
+        val d = getOrCreateFolderBlurDrawable() ?: return
 
-        d.setVisible(true, false)
+        val becameVisible = d.setVisible(true, false)
         if (pathWrapper != null) {
             pathWrapper.bounds.roundOut(bounds)
             d.bounds = bounds
             d.setCornerRadius(pathWrapper.cornerRadius)
         } else {
-            d.setBounds(0, 0, view.width, view.height)
+            bounds.set(0, 0, view.width, view.height)
+            if (becameVisible || d.bounds != bounds) {
+                d.bounds = bounds
+            }
             d.setCornerRadius(cornerRadius)
         }
         d.draw(canvas)
     }
 
-    override fun folderCloseComplete() {
+    override fun folderCloseComplete(folder: Folder) {
+        if (blurOwnerFolder != null && blurOwnerFolder !== folder) {
+            return
+        }
+        blurOwnerFolder = null
         if (workspaceBlurRenderNode.hasDisplayList()) {
             workspaceBlurRenderNode.discardDisplayList()
         }
@@ -189,26 +248,56 @@ constructor(
         return true
     }
 
-    override fun applyPopupBlurBackground(view: View) {
+    override fun applyPopupBlurBackground(view: View): Boolean {
         if (!isPopupBlurEnabled()) {
-            return
+            return false
         }
-        val surfaceDrawable = view.background ?: return
-        if (surfaceDrawable is LayerDrawable
-            && surfaceDrawable.numberOfLayers > 1
-            && surfaceDrawable.getDrawable(0) is BackgroundBlurDrawable) {
-            return
+        val surfaceDrawable = view.background ?: return false
+        if (getPopupBlurDrawable(view) != null) {
+            return true
         }
 
-        val viewRoot = activityContext.dragLayer.viewRootImpl ?: return
+        val viewRoot = activityContext.dragLayer.viewRootImpl ?: return false
         val surface = surfaceDrawable.mutate()
         val blurDrawable = viewRoot.createBackgroundBlurDrawable()?.apply {
             setBlurRadius(popupBlurRadius)
             getPopupCornerRadii(surface, view).applyTo(this)
             setVisible(true, false)
-        } ?: return
+        } ?: return false
         view.background = LayerDrawable(arrayOf(blurDrawable, surface))
         view.invalidate()
+        return true
+    }
+
+    override fun setPopupBlurAlpha(view: View, alpha: Float) {
+        val d = getPopupBlurDrawable(view) ?: return
+        val newAlpha = (alpha.coerceIn(0f, 1f) * 255).roundToInt()
+        val oldAlpha = d.alpha
+        if (oldAlpha == newAlpha) {
+            return
+        }
+        d.alpha = newAlpha
+        if (oldAlpha == 0) {
+            refreshBlurPath(d)
+            view.invalidate()
+        }
+    }
+
+    private fun refreshBlurPath(d: BackgroundBlurDrawable) {
+        tmpRect.set(d.bounds)
+        d.bounds = tmpRect
+    }
+
+    override fun releasePopupBlurBackground(view: View) {
+        getPopupBlurDrawable(view)?.setVisible(false, false)
+    }
+
+    private fun getPopupBlurDrawable(view: View): BackgroundBlurDrawable? {
+        val background = view.background as? LayerDrawable ?: return null
+        if (background.numberOfLayers < 2) {
+            return null
+        }
+        return background.getDrawable(0) as? BackgroundBlurDrawable
     }
 
     private data class PopupCornerRadii(
@@ -247,20 +336,11 @@ constructor(
         if (!isPopupBlurEnabled() || fallbackColor == Color.TRANSPARENT) {
             return fallbackColor
         }
-        return getPopupBlurSurfaceColor()
+        return popupBlurSurfaceColor
     }
 
-    private fun getPopupBlurSurfaceColor(): Int {
-        val color =
-            try {
-                context.getColor(InternalR.color.customColorSurfaceEffect0)
-            } catch (_: Exception) {
-                context.getColor(R.color.materialColorSurfaceContainer)
-            }
-        return if (Color.alpha(color) < 255) {
-            color
-        } else {
-            ColorUtils.setAlphaComponent(color, (0.60f * 255).toInt())
-        }
+    private companion object {
+        const val MAX_WORKSPACE_BLUR_DOWNSCALE = 4f
+        const val MIN_DOWNSCALED_BLUR_RADIUS = 8f
     }
 }

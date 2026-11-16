@@ -1017,7 +1017,7 @@ public class Folder extends AbstractFloatingView implements ClipPathView, DragSo
 
     private void closeComplete(boolean wasAnimated) {
         mIsOpen = false;
-        mBlurBackgroundHelper.folderCloseComplete();
+        mBlurBackgroundHelper.folderCloseComplete(this);
 
         // TODO: Clear all active animations.
         BaseDragLayer parent = (BaseDragLayer) getParent();

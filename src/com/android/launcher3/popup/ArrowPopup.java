@@ -61,6 +61,8 @@ import com.android.launcher3.util.Themes;
 import com.android.launcher3.views.ActivityContext;
 import com.android.launcher3.views.BaseDragLayer;
 
+import java.util.ArrayList;
+
 /**
  * A container for shortcuts to deep links and notifications associated with an app.
  *
@@ -135,6 +137,8 @@ public abstract class ArrowPopup<T extends ActivityContext> extends AbstractFloa
     protected final int[] mColors;
 
     private final BlurBackgroundHelper mBlurBackgroundHelper;
+    // Views whose background carries a cross-window blur layer.
+    private final ArrayList<View> mBlurredViews = new ArrayList<>();
 
     public ArrowPopup(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
@@ -339,11 +343,15 @@ public abstract class ArrowPopup<T extends ActivityContext> extends AbstractFloa
     }
 
     private void applyPopupBlurToHierarchy(View view, View parent) {
-        if (isShortcutContainer(view)) {
-            mBlurBackgroundHelper.applyPopupBlurBackground(view);
-        } else if (isShortcutOrWrapper(view)
-                && (parent == null || !isShortcutContainer(parent))) {
-            mBlurBackgroundHelper.applyPopupBlurBackground(view);
+        if (isShortcutContainer(view) || (isShortcutOrWrapper(view)
+                && (parent == null || !isShortcutContainer(parent)))) {
+            if (mBlurBackgroundHelper.applyPopupBlurBackground(view)) {
+                if (!mBlurredViews.contains(view)) {
+                    mBlurredViews.add(view);
+                }
+                // The background may have been replaced, keep the new blur layer in sync.
+                mBlurBackgroundHelper.setPopupBlurAlpha(view, getAlpha());
+            }
         }
         if (view instanceof ViewGroup viewGroup) {
             for (int i = 0; i < viewGroup.getChildCount(); i++) {
@@ -770,6 +778,23 @@ public abstract class ArrowPopup<T extends ActivityContext> extends AbstractFloa
         return super.onResolvePointerIcon(event, pointerIndex);
     }
 
+    @Override
+    public void setAlpha(float alpha) {
+        super.setAlpha(alpha);
+        if (mBlurredViews != null) {
+            for (int i = mBlurredViews.size() - 1; i >= 0; i--) {
+                mBlurBackgroundHelper.setPopupBlurAlpha(mBlurredViews.get(i), alpha);
+            }
+        }
+    }
+
+    private void releasePopupBlur() {
+        for (int i = mBlurredViews.size() - 1; i >= 0; i--) {
+            mBlurBackgroundHelper.releasePopupBlurBackground(mBlurredViews.get(i));
+        }
+        mBlurredViews.clear();
+    }
+
     /**
      * Closes the popup without animation.
      */
@@ -778,6 +803,7 @@ public abstract class ArrowPopup<T extends ActivityContext> extends AbstractFloa
             mOpenCloseAnimator.cancel();
             mOpenCloseAnimator = null;
         }
+        releasePopupBlur();
         mIsOpen = false;
         mDeferContainerRemoval = false;
         getPopupContainer().removeView(this);
