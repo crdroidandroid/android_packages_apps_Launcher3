@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<com.android.launcher3.views.DoubleShadowBubbleTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:launcher="http://schemas.android.com/apk/res-auto"
+    style="@style/BaseIcon.Workspace"
+    android:theme="@style/HomeScreenElementTheme"
+    android:id="@+id/icon"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stateListAnimator="@animator/all_apps_fastscroll_icon_anim"
+    android:paddingLeft="@dimen/dynamic_grid_cell_padding_x"
+    android:paddingRight="@dimen/dynamic_grid_cell_padding_x"
+    android:singleLine="false"
+    android:lines="2"
+    launcher:iconDisplay="all_apps"
+    launcher:centerVertically="true" />
