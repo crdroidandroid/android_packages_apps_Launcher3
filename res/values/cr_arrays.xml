@@ -68,4 +68,21 @@
         <item>install_date</item>
         <item>usage</item>
     </string-array>
+
+    <!-- Recents layout styles -->
+    <string-array name="recents_styles_entries">
+        <item>@string/recents_style_default</item>
+        <item>@string/recents_style_stock</item>
+        <item>@string/recents_style_staple</item>
+        <item>@string/recents_style_ios</item>
+        <item>@string/recents_style_oxygen</item>
+    </string-array>
+
+    <string-array name="recents_styles_values" translatable="false">
+        <item>default</item>
+        <item>stock</item>
+        <item>staple</item>
+        <item>ios</item>
+        <item>oxygen</item>
+    </string-array>
 </resources>

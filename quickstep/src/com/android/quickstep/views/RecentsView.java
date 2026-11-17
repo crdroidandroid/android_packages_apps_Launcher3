@@ -27,6 +27,7 @@ import static com.android.app.animation.Interpolators.ACCELERATE_0_75;
 import static com.android.app.animation.Interpolators.ACCELERATE_DECELERATE;
 import static com.android.app.animation.Interpolators.DECELERATE_2;
 import static com.android.app.animation.Interpolators.EMPHASIZED_DECELERATE;
+import static com.android.app.animation.Interpolators.FAST_OUT_SLOW_IN;
 import static com.android.app.animation.Interpolators.LINEAR;
 import static com.android.app.animation.Interpolators.clampToProgress;
 import static com.android.internal.jank.Cuj.CUJ_LAUNCHER_RECENTS_TO_HOME;
@@ -82,6 +83,7 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.LocusId;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BlendMode;
@@ -521,6 +523,7 @@ public abstract class RecentsView<
     @Nullable
     protected Float mLastComputedTaskEndPushOutDistance = null;
     protected boolean mEnableDrawingLiveTile = false;
+    private boolean mEnableOverlap = false;
     protected final Rect mTempRect = new Rect();
     protected final RectF mTempRectF = new RectF();
     private final PointF mTempPointF = new PointF();
@@ -531,6 +534,7 @@ public abstract class RecentsView<
 
     // The threshold at which we update the SystemUI flags when animating from the task into the app
     public static final float UPDATE_SYSUI_FLAGS_THRESHOLD = 0.85f;
+    private static final float STACK_STYLE_FULLSCREEN_PROGRESS = 0.35f;
 
     protected final CONTAINER_TYPE mContainer;
     private final float mFastFlingVelocity;
@@ -1108,9 +1112,27 @@ public abstract class RecentsView<
         return true;
     }
 
+    private String mRecentsStyle = "default";
+    private final RecentsStyle mTaskStyle = new RecentsStyle();
+
+    private final SharedPreferences.OnSharedPreferenceChangeListener mPrefListener =
+            (prefs, key) -> {
+                if (LauncherPrefs.RECENTS_STYLE.getSharedPrefKey().equals(key)) {
+                    updateOverlapState();
+                    resetTaskVisuals();
+                    requestLayout();
+                }
+            };
+
+    public void updateOverlapState() {
+        mRecentsStyle = LauncherPrefs.RECENTS_STYLE.get(getContext());
+        mEnableOverlap = !mRecentsStyle.equals("default");
+    }
+
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
+        updateOverlapState();
         updateTaskStackListenerState();
         if (!enableLowResThumbnailPreloading()) {
             mRecentsModel.getThumbnailCache().getHighResLoadingState().addCallback(this);
@@ -1131,6 +1153,8 @@ public abstract class RecentsView<
         if (mIsMultipleDesktopFrontendEnabled) {
             mDesktopVisibilityController.registerDesktopVisibilityListener(mUtils);
         }
+        LauncherPrefs.getPrefs(getContext())
+                .registerOnSharedPreferenceChangeListener(mPrefListener);
     }
 
     @Override
@@ -1159,6 +1183,8 @@ public abstract class RecentsView<
         }
         mTaskLaunchListener = null;
         mOnTaskLaunchCancelledRunnable = null;
+        LauncherPrefs.getPrefs(getContext())
+                .unregisterOnSharedPreferenceChangeListener(mPrefListener);
         reset();
     }
 
@@ -2123,6 +2149,7 @@ public abstract class RecentsView<
             simulator.taskSecondaryTranslation.value = 0;
             simulator.fullScreenProgress.value = 0;
             simulator.recentsViewScale.value = 1;
+            simulator.setRecentsStyleTransform(1f, 0f);
         });
         // Reapply runningTask related attributes as they might have been reset by
         // resetViewTransforms().
@@ -2130,6 +2157,7 @@ public abstract class RecentsView<
         applyAttachAlpha();
 
         updateCurveProperties();
+        doScrollScale();
         // Update the set of visible task's data
         loadVisibleTaskData();
         setTaskModalness(0);
@@ -2148,6 +2176,10 @@ public abstract class RecentsView<
                 mapToRange(fullscreenProgress, 0, 0.1f, 1f, 0f, LINEAR));
         mMemInfoView.setAlpha(MemInfoView.ALPHA_FS_PROGRESS,
                 mapToRange(fullscreenProgress, 0, 0.1f, 1f, 0f, LINEAR));
+
+        if (mEnableOverlap) {
+            updatePageOffsets();
+        }
     }
 
     private void updateTaskStackListenerState() {
@@ -4034,6 +4066,10 @@ public abstract class RecentsView<
             }
         }
         updateCurveProperties();
+        doScrollScale();
+        if (mEnableOverlap && mEnableDrawingLiveTile && mRemoteTargetHandles != null) {
+            redrawLiveTile();
+        }
     }
 
     /**
@@ -5780,6 +5816,106 @@ public abstract class RecentsView<
     protected void onScrollChanged(int l, int t, int oldl, int oldt) {
         super.onScrollChanged(l, t, oldl, oldt);
         dispatchScrollChanged();
+        doScrollScale();
+    }
+
+    private boolean isCustomRecentsStyleActive() {
+        return mEnableOverlap && !showAsGrid()
+                && !mContainer.getDeviceProfile().getDeviceProperties().isLargeScreen();
+    }
+
+    public boolean isStackRecentsStyleActive() {
+        return isCustomRecentsStyleActive() && (mRecentsStyle.equals("staple")
+                || mRecentsStyle.equals("ios") || mRecentsStyle.equals("oxygen"));
+    }
+
+    private float getStackStyleOverlapFactor() {
+        if (!isCustomRecentsStyleActive()
+                || mFullscreenProgress >= STACK_STYLE_FULLSCREEN_PROGRESS) {
+            return 0f;
+        }
+        float stackProgress = Utilities.boundToRange(
+                1f - (mFullscreenProgress / STACK_STYLE_FULLSCREEN_PROGRESS), 0f, 1f);
+        return FAST_OUT_SLOW_IN.getInterpolation(stackProgress);
+    }
+
+    private void doScrollScale() {
+        if (!mEnableOverlap) {
+            return;
+        }
+        for (int i = 0; i < getChildCount(); i++) {
+            if (getChildAt(i) instanceof TaskView taskView) {
+                updateTaskRecentsStyle(taskView, i);
+            }
+        }
+    }
+
+    void updateTaskRecentsStyle(TaskView taskView) {
+        if (mEnableOverlap) {
+            updateTaskRecentsStyle(taskView, indexOfChild(taskView));
+        }
+    }
+
+    private void updateTaskRecentsStyle(TaskView taskView, int index) {
+        if (!isCustomRecentsStyleActive() && !taskView.isRecentsStyleApplied()) {
+            return;
+        }
+        RecentsPagedOrientationHandler orientation = getPagedOrientationHandler();
+        float progress = getStackStyleOverlapFactor();
+        boolean hasScroll = isPageScrollsInitialized()
+                && index >= 0 && index < mPageScrolls.length;
+        float distance = hasScroll
+                ? mPageScrolls[index] - orientation.getPrimaryScroll(this)
+                        + taskView.getPrimaryDismissTranslationProperty().get(taskView)
+                : 0f;
+        mTaskStyle.update(mRecentsStyle, distance, orientation.getPrimarySize(taskView),
+                mPageSpacing, hasScroll ? progress : 0f, mIsRtl);
+        taskView.setRecentsScale(mTaskStyle.scale);
+        taskView.setRecentsTranslation(mTaskStyle.translation);
+        taskView.setTranslationZ(mTaskStyle.elevation);
+        taskView.setRecentsDim(mTaskStyle.dim);
+        updateLiveTileRecentsStyle(taskView);
+    }
+
+    public void updateRecentsStyle(RemoteTargetHandle handle) {
+        TaskViewSimulator simulator = handle.getTaskViewSimulator();
+        simulator.setRecentsStyleTransform(1f, 0f);
+        if (!isCustomRecentsStyleActive()) {
+            return;
+        }
+        RemoteAnimationTargets targets = handle.getTransformParams().getTargetSet();
+        if (targets == null) {
+            return;
+        }
+        for (TaskView taskView : getTaskViews()) {
+            for (int taskId : taskView.getTaskIds()) {
+                if (targets.findTask(taskId) != null) {
+                    updateTaskRecentsStyle(taskView);
+                    simulator.setRecentsStyleTransform(
+                            taskView.getRecentsScale(), taskView.getRecentsPrimaryTranslation());
+                    return;
+                }
+            }
+        }
+    }
+
+    private void updateLiveTileRecentsStyle(TaskView taskView) {
+        if (mRemoteTargetHandles == null) {
+            return;
+        }
+        for (RemoteTargetHandle handle : mRemoteTargetHandles) {
+            RemoteAnimationTargets targets = handle.getTransformParams().getTargetSet();
+            if (targets == null) {
+                continue;
+            }
+            for (int taskId : taskView.getTaskIds()) {
+                if (targets.findTask(taskId) != null) {
+                    handle.getTaskViewSimulator().setRecentsStyleTransform(
+                            taskView.getRecentsScale(), taskView.getRecentsPrimaryTranslation());
+                    break;
+                }
+            }
+        }
     }
 
     /**

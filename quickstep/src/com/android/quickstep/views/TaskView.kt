@@ -26,6 +26,7 @@ import android.app.WindowConfiguration.WINDOWING_MODE_FULLSCREEN
 import android.content.Context
 import android.content.res.Configuration
 import android.graphics.Canvas
+import android.graphics.Color
 import android.graphics.PointF
 import android.graphics.Rect
 import android.graphics.drawable.Drawable
@@ -400,16 +401,59 @@ constructor(
             applyScale()
         }
 
+    var recentsScale = 1f
+        set(value) {
+            if (field == value) return
+            field = value
+            applyScale()
+        }
+
+    private var recentsTranslationX = 0f
+    private var recentsTranslationY = 0f
+    private var recentsDimAmount = 0f
+    private var colorTintAmount = 0f
+    private var colorTintColor = 0
+
+    val recentsPrimaryTranslation: Float
+        get() = pagedOrientationHandler.getPrimaryValue(recentsTranslationX, recentsTranslationY)
+
+    /** Whether any recents layout style transform (scale/translation/dim/elevation) is set. */
+    val isRecentsStyleApplied: Boolean
+        get() =
+            recentsScale != 1f ||
+                recentsTranslationX != 0f ||
+                recentsTranslationY != 0f ||
+                recentsDimAmount != 0f ||
+                translationZ != 0f
+
+    fun setRecentsTranslation(translation: Float) {
+        val x = pagedOrientationHandler.getPrimaryValue(translation, 0f)
+        val y = pagedOrientationHandler.getPrimaryValue(0f, translation)
+        if (recentsTranslationX == x && recentsTranslationY == y) return
+        recentsTranslationX = x
+        recentsTranslationY = y
+        applyTranslationX()
+        applyTranslationY()
+    }
+
+    fun setRecentsDim(amount: Float) {
+        if (recentsDimAmount == amount) return
+        recentsDimAmount = amount
+        applyColorTint()
+    }
+
     private var dismissTranslationX = 0f
         set(value) {
             field = value
             applyTranslationX()
+            recentsView?.updateTaskRecentsStyle(this)
         }
 
     private var dismissTranslationY = 0f
         set(value) {
             field = value
             applyTranslationY()
+            recentsView?.updateTaskRecentsStyle(this)
         }
 
     private var taskOffsetTranslationX = 0f
@@ -1790,7 +1834,15 @@ constructor(
 
     /** Set a color tint on the snapshot and supporting views. */
     open fun setColorTint(amount: Float, tintColor: Int) {
+        colorTintAmount = amount
+        colorTintColor = tintColor
+        applyColorTint()
+    }
+
+    private fun applyColorTint() {
         // RecentsView's COLOR_TINT animates between 0 and 0.5f, we want to hide the app chip menu.
+        val amount = maxOf(colorTintAmount, recentsDimAmount)
+        val tintColor = if (recentsDimAmount > colorTintAmount) Color.BLACK else colorTintColor
         val colorTintAlpha = Utilities.mapToRange(amount, 0f, 0.5f, 1f, 0f, Interpolators.LINEAR)
         getTaskIcons().forEach { (icon, _) -> icon.colorTintAlpha = colorTintAlpha }
         taskContainers.forEach {
@@ -1837,6 +1889,7 @@ constructor(
         val scale =
             persistentScale *
                 dismissScale *
+                recentsScale *
                 animateToIconScale *
                 Utilities.mapRange(modalness, 1f, modalScale)
         scaleX = scale
@@ -1847,6 +1900,7 @@ constructor(
     private fun applyTranslationX() {
         translationX =
             dismissTranslationX +
+                recentsTranslationX +
                 taskOffsetTranslationX +
                 taskResistanceTranslationX +
                 splitSelectTranslationX +
@@ -1858,6 +1912,7 @@ constructor(
     private fun applyTranslationY() {
         translationY =
             dismissTranslationY +
+                recentsTranslationY +
                 taskOffsetTranslationY +
                 taskResistanceTranslationY +
                 splitSelectTranslationY +
@@ -1938,6 +1993,9 @@ constructor(
             splitSelectTranslationY = 0f
         }
         dismissScale = 1f
+        recentsScale = 1f
+        setRecentsTranslation(0f)
+        setRecentsDim(0f)
         translationZ = 0f
         setIconVisibleForGesture(true)
         settledProgressDismiss = 1f
