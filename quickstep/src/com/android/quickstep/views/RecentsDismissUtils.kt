@@ -708,8 +708,6 @@ constructor(
         if (taskViewOffsetPairs.isEmpty()) return previousSpring
         var lastTaskViewSpring = previousSpring
         var previousColumnDriverSpring = previousSpring
-        var previousColumnDriverTarget = dismissedTaskGap
-        var lastTaskViewTarget = dismissedTaskGap
         var lastColumnOffset = taskViewOffsetPairs.first().second
         taskViewOffsetPairs
             .filter { (taskView, _) ->
@@ -727,8 +725,6 @@ constructor(
                             (if (recentsView.isRtl) -recentsView.mLastComputedTaskSize.right
                             else recentsView.mLastComputedTaskSize.right)
                     } else 0f
-                val taskReflowTarget =
-                    recentsView.getStackDismissReflowTarget(taskView, dismissedTaskGap)
                 val taskViewSpringAnimation =
                     SpringAnimation(
                             taskView,
@@ -736,7 +732,7 @@ constructor(
                                 taskView.primaryDismissTranslationProperty
                             ),
                         )
-                        .setSpring(createExpressiveGridReflowSpringForce(taskReflowTarget))
+                        .setSpring(createExpressiveGridReflowSpringForce(dismissedTaskGap))
                         .setStartValue(startValue)
                 // Update live tile on spring animation.
                 if (taskView.isRunningTask && recentsView.enableDrawingLiveTile) {
@@ -752,39 +748,18 @@ constructor(
                 // should both be pulled by the previous spring at the same time.
                 if (column != lastColumnOffset) {
                     previousColumnDriverSpring = lastTaskViewSpring
-                    previousColumnDriverTarget = lastTaskViewTarget
                     lastColumnOffset = column
                 }
-                val driverSpringForTask = previousColumnDriverSpring
-                val driverTargetForTask = previousColumnDriverTarget
-                if (recentsView.isStackRecentsStyleActive) {
-                    // In a stack layout every card travels a different distance, so the normalised
-                    // driver value has to be rescaled to this card's own reflow target.
-                    driverSpringForTask.addUpdateListener { _, value, _ ->
-                        taskViewSpringAnimation.animateToFinalPosition(
-                            getStackReflowSpringValue(value, driverTargetForTask, taskReflowTarget)
-                        )
-                    }
-                } else {
-                    driverSpringForTask.addUpdateListener { _, value, _ ->
-                        taskViewSpringAnimation.animateToFinalPosition(value)
-                    }
+                previousColumnDriverSpring.addUpdateListener { _, value, _ ->
+                    taskViewSpringAnimation.animateToFinalPosition(value)
                 }
                 lastTaskViewSpring = taskViewSpringAnimation
-                lastTaskViewTarget = taskReflowTarget
-                reflowSpringSet.trackSpring(taskViewSpringAnimation, taskReflowTarget)
+                reflowSpringSet.trackSpring(taskViewSpringAnimation, dismissedTaskGap)
                 recentsView.mTaskViewsDismissPrimaryTranslations[taskView] =
-                    taskReflowTarget.toInt()
+                    dismissedTaskGap.toInt()
             }
         return lastTaskViewSpring
     }
-
-    /** Maps the shared driver spring to the individual destination of a stacked card. */
-    private fun getStackReflowSpringValue(
-        value: Float,
-        driverTarget: Float,
-        taskReflowTarget: Float,
-    ): Float = if (driverTarget == 0f) taskReflowTarget else value / driverTarget * taskReflowTarget
 
     /** Animates non-reflowing tasks when splitting while current page is a desktop tile. */
     private fun createSplitWithCurrentPageFadeOutReflowSpringSet(
@@ -1309,6 +1284,7 @@ constructor(
         return SpringForce(finalPosition)
             .setDampingRatio(
                 if (recentsView.isStackRecentsStyleActive) {
+                    // No overshoot for stack layouts, the stack would snap at the end.
                     STACK_STYLE_REFLOW_DAMPING_RATIO
                 } else {
                     resourceProvider.getFloat(R.dimen.expressive_dismiss_task_trans_x_damping_ratio)
