@@ -16,6 +16,7 @@
 package com.android.launcher3.icons;
 
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.text.TextUtils;
@@ -49,6 +50,7 @@ public class LauncherIconProvider extends IconProvider {
     private static final Map<String, ThemeData> DISABLED_MAP = Collections.emptyMap();
 
     private Map<String, ThemeData> mThemedIconMap;
+    private AssetManager mThemedIconMapAssets;
 
     protected final ThemeManager mThemeManager;
 
@@ -75,11 +77,14 @@ public class LauncherIconProvider extends IconProvider {
     }
 
     private Map<String, ThemeData> getThemedIconMap() {
-        if (mThemedIconMap != null) {
-            return mThemedIconMap;
-        }
-        ArrayMap<String, ThemeData> map = new ArrayMap<>();
         Resources res = mContext.getResources();
+        Map<String, ThemeData> cached = mThemedIconMap;
+        if (cached != null
+                && (cached == DISABLED_MAP || mThemedIconMapAssets == res.getAssets())) {
+            return cached;
+        }
+        AssetManager assets = res.getAssets();
+        ArrayMap<String, ThemeData> map = new ArrayMap<>();
         try (XmlResourceParser parser = res.getXml(R.xml.grayscale_icon_map)) {
             final int depth = parser.getDepth();
             int type;
@@ -102,7 +107,8 @@ public class LauncherIconProvider extends IconProvider {
         } catch (Exception e) {
             Log.e(TAG, "Unable to parse icon map", e);
         }
+        mThemedIconMapAssets = assets;
         mThemedIconMap = map;
-        return mThemedIconMap;
+        return map;
     }
 }
