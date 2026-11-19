@@ -20,38 +20,68 @@ package com.android.quickstep.views;
  * for the custom recents layout styles (Kami, iOS, OxygenOS).
  */
 final class RecentsStyle {
+    static final int STYLE_DEFAULT = 0;
+    static final int STYLE_SCALE = 1;
+    static final int STYLE_KAMI = 2;
+    static final int STYLE_IOS = 3;
+    static final int STYLE_OXYGEN = 4;
+
+    /** Maps the {@code pref_recents_style} value to a style id, unknown values are default. */
+    static int fromPref(String value) {
+        if (value == null) {
+            return STYLE_DEFAULT;
+        }
+        switch (value) {
+            case "stock":
+                return STYLE_SCALE;
+            case "staple":
+                return STYLE_KAMI;
+            case "ios":
+                return STYLE_IOS;
+            case "oxygen":
+                return STYLE_OXYGEN;
+            default:
+                return STYLE_DEFAULT;
+        }
+    }
+
+    /** Whether the style stacks cards on top of each other (as opposed to only scaling them). */
+    static boolean isStackStyle(int style) {
+        return style == STYLE_KAMI || style == STYLE_IOS || style == STYLE_OXYGEN;
+    }
+
     float scale = 1f;
     float translation;
     float elevation;
     float dim;
 
-    void update(String style, float distance, float taskSize, float pageSpacing,
+    void update(int style, float distance, float taskSize, float pageSpacing,
             float progress, boolean recentsRtl) {
         scale = 1f;
         translation = 0f;
         elevation = 0f;
         dim = 0f;
-        if (taskSize <= 0f || progress <= 0f || "default".equals(style)) {
+        if (taskSize <= 0f || progress <= 0f || style == STYLE_DEFAULT) {
             return;
         }
         progress = Math.min(1f, progress);
         float dist = recentsRtl ? distance : -distance;
         float absDist = Math.abs(dist);
         float scaleProgress = Math.min(1f, absDist / Math.max(1f, taskSize + pageSpacing));
-        if ("stock".equals(style)) {
+        if (style == STYLE_SCALE) {
             scale = 1f - 0.15f * scaleProgress * progress;
             return;
         }
-        float minScale = "oxygen".equals(style) ? 0.92f : 0.85f;
+        float minScale = style == STYLE_OXYGEN ? 0.92f : 0.85f;
         float targetScale = 1f - (1f - minScale) * scaleProgress;
 
-        if ("staple".equals(style)) {
+        if (style == STYLE_KAMI) {
             float excess = Math.max(0f, absDist - taskSize * 0.60f);
             float squish = Math.min(excess, (float) (Math.log10(1f + excess) * 12f));
             translation = -Math.signum(dist) * (excess - squish);
             elevation = -(excess / taskSize) * 20f;
             targetScale *= Math.max(0.75f, 1f - excess / (taskSize * 2.5f) * 0.15f);
-        } else if ("ios".equals(style) && dist < 0f) {
+        } else if (style == STYLE_IOS && dist < 0f) {
             float excess = Math.max(0f, absDist - taskSize * 0.1f);
             float squish = Math.min(excess, (float) (Math.log10(1f + excess) * 45f));
             translation = excess - squish;
@@ -59,7 +89,7 @@ final class RecentsStyle {
             float depth = Math.min(1f, excess / (taskSize * 1.5f));
             dim = 0.3f * depth;
             targetScale *= 1f - depth * 0.15f;
-        } else if ("oxygen".equals(style) && dist < 0f) {
+        } else if (style == STYLE_OXYGEN && dist < 0f) {
             float bend = taskSize * 0.02f;
             float visualDistance = 2f * absDist
                     / ((float) Math.sqrt(1f + absDist / bend) + 1f);

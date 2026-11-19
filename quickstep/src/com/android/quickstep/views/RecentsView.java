@@ -1112,8 +1112,10 @@ public abstract class RecentsView<
         return true;
     }
 
-    private String mRecentsStyle = "default";
+    private int mRecentsStyle = RecentsStyle.STYLE_DEFAULT;
     private final RecentsStyle mTaskStyle = new RecentsStyle();
+    // Overlap factor the task styles were last computed with, NaN forces the next update.
+    private float mLastStyleOverlapFactor = Float.NaN;
 
     private final SharedPreferences.OnSharedPreferenceChangeListener mPrefListener =
             (prefs, key) -> {
@@ -1125,8 +1127,9 @@ public abstract class RecentsView<
             };
 
     public void updateOverlapState() {
-        mRecentsStyle = LauncherPrefs.RECENTS_STYLE.get(getContext());
-        mEnableOverlap = !mRecentsStyle.equals("default");
+        mRecentsStyle = RecentsStyle.fromPref(LauncherPrefs.RECENTS_STYLE.get(getContext()));
+        mEnableOverlap = mRecentsStyle != RecentsStyle.STYLE_DEFAULT;
+        mLastStyleOverlapFactor = Float.NaN;
     }
 
     @Override
@@ -2177,8 +2180,14 @@ public abstract class RecentsView<
         mMemInfoView.setAlpha(MemInfoView.ALPHA_FS_PROGRESS,
                 mapToRange(fullscreenProgress, 0, 0.1f, 1f, 0f, LINEAR));
 
-        if (mEnableOverlap) {
-            updatePageOffsets();
+        // Only the style transform depends on the fullscreen progress, so there is no need to
+        // run a full updatePageOffsets() on every frame. Once the style has faded out (factor
+        // settled at 0) there is nothing left to update for the rest of the animation.
+        if (mEnableOverlap && getStackStyleOverlapFactor() != mLastStyleOverlapFactor) {
+            doScrollScale();
+            if (mEnableDrawingLiveTile && mRemoteTargetHandles != null) {
+                redrawLiveTile();
+            }
         }
     }
 
@@ -4067,7 +4076,9 @@ public abstract class RecentsView<
         }
         updateCurveProperties();
         doScrollScale();
-        if (mEnableOverlap && mEnableDrawingLiveTile && mRemoteTargetHandles != null) {
+        // The live tile was redrawn above before its style transform was updated.
+        if (mEnableDrawingLiveTile && mRemoteTargetHandles != null
+                && isCustomRecentsStyleActive()) {
             redrawLiveTile();
         }
     }
@@ -5825,13 +5836,15 @@ public abstract class RecentsView<
     }
 
     public boolean isStackRecentsStyleActive() {
-        return isCustomRecentsStyleActive() && (mRecentsStyle.equals("staple")
-                || mRecentsStyle.equals("ios") || mRecentsStyle.equals("oxygen"));
+        return RecentsStyle.isStackStyle(mRecentsStyle) && isCustomRecentsStyleActive();
     }
 
     private float getStackStyleOverlapFactor() {
-        if (!isCustomRecentsStyleActive()
-                || mFullscreenProgress >= STACK_STYLE_FULLSCREEN_PROGRESS) {
+        return getStackStyleOverlapFactor(isCustomRecentsStyleActive());
+    }
+
+    private float getStackStyleOverlapFactor(boolean styleActive) {
+        if (!styleActive || mFullscreenProgress >= STACK_STYLE_FULLSCREEN_PROGRESS) {
             return 0f;
         }
         float stackProgress = Utilities.boundToRange(
@@ -5843,29 +5856,37 @@ public abstract class RecentsView<
         if (!mEnableOverlap) {
             return;
         }
-        for (int i = 0; i < getChildCount(); i++) {
+        // Resolve everything that is the same for all cards once per pass, this runs per frame.
+        boolean styleActive = isCustomRecentsStyleActive();
+        float progress = getStackStyleOverlapFactor(styleActive);
+        int primaryScroll = getPagedOrientationHandler().getPrimaryScroll(this);
+        mLastStyleOverlapFactor = progress;
+        for (int i = getChildCount() - 1; i >= 0; i--) {
             if (getChildAt(i) instanceof TaskView taskView) {
-                updateTaskRecentsStyle(taskView, i);
+                updateTaskRecentsStyle(taskView, i, styleActive, progress, primaryScroll);
             }
         }
     }
 
     void updateTaskRecentsStyle(TaskView taskView) {
         if (mEnableOverlap) {
-            updateTaskRecentsStyle(taskView, indexOfChild(taskView));
+            boolean styleActive = isCustomRecentsStyleActive();
+            updateTaskRecentsStyle(taskView, indexOfChild(taskView), styleActive,
+                    getStackStyleOverlapFactor(styleActive),
+                    getPagedOrientationHandler().getPrimaryScroll(this));
         }
     }
 
-    private void updateTaskRecentsStyle(TaskView taskView, int index) {
-        if (!isCustomRecentsStyleActive() && !taskView.isRecentsStyleApplied()) {
+    private void updateTaskRecentsStyle(TaskView taskView, int index, boolean styleActive,
+            float progress, int primaryScroll) {
+        if (!styleActive && !taskView.isRecentsStyleApplied()) {
             return;
         }
         RecentsPagedOrientationHandler orientation = getPagedOrientationHandler();
-        float progress = getStackStyleOverlapFactor();
         boolean hasScroll = isPageScrollsInitialized()
                 && index >= 0 && index < mPageScrolls.length;
         float distance = hasScroll
-                ? mPageScrolls[index] - orientation.getPrimaryScroll(this)
+                ? mPageScrolls[index] - primaryScroll
                         + taskView.getPrimaryDismissTranslationProperty().get(taskView)
                 : 0f;
         mTaskStyle.update(mRecentsStyle, distance, orientation.getPrimarySize(taskView),
@@ -5874,29 +5895,51 @@ public abstract class RecentsView<
         taskView.setRecentsTranslation(mTaskStyle.translation);
         taskView.setTranslationZ(mTaskStyle.elevation);
         taskView.setRecentsDim(mTaskStyle.dim);
-        updateLiveTileRecentsStyle(taskView);
+        // Only the running task can be backed by a live tile, skip the target lookups otherwise.
+        if (taskView.isRunningTask()) {
+            updateLiveTileRecentsStyle(taskView);
+        }
     }
 
     public void updateRecentsStyle(RemoteTargetHandle handle) {
         TaskViewSimulator simulator = handle.getTaskViewSimulator();
         simulator.setRecentsStyleTransform(1f, 0f);
-        if (!isCustomRecentsStyleActive()) {
+        if (!mEnableOverlap || !isCustomRecentsStyleActive()) {
             return;
         }
         RemoteAnimationTargets targets = handle.getTransformParams().getTargetSet();
         if (targets == null) {
             return;
         }
-        for (TaskView taskView : getTaskViews()) {
-            for (int taskId : taskView.getTaskIds()) {
-                if (targets.findTask(taskId) != null) {
-                    updateTaskRecentsStyle(taskView);
-                    simulator.setRecentsStyleTransform(
-                            taskView.getRecentsScale(), taskView.getRecentsPrimaryTranslation());
-                    return;
-                }
+        // This runs on every frame of the gesture: try the running task first, it is the one
+        // backing the animation targets in practically all cases.
+        TaskView runningTaskView = getRunningTaskView();
+        if (runningTaskView != null && matchesTargets(runningTaskView, targets)) {
+            applyRecentsStyle(runningTaskView, simulator);
+            return;
+        }
+        for (int i = getChildCount() - 1; i >= 0; i--) {
+            if (getChildAt(i) instanceof TaskView taskView && taskView != runningTaskView
+                    && matchesTargets(taskView, targets)) {
+                applyRecentsStyle(taskView, simulator);
+                return;
             }
         }
+    }
+
+    private void applyRecentsStyle(TaskView taskView, TaskViewSimulator simulator) {
+        updateTaskRecentsStyle(taskView);
+        simulator.setRecentsStyleTransform(
+                taskView.getRecentsScale(), taskView.getRecentsPrimaryTranslation());
+    }
+
+    private static boolean matchesTargets(TaskView taskView, RemoteAnimationTargets targets) {
+        for (int taskId : taskView.getTaskIds()) {
+            if (targets.findTask(taskId) != null) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void updateLiveTileRecentsStyle(TaskView taskView) {
@@ -5905,15 +5948,9 @@ public abstract class RecentsView<
         }
         for (RemoteTargetHandle handle : mRemoteTargetHandles) {
             RemoteAnimationTargets targets = handle.getTransformParams().getTargetSet();
-            if (targets == null) {
-                continue;
-            }
-            for (int taskId : taskView.getTaskIds()) {
-                if (targets.findTask(taskId) != null) {
-                    handle.getTaskViewSimulator().setRecentsStyleTransform(
-                            taskView.getRecentsScale(), taskView.getRecentsPrimaryTranslation());
-                    break;
-                }
+            if (targets != null && matchesTargets(taskView, targets)) {
+                handle.getTaskViewSimulator().setRecentsStyleTransform(
+                        taskView.getRecentsScale(), taskView.getRecentsPrimaryTranslation());
             }
         }
     }
