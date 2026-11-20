@@ -417,6 +417,12 @@
     <string name="pref_app_drawer_custom_color_dark_title">어두운 모드 색</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">스크롤 진동</string>
+    <string name="recents_style_title">최근 앱 레이아웃 스타일</string>
+    <string name="recents_style_default">기본값</string>
+    <string name="recents_style_stock">스케일 효과</string>
+    <string name="recents_style_staple">Kami 스타일</string>
+    <string name="recents_style_ios">iOS 스타일</string>
+    <string name="recents_style_oxygen">OxygenOS 스타일</string>
     <!-- Lock -->
     <string name="action_lock">앱 잠금 / 잠금 해제</string>
     <string name="unlock_app">최근 앱 잠금 해제됨</string>
