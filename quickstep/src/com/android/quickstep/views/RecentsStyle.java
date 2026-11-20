@@ -50,6 +50,12 @@ final class RecentsStyle {
         return style == STYLE_KAMI || style == STYLE_IOS || style == STYLE_OXYGEN;
     }
 
+    // Length (as a fraction of the task size) over which a stacked card still visibly travels
+    // once it starts getting pulled into the stack. Sized to match the old pixel-based log curves
+    // (log10(1 + x) * 12 / * 45) on a typical phone, but independent of the display density.
+    private static final float KAMI_SQUISH = 0.012f;
+    private static final float IOS_SQUISH = 0.065f;
+
     float scale = 1f;
     float translation;
     float elevation;
@@ -67,7 +73,9 @@ final class RecentsStyle {
         progress = Math.min(1f, progress);
         float dist = recentsRtl ? distance : -distance;
         float absDist = Math.abs(dist);
-        float scaleProgress = Math.min(1f, absDist / Math.max(1f, taskSize + pageSpacing));
+        // Eased so the scale starts and stops changing gradually, both at the centre and at the
+        // rest position of the neighbouring cards (one page away).
+        float scaleProgress = smoothstep(absDist / Math.max(1f, taskSize + pageSpacing));
         if (style == STYLE_SCALE) {
             scale = 1f - 0.15f * scaleProgress * progress;
             return;
@@ -77,16 +85,14 @@ final class RecentsStyle {
 
         if (style == STYLE_KAMI) {
             float excess = Math.max(0f, absDist - taskSize * 0.60f);
-            float squish = Math.min(excess, (float) (Math.log10(1f + excess) * 12f));
-            translation = -Math.signum(dist) * (excess - squish);
+            translation = -Math.signum(dist) * stackPull(excess, taskSize * KAMI_SQUISH);
             elevation = -(excess / taskSize) * 20f;
-            targetScale *= Math.max(0.75f, 1f - excess / (taskSize * 2.5f) * 0.15f);
+            targetScale *= 1f - 0.15f * smoothstep(excess / (taskSize * 2.5f));
         } else if (style == STYLE_IOS && dist < 0f) {
             float excess = Math.max(0f, absDist - taskSize * 0.1f);
-            float squish = Math.min(excess, (float) (Math.log10(1f + excess) * 45f));
-            translation = excess - squish;
+            translation = stackPull(excess, taskSize * IOS_SQUISH);
             elevation = -(excess / taskSize) * 24f;
-            float depth = Math.min(1f, excess / (taskSize * 1.5f));
+            float depth = smoothstep(excess / (taskSize * 1.5f));
             dim = 0.3f * depth;
             targetScale *= 1f - depth * 0.15f;
         } else if (style == STYLE_OXYGEN && dist < 0f) {
@@ -95,12 +101,37 @@ final class RecentsStyle {
                     / ((float) Math.sqrt(1f + absDist / bend) + 1f);
             translation = absDist - visualDistance;
             elevation = -(absDist / taskSize) * 12f;
-            targetScale *= Math.max(0.85f, 1f - absDist / (taskSize * 3f) * 0.1f);
+            targetScale *= 1f - 0.1f * smoothstep(absDist / (taskSize * 3f));
         }
 
         scale = 1f + (targetScale - 1f) * progress;
         translation *= (recentsRtl ? 1f : -1f) * progress;
         elevation *= progress;
         dim *= progress;
+    }
+
+    /**
+     * How far a card that is {@code excess} past the stack threshold is pulled back into the stack.
+     *
+     * <p>The card keeps {@code squish * ln(1 + excess / squish)} of its travel, which starts at
+     * full speed and slows down smoothly, so the pull starts at zero speed instead of kicking in
+     * abruptly the way {@code min(excess, log(...))} did.
+     */
+    private static float stackPull(float excess, float squish) {
+        if (excess <= 0f || squish <= 0f) {
+            return 0f;
+        }
+        return excess - squish * (float) Math.log1p(excess / squish);
+    }
+
+    /** Clamps {@code t} to [0, 1] and eases it in and out, with zero slope at both ends. */
+    private static float smoothstep(float t) {
+        if (t <= 0f) {
+            return 0f;
+        }
+        if (t >= 1f) {
+            return 1f;
+        }
+        return t * t * (3f - 2f * t);
     }
 }
