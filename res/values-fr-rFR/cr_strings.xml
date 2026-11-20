@@ -417,6 +417,12 @@
     <string name="pref_app_drawer_custom_color_dark_title">Couleur du mode foncé</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Vibration lors du défilement</string>
+    <string name="recents_style_title">Style de mise en page des applications récentes</string>
+    <string name="recents_style_default">Par défaut</string>
+    <string name="recents_style_stock">Effet d\'écailles</string>
+    <string name="recents_style_staple">Style Kami</string>
+    <string name="recents_style_ios">Style iOS</string>
+    <string name="recents_style_oxygen">Style OxygenOS</string>
     <!-- Lock -->
     <string name="action_lock">Verrouiller/Déverrouiller l\'application</string>
     <string name="unlock_app">Application déverrouillée dans les applications récentes</string>
