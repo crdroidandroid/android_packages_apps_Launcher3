@@ -417,6 +417,12 @@
     <string name="pref_app_drawer_custom_color_dark_title">Cor do modo escuro</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Vibração ao rolar</string>
+    <string name="recents_style_title">Estilo de layout dos recentes</string>
+    <string name="recents_style_default">Padrão</string>
+    <string name="recents_style_stock">Efeito de escala</string>
+    <string name="recents_style_staple">Estilo Kami</string>
+    <string name="recents_style_ios">Estilo iOS</string>
+    <string name="recents_style_oxygen">Estilo OxigenOS</string>
     <!-- Lock -->
     <string name="action_lock">Bloquear/Desbloquear aplicação</string>
     <string name="unlock_app">Aplicação desbloqueada em recentes</string>
