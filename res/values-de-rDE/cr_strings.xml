@@ -417,6 +417,12 @@
     <string name="pref_app_drawer_custom_color_dark_title">Farbe bei dunklem Design</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Scroll-Vibration</string>
+    <string name="recents_style_title">Stil des Anwendungsverlaufslayouts</string>
+    <string name="recents_style_default">Standard</string>
+    <string name="recents_style_stock">Skalierungseffekt</string>
+    <string name="recents_style_staple">Kami-Stil</string>
+    <string name="recents_style_ios">iOS-Stil</string>
+    <string name="recents_style_oxygen">OxygenOS-Stil</string>
     <!-- Lock -->
     <string name="action_lock">App sperren/entsperren</string>
     <string name="unlock_app">Entsperrte App im Anwendungsverlauf</string>
