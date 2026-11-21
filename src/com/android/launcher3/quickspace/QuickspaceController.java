@@ -26,6 +26,7 @@ import android.media.MediaMetadata;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.android.internal.util.crdroid.OmniJawsClient;
@@ -70,6 +71,8 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
     private String mSeraphixText;
     private String mSeraphixCondition;
     private Bitmap mSeraphixBitmap;
+
+    private SmartspaceWeatherSource mSmartspace;
 
     private final MediaSessionManagerHelper mMediaSessionHelper;
 
@@ -172,6 +175,8 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
         }
         if (mProvider == WeatherProvider.OMNIJAWS) {
             addOmniJawsIfEnabled();
+        } else if (mProvider == WeatherProvider.SERAPHIX) {
+            startSmartspace();
         }
 
         if (changed) notifyListeners();
@@ -206,7 +211,29 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
         return false;
     }
 
+    private void startSmartspace() {
+        if (mSmartspace == null) {
+            mSmartspace = new SmartspaceWeatherSource(mContext, this::notifyListeners);
+        }
+        if (!mSmartspace.start()) {
+            mSmartspace = null;
+        }
+    }
+
+    private void stopSmartspace() {
+        if (mSmartspace != null) {
+            mSmartspace.stop();
+            mSmartspace = null;
+        }
+    }
+
+    private boolean hasSmartspaceWeather() {
+        return mProvider == WeatherProvider.SERAPHIX
+                && mSmartspace != null && mSmartspace.hasWeather();
+    }
+
     private void unbindSeraphix() {
+        stopSmartspace();
         try {
             if (mSeraphix != null) {
                 mSeraphix.setOnDataUpdated(null);
@@ -299,7 +326,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
     public boolean isWeatherAvailable() {
         if (!LauncherPrefs.SHOW_QUICKSPACE_WEATHER.get(mContext)) return false;
         if (mProvider == WeatherProvider.SERAPHIX) {
-            return !TextUtils.isEmpty(mSeraphixText);
+            return hasSmartspaceWeather() || !TextUtils.isEmpty(mSeraphixText);
         } else {
             return mWeatherClient != null && mWeatherClient.isOmniJawsEnabled(mContext);
         }
@@ -313,11 +340,15 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
         return mWeatherClient != null ? mWeatherClient : OmniJawsClient.get();
     }
 
-    /** Fires the weather action of the bound Google smartspace widget, if any. */
-    public boolean launchSeraphixWeather() {
-        if (mProvider != WeatherProvider.SERAPHIX || mSeraphix == null) return false;
+    /**
+     * Fires Google's own weather action: the smartspace target's tap action if there is one,
+     * otherwise a replayed tap on the hosted Google widget.
+     */
+    public boolean launchSeraphixWeather(View view) {
+        if (mProvider != WeatherProvider.SERAPHIX) return false;
         try {
-            return mSeraphix.launchWeather();
+            if (hasSmartspaceWeather() && mSmartspace.launch(view)) return true;
+            return mSeraphix != null && mSeraphix.launchWeather();
         } catch (Throwable t) {
             Log.w(TAG, "Seraphix weather launch failed", t);
             return false;
@@ -326,8 +357,10 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
 
     public Drawable getWeatherIcon() {
         if (mProvider == WeatherProvider.SERAPHIX) {
-            return mSeraphixBitmap != null
-                    ? new BitmapDrawable(mContext.getResources(), mSeraphixBitmap) : null;
+            final Bitmap bitmap = hasSmartspaceWeather()
+                    ? mSmartspace.getIcon() : mSeraphixBitmap;
+            return bitmap != null
+                    ? new BitmapDrawable(mContext.getResources(), bitmap) : null;
         } else {
             return mConditionImage;
         }
@@ -335,12 +368,15 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
 
     public String getWeatherTemp() {
         if (mProvider == WeatherProvider.SERAPHIX) {
-            if (TextUtils.isEmpty(mSeraphixText)) return null;
-            if (mSeraphixCondition == null
+            final boolean smartspace = hasSmartspaceWeather();
+            final String temp = smartspace ? mSmartspace.getTemp() : mSeraphixText;
+            final String condition = smartspace ? mSmartspace.getCondition() : mSeraphixCondition;
+            if (TextUtils.isEmpty(temp)) return null;
+            if (TextUtils.isEmpty(condition)
                     || !LauncherPrefs.SHOW_QUICKSPACE_WEATHER_TEXT.get(mContext)) {
-                return mSeraphixText;
+                return temp;
             }
-            return mSeraphixText + " • " + capitalizeFirst(mSeraphixCondition);
+            return temp + " • " + capitalizeFirst(condition);
         } else {
             if (mWeatherInfo == null) return null;
 
@@ -431,6 +467,9 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
         decideWeatherProvider();
         if (mProvider == WeatherProvider.SERAPHIX && mSeraphix != null) {
             mSeraphix.resumeListening();
+        }
+        if (mSmartspace != null) {
+            mSmartspace.requestUpdate();
         }
         updatePSAevent();
         notifyListeners();

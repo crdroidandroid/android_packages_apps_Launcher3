@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2019-2025 crDroid Android Project
+     Copyright (C) 2019-2026 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 <permissions>
     <!-- Additional permissions on top of privapp_whitelist_com.android.launcher3.xml -->
     <privapp-permissions package="com.android.launcher3">
+        <permission name="android.permission.ACCESS_SMARTSPACE"/>
         <permission name="android.permission.SUSPEND_APPS"/>
         <permission name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
         <permission name="android.permission.ACCESS_CONTEXTUAL_SEARCH"/>

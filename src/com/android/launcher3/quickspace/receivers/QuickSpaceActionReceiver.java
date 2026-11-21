@@ -68,7 +68,7 @@ public class QuickSpaceActionReceiver {
             openOmniJaws(view, controller.getOmniJawsClient());
             return;
         }
-        if (controller != null && controller.launchSeraphixWeather()) return;
+        if (controller != null && controller.launchSeraphixWeather(view)) return;
         openGoogleWeather(view);
     }
 
