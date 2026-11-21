@@ -361,6 +361,7 @@
     <string name="quick_event_weather_mist">Nebel</string>
     <string name="quick_event_weather_city_title">Aktueller Standort</string>
     <string name="quick_event_weather_city_summary">Aktuellen Wetterstandort anzeigen</string>
+    <string name="quick_event_weather_city_summary_unavailable">Not available with Google weather</string>
     <string name="quick_event_weather_text_title">Wetterlage in Worten</string>
     <string name="quick_event_weather_text_summary">Kurze schriftliche Übersicht der aktuellen Wetterlage anzeigen</string>
     <!-- Auto-hide page indicator dots -->
