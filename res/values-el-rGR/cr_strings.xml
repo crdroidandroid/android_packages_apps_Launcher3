@@ -361,6 +361,7 @@
     <string name="quick_event_weather_mist">Ομιχλώδες</string>
     <string name="quick_event_weather_city_title">Τρέχουσα τοποθεσία</string>
     <string name="quick_event_weather_city_summary">Εμφάνιση της τρέχουσας τοποθεσίας του καιρού</string>
+    <string name="quick_event_weather_city_summary_unavailable">Not available with Google weather</string>
     <string name="quick_event_weather_text_title">Τρέχουσα κατάσταση</string>
     <string name="quick_event_weather_text_summary">Εμφάνιση σύνοψης της τρέχουσας καιρικής κατάστασης</string>
     <!-- Auto-hide page indicator dots -->
