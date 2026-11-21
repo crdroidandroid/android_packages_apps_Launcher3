@@ -417,6 +417,12 @@
     <string name="pref_app_drawer_custom_color_dark_title">A \'Sötét mód\' színe</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Rezgés görgetéskor</string>
+    <string name="recents_style_title">Az Előzmények elrendezési stílusa</string>
+    <string name="recents_style_default">Alapértelmezett</string>
+    <string name="recents_style_stock">Skálázott</string>
+    <string name="recents_style_staple">Kami</string>
+    <string name="recents_style_ios">iOS</string>
+    <string name="recents_style_oxygen">OxigenOS</string>
     <!-- Lock -->
     <string name="action_lock">Alkalmazás zárolása/feloldása</string>
     <string name="unlock_app">Feloldott alkalmazások az előzményekben</string>

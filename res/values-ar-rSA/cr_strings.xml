@@ -417,6 +417,12 @@
     <string name="pref_app_drawer_custom_color_dark_title">لون الوضع المظلم</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">الإهتزاز اثناء التمرير</string>
+    <string name="recents_style_title">نمط تخطيط التطبيقات الحديثة</string>
+    <string name="recents_style_default">الإفتراضي</string>
+    <string name="recents_style_stock">تأثير المقياس</string>
+    <string name="recents_style_staple">نمط الكامي</string>
+    <string name="recents_style_ios">نمط iOS</string>
+    <string name="recents_style_oxygen">نمط OxygenOS</string>
     <!-- Lock -->
     <string name="action_lock">قفل/فتح التطبيق</string>
     <string name="unlock_app">التطبيق غير المقفل في التطبيقات الحديثة</string>

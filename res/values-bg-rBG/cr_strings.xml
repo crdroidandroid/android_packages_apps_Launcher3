@@ -417,6 +417,12 @@
     <string name="pref_app_drawer_custom_color_dark_title">Цвят по тъмен режим</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Scroll vibration</string>
+    <string name="recents_style_title">Стил на скорошните</string>
+    <string name="recents_style_default">По подразбиране</string>
+    <string name="recents_style_stock">Ефект на разширяване</string>
+    <string name="recents_style_staple">Kami стил</string>
+    <string name="recents_style_ios">стил по iOS</string>
+    <string name="recents_style_oxygen">Стил по OxygenOS</string>
     <!-- Lock -->
     <string name="action_lock">Заключи/Отключи приложение</string>
     <string name="unlock_app">Отключено приложение в скорошните</string>

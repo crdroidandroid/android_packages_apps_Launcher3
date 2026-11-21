@@ -402,15 +402,15 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="app_drawer_sort_install_date">Sắp xếp theo ngày cài đặt</string>
     <string name="app_drawer_sort_usage">Sắp xếp theo mức sử dụng</string>
     <!-- Color Picker -->
-    <string name="color_picker_title">Select color</string>
-    <string name="color_picker_select">Select</string>
-    <string name="color_picker_reset">Reset to default</string>
-    <string name="color_picker_presets">Presets</string>
+    <string name="color_picker_title">Chọn màu</string>
+    <string name="color_picker_select">Chọn</string>
+    <string name="color_picker_reset">Khôi phục về mặc định</string>
+    <string name="color_picker_presets">Có sẵn</string>
     <string name="color_picker_hex_rgb">Hex (#RRGGBB)</string>
     <string name="color_picker_hex_argb">Hex (#AARRGGBB)</string>
-    <string name="color_picker_hex_invalid">Enter a valid hex color</string>
-    <string name="color_picker_current_color">Current color</string>
-    <string name="color_picker_new_color">New color</string>
+    <string name="color_picker_hex_invalid">Nhập mã màu hex hợp lệ</string>
+    <string name="color_picker_current_color">Màu hiện tại</string>
+    <string name="color_picker_new_color">Màu mới</string>
     <!-- App drawer background color -->
     <string name="pref_app_drawer_custom_color_title">Màu nền tùy chỉnh</string>
     <string name="pref_app_drawer_custom_color_summary">Sử dụng màu tùy chỉnh cho nền ngăn kéo ứng dụng</string>
@@ -418,6 +418,12 @@ Gửi cho chúng tôi một cốc bia</item>
     <string name="pref_app_drawer_custom_color_dark_title">Chế độ màu tối</string>
     <!-- Recents style -->
     <string name="recents_scroll_vibrate_title">Rung khi cuộn</string>
+    <string name="recents_style_title">Kiểu bố cục ứng dụng gần đây</string>
+    <string name="recents_style_default">Mặc định</string>
+    <string name="recents_style_stock">Hiệu ứng thu phóng</string>
+    <string name="recents_style_staple">Kiểu mới</string>
+    <string name="recents_style_ios">iOS</string>
+    <string name="recents_style_oxygen">Kiểu OxygenOS</string>
     <!-- Lock -->
     <string name="action_lock">Khóa/Mở khóa ứng dụng</string>
     <string name="unlock_app">Ứng dụng đã mở khóa trong gần đây</string>
