@@ -25,9 +25,11 @@ import android.widget.ImageView
 import android.widget.RemoteViews
 import android.widget.TextView
 import io.chaldeaprjkt.seraphixgoogle.SeraphixCompanion.visibleLeaves
+import java.lang.ref.WeakReference
 
 class EphemeralWidgetHostViewGoogle(context: Context?) : AppWidgetHostView(context) {
     private var listener: DataProviderListener? = null
+    private var weatherClickTarget: WeakReference<View>? = null
 
     override fun updateAppWidget(remoteViews: RemoteViews?) {
         super.updateAppWidget(remoteViews)
@@ -41,6 +43,7 @@ class EphemeralWidgetHostViewGoogle(context: Context?) : AppWidgetHostView(conte
     }
 
     private fun parseWeather(): Card {
+        weatherClickTarget = null
         val leaves = visibleLeaves()
 
         var tempView: TextView? = null
@@ -60,7 +63,25 @@ class EphemeralWidgetHostViewGoogle(context: Context?) : AppWidgetHostView(conte
         val iconView = images.firstOrNull { it.idName().contains("weather", true) }
             ?: nearestImage(tempView, images)
 
+        weatherClickTarget = (clickableAncestor(tempView) ?: iconView?.let { clickableAncestor(it) })
+            ?.let { WeakReference(it) }
+
         return Card(temp, (iconView?.drawable as? BitmapDrawable)?.bitmap)
+    }
+
+    fun performWeatherClick(): Boolean {
+        val target = weatherClickTarget?.get() ?: return false
+        return target.hasOnClickListeners() && target.performClick()
+    }
+
+    private fun clickableAncestor(view: View): View? {
+        var v: View? = view
+        while (v != null) {
+            if (v.hasOnClickListeners()) return v
+            if (v === this) break
+            v = v.parent as? View
+        }
+        return null
     }
 
     private fun nearestImage(anchor: View, images: List<ImageView>): ImageView? {

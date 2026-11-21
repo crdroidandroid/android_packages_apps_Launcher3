@@ -27,14 +27,16 @@ import android.provider.CalendarContract;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import com.android.internal.util.crdroid.OmniJawsClient;
+
 import com.android.launcher3.Launcher;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
+import com.android.launcher3.quickspace.QuickspaceController;
 
 public class QuickSpaceActionReceiver {
 
     private static final OnClickListener calendarClick = v -> openGoogleCalendar(v);
-    private static final OnClickListener weatherClick  = v -> openGoogleWeather(v);
 
     private static Launcher launcherFrom(View v) {
         return Launcher.getLauncher(v.getContext());
@@ -61,6 +63,23 @@ public class QuickSpaceActionReceiver {
         } catch (SecurityException ignored) { }
     }
 
+    public static void openWeather(View view, QuickspaceController controller) {
+        if (controller != null && controller.isOmniJawsWeather()) {
+            openOmniJaws(view, controller.getOmniJawsClient());
+            return;
+        }
+        if (controller != null && controller.launchSeraphixWeather()) return;
+        openGoogleWeather(view);
+    }
+
+    private static void openOmniJaws(View view, OmniJawsClient client) {
+        Intent i = client.getWeatherActivityIntent(view.getContext())
+            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+        try {
+            launcherFrom(view).startActivitySafely(view, i, null);
+        } catch (ActivityNotFoundException | SecurityException ignored) { }
+    }
+
     private static void openGoogleWeather(View view) {
         if (!Utilities.isGSAEnabled(view.getContext())) return;
         Intent i = new Intent(Intent.ACTION_VIEW)
@@ -84,5 +103,4 @@ public class QuickSpaceActionReceiver {
     }
 
     public static OnClickListener getCalendarAction() { return calendarClick; }
-    public static OnClickListener getWeatherAction()  { return weatherClick; }
 }

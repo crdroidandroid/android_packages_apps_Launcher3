@@ -299,6 +299,25 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
         }
     }
 
+    public boolean isOmniJawsWeather() {
+        return mProvider == WeatherProvider.OMNIJAWS;
+    }
+
+    public OmniJawsClient getOmniJawsClient() {
+        return mWeatherClient != null ? mWeatherClient : OmniJawsClient.get();
+    }
+
+    /** Fires the weather action of the bound Google smartspace widget, if any. */
+    public boolean launchSeraphixWeather() {
+        if (mProvider != WeatherProvider.SERAPHIX || mSeraphix == null) return false;
+        try {
+            return mSeraphix.launchWeather();
+        } catch (Throwable t) {
+            Log.w(TAG, "Seraphix weather launch failed", t);
+            return false;
+        }
+    }
+
     public Drawable getWeatherIcon() {
         if (mProvider == WeatherProvider.SERAPHIX) {
             return mSeraphixBitmap != null

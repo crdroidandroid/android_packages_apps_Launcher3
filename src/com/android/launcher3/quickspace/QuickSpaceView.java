@@ -77,6 +77,9 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
 
     public QuickspaceController mController;
 
+    private final View.OnClickListener mWeatherClick =
+            v -> QuickSpaceActionReceiver.openWeather(v, mController);
+
     public QuickSpaceView(Context context, AttributeSet set) {
         super(context, set);
         if (!LauncherPrefs.SHOW_QUICKSPACE.get(context)) return;
@@ -226,12 +229,12 @@ public class QuickSpaceView extends FrameLayout implements OnDataListener {
             animateOut(container);
             return;
         }
-        container.setOnClickListener(QuickSpaceActionReceiver.getWeatherAction());
+        container.setOnClickListener(mWeatherClick);
         title.setText(weatherTemp);
-        title.setOnClickListener(QuickSpaceActionReceiver.getWeatherAction());
+        title.setOnClickListener(mWeatherClick);
         Drawable d = mController.getWeatherIcon();
         icon.setImageDrawable(d);
-        icon.setOnClickListener(QuickSpaceActionReceiver.getWeatherAction());
+        icon.setOnClickListener(mWeatherClick);
         icon.setVisibility(d != null ? View.VISIBLE : View.GONE);
         animateIn(container);
     }

@@ -86,6 +86,10 @@ class SeraphixDataProvider(
         return true
     }
 
+    /** Launches the weather action of the hosted widget. Returns false if unavailable. */
+    fun launchWeather(): Boolean =
+        isWidgetBound && ::widgetHostView.isInitialized && widgetHostView.performWeatherClick()
+
     fun unbind() {
         if (!isWidgetBound) return
         pauseListening()
