@@ -191,6 +191,7 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
         private static final String KEY_GENERAL_CATEGORY = "general_category";
 
         private Preference mShowGoogleAppPref;
+        private Preference mWeatherCityPref;
 
         @Override
         public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -213,6 +214,19 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
 
             mShowGoogleAppPref = screen.findPreference(KEY_MINUS_ONE);
             updateIsGoogleAppEnabled();
+
+            mWeatherCityPref = screen.findPreference(
+                    LauncherPrefs.SHOW_QUICKSPACE_WEATHER_CITY.getSharedPrefKey());
+            Preference weatherProviderPref = screen.findPreference(
+                    LauncherPrefs.SHOW_QUICKSPACE_WEATHER_PROVIDER.getSharedPrefKey());
+            if (mWeatherCityPref != null && weatherProviderPref != null) {
+                updateWeatherCityPref(LauncherPrefs.SHOW_QUICKSPACE_WEATHER_PROVIDER
+                        .get(getContext()));
+                weatherProviderPref.setOnPreferenceChangeListener((pref, value) -> {
+                    updateWeatherCityPref((String) value);
+                    return true;
+                });
+            }
 
             if (!VibratorWrapper.INSTANCE.get(getContext()).hasVibrator()) {
                 PreferenceCategory generalCategory = (PreferenceCategory) findPreference(KEY_GENERAL_CATEGORY);
@@ -239,6 +253,14 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
             if (getActivity() != null && !TextUtils.isEmpty(getPreferenceScreen().getTitle())) {
                 getActivity().setTitle(getPreferenceScreen().getTitle());
             }
+        }
+
+        private void updateWeatherCityPref(String provider) {
+            boolean google = "seraphix".equals(provider);
+            mWeatherCityPref.setEnabled(!google);
+            mWeatherCityPref.setSummary(google
+                    ? R.string.quick_event_weather_city_summary_unavailable
+                    : R.string.quick_event_weather_city_summary);
         }
 
         private boolean isKeyInPreferenceGroup(String targetKey, PreferenceGroup parent) {

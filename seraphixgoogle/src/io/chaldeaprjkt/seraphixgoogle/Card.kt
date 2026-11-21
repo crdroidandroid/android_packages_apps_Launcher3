@@ -17,4 +17,8 @@ package io.chaldeaprjkt.seraphixgoogle
 
 import android.graphics.Bitmap
 
-data class Card(var text: String? = null, var image: Bitmap? = null)
+data class Card(
+    var text: String? = null,
+    var image: Bitmap? = null,
+    var condition: String? = null
+)

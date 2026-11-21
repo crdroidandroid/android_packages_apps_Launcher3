@@ -68,6 +68,7 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
 
     private SeraphixDataProvider mSeraphix;
     private String mSeraphixText;
+    private String mSeraphixCondition;
     private Bitmap mSeraphixBitmap;
 
     private final MediaSessionManagerHelper mMediaSessionHelper;
@@ -214,30 +215,35 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
         } catch (Throwable ignored) {}
         mSeraphix = null;
         mSeraphixText = null;
+        mSeraphixCondition = null;
         mSeraphixBitmap = null;
     }
 
     private final DataProviderListener mSeraphixListener = card -> {
         try {
-            updateWeatherData(card.getText(), card.getImage());
+            updateWeatherData(card.getText(), card.getImage(), card.getCondition());
         } catch (Exception e) {
             Log.e(TAG, "Seraphix update error", e);
         }
     };
 
-    private void updateWeatherData(String text, Bitmap image) {
+    private void updateWeatherData(String text, Bitmap image, String condition) {
         if (TextUtils.isEmpty(text)) {
             text = null;
             image = null;
+            condition = null;
         }
+        if (TextUtils.isEmpty(condition)) condition = null;
         final boolean sameImage = (image == null)
                 ? mSeraphixBitmap == null
                 : mSeraphixBitmap != null
                         && (image == mSeraphixBitmap || image.sameAs(mSeraphixBitmap));
-        if (TextUtils.equals(text, mSeraphixText) && sameImage) {
+        if (TextUtils.equals(text, mSeraphixText)
+                && TextUtils.equals(condition, mSeraphixCondition) && sameImage) {
             return;
         }
         mSeraphixText = text;
+        mSeraphixCondition = condition;
         mSeraphixBitmap = image;
         notifyListeners();
     }
@@ -329,7 +335,12 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
 
     public String getWeatherTemp() {
         if (mProvider == WeatherProvider.SERAPHIX) {
-            return mSeraphixText;
+            if (TextUtils.isEmpty(mSeraphixText)) return null;
+            if (mSeraphixCondition == null
+                    || !LauncherPrefs.SHOW_QUICKSPACE_WEATHER_TEXT.get(mContext)) {
+                return mSeraphixText;
+            }
+            return mSeraphixText + " • " + capitalizeFirst(mSeraphixCondition);
         } else {
             if (mWeatherInfo == null) return null;
 
@@ -378,6 +389,11 @@ public class QuickspaceController implements OmniJawsClient.OmniJawsObserver,
         map.put("wind", R.string.quick_event_weather_wind);
         map.put("mist", R.string.quick_event_weather_mist);
         return map;
+    }
+
+    private String capitalizeFirst(String input) {
+        Locale locale = mContext.getResources().getConfiguration().getLocales().get(0);
+        return input.substring(0, 1).toUpperCase(locale) + input.substring(1);
     }
 
     private String capitalizeWords(String input) {

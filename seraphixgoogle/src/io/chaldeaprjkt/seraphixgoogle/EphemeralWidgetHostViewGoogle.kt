@@ -63,10 +63,33 @@ class EphemeralWidgetHostViewGoogle(context: Context?) : AppWidgetHostView(conte
         val iconView = images.firstOrNull { it.idName().contains("weather", true) }
             ?: nearestImage(tempView, images)
 
-        weatherClickTarget = (clickableAncestor(tempView) ?: iconView?.let { clickableAncestor(it) })
-            ?.let { WeakReference(it) }
+        val clickTarget = clickableAncestor(tempView) ?: iconView?.let { clickableAncestor(it) }
+        weatherClickTarget = clickTarget?.let { WeakReference(it) }
 
-        return Card(temp, (iconView?.drawable as? BitmapDrawable)?.bitmap)
+        val chipImages = (clickTarget as? ViewGroup)?.let { chip ->
+            leaves.filterIsInstance<ImageView>()
+                .filter { it.isDescendantOf(chip) }
+                .map { it.contentDescription }
+        } ?: emptyList()
+        val condition = (sequenceOf(iconView?.contentDescription) + chipImages.asSequence() +
+                sequenceOf(
+                    TEMP_REGEX.replace(tempView.text ?: "", ""),
+                    tempView.contentDescription,
+                    clickTarget?.contentDescription
+                )).firstNotNullOfOrNull { extractCondition(it) }
+
+        return Card(temp, (iconView?.drawable as? BitmapDrawable)?.bitmap, condition)
+    }
+
+    private fun extractCondition(source: CharSequence?): String? {
+        if (source.isNullOrBlank()) return null
+        return TEMP_REGEX.replace(source, "")
+            .split(SEPARATOR_REGEX)
+            .map { it.trim() }
+            .firstOrNull { part ->
+                part.isNotEmpty() && part.none { it.isDigit() } &&
+                        GENERIC_WORDS.none { part.equals(it, ignoreCase = true) }
+            }
     }
 
     fun performWeatherClick(): Boolean {
@@ -126,5 +149,7 @@ class EphemeralWidgetHostViewGoogle(context: Context?) : AppWidgetHostView(conte
         // then a degree sign (optionally followed by C/F) or ℃ / ℉.
         private val TEMP_REGEX = Regex("""[-−]?\p{Nd}{1,3}\s*(?:°\s*[CFcf]?|℃|℉)""")
         private val WHITESPACE_REGEX = Regex("""\s+""")
+        private val SEPARATOR_REGEX = Regex("""[,،、;|•·\n]""")
+        private val GENERIC_WORDS = listOf("weather", "weather icon", "icon")
     }
 }
