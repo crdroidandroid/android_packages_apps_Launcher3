@@ -250,7 +250,11 @@ public abstract class BaseAllAppsAdapter
                 });
                 return new ViewHolder(icon);
             case VIEW_TYPE_EMPTY_SEARCH:
-                return new ViewHolder(mLayoutInflater.inflate(R.layout.all_apps_empty_search,
+                return new ViewHolder(mLayoutInflater.inflate(
+                        mActivityContext instanceof SecondaryDisplayLauncher sdl
+                                && sdl.isOnlyAppDrawer()
+                                ? R.layout.all_apps_empty_search_workspace
+                                : R.layout.all_apps_empty_search,
                         parent, false));
             case VIEW_TYPE_ALL_APPS_DIVIDER, VIEW_TYPE_PRIVATE_SPACE_SYS_APPS_DIVIDER:
                 return new ViewHolder(mLayoutInflater.inflate(
