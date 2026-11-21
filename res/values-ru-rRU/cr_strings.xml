@@ -361,7 +361,7 @@
     <string name="quick_event_weather_mist">Туман</string>
     <string name="quick_event_weather_city_title">Текущее местоположение</string>
     <string name="quick_event_weather_city_summary">Показывать текущее местоположение</string>
-    <string name="quick_event_weather_city_summary_unavailable">Not available with Google weather</string>
+    <string name="quick_event_weather_city_summary_unavailable">Недоступно в Google Погоде</string>
     <string name="quick_event_weather_text_title">Текущее состояние</string>
     <string name="quick_event_weather_text_summary">Показывать информацию о текущих погодных условиях</string>
     <!-- Auto-hide page indicator dots -->
@@ -421,7 +421,7 @@
     <string name="recents_style_title">Стиль недавних приложений</string>
     <string name="recents_style_default">По умолчанию</string>
     <string name="recents_style_stock">Эффект масштабирования</string>
-    <string name="recents_style_staple">Ками стиль</string>
+    <string name="recents_style_staple">Стиль Kami</string>
     <string name="recents_style_ios">iOS стиль</string>
     <string name="recents_style_oxygen">Стиль OxygenOS</string>
     <!-- Lock -->
