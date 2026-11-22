@@ -189,6 +189,8 @@ public abstract class BaseAllAppsAdapter
     protected final OnLongClickListener mOnIconLongClickListener;
     protected final CustomActionsListener mIconCustomActionsListener;
     protected final int mTextColor;
+    // App drawer only mode draws the drawer straight over the wallpaper, so use home screen labels.
+    private final boolean mUseWorkspaceLabelStyle;
     protected OnFocusChangeListener mIconFocusListener;
 
     public BaseAllAppsAdapter(ActivityContext activityContext, LayoutInflater inflater,
@@ -198,6 +200,8 @@ public abstract class BaseAllAppsAdapter
         mLayoutInflater = inflater;
 
         mTextColor = AppDrawerStyle.getContentColor(activityContext.asContext());
+        mUseWorkspaceLabelStyle = activityContext instanceof SecondaryDisplayLauncher sdl
+                && sdl.isOnlyAppDrawer();
 
         mOnIconClickListener = mActivityContext.getItemOnClickListener();
         mOnIconLongClickListener = mActivityContext.getAllAppsItemLongClickListener();
@@ -251,8 +255,7 @@ public abstract class BaseAllAppsAdapter
                 return new ViewHolder(icon);
             case VIEW_TYPE_EMPTY_SEARCH:
                 return new ViewHolder(mLayoutInflater.inflate(
-                        mActivityContext instanceof SecondaryDisplayLauncher sdl
-                                && sdl.isOnlyAppDrawer()
+                        mUseWorkspaceLabelStyle
                                 ? R.layout.all_apps_empty_search_workspace
                                 : R.layout.all_apps_empty_search,
                         parent, false));
@@ -287,8 +290,12 @@ public abstract class BaseAllAppsAdapter
                 AdapterItem adapterItem = mApps.getAdapterItems().get(position);
                 BubbleTextView icon = (BubbleTextView) holder.itemView;
                 icon.reset();
-                icon.setTextColor(mTextColor);
-                if (AppDrawerStyle.isHorizontalList(getDrawerStyle())) {
+                final boolean horizontalList = AppDrawerStyle.isHorizontalList(getDrawerStyle());
+                if (!mUseWorkspaceLabelStyle || horizontalList) {
+                    // Workspace styled labels keep their home screen color from the layout.
+                    icon.setTextColor(mTextColor);
+                }
+                if (horizontalList) {
                     // Guard against views that were inflated for the grid (e.g. recycled).
                     applyHorizontalListLayout(icon);
                 }
@@ -388,7 +395,7 @@ public abstract class BaseAllAppsAdapter
         } else {
             final boolean twoLines =
                     LauncherPrefs.ENABLE_TWOLINE_ALLAPPS_TOGGLE.get(mActivityContext.asContext());
-            if (mActivityContext instanceof SecondaryDisplayLauncher sdl && sdl.isOnlyAppDrawer()) {
+            if (mUseWorkspaceLabelStyle) {
                 layout = twoLines
                         ? R.layout.all_apps_icon_workspace_twoline
                         : R.layout.all_apps_icon_workspace;

@@ -5,8 +5,6 @@
 -->
 <TextView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/BaseIcon.Workspace"
-    android:theme="@style/HomeScreenElementTheme"
     android:id="@+id/empty_text"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -15,5 +13,9 @@
     android:paddingBottom="8dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
+    android:fontFamily="sans-serif-medium"
     android:textSize="14sp"
+    android:textColor="@color/workspace_text_color_light"
+    android:shadowRadius="2.0"
+    android:shadowColor="?attr/workspaceShadowColor"
     android:focusable="false" />
