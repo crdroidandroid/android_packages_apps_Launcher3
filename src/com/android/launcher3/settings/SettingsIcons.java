@@ -52,6 +52,8 @@ import com.android.launcher3.customization.IconDatabase;
 import com.android.launcher3.display.DisplayController;
 import com.android.launcher3.display.LauncherDisplayInfo;
 import com.android.launcher3.icons.pack.IconPackSettingsActivity;
+import com.android.launcher3.shapes.IconShapeSettingsActivity;
+import com.android.launcher3.shapes.IconShapeSettingsFragment;
 import com.android.launcher3.util.AppReloader;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
@@ -64,6 +66,7 @@ public class SettingsIcons extends CollapsingToolbarBaseActivity
         implements OnPreferenceStartFragmentCallback, OnPreferenceStartScreenCallback {
 
     private static final String NOTIFICATION_DOTS_PREFERENCE_KEY = "pref_icon_badging";
+    private static final String ICON_SHAPE_PREFERENCE_KEY = "pref_icon_shape";
 
     public static final String EXTRA_FRAGMENT_ARGS = ":settings:fragment_args";
 
@@ -296,6 +299,9 @@ public class SettingsIcons extends CollapsingToolbarBaseActivity
                 case IconDatabase.KEY_ICON_PACK:
                     setupIconPackPreference(preference);
                     return true;
+                case ICON_SHAPE_PREFERENCE_KEY:
+                    setupIconShapePreference(preference);
+                    return true;
             }
             return true;
         }
@@ -310,6 +316,12 @@ public class SettingsIcons extends CollapsingToolbarBaseActivity
                     getView().postDelayed(highlighter, DELAY_HIGHLIGHT_DURATION_MILLIS);
                     mPreferenceHighlighted = true;
                 }
+            }
+
+            Preference iconShapePref = findPreference(ICON_SHAPE_PREFERENCE_KEY);
+            if (iconShapePref != null) {
+                iconShapePref.setSummary(
+                        IconShapeSettingsFragment.getCurrentShapeLabel(getContext()));
             }
 
             if (mRestartOnResume) {
@@ -358,6 +370,14 @@ public class SettingsIcons extends CollapsingToolbarBaseActivity
             preference.setSummary(pkgLabel);
             preference.setOnPreferenceClickListener(p -> {
                 startActivity(new Intent(getContext(), IconPackSettingsActivity.class));
+                return true;
+            });
+        }
+
+        private void setupIconShapePreference(Preference preference) {
+            preference.setSummary(IconShapeSettingsFragment.getCurrentShapeLabel(getContext()));
+            preference.setOnPreferenceClickListener(p -> {
+                startActivity(new Intent(getContext(), IconShapeSettingsActivity.class));
                 return true;
             });
         }

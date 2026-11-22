@@ -427,6 +427,10 @@
     <string name="icon_pack_add">Install more</string>
     <string name="icon_pack_no_market">There\'s no available app store</string>
 
+    <!-- Icon shape -->
+    <string name="icon_shape_title">Icon shape</string>
+    <string name="icon_shape_default_label">System default</string>
+
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">Wallpaper carousel</string>
     <string name="wallpaper_carousel_summary">Quickly switch wallpapers from the long-press menu</string>

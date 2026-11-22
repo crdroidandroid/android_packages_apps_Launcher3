@@ -215,6 +215,14 @@
             android:exported="true"
             android:autoRemoveFromRecents="true"  />
 
+        <!-- Icon Shape -->
+        <activity
+            android:name="com.android.launcher3.shapes.IconShapeSettingsActivity"
+            android:label="@string/icon_shape_title"
+            android:theme="@style/HomeSettings.Theme"
+            android:exported="false"
+            android:autoRemoveFromRecents="true" />
+
         <provider
             android:name="com.android.launcher3.testing.TestInformationProvider"
             android:authorities="${applicationId}.TestInfo"
