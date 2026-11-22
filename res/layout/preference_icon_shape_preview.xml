@@ -18,15 +18,35 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="24dp"
-    android:paddingBottom="24dp">
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
 
-    <ImageView
-        android:id="@+id/icon_shape_preview"
-        android:layout_width="wrap_content"
+    <!-- The icon grid sets the height; the wallpaper is cropped to match it. -->
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:importantForAccessibility="no"
-        android:scaleType="centerInside" />
+        android:background="@drawable/icon_shape_preview_card"
+        android:clipToOutline="true">
+
+        <ImageView
+            android:id="@+id/icon_shape_preview_wallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/icon_shape_preview_grid"
+            android:layout_alignBottom="@id/icon_shape_preview_grid"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@id/icon_shape_preview_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="noHideDescendants"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+    </RelativeLayout>
 
 </FrameLayout>
