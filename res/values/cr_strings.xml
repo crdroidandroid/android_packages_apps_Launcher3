@@ -434,6 +434,19 @@
     <!-- Icon shape -->
     <string name="icon_shape_title">Icon shape</string>
     <string name="icon_shape_default_label">System default</string>
+    <string name="icon_shape_custom">Custom</string>
+    <string name="icon_shape_presets">Presets</string>
+    <string name="icon_shape_custom_create">Create custom shape</string>
+    <string name="icon_shape_custom_edit">Edit custom shape</string>
+    <string name="icon_shape_custom_title">Custom shape</string>
+    <string name="icon_shape_corner_top_left">Top left</string>
+    <string name="icon_shape_corner_top_right">Top right</string>
+    <string name="icon_shape_corner_bottom_left">Bottom left</string>
+    <string name="icon_shape_corner_bottom_right">Bottom right</string>
+    <string name="icon_shape_corner_round">Round</string>
+    <string name="icon_shape_corner_smooth">Smooth</string>
+    <string name="icon_shape_corner_cut">Cut</string>
+    <string name="icon_shape_apply">Apply</string>
 
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">Wallpaper carousel</string>

@@ -56,6 +56,7 @@ import com.android.launcher3.deviceprofile.parser.GridOption;
 import com.android.launcher3.graphics.theme.ThemePreference;
 import com.android.launcher3.preview.PreviewLifecycleObserver;
 import com.android.launcher3.preview.PreviewSurfaceRenderer;
+import com.android.launcher3.shapes.CustomIconShape;
 import com.android.launcher3.shapes.IconShapeModel;
 import com.android.launcher3.shapes.ShapesProvider;
 import com.android.launcher3.util.ApiWrapper;
@@ -191,6 +192,11 @@ public class GridCustomizationsProxy implements ProxyProvider {
                         KEY_SHAPE_KEY, KEY_SHAPE_TITLE, KEY_PATH, KEY_IS_DEFAULT});
                 final String currentShape = mPrefs.get(PREF_ICON_SHAPE);
                 IconShapeModel[] availableShapes = ShapesProvider.INSTANCE.getIconShapes();
+                CustomIconShape customShape = CustomIconShape.fromPrefs(mPrefs);
+                if (customShape != null) {
+                    availableShapes = Arrays.copyOf(availableShapes, availableShapes.length + 1);
+                    availableShapes[availableShapes.length - 1] = customShape.toModel();
+                }
 
                 if (availableShapes.length == 0) {
                     // This is unexpected as we should always provide at least 1 default shape.

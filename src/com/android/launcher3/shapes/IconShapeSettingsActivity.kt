@@ -16,23 +16,31 @@
 
 package com.android.launcher3.shapes
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import com.android.launcher3.R
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.android.settingslib.collapsingtoolbar.R as CollapsingToolbarR
 
-/** Settings activity hosting the icon shape picker. */
+/** Settings activity hosting the icon shape picker, or the custom shape editor. */
 class IconShapeSettingsActivity : CollapsingToolbarBaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings_activity)
 
+        val isEditor = intent.getBooleanExtra(EXTRA_EDITOR, false)
+        if (isEditor) setTitle(R.string.icon_shape_custom_title)
+
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .replace(CollapsingToolbarR.id.content_frame, IconShapeSettingsFragment())
+                .replace(
+                    CollapsingToolbarR.id.content_frame,
+                    if (isEditor) IconShapeEditorFragment() else IconShapeSettingsFragment(),
+                )
                 .commit()
         }
     }
@@ -48,5 +56,13 @@ class IconShapeSettingsActivity : CollapsingToolbarBaseActivity() {
             return true
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    companion object {
+        private const val EXTRA_EDITOR = "icon_shape_editor"
+
+        /** Returns an intent opening the custom shape editor. */
+        fun createEditorIntent(context: Context): Intent =
+            Intent(context, IconShapeSettingsActivity::class.java).putExtra(EXTRA_EDITOR, true)
     }
 }

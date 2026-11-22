@@ -37,6 +37,7 @@ import com.android.launcher3.icons.DotRenderer.IconShapeInfo
 import com.android.launcher3.icons.GraphicsUtils.generateIconShape
 import com.android.launcher3.icons.IconShape
 import com.android.launcher3.icons.IconThemeController
+import com.android.launcher3.shapes.CustomIconShape
 import com.android.launcher3.shapes.IconShapeModel.Companion.DEFAULT_ICON_RADIUS
 import com.android.launcher3.shapes.ShapesProvider
 import com.android.launcher3.util.DaggerSingletonObject
@@ -101,12 +102,14 @@ constructor(
         lifecycle.addCloseable(overlayChangeHandler.addCallback { verifyIconState() })
 
         val prefListener = LauncherPrefChangeListener {
-            if (it == PREF_ICON_SHAPE.sharedPrefKey) verifyIconState()
+            if (it == PREF_ICON_SHAPE.sharedPrefKey || it == PREF_CUSTOM_ICON_SHAPE.sharedPrefKey) {
+                verifyIconState()
+            }
         }
-        prefs.addListener(prefListener, PREF_ICON_SHAPE)
+        prefs.addListener(prefListener, PREF_ICON_SHAPE, PREF_CUSTOM_ICON_SHAPE)
         lifecycle.addCloseable(themePreference.forEach(mainExecutor) { verifyIconState() })
         lifecycle.addCloseable {
-            prefs.removeListener(prefListener, PREF_ICON_SHAPE)
+            prefs.removeListener(prefListener, PREF_ICON_SHAPE, PREF_CUSTOM_ICON_SHAPE)
             iconState.closeController()
         }
     }
@@ -149,7 +152,11 @@ constructor(
     private fun parseIconState(oldState: IconState?): IconState {
         val shapeModel =
             prefs.get(PREF_ICON_SHAPE).let { shapeOverride ->
-                ShapesProvider.iconShapes.firstOrNull { it.key == shapeOverride }
+                if (shapeOverride == CustomIconShape.KEY) {
+                    CustomIconShape.fromPrefs(prefs)?.toModel()
+                } else {
+                    ShapesProvider.iconShapes.firstOrNull { it.key == shapeOverride }
+                }
             }
         val iconMask =
             when {
@@ -238,6 +245,7 @@ constructor(
 
         @JvmField val INSTANCE = DaggerSingletonObject(LauncherAppComponent::getThemeManager)
         @JvmField val PREF_ICON_SHAPE = backedUpItem("icon_shape_model", "")
+        @JvmField val PREF_CUSTOM_ICON_SHAPE = backedUpItem("icon_shape_custom", "")
 
         @JvmField val DEFAULT_SHAPE_DELEGATE = pickBestShape(shapeStr = "")
 

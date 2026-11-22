@@ -39,11 +39,14 @@ import kotlin.math.roundToInt
  * Draws an outlined preview of an icon shape path defined on a 100x100 viewport. An empty
  * [pathString] previews the system adaptive icon mask.
  */
-class IconShapePreviewDrawable(context: Context, pathString: String) : Drawable() {
+class IconShapePreviewDrawable
+@JvmOverloads
+constructor(context: Context, pathString: String, sizeDp: Int = PREVIEW_SIZE_DP) : Drawable() {
 
     private val density = context.resources.displayMetrics.density
-    private val size = (PREVIEW_SIZE_DP * density).roundToInt()
-    private val strokeWidth = STROKE_WIDTH_DP * density
+    private val size = (sizeDp * density).roundToInt()
+    private val strokeWidth =
+        (STROKE_WIDTH_DP * sizeDp / PREVIEW_SIZE_DP).coerceAtMost(MAX_STROKE_WIDTH_DP) * density
 
     private val basePath = createPath(pathString)
     private val drawPath = Path()
@@ -105,6 +108,7 @@ class IconShapePreviewDrawable(context: Context, pathString: String) : Drawable(
         private const val PATH_SIZE = 100
         private const val PREVIEW_SIZE_DP = 40
         private const val STROKE_WIDTH_DP = 1.5f
+        private const val MAX_STROKE_WIDTH_DP = 3f
         private const val FILL_ALPHA = 0x1A
 
         private val VIEWPORT = RectF(0f, 0f, PATH_SIZE.toFloat(), PATH_SIZE.toFloat())
