@@ -16,11 +16,8 @@
 
 package com.android.launcher3.shapes
 
-import android.app.WallpaperManager
 import android.content.Context
 import android.content.pm.LauncherApps
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.os.Process
 import android.util.AttributeSet
@@ -43,6 +40,7 @@ import com.android.launcher3.icons.GraphicsUtils
 import com.android.launcher3.icons.IconShape
 import com.android.launcher3.icons.cache.CacheLookupFlag.Companion.DEFAULT_LOOKUP_FLAG
 import com.android.launcher3.model.data.AppInfo
+import com.android.launcher3.settings.preferences.PreviewWallpaper
 import com.android.launcher3.util.Executors.MAIN_EXECUTOR
 import com.android.launcher3.util.Executors.MODEL_EXECUTOR
 import kotlin.math.roundToInt
@@ -152,7 +150,7 @@ constructor(context: Context, attrs: AttributeSet? = null) : Preference(context,
             val icons = runCatching { loadAppIcons(appContext) }
                 .onFailure { Log.w(TAG, "Unable to load preview icons", it) }
                 .getOrDefault(emptyList())
-            val wallpaper = loadWallpaper(appContext)
+            val wallpaper = PreviewWallpaper.load(appContext)
             MAIN_EXECUTOR.execute {
                 appIcons = icons
                 this.wallpaper = wallpaper
@@ -181,27 +179,11 @@ constructor(context: Context, attrs: AttributeSet? = null) : Preference(context,
             }
     }
 
-    /** Returns the home screen wallpaper, scaled down since only a snippet is shown. */
-    private fun loadWallpaper(context: Context): Drawable? {
-        val drawable =
-            runCatching { WallpaperManager.getInstance(context).drawable }
-                .onFailure { Log.w(TAG, "Unable to read wallpaper", it) }
-                .getOrNull() ?: return null
-        val bitmap = (drawable as? BitmapDrawable)?.bitmap ?: return drawable
-        if (bitmap.width <= MAX_WALLPAPER_WIDTH) return drawable
-        val height = bitmap.height * MAX_WALLPAPER_WIDTH / bitmap.width
-        return BitmapDrawable(
-            context.resources,
-            Bitmap.createScaledBitmap(bitmap, MAX_WALLPAPER_WIDTH, height, true),
-        )
-    }
-
     private companion object {
         const val TAG = "IconShapePreview"
         const val ROWS = 2
         const val COLUMNS = 4
         const val ICON_SIZE_DP = 56
         const val ROW_PADDING_DP = 8
-        const val MAX_WALLPAPER_WIDTH = 720
     }
 }

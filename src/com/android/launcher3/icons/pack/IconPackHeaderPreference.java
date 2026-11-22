@@ -16,11 +16,15 @@
 
 package com.android.launcher3.icons.pack;
 
+import static com.android.launcher3.util.Executors.MAIN_EXECUTOR;
+import static com.android.launcher3.util.Executors.MODEL_EXECUTOR;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.LauncherApps;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
 import android.util.AttributeSet;
@@ -32,6 +36,7 @@ import androidx.preference.PreferenceViewHolder;
 
 import com.android.launcher3.R;
 import com.android.launcher3.icons.IconProvider;
+import com.android.launcher3.settings.preferences.PreviewWallpaper;
 
 
 public class IconPackHeaderPreference extends RadioHeaderPreference {
@@ -42,6 +47,9 @@ public class IconPackHeaderPreference extends RadioHeaderPreference {
 
     private final Context context;
     private ImageView[] icons = null;
+    private ImageView wallpaperView = null;
+    private Drawable wallpaper = null;
+    private boolean wallpaperLoadStarted = false;
 
     public IconPackHeaderPreference(Context context) {
         this(context, null);
@@ -74,11 +82,33 @@ public class IconPackHeaderPreference extends RadioHeaderPreference {
         };
         this.icons = imageViews;
         onRadioElementSelected(null);
+
+        wallpaperView = (ImageView) holder.findViewById(R.id.pref_icons_wallpaper);
+        wallpaperView.setImageDrawable(wallpaper);
+        loadWallpaper();
+    }
+
+    private void loadWallpaper() {
+        if (wallpaperLoadStarted) {
+            return;
+        }
+        wallpaperLoadStarted = true;
+        final Context appContext = context.getApplicationContext();
+        MODEL_EXECUTOR.execute(() -> {
+            final Drawable loaded = PreviewWallpaper.load(appContext);
+            MAIN_EXECUTOR.execute(() -> {
+                wallpaper = loaded;
+                if (wallpaperView != null) {
+                    wallpaperView.setImageDrawable(loaded);
+                }
+            });
+        });
     }
 
     @Override
     public void onDetached() {
         this.icons = null;
+        this.wallpaperView = null;
         super.onDetached();
     }
 

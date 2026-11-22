@@ -27,7 +27,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/icon_shape_preview_card"
+        android:background="@drawable/settings_preview_card"
         android:clipToOutline="true">
 
         <ImageView
