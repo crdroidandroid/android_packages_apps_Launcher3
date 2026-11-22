@@ -100,6 +100,10 @@
     <string name="meow_shape_title">야옹</string>
     <string name="samsung_style_shape_title">삼성 스타일</string>
     <string name="stretched_shape_title">늘인 모양</string>
+    <string name="diamond_shape_title">Diamond</string>
+    <string name="egg_shape_title">Egg</string>
+    <string name="very_sunny_shape_title">Very sunny</string>
+    <string name="complex_clover_shape_title">Complex clover</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">스와이프하여 검색 시작</string>
     <string name="drawer_open_keyboard_summary">앱 서랍이 열리면 키보드 표시</string>
@@ -375,6 +379,22 @@
     <string name="icon_pack_default_label">기본값</string>
     <string name="icon_pack_add">추가로 설치</string>
     <string name="icon_pack_no_market">사용할 수 있는 앱 스토어가 없습니다</string>
+    <!-- Icon shape -->
+    <string name="icon_shape_title">Icon shape</string>
+    <string name="icon_shape_default_label">System default</string>
+    <string name="icon_shape_custom">Custom</string>
+    <string name="icon_shape_presets">Presets</string>
+    <string name="icon_shape_custom_create">Create custom shape</string>
+    <string name="icon_shape_custom_edit">Edit custom shape</string>
+    <string name="icon_shape_custom_title">Custom shape</string>
+    <string name="icon_shape_corner_top_left">Top left</string>
+    <string name="icon_shape_corner_top_right">Top right</string>
+    <string name="icon_shape_corner_bottom_left">Bottom left</string>
+    <string name="icon_shape_corner_bottom_right">Bottom right</string>
+    <string name="icon_shape_corner_round">Round</string>
+    <string name="icon_shape_corner_smooth">Smooth</string>
+    <string name="icon_shape_corner_cut">Cut</string>
+    <string name="icon_shape_apply">Apply</string>
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">슬라이드형 배경화면</string>
     <string name="wallpaper_carousel_summary">메뉴 길게 눌러서 배경화면 빠르게 전환</string>
