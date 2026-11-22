@@ -16,6 +16,8 @@
 
 package com.android.launcher3.shapes
 
+import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
+import androidx.compose.material3.MaterialShapes
 import com.android.launcher3.Flags as LauncherFlags
 import com.android.launcher3.R
 
@@ -81,6 +83,24 @@ object ShapesProvider {
     const val MEOW_KEY = "meow"
     const val SAMSUNG_STYLE_KEY = "samsung_style"
     const val STRETCHED_KEY = "stretched"
+    const val DIAMOND_KEY = "diamond"
+    const val EGG_KEY = "egg"
+    const val VERY_SUNNY_KEY = "very_sunny"
+    const val COMPLEX_CLOVER_KEY = "complex_clover"
+
+    private val DIAMOND_PATH =
+        ShapeCorner(CornerStyle.CUT, 1f).let { ShapePathBuilder.fromCorners(it, it, it, it) }
+    private val EGG_PATH =
+        ShapePathBuilder.fromCorners(
+            topLeft = ShapeCorner(CornerStyle.ROUND, 1f),
+            topRight = ShapeCorner(CornerStyle.ROUND, 1f),
+            bottomRight = ShapeCorner(CornerStyle.ROUND, 0.75f),
+            bottomLeft = ShapeCorner(CornerStyle.ROUND, 0.75f),
+        )
+    @OptIn(ExperimentalMaterial3ExpressiveApi::class)
+    private val VERY_SUNNY_PATH = ShapePathBuilder.fromPolygon(MaterialShapes.VerySunny)
+    @OptIn(ExperimentalMaterial3ExpressiveApi::class)
+    private val COMPLEX_CLOVER_PATH = ShapePathBuilder.fromPolygon(MaterialShapes.Clover8Leaf)
 
     val iconShapes: Array<IconShapeModel> =
         if (LauncherFlags.enableLauncherIconShapes()) {
@@ -219,6 +239,26 @@ object ShapesProvider {
                     key = STRETCHED_KEY,
                     titleId = R.string.stretched_shape_title,
                     pathString = STRETCHED_PATH,
+                ),
+                IconShapeModel(
+                    key = DIAMOND_KEY,
+                    titleId = R.string.diamond_shape_title,
+                    pathString = DIAMOND_PATH,
+                ),
+                IconShapeModel(
+                    key = EGG_KEY,
+                    titleId = R.string.egg_shape_title,
+                    pathString = EGG_PATH,
+                ),
+                IconShapeModel(
+                    key = VERY_SUNNY_KEY,
+                    titleId = R.string.very_sunny_shape_title,
+                    pathString = VERY_SUNNY_PATH,
+                ),
+                IconShapeModel(
+                    key = COMPLEX_CLOVER_KEY,
+                    titleId = R.string.complex_clover_shape_title,
+                    pathString = COMPLEX_CLOVER_PATH,
                 ),
             )
         } else {
