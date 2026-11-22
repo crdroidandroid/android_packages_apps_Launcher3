@@ -100,10 +100,10 @@
     <string name="meow_shape_title">Miau</string>
     <string name="samsung_style_shape_title">Samsung</string>
     <string name="stretched_shape_title">Rozciągnięty</string>
-    <string name="diamond_shape_title">Diamond</string>
-    <string name="egg_shape_title">Egg</string>
-    <string name="very_sunny_shape_title">Very sunny</string>
-    <string name="complex_clover_shape_title">Complex clover</string>
+    <string name="diamond_shape_title">Diament</string>
+    <string name="egg_shape_title">Jajko</string>
+    <string name="very_sunny_shape_title">Bardzo słonecznie</string>
+    <string name="complex_clover_shape_title">Koniczyna złożona</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Przesuń, aby rozpocząć wyszukiwanie</string>
     <string name="drawer_open_keyboard_summary">Otwieraj klawiaturę, gdy szuflada aplikacji staje się widoczna</string>
@@ -380,21 +380,21 @@
     <string name="icon_pack_add">Zainstaluj więcej</string>
     <string name="icon_pack_no_market">Nie jest dostępny sklep z aplikacjami</string>
     <!-- Icon shape -->
-    <string name="icon_shape_title">Icon shape</string>
-    <string name="icon_shape_default_label">System default</string>
-    <string name="icon_shape_custom">Custom</string>
+    <string name="icon_shape_title">Kształt ikon</string>
+    <string name="icon_shape_default_label">Domyślny dla systemu</string>
+    <string name="icon_shape_custom">Własny</string>
     <string name="icon_shape_presets">Szablony</string>
-    <string name="icon_shape_custom_create">Create custom shape</string>
-    <string name="icon_shape_custom_edit">Edit custom shape</string>
-    <string name="icon_shape_custom_title">Custom shape</string>
-    <string name="icon_shape_corner_top_left">Top left</string>
-    <string name="icon_shape_corner_top_right">Top right</string>
-    <string name="icon_shape_corner_bottom_left">Bottom left</string>
-    <string name="icon_shape_corner_bottom_right">Bottom right</string>
-    <string name="icon_shape_corner_round">Round</string>
-    <string name="icon_shape_corner_smooth">Smooth</string>
-    <string name="icon_shape_corner_cut">Cut</string>
-    <string name="icon_shape_apply">Apply</string>
+    <string name="icon_shape_custom_create">Utwórz własny kształt</string>
+    <string name="icon_shape_custom_edit">Edytuj własny kształt</string>
+    <string name="icon_shape_custom_title">Własny kształt</string>
+    <string name="icon_shape_corner_top_left">Lewy górny</string>
+    <string name="icon_shape_corner_top_right">Prawy górny</string>
+    <string name="icon_shape_corner_bottom_left">Lewy dolny</string>
+    <string name="icon_shape_corner_bottom_right">Prawy dolny</string>
+    <string name="icon_shape_corner_round">Okrągły</string>
+    <string name="icon_shape_corner_smooth">Gładki</string>
+    <string name="icon_shape_corner_cut">Wycięty</string>
+    <string name="icon_shape_apply">Zastosuj</string>
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">Tapety blokady</string>
     <string name="wallpaper_carousel_summary">Szybka zmiana tapet z menu po przytrzymaniu</string>
