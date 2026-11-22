@@ -100,6 +100,10 @@
     <string name="meow_shape_title">Meow</string>
     <string name="samsung_style_shape_title">Samsung Style</string>
     <string name="stretched_shape_title">Étiré</string>
+    <string name="diamond_shape_title">Diamond</string>
+    <string name="egg_shape_title">Egg</string>
+    <string name="very_sunny_shape_title">Very sunny</string>
+    <string name="complex_clover_shape_title">Complex clover</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Glisser pour lancer la recherche</string>
     <string name="drawer_open_keyboard_summary">Ouvrir le clavier chaque fois que le tiroir d\'applications devient visible</string>
@@ -375,6 +379,22 @@
     <string name="icon_pack_default_label">Par défaut</string>
     <string name="icon_pack_add">Installer plus</string>
     <string name="icon_pack_no_market">Il n\'y a aucun magasin d\'applications disponible</string>
+    <!-- Icon shape -->
+    <string name="icon_shape_title">Icon shape</string>
+    <string name="icon_shape_default_label">System default</string>
+    <string name="icon_shape_custom">Custom</string>
+    <string name="icon_shape_presets">Préréglages</string>
+    <string name="icon_shape_custom_create">Create custom shape</string>
+    <string name="icon_shape_custom_edit">Edit custom shape</string>
+    <string name="icon_shape_custom_title">Custom shape</string>
+    <string name="icon_shape_corner_top_left">Top left</string>
+    <string name="icon_shape_corner_top_right">Top right</string>
+    <string name="icon_shape_corner_bottom_left">Bottom left</string>
+    <string name="icon_shape_corner_bottom_right">Bottom right</string>
+    <string name="icon_shape_corner_round">Round</string>
+    <string name="icon_shape_corner_smooth">Smooth</string>
+    <string name="icon_shape_corner_cut">Cut</string>
+    <string name="icon_shape_apply">Apply</string>
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">Fond d\'écran Carrousel</string>
     <string name="wallpaper_carousel_summary">Basculer rapidement les fonds d\'écran depuis le menu d\'appui long</string>
