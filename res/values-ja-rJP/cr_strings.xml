@@ -100,10 +100,10 @@
     <string name="meow_shape_title">ニャー🐈</string>
     <string name="samsung_style_shape_title">Samsungのスタイル</string>
     <string name="stretched_shape_title">ストレッチ</string>
-    <string name="diamond_shape_title">Diamond</string>
-    <string name="egg_shape_title">Egg</string>
-    <string name="very_sunny_shape_title">Very sunny</string>
-    <string name="complex_clover_shape_title">Complex clover</string>
+    <string name="diamond_shape_title">ダイヤモンド</string>
+    <string name="egg_shape_title">卵</string>
+    <string name="very_sunny_shape_title">非常に晴れた</string>
+    <string name="complex_clover_shape_title">複雑なクローバー</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">上にスワイプして検索を開始</string>
     <string name="drawer_open_keyboard_summary">ドロワーを表示する際にキーボードを表示し素早く検索します</string>
@@ -380,21 +380,21 @@
     <string name="icon_pack_add">その他をインストール</string>
     <string name="icon_pack_no_market">利用可能なアプリストアがありません</string>
     <!-- Icon shape -->
-    <string name="icon_shape_title">Icon shape</string>
-    <string name="icon_shape_default_label">System default</string>
-    <string name="icon_shape_custom">Custom</string>
+    <string name="icon_shape_title">アイコンの形状</string>
+    <string name="icon_shape_default_label">システムのデフォルト</string>
+    <string name="icon_shape_custom">カスタム</string>
     <string name="icon_shape_presets">プリセット</string>
-    <string name="icon_shape_custom_create">Create custom shape</string>
-    <string name="icon_shape_custom_edit">Edit custom shape</string>
-    <string name="icon_shape_custom_title">Custom shape</string>
-    <string name="icon_shape_corner_top_left">Top left</string>
-    <string name="icon_shape_corner_top_right">Top right</string>
-    <string name="icon_shape_corner_bottom_left">Bottom left</string>
-    <string name="icon_shape_corner_bottom_right">Bottom right</string>
-    <string name="icon_shape_corner_round">Round</string>
-    <string name="icon_shape_corner_smooth">Smooth</string>
-    <string name="icon_shape_corner_cut">Cut</string>
-    <string name="icon_shape_apply">Apply</string>
+    <string name="icon_shape_custom_create">カスタムシェイプを作成</string>
+    <string name="icon_shape_custom_edit">カスタムシェイプを編集</string>
+    <string name="icon_shape_custom_title">カスタム形状</string>
+    <string name="icon_shape_corner_top_left">左上</string>
+    <string name="icon_shape_corner_top_right">右上</string>
+    <string name="icon_shape_corner_bottom_left">左下</string>
+    <string name="icon_shape_corner_bottom_right">右下</string>
+    <string name="icon_shape_corner_round">円形</string>
+    <string name="icon_shape_corner_smooth">滑らか</string>
+    <string name="icon_shape_corner_cut">切り取り</string>
+    <string name="icon_shape_apply">適用</string>
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">壁紙カルーセル</string>
     <string name="wallpaper_carousel_summary">長押しのメニューから壁紙を素早く切り替える</string>
