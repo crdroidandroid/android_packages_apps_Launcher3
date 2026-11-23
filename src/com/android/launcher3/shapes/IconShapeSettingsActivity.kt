@@ -32,15 +32,16 @@ class IconShapeSettingsActivity : CollapsingToolbarBaseActivity() {
         setContentView(R.layout.settings_activity)
 
         val isEditor = intent.getBooleanExtra(EXTRA_EDITOR, false)
-        if (isEditor) setTitle(R.string.icon_shape_custom_title)
+        val target = ShapeTarget.fromName(intent.getStringExtra(EXTRA_TARGET))
+        setTitle(if (isEditor) target.customTitle else target.title)
 
         if (savedInstanceState == null) {
+            val fragment =
+                if (isEditor) IconShapeEditorFragment() else IconShapeSettingsFragment()
+            fragment.arguments = Bundle().apply { putString(EXTRA_TARGET, target.name) }
             supportFragmentManager
                 .beginTransaction()
-                .replace(
-                    CollapsingToolbarR.id.content_frame,
-                    if (isEditor) IconShapeEditorFragment() else IconShapeSettingsFragment(),
-                )
+                .replace(CollapsingToolbarR.id.content_frame, fragment)
                 .commit()
         }
     }
@@ -60,9 +61,17 @@ class IconShapeSettingsActivity : CollapsingToolbarBaseActivity() {
 
     companion object {
         private const val EXTRA_EDITOR = "icon_shape_editor"
+        /** [ShapeTarget] name, also passed to the hosted fragment as an argument. */
+        const val EXTRA_TARGET = "shape_target"
 
-        /** Returns an intent opening the custom shape editor. */
-        fun createEditorIntent(context: Context): Intent =
-            Intent(context, IconShapeSettingsActivity::class.java).putExtra(EXTRA_EDITOR, true)
+        /** Returns an intent opening the shape picker for [target]. */
+        @JvmStatic
+        fun createIntent(context: Context, target: ShapeTarget): Intent =
+            Intent(context, IconShapeSettingsActivity::class.java)
+                .putExtra(EXTRA_TARGET, target.name)
+
+        /** Returns an intent opening the custom shape editor for [target]. */
+        fun createEditorIntent(context: Context, target: ShapeTarget): Intent =
+            createIntent(context, target).putExtra(EXTRA_EDITOR, true)
     }
 }

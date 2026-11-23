@@ -54,6 +54,7 @@ import com.android.launcher3.display.LauncherDisplayInfo;
 import com.android.launcher3.icons.pack.IconPackSettingsActivity;
 import com.android.launcher3.shapes.IconShapeSettingsActivity;
 import com.android.launcher3.shapes.IconShapeSettingsFragment;
+import com.android.launcher3.shapes.ShapeTarget;
 import com.android.launcher3.util.AppReloader;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
@@ -67,6 +68,7 @@ public class SettingsIcons extends CollapsingToolbarBaseActivity
 
     private static final String NOTIFICATION_DOTS_PREFERENCE_KEY = "pref_icon_badging";
     private static final String ICON_SHAPE_PREFERENCE_KEY = "pref_icon_shape";
+    private static final String FOLDER_SHAPE_PREFERENCE_KEY = "pref_folder_shape";
 
     public static final String EXTRA_FRAGMENT_ARGS = ":settings:fragment_args";
 
@@ -300,7 +302,10 @@ public class SettingsIcons extends CollapsingToolbarBaseActivity
                     setupIconPackPreference(preference);
                     return true;
                 case ICON_SHAPE_PREFERENCE_KEY:
-                    setupIconShapePreference(preference);
+                    setupShapePreference(preference, ShapeTarget.ICON);
+                    return true;
+                case FOLDER_SHAPE_PREFERENCE_KEY:
+                    setupShapePreference(preference, ShapeTarget.FOLDER);
                     return true;
             }
             return true;
@@ -318,11 +323,8 @@ public class SettingsIcons extends CollapsingToolbarBaseActivity
                 }
             }
 
-            Preference iconShapePref = findPreference(ICON_SHAPE_PREFERENCE_KEY);
-            if (iconShapePref != null) {
-                iconShapePref.setSummary(
-                        IconShapeSettingsFragment.getCurrentShapeLabel(getContext()));
-            }
+            updateShapeSummary(ICON_SHAPE_PREFERENCE_KEY, ShapeTarget.ICON);
+            updateShapeSummary(FOLDER_SHAPE_PREFERENCE_KEY, ShapeTarget.FOLDER);
 
             if (mRestartOnResume) {
                 recreateActivityNow();
@@ -374,12 +376,21 @@ public class SettingsIcons extends CollapsingToolbarBaseActivity
             });
         }
 
-        private void setupIconShapePreference(Preference preference) {
-            preference.setSummary(IconShapeSettingsFragment.getCurrentShapeLabel(getContext()));
+        private void setupShapePreference(Preference preference, ShapeTarget target) {
+            preference.setSummary(
+                    IconShapeSettingsFragment.getCurrentShapeLabel(getContext(), target));
             preference.setOnPreferenceClickListener(p -> {
-                startActivity(new Intent(getContext(), IconShapeSettingsActivity.class));
+                startActivity(IconShapeSettingsActivity.createIntent(getContext(), target));
                 return true;
             });
+        }
+
+        private void updateShapeSummary(String key, ShapeTarget target) {
+            Preference preference = findPreference(key);
+            if (preference != null) {
+                preference.setSummary(
+                        IconShapeSettingsFragment.getCurrentShapeLabel(getContext(), target));
+            }
         }
     }
 

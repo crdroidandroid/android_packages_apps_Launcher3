@@ -31,6 +31,7 @@ import com.android.launcher3.Flags
 import com.android.launcher3.InvariantDeviceProfile
 import com.android.launcher3.LauncherAppState
 import com.android.launcher3.R
+import com.android.launcher3.graphics.ShapeDelegate
 import com.android.launcher3.graphics.ShapeDelegate.Companion.pickBestShape
 import com.android.launcher3.graphics.ThemeManager
 import com.android.launcher3.icons.BitmapInfo
@@ -46,8 +47,9 @@ import com.android.launcher3.util.Executors.MODEL_EXECUTOR
 import kotlin.math.roundToInt
 
 /**
- * Live preview of the icon shape being edited: real app icons, as the launcher renders them with
- * the current icon pack and theme, clipped to the shape over a snippet of the wallpaper.
+ * Live preview of the shape being edited, over a snippet of the wallpaper: a row of real app
+ * icons, as the launcher renders them with the current icon pack and theme, above a row of
+ * folders. Both rows show how the home screen would look with the edited [target] shape applied.
  */
 class IconShapePreviewPreference
 @JvmOverloads
@@ -56,9 +58,19 @@ constructor(context: Context, attrs: AttributeSet? = null) : Preference(context,
     private val themeManager = ThemeManager.INSTANCE.get(context)
     private val iconBitmapSize = InvariantDeviceProfile.INSTANCE.get(context).iconBitmapSize
 
+    /** What the edited shape applies to. */
+    var target = ShapeTarget.ICON
+        set(value) {
+            if (field == value) return
+            field = value
+            folderShape = null
+            updateIcons()
+        }
+
     private var pathString = ""
     /** Shape generated for [pathString], created lazily since it renders a shadow bitmap. */
     private var iconShape: IconShape? = null
+    private var folderShape: ShapeDelegate? = null
 
     private var loadStarted = false
     private var appIcons: List<BitmapInfo> = emptyList()
@@ -75,19 +87,16 @@ constructor(context: Context, attrs: AttributeSet? = null) : Preference(context,
         if (path == pathString) return
         pathString = path
         iconShape = null
+        folderShape = null
         // Update the bound views directly; a full rebind on every slider step would flicker.
         updateIcons()
-    }
-
-    override fun onAttached() {
-        super.onAttached()
-        loadPreviewContent()
     }
 
     override fun onBindViewHolder(holder: PreferenceViewHolder) {
         super.onBindViewHolder(holder)
         holder.isDividerAllowedAbove = false
         holder.isDividerAllowedBelow = false
+        loadPreviewContent()
 
         (holder.findViewById(R.id.icon_shape_preview_wallpaper) as ImageView)
             .setImageDrawable(wallpaper)
@@ -124,17 +133,47 @@ constructor(context: Context, attrs: AttributeSet? = null) : Preference(context,
 
     private fun updateIcons() {
         if (iconViews.isEmpty() || appIcons.isEmpty()) return
-        val shape = iconShape ?: createIconShape().also { iconShape = it }
-        val flags = FLAG_NO_BADGE or if (themeManager.isIconThemeEnabled) FLAG_THEMED else 0
+        val appShape =
+            if (target == ShapeTarget.ICON) iconShape ?: createIconShape().also { iconShape = it }
+            else themeManager.iconShapeData.value
+        val folderShape = folderShape ?: previewFolderShape().also { folderShape = it }
+        val folderColor = folderBackgroundColor()
         iconViews.forEachIndexed { i, view ->
-            val info = appIcons.getOrNull(i)
-            // Mirror the launcher: only full-bleed icons are cropped to a custom shape.
-            val customShape =
-                if (Flags.enableLauncherIconShapes() && info?.isFullBleed() == true) shape
-                else null
-            view.setImageDrawable(info?.newIcon(context, flags, customShape))
+            if (i < COLUMNS) {
+                view.setImageDrawable(appIcons.getOrNull(i)?.let { newIcon(it, appShape) })
+            } else {
+                val first = COLUMNS + (i - COLUMNS) * FOLDER_ITEMS
+                val items = appIcons.drop(first).take(FOLDER_ITEMS).map { newIcon(it, appShape) }
+                view.setImageDrawable(
+                    FolderPreviewDrawable(folderShape, items, folderColor, iconBitmapSize)
+                )
+            }
         }
     }
+
+    /**
+     * Returns the folder shape the edited shape would produce: the shape itself when editing
+     * folders, or when folders match the (custom) icon shape; otherwise the folder shape in use.
+     */
+    private fun previewFolderShape(): ShapeDelegate {
+        val followsIcon = ShapeTarget.FOLDER.shapePref.get(context).isEmpty()
+        return if (target == ShapeTarget.FOLDER || followsIcon) pickBestShape(pathString)
+        else themeManager.folderShape
+    }
+
+    private fun newIcon(info: BitmapInfo, shape: IconShape): Drawable {
+        val flags = FLAG_NO_BADGE or if (themeManager.isIconThemeEnabled) FLAG_THEMED else 0
+        // Mirror the launcher: only full-bleed icons are cropped to a custom shape.
+        val customShape =
+            if (Flags.enableLauncherIconShapes() && info.isFullBleed()) shape else null
+        return info.newIcon(context, flags, customShape)
+    }
+
+    private fun folderBackgroundColor(): Int =
+        context.getColor(
+            if (context.resources.configuration.isNightModeActive) R.color.folder_preview_dark
+            else R.color.folder_preview_light
+        )
 
     private fun createIconShape(): IconShape =
         GraphicsUtils.generateIconShape(
@@ -171,7 +210,7 @@ constructor(context: Context, attrs: AttributeSet? = null) : Preference(context,
             .getActivityList(null, user)
             .distinctBy { it.componentName.packageName }
             .sortedBy { it.label.toString().lowercase() }
-            .take(ROWS * COLUMNS)
+            .take(MAX_APPS)
             .map { activity ->
                 AppInfo(context, activity, user)
                     .also { iconCache.getTitleAndIcon(it, activity, lookupFlag) }
@@ -185,5 +224,8 @@ constructor(context: Context, attrs: AttributeSet? = null) : Preference(context,
         const val COLUMNS = 4
         const val ICON_SIZE_DP = 56
         const val ROW_PADDING_DP = 8
+        const val FOLDER_ITEMS = 4
+        /** Enough apps for a row of icons and a row of filled folders. */
+        const val MAX_APPS = COLUMNS + COLUMNS * FOLDER_ITEMS
     }
 }

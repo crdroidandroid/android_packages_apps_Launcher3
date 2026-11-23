@@ -19,6 +19,7 @@ package com.android.launcher3.graphics
 import android.content.Context
 import android.content.res.Resources
 import androidx.annotation.AnyThread
+import com.android.launcher3.ConstantItem
 import com.android.launcher3.LauncherPrefChangeListener
 import com.android.launcher3.LauncherPrefs
 import com.android.launcher3.LauncherPrefs.Companion.backedUpItem
@@ -38,6 +39,7 @@ import com.android.launcher3.icons.GraphicsUtils.generateIconShape
 import com.android.launcher3.icons.IconShape
 import com.android.launcher3.icons.IconThemeController
 import com.android.launcher3.shapes.CustomIconShape
+import com.android.launcher3.shapes.IconShapeModel
 import com.android.launcher3.shapes.IconShapeModel.Companion.DEFAULT_ICON_RADIUS
 import com.android.launcher3.shapes.ShapesProvider
 import com.android.launcher3.util.DaggerSingletonObject
@@ -102,14 +104,12 @@ constructor(
         lifecycle.addCloseable(overlayChangeHandler.addCallback { verifyIconState() })
 
         val prefListener = LauncherPrefChangeListener {
-            if (it == PREF_ICON_SHAPE.sharedPrefKey || it == PREF_CUSTOM_ICON_SHAPE.sharedPrefKey) {
-                verifyIconState()
-            }
+            if (SHAPE_PREFS.any { pref -> pref.sharedPrefKey == it }) verifyIconState()
         }
-        prefs.addListener(prefListener, PREF_ICON_SHAPE, PREF_CUSTOM_ICON_SHAPE)
+        prefs.addListener(prefListener, *SHAPE_PREFS)
         lifecycle.addCloseable(themePreference.forEach(mainExecutor) { verifyIconState() })
         lifecycle.addCloseable {
-            prefs.removeListener(prefListener, PREF_ICON_SHAPE, PREF_CUSTOM_ICON_SHAPE)
+            prefs.removeListener(prefListener, *SHAPE_PREFS)
             iconState.closeController()
         }
     }
@@ -127,7 +127,11 @@ constructor(
             // trigger listeners only for theme change, not shape change
             listeners.forEach { it.onThemeChanged() }
         }
-        if (newState.iconShape != oldState.iconShape) {
+        // Shape changes rebind the model, which also redraws folders with a new folder shape.
+        if (
+            newState.iconShape != oldState.iconShape ||
+                newState.folderShape != oldState.folderShape
+        ) {
             _iconShapeData.dispatchValue(iconShape.createIconShape(iconShapeData.value.pathSize))
         }
     }
@@ -150,14 +154,7 @@ constructor(
     }
 
     private fun parseIconState(oldState: IconState?): IconState {
-        val shapeModel =
-            prefs.get(PREF_ICON_SHAPE).let { shapeOverride ->
-                if (shapeOverride == CustomIconShape.KEY) {
-                    CustomIconShape.fromPrefs(prefs)?.toModel()
-                } else {
-                    ShapesProvider.iconShapes.firstOrNull { it.key == shapeOverride }
-                }
-            }
+        val shapeModel = resolveShapeModel(PREF_ICON_SHAPE, PREF_CUSTOM_ICON_SHAPE)
         val iconMask =
             when {
                 shapeModel != null -> shapeModel.pathString
@@ -173,9 +170,19 @@ constructor(
             }
 
         val folderRadius = shapeModel?.folderRadiusRatio ?: 1f
+        val folderMask =
+            resolveShapeModel(PREF_FOLDER_SHAPE, PREF_CUSTOM_FOLDER_SHAPE)?.pathString
+                ?: shapeModel?.takeIf { it.key == CustomIconShape.KEY }?.pathString
+                ?: ""
         val folderShape =
-            if (oldState != null && oldState.folderRadius == folderRadius) {
+            if (
+                oldState != null &&
+                    oldState.folderMask == folderMask &&
+                    (folderMask.isNotEmpty() || oldState.folderRadius == folderRadius)
+            ) {
                 oldState.folderShape
+            } else if (folderMask.isNotEmpty()) {
+                pickBestShape(folderMask)
             } else if (folderRadius == 1f) {
                 ShapeDelegate.Circle()
             } else {
@@ -204,6 +211,7 @@ constructor(
         return IconState(
             iconMask = iconMask,
             folderRadius = folderRadius,
+            folderMask = folderMask,
             themeController = iconControllerFactory,
             iconShape = iconShape,
             folderShape = folderShape,
@@ -214,9 +222,19 @@ constructor(
         )
     }
 
+    private fun resolveShapeModel(
+        shapePref: ConstantItem<String>,
+        customShapePref: ConstantItem<String>,
+    ): IconShapeModel? =
+        when (val key = prefs.get(shapePref)) {
+            CustomIconShape.KEY -> CustomIconShape.parse(prefs.get(customShapePref))?.toModel()
+            else -> ShapesProvider.iconShapes.firstOrNull { it.key == key }
+        }
+
     data class IconState(
         val iconMask: String,
         val folderRadius: Float,
+        val folderMask: String,
         val themeController: IconThemeController?,
         val themeCode: String,
         val iconShape: ShapeDelegate,
@@ -246,6 +264,16 @@ constructor(
         @JvmField val INSTANCE = DaggerSingletonObject(LauncherAppComponent::getThemeManager)
         @JvmField val PREF_ICON_SHAPE = backedUpItem("icon_shape_model", "")
         @JvmField val PREF_CUSTOM_ICON_SHAPE = backedUpItem("icon_shape_custom", "")
+        @JvmField val PREF_FOLDER_SHAPE = backedUpItem("folder_shape_model", "")
+        @JvmField val PREF_CUSTOM_FOLDER_SHAPE = backedUpItem("folder_shape_custom", "")
+
+        private val SHAPE_PREFS =
+            arrayOf(
+                PREF_ICON_SHAPE,
+                PREF_CUSTOM_ICON_SHAPE,
+                PREF_FOLDER_SHAPE,
+                PREF_CUSTOM_FOLDER_SHAPE,
+            )
 
         @JvmField val DEFAULT_SHAPE_DELEGATE = pickBestShape(shapeStr = "")
 

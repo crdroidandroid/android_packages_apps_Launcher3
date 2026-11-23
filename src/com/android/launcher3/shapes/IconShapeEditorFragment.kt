@@ -26,12 +26,14 @@ import androidx.lifecycle.Lifecycle
 import com.android.launcher3.LauncherFiles
 import com.android.launcher3.LauncherPrefs
 import com.android.launcher3.R
-import com.android.launcher3.graphics.ThemeManager.Companion.PREF_CUSTOM_ICON_SHAPE
-import com.android.launcher3.graphics.ThemeManager.Companion.PREF_ICON_SHAPE
 import com.android.settingslib.widget.SettingsBasePreferenceFragment
 
-/** Edits the four corners of the custom icon shape, previewing the result live. */
+/** Edits the four corners of a custom icon or folder shape, previewing the result live. */
 class IconShapeEditorFragment : SettingsBasePreferenceFragment() {
+
+    private val target by lazy {
+        ShapeTarget.fromName(arguments?.getString(IconShapeSettingsActivity.EXTRA_TARGET))
+    }
 
     /** Links a corner's preference to the matching field of [CustomIconShape]. */
     private class CornerBinding(
@@ -65,13 +67,15 @@ class IconShapeEditorFragment : SettingsBasePreferenceFragment() {
         preferenceManager.sharedPreferencesName = LauncherFiles.SHARED_PREFERENCES_KEY
         setPreferencesFromResource(R.xml.launcher_icon_shape_editor, rootKey)
 
-        saved = CustomIconShape.fromPrefs(LauncherPrefs.get(requireContext()))
+        saved = target.customShape(LauncherPrefs.get(requireContext()))
         draft =
             CustomIconShape.parse(savedInstanceState?.getString(STATE_DRAFT))
                 ?: saved
                 ?: CustomIconShape.DEFAULT
 
-        preview = findPreference(KEY_PREVIEW)
+        preview = findPreference<IconShapePreviewPreference>(KEY_PREVIEW)?.apply {
+            target = this@IconShapeEditorFragment.target
+        }
         corners.forEach { bindCorner(it) }
         updatePreview()
     }
@@ -122,7 +126,10 @@ class IconShapeEditorFragment : SettingsBasePreferenceFragment() {
 
     private fun applyDraft() {
         LauncherPrefs.get(requireContext())
-            .put(PREF_CUSTOM_ICON_SHAPE to draft.serialize(), PREF_ICON_SHAPE to CustomIconShape.KEY)
+            .put(
+                target.customShapePref to draft.serialize(),
+                target.shapePref to CustomIconShape.KEY,
+            )
         activity?.finish()
     }
 

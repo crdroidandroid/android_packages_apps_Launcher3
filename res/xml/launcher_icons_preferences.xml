@@ -27,6 +27,10 @@
         android:key="pref_icon_shape"
         android:title="@string/icon_shape_title" />
 
+    <Preference
+        android:key="pref_folder_shape"
+        android:title="@string/folder_shape_title" />
+
     <com.android.launcher3.settings.NotificationDotsPreference
         android:key="pref_icon_badging"
         android:title="@string/notification_dots_title"
