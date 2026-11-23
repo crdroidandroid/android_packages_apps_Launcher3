@@ -19,6 +19,7 @@ package com.android.launcher3.settings;
 import static androidx.preference.PreferenceFragmentCompat.ARG_PREFERENCE_ROOT;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -51,6 +52,7 @@ import com.android.launcher3.R;
 import com.android.launcher3.customization.IconDatabase;
 import com.android.launcher3.display.DisplayController;
 import com.android.launcher3.display.LauncherDisplayInfo;
+import com.android.launcher3.graphics.ThemeManager;
 import com.android.launcher3.icons.pack.IconPackSettingsActivity;
 import com.android.launcher3.shapes.IconShapeSettingsActivity;
 import com.android.launcher3.shapes.IconShapeSettingsFragment;
@@ -377,20 +379,29 @@ public class SettingsIcons extends CollapsingToolbarBaseActivity
         }
 
         private void setupShapePreference(Preference preference, ShapeTarget target) {
-            preference.setSummary(
-                    IconShapeSettingsFragment.getCurrentShapeLabel(getContext(), target));
             preference.setOnPreferenceClickListener(p -> {
                 startActivity(IconShapeSettingsActivity.createIntent(getContext(), target));
                 return true;
             });
+            updateShapePreference(preference, target);
         }
 
         private void updateShapeSummary(String key, ShapeTarget target) {
             Preference preference = findPreference(key);
             if (preference != null) {
-                preference.setSummary(
-                        IconShapeSettingsFragment.getCurrentShapeLabel(getContext(), target));
+                updateShapePreference(preference, target);
             }
+        }
+
+        private void updateShapePreference(Preference preference, ShapeTarget target) {
+            Context context = getContext();
+            boolean blockedByIconPack = target == ShapeTarget.ICON
+                    && !IconDatabase.VALUE_DEFAULT.equals(IconDatabase.getGlobal(context))
+                    && !LauncherPrefs.get(context).get(ThemeManager.PREF_RESHAPE_PACK_ICONS);
+            preference.setEnabled(!blockedByIconPack);
+            preference.setSummary(blockedByIconPack
+                    ? context.getString(R.string.icon_shape_unavailable_pack_summary)
+                    : IconShapeSettingsFragment.getCurrentShapeLabel(context, target));
         }
     }
 

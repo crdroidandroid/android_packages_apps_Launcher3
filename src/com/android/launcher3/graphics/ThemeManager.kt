@@ -266,6 +266,7 @@ constructor(
         @JvmField val PREF_CUSTOM_ICON_SHAPE = backedUpItem("icon_shape_custom", "")
         @JvmField val PREF_FOLDER_SHAPE = backedUpItem("folder_shape_model", "")
         @JvmField val PREF_CUSTOM_FOLDER_SHAPE = backedUpItem("folder_shape_custom", "")
+        @JvmField val PREF_RESHAPE_PACK_ICONS = backedUpItem("icon_shape_reshape_pack_icons", false)
 
         private val SHAPE_PREFS =
             arrayOf(

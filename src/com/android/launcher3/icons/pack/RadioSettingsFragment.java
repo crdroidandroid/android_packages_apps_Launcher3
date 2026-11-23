@@ -46,6 +46,7 @@ public abstract class RadioSettingsFragment extends SettingsBasePreferenceFragme
         if (headerPref != null) {
             screen.addPreference(headerPref);
         }
+        addExtraPreferences(context, screen);
 
         loadPreferences(context, screen, null);
         setPreferenceScreen(screen);
@@ -78,6 +79,13 @@ public abstract class RadioSettingsFragment extends SettingsBasePreferenceFragme
         return null;
     }
 
+    /**
+     * Adds preferences shown between the header and the radio list. They are kept when the radio
+     * preferences are reloaded.
+     */
+    protected void addExtraPreferences(Context context, PreferenceScreen screen) {
+    }
+
     protected final void setSelectedPreference(SelectorWithWidgetPreference preference) {
         selectedPreference = preference;
     }
@@ -85,6 +93,14 @@ public abstract class RadioSettingsFragment extends SettingsBasePreferenceFragme
     protected void onSelected(String key) {
         if (headerPref != null) {
             headerPref.onRadioElementSelected(key);
+        }
+    }
+
+    /** Reloads the header contents for the selected element. */
+    protected final void refreshHeader() {
+        if (headerPref != null) {
+            headerPref.onRadioElementSelected(
+                    selectedPreference == null ? null : selectedPreference.getKey());
         }
     }
 

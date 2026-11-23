@@ -25,10 +25,14 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 
 import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.SwitchPreferenceCompat;
 
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 
 import com.android.launcher3.customization.IconDatabase;
+import com.android.launcher3.graphics.ThemeManager;
 
 import com.android.settingslib.widget.SelectorWithWidgetPreference;
 
@@ -39,6 +43,7 @@ import java.util.Set;
 
 public final class IconPackSettingsFragment extends RadioSettingsFragment {
     private static final IntentFilter PKG_UPDATE_INTENT = new IntentFilter();
+    private static final String KEY_RESHAPE_PACK_ICONS = "pref_reshape_pack_icons";
 
     private static final String[] ICON_INTENT_ACTIONS = new String[] {
             "com.fede.launcher.THEME_ICONPACK",
@@ -74,10 +79,43 @@ public final class IconPackSettingsFragment extends RadioSettingsFragment {
         }
     };
 
+    private SwitchPreferenceCompat mReshapePref;
+
+    @Override
+    protected void addExtraPreferences(Context context, PreferenceScreen screen) {
+        final LauncherPrefs prefs = LauncherPrefs.get(context);
+        mReshapePref = new SwitchPreferenceCompat(context);
+        mReshapePref.setKey(KEY_RESHAPE_PACK_ICONS);
+        mReshapePref.setPersistent(false);
+        mReshapePref.setTitle(R.string.icon_shape_reshape_pack_title);
+        mReshapePref.setSummary(R.string.icon_shape_reshape_pack_summary);
+        mReshapePref.setChecked(prefs.get(ThemeManager.PREF_RESHAPE_PACK_ICONS));
+        mReshapePref.setOnPreferenceChangeListener((p, newValue) -> {
+            prefs.put(ThemeManager.PREF_RESHAPE_PACK_ICONS, (Boolean) newValue);
+            refreshHeader();
+            return true;
+        });
+        screen.addPreference(mReshapePref);
+        updateReshapeEnabled(IconDatabase.getGlobal(context));
+    }
+
+    private void updateReshapeEnabled(String iconPack) {
+        if (mReshapePref != null) {
+            mReshapePref.setEnabled(!IconDatabase.VALUE_DEFAULT.equals(iconPack));
+        }
+    }
+
+    @Override
+    public void onDestroyView() {
+        mReshapePref = null;
+        super.onDestroyView();
+    }
+
     @Override
     public void onResume() {
         super.onResume();
         reloadPreferences();
+        updateReshapeEnabled(IconDatabase.getGlobal(getContext()));
         getActivity().registerReceiver(broadCastReceiver, PKG_UPDATE_INTENT);
     }
 
@@ -110,6 +148,7 @@ public final class IconPackSettingsFragment extends RadioSettingsFragment {
     @Override
     public void onSelected(String key) {
         IconDatabase.setGlobal(getActivity(), key);
+        updateReshapeEnabled(key);
         super.onSelected(key);
     }
 

@@ -447,6 +447,9 @@
     <string name="icon_shape_corner_smooth">Smooth</string>
     <string name="icon_shape_corner_cut">Cut</string>
     <string name="icon_shape_apply">Apply</string>
+    <string name="icon_shape_reshape_pack_title">Fit icon pack icons to shape</string>
+    <string name="icon_shape_reshape_pack_summary">Place icon pack icons on a matching background in the selected icon shape</string>
+    <string name="icon_shape_unavailable_pack_summary">Turn on \u201cFit icon pack icons to shape\u201d in Icon pack to use with this icon pack</string>
     <string name="folder_shape_title">Folder shape</string>
     <string name="folder_shape_match_icon">Match icon shape</string>
     <string name="folder_shape_custom_title">Custom folder shape</string>
