@@ -63,6 +63,14 @@ class IconShapeSettingsFragment : SettingsBasePreferenceFragment() {
         val screen = preferenceManager.createPreferenceScreen(context)
         setPreferenceScreen(screen)
 
+        // Previews the shapes in use, updating as soon as another one is selected.
+        screen.addPreference(
+            IconShapePreviewPreference(context).apply {
+                key = KEY_PREVIEW
+                target = this@IconShapeSettingsFragment.target
+            }
+        )
+
         val customCategory =
             PreferenceCategory(context).apply {
                 key = KEY_CATEGORY_CUSTOM
@@ -165,6 +173,7 @@ class IconShapeSettingsFragment : SettingsBasePreferenceFragment() {
          * icons, the icon shape for folders.
          */
         private const val KEY_SYSTEM_DEFAULT = "system_default"
+        private const val KEY_PREVIEW = "shape_preview"
         private const val KEY_CATEGORY_CUSTOM = "icon_shape_category_custom"
         private const val KEY_CATEGORY_PRESETS = "icon_shape_category_presets"
         private const val KEY_EDIT_CUSTOM = "icon_shape_edit_custom"

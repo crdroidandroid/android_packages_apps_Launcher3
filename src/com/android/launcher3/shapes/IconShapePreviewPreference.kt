@@ -44,12 +44,14 @@ import com.android.launcher3.model.data.AppInfo
 import com.android.launcher3.settings.preferences.PreviewWallpaper
 import com.android.launcher3.util.Executors.MAIN_EXECUTOR
 import com.android.launcher3.util.Executors.MODEL_EXECUTOR
+import com.android.launcher3.util.SafeCloseable
 import kotlin.math.roundToInt
 
 /**
  * Live preview of the shape being edited, over a snippet of the wallpaper: a row of real app
  * icons, as the launcher renders them with the current icon pack and theme, above a row of
- * folders. Both rows show how the home screen would look with the edited [target] shape applied.
+ * folders. Both rows show how the home screen would look with the edited [target] shape applied,
+ * or, until a shape is set with [setPathString], with the shapes currently in use.
  */
 class IconShapePreviewPreference
 @JvmOverloads
@@ -67,7 +69,8 @@ constructor(context: Context, attrs: AttributeSet? = null) : Preference(context,
             updateIcons()
         }
 
-    private var pathString = ""
+    /** Path of the edited shape, or null to preview the shapes in use. */
+    private var pathString: String? = null
     /** Shape generated for [pathString], created lazily since it renders a shadow bitmap. */
     private var iconShape: IconShape? = null
     private var folderShape: ShapeDelegate? = null
@@ -76,6 +79,7 @@ constructor(context: Context, attrs: AttributeSet? = null) : Preference(context,
     private var appIcons: List<BitmapInfo> = emptyList()
     private var wallpaper: Drawable? = null
     private var iconViews: List<ImageView> = emptyList()
+    private var shapeChangeListener: SafeCloseable? = null
 
     init {
         layoutResource = R.layout.preference_icon_shape_preview
@@ -90,6 +94,22 @@ constructor(context: Context, attrs: AttributeSet? = null) : Preference(context,
         folderShape = null
         // Update the bound views directly; a full rebind on every slider step would flicker.
         updateIcons()
+    }
+
+    override fun onAttached() {
+        super.onAttached()
+        // Applying a shape updates the icon shape data, which is also dispatched for folders.
+        shapeChangeListener =
+            themeManager.iconShapeData.forEach(MAIN_EXECUTOR) {
+                folderShape = null
+                updateIcons()
+            }
+    }
+
+    override fun onDetached() {
+        shapeChangeListener?.close()
+        shapeChangeListener = null
+        super.onDetached()
     }
 
     override fun onBindViewHolder(holder: PreferenceViewHolder) {
@@ -133,8 +153,10 @@ constructor(context: Context, attrs: AttributeSet? = null) : Preference(context,
 
     private fun updateIcons() {
         if (iconViews.isEmpty() || appIcons.isEmpty()) return
+        val path = pathString
         val appShape =
-            if (target == ShapeTarget.ICON) iconShape ?: createIconShape().also { iconShape = it }
+            if (path != null && target == ShapeTarget.ICON)
+                iconShape ?: createIconShape(path).also { iconShape = it }
             else themeManager.iconShapeData.value
         val folderShape = folderShape ?: previewFolderShape().also { folderShape = it }
         val folderColor = folderBackgroundColor()
@@ -156,8 +178,9 @@ constructor(context: Context, attrs: AttributeSet? = null) : Preference(context,
      * folders, or when folders match the (custom) icon shape; otherwise the folder shape in use.
      */
     private fun previewFolderShape(): ShapeDelegate {
+        val path = pathString ?: return themeManager.folderShape
         val followsIcon = ShapeTarget.FOLDER.shapePref.get(context).isEmpty()
-        return if (target == ShapeTarget.FOLDER || followsIcon) pickBestShape(pathString)
+        return if (target == ShapeTarget.FOLDER || followsIcon) pickBestShape(path)
         else themeManager.folderShape
     }
 
@@ -175,10 +198,10 @@ constructor(context: Context, attrs: AttributeSet? = null) : Preference(context,
             else R.color.folder_preview_light
         )
 
-    private fun createIconShape(): IconShape =
+    private fun createIconShape(path: String): IconShape =
         GraphicsUtils.generateIconShape(
             iconBitmapSize,
-            pickBestShape(shapeStr = pathString).getPath(iconBitmapSize.toFloat()),
+            pickBestShape(shapeStr = path).getPath(iconBitmapSize.toFloat()),
         )
 
     private fun loadPreviewContent() {
