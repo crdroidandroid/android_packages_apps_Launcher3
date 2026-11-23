@@ -65,6 +65,9 @@ import android.content.ClipDescription;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Camera;
+import android.graphics.Canvas;
+import android.graphics.Matrix;
 import android.graphics.Point;
 import android.graphics.PointF;
 import android.graphics.Rect;
@@ -328,6 +331,18 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
     private final List<LauncherOverlayCallbacks> mOverlayCallbacks = new ArrayList<>();
 
     private boolean mForceDrawAdjacentPages = false;
+
+    private PageTransitionEffect mPageTransitionEffect = PageTransitionEffect.NONE;
+    private final PageTransitionEffect.PageTransform mPageTransform =
+            new PageTransitionEffect.PageTransform();
+    private final Matrix mPageTransformMatrix = new Matrix();
+    private final Matrix mPageTransformTmpMatrix = new Matrix();
+    private final Camera mPageTransformCamera = new Camera();
+    private final LauncherPrefChangeListener mPageTransitionListener = key -> {
+        if (LauncherPrefs.PAGE_TRANSITION.getSharedPrefKey().equals(key)) {
+            updatePageTransitionEffect();
+        }
+    };
 
     // Handles workspace state transitions
     private final WorkspaceStateTransitionAnimation mStateTransitionAnimation;
@@ -1603,6 +1618,9 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
         computeScroll();
         mLauncher.getStateManager().addStateListener(mAccessibilityDropListener);
         mLayoutTransition.addTransitionListener(mTransitionListener);
+        LauncherPrefs.get(getContext()).addListener(mPageTransitionListener,
+                LauncherPrefs.PAGE_TRANSITION);
+        updatePageTransitionEffect();
     }
 
     protected void onDetachedFromWindow() {
@@ -1610,10 +1628,83 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
         mWallpaperOffset.setWindowToken(null);
         mWallpaperOffset.destroy();
         mLauncher.getStateManager().removeStateListener(mAccessibilityDropListener);
+        LauncherPrefs.get(getContext()).removeListener(mPageTransitionListener,
+                LauncherPrefs.PAGE_TRANSITION);
         if (mLayoutTransition != null) {
             mLayoutTransition.removeTransitionListener(mTransitionListener);
         }
         mOverlayCallbacks.clear();
+    }
+
+    private void updatePageTransitionEffect() {
+        PageTransitionEffect effect = PageTransitionEffect.fromValue(
+                LauncherPrefs.PAGE_TRANSITION.get(getContext()));
+        if (effect != mPageTransitionEffect) {
+            mPageTransitionEffect = effect;
+            invalidate();
+        }
+    }
+
+    private boolean canApplyPageTransition() {
+        return mPageTransitionEffect != PageTransitionEffect.NONE
+                && !workspaceInModalState()
+                && !mIsSwitchingState
+                && (mDragController == null || !mDragController.isDragging())
+                && (getLayoutTransition() == null || !getLayoutTransition().isRunning())
+                && isPageScrollsInitialized();
+    }
+
+    @Override
+    protected boolean drawChild(Canvas canvas, View child, long drawingTime) {
+        if (!canApplyPageTransition()) {
+            return super.drawChild(canvas, child, drawingTime);
+        }
+        int index = indexOfChild(child);
+        if (index < 0) {
+            return super.drawChild(canvas, child, drawingTime);
+        }
+
+        int panelCount = getPanelCount();
+        int firstPanel = index - index % panelCount;
+        int lastPanel = Math.min(firstPanel + panelCount, getChildCount()) - 1;
+        int groupLeft = Integer.MAX_VALUE;
+        int groupRight = Integer.MIN_VALUE;
+        for (int i = firstPanel; i <= lastPanel; i++) {
+            View panel = getChildAt(i);
+            groupLeft = Math.min(groupLeft, panel.getLeft());
+            groupRight = Math.max(groupRight, panel.getRight());
+        }
+        float groupWidth = groupRight - groupLeft;
+        float height = child.getHeight();
+        int screenCenter = getScrollX() + getMeasuredWidth() / 2;
+        float progress = getScrollProgress(screenCenter, getChildAt(firstPanel), firstPanel);
+
+        PageTransitionEffect.PageTransform transform = mPageTransform;
+        if (!mPageTransitionEffect.getTransform(transform, progress, groupWidth, height,
+                groupWidth + mPageSpacing, mIsRtl)) {
+            return super.drawChild(canvas, child, drawingTime);
+        }
+        if (transform.alpha <= 0f) {
+            return false;
+        }
+        transform.offsetX(child.getLeft() - groupLeft);
+        transform.getMatrix(mPageTransformMatrix, mPageTransformTmpMatrix,
+                mPageTransformCamera, Math.max(groupWidth, height));
+
+        int saveCount = canvas.save();
+        canvas.translate(child.getLeft(), child.getTop());
+        canvas.concat(mPageTransformMatrix);
+        if (transform.hasClip) {
+            canvas.clipRect(transform.clipLeft, 0f, transform.clipRight, height);
+        }
+        if (transform.alpha < 1f) {
+            canvas.saveLayerAlpha(0f, 0f, child.getWidth(), height,
+                    Math.round(transform.alpha * 255));
+        }
+        canvas.translate(-child.getLeft(), -child.getTop());
+        boolean result = super.drawChild(canvas, child, drawingTime);
+        canvas.restoreToCount(saveCount);
+        return result;
     }
 
     @Override

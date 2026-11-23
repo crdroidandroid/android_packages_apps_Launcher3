@@ -85,4 +85,39 @@
         <item>ios</item>
         <item>oxygen</item>
     </string-array>
+
+    <!-- Home screen page transition effects -->
+    <string-array name="page_transition_entries">
+        <item>@string/page_transition_none</item>
+        <item>@string/page_transition_simple</item>
+        <item>@string/page_transition_cube</item>
+        <item>@string/page_transition_card_stack</item>
+        <item>@string/page_transition_tablet</item>
+        <item>@string/page_transition_revolving_door</item>
+        <item>@string/page_transition_flip</item>
+        <item>@string/page_transition_flip_vertical</item>
+        <item>@string/page_transition_in_and_out</item>
+        <item>@string/page_transition_accordion</item>
+        <item>@string/page_transition_glass</item>
+        <item>@string/page_transition_wipe</item>
+        <item>@string/page_transition_zoom_fade</item>
+        <item>@string/page_transition_throw</item>
+    </string-array>
+
+    <string-array name="page_transition_values" translatable="false">
+        <item>none</item>
+        <item>simple</item>
+        <item>cube</item>
+        <item>card_stack</item>
+        <item>tablet</item>
+        <item>revolving_door</item>
+        <item>flip</item>
+        <item>flip_vertical</item>
+        <item>in_and_out</item>
+        <item>accordion</item>
+        <item>glass</item>
+        <item>wipe</item>
+        <item>zoom_fade</item>
+        <item>throw</item>
+    </string-array>
 </resources>

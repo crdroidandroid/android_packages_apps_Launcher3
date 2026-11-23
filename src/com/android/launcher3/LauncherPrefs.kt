@@ -316,6 +316,7 @@ constructor(@ApplicationContext private val encryptedContext: Context) {
         @JvmField val HOTSEAT_QSB_OUTER_OPACITY = backedUpItem("pref_hotseat_qsb_outer_opacity", 60)
         @JvmField val HOTSEAT_QSB_STROKE_WIDTH = backedUpItem("pref_hotseat_qsb_stroke_width", 0)
         @JvmField val ICON_SIZE = backedUpItem("pref_custom_icon_size", 100)
+        @JvmField val PAGE_TRANSITION = backedUpItem("pref_page_transition", "none")
         @JvmField val RECENTS_CLEAR_ALL = backedUpItem("pref_recents_clear_all", true)
         @JvmField val RECENTS_LENS = backedUpItem("pref_recents_lens", false)
         @JvmField val RECENTS_MEMINFO = backedUpItem("pref_recents_meminfo", false)

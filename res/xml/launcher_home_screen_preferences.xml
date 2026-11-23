@@ -64,6 +64,15 @@
     <PreferenceCategory
         android:title="@string/interface_category_title">
 
+        <ListPreference
+            android:key="pref_page_transition"
+            android:title="@string/page_transition_title"
+            android:summary="%s"
+            android:entries="@array/page_transition_entries"
+            android:entryValues="@array/page_transition_values"
+            android:defaultValue="none"
+            launcher:iconSpaceReserved="false" />
+
         <SwitchPreferenceCompat
             android:key="pref_enable_minus_one"
             android:title="@string/title_show_google_app"
