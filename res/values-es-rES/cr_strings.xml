@@ -100,10 +100,10 @@
     <string name="meow_shape_title">Michi</string>
     <string name="samsung_style_shape_title">Estilo Samsung</string>
     <string name="stretched_shape_title">Estirado</string>
-    <string name="diamond_shape_title">Diamond</string>
-    <string name="egg_shape_title">Egg</string>
-    <string name="very_sunny_shape_title">Very sunny</string>
-    <string name="complex_clover_shape_title">Complex clover</string>
+    <string name="diamond_shape_title">Diamante</string>
+    <string name="egg_shape_title">Huevo</string>
+    <string name="very_sunny_shape_title">Muy soleado</string>
+    <string name="complex_clover_shape_title">Trébol complejo</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Desliza para comenzar la búsqueda</string>
     <string name="drawer_open_keyboard_summary">Abrir el teclado cada vez que el cajón de aplicaciones se vuelva visible</string>
@@ -365,7 +365,7 @@
     <string name="quick_event_weather_mist">Neblina</string>
     <string name="quick_event_weather_city_title">Ubicación actual</string>
     <string name="quick_event_weather_city_summary">Mostrar ubicación meteorológica actual</string>
-    <string name="quick_event_weather_city_summary_unavailable">Not available with Google weather</string>
+    <string name="quick_event_weather_city_summary_unavailable">No disponible con el clima de Google</string>
     <string name="quick_event_weather_text_title">Condición actual</string>
     <string name="quick_event_weather_text_summary">Mostrar el resumen actual de la condición meteorológica</string>
     <!-- Auto-hide page indicator dots -->
@@ -380,21 +380,21 @@
     <string name="icon_pack_add">Instalar más</string>
     <string name="icon_pack_no_market">No hay una tienda de aplicaciones disponible</string>
     <!-- Icon shape -->
-    <string name="icon_shape_title">Icon shape</string>
-    <string name="icon_shape_default_label">System default</string>
-    <string name="icon_shape_custom">Custom</string>
+    <string name="icon_shape_title">Forma de ícono</string>
+    <string name="icon_shape_default_label">Predeterminado del sistema</string>
+    <string name="icon_shape_custom">Personalizado</string>
     <string name="icon_shape_presets">Preajustes</string>
-    <string name="icon_shape_custom_create">Create custom shape</string>
-    <string name="icon_shape_custom_edit">Edit custom shape</string>
-    <string name="icon_shape_custom_title">Custom shape</string>
-    <string name="icon_shape_corner_top_left">Top left</string>
-    <string name="icon_shape_corner_top_right">Top right</string>
-    <string name="icon_shape_corner_bottom_left">Bottom left</string>
-    <string name="icon_shape_corner_bottom_right">Bottom right</string>
-    <string name="icon_shape_corner_round">Round</string>
-    <string name="icon_shape_corner_smooth">Smooth</string>
-    <string name="icon_shape_corner_cut">Cut</string>
-    <string name="icon_shape_apply">Apply</string>
+    <string name="icon_shape_custom_create">Crear forma personalizada</string>
+    <string name="icon_shape_custom_edit">Editar forma personalizada</string>
+    <string name="icon_shape_custom_title">Forma personalizada</string>
+    <string name="icon_shape_corner_top_left">Superior Izquierda</string>
+    <string name="icon_shape_corner_top_right">Superior derecha</string>
+    <string name="icon_shape_corner_bottom_left">Inferior izquierda</string>
+    <string name="icon_shape_corner_bottom_right">Inferior derecha</string>
+    <string name="icon_shape_corner_round">Redondo</string>
+    <string name="icon_shape_corner_smooth">Suave</string>
+    <string name="icon_shape_corner_cut">Cortar</string>
+    <string name="icon_shape_apply">Aplicar</string>
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">Carrusel de fondos de pantalla</string>
     <string name="wallpaper_carousel_summary">Cambia rápidamente los fondos de pantalla desde el menú de pulsación prolongada</string>
