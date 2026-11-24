@@ -395,9 +395,9 @@
     <string name="icon_shape_corner_smooth">Гладкий</string>
     <string name="icon_shape_corner_cut">Вырезать</string>
     <string name="icon_shape_apply">Применить</string>
-    <string name="icon_shape_reshape_pack_title">Fit icon pack icons to shape</string>
-    <string name="icon_shape_reshape_pack_summary">Place icon pack icons on a matching background in the selected icon shape</string>
-    <string name="icon_shape_unavailable_pack_summary">Turn on \u201cFit icon pack icons to shape\u201d in Icon pack to use with this icon pack</string>
+    <string name="icon_shape_reshape_pack_title">Подогнать набор значков под форму</string>
+    <string name="icon_shape_reshape_pack_summary">Разместить значки из набора значков на соответствующем фоне, придав им выбранную форму</string>
+    <string name="icon_shape_unavailable_pack_summary">Включите опцию «Подогнать набор значков под форму» в наборе значков, чтобы использовать этот набор</string>
     <string name="folder_shape_title">Форма папки</string>
     <string name="folder_shape_match_icon">Как у значка</string>
     <string name="folder_shape_custom_title">Своя форма папки</string>
@@ -457,19 +457,19 @@
     <string name="unlock_app">Разблокировано в недавних</string>
     <string name="lock_app">Заблокировано в недавних</string>
     <!-- Page transition -->
-    <string name="page_transition_title">Transition effect</string>
-    <string name="page_transition_none">None</string>
-    <string name="page_transition_simple">Simple</string>
-    <string name="page_transition_cube">Cube</string>
-    <string name="page_transition_card_stack">Card stack</string>
-    <string name="page_transition_tablet">Tablet</string>
-    <string name="page_transition_revolving_door">Revolving door</string>
-    <string name="page_transition_flip">Flip</string>
-    <string name="page_transition_flip_vertical">Flip vertical</string>
-    <string name="page_transition_in_and_out">In and out</string>
-    <string name="page_transition_accordion">Accordion</string>
-    <string name="page_transition_glass">Glass</string>
-    <string name="page_transition_wipe">Wipe</string>
-    <string name="page_transition_zoom_fade">Zoom fade</string>
-    <string name="page_transition_throw">Throw</string>
+    <string name="page_transition_title">Эффект перехода</string>
+    <string name="page_transition_none">Нет</string>
+    <string name="page_transition_simple">Простой</string>
+    <string name="page_transition_cube">Куб</string>
+    <string name="page_transition_card_stack">Стопка карт</string>
+    <string name="page_transition_tablet">Планшет</string>
+    <string name="page_transition_revolving_door">Вращающаяся дверь</string>
+    <string name="page_transition_flip">Листание</string>
+    <string name="page_transition_flip_vertical">Вертикальное листание</string>
+    <string name="page_transition_in_and_out">Вход и выход</string>
+    <string name="page_transition_accordion">Аккордеон</string>
+    <string name="page_transition_glass">Стекло</string>
+    <string name="page_transition_wipe">Стирание</string>
+    <string name="page_transition_zoom_fade">Затухание при увеличении</string>
+    <string name="page_transition_throw">Бросок</string>
 </resources>
