@@ -223,6 +223,14 @@
             android:exported="false"
             android:autoRemoveFromRecents="true" />
 
+        <!-- Page Transition -->
+        <activity
+            android:name="com.android.launcher3.pagetransition.PageTransitionSettingsActivity"
+            android:label="@string/page_transition_title"
+            android:theme="@style/HomeSettings.Theme"
+            android:exported="false"
+            android:autoRemoveFromRecents="true" />
+
         <provider
             android:name="com.android.launcher3.testing.TestInformationProvider"
             android:authorities="${applicationId}.TestInfo"

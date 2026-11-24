@@ -47,6 +47,8 @@ import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
+import com.android.launcher3.pagetransition.PageTransitionSettingsActivity;
+import com.android.launcher3.pagetransition.PageTransitionSettingsFragment;
 import com.android.launcher3.util.VibratorWrapper;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
@@ -192,6 +194,7 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
 
         private Preference mShowGoogleAppPref;
         private Preference mWeatherCityPref;
+        private Preference mPageTransitionPref;
 
         @Override
         public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -228,6 +231,16 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
                 });
             }
 
+            mPageTransitionPref = screen.findPreference(
+                    LauncherPrefs.PAGE_TRANSITION.getSharedPrefKey());
+            if (mPageTransitionPref != null) {
+                mPageTransitionPref.setOnPreferenceClickListener(p -> {
+                    startActivity(PageTransitionSettingsActivity.createIntent(getContext()));
+                    return true;
+                });
+                updatePageTransitionSummary();
+            }
+
             if (!VibratorWrapper.INSTANCE.get(getContext()).hasVibrator()) {
                 PreferenceCategory generalCategory = (PreferenceCategory) findPreference(KEY_GENERAL_CATEGORY);
                 Preference d2SHaptic = screen.findPreference(LauncherPrefs.SLEEP_GESTURE_HAPTIC.getSharedPrefKey());
@@ -261,6 +274,13 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
             mWeatherCityPref.setSummary(google
                     ? R.string.quick_event_weather_city_summary_unavailable
                     : R.string.quick_event_weather_city_summary);
+        }
+
+        private void updatePageTransitionSummary() {
+            if (mPageTransitionPref != null) {
+                mPageTransitionPref.setSummary(
+                        PageTransitionSettingsFragment.getCurrentLabel(getContext()));
+            }
         }
 
         private boolean isKeyInPreferenceGroup(String targetKey, PreferenceGroup parent) {
@@ -339,6 +359,7 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
                 }
             }
             updateIsGoogleAppEnabled();
+            updatePageTransitionSummary();
 
             if (mRestartOnResume) {
                 recreateActivityNow();

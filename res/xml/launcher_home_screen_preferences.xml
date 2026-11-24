@@ -64,13 +64,10 @@
     <PreferenceCategory
         android:title="@string/interface_category_title">
 
-        <ListPreference
+        <Preference
             android:key="pref_page_transition"
             android:title="@string/page_transition_title"
-            android:summary="%s"
-            android:entries="@array/page_transition_entries"
-            android:entryValues="@array/page_transition_values"
-            android:defaultValue="none"
+            android:persistent="false"
             launcher:iconSpaceReserved="false" />
 
         <SwitchPreferenceCompat

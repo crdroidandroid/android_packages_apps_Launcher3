@@ -17,30 +17,22 @@
 package com.android.launcher3.shapes
 
 import android.content.Context
-import android.content.pm.LauncherApps
 import android.graphics.drawable.Drawable
-import android.os.Process
 import android.util.AttributeSet
-import android.util.Log
 import android.view.Gravity
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.preference.Preference
 import androidx.preference.PreferenceViewHolder
-import com.android.launcher3.Flags
 import com.android.launcher3.InvariantDeviceProfile
-import com.android.launcher3.LauncherAppState
 import com.android.launcher3.R
 import com.android.launcher3.graphics.ShapeDelegate
 import com.android.launcher3.graphics.ShapeDelegate.Companion.pickBestShape
 import com.android.launcher3.graphics.ThemeManager
 import com.android.launcher3.icons.BitmapInfo
-import com.android.launcher3.icons.BitmapInfo.Companion.FLAG_NO_BADGE
-import com.android.launcher3.icons.BitmapInfo.Companion.FLAG_THEMED
 import com.android.launcher3.icons.GraphicsUtils
 import com.android.launcher3.icons.IconShape
-import com.android.launcher3.icons.cache.CacheLookupFlag.Companion.DEFAULT_LOOKUP_FLAG
-import com.android.launcher3.model.data.AppInfo
+import com.android.launcher3.settings.preferences.PreviewAppIcons
 import com.android.launcher3.settings.preferences.PreviewWallpaper
 import com.android.launcher3.util.Executors.MAIN_EXECUTOR
 import com.android.launcher3.util.Executors.MODEL_EXECUTOR
@@ -184,13 +176,8 @@ constructor(context: Context, attrs: AttributeSet? = null) : Preference(context,
         else themeManager.folderShape
     }
 
-    private fun newIcon(info: BitmapInfo, shape: IconShape): Drawable {
-        val flags = FLAG_NO_BADGE or if (themeManager.isIconThemeEnabled) FLAG_THEMED else 0
-        // Mirror the launcher: only full-bleed icons are cropped to a custom shape.
-        val customShape =
-            if (Flags.enableLauncherIconShapes() && info.isFullBleed()) shape else null
-        return info.newIcon(context, flags, customShape)
-    }
+    private fun newIcon(info: BitmapInfo, shape: IconShape): Drawable =
+        PreviewAppIcons.newIcon(context, info, shape)
 
     private fun folderBackgroundColor(): Int =
         context.getColor(
@@ -209,9 +196,7 @@ constructor(context: Context, attrs: AttributeSet? = null) : Preference(context,
         loadStarted = true
         val appContext = context.applicationContext
         MODEL_EXECUTOR.execute {
-            val icons = runCatching { loadAppIcons(appContext) }
-                .onFailure { Log.w(TAG, "Unable to load preview icons", it) }
-                .getOrDefault(emptyList())
+            val icons = PreviewAppIcons.load(appContext, MAX_APPS)
             val wallpaper = PreviewWallpaper.load(appContext)
             MAIN_EXECUTOR.execute {
                 appIcons = icons
@@ -221,28 +206,7 @@ constructor(context: Context, attrs: AttributeSet? = null) : Preference(context,
         }
     }
 
-    /** Loads icons through the launcher icon cache so they match the home screen. */
-    private fun loadAppIcons(context: Context): List<BitmapInfo> {
-        val user = Process.myUserHandle()
-        val launcherApps = context.getSystemService(LauncherApps::class.java) ?: return emptyList()
-        val iconCache = LauncherAppState.getInstance(context).iconCache
-        val lookupFlag =
-            DEFAULT_LOOKUP_FLAG.withUseLowRes(false)
-                .withThemeIcon(ThemeManager.INSTANCE.get(context).isIconThemeEnabled)
-        return launcherApps
-            .getActivityList(null, user)
-            .distinctBy { it.componentName.packageName }
-            .sortedBy { it.label.toString().lowercase() }
-            .take(MAX_APPS)
-            .map { activity ->
-                AppInfo(context, activity, user)
-                    .also { iconCache.getTitleAndIcon(it, activity, lookupFlag) }
-                    .bitmap
-            }
-    }
-
     private companion object {
-        const val TAG = "IconShapePreview"
         const val ROWS = 2
         const val COLUMNS = 4
         const val ICON_SIZE_DP = 56
