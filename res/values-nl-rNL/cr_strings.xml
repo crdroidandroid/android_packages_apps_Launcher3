@@ -395,9 +395,9 @@
     <string name="icon_shape_corner_smooth">Gelijkmatig</string>
     <string name="icon_shape_corner_cut">Knippen</string>
     <string name="icon_shape_apply">Toepassen</string>
-    <string name="icon_shape_reshape_pack_title">Fit icon pack icons to shape</string>
-    <string name="icon_shape_reshape_pack_summary">Place icon pack icons on a matching background in the selected icon shape</string>
-    <string name="icon_shape_unavailable_pack_summary">Turn on \u201cFit icon pack icons to shape\u201d in Icon pack to use with this icon pack</string>
+    <string name="icon_shape_reshape_pack_title">Maak pictogrammen van het pictogrammenpakket passend aan om vorm</string>
+    <string name="icon_shape_reshape_pack_summary">Plaats pictogrammen van het pictogrammen pakket op een overeenkomende achtergrond in de geselecteerde vorm</string>
+    <string name="icon_shape_unavailable_pack_summary">\u201cPast pictrogrammen van het pakket aan om\u201d in het pictogrammen pakket te gebruiken met dit pictogrammen pakket</string>
     <string name="folder_shape_title">Vorm van map</string>
     <string name="folder_shape_match_icon">Match pictogram vorm</string>
     <string name="folder_shape_custom_title">Aangepaste mapvorm</string>
@@ -457,19 +457,19 @@
     <string name="unlock_app">Ontgrendelde app in recente apps</string>
     <string name="lock_app">Vergrendelde app in recente apps</string>
     <!-- Page transition -->
-    <string name="page_transition_title">Transition effect</string>
-    <string name="page_transition_none">None</string>
-    <string name="page_transition_simple">Simple</string>
-    <string name="page_transition_cube">Cube</string>
-    <string name="page_transition_card_stack">Card stack</string>
+    <string name="page_transition_title">Transitie effect</string>
+    <string name="page_transition_none">Geen</string>
+    <string name="page_transition_simple">Simpel</string>
+    <string name="page_transition_cube">Kubus</string>
+    <string name="page_transition_card_stack">Kaart stapel</string>
     <string name="page_transition_tablet">Tablet</string>
-    <string name="page_transition_revolving_door">Revolving door</string>
-    <string name="page_transition_flip">Flip</string>
-    <string name="page_transition_flip_vertical">Flip vertical</string>
-    <string name="page_transition_in_and_out">In and out</string>
-    <string name="page_transition_accordion">Accordion</string>
-    <string name="page_transition_glass">Glass</string>
-    <string name="page_transition_wipe">Wipe</string>
-    <string name="page_transition_zoom_fade">Zoom fade</string>
-    <string name="page_transition_throw">Throw</string>
+    <string name="page_transition_revolving_door">Draaideur</string>
+    <string name="page_transition_flip">Omdraaien</string>
+    <string name="page_transition_flip_vertical">Verticaal spiegelen</string>
+    <string name="page_transition_in_and_out">In en uit</string>
+    <string name="page_transition_accordion">Accordeon</string>
+    <string name="page_transition_glass">Glas</string>
+    <string name="page_transition_wipe">Wissen</string>
+    <string name="page_transition_zoom_fade">Zoom vervagen</string>
+    <string name="page_transition_throw">Gooien</string>
 </resources>
