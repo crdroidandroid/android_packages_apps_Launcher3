@@ -2063,7 +2063,8 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
                 }
             } else if (((Flags.homeScreenEditImprovements() && child instanceof Poppable)
                     || HomeScreenFilesUtilsKt.isFileSystemItem(item))
-                    && !dragOptions.isAccessibleDrag && !dragOptions.isMouseDrag) {
+                    && !dragOptions.isAccessibleDrag && !dragOptions.isMouseDrag
+                    && dragOptions.preDragCondition == null) {
                 Popup popup = mLauncher.getPopupControllerForHomeScreenItems()
                         .show(child);
                 if (popup != null) {
@@ -3413,6 +3414,15 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
             // values of the info is properly updated.
             mLauncher.getModelWriter().addOrMoveItemInDatabase(info, container, screenId,
                     mTargetCell[0], mTargetCell[1]);
+            if (info instanceof FolderInfo folderInfo) {
+                // A folder copied from the app drawer brings unsaved apps.
+                for (ItemInfo item : folderInfo.getContents()) {
+                    if (item.id == ItemInfo.NO_ID) {
+                        mLauncher.getModelWriter().addItemToDatabase(item, folderInfo.id, 0,
+                                item.cellX, item.cellY);
+                    }
+                }
+            }
 
             addInScreen(view, container, screenId, mTargetCell[0], mTargetCell[1],
                     info.spanX, info.spanY);

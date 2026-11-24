@@ -61,6 +61,7 @@ import com.android.launcher3.dragndrop.DragOptions;
 import com.android.launcher3.folder.Folder;
 import com.android.launcher3.folder.FolderIcon;
 import com.android.launcher3.folder.PreviewBackground;
+import com.android.launcher3.graphics.DragPreviewProvider;
 import com.android.launcher3.logging.InstanceId;
 import com.android.launcher3.logging.StatsLogManager.LauncherEvent;
 import com.android.launcher3.model.data.AppInfo;
@@ -68,6 +69,7 @@ import com.android.launcher3.model.data.FolderInfo;
 import com.android.launcher3.model.data.ItemInfo;
 import com.android.launcher3.model.data.WorkspaceItemFactory;
 import com.android.launcher3.model.data.WorkspaceItemInfo;
+import com.android.launcher3.touch.ItemLongClickListener;
 import com.android.launcher3.util.ComponentKey;
 import com.android.launcher3.util.LabelComparator;
 import com.android.launcher3.views.BaseDragLayer;
@@ -387,8 +389,8 @@ public class DrawerFolderController implements DragController.DragListener,
     private boolean onFolderLongClick(View v) {
         if (!(v instanceof FolderIcon icon) || !mFolders.contains(icon.mInfo)
                 || icon == mCreatingIcon || icon.getFolder().isOpen()
-                || mLauncher.getDragController().isDragging()
-                || !mLauncher.isInState(ALL_APPS)) {
+                || !mLauncher.isInState(ALL_APPS)
+                || !ItemLongClickListener.canStartAllAppsItemDrag(mLauncher)) {
             return false;
         }
         FolderInfo info = icon.mInfo;
@@ -408,8 +410,65 @@ public class DrawerFolderController implements DragController.DragListener,
                     removeFolder(info);
                     return true;
                 }));
-        OptionsPopupView.show(mLauncher, target, options, true /* shouldAddArrow */);
+        OptionsPopupView<?> popup =
+                OptionsPopupView.show(mLauncher, target, options, true /* shouldAddArrow */);
+        startCopyDrag(icon, popup);
         return true;
+    }
+
+    /** Drags a copy of the folder; dropping it on the home screen adds a new folder there. */
+    private void startCopyDrag(FolderIcon icon, @Nullable OptionsPopupView<?> popup) {
+        int threshold = mLauncher.getResources().getDimensionPixelSize(
+                R.dimen.deep_shortcuts_start_drag_threshold);
+        DragOptions options = new DragOptions();
+        options.preDragCondition = new DragOptions.PreDragCondition() {
+            @Override
+            public boolean shouldStartDrag(double distanceDragged) {
+                return distanceDragged > threshold;
+            }
+
+            @Override
+            public void onPreDragStart(DropTarget.DragObject dragObject) {
+                icon.setIconVisible(false);
+            }
+
+            @Override
+            public void onPreDragEnd(DropTarget.DragObject dragObject, boolean dragStarted) {
+                icon.setIconVisible(true);
+                if (dragStarted) {
+                    icon.setVisibility(View.INVISIBLE);
+                    if (popup != null) {
+                        popup.close(true);
+                    }
+                }
+            }
+        };
+        DragController dragController = mLauncher.getDragController();
+        dragController.addDragSessionListener(new DragController.DragSessionListener() {
+            @Override
+            public void onDragSessionEnd() {
+                icon.setIconVisible(true);
+                icon.setVisibility(View.VISIBLE);
+                dragController.removeDragSessionListener(this);
+            }
+        });
+        mLauncher.getWorkspace().beginDragShared(icon, icon, mLauncher.getAppsView(),
+                copyForHomeScreen(icon.mInfo), new DragPreviewProvider(icon), options);
+    }
+
+    private static FolderInfo copyForHomeScreen(FolderInfo source) {
+        FolderInfo copy = new FolderInfo();
+        copy.title = source.title;
+        copy.options = source.options;
+        for (ItemInfo item : source.getContents()) {
+            if (item instanceof WorkspaceItemInfo app) {
+                WorkspaceItemInfo appCopy = new WorkspaceItemInfo(app);
+                appCopy.id = ItemInfo.NO_ID;
+                appCopy.container = ItemInfo.NO_ID;
+                copy.add(appCopy);
+            }
+        }
+        return copy;
     }
 
     public void removeFolder(FolderInfo info) {
