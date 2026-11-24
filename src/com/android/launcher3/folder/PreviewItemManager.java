@@ -48,6 +48,7 @@ import androidx.annotation.VisibleForTesting;
 import com.android.launcher3.BubbleTextView;
 import com.android.launcher3.Flags;
 import com.android.launcher3.LauncherAppState;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.apppairs.AppPairIcon;
 import com.android.launcher3.apppairs.AppPairIconDrawingParams;
@@ -185,7 +186,7 @@ public class PreviewItemManager {
     }
 
     private PreviewItemDrawingParams getFinalIconParams(PreviewItemDrawingParams params) {
-        float iconSize = mIcon.mActivity.getDeviceProfile().getWorkspaceProfile().getIconSizePx();
+        float iconSize = mIcon.getIconSizePx();
 
         final float scale = iconSize / mReferenceDrawable.getIntrinsicWidth();
         final float trans = (mIcon.mBackground.previewSize - iconSize) / 2;
@@ -459,12 +460,12 @@ public class PreviewItemManager {
             PreviewItemDrawingParams p, ItemInfo item, boolean loadHighResIcon) {
         if (item instanceof WorkspaceItemInfo wii) {
             if (wii.shouldShowPendingIcon()) {
-                p.drawable = newPendingIcon(wii, mContext, FLAG_THEMED);
+                p.drawable = newPendingIcon(wii, mContext, getThemeFlag());
             } else if (Flags.enableAppAutomationIndicator()
                     && (wii.runtimeStatusFlags & FLAG_AUTOMATED) != 0) {
-                p.drawable = newAutomatedIcon(mContext, wii, FLAG_THEMED);
+                p.drawable = newAutomatedIcon(mContext, wii, getThemeFlag());
             } else if (!maybeHandleAutomationExit(wii, p)) {
-                p.drawable = wii.newIcon(mContext, FLAG_THEMED);
+                p.drawable = wii.newIcon(mContext, getThemeFlag());
             }
             p.drawable.setBounds(0, 0, mIconSize, mIconSize);
         } else if (item instanceof AppPairInfo api) {
@@ -498,12 +499,18 @@ public class PreviewItemManager {
         }
     }
 
+    /** Drawer folders follow the drawer icon customization setting. */
+    private int getThemeFlag() {
+        return mIcon.isInAppDrawer() && !LauncherPrefs.ALLAPPS_ICON_CUSTOMIZATION.get(mContext)
+                ? 0 : FLAG_THEMED;
+    }
+
     private boolean maybeHandleAutomationExit(WorkspaceItemInfo wii, PreviewItemDrawingParams p) {
         if ((wii.runtimeStatusFlags & FLAG_AUTOMATED) == 0
                 && p.drawable instanceof FastBitmapDrawable fbd
                 && fbd.getDelegate() instanceof AutomatedIconDelegate aid) {
             aid.startExitAnimation(() -> {
-                p.drawable = wii.newIcon(mContext, FLAG_THEMED);
+                p.drawable = wii.newIcon(mContext, getThemeFlag());
                 if (p.drawable != null) {
                     p.drawable.setBounds(0, 0, mIconSize, mIconSize);
                     p.drawable.setCallback(mIcon);

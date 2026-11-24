@@ -33,6 +33,7 @@ import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -44,6 +45,7 @@ import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.allapps.search.SearchAdapterProvider;
 import com.android.launcher3.model.data.AppInfo;
+import com.android.launcher3.model.data.FolderInfo;
 import com.android.launcher3.popup.PopupContainerWithArrow;
 import com.android.launcher3.secondarydisplay.SecondaryDisplayLauncher;
 import com.android.launcher3.touch.CustomActionsListener;
@@ -70,11 +72,13 @@ public abstract class BaseAllAppsAdapter
     public static final int VIEW_TYPE_PRIVATE_SPACE_SYS_APPS_DIVIDER = 1 << 7;
     public static final int VIEW_TYPE_BOTTOM_VIEW_TO_SCROLL_TO = 1 << 8;
     public static final int VIEW_TYPE_PRIVATE_SPACE_APP_ICON = 1 << 9;
-    public static final int NEXT_ID = 10;
+    public static final int VIEW_TYPE_FOLDER = 1 << 10;
+    public static final int NEXT_ID = 11;
 
     // Common view type masks
     public static final int VIEW_TYPE_MASK_DIVIDER = VIEW_TYPE_ALL_APPS_DIVIDER;
-    public static final int VIEW_TYPE_MASK_ICON = VIEW_TYPE_ICON | VIEW_TYPE_PRIVATE_SPACE_APP_ICON;
+    public static final int VIEW_TYPE_MASK_ICON = VIEW_TYPE_ICON | VIEW_TYPE_PRIVATE_SPACE_APP_ICON
+            | VIEW_TYPE_FOLDER;
 
     public static final int VIEW_TYPE_MASK_PRIVATE_SPACE_HEADER =
             VIEW_TYPE_PRIVATE_SPACE_HEADER;
@@ -110,6 +114,8 @@ public abstract class BaseAllAppsAdapter
         public int rowAppIndex;
         // The associated ItemInfoWithIcon for the item
         public AppInfo itemInfo = null;
+        public FolderInfo folderInfo = null;
+        public int folderIconGeneration;
         // Private App Decorator
         public SectionDecorationInfo decorationInfo = null;
         public AdapterItem(int viewType) {
@@ -125,6 +131,13 @@ public abstract class BaseAllAppsAdapter
             return item;
         }
 
+        public static AdapterItem asFolder(FolderInfo folderInfo, int iconGeneration) {
+            AdapterItem item = new AdapterItem(VIEW_TYPE_FOLDER);
+            item.folderInfo = folderInfo;
+            item.folderIconGeneration = iconGeneration;
+            return item;
+        }
+
         public static AdapterItem asAppWithDecorationInfo(AppInfo appInfo,
                 SectionDecorationInfo decorationInfo, boolean isPrivateSpaceApp) {
             AdapterItem item = new AdapterItem(isPrivateSpaceApp ? VIEW_TYPE_PRIVATE_SPACE_APP_ICON
@@ -135,7 +148,7 @@ public abstract class BaseAllAppsAdapter
         }
 
         protected boolean isCountedForAccessibility() {
-            return viewType == VIEW_TYPE_ICON;
+            return viewType == VIEW_TYPE_ICON || viewType == VIEW_TYPE_FOLDER;
         }
 
         /**
@@ -144,6 +157,10 @@ public abstract class BaseAllAppsAdapter
         public boolean isSameAs(AdapterItem other) {
             if (other == null || other.viewType != viewType || other.getClass() != getClass()) {
                 return false;
+            }
+            if (viewType == VIEW_TYPE_FOLDER) {
+                return folderInfo != null && other.folderInfo != null
+                        && folderInfo.id == other.folderInfo.id;
             }
             if (viewType == VIEW_TYPE_ICON || viewType == VIEW_TYPE_PRIVATE_SPACE_APP_ICON) {
                 if (itemInfo == null || other.itemInfo == null) {
@@ -162,6 +179,10 @@ public abstract class BaseAllAppsAdapter
          * as well. Returning true will prevent redrawing of thee item.
          */
         public boolean isContentSame(AdapterItem other) {
+            if (viewType == VIEW_TYPE_FOLDER) {
+                return folderInfo == other.folderInfo
+                        && folderIconGeneration == other.folderIconGeneration;
+            }
             return itemInfo == null && other.itemInfo == null;
         }
 
@@ -273,6 +294,12 @@ public abstract class BaseAllAppsAdapter
                         R.layout.private_space_header, parent, false));
             case VIEW_TYPE_BOTTOM_VIEW_TO_SCROLL_TO:
                 return new ViewHolder(new View(mActivityContext.asContext()));
+            case VIEW_TYPE_FOLDER: {
+                FrameLayout host = new FrameLayout(mActivityContext.asContext());
+                host.setLayoutParams(new RecyclerView.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT, getFolderCellHeight()));
+                return new ViewHolder(host);
+            }
             default:
                 if (mAdapterProvider.isViewSupported(viewType)) {
                     return mAdapterProvider.onCreateViewHolder(mLayoutInflater, parent, viewType);
@@ -334,6 +361,22 @@ public abstract class BaseAllAppsAdapter
                         adapterItem.decorationInfo = null;
                         icon.setVisibility(GONE);
                     }
+                }
+                break;
+            }
+            case VIEW_TYPE_FOLDER: {
+                AdapterItem folderItem = mApps.getAdapterItems().get(position);
+                DrawerFoldersProvider provider = mApps.getDrawerFoldersProvider();
+                FrameLayout host = (FrameLayout) holder.itemView;
+                ViewGroup.LayoutParams lp = host.getLayoutParams();
+                int height = getFolderCellHeight();
+                if (lp != null && lp.height != height) {
+                    lp.height = height;
+                    host.setLayoutParams(lp);
+                }
+                if (provider != null && folderItem.folderInfo != null) {
+                    provider.bindFolderIcon(folderItem.folderInfo, host,
+                            AppDrawerStyle.isHorizontalList(getDrawerStyle()), mTextColor);
                 }
                 break;
             }
@@ -430,6 +473,20 @@ public abstract class BaseAllAppsAdapter
             lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
             lp.height = ViewGroup.LayoutParams.WRAP_CONTENT;
             icon.setLayoutParams(lp);
+        }
+    }
+
+    private int getFolderCellHeight() {
+        return AppDrawerStyle.isHorizontalList(getDrawerStyle())
+                ? ViewGroup.LayoutParams.WRAP_CONTENT
+                : mActivityContext.getDeviceProfile().getAllAppsProfile().getCellHeightPx();
+    }
+
+    @Override
+    public void onViewRecycled(ViewHolder holder) {
+        super.onViewRecycled(holder);
+        if (holder.getItemViewType() == VIEW_TYPE_FOLDER) {
+            ((ViewGroup) holder.itemView).removeAllViews();
         }
     }
 

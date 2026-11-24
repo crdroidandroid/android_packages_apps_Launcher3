@@ -162,6 +162,7 @@ import com.android.launcher3.accessibility.LauncherAccessibilityDelegate;
 import com.android.launcher3.allapps.ActivityAllAppsContainerView;
 import com.android.launcher3.allapps.AllAppsTransitionController;
 import com.android.launcher3.allapps.DiscoveryBounce;
+import com.android.launcher3.allapps.DrawerFolderController;
 import com.android.launcher3.anim.AnimationSuccessListener;
 import com.android.launcher3.anim.PropertyListBuilder;
 import com.android.launcher3.apppairs.AppPairIcon;
@@ -377,6 +378,7 @@ public class Launcher extends StatefulActivity<LauncherState>
 
     protected LauncherOverlayManager mOverlayManager;
     protected LauncherDragController mDragController;
+    private DrawerFolderController mDrawerFolderController;
 
     protected long mLastTouchUpTime = -1;
     private boolean mTouchInProgress;
@@ -1208,6 +1210,9 @@ public class Launcher extends StatefulActivity<LauncherState>
         // default state, otherwise we will update to the wrong offsets in RTL
         mWorkspace.lockWallpaperToDefaultPage();
         mWorkspace.bindAndInitFirstWorkspaceScreen();
+        // Must run before the workspace and drop target bar listeners.
+        mDrawerFolderController = new DrawerFolderController(this);
+        mDragController.addDragListener(mDrawerFolderController);
         mDragController.addDragListener(mWorkspace);
 
         // Get the search/delete/uninstall bar
@@ -1216,6 +1221,7 @@ public class Launcher extends StatefulActivity<LauncherState>
         // Setup Apps
         mAppsView = findViewById(R.id.apps_view);
         mAppsView.setAllAppsTransitionController(mAllAppsController);
+        mAppsView.setDrawerFoldersProvider(mDrawerFolderController);
 
         // Setup Scrim
         mScrimView = findViewById(R.id.scrim_view);
@@ -1227,6 +1233,7 @@ public class Launcher extends StatefulActivity<LauncherState>
         }
 
         // Setup the drag controller (drop targets have to be added in reverse order in priority)
+        mDrawerFolderController.addDropTargets(mDragController);
         mDropTargetBar.setup(mDragController);
         mAllAppsController.setupViews(mScrimView, mAppsView);
 
@@ -1628,6 +1635,9 @@ public class Launcher extends StatefulActivity<LauncherState>
         if (mQuickSpace != null) {
             mQuickSpace.onDestroy();
         }
+        if (mDrawerFolderController != null) {
+            mDrawerFolderController.onDestroy();
+        }
     }
 
     public LauncherAccessibilityDelegate getAccessibilityDelegate() {
@@ -1636,6 +1646,10 @@ public class Launcher extends StatefulActivity<LauncherState>
 
     public LauncherDragController getDragController() {
         return mDragController;
+    }
+
+    public DrawerFolderController getDrawerFolderController() {
+        return mDrawerFolderController;
     }
 
     @Override

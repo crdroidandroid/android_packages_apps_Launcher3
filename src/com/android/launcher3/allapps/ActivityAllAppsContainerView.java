@@ -937,6 +937,41 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
         }
     }
 
+    @Nullable
+    private DrawerFoldersProvider mDrawerFolders;
+
+    public void setDrawerFoldersProvider(@Nullable DrawerFoldersProvider provider) {
+        mDrawerFolders = provider;
+        mAH.get(AdapterHolder.MAIN).mAppsList.setDrawerFoldersProvider(provider);
+        onDrawerFoldersChanged();
+    }
+
+    public void onDrawerFoldersChanged() {
+        if (mDrawerFolders == null) {
+            return;
+        }
+        mAH.get(AdapterHolder.MAIN).mAppsList.onAppsUpdated();
+        if (mOneUiPagedView != null) {
+            removeCallbacks(mRefreshOneUiAppsRunnable);
+            post(mRefreshOneUiAppsRunnable);
+        }
+    }
+
+    public boolean supportsDrawerFolders() {
+        return mDrawerFolders != null && !isSearching() && isPersonalTab();
+    }
+
+    @Nullable
+    public View getVisibleSearchContainer() {
+        return mSearchContainer != null && mSearchContainer.isShown()
+                && mSearchContainer.getHeight() > 0 ? mSearchContainer : null;
+    }
+
+    @Nullable
+    public OneUiPagedAllAppsView getOneUiPagedView() {
+        return mOneUiPagedView;
+    }
+
     protected void updateHeaderScroll(int scrolledOffset) {
         float prog = Utilities.boundToRange((float) scrolledOffset / mHeaderThreshold, 0f, 1f);
         int headerColor = getHeaderColor(prog);
@@ -1259,6 +1294,9 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
 
     @Override
     public void onDeviceProfileChanged(DeviceProfile dp) {
+        if (mDrawerFolders != null) {
+            mDrawerFolders.onDeviceProfileChanged();
+        }
         for (AdapterHolder holder : mAH) {
             holder.mAdapter.setAppsPerRow(dp.getAllAppsProfile().getNumShownAllAppsColumns());
             holder.mAppsList.setNumAppsPerRowAllApps(
@@ -1435,7 +1473,11 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     }
 
     @Override
-    public void onDropCompleted(View target, DragObject d, boolean success) {}
+    public void onDropCompleted(View target, DragObject d, boolean success) {
+        if (success && mDrawerFolders != null) {
+            mDrawerFolders.onDrawerDropCompleted();
+        }
+    }
 
     @Override
     public void setInsets(Rect insets) {
@@ -1607,6 +1649,7 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
             return;
         }
         mOneUiPagedView.setPageIndicator(mOneUiPageIndicator);
+        mOneUiPagedView.setDrawerFoldersProvider(mDrawerFolders);
         mOneUiPagedView.setOnRecyclerViewsChangedListener((removed, added) -> {
             for (AllAppsRecyclerView rv : removed) {
                 mAllAppsStore.unregisterIconContainer(rv);
@@ -1640,14 +1683,18 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     }
 
     /**
-     * Regular (personal + work) apps in A-Z order. Private space apps are left out: they stay
-     * reachable through search ("Private space"), which keeps the locked/unlocked flow intact.
+     * Drawer folders and regular (personal + work) apps in A-Z order. Private space apps are left
+     * out: they stay reachable through search ("Private space"), which keeps the locked/unlocked
+     * flow intact.
      */
-    private List<AppInfo> getOneUiApps() {
-        List<AppInfo> apps = new ArrayList<>();
+    private List<ItemInfo> getOneUiApps() {
+        List<ItemInfo> apps = new ArrayList<>();
         for (AdapterItem item : mAH.get(AdapterHolder.MAIN).mAppsList.getAdapterItems()) {
             if (item.viewType == BaseAllAppsAdapter.VIEW_TYPE_ICON && item.itemInfo != null) {
                 apps.add(item.itemInfo);
+            } else if (item.viewType == BaseAllAppsAdapter.VIEW_TYPE_FOLDER
+                    && item.folderInfo != null) {
+                apps.add(item.folderInfo);
             }
         }
         return apps;

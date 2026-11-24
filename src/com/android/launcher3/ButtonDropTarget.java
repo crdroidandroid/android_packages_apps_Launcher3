@@ -238,6 +238,9 @@ public abstract class ButtonDropTarget extends TextView
 
     @Override
     public boolean isDropEnabled() {
+        if (mDropTargetBar != null && mDropTargetBar.isDeferredForDrawerDrag()) {
+            return false;
+        }
         return mActive && (mAccessibleDrag ||
                 mActivityContext.getDragController().getDistanceDragged()
                         >= mDragDistanceThreshold);

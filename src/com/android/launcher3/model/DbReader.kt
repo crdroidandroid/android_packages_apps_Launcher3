@@ -28,6 +28,7 @@ import com.android.launcher3.LauncherSettings.Favorites.APPWIDGET_PROVIDER
 import com.android.launcher3.LauncherSettings.Favorites.CELLX
 import com.android.launcher3.LauncherSettings.Favorites.CELLY
 import com.android.launcher3.LauncherSettings.Favorites.CONTAINER
+import com.android.launcher3.LauncherSettings.Favorites.CONTAINER_ALL_APPS
 import com.android.launcher3.LauncherSettings.Favorites.CONTAINER_DESKTOP
 import com.android.launcher3.LauncherSettings.Favorites.CONTAINER_HOTSEAT
 import com.android.launcher3.LauncherSettings.Favorites.INTENT
@@ -203,6 +204,45 @@ class DbReader(val mDb: SQLiteDatabase, val mTableName: String, val mContext: Co
         GridSizeMigrationDBController.removeEntryFromDb(mDb, mTableName, entriesToRemove)
         c.close()
         return workspaceEntries
+    }
+
+    /** Loads the app drawer folders; folders with less than 2 items are removed. */
+    fun loadAllAppsFolderEntries(): List<DbEntry> {
+        val folderEntries: MutableList<DbEntry> = ArrayList()
+        val columnsToRead = arrayOf(_ID, ITEM_TYPE)
+        val c =
+            ModelCursorWrapper(
+                queryWorkspace(
+                    columnsToRead,
+                    "$CONTAINER = $CONTAINER_ALL_APPS AND $ITEM_TYPE = $ITEM_TYPE_FOLDER",
+                ),
+                columnsToRead,
+            )
+
+        val entriesToRemove = IntArray()
+        while (c.moveToNext()) {
+            val entry =
+                DbEntry().apply {
+                    id = c.id
+                    itemType = c.itemType
+                    screenId = 0
+                    cellX = 0
+                    cellY = 0
+                    spanX = 1
+                    spanY = 1
+                }
+            if (getFolderItemsCount(entry) < 2) {
+                if (DEBUG) {
+                    Log.d(TAG, "Removing app drawer folder with less than 2 items " + entry.id)
+                }
+                entriesToRemove.add(entry.id)
+                continue
+            }
+            folderEntries.add(entry)
+        }
+        GridSizeMigrationDBController.removeEntryFromDb(mDb, mTableName, entriesToRemove)
+        c.close()
+        return folderEntries
     }
 
     private fun getFolderItemsCount(entry: DbEntry): Int {

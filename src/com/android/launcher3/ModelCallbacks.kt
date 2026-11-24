@@ -13,6 +13,7 @@ import com.android.launcher3.LauncherConstants.TraceEvents
 import com.android.launcher3.LauncherConstants.TraceEvents.DISPLAY_WORKSPACE_TRACE_METHOD_NAME
 import com.android.launcher3.LauncherConstants.TraceEvents.SINGLE_TRACE_COOKIE
 import com.android.launcher3.LauncherModel.Companion.useModelRepositoryBinding
+import com.android.launcher3.LauncherSettings.Favorites.CONTAINER_ALL_APPS
 import com.android.launcher3.LauncherSettings.Favorites.CONTAINER_DESKTOP
 import com.android.launcher3.LauncherSettings.Favorites.CONTAINER_HOTSEAT
 import com.android.launcher3.WorkspaceLayoutManager.FIRST_SCREEN_ID
@@ -26,6 +27,7 @@ import com.android.launcher3.model.ItemInstallQueue.FLAG_LOADER_RUNNING
 import com.android.launcher3.model.ModelUtils.currentScreenContentFilter
 import com.android.launcher3.model.StringCache
 import com.android.launcher3.model.data.AppInfo
+import com.android.launcher3.model.data.FolderInfo
 import com.android.launcher3.model.data.ItemInfo
 import com.android.launcher3.model.data.PredictedContainerInfo
 import com.android.launcher3.model.data.WorkspaceChangeEvent.AddEvent
@@ -270,6 +272,7 @@ class ModelCallbacks(private var launcher: Launcher) : BgDataModel.Callbacks {
     private fun bindWorkspaceItemsUpdated(updates: Set<ItemInfo>) {
         val workspace = launcher.workspace
         val itemsToRebind = workspace.updateContainerItems(updates, launcher)
+        launcher.drawerFolderController.onItemsUpdated(updates)
         PopupContainer.dismissInvalidPopup(launcher)
 
         updates
@@ -301,6 +304,7 @@ class ModelCallbacks(private var launcher: Launcher) : BgDataModel.Callbacks {
      */
     private fun bindWorkspaceItemsRemoved(matcher: Predicate<ItemInfo?>) {
         launcher.workspace.removeItemsByMatcher(matcher, true)
+        launcher.drawerFolderController.onItemsRemoved(matcher)
         launcher.dragController.onAppsRemoved(matcher)
         PopupContainer.dismissInvalidPopup(launcher)
         hybridHotseatOrganizer?.onModelItemsRemoved(matcher)
@@ -535,6 +539,9 @@ class ModelCallbacks(private var launcher: Launcher) : BgDataModel.Callbacks {
             startBinding()
         }
 
+        val drawerFolders = itemIdMap.getDrawerFolders()
+        executeCallbacksTask { launcher.drawerFolderController.syncFromModel(drawerFolders) }
+
         // Bind workspace screens
         executeCallbacksTask { bindScreens(orderedScreenIds) }
 
@@ -589,6 +596,9 @@ class ModelCallbacks(private var launcher: Launcher) : BgDataModel.Callbacks {
             executor,
         )
 
+    private fun WorkspaceData.getDrawerFolders(): List<FolderInfo> =
+        filterIsInstance<FolderInfo>().filter { it.container == CONTAINER_ALL_APPS }
+
     /** Binds the model while inflating items asynchronously */
     private fun bindModelWithAsyncInflation(
         itemIdMap: WorkspaceData,
@@ -622,6 +632,7 @@ class ModelCallbacks(private var launcher: Launcher) : BgDataModel.Callbacks {
                 clearPendingBinds()
                 startBinding()
                 bindScreens(orderedScreenIds)
+                launcher.drawerFolderController.syncFromModel(itemIdMap.getDrawerFolders())
                 emptyList<Void>()
             }
             .thenOn(if (isBindingSync) MAIN_EXECUTOR else UI_HELPER_EXECUTOR, taskTracker) {

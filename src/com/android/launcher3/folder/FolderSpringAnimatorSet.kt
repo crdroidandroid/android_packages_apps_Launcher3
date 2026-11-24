@@ -78,14 +78,22 @@ class FolderSpringAnimatorSet(val animatorSet: AnimatorSet) {
             addFolderScaleAndTranslateAnimators(folder, animatorSet, folderAnimData)
             addClipRevealAnimators(folder, animatorSet, clipRevealData)
             addAlphaAndColorAnimators(folder, animatorSet, folderAnimData)
-            addWorkspaceAnimators(
-                folder.context,
-                animatorSet,
-                folderAnimData.isOpening,
-                launcherDelegate,
-            )
-            launcherDelegate.launcher?.depthController?.folderZoom?.let {
-                addWallpaperZoomAnimator(folder.context, animatorSet, folderAnimData.isOpening, it)
+            // Drawer folders must not animate the scrim, it draws the drawer panel.
+            if (!folder.isInAppDrawer) {
+                addWorkspaceAnimators(
+                    folder.context,
+                    animatorSet,
+                    folderAnimData.isOpening,
+                    launcherDelegate,
+                )
+                launcherDelegate.launcher?.depthController?.folderZoom?.let {
+                    addWallpaperZoomAnimator(
+                        folder.context,
+                        animatorSet,
+                        folderAnimData.isOpening,
+                        it,
+                    )
+                }
             }
             iconAnimData.forEach { addContentIconAnimators(folder.context, animatorSet, it) }
             return FolderSpringAnimatorSet(animatorSet)

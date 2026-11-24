@@ -581,6 +581,24 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
             enforceDragParity("onDragStart", 0, 0);
         }
 
+        if (mLauncher.getDrawerFolderController().isDragInDrawer()) {
+            // Stays in the app drawer until onDrawerDragHandedOver().
+            mDrawerDragPending = true;
+            return;
+        }
+        mDrawerDragPending = false;
+        startWorkspaceDrag(dragObject, options);
+    }
+
+    public void onDrawerDragHandedOver(DragObject dragObject, DragOptions options) {
+        if (!mDrawerDragPending) {
+            return;
+        }
+        mDrawerDragPending = false;
+        startWorkspaceDrag(dragObject, options);
+    }
+
+    private void startWorkspaceDrag(DragObject dragObject, DragOptions options) {
         if (mDragInfo != null && mDragInfo.cell != null) {
             CellLayout layout = (CellLayout) (mDragInfo.cell instanceof LauncherAppWidgetHostView
                     ? dragObject.dragView.getContentViewParent().getParent()
@@ -639,6 +657,8 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
         mDeferRemoveExtraEmptyScreen = true;
     }
 
+    private boolean mDrawerDragPending = false;
+
     @Override
     public void onDragEnd() {
         if (ENFORCE_DRAG_EVENT_ORDER) {
@@ -646,6 +666,12 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
         }
 
         updateChildrenLayersEnabled();
+        if (mDrawerDragPending) {
+            mDrawerDragPending = false;
+            mDragInfo = null;
+            mDragSourceInternal = null;
+            return;
+        }
         StateManager<LauncherState, Launcher> stateManager = mLauncher.getStateManager();
         stateManager.addStateListener(new StateManager.StateListener<LauncherState>() {
             @Override

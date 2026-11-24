@@ -137,6 +137,11 @@ public class ItemClickHandler {
      */
     private static void onClickFolderIcon(View v) {
         Folder folder = ((FolderIcon) v).getFolder();
+        // Only one folder may be open at a time (e.g. multi-finger taps).
+        Folder openFolder = Folder.getOpen(Launcher.getLauncher(v.getContext()));
+        if (openFolder != null && openFolder != folder) {
+            return;
+        }
         if (!folder.isOpen() && !folder.isDestroyed()) {
             // Open the requested folder
             folder.animateOpen();

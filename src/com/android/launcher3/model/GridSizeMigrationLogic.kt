@@ -136,6 +136,7 @@ constructor(
                 )
                 // Migrate workspace.
                 migrateWorkspace(srcReader, destReader, target, targetSize, idsInUse)
+                migrateAllAppsFolders(srcReader, destReader, target, idsInUse)
 
                 dropTable(t.db, TMP_TABLE)
                 t.commit()
@@ -159,6 +160,41 @@ constructor(
 
             // Notify if we've migrated successfully
             modelDelegate.gridMigrationComplete(srcDeviceState, destDeviceState)
+        }
+    }
+
+    /** App drawer folders don't depend on the grid, copy them from the source grid. */
+    @VisibleForTesting
+    fun migrateAllAppsFolders(
+        srcReader: DbReader,
+        destReader: DbReader,
+        helper: DatabaseHelper,
+        idsInUse: MutableList<Int>,
+    ) {
+        val srcFolders = srcReader.loadAllAppsFolderEntries()
+        val dstFolders = destReader.loadAllAppsFolderEntries()
+
+        val toBeRemoved = IntArray()
+        dstFolders.forEach { folder ->
+            toBeRemoved.add(folder.id)
+            folder.mFolderItems.values.forEach { ids -> ids.forEach { toBeRemoved.add(it) } }
+        }
+        if (!toBeRemoved.isEmpty) {
+            GridSizeMigrationDBController.removeEntryFromDb(
+                destReader.mDb,
+                destReader.mTableName,
+                toBeRemoved,
+            )
+        }
+
+        srcFolders.forEach { folder ->
+            GridSizeMigrationDBController.insertEntryInDb(
+                helper,
+                folder,
+                srcReader.mTableName,
+                destReader.mTableName,
+                idsInUse,
+            )
         }
     }
 

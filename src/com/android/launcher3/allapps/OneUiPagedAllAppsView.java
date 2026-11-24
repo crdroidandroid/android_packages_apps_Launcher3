@@ -24,6 +24,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,6 +36,8 @@ import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.PagedView;
 import com.android.launcher3.R;
 import com.android.launcher3.model.data.AppInfo;
+import com.android.launcher3.model.data.FolderInfo;
+import com.android.launcher3.model.data.ItemInfo;
 import com.android.launcher3.pageindicators.PageIndicatorDots;
 import com.android.launcher3.touch.CustomActionsListener;
 import com.android.launcher3.views.ActivityContext;
@@ -64,10 +67,12 @@ public class OneUiPagedAllAppsView extends PagedView<PageIndicatorDots> {
     }
 
     private static final int RECYCLED_VIEW_POOL_SIZE = 64;
+    private static final int VIEW_TYPE_APP = 0;
+    private static final int VIEW_TYPE_FOLDER = 1;
 
     private final ActivityContext mActivityContext;
     private final LayoutInflater mLayoutInflater;
-    private final ArrayList<AppInfo> mApps = new ArrayList<>();
+    private final ArrayList<ItemInfo> mApps = new ArrayList<>();
     private final ArrayList<AllAppsRecyclerView> mPageRecyclerViews = new ArrayList<>();
     private final Rect mPagePadding = new Rect();
 
@@ -75,6 +80,7 @@ public class OneUiPagedAllAppsView extends PagedView<PageIndicatorDots> {
 
     @Nullable private OnActivePageChangedListener mOnActivePageChangedListener;
     @Nullable private OnRecyclerViewsChangedListener mOnRecyclerViewsChangedListener;
+    @Nullable private DrawerFoldersProvider mDrawerFolders;
     private int mLastItemsPerPage = -1;
     private int mLastSpanCount = -1;
     private int mLastCellHeight = -1;
@@ -101,7 +107,7 @@ public class OneUiPagedAllAppsView extends PagedView<PageIndicatorDots> {
         setPageSpacing(0);
         setMotionEventSplittingEnabled(false);
 
-        mSharedPool.setMaxRecycledViews(0 /* viewType */, RECYCLED_VIEW_POOL_SIZE);
+        mSharedPool.setMaxRecycledViews(VIEW_TYPE_APP, RECYCLED_VIEW_POOL_SIZE);
     }
 
     public void setPageIndicator(@Nullable PageIndicatorDots pageIndicator) {
@@ -121,11 +127,15 @@ public class OneUiPagedAllAppsView extends PagedView<PageIndicatorDots> {
         mOnRecyclerViewsChangedListener = listener;
     }
 
+    public void setDrawerFoldersProvider(@Nullable DrawerFoldersProvider provider) {
+        mDrawerFolders = provider;
+    }
+
     /**
      * Replaces the app list. Pages are rebuilt (keeping the current page when possible) once the
      * view has a size.
      */
-    public void setApps(@NonNull List<AppInfo> apps) {
+    public void setApps(@NonNull List<ItemInfo> apps) {
         if (mApps.equals(apps) && !mPageRecyclerViews.isEmpty()) {
             // Same apps in same order: only rebind so icon/label/badge changes are picked up.
             for (AllAppsRecyclerView rv : mPageRecyclerViews) {
@@ -326,7 +336,7 @@ public class OneUiPagedAllAppsView extends PagedView<PageIndicatorDots> {
         for (int page = 0; page < pageCount; page++) {
             int start = page * itemsPerPage;
             int end = Math.min(start + itemsPerPage, mApps.size());
-            List<AppInfo> pageApps = start < end
+            List<ItemInfo> pageApps = start < end
                     ? new ArrayList<>(mApps.subList(start, end))
                     : new ArrayList<>();
             AllAppsRecyclerView recyclerView = createPageRecyclerView(spanCount, itemsPerPage,
@@ -349,7 +359,7 @@ public class OneUiPagedAllAppsView extends PagedView<PageIndicatorDots> {
     }
 
     private AllAppsRecyclerView createPageRecyclerView(int spanCount, int itemsPerPage,
-            int cellHeight, List<AppInfo> pageApps) {
+            int cellHeight, List<ItemInfo> pageApps) {
         AllAppsRecyclerView recyclerView = new AllAppsRecyclerView(getContext()) {
             @Override
             public void scrollToTop() {
@@ -463,8 +473,8 @@ public class OneUiPagedAllAppsView extends PagedView<PageIndicatorDots> {
         return getRowsPerPage() * getColumns();
     }
 
-    private class PageAdapter extends RecyclerView.Adapter<PageAdapter.IconHolder> {
-        private final List<AppInfo> mPageApps;
+    private class PageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+        private final List<ItemInfo> mPageApps;
         private final int mCellHeight;
         private final int mTextColor;
         private final int mLayoutRes;
@@ -472,7 +482,7 @@ public class OneUiPagedAllAppsView extends PagedView<PageIndicatorDots> {
         private final View.OnLongClickListener mLongClickListener;
         private final CustomActionsListener mCustomActionsListener;
 
-        PageAdapter(List<AppInfo> pageApps, int cellHeight) {
+        PageAdapter(List<ItemInfo> pageApps, int cellHeight) {
             mPageApps = pageApps;
             mCellHeight = cellHeight;
             Context ctx = mActivityContext.asContext();
@@ -489,9 +499,21 @@ public class OneUiPagedAllAppsView extends PagedView<PageIndicatorDots> {
             return mPageApps.size();
         }
 
+        @Override
+        public int getItemViewType(int position) {
+            return mPageApps.get(position) instanceof FolderInfo ? VIEW_TYPE_FOLDER : VIEW_TYPE_APP;
+        }
+
         @NonNull
         @Override
-        public IconHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent,
+                int viewType) {
+            if (viewType == VIEW_TYPE_FOLDER) {
+                FrameLayout host = new FrameLayout(parent.getContext());
+                host.setLayoutParams(new RecyclerView.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT, mCellHeight));
+                return new FolderHolder(host);
+            }
             BubbleTextView icon = (BubbleTextView) mLayoutInflater.inflate(mLayoutRes, parent,
                     false);
             icon.setLongPressTimeoutFactor(1f);
@@ -505,7 +527,21 @@ public class OneUiPagedAllAppsView extends PagedView<PageIndicatorDots> {
         }
 
         @Override
-        public void onBindViewHolder(@NonNull IconHolder holder, int position) {
+        public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
+            ItemInfo item = mPageApps.get(position);
+            if (viewHolder instanceof FolderHolder folderHolder) {
+                ViewGroup.LayoutParams lp = folderHolder.mHost.getLayoutParams();
+                if (lp != null && lp.height != mCellHeight) {
+                    lp.height = mCellHeight;
+                    folderHolder.mHost.setLayoutParams(lp);
+                }
+                if (mDrawerFolders != null && item instanceof FolderInfo folderInfo) {
+                    mDrawerFolders.bindFolderIcon(folderInfo, folderHolder.mHost,
+                            false /* horizontal */, mTextColor);
+                }
+                return;
+            }
+            IconHolder holder = (IconHolder) viewHolder;
             BubbleTextView icon = holder.mIcon;
             ViewGroup.LayoutParams lp = icon.getLayoutParams();
             if (lp != null && lp.height != mCellHeight) {
@@ -514,13 +550,26 @@ public class OneUiPagedAllAppsView extends PagedView<PageIndicatorDots> {
             }
             icon.reset();
             icon.setTextColor(mTextColor);
-            icon.applyFromApplicationInfo(mPageApps.get(position));
+            icon.applyFromApplicationInfo((AppInfo) item);
         }
 
         @Override
-        public void onViewRecycled(@NonNull IconHolder holder) {
+        public void onViewRecycled(@NonNull RecyclerView.ViewHolder holder) {
             super.onViewRecycled(holder);
-            holder.mIcon.reset();
+            if (holder instanceof IconHolder iconHolder) {
+                iconHolder.mIcon.reset();
+            } else if (holder instanceof FolderHolder folderHolder) {
+                folderHolder.mHost.removeAllViews();
+            }
+        }
+
+        class FolderHolder extends RecyclerView.ViewHolder {
+            final FrameLayout mHost;
+
+            FolderHolder(FrameLayout host) {
+                super(host);
+                mHost = host;
+            }
         }
 
         class IconHolder extends RecyclerView.ViewHolder {

@@ -22,6 +22,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.android.launcher3.BubbleTextView;
+import com.android.launcher3.Launcher;
 import com.android.launcher3.allapps.AllAppsStore;
 import com.android.launcher3.dagger.ActivityContextSingleton;
 import com.android.launcher3.dot.DotInfo;
@@ -93,6 +94,9 @@ public class PopupDataProvider {
             folder.mapOverItems(op);
         }
         mAppsStore.updateNotificationDots(updatedDots);
+        if (mContext instanceof Launcher launcher) {
+            launcher.getDrawerFolderController().updateNotificationDots(matcher);
+        }
         return null;
     }
 

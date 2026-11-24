@@ -55,6 +55,10 @@ public class DropTargetBar extends FrameLayout
     @ViewDebug.ExportedProperty(category = "launcher")
     protected boolean mVisible = false;
 
+    // The bar is behind the drawer while a drag stays in it.
+    @ViewDebug.ExportedProperty(category = "launcher")
+    private boolean mDeferredForDrawerDrag = false;
+
     private ButtonDropTarget[] mDropTargets;
     private ButtonDropTarget[] mTempTargets;
     private ViewPropertyAnimator mCurrentAnimation;
@@ -333,6 +337,25 @@ public class DropTargetBar extends FrameLayout
      */
     @Override
     public void onDragStart(DropTarget.DragObject dragObject, DragOptions options) {
+        mDeferredForDrawerDrag = mLauncher.getDrawerFolderController().isDragInDrawer();
+        if (mDeferredForDrawerDrag) {
+            return;
+        }
+        animateToVisibility(true);
+    }
+
+    public boolean isDeferredForDrawerDrag() {
+        return mDeferredForDrawerDrag;
+    }
+
+    public void onDrawerDragHandedOver(DropTarget.DragObject dragObject, DragOptions options) {
+        if (!mDeferredForDrawerDrag) {
+            return;
+        }
+        mDeferredForDrawerDrag = false;
+        for (ButtonDropTarget target : mDropTargets) {
+            target.onDragStart(dragObject, options);
+        }
         animateToVisibility(true);
     }
 
@@ -346,6 +369,7 @@ public class DropTargetBar extends FrameLayout
 
     @Override
     public void onDragEnd() {
+        mDeferredForDrawerDrag = false;
         if (!mDeferOnDragEnd) {
             animateToVisibility(false);
         } else {

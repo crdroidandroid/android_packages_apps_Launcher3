@@ -36,6 +36,7 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.Property;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -154,6 +155,8 @@ public class FolderIcon extends FrameLayout implements FloatingIconViewCompanion
 
     private float mScaleForReorderBounce = 1f;
 
+    private boolean mDrawerHorizontal = false;
+
     private static final Property<FolderIcon, Float> DOT_SCALE_PROPERTY
             = new Property<FolderIcon, Float>(Float.TYPE, "dotScale") {
         @Override
@@ -219,7 +222,6 @@ public class FolderIcon extends FrameLayout implements FloatingIconViewCompanion
                     "is dependent on this");
         }
 
-        DeviceProfile grid = activity.getDeviceProfile();
         LayoutInflater inflater = (group != null)
                 ? LayoutInflater.from(group.getContext())
                 : activity.getLayoutInflater();
@@ -238,23 +240,21 @@ public class FolderIcon extends FrameLayout implements FloatingIconViewCompanion
             }
         }
         icon.mFolderName.setCompoundDrawablePadding(0);
-        FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) icon.mFolderName.getLayoutParams();
-        lp.topMargin = grid.getWorkspaceProfile().getIconSizePx()
-                + grid.getWorkspaceProfile().getIconDrawablePaddingPx();
+        icon.mInfo = folderInfo;
+        icon.mActivity = activity;
+        icon.applyLabelLayout();
 
         icon.setTag(folderInfo);
         icon.setOnClickListener(activity.getItemOnClickListener());
-        icon.setCustomActionsListener(WorkspaceItemCustomActionsListener.INSTANCE);
-        icon.mInfo = folderInfo;
-        icon.mActivity = activity;
-        icon.mDotRenderer = new DotRenderer(
-                grid.getWorkspaceProfile().getIconSizePx()
-        );
+        icon.setCustomActionsListener(icon.isInAppDrawer()
+                ? null : WorkspaceItemCustomActionsListener.INSTANCE);
+        icon.mDotRenderer = new DotRenderer(icon.getIconSizePx());
 
         icon.updateDotInfo();
         icon.setContentDescription(icon.getAccessiblityTitle(folderInfo.title));
 
-        icon.setAccessibilityDelegate(activity.getAccessibilityDelegate());
+        icon.setAccessibilityDelegate(
+                icon.isInAppDrawer() ? null : activity.getAccessibilityDelegate());
 
         icon.mPreviewVerifier = createFolderGridOrganizer(activity.getDeviceProfile());
         icon.mPreviewVerifier.setFolderInfo(folderInfo);
@@ -270,6 +270,69 @@ public class FolderIcon extends FrameLayout implements FloatingIconViewCompanion
 
     public BubbleTextView getFolderName() {
         return mFolderName;
+    }
+
+    public boolean isInAppDrawer() {
+        return mInfo != null && mInfo.container == LauncherSettings.Favorites.CONTAINER_ALL_APPS;
+    }
+
+    public boolean isDrawerHorizontal() {
+        return mDrawerHorizontal;
+    }
+
+    public void setDrawerHorizontal(boolean horizontal) {
+        if (mDrawerHorizontal == horizontal || !isInAppDrawer()) {
+            return;
+        }
+        mDrawerHorizontal = horizontal;
+        applyLabelLayout();
+        requestLayout();
+        invalidate();
+    }
+
+    int getIconSizePx() {
+        DeviceProfile grid = mActivity.getDeviceProfile();
+        return isInAppDrawer()
+                ? grid.getAllAppsProfile().getIconSizePx()
+                : grid.getWorkspaceProfile().getIconSizePx();
+    }
+
+    private int getIconDrawablePaddingPx() {
+        DeviceProfile grid = mActivity.getDeviceProfile();
+        return isInAppDrawer()
+                ? grid.getAllAppsProfile().getIconDrawablePaddingPx()
+                : grid.getWorkspaceProfile().getIconDrawablePaddingPx();
+    }
+
+    int getDrawerPreviewLeft(int availableSpaceX, int iconSize, int previewSize) {
+        if (!mDrawerHorizontal) {
+            return (availableSpaceX - previewSize) / 2;
+        }
+        int iconLeft = Utilities.isRtl(getResources())
+                ? availableSpaceX - getPaddingRight() - iconSize
+                : getPaddingLeft();
+        return iconLeft + (iconSize - previewSize) / 2;
+    }
+
+    private void applyLabelLayout() {
+        FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) mFolderName.getLayoutParams();
+        int iconSize = getIconSizePx();
+        int drawablePadding = getIconDrawablePaddingPx();
+        if (mDrawerHorizontal) {
+            int rowPadding = getResources().getDimensionPixelSize(
+                    R.dimen.dynamic_grid_cell_padding_x);
+            setPaddingRelative(rowPadding, rowPadding, rowPadding, rowPadding);
+            lp.topMargin = 0;
+            lp.setMarginStart(iconSize + drawablePadding);
+            lp.gravity = Gravity.START | Gravity.CENTER_VERTICAL;
+            mFolderName.setPaddingRelative(0, 0, 0, 0);
+            mFolderName.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
+        } else {
+            lp.topMargin = iconSize + drawablePadding;
+            lp.setMarginStart(0);
+            lp.gravity = Gravity.TOP;
+        }
+        mFolderName.setLayoutParams(lp);
     }
 
     public void getPreviewBounds(Rect outBounds) {
@@ -310,6 +373,16 @@ public class FolderIcon extends FrameLayout implements FloatingIconViewCompanion
                 ((dragInfo instanceof WorkspaceItemFactory)
                         || (dragInfo instanceof PendingAddShortcutInfo)
                         || Folder.willAccept(dragInfo))) {
+            mOpenAlarm.setAlarm(ON_OPEN_DELAY);
+        }
+    }
+
+    /** {@link #onDragEnter(ItemInfo)} for app drawer folders, which have no CellLayout. */
+    public void onDrawerDragEnter(ItemInfo dragInfo) {
+        if (mFolder.isDestroyed() || !willAcceptItem(dragInfo)) return;
+        mBackground.animateToAcceptInPlace();
+        mOpenAlarm.setOnAlarmListener(mOnOpenListener);
+        if (SPRING_LOADING_ENABLED) {
             mOpenAlarm.setAlarm(ON_OPEN_DELAY);
         }
     }
@@ -419,7 +492,7 @@ public class FolderIcon extends FrameLayout implements FloatingIconViewCompanion
             float finalScale = scale * scaleRelativeToDragLayer;
 
             // Account for potentially different icon sizes with non-default grid settings
-            if (d.dragSource instanceof ActivityAllAppsContainerView) {
+            if (d.dragSource instanceof ActivityAllAppsContainerView && !isInAppDrawer()) {
                 DeviceProfile grid = mActivity.getDeviceProfile();
                 float containerScale = (1f * grid.getWorkspaceProfile().getIconSizePx()
                         / grid.getAllAppsProfile().getIconSizePx());
@@ -648,15 +721,20 @@ public class FolderIcon extends FrameLayout implements FloatingIconViewCompanion
     public void drawDot(Canvas canvas) {
         if (!mForceHideDot && ((mDotInfo != null && mDotInfo.hasDot()) || mDotScale > 0)) {
             Rect iconBounds = mDotParams.iconBounds;
-            // FolderIcon draws the icon to be top-aligned (with padding) & horizontally-centered
-            int iconSize = mActivity.getDeviceProfile().getWorkspaceProfile().getIconSizePx();
-            iconBounds.left = (getWidth() - iconSize) / 2;
-            iconBounds.right = iconBounds.left + iconSize;
-            iconBounds.top = getPaddingTop();
-            iconBounds.bottom = iconBounds.top + iconSize;
+            if (isInAppDrawer()) {
+                mBackground.getBounds(iconBounds);
+            } else {
+                // FolderIcon draws the icon to be top-aligned (with padding) &
+                // horizontally-centered
+                int iconSize = getIconSizePx();
+                iconBounds.left = (getWidth() - iconSize) / 2;
+                iconBounds.right = iconBounds.left + iconSize;
+                iconBounds.top = getPaddingTop();
+                iconBounds.bottom = iconBounds.top + iconSize;
 
-            float iconScale = (float) mBackground.previewSize / iconSize;
-            Utilities.scaleRectAboutCenter(iconBounds, iconScale);
+                float iconScale = (float) mBackground.previewSize / iconSize;
+                Utilities.scaleRectAboutCenter(iconBounds, iconScale);
+            }
 
             // If we are animating to the accepting state, animate the dot out.
             mDotParams.scale = Math.max(0, mDotScale - mBackground.getAcceptScaleProgress());
@@ -666,6 +744,10 @@ public class FolderIcon extends FrameLayout implements FloatingIconViewCompanion
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        if (isInAppDrawer()) {
+            onMeasureInAppDrawer(widthMeasureSpec, heightMeasureSpec);
+            return;
+        }
         boolean shouldShowLabel = mFolderName.shouldShowLabel();
         boolean shouldCenterIcon = mActivity.getDeviceProfile().getWorkspaceProfile()
                 .getIconCenterVertically();
@@ -676,6 +758,25 @@ public class FolderIcon extends FrameLayout implements FloatingIconViewCompanion
             int cellHeightPx = iconSize + mFolderName.getCompoundDrawablePadding() + textHeight;
             setPadding(getPaddingLeft(), (MeasureSpec.getSize(heightMeasureSpec)
                     - cellHeightPx) / 2, getPaddingRight(), getPaddingBottom());
+        }
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+    }
+
+    private void onMeasureInAppDrawer(int widthMeasureSpec, int heightMeasureSpec) {
+        int iconSize = getIconSizePx();
+        if (mDrawerHorizontal) {
+            heightMeasureSpec = MeasureSpec.makeMeasureSpec(
+                    getPaddingTop() + iconSize + getPaddingBottom(), MeasureSpec.EXACTLY);
+        } else {
+            boolean shouldShowLabel = mFolderName.shouldShowLabel();
+            Paint.FontMetrics fm = mFolderName.getPaint().getFontMetrics();
+            int textHeight = shouldShowLabel ? (int) Math.ceil(fm.bottom - fm.top) : 0;
+            int contentHeight = iconSize + getIconDrawablePaddingPx() + textHeight;
+            int paddingTop = Math.max(0,
+                    (MeasureSpec.getSize(heightMeasureSpec) - contentHeight) / 2);
+            if (paddingTop != getPaddingTop()) {
+                setPadding(getPaddingLeft(), paddingTop, getPaddingRight(), getPaddingBottom());
+            }
         }
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }

@@ -168,16 +168,52 @@ public class PreviewBackground extends DelegatedCellDrawing {
                       int availableSpaceX, int topPadding) {
         mInvalidateDelegate = invalidateDelegate;
 
+        DeviceProfile grid = activity.getDeviceProfile();
+        if (invalidateDelegate instanceof FolderIcon folderIcon && folderIcon.isInAppDrawer()) {
+            int iconSize = grid.getAllAppsProfile().getIconSizePx();
+            previewSize = getAppDrawerPreviewSize(grid);
+            basePreviewOffsetX = folderIcon.getDrawerPreviewLeft(
+                    availableSpaceX, iconSize, previewSize);
+            basePreviewOffsetY = topPadding + (iconSize - previewSize) / 2;
+        } else {
+            previewSize = grid.getFolderProfile().getFolderIconSizePx();
+
+            basePreviewOffsetX = (availableSpaceX - previewSize) / 2;
+            basePreviewOffsetY = topPadding + grid.getFolderProfile().getFolderIconOffsetYPx();
+        }
+        applyStyle(context);
+    }
+
+    /** Sets up the background around an app drawer icon at ({@code iconLeft}, {@code iconTop}). */
+    public void setupForAppDrawerIcon(Context context, ActivityContext activity,
+            View invalidateDelegate, int iconLeft, int iconTop) {
+        mInvalidateDelegate = invalidateDelegate;
+        DeviceProfile grid = activity.getDeviceProfile();
+        int iconSize = grid.getAllAppsProfile().getIconSizePx();
+        previewSize = getAppDrawerPreviewSize(grid);
+        basePreviewOffsetX = iconLeft + (iconSize - previewSize) / 2;
+        basePreviewOffsetY = iconTop + (iconSize - previewSize) / 2;
+        applyStyle(context);
+    }
+
+    static int getAppDrawerPreviewSize(DeviceProfile grid) {
+        int workspaceIconSize = grid.getWorkspaceProfile().getIconSizePx();
+        int folderIconSize = grid.getFolderProfile().getFolderIconSizePx();
+        return workspaceIconSize > 0
+                ? Math.round(folderIconSize * (float) grid.getAllAppsProfile().getIconSizePx()
+                        / workspaceIconSize)
+                : folderIconSize;
+    }
+
+    public boolean isScaleAnimationRunning() {
+        return mScaleAnimator != null;
+    }
+
+    private void applyStyle(Context context) {
         TypedArray ta = context.getTheme().obtainStyledAttributes(R.styleable.FolderIconPreview);
         mStrokeColor = ta.getColor(R.styleable.FolderIconPreview_folderIconBorderColor, 0);
         mBgColor = ta.getColor(R.styleable.FolderIconPreview_folderPreviewColor, 0);
         ta.recycle();
-
-        DeviceProfile grid = activity.getDeviceProfile();
-        previewSize = grid.getFolderProfile().getFolderIconSizePx();
-
-        basePreviewOffsetX = (availableSpaceX - previewSize) / 2;
-        basePreviewOffsetY = topPadding + grid.getFolderProfile().getFolderIconOffsetYPx();
 
         // Stroke width is 1dp
         mStrokeWidth = context.getResources().getDisplayMetrics().density;
@@ -457,6 +493,10 @@ public class PreviewBackground extends DelegatedCellDrawing {
 
     public void animateToAccept(CellLayout cl, int cellX, int cellY) {
         delegateDrawing(cl, cellX, cellY);
+        animateScale(/* isAccepting= */ true, mIsHovered);
+    }
+
+    public void animateToAcceptInPlace() {
         animateScale(/* isAccepting= */ true, mIsHovered);
     }
 

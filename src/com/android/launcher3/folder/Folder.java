@@ -84,6 +84,7 @@ import com.android.launcher3.DropTarget;
 import com.android.launcher3.ExtendedEditText;
 import com.android.launcher3.Flags;
 import com.android.launcher3.Launcher;
+import com.android.launcher3.LauncherSettings;
 import com.android.launcher3.OnAlarmListener;
 import com.android.launcher3.R;
 import com.android.launcher3.ShortcutAndWidgetContainer;
@@ -250,6 +251,7 @@ public class Folder extends AbstractFloatingView implements ClipPathView, DragSo
     private boolean mDeleteFolderOnDropCompleted = false;
 
     private boolean mSuppressFolderDeletion = false;
+    private boolean mDragItemRestored = false;
     private boolean mSuppressContentUpdate = false;
 
     private boolean mItemAddedBackToSelfViaIcon = false;
@@ -1059,10 +1061,16 @@ public class Folder extends AbstractFloatingView implements ClipPathView, DragSo
         setState(STATE_CLOSED);
         mContent.setCurrentPage(0);
 
-        if (Flags.enableExpressiveFolderExpansion()) {
+        // Drawer folders don't animate the scrim, resetting it would break the drawer.
+        if (Flags.enableExpressiveFolderExpansion() && !isInAppDrawer()) {
             FolderAnimationSpringBuilderManager.resetLauncherScale(mLauncherDelegate);
             FolderAnimationSpringBuilderManager.resetScrimAndZoom(mLauncherDelegate);
         }
+        mLauncherDelegate.onFolderClosed(this);
+    }
+
+    public boolean isInAppDrawer() {
+        return mInfo != null && mInfo.container == LauncherSettings.Favorites.CONTAINER_ALL_APPS;
     }
 
     @Override
@@ -1220,7 +1228,7 @@ public class Folder extends AbstractFloatingView implements ClipPathView, DragSo
                     && target != this) {
                 replaceFolderWithFinalItem();
             }
-        } else {
+        } else if (!mDragItemRestored) {
             // The drag failed, we need to return the item to the folder
             ItemInfo info = d.dragInfo;
             View icon = (mCurrentDragView != null && mCurrentDragView.getTag() == info)
@@ -1251,6 +1259,7 @@ public class Folder extends AbstractFloatingView implements ClipPathView, DragSo
         mDeleteFolderOnDropCompleted = false;
         mIsDragInProgress = false;
         mItemAddedBackToSelfViaIcon = false;
+        mDragItemRestored = false;
         mCurrentDragView = null;
 
         // Reordering may have occured, and we need to save the new item locations. We do this once
@@ -1594,6 +1603,16 @@ public class Folder extends AbstractFloatingView implements ClipPathView, DragSo
         if (v != null) {
             v.setVisibility(VISIBLE);
         }
+    }
+
+    /** Puts the dragged item back; the drag continues with a copy of it. */
+    public void restoreDraggedItem(ItemInfo item) {
+        if (!mIsDragInProgress || mInfo.getContents().contains(item)) {
+            return;
+        }
+        mDragItemRestored = true;
+        mDeleteFolderOnDropCompleted = false;
+        addFolderContent(item, item.rank, false);
     }
 
     /** Add an app or shortcut */

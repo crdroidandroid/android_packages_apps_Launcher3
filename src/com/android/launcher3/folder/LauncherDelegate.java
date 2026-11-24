@@ -63,6 +63,10 @@ public class LauncherDelegate {
     }
 
     boolean replaceFolderWithFinalItem(Folder folder) {
+        if (folder.isInAppDrawer()) {
+            mLauncher.getDrawerFolderController().dissolveFolder(folder.mInfo);
+            return true;
+        }
         // Add the last remaining child to the workspace in place of the folder
         Runnable onCompleteRunnable = new Runnable() {
             @Override
@@ -117,6 +121,12 @@ public class LauncherDelegate {
         return true;
     }
 
+    void onFolderClosed(Folder folder) {
+        if (folder.isInAppDrawer()) {
+            mLauncher.getDrawerFolderController().onFolderClosed(folder);
+        }
+    }
+
     boolean interceptOutsideTouch(MotionEvent ev, BaseDragLayer dl, Folder folder) {
         if (mLauncher.getAccessibilityDelegate().isInAccessibleDrag()) {
             // Do not close the container if in drag and drop.
@@ -160,6 +170,9 @@ public class LauncherDelegate {
         boolean replaceFolderWithFinalItem(Folder folder) {
             return false;
         }
+
+        @Override
+        void onFolderClosed(Folder folder) { }
 
         @Override
         boolean interceptOutsideTouch(MotionEvent ev, BaseDragLayer dl, Folder folder) {

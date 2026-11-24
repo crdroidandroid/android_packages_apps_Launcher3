@@ -42,7 +42,9 @@ import com.android.launcher3.Flags;
 import com.android.launcher3.R;
 import com.android.launcher3.allapps.BaseAllAppsAdapter.AdapterItem;
 import com.android.launcher3.model.data.AppInfo;
+import com.android.launcher3.model.data.FolderInfo;
 import com.android.launcher3.model.data.ItemInfo;
+import com.android.launcher3.util.ComponentKey;
 import com.android.launcher3.util.LabelComparator;
 import com.android.launcher3.views.ActivityContext;
 
@@ -52,6 +54,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 import java.util.TreeMap;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -116,6 +119,10 @@ public class AlphabeticalAppsList implements AllAppsStore.OnUpdateListener {
     private int mNumAppsPerRowAllApps;
     private int mNumAppRowsInAdapter;
     private Predicate<ItemInfo> mItemFilter;
+    @Nullable
+    private DrawerFoldersProvider mDrawerFolders;
+    @Nullable
+    private SpannableString mDrawerFoldersScrollerBadge;
 
     public AlphabeticalAppsList(ActivityContext activityContext, @Nullable AllAppsStore appsStore,
             WorkProfileManager workProfileManager, PrivateProfileManager privateProfileManager) {
@@ -258,6 +265,13 @@ public class AlphabeticalAppsList implements AllAppsStore.OnUpdateListener {
                         .filter(mPrivateProviderManager.getItemInfoMatcher());
             }
         }
+        if (mDrawerFolders != null) {
+            Set<ComponentKey> folderMembers = mDrawerFolders.getFolderMemberKeys();
+            if (!folderMembers.isEmpty()) {
+                appSteam = appSteam.filter(
+                        info -> !folderMembers.contains(info.getComponentKey()));
+            }
+        }
         appSteam = appSteam.sorted(mAppNameComparator);
         privateAppStream = privateAppStream.sorted(mAppNameComparator);
 
@@ -321,6 +335,7 @@ public class AlphabeticalAppsList implements AllAppsStore.OnUpdateListener {
                                     R.string.work_profile_edu_section), 0));
                     Log.d(TAG, "Adding FastScrollSection for work edu card.");
                 }
+                position = addDrawerFolders(position);
                 position = addAppsWithSections(mApps, position);
             }
             if (Flags.enablePrivateSpace()) {
@@ -379,6 +394,46 @@ public class AlphabeticalAppsList implements AllAppsStore.OnUpdateListener {
                 });
             });
         }
+    }
+
+    public void setDrawerFoldersProvider(@Nullable DrawerFoldersProvider provider) {
+        mDrawerFolders = provider;
+    }
+
+    @Nullable
+    public DrawerFoldersProvider getDrawerFoldersProvider() {
+        return mDrawerFolders;
+    }
+
+    private int addDrawerFolders(int position) {
+        if (mDrawerFolders == null) {
+            return position;
+        }
+        List<FolderInfo> folders = mDrawerFolders.getDrawerFolders();
+        if (folders.isEmpty()) {
+            return position;
+        }
+        mFastScrollerSections.add(new FastScrollSectionInfo(getDrawerFoldersScrollerBadge(),
+                position));
+        int generation = mDrawerFolders.getIconGeneration();
+        for (FolderInfo folder : folders) {
+            mAdapterItems.add(AdapterItem.asFolder(folder, generation));
+            position++;
+        }
+        return position;
+    }
+
+    private SpannableString getDrawerFoldersScrollerBadge() {
+        if (mDrawerFoldersScrollerBadge == null) {
+            mDrawerFoldersScrollerBadge = new SpannableString(" ");
+            mDrawerFoldersScrollerBadge.setSpan(new ImageSpan(mActivityContext.asContext(),
+                            Flags.letterFastScroller()
+                                    ? R.drawable.ic_all_apps_folders_letter_list_badge
+                                    : R.drawable.ic_all_apps_folders_scroller_badge,
+                            ImageSpan.ALIGN_CENTER),
+                    0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+        return mDrawerFoldersScrollerBadge;
     }
 
     int addPrivateSpaceItems(int position) {
