@@ -395,14 +395,14 @@
     <string name="icon_shape_corner_smooth">Suave</string>
     <string name="icon_shape_corner_cut">Cortar</string>
     <string name="icon_shape_apply">Aplicar</string>
-    <string name="icon_shape_reshape_pack_title">Fit icon pack icons to shape</string>
-    <string name="icon_shape_reshape_pack_summary">Place icon pack icons on a matching background in the selected icon shape</string>
-    <string name="icon_shape_unavailable_pack_summary">Turn on \u201cFit icon pack icons to shape\u201d in Icon pack to use with this icon pack</string>
-    <string name="folder_shape_title">Folder shape</string>
-    <string name="folder_shape_match_icon">Match icon shape</string>
-    <string name="folder_shape_custom_title">Custom folder shape</string>
-    <string name="folder_shape_custom_create">Create custom folder shape</string>
-    <string name="folder_shape_custom_edit">Edit custom folder shape</string>
+    <string name="icon_shape_reshape_pack_title">Adaptar los iconos del paquete a la forma</string>
+    <string name="icon_shape_reshape_pack_summary">Colocar los iconos del paquete sobre un fondo que coincida con la forma seleccionada</string>
+    <string name="icon_shape_unavailable_pack_summary">Active \u201cAjustar los iconos del pack para dar forma a\u201d en el paquete para usar con este paquete de iconos</string>
+    <string name="folder_shape_title">Forma de carpeta</string>
+    <string name="folder_shape_match_icon">Coincidir con la forma del icono</string>
+    <string name="folder_shape_custom_title">Forma de carpeta personalizada</string>
+    <string name="folder_shape_custom_create">Crear forma de carpeta personalizada</string>
+    <string name="folder_shape_custom_edit">Editar forma de carpeta personalizada</string>
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">Carrusel de fondos de pantalla</string>
     <string name="wallpaper_carousel_summary">Cambia rápidamente los fondos de pantalla desde el menú de pulsación prolongada</string>
