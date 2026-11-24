@@ -395,14 +395,14 @@
     <string name="icon_shape_corner_smooth">滑らか</string>
     <string name="icon_shape_corner_cut">切り取り</string>
     <string name="icon_shape_apply">適用</string>
-    <string name="icon_shape_reshape_pack_title">Fit icon pack icons to shape</string>
-    <string name="icon_shape_reshape_pack_summary">Place icon pack icons on a matching background in the selected icon shape</string>
-    <string name="icon_shape_unavailable_pack_summary">Turn on \u201cFit icon pack icons to shape\u201d in Icon pack to use with this icon pack</string>
-    <string name="folder_shape_title">Folder shape</string>
-    <string name="folder_shape_match_icon">Match icon shape</string>
-    <string name="folder_shape_custom_title">Custom folder shape</string>
-    <string name="folder_shape_custom_create">Create custom folder shape</string>
-    <string name="folder_shape_custom_edit">Edit custom folder shape</string>
+    <string name="icon_shape_reshape_pack_title">アイコンパックのアイコンを形に合わせる</string>
+    <string name="icon_shape_reshape_pack_summary">選択したアイコンの形状に一致する背景にアイコンパックアイコンを配置します</string>
+    <string name="icon_shape_unavailable_pack_summary">このアイコンパックで使用するには、 \u201cアイコンパックのアイコンを\u201d 形にする</string>
+    <string name="folder_shape_title">フォルダの形状</string>
+    <string name="folder_shape_match_icon">アイコンの形状を一致させる</string>
+    <string name="folder_shape_custom_title">カスタムフォルダ形式</string>
+    <string name="folder_shape_custom_create">カスタムフォルダ形式を作成</string>
+    <string name="folder_shape_custom_edit">カスタムフォルダ形式を編集</string>
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">壁紙カルーセル</string>
     <string name="wallpaper_carousel_summary">長押しのメニューから壁紙を素早く切り替える</string>
@@ -457,19 +457,19 @@
     <string name="unlock_app">アプリ履歴でロック解除されたアプリ</string>
     <string name="lock_app">アプリ履歴でロック解除されたアプリ</string>
     <!-- Page transition -->
-    <string name="page_transition_title">Transition effect</string>
-    <string name="page_transition_none">None</string>
-    <string name="page_transition_simple">Simple</string>
-    <string name="page_transition_cube">Cube</string>
-    <string name="page_transition_card_stack">Card stack</string>
-    <string name="page_transition_tablet">Tablet</string>
-    <string name="page_transition_revolving_door">Revolving door</string>
-    <string name="page_transition_flip">Flip</string>
-    <string name="page_transition_flip_vertical">Flip vertical</string>
-    <string name="page_transition_in_and_out">In and out</string>
-    <string name="page_transition_accordion">Accordion</string>
-    <string name="page_transition_glass">Glass</string>
-    <string name="page_transition_wipe">Wipe</string>
-    <string name="page_transition_zoom_fade">Zoom fade</string>
-    <string name="page_transition_throw">Throw</string>
+    <string name="page_transition_title">切り替え効果</string>
+    <string name="page_transition_none">なし</string>
+    <string name="page_transition_simple">シンプル</string>
+    <string name="page_transition_cube">立方体</string>
+    <string name="page_transition_card_stack">カードスタック</string>
+    <string name="page_transition_tablet">タブレット</string>
+    <string name="page_transition_revolving_door">回転ドア</string>
+    <string name="page_transition_flip">反転</string>
+    <string name="page_transition_flip_vertical">垂直に反転</string>
+    <string name="page_transition_in_and_out">インとアウト</string>
+    <string name="page_transition_accordion">アコーディオン</string>
+    <string name="page_transition_glass">ガラス</string>
+    <string name="page_transition_wipe">削除</string>
+    <string name="page_transition_zoom_fade">ズームフェード</string>
+    <string name="page_transition_throw">スロー</string>
 </resources>
