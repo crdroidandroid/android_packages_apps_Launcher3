@@ -457,19 +457,21 @@
     <string name="unlock_app">Odblokowana aplikacja w ostatnich aplikacjach</string>
     <string name="lock_app">Zablokowana aplikacja w ostatnich aplikacjach</string>
     <!-- Page transition -->
-    <string name="page_transition_title">Transition effect</string>
-    <string name="page_transition_none">None</string>
-    <string name="page_transition_simple">Simple</string>
-    <string name="page_transition_cube">Cube</string>
-    <string name="page_transition_card_stack">Card stack</string>
+    <string name="page_transition_title">Efekty przejścia</string>
+    <string name="page_transition_none">Brak</string>
+    <string name="page_transition_simple">Prosty</string>
+    <string name="page_transition_cube">Sześcian</string>
+    <string name="page_transition_card_stack">Stos kart</string>
     <string name="page_transition_tablet">Tablet</string>
-    <string name="page_transition_revolving_door">Revolving door</string>
-    <string name="page_transition_flip">Flip</string>
-    <string name="page_transition_flip_vertical">Flip vertical</string>
-    <string name="page_transition_in_and_out">In and out</string>
-    <string name="page_transition_accordion">Accordion</string>
-    <string name="page_transition_glass">Glass</string>
-    <string name="page_transition_wipe">Wipe</string>
-    <string name="page_transition_zoom_fade">Zoom fade</string>
-    <string name="page_transition_throw">Throw</string>
+    <string name="page_transition_revolving_door">Drzwi obrotowe</string>
+    <string name="page_transition_flip">Obracanie</string>
+    <string name="page_transition_flip_vertical">Odwracanie w pionie</string>
+    <string name="page_transition_in_and_out">Do środka i na zewnątrz</string>
+    <string name="page_transition_accordion">Akordeon</string>
+    <string name="page_transition_glass">Szkło</string>
+    <string name="page_transition_wipe">Czyszczenie</string>
+    <string name="page_transition_zoom_fade">Zmniejszenie i zanikanie</string>
+    <string name="page_transition_throw">Rzucanie</string>
+    <!-- Long press option of an app drawer folder -->
+    <string name="all_apps_remove_folder">Usuń katalog</string>
 </resources>
