@@ -249,7 +249,7 @@
         <item>珍惜当下，无论人生几何</item>
         <item>在每个黄昏中，寻得新的曙光</item>
         <item>生活就像一场旅行，享受着沿途的风景。</item>
-        <item>态度决定成败</item>
+        <item>态度决定成败。</item>
         <item>你的传奇经久不息</item>
         <item>在平凡的时刻捕捉美好。</item>
         <item>业精于勤, 荒于嬉；行成于思, 毁于随</item>
@@ -397,12 +397,12 @@
     <string name="icon_shape_apply">应用</string>
     <string name="icon_shape_reshape_pack_title">将图标包图标适配形状</string>
     <string name="icon_shape_reshape_pack_summary">将图标包图标放置在匹配背景上，并套用选定的图标形状</string>
-    <string name="icon_shape_unavailable_pack_summary">Turn on \u201cFit icon pack icons to shape\u201d in Icon pack to use with this icon pack</string>
-    <string name="folder_shape_title">文件夹样式</string>
-    <string name="folder_shape_match_icon">匹配图标样式</string>
-    <string name="folder_shape_custom_title">自定义文件夹样式</string>
-    <string name="folder_shape_custom_create">新建文件夹自定义样式</string>
-    <string name="folder_shape_custom_edit">编辑文件夹自定义样式</string>
+    <string name="icon_shape_unavailable_pack_summary">开启 \u201c 图标包图标适配形状 \u201d 即可使用此图标包</string>
+    <string name="folder_shape_title">文件夹形状</string>
+    <string name="folder_shape_match_icon">匹配图标形状</string>
+    <string name="folder_shape_custom_title">自定义文件夹形状</string>
+    <string name="folder_shape_custom_create">新建文件夹自定义形状</string>
+    <string name="folder_shape_custom_edit">编辑文件夹自定义形状</string>
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">快捷切换壁纸</string>
     <string name="wallpaper_carousel_summary">从长按菜单快速切换壁纸</string>
