@@ -456,4 +456,20 @@
     <string name="action_lock">Kunci/Buka kunci aplikasi</string>
     <string name="unlock_app">Aplikasi terbuka di daftar aplikasi terbaru</string>
     <string name="lock_app">Aplikasi terkunci di daftar aplikasi terbaru</string>
+    <!-- Page transition -->
+    <string name="page_transition_title">Transition effect</string>
+    <string name="page_transition_none">None</string>
+    <string name="page_transition_simple">Simple</string>
+    <string name="page_transition_cube">Cube</string>
+    <string name="page_transition_card_stack">Card stack</string>
+    <string name="page_transition_tablet">Tablet</string>
+    <string name="page_transition_revolving_door">Revolving door</string>
+    <string name="page_transition_flip">Flip</string>
+    <string name="page_transition_flip_vertical">Flip vertical</string>
+    <string name="page_transition_in_and_out">In and out</string>
+    <string name="page_transition_accordion">Accordion</string>
+    <string name="page_transition_glass">Glass</string>
+    <string name="page_transition_wipe">Wipe</string>
+    <string name="page_transition_zoom_fade">Zoom fade</string>
+    <string name="page_transition_throw">Throw</string>
 </resources>
