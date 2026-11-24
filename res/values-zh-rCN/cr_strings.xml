@@ -100,6 +100,10 @@
     <string name="meow_shape_title">喵喵</string>
     <string name="samsung_style_shape_title">Samsung 样式</string>
     <string name="stretched_shape_title">拉伸</string>
+    <string name="diamond_shape_title">菱形</string>
+    <string name="egg_shape_title">鹅蛋形</string>
+    <string name="very_sunny_shape_title">强光晴日</string>
+    <string name="complex_clover_shape_title">复合四叶草</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">滑动搜索</string>
     <string name="drawer_open_keyboard_summary">键盘在应用资源库时弹出</string>
@@ -245,7 +249,7 @@
         <item>珍惜当下，无论人生几何</item>
         <item>在每个黄昏中，寻得新的曙光</item>
         <item>生活就像一场旅行，享受着沿途的风景。</item>
-        <item>态度决定成败</item>
+        <item>态度决定成败。</item>
         <item>你的传奇经久不息</item>
         <item>在平凡的时刻捕捉美好。</item>
         <item>业精于勤, 荒于嬉；行成于思, 毁于随</item>
@@ -361,6 +365,7 @@
     <string name="quick_event_weather_mist">有雾</string>
     <string name="quick_event_weather_city_title">当前位置</string>
     <string name="quick_event_weather_city_summary">显示当前位置天气</string>
+    <string name="quick_event_weather_city_summary_unavailable">谷歌天气不可用</string>
     <string name="quick_event_weather_text_title">当前天气状况</string>
     <string name="quick_event_weather_text_summary">显示当前天气状况摘要</string>
     <!-- Auto-hide page indicator dots -->
@@ -374,6 +379,30 @@
     <string name="icon_pack_default_label">默认</string>
     <string name="icon_pack_add">安装更多</string>
     <string name="icon_pack_no_market">没有可用的应用商店</string>
+    <!-- Icon shape -->
+    <string name="icon_shape_title">图标形状</string>
+    <string name="icon_shape_default_label">系统默认</string>
+    <string name="icon_shape_custom">自定义</string>
+    <string name="icon_shape_presets">预设</string>
+    <string name="icon_shape_custom_create">创建自定义形状</string>
+    <string name="icon_shape_custom_edit">编辑自定义形状</string>
+    <string name="icon_shape_custom_title">自定义形状</string>
+    <string name="icon_shape_corner_top_left">左上角</string>
+    <string name="icon_shape_corner_top_right">右上角</string>
+    <string name="icon_shape_corner_bottom_left">左下角</string>
+    <string name="icon_shape_corner_bottom_right">右下角</string>
+    <string name="icon_shape_corner_round">圆形</string>
+    <string name="icon_shape_corner_smooth">平滑</string>
+    <string name="icon_shape_corner_cut">裁切</string>
+    <string name="icon_shape_apply">应用</string>
+    <string name="icon_shape_reshape_pack_title">将图标包图标适配形状</string>
+    <string name="icon_shape_reshape_pack_summary">将图标包图标放置在匹配背景上，并套用选定的图标形状</string>
+    <string name="icon_shape_unavailable_pack_summary">开启 \u201c 图标包图标适配形状 \u201d 即可使用此图标包</string>
+    <string name="folder_shape_title">文件夹形状</string>
+    <string name="folder_shape_match_icon">匹配图标形状</string>
+    <string name="folder_shape_custom_title">自定义文件夹形状</string>
+    <string name="folder_shape_custom_create">新建文件夹自定义形状</string>
+    <string name="folder_shape_custom_edit">编辑文件夹自定义形状</string>
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">快捷切换壁纸</string>
     <string name="wallpaper_carousel_summary">从长按菜单快速切换壁纸</string>
@@ -427,4 +456,20 @@
     <string name="action_lock">锁定/解锁应用</string>
     <string name="unlock_app">已解锁应用</string>
     <string name="lock_app">已锁定应用</string>
+    <!-- Page transition -->
+    <string name="page_transition_title">过渡动画</string>
+    <string name="page_transition_none">无</string>
+    <string name="page_transition_simple">简约</string>
+    <string name="page_transition_cube">立方体</string>
+    <string name="page_transition_card_stack">卡片堆叠</string>
+    <string name="page_transition_tablet">平板</string>
+    <string name="page_transition_revolving_door">旋转门</string>
+    <string name="page_transition_flip">翻转</string>
+    <string name="page_transition_flip_vertical">垂直翻转</string>
+    <string name="page_transition_in_and_out">淡入淡出</string>
+    <string name="page_transition_accordion">手风琴</string>
+    <string name="page_transition_glass">玻璃</string>
+    <string name="page_transition_wipe">擦除</string>
+    <string name="page_transition_zoom_fade">缩放淡入淡出</string>
+    <string name="page_transition_throw">抛射</string>
 </resources>

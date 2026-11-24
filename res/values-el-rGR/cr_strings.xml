@@ -100,6 +100,10 @@
     <string name="meow_shape_title">Meow</string>
     <string name="samsung_style_shape_title">Samsung Style</string>
     <string name="stretched_shape_title">Stretched</string>
+    <string name="diamond_shape_title">Diamond</string>
+    <string name="egg_shape_title">Egg</string>
+    <string name="very_sunny_shape_title">Very sunny</string>
+    <string name="complex_clover_shape_title">Complex clover</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Σύρετε για έναρξη αναζήτησης</string>
     <string name="drawer_open_keyboard_summary">Άνοιγμα πληκτρολογίου κάθε φορά που το συρτάρι εφαρμογών γίνεται ορατό</string>
@@ -361,6 +365,7 @@
     <string name="quick_event_weather_mist">Ομιχλώδες</string>
     <string name="quick_event_weather_city_title">Τρέχουσα τοποθεσία</string>
     <string name="quick_event_weather_city_summary">Εμφάνιση της τρέχουσας τοποθεσίας του καιρού</string>
+    <string name="quick_event_weather_city_summary_unavailable">Not available with Google weather</string>
     <string name="quick_event_weather_text_title">Τρέχουσα κατάσταση</string>
     <string name="quick_event_weather_text_summary">Εμφάνιση σύνοψης της τρέχουσας καιρικής κατάστασης</string>
     <!-- Auto-hide page indicator dots -->
@@ -374,6 +379,30 @@
     <string name="icon_pack_default_label">Προεπιλογή</string>
     <string name="icon_pack_add">Εγκαταστήστε περισσότερα</string>
     <string name="icon_pack_no_market">Δεν υπάρχει κανένα διαθέσιμο κατάστημα εφαρμογών</string>
+    <!-- Icon shape -->
+    <string name="icon_shape_title">Icon shape</string>
+    <string name="icon_shape_default_label">System default</string>
+    <string name="icon_shape_custom">Custom</string>
+    <string name="icon_shape_presets">Presets</string>
+    <string name="icon_shape_custom_create">Create custom shape</string>
+    <string name="icon_shape_custom_edit">Edit custom shape</string>
+    <string name="icon_shape_custom_title">Custom shape</string>
+    <string name="icon_shape_corner_top_left">Top left</string>
+    <string name="icon_shape_corner_top_right">Top right</string>
+    <string name="icon_shape_corner_bottom_left">Bottom left</string>
+    <string name="icon_shape_corner_bottom_right">Bottom right</string>
+    <string name="icon_shape_corner_round">Round</string>
+    <string name="icon_shape_corner_smooth">Smooth</string>
+    <string name="icon_shape_corner_cut">Cut</string>
+    <string name="icon_shape_apply">Apply</string>
+    <string name="icon_shape_reshape_pack_title">Fit icon pack icons to shape</string>
+    <string name="icon_shape_reshape_pack_summary">Place icon pack icons on a matching background in the selected icon shape</string>
+    <string name="icon_shape_unavailable_pack_summary">Turn on \u201cFit icon pack icons to shape\u201d in Icon pack to use with this icon pack</string>
+    <string name="folder_shape_title">Folder shape</string>
+    <string name="folder_shape_match_icon">Match icon shape</string>
+    <string name="folder_shape_custom_title">Custom folder shape</string>
+    <string name="folder_shape_custom_create">Create custom folder shape</string>
+    <string name="folder_shape_custom_edit">Edit custom folder shape</string>
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">Wallpaper carousel</string>
     <string name="wallpaper_carousel_summary">Quickly switch wallpapers from the long-press menu</string>
@@ -427,4 +456,20 @@
     <string name="action_lock">Lock/Unlock app</string>
     <string name="unlock_app">Unlocked app in recents</string>
     <string name="lock_app">Locked app in recents</string>
+    <!-- Page transition -->
+    <string name="page_transition_title">Transition effect</string>
+    <string name="page_transition_none">None</string>
+    <string name="page_transition_simple">Simple</string>
+    <string name="page_transition_cube">Cube</string>
+    <string name="page_transition_card_stack">Card stack</string>
+    <string name="page_transition_tablet">Tablet</string>
+    <string name="page_transition_revolving_door">Revolving door</string>
+    <string name="page_transition_flip">Flip</string>
+    <string name="page_transition_flip_vertical">Flip vertical</string>
+    <string name="page_transition_in_and_out">In and out</string>
+    <string name="page_transition_accordion">Accordion</string>
+    <string name="page_transition_glass">Glass</string>
+    <string name="page_transition_wipe">Wipe</string>
+    <string name="page_transition_zoom_fade">Zoom fade</string>
+    <string name="page_transition_throw">Throw</string>
 </resources>

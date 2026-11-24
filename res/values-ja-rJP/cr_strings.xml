@@ -100,6 +100,10 @@
     <string name="meow_shape_title">ニャー🐈</string>
     <string name="samsung_style_shape_title">Samsungのスタイル</string>
     <string name="stretched_shape_title">ストレッチ</string>
+    <string name="diamond_shape_title">ダイヤモンド</string>
+    <string name="egg_shape_title">卵</string>
+    <string name="very_sunny_shape_title">非常に晴れた</string>
+    <string name="complex_clover_shape_title">複雑なクローバー</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">上にスワイプして検索を開始</string>
     <string name="drawer_open_keyboard_summary">ドロワーを表示する際にキーボードを表示し素早く検索します</string>
@@ -361,6 +365,7 @@
     <string name="quick_event_weather_mist">霧</string>
     <string name="quick_event_weather_city_title">現在地</string>
     <string name="quick_event_weather_city_summary">現在地の天気を表示します</string>
+    <string name="quick_event_weather_city_summary_unavailable">Google天気では利用できません</string>
     <string name="quick_event_weather_text_title">現在の天気</string>
     <string name="quick_event_weather_text_summary">現在の天候の概要を表示します</string>
     <!-- Auto-hide page indicator dots -->
@@ -374,6 +379,30 @@
     <string name="icon_pack_default_label">デフォルト</string>
     <string name="icon_pack_add">その他をインストール</string>
     <string name="icon_pack_no_market">利用可能なアプリストアがありません</string>
+    <!-- Icon shape -->
+    <string name="icon_shape_title">アイコンの形状</string>
+    <string name="icon_shape_default_label">システムのデフォルト</string>
+    <string name="icon_shape_custom">カスタム</string>
+    <string name="icon_shape_presets">プリセット</string>
+    <string name="icon_shape_custom_create">カスタムシェイプを作成</string>
+    <string name="icon_shape_custom_edit">カスタムシェイプを編集</string>
+    <string name="icon_shape_custom_title">カスタム形状</string>
+    <string name="icon_shape_corner_top_left">左上</string>
+    <string name="icon_shape_corner_top_right">右上</string>
+    <string name="icon_shape_corner_bottom_left">左下</string>
+    <string name="icon_shape_corner_bottom_right">右下</string>
+    <string name="icon_shape_corner_round">円形</string>
+    <string name="icon_shape_corner_smooth">滑らか</string>
+    <string name="icon_shape_corner_cut">切り取り</string>
+    <string name="icon_shape_apply">適用</string>
+    <string name="icon_shape_reshape_pack_title">アイコンパックのアイコンを形に合わせる</string>
+    <string name="icon_shape_reshape_pack_summary">選択したアイコンの形状に一致する背景にアイコンパックアイコンを配置します</string>
+    <string name="icon_shape_unavailable_pack_summary">このアイコンパックで使用するには、 \u201cアイコンパックのアイコンを\u201d 形にする</string>
+    <string name="folder_shape_title">フォルダの形状</string>
+    <string name="folder_shape_match_icon">アイコンの形状を一致させる</string>
+    <string name="folder_shape_custom_title">カスタムフォルダ形式</string>
+    <string name="folder_shape_custom_create">カスタムフォルダ形式を作成</string>
+    <string name="folder_shape_custom_edit">カスタムフォルダ形式を編集</string>
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">壁紙カルーセル</string>
     <string name="wallpaper_carousel_summary">長押しのメニューから壁紙を素早く切り替える</string>
@@ -427,4 +456,20 @@
     <string name="action_lock">アプリをロック/ロック解除</string>
     <string name="unlock_app">アプリ履歴でロック解除されたアプリ</string>
     <string name="lock_app">アプリ履歴でロック解除されたアプリ</string>
+    <!-- Page transition -->
+    <string name="page_transition_title">切り替え効果</string>
+    <string name="page_transition_none">なし</string>
+    <string name="page_transition_simple">シンプル</string>
+    <string name="page_transition_cube">立方体</string>
+    <string name="page_transition_card_stack">カードスタック</string>
+    <string name="page_transition_tablet">タブレット</string>
+    <string name="page_transition_revolving_door">回転ドア</string>
+    <string name="page_transition_flip">反転</string>
+    <string name="page_transition_flip_vertical">垂直に反転</string>
+    <string name="page_transition_in_and_out">インとアウト</string>
+    <string name="page_transition_accordion">アコーディオン</string>
+    <string name="page_transition_glass">ガラス</string>
+    <string name="page_transition_wipe">削除</string>
+    <string name="page_transition_zoom_fade">ズームフェード</string>
+    <string name="page_transition_throw">スロー</string>
 </resources>

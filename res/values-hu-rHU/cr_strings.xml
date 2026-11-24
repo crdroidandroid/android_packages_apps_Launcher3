@@ -100,6 +100,10 @@
     <string name="meow_shape_title">Miau</string>
     <string name="samsung_style_shape_title">Samsung-stílus</string>
     <string name="stretched_shape_title">Nyújtott</string>
+    <string name="diamond_shape_title">Gyémánt</string>
+    <string name="egg_shape_title">Tojás</string>
+    <string name="very_sunny_shape_title">Verőfényes</string>
+    <string name="complex_clover_shape_title">Egész lóhere</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Csúsztatás a kereséshez</string>
     <string name="drawer_open_keyboard_summary">Nyíljon meg a billentyűzet, amikor az alkalmazásfiók láthatóvá válik</string>
@@ -361,6 +365,7 @@
     <string name="quick_event_weather_mist">Ködös</string>
     <string name="quick_event_weather_city_title">Jelenlegi tartózkodási hely</string>
     <string name="quick_event_weather_city_summary">A jelenlegi tartózkodási hely adatait jeleníti meg</string>
+    <string name="quick_event_weather_city_summary_unavailable">Ez a Google Időjárással nem elérhető</string>
     <string name="quick_event_weather_text_title">Jelenlegi időjárás</string>
     <string name="quick_event_weather_text_summary">Megjeleníti az épp aktuális hőfokot és adatokat</string>
     <!-- Auto-hide page indicator dots -->
@@ -374,6 +379,30 @@
     <string name="icon_pack_default_label">Alapértelmezett</string>
     <string name="icon_pack_add">Továbbiak telepítése</string>
     <string name="icon_pack_no_market">Nincs hely ahonnan letölthetne</string>
+    <!-- Icon shape -->
+    <string name="icon_shape_title">Az ikon formája</string>
+    <string name="icon_shape_default_label">Alapértelmezett</string>
+    <string name="icon_shape_custom">Egyéni</string>
+    <string name="icon_shape_presets">Előre beállítottak</string>
+    <string name="icon_shape_custom_create">Egyedi forma készítése</string>
+    <string name="icon_shape_custom_edit">Egyedi forma szerkesztése</string>
+    <string name="icon_shape_custom_title">Egyedi forma</string>
+    <string name="icon_shape_corner_top_left">Bal felső</string>
+    <string name="icon_shape_corner_top_right">Jobb felső</string>
+    <string name="icon_shape_corner_bottom_left">Bal alsó</string>
+    <string name="icon_shape_corner_bottom_right">Jobb alsó</string>
+    <string name="icon_shape_corner_round">Kerekített</string>
+    <string name="icon_shape_corner_smooth">Sima</string>
+    <string name="icon_shape_corner_cut">Vágott</string>
+    <string name="icon_shape_apply">Alkalmazás</string>
+    <string name="icon_shape_reshape_pack_title">Az ikoncsomag ikonjainak alakra igazítása</string>
+    <string name="icon_shape_reshape_pack_summary">Helyezze az ikoncsomag ikonjait a kiválasztott ikonformában szereplő, megfelelő háttérre</string>
+    <string name="icon_shape_unavailable_pack_summary">Kapcsolja be \'Az ikoncsomag ikonjainak alakra igazítása\' opciót az ikoncsomagban, hogy ezzel használhassa</string>
+    <string name="folder_shape_title">Folder shape</string>
+    <string name="folder_shape_match_icon">Match icon shape</string>
+    <string name="folder_shape_custom_title">Custom folder shape</string>
+    <string name="folder_shape_custom_create">Create custom folder shape</string>
+    <string name="folder_shape_custom_edit">Edit custom folder shape</string>
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">Váltakozó háttérképek</string>
     <string name="wallpaper_carousel_summary">Gyors háttérkép-váltás a hosszan nyomással elérhető menüből</string>
@@ -427,4 +456,20 @@
     <string name="action_lock">Alkalmazás zárolása/feloldása</string>
     <string name="unlock_app">Feloldott alkalmazások az előzményekben</string>
     <string name="lock_app">Zárolt alkalmazások az előzményekben</string>
+    <!-- Page transition -->
+    <string name="page_transition_title">Áttűnési effekt</string>
+    <string name="page_transition_none">Nincs</string>
+    <string name="page_transition_simple">Egyszerű</string>
+    <string name="page_transition_cube">Kocka</string>
+    <string name="page_transition_card_stack">Kártyahalom</string>
+    <string name="page_transition_tablet">Tablet</string>
+    <string name="page_transition_revolving_door">Forgóajtó</string>
+    <string name="page_transition_flip">Átfordítás</string>
+    <string name="page_transition_flip_vertical">Megfordítás függőlegesen</string>
+    <string name="page_transition_in_and_out">Be és ki</string>
+    <string name="page_transition_accordion">Harmonika</string>
+    <string name="page_transition_glass">Üveg</string>
+    <string name="page_transition_wipe">Letörlés</string>
+    <string name="page_transition_zoom_fade">Zoom</string>
+    <string name="page_transition_throw">Eldobás</string>
 </resources>

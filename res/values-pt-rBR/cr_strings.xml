@@ -100,6 +100,10 @@
     <string name="meow_shape_title">Gatinho</string>
     <string name="samsung_style_shape_title">Estilo Samsung</string>
     <string name="stretched_shape_title">Esticado</string>
+    <string name="diamond_shape_title">Diamond</string>
+    <string name="egg_shape_title">Egg</string>
+    <string name="very_sunny_shape_title">Very sunny</string>
+    <string name="complex_clover_shape_title">Complex clover</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Deslize para iniciar busca</string>
     <string name="drawer_open_keyboard_summary">Abrir o teclado sempre que a gaveta de ‘apps’ se tornar visível</string>
@@ -361,6 +365,7 @@
     <string name="quick_event_weather_mist">Nevoeiro</string>
     <string name="quick_event_weather_city_title">Localização atual</string>
     <string name="quick_event_weather_city_summary">Exibir localização do tempo atual</string>
+    <string name="quick_event_weather_city_summary_unavailable">Not available with Google weather</string>
     <string name="quick_event_weather_text_title">Condição atual</string>
     <string name="quick_event_weather_text_summary">Exibir o resumo atual da condição climática</string>
     <!-- Auto-hide page indicator dots -->
@@ -374,6 +379,30 @@
     <string name="icon_pack_default_label">Padrão</string>
     <string name="icon_pack_add">Instalar mais</string>
     <string name="icon_pack_no_market">Não há uma loja de aplicativos disponível</string>
+    <!-- Icon shape -->
+    <string name="icon_shape_title">Icon shape</string>
+    <string name="icon_shape_default_label">System default</string>
+    <string name="icon_shape_custom">Custom</string>
+    <string name="icon_shape_presets">Presets</string>
+    <string name="icon_shape_custom_create">Create custom shape</string>
+    <string name="icon_shape_custom_edit">Edit custom shape</string>
+    <string name="icon_shape_custom_title">Custom shape</string>
+    <string name="icon_shape_corner_top_left">Top left</string>
+    <string name="icon_shape_corner_top_right">Top right</string>
+    <string name="icon_shape_corner_bottom_left">Bottom left</string>
+    <string name="icon_shape_corner_bottom_right">Bottom right</string>
+    <string name="icon_shape_corner_round">Round</string>
+    <string name="icon_shape_corner_smooth">Smooth</string>
+    <string name="icon_shape_corner_cut">Cut</string>
+    <string name="icon_shape_apply">Apply</string>
+    <string name="icon_shape_reshape_pack_title">Fit icon pack icons to shape</string>
+    <string name="icon_shape_reshape_pack_summary">Place icon pack icons on a matching background in the selected icon shape</string>
+    <string name="icon_shape_unavailable_pack_summary">Turn on \u201cFit icon pack icons to shape\u201d in Icon pack to use with this icon pack</string>
+    <string name="folder_shape_title">Folder shape</string>
+    <string name="folder_shape_match_icon">Match icon shape</string>
+    <string name="folder_shape_custom_title">Custom folder shape</string>
+    <string name="folder_shape_custom_create">Create custom folder shape</string>
+    <string name="folder_shape_custom_edit">Edit custom folder shape</string>
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">Carrossel de papel de parede</string>
     <string name="wallpaper_carousel_summary">Trocar rapidamente papel de parede por segurar o botão menu</string>
@@ -427,4 +456,20 @@
     <string name="action_lock">Bloquear/Desbloquear app</string>
     <string name="unlock_app">Aplicativo desbloqueado em recentes</string>
     <string name="lock_app">Bloqueado app nos recentes</string>
+    <!-- Page transition -->
+    <string name="page_transition_title">Transition effect</string>
+    <string name="page_transition_none">None</string>
+    <string name="page_transition_simple">Simple</string>
+    <string name="page_transition_cube">Cube</string>
+    <string name="page_transition_card_stack">Card stack</string>
+    <string name="page_transition_tablet">Tablet</string>
+    <string name="page_transition_revolving_door">Revolving door</string>
+    <string name="page_transition_flip">Flip</string>
+    <string name="page_transition_flip_vertical">Flip vertical</string>
+    <string name="page_transition_in_and_out">In and out</string>
+    <string name="page_transition_accordion">Accordion</string>
+    <string name="page_transition_glass">Glass</string>
+    <string name="page_transition_wipe">Wipe</string>
+    <string name="page_transition_zoom_fade">Zoom fade</string>
+    <string name="page_transition_throw">Throw</string>
 </resources>

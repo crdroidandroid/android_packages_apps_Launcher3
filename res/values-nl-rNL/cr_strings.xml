@@ -100,6 +100,10 @@
     <string name="meow_shape_title">Miauw</string>
     <string name="samsung_style_shape_title">Samsung Stijl</string>
     <string name="stretched_shape_title">Uitgerekt</string>
+    <string name="diamond_shape_title">Diamant</string>
+    <string name="egg_shape_title">Ei</string>
+    <string name="very_sunny_shape_title">Zeer zonnig</string>
+    <string name="complex_clover_shape_title">Complexe klaver</string>
     <!-- Open keyboard -->
     <string name="drawer_open_keyboard_title">Veeg om zoeken te starten</string>
     <string name="drawer_open_keyboard_summary">Open toetsenbord wanneer app drawer zichtbaar wordt</string>
@@ -361,6 +365,7 @@
     <string name="quick_event_weather_mist">Mistig</string>
     <string name="quick_event_weather_city_title">Huidige locatie</string>
     <string name="quick_event_weather_city_summary">Toon huidige weerlocatie</string>
+    <string name="quick_event_weather_city_summary_unavailable">Niet beschikbaar bij Google weer</string>
     <string name="quick_event_weather_text_title">Huidige omstandigheden</string>
     <string name="quick_event_weather_text_summary">Overzicht huidige weersomstandigheden weergeven</string>
     <!-- Auto-hide page indicator dots -->
@@ -374,6 +379,30 @@
     <string name="icon_pack_default_label">Standaard</string>
     <string name="icon_pack_add">Meer installeren</string>
     <string name="icon_pack_no_market">Er is geen beschikbare app store</string>
+    <!-- Icon shape -->
+    <string name="icon_shape_title">Icoonvorm</string>
+    <string name="icon_shape_default_label">Systeem standaard</string>
+    <string name="icon_shape_custom">Aangepast</string>
+    <string name="icon_shape_presets">Voorkeursinstellingen</string>
+    <string name="icon_shape_custom_create">Aangepaste vorm maken</string>
+    <string name="icon_shape_custom_edit">Aangepaste vorm bewerken</string>
+    <string name="icon_shape_custom_title">Aangepaste vorm</string>
+    <string name="icon_shape_corner_top_left">Boven links</string>
+    <string name="icon_shape_corner_top_right">Boven rechts</string>
+    <string name="icon_shape_corner_bottom_left">Bodem links</string>
+    <string name="icon_shape_corner_bottom_right">Bodem rechts</string>
+    <string name="icon_shape_corner_round">Rond</string>
+    <string name="icon_shape_corner_smooth">Gelijkmatig</string>
+    <string name="icon_shape_corner_cut">Knippen</string>
+    <string name="icon_shape_apply">Toepassen</string>
+    <string name="icon_shape_reshape_pack_title">Maak pictogrammen van het pictogrammenpakket passend aan om vorm</string>
+    <string name="icon_shape_reshape_pack_summary">Plaats pictogrammen van het pictogrammen pakket op een overeenkomende achtergrond in de geselecteerde vorm</string>
+    <string name="icon_shape_unavailable_pack_summary">\u201cPast pictrogrammen van het pakket aan om\u201d in het pictogrammen pakket te gebruiken met dit pictogrammen pakket</string>
+    <string name="folder_shape_title">Vorm van map</string>
+    <string name="folder_shape_match_icon">Match pictogram vorm</string>
+    <string name="folder_shape_custom_title">Aangepaste mapvorm</string>
+    <string name="folder_shape_custom_create">Aangepaste mapvorm maken</string>
+    <string name="folder_shape_custom_edit">Aangepaste mapvorm bewerken</string>
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">Achtergrond carrousel</string>
     <string name="wallpaper_carousel_summary">Wissel snel over van achtergronden vanuit het lang drukken menu</string>
@@ -427,4 +456,20 @@
     <string name="action_lock">App vergrendelen/ontgrendelen</string>
     <string name="unlock_app">Ontgrendelde app in recente apps</string>
     <string name="lock_app">Vergrendelde app in recente apps</string>
+    <!-- Page transition -->
+    <string name="page_transition_title">Transitie effect</string>
+    <string name="page_transition_none">Geen</string>
+    <string name="page_transition_simple">Simpel</string>
+    <string name="page_transition_cube">Kubus</string>
+    <string name="page_transition_card_stack">Kaart stapel</string>
+    <string name="page_transition_tablet">Tablet</string>
+    <string name="page_transition_revolving_door">Draaideur</string>
+    <string name="page_transition_flip">Omdraaien</string>
+    <string name="page_transition_flip_vertical">Verticaal spiegelen</string>
+    <string name="page_transition_in_and_out">In en uit</string>
+    <string name="page_transition_accordion">Accordeon</string>
+    <string name="page_transition_glass">Glas</string>
+    <string name="page_transition_wipe">Wissen</string>
+    <string name="page_transition_zoom_fade">Zoom vervagen</string>
+    <string name="page_transition_throw">Gooien</string>
 </resources>
