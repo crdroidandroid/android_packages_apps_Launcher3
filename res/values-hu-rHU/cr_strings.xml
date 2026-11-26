@@ -398,11 +398,11 @@
     <string name="icon_shape_reshape_pack_title">Az ikoncsomag ikonjainak alakra igazítása</string>
     <string name="icon_shape_reshape_pack_summary">Helyezze az ikoncsomag ikonjait a kiválasztott ikonformában szereplő, megfelelő háttérre</string>
     <string name="icon_shape_unavailable_pack_summary">Kapcsolja be \'Az ikoncsomag ikonjainak alakra igazítása\' opciót az ikoncsomagban, hogy ezzel használhassa</string>
-    <string name="folder_shape_title">Folder shape</string>
-    <string name="folder_shape_match_icon">Match icon shape</string>
-    <string name="folder_shape_custom_title">Custom folder shape</string>
-    <string name="folder_shape_custom_create">Create custom folder shape</string>
-    <string name="folder_shape_custom_edit">Edit custom folder shape</string>
+    <string name="folder_shape_title">A mappa formája</string>
+    <string name="folder_shape_match_icon">Ikon formájának módosítása</string>
+    <string name="folder_shape_custom_title">Egyedi mappaforma</string>
+    <string name="folder_shape_custom_create">Egyedi mappaforma készítése</string>
+    <string name="folder_shape_custom_edit">Egyedi mappaforma szerkesztése</string>
     <!-- Wallpaper carousel -->
     <string name="wallpaper_carousel_title">Váltakozó háttérképek</string>
     <string name="wallpaper_carousel_summary">Gyors háttérkép-váltás a hosszan nyomással elérhető menüből</string>
@@ -472,4 +472,6 @@
     <string name="page_transition_wipe">Letörlés</string>
     <string name="page_transition_zoom_fade">Zoom</string>
     <string name="page_transition_throw">Eldobás</string>
+    <!-- Long press option of an app drawer folder -->
+    <string name="all_apps_remove_folder">Mappa eltávolítása</string>
 </resources>
