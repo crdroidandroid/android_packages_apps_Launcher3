@@ -943,6 +943,9 @@ public class ActivityAllAppsContainerView<T extends Context & ActivityContext>
     public void setDrawerFoldersProvider(@Nullable DrawerFoldersProvider provider) {
         mDrawerFolders = provider;
         mAH.get(AdapterHolder.MAIN).mAppsList.setDrawerFoldersProvider(provider);
+        if (mOneUiPagedView != null) {
+            mOneUiPagedView.setDrawerFoldersProvider(provider);
+        }
         onDrawerFoldersChanged();
     }
 
