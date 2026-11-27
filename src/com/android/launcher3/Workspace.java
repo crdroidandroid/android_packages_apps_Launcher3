@@ -97,6 +97,7 @@ import androidx.core.view.ViewCompat;
 import com.android.app.animation.Interpolators;
 import com.android.launcher3.accessibility.AccessibleDragListenerAdapter;
 import com.android.launcher3.accessibility.WorkspaceAccessibilityHelper;
+import com.android.launcher3.allapps.ActivityAllAppsContainerView;
 import com.android.launcher3.anim.PendingAnimation;
 import com.android.launcher3.apppairs.AppPairIcon;
 import com.android.launcher3.automation.AutomationRepository;
@@ -2044,6 +2045,13 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
         if (draggableView != null) {
             draggableView.getSourceVisualDragBounds(dragRect);
             dragLayerY += dragRect.top;
+            if (contentView == null && source instanceof ActivityAllAppsContainerView
+                    && !(child instanceof BubbleTextView drawerIcon
+                            && drawerIcon.isDisplaySearchResult())) {
+                // App drawer list rows keep the icon at the start, not centered.
+                dragLayerX += Math.round(
+                        (dragRect.left - (child.getWidth() - dragRect.width()) / 2) * scale);
+            }
         }
 
 
