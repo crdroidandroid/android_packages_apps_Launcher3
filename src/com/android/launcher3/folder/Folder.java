@@ -1577,7 +1577,7 @@ public class Folder extends AbstractFloatingView implements ClipPathView, DragSo
                     mActivityContext.getModelWriter());
         }
 
-        if (!launcher.isInState(EDIT_MODE)) {
+        if (!launcher.isInState(EDIT_MODE) && !isInAppDrawer()) {
             launcher.getStateManager().goToState(NORMAL, SPRING_LOADED_EXIT_DELAY);
         }
 
