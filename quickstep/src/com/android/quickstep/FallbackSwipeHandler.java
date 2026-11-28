@@ -16,11 +16,13 @@
 package com.android.quickstep;
 
 import static android.app.WindowConfiguration.ACTIVITY_TYPE_HOME;
+import static android.app.WindowConfiguration.WINDOWING_MODE_FULLSCREEN;
 import static android.content.Intent.EXTRA_COMPONENT_NAME;
 import static android.content.Intent.EXTRA_USER;
 
 import static com.android.app.animation.Interpolators.ACCELERATE;
 import static com.android.app.animation.Interpolators.DECELERATE;
+import static com.android.app.animation.Interpolators.LINEAR;
 import static com.android.launcher3.GestureNavContract.EXTRA_ENABLE_GESTURE_CONTRACT;
 import static com.android.launcher3.GestureNavContract.EXTRA_GESTURE_CONTRACT;
 import static com.android.launcher3.GestureNavContract.EXTRA_ICON_POSITION;
@@ -34,11 +36,13 @@ import static com.android.quickstep.OverviewComponentObserver.startHomeIntentSaf
 import android.animation.ObjectAnimator;
 import android.app.ActivityOptions;
 import android.app.TaskInfo;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Matrix;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.hardware.display.DisplayManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -49,6 +53,7 @@ import android.os.ParcelUuid;
 import android.os.RemoteException;
 import android.os.UserHandle;
 import android.util.Log;
+import android.view.Display;
 import android.view.RemoteAnimationTarget;
 import android.view.Surface;
 import android.view.SurfaceControl;
@@ -72,6 +77,7 @@ import com.android.launcher3.util.StableViewInfo;
 import com.android.quickstep.fallback.FallbackActivityRecentsView;
 import com.android.quickstep.fallback.RecentsState;
 import com.android.quickstep.util.ActiveGestureLog;
+import com.android.quickstep.util.IslandCloseTarget;
 import com.android.quickstep.util.RectFSpringAnim;
 import com.android.quickstep.util.SurfaceTransaction.SurfaceProperties;
 import com.android.quickstep.util.TransformParams;
@@ -197,7 +203,8 @@ public class FallbackSwipeHandler extends
         if (appCanEnterPip) {
             return new FallbackPipToHomeAnimationFactory();
         }
-        mActiveAnimationFactory = new FallbackHomeAnimationFactory(duration, targetTaskView);
+        mActiveAnimationFactory = new FallbackHomeAnimationFactory(duration, targetTaskView,
+                findIslandTarget(runningTaskTarget, targetTaskView));
         startHomeIntent(
                 mActiveAnimationFactory,
                 runningTaskTarget,
@@ -211,6 +218,30 @@ public class FallbackSwipeHandler extends
                                 .orElse(null),
                 "FallbackSwipeHandler-home");
         return mActiveAnimationFactory;
+    }
+
+    /** The Dynamic Bar island to close into when the app has events waiting there. */
+    @Nullable
+    private RectF findIslandTarget(@Nullable RemoteAnimationTarget runningTaskTarget,
+            @Nullable TaskView targetTaskView) {
+        if (targetTaskView != null || mRunningOverHome || mIsSwipeForSplit
+                || runningTaskTarget == null || runningTaskTarget.taskInfo == null
+                || mRemoteTargetHandles.length > 1
+                || runningTaskTarget.windowConfiguration.getWindowingMode()
+                        != WINDOWING_MODE_FULLSCREEN) {
+            return null;
+        }
+        DisplayManager dm = mContext.getSystemService(DisplayManager.class);
+        Display display = dm != null ? dm.getDisplay(Display.DEFAULT_DISPLAY) : null;
+        if (display == null) return null;
+        for (ComponentName component : new ComponentName[] {
+                runningTaskTarget.taskInfo.baseActivity, runningTaskTarget.taskInfo.topActivity}) {
+            if (component == null) continue;
+            RectF bounds = IslandCloseTarget.boundsFor(
+                    component.getPackageName(), display.getRotation());
+            if (bounds != null) return bounds;
+        }
+        return null;
     }
 
     private void startHomeIntent(
@@ -334,10 +365,17 @@ public class FallbackSwipeHandler extends
         private final long mDuration;
         @Nullable private final TaskView mTargetTaskView;
 
+        @Nullable private final RectF mIslandBounds;
+
         private RectFSpringAnim mSpringAnim;
-        FallbackHomeAnimationFactory(long duration, @Nullable TaskView targetTaskView) {
+        FallbackHomeAnimationFactory(long duration, @Nullable TaskView targetTaskView,
+                @Nullable RectF islandBounds) {
             mDuration = duration;
             mTargetTaskView = targetTaskView;
+            mIslandBounds = islandBounds;
+            if (islandBounds != null) {
+                mTargetRect.set(islandBounds);
+            }
 
             if (mRunningOverHome) {
                 float currentShift = getCurrentShiftValue();
@@ -375,6 +413,30 @@ public class FallbackSwipeHandler extends
                 mTargetRect.set(super.getWindowTargetRect());
             }
             return mTargetRect;
+        }
+
+        @Override
+        public boolean isWidget() {
+            return mIslandBounds != null;
+        }
+
+        @Override
+        public float getEndRadius(RectF cropRectF) {
+            return mIslandBounds != null ? mIslandBounds.height() / 2f
+                    : super.getEndRadius(cropRectF);
+        }
+
+        @Override
+        protected float getWindowCornerRadius(float progress) {
+            return mIslandBounds != null ? mIslandBounds.height() / 2f
+                    : super.getWindowCornerRadius(progress);
+        }
+
+        @Override
+        protected float getWindowAlpha(float progress) {
+            return mIslandBounds != null
+                    ? 1 - Utilities.mapBoundToRange(progress, 0.6f, 1f, 0, 1, LINEAR)
+                    : super.getWindowAlpha(progress);
         }
 
         private void updateRecentsActivityTransformDuringHomeAnim(SurfaceProperties builder,
@@ -494,7 +556,7 @@ public class FallbackSwipeHandler extends
                 @NonNull Intent intent,
                 @NonNull TaskKey key,
                 @Nullable IBinder launchCookie) {
-            if (mRunningOverHome) {
+            if (mRunningOverHome || mIslandBounds != null) {
                 return;
             }
             if (key.getComponent() == null) {
