@@ -27,7 +27,7 @@ import android.provider.CalendarContract;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import com.android.internal.util.crdroid.OmniJawsClient;
+import org.omnirom.omnijaws.client.OmniJawsClient;
 
 import com.android.launcher3.Launcher;
 import com.android.launcher3.R;

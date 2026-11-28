@@ -362,6 +362,7 @@ android_app {
     ],
 
     static_libs: [
+        "OmniJawsClient",
         "Launcher3ResLib",
         // Compose dep
         "androidx.compose.runtime_runtime",
@@ -488,6 +489,7 @@ android_library {
     // in QuickstepResLib to take precendece, so it should be the final
     // dependency. See b/205278434 for how this can go wrong.
     static_libs: [
+        "OmniJawsClient",
         "QuickstepResLib",
         "androidx.room_room-runtime",
         // Compose dep
@@ -532,6 +534,7 @@ android_library {
     // in QuickstepResLib to take precendece, so it should be the final
     // dependency. See b/208647810 for how this can go wrong.
     static_libs: [
+        "OmniJawsClient",
         "SystemUI-statsd",
         "QuickstepResLib",
         // Compose dep
