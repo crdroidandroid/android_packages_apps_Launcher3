@@ -100,8 +100,8 @@
     <string name="meow_shape_title">Gatinho</string>
     <string name="samsung_style_shape_title">Estilo Samsung</string>
     <string name="stretched_shape_title">Esticado</string>
-    <string name="diamond_shape_title">Diamond</string>
-    <string name="egg_shape_title">Egg</string>
+    <string name="diamond_shape_title">Diamante</string>
+    <string name="egg_shape_title">Ovo</string>
     <string name="very_sunny_shape_title">Very sunny</string>
     <string name="complex_clover_shape_title">Complex clover</string>
     <!-- Open keyboard -->
@@ -365,7 +365,7 @@
     <string name="quick_event_weather_mist">Nevoeiro</string>
     <string name="quick_event_weather_city_title">Localização atual</string>
     <string name="quick_event_weather_city_summary">Exibir localização do tempo atual</string>
-    <string name="quick_event_weather_city_summary_unavailable">Not available with Google weather</string>
+    <string name="quick_event_weather_city_summary_unavailable">Indisponível com o Google weather</string>
     <string name="quick_event_weather_text_title">Condição atual</string>
     <string name="quick_event_weather_text_summary">Exibir o resumo atual da condição climática</string>
     <!-- Auto-hide page indicator dots -->
@@ -381,8 +381,8 @@
     <string name="icon_pack_no_market">Não há uma loja de aplicativos disponível</string>
     <!-- Icon shape -->
     <string name="icon_shape_title">Icon shape</string>
-    <string name="icon_shape_default_label">System default</string>
-    <string name="icon_shape_custom">Custom</string>
+    <string name="icon_shape_default_label">Padrão do sistema</string>
+    <string name="icon_shape_custom">Customizado</string>
     <string name="icon_shape_presets">Presets</string>
     <string name="icon_shape_custom_create">Create custom shape</string>
     <string name="icon_shape_custom_edit">Edit custom shape</string>
@@ -393,8 +393,8 @@
     <string name="icon_shape_corner_bottom_right">Bottom right</string>
     <string name="icon_shape_corner_round">Round</string>
     <string name="icon_shape_corner_smooth">Smooth</string>
-    <string name="icon_shape_corner_cut">Cut</string>
-    <string name="icon_shape_apply">Apply</string>
+    <string name="icon_shape_corner_cut">Cortar</string>
+    <string name="icon_shape_apply">Aplicar</string>
     <string name="icon_shape_reshape_pack_title">Fit icon pack icons to shape</string>
     <string name="icon_shape_reshape_pack_summary">Place icon pack icons on a matching background in the selected icon shape</string>
     <string name="icon_shape_unavailable_pack_summary">Turn on \u201cFit icon pack icons to shape\u201d in Icon pack to use with this icon pack</string>
@@ -412,9 +412,9 @@
     <string name="rename_app_label">Rename</string>
     <string name="rename_app_reset">Redefinir</string>
     <!-- Custom icon -->
-    <string name="app_info_custom_icon_title">Custom icon</string>
+    <string name="app_info_custom_icon_title">Ícone customizado</string>
     <string name="app_info_custom_icon_summary">Pick any icon from any icon pack</string>
-    <string name="icon_picker_search_hint">Search icons</string>
+    <string name="icon_picker_search_hint">Ícones de pesquisa</string>
     <!-- Dark app drawer text -->
     <string name="all_apps_dark_text_title">Rótulos longos dos aplicativos</string>
     <string name="all_apps_dark_text_summary">Sempre usar texto escuro para rótulos de aplicativos na gaveta de aplicativos</string>
@@ -431,7 +431,7 @@
     <string name="app_drawer_sort_usage">Ordenar por uso</string>
     <!-- Color Picker -->
     <string name="color_picker_title">Select color</string>
-    <string name="color_picker_select">Select</string>
+    <string name="color_picker_select">Selecionar</string>
     <string name="color_picker_reset">Reset to default</string>
     <string name="color_picker_presets">Presets</string>
     <string name="color_picker_hex_rgb">Hex (#RRGGBB)</string>
@@ -457,10 +457,10 @@
     <string name="unlock_app">Aplicativo desbloqueado em recentes</string>
     <string name="lock_app">Bloqueado app nos recentes</string>
     <!-- Page transition -->
-    <string name="page_transition_title">Transition effect</string>
-    <string name="page_transition_none">None</string>
-    <string name="page_transition_simple">Simple</string>
-    <string name="page_transition_cube">Cube</string>
+    <string name="page_transition_title">Efeitos de transição </string>
+    <string name="page_transition_none">Nenhum</string>
+    <string name="page_transition_simple">Simples</string>
+    <string name="page_transition_cube">Cubo</string>
     <string name="page_transition_card_stack">Card stack</string>
     <string name="page_transition_tablet">Tablet</string>
     <string name="page_transition_revolving_door">Revolving door</string>
@@ -473,5 +473,5 @@
     <string name="page_transition_zoom_fade">Zoom fade</string>
     <string name="page_transition_throw">Throw</string>
     <!-- Long press option of an app drawer folder -->
-    <string name="all_apps_remove_folder">Remove folder</string>
+    <string name="all_apps_remove_folder">Remover pasta</string>
 </resources>
