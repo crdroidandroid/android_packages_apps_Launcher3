@@ -17,6 +17,7 @@ package com.android.quickstep.sysuiconnection
 
 import android.app.contextualsearch.ContextualSearchConfig
 import android.content.Context
+import android.graphics.Rect
 import android.graphics.Region
 import android.os.Bundle
 import android.os.IRemoteCallback
@@ -52,6 +53,7 @@ import com.android.quickstep.dagger.SysUIConnectionSingleton
 import com.android.quickstep.input.QuickstepKeyGestureEventsManager
 import com.android.quickstep.util.ActivityPreloadUtil.preloadOverviewForTIS
 import com.android.quickstep.util.ContextualSearchInvoker
+import com.android.quickstep.util.IslandCloseTarget
 import com.android.systemui.shared.recents.ILauncherProxy.Stub
 import com.android.systemui.shared.statusbar.phone.BarTransitions.TransitionMode
 import com.android.systemui.shared.system.ActivityManagerWrapper
@@ -311,6 +313,7 @@ internal constructor(
     }
 
     override fun onUnbind(reply: IRemoteCallback) {
+        IslandCloseTarget.clear()
         cleanupTasks.complete()
         // Wait for both executors to complete before sending a reply
         uiExecutor.execute {
@@ -323,6 +326,9 @@ internal constructor(
             }
         }
     }
+
+    override fun onIslandTargetChanged(packages: Array<String>?, bounds: Rect?, rotation: Int) =
+        IslandCloseTarget.update(packages, bounds, rotation)
 
     override fun onActionCornerActivated(action: Int, displayId: Int) =
         uiExecutor.execute { withState { actionCornerHandler?.handleAction(action, displayId) } }

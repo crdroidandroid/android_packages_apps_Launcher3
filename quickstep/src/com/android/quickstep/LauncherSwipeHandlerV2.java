@@ -50,7 +50,9 @@ import com.android.launcher3.views.ClipIconView;
 import com.android.launcher3.views.FloatingIconView;
 import com.android.launcher3.views.FloatingView;
 import com.android.launcher3.widget.LauncherAppWidgetHostView;
+import com.android.quickstep.orientation.RecentsPagedOrientationHandler;
 import com.android.quickstep.util.ActiveGestureLog;
+import com.android.quickstep.util.IslandCloseTarget;
 import com.android.quickstep.util.RectFSpringAnim;
 import com.android.quickstep.util.ScalingWorkspaceRevealAnim;
 import com.android.quickstep.util.TaskViewSimulator;
@@ -132,6 +134,11 @@ public class LauncherSwipeHandlerV2 extends AbsSwipeUpHandler<
 
         mContainer.getRootView().setForceHideBackArrow(true);
 
+        RectF islandBounds = findIslandTarget(sourceTaskView, targetTaskView, appCanEnterPip);
+        if (islandBounds != null) {
+            return createIslandHomeAnimationFactory(islandBounds);
+        }
+
         if (mHandOffAnimationToHome || !canUseWorkspaceView || appCanEnterPip || mIsSwipeForSplit) {
             return new LauncherHomeAnimationFactory() {
 
@@ -147,6 +154,55 @@ public class LauncherSwipeHandlerV2 extends AbsSwipeUpHandler<
                     isTargetTranslucent, runningTaskTarget);
         }
         return createIconHomeAnimationFactory(workspaceView, targetTaskView);
+    }
+
+    /** The Dynamic Bar island to close into when the app has events waiting there. */
+    @Nullable
+    private RectF findIslandTarget(@Nullable TaskView sourceTaskView,
+            @Nullable TaskView targetTaskView, boolean appCanEnterPip) {
+        if (targetTaskView != null || sourceTaskView == null || appCanEnterPip
+                || mHandOffAnimationToHome || mIsSwipeForSplit || mIsSwipingPipToHome
+                || getOrientationHandler() != RecentsPagedOrientationHandler.PORTRAIT
+                || DesktopVisibilityController.INSTANCE.get(mContainer)
+                        .isInDesktopModeAndNotInOverview(mContainer.getDisplayId())) {
+            return null;
+        }
+        Task task = sourceTaskView.getFirstTask();
+        if (task == null || task.key.getComponent() == null) return null;
+        return IslandCloseTarget.boundsFor(task.key.getComponent().getPackageName(),
+                mContainer.getDisplay().getRotation());
+    }
+
+    // Shrinks the window into the island pill, cropped to its shape, fading out as it lands.
+    private HomeAnimationFactory createIslandHomeAnimationFactory(RectF islandBounds) {
+        final float radius = islandBounds.height() / 2f;
+        return new LauncherHomeAnimationFactory() {
+            @NonNull
+            @Override
+            public RectF getWindowTargetRect() {
+                return new RectF(islandBounds);
+            }
+
+            @Override
+            public boolean isWidget() {
+                return true;
+            }
+
+            @Override
+            public float getEndRadius(RectF cropRectF) {
+                return radius;
+            }
+
+            @Override
+            protected float getWindowCornerRadius(float progress) {
+                return radius;
+            }
+
+            @Override
+            protected float getWindowAlpha(float progress) {
+                return 1 - mapBoundToRange(progress, 0.6f, 1f, 0, 1, LINEAR);
+            }
+        };
     }
 
     private HomeAnimationFactory createIconHomeAnimationFactory(
