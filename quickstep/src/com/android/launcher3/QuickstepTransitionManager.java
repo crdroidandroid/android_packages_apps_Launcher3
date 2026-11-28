@@ -19,6 +19,7 @@ package com.android.launcher3;
 import static android.app.ActivityTaskManager.INVALID_TASK_ID;
 import static android.app.WindowConfiguration.ACTIVITY_TYPE_HOME;
 import static android.app.WindowConfiguration.ACTIVITY_TYPE_STANDARD;
+import static android.app.WindowConfiguration.WINDOWING_MODE_FULLSCREEN;
 import static android.app.WindowConfiguration.WINDOWING_MODE_MULTI_WINDOW;
 import static android.app.role.RoleManager.ROLE_HOME;
 import static android.provider.Settings.Secure.LAUNCHER_TASKBAR_EDUCATION_SHOWING;
@@ -158,6 +159,7 @@ import com.android.quickstep.util.AlreadyStartedBackAnimState;
 import com.android.quickstep.util.AnimatorBackState;
 import com.android.quickstep.util.BackAnimState;
 import com.android.quickstep.util.CrossDisplayMoveTransition;
+import com.android.quickstep.util.IslandCloseTarget;
 import com.android.quickstep.util.MultiValueUpdateListener;
 import com.android.quickstep.util.RectFSpringAnim;
 import com.android.quickstep.util.RectFSpringAnim.DefaultSpringConfig;
@@ -1857,6 +1859,62 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
         return anim;
     }
 
+    /** The Dynamic Bar island to close into when the app has events waiting there. */
+    @Nullable
+    private RectF findIslandTarget(RemoteAnimationTarget[] appTargets) {
+        RemoteAnimationTarget closing = null;
+        for (RemoteAnimationTarget target : appTargets) {
+            if (target.mode == MODE_CLOSING) {
+                if (closing != null) return null;
+                closing = target;
+            }
+        }
+        if (closing == null || closing.taskInfo == null || closing.isTranslucent
+                || closing.windowConfiguration.getWindowingMode() != WINDOWING_MODE_FULLSCREEN
+                || mLauncher.getDisplay() == null) {
+            return null;
+        }
+        int rotation = mLauncher.getDisplay().getRotation();
+        for (ComponentName component : new ComponentName[] {
+                closing.taskInfo.baseActivity, closing.taskInfo.topActivity}) {
+            if (component == null) continue;
+            RectF bounds = IslandCloseTarget.boundsFor(component.getPackageName(), rotation);
+            if (bounds != null) return bounds;
+        }
+        return null;
+    }
+
+    // Shrinks the window into the island pill, cropped to its shape, fading out as it lands.
+    private RectFSpringAnim getIslandClosingWindowAnimator(AnimatorSet animation,
+            RemoteAnimationTarget[] targets, RectF startRect, float startRadius,
+            RectF islandBounds) {
+        RectFSpringAnim anim = new RectFSpringAnim(
+                new WidgetSpringConfig(mLauncher, mDeviceProfile, startRect, islandBounds));
+        final float endRadius = islandBounds.height() / 2f;
+        final boolean portrait = startRect.height() > startRect.width();
+        final float screenWidth = mDeviceProfile.getDeviceProperties().getWidthPx();
+        final float screenHeight = mDeviceProfile.getDeviceProperties().getHeightPx();
+        anim.addOnUpdateListener(new SpringAnimRunner(
+                targets, islandBounds, startRect, mLauncher, startRadius, 1f) {
+            @Override
+            public void onUpdate(RectF currentRectF, float progress) {
+                float scale = Math.min(1f, portrait
+                        ? currentRectF.width() / screenWidth
+                        : currentRectF.height() / screenHeight);
+                float radius = startRadius + (endRadius - startRadius) * progress;
+                setWindowCornerRadius(radius / Math.max(scale, 0.01f));
+                super.onUpdate(currentRectF, progress);
+            }
+        });
+        animation.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+                anim.start(mLauncher, mDeviceProfile, new PointF());
+            }
+        });
+        return anim;
+    }
+
     /**
      * Closing window animator that moves the window down and offscreen.
      */
@@ -2014,7 +2072,8 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
             RectF startRect,
             float startWindowCornerRadius,
             boolean fromPredictiveBack) {
-        View launcherView = findLauncherView(appTargets);
+        RectF islandBounds = findIslandTarget(appTargets);
+        View launcherView = islandBounds != null ? null : findLauncherView(appTargets);
         if (launcherView != null
                 && launcherView.getTag() instanceof ItemInfo info
                 && info.shouldUseBackgroundAnimation()) {
@@ -2048,7 +2107,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
                 || launcherIsASurfaceWithMode(AnimatedSurfaceUtils.mapFromTargets(appTargets),
                 AnimatedSurface.Mode.OPENING);
 
-        boolean playFallBackAnimation = (launcherView == null
+        boolean playFallBackAnimation = (launcherView == null && islandBounds == null
                 && launcherIsForceInvisibleOrOpening)
                 || mLauncher.getWorkspace().isOverlayShown()
                 || shouldPlayFallbackClosingAnimation(appTargets);
@@ -2067,9 +2126,11 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
         if (mLauncher.isInState(OVERVIEW)) {
             playWorkspaceReveal = false;
         } else if (!playFallBackAnimation) {
-            rectFSpringAnim = getClosingWindowAnimators(
-                    anim, appTargets, launcherView, new PointF(), startRect,
-                    startWindowCornerRadius);
+            rectFSpringAnim = islandBounds != null
+                    ? getIslandClosingWindowAnimator(anim, appTargets, startRect,
+                            startWindowCornerRadius, islandBounds)
+                    : getClosingWindowAnimators(anim, appTargets, launcherView, new PointF(),
+                            startRect, startWindowCornerRadius);
             if (mLauncher.isInState(LauncherState.ALL_APPS)) {
                 // Skip scaling all apps, otherwise FloatingIconView will get wrong
                 // layout bounds.
